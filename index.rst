@@ -26,7 +26,7 @@ operations performed through the user interface.
 Overview
 --------
 
-* What is Archivematica?
+* :ref:`What is Archivematica? <intro>`
 * Web-based dashboard
 * Technical architecture
 * Microservices
