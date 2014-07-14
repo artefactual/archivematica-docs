@@ -28,7 +28,7 @@ Overview
 
 * :ref:`What is Archivematica? <intro>`
 * Web-based dashboard
-* Technical architecture
+* :ref:`Technical architecture <technical-arch>`
 * Microservices
 
 .. _getting-started:
