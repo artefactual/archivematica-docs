@@ -61,15 +61,16 @@ Transfer
 
 .. _home-ingest:
 
-Ingest
-------
+:ref:`Ingest <ingest>`
+----------------------
 
-* Create a SIP
-* Arrange a SIP from backlog
-* Add metadata
-* Normalize
-* Store the AIP
-* Manual normalization
+* :ref:`Create a SIP <create-sip>`
+* :ref:`Arrange a SIP from backlog <arrange-sip>`
+* :ref:`Add metadata <add-metadata>`
+* :ref:`Add PREMIS rights <add-rights>`
+* :ref:`Normalize <normalize>`
+* :ref:`Store the AIP <store-aip>`
+* :ref:`Manual normalization <manual-norm>`
 
 
 .. _home-storage:
