@@ -277,3 +277,6 @@ If you adjust your processing configuration settings, Archivematica will stop
 after format identification and allow you to extract any packages in your
 transfer. Additionally, you can decide whether you would like to keep the
 package with the extracted objects or not.
+
+
+:ref:`Back to the top <transfer>`
