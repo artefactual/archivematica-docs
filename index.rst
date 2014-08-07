@@ -42,13 +42,13 @@ Getting started
 
 .. _home-transfer:
 
-Transfer
---------
+:ref:`Transfer <transfer>`
+--------------------------
 
-* Create a transfer
-* Create a transfer with submission documentation
-* Process the transfer
-* Extract packages
+* :ref:`Create a transfer <create-transfer>`
+* :ref:`Create a transfer with submission documentation <create-submission>`
+* :ref:`Process the transfer <process-transfer>`
+* :ref:`Extract packages <extract-packages>`
 * Import metadata
 * Manage a backlog
 * Bags (Library of Congress Bagit format)
