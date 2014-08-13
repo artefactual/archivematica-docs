@@ -39,7 +39,7 @@ backlog for processing later.
 
    If you would like to import lower-level metadata with your transfer (i.e.
    metadata to be attached to subdirectories and files within a SIP), see
-   Metadata import
+   :ref:`Metadata import <import-metadata>`.
 
    If your transfer is a DSpace export, please see DSpace export.
 
