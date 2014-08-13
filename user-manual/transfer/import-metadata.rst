@@ -103,7 +103,89 @@ objects/QEParksunset.jp2  Sunset in Queen Elizabeth                 Riley Studio
 
 .. code:: bash
 
-
+   <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
+   <dmdSec ID="dmdSec_1">
+       <mdWrap MDTYPE="DC">
+          <xmlData>
+             <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
+               <title>Stanley Park in December</title>
+               <issued>1996-01-17</issued>
+               <subject>Vancouver (B.C.)--Parks</subject>
+               <subject>Landscapes</subject>
+               <description>Image shows Brockton Oval after light snowfall</description>
+               <publisher>Riley Studios, Vancouver B.C.</publisher>
+               <contributor>Don Langfield, photographer</contributor>
+               <date>1992-12-04</date>
+               <isPartOf>Riley Studios collection</isPartOf>
+               <rights>Copyright held by Riley Studios</rights>
+               <format>image/jp2</format>
+              </dublincore>
+          </xmlData>
+         </mdWrap>
+      </dmdSec>
+   <dmdSec ID="dmdSec_2">
+       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+           <xmlData>
+               <notes>
+                   Originally part of series entitled "Winter in Vancouver"
+               </notes>
+               <repository>
+                   New Caledonia Public Library
+               </repository>
+               <project_website>http://www.ncpl/donlangfieldphotographs.ca</project_website>
+           </xmlData>
+       </mdWrap>
+   </dmdSec>
+   <dmdSec ID="dmdSec_3">
+       <mdWrap MDTYPE="DC">
+           <xmlData>
+               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
+               <title>Sunset in Queen Elizabeth Park</title>
+               <subject>Vancouver (B.C.)--Parks</subject>
+               <publisher>Riley Studios, Vancouver BC</publisher>
+               <contributor>Don Langfield, photographer</contributor>
+               <date>1994-07-13</date>
+               <rights>Copyright held by Riley Studios</rights>
+           </dublincore>
+       </xmlData>
+   </mdWrap>
+   </dmdSec>
+   <dmdSec ID="dmdSec_4">
+       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+           <xmlData>
+               <forms_part_of>Riley Studios collection </forms_part_of>
+               <repository>New Caledonia Public Library</repository>
+               <project_website>http://www.ncpl/donlangfieldphotographs.ca</project_website>
+               <digital_image_format>image/jp2</digital_image_format>
+           </xmlData>
+       </mdWrap>
+   </dmdSec>
+   <fileSec>
+       <fileGrp USE="original">
+           <file ID="BrocktonOval.jp2-aeebe429-9b5f-453c-8f73-57ed53f12b6f" GROUPID="Group-aeebe429-9b5f-453c-8f73-57ed53f12b6f" ADMID="amdSec_1">
+               <FLocat xlink:href="objects/BrocktonOval.jp2" LOCTYPE="OTHER" OTHERLOCATYPE="SYSTEM"/>
+           </file>
+           <file ID="QE_Park_sunset.jp2-47faa4c2-fa23-4484-aa08-8d50945b1c5d" GROUPID="Group-47faa4c2-fa23-4484-aa08-8d50945b1c5d" ADMID="amdSec_2">
+               <FLocat xlink:href="objects/QE_Park_sunset.jp2" LOCTYPE="OTHER" OTHERLOCATYPE="SYSTEM"/>
+           </file>
+       </fileGrp>
+   </fileSec>
+   <structMap TYPE="physical" LABEL="Archivematica default">
+       <div TYPE="directory" LABEL="Simple-0c754dae-6a7f-4837-9ecd-8a0ff36e694b">
+           <div TYPE="directory" LABEL="objects">
+               <div TYPE="Item" DMDID="dmdSec_1 dmdSec_2">
+                   <fptr FILEID="BrocktonOval.jp2-aeebe429-9b5f-453c-8f73-57ed53f12b6f"/>
+               </div>
+               <div TYPE="Item" DMDID="dmdSec_3 dmdSec_4">
+                   <fptr FILEID="QE_Park_sunset.jp2-47faa4c2-fa23-4484-aa08-8d50945b1c5d"/>
+               </div>
+               <div TYPE="directory" LABEL="submissionDocumentation">
+                   <div TYPE="directory" LABEL="transfer-Simple-525a57bb-cec8-4279-ae77-b95171f84c59"/>
+               </div>
+           </div>
+       </div>
+   </structMap>
+   </mets>
 
 
 Compound objects
@@ -124,5 +206,109 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
 =================  ============================ ===================  ============ ==================== ==========================  ==========  ==================================  =========   ===========  =================================================  ==================================  ==========================================  ===================
 
 
+**METS file**
+
+.. code:: bash
+
+   <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
+   <dmdSec ID="dmdSec_1">
+       <mdWrap MDTYPE="DC">
+           <xmlData>
+               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
+               <title>Coast News, January 02, 1964</title>
+               <subject>Gibsons (B.C.)--Newspapers</subject>
+               <description>Serving the Growing Sunshine Coast</description>
+               <publisher>Fred Cruice</publisher>
+               <date>1964/01/02</date>
+               <language>English</language>
+           </dublincore>
+       </xmlData>
+   </mdWrap>
+   </dmdSec>
+   <dmdSec ID="dmdSec_2">
+       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+           <xmlData>
+               <alternative_title>Sunshine Coast News</alternative_title>
+               <dates_of_publication>1945-1995</dates_of_publication>
+               <frequency>Weekly</frequency>
+               <forms_part_of>British Columbia Historical Newspapers Collection</forms_part_of>
+               <repository>
+                   Sunshine Coast Museum and Archives
+               </repository>
+               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
+               <digital_image_format>image/jp2</digital_image_format>
+           </xmlData>
+       </mdWrap>
+   </dmdSec>
+   <dmdSec ID="dmdSec_3">
+       <mdWrap MDTYPE="DC">
+           <xmlData>
+               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
+               <title>Coast News, January 09, 1964</title>
+               <subject>Gibsons (B.C.)--Newspapers</subject>
+               <description>Serving the Growing Sunshine Coast</description>
+               <publisher>Fred Cruice</publisher>
+               <date>1964/01/09</date>
+               <language>English</language>
+           </dublincore>
+       </xmlData>
+   </mdWrap>
+   </dmdSec>
+   <dmdSec ID="dmdSec_4">
+       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+           <xmlData>
+               <alternative_title>Sunshine Coast News</alternative_title>
+               <dates_of_publication>1945-1995</dates_of_publication>
+               <frequency>Weekly</frequency>
+               <forms_part_of>British Columbia Historical Newspapers Collection</forms_part_of>
+               <repository>Sunshine Coast Museum and Archives</repository>
+               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
+               <digital_image_format>image/jp2</digital_image_format>
+           </xmlData>
+       </mdWrap>
+   </dmdSec>
+   <fileSec>
+       <fileGrp USE="original">
+           <file ID="page01.jp2-31e3ee5c-ff7a-4fb9-818d-e325345a5766" GROUPID="Group-31e3ee5c-ff7a-4fb9-818d-e325345a5766" ADMID="amdSec_1">
+               <FLocat xlink:href="objects/Jan021964/page01.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+           </file>
+           <file ID="page02.jp2-626bc937-5a6e-4a32-adf4-7db7ab5a3e66" GROUPID="Group-626bc937-5a6e-4a32-adf4-7db7ab5a3e66" ADMID="amdSec_2">
+               <FLocat xlink:href="objects/Jan021964/page02.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+           </file>
+           <file ID="page01.jp2-38e939e0-74fe-4ace-81ff-da4b89fa3481" GROUPID="Group-38e939e0-74fe-4ace-81ff-da4b89fa3481" ADMID="amdSec_3">
+               <FLocat xlink:href="objects/Jan091964/page01.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+           </file>
+           <file ID="page02.jp2-f42aaa1b-3816-45ed-9419-193474462481" GROUPID="Group-f42aaa1b-3816-45ed-9419-193474462481" ADMID="amdSec_4">
+               <FLocat xlink:href="objects/Jan091964/page02.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+           </file>
+       </fileGrp>
+   </fileSec>
+   <structMap TYPE="physical" LABEL="Archivematica default">
+       <div TYPE="directory" LABEL="Compound-6ef65864-d8ce-46df-b6e7-cd7d75498110">
+           <div TYPE="directory" LABEL="objects">
+               <div TYPE="directory" LABEL="Jan021964" DMDID="dmdSec_1 dmdSec_2">
+                   <div TYPE="item">
+                       <fptr FILEID="page01.jp2-31e3ee5c-ff7a-4fb9-818d-e325345a5766"/>
+                   </div>
+                   <div TYPE="item">
+                       <fptr FILEID="page02.jp2-626bc937-5a6e-4a32-adf4-7db7ab5a3e66"/>
+                   </div>
+               </div>
+               <div TYPE="directory" LABEL="Jan091964" DMDID="dmdSec_3 dmdSec_4">
+                   <div TYPE="item">
+                       <fptr FILEID="page01.jp2-38e939e0-74fe-4ace-81ff-da4b89fa3481"/>
+                   </div>
+                   <div TYPE="item">
+                       <fptr FILEID="page02.jp2-f42aaa1b-3816-45ed-9419-193474462481"/>
+                   </div>
+               </div>
+               <div TYPE="directory" LABEL="submissionDocumentation">
+                   <div TYPE="directory" LABEL="transfer-Compound-03e22333-4ce3-415f-adbf-9d392931bfb6"/>
+               </div>
+           </div>
+       </div>
+   </structMap>
+   </mets>
 
 
+:ref:`Back to the top <import-metadata>`
