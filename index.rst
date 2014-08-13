@@ -50,7 +50,7 @@ Getting started
 * :ref:`Process the transfer <process-transfer>`
 * :ref:`Extract packages <extract-packages>`
 * :ref:`Import metadata <import-metadata>`
-* Manage a backlog
+* :ref:`Manage a backlog <manage-backlog>`
 * Bags (Library of Congress Bagit format)
 * Digitized files
 * Forensic images

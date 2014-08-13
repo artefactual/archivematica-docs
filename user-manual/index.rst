@@ -13,6 +13,7 @@ links to each chapter's main sections.
    overview/technical
    transfer/transfer
    transfer/import-metadata
+   transfer/manage-backlog
    ingest/ingest
    ingest/manual-normalization
 
