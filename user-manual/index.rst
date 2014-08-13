@@ -10,7 +10,9 @@ links to each chapter's main sections.
 .. toctree::
 
    overview/intro
-   overview/technical-arch
+   overview/technical
+   transfer/transfer
+   transfer/import-metadata
    ingest/ingest
-   ingest/manual-norm
+   ingest/manual-normalization
 

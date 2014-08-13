@@ -49,7 +49,7 @@ Getting started
 * :ref:`Create a transfer with submission documentation <create-submission>`
 * :ref:`Process the transfer <process-transfer>`
 * :ref:`Extract packages <extract-packages>`
-* Import metadata
+* :ref:`Import metadata <import-metadata>`
 * Manage a backlog
 * Bags (Library of Congress Bagit format)
 * Digitized files

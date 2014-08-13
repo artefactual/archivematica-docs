@@ -25,9 +25,13 @@ backlog for processing later.
 *On this page:*
 
 * :ref:`Create a transfer <create-transfer>`
+
 * :ref:`Create a transfer with submission documentation <create-submission>`
+
 * :ref:`Process the transfer <process-transfer>`
+
 * :ref:`Format identification <format-identification>`
+
 * :ref:`Extract packages <extract-packages>`
 
 
@@ -78,7 +82,7 @@ transfer is composed from multiple sources.
    :width: 100%
    :alt: Select transfer(s) from source directory(ies)
 
-    Select transfer for transfers from source directories
+   Select transfer for transfers from source directories
 
 3. If applicable, enter an accession number for the transfer.
 
@@ -91,7 +95,7 @@ Transfer button for the transfer processing to begin.
    :width: 100%
    :alt: Select transfer in dashboard
 
-    Select transfer
+   Select transfer
 
 
 .. _create-submission:
@@ -154,7 +158,7 @@ processing the transfer. You may also "Reject transfer" and quit processing.
    :width: 100%
    :alt:  In the Actions drop-down menu, select "Approve transfer"
 
-    In the Actions drop-down menu, select "Approve transfer"
+   In the Actions drop-down menu, select "Approve transfer"
 
 4. The transfer will now run through a series of micro-services. These include:
 
@@ -223,7 +227,7 @@ for processing at a later date
    :width: 100%
    :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
 
-    A transfer that is ready to be packaged into a SIP or stored in backlog
+   A transfer that is ready to be packaged into a SIP or stored in backlog
 
 
 * Option 1: Select "Create single SIP and continue processing"
