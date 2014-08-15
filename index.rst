@@ -92,7 +92,7 @@ Access
 
 * Upload DIP to AtoM
 * Upload DIP metadata to Archivists' Toolkit
-* Upload DIP to ContentDM
+* :ref:`Upload DIP to ContentDM <dip-contentdm>`
 
 
 .. _home-administer:

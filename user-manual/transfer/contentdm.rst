@@ -1,8 +1,8 @@
 .. _contentdm:
 
-=============================
-ContentDM ingest and transfer
-=============================
+==========
+ContentDM
+==========
 
 Users can process digital content and then upload the DIP to CONTENTdm as the
 access system. To configure Archivematica to upload a DIP to CONTENTdm, see
@@ -20,6 +20,8 @@ Should you run into an error during this process, please see Error handling.
 :ref:`Transfer and ingest of single items <contentdm-single>`
 
 :ref:`Transfer and ingest of multiple items <contentdm-multiple>`
+
+:ref:`Upload DIP to ContentDM <dip-contentdm>`
 
 .. _contentdm-single:
 
@@ -141,8 +143,51 @@ in your metadata.csv file (that is, all fields match Dublin Core elements),
 Archivematica will use whatever Dublin Core mappings have been defined in the
 target CONTENTdm collection to populate the corresponding fields in CONTENTdm.
 
+.. _dip-contentdm:
+
+Upload DIP to ContentDM
+-----------------------
+
+.. important::
+
+   The user must create the target collection in CONTENTdm before
+   uploading the DIP. The user will need to indicate a target collection in order
+   to send the DIP to the appropriate place during DIP upload. Also, target
+   collections must have a field named "AIP UUID", which will be automatically
+   populated with the UUID of the AIP containing the CONTENTdm item. If this
+   field is absent, and the collection has a field mapped to dc.identifier, the
+   AIP's UUID will be added to that field as a "repeated" value (that is, if
+   there is already a value in the field, it will be kept).
+
+To upload a DIP directly from Archivematica to your CONTENTdm collection:
+
+1. In the Archivematica dashboard at “Upload DIP”, choose the action “Upload
+DIP to CONTENTdm” from the drop-down menu.
+
+2. At “Select target CONTENTdm server”, select your server.
+
+3. At “Select destination collection”, select your CONTENTdm collection.
+
+4. At "Select upload type (Project Client or direct upload)", select “Direct
+upload”.
+
+
+To send a DIP to the project client:
+
+1. Follow steps 1-3 above, then at "Select upload type (Project Client or
+direct upload)", select “Project client".
+
+2. The DIP will be stored in
+``/share/sharedDirectoryStructure/watchedDirectories/uploadedDIPs/CONTENTdm/.``
+The user will need to move the DIP somewhere accessible to the CONTENTdm
+project client, then unzip it and process using normal CONTENTdm project
+client workflows.
+
 .. seealso::
 
-   :ref:`Upload DIP to ContentDM <dip-contentdm>`
+   Administrator Manual: Administrator manual - CONTENTdm DIP upload
+
+
+
 
 :ref:`Back to the top <contentdm>`
