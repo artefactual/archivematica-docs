@@ -16,6 +16,7 @@ links to each chapter's main sections.
    transfer/manage-backlog
    transfer/bags
    transfer/digitized
+   transfer/dspace
    ingest/ingest
    ingest/manual-normalization
 

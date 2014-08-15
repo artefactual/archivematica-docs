@@ -54,7 +54,7 @@ Getting started
 * :ref:`Bags (Library of Congress Bagit format) <bags>`
 * :ref:`Digitized files <digitized>`
 * Forensic images
-* DSpace exports
+* :ref:`DSpace exports <dspace>`
 * ContentDM
 
 
