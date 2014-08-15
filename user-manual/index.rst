@@ -17,6 +17,7 @@ links to each chapter's main sections.
    transfer/bags
    transfer/digitized
    transfer/dspace
+   transfer/contentdm
    ingest/ingest
    ingest/manual-normalization
 

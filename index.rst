@@ -55,7 +55,7 @@ Getting started
 * :ref:`Digitized files <digitized>`
 * Forensic images
 * :ref:`DSpace exports <dspace>`
-* ContentDM
+* :ref:`ContentDM (transfer and ingest) <contentdm>`
 
 
 
