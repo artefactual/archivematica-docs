@@ -51,7 +51,7 @@ Getting started
 * :ref:`Extract packages <extract-packages>`
 * :ref:`Import metadata <import-metadata>`
 * :ref:`Manage a backlog <manage-backlog>`
-* Bags (Library of Congress Bagit format)
+* :ref:`Bags (Library of Congress Bagit format) <bags>`
 * Digitized files
 * Forensic images
 * DSpace exports
