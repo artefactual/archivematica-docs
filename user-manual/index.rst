@@ -20,4 +20,5 @@ links to each chapter's main sections.
    transfer/contentdm
    ingest/ingest
    ingest/manual-normalization
+   archival-storage/archival-storage
 

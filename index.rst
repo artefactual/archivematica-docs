@@ -75,12 +75,12 @@ Getting started
 
 .. _home-storage:
 
-Storage
--------
+:ref:`Storage <archival-storage>`
+---------------------------------
 
-* Store the AIP
-* Search the AIP store
-* Delete an AIP
+* :ref:`Store the AIP <store-aip>`
+* :ref:`Search the AIP store <search-aip>`
+* :ref:`Delete an AIP <delete-aip>`
 * AIP structure
 * AICs - managing multi-part AIPs
 
