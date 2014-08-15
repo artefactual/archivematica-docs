@@ -15,6 +15,7 @@ links to each chapter's main sections.
    transfer/import-metadata
    transfer/manage-backlog
    transfer/bags
+   transfer/digitized
    ingest/ingest
    ingest/manual-normalization
 

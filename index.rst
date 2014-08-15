@@ -52,7 +52,7 @@ Getting started
 * :ref:`Import metadata <import-metadata>`
 * :ref:`Manage a backlog <manage-backlog>`
 * :ref:`Bags (Library of Congress Bagit format) <bags>`
-* Digitized files
+* :ref:`Digitized files <digitized>`
 * Forensic images
 * DSpace exports
 * ContentDM
