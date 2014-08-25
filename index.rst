@@ -81,7 +81,7 @@ Getting started
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Search the AIP store <search-aip>`
 * :ref:`Delete an AIP <delete-aip>`
-* AIP structure
+* :ref:`AIP structure <aip-structure>`
 * AICs - managing multi-part AIPs
 
 
