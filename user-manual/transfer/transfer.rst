@@ -184,6 +184,9 @@ processing the transfer. You may also "Reject transfer" and quit processing.
 
 * Scan for viruses (scans for viruses and malware)
 
+* Generate transfer structure report (generates a directory tree of the original
+  transfer and places as a text file in the AIP).
+
 * Clean up file and directory names (removes prohibited characters from folder
   and filenames, such as ampersands).
 
