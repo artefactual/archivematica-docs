@@ -21,6 +21,7 @@ Should you run into an error during ingest, please see Error handling.
 * :ref:`Add metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
+* :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
 
 .. _create-sip:
@@ -391,6 +392,16 @@ to learn more about the problem.
 
    Manual normalization
 
+
+.. _transcribe-contents:
+
+Transcribe SIP contents
+-----------------------
+
+Archivematica gives users the option to Transcribe SIP contents using
+`Tesseract <https://code.google.com/p/tesseract-ocr/>`_ OCR tool. If Yes is
+selected by the user during this micro-service, an OCR file will be included in
+the DIP and stored in the AIP.
 
 .. _store-AIP:
 
