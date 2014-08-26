@@ -163,48 +163,48 @@ processing the transfer. You may also "Reject transfer" and quit processing.
 4. The transfer will now run through a series of micro-services. These include:
 
 * Verify transfer compliance (verifies that the transfer is properly
-structured - i.e. with the logs, metadata and objects folders)
+  structured - i.e. with the logs, metadata and objects folders)
 
 * Rename with transfer UUID (assigns a unique universal identifier for the
-transfer as a whole; directly associates the transfer with its metadata)
+  transfer as a whole; directly associates the transfer with its metadata)
 
 * Assign file UUIDs and checksums to objects (assigns a unique universal
-identifier and sha-256 checksum to each file in the /objects directory)
+  identifier and sha-256 checksum to each file in the /objects directory)
 
 * Verify transfer checksums (verifies any checksums included with the transfer
-in its metadata directory).
+  in its metadata directory).
 
 * Generate METS.xml document (creates a METS file capturing the original order
-of the transfer. This METS file is added to any SIPs generated from this
-transfer)
+  of the transfer. This METS file is added to any SIPs generated from this
+  transfer)
 
 * Quarantine (quarantines the transfer to a set duration based on
-preconfiguration settings in the Administration tab of the dashboard; to
-allow virus definitions to update before a virus scan)
+  preconfiguration settings in the Administration tab of the dashboard; to
+  allow virus definitions to update before a virus scan)
 
 * Scan for viruses (scans for viruses and malware)
 
 * Clean up file and directory names (removes prohibited characters from folder
-and filenames, such as ampersands).
+  and filenames, such as ampersands).
 
 * Identify file format (this is the identification that normalization will be
-based upon, the user can choose between FIDO and extension or skipping
-format identification at this stage) See Format identification below for
-more information.
+  based upon, the user can choose between FIDO and extension or skipping
+  format identification at this stage) See Format identification below for
+  more information.
 
 * Extract packages (extracts contents from zipped or otherwise packaged
-files): You can change your preconfigured workflow settings to allow for
-some choices about package extraction. See below for details Extract
-packages
+  files): You can change your preconfigured workflow settings to allow for
+  some choices about package extraction. See below for details Extract
+  packages
 
 * Characterize and extract metadata (identifies and validates file formats;
-extracts technical metadata embedded in the files). If you have
-preconfigured it to do so, Archivematica will stop during this micro-service
-and allow the user to choose a file identification command from a dropdown
-menu. To learn about preconfigured options, please see Administrator manual
-- Processing configuration. Archivematica's file identification default is
-set to identification by file extension. You can also choose to skip
-identification and run it later, during Ingest, instead.
+  extracts technical metadata embedded in the files). If you have
+  preconfigured it to do so, Archivematica will stop during this micro-service
+  and allow the user to choose a file identification command from a dropdown
+  menu. To learn about preconfigured options, please see Administrator manual
+  - Processing configuration. Archivematica's file identification default is
+  set to identification by file extension. You can also choose to skip
+  identification and run it later, during Ingest, instead.
 
 * Complete transfer (Includes indexing transfer)
 
@@ -233,9 +233,9 @@ for processing at a later date
 * Option 1: Select "Create single SIP and continue processing"
 
 * Option 2: Select "Send transfer to backlog". In this case, your transfer
-will be stored in a backlog in the same location as your AIP store so that
-you can retrieve one or more transfers from the Ingest tab for processing at
-a later date. See Managing a backlog.
+  will be stored in a backlog in the same location as your AIP store so that
+  you can retrieve one or more transfers from the Ingest tab for processing at
+  a later date. See Managing a backlog.
 
 * Option 3: Select "Reject the transfer".
 
