@@ -42,9 +42,10 @@ Getting started
 
 .. _home-transfer:
 
-:ref:`Transfer <transfer>`
---------------------------
+Transfer
+--------
 
+* :ref:`General description <transfer>`
 * :ref:`Create a transfer <create-transfer>`
 * :ref:`Create a transfer with submission documentation <create-submission>`
 * :ref:`Process the transfer <process-transfer>`
@@ -61,9 +62,10 @@ Getting started
 
 .. _home-ingest:
 
-:ref:`Ingest <ingest>`
-----------------------
+Ingest
+------
 
+* :ref:`General description <ingest>`
 * :ref:`Create a SIP <create-sip>`
 * :ref:`Arrange a SIP from backlog <arrange-sip>`
 * :ref:`Add metadata <add-metadata>`
@@ -75,9 +77,10 @@ Getting started
 
 .. _home-storage:
 
-:ref:`Storage <archival-storage>`
----------------------------------
+Storage
+-------
 
+* :ref:`General description <archival-storage>`
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Search the AIP store <search-aip>`
 * :ref:`Delete an AIP <delete-aip>`
@@ -87,9 +90,10 @@ Getting started
 
 .. _home-access:
 
-:ref:`Access <access>`
-----------------------
+Access
+------
 
+* :ref:`General description <access>`
 * :ref:`Upload DIP to AtoM <upload-atom>`
 * Upload DIP metadata to Archivists' Toolkit
 * :ref:`Upload DIP to ContentDM <dip-contentdm>`
