@@ -29,6 +29,14 @@ Directory structure
 The AIP is zipped in the AIPsStore. The AIP directories are broken down into
 UUID quad directories for efficient storage and retrieval.
 
+.. figure:: images/ZippedAIP-10.*
+   :align: center
+   :figwidth: 70%
+   :width: 100%
+   :alt: AIP directory - top level
+
+   AIP directory - top level
+
 .. note::
 
    UUID quad directories: Some file systems limit the number of items allowed in
@@ -48,12 +56,26 @@ The AIP is packaged in accordance with the Library of Congress Bagit
 specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt,
 bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:
 
+.. image:: images/BagSpec-10.*
+   :align: center
+   :width: 70%
+   :alt: Bagit specification files
+
+
 The following describes the contents of the AIP once extracted:
 
 **Data directory**
 
 The data directory consists of the METS file for the AIP and three folders:
 logs, objects. and thumbnails.
+
+.. figure:: images/AIPdatadirectory-10.*
+   :align: center
+   :figwidth: 70%
+   :width: 100%
+   :alt: AIP data directory
+
+   AIP data directory
 
 **METS file**
 
@@ -70,6 +92,14 @@ objects in the AIP.
 log, and the extraction log (from unpackaging packages) generated during SIP
 creation.
 
+.. figure:: images/DataLogs-10.*
+   :align: center
+   :figwidth: 70%
+   :width: 100%
+   :alt: Logs folder content in Data
+
+   Logs folder content in Data
+
 The ``/transfers`` directory contains the logs from processing that occurred
 to each transfer which is part of the SIP in the transfer workflow in the
 dashboard.
@@ -80,6 +110,14 @@ dashboard.
 ``/submissionDocumentation``. If there were any lower level directories within
 the SIP, that directory structure is maintained.
 
+.. figure:: images/DataObjects-10.*
+   :align: center
+   :figwidth: 70%
+   :width: 100%
+   :alt: Objects folder content in Data
+
+   Objects folder content in Data
+
 ``/metadata`` contains ``/transfers``, which contains any metadata which may have
 been imported with the transfers
 
@@ -88,3 +126,10 @@ transfer which is part of the SIP and each transfer's METS.xml file. The
 structmap for the transfer is the closest approximation of original order
 for the transfer, along with the tree diagram if the user chose to create one
 during transfer.
+
+**Thumbnails**
+
+``/data/thumbnails`` contains any thumbnails generated for viewing in the AIP
+search interface of the dashboard.
+
+:ref:`Back to the top <aip-structure>`
