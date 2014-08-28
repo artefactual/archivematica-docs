@@ -22,5 +22,6 @@ links to each chapter's main sections.
    ingest/manual-normalization
    archival-storage/archival-storage
    archival-storage/aip-structure
+   archival-storage/aic
 
 

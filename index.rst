@@ -82,7 +82,7 @@ Getting started
 * :ref:`Search the AIP store <search-aip>`
 * :ref:`Delete an AIP <delete-aip>`
 * :ref:`AIP structure <aip-structure>`
-* AICs - managing multi-part AIPs
+* :ref:`AICs <aic>`- managing multi-part AIPs
 
 
 .. _home-access:
