@@ -1,0 +1,93 @@
+.. _access:
+
+======
+Access
+======
+
+During ingest, access copies of digital objects are generated and packaged
+into a DIP (Dissemination Information Package). The user uploads the DIP to
+the access system. Please note the user must create the description in AtoM
+(or other access system) before uploading the DIP. The user will need to
+indicate part of the description's URL or a target collection in order to send
+the DIP to the appropriate place in the description.
+
+Should you run into an error during this process, please see Error handling.
+
+.. seealso::
+
+   :ref:`Upload DIP to ContentDM <dip-contentdm>`
+
+   Upload DIP metadata to Archivists' Toolkit
+
+.. _access-default:
+
+Default access system
+---------------------
+
+A content management tool called `AtoM <https://www.accesstomemory.org>`_ is
+Archivematica's default access system. AtoM supports standards-compliant
+hierarchical archival description and digital object management.
+
+AtoM stands for Access to Memory. It is a web-based, open source application
+for standards-based archival description and access in a multilingual, multi-
+repository environment. User and Administrator manuals for AtoM are available
+`here <https://www.accesstomemory.org/en/docs/>`_ .
+
+To configure Archivematica for uploading the DIP to AtoM, see the
+Administrator manual - AtoM DIP upload.
+
+.. _upload-atom:
+
+Upload DIP to AtoM
+------------------
+
+.. important::
+
+   The user must create the target description in AtoM before uploading the
+   DIP. The user will need to indicate part of the description's URL or a
+   target collection in order to send the DIP to the appropriate place during
+   DIP upload
+
+In this example, we will upload a DIP to a sample description in AtoM called
+"Sample fonds".
+
+1. In the ingest tab, select "Upload DIP to AtoM" in the upload DIP Actions
+drop-down menu.
+
+2. A dialogue box will appear.
+
+Enter the permalink of the description in the dialogue box: sample-fonds
+
+.. tip::
+
+   The permalink is the "slug" from the AtoM target description.
+   See `slug <https://www.accesstomemory.org/en/docs/2.0/user-manual/glossary/glossary/#term-slug>`_
+   in the AtoM glossary.
+
+3. Click the blue "Upload" button.
+
+Digital objects are uploaded as items within the description to which the DIP
+is being uploaded.
+
+If you want to create a child level of description under the target
+description, you must add the title of that level of description using the DC
+metadata template prior to normalization.
+
+4. When the DIP has finished uploading, open the Access tab in the dashboard.
+This tab shows the AIP and its uploaded DIP. Click on the DIP URL to go to the
+uploaded DIP in AtoM.
+
+5. If you are not already logged in to AtoM you will need to log in using your
+login credentials.
+
+6. You will see an archival description with the metadata you added during
+ingest, displayed in the context of the level of archival description to which
+the DIP was uploaded (figure 4). To view an individual digital object, scroll
+through the thumbnails on the left of the screen and click on an image.
+
+7. Below, the digital is object displayed in AtoM.
+
+Clicking on the image will open the uploaded object.
+
+
+:ref:`Back to the top <access>`

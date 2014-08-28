@@ -87,10 +87,10 @@ Getting started
 
 .. _home-access:
 
-Access
-------
+:ref:`Access <access>`
+----------------------
 
-* Upload DIP to AtoM
+* :ref:`Upload DIP to AtoM <upload-atom>`
 * Upload DIP metadata to Archivists' Toolkit
 * :ref:`Upload DIP to ContentDM <dip-contentdm>`
 
