@@ -30,7 +30,8 @@ Creating AICs
 
 **Step 1: Create AIPs**
 
-1. Ingest a standard transfer consisting of metadata and data files
+1. Ingest a standard transfer consisting of metadata and data files, or create a
+SIP from backlog using the :ref:`SIP arrange pane <arrange-sip>`.
 
 2. At the Normalize micro-service, click on the metadata button:
 
