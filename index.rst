@@ -95,7 +95,7 @@ Access
 
 * :ref:`General description <access>`
 * :ref:`Upload DIP to AtoM <upload-atom>`
-* Upload DIP metadata to Archivists' Toolkit
+* :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
 * :ref:`Upload DIP to ContentDM <dip-contentdm>`
 
 
