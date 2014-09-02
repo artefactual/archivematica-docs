@@ -11,6 +11,7 @@ links to each chapter's main sections.
 
    overview/intro
    overview/technical
+   overview/microservices
    transfer/transfer
    transfer/import-metadata
    transfer/manage-backlog
