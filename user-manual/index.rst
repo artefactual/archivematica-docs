@@ -27,5 +27,6 @@ links to each chapter's main sections.
    access/access
    access/archivists-toolkit
    administer/dashboard-admin
+   troubleshooting/error-handling
 
 

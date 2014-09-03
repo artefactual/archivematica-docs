@@ -105,7 +105,6 @@ Administer
 ----------
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* Archivematica users
 * Update Format Policy Registry (FPR)
 * Storage service users
 
@@ -115,7 +114,7 @@ Administer
 Troubleshooting
 ---------------
 
-* Error handing
+* :ref:`Error handing <error-handling>`
 * Error reporting
 * FAQ
 
