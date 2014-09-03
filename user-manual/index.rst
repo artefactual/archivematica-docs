@@ -26,5 +26,6 @@ links to each chapter's main sections.
    archival-storage/aic
    access/access
    access/archivists-toolkit
+   administer/dashboard-admin
 
 

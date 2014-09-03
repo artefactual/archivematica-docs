@@ -104,7 +104,7 @@ Access
 Administer
 ----------
 
-* Dashboard administration tab
+* :ref:`Dashboard administration tab <dashboard-admin>`
 * Archivematica users
 * Update Format Policy Registry (FPR)
 * Storage service users
