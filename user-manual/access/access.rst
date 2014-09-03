@@ -91,4 +91,14 @@ through the thumbnails on the left of the screen and click on an image.
 Clicking on the image will open the uploaded object.
 
 
+.. _access-tab:
+
+Access tab
+----------
+
+By clicking the Access tab in the Dashboard, you can see a table showing all
+uploaded DIPs including the URL, the associated AIP, the upload date and status,
+and the option to delete from the Access tab. Note that this link will delete the
+record of the DIP in the Access tab, not the actual DIP.
+
 :ref:`Back to the top <access>`
