@@ -17,7 +17,8 @@ Should you run into an error during this process, please see Error handling.
 
    :ref:`Upload DIP to ContentDM <dip-contentdm>`
 
-   Upload DIP metadata to Archivists' Toolkit
+   :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
+
 
 .. _access-default:
 
