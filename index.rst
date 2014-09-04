@@ -99,6 +99,14 @@ Access
 * :ref:`Upload DIP to ContentDM <dip-contentdm>`
 
 
+.. _home-preservation:
+
+Preservation planning
+---------------------
+
+* Preservation planning tab
+* FPR Format Policy Registry
+
 .. _home-administer:
 
 Administer
