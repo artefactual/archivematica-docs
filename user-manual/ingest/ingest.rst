@@ -403,8 +403,16 @@ Archivematica gives users the option to Transcribe SIP contents using
 selected by the user during this micro-service, an OCR file will be included in
 the DIP and stored in the AIP.
 
-.. _store-AIP:
+.. note::
 
+   This feature is designed to transcribe the text from single images (e.g.
+   individual pages of a book scanned as image files). It does not support
+   transcription of multi-page objects or word processing files, PDF files, etc.
+
+
+
+.. _store-AIP:
+ar
 Store AIP
 ---------
 
