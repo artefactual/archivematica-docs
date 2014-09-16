@@ -104,8 +104,11 @@ Access
 Preservation planning
 ---------------------
 
+* :ref:`General description <preservation-planning>`
 * Preservation planning tab
 * FPR Format Policy Registry
+* Preservation policies
+
 
 .. _home-administer:
 

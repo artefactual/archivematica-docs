@@ -26,6 +26,7 @@ links to each chapter's main sections.
    archival-storage/aic
    access/access
    access/archivists-toolkit
+   preservation/preservation-planning
    administer/dashboard-admin
    troubleshooting/error-handling
 
