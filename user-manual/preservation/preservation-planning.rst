@@ -132,8 +132,8 @@ performed.
 Types of FPR entries
 ^^^^^^^^^^^^^^^^^^^^
 
-Format
-""""""
+Formats
+"""""""
 
 In the FPR, a "format" is a record representing one or more related format
 versions, which are records representing a specific file format. For example,
@@ -160,13 +160,17 @@ When creating a new format version, the following fields are available:
 * Access format and Preservation format - Indicates whether this format is
   suitable as an access format for end users, and for preservation.
 
-Format Group
-""""""""""""
-
+Groups
+""""""
 A format group is a convenient grouping of related file formats which share
 common properties. For instance, the FPR includes an "Image (raster)" group
 which contains format records for GIF, JPEG, and PNG. Each format can belong
 to one (and only one) format group.
+
+The groups as determined by Artefactual should be perceived as arbritrary and
+are simply meant to make the Format Policy Registry easier to read and navigate.
+If an institution so desired, they could change the names and population of the
+groups in their local Preservation planning tab.
 
 Format policy rules
 """""""""""""""""""
@@ -203,14 +207,6 @@ the IDs in PRONOM, and a simple script which identifies files by their file
 extension. You can use the identification tools portion of FPR to customize
 the behaviour of the existing tools, or to write your own.
 
-**Commands**
-
-Identification commands contain the actual code that a tool will run when
-identifying a file. This command will be run on every file in a transfer.
-
-Instructions on writing an identification command can be found in the administrator
-manual.
-
 **Rules**
 
 Identification rules allow you to define the relationship between the
@@ -228,6 +224,43 @@ regardless of what tool is being used.
 
 Instructions on writing an identification rule can be found in the administrator
 manual.
+
+**Commands**
+
+Identification commands contain the actual code that a tool will run when
+identifying a file. This command will be run on every file in a transfer.
+
+Instructions on writing an identification command can be found in the administrator
+manual.
+
+Format policy registry tools
+""""""""""""""""""""""""""""
+
+Format policy tools control how Archivematica processes files during ingest.
+The most common kind of these tools are normalization tools, which produce
+preservation and access copies from ingested files. Archivematica comes
+configured with a number of commands and scripts to normalize several file
+formats, and you can use this section of the FPR to customize them or to
+create your own. These are organized similarly to the Identification Tools
+documented above.
+
+Archivematica uses the following kinds of format policy rules:
+
+* Characterization
+
+* Extraction
+
+* Normalization - Access, preservation and thumbnails
+
+* Event detail - Extracts information about a given tool in order to be inserted
+  into a generated METS file.
+
+* Transcription
+
+* Verification - Validates a file produced by another command. For instance, a
+  tool could use Exiftool or JHOVE to determine whether a thumbnail produced by
+  a normalization command was valid and well-formed.
+
 
 Characterization
 """"""""""""""""
@@ -272,7 +305,7 @@ these tools may be called instead of FITS.
    characterization tool oriented towards still image data and extraction of
    embedded metadata
 
-**Writing a new characterization command**
+**Commands**
 
 Information on writing new characterization commands can be found in the FPR
 administrator's manual.
@@ -282,7 +315,66 @@ standard out. Output from characterization commands is expected to be valid
 XML, and will be included in the AIP's METS document within the file's
 ``<objectCharacteristicsExtension>`` element.
 
+Event Detail
+""""""""""""
 
+Extraction
+""""""""""
+
+Archivematica supports extracting contents from files during the transfer phase.
+
+Many transfers contain files which are packages of other files; examples of
+these include compressed archives, such as ZIP files, or disk images.
+Archivematica provides a transcription microservice which comes with several
+predefined rules to extract packages, and which is fully customizeable by
+Archivematica administrators. Administrators can write new commands, and
+assign existing formats to run for other file formats.
+
+**Commands**
+
+An extraction command is passed two arguments: the file to extract, and the
+path to which the package should be extracted. Similar to normalization
+commands, these arguments will be interpolated directly into "bashScript" and
+"command" scripts, and passed as positional arguments to "pythonScript" and
+"asIs" scripts.
+
+Information on writing a new Extraction command can be found in the Administrator
+manual.
+
+Normalization
+"""""""""""""
+
+Transcription
+"""""""""""""
+
+Archivematica 1.2 introduces a new transcription microservice. This
+microservice provides tools to transcribe the contents of media objects. In
+Archivematica 1.2 it is used to perform OCR on images of textual material, but
+it can also be used to create commands which perform other kinds of
+transcription.
+
+**Commands**
+
+Writing a transcription command is very similar to writing an identification
+command or a normalization command.
+
+Transcription commands are expected to write their data to disk inside the
+SIP. For commands which perform OCR, metadata can be placed inside the
+``metadata/OCRfiles"`` directory inside the SIP; other kinds of transcription
+should produce files within``metadata``.
+
+Information on writing a new Transcription command can be found in the Administrator
+manual.
+
+Validation
+""""""""""
+
+Archivematica runs commands to validate files on transfer using
+`JHOVE <http://jhove.sourceforge.net/>`_. As of version 1.2, this validation tool
+is run through rules in the Format Policy Registry.
+
+Verification
+""""""""""""
 
 
 .. _pres-policies:
@@ -290,8 +382,13 @@ XML, and will be included in the AIP's METS document within the file's
 Preservation planning policies
 ------------------------------
 
-''We should also include a write up about establishing local policies and
-monitoring the preservation environment, as well as an explanation that the
-groups are relatively arbitrary and can be adjusted to suit local policies.''
+At Artefactual, we have a long-term vision that the Format Policy Registry will
+be a collaborative tool for the digital preservation community.
+
+It is important though for institutions to establish local policies and practices
+that include monitoring the digitial preservation environment to help inform
+format normalization rules over time as standards and tools evolve.
+
+
 
 
