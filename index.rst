@@ -154,7 +154,7 @@ and maintenance of Archivematica and related systems.
 Installation and setup
 ----------------------
 
-* Installation
+* :ref:`Installation <installation>`
 * Storage Service
 * Dashboard Administration tab
 * Format Policy Registry (FPR)
