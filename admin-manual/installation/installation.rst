@@ -281,7 +281,7 @@ configuration is Archivematica 1.2.0 with AtoM deployed from the stable/2.0.x
 branch. Archivematica has also been successfully tested with the qa/2.1.x branch.
 
 Installation instructions for Atom 2 are available on the accesstomemory.org
-website https://www.accesstomemory.org/en/docs/2.0/ . When following those
+website https://www.accesstomemory.org/en/docs/2.1/ . When following those
 instructions, it is best to download Atom from the git repository (rather than
 use one of the supplied tarballs). When checking out Atom, use the head of
 either the stable/2.0.x or qa/2.1.x branch.
