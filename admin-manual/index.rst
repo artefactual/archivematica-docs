@@ -8,4 +8,5 @@ set of links to each chapter's main sections.
 .. toctree::
 
    installation/installation
+   installation/dashboard-config
 
