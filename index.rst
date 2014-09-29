@@ -166,9 +166,9 @@ Installation and setup
 Maintenance
 -----------
 
-* Elasticsearch
-* Data back-up
-* FAQ
+* :ref:`Elasticsearch <elasticsearch>`
+* :ref:`Data back-up <data-backup>`
+* :ref:`FAQ <admin-faq>`
 
 
 .. _home-security:
@@ -176,6 +176,7 @@ Maintenance
 Security
 --------
 
+* Elasticsearch
 * MySQL
 * AtoM
 * Gearman

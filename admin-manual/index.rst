@@ -9,4 +9,7 @@ set of links to each chapter's main sections.
 
    installation/installation
    installation/dashboard-config
+   maintenance/maintenance
+   maintenance/security
+
 
