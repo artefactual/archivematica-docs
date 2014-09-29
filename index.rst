@@ -158,7 +158,7 @@ Installation and setup
 * Storage Service
 * :ref:`Dashboard Administration tab <dashboard-config>`
 * Format Policy Registry (FPR)
-* Customization and automation
+* :ref:`Customization and automation <customization>`
 
 
 .. _maintenance:
