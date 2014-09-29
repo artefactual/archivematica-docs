@@ -176,7 +176,7 @@ Maintenance
 Security
 --------
 
-* Elasticsearch
-* MySQL
-* AtoM
-* Gearman
+* :ref:`Elasticsearch <elasticsearch-security>`
+* :ref:`MySQL <mysql-security>`
+* :ref:`AtoM <atom-security>`
+* :ref:`Gearman <gearman-security>`
