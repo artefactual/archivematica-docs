@@ -10,6 +10,7 @@ links to each chapter's main sections.
 .. toctree::
 
    overview/intro
+   overview/dashboard
    overview/technical
    overview/microservices
    getting-started/configuration
