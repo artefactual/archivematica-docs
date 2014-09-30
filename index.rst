@@ -81,7 +81,7 @@ Storage
 -------
 
 * :ref:`General description <archival-storage>`
-* :ref:`Store the AIP <store-aip>`
+* :ref:`Store the AIP <storing-aip>`
 * :ref:`Search the AIP store <search-aip>`
 * :ref:`Delete an AIP <delete-aip>`
 * :ref:`AIP structure <aip-structure>`
