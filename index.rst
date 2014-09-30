@@ -37,7 +37,7 @@ Getting started
 ---------------
 
 * Configuration
-* TRAC auditing
+* :ref:`TRAC review tool <trac>`
 
 
 .. _home-transfer:
