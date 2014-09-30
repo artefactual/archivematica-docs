@@ -155,7 +155,7 @@ Installation and setup
 ----------------------
 
 * :ref:`Installation <installation>`
-* Storage Service
+* :ref:`Storage Service <storageservice:administrators>`
 * :ref:`Dashboard Administration tab <dashboard-config>`
 * Format Policy Registry (FPR)
 * :ref:`Customization and automation <customization>`
