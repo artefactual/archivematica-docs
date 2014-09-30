@@ -411,8 +411,8 @@ the DIP and stored in the AIP.
 
 
 
-.. _store-AIP:
-ar
+.. _store-aip:
+
 Store AIP
 ---------
 

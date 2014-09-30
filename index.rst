@@ -36,7 +36,7 @@ Overview
 Getting started
 ---------------
 
-* Configuration
+* :ref:`Configuration <configuration>`
 * :ref:`TRAC review tool <trac>`
 
 

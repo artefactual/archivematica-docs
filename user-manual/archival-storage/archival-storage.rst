@@ -10,11 +10,11 @@ Should you run into an error during archival storage, please see Error handling.
 
 *On this page*
 
-* :ref:`Storing an AIP <store-aip>`
+* :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
 
-.. _store-aip:
+.. _storing-aip:
 
 Storing an AIP
 --------------
@@ -24,7 +24,10 @@ drop-down menu compresses and zips the AIP and moves it into Archival storage.
 
 2. In the demo version of Archivematica the AIP storage directory is
 ``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it can be a
-remote network mounted directory.
+remote network mounted directory. If multiple AIP storage locations have been
+created in the Storage Service, each will appear in the Store AIP location
+dropdown, including LOCKSS locations.
+
 
 3. The AIP directories are broken down into UUID quad directories for
 efficient storage and retrieval.
