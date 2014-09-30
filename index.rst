@@ -105,9 +105,9 @@ Preservation planning
 ---------------------
 
 * :ref:`General description <preservation-planning>`
-* Preservation planning tab
-* FPR Format Policy Registry
-* Preservation policies
+* :ref:`Preservation planning tab <pres-tab>`
+* :ref:`FPR Format Policy Registry <fpr>`
+* :ref:`Preservation policies <pres-policies>`
 
 
 .. _home-administer:
@@ -116,8 +116,8 @@ Administer
 ----------
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* Update Format Policy Registry (FPR)
-* Storage service users
+* :ref:`Update Format Policy Registry (FPR) <fpr-update>`
+* :ref:`Storage service users <storageservice:users>`
 
 
 .. _troubleshooting:
@@ -126,7 +126,7 @@ Troubleshooting
 ---------------
 
 * :ref:`Error handing <error-handling>`
-* Error reporting
+* :ref:`Error reporting <error-reporting>`
 * FAQ
 
 

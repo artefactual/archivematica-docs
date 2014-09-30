@@ -29,5 +29,6 @@ links to each chapter's main sections.
    preservation/preservation-planning
    administer/dashboard-admin
    troubleshooting/error-handling
+   troubleshooting/error-reporting
 
 
