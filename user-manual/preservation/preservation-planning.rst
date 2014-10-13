@@ -193,7 +193,8 @@ filled out:
 
 * Command - The specific command to call when this rule is used.
 
-Instructions on writing commands can be found in the administrator manual.
+Instructions on writing commands can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 Identification
 """"""""""""""
@@ -232,8 +233,8 @@ manual.
 Identification commands contain the actual code that a tool will run when
 identifying a file. This command will be run on every file in a transfer.
 
-Instructions on writing an identification command can be found in the administrator
-manual.
+Instructions on writing an identification command can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 Format policy registry tools
 """"""""""""""""""""""""""""
@@ -319,6 +320,13 @@ XML, and will be included in the AIP's METS document within the file's
 
 Event Detail
 """"""""""""
+A command to provide information about the software running a command. This
+will be written to the METS file as the "event detail" property. For example,
+the normalization commands which use ffmpeg use an event detail command to
+extract ffmpeg's version number.
+
+For more information, see the :ref:`FPR Administrators manual <fpr:index>`.
+
 
 Extraction
 """"""""""
@@ -340,11 +348,19 @@ commands, these arguments will be interpolated directly into "bashScript" and
 "command" scripts, and passed as positional arguments to "pythonScript" and
 "asIs" scripts.
 
-Information on writing a new Extraction command can be found in the Administrator
-manual.
+Information on writing a new Extraction command can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 Normalization
 """""""""""""
+
+Normalization rules determine how Archivematica will handle the creation of
+access and preservation copies during the Ingest of packages.  Normalization
+commands take those rules and express them as actions that Archivematica will
+perform with one of its integrated tools.
+
+Information on writing a new Normalization command can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 Transcription
 """""""""""""
@@ -365,19 +381,21 @@ SIP. For commands which perform OCR, metadata can be placed inside the
 ``metadata/OCRfiles"`` directory inside the SIP; other kinds of transcription
 should produce files within``metadata``.
 
-Information on writing a new Transcription command can be found in the Administrator
-manual.
+Information on writing a new Transcription command can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 Validation
 """"""""""
 
 Archivematica runs commands to validate files on transfer using
-`JHOVE <http://jhove.sourceforge.net/>`_. As of version 1.2, this validation tool
-is run through rules in the Format Policy Registry.
+`JHOVE <http://jhove.sourceforge.net/>`_. As of version 1.2, rules for valiadation
+are defined in the Format Policy Registry.
 
 Verification
 """"""""""""
-
+verification is run currently only after normalization commands - so far we only have 2 verification commands - one checks if a file exists and the other checks if the file exists and is greater than 0 bytes in size
+(01:23:58 PM) justinS: so verification is very basic - it makes sure that the output of transcoding resulted in an actual file
+(01:24:15 PM) justinS: it is run on the output of normalization not on the original file
 
 .. _pres-policies:
 
@@ -397,7 +415,7 @@ standard for auditing Trusted Digital Repositories
 
 .. seealso::
 
-   TRAC auditing tool
+   :ref:`TRAC auditing tool <trac>`
 
 
 :ref:`Back to the top <preservation-planning>`
