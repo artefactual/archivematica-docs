@@ -120,6 +120,8 @@ something that Artefactual is not intending to develop, but anyone is free to
 extend the software as they see fit, or to hire us or other developers to do
 so.
 
+.. _fpr-update:
+
 Updating format policies
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -389,6 +391,14 @@ It is important though for institutions to establish local policies and practice
 that include monitoring the digitial preservation environment to help inform
 format normalization rules over time as standards and tools evolve.
 
+We recommend documenting your policies and pratices, in accordance with the TRAC
+standard for auditing Trusted Digital Repositories
+(`ISO 16363:2012 <http://www.iso.org/iso/catalogue_detail.htm?csnumber=56510>`_).
+
+.. seealso::
+
+   TRAC auditing tool
 
 
+:ref:`Back to the top <preservation-planning>`
 
