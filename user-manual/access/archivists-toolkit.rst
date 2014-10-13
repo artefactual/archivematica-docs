@@ -7,15 +7,12 @@ Upload DIP metadata to Archivists' Toolkit
 This workflow involves:
 
 * creating resource components in Archivists' Toolkit (AT);
-
 * preserving digital objects and generating access copies (as DIPs) in
   Archivematica;
-
 * sending DIP metadata, including digital object UUIDs, to AT;
-
 * copying access copies to a web-server;
-
-* and generating EAD files from AT and uploading them to a web-based access system.
+* and generating EAD files from AT and uploading them to a web-based access
+  system.
 
 On this page:
 

@@ -11,7 +11,8 @@ the access system. Please note the user must create the description in AtoM
 indicate part of the description's URL or a target collection in order to send
 the DIP to the appropriate place in the description.
 
-Should you run into an error during this process, please see Error handling.
+Should you run into an error during this process, please see
+:ref:`Error handling <error-handling>`.
 
 .. seealso::
 
@@ -35,7 +36,7 @@ repository environment. User and Administrator manuals for AtoM are available
 `here <https://www.accesstomemory.org/en/docs/>`_ .
 
 To configure Archivematica for uploading the DIP to AtoM, see the
-Administrator manual - AtoM DIP upload.
+:ref:`Administrator manual - AtoM DIP upload <admin-dashboard-atom>`.
 
 .. _upload-atom:
 
@@ -62,7 +63,7 @@ Enter the permalink of the description in the dialogue box: sample-fonds
 .. tip::
 
    The permalink is the "slug" from the AtoM target description.
-   See `slug <https://www.accesstomemory.org/en/docs/2.0/user-manual/glossary/glossary/#term-slug>`_
+   See `slug <https://www.accesstomemory.org/en/docs/2.1/user-manual/glossary/glossary/#term-slug>`_
    in the AtoM glossary.
 
 3. Click the blue "Upload" button.
