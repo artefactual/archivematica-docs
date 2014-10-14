@@ -20,6 +20,7 @@ links to each chapter's main sections.
    transfer/manage-backlog
    transfer/bags
    transfer/digitized
+   transfer/forensic
    transfer/dspace
    transfer/contentdm
    ingest/ingest
