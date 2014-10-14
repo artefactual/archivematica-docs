@@ -4,9 +4,9 @@
 Dashboard administration tab
 ============================
 
-This page describes dashboard user administration in Archivematica 1.2 via the
+This page describes dashboard user administration in Archivematica via the
 dashboard. For higher level, technical administrative documentation, please
-see Administrator manual 1.2.
+see :ref:`Administrator manual <home>`.
 
 The Archivematica administration pages, under the Administration tab of the
 dashboard, allows you to configure application components and manage users.
@@ -251,7 +251,8 @@ recommended.
 
 .. seealso::
 
-   AtoM configuration instructions in the Administrator manual
+   :ref:`AtoM configuration <admin-dashboard-atom>` instructions in the
+   Administrator manual
 
 .. _dashboard-CDM:
 
@@ -262,8 +263,8 @@ Users can process digital content and then upload the DIP to CONTENTdm as the
 access system. Artefactual recommends that a technical administrator configure
 the options for this feature.
 
-To configure Archivematica to upload a DIP to CONTENTdm, see Administrator
-manual - CONTENTdm upload.
+To configure Archivematica to upload a DIP to CONTENTdm, see
+:ref:`Administrator manual - CONTENTdm upload <admin-dashboard-CDM>`.
 
 .. important::
 
@@ -302,7 +303,8 @@ dashboard have been set.
 
 .. seealso::
 
-   :ref:`Archivists Toolkit <archivists-toolkit>`
+   * :ref:`Archivists Toolkit <archivists-toolkit>`
+   * :ref:`Administrators manual- Archivists Toolkit DIP upload <admin-dashboard-AT>`
 
 
 .. _dashboard-premis:
@@ -320,6 +322,10 @@ The PREMIS agent name and code can be set via the administration interface.
 The PREMIS agent information is used in the METS files created by Archivematica
 to identify the agency performing the digital preservation events.
 
+.. seealso::
+
+   * :ref:`Administrators manual - PREMIS <admin-dashboard-premis>`
+
 .. _dashboard-rest:
 
 REST API
@@ -330,7 +336,7 @@ Artefactual recommends that a technical administrator configure the options
 for this feature.
 
 To configure Archivematica to use the REST API for automation, see
-Administrator manual - REST API.
+:ref:`Administrator manual - REST API <admin-dashboard-rest>`.
 
 .. _dashboard-users:
 

@@ -11,16 +11,17 @@ confidential contents.
 
 In the Transfer tab of the Dashboard, the user moves digital objects from
 source directories accessible via the Storage Service into Archivematica. See
-Administrator manual - Storage Service for instructions on how to set up
-shared transfer source directories. Once uploaded to the dashboard, transfers
-run through several micro-services: UUID assignment; checksum verification (if
-checksums are present); package extraction (i.e. unzipping of zipped or
-otherwise packaged files); virus checking; indexing; format identification and
-validation; and metadata extraction.
+:ref:`Administrator manual - Storage Service <storageService:administrators>`
+for instructions on how to set up shared transfer source directories. Once
+uploaded to the dashboard, transfers run through several micro-services: UUID
+assignment; checksum verification (if checksums are present); package
+extraction (i.e. unzipping of zipped or otherwise packaged files); virus
+checking; indexing; format identification and validation; and metadata
+extraction.
 
 At the end of transfer, the user creates a SIP from one or more standard
 transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
-backlog for processing later.
+:ref:`backlog <manage-backlog>` for processing later.
 
 *On this page:*
 
@@ -41,19 +42,19 @@ backlog for processing later.
    metadata to be attached to subdirectories and files within a SIP), see
    :ref:`Metadata import <import-metadata>`.
 
-   If your transfer is a DSpace export, please see DSpace export.
+   If your transfer is a DSpace export, please see :ref:`DSpace export <dspace>`.
 
-   If your transfer is a bag or a zipped bag, please see Bags
+   If your transfer is a bag or a zipped bag, please see :ref:`Bags <bags>`.
 
    If your transfer is composed of objects that are the result of digitization,
-   please see Digitization output.
+   please see :ref:`Digitization output <digitized>`.
 
    If your transfer is composed of digital forensic disk images, please see
-   Forensic image processing
+   :ref:`Forensic image processing <forensic>`.
 
    If you would like to skip some of the default choices for dashboard decision
-   points or make preconfigured choices for your desired workflow, see User
-   manual - User administration - Processing configuration
+   points or make preconfigured choices for your desired workflow, see
+   :ref:`Processing configuration <dashboard-processing>`.
 
 
 .. _create-transfer:
@@ -65,8 +66,8 @@ Open the web browser and the Archivematica dashboard to sign in with your
 username and password. Please note that if this is your first time logging in
 to a newly installed instance of Archivematica 1.2, you will see a log-in that
 allows you to register your repository and get updates to the format policy
-registry. See the User manual - Format Policy Registry (FPR) and the
-Administrator manual - Format Policy Registry (FPR).
+registry. See the User manual - :ref:`Format Policy Registry (FPR) <fpr>` and the
+:ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
 
 1. In transfer tab, select your transfer type in the dropdown menu. Types
 include standard, unzipped bag, zipped bag, DSpace, maildir and Disk image.
@@ -204,10 +205,11 @@ processing the transfer. You may also "Reject transfer" and quit processing.
   extracts technical metadata embedded in the files). If you have
   preconfigured it to do so, Archivematica will stop during this micro-service
   and allow the user to choose a file identification command from a dropdown
-  menu. To learn about preconfigured options, please see Administrator manual
-  - Processing configuration. Archivematica's file identification default is
-  set to identification by file extension. You can also choose to skip
-  identification and run it later, during Ingest, instead.
+  menu. To learn about preconfigured options, please see
+  :ref:`Administrator manual - Processing configuration <process-config>`.
+  Archivematica's file identification default is set to identification by file
+  extension. You can also choose to skip identification and run it later,
+  during Ingest, instead.
 
 * Complete transfer (Includes indexing transfer)
 
@@ -238,7 +240,7 @@ for processing at a later date
 * Option 2: Select "Send transfer to backlog". In this case, your transfer
   will be stored in a backlog in the same location as your AIP store so that
   you can retrieve one or more transfers from the Ingest tab for processing at
-  a later date. See Managing a backlog.
+  a later date. See :ref:`Managing a backlog <manage-backlog>`.
 
 * Option 3: Select "Reject the transfer".
 
@@ -259,11 +261,11 @@ user choice in the dashboard.
 Artefactual included the ability to skip identification at transfer and/or to
 change identification tool before normalization mainly to allow for the
 possibility that content in the transfer backlog may contain formats for which
-there are not currently entries in the Format Policy Registry (FPR). While the
-transfers are in the backlog, you can add rules that allow for the format(s)
-not identified or identifiable at time of transfer to the FPR so that, when
-they are processed through ingest, all formats will be identified and
-normalization attempted based on those identifications.
+there are not currently entries in the :ref:`Format Policy Registry (FPR) <fpr>`.
+While the transfers are in the backlog, you can add rules that allow for the
+format(s) not identified or identifiable at time of transfer to the FPR so
+that, when they are processed through ingest, all formats will be identified
+and normalization attempted based on those identifications.
 
 There may be other use case scenarios in the future that this configuration
 flexibility facilitates. In general, we aim to include as much flexibility as

@@ -38,7 +38,7 @@ Please see:
 * :ref:`ContentDM <dashboard-CDM>`
 * :ref:`Archivist's Toolkit <dashboard-AT>`
 * :ref:`DSpace <dspace>`
-* :ref:`LOCKSS <storageservice:lockss>` (Administrator documentation)
+* :ref:`LOCKSS <storageService:lockss>` (Administrator documentation)
 * Duracloud (coming soon)
 * Arkivum (coming soon)
 
@@ -49,7 +49,7 @@ Administrative users can add/edit users and update passwords. An administrative
 user does not need to be a systems administrator and can perform this function
 within the Archivematica dashboard Administration page.
 
-Please see :ref:`Users <dashboard-usedashboard-premisrs>`.
+Please see :ref:`Users <dashboard-premis>`.
 
 Add/edit PREMIS agents
 ----------------------

@@ -117,7 +117,7 @@ Administer
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
 * :ref:`Update Format Policy Registry (FPR) <fpr-update>`
-* :ref:`Storage service users <storageservice:users>`
+* :ref:`Storage service users <storageService:users>`
 
 
 .. _troubleshooting:
@@ -155,7 +155,7 @@ Installation and setup
 ----------------------
 
 * :ref:`Installation <installation>`
-* :ref:`Storage Service <storageservice:administrators>`
+* :ref:`Storage Service <storageService:administrators>`
 * :ref:`Dashboard Administration tab <dashboard-config>`
 * :ref:`Format Policy Registry (FPR) <fpr:index>`
 * :ref:`Customization and automation <customization>`

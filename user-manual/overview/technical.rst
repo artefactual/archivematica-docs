@@ -29,7 +29,7 @@ Dissemination Information Package (DIP). The physical structure of an
 information package will include files, checksums, logs, submission
 documentation, XML metadata, etc.
 
-For more information, see Microservices **link**.
+For more information, see :ref:`Micro-services <micro-services>`.
 
 .. _technical-dashboard:
 
@@ -45,7 +45,7 @@ metadata, coordinate AIP and DIP storage and provide preservation planning
 information. Notifications include error reports, monitoring of MCP tasks and
 manual approvals in the workflow.
 
-For more information, see Web-based dashboard **link**.
+For more information, see :ref:`Web-based dashboard <web-dashboard>`.
 
 
 .. _technical-fpr:
@@ -53,8 +53,7 @@ For more information, see Web-based dashboard **link**.
 Format policies
 ---------------
 
-Archivematica maintains the original format of all ingested files to
- support
+Archivematica maintains the original format of all ingested files to  support
 migration and emulation strategies. However, the primary preservation strategy
 is to normalize files to preservation and access formats upon ingest.
 Archivematica groups file formats into format policies (e.g. text, audio,
@@ -71,7 +70,7 @@ together format identification information with significant characteristic
 analysis, risk assessments and normalization tool information to arrive at
 default preservation format and access format policies for Archivematica.
 
-For more information, see Format Policy Registry (FPR) **link**
+For more information, see :ref:`Format Policy Registry (FPR) <fpr>`.
 
 
 .. _technical-dip:
@@ -106,3 +105,4 @@ architecture allows it to be deployed in multi-node, distributed processing
 configurations to support large-scale, resource- intensive production
 environments.
 
+:ref:`Back to the top <technical-arch>`

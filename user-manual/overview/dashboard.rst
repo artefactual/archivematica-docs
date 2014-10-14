@@ -79,7 +79,8 @@ decision points can be pre-configured if desired in the
 Report (paper and pencil) icons appear on Transfer and Ingest packages and link
 the user to the :ref:`descriptive <add-metadata>` and
 :ref:`rights <add-rights>` metadata entry page. (The same icon is used for forensic
-disk image transfer metadata entry as well as :ref:`normalization report <normalize>`).
+disk image transfer metadata entry as well as the
+:ref:`normalization report <normalize>`).
 
 The red remove icon removes the package from the Dashboard. The package can be
 removed whether the processing is completed or not. It is best practice to remove

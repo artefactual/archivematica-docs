@@ -307,8 +307,6 @@ between Archivematica and Atom. The basic steps are:
 
 * start the atom worker on the AtoM server
 
-These steps are detailed on the DIP Upload page.
-
 :ref:`Back to the top <installation>`
 
 

@@ -40,8 +40,8 @@ has preconfigured Archivematica to do so, processing will stop at a decision
 point that allows the user to choose a file identification method to base
 normalization upon or to choose to use pre-existing data gathered during
 identification at the transfer stage. Archivematica default is to use pre-
-existing data. For more about this option, see User Administration -
-Processing configuration
+existing data. For more about this option, see
+:ref:`Administer -Processing configuration <dashboard-processing>`.
 
 4. Wait until the SIP reaches "Normalize" and a bell icon appears.
 
@@ -53,11 +53,13 @@ Processing configuration
 
    Normalization micro-service
 
-5. To add descriptive metadata, see Add metadata, below.
+5. To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, below.
 
-6. To add PREMIS rights information, see Add PREMIS rights, below.
+6. To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`,
+   below.
 
-7. For selecting a normalization option, see Normalization, below.
+7. For selecting a normalization option, see :ref:`Normalization <normalize>`,
+   below.
 
 
 .. _arrange-sip:
@@ -153,17 +155,16 @@ Add metadata
 In version 1.2, metadata can be added either prior to the normalization step
 or after. Archivematica will prompt you with a reminder to add metadata if
 desired during the Process metadata directory micro-service. See
-`ICA-AtoM (Qubit) Dublin Core  <https://www.archivematica.org/wiki/UM_ingest_1.2>`_
+:ref:`AtoM Dublin Core <atom:dc-template>`_
 for information about the Dublin Core elements available.
-
 
 .. seealso::
 
     If you are importing lower-level metadata (i.e. metadata to be attached to
     subdirectories and files within a SIP) see also:
 
-    * Metadata import
-    * Transfer
+    * :ref:`Metadata import <import-metadata>`
+    * :ref:`Transfer <transfer>`
 
 
 1. Click on the template icon.
@@ -390,7 +391,7 @@ to learn more about the problem.
 
 .. seealso::
 
-   Manual normalization
+   :ref:`Manual normalization <manual-norm>`
 
 
 .. _transcribe-contents:
@@ -408,7 +409,6 @@ the DIP and stored in the AIP.
    This feature is designed to transcribe the text from single images (e.g.
    individual pages of a book scanned as image files). It does not support
    transcription of multi-page objects or word processing files, PDF files, etc.
-
 
 
 .. _store-aip:
@@ -438,16 +438,17 @@ METS. You can download the AIP at this stage, as well, by clicking on it.
 4. From the Action dropdown menu, select "Store AIP" to move the AIP into
 archival storage. You can store an AIP in any number of preconfigured
 directories. For instructions to configure AIP storage locations, see
-Administrator manual - Storage Service.
+:ref:`Administrator manual - Storage Service <storageService:administrators>`.
 
 5. From the Action dropdown menu, select the AIP storage location from the
 pre-configured set of options.
 
 .. seealso::
 
-   For information on viewing and managing stored AIPs go to Archival storage.
+   For information on viewing and managing stored AIPs go to
+   :ref:`Archival storage <archival-storage>`.
 
-   For information on uploading the DIP, go to Access.
+   For information on uploading the DIP, go to :ref:`Access <access>`.
 
 
 :ref:`Back to the top <ingest>`

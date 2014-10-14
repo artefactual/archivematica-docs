@@ -49,8 +49,8 @@ below:
 * mets.xml = the METS file for the item
 
 3. To process, configure the source directory containing the transfer in the
-Administration tab of the browser. See Administrator manual - Transfer source
-directories
+Administration tab of the browser. See
+:ref:`Administrator manual - Transfer source directories <admin-dashboard-transfer-source>`.
 
 4. In the transfer tab, use the dropdown menu to select the DSpace transfer
 type.

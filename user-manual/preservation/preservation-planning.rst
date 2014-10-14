@@ -40,8 +40,8 @@ The Preservation Planning tab displays the local
 
 Administrative users can add or edit format policies using forms on this page.
 Detailed instructions are in the User manual - Format Policy Registry (FPR)
-with more comprehensive, administrative instructions in the Administrator
-manual under Format Policy Registry (FPR)
+with more comprehensive, administrative instructions in Format Policy Registry
+(FPR) :ref:`Administrators manual <fpr:index>`
 
 A format policy consists of the business rules and tool commands for format
 normalization. The FPR lists all of Archivematica's default format policy rules.
@@ -77,8 +77,10 @@ FPR server via a REST API.
 .. note::
 
    As of version 1.2, there is no public facing data at fpr.archivematica.org.
-   Please see the public roadmap to review development planning for the public
-   interface and future functionality of the FPR.
+   Please see the
+   `public roadmap <https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_
+   to review development planning for the public interface and future
+   functionality of the FPR.
 
 First-time configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -225,8 +227,8 @@ file extensions or MIME types. Because PUIDs are universal, Archivematica will
 always look these up for you without requiring any rules to be created,
 regardless of what tool is being used.
 
-Instructions on writing an identification rule can be found in the administrator
-manual.
+Instructions on writing an identification rule can be found in the
+:ref:`FPR Administrators manual <fpr:index>`.
 
 **Commands**
 
@@ -393,9 +395,11 @@ are defined in the Format Policy Registry.
 
 Verification
 """"""""""""
-verification is run currently only after normalization commands - so far we only have 2 verification commands - one checks if a file exists and the other checks if the file exists and is greater than 0 bytes in size
-(01:23:58 PM) justinS: so verification is very basic - it makes sure that the output of transcoding resulted in an actual file
-(01:24:15 PM) justinS: it is run on the output of normalization not on the original file
+Verification is run after normalization commands. Archivematica will run two
+commands: one checks if a file exists, and the other checks if the file exists
+and is greater than 0 bytes in size.
+
+Verification is run on the output of normalization, not on the original file.
 
 .. _pres-policies:
 

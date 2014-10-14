@@ -202,7 +202,8 @@ DSpace transfer type.
 **Storage Service options**
 
 This is where you'll find the complete URL for the Storage Service. See
-Storage Service for more information about this feature.
+:ref:`Storage Service <storageService:administrators>` for more information
+about this feature.
 
 .. _admin-dashboard-failures:
 
@@ -282,7 +283,9 @@ click "Save".
 
 Note that in AtoM, the sword plugin (Admin --> Plugins --> qtSwordPlugin) must
 be enabled in order for AtoM to receive uploaded DIPs. Enabling Job scheduling
-(Admin --> Settings --> Job scheduling) is also recommended.
+(Admin --> Settings --> Job scheduling) is also recommended. From the AtoM
+documentation, see :ref:`Settings <atom:settings>` and
+:ref:`Plugins <atom:manage-plugins>`.
 
 AtoM server configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -428,7 +431,9 @@ you should see the API key.
 IP whitelist
 ^^^^^^^^^^^^
 
-In addition to creating API keys, you'll need to add the IP of any computer making REST requests to the REST API whitelist. The IP whitelist can be edited in the administration interface at /administration/api/.
+In addition to creating API keys, you'll need to add the IP of any computer
+making REST requests to the REST API whitelist. The IP whitelist can be
+edited in the administration interface at ``/administration/api/``.
 
 Approving a transfer
 ^^^^^^^^^^^^^^^^^^^^

@@ -6,14 +6,15 @@ ContentDM
 
 Users can process digital content and then upload the DIP to CONTENTdm as the
 access system. To configure Archivematica to upload a DIP to CONTENTdm, see
-Administrator manual - CONTENTdm upload.
+:ref:`Administrator manual - CONTENTdm upload <admin-dashboard-CDM>`.
 
 .. note::
 
    The user must create the target collection in CONTENTdm **before** uploading
    the DIP.
 
-Should you run into an error during this process, please see Error handling.
+Should you run into an error during this process, please see
+:ref:`Error handling <error-handling>`.
 
 *On this page*
 
@@ -185,9 +186,7 @@ client workflows.
 
 .. seealso::
 
-   Administrator Manual: Administrator manual - CONTENTdm DIP upload
-
-
+   :ref:`Administrator manual - CONTENTdm DIP upload <admin-dashboard-CDM>`
 
 
 :ref:`Back to the top <contentdm>`

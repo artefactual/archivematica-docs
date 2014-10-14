@@ -12,8 +12,8 @@ Resources for dashboard configuration
 
 The Preservation Planning tab allows editing or addition of commands for
 identification, tools, characterization, event detail, extraction, normalization,
-transcription, validation and verification. Please see the Format Policy Registry
-(FPR) documentation for instruction.
+transcription, validation and verification. Please see the
+:ref:`Format Policy Registry (FPR) documentation <fpr:index>` for instruction.
 
 Basic workflow configuration is feasible by administrators or end-users in the
 :ref:`Administration tab <dashboard-admin>` of the dashboard.

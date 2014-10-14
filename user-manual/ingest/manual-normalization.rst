@@ -58,11 +58,11 @@ versions.
 
 2. Upload the transfer to the dashboard from your source directories in the
 Transfer Tab.For instructions detailing how to set up source directories, see
-the Administrator's manual here: Administrator manual - Transfer source
-location
+the Administrator's manual here:
+:ref:`Administrator manual - Transfer source location <admin-dashboard-transfer-source>`.
 
 3. Continue processing as you would a regular SIP. For instructions, see the
-online User manual through to the Ingest tab.
+:ref:`Transfer <transfer>` and :ref:`Ingest <ingest>`.
 
 4. In the Ingest tab, at the normalization micro-service, choose whether to
 normalize for access, preservation, or both. If you choose to review
@@ -83,13 +83,13 @@ preservation, logs, thumbnails and the METS xml. That data folder will contain
 your originals and normalized files, and the METS will include PREMIS events
 with "manual normalization" noted in the eventDetail of the appropriate
 normalization events. A discussion of the overall AIP structure can be found
-here: AIP structure. Additionally, you might note that the manualNormalization
-folder and subfolders used during the manual normalization workflow have been
-deleted once normalization was approved rather than being packaged into the
-AIP.
+here: :ref:`AIP structure <aip-structure>`. Additionally, you might note that
+the manualNormalization folder and subfolders used during the manual
+normalization workflow have been deleted once normalization was approved rather
+than being packaged into the AIP.
 
 7. If you are satisfied with everything here, continue to store your AIP
-and/or upload your DIP as per the User manual instructions.
+and/or upload your DIP as per usual.
 
 Option 2: Manual normalization during Ingest
 --------------------------------------------
@@ -135,10 +135,10 @@ contains your objects for preservation, logs, thumbnails and the METS xml.
 That data folder will contain your originals and normalized files, and the
 METS will include PREMIS events with "manual normalization" noted in the
 eventDetail of the appropriate normalization events. A discussion of the
-overall AIP structure can be found here: AIP structure Additionally, you might
-note that the manualNormalization folder and subfolders used during the manual
-normalization workflow have been deleted once normalization was approved
-rather than being packaged into the AIP.
+overall AIP structure can be found here: :ref:`AIP structure <aip-structure>`.
+Additionally, you might note that the manualNormalization folder and subfolders
+used during the manual normalization workflow have been deleted once
+normalization was approved rather than being packaged into the AIP.
 
 10. If you are satisfied with everything here, continue to store your AIP
 and/or upload your DIP as per the User manual instructions.

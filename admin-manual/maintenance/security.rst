@@ -73,8 +73,8 @@ AtoM
 
 In addition to changing the MySQL credentials, if you've also installed AtoM
 you'll want to set the password for it as well. Note that after changing your
-AtoM credentials you should update the credentials on the AtoM DIP upload
-administration page as well.
+AtoM credentials you should update the credentials on the
+:ref:`AtoM DIP upload administration page <admin-dashboard-atom>` as well.
 
 .. _gearman-security:
 
@@ -83,8 +83,7 @@ Gearman
 
 Archivematica relies on the German server for queuing work that needs to be
 done. Gearman currently doesn't support secured connections so Gearman should
-be run locally or on a secure, isolated network. See issue
-`1345 <https://projects.artefactual.com/issues/1345>`_.
+be run locally or on a secure, isolated network. See :issue:`1345`.
 
 :ref:`Back to the top <security>`
 

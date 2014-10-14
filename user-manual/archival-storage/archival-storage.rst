@@ -6,7 +6,8 @@ Archival storage
 
 During archival storage, the AIP is moved into its storage repository.
 
-Should you run into an error during archival storage, please see Error handling.
+Should you run into an error during archival storage, please see
+:ref:`Error handling <error-handling>`.
 
 *On this page*
 
@@ -64,8 +65,8 @@ Archivematica, DIPs, and other AIPs as appropriate.
 
 .. seealso::
 
-   More information on Archivematica's AIP structure and the METS/PREMIS file
-   is available on the Archivematica wiki: see AIP structure and METS.
+   * :ref:`AIP structure <aip-structure>`
+   * `Archivematica METS file (wiki) <https://www.archivematica.org/wiki/METS>`_
 
 
 .. _search-aip:
@@ -140,7 +141,7 @@ administrator should contact you.
 
 .. seealso::
 
-   Upload DIP
+   :ref:`Access <access>`
 
 
 :ref:`Back to the top <archival-storage>`
