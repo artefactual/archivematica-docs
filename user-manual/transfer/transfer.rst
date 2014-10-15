@@ -29,6 +29,8 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
 * :ref:`Create a transfer with submission documentation <create-submission>`
 
+* :ref:`Create a transfer with existing checksums <transfer-checksums>`
+
 * :ref:`Process the transfer <process-transfer>`
 
 * :ref:`Format identification <format-identification>`
@@ -137,6 +139,29 @@ directory. Add files to that folder like donor agreements, transfer forms,
 copyright agreements and any correspondence or other documentation relating to
 the transfer. Any SIPs subsequently made from this transfer will automatically
 contain copies of this documentation.
+
+.. _transfer-checksums:
+
+Create a transfer with existing checksums
+-----------------------------------------
+
+You can include checksums with your transfer if you have them. Archivematica
+will verify .md5, .sha1 and .sha256 checksums in the Verify checksums micro-
+service during the Transfer workflow in the dashboard.
+
+1. Place the digital objects into an ``/objects`` folder below the first level of
+the transfer.
+
+2. Place the metadata files in a /metadata folder at the same level as the
+``/objects`` folder. Your checksums should be contained in text files named the
+following way: checksum.md5, checksum.sha1 or checksum.sha256.
+
+3. Begin your standard transfer in the Archivematica dashboard interface.
+
+4. If your checksum check fails, this micro-service will show an error. The
+micro-service line will turn red. The log for this is sent to the ``/logs`` folder
+of the transfer. The file in the log folder should look like "checksum.md5
+-Check-Tue Oct 14 13:56:51 PDT 2014"
 
 .. _process-transfer:
 

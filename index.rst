@@ -48,6 +48,7 @@ Transfer
 * :ref:`General description <transfer>`
 * :ref:`Create a transfer <create-transfer>`
 * :ref:`Create a transfer with submission documentation <create-submission>`
+* :ref:`Create a transfer with existing checksums <transfer-checksums>`
 * :ref:`Process the transfer <process-transfer>`
 * :ref:`Extract packages <extract-packages>`
 * :ref:`Import metadata <import-metadata>`
@@ -135,7 +136,7 @@ Troubleshooting
 Metadata
 --------
 
-* Import metadata
+* :ref:`Import metadata <import-metadata>`
 * PREMIS
 * Dublin Core
 
