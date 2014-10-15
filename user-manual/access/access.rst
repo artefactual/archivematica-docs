@@ -83,7 +83,7 @@ login credentials.
 
 6. You will see an archival description with the metadata you added during
 ingest, displayed in the context of the level of archival description to which
-the DIP was uploaded (figure 4). To view an individual digital object, scroll
+the DIP was uploaded. To view an individual digital object, scroll
 through the thumbnails on the left of the screen and click on an image.
 
 7. Below, the digital is object displayed in AtoM.
