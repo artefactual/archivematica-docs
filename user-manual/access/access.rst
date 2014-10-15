@@ -63,8 +63,7 @@ Enter the permalink of the description in the dialogue box: sample-fonds
 .. tip::
 
    The permalink is the "slug" from the AtoM target description.
-   See `slug <https://www.accesstomemory.org/en/docs/2.1/user-manual/glossary/glossary/#term-slug>`_
-   in the AtoM glossary.
+   See :ref:`slug <atom:slug>` in the AtoM glossary.
 
 3. Click the blue "Upload" button.
 
