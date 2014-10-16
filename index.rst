@@ -4,8 +4,6 @@
 Archivematica documentation
 ===========================
 
-Contents:
-
 .. toctree::
    :hidden:
 
