@@ -86,8 +86,3 @@ done. Gearman currently doesn't support secured connections so Gearman should
 be run locally or on a secure, isolated network. See :issue:`1345`.
 
 :ref:`Back to the top <security>`
-
-
-
-
-
