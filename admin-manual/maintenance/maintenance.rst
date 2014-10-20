@@ -302,6 +302,7 @@ How to restart the Archivematica services
    sudo /etc/init.d/elasticsearch stop
 
 **Starting**
+
 .. code:: bash
 
    sudo /etc/init.d/elasticsearch start
@@ -321,7 +322,7 @@ error is?"
 Seeing an full error stack trace for the Dashboard requires knowing how to
 edit a configuration file from the command line.
 
-1.  SSH to the Archivematica server
+1. SSH to the Archivematica server
 
 2. With your preferred text editor, open the dashboard settings file (vim shown
    in example; Note that you must use sudo to edit this file):
@@ -351,4 +352,3 @@ edit a configuration file from the command line.
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
 
 :ref:`Back to the top <maintenance>`
-
