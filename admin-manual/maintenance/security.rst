@@ -57,10 +57,10 @@ Once you've done this you can change Archivematica's MySQL database access
 credentials by editing these two files:
 
 * ``/etc/archivematica/archivematicaCommon/dbsettings`` (change the ``user`` and
-   ``password`` settings)
+  ``password`` settings)
 
-*  ``/usr/share/archivematica/dashboard/settings/common.py`` (change the ``USER``
-   and ``PASSWORD`` settings in the ``DATABASES`` section)
+* ``/usr/share/archivematica/dashboard/settings/common.py`` (change the ``USER``
+  and ``PASSWORD`` settings in the ``DATABASES`` section)
 
 Archivematica does not presently support secured MySQL communication so MySQL
 should be run locally or on a secure, isolated network. See issue
