@@ -31,7 +31,6 @@ import json
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.ifconfig',
     'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
 ]
