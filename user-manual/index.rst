@@ -34,5 +34,6 @@ links to each chapter's main sections.
    administer/dashboard-admin
    troubleshooting/error-handling
    troubleshooting/error-reporting
+   metadata/dublincore
 
 

@@ -136,7 +136,7 @@ Metadata
 
 * :ref:`Import metadata <import-metadata>`
 * PREMIS
-* Dublin Core
+* :ref:`Dublin Core <dublin_core>`
 
 
 .. _admin-manual-home:
