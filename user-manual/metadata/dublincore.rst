@@ -49,6 +49,9 @@ Archivematica handles this metadata by parsing it to the METS file. For example:
          </mdWrap>
       </dmdSec>
 
-
+When a DIP is sent to :ref:`AtoM <upload-atom>`, Dublin Core metadata is parsed
+into the appropriate fields in the AtoM descriptive template. Descriptive metadata
+is also indexed in the Archival Storage tab in Archivematica; search results will
+show the AIP, not individual files.
 
 :ref:`Back to the top <dublin_core>`.
