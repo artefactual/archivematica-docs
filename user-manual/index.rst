@@ -35,5 +35,6 @@ links to each chapter's main sections.
    troubleshooting/error-handling
    troubleshooting/error-reporting
    metadata/dublincore
+   metadata/premis
 
 

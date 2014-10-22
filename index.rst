@@ -135,7 +135,7 @@ Metadata
 --------
 
 * :ref:`Import metadata <import-metadata>`
-* PREMIS
+* :ref:`PREMIS <premis>`
 * :ref:`Dublin Core <dublin_core>`
 
 
@@ -154,7 +154,7 @@ Installation and setup
 ----------------------
 
 * :ref:`Installation <installation>`
-* :ref:`Storage Service <storageService:administrators>`
+* :ref:`Storage Service <storageservice:administrators>`
 * :ref:`Dashboard Administration tab <dashboard-config>`
 * :ref:`Format Policy Registry (FPR) <fpr:index>`
 * :ref:`Customization and automation <customization>`
