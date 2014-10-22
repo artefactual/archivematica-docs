@@ -23,6 +23,32 @@ description of the Dublin Core metatadata template :ref:`here <atom:dc-template>
 Metadata handling
 -----------------
 
-When descriptive metadata
+When descriptive metadata is added through either of the methods described above,
+Archivematica handles this metadata by parsing it to the METS file. For example:
+
+
+.. code:: bash
+
+      <dmdSec ID="dmdSec_1">
+       <mdWrap MDTYPE="DC">
+          <xmlData>
+             <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
+               <title>Stanley Park in December</title>
+               <issued>1996-01-17</issued>
+               <subject>Vancouver (B.C.)--Parks</subject>
+               <subject>Landscapes</subject>
+               <description>Image shows Brockton Oval after light snowfall</description>
+               <publisher>Riley Studios, Vancouver B.C.</publisher>
+               <contributor>Don Langfield, photographer</contributor>
+               <date>1992-12-04</date>
+               <isPartOf>Riley Studios collection</isPartOf>
+               <rights>Copyright held by Riley Studios</rights>
+               <format>image/jp2</format>
+              </dublincore>
+          </xmlData>
+         </mdWrap>
+      </dmdSec>
+
+
 
 :ref:`Back to the top <dublin_core>`.
