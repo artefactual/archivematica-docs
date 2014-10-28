@@ -39,6 +39,8 @@ same error, below.
 
 * :ref:`Removing a transfer or SIP from the dashboard <removing>`
 
+* :ref:`Browser compatability <error-browser>`
+
 .. _error-dashboard:
 
 Dashboard error reporting
@@ -268,5 +270,14 @@ in the dashboard:
 
 It is recommended that you clear your dashboard of transfers and SIPs periodically
 to improve browser performance.
+
+.. _error-browser:
+
+Browser compatability
+---------------------
+
+Archivematica has been tested most extensively with Firefox and Chrome. There are
+known issues with Internet Explorer 11 which result in an inability to start
+transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_)
 
 :ref:`Back to the top <error-handling>`

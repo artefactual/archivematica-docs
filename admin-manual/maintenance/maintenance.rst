@@ -351,4 +351,12 @@ edit a configuration file from the command line.
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
 
+Browser compatability
+^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica has been tested most extensively with Firefox and Chrome. There are
+known issues with Internet Explorer 11 which result in an inability to start
+transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_)
+
+
 :ref:`Back to the top <maintenance>`
