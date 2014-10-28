@@ -1,4 +1,4 @@
-.. premis::
+.. _premis:
 
 ================================
 PREMIS metadata in Archivematica
