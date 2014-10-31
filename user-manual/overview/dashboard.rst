@@ -10,7 +10,7 @@ a web browser.
 
 .. image:: images/Dashboard.*
    :align: center
-   :width: 80%
+   :width: 90%
    :alt: Archivematica's web-based dashboard
 
 The Dashboard is akin to a "processing space" for digital archives, allowing
