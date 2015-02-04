@@ -158,6 +158,7 @@ Installation and setup
 * :ref:`Dashboard Administration tab <dashboard-config>`
 * :ref:`Format Policy Registry (FPR) <fpr:index>`
 * :ref:`Customization and automation <customization>`
+* :ref:`Duracloud setup <duracloud-setup>`
 
 
 .. _maintenance:
