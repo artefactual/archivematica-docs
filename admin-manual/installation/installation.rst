@@ -6,7 +6,7 @@ Installation
 
 *On this page*
 
-* :ref:`Technical requiremnets <tech-requirements>`
+* :ref:`Technical requirements <tech-requirements>`
 
 * :ref:`Recommended Minimum Requirements for small-scale testing <requirements-small>`
 
@@ -14,7 +14,7 @@ Installation
 
 * :ref:`Firewall requirements <firewall>`
 
-* :ref:`Install 1.3.1 (upgrade from previous version) <install-1_3>`
+* :ref:`Upgrade to 1.3.1 from previous version <upgrade>`
 
 * :ref:`Install new from packages <install-new>`
 
@@ -26,8 +26,8 @@ Technical Requirements
 ----------------------
 
 Operating System requirement: Ubuntu 12.04 or 14.04. Archivematica is designed to work
-with Ubuntu 12.04,  Archivematica |version| has been tested with Ubuntu 14.04 and 12.04.
-We recommend 12.04 for production installations.
+with Ubuntu 12.04,  Archivematica |version| has been tested with Ubuntu 14.04.1 and 12.04.5.
+We recommend the 64 bit Server editions of Ubuntu.
 
 Archivematica is capable of running on almost any hardware supported by Ubuntu; 
 however, processing large collections will require better hardware.
@@ -71,19 +71,10 @@ able to reach each other on the following ports:
 
 * http, mysqld, gearman, nfs, ssh
 
-.. _install-1_3:
+.. _upgrade:
 
-Install release |release|
+Upgrade to |release|
 -------------------
-
-.. note::
-
-   Archivematica |release| requires Ubuntu 12.04.05 or 14.04.1. Artefactual has 
-   tested against 12.04.5 and 14.04.1 with success and cannot verify functionality 
-   with later releases of Ubuntu. Ubuntu Server 64bit is recommended.
-
-Updating Archivematica 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have installed Archivematica 1.3.0 or earlier from packages, it is possible
 to update your installation without re-installing. The steps are:
