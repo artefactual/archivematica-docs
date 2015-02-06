@@ -14,7 +14,7 @@ Installation
 
 * :ref:`Firewall requirements <firewall>`
 
-* :ref:`Install 1.2 (upgrade 1.1) <install-1_2>`
+* :ref:`Install 1.3.1 (upgrade from previous version) <install-1_3>`
 
 * :ref:`Install new from packages <install-new>`
 
@@ -25,13 +25,12 @@ Installation
 Technical Requirements
 ----------------------
 
-Operating System requirement: Ubuntu 12.04. Archivematica is designed to work
-with Ubuntu 12.04, it will not work with other versions of Ubuntu, or other
-Linux distributions. Archivematica 1.2.1 has been tested with Ubuntu 14.04,
-but official packages are not yet available.
+Operating System requirement: Ubuntu 12.04 or 14.04. Archivematica is designed to work
+with Ubuntu 12.04,  Archivematica |version| has been tested with Ubuntu 14.04 and 12.04.
+We recommend 12.04 for production installations.
 
-Archivematica is capable of running on almost any hardware supported by Ubuntu
-12.04; however, processing large collections will require better hardware.
+Archivematica is capable of running on almost any hardware supported by Ubuntu; 
+however, processing large collections will require better hardware.
 
 Archivematica can be installed on a single machine, or across many machines to
 spread the processing workload.
@@ -60,7 +59,7 @@ each machines have these minimum requirements:
 
 * Processor: dual core i5 2nd generation CPU or better
 *  Memory: 8GB+
-*  Disk space: 10GB plus the disk space required for the collection.
+*  Disk space: 20GB plus the disk space required for the collection.
 
 .. _firewall:
 
@@ -72,34 +71,22 @@ able to reach each other on the following ports:
 
 * http, mysqld, gearman, nfs, ssh
 
-.. _install-1_2:
+.. _install-1_3:
 
-Install release 1.2
+Install release |release|
 -------------------
 
 .. note::
 
-   Archivematica 1.2 requires Ubuntu 12.04.04. Artefactual has tested against
-   12.04.4 with success and cannot verify functionality with later releases of
-   Ubuntu. Ubuntu Server (either 64bit or 32bit) is recommended.
+   Archivematica |release| requires Ubuntu 12.04.05 or 14.04.1. Artefactual has 
+   tested against 12.04.5 and 14.04.1 with success and cannot verify functionality 
+   with later releases of Ubuntu. Ubuntu Server 64bit is recommended.
 
-   Artefactual is actively testing Archivematica 1.2 with Ubuntu 14.04. We are
-   planning on releasing 12.04 and 14.04 packages for the 1.x releases,
-   starting probably with 1.2.0. Archivematica code works fine on Ubuntu
-   14.04, however there are issues with some of the dependencies. In most
-   cases using 14.04 makes things easier,  as there are some software packages
-   that Artefactual has had to package and make available in our externals
-   ppa, and with trusty that list is smaller. Once Artefactual has done more
-   testing, we will add trusty packages to our release ppa. As this is
-   unfunded work, we do not have a deadline but it is in the project's best
-   interest. We want to use trusty in our hosted Archivematica service and to
-   provide that option to our customers who are on maintenance agreements.
-
-Updating from Archivematica 1.1
+Updating Archivematica 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you have installed Archivematica 1.1.0 from packages, it is possible to
-update your installation without re-installing. The steps are:
+If you have installed Archivematica 1.3.0 or earlier from packages, it is possible
+to update your installation without re-installing. The steps are:
 
 **Update Archivematica Storage Service**
 
@@ -116,7 +103,7 @@ your local installation, but a simple example would be to use mysqldump:
 
 .. code:: bash
 
-   mysqldump -u root -p MCP > ~/am110_backup.sql
+   mysqldump -u root -p MCP > ~/am130_backup.sql
 
 If you do not have a password set for the root user in mysql, you can take out
 the '-p' portion of that command. If there is a problem during the upgrade
@@ -138,10 +125,10 @@ better to update the dashboard before updating the mcp components.
 
 **Update ElasticSearch (optional)**
 
-Archivematica 1.2.0 has been tested most extensively against version 0.90.13
-of ElasticSearch. This is the same version that was distributed with
-Archivematica 1.1.0, so no changes to ElasticSearch should be required in most
-cases. Do not attempt to use ElasticSearch 1.0 or greater.
+Archivematica 1.3.1 has been tested most extensively against version 0.90.13
+of ElasticSearch. This is the same version that has been distributed with
+Archivematica since version 1.1.0, so no changes to ElasticSearch should be 
+required in most cases. Do not attempt to use ElasticSearch 1.0 or greater.
 
 **Restart Services**
 
@@ -158,11 +145,11 @@ cases. Do not attempt to use ElasticSearch 1.0 or greater.
 
 .. _install-new:
 
-Installing Archivematica 1.2 packages (new install)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Installing Archivematica 1.3.1 packages (new install)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica packages are hosted on Launchpad, in an Ubuntu PPA (Personal
-Package Archive). In order to install software onto your Ubuntu 12.04.5 system
+Package Archive). In order to install software onto your Ubuntu system
 from a PPA:
 
 1. Add the archivematica/release PPA to your list of trusted repositories (if
@@ -175,15 +162,6 @@ from a PPA:
    sudo apt-get install python-software-properties
    sudo add-apt-repository ppa:archivematica/release
    sudo add-apt-repository ppa:archivematica/externals
-
-
-.. note::
-
-   There are test packages available for Ubuntu 14.04. If you would like to
-   evaluate or test Archivematica on Ubuntu 14.04, use the archivematica/qa
-   ppa instead of archivematica/release in the instructions above. Please note
-   that this is not yet verified to actually work.
-
 
 2. Add the ElasticSearch apt repository next (from
    http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/setup-repositories.html):
@@ -198,8 +176,7 @@ Then add this line to the bottom of ``/etc/apt/sources.list``
 
    deb http://packages.elasticsearch.org/elasticsearch/0.90/debian stable main
 
-3. Update your system to the most recent 12.04 release (12.04.5 at the time of
-   this writing).
+3. Update your system to the most recent Ubuntu release.
 
 This step will also fetch a list of the software from the PPAs you just added
 to your system.
@@ -231,8 +208,9 @@ to your system.
 
 .. code:: bash
 
-   sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.2.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default
+   sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.3.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default.conf
    sudo rm /etc/nginx/sites-enabled/default
+   sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
    sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
    sudo service uwsgi restart
@@ -269,7 +247,7 @@ have been installing on)
 
 9. Register your installation for full Format Policy Registry interoperability.
 
-Register Archivematica 1.2
+Register Archivematica |release|
 
 .. _install-atom:
 
@@ -277,14 +255,12 @@ Using AtoM 2.x with Archivematica
 ---------------------------------
 
 Archivematica has been successfully tested with AtoM 2.x. The best known
-configuration is Archivematica 1.2.0 with AtoM deployed from the stable/2.0.x
-branch. Archivematica has also been successfully tested with the qa/2.1.x branch.
+configuration is Archivematica |version|  with AtoM deployed from the stable/2.1.x
+branch. Archivematica has also been successfully tested with the qa/2.2.x branch, 
+although that is not yet considered a stable AtoM branch.
 
 Installation instructions for Atom 2 are available on the accesstomemory.org
-website https://www.accesstomemory.org/en/docs/2.1/ . When following those
-instructions, it is best to download Atom from the git repository (rather than
-use one of the supplied tarballs). When checking out Atom, use the head of
-either the stable/2.0.x or qa/2.1.x branch.
+website https://www.accesstomemory.org/en/docs/2.1/ . 
 
 Once you have a working AtoM installation, you can configure dip upload
 between Archivematica and Atom. The basic steps are:
