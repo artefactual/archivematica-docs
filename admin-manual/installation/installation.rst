@@ -200,6 +200,8 @@ to your system.
 .. code:: bash
 
    sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.3.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default.conf
+   sudo rm -f /etc/apache2/sites-enabled/000-default.conf
+   sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
    sudo rm /etc/nginx/sites-enabled/default
    sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
