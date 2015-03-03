@@ -132,7 +132,7 @@ SIP(s). Two scenarios are outlined below:
    DuraCloud.
 
 2. Create at least 2 levels of directories within that directory before any
-    digital objects.
+   digital objects.
 
 Example 1:
 
@@ -179,12 +179,12 @@ could become their own transfers (Photographs, Videos, etc).
    reorganize into a directory structure deep enough to work with Archivematica,
    you can instead use the Sync Tool's prefix option:
 
-i. Ensure your sync tool is stopped in the Status tab. Then click on the
+a. Ensure your sync tool is stopped in the Status tab. Then click on the
    configuration tab.
 
-ii. Under "Other options," create a prefix for your sync folder to create a
-    directory structure at least two levels deep. The prefix must end in a
-    slash (/).
+b. Under "Other options," create a prefix for your sync folder to create a
+   directory structure at least two levels deep. The prefix must end in a
+   slash (/).
 
 2. Note that the prefix will replace the directory name of the sync folder in
    DuraCloud.
@@ -223,9 +223,9 @@ the transfer.
 Step 5: Configure transfer sources
 ----------------------------------
 
-Assuming that you have configured transfer-source spaces in DuraCloud,
-return to the Archivematica Storage Serice at this point to configure transfer
-sources locations.
+Assuming that you have configured transfer-source spaces in DuraCloud, return
+to the :ref:`Archivematica Storage Service <storageservice:index>` at this
+point to configure transfer sources locations.
 
 Navigate to the transfer-source Storage Service space and create locations for
 each top level directory inside the directory or directories you have synced.
