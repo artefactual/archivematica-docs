@@ -104,7 +104,7 @@ Store DIP
 
 Archivematica also provides the option to store the DIP to a location that you
 have configured via the :ref:`Storage Service <storageservice:index>`. This can
-be configured to be a local server, NFS-mounted or another storage protocal such
+be configured to be a local server, NFS-mounted or another storage protocol such
 as DuraCloud.
 
 To store a DIP:
