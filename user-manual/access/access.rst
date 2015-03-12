@@ -21,6 +21,13 @@ Should you run into an error during this process, please see
    :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
 
 
+*On this page:*
+
+* :ref:`Default access system <access-default>`
+* :ref:`Upload DIP to AtoM <upload-atom>`
+* :ref:`Store DIP <store-dip>`
+* :ref:`Access tab <access-tab>`
+
 .. _access-default:
 
 Default access system
@@ -90,15 +97,39 @@ through the thumbnails on the left of the screen and click on an image.
 
 Clicking on the image will open the uploaded object.
 
+.. _store-dip:
+
+Store DIP
+---------
+
+Archivematica also provides the option to store the DIP to a location that you
+have configured via the :ref:`Storage Service <storageservice:index>`. This can
+be configured to be a local server, NFS-mounted or another storage protocal such
+as DuraCloud.
+
+To store a DIP:
+
+1. Ensure that at least one DIP storage location has been configured in the
+:ref:`Storage Service <storageservice:index>`.
+
+2. When prompted to Upload DIP, choose Store DIP.
+
+3. Choose the DIP storage location from the configured options.
+
+The DIP will include the access copies made through either Archivematica's
+normalization rules or a manual normalization process, and the METS file.
 
 .. _access-tab:
 
 Access tab
 ----------
 
-By clicking the Access tab in the Dashboard, you can see a table showing all
-uploaded DIPs including the URL, the associated AIP, the upload date and status,
+By clicking the Access tab in the Dashboard, you can see a table showing all DIPs
+upload to AtoM including the URL, the associated AIP, the upload date and status,
 and the option to delete from the Access tab. Note that this link will delete the
 record of the DIP in the Access tab, not the actual DIP.
+
+At this time, the Access tab only provides links to DIPs uploaded to AtoM, not
+to other access systems or DIPs that have been stored.
 
 :ref:`Back to the top <access>`
