@@ -6,12 +6,14 @@ Archivematica-Duracloud Quick Start Guide
 Introduction
 ------------
 
-Archivematica hosting is planned to be offerred by Artefactual Systems and
-DuraSpace in early 2015. This guide can be used by those who wish to install
-Archivematica and/or DuraCloud locally and run the systems themselves. This
-guide assumes that you have already installed Archivematica and DuraCloud, or
-have arranged for a hosted instance through Artefactual Systems/DuraSpace.
-Hosted clients will have steps 1 and 2 completed for them.
+`ArchivesDirect <http://www.archivesdirect.org/>`_ is an Archivematica in
+DuraCloud hosting plan offered by Artefactual Systems and DuraSpace. This
+guide can be used by those who wish to install Archivematica and/or DuraCloud
+locally and run the systems themselves and may also be helpful for those using
+the hosted service. This guide assumes that you have already installed
+Archivematica and DuraCloud, or have arranged for a hosted instance through
+Artefactual Systems/DuraSpace. Hosted clients will have steps 1 and 2
+completed for them.
 
 For installation instructions please see:
 
