@@ -317,7 +317,7 @@ rsync:
 
    $ sudo apt-get install rssh
    $ sudo useradd -d /home/archivematica -m -s /usr/bin/rssh archivematica
-   $ sudo passswd -l archivematica
+   $ sudo passwd -l archivematica
    $ sudo vim /etc/rssh.conf // Make sure that allowrsync is uncommented!
 
 Add the SSH key that we generated before:
