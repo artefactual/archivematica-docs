@@ -87,7 +87,11 @@ transfer is composed from multiple sources.
 
    Select transfer for transfers from source directories
 
+As shown above, Archivematica will display the number of objects in each available
+transfer directory.
+
 3. If applicable, enter an accession number for the transfer.
+
 
 4. Once all of your digital object sources have been uploaded, hit the Start
 Transfer button for the transfer processing to begin.
@@ -96,9 +100,9 @@ Transfer button for the transfer processing to begin.
    :align: center
    :figwidth: 60%
    :width: 100%
-   :alt: Select transfer in dashboard
+   :alt: Start transfer in dashboard
 
-   Select transfer
+   Start transfer
 
 
 .. _create-submission:
@@ -299,8 +303,7 @@ as possible to AIP and DIP processing rather than hardcoding and automating so
 much that the archivist is left less influence on ingest.
 
 Format identification is logged as a PREMIS event in the METS.xml using the
-results of running FITS tools (DROID, in particular), not the results of the
-tool selected to base normalization upon. This will change in coming releases.
+results of running whichever tool chosen during processing.
 
 .. _extract-packages:
 
