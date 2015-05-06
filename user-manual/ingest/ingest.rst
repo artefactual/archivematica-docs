@@ -82,7 +82,8 @@ feature, though entire folders/directories can be moved.
 
    Transfer backlog search results in populating Originals pane
 
-To hide directories from the Originals pane, click on the directory and click
+Archivematica will display the directories in Transfer backlog including the
+number of objects in each directory. To hide directories from the Originals pane, click on the directory and click
 Hide.
 
 2. Drag and drop the transfer directory(ies) and/or object(s) you wish to
@@ -96,6 +97,13 @@ create an arrangement structure for your SIP (see step 4, below).
    :alt: Dragging and dropping directories from Originals pane to Arrange pane
 
    Drag and drop from Originals pane to Arrange pane
+
+.. note::
+
+   There will be a discrepancy between the object count in the originals pane
+   vs the arrange pane after a directory is dragged over. This is because the
+   originals pane is counting metadata and submission documentation, including
+   the METS file created during Transfer.
 
 3. Click on the directory in the Arrange pane to select, and then click Create
 SIP. Archivematica will confirm that you wish to create a SIP, and then
