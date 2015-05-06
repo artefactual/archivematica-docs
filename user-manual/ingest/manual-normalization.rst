@@ -221,6 +221,11 @@ directory, is three columns: original file, file normalized for access, file
 normalized for preservation. All the files with duplicate names
 need to be listed, even if they are not manually normalized.
 
+.. important::
+
+   The normalization.csv is case-sensitive, meaning that the contents must
+   match the file names exactly as to their capitalization.
+
 You need to specify the path in the csv file, including any subdirectories,
 such as in the example below.
 
@@ -256,7 +261,11 @@ Subdirectories used only to distinguish file names:
    file1.tga,manualNormalization/access/subdir1/file1.jpg,manualNormalization/preservation/subdir1/file1.tif
    file1.ppm,manualNormalization/access/subdir2/file1.jpg,manualNormalization/preservation/subdir2/file1.tif
 
-
+If the file names contain spaces or forbidden characters, Archivematica will
+sanitize the file names by replacing the spaces/characters with underscores. The
+normalization.csv file will still work by using either the original, unsanitized
+file names, or by pre-sanitizing the normalized filenames and the corresponding
+columns in normalization.csv (see: `Issue 6870 <https://projects.artefactual.com/issues/6870>`_).
 
 
 :ref:`Back to the top <manual-norm>`
