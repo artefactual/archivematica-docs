@@ -26,6 +26,7 @@ Should you run into an error during this process, please see
 * :ref:`Default access system <access-default>`
 * :ref:`Upload DIP to AtoM <upload-atom>`
 * :ref:`Store DIP <store-dip>`
+* :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
 
 .. _access-default:
@@ -105,7 +106,7 @@ Store DIP
 Archivematica also provides the option to store the DIP to a location that you
 have configured via the :ref:`Storage Service <storageservice:index>`. This can
 be configured to be a local server, NFS-mounted or another storage protocol such
-as DuraCloud.
+as DuraCloud.https://groups.google.com/forum/#!topic/archivematica/ZQ-ttlGxEkA
 
 To store a DIP:
 
@@ -118,6 +119,36 @@ To store a DIP:
 
 The DIP will include the access copies made through either Archivematica's
 normalization rules or a manual normalization process, and the METS file.
+
+.. _review-dip:
+
+Review/Download DIP
+-------------------
+
+Regardless of the access path chosen (an integrated access system, or storing
+the DIP) the dashboard will present the operator with the option of reviewing
+and downloading the DIP objects. When the Upload DIP micro-service is complete,
+a "review" link will appear:
+
+.. image:: images/ReviewDIP.*
+   :align: center
+   :width: 80%
+   :alt: Click on the "review" link in the Upload DIP micro-service
+
+This will present the operator with a page displaying the uploadedDIPs directory
+which can then be navigated to locate any DIP in this directory. As shown below,
+when expanded, the DIP objects, thumbnails and METS files can be viewed or
+downloaded within the browser window.
+
+.. image:: images/DownloadDIP.*
+   :align: center
+   :width: 80%
+   :alt: Download DIP screen showing a DIP directory expanded.
+
+Your ability to view the objects in the browser will be dependent on your browser
+having a plugin for the particular filetypes. However, all files can be
+downloaded locally in this manner.
+
 
 .. _access-tab:
 
