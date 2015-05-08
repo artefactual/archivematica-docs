@@ -23,6 +23,8 @@ dashboard, allows you to configure application components and manage users.
 
 * :ref:`AIP storage locations <dashboard-AIP-stor>`
 
+* :ref:`Processing storage usage <dashboard-usage>`
+
 * :ref:`AtoM DIP upload <dashboard-atom>`
 
 * :ref:`ContentDM DIP upload <dashboard-CDM>`
@@ -191,6 +193,22 @@ directories using the Storage Service.
 
 You can view your transfer source directories in the Administrative tab of the
 dashboard under "AIP storage locations".
+
+.. _dashboard-usage:
+
+Processing storage usage
+------------------------
+
+This section of the Administration page displays various processing locations
+with their current usage of available space.
+
+.. image:: images/ProcessingUsage.*
+   :align: center
+   :width: 80%
+   :alt: Processing storage usage area of Administration page
+
+Administrators can use the "clear" buttons to delete the contents of these
+processing locations to make more room on their server.
 
 .. _dashboard-atom:
 
