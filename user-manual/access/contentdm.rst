@@ -10,7 +10,7 @@ Rather, Archivematica will prepare the DIP and allow you to download via the
 Dashboard or by SFTP to the server Archivematica is installed on.
 
 In Archivematica version 1.4, direct upload to CONTENTdm is no longer
-available. The process descrived below assumes the user will use
+available. The process described below assumes the user will use
 `Project Client <http://www.contentdm.org/help6/projectclient/index.asp>`_
 to upload DIPs to CONTENTdm.
 
@@ -21,7 +21,9 @@ Should you run into an error during this process, please see
 
 * :ref:`Preparing a transfer for CONTENTdm <transfer-contentdm>`
 
-* :ref:`
+* :ref:`Controlling the file order <contentdm-order>`
+
+* :ref:`Create DIP for CONTENTdm <dip-contentdm>`
 
 .. _transfer-contentdm:
 
@@ -36,7 +38,6 @@ Preparing a transfer for CONTENTdm
 
 Note that it is possible to follow these instructions for either a single simple
 or compound object, or multiple simple or compound objects.
-
 
 **Preparing the transfer**
 
@@ -73,7 +74,6 @@ compound object. Place the digital objects inside those directories.
 
 3. Inside metadata, place a file called ``metadata.csv``. See preparation
 instructions below.
-
 
 Example:
 
@@ -121,82 +121,23 @@ duplicate fields in the metadata.csv which are namespaced to Dublin Core (see:
 CONTENTdm purposes, Archivematica will ignore the Dublin Core metadata and use
 the non-Dublin Core metadata fields instead.
 
-
 .. _contentdm-order:
 
-Controlling the file order and labels
--------------------------------------
+Controlling the file order
+--------------------------
 
-In order to allow users to display digital files in a specified order in
-CONTENTdm compound items such as newspapers issues, Archivematica provides the
-following options:
+Currently, the only method of controlling the order of files and directories as
+listed in the tab delimited file is to ensure they are in alphabetical order.
+The sort method is based on `ASCII <http://en.wikipedia.org/wiki/ASCII>`_
+characters (e.g. numbers, capital letters, underscores, small case letters).
 
-* Each file will be placed in its own div
-
-* If desired, div labels can be applied to files via a csv file entitled
-  file_labels.csv included in the /metadata directory of the transfer
-
-   * The csv file would consist of two columns: filename and label
-   * The div labels would map to the title field in the access system
-   * The div labels would be applied only to original versions of the files, not
-     normalized versions
-
-.. image:: images/StructMap-09.*
-   :align: center
-   :width: 80%
-   :alt: structMap showing ContentDM transfer
-
-
-**User-supplied structMaps**
-
-If desired, the user can submit a structMap with a single-item transfer or
-SIP. This will be useful if the user desires an upload/display order based on
-logical divisions (for example, book chapters):
-
-* Archivematica will automatically detect the structMap file and use it as the
-  structMap in the AIP METS file. This will be the only structMap in the AIP
-  METS file
-
-* The name of the file must be mets_structmap.xml
-
-* There must be no more than one mets_structmap.xml file per transfer or SIP
-
-* The structMap TYPE must be specified as either logical or physical
-
-* The structMap file must be placed in the /metadata folder of the transfer or SIP
-
-* The structMap must cover all the files in the /objects directory
-
-* All filenames in the /objects directory must be unique
-
-* If the structMap contains <fptr> elements Archivematica will generate a
-  fileSec in order to create a valid METS file
-
-* Once the fileSec is added, Archivematica will validate the METS file using e.g.
-  xmllint
-
-* Archivematica will apply file UUIDs to the filenames in the <fptr> elements of
-  the structMap when the AIP METS file is generated
-
-* Div labels, if included, will be mapped to title field in CONTENTdm and AtoM
-
-Sample user-supplied structMap:
-
-.. image:: images/Mets_structmap1.*
-   :align: center
-   :width: 80%
-   :alt: User supplied structMap image one
-
-.. image:: images/Mets_structmap2.*
-   :align: center
-   :width: 80%
-   :alt: User supplied structMap image two
-
+Other methods of controlling file order could be implemented in future releases.
+Please see `Issue 8448 <https://projects.artefactual.com/issues/8448>`_.
 
 .. _dip-contentdm:
 
-Upload DIP to CONTENTdm
------------------------
+Create DIP for CONTENTdm
+------------------------
 
 .. important::
 
@@ -211,10 +152,36 @@ DIP to CONTENTdm” from the drop-down menu.
 :ref:`manually normalized <manual-norm>` access objects and a tab delimited
 file for use in Project Client.
 
-To review the DIP in the dashboard and
+To review the DIP in the dashboard and download individual DIP objects and/or
+the tab file, click "review":
 
-The DIP will be stored in
-``/share/sharedDirectoryStructure/watchedDirectories/uploadedDIPs/CONTENTdm/.``
+.. image:: images/ReviewDIP.*
+   :align: center
+   :width: 80%
+   :alt: Click "review" in Upload DIP micro-service to access DIP objects and tab file
+
+The next screen will display the uploadedDIPs directory, which operators can
+navigate to locate the required DIP objects. The CONTENTdm tab file will be
+in the same directory as the DIP objects.
+
+.. image:: images/cdmDIP.*
+   :align: center
+   :width: 80%
+   :alt: Download DIP screen showing CONTENTdm tab file in objects directory
+
+
+By default, the DIP will be stored in
+``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. It can
+be retrieved from this location via SFTP client, or individual objects downloaded
+through the web browser.
+
+.. tip::
+
+   Once your work in CONTENTdm Project Client is complete, and your digital
+   objects are uploaded, you may wish to "clean up" your uploadedDIPs directory
+   to save space on your service and keep the Download DIP page manageable. This
+   can be done through the
+   :ref:`Administration tab, Processing storage usage <dashboard-usage>`.
 
 
 :ref:`Back to the top <contentdm>`

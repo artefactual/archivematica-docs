@@ -96,7 +96,7 @@ Access
 * :ref:`Upload DIP to AtoM <upload-atom>`
 * :ref:`Store DIP <store-dip>`
 * :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
-* :ref:`Upload DIP to ContentDM <dip-contentdm>`
+* :ref:`Upload DIP to ContentDM <contentdm>`
 
 
 .. _home-preservation:
