@@ -86,13 +86,24 @@ to begin processing.
 
 7. The METS file for the AIP will show fileGrps for the different file types:
 original, submissionDocumentation (the mets.xml files), preservation, license
-and text/ocr. It also contains Xpointers to descriptive and rights metadata in
-the original mets.xml files exported from DSpace.
+and text/ocr.
 
 .. image:: images/DSpace3g.*
    :align: center
    :width: 80%
    :alt: An excerpt from a METS file for an Archivematica AIP that has been
          generated from a DSpace export
+
+Each object in the AIP has 2 dmdSecs. The first contains Xpointers to descriptive and rights metadata in
+the original mets.xml files exported from DSpace. The second reflects the
+parent-child relationship between a DSpace object and its community/collection,
+using the handles as identifiers:
+
+.. image:: images/DSpace_dmd.*
+   :align: center
+   :width: 80%
+   :alt: Excerpt from Archivematica METS file showing dmdSec for DSpace export.
+
+
 
 :ref:`Back to the top <dspace>`
