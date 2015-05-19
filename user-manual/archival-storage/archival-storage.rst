@@ -14,6 +14,7 @@ Should you run into an error during archival storage, please see
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
+* :ref: `Deleting an AIP via the REST API <delete-aip-api>`
 
 .. _storing-aip:
 
@@ -130,6 +131,13 @@ administrator. If the administrator approves the request, your AIP will be
 deleted from your Archival Storage and your index will be updated. If the
 administrator denies the request, the AIP will remain in storage and your
 administrator should contact you.
+
+.. _delete-aip-api:
+
+Deleting an AIP via the REST API
+--------------------------------
+
+It is possible to delete an aip programmatically.
 
 .. important::
 
