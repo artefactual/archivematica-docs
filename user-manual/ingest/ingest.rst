@@ -101,7 +101,7 @@ create an arrangement structure for your SIP (see step 4, below).
 SIP. Archivematica will confirm that you wish to create a SIP, and then
 continue through the ingest process.
 
-4. To create an arrangement for your SIP, create one or more directories in
+4. To arrange your SIP, create one or more directories in
 the Arrange pane by clicking on the Add Directory button. You can add
 separate directories or directories nested inside of each other. Note: You
 cannot rename a directory once you have created it; you must delete it and
