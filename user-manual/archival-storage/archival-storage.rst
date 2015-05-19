@@ -14,7 +14,7 @@ Should you run into an error during archival storage, please see
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
-* :ref: `Deleting an AIP via the REST API <delete-aip-api>`
+* :ref:`Deleting an AIP via the REST API <delete-aip-api>`
 
 .. _storing-aip:
 
