@@ -14,7 +14,7 @@ Installation
 
 * :ref:`Firewall requirements <firewall>`
 
-* :ref:`Install 1.2 (upgrade 1.1) <install-1_2>`
+* :ref:`Install 1.4 (upgrade 1.3) <install-1_4>`
 
 * :ref:`Install new from packages <install-new>`
 
