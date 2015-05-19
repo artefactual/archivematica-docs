@@ -24,8 +24,10 @@ Archivematica provides an integrated suite of free and open-source tools that
 allows users to process digital objects from ingest to archival storage and
 access in compliance with the `ISO-OAIS <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_
 functional model and other digital preservation standards and best practices.
-All of the Archivematica code and documentation is released under AGPL and
-Creative Commons open-source licenses.
+All of the Archivematica code is released under a
+`GNU Affero General Public License <http://www.gnu.org/licenses/agpl-3.0.en.html>`_
+and Archivematica documentation is released under a
+`Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
 
 .. _intro-barriers:
