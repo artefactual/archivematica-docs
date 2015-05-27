@@ -171,6 +171,56 @@ common properties. For instance, the FPR includes an "Image (raster)" group
 which contains format records for GIF, JPEG, and PNG. Each format can belong
 to one (and only one) format group.
 
+The following format groups come pre-populated in the FPR:
+
+* Audio
+
+* Binary (Data)
+
+* Binary (Executable)
+
+* CAD
+
+* Database
+
+* Desktop Publishing
+
+* Disk Image
+
+* Email
+
+* Font
+
+* GIS
+
+* Image (Raster)
+
+* Image (Vector)
+
+* Package
+
+* Portable Document Format
+
+* Presentation
+
+* Spreadsheet
+
+* Statistics
+
+* Text (Markup)
+
+* Text (Plain)
+
+* Text (Source Code)
+
+* Test (Structured)
+
+* Unknown
+
+* Video
+
+* Word Processing
+
 The groups as determined by Artefactual should be perceived as arbritrary and
 are simply meant to make the Format Policy Registry easier to read and navigate.
 If an institution so desired, they could change the names and population of the
