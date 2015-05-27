@@ -27,8 +27,6 @@ dashboard, allows you to configure application components and manage users.
 
 * :ref:`AtoM DIP upload <dashboard-atom>`
 
-* :ref:`ContentDM DIP upload <dashboard-CDM>`
-
 * :ref:`Archivists Toolkit DIP upload <dashboard-AT>`
 
 * :ref:`PREMIS agent <dashboard-premis>`
@@ -271,24 +269,6 @@ recommended.
 
    :ref:`AtoM configuration <admin-dashboard-atom>` instructions in the
    Administrator manual
-
-.. _dashboard-CDM:
-
-ContentDM upload
-----------------
-
-Users can process digital content and then upload the DIP to CONTENTdm as the
-access system. Artefactual recommends that a technical administrator configure
-the options for this feature.
-
-To configure Archivematica to upload a DIP to CONTENTdm, see
-:ref:`Administrator manual - CONTENTdm upload <admin-dashboard-CDM>`.
-
-.. important::
-
-   The user must create the target collection in CONTENTdm before uploading the
-   DIP.
-
 
 .. _dashboard-AT:
 

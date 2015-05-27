@@ -108,18 +108,19 @@ Or, for a compound transfer with object-level metadata
 
 ``objects/directoryName/filename.tif``
 
+If there are both Dublin Core and non-Dublin Core fields in metadata.csv,
 Archivematica will look for "custom" (non-Dublin Core) field names in the
 metadata.csv file file and create a tab delimited file based on those fields.
 This allows the operator to use the field names as they appear exactly as they
-do in the CONTENTdm collection, which eases the field matching in Project Client.
-It is also recommended that you enter the non-Dublin Core fields in the same
-order as in your CONTENTdm collection.
+do in the CONTENTdm collection, which eases the field matching in Project
+Client. It is also recommended that you enter the non-Dublin Core fields in
+the same order as in your CONTENTdm collection. However, if metadata.csv contains
+*only* Dublin Core namespaced fields, Archivematica will create the tab delimited
+file using those fieldnames, stripping out the dc namespace. For example,
+``dc.title`` will become ``title``.
 
-If you wish to include Dublin Core metadata in your METS file, you can include
-duplicate fields in the metadata.csv which are namespaced to Dublin Core (see:
-:ref:`Import metadata <import-metadata>`. To create the tab delimited file for
-CONTENTdm purposes, Archivematica will ignore the Dublin Core metadata and use
-the non-Dublin Core metadata fields instead.
+For more information regarding the creation and transfer of a metadata.csv file,
+see :ref:`Import metadata <import-metadata>`.
 
 .. _contentdm-order:
 

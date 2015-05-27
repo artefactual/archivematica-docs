@@ -21,8 +21,6 @@ dashboard, allow you to configure application components and manage users.
 
 * :ref:`AtoM DIP upload <admin-dashboard-atom>`
 
-* :ref:`ContentDM DIP upload <admin-dashboard-CDM>`
-
 * :ref:`Archivists Toolkit DIP upload <admin-dashboard-AT>`
 
 * :ref:`PREMIS agent <admin-dashboard-premis>`
@@ -343,32 +341,6 @@ Generic parameters:
    --uuid="%SIPUUID%" \
    --rsync-target="archivematica@atom-hostname:/tmp" \
    --debug
-
-.. _admin-dashboard-CDM:
-
-ContentDM DIP Upload
---------------------
-
-Archivematica can also upload DIPs to CONTENTdm instances. Multiple CONTENTdm
-destinations may be configured.
-
-For each possible CONTENTdm DIP upload destination, you'll specify a brief
-description and configuration parameters appropriate for the destination.
-Paramters include ``%ContentdmServer%`` (full path to the CONTENTdm API, including
-the leading 'http://' or 'https://', for example
-``http://example.com:81/dmwebservices/index.php``), ``%ContentdmUser%``, and
-``%ContentdmGroup%`` (Linux user and group on the CONTENTdm server, not a
-CONTENTdm username). Note that only ``%ContentdmServer%`` is required if you are
-going to produce CONTENTdm Project Client packages; ``%ContentdmUser%``, and
-``%ContentdmGroup%`` are also required if you are going to use the "direct upload"
-option for uploading your DIPs into CONTENTdm.
-
-When changing parameters for a CONTENTdm DIP upload destination simply change
-the values, preserving the existing format they're specified in. To add an
-upload destination fill in the form at the bottom of the page with the
-appropriate values. When you've completed your changes click the "Save"
-button.
-
 
 .. _admin-dashboard-AT:
 

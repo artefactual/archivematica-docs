@@ -127,7 +127,7 @@ Troubleshooting
 
 * :ref:`Error handing <error-handling>`
 * :ref:`Error reporting <error-reporting>`
-* FAQ
+* :ref:`FAQ <faq>`
 
 
 .. _metadata:
