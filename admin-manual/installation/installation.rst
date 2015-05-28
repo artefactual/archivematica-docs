@@ -180,7 +180,7 @@ from a PPA:
 .. code:: bash
 
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-   sudo echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list
+   sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list'
 
 3. Update your system to the most recent 12.04 release (12.04.5 at the time of
    this writing).
@@ -193,36 +193,40 @@ to your system.
    sudo apt-get update
    sudo apt-get upgrade
 
-4. Install all packages (each of these packages can be installed separately, if
+4. Install the storage service package
+
+.. code:: bash
+
+   sudo apt-get install archivematica-storage-service
+
+5. Configure the storage service
+
+.. code:: bash
+
+   sudo rm -f /etc/nginx/sites-enabled/default
+   sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
+   sudo service uwsgi restart
+   sudo service nginx restart
+
+6. Install the Archivematica packages (each of these packages can be installed separately, if
    necessary). Say YES or OK to any prompts you get after entering the following
    into terminal:
 
 .. code:: bash
 
-   sudo apt-get install archivematica-storage-service
    sudo apt-get install archivematica-mcp-server
    sudo apt-get install archivematica-mcp-client
    sudo apt-get install archivematica-dashboard
    sudo apt-get install elasticsearch
 
-5. Configure the dashboard and storage service
-
-.. warning::
-
-   These steps are safe to do on a desktop, or a machine dedicated to
-   Archivematica. They may not be advisable on an existing web server.
-   Consult with your web server administrator if you are unsure.
+7. Configure the dashboard
 
 .. code:: bash
 
    sudo rm -f /etc/apache2/sites-enabled/*default*
    sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.4.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default.conf
    sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
-   sudo rm -f /etc/nginx/sites-enabled/default
-   sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
-   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
-   sudo service uwsgi restart
-   sudo service nginx restart
    sudo /etc/init.d/apache2 restart
    sudo freshclam
    sudo /etc/init.d/clamav-daemon start
@@ -238,7 +242,7 @@ If you have trouble with the gearman command try this as an alternative:
 
    sudo restart gearman-job-server
 
-6. Test the storage service
+8. Test the storage service
 
 The storage service runs as a separate web application from the Archivematica
 dashboard. Go to the following link in a web browser:
@@ -247,19 +251,19 @@ http://localhost:8000 (or use the IP address of the machine you have been instal
 
 log in as user: test password: test
 
-7. Create a new administrative user in the Storage service
+9. Create a new administrative user in the Storage service
 
 The storage service has its own set of users. In the User menu in the
 Administrative tab of the storage service, add at least one administrative
 user, and delete or modify the test user.
 
-8. Test the dashboard
+10. Test the dashboard
 
 You can login to the Archivematica dashboard and finish the installation in a
 web browser: http://localhost (again, use the IP address of the machine you
 have been installing on)
 
-9. Register your installation for full Format Policy Registry interoperability.
+11. Register your installation for full Format Policy Registry interoperability.
 
 Register Archivematica 1.4
 
