@@ -129,6 +129,13 @@ in the arrange panel. You can move either individual files or entire
 directories. Note: All files must be in a directory inside of Arrange.
 “Arrange” cannot be used as the top directory.
 
+.. note::
+
+   If the copy operation from the Originals pane into the Arrange pane does not
+   complete, (i.e., objects in the Originals pane are not greyed out), and you 
+   navigate away from the Ingest tab of the dashboard, your arrangement will not 
+   be saved; this operation will have to be redone. 
+
 6. When you have completed moving files and directories into the Arrange pane,
 click on the top level directory which you wish to include in your SIP. Click
 on Create SIP. Any files or directories which are not inside the directory you
