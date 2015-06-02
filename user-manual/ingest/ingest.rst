@@ -132,7 +132,7 @@ directories. Note: All files must be in a directory inside of Arrange.
 .. note::
 
    If the copy operation from the Originals pane into the Arrange pane does not
-   complete, (i.e., objects in the Originals pane are not greyed out), and you 
+   complete, (i.e. objects in the Originals pane are not greyed out), and you 
    navigate away from the Ingest tab of the dashboard, your arrangement will not 
    be saved; this operation will have to be redone. 
 
