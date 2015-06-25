@@ -276,13 +276,13 @@ Archivematica has been successfully tested with AtoM 2.x. The best known
 configuration is Archivematica 1.4.0 with AtoM deployed from the stable/2.1.x
 branch. Archivematica has also been successfully tested with the qa/2.2.x branch.
 
-Installation instructions for Atom 2 are available on the accesstomemory.org
-website https://www.accesstomemory.org/en/docs/2.1/ . When following those
+Installation instructions for Atom 2 are available on the
+:ref:`accesstomemory.org documentation <atom:home>`. When following those
 instructions, it is best to download Atom from the git repository (rather than
 use one of the supplied tarballs). When checking out Atom, use the head of
 either the stable/2.1.x or qa/2.2.x branch.
 
-Once you have a working AtoM installation, you can configure dip upload
+Once you have a working AtoM installation, you can Archivematicaconfigure dip upload
 between Archivematica and Atom. The basic steps are:
 
 * update atom dip upload configuration in the Archivematica dashboard
