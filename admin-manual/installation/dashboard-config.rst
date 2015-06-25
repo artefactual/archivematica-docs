@@ -301,9 +301,8 @@ blank.
 
 .. code:: bash
 
-   $ sudo -i -u archivematica
-   $ cd ~
-   $ ssh-keygen
+   $ sudo -u archivematica ssh-keygen
+
 
 Copy the contents of ``/var/lib/archivematica/.ssh/id_rsa.pub`` somewhere
 handy, you will need it later.
