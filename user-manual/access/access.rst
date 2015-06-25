@@ -6,10 +6,20 @@ Access
 
 During ingest, access copies of digital objects are generated and packaged
 into a DIP (Dissemination Information Package). The user uploads the DIP to
-the access system. Please note the user must create the description in AtoM
-(or other access system) before uploading the DIP. The user will need to
-indicate part of the description's URL or a target collection in order to send
-the DIP to the appropriate place in the description.
+the access system, or stores it for future use.
+
+When the DIP is prepared, Archivematica moves the DIP into the uploadDIP
+directory, which triggers the dashboard to display the DIP upload options
+to the operator. After a DIP is uploaded/stored, it is moved to the
+uploadedDIPs directory, which can be emptied in the Administration tab- see
+:ref:`Processing storage usage <dashboard-usage>`.
+
+.. note::
+
+   The user must create the description in AtoM (or other access system) before
+   uploading the DIP. The user will need to indicate part of the description's
+   URL or a target collection in order to send the DIP to the appropriate place
+   in the description.
 
 Should you run into an error during this process, please see
 :ref:`Error handling <error-handling>`.
