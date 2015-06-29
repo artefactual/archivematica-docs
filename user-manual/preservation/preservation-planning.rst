@@ -65,10 +65,10 @@ package formats). Format policies will change over time as local and community
 standards, practices and tools evolve.
 
 A public Format Policy Registry server containing Archivematica default format
-policies is maintained by Artefactual Systems, Inc. at
-`fpr.archivematica.org <http://fpr.archivematica.org>`_.
-This server stores structured information about normalization format policies
-for preservation and access. You can update your local FPR from the FPR server
+policies is maintained by Artefactual Systems, Inc. at fpr.archivematica.org.
+(Note: there is currently no public interface for this server). This server
+stores structured information about normalization format policies for
+preservation and access. You can update your local FPR from the FPR server
 using the UPDATE button in the preservation planning tab of the dashboard. In
 addition, you can maintain local rules to add new formats or customize the
 behaviour of Archivematica. The Archivematica dashboard communicates with the
@@ -76,7 +76,7 @@ FPR server via a REST API.
 
 .. note::
 
-   As of version 1.2, there is no public facing data at fpr.archivematica.org.
+   As of version 1.4, there is no public facing data at fpr.archivematica.org.
    Please see the
    `public roadmap <https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_
    to review development planning for the public interface and future
@@ -255,12 +255,24 @@ Identification
 
 The identification tool properties in Archivematica control the ways in which
 Archivematica identifies files and associates them with the FPR's version
-records. The current version of the FPR server contains two tools: a script
+records. The current version of the FPR server contains three tools: a script
 based on the `Open Planets Foundation's <http://www.openplanetsfoundation.org/>`_
 `FIDO <https://github.com/openplanets/fido/>`_ tool, which identifies based on
-the IDs in PRONOM, and a simple script which identifies files by their file
-extension. You can use the identification tools portion of FPR to customize
-the behaviour of the existing tools, or to write your own.
+the IDs in PRONOM; a simple script which identifies files by their file
+extension; and `Siegfried <http://www.itforarchivists.com/siegfried>`_ which like
+FIDO, is based on PRONOM ID and provides detailed information on the basis for
+format matches in its output.  You can use the identification tools portion of
+FPR to customize the behaviour of the existing tools, or to write your own.
+
+.. note::
+
+   The FIDO command by default in the FPR is set to a buffer size of 1MB, which
+   is higher than the FIDO default of 256KB. The reason for this configuration in
+   the FPR is to facilitate the identification of certain file formats that have
+   their header information later in the file (see `Issue 5941 <https://projects.artefactual.com/issues/5941>`_.
+   If you experience slowness using FIDO in Archivematica, you may consider either
+   1., increasing the available RAM or 2., editing the FIDO identification rule
+   so that the buffer size is smaller.
 
 **Rules**
 
