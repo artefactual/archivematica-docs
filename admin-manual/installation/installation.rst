@@ -102,6 +102,7 @@ your local installation, but a simple example would be to use mysqldump:
 
    mysqldump -u root -p MCP > ~/am_backup.sql
 
+
 If you do not have a password set for the root user in mysql, you can take out
 the '-p' portion of that command. If there is a problem during the upgrade
 process, you can restore your mysql database from this backup and try the
@@ -120,11 +121,11 @@ better to update the dashboard before updating the mcp components.
    sudo apt-get install archivematica-mcp-server
    sudo apt-get install archivematica-mcp-client
 
-**Update Elasticsearch **
+**Update Elasticsearch**
 
 Archivematica 1.4.0 requires a new version of Elasticsearch.  Full instructions
- on how to upgrade can be found on the 'Elasticsearch website
-<https://www.elastic.co/guide/en/elasticsearch/reference/1.3/setup-upgrade.html>'_.
+on how to upgrade can be found on the
+`Elasticsearch website <https://www.elastic.co/guide/en/elasticsearch/reference/1.3/setup-upgrade.html>`_.
 In general it should be possible to upgrade Elasticsearch on a standard
 Archivematica machine with the following commands:
 
@@ -185,8 +186,8 @@ from a PPA:
 3. Update your system to the most recent 12.04 release (12.04.5 at the time of
    this writing).
 
-This step will also fetch a list of the software from the PPAs you just added
-to your system.
+   This step will also fetch a list of the software from the PPAs you just added
+   to your system.
 
 .. code:: bash
 
@@ -265,7 +266,6 @@ have been installing on)
 
 11. Register your installation for full Format Policy Registry interoperability.
 
-Register Archivematica 1.4
 
 .. _install-atom:
 
