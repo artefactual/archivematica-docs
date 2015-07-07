@@ -136,7 +136,7 @@ Metadata
 --------
 
 * :ref:`Import metadata <import-metadata>`
-* :ref:`PREMIS <premis>`
+* :ref:`PREMIS <premis-template>`
 * :ref:`Dublin Core <dublin_core>`
 
 

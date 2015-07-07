@@ -34,7 +34,7 @@ links to each chapter's main sections.
    administer/dashboard-admin
    troubleshooting/error-handling
    troubleshooting/error-reporting
-   troubleshootin/faq
+   troubleshooting/faq
    metadata/dublincore
    metadata/premis
 
