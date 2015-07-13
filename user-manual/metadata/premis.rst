@@ -644,7 +644,7 @@ Basis: Policy
 .. note::
 
    Archivematica provides a template for policy rights, which are translated in
-   PREMIS as "other".  In the METS file, you will find POlicy rights in a rightsMD
+   PREMIS as "other".  In the METS file, you will find Policy rights in a rightsMD
    ``<premis:rightsBasis>Other</premisrightsBasis>``.
 
 Policy start date
@@ -905,41 +905,86 @@ migrate, modify, use, disseminate, delete."
 
 **METS XML**
 
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted>
+         <premis:act>Delete</premis:act>
+
 Grant/restriction
 -----------------
 
-**Template field**
+**Template field** Grant/restriction
 
-**Rule**
+**Rule** Drop-down field: choose between Allow, Disallow, Conditional
 
 **METS XML**
+
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted>
+         <premis:restriction>Disallow</premis:restriction>
 
 Start
 -----
 
-**Template field**
+**Template field** Start
 
-**Rule**
+**Rule** "Beginning date of the rights or restrictions granted."
 
 **METS XML**
+
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted>
+         <premis:termOfRestriction>
+            <premis:startDate>2015-01-01</premis:startDate>
+
+**Note** Uses ISO 8061.
 
 End
 ---
 
-**Template field**
+**Template field** End
 
-**Rule**
+**Rule** "Ending date of the rights or restrictions granted."
 
 **METS XML**
+
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted:
+         <premis:termofRestriction>
+            <premis:endDate>2025-01-01</premis:endDate>
+
+**Note** Uses ISO 8061
+
+End date can be left open by clicking "Open End Date." Resulting METS XML:
+
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted:
+         <premis:termofRestriction>
+            <premis:endDate>OPEN</premis:endDate>
 
 Grant/restriction note
 ----------------------
 
-**Template field**
+**Template field** Grant/restriction note
 
-**Rule**
+**Rule** "Additional information about the rights granted."
 
 **METS XML**
+
+.. code-block:: xml
+
+   <premis:rightsStatement>
+      <premis:rightsGranted>
+         <premis:rightsGrantedNote>Publication restricted until copyright expires.</premis:rightsGrantedNote>
 
 
 
