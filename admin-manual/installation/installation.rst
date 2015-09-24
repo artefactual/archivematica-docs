@@ -282,7 +282,7 @@ instructions, it is best to download Atom from the git repository (rather than
 use one of the supplied tarballs). When checking out Atom, use the head of
 either the stable/2.1.x or qa/2.2.x branch.
 
-Once you have a working AtoM installation, you can Archivematicaconfigure dip upload
+Once you have a working AtoM installation, you can configure dip upload
 between Archivematica and Atom. The basic steps are:
 
 * update atom dip upload configuration in the Archivematica dashboard
