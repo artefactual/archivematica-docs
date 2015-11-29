@@ -221,7 +221,7 @@ specify the details of the AtoM installation you'd like the DIPs uploaded to
 
 .. figure:: images/AtoMDIPConfig.*
    :align: center
-   :figwidth: 70%
+   :figwidth: 80%
    :width: 100%
    :alt: AtoM DIP upload configuration in Dashboard.
 
@@ -229,31 +229,31 @@ specify the details of the AtoM installation you'd like the DIPs uploaded to
 
 The required parameters are:
 
- ``url``: the destination AtoM website's URL
+**Upload url** : the destination AtoM website's URL
 
- ``email``: the email address used to log in to AtoM
+**Login email** : the email address used to log in to AtoM
 
- ``password``: the password used to log in to AtoM.
+**Login password** : the password used to log in to AtoM.
 
- ``uuid``: Use this wildcard: %SIPUUID%. Archivematica will do the rest for you.
+**AtoM version** : choose between AtoM 1.x and 2.x
 
-If using rsync to send the DIP to AtoM, enter
+.. note::
 
-``--rsync-target="address.of.atom.machine:/tmp" \``
+   Archivematica 1.5 has been tested with and is recommended for use with AtoM 2.2
+   and AtoM 2.3.
 
-If you are using AtoM 2.0 or higher, enter
+Optional parameters:
 
-``--version=2``
+If using rsync to send the DIP to AtoM, enter rsync details:
 
-Do not enter the specific version of AtoM, e.g. 2.0.1, only 2.
+**Rsync target** : Destination value for rsync, e.g. ``foobar.com:/dips``
 
-For additional details in failure reports, also enable debug mode:
+**Rsync command** : Used to specify the remote shell manually, e.g.
+``ssh -p 22222 -l user``
 
-``--debug``
 
-To set any parameters for AtoM DIP upload change the values, preserving the
-existing format they're specified in, in the "Arguments" field then
-click "Save".
+For additional details in failure reports, also enable **debug mode** by choosing
+"Yes".
 
 **In the AtoM user interface**
 
@@ -262,8 +262,25 @@ In the AtoM user interface, ensure that:
 The sword plugin (Admin --> Plugins --> qtSwordPlugin) is be enabled in order
 for AtoM to receive uploaded DIPs.
 
-Enabling Job scheduling (Admin --> Settings --> Job scheduling) is also
-recommended.
+Enabling Job scheduling (Admin --> Settings --> Job scheduling) in veriosn
+2.1 or lower is also recommended.
+
+**Levels of description**
+
+You can fetch levels of description from AtoM so that they can be used in
+:ref:`SIP arrange <arrange-sip>`. Click on Levels of Description, then
+Fetch from AtoM to get an updated list from the AtoM levels of description
+taxonomy.
+
+.. image:: images/AtoM_lod.*
+   :align: center
+   :width: 80%
+   :alt: Levels of description from AtoM shown in Archivematica administration screen
+
+If there are levels of description in the AtoM taxonomy that you prefer not to
+use in Archivematica SIP arrange, you can remove them using the red delete
+button. You can change the order that they appear in SIP arrange by using the
+up/down arrows in this screen.
 
 .. seealso::
 

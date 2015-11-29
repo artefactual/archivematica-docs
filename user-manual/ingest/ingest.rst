@@ -129,7 +129,50 @@ in the arrange panel. You can move either individual files or entire
 directories. Note: All files must be in a directory inside of Arrange.
 “Arrange” cannot be used as the top directory.
 
-6. When you have completed moving files and directories into the Arrange pane,
+6. If you plan to create a DIP to upload to AtoM, you may wish to add levels of
+description to your directories and/or objects. Archivematica will add a logical
+structMAP to the METS file, which AtoM will use to create information objects,
+applying the chosen levels of description. Note that if you do not apply a
+level of description to a digital object, AtoM will automatically assign it
+the level of item.
+
+.. note::
+
+   This functionality is supported in AtoM 2.2 and higher.
+
+Click to select a directory or object, then click Edit metadata to choose the
+level of description.
+
+.. image:: images/choose_lod.*
+   :align: center
+   :width: 80%
+   :alt: Choosing the AtoM level of description
+
+As you add levels of description they will be shown in the arrange pane for you
+to review before finalizing your SIP.
+
+.. image:: images/view_arrangement.*
+   :align: center
+   :width: 70%
+   :alt: Viewing levels of description applied to SIP
+
+.. note::
+
+   To have the AtoM levels of description appear you must have entered
+   your AtoM credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
+
+   Levels of description in AtoM are managed as a taxonomy. To edit, see
+   :ref:`Terms <atom:terms>`.
+
+.. tip::
+
+   If you choose not to assign levels of description to directories in SIP arrange,
+   AtoM will flatten the DIP so that all digital objects are child-level descriptions
+   of the target description.
+
+
+
+7. When you have completed moving files and directories into the Arrange pane,
 click on the top level directory which you wish to include in your SIP. Click
 on Create SIP. Any files or directories which are not inside the directory you
 chose will remain in the Arrange pane until you create a SIP using these files
@@ -146,13 +189,6 @@ and directories.
 Archivematica will confirm that you wish to create a SIP and after receiving
 confirmation, proceed to the next micro-services to create AIPs and DIPs as
 selected by the user.
-
-.. note::
-
-   The arrangement that you made in the Arrange pane will be reflected in both
-   the structure of the AIP and the structMap in the METS file. When uploaded to
-   AtoM, the SIP structure will not be maintained- all objects will be uploaded
-   as children to the same level of description.
 
 
 .. _add-metadata:
