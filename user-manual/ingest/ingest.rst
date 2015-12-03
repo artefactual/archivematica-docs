@@ -23,6 +23,7 @@ Should you run into an error during ingest, please see Error handling.
 * :ref:`Normalize <normalize>`
 * :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
+* :ref:`Reingest AIP <reingest>`
 
 .. _create-sip:
 
@@ -493,6 +494,101 @@ pre-configured set of options.
    :ref:`Archival storage <archival-storage>`.
 
    For information on uploading the DIP, go to :ref:`Access <access>`.
+
+
+.. _reingest:
+
+Reingest AIP
+------------
+
+In Archivematica 1.5, AIP reingest is supported for the purpose of adding
+metadata and normalizing for access.  There are three methods of starting
+AIP reingest: through the dashboard, through the Storage Service, or through
+the API.
+
+Dashboard
+=========
+
+1. In the Archival Storage tab, find the AIP you wish to reingest by searching
+or browsing. Click on Reingest
+
+.. image:: images/storage_reingest.*
+   :align: center
+   :width: 80%
+   :alt: Click on reingest beside AIP
+
+2. Choose if you wish to reingest the metadata only, or reingest the metadata
+and objects.
+
+.. image:: images/reingest_type.*
+   :align: center
+   :width: 80%
+   :alt: Choose type of reingest
+
+Click on Re-ingest package. Archivematica will tell you that the AIP has been
+sent to the pipeline for reingest.
+
+.. note::
+
+   If you attempt to reingest an AIP which is already in the process of being
+   reingested in the pipeline, Archivematica will alert you with an error.
+
+
+3. Proceed to the Ingest tab and approve the AIP reingest.
+
+.. image:: images/reingest_approve.*
+   :align: center
+   :width: 80%
+   :alt: Approve AIP reingest in Ingest tab.
+
+
+4. When the package proceeds to Normalization:
+
+**For metadata only** choose "Do not normalize"
+
+**For metadata and objects** choose "Normalize for access"
+
+.. important::
+
+   All normalization options will appear as for any SIP being normalized, but
+   only the two normalization paths above are operational for AIP reingest in
+   version 1.5. Choosing another normalization path will result in errors!
+
+5. To add new metadata or edit existing metadata, click on the metadata report
+icon:
+
+.. image:: images/reingest_metadata.*
+   :align: center
+   :width: 80%
+   :alt: Click on the metadata report icon
+
+.. tip::
+
+   You can update the metadata either before or after Normalization, but to
+   ensure the metadata is written to the database before the AIP METS
+   is prepared, it is recommended practice to add the metadata before
+   Normalization, or set the metadata reminder to unchecked in Processing
+   Configuration.
+
+Descriptive or rights metadata can updated or deleted. ``metadata.csv`` files
+can also be added by clicking on Add Metadata files. This will launch a file
+browser with the same locations available as configured for Transfer Source.
+
+.. image:: images/reingest_metadata_upload.*
+   :align: center
+   :width: 80%
+   :alt: Add new metadata files
+
+6. After normalization and metadata updating, continue processing the SIP as
+normal. Note that when performing a metadata-only reingest, there will be no
+objects in your AIP in the review stage- Archivematica replaces the METS file
+in the existing AIP upon storage.
+
+Storage Service
+===============
+
+API
+===
 
 
 :ref:`Back to the top <ingest>`

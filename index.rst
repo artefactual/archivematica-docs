@@ -71,6 +71,7 @@ Ingest
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
 * :ref:`Store the AIP <store-aip>`
+* :ref:`Reingest AIP <reingest>`
 * :ref:`Manual normalization <manual-norm>`
 
 
