@@ -587,6 +587,26 @@ in the existing AIP upon storage.
 Storage Service
 ===============
 
+1. From the Packages tab in the Storage Service, click on Re-ingest beside the
+AIP you wish to reingest.
+
+.. image:: images/reingest_ss.*
+   :align: center
+   :width: 80%
+   :alt: Reingest link in Storage Service Packages tab
+
+2. The Storage Service will ask you to choose a pipeline, and the types of
+reingest (metadata only or metadata and objects in version 1.5)
+
+.. image:: images/reingest_ss_2.*
+   :align: center
+   :width: 80%
+   :alt: Screen to choose pipeline and type of reingest
+
+3. The Storage Service will confirm that the AIP has been sent to the pipeline
+for reingest. Proceed to the Ingest tab of your pipeline, and follow steps
+3-6 above.
+
 API
 ===
 
