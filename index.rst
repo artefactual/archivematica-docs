@@ -9,7 +9,6 @@ Archivematica documentation
 
    index
    /user-manual/index
-   /admin-manual/index
 
 .. _user-manual-home:
 
