@@ -233,7 +233,7 @@ processing the transfer. You may also "Reject transfer" and quit processing.
   extension. You can also choose to skip identification and run it later,
   during Ingest, instead.
 
-* Complete transfer: Includes indexing transfer.
+* Complete transfer: Includes indexing the transfer.
 
 5. A transfer that is in the middle of processing will show which micro-
 services have been completed (green) and which are in progress (orange).
