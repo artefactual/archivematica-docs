@@ -107,18 +107,16 @@ Transfer button for the transfer processing to begin.
 Create a transfer with submission documentation
 -----------------------------------------------
 
-Another option is to create a transfer in a structured directory prior to
-beginning processing in Archivematica. The structured directory in
-Archivematica is the basic configuration of the transfer. If you just add a
-directory to the dashboard and start transfer processing, Archivematica will
-restructure it so it complies with this structure. There should be three
-subdirectories: logs, metadata, objects. The objects directory contains the
-digital objects that are to be preserved. The metadata directory contains the
-checksum, the METS file, and a submissionDocumentation subfolder, which can be
-used for transfer forms, donation agreements or any other documents that
-relate to the acquisition of the records. The logs folder will eventually
-contain logs generated when processing the transfer in Archivematica. You can
-create subdirectories within objects if desired.
+The structured directory in Archivematica is the basic configuration of the transfer. If you just add a directory to the dashboard and start transfer processing, Archivematica will restructure it so it complies with this structure. Another option is to create a transfer in a structured directory prior to
+beginning processing in Archivematica.
+
+To create a transfer that includes submission documentation, such as a donor agreement, you must create a structured directory prior to beginning processing in Archivematica. Your source directory should contain three subdirectories, titled as below:
+
+1. objects: The *objects* directory contains the digital objects that are to be preserved. You can create subdirectories within objects if desired.
+
+2. metadata: The *metadata* directory contains the checksum, the METS file, and a submissionDocumentation subfolder, which can be used for transfer forms, donation agreements or any other documents that relate to the acquisition of the records.
+
+3. logs: The *logs* directory will eventually contain logs generated when processing the transfer in Archivematica.
 
 .. important::
 
