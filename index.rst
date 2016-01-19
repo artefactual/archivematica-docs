@@ -7,7 +7,6 @@ Archivematica documentation
 .. toctree::
    :hidden:
 
-   index
    /user-manual/index
    /admin-manual/index
 
