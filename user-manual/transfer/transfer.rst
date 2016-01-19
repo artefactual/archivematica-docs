@@ -187,46 +187,44 @@ processing the transfer. You may also "Reject transfer" and quit processing.
 
 4. The transfer will now run through a series of micro-services. These include:
 
-* Verify transfer compliance (verifies that the transfer is properly
-  structured - i.e. with the logs, metadata and objects folders)
+* Verify transfer compliance: verifies that the transfer is properly
+  structured - i.e. with the logs, metadata and objects folders.
 
-* Rename with transfer UUID (assigns a unique universal identifier for the
-  transfer as a whole; directly associates the transfer with its metadata)
+* Rename with transfer UUID: assigns a unique universal identifier for the
+  transfer as a whole; directly associates the transfer with its metadata.
 
-* Assign file UUIDs and checksums to objects (assigns a unique universal
-  identifier and sha-256 checksum to each file in the /objects directory)
+* Assign file UUIDs and checksums to objects: assigns a unique universal
+  identifier and sha-256 checksum to each file in the /objects directory.
 
-* Verify transfer checksums (verifies any checksums included with the transfer
-  in its metadata directory).
+* Verify transfer checksums: verifies any checksums included with the transfer
+  in its metadata directory.
 
-* Generate METS.xml document (creates a METS file capturing the original order
+* Generate METS.xml document: creates a METS file capturing the original order
   of the transfer. This METS file is added to any SIPs generated from this
-  transfer)
+  transfer.
 
-* Quarantine (quarantines the transfer to a set duration based on
-  preconfiguration settings in the Administration tab of the dashboard; to
-  allow virus definitions to update before a virus scan)
+* Quarantine: quarantines the transfer to a set duration based on
+  preconfiguration settings in the Administration tab of the dashboard. This can be used to allow virus definitions to update before a virus scan.
 
-* Scan for viruses (scans for viruses and malware)
+* Scan for viruses: scans for viruses and malware.
 
-* Generate transfer structure report (generates a directory tree of the original
-  transfer and places as a text file in the AIP).
+* Generate transfer structure report: generates a directory tree of the original
+  transfer and places as a text file in the AIP.
 
-* Clean up file and directory names (removes prohibited characters from folder
-  and filenames, such as ampersands).
+* Clean up file and directory names: removes prohibited characters from folder
+  and filenames, such as ampersands.
 
-* Identify file format (this is the identification that normalization will be
+* Identify file format: this is the identification that normalization will be
   based upon, the user can choose between FIDO and extension or skipping
-  format identification at this stage) See Format identification below for
+  format identification at this stage. See :ref:`Format identification <format-identification>` below for
   more information.
 
-* Extract packages (extracts contents from zipped or otherwise packaged
-  files): You can change your preconfigured workflow settings to allow for
-  some choices about package extraction. See below for details Extract
-  packages
+* Extract packages: extracts contents from zipped or otherwise packaged
+  files. You can change your preconfigured workflow settings to allow for
+  some choices about package extraction. See :ref:`Extract Packages <extract-packages>` below for more information.
 
-* Characterize and extract metadata (identifies and validates file formats;
-  extracts technical metadata embedded in the files). If you have
+* Characterize and extract metadata: identifies and validates file formats;
+  extracts technical metadata embedded in the files. If you have
   preconfigured it to do so, Archivematica will stop during this micro-service
   and allow the user to choose a file identification command from a dropdown
   menu. To learn about preconfigured options, please see
@@ -235,7 +233,7 @@ processing the transfer. You may also "Reject transfer" and quit processing.
   extension. You can also choose to skip identification and run it later,
   during Ingest, instead.
 
-* Complete transfer (Includes indexing transfer)
+* Complete transfer: Includes indexing transfer.
 
 5. A transfer that is in the middle of processing will show which micro-
 services have been completed (green) and which are in progress (orange).
