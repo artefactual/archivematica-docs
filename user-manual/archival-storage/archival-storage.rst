@@ -35,15 +35,15 @@ efficient storage and retrieval.
 
 .. note::
 
-   UUID quad directories: Some file systems limit the number of items allowed
-   in a directory, Archivematica uses a directory tree structure to store AIPs.
-   The tree is based on the AIP UUIDs. The UUID is broken down into manageable 4
-   character pieces, or "UUID quads", each quad representing a directory. The
-   first four characters (UUID quad) of the AIP UUID will compose a sub directory
+   Archivematica uses a directory tree structure to store AIPs.
+   The tree is based on AIP UUIDs, which are 16-digit alphanumeric unique universal
+   identifiers. Each UUID is broken down into a manageable 4-character chunk, or
+   "UUID quad". Each quad represents a directory. The first four characters (the
+   first UUID quad) of the AIP UUID will compose a subdirectory
    of the AIP storage. The second UUID quad will be the name of a sub directory
-   of the first, and so on and so forth, until the last four characters (last
-   UUID Quad) create the leaf of the AIP store directory tree, and the AIP with
-   that UUID resides in that directory.)
+   of the first, and so on. The last four characters (the last UUID quad) are
+   used to create the leaf of the AIP store directory tree, and the AIP with
+   that UUID resides in that leaf.
 
 4. The Archival storage tab in the Archivematica dashboard consists of a table
 with information about the stored AIPs. Use the up and down arrows in the
