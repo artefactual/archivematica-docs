@@ -66,18 +66,15 @@ Create a transfer
 
 Open the web browser and the Archivematica dashboard to sign in with your
 username and password. Please note that if this is your first time logging in
-to a newly installed instance of Archivematica 1.2, you will see a log-in that
+to a newly installed instance of Archivematica, you will see a log-in that
 allows you to register your repository and get updates to the format policy
 registry. See the User manual - :ref:`Format Policy Registry (FPR) <fpr>` and the
 :ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
 
-1. In transfer tab, select your transfer type in the dropdown menu. Types
-include standard, unzipped bag, zipped bag, DSpace, maildir and Disk image.
+1. In the transfer tab, select your transfer type in the dropdown menu. Types
+include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
 
-2. In transfer tab, name your transfer and browse to a source directory to
-select your object or set of objects for upload. Your transfer can be composed
-of multiple directories from different sources. Repeat this step if your
-transfer is composed from multiple sources.
+2. In transfer tab, name your transfer and select your source directory. Click Browse to select the directory containing your object(s) for upload. Your transfer can be composed of multiple directories from different sources. Repeat this step if your transfer is composed of multiple sources.
 
 .. figure:: images/Browse1.*
    :align: center
