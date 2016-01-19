@@ -30,19 +30,19 @@ Should you run into an error during ingest, please see Error handling.
 Create a SIP
 ------------
 
-1. Process transfers as described in Transfer.
 
-2. Click on the Ingest tab.You will get a pop-up warning you that if you wish
-to add metadata or PREMIS rights you must do it prior to normalization.
-Dismiss or wait until it disappears.
+1. Process transfers as described in :ref:`Transfers <transfer>`.
+
+2. Click on the Ingest tab. Please note that if you would like to be reminded to add metadata or
+PREMIS rights to the package, you must configure this in the Administration tab.
 
 3. The single SIP will move through a number of micro-services. If the user
 has preconfigured Archivematica to do so, processing will stop at a decision
 point that allows the user to choose a file identification method to base
 normalization upon or to choose to use pre-existing data gathered during
-identification at the transfer stage. Archivematica default is to use pre-
-existing data. For more about this option, see
-:ref:`Administer -Processing configuration <dashboard-processing>`.
+identification at the transfer stage. Archivematica default is to use pre-existing
+data. For more about this option, see
+:ref:`Administer — Processing configuration <dashboard-processing>`.
 
 4. Wait until the SIP reaches "Normalize" and a bell icon appears.
 
@@ -84,8 +84,8 @@ feature, though entire folders/directories can be moved.
    Transfer backlog search results in populating Originals pane
 
 Archivematica will display the directories in Transfer backlog including the
-number of objects in each directory. To hide directories from the Originals pane, click on the directory and click
-Hide.
+number of objects in each directory. To hide directories from the Originals pane, click on the
+directory and click Hide.
 
 2. Drag and drop the transfer directory(ies) and/or object(s) you wish to
 arrange and ingest as a SIP from the Originals pane to the Arrange pane, or
@@ -197,7 +197,7 @@ selected by the user.
 Add metadata
 ------------
 
-In version 1.2, metadata can be added either prior to the normalization step
+In Archivematica, metadata can be added either prior to the normalization step
 or after. Archivematica will prompt you with a reminder to add metadata if
 desired during the Process metadata directory micro-service. See
 :ref:`AtoM Dublin Core <atom:dc-template>`_
@@ -257,7 +257,7 @@ the object has been uploaded to your access system.
     template.
 
 4. When you click Create, you will see the metadata entry in the list page.
-To edit it further, click Edit on the right-hand side.To delete it, click
+To edit it further, click Edit on the right-hand side. To delete it, click
 Delete. To add more DC metadata, click the Add button below the list.
 
 .. figure:: images/Metadatalist1.*
@@ -275,11 +275,10 @@ Delete. To add more DC metadata, click the Add button below the list.
 Add PREMIS rights
 -----------------
 
-In version 1.2 you can add rights either prior to the normalization step or
+Archivematica allows you to add PREMIS rights either prior to the normalization step or
 after. Archivematica will prompt you with a reminder to add rights information
-if desired during the Process metadata directory micro-service. See
-`AtoM Rights Entity <https://www.accesstomemory.org/en/docs/2.0/user-manual/add-edit-content/rights/#rights>`_
-for information about the rights elements available.
+if desired during the Process metadata directory micro-service. For more information about the
+PREMIS rights fields, see :ref:`PREMIS template <premis-template>`
 
 1. Click on the template icon.
 
@@ -293,7 +292,7 @@ for information about the rights elements available.
    To add rights, click on the template icon
 
 2. This will take you to the SIP detail panel. On the left-hand side, under
-Rights click Add.
+Rights, click Add.
 
 .. figure:: images/SIPDetailPanel1.*
    :align: center
@@ -501,7 +500,7 @@ pre-configured set of options.
 Reingest AIP
 ------------
 
-In Archivematica 1.5, AIP reingest is supported for the purpose of adding
+In Archivematica, AIP reingest is supported for the purpose of adding
 metadata and normalizing for access.  There are three methods of starting
 AIP reingest: through the dashboard, through the Storage Service, or through
 the API.
@@ -610,5 +609,6 @@ for reingest. Proceed to the Ingest tab of your pipeline, and follow steps
 API
 ===
 
+Content forthcoming.
 
 :ref:`Back to the top <ingest>`
