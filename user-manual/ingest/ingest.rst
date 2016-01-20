@@ -464,7 +464,8 @@ Store AIP
 services, including processing of the submission documentation, generation of
 the METS file, indexing, generation of the DIP and packaging of the AIP.
 
-2. When these micro-services are complete, the user can upload DIP and store AIP.
+2. When these micro-services are complete, the user can upload the DIP and store the AIP.
+
 
 .. figure:: images/StoreAIPUpDIP1.*
    :align: center
@@ -472,12 +473,12 @@ the METS file, indexing, generation of the DIP and packaging of the AIP.
    :width: 100%
    :alt: Archivematica ready to store AIP and upload DIP
 
-   Archivematica ready to store AIP and upload DIP
+   Archivematica ready to store the AIP and upload the DIP
 
 3. If desired, review the contents of the AIP in another tab by clicking on
 Review. More information on Archivematica's AIP structure and the METS/PREMIS
-file is available in the Archivematica documentation: see AIP structure and
-METS. You can download the AIP at this stage, as well, by clicking on it.
+file is available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`.
+You can download the AIP at this stage by clicking on it.
 
 4. From the Action dropdown menu, select "Store AIP" to move the AIP into
 archival storage. You can store an AIP in any number of preconfigured
@@ -487,7 +488,11 @@ directories. For instructions to configure AIP storage locations, see
 5. From the Action dropdown menu, select the AIP storage location from the
 pre-configured set of options.
 
-.. seealso::
+.. note::
+
+   We recommend storing the AIP before uploading the DIP. If there is a problem
+   with the AIP at this point and the DIP has already been uploaded, you will have
+   to delete the DIP from the upload location.
 
    For information on viewing and managing stored AIPs go to
    :ref:`Archival storage <archival-storage>`.
@@ -514,7 +519,7 @@ or browsing. Click on Reingest
 .. image:: images/storage_reingest.*
    :align: center
    :width: 80%
-   :alt: Click on reingest beside AIP
+   :alt: Click on reingest beside the AIP
 
 2. Choose if you wish to reingest the metadata only, or reingest the metadata
 and objects.
