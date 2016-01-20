@@ -214,10 +214,10 @@ AtoM DIP upload
 ---------------
 
 Archivematica can upload DIPs directly to an
-`AtoM <www.accesstomemory.org>`_ website so the contents can
+`AtoM <www.accesstomemory.org>`_ website so that the contents can
 be accessed online. The AtoM DIP upload configuration page is where you
-specify the details of the AtoM installation you'd like the DIPs uploaded to
-(and, if using Rsync to transfer the DIP files, Rsync transfer details).
+specify the AtoM installation where you'd like to upload DIPs
+(and, if you are using Rsync to transfer the DIP files, the Rsync transfer details).
 
 .. figure:: images/AtoMDIPConfig.*
    :align: center
@@ -229,41 +229,37 @@ specify the details of the AtoM installation you'd like the DIPs uploaded to
 
 The required parameters are:
 
-**Upload url** : the destination AtoM website's URL
+* **Upload URL** : the URL of the destination AtoM website.
 
-**Login email** : the email address used to log in to AtoM
+* **Login email** : the email address used to log in to AtoM.
 
-**Login password** : the password used to log in to AtoM.
+* **Login password** : the password used to log in to AtoM.
 
-**AtoM version** : choose between AtoM 1.x and 2.x
+* **AtoM version** : the version of the destination AtoM website (find in Admin -> Settings -> Global).
 
 .. note::
 
    Archivematica 1.5 has been tested with and is recommended for use with AtoM 2.2
    and AtoM 2.3.
 
-Optional parameters:
+If you are using Rsync to send the DIP to AtoM, enter Rsync details:
 
-If using rsync to send the DIP to AtoM, enter rsync details:
+* **Rsync target** : Destination value for rsync, e.g. ``foobar.com:/dips``
 
-**Rsync target** : Destination value for rsync, e.g. ``foobar.com:/dips``
+* **Rsync command** : Used to specify the remote shell manually, e.g. ``ssh -p 22222 -l user``
 
-**Rsync command** : Used to specify the remote shell manually, e.g.
-``ssh -p 22222 -l user``
+If you are not using Rsync, leave these fields blank.
 
-
-For additional details in failure reports, also enable **debug mode** by choosing
+If you would like to have additional details in failure reports, also enable debug mode by choosing
 "Yes".
 
-**In the AtoM user interface**
+**AtoM user interface**
 
-In the AtoM user interface, ensure that:
+In the AtoM user interface, please take note of the following:
 
-The sword plugin (Admin --> Plugins --> qtSwordPlugin) is be enabled in order
-for AtoM to receive uploaded DIPs.
+* The sword plugin (Admin --> Plugins --> qtSwordPlugin) must be enabled in order for AtoM to receive uploaded DIPs.
 
-Enabling Job scheduling (Admin --> Settings --> Job scheduling) in veriosn
-2.1 or lower is also recommended.
+* Enabling Job scheduling (Admin --> Settings --> Job scheduling) in version 2.1 or lower is also recommended.
 
 **Levels of description**
 
@@ -282,9 +278,10 @@ use in Archivematica SIP arrange, you can remove them using the red delete
 button. You can change the order that they appear in SIP arrange by using the
 up/down arrows in this screen.
 
-.. seealso::
+.. note::
 
-   :ref:`AtoM configuration <admin-dashboard-atom>` instructions in the
+   You may need an administrator to configure AtoM for DIP uploads from Archivematica.
+   For administrator instructions, see :ref:`AtoM configuration <admin-dashboard-atom>` in the
    Administrator manual
 
 .. _dashboard-AT:
