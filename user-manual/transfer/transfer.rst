@@ -7,7 +7,7 @@ Transfer
 In Archivematica, Transfer is the process of transforming any set of digital
 objects and/or directories into a SIP. Transformation may include appraisal,
 arrangement, description and identification of donor restricted, private or
-confidential contents. The Transfer tab prepares your content for preservation in Archivematica
+confidential contents. The Transfer tab prepares your content for preservation in Archivematica.
 
 In the Transfer tab of the Dashboard, the user moves digital objects from
 source directories accessible via the Storage Service into Archivematica. See
