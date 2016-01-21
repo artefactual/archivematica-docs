@@ -19,7 +19,7 @@ FAQ
    `OAIS <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ will
    make Archivematica more intuitive to use but is not necessarily a prerequisite.
 
-   Oragnizations that are unable to provide in-house technical support may
+   Organizations that are unable to provide in-house technical support may
    consider a `maintenance contract <http://www.artefactual.com/services/maintenance/>`_
    through Artefactual Systems.
 
