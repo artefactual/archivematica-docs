@@ -166,9 +166,7 @@ Archivematica packages are hosted on Launchpad, in an Ubuntu PPA (Personal
 Package Archive). In order to install software onto your Ubuntu system
 from a PPA:
 
-1. Add the archivematica/release PPA to your list of trusted repositories (if
-   add-apt-repositories is not available you must install python-software-
-   properties first):
+1. Add the archivematica/release PPA to your list of trusted repositories (if    add-apt-repositories is not available you must install python-software-    properties first):
 
 .. code:: bash
 
@@ -183,11 +181,7 @@ from a PPA:
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
    sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list'
 
-3. Update your system to the most recent 12.04 release (12.04.5 at the time of
-   this writing).
-
-   This step will also fetch a list of the software from the PPAs you just added
-   to your system.
+3. Update your system to the most recent 12.04 release (12.04.5 at the time of this writing). This step will also fetch a list of the software from the PPAs you just added to your system.
 
 .. code:: bash
 
@@ -210,9 +204,7 @@ from a PPA:
    sudo service uwsgi restart
    sudo service nginx restart
 
-6. Install the Archivematica packages (each of these packages can be installed separately, if
-   necessary). Say YES or OK to any prompts you get after entering the following
-   into terminal:
+6. Install the Archivematica packages (each of these packages can be installed separately, if necessary). Say YES or OK to any prompts you get after entering the following into terminal:
 
 .. code:: bash
 
@@ -243,26 +235,11 @@ If you have trouble with the gearman command try this as an alternative:
 
    sudo restart gearman-job-server
 
-8. Test the storage service
+8. Test the storage service. The storage service runs as a separate web application from the Archivematica dashboard. Go to the following link in a web browser and log in as user *test* with the password *test*: http://localhost:8000 (or use the IP address of the machine you have been installing on)
 
-The storage service runs as a separate web application from the Archivematica
-dashboard. Go to the following link in a web browser:
+9. Create a new administrative user in the Storage service. The storage service has its own set of users. In the User menu in the Administrative tab of the storage service, add at least one administrative user, and delete or modify the test user.
 
-http://localhost:8000 (or use the IP address of the machine you have been installing on).
-
-log in as user: test password: test
-
-9. Create a new administrative user in the Storage service
-
-The storage service has its own set of users. In the User menu in the
-Administrative tab of the storage service, add at least one administrative
-user, and delete or modify the test user.
-
-10. Test the dashboard
-
-You can login to the Archivematica dashboard and finish the installation in a
-web browser: http://localhost (again, use the IP address of the machine you
-have been installing on)
+10. Test the dashboard. You can login to the Archivematica dashboard and finish the installation in a web browser: http://localhost (again, use the IP address of the machine you have been installing on).
 
 11. Register your installation for full Format Policy Registry interoperability.
 
@@ -285,22 +262,22 @@ either the stable/2.1.x, stable/2.2.x or qa/2.3.x branch.
 Once you have a working AtoM installation, you can configure dip upload
 between Archivematica and Atom. The basic steps are:
 
-* update atom dip upload configuration in the Archivematica dashboard
+* Update atom dip upload configuration in the Archivematica dashboard
 
-* confirm atom-worker is configured on the Atom server (copy the atom-
+* Confirm atom-worker is configured on the Atom server (copy the atom-
   worker.conf file from atom source to /etc/init/)
 
-* enable the Sword Plugin in the AtoM plugins page
+* Enable the Sword Plugin in the AtoM plugins page
 
-* enable job scheduling in the AtoM settings page (AtoM version 2.1 or lower only)
+* Enable job scheduling in the AtoM settings page (AtoM version 2.1 or lower only)
 
-* confirm gearman is installed on the AtoM server
+* Confirm gearman is installed on the AtoM server
 
-* configure ssh keys to allow rsync to work for the archivematica user, from
+* Configure ssh keys to allow rsync to work for the archivematica user, from
   the Archivematica server to the Atom server
 
-* start gearman on the Atom server
+* Start gearman on the Atom server
 
-* start the atom worker on the AtoM server
+* Start the atom worker on the AtoM server
 
 :ref:`Back to the top <installation>`

@@ -347,7 +347,7 @@ edit a configuration file from the command line.
 
 6. Reload the dashboard page reporting the error in your browse
 
-7.  Debug or report error
+7. Debug or report error
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
 

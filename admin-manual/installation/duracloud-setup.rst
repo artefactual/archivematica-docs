@@ -58,37 +58,28 @@ Step 2: Configure Archivematica Storage Service
 The :ref:`Archivematica Storage Service <storageservice:index>` was installed
 when you installed Archivematica.
 
-1. Set up a Storage Service space for each of transfer-source, transfer-backlog,
-   aip-store and dip-store. Use the following parameters:
+1. Set up a Storage Service space for each of transfer-source, transfer-backlog,    aip-store and dip-store. Use the following parameters:
 
-Access protocol: DuraCloud
+  * Access protocol: DuraCloud
 
-Size: optional
+  * Size: optional
 
-Path: leave blank
+  * Path: leave blank
 
-Staging path: for example, ``/var/archivematica/storage_service/``
+  * Staging path: for example, ``/var/archivematica/storage_service/``
 
-Host: Hostname of the DuraCloud instance, e.g. trial.duracloud.org
+  * Host: Hostname of the DuraCloud instance, e.g. trial.duracloud.org
 
-Username and Password: Enter Archivematica username and password that you
-created for DuraCloud in step 1.
+  * Username and Password: Enter Archivematica username and password that you   created for DuraCloud in step 1.
 
-Duraspace: the name of the space in DuraCloud you are creating this Storage
-Service space for (e.g. transfer-source, aip-store, etc).
+  * Duraspace: the name of the space in DuraCloud you are creating this Storage   Service space for (e.g. transfer-source, aip-store, etc).
 
-As noted in step one, other possible configurations are possible if you are not
-using DuraCloud for all Archivematica spaces.
+.. NOTE::
+  Other possible configurations are possible if you are not using DuraCloud for all Archivematica spaces.
 
-2. Create one location in each space for aip-store, dip-store and
-transfer-backlog, choosing the appropriate purpose and relative path for each.
+2. Create one location in each space for aip-store, dip-store and transfer-backlog, choosing the appropriate purpose and relative path for each. Be sure to click on the pipeline to enable the location you are creating.
 
-.. tip::
-
-   Be sure to click on the pipeline to enable the location you are creating.
-
-3. If using DuraCloud for transfer-source, locations can be configured after
-   content is synced- see below.
+3. If using DuraCloud for transfer-source, locations can be configured after    content is synced- see below.
 
 
 Step 3: Download and configure sync tool
@@ -128,11 +119,9 @@ SIP(s). Two scenarios are outlined below:
 
 **Create a new directory to sync:**
 
-1. Create a top level directory on your local machine or server to sync to
-   DuraCloud.
+1. Create a top level directory on your local machine or server to sync to    DuraCloud.
 
-2. Create at least 2 levels of directories within that directory before any
-    digital objects.
+2. Create at least 2 levels of directories within that directory before any     digital objects.
 
 Example 1:
 
@@ -175,16 +164,14 @@ could become their own transfers (Photographs, Videos, etc).
 
 **Sync an existing directory**
 
-1. If there are existing directories that you wish to sync but do not wish to
-   reorganize into a directory structure deep enough to work with Archivematica,
-   you can instead use the Sync Tool's prefix option:
+1. If there are existing directories that you wish to sync but do not wish to    reorganize into a directory structure deep enough to work with Archivematica,    you can instead use the Sync Tool's prefix option:
 
-i. Ensure your sync tool is stopped in the Status tab. Then click on the
-   configuration tab.
+  * Ensure your sync tool is stopped in the Status tab. Then click on the
+     configuration tab.
 
-ii. Under "Other options," create a prefix for your sync folder to create a
-    directory structure at least two levels deep. The prefix must end in a
-    slash (/).
+  * Under "Other options," create a prefix for your sync folder to create a
+      directory structure at least two levels deep. The prefix must end in a
+      slash (/).
 
 2. Note that the prefix will replace the directory name of the sync folder in
    DuraCloud.
@@ -236,6 +223,7 @@ each top level directory inside the directory or directories you have synced.
    (e.g. "transfers") you will only need to configure the transfer source
    once.
 
+.. tip::
    If you browse for a path and do not see the expected directory listed, this
    may be caused by a UI bug. You can type the path in instead.
 
