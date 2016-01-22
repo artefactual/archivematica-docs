@@ -643,7 +643,6 @@ specific objects or resources by name.
 
 4. Once you have selected the objects and the resource you would like to pair them to,
 click *Pair* in the top right corner. Repeat steps 2-4 as needed.
-tw
 
 5. When you are done pairing objects and resources, click on *Review matches.*
 
