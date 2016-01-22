@@ -11,11 +11,9 @@ Name
 
 The AIP name is composed of the following:
 
-   1. Either the name of the original transfer if no new name has been assigned
-   to the SIP upon formation or the name of the SIP or SIPs created from the
-   transfer and
+1. Either the name of the original transfer if no new name has been assigned    to the SIP upon formation or the name of the SIP or SIPs created from the transfer and
 
-   2. a UUID assigned during SIP formation
+2. A UUID assigned during SIP formation
 
 example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112
 

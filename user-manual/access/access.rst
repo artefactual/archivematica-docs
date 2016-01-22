@@ -71,42 +71,24 @@ Upload DIP to AtoM
 In this example, we will upload a DIP to a sample description in AtoM called
 "Sample fonds".
 
-1. In the ingest tab, select "Upload DIP to AtoM" in the upload DIP Actions
-drop-down menu.
+1. In the ingest tab, select "Upload DIP to AtoM" in the upload DIP Actions drop-down menu.
 
-2. A dialogue box will appear.
-
-Enter the permalink of the description in the dialogue box: sample-fonds
+2. A dialogue box will appear. Enter the permalink of the description in the dialogue box.
 
 .. tip::
 
    The permalink is the "slug" from the AtoM target description.
    See :ref:`slug <atom:slug>` in the AtoM glossary.
 
-3. Click the blue "Upload" button.
+3. Click the blue "Upload" button. Digital objects are uploaded as items within the description to which the DIP is being uploaded. If you want to create a child level of description under the target description, you must add the title of that level of description using the DC metadata template prior to normalization.
 
-Digital objects are uploaded as items within the description to which the DIP
-is being uploaded.
+4. When the DIP has finished uploading, open the Access tab in the dashboard. This tab shows the AIP and its uploaded DIP. Click on the DIP URL to go to the uploaded DIP in AtoM.
 
-If you want to create a child level of description under the target
-description, you must add the title of that level of description using the DC
-metadata template prior to normalization.
+5. If you are not already logged in to AtoM you will need to log in using your login credentials.
 
-4. When the DIP has finished uploading, open the Access tab in the dashboard.
-This tab shows the AIP and its uploaded DIP. Click on the DIP URL to go to the
-uploaded DIP in AtoM.
+6. You will see an archival description with the metadata you added during ingest, displayed in the context of the level of archival description to which the DIP was uploaded. To view an individual digital object, scroll through the thumbnails on the left of the screen and click on an image.
 
-5. If you are not already logged in to AtoM you will need to log in using your
-login credentials.
-
-6. You will see an archival description with the metadata you added during
-ingest, displayed in the context of the level of archival description to which
-the DIP was uploaded. To view an individual digital object, scroll
-through the thumbnails on the left of the screen and click on an image.
-
-7. Below, the digital is object displayed in AtoM.
-
-Clicking on the image will open the uploaded object.
+7. The digital object is displayed in AtoM. Clicking on the image will open the uploaded object.
 
 .. _store-dip:
 
@@ -120,8 +102,7 @@ as DuraCloud.https://groups.google.com/forum/#!topic/archivematica/ZQ-ttlGxEkA
 
 To store a DIP:
 
-1. Ensure that at least one DIP storage location has been configured in the
-:ref:`Storage Service <storageservice:index>`.
+1. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
 
 2. When prompted to Upload DIP, choose Store DIP.
 

@@ -15,10 +15,7 @@ user deposit and access system.
    in the DSpace AIP export structure between 1.7.x and 1.8.x so it is
    anticipated that performance will be identical.
 
-1. The transfer should be structured similar to the one in Archivematica's
-sample data at sampledata/SampleTransfers/DSpaceExport. This is a standard
-DSpace export with one DSpace AIP for the collection-level description and one
-for each of the deposited objects.
+1. The transfer should be structured similar to the one in Archivematica's sample data at sampledata/SampleTransfers/DSpaceExport. This is a standard DSpace export with one DSpace AIP for the collection-level description and one for each of the deposited objects.
 
 .. image:: images/DSpace1g.*
    :align: center
@@ -31,9 +28,7 @@ for each of the deposited objects.
    mandatory.
 
 
-2. A typical zipped item folder will contain the uploaded object plus a
-license file, a METS file and possibly an OCR text file. An example is shown
-below:
+2. A typical zipped item folder will contain the uploaded object plus a license file, a METS file and possibly an OCR text file. An example is shown below:
 
 .. image:: images/DSpace2g.*
    :align: center
@@ -48,12 +43,9 @@ below:
 
 * mets.xml = the METS file for the item
 
-3. To process, configure the source directory containing the transfer in the
-Administration tab of the browser. See
-:ref:`Administrator manual - Transfer source directories <admin-dashboard-transfer-source>`.
+3. To process, configure the source directory containing the transfer in the Administration tab of the browser. See :ref:`Administrator manual - Transfer source directories <admin-dashboard-transfer-source>`.
 
-4. In the transfer tab, use the dropdown menu to select the DSpace transfer
-type.
+4. In the transfer tab, use the dropdown menu to select the DSpace transfer type.
 
 .. image:: images/UploadDSpaceTransfer.*
    :align: center
@@ -69,8 +61,7 @@ Then, browse to the appropriate source directory and add your DSpace export.
    :alt: Add DSpace export from source directory
 
 
-5. When the DSpace transfer has loaded to the dashboard, click Start Transfer
-to begin processing.
+5. When the DSpace transfer has loaded to the dashboard, click Start Transfer to begin processing.
 
 .. image:: images/DSpaceTransferMicros.*
    :align: center
@@ -84,9 +75,7 @@ to begin processing.
    :width: 80%
    :alt: Select Normalize for preservation for DSpace export
 
-7. The METS file for the AIP will show fileGrps for the different file types:
-original, submissionDocumentation (the mets.xml files), preservation, license
-and text/ocr.
+7. The METS file for the AIP will show fileGrps for the different file types: original, submissionDocumentation (the mets.xml files), preservation, license and text/ocr.
 
 .. image:: images/DSpace3g.*
    :align: center

@@ -4,7 +4,7 @@
 FAQ
 ===
 
-#. What technical skills are required to install/maintain/operate Archivematica?
+#. **What technical skills are required to install/maintain/operate Archivematica?**
 
    To install and maintain Archivematica successfully, you or someone in your
    organization should be comfortable using and maintaining Linux-based servers,
@@ -23,7 +23,7 @@ FAQ
    consider a `maintenance contract <http://www.artefactual.com/services/maintenance/>`_
    through Artefactual Systems.
 
-#. Does Archivematica perform fixity checks?
+#. **Does Archivematica perform fixity checks?**
 
    Archivematica generates checksums upon transfer of objects into the system,
    and will verify those checksums before storing the AIP. It is also
@@ -34,12 +34,12 @@ FAQ
    command-line app called `Fixity <https://github.com/artefactual/fixity>`_
    (further user documentation for Fixity is pending).
 
-#. Is Archivematica a storage system?
+#. **Is Archivematica a storage system?**
 
    Archivematica is purposefully designed to be storage system agnostic, leaving
    the door open for integration with a wide variety of existing storage systems.
 
-#. What is the Archivematica Storage Service and why is there a separate application?
+#. **What is the Archivematica Storage Service and why is there a separate application?**
 
    The Archivematica Storage Service manages the storage and transfer source
    locations for Archivematica installations. Our recommendation is for each
@@ -49,8 +49,8 @@ FAQ
    another reason is so that multiple Archivematica pipelines can be managed
    through one Storage Service.
 
-#. Why doesn't Archivematica have a module for providing access to digital
-   materials?
+#. **Why doesn't Archivematica have a module for providing access to digital
+   materials?**
 
    In a manner of speaking, it does! It's called :ref:`AtoM <atom:home>` and
    it is another open-source, freely available software application managed
@@ -66,26 +66,27 @@ FAQ
    Archivist's Toolkit and ArchivesSpace, for example. Other integrations are
    possible; see the next question below.
 
-#. I need to user Archivematica in conjunction with another system (for access,
-   storage, etc). How can I integrate the two systems?
+#. **I need to user Archivematica in conjunction with another system (for access,
+   storage, etc). How can I integrate the two systems?**
 
    The list of systems and tools that Archivematica is integrated with grows with almost
    every release. If you are interested in having Archivematica integrate with a
    system which is not currently on our `Roadmap <https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_,
    here are a few ideas:
 
-   * Post to the `user forum <https://groups.gtoogle.com/forum/#!forum/archivematica>`_
-     and ask community members if they have any experience creating a workflow
-     between Archivematica and the other system.
-   * If you have software development skills, consider writing to code required
-     to integrate the two systems. If practical, we would gladly accept the
-     code into the Archivematica code base via a `pull request <https://www.archivematica.org/wiki/Contribute_code>`_.
-   * Contract Artefactual Systems to `write the code <http://www.artefactual.com/services/development/>`_.
-     We will work with you to identify requirements and include the new integration
-     code in the next software release, for the entire community's benefit.
+  * Post to the `user forum <https://groups.gtoogle.com/forum/#!forum/archivematica>`_      and ask community members if they have any experience creating a workflow between Archivematica and the other system.
 
-#. I'm having a problem with installation/Why is Archivematica difficult to
-   install?
+  * If you have software development skills, consider writing to code required to integrate the two systems. If practical, we would gladly accept the code into the Archivematica code base via a `pull request <https://www.archivematica.org/wiki/Contribute_code>`_.
+
+  * Contract Artefactual Systems to `write the code <http://www.artefactual.com/services/development/>`_. We will work with you to identify requirements and include the new integration code in the next software release, for the entire community's benefit.
+
+
+7. **I'm having a problem with installation/Why is Archivematica difficult to
+   install?**
+
+   Archivematica is a complex piece of software with many dependencies, all
+   of which are open-source. Because of its complex, open-source nature,
+   it is not feasible to create a click-through executible file for installation.
 
    If you encounter errors during :ref:`installation <installation>` you are
    welcome to post your errors to our
@@ -95,15 +96,13 @@ FAQ
    unsponsored work and it can take a while for us to respond when we are busy.
    Information that we might ask you for includes:
 
-   * What version of Archivematica are you installing.
-   * Are you upgrading or installing fresh.
-   * Are you using something other than the recommended requirements from our
-     :ref:`installation <installation>` instructions.
-   * Include stack traces or results from error logs if possible.
+  * What version of Archivematica are you installing.
 
-   Archivematica is a complex piece of software with many dependencies, all
-   of which are open-source. Because of it's complex, open-source nature,
-   it is not feasible to create a click-through executible file for installation.
+  * Are you upgrading or installing fresh.
+
+  * Are you using something other than the recommended requirements from our      :ref:`installation <installation>` instructions.
+
+  * Include stack traces or results from error logs if possible.
 
 
 :ref:`Back to the top <faq>`

@@ -11,9 +11,7 @@ SIP.
 Workflow
 --------
 
-1. For simple objects, the user places files in the objects directory, with or
-without intervening subdirectories. The imported metadata are attached to each
-object.
+1. For simple objects, the user places files in the objects directory, with or without intervening subdirectories. The imported metadata are attached to each object.
 
 .. figure:: images/MdfolderMDimport-10.*
    :align: center
@@ -32,16 +30,13 @@ object.
    Example csv file contents
 
 
-2. For compound objects, the user creates one or more subdirectories in the
-objects directory, each containing the files that form a compound object. The
-imported metadata are attached to each subdirectory.
+2. For compound objects, the user creates one or more subdirectories in the objects directory, each containing the files that form a compound object. The imported metadata are attached to each subdirectory.
 
 .. important::
 
    The subdirectory names must not contain spaces or other forbidden characters.
 
-3. The user adds a csv file to the metadata folder for the transfer entitled
-metadata.csv
+3. The user adds a csv file to the metadata folder for the transfer entitled metadata.csv
 
 * The first row of the csv file consists of field names. Field names must not
   include spaces.
@@ -67,8 +62,7 @@ metadata.csv
   if desired. For example, the name "page01.jp2" can occur in multiple
   subdirectories.
 
-4. At the generate METS micro-service, Archivematica parses the metadata in
-metadata.csv to the METS file, as follows:
+4. At the generate METS micro-service, Archivematica parses the metadata in metadata.csv to the METS file, as follows:
 
 * All Dublin Core elements are used to generate a dmdSec for each directory or
   file with MDTYPE="DC"

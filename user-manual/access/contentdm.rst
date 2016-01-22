@@ -43,13 +43,11 @@ or compound object, or multiple simple or compound objects.
 
 For a transfer of simple objects:
 
-1. Inside the directory you wish to use as a transfer, create two subdirectories:
-``metadata``, and ``objects``.
+1. Inside the directory you wish to use as a transfer, create two subdirectories: ``metadata``, and ``objects``.
 
 2. Inside ``objects``, place the digital objects you wish to transfer.
 
-3. Inside ``metadata``, place a file called ``metadata.csv``. See preparation
-instructions below.
+3. Inside ``metadata``, place a file called ``metadata.csv``. See preparation instructions below.
 
 Example:
 
@@ -66,14 +64,11 @@ Example:
 
 For a transfer of compound objects:
 
-1. Inside the directory you wish to use as a transfer, create two subdirectories:
-``metadata``, and ``objects``.
+1. Inside the directory you wish to use as a transfer, create two subdirectories: ``metadata``, and ``objects``.
 
-2. Inside ``objects``, create or place directories, one corrsponding to each
-compound object. Place the digital objects inside those directories.
+2. Inside ``objects``, create or place directories, one corrsponding to each compound object. Place the digital objects inside those directories.
 
-3. Inside metadata, place a file called ``metadata.csv``. See preparation
-instructions below.
+3. Inside metadata, place a file called ``metadata.csv``. See preparation instructions below.
 
 Example:
 
@@ -146,12 +141,9 @@ Create DIP for CONTENTdm
    and a field called "File UUID". The tab file produced by Archivematica
    will populate these two fields.
 
-1. In the Archivematica dashboard at “Upload DIP”, choose the action “Upload
-DIP to CONTENTdm” from the drop-down menu.
+1. In the Archivematica dashboard at “Upload DIP”, choose the action “Upload DIP to CONTENTdm” from the drop-down menu.
 
-2. Archivematica will create a DIP consisting of normalized or
-:ref:`manually normalized <manual-norm>` access objects and a tab delimited
-file for use in Project Client.
+2. Archivematica will create a DIP consisting of normalized or :ref:`manually normalized <manual-norm>` access objects and a tab delimited file for use in Project Client.
 
 To review the DIP in the dashboard and download individual DIP objects and/or
 the tab file, click "review":

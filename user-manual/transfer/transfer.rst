@@ -71,8 +71,7 @@ allows you to register your repository and get updates to the format policy
 registry. See the User manual - :ref:`Format Policy Registry (FPR) <fpr>` and the
 :ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
 
-1. In the transfer tab, select your transfer type in the dropdown menu. Types
-include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
+1. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
 
 2. In transfer tab, name your transfer and select your source directory. Click Browse to select the directory containing your object(s) for upload. Your transfer can be composed of multiple directories from different sources. Repeat this step if your transfer is composed of multiple sources.
 
@@ -90,8 +89,7 @@ transfer directory.
 3. If applicable, enter an accession number for the transfer.
 
 
-4. Once all of your digital object sources have been uploaded, hit the Start
-Transfer button for the transfer processing to begin.
+4. Once all of your digital object sources have been uploaded, hit the Start Transfer button for the transfer processing to begin.
 
 .. figure:: images/Start1.*
    :align: center
@@ -125,19 +123,11 @@ To create a transfer that includes submission documentation, such as a donor agr
    sanitized. Any filenames other than plain ASCII names may cause errors in
    processing.
 
-1. Open the file browser by clicking on the Home folder on the Archivematica
-desktop.
+1. Open the file browser by clicking on the Home folder on the Archivematica desktop.
 
-2. The structured directory should contain three subdirectories: logs,
-metadata, objects. Copy the digital files to be preserved into the objects
-directory. Note that you can create subdirectories within objects.
+2. The structured directory should contain three subdirectories: logs, metadata, objects. Copy the digital files to be preserved into the objects directory. Note that you can create subdirectories within objects.
 
-3. Add submission documentation. In the transfer you have just created,
-navigate to the /metadata/ folder and add a /submissionDocumentation
-directory. Add files to that folder like donor agreements, transfer forms,
-copyright agreements and any correspondence or other documentation relating to
-the transfer. Any SIPs subsequently made from this transfer will automatically
-contain copies of this documentation.
+3. Add submission documentation. In the transfer you have just created, navigate to the /metadata/ folder and add a /submissionDocumentation directory. Add files to that folder like donor agreements, transfer forms, copyright agreements and any correspondence or other documentation relating to the transfer. Any SIPs subsequently made from this transfer will automatically contain copies of this documentation.
 
 .. _transfer-checksums:
 
@@ -148,34 +138,24 @@ You can include checksums with your transfer if you have them. Archivematica
 will verify .md5, .sha1 and .sha256 checksums in the Verify checksums micro-
 service during the Transfer workflow in the dashboard.
 
-1. Place the digital objects into an ``/objects`` folder below the first level of
-the transfer.
+1. Place the digital objects into an ``/objects`` folder below the first level of the transfer.
 
-2. Place the metadata files in a /metadata folder at the same level as the
-``/objects`` folder. Your checksums should be contained in text files named the
-following way: checksum.md5, checksum.sha1 or checksum.sha256.
+2. Place the metadata files in a /metadata folder at the same level as the ``/objects`` folder. Your checksums should be contained in text files named the following way: checksum.md5, checksum.sha1 or checksum.sha256.
 
 3. Begin your standard transfer in the Archivematica dashboard interface.
 
-4. If your checksum check fails, this micro-service will show an error. The
-micro-service line will turn red. The log for this is sent to the ``/logs`` folder
-of the transfer. The file in the log folder should look like "checksum.md5
--Check-Tue Oct 14 13:56:51 PDT 2014"
+4. If your checksum check fails, this micro-service will show an error. The micro-service line will turn red. The log for this is sent to the ``/logs`` folder of the transfer. The file in the log folder should look like "checksum.md5 -Check-Tue Oct 14 13:56:51 PDT 2014"
 
 .. _process-transfer:
 
 Process the transfer
 --------------------
 
-1. In the dashboard transfer tab, the transfer will appear in the dashboard
-with a bell icon next to it. This means that it is awaiting a decision by the
-user.
+1. In the dashboard transfer tab, the transfer will appear in the dashboard with a bell icon next to it. This means that it is awaiting a decision by the user.
 
-2. Click on the micro-service to display jobs that have completed, including
-the one requiring action.
+2. Click on the micro-service to display jobs that have completed, including the one requiring action.
 
-3. In the Actions drop-down menu, select "Approve transfer" to begin
-processing the transfer. You may also "Reject transfer" and quit processing.
+3. In the Actions drop-down menu, select "Approve transfer" to begin processing the transfer. You may also "Reject transfer" and quit processing.
 
 .. figure:: images/Approve1.*
    :align: center
@@ -235,18 +215,11 @@ processing the transfer. You may also "Reject transfer" and quit processing.
 
 * Complete transfer: Includes indexing the transfer.
 
-5. A transfer that is in the middle of processing will show which micro-
-services have been completed (green) and which are in progress (orange).
+5. A transfer that is in the middle of processing will show which micro-services have been completed (green) and which are in progress (orange).
 
-6. When a micro-service fails or encounters an error, the micro-service
-background turns from green to pink and a "failed" icon appears next to the
-transfer or SIP name. See Error handling for more information about how to
-handle an error.
+6. When a micro-service fails or encounters an error, the micro-service background turns from green to pink and a "failed" icon appears next to the transfer or SIP name. See Error handling for more information about how to handle an error.
 
-7. Once the transfer micro-services are completed, a bell icon will appear
-next to the transfer. This means that the transfer is ready to be packaged
-into a SIP for ingest or sent to a backlog, indexed and stored to be retrieved
-for processing at a later date
+7. Once the transfer micro-services are completed, a bell icon will appear next to the transfer. This means that the transfer is ready to be packaged into a SIP for ingest or sent to a backlog, indexed and stored to be retrieved for processing at a later date
 
 .. figure:: images/CreateSIP.*
    :align: center

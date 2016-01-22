@@ -20,18 +20,11 @@ Should you run into an error during archival storage, please see
 Storing an AIP
 --------------
 
-1. Once ingest is complete, selecting a location to "Store AIP" in the Actions
-drop-down menu compresses and zips the AIP and moves it into Archival storage.
+1. Once ingest is complete, selecting a location to "Store AIP" in the Actions drop-down menu compresses and zips the AIP and moves it into Archival storage.
 
-2. In the demo version of Archivematica the AIP storage directory is
-``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it can be a
-remote network mounted directory. If multiple AIP storage locations have been
-created in the Storage Service, each will appear in the Store AIP location
-dropdown, including LOCKSS locations.
+2. In the demo version of Archivematica the AIP storage directory is ``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it can be a remote network mounted directory. If multiple AIP storage locations have been created in the Storage Service, each will appear in the Store AIP location dropdown, including LOCKSS locations.
 
-
-3. The AIP directories are broken down into UUID quad directories for
-efficient storage and retrieval.
+3. The AIP directories are broken down into UUID quad directories for efficient storage and retrieval.
 
 .. note::
 
@@ -45,23 +38,16 @@ efficient storage and retrieval.
    used to create the leaf of the AIP store directory tree, and the AIP with
    that UUID resides in that leaf.
 
-4. The Archival storage tab in the Archivematica dashboard consists of a table
-with information about the stored AIPs. Use the up and down arrows in the
-column headers to sort by AIP name, size, UUID, date stored or status. Note
-that at the top of the table is the total size of the stored AIPs and the
-number of indexed files.
+4. The Archival storage tab in the Archivematica dashboard consists of a table with information about the stored AIPs. Use the up and down arrows in the column headers to sort by AIP name, size, UUID, date stored or status. Note that at the top of the table is the total size of the stored AIPs and the number of indexed files.
 
 .. image:: images/ArchStorTab1.*
    :align: center
    :width: 80%
    :alt: Archival storage tab showing stored AIPs
 
-5. To open a copy of the AIP, click on the AIP name. You can then open or
-download the zipped AIP.
+5. To open a copy of the AIP, click on the AIP name. You can then open or download the zipped AIP.
 
-6. The AIP pointer file can be accessed by clicking on the Pointer file link.
-The pointer file provides information on the AIP and its relationships to the
-Archivematica, DIPs, and other AIPs as appropriate.
+6. The AIP pointer file can be accessed by clicking on the Pointer file link. The pointer file provides information on the AIP and its relationships to the Archivematica, DIPs, and other AIPs as appropriate.
 
 .. seealso::
 
@@ -109,8 +95,7 @@ Note that:
 Deleting an AIP
 ---------------
 
-1. To request AIP deletion, click on the red delete icon next the AIP in the
-Archival storage tab table.
+1. To request AIP deletion, click on the red delete icon next the AIP in the Archival storage tab table.
 
 .. image:: images/DeleteButton.*
    :align: center
@@ -125,11 +110,7 @@ Archival storage tab table.
    :width: 80%
    :alt: Give a reason for deletion
 
-Choosing to delete an AIP will send a request to your Archival Storage Service
-administrator. If the administrator approves the request, your AIP will be
-deleted from your Archival Storage and your index will be updated. If the
-administrator denies the request, the AIP will remain in storage and your
-administrator should contact you.
+Choosing to delete an AIP will send a request to your Archival Storage Service administrator. If the administrator approves the request, your AIP will be deleted from your Archival Storage and your index will be updated. If the administrator denies the request, the AIP will remain in storage and your administrator should contact you.
 
 .. important::
 
