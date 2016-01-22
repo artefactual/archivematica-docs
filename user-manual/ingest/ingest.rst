@@ -24,6 +24,9 @@ Should you run into an error during ingest, please see Error handling.
 * :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
 * :ref:`Reingest AIP <reingest>`
+* :ref:`Storage Service <storage-service>`
+* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
+* :ref:`Upload DIP to Archivists Toolkit <dip-upload-AT>`
 
 .. _create-sip:
 
@@ -465,6 +468,7 @@ services, including processing of the submission documentation, generation of
 the METS file, indexing, generation of the DIP and packaging of the AIP.
 
 2. When these micro-services are complete, the user can upload the DIP and store the AIP.
+See below for :ref:`ArchivesSpace <dip-upload-AS>` and Archivists Toolkit DIP upload
 
 
 .. figure:: images/StoreAIPUpDIP1.*
@@ -588,6 +592,8 @@ normal. Note that when performing a metadata-only reingest, there will be no
 objects in your AIP in the review stage- Archivematica replaces the METS file
 in the existing AIP upon storage.
 
+.. _storage-service:
+
 Storage Service
 ===============
 
@@ -611,9 +617,39 @@ reingest (metadata only or metadata and objects in version 1.5)
 for reingest. Proceed to the Ingest tab of your pipeline, and follow steps
 3-6 above.
 
-API
-===
+.. _dip-upload-AS:
 
-Content forthcoming.
+Upload DIP to ArchivesSpace
+===========================
+
+To upload DIPs to your ArchivesSpace instance, you must enter your ArchivesSpace
+information and credentials in Administration. See :ref:`ArchivesSpace DIP upload
+<dashboard-AS>` for more information.
+
+During Normalization, choose one of the options that normalizes the package for access.
+During the Upload DIP micro-service, select Upload DIP to Archives Space. The Match
+page should automatically open.
+
+1. Find the ArchivesSpace collection to which you would like to upload the DIP. By
+clicking on the name of the resource, you can drill down into the collection to
+upload the DIP at a lower level of description.
+
+2. When you have navigated to the level of description where you want to store the
+DIP, select *Assign DIP objects to this resource*.
+
+3. On the Assign Objects screen, select which objects you would like to assign
+to which resources. Using the filter boxes in the top right, it is possible to search for
+specific objects or resources by name.
+
+4. Once you have selected the objects and the resource you would like to pair them to,
+click *Pair* in the top right corner. Repeat steps 2-4 as needed.
+
+5. When you are done pairing objects and resources, click on *Review matches.*
+
+6. To remove all pairs and restart, click on *Restart matching*.
+
+7. If everything is correct, click on *Finish matching*.
+
+This will take you back to the Ingest tab, where you can finish ingesting the AIP.
 
 :ref:`Back to the top <ingest>`
