@@ -643,6 +643,7 @@ specific objects or resources by name.
 
 4. Once you have selected the objects and the resource you would like to pair them to,
 click *Pair* in the top right corner. Repeat steps 2-4 as needed.
+tw
 
 5. When you are done pairing objects and resources, click on *Review matches.*
 
@@ -651,5 +652,14 @@ click *Pair* in the top right corner. Repeat steps 2-4 as needed.
 7. If everything is correct, click on *Finish matching*.
 
 This will take you back to the Ingest tab, where you can finish ingesting the AIP.
+
+.. _dip-upload-AT:
+
+Upload DIP to Archivists Toolkit
+================================
+
+To upload DIPs to your Archivists Toolkit instance, you must enter your Archivists Toolkit
+information and credentials in Administration. See :ref:`Archivists Toolkit DIP upload
+<dashboard-AT>` for more information.
 
 :ref:`Back to the top <ingest>`
