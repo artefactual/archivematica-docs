@@ -26,7 +26,7 @@ Should you run into an error during ingest, please see Error handling.
 * :ref:`Reingest AIP <reingest>`
 * :ref:`Storage Service <storage-service>`
 * :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
-* :ref:`Upload DIP to Archivists Toolkit <dip-upload-AT>`
+* :ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`
 
 .. _create-sip:
 
@@ -404,7 +404,7 @@ Store AIP
 
 1. After normalization is approved, the SIP runs through a number of micro-services, including processing of the submission documentation, generation of the METS file, indexing, generation of the DIP and packaging of the AIP.
 
-2. When these micro-services are complete, the user can upload the DIP and store the AIP. See below for :ref:`ArchivesSpace <dip-upload-AS>` and Archivists Toolkit DIP upload
+2. When these micro-services are complete, the user can upload the DIP and store the AIP. See below for :ref:`ArchivesSpace <dip-upload-AS>` and Archivists' Toolkit DIP upload
 
 
 .. figure:: images/StoreAIPUpDIP1.*
@@ -542,12 +542,12 @@ Upload DIP to ArchivesSpace
 ===========================
 
 To upload DIPs to your ArchivesSpace instance, you must enter your ArchivesSpace
-information and credentials in Administration. See :ref:`ArchivesSpace DIP upload
+information and credentials in the Administration tab. See :ref:`ArchivesSpace DIP upload
 <dashboard-AS>` for more information.
 
-During Normalization, choose one of the options that normalizes the package for access.
-During the Upload DIP micro-service, select Upload DIP to Archives Space. The Match
-page should automatically open.
+Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization, choose one of
+the options that normalizes the package for access. During the Upload DIP micro-service,
+select Upload DIP to Archives Space. The Match page should automatically open.
 
 1. Find the ArchivesSpace collection to which you would like to upload the DIP. By clicking on the name of the resource, you can drill down into the collection to upload the DIP at a lower level of description.
 
@@ -567,11 +567,20 @@ This will take you back to the Ingest tab, where you can finish ingesting the AI
 
 .. _dip-upload-AT:
 
-Upload DIP to Archivists Toolkit
+Upload DIP to Archivists' Toolkit
 ================================
 
-To upload DIPs to your Archivists Toolkit instance, you must enter your Archivists Toolkit
-information and credentials in Administration. See :ref:`Archivists Toolkit DIP upload
-<dashboard-AT>` for more information.
+To upload DIPs to your Archivists' Toolkit instance, you must enter your Archivists' Toolkit
+information and credentials in the Administration tab. See :ref:`Archivists' Toolkit DIP upload <dashboard-AT>` for more information.
+
+Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization,
+choose one of the options that normalizes the package for access. During the Upload DIP
+micro-service, select Upload DIP to Archivists' Toolkit. The Match page should
+automatically open.
+
+#. A page will open allowing the user to select the Archivists' Toolkit collection where the objects should be added. This page allows the user to match digital objects to resource components in Archivists' Toolkit.
+
+#. Archivematica will upload the DIP metadata to Archivists' Toolkit.
+
 
 :ref:`Back to the top <ingest>`
