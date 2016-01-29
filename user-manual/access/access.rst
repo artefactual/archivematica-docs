@@ -33,16 +33,18 @@ Should you run into an error during this process, please see
 
 *On this page:*
 
-* :ref:`Default access system <access-default>`
+* :ref:`Access systems <access-default>`
 * :ref:`Upload DIP to AtoM <upload-atom>`
+* :ref:`Upload DIP to ArchivesSpace <upload-as>`
+* :ref:`Upload DIP to Archivists' Toolkit <upload-at>`
 * :ref:`Store DIP <store-dip>`
 * :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
 
 .. _access-default:
 
-Default access system
----------------------
+Access systems
+--------------
 
 A content management tool called `AtoM <https://www.accesstomemory.org>`_ is
 Archivematica's default access system. AtoM supports standards-compliant
@@ -53,25 +55,24 @@ for standards-based archival description and access in a multilingual, multi-
 repository environment. User and Administrator manuals for AtoM are available
 `here <https://www.accesstomemory.org/en/docs/>`_ .
 
-To configure Archivematica for uploading the DIP to AtoM, see the
-:ref:`Administrator manual - AtoM DIP upload <admin-dashboard-atom>`.
+Archivematica has also been developed to integrate with `ArchivesSpace <http://archivesspace.org/>`_ and `Archivists' Toolkit <http://www.archiviststoolkit.org/>`_.
 
 .. _upload-atom:
 
 Upload DIP to AtoM
-------------------
+==================
+
+To upload DIPs to your AtoM instance, you must enter your AtoM
+information and credentials in the Administration tab. See :ref:`Administrator manual - AtoM DIP upload <admin-dashboard-atom>` for more information.
 
 .. important::
 
-   The user must create the target description in AtoM before uploading the
-   DIP. The user will need to indicate part of the description's URL or a
+   You must create the target description in AtoM before uploading the
+   DIP. You will need to indicate part of the description's URL or a
    target collection in order to send the DIP to the appropriate place during
-   DIP upload
+   DIP upload.
 
-In this example, we will upload a DIP to a sample description in AtoM called
-"Sample fonds".
-
-1. In the ingest tab, select "Upload DIP to AtoM" in the upload DIP Actions drop-down menu.
+1. In the ingest tab, select "Upload DIP to AtoM" in the Upload DIP Actions drop-down menu.
 
 2. A dialogue box will appear. Enter the permalink of the description in the dialogue box.
 
@@ -82,6 +83,9 @@ In this example, we will upload a DIP to a sample description in AtoM called
 
 3. Click the blue "Upload" button. Digital objects are uploaded as items within the description to which the DIP is being uploaded. If you want to create a child level of description under the target description, you must add the title of that level of description using the DC metadata template prior to normalization.
 
+.. IMPORTANT::
+    If you :ref:`add metadata <add-metadata>` to the DIP during Ingest, a file-level record will be created in AtoM below the chosen parent record. The metadata will be written to this file-level record and the digital objects will be added as child items. If you do not add metadata, the digital objects will be added to the parent record directly.
+
 4. When the DIP has finished uploading, open the Access tab in the dashboard. This tab shows the AIP and its uploaded DIP. Click on the DIP URL to go to the uploaded DIP in AtoM.
 
 5. If you are not already logged in to AtoM you will need to log in using your login credentials.
@@ -89,6 +93,54 @@ In this example, we will upload a DIP to a sample description in AtoM called
 6. You will see an archival description with the metadata you added during ingest, displayed in the context of the level of archival description to which the DIP was uploaded. To view an individual digital object, scroll through the thumbnails on the left of the screen and click on an image.
 
 7. The digital object is displayed in AtoM. Clicking on the image will open the uploaded object.
+
+.. _upload-as:
+
+Upload DIP to ArchivesSpace
+---------------------------
+
+To upload DIPs to your ArchivesSpace instance, you must enter your ArchivesSpace
+information and credentials in the Administration tab. See :ref:`ArchivesSpace dashboard
+configuration <dashboard-AS>` for more information.
+
+Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization, choose one of
+the options that normalizes the package for access. During the Upload DIP micro-service,
+select Upload DIP to Archives Space. The Match page should automatically open.
+
+#. Find the ArchivesSpace collection to which you would like to upload the DIP. By clicking on the name of the resource, you can drill down into the collection to upload the DIP at a lower level of description.
+
+#. When you have navigated to the level of description where you want to store the DIP, select *Assign DIP objects to this resource*.
+
+#. On the Assign Objects screen, select which objects you would like to assign to which resources. Using the filter boxes in the top right, it is possible to search for specific objects or resources by name.
+
+#. Once you have selected the objects and the resource you would like to pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as needed.
+
+#. When you are done pairing objects and resources, click on *Review matches.*
+
+#. To remove all pairs and restart, click on *Restart matching*.
+
+#. If everything is correct, click on *Finish matching*.
+
+This will take you back to the Ingest tab, where you can finish ingesting the AIP.
+
+.. _upload-at:
+
+Upload DIP to Archivists' Toolkit
+---------------------------------
+
+To upload DIPs to your Archivists' Toolkit instance, you must enter your Archivists' Toolkit
+information and credentials in the Administration tab. See :ref:`Archivists' Toolkit
+dashboard configuration <dashboard-AT>` for more information.
+
+Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization,
+choose one of the options that normalizes the package for access. During the Upload DIP
+micro-service, select Upload DIP to Archivists' Toolkit. The Match page should
+automatically open.
+
+#. A page will open allowing the user to select the Archivists' Toolkit collection where the objects should be added. This page allows the user to match digital objects to resource components in Archivists' Toolkit.
+
+#. Archivematica will upload the DIP metadata to Archivists' Toolkit.
+
 
 .. _store-dip:
 

@@ -23,10 +23,9 @@ Should you run into an error during ingest, please see Error handling.
 * :ref:`Normalize <normalize>`
 * :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
+* :ref:`Upload DIP <upload-dip>`
 * :ref:`Reingest AIP <reingest>`
-* :ref:`Storage Service <storage-service>`
-* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
-* :ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`
+
 
 .. _create-sip:
 
@@ -108,11 +107,44 @@ directory and click Hide.
 
 5. Click and drag files from the Originals pane into your desired directory in the arrange panel. You can move either individual files or entire directories. Note: All files must be in a directory inside of Arrange. “Arrange” cannot be used as the top directory.
 
-6. If you plan to create a DIP to upload to AtoM, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of item.
+6. When you have completed moving files and directories into the Arrange pane, click on the top level directory which you wish to include in your SIP. Click on Create SIP. Any files or directories which are not inside the directory you chose will remain in the Arrange pane until you create a SIP using these files and directories.
+
+.. figure:: images/Create-SIP.*
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+   :alt: Create a new SIP in Arrange pane
+
+   Create a new SIP by clicking on a directory within Arrange pane
+
+Archivematica will confirm that you wish to create a SIP and after receiving
+confirmation, proceed to the next micro-services to create AIPs and DIPs as
+selected by the user.
+
+
+.. _add-metadata:
+
+Add metadata
+------------
+
+In Archivematica, metadata can be added either prior to the normalization step
+or after. Archivematica will prompt you with a reminder to add metadata if
+desired during the Process metadata directory micro-service. See
+:ref:`AtoM Dublin Core <atom:dc-template>`_
+for information about the Dublin Core elements available.
+
+.. seealso::
+
+    If you are importing lower-level metadata (i.e. metadata to be attached to subdirectories and files within a SIP) see also:
+
+    * :ref:`Transfer <transfer>`
+
+    * :ref:`Import metadata <import-metadata>`
 
 .. note::
+    If you plan to create a DIP to :ref:`Upload to AtoM<dip-upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of item.
 
-   This functionality is supported in AtoM 2.2 and higher.
+    This functionality is supported in AtoM 2.2 and higher.
 
 Click to select a directory or object, then click Edit metadata to choose the
 level of description.
@@ -143,38 +175,7 @@ to review before finalizing your SIP.
    If you choose not to assign levels of description to directories in SIP arrange,
    AtoM will flatten the DIP so that all digital objects are child-level descriptions
    of the target description.
-
-
-
-7. When you have completed moving files and directories into the Arrange pane, click on the top level directory which you wish to include in your SIP. Click on Create SIP. Any files or directories which are not inside the directory you chose will remain in the Arrange pane until you create a SIP using these files and directories.
-
-.. figure:: images/Create-SIP.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Create a new SIP in Arrange pane
-
-   Create a new SIP by clicking on a directory within Arrange pane
-
-Archivematica will confirm that you wish to create a SIP and after receiving
-confirmation, proceed to the next micro-services to create AIPs and DIPs as
-selected by the user.
-
-
-.. _add-metadata:
-
-Add metadata
-------------
-
-In Archivematica, metadata can be added either prior to the normalization step
-or after. Archivematica will prompt you with a reminder to add metadata if
-desired during the Process metadata directory micro-service. See
-:ref:`AtoM Dublin Core <atom:dc-template>`_
-for information about the Dublin Core elements available.
-
-.. seealso::
-
-    If you are importing lower-level metadata (i.e. metadata to be attached to
+ower-level metadata (i.e. metadata to be attached to
     subdirectories and files within a SIP) see also:
 
     * :ref:`Metadata import <import-metadata>`
@@ -195,7 +196,9 @@ for information about the Dublin Core elements available.
 2. This will take you to the SIP detail panel. On the left-hand side, under metadata click Add.
 
 .. figure:: images/SIPDetailPanel1.*
-   :align: center
+   :align: center* :ref:`Upload DIP to AtoM <dip-upload-atom>`
+* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
+* :ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`
    :figwidth: 80%
    :width: 100%
    :alt: SIP detail panel
@@ -430,8 +433,12 @@ Store AIP
    For information on viewing and managing stored AIPs go to
    :ref:`Archival storage <archival-storage>`.
 
-   For information on uploading the DIP, go to :ref:`Access <access>`.
+.. _upload-dip:
 
+Upload DIP
+----------
+
+Archivematica supports DIP uploads to AtoM, ArchivesSpace, and Archivists' Toolkit. For information about uploading DIPs to your access system, see :ref:`Access <access>`.
 
 .. _reingest:
 
@@ -513,7 +520,7 @@ browser with the same locations available as configured for Transfer Source.
    :width: 80%
    :alt: Add new metadata files
 
-6. After normalization and metadata updating, continue processing the SIP as normal. Note that when performing a metadata-only reingest, there will be no objects in your AIP in the review stage- Archivematica replaces the METS file in the existing AIP upon storage.
+7. After normalization and metadata updating, continue processing the SIP as normal. Note that when performing a metadata-only reingest, there will be no objects in your AIP in the review stage- Archivematica replaces the METS file in the existing AIP upon storage.
 
 .. _storage-service:
 
@@ -535,52 +542,5 @@ Storage Service
    :alt: Screen to choose pipeline and type of reingest
 
 3. The Storage Service will confirm that the AIP has been sent to the pipeline for reingest. Proceed to the Ingest tab of your pipeline, and follow steps 3-6 above.
-
-.. _dip-upload-AS:
-
-Upload DIP to ArchivesSpace
-===========================
-
-To upload DIPs to your ArchivesSpace instance, you must enter your ArchivesSpace
-information and credentials in the Administration tab. See :ref:`ArchivesSpace DIP upload
-<dashboard-AS>` for more information.
-
-Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization, choose one of
-the options that normalizes the package for access. During the Upload DIP micro-service,
-select Upload DIP to Archives Space. The Match page should automatically open.
-
-1. Find the ArchivesSpace collection to which you would like to upload the DIP. By clicking on the name of the resource, you can drill down into the collection to upload the DIP at a lower level of description.
-
-2. When you have navigated to the level of description where you want to store the DIP, select *Assign DIP objects to this resource*.
-
-3. On the Assign Objects screen, select which objects you would like to assign to which resources. Using the filter boxes in the top right, it is possible to search for specific objects or resources by name.
-
-4. Once you have selected the objects and the resource you would like to pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as needed.
-
-5. When you are done pairing objects and resources, click on *Review matches.*
-
-6. To remove all pairs and restart, click on *Restart matching*.
-
-7. If everything is correct, click on *Finish matching*.
-
-This will take you back to the Ingest tab, where you can finish ingesting the AIP.
-
-.. _dip-upload-AT:
-
-Upload DIP to Archivists' Toolkit
-================================
-
-To upload DIPs to your Archivists' Toolkit instance, you must enter your Archivists' Toolkit
-information and credentials in the Administration tab. See :ref:`Archivists' Toolkit DIP upload <dashboard-AT>` for more information.
-
-Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Normalization,
-choose one of the options that normalizes the package for access. During the Upload DIP
-micro-service, select Upload DIP to Archivists' Toolkit. The Match page should
-automatically open.
-
-#. A page will open allowing the user to select the Archivists' Toolkit collection where the objects should be added. This page allows the user to match digital objects to resource components in Archivists' Toolkit.
-
-#. Archivematica will upload the DIP metadata to Archivists' Toolkit.
-
 
 :ref:`Back to the top <ingest>`
