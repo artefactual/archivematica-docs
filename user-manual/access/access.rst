@@ -97,7 +97,7 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 .. _upload-as:
 
 Upload DIP to ArchivesSpace
----------------------------
+===========================
 
 To upload DIPs to your ArchivesSpace instance, you must enter your ArchivesSpace
 information and credentials in the Administration tab. See :ref:`ArchivesSpace dashboard
@@ -126,7 +126,7 @@ This will take you back to the Ingest tab, where you can finish ingesting the AI
 .. _upload-at:
 
 Upload DIP to Archivists' Toolkit
----------------------------------
+=================================
 
 To upload DIPs to your Archivists' Toolkit instance, you must enter your Archivists' Toolkit
 information and credentials in the Administration tab. See :ref:`Archivists' Toolkit

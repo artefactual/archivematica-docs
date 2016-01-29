@@ -312,9 +312,17 @@ dashboard have been set.
 
 * ArchivesSpace repository number: Insert the identifier for the ArchivesSpace repository
   to which you would like to upload DIPs here. Note that the default identifier for a
-  single-repository ArchivesSpace instance is **2**.
+  single-repository ArchivesSpace instance is 2.
 
 .. NOTE::
+  The *Use statement* and *Object type* fields can be left blank. To populate these fields, you must
+  refer to ArchivesSpace's Controlled Value Lists. For example, the Object type field in Archivematica
+  is mapped to the Digital Object Type list in ArchivesSpace. If the uploaded materials are sound
+  recordings, you could enter ``sound_recording`` in the Object type field to apply the label
+  sound_recording to all of the uploads. For mixed media uploads, it is best to leave this field blank.
+
+
+.. IMPORTANT::
   In order to save changes to the ArchivesSpace DIP upload configuration, you must
   enter the password before clicking save. Note that Archivematica will *not* show you
   an error if the password is not entered.
