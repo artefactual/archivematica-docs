@@ -292,7 +292,7 @@ ArchivesSpace DIP upload
 -----------------------------
 
 Before ingesting digital objects destined for ArchivesSpace, ensure that
-the Achivists' Toolkit DIP upload settings in the administration tab of the
+the ArchivesSpace DIP upload settings in the administration tab of the
 dashboard have been set.
 
 * These settings should be created and saved before digital objects destined
@@ -315,17 +315,19 @@ dashboard have been set.
   single-repository ArchivesSpace instance is 2.
 
 .. NOTE::
-  The *Use statement* and *Object type* fields can be left blank. To populate these fields, you must
-  refer to ArchivesSpace's Controlled Value Lists. For example, the Object type field in Archivematica
-  is mapped to the Digital Object Type list in ArchivesSpace. If the uploaded materials are sound
-  recordings, you could enter ``sound_recording`` in the Object type field to apply the label
-  sound_recording to all of the uploads. For mixed media uploads, it is best to leave this field blank.
+
+   The *Use statement* and *Object type* fields can be left blank. To populate these fields, you must
+   refer to ArchivesSpace's Controlled Value Lists. For example, the Object type field in Archivematica
+   is mapped to the Digital Object Type list in ArchivesSpace. If the uploaded materials are sound
+   recordings, you could enter ``sound_recording`` in the Object type field to apply the label
+   sound_recording to all of the uploads. For mixed media uploads, it is best to leave this field blank.
 
 
 .. IMPORTANT::
-  In order to save changes to the ArchivesSpace DIP upload configuration, you must
-  enter the password before clicking save. Note that Archivematica will *not* show you
-  an error if the password is not entered.
+
+   In order to save changes to the ArchivesSpace DIP upload configuration, you must
+   enter the password before clicking save. Note that Archivematica will *not* show you
+   an error if the password is not entered.
 
 
 .. _dashboard-AT:

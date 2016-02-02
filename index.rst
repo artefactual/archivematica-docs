@@ -72,8 +72,8 @@ Ingest
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Reingest AIP <reingest>`
 * :ref:`Storage Service <storage-service>`
-* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
-* :ref:`Upload DIP to Archivists Toolkit <dip-upload-AT>`
+* :ref:`Upload DIP to ArchivesSpace <upload-AS>`
+* :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`
 
 
