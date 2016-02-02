@@ -4,14 +4,29 @@
 Import metadata
 ===============
 
-This page documents the workflow and METS content for lower-level metadata
-import - i.e. metadata to be attached to subdirectories and files within a
-SIP.
+To import metadata with your transfer, you must structure your transfer to
+include a directory called ``metadata``. The folder can contain any type of
+metadata that you wish to preserve alongside your digital objects. If you
+include a ``metadata.csv`` file structured as described on this page,
+Archivematica is able to parse the metadata into the dmdSec (descriptive
+metadata section) of the METS file. This metadata also becomes searchable
+in the :ref:`Archival Storage <archival-storage>` tab.
+
+.. seealso::
+
+   :ref:`Create a transfer with submission documentation <create-submission>`
+
 
 Workflow
 --------
 
+<<<<<<< HEAD
 1. For simple objects, the user places files in the objects directory, with or without intervening subdirectories. The imported metadata are attached to each object.
+=======
+1. Create a transfer folder that contains a folder called ``metadata``. For
+   simple objects, the user places files in the objects directory, with or
+   without intervening subdirectories.
+>>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 .. figure:: images/MdfolderMDimport-10.*
    :align: center
@@ -21,6 +36,7 @@ Workflow
 
    Metadata folder in transfer directory contains metadata.csv file
 
+<<<<<<< HEAD
 .. figure:: images/CsvMDimport-10.*
    :align: center
    :figwidth: 60%
@@ -31,21 +47,34 @@ Workflow
 
 
 2. For compound objects, the user creates one or more subdirectories in the objects directory, each containing the files that form a compound object. The imported metadata are attached to each subdirectory.
+=======
+2. For compound objects, create one or more subdirectories in the
+   objects directory, each containing the files that form a compound object.
+>>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 .. important::
 
    The subdirectory names must not contain spaces or other forbidden characters.
 
+<<<<<<< HEAD
 3. The user adds a csv file to the metadata folder for the transfer entitled metadata.csv
+=======
+3. Add a csv file to the metadata folder for the transfer called
+   ``metadata.csv``.
+>>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 * The first row of the csv file consists of field names. Field names must not
   include spaces.
 
 * Dublin Core field names must contain the "dc" element in the name, eg
-  "dc.title"
+  "dc.title". Note that the Dublin Core is not validated, this is up to the
+  user.
 
 * Each subsequent row contains the complete set of field values for a single
   directory or file.
+
+* As of version 1.4, mixed directory and object level metadata is allowed
+  in the metadata.csv.
 
 * For multi-value fields (such as dc.subject), the entire column is repeated
   and each column contains a single value.
@@ -54,15 +83,28 @@ Workflow
   "filename" column listing the filepath and filename of each objects: eg
   "objects/BrocktonOval.jp2"
 
-* If the metadata are for compound objects, the csv file must contain a
-  "parts" column listing the names of the directories containing the items
-  that form the compound object: eg "objects/Jan021964"
+* If the metadata are for compound objects, the "filename" column contains the
+  names of the directories containing the items that form the compound object:
+  eg "objects/Jan021964"
 
 * Note that filenames can be duplicates of filenames in other subdirectories
   if desired. For example, the name "page01.jp2" can occur in multiple
   subdirectories.
 
+<<<<<<< HEAD
 4. At the generate METS micro-service, Archivematica parses the metadata in metadata.csv to the METS file, as follows:
+=======
+  .. figure:: images/CsvMDimport-10.*
+     :align: center
+     :figwidth: 60%
+     :width: 100%
+     :alt:  Example csv file contents
+
+     Example csv file contents
+
+4. At the generate METS micro-service, Archivematica parses the metadata in
+   metadata.csv to the METS file, as follows:
+>>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 * All Dublin Core elements are used to generate a dmdSec for each directory or
   file with MDTYPE="DC"
@@ -70,7 +112,7 @@ Workflow
 * All non-Dublin Core elements are used to generate a dmdSec for each
   directory or file with MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"
 
-* The dmdSecs are linked to their directories or files in the structMap
+* The dmdSecs are linked to their directories or files in the structMap.
 
 
 Simple objects
