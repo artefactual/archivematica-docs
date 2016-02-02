@@ -47,9 +47,13 @@ SIP from backlog using the :ref:`SIP arrange pane <arrange-sip>`.
    :width: 80%
    :alt: Click on Add under Metadata
 
+<<<<<<< HEAD
 4. Enter Dublin Core metadata. Recommended minimum is Title and Part of AIC.
 However, if desired, use the metadata entry template to create a more detailed
 description of the AIP contents:
+=======
+4. Enter Dublin Core metadata. At a minimum, the AIC identifier (Part of AIC field) is required. However, if desired, use the metadata entry template to create a more detailed description of the AIP contents:
+>>>>>>> 2e1c749... Clarified AIC identifier requirements
 
 .. image:: images/AIC_metadata.*
    :align: center
@@ -58,7 +62,7 @@ description of the AIP contents:
 
 .. tip::
 
-   The AIC should be represented by a number- enter digits only in Part of AIC
+   The AIC can be represented by any combination of letters and numbers.
 
 
 5. At bottom of screen, click the Create button.
