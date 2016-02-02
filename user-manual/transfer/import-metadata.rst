@@ -20,13 +20,9 @@ in the :ref:`Archival Storage <archival-storage>` tab.
 Workflow
 --------
 
-<<<<<<< HEAD
-1. For simple objects, the user places files in the objects directory, with or without intervening subdirectories. The imported metadata are attached to each object.
-=======
 1. Create a transfer folder that contains a folder called ``metadata``. For
    simple objects, the user places files in the objects directory, with or
    without intervening subdirectories.
->>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 .. figure:: images/MdfolderMDimport-10.*
    :align: center
@@ -36,32 +32,15 @@ Workflow
 
    Metadata folder in transfer directory contains metadata.csv file
 
-<<<<<<< HEAD
-.. figure:: images/CsvMDimport-10.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt:  Example csv file contents
-
-   Example csv file contents
-
-
-2. For compound objects, the user creates one or more subdirectories in the objects directory, each containing the files that form a compound object. The imported metadata are attached to each subdirectory.
-=======
 2. For compound objects, create one or more subdirectories in the
    objects directory, each containing the files that form a compound object.
->>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 .. important::
 
    The subdirectory names must not contain spaces or other forbidden characters.
 
-<<<<<<< HEAD
-3. The user adds a csv file to the metadata folder for the transfer entitled metadata.csv
-=======
 3. Add a csv file to the metadata folder for the transfer called
    ``metadata.csv``.
->>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 * The first row of the csv file consists of field names. Field names must not
   include spaces.
@@ -91,9 +70,7 @@ Workflow
   if desired. For example, the name "page01.jp2" can occur in multiple
   subdirectories.
 
-<<<<<<< HEAD
-4. At the generate METS micro-service, Archivematica parses the metadata in metadata.csv to the METS file, as follows:
-=======
+
   .. figure:: images/CsvMDimport-10.*
      :align: center
      :figwidth: 60%
@@ -104,7 +81,6 @@ Workflow
 
 4. At the generate METS micro-service, Archivematica parses the metadata in
    metadata.csv to the METS file, as follows:
->>>>>>> d23b5e4... Updated and clarified instructions for pre-structured transfer and metadata import, removed refs to outdated workflows
 
 * All Dublin Core elements are used to generate a dmdSec for each directory or
   file with MDTYPE="DC"
