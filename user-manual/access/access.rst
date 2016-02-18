@@ -150,18 +150,18 @@ Store DIP
 Archivematica also provides the option to store the DIP to a location that you
 have configured via the :ref:`Storage Service <storageservice:index>`. This can
 be configured to be a local server, NFS-mounted or another storage protocol such
-as DuraCloud.https://groups.google.com/forum/#!topic/archivematica/ZQ-ttlGxEkA
+as DuraCloud.
 
 To store a DIP:
 
 1. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
 
-2. When prompted to Upload DIP, choose Store DIP.
+2. When prompted to Upload DIP, either choose Store DIP, or choose to upload to your desired access system.  If you choose an access system, a second Store DIP option will be presented to you.
 
 3. Choose the DIP storage location from the configured options.
 
 The DIP will include the access copies made through either Archivematica's
-normalization rules or a manual normalization process, and the METS file.
+normalization rules or a manual normalization process, thumbnails, and the METS file.
 
 .. _review-dip:
 
