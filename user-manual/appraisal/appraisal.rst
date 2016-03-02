@@ -22,3 +22,8 @@ Transfers that have been sent to the backlog can be found in the Backlog pane of
 Adding Tags
 =========
 Tags can be added to selected files in the backlog by entering a tag name and clicking the “Add tag to selected files” button at the top of the Backlog pane.
+
+.. image:: images/tags_backlog.*
+   :align: center
+   :width: 80%
+   :alt: Adding tags to files in the backlog
