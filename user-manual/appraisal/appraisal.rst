@@ -8,8 +8,17 @@ The Appraisal tab provides a space between Transfer and Ingest for archivists to
 
 *On this page:*
 
-.._backlog-pane
+.._backlog-pane:
 
 Transfers in the Backlog
 ------------
 Transfers that have been sent to the backlog can be found in the Backlog pane of the Appraisal tab. Search the backlog by entering search terms and parameters in the search box at the top of the page.
+
+.. image:: images/search_backlog.*
+   :align: center
+   :width: 80%
+   :alt: Search box for searching the backlog in the Appraisal tab
+
+Adding Tags
+=========
+Tags can be added to selected files in the backlog by entering a tag name and clicking the “Add tag to selected files” button at the top of the Backlog pane.
