@@ -40,3 +40,4 @@ The analysis pane allows the user to explore files in transfers sent to the back
 
 1) Objects
 =========
+In the Objects tab, information about selected files can be viewed in the form of a report or a visualization. The Report view provides information about the files’ format, PUID, group, number of files, and size. Files can also be analyzed through visualizations with options for representing the total number of files in each format and for representing the total size of files with each format represented in the list.
