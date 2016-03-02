@@ -32,9 +32,8 @@ Tags that have already been created appear in the Tags drop-down menu. Filtering
 
 .. _analysis_pane:
 
-=========
 Analysis
-=========
+------------
 
 The analysis pane allows the user to explore files in transfers sent to the backlog. Files selected in the Backlog pane populate the Analysis pane and can be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview File.
 
