@@ -48,3 +48,10 @@ In the Objects tab, information about selected files can be viewed in the form o
    :alt: Report view in the Analysis pane
 
    Report showing files selected in the Backlog pane
+   
+   .. figure:: images/objects_report.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: Visualization of files by size in the Analysis pane
+   
