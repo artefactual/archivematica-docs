@@ -8,7 +8,7 @@ The Appraisal tab provides a space between Transfer and Ingest for archivists to
 
 *On this page:*
 
-.._backlog-pane:
+.. _backlog_pane:
 
 Transfers in the Backlog
 ------------
