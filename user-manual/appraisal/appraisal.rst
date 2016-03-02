@@ -27,3 +27,16 @@ Tags can be added to selected files in the backlog by entering a tag name and cl
    :align: center
    :width: 80%
    :alt: Adding tags to files in the backlog
+   
+Tags that have already been created appear in the Tags drop-down menu. Filtering by a particular tag causes only files to which that tag has been applied to appear in transfers in the Backlog pane. Filters added in other panes in the Appraisal tab will also appear listed under the Tags drop-down menu. Filters can be removed by clicking the “x” next to them.
+
+.. _analysis_pane:
+
+=========
+Analysis
+=========
+
+The analysis pane allows the user to explore files in transfers sent to the backlog. Files selected in the Backlog pane populate the Analysis pane and can be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview File.
+
+1) Objects
+=========
