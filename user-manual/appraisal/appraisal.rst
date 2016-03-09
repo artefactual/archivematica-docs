@@ -7,6 +7,7 @@ Appraisal
 The Appraisal tab provides a space between Transfer and Ingest for archivists to make decisions about what files from transfers should become SIPs and how these files should be arranged within the SIP. It includes features for examining the characteristics and contents of the files as well as for connecting files to finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature, found in previous versions of Archivematica, has also been moved to the Appraisal tab (see :ref:`Arrangement <arrangement>`).
 
 *On this page:*
+
 * :ref:`Transfers in the Backlog <backlog_pane>`
 * :ref:`Analysis <analysis_pane>`
 * :ref:`File List <File_list_pane>`
