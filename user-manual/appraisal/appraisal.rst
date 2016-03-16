@@ -159,8 +159,39 @@ Digital object components will not appear in the ArchivesSpace repository until 
 Both archival objects and digital object components can be created in the ArchivesSpace pane at any level of description; however, new resources can only be created in ArchivesSpace. 
 
 Basic metadata for existing archival objects and digital object components can be edited using the “Edit Metadata” button. 
+.. image:: images/archivesspace_edit_metadata.*
+   :align: center
+   :width: 60%
+   :alt: Edit metadata dialog box 
 
-“Edit Rights Metadata” leads to a form for adding PREMIS rights information. Add information as needed and click save. Rights can only be added at the SIP level. 
+“Edit Rights Metadata” leads to a form for adding PREMIS rights information. 
+
+.. figure:: images/archivesspace_add_rights_metadata1.*
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+   :alt: Adding PREMIS rights information
+   
+   Click "Add" to add rights.
+   
+   .. figure:: images/archivesspace_add_rights_metadata2.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: Form for adding rights information
+   
+   Specify the type of rights information from the drop-down menu and fill out the relevant fields.
+
+The form for adding rights includes two pages of fields. Once added, acts can be edited or deleted and further acts can be added.
+
+.. image:: images/archivesspace_add_rights metadata3.*
+   :align: center
+   :width: 60%
+   :alt: Added rights in Archivematica
+
+.. note::
+Rights can only be added at the SIP level. 
+
 
 .. _adding_files_archivesspace:
 
