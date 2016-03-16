@@ -172,18 +172,17 @@ Basic metadata for existing archival objects and digital object components can b
    :align: center
    :figwidth: 80%
    :width: 100%
-   :alt: Adding PREMIS rights information
+   :alt: Form for adding rights information
    
    Click "Add" to add rights.
    
-   
-   .. figure:: images/archivesspace_add_rights_metadata2.*
+.. figure:: images/archivesspace_add_rights_metadata2.*
    :align: center
-   :figwidth: 60%
+   :figwidth: 80%
    :width: 100%
-   :alt: Form for adding rights information
+   :alt: Adding PREMIS rights information
    
-   Specify the type of rights information from the drop-down menu and fill out the relevant fields.
+   Specify the type of rights information from the drop-down menu and fill out the relevant fields.  
 
 
 The form for adding rights includes two pages of fields. Once added, acts can be edited or deleted and further acts can be added.
