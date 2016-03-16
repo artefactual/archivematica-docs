@@ -159,6 +159,7 @@ Digital object components will not appear in the ArchivesSpace repository until 
 Both archival objects and digital object components can be created in the ArchivesSpace pane at any level of description; however, new resources can only be created in ArchivesSpace. 
 
 Basic metadata for existing archival objects and digital object components can be edited using the “Edit Metadata” button. 
+
 .. image:: images/archivesspace_edit_metadata.*
    :align: center
    :width: 60%
