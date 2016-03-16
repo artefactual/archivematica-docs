@@ -4,7 +4,7 @@
 Appraisal
 ======
 
-The Appraisal tab provides a space between Transfer and Ingest for archivists to make decisions about what files from transfers should become SIPs and how these files should be arranged within the SIP. It includes features for examining the characteristics and contents of the files as well as for connecting files to finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature, found in previous versions of Archivematica, has also been moved to the Appraisal tab (see :ref:`Arrangement <arrangement>`).
+The Appraisal tab provides a space between Transfer and Ingest for archivists to make decisions about what files from transfers should become SIPs and how these files should be arranged within the SIP. It includes features for examining the characteristics and contents of the files as well as for connecting files to finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature, found in previous versions of Archivematica, also has moved to the Appraisal tab (see :ref:`Arrangement <arrangement>`).
 
 *On this page:*
 
@@ -121,7 +121,7 @@ Clicking on the name of the file opens a preview in the Analysis pane.
 
 ArchivesSpace Resources
 -----------------
-The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to resources that have been created in an ArchivesSpace repository. Settings for ArchivesSpace DIP upload should be configured in the Administration tab to associate the ArchivesSpace repository. In the ArchivesSpace pane, files transferred into Archivematica can be associated with resources created in ArchivesSpace and SIPs can be sent to Ingest.
+The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to resources that have been created in an ArchivesSpace repository. Settings for ArchivesSpace DIP upload should be configured in the :ref:`Dashboard administration tab <dashboard-admin>` to associate the ArchivesSpace repository. In the ArchivesSpace pane, files transferred into Archivematica can be associated with resources created in ArchivesSpace and SIPs can be sent to Ingest.
 
 ArchivesSpace Terms 
 =========
