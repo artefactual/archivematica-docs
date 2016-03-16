@@ -176,6 +176,7 @@ Basic metadata for existing archival objects and digital object components can b
    
    Click "Add" to add rights.
    
+   
    .. figure:: images/archivesspace_add_rights_metadata2.*
    :align: center
    :figwidth: 60%
