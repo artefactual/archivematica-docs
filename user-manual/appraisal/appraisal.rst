@@ -165,6 +165,7 @@ Basic metadata for existing archival objects and digital object components can b
    :width: 60%
    :alt: Edit metadata dialog box 
 
+
 “Edit Rights Metadata” leads to a form for adding PREMIS rights information. 
 
 .. figure:: images/archivesspace_add_rights_metadata1.*
@@ -183,12 +184,15 @@ Basic metadata for existing archival objects and digital object components can b
    
    Specify the type of rights information from the drop-down menu and fill out the relevant fields.
 
+
 The form for adding rights includes two pages of fields. Once added, acts can be edited or deleted and further acts can be added.
+
 
 .. image:: images/archivesspace_add_rights metadata3.*
    :align: center
    :width: 60%
    :alt: Added rights in Archivematica
+
 
 .. note::
 Rights can only be added at the SIP level. 
