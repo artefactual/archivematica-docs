@@ -91,7 +91,7 @@ If Examine Contents (using the tool Bulk Extractor) was used during transfer, th
    :width: 100%
    :alt: Examine contents tab in the anaysis pane
    
-   Examine contenst tab showing a selected transfer where no files with PII were found
+   Examine contents tab showing a selected transfer where no files with PII were found
 
 4) Preview File
 =========
