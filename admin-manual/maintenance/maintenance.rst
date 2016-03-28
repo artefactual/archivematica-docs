@@ -356,7 +356,8 @@ Browser compatability
 
 Archivematica has been tested most extensively with Firefox and Chrome. There are
 known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_)
+transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_). Minimal, but successful,
+testing has been done with Microsoft Edge.
 
 
 :ref:`Back to the top <maintenance>`
