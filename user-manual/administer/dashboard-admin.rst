@@ -291,6 +291,11 @@ up/down arrows in this screen.
 ArchivesSpace DIP upload
 -----------------------------
 
+.. image:: images/ASDIPConfig.*
+   :align: right
+   :width: 45%
+   :alt: ArchivesSpace configuration settings
+
 Before ingesting digital objects destined for ArchivesSpace, ensure that
 the ArchivesSpace DIP upload settings in the administration tab of the
 dashboard have been set.
@@ -302,7 +307,7 @@ dashboard have been set.
 
 * Include the IP address of the host database (ArchivesSpace host), the database
   port (ArchivesSpace backend port), an ArchivesSpace administrative
-  username, and the ArchivesSpace administrative user password.
+  username, the ArchivesSpace administrative user password, and the Use Statement (see note below).
 
 * Restrictions Apply: Selecting *Yes* will apply a blanket access restriction to all content
   uploaded from Archivematica to ArchivesSpace. Selecting *No* will send all content to
@@ -316,12 +321,23 @@ dashboard have been set.
 
 .. NOTE::
 
-   The *Use statement* and *Object type* fields can be left blank. To populate these fields, you must
-   refer to ArchivesSpace's Controlled Value Lists. For example, the Object type field in Archivematica
-   is mapped to the Digital Object Type list in ArchivesSpace. If the uploaded materials are sound
-   recordings, you could enter ``sound_recording`` in the Object type field to apply the label
-   sound_recording to all of the uploads. For mixed media uploads, it is best to leave this field blank.
+   The *Use statement* field is required. To populate this fields, you **must**
+   refer to ArchivesSpace's Controlled Value Lists.
 
+   The Use statement field in Archivematica is mapped to the Use Statement list in
+   ArchivesSpace. If the uploaded materials are original master images, for example,
+   you could enter ``image-master`` in the Use statement field to apply the label
+   image-master to all of the uploads.
+
+.. NOTE::
+
+   The *Object type* field can be left blank. To populate this fields, you **must**
+   refer to ArchivesSpace's Controlled Value Lists.
+
+   The Object type field in Archivematica is mapped to the Digital Object Type list in
+   ArchivesSpace. If the uploaded materials are sound recordings, you could enter ``sound_recording``
+   in the Object type field to apply the label sound_recording to all of the uploads. For mixed
+   media uploads, it is best to leave this field blank.
 
 .. IMPORTANT::
 
