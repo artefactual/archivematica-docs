@@ -117,10 +117,12 @@ This pane also provides the option for adding tags. Files can be selected by che
    
    Clicking on the name of the file opens a preview in the Analysis pane.
    
+   
    .. image:: images/analysis_preview_file.*
    :align: center
    :width: 80%
    :alt: Preview file window in the Analysis pane
+   
 
 .. _archivesspace_pane:
 
