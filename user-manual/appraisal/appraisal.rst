@@ -51,7 +51,7 @@ The analysis pane allows the user to explore files in transfers sent to the back
 
 1) Objects
 =========
-In the Objects tab, information about selected files can be viewed in the form of a report or a visualization. The Report view provides information about the files’ format, PUID, group, number of files, and size. Files can also be analyzed through visualizations with options for representing the total number of files in each format and for representing the total size of files with each format represented in the list.
+In the Objects tab, information about selected files can be viewed in the form of a report or a visualization. The Report view provides information about the files’ format, PUID, group, number of files, and size. Files can also be analyzed through visualizations with options for representing the total number of files in each format and for representing the total size of files for each format represented in the list.
 
 .. figure:: images/analysis_report.*
    :align: center
@@ -83,7 +83,7 @@ The Tags tab lists any tags that have been added and how many of each tag are pr
 
 3) Examine Contents
 =========
-If Examine Contents (using the tool Bulk Extractor) was used during transfer, the Examine Contents tab provides the reports created during this micro-service. This tab includes options for listing files that potentially contain personally identifiable information (PII) or credit card numbers. Examine Contents also includes the option to add tags to these files. 
+If Examine Contents (using the tool Bulk Extractor) was used during transfer, the Examine Contents tab provides the reports created during this micro-service. This tab includes options for listing files that potentially contain personally identifiable information (PII) or credit card numbers. Examine Contents also includes an option for adding tags to these files. 
 
 .. figure:: images/analysis_examine_contents.*
    :align: center
@@ -105,7 +105,7 @@ The File List pane is also populated through selecting files in the Backlog pane
 
 Any filters that have been applied in the Analysis pane or through the Tags drop-down menu will affect what files appear in File List. In addition, a date range can be added to filter files by the date they were last modified. 
 
-This pane also provides the option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
+This pane also provides an option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
 
 .. figure:: images/analysis_file_list.*
    :align: center
@@ -113,7 +113,7 @@ This pane also provides the option for adding tags. Files can be selected by che
    :width: 100%
    :alt: File list pane
    
-   File list pane showing adding tags and filtering by date range
+   File list pane showing options for adding tags and filtering by date range
    
 
 Clicking on the name of the file opens a preview in the Analysis pane.
