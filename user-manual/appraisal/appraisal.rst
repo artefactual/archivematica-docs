@@ -35,7 +35,7 @@ Tags can be added to selected files in the backlog by entering a tag name and cl
    :width: 60%
    :alt: Adding tags to files in the backlog
    
-Tags that have already been created appear in the Tags drop-down menu. Filtering by a particular tag causes only files to which that tag has been applied to appear in transfers in the Backlog pane. Filters added in other panes in the Appraisal tab will also appear listed under the Tags drop-down menu. Filters can be removed by clicking the “x” next to them.
+Tags that have already been created appear in the Tags drop-down menu. Choosing a particular tag filters the files that appear within transfers in the Backlog pane by that tag. Filters added in other panes in the Appraisal tab will also appear listed under the Tags drop-down menu. Filters can be removed by clicking the “x” next to them.
 
 .. image:: images/adding_filters.*
    :align: center
@@ -68,7 +68,7 @@ In the Objects tab, information about selected files can be viewed in the form o
    :width: 100%
    :alt: Visualization showing formats by total size of files
    
-   Visualization showing formats by total size of files for files selected in the Backlog pane
+   Visualization showing formats by total size of the selected files
    
 Files listed in Analysis can also be filtered by Format, PUID, and Group through selecting values for these facets in the Report view. For instance, if the user clicks on the Group “Portable Document Format” listed for one of the files, this filter is added and only PDF files remain listed in the Analysis pane. Filters appear under the Tags drop-down menu and can be removed by clicking the “x” beside the name.
 
@@ -107,8 +107,6 @@ Any filters that have been applied in the Analysis pane or through the Tags drop
 
 This pane also provides the option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
 
-Clicking on the name of the file opens a preview in the Analysis pane.
-
 .. figure:: images/analysis_file_list.*
    :align: center
    :figwidth: 80%
@@ -116,6 +114,13 @@ Clicking on the name of the file opens a preview in the Analysis pane.
    :alt: File list pane
    
    File list pane showing adding tags and filtering by date range
+   
+   Clicking on the name of the file opens a preview in the Analysis pane.
+   
+   .. image:: images/analysis_preview_file.*
+   :align: center
+   :width: 80%
+   :alt: Preview file window in the Analysis pane
 
 .. _archivesspace_pane:
 
