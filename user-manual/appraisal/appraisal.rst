@@ -23,7 +23,7 @@ Transfers that have been sent to the backlog can be found in the Backlog pane of
 
 .. image:: images/search_backlog.*
    :align: center
-   :width: 60%
+   :width: 80%
    :alt: Search box for searching the backlog in the Appraisal tab
 
 Adding Tags
@@ -39,7 +39,7 @@ Tags that have already been created appear in the Tags drop-down menu. Choosing 
 
 .. image:: images/adding_filters.*
    :align: center
-   :width: 60%
+   :width: 40%
    :alt: Filters as they appear below the tags drop-down menu
 
 .. _analysis_pane:
@@ -55,7 +55,7 @@ In the Objects tab, information about selected files can be viewed in the form o
 
 .. figure:: images/analysis_report.*
    :align: center
-   :figwidth: 60%
+   :figwidth: 80%
    :width: 100%
    :alt: Report view in the Analysis pane
 
@@ -78,7 +78,7 @@ The Tags tab lists any tags that have been added and how many of each tag are pr
 
 .. image:: images/analysis_tags.*
    :align: center
-   :width: 80%
+   :width: 60%
    :alt: Tags tab in the analysis pane
 
 3) Examine Contents
@@ -87,7 +87,7 @@ If Examine Contents (using the tool Bulk Extractor) was used during transfer, th
 
 .. figure:: images/analysis_examine_contents.*
    :align: center
-   :figwidth: 80%
+   :figwidth: 60%
    :width: 100%
    :alt: Examine contents tab in the anaysis pane
    
@@ -109,7 +109,7 @@ This pane also provides an option for adding tags. Files can be selected by chec
 
 .. figure:: images/analysis_file_list.*
    :align: center
-   :figwidth: 80%
+   :figwidth: 60%
    :width: 100%
    :alt: File list pane
    
@@ -143,7 +143,7 @@ ArchivesSpace resources can be expanded to show lower levels of description. Fol
 
 .. image:: images/archivesspace_search.*
    :align: center
-   :width: 80%
+   :width: 60%
    :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of heirarchy
 
 Creating Archival Description
@@ -154,7 +154,7 @@ Selecting a resource or archival object and using “Add New Child Record” add
 
 .. image:: images/archivesspace_add_new_child.*
    :align: center
-   :width: 80%
+   :width: 60%
    :alt: Add new child record dialog box 
 
 The new archival object will appear in the ArchivesSpace pane and the change will be reflected in the ArchivesSpace repository. The “Delete Selected” button can be used to remove mistakenly created archival objects.
@@ -178,7 +178,7 @@ Basic metadata for existing archival objects and digital object components can b
 
 .. figure:: images/archivesspace_add_rights_metadata1.*
    :align: center
-   :figwidth: 80%
+   :figwidth: 70%
    :width: 100%
    :alt: Form for adding rights information
    
@@ -186,7 +186,7 @@ Basic metadata for existing archival objects and digital object components can b
    
 .. figure:: images/archivesspace_add_rights_metadata2.*
    :align: center
-   :figwidth: 80%
+   :figwidth: 70%
    :width: 100%
    :alt: Adding PREMIS rights information
    
@@ -198,7 +198,7 @@ The form for adding rights includes two pages of fields. Once added, acts can be
 
 .. image:: images/archivesspace_add_rights metadata3.*
    :align: center
-   :width: 60%
+   :width: 70%
    :alt: Added rights in Archivematica
 
 
