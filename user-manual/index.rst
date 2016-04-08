@@ -37,5 +37,5 @@ links to each chapter's main sections.
    troubleshooting/faq
    metadata/dublincore
    metadata/premis
-
+   appraisal/appraisal
 
