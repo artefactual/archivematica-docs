@@ -7,7 +7,6 @@ Archivematica documentation
 .. toctree::
    :hidden:
 
-   index
    /user-manual/index
    /admin-manual/index
 
@@ -72,6 +71,9 @@ Ingest
 * :ref:`Normalize <normalize>`
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Reingest AIP <reingest>`
+* :ref:`Storage Service <storage-service>`
+* :ref:`Upload DIP to ArchivesSpace <upload-AS>`
+* :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`
 
 
@@ -80,9 +82,9 @@ Ingest
 Storage
 -------
 
-* :ref:`General description <archival-storage>`
-* :ref:`Store the AIP <storing-aip>`
-* :ref:`Search the AIP store <search-aip>`
+* :ref:`Storing an AIP <storing-aip>`
+* :ref:`Searching the AIP store <search-aip>`
+* :ref:`Deleting an AIP <delete-aip>`
 * :ref:`Delete an AIP <delete-aip>`
 * :ref:`AIP structure <aip-structure>`
 * :ref:`AICs <aic>`- managing multi-part AIPs
@@ -94,8 +96,11 @@ Access
 ------
 
 * :ref:`General description <access>`
+* :ref:`Default access system <access-default>`
 * :ref:`Upload DIP to AtoM <upload-atom>`
 * :ref:`Store DIP <store-dip>`
+* :ref:`Review/Download DIP <review-dip>`
+* :ref:`Access tab <access-tab>`
 * :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
 * :ref:`Upload DIP to ContentDM <contentdm>`
 
@@ -107,7 +112,7 @@ Preservation planning
 
 * :ref:`General description <preservation-planning>`
 * :ref:`Preservation planning tab <pres-tab>`
-* :ref:`FPR Format Policy Registry <fpr>`
+* :ref:`Format Policy Registry (FPR) <fpr>`
 * :ref:`Preservation policies <pres-policies>`
 
 

@@ -21,6 +21,8 @@ dashboard, allow you to configure application components and manage users.
 
 * :ref:`AtoM DIP upload <admin-dashboard-atom>`
 
+* :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`
+
 * :ref:`Archivists Toolkit DIP upload <admin-dashboard-AT>`
 
 * :ref:`PREMIS agent <admin-dashboard-premis>`
@@ -340,6 +342,39 @@ Generic parameters:
    --uuid="%SIPUUID%" \
    --rsync-target="archivematica@atom-hostname:/tmp" \
    --debug
+
+.. _admin-dashboard-AS:
+
+ArchivesSpace DIP upload
+-----------------------------
+
+Before ingesting digital objects destined for ArchivesSpace, ensure that
+the Achivists' Toolkit DIP upload settings in the administration tab of the
+dashboard have been set.
+
+* These settings should be created and saved before digital objects destined
+  for upload to ArchivesSpace are processed. Note that these can be set
+  once and used for processing any number of transfers (i.e. they do not need
+  to be re-set for each transfer).
+
+* Include the IP address of the host database (ArchivesSpace host), the database
+  port (ArchivesSpace backend port), an ArchivesSpace administrative
+  username, and the ArchivesSpace administrative user password.
+
+* Restrictions Apply: Selecting *Yes* will apply a blanket access restriction to all content
+  uploaded from Archivematica to ArchivesSpace. Selecting *No* will send all content to
+  ArchivesSpace without restrictions. Should you wish to enable the PREMIS-based restrictions functionality,
+  choose "base on PREMIS" under "Restrictions Apply". To add PREMIS rights,
+  please see :ref:`Add PREMIS rights and restrictions <at-premis>`.
+
+* ArchivesSpace repository number: Insert the identifier for the ArchivesSpace repository
+  to which you would like to upload DIPs here. Note that the default identifier for a
+  single-repository ArchivesSpace instance is **2**.
+
+.. NOTE::
+  In order to save changes to the ArchivesSpace DIP upload configuration, you must
+  enter the password before clicking save. Note that Archivematica will *not* show you
+  an error if the password is not entered.
 
 .. _admin-dashboard-AT:
 

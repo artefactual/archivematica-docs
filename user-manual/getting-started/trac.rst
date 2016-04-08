@@ -135,4 +135,3 @@ work towards the development of this tool and for allowing us to host it for
 community consumption here on the Archivematica website.
 
 :ref:`Back to the top <trac>`
-

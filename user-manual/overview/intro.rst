@@ -67,5 +67,3 @@ users and professional community as a whole.
 
 
 :ref:`Back to the top <intro>`
-
-

@@ -35,7 +35,7 @@ processing clusters for highly scalable configurations.
 Micro-services in Archivematica Releases
 ----------------------------------------
 
-Archivematica 1.2 Micro-services (link to come).
+The Archivematica wiki contains an updated `list of micro-services <https://wiki.archivematica.org/Micro-services>`._
 
 `Archivematica 1.1 Micro-services <https://www.archivematica.org/wiki/Archivematica_1.1_Micro-services>`_
 

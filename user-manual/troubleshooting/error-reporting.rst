@@ -6,12 +6,9 @@ Error reporting
 
 When an error or bug is encountered, we request that Archivematica users first:
 
-1. Search the `User Forum <https://groups.google.com/forum/#!forum/archivematica>`_
-   for similar problems and post a new thread if necessary.
+1. Search the `User Forum <https://groups.google.com/forum/#!forum/archivematica>`_    for similar problems and post a new thread if necessary.
 
-2. Search and/or report in our issue tracker. Artefactual uses Redmine project
-   management software to track bugs and issues in Archivematica. You can find
-   our Redmine instance at https://projects.artefactual.com
+2. Search and/or report in our issue tracker. Artefactual uses Redmine project    management software to track bugs and issues in Archivematica. You can find    our Redmine instance at https://projects.artefactual.com
 
 Register for an account
 -----------------------
@@ -40,8 +37,7 @@ Create a new bug or issue
 
 1. Always search Redmine for an existing bug or issue before reporting a new one.
 
-2. To create a new bug or issue, navigate to the Archivematica project by
-   clicking on "Jump to a project" and then "Archivematica".
+2. To create a new bug or issue, navigate to the Archivematica project by clicking on "Jump to a project" and then "Archivematica".
 
 3. Click on "New Issue" and fill in the required fields as outlined below:
 

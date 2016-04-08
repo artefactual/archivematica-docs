@@ -51,7 +51,7 @@ Package (SIP), respectively. A package will either be:
 It is a good practice to "clean up" the Dashboard periodically by removing
 packages using the red "remove" button (see below).
 
-4. Micro-services and 5. Jobs
+4. Micro-services and Jobs
 -----------------------------
 
 Archivematica's processing is performed through a number of
@@ -65,7 +65,7 @@ see by clicking on the micro-service to expand. Clicking on the gear icon within
 a job will open a new browser tab showing the tasks performed for that particular
 job.
 
-6. Decision
+5. Decision
 -----------
 
 Certain micro-services result in a decision point for the archivist. The decision
@@ -73,7 +73,7 @@ is completed by choosing an available option from a drop-down menu. Many of the
 decision points can be pre-configured if desired in the
 :ref:`Administration tab <dashboard-processing>`.
 
-7. Report/remove icons
+6. Report/remove icons
 ----------------------
 
 Report (paper and pencil) icons appear on Transfer and Ingest packages and link
