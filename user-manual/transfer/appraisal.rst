@@ -30,7 +30,7 @@ Transfers that have been sent to the backlog can be found in the Backlog pane of
 the Appraisal tab. Search the backlog by entering search terms and parameters in
 the search box at the top of the page.
 
-.. image:: images/search_backlog.*
+.. image:: images/appraisal/search_backlog.*
    :align: center
    :width: 80%
    :alt: Search box for searching the backlog in the Appraisal tab
@@ -41,7 +41,7 @@ Adding Tags
 Tags can be added to selected files in the backlog by entering a tag name and
 clicking the “Add tag to selected files” button at the top of the Backlog pane.
 
-.. image:: images/tags_backlog.*
+.. image:: images/appraisal/tags_backlog.*
    :align: center
    :width: 60%
    :alt: Adding tags to files in the backlog
@@ -52,7 +52,7 @@ pane by that tag. Filters added in other panes in the Appraisal tab will also
 appear listed under the Tags drop-down menu. Filters can be removed by clicking
 the “x” next to them.
 
-.. image:: images/adding_filters.*
+.. image:: images/appraisal/adding_filters.*
    :align: center
    :width: 40%
    :alt: Filters as they appear below the tags drop-down menu
@@ -77,7 +77,7 @@ analyzed through visualizations with options for representing the total number
 of files in each format and for representing the total size of files for each
 format represented in the list.
 
-.. figure:: images/analysis_report.*
+.. figure:: images/appraisal/analysis_report.*
    :align: center
    :figwidth: 80%
    :width: 100%
@@ -85,7 +85,7 @@ format represented in the list.
 
    Report showing files selected in the Backlog pane
 
-.. figure:: images/analysis_visualization.*
+.. figure:: images/appraisal/analysis_visualization.*
    :align: center
    :figwidth: 60%
    :width: 100%
@@ -106,7 +106,7 @@ beside the name.
 The Tags tab lists any tags that have been added and how many of each tag are
 present in the selected files.
 
-.. image:: images/analysis_tags.*
+.. image:: images/appraisal/analysis_tags.*
    :align: center
    :width: 60%
    :alt: Tags tab in the analysis pane
@@ -120,7 +120,7 @@ This tab includes options for listing files that potentially contain personally
 identifiable information (PII) or credit card numbers. Examine Contents also
 includes an option for adding tags to these files.
 
-.. figure:: images/analysis_examine_contents.*
+.. figure:: images/appraisal/analysis_examine_contents.*
    :align: center
    :figwidth: 60%
    :width: 100%
@@ -154,7 +154,7 @@ checking the checkbox next to their filename, creating a tag name, and clicking
 “Add tag to selected files.” Tags can be removed from files by clicking the “-“
 next to the tag name.
 
-.. figure:: images/analysis_file_list.*
+.. figure:: images/appraisal/analysis_file_list.*
    :align: center
    :figwidth: 60%
    :width: 100%
@@ -164,7 +164,7 @@ next to the tag name.
 
 Clicking on the name of the file opens a preview in the Analysis pane.
 
-.. image:: images/analysis_preview_file.*
+.. image:: images/appraisal/analysis_preview_file.*
    :align: center
    :width: 80%
    :alt: Preview file window in the Analysis pane
@@ -204,7 +204,7 @@ child records nested under them. Page icons indicate resources and archival
 objects that do not have child records. Digital object components are designated
 by the parallel lines icon.
 
-.. image:: images/archivesspace_search.*
+.. image:: images/appraisal/archivesspace_search.*
    :align: center
    :width: 60%
    :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to showlevels of heirarchy
@@ -222,7 +222,7 @@ Clicking this button brings up a dialog box for entering metadata. At a minimum,
 a new archival object must have a title and a level of description, otherwise
 “save” is not available.
 
-.. image:: images/archivesspace_add_new_child.*
+.. image:: images/appraisal/archivesspace_add_new_child.*
    :align: center
    :width: 60%
    :alt: Add new child record dialog box
@@ -245,14 +245,14 @@ be created in ArchivesSpace.
 Basic metadata for existing archival objects and digital object components can
 be edited using the “Edit Metadata” button.
 
-.. image:: images/archivesspace_edit_metadata.*
+.. image:: images/appraisal/archivesspace_edit_metadata.*
    :align: center
    :width: 60%
    :alt: Edit metadata dialog box
 
 “Edit Rights Metadata” leads to a form for adding PREMIS rights information.
 
-.. figure:: images/archivesspace_add_rights_metadata1.*
+.. figure:: images/appraisal/archivesspace_edit_rights_metadata1.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -260,7 +260,7 @@ be edited using the “Edit Metadata” button.
 
    Click "Add" to add rights.
 
-.. figure:: images/archivesspace_add_rights_metadata2.*
+.. figure:: images/appraisal/archivesspace_edit_rights_metadata2.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -272,7 +272,7 @@ be edited using the “Edit Metadata” button.
 The form for adding rights includes two pages of fields. Once added, acts can be
 edited or deleted and further acts can be added.
 
-.. image:: images/archivesspace_add_rights metadata3.*
+.. figure:: images/appraisal/archivesspace_edit_rights_metadata3.*
    :align: center
    :width: 70%
    :alt: Added rights in Archivematica
@@ -289,7 +289,7 @@ Adding Files to ArchivesSpace Resources and Starting SIPs
 Files from transfers in the Backlog pane can be associated with ArchivesSpace
 resources by dragging files from the backlog to digital object components.
 
-.. image:: images/backlog_and_archivesspace.*
+.. image:: images/appraisal/backlog_and_archivesspace.*
    :align: center
    :width: 80%
    :alt: Backlog and analysis panes

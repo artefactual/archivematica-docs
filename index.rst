@@ -55,7 +55,7 @@ Transfer
 * :ref:`Forensic images <forensic>`
 * :ref:`DSpace exports <dspace>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`
-
+* :ref:`Appraisal tab <appraisal>`
 
 
 .. _home-ingest:
@@ -103,6 +103,10 @@ Access
 * :ref:`Access tab <access-tab>`
 * :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
 * :ref:`Upload DIP to ContentDM <contentdm>`
+
+.. _home-appraisal-tab:
+
+Appraisal tabl
 
 
 .. _home-preservation:
