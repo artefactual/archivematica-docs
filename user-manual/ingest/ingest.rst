@@ -4,20 +4,17 @@
 Ingest
 ======
 
-During ingest, digital objects are packaged into SIPs and run through several
-micro-services, including normalization, packaging into an AIP and generation
-of a DIP.
+During ingest, digital objects are packaged into SIPs and run through several micro-services, including normalization, packaging into an AIP and generation of a DIP.
 
-If you would like to skip some of the default decision points or make
-preconfigured choices for your desired workflow, see User administration -
-Processing configuration
+If you would like to skip some of the default decision points or make preconfigured choices for your desired workflow, see :ref:`User administration - Processing configuration <dashboard-processing>`.
 
-Should you run into an error during ingest, please see Error handling.
+Should you run into an error during ingest, please see :ref:`Error handling <error-handling>`.
 
 *On this page:*
 
 * :ref:`Create a SIP <create-sip>`
 * :ref:`Arrange a SIP from backlog <arrange-sip>`
+* :ref:`Arrange a SIP for AtoM <hierarchical-dip>`
 * :ref:`Add metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
@@ -32,10 +29,9 @@ Should you run into an error during ingest, please see Error handling.
 Create a SIP
 ------------
 
-
 1. Process transfers as described in :ref:`Transfers <transfer>`.
 
-2. Click on the Ingest tab. Please note that if you would like to be reminded to add metadata or PREMIS rights to the package, you must configure this in the Administration tab.
+2. Click on the Ingest tab.
 
 3. The single SIP will move through a number of micro-services. If the user has preconfigured Archivematica to do so, processing will stop at a decision point that allows the user to choose a file identification method to base normalization upon or to choose to use pre-existing data gathered during identification at the transfer stage. Archivematica default is to use pre-existing data. For more about this option, see :ref:`Administer — Processing configuration <dashboard-processing>`.
 
@@ -61,7 +57,7 @@ Create a SIP
 Arrange a SIP from backlog
 --------------------------
 
-1. Retrieve content from transfer backlog. Use the Transfer backlog search bars at the top of the Ingest tab to find the transfer(s) and/or object(s)you'd like to ingest, or browse the entire backlog by clicking Search transfer backlog with a blank search. This will populate the Originals pane of the Ingest dashboard. Note: Multi-item select is not yet included in this feature, though entire folders/directories can be moved.
+1. First, retrieve content from transfer backlog. Use the Transfer backlog search bars at the top of the Ingest tab to find the transfer(s) and/or object(s)you'd like to ingest, or browse the entire backlog by clicking Search transfer backlog with a blank search. This will populate the Originals pane of the Ingest dashboard. Note: Multi-item select is not yet included in this feature, though entire folders/directories can be moved.
 
 .. figure:: images/Ingest-panes.*
    :align: center
@@ -121,41 +117,23 @@ Archivematica will confirm that you wish to create a SIP and after receiving
 confirmation, proceed to the next micro-services to create AIPs and DIPs as
 selected by the user.
 
+.. _hierarchical-dip:
 
-.. _add-metadata:
+Arranging a SIP for AtoM
+------------------------
 
-Add metadata
-------------
+If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of "item".
 
-In Archivematica, metadata can be added either prior to the normalization step
-or after. Archivematica will prompt you with a reminder to add metadata if
-desired during the Process metadata directory micro-service. See
-:ref:`AtoM Dublin Core <atom:dc-template>`_
-for information about the Dublin Core elements available.
+This functionality is supported in AtoM 2.2 and higher.
 
-.. seealso::
-
-    If you are importing lower-level metadata (i.e. metadata to be attached to subdirectories and files within a SIP) see also:
-
-    * :ref:`Transfer <transfer>`
-
-    * :ref:`Import metadata <import-metadata>`
-
-.. note::
-    If you plan to create a DIP to :ref:`Upload to AtoM<dip-upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of item.
-
-    This functionality is supported in AtoM 2.2 and higher.
-
-Click to select a directory or object, then click Edit metadata to choose the
-level of description.
+1. Click to select a directory or object, then click Edit metadata to choose the level of description.
 
 .. image:: images/choose_lod.*
    :align: center
    :width: 80%
    :alt: Choosing the AtoM level of description
 
-As you add levels of description they will be shown in the arrange pane for you
-to review before finalizing your SIP.
+2. As you add levels of description they will be shown in the arrange pane for you to review before finalizing your SIP.
 
 .. image:: images/view_arrangement.*
    :align: center
@@ -164,22 +142,31 @@ to review before finalizing your SIP.
 
 .. note::
 
-   To have the AtoM levels of description appear you must have entered
-   your AtoM credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
+   To have the AtoM levels of description appear you must have entered your AtoM credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
 
-   Levels of description in AtoM are managed as a taxonomy. To edit, see
-   :ref:`Terms <atom:terms>`.
+   Levels of description in AtoM are managed as a taxonomy. To edit, see :ref:`Terms <atom:terms>`.
 
 .. tip::
 
-   If you choose not to assign levels of description to directories in SIP arrange,
-   AtoM will flatten the DIP so that all digital objects are child-level descriptions
-   of the target description.
-ower-level metadata (i.e. metadata to be attached to
-    subdirectories and files within a SIP) see also:
+   If you choose not to assign levels of description to directories in SIP arrange, AtoM will flatten the DIP so that all digital objects are child-level descriptions of the target description.
 
-    * :ref:`Metadata import <import-metadata>`
+
+.. _add-metadata:
+
+Add metadata
+------------
+
+In Archivematica, metadata can be added either prior to the normalization step or after.
+Archivematica will prompt you with a reminder to add metadata if desired during the Process metadata directory micro-service.
+See :ref:`AtoM Dublin Core <atom:dc-template>`for information about the Dublin Core elements available.
+
+.. seealso::
+
+    If you are importing lower-level metadata (i.e. metadata to be attached to subdirectories and files within a SIP) see also:
+
     * :ref:`Transfer <transfer>`
+
+    * :ref:`Import metadata <import-metadata>`
 
 
 1. Click on the template icon.
@@ -196,9 +183,7 @@ ower-level metadata (i.e. metadata to be attached to
 2. This will take you to the SIP detail panel. On the left-hand side, under metadata click Add.
 
 .. figure:: images/SIPDetailPanel1.*
-   :align: center* :ref:`Upload DIP to AtoM <dip-upload-atom>`
-* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
-* :ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`
+   :align: center
    :figwidth: 80%
    :width: 100%
    :alt: SIP detail panel
@@ -215,11 +200,6 @@ ower-level metadata (i.e. metadata to be attached to
 
    SIP metadata entry form
 
-.. important::
-
-    If you would like to upload your DIP to AtoM as a child of an existing
-    target description, you must add at least a Title in the Dublin Core
-    template.
 
 4. When you click Create, you will see the metadata entry in the list page. To edit it further, click Edit on the right-hand side. To delete it, click Delete. To add more DC metadata, click the Add button below the list.
 
@@ -407,8 +387,6 @@ Store AIP
 
 1. After normalization is approved, the SIP runs through a number of micro-services, including processing of the submission documentation, generation of the METS file, indexing, generation of the DIP and packaging of the AIP.
 
-2. When these micro-services are complete, the user can upload the DIP and store the AIP. See below for :ref:`ArchivesSpace <dip-upload-AS>` and Archivists' Toolkit DIP upload
-
 
 .. figure:: images/StoreAIPUpDIP1.*
    :align: center
@@ -418,11 +396,11 @@ Store AIP
 
    Archivematica ready to store the AIP and upload the DIP
 
-3. If desired, review the contents of the AIP in another tab by clicking on Review. More information on Archivematica's AIP structure and the METS/PREMIS file is available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`. You can download the AIP at this stage by clicking on it.
+2. If desired, review the contents of the AIP in another tab by clicking on Review. More information on Archivematica's AIP structure and the METS/PREMIS file is available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`. You can download the AIP at this stage by clicking on it.
 
-4. From the Action dropdown menu, select "Store AIP" to move the AIP into archival storage. You can store an AIP in any number of preconfigured directories. For instructions to configure AIP storage locations, see :ref:`Administrator manual - Storage Service <storageService:administrators>`.
+3. From the Action dropdown menu, select "Store AIP" to move the AIP into archival storage. You can store an AIP in any number of preconfigured directories. For instructions to configure AIP storage locations, see :ref:`Administrator manual - Storage Service <storageService:administrators>`.
 
-5. From the Action dropdown menu, select the AIP storage location from the pre-configured set of options.
+4. From the Action dropdown menu, select the AIP storage location from the pre-configured set of options.
 
 .. note::
 
@@ -438,7 +416,7 @@ Store AIP
 Upload DIP
 ----------
 
-Archivematica supports DIP uploads to AtoM, ArchivesSpace, and Archivists' Toolkit. For information about uploading DIPs to your access system, see :ref:`Access <access>`.
+Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and Archivists' Toolkit. For information about uploading DIPs to your access system, see :ref:`Access <access>`.
 
 .. _reingest:
 
