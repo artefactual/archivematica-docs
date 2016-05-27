@@ -159,14 +159,14 @@ try this command instead:
 
 .. _install-new:
 
-Installing Archivematica 1.4 packages (new install)
+Installing Archivematica 1.5 packages (new install)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica packages are hosted on Launchpad, in an Ubuntu PPA (Personal
 Package Archive). In order to install software onto your Ubuntu system
 from a PPA:
 
-1. Add the archivematica/release PPA to your list of trusted repositories (if    add-apt-repositories is not available you must install python-software-    properties first):
+1. Add the archivematica/release PPA to your list of trusted repositories (if add-apt-repositories is not available you must install python-software-properties first):
 
 .. code:: bash
 
@@ -237,9 +237,9 @@ If you have trouble with the gearman command try this as an alternative:
 
 8. Test the storage service. The storage service runs as a separate web application from the Archivematica dashboard. Go to the following link in a web browser and log in as user *test* with the password *test*: http://localhost:8000 (or use the IP address of the machine you have been installing on)
 
-9. Create a new administrative user in the Storage service. The storage service has its own set of users. In the User menu in the Administrative tab of the storage service, add at least one administrative user, and delete or modify the test user.
+9. Create a new administrative user in the Storage service. The storage service has its own set of users. In the User menu in the Administrative tab of the storage service, add at least one administrative user, and delete or modify the test user. After you have created an administrative user, copy its API key to your clipboard.
 
-10. Test the dashboard. You can login to the Archivematica dashboard and finish the installation in a web browser: http://localhost (again, use the IP address of the machine you have been installing on).
+10. Test the dashboard. You can login to the Archivematica dashboard and finish the installation in a web browser: http://localhost (again, use the IP address of the machine you have been installing on). When prompted, enter the URL of the Storage Service, the name of the administrative user, and that user's API key.
 
 11. Register your installation for full Format Policy Registry interoperability.
 
