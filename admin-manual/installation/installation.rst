@@ -14,7 +14,7 @@ Installation
 
 * :ref:`Firewall requirements <firewall>`
 
-* :ref:`Install 1.4 (upgrade 1.3) <install-1_4>`
+* :ref:`Install 1.5 (upgrade 1.4) <install-1_5>`
 
 * :ref:`Install new from packages <install-new>`
 
@@ -26,7 +26,7 @@ Technical Requirements
 ----------------------
 
 Operating System requirement: A current Ubuntu LTS version, which at the moment
-means version 14.04 or 12.04.  The 64 bit Server Edition of Ubuntu 14.04.2 is
+means version 14.04.  The 64 bit Server Edition of Ubuntu 14.04.2 is
 recommended.
 
 Archivematica is capable of running on almost any hardware supported by Ubuntu;
@@ -71,9 +71,9 @@ able to reach each other on the following ports:
 
 * http, mysqld, gearman, nfs, ssh
 
-.. _install-1_4:
+.. _install-1_5:
 
-Updating from Archivematica 1.3
+Updating from Archivematica 1.4
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have installed an earlier version Archivematica from packages, it is
@@ -83,7 +83,7 @@ possible to update your installation without re-installing. The steps are:
 
 .. code:: bash
 
-   sudo add-apt-repository ppa:archivematica/1.4
+   sudo add-apt-repository ppa:archivematica/1.5
 
 **Update Archivematica Storage Service**
 
