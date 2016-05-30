@@ -107,21 +107,50 @@ Create a SIP using the :ref:`Transfer <transfer>` process as normal. During Norm
 the options that normalizes the package for access. During the Upload DIP micro-service,
 select Upload DIP to Archives Space. The Match page should automatically open.
 
-#. Find the ArchivesSpace collection to which you would like to upload the DIP. By clicking on the name of the resource, you can drill down into the collection to upload the DIP at a lower level of description.
+#. Find the ArchivesSpace collection to which you would like to assign the DIP objects. By clicking on the name of the resource, you can drill down into the collection to upload the DIP at a lower level of description.
 
-#. When you have navigated to the level of description where you want to store the DIP, select *Assign DIP objects to this resource*.
+#. When you have navigated to the level of description where you want to assign the DIP objects, select *Assign DIP objects to this resource*.
 
 #. On the Assign Objects screen, select which objects you would like to assign to which resources. Using the filter boxes in the top right, it is possible to search for specific objects or resources by name.
 
-#. Once you have selected the objects and the resource you would like to pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as needed.
+#. Once you have selected the objects and the resource you would like to pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as needed. You can navigate back up the levels of description by clicking "Parent record."
 
-#. When you are done pairing objects and resources, click on *Review matches.*
+#. When you are done pairing objects and resources, click on *Review matches.* Note: this step is optional. If you prefer, you can click on the Ingest tab to go back to the Dashboard and continue processing.
 
 #. To remove all pairs and restart, click on *Restart matching*.
 
 #. If everything is correct, click on *Finish matching*.
 
-This will take you back to the Ingest tab, where you can finish ingesting the AIP.
+This will take you back to the Ingest tab, where you can finish ingesting the SIP.
+
+.. _aspace_premis:
+
+Create restrictions and notes based on PREMIS:
+++++++++++++++++++++++++++++++++++++++++++++++
+
+When digital objects are paired with resources in ArchivesSpace, the newly created Digital Object record in ArchivesSpace can have restrictions set to either "True" (restricted) or "False" (unrestricted). This can be set in the :ref:`ArchivesSpace dashboard configuration <dashboard-AS>` to apply to all digital objects, or can be set to be based on PREMIS.
+
+To use PREMIS to set restrictions to "False":
+
+* Create PREMIS acts of *both* ``disseminate`` and ``publish`` as "allow". Note that both acts must be present and must be exactly ``disseminate`` and ``publish``, lower case.
+
+All other PREMIS records will default to restrictions set to "True", including acts which are disallow or conditional, or any act other than disseminate and publish set to allow. DIPs with no PREMIS record also default to restrictions = "True."
+
+You can also create Conditions Governing Use and Conditions Governing Access notes for your digital objects in ArchivesSpace by using the PREMIS record. This is only supported for notes in records for the acts ``disseminate`` and ``publish`` (lower case).
+
+The rights granted note for the act "publish" will become the "Conditions Governing Use" note in ArchivesSpace, like so:
+
+.. image:: images/aspace_publish_note.*
+   :align: center
+   :width: 90%
+   :alt: Note in PREMIS record beside equivalent note in ArchivesSpace
+
+The rights granted note for the act "disseminate" will become the "Conditions Governing Access" note in ArchivesSpace, like so:
+
+.. image:: images/aspace_disseminate_note.*
+   :align: center
+   :width: 90%
+   :alt: Note in PREMIS record beside equivalent note in ArchivesSpace
 
 .. _upload-at:
 
