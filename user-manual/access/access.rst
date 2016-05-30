@@ -134,7 +134,7 @@ To use PREMIS to set restrictions to "False":
 
 * Create PREMIS acts of *both* ``disseminate`` and ``publish`` as "allow". Note that both acts must be present and must be exactly ``disseminate`` and ``publish``, lower case.
 
-All other PREMIS records will default to restrictions set to "True", including acts which are disallow or conditional, or any act other than disseminate and publish set to allow. DIPs with no PREMIS record also default to restrictions = "True."
+All other PREMIS records will default to restrictions set to "True", including acts which are set to disallow or conditional, or any act other than disseminate and publish set to allow. DIPs with no PREMIS record also default to restrictions = "True."
 
 You can also create Conditions Governing Use and Conditions Governing Access notes for your digital objects in ArchivesSpace by using the PREMIS record. This is only supported for notes in records for the acts ``disseminate`` and ``publish`` (lower case).
 
