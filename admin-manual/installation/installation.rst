@@ -100,6 +100,15 @@ on an ongoing basis.
    sudo apt-get update
    sudo apt-get install archivematica-storage-service
 
+**Create new Storage Service user**
+
+Archivematica Storage Service 0.8.0 introduces a new security feature - each user is assigned an API key. 
+All api interactions with the storage service require the use of an api key, including from the Archivematica Dashboard.
+
+Log into the Storage Service with your existing credentials.  Go to the Administration tab, and then select 'users'
+from the menu on the left.  Create a new user.  Once you have finished creating the new user, copy the api key that 
+is displayed on the 'edit user' page.  You will need this later after upgrading the Dashboard.
+
 **Update Archivematica**
 
 It is always a good idea to make a backup of your archivematica database
@@ -129,7 +138,7 @@ better to update the dashboard before updating the mcp components.
    sudo apt-get install archivematica-mcp-server
    sudo apt-get install archivematica-mcp-client
 
-(Optional) Update Elasticsearch**
+**(Optional) Update Elasticsearch**
 
 Archivematica 1.4.1 uses Elasticsearch version 1.4.  Archivematica 1.5.0 will work with any version of Elasticsearch from 1.4 to 1.7.5.  You do not have to upgrade Elasticsearch when upgrading Archivematica, although we recommend doing so, to make future upgrades easier.
 
@@ -167,32 +176,50 @@ try this command instead:
 .. code:: bash
 
    sudo restart gearman-job-server
+   
+**Update Dashboard Configuration**
+
+Log into the Archivematica dashboard with your existing credentials.  Go to the administration tab, 
+and click on 'general configuration' in the menu on the left.  You will see a new 'api key' property
+in the Storage Service configuration section.  Copy the api key you generated earlier, when creating 
+a new Storage Service user, into this box and click save.
 
 .. _install-new:
 
 Installing Archivematica 1.5 packages (new install)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica packages are hosted on Launchpad, in an Ubuntu PPA (Personal
-Package Archive). In order to install software onto your Ubuntu system
-from a PPA:
+Archivematica packages in the past have been hosted on Launchpad, in an Ubuntu PPA (Personal
+Package Archive). With the 1.5.0 release, there is now a new repository at packages.archivematica.org.  
+This has been introduced to allow one central place to store packages for multiple operating systems.
 
-1. Add the archivematica/release PPA to your list of trusted repositories (if add-apt-repositories is not available you must install python-software-properties first):
+There are some dependencies still hosted on Launchpad, that have not yet been migrated to packages.archivematica.org.  
+In a future release, all the requirements will be hosted in one repository, for the time being it is necessary to set up
+two different sources of packages.
+
+1. Add the archivematica/externals PPA to your list of trusted repositories (if add-apt-repositories is not available you must install python-software-properties first):
 
 .. code:: bash
 
    sudo apt-get update
    sudo apt-get install python-software-properties
-   sudo add-apt-repository ppa:archivematica/1.5 [might change to something else]
+   sudo add-apt-repository ppa:archivematica/externals
+   
+2. Add packages.archivematica.org to your list of trusted repositories
 
-2. Add the ElasticSearch apt repository next:
+.. code:: bash
+
+   sudo wget -O - https://packages.archivematica.org/1.5.x/key.asc | apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main" >> /etc/apt/sources.list'
+
+3. Add the ElasticSearch apt repository next:
 
 .. code:: bash
 
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
    sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
-3. Update your system to the most recent 14.04 release. This step will also fetch a list of the software from the PPAs you just added to your system.
+4. Update your system to the most recent 14.04 release. This step will also fetch a list of the software from the PPAs you just added to your system.
 
 .. code:: bash
 
@@ -203,7 +230,7 @@ from a PPA:
 
 .. code:: bash
 
-   sudo apt-get install archivematica-storage-service
+   sudo apt-get install -y archivematica-storage-service
 
 5. Configure the storage service
 
@@ -211,7 +238,7 @@ from a PPA:
 
    sudo rm -f /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
-   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini [this might change]
+   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
    sudo service uwsgi restart
    sudo service nginx restart
 
@@ -235,7 +262,7 @@ from a PPA:
    sudo freshclam
    sudo /etc/init.d/clamav-daemon start
    sudo /etc/init.d/elasticsearch restart
-   sudo /etc/init.d/gearman-job-server restart
+   sudo service gearman-job-server restart
    sudo start archivematica-mcp-server
    sudo start archivematica-mcp-client
    sudo start fits
