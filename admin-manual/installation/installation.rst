@@ -12,28 +12,26 @@ Installation
 
 * :ref:`Recommended Minimum Requirements for production processing <requirements-production>`
 
-* :ref:`Firewall requirements <firewall>`
+* :ref:`Install from packages <install-packages>`
 
-* :ref:`Install 1.5 (upgrade 1.4) <install-1_5>`
+* :ref:`Install new source <install-source>`
 
-* :ref:`Install new from packages <install-new>`
+* :ref:`Docker <docker>`
 
-* :ref:`Using AtoM 2.x with Archivematica <install-atom>`
+* :ref:`Advanced <advanced>`
 
 .. _tech-requirements:
 
 Technical Requirements
 ----------------------
 
-Operating System requirement: A current Ubuntu LTS version, which at the moment
-means version 14.04.  The 64 bit Server Edition of Ubuntu 14.04.2 is
-recommended.
+Version 1.5: Operating System requirement: A current Ubuntu LTS version, which at the moment means version 14.04.  The 64 bit Server Edition of Ubuntu 14.04.2 is recommended.
 
-Archivematica is capable of running on almost any hardware supported by Ubuntu;
-however, processing large collections will require better hardware.
+We plan to release a version 1.5.1 which will be available on Ubuntu 12.04 and CentOS/Redhat 7 (more information available soon).
 
-Archivematica can be installed on a single machine, or across many machines to
-spread the processing workload.
+Archivematica is capable of running on almost any hardware supported by Ubuntu; however, processing large collections will require better hardware.
+
+Archivematica can be installed on a single machine, or across many machines to spread the processing workload. See :ref:`Advanced <advanced>.`
 
 .. _requirements-small:
 
@@ -61,17 +59,14 @@ each machines have these minimum requirements:
 * Memory: 8GB+
 * Disk space: 20GB plus the disk space required for the collection.
 
-.. _firewall:
+These requirements may not be suitable for certain types of material, e.g. audio-visual.
 
-Firewall requirements
----------------------
+.. _install-packages:
 
-When installing Archivematica on multiple machines, all the machines must be
-able to reach each other on the following ports:
+Installing from packages
+------------------------
 
-* http, mysqld, gearman, nfs, ssh
-
-.. _install-1_5:
+Installing from packages is tested for both new installations and upgrading from version 1.4.
 
 Updating from Archivematica 1.4
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -83,7 +78,7 @@ possible to update your installation without re-installing. The steps are:
 
 .. code:: bash
 
-   sudo add-apt-repository ppa:archivematica/1.5
+   sudo add-apt-repository ppa:archivematica/1.5 [this will change]
 
 **Update Archivematica Storage Service**
 
@@ -123,11 +118,10 @@ better to update the dashboard before updating the mcp components.
 
 **Update Elasticsearch**
 
-Archivematica 1.4.0 requires a new version of Elasticsearch.  Full instructions
-on how to upgrade can be found on the
+
+If you do not have an Elasticsearch version between 1.4.0 - 1.7.5 installed, you need to upgrade. ull instructions on how to upgrade can be found on the
 `Elasticsearch website <https://www.elastic.co/guide/en/elasticsearch/reference/1.3/setup-upgrade.html>`_.
-In general it should be possible to upgrade Elasticsearch on a standard
-Archivematica machine with the following commands:
+In general it should be possible to upgrade Elasticsearch on a standard Archivematica machine with the following commands:
 
 .. code:: bash
 
@@ -141,9 +135,9 @@ Archivematica machine with the following commands:
 
 .. code:: bash
 
-   sudo service uwsgi restart
+   sudo service uwsgi restart [maybe change]
    sudo service nginx restart
-   sudo /etc/init.d/apache2 restart
+   sudo /etc/init.d/apache2 restart [maybe remove]
    sudo /etc/init.d/gearman-job-server restart
    sudo restart archivematica-mcp-server
    sudo restart archivematica-mcp-client
@@ -172,16 +166,16 @@ from a PPA:
 
    sudo apt-get update
    sudo apt-get install python-software-properties
-   sudo add-apt-repository ppa:archivematica/1.4
+   sudo add-apt-repository ppa:archivematica/1.5 [might change to something else]
 
 2. Add the ElasticSearch apt repository next:
 
 .. code:: bash
 
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-   sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
-3. Update your system to the most recent 12.04 release (12.04.5 at the time of this writing). This step will also fetch a list of the software from the PPAs you just added to your system.
+3. Update your system to the most recent 14.04 release. This step will also fetch a list of the software from the PPAs you just added to your system.
 
 .. code:: bash
 
@@ -200,7 +194,7 @@ from a PPA:
 
    sudo rm -f /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
-   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
+   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini [this might change]
    sudo service uwsgi restart
    sudo service nginx restart
 
@@ -217,7 +211,7 @@ from a PPA:
 
 .. code:: bash
 
-   sudo rm -f /etc/apache2/sites-enabled/*default*
+   sudo rm -f /etc/apache2/sites-enabled/*default* [this might change]
    sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.4.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default.conf
    sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
    sudo /etc/init.d/apache2 restart
@@ -243,21 +237,67 @@ If you have trouble with the gearman command try this as an alternative:
 
 11. Register your installation for full Format Policy Registry interoperability.
 
+.. _install-source:
+
+Install from source
+-------------------
+
+Installing from source has been tested using ansible scripts. Ansible installations have been tested for new installations but are not fully tested for upgrades.
+
+Instructions coming soon.
+
+.. _docker:
+
+Docker
+------
+
+Docker installations are experimental at this time- instructions coming soon.
+
+
+.. _advanced:
+
+Advanced
+--------
+
+.. _multiple-machines:
+
+Installing across multiple machines
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is possible to spread Archivematica's processing load across several machines by installing the following services on separate machines:
+
+* Elasticsearch
+* gearman
+* mySQL
+
+For help, send an email to `Archivematica tech mailing list. <https://groups.google.com/forum/#!forum/archivematica-tech>`_
+
+
+.. _firewall:
+
+Firewall requirements
+^^^^^^^^^^^^^^^^^^^^^
+
+When installing Archivematica on multiple machines, all the machines must be
+able to reach each other on the following ports:
+
+* http, mysqld, gearman, nfs, ssh
+
 
 .. _install-atom:
 
 Using AtoM 2.x with Archivematica
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica 1.5 has been tested with and is recommended for use with AtoM
-versions 2.2 and 2.3. AtoM version 2.2 or higher is required for use with the
+versions 2.2. AtoM version 2.2 or higher is required for use with the
 hierarchical DIP functionality; see :ref:`Arrange a SIP from backlog <arrange-sip>`.
 
 Installation instructions for Atom 2 are available on the
 :ref:`accesstomemory.org documentation <atom:home>`. When following those
 instructions, it is best to download Atom from the git repository (rather than
 use one of the supplied tarballs). When checking out Atom, use the head of
-either the stable/2.1.x, stable/2.2.x or qa/2.3.x branch.
+either the stable/2.1.x, stable/2.2.x or qa/2.3.x branch (integration with qa branch is experimental).
 
 Once you have a working AtoM installation, you can configure dip upload
 between Archivematica and Atom. The basic steps are:
@@ -279,5 +319,40 @@ between Archivematica and Atom. The basic steps are:
 * Start gearman on the Atom server
 
 * Start the atom worker on the AtoM server
+
+.. _install-aspace:
+
+ArchivesSpace
+^^^^^^^^^^^^^
+
+TODO
+
+.. _install-duracloud:
+
+Duracloud
+^^^^^^^^^
+
+See :ref:`Archivematica DuraCloud quick start guide <duracloud-setup>`
+
+.. _install-swift:
+
+Swift
+^^^^^
+
+See: :ref:`Swift Storage Service docs <storageservice:swift>`
+
+.. _install-islandora:
+
+Islandora
+^^^^^^^^^
+
+TODO
+
+.. _install-arkivum:
+
+Arkivum
+^^^^^^^
+
+See: :ref:`Arkivum Storage Service docs <storageservice:arkivum>`
 
 :ref:`Back to the top <installation>`
