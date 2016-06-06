@@ -25,9 +25,9 @@ Installation
 Technical Requirements
 ----------------------
 
-Version 1.5: Operating System requirement: A current Ubuntu LTS version, which at the moment means version 14.04.  The 64 bit Server Edition of Ubuntu 14.04.2 is recommended.
+Version 1.5: Operating System requirement: A current Ubuntu LTS version, which at the moment means version 14.04.  The 64 bit Server Edition of Ubuntu 14.04.4 is recommended.
 
-We plan to release a version 1.5.1 which will be available on Ubuntu 12.04 and CentOS/Redhat 7 (more information available soon).
+We plan to release a version 1.5.1 which will be available on Ubuntu 12.04, 16.04 and CentOS/Redhat 7 (more information available soon).
 
 Archivematica is capable of running on almost any hardware supported by Ubuntu; however, processing large collections will require better hardware.
 
@@ -55,7 +55,7 @@ Recommended Minimum Requirements for production processing
 Archivematica can be installed one or more machines. It is recommended that
 each machines have these minimum requirements:
 
-* Processor: dual core i5 3rd generation CPU or better
+* Processor: dual core i5 5th generation CPU or better
 * Memory: 8GB+
 * Disk space: 20GB plus the disk space required for the collection.
 
@@ -74,11 +74,24 @@ Updating from Archivematica 1.4
 If you have installed an earlier version Archivematica from packages, it is
 possible to update your installation without re-installing. The steps are:
 
-**Add source code repository**
+
+**Update python**
+
+This might be done on your system already, if you have been updating the operating system 
+on an ongoing basis.
 
 .. code:: bash
 
-   sudo add-apt-repository ppa:archivematica/1.5 [this will change]
+   apt-get update
+   apt-get install python-pip
+    
+**Add source code repositories**
+
+.. code:: bash
+
+   sudo add-apt-repository ppa:archivematica/externals 
+   wget -O - https://packages.archivematica.org/1.5.x/key.asc | apt-key add -
+   echo 'deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main' >> /etc/apt/sources.list
 
 **Update Archivematica Storage Service**
 
@@ -116,33 +129,37 @@ better to update the dashboard before updating the mcp components.
    sudo apt-get install archivematica-mcp-server
    sudo apt-get install archivematica-mcp-client
 
-**Update Elasticsearch**
+(Optional) Update Elasticsearch**
 
+Archivematica 1.4.1 uses Elasticsearch version 1.4.  Archivematica 1.5.0 will work with any version of Elasticsearch from 1.4 to 1.7.5.  You do not have to upgrade Elasticsearch when upgrading Archivematica, although we recommend doing so, to make future upgrades easier.
 
-If you do not have an Elasticsearch version between 1.4.0 - 1.7.5 installed, you need to upgrade. ull instructions on how to upgrade can be found on the
+Instructions on how to upgrade can be found on the
 `Elasticsearch website <https://www.elastic.co/guide/en/elasticsearch/reference/1.3/setup-upgrade.html>`_.
 In general it should be possible to upgrade Elasticsearch on a standard Archivematica machine with the following commands:
 
 .. code:: bash
 
    sudo /etc/init.d/elasticsearch stop
-   sudo echo "deb http://packages.elasticsearch.org/elasticsearch/1.4/debian stable main" >> /etc/apt/sources.list
+   sudo echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list
    sudo apt-get update
    sudo apt-get install elasticsearch
    sudo /etc/init.d/elasticsearch start
+   
+You will be prompted with questions about modifying configuration files.  If you have not made any modifications to your Elasticsearch configuration, it should be safe to use the new versions of the configuration files that come with Elasticsearch.
 
 **Restart Services**
 
 .. code:: bash
 
-   sudo service uwsgi restart [maybe change]
+   sudo service uwsgi restart
    sudo service nginx restart
-   sudo /etc/init.d/apache2 restart [maybe remove]
-   sudo /etc/init.d/gearman-job-server restart
+   sudo /etc/init.d/apache2 restart
+   sudo service gearman-job-server restart
    sudo restart archivematica-mcp-server
    sudo restart archivematica-mcp-client
    sudo restart fits
-
+   sudo freshclam
+   
 Note, depending on how your Ubuntu system is set up, you may have trouble
 restarting gearman with the command in the block above.  If that is the case,
 try this command instead:
