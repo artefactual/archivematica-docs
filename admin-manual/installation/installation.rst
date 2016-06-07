@@ -77,23 +77,25 @@ possible to update your installation without re-installing. The steps are:
 
 **Update python**
 
-This might be done on your system already, if you have been updating the operating system 
+This might be done on your system already, if you have been updating the operating system
 on an ongoing basis.
 
 .. code:: bash
 
    apt-get update
    apt-get install python-pip
-    
+
 **Add source code repositories**
 
 .. code:: bash
 
-   sudo add-apt-repository ppa:archivematica/externals 
+   sudo add-apt-repository ppa:archivematica/externals
    wget -O - https://packages.archivematica.org/1.5.x/key.asc | apt-key add -
    echo 'deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main' >> /etc/apt/sources.list
 
 **Update Archivematica Storage Service**
+
+Ensure that the default user 'test' exists in the Storage Service before updating (create it if it doesn't). Database migrations may not be correctly applied if not.
 
 .. code:: bash
 
@@ -102,11 +104,11 @@ on an ongoing basis.
 
 **Create new Storage Service user**
 
-Archivematica Storage Service 0.8.0 introduces a new security feature - each user is assigned an API key. 
+Archivematica Storage Service 0.8.0 introduces a new security feature - each user is assigned an API key.
 All api interactions with the storage service require the use of an api key, including from the Archivematica Dashboard.
 
 Log into the Storage Service with your existing credentials.  Go to the Administration tab, and then select 'users'
-from the menu on the left.  Create a new user.  Once you have finished creating the new user, copy the api key that 
+from the menu on the left.  Create a new user.  Once you have finished creating the new user, copy the api key that
 is displayed on the 'edit user' page.  You will need this later after upgrading the Dashboard.
 
 **Update Archivematica**
@@ -153,7 +155,7 @@ In general it should be possible to upgrade Elasticsearch on a standard Archivem
    sudo apt-get update
    sudo apt-get install elasticsearch
    sudo /etc/init.d/elasticsearch start
-   
+
 You will be prompted with questions about modifying configuration files.  If you have not made any modifications to your Elasticsearch configuration, it should be safe to use the new versions of the configuration files that come with Elasticsearch.
 
 **Restart Services**
@@ -168,7 +170,7 @@ You will be prompted with questions about modifying configuration files.  If you
    sudo restart archivematica-mcp-client
    sudo restart fits
    sudo freshclam
-   
+
 Note, depending on how your Ubuntu system is set up, you may have trouble
 restarting gearman with the command in the block above.  If that is the case,
 try this command instead:
@@ -176,12 +178,12 @@ try this command instead:
 .. code:: bash
 
    sudo restart gearman-job-server
-   
+
 **Update Dashboard Configuration**
 
-Log into the Archivematica dashboard with your existing credentials.  Go to the administration tab, 
+Log into the Archivematica dashboard with your existing credentials.  Go to the administration tab,
 and click on 'general configuration' in the menu on the left.  You will see a new 'api key' property
-in the Storage Service configuration section.  Copy the api key you generated earlier, when creating 
+in the Storage Service configuration section.  Copy the api key you generated earlier, when creating
 a new Storage Service user, into this box and click save.
 
 .. _install-new:
@@ -190,10 +192,10 @@ Installing Archivematica 1.5 packages (new install)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica packages in the past have been hosted on Launchpad, in an Ubuntu PPA (Personal
-Package Archive). With the 1.5.0 release, there is now a new repository at packages.archivematica.org.  
+Package Archive). With the 1.5.0 release, there is now a new repository at packages.archivematica.org.
 This has been introduced to allow one central place to store packages for multiple operating systems.
 
-There are some dependencies still hosted on Launchpad, that have not yet been migrated to packages.archivematica.org.  
+There are some dependencies still hosted on Launchpad, that have not yet been migrated to packages.archivematica.org.
 In a future release, all the requirements will be hosted in one repository, for the time being it is necessary to set up
 two different sources of packages.
 
@@ -204,7 +206,7 @@ two different sources of packages.
    sudo apt-get update
    sudo apt-get install python-software-properties
    sudo add-apt-repository ppa:archivematica/externals
-   
+
 2. Add packages.archivematica.org to your list of trusted repositories
 
 .. code:: bash
