@@ -8,7 +8,6 @@ Archivematica documentation
    :hidden:
 
    /user-manual/index
-   /admin-manual/index
 
 .. _user-manual-home:
 
