@@ -300,51 +300,66 @@ Before ingesting digital objects destined for ArchivesSpace, ensure that
 the ArchivesSpace DIP upload settings in the administration tab of the
 dashboard have been set.
 
-* These settings should be created and saved before digital objects destined
-  for upload to ArchivesSpace are processed. Note that these can be set
-  once and used for processing any number of transfers (i.e. they do not need
-  to be re-set for each transfer).
+These settings should be created and saved before digital objects destined
+for upload to ArchivesSpace are processed. Note that these can be set
+once and used for processing any number of transfers (i.e. they do not need
+to be re-set for each transfer).
 
-* Include the IP address of the host database (ArchivesSpace host), the database
-  port (ArchivesSpace backend port), an ArchivesSpace administrative
-  username, the ArchivesSpace administrative user password, and the Use Statement (see note below).
+* **ArchivesSpace host**: the IP address of the host database. Do not include
+  http:// or   www. (i.e. ``myarchivesspace.example.com``)
 
-* Restrictions Apply: Selecting *Yes* will apply a blanket access restriction to all content
-  uploaded from Archivematica to ArchivesSpace. Selecting *No* will send all content to
-  ArchivesSpace without restrictions. Should you wish to enable the PREMIS-based restrictions functionality,
-  choose "base on PREMIS" under "Restrictions Apply". To add PREMIS rights,
-  please see :ref:`Add PREMIS rights and restrictions <at-premis>`.
+* **ArchivesSpace backend port**: the database port of the ArchivesSpace site
+  (i.e. ``8089``)
 
-* ArchivesSpace repository number: Insert the identifier for the ArchivesSpace repository
+* **ArchivesSpace administrative user**: a username with administrative permissions
+  in the ArchivesSpace site
+
+* **ArchivesSpace administrative user password**: password for the above user
+
+* **Restrictions Apply**: Selecting *Yes* will apply a blanket access restriction to
+  all content uploaded from Archivematica to ArchivesSpace. Selecting *No* will
+  send all content to ArchivesSpace without restrictions. Should you wish to enable
+  the PREMIS-based restrictions functionality, choose "base on PREMIS" under "Restrictions
+  Apply". To add PREMIS rights, please see :ref:`Add PREMIS rights and restrictions <at-premis>`.
+
+* **XLink Actuate**: XLink Actuate defines when digital object will be read and displayed
+  to users. ``onLoad`` means that the digital object will be loaded and shown when the
+  target resource loads. ``onRequest`` means that the digital object will be loaded
+  and shown when the user clicks on the digital object link.
+
+* **XLink Show**: XLink Show defines where the browser will open the digital object.
+  ``Embed`` is selected by default - the digital object will be embedded in the resource
+  page. ``New`` will open the digital object in a new window or tab. ``Replace`` will open the digital object in the same window or tab.
+
+* **Use Statement**: select a term from the Use Statement list in ArchivesSpace's
+  Controlled Value Lists under the System menu. For example, if the uploaded materials
+  are original master images, for example, enter ``image-master`` in the Use statement
+  field to apply the label ``image-master`` to all of the uploads.
+
+* **Object type**: select a term from the Digital Object Type list in ArchivesSpace's
+  Controlled Value Lists under the System menu. If the uploaded materials are sound
+  recordings, you could enter ``sound_recording`` in the Object type field to apply
+  the label sound_recording to all of the uploads. For mixed media uploads, it is
+  best to leave this field blank.
+
+* **Conditions governing access**: Enter free-text conditions that govern access
+  to the digital object.
+
+* **Conditions governing use**: Enter free-text conditions that govern use
+  of the digital object.
+
+* **URL prefix**: URL of DIP object server as you wish it to appear in ArchivesSpace
+  record. Example: ``http://example.com``.
+
+* **ArchivesSpace repository number**: Insert the identifier for the ArchivesSpace repository
   to which you would like to upload DIPs here. Note that the default identifier for a
   single-repository ArchivesSpace instance is 2.
-
-.. NOTE::
-
-   The *Use statement* field is required. To populate this fields, you **must**
-   refer to ArchivesSpace's Controlled Value Lists.
-
-   The Use statement field in Archivematica is mapped to the Use Statement list in
-   ArchivesSpace. If the uploaded materials are original master images, for example,
-   you could enter ``image-master`` in the Use statement field to apply the label
-   image-master to all of the uploads.
-
-.. NOTE::
-
-   The *Object type* field can be left blank. To populate this fields, you **must**
-   refer to ArchivesSpace's Controlled Value Lists.
-
-   The Object type field in Archivematica is mapped to the Digital Object Type list in
-   ArchivesSpace. If the uploaded materials are sound recordings, you could enter ``sound_recording``
-   in the Object type field to apply the label sound_recording to all of the uploads. For mixed
-   media uploads, it is best to leave this field blank.
 
 .. IMPORTANT::
 
    In order to save changes to the ArchivesSpace DIP upload configuration, you must
    enter the password before clicking save. Note that Archivematica will *not* show you
    an error if the password is not entered.
-
 
 .. _dashboard-AT:
 
