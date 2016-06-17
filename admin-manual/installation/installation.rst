@@ -211,7 +211,7 @@ two different sources of packages.
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.5.x/key.asc | apt-key add -
+   sudo wget -O - https://packages.archivematica.org/1.5.x/key.asc | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main" >> /etc/apt/sources.list'
 
 3. Add the ElasticSearch apt repository next:
