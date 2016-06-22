@@ -18,6 +18,8 @@ Installation
 
 * :ref:`Docker <docker>`
 
+* :ref:`Vagrant/Ansible <vagrant>`
+
 * :ref:`Advanced <advanced>`
 
 .. _tech-requirements:
@@ -31,7 +33,7 @@ We plan to release a version 1.5.1 which will be available on Ubuntu 12.04, 16.0
 
 Archivematica is capable of running on almost any hardware supported by Ubuntu; however, processing large collections will require better hardware.
 
-Archivematica can be installed on a single machine, or across many machines to spread the processing workload. See :ref:`Advanced <advanced>.`
+Archivematica can be installed on a single machine, or across many machines to spread the processing workload. See :ref:`Advanced <advanced>`.
 
 .. _requirements-small:
 
@@ -299,6 +301,16 @@ Docker
 
 Docker installations are experimental at this time- instructions coming soon.
 
+.. _vagrant:
+
+Vagrant/Ansible
+---------------
+
+The recommended way to install Archivematica for development is with Ansible and
+Vagrant. For instructions on how to install Archivematica from a virtual machine,
+see the `Ansible & Vagrant Installation instructions
+<https://wiki.archivematica.org/Getting_started#Installation>`_ on the Archivematica
+wiki.
 
 .. _advanced:
 
