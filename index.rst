@@ -51,7 +51,7 @@ Transfer
 * :ref:`Import metadata <import-metadata>`
 * :ref:`Manage a backlog <manage-backlog>`
 * :ref:`Bags (Library of Congress Bagit format) <bags>`
-* :ref:`Digitized files <digitized>`
+* :ref:`Access and service files <access_and_service>`
 * :ref:`Forensic images <forensic>`
 * :ref:`DSpace exports <dspace>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`

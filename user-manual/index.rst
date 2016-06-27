@@ -19,7 +19,7 @@ links to each chapter's main sections.
    transfer/import-metadata
    transfer/manage-backlog
    transfer/bags
-   transfer/digitized
+   transfer/access_and_service
    transfer/forensic
    transfer/dspace
    ingest/ingest
@@ -37,5 +37,3 @@ links to each chapter's main sections.
    troubleshooting/faq
    metadata/dublincore
    metadata/premis
-
-

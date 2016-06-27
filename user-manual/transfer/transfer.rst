@@ -48,8 +48,8 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
    If your transfer is a bag or a zipped bag, please see :ref:`Bags <bags>`.
 
-   If your transfer is composed of objects that are the result of digitization,
-   please see :ref:`Digitization output <digitized>`.
+   If your transfer includes access and service/mezzanine files,
+   please see :ref:`Access and service files <access_and_service>`.
 
    If your transfer is composed of digital forensic disk images, please see
    :ref:`Forensic image processing <forensic>`.
