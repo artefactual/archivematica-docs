@@ -46,6 +46,7 @@ Transfer
 * :ref:`Create a transfer <create-transfer>`
 * :ref:`Create a transfer with submission documentation <create-submission>`
 * :ref:`Create a transfer with existing checksums <transfer-checksums>`
+* :ref:`Create a transfer with an existing structmap <structmap>`
 * :ref:`Process the transfer <process-transfer>`
 * :ref:`Extract packages <extract-packages>`
 * :ref:`Import metadata <import-metadata>`

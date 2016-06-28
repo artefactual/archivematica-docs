@@ -7,7 +7,8 @@ Transfer
 In Archivematica, Transfer is the process of transforming any set of digital
 objects and/or directories into a SIP. Transformation may include appraisal,
 arrangement, description and identification of donor restricted, private or
-confidential contents. The Transfer tab prepares your content for preservation in Archivematica.
+confidential contents. The Transfer tab prepares your content for preservation
+in Archivematica.
 
 In the Transfer tab of the Dashboard, the user moves digital objects from
 source directories accessible via the Storage Service into Archivematica. See
@@ -30,6 +31,8 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 * :ref:`Create a transfer with submission documentation <create-submission>`
 
 * :ref:`Create a transfer with existing checksums <transfer-checksums>`
+
+* :ref:`Create a transfer with an existing structmap <structmap>`
 
 * :ref:`Process the transfer <process-transfer>`
 
@@ -64,16 +67,16 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 Create a transfer
 -----------------
 
-Open the web browser and the Archivematica dashboard to sign in with your
+Open the web browser and the Archivematica dashboard and sign in with your
 username and password. Please note that if this is your first time logging in
 to a newly installed instance of Archivematica, you will see a log-in that
 allows you to register your repository and get updates to the format policy
-registry. See the User manual - :ref:`Format Policy Registry (FPR) <fpr>` and the
+registry. For more information, see :ref:`Format Policy Registry (FPR) <fpr>` and the
 :ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
 
-1. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
+1. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, :ref:`Unzipped Bag <bags>`, :ref:`Zipped Bag <bags>`, :ref:`DSpace <dspace>`, maildir, and :ref:`Disk Image <forensic>`.
 
-2. In transfer tab, name your transfer and select your source directory. Click Browse to select the directory containing your object(s) for upload. Your transfer can be composed of multiple directories from different sources. Repeat this step if your transfer is composed of multiple sources.
+2. In transfer tab, name your transfer and select your source directory. Click Browse to select the directory containing your object(s) for upload. If you would like your transfer to be composed of multiple directories from different sources, repeat this step.
 
 .. figure:: images/Browse1.*
    :align: center
@@ -87,7 +90,6 @@ As shown above, Archivematica will display the number of objects in each availab
 transfer directory.
 
 3. If applicable, enter an accession number for the transfer.
-
 
 4. Once all of your digital object sources have been uploaded, hit the Start Transfer button for the transfer processing to begin.
 
@@ -105,16 +107,19 @@ transfer directory.
 Create a transfer with submission documentation
 -----------------------------------------------
 
-The structured directory in Archivematica is the basic configuration of the transfer. If you just add a directory to the dashboard and start transfer processing, Archivematica will restructure it so it complies with this structure. Another option is to create a transfer in a structured directory prior to
-beginning processing in Archivematica.
+The structured directory in Archivematica is the basic configuration of the transfer.
+If you just add a directory to the dashboard and start transfer processing, Archivematica
+will restructure it so it complies with this structure. Another option is to create
+a transfer in a structured directory prior to beginning processing in Archivematica.
 
-To create a transfer that includes submission documentation, such as a donor agreement, you must create a structured directory prior to beginning processing in Archivematica. Your source directory should contain three subdirectories, titled as below:
+To create a transfer that includes submission documentation, such as a donor agreement,
+you must create a structured directory prior to beginning processing in Archivematica.
 
-1. objects: The *objects* directory contains the digital objects that are to be preserved. You can create subdirectories within objects if desired.
+1. Your source directory can be called anything (``transfer`` in this example). Place all of the digital objects that you are preserving in the ``transfer`` directory (you can add subdirectories if you wish, but they are not required).
 
-2. metadata: The *metadata* directory contains the checksum, the METS file, and a submissionDocumentation subfolder, which can be used for transfer forms, donation agreements or any other documents that relate to the acquisition of the records.
+2. Create a subdirectory called ``metadata`` (no capitalization).
 
-3. logs: The *logs* directory will eventually contain logs generated when processing the transfer in Archivematica.
+3. Create a subdirectory within ``metadata`` called ``submissionDocumentation`` (in camel-case). Place any transfer forms, donation agreements or any other documents that relate to the acquisition of the records inside ``submissionDocumentation``.
 
 .. important::
 
@@ -123,28 +128,63 @@ To create a transfer that includes submission documentation, such as a donor agr
    sanitized. Any filenames other than plain ASCII names may cause errors in
    processing.
 
-1. Open the file browser by clicking on the Home folder on the Archivematica desktop.
-
-2. The structured directory should contain three subdirectories: logs, metadata, objects. Copy the digital files to be preserved into the objects directory. Note that you can create subdirectories within objects.
-
-3. Add submission documentation. In the transfer you have just created, navigate to the /metadata/ folder and add a /submissionDocumentation directory. Add files to that folder like donor agreements, transfer forms, copyright agreements and any correspondence or other documentation relating to the transfer. Any SIPs subsequently made from this transfer will automatically contain copies of this documentation.
-
 .. _transfer-checksums:
 
 Create a transfer with existing checksums
 -----------------------------------------
 
-You can include checksums with your transfer if you have them. Archivematica
-will verify .md5, .sha1 and .sha256 checksums in the Verify checksums micro-
-service during the Transfer workflow in the dashboard.
+If you have existing checksums that you would like to preserve along with your transfer,
+you can include them in your transfer directory. Archivematica will verify .md5,
+.sha1 and .sha256 checksums in the Verify checksums micro-service during the Transfer
+workflow in the dashboard.
 
-1. Place the digital objects into an ``/objects`` folder below the first level of the transfer.
+1. Your source directory can be called anything (``transfer`` in this example). Place all of the digital objects that you are preserving in the ``transfer`` directory (you can add subdirectories if you wish, but they are not required).
 
-2. Place the metadata files in a /metadata folder at the same level as the ``/objects`` folder. Your checksums should be contained in text files named the following way: checksum.md5, checksum.sha1 or checksum.sha256.
+2. Create a subdirectory called ``metadata`` (no capitalization).
 
-3. Begin your standard transfer in the Archivematica dashboard interface.
+3. Your checksums should be contained in text files named the following way: checksum.md5, checksum.sha1 or checksum.sha256. Place the checksum files in the ``metadata`` directory.
 
-4. If your checksum check fails, this micro-service will show an error. The micro-service line will turn red. The log for this is sent to the ``/logs`` folder of the transfer. The file in the log folder should look like "checksum.md5 -Check-Tue Oct 14 13:56:51 PDT 2014"
+4. Begin your standard transfer in the Archivematica dashboard interface.
+
+5. If your checksum check fails, this micro-service will show an error. The micro-service line will turn red. The log for this is sent to the ``/logs`` folder of the transfer. The file in the log folder should look like "checksum.md5 -Check-Tue Oct 14 13:56:51 PDT 2014"
+
+.. _structmap:
+
+Create a transfer with an existing structmap
+--------------------------------------------
+
+It's possible to apply an externally-created logical METS structmap to a transfer by
+including an XML file with the transfer. This can be used for internal purposes,
+like identifying the sections of a book, or to apply levels of description to be
+used when uploading the DIP to AtoM.
+
+1. Your source directory can be called anything (``transfer`` in this example). Place all of the digital objects that you are preserving in the ``transfer`` directory (you can add subdirectories if you wish, but they are not required).
+
+2. Create a subdirectory called ``metadata`` (no capitalization).
+
+3. Your structmap must be contained in an XML file named mets_structmap.xml (no capitalization). the structmap must refer to the filenames of the objects in the transfer exactly. Place the structmap file in the ``metadata`` directory.
+
+.. figure:: images/structmap.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: Structure of the logical mets_structmap.xml.
+
+   Logical mets_structmap.xml file showing the first few pages of a book, with AtoM levels of description applied (item, series, fonds).
+
+4. Begin your standard transfer in the Archivematica dashboard interface.
+
+5. In order to confirm that your structmap was correctly applied to the contents of the transfer, check the METS file contained within the AIP. The structmap is usually near the very end of the METS file. It should reflect the logical structmap that you uploaded with the transfer.
+
+6. If you are uploading a DIP to AtoM, your structmap should include the applicable Atom level of description as the ``mets:div TYPE`` (see image above). Once you have uploaded the DIP to AtoM, the objects should have the levels of description as defined in the structmap.
+
+.. IMPORTANT::
+  In order to use the structmap to assign levels of description to the digital objects,
+  you must use the levels of description defined in your AtoM instance without capital
+  letters (for example, item instead of Item).
+
+.. NOTE::
+  It is not required to use AtoM levels of description for the ``mets:div TYPE``. The value can be anything and does not need to adhere to any convention. For example, the sample provided in the image above could use the terms "book", "chapter", and "page" instead of "fonds", "series", and "item".
 
 .. _process-transfer:
 
