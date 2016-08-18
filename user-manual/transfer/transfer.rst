@@ -302,9 +302,11 @@ icon found next to the add metadata icon, to the right of the transfer name.
    :width: 100%
    :alt: A transfer that is ready to be removed from the dashboard
 
+   
 .. NOTE::
   This does not delete the transfer or related entities, including the source directory.
 
+  
 .. _format-identification:
 
 Format identification
