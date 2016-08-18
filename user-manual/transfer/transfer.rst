@@ -300,7 +300,7 @@ icon found next to the add metadata icon, to the right of the transfer name.
    :align: center
    :figwidth: 60%
    :width: 100%
-   :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
+   :alt: A transfer that is ready to be removed from the dashboard
 
 .. NOTE::
   This does not delete the transfer or related entities, including the source directory.
