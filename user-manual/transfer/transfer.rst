@@ -294,6 +294,7 @@ information which can create browser timeout issues.
 
 1. When you are ready to remove a transfer from the dashboard, click the remove 
 icon found next to the add metadata icon, to the right of the transfer name.
+
 2. Click the Confirm button to remove the transfer from the dashboard.
 
 .. figure:: images/remove-sip.*
