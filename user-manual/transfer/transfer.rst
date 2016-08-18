@@ -283,7 +283,7 @@ Process the transfer
 
 8. See Ingest for next steps.
 
-.._cleanup:
+.. _cleanup:
 
 Cleaning up the transfer dashboard
 ----------------------------------
