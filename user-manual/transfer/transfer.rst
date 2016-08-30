@@ -36,6 +36,8 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
 * :ref:`Process the transfer <process-transfer>`
 
+* :ref:`Cleaning up the transfer dashboard <cleanup>`
+
 * :ref:`Format identification <format-identification>`
 
 * :ref:`Extract packages <extract-packages>`
@@ -281,6 +283,31 @@ Process the transfer
 
 8. See Ingest for next steps.
 
+.. _cleanup:
+
+Cleaning up the transfer dashboard
+----------------------------------
+
+The dashboard in the Transfer tab should be cleaned up from time to time. As the 
+list of transfers grows, it takes Archivematica longer and longer to parse this 
+information which can create browser timeout issues.
+
+1. When you are ready to remove a transfer from the dashboard, click the remove 
+icon found next to the add metadata icon, to the right of the transfer name.
+
+2. Click the Confirm button to remove the transfer from the dashboard.
+
+.. figure:: images/remove-sip.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: A transfer that is ready to be removed from the dashboard
+
+   
+.. NOTE::
+  This does not delete the transfer or related entities, including the source directory.
+
+  
 .. _format-identification:
 
 Format identification
