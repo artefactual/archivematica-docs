@@ -13,6 +13,7 @@ links to each chapter's main sections.
    overview/dashboard
    overview/technical
    overview/microservices
+   getting-started/quick-start
    getting-started/configuration
    getting-started/trac
    transfer/transfer
