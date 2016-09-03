@@ -51,6 +51,10 @@ transfers are limited to Artefactual's provided sample data. Users who wish to
 test using their own data may download the Vagrant box (described below) and test
 locally.
 
+.. note::
+
+  If you are using the sandbox, you can skip the next section.
+
 .. _quick-start-vm:
 
 Installing on a virtual machine
@@ -112,6 +116,11 @@ You may also now access your Archivematica instance through the web browser:
 
 Starting your first transfer
 ----------------------------
+
+To start your first transfer, go to the Archivematica dashboard - the main page
+of either the `sandbox <sandbox.archivematica.org>`_ or your `Archivematica VM <http://192.168.168.192>`_
+
+
 
 .. _quick-start-ingest:
 
