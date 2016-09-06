@@ -16,6 +16,8 @@ Installation
 
 * :ref:`Install new source <install-source>`
 
+* :ref:`Install for CentOS/Redhat <centos>`
+
 * :ref:`Docker <docker>`
 
 * :ref:`Vagrant/Ansible <vagrant>`
@@ -293,6 +295,209 @@ Install from source
 Installing from source has been tested using ansible scripts. Ansible installations have been tested for new installations but are not fully tested for upgrades.
 
 Instructions coming soon.
+
+.. _centos:
+
+Install for CentOS/Redhat
+-------------------------
+
+Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
+
+**Prerequisites**
+
+Extra repos:
+
+Some repositories need to be installed in order to fullfill the installation procedure:
+
+* Extra packages for enterprise linux
+
+.. code:: bash
+
+   sudo yum install -y epel-release
+
+* Elasticsearch
+
+.. code:: bash
+
+   sudo -u root rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
+   sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
+   [elasticsearch-1.7]
+   name=Elasticsearch repository for 1.7 packages
+   baseurl=https://packages.elastic.co/elasticsearch/1.7/centos
+   gpgcheck=1
+   gpgkey=https://packages.elastic.co/GPG-KEY-elasticsearch
+   enabled=1
+   EOF'
+
+* Archivematica
+
+.. code:: bash
+
+   sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
+   [archivematica]
+   name=archivematica
+   baseurl=https://packages.archivematica.org/1.x/centos
+   gpgcheck=0
+   enabled=1
+   EOF'
+
+**Service depencencies**
+
+Common services like elasticsearch, mariadb and gearmand should be installed and enabled before the archivematica install. It can be done with:
+
+.. code:: bash
+
+   sudo -u root yum install -y java-1.8.0-openjdk-headless elasticsearch mariadb-server gearmand
+   sudo -u root systemctl enable elasticsearch
+   sudo -u root systemctl start elasticsearch
+   sudo -u root systemctl enable mariadb
+   sudo -u root systemctl start mariadb
+   sudo -u root systemctl enable gearmand
+   sudo -u root systemctl start gearmand
+
+**Install Archivematica Storage Service**
+
+* First, we install the packages:
+
+.. code:: bash
+
+   sudo -u root yum install -y python-pip archivematica-storage-service
+
+* After the package is installed, we need to populate the sqlite database, and collect some static files used by django. Those tasks must be run as “archivematica” user.
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-storage-service
+   cd /usr/share/archivematica/storage-service
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   ";
+
+* And now, we enable and start the archivematica-storage-service and it’s nginx frontend
+
+.. code:: bash
+
+   sudo -u root systemctl enable archivematica-storage-service
+   sudo -u root systemctl start archivematica-storage-service
+   sudo -u root systemctl enable nginx
+   sudo -u root systemctl start nginx
+
+.. note::
+
+   The storage service will be avaliable at http://<ip>:8001
+
+**Installing Archivematica Dashboard and MCP Server**
+
+* First, install the pacakges:
+
+.. code:: bash
+
+   sudo -u root yum install -y archivematica-common archivematica-mcp-server archivematica-dashboard
+
+* Create user and mysql database with:
+
+.. code:: bash
+
+   sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS MCP; CREATE DATABASE MCP CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+   sudo -H -u root mysql -hlocalhost -uroot -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
+   sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON MCP.* TO 'archivematica'@'localhost';"
+
+* And as archivematica user, run migrations:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-dashboard
+   cd /usr/share/archivematica/dashboard
+   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   ";
+
+* Start and enable services:
+
+.. code:: bash
+
+   sudo -u root systemctl enable archivematica-mcp-server
+   sudo -u root systemctl start archivematica-mcp-server
+   sudo -u root systemctl enable archivematica-dashboard
+   sudo -u root systemctl start archivematica-dashboard
+
+* Reload nginx in order to load the dashboard config file:
+
+.. code:: bash
+
+   sudo -u root systemctl reload nginx
+
+.. note::
+
+   The dashboard will be avaliable at http://ip:81
+
+**Installing Archivematica MCP client**
+
+* First, we need to add some extra repos with the MCP Client dependencies:
+
+* Archivematica supplied external packages:
+
+.. code:: bash
+
+   sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
+   [archivematica-extras]
+   name=archivematica-extras
+   baseurl=https://packages.archivematica.org/1.5.x/centos-extras
+   gpgcheck=0
+   enabled=1
+   EOF'
+
+* Nux multimedia repo
+
+.. code:: bash
+
+   rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+
+* Forensic tools repo
+
+.. code:: bash
+
+   rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
+
+* Then, install the package:
+
+.. code:: bash
+
+   sudo -u root yum install -y archivematica-mcp-client
+
+* The MCP Client expect some programs in certain paths, so we put things in place:
+
+.. code:: bash
+
+   sudo cp /usr/bin/clamscan /usr/bin/clamdscan
+   sudo ln -s /usr/bin/7za /usr/bin/7z
+
+After that, we can enable and start services
+
+.. code:: bash
+
+   sudo -u root systemctl enable archivematica-mcp-client
+   sudo -u root systemctl start archivematica-mcp-client
+   sudo -u root systemctl enable fits-nailgun
+   sudo -u root systemctl start fits-nailgun
+
+**Finalizing installation**
+
+The dashboard will be available on port 81, and the storage service on port 8001.
+You will need to complete the installation by opening up the dashboard in a web browser, and filling in the form you are presented with.
+On the 2nd page of the installer, you are asked for information about the storage service.
+You will need to log into the storage service and find the api key that was generated for your user (in admin->users). 
+
+**Configuration**
+
+Each service have a configuration file in /etc/sysconfig/archivematica-packagename
+
+**Troubleshooting**
+
+If IPv6 is disabled, Nginx may refuse to start. If that is the case make sure that the listen directives used under /etc/nginx are not using IPv6 addresses like [::]:80.
 
 .. _docker:
 
