@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/transfer/dspace.rst:5
+msgid "DSpace exports"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:7
+msgid ""
+"Archivematica can act to facilitate a \"dark archive\" for a DSpace "
+"repository - i.e. providing back-end preservation functionality while "
+"DSpace remains the user deposit and access system."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:13
+msgid ""
+"Archivematica has been tested using exports from DSpace 1.7.x. Ingest has"
+" not been tested on exports from DSpace 1.8.x; however, there were no "
+"changes in the DSpace AIP export structure between 1.7.x and 1.8.x so it "
+"is anticipated that performance will be identical."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:18
+msgid ""
+"The transfer should be structured similar to the one in Archivematica's "
+"sample data at sampledata/SampleTransfers/DSpaceExport. This is a "
+"standard DSpace export with one DSpace AIP for the collection-level "
+"description and one for each of the deposited objects."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:27
+msgid ""
+"The inclusion of the collection level export (eg aip_1314.zip) is not "
+"mandatory."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:31
+msgid ""
+"A typical zipped item folder will contain the uploaded object plus a "
+"license file, a METS file and possibly an OCR text file. An example is "
+"shown below:"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:38
+msgid "bitstream_39691_txt = the OCR text file"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:40
+msgid "bitstream_8272.pdf = the object deposited in DSpace"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:42
+msgid "bitstream_8273 = the license file"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:44
+msgid "mets.xml = the METS file for the item"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:46
+msgid ""
+"To process, configure the source directory containing the transfer in the"
+" Administration tab of the browser. See :ref:`Administrator manual - "
+"Transfer source directories <admin-dashboard-transfer-source>`."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:48
+msgid ""
+"In the transfer tab, use the dropdown menu to select the DSpace transfer "
+"type."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:56
+msgid ""
+"Then, browse to the appropriate source directory and add your DSpace "
+"export."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:64
+msgid ""
+"When the DSpace transfer has loaded to the dashboard, click Start "
+"Transfer to begin processing."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:71
+msgid "At the normalization step, choose \"Normalize for preservation\"."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:78
+msgid ""
+"The METS file for the AIP will show fileGrps for the different file "
+"types: original, submissionDocumentation (the mets.xml files), "
+"preservation, license and text/ocr."
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:86
+msgid ""
+"Each object in the AIP has 2 dmdSecs. The first contains Xpointers to "
+"descriptive and rights metadata in the original mets.xml files exported "
+"from DSpace. The second reflects the parent-child relationship between a "
+"DSpace object and its community/collection, using the handles as "
+"identifiers:"
+msgstr ""
+
+#: ../../user-manual/transfer/dspace.rst:98
+msgid ":ref:`Back to the top <dspace>`"
+msgstr ""
+

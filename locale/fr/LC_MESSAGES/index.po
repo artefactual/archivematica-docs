@@ -1,0 +1,376 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../index.rst:5
+msgid "Archivematica documentation"
+msgstr ""
+
+#: ../../index.rst:16
+msgid "User manual"
+msgstr ""
+
+#: ../../index.rst:18
+msgid ""
+"Manual for Archivematica users explaining functionality and configuration"
+" operations performed through the user interface."
+msgstr ""
+
+#: ../../index.rst:24
+msgid "Overview"
+msgstr ""
+
+#: ../../index.rst:26
+msgid ":ref:`What is Archivematica? <intro>`"
+msgstr ""
+
+#: ../../index.rst:27
+msgid ":ref:`Web-based dashboard <web-dashboard>`"
+msgstr ""
+
+#: ../../index.rst:28
+msgid ":ref:`Technical architecture <technical-arch>`"
+msgstr ""
+
+#: ../../index.rst:29
+msgid ":ref:`Micro-services <micro-services>`"
+msgstr ""
+
+#: ../../index.rst:34
+msgid "Getting started"
+msgstr ""
+
+#: ../../index.rst:36
+msgid ":ref:`Configuration <configuration>`"
+msgstr ""
+
+#: ../../index.rst:37
+msgid ":ref:`TRAC review tool <trac>`"
+msgstr ""
+
+#: ../../index.rst:43
+msgid "Transfer"
+msgstr ""
+
+#: ../../index.rst:45
+msgid ":ref:`General description <transfer>`"
+msgstr ""
+
+#: ../../index.rst:46
+msgid ":ref:`Create a transfer <create-transfer>`"
+msgstr ""
+
+#: ../../index.rst:47
+msgid ":ref:`Create a transfer with submission documentation <create-submission>`"
+msgstr ""
+
+#: ../../index.rst:48
+msgid ":ref:`Create a transfer with existing checksums <transfer-checksums>`"
+msgstr ""
+
+#: ../../index.rst:49
+msgid ":ref:`Process the transfer <process-transfer>`"
+msgstr ""
+
+#: ../../index.rst:50
+msgid ":ref:`Extract packages <extract-packages>`"
+msgstr ""
+
+#: ../../index.rst:51 ../../index.rst:144
+msgid ":ref:`Import metadata <import-metadata>`"
+msgstr ""
+
+#: ../../index.rst:52
+msgid ":ref:`Manage a backlog <manage-backlog>`"
+msgstr ""
+
+#: ../../index.rst:53
+msgid ":ref:`Bags (Library of Congress Bagit format) <bags>`"
+msgstr ""
+
+#: ../../index.rst:54
+msgid ":ref:`Digitized files <digitized>`"
+msgstr ""
+
+#: ../../index.rst:55
+msgid ":ref:`Forensic images <forensic>`"
+msgstr ""
+
+#: ../../index.rst:56
+msgid ":ref:`DSpace exports <dspace>`"
+msgstr ""
+
+#: ../../index.rst:57
+msgid ":ref:`ContentDM (transfer and ingest) <contentdm>`"
+msgstr ""
+
+#: ../../index.rst:64
+msgid "Ingest"
+msgstr ""
+
+#: ../../index.rst:66
+msgid ":ref:`General description <ingest>`"
+msgstr ""
+
+#: ../../index.rst:67
+msgid ":ref:`Create a SIP <create-sip>`"
+msgstr ""
+
+#: ../../index.rst:68
+msgid ":ref:`Arrange a SIP from backlog <arrange-sip>`"
+msgstr ""
+
+#: ../../index.rst:69
+msgid ":ref:`Add metadata <add-metadata>`"
+msgstr ""
+
+#: ../../index.rst:70
+msgid ":ref:`Add PREMIS rights <add-rights>`"
+msgstr ""
+
+#: ../../index.rst:71
+msgid ":ref:`Normalize <normalize>`"
+msgstr ""
+
+#: ../../index.rst:72
+msgid ":ref:`Store the AIP <store-aip>`"
+msgstr ""
+
+#: ../../index.rst:73
+msgid ":ref:`Reingest AIP <reingest>`"
+msgstr ""
+
+#: ../../index.rst:74
+msgid ":ref:`Storage Service <storage-service>`"
+msgstr ""
+
+#: ../../index.rst:75
+msgid ":ref:`Upload DIP to ArchivesSpace <upload-AS>`"
+msgstr ""
+
+#: ../../index.rst:76
+msgid ":ref:`Upload DIP to Archivists Toolkit <upload-AT>`"
+msgstr ""
+
+#: ../../index.rst:77
+msgid ":ref:`Manual normalization <manual-norm>`"
+msgstr ""
+
+#: ../../index.rst:83
+msgid "Storage"
+msgstr ""
+
+#: ../../index.rst:85
+msgid ":ref:`Storing an AIP <storing-aip>`"
+msgstr ""
+
+#: ../../index.rst:86
+msgid ":ref:`Searching the AIP store <search-aip>`"
+msgstr ""
+
+#: ../../index.rst:87
+msgid ":ref:`Deleting an AIP <delete-aip>`"
+msgstr ""
+
+#: ../../index.rst:88
+msgid ":ref:`Delete an AIP <delete-aip>`"
+msgstr ""
+
+#: ../../index.rst:89
+msgid ":ref:`AIP structure <aip-structure>`"
+msgstr ""
+
+#: ../../index.rst:90
+msgid ":ref:`AICs <aic>`- managing multi-part AIPs"
+msgstr ""
+
+#: ../../index.rst:96
+msgid "Access"
+msgstr ""
+
+#: ../../index.rst:98
+msgid ":ref:`General description <access>`"
+msgstr ""
+
+#: ../../index.rst:99
+msgid ":ref:`Default access system <access-default>`"
+msgstr ""
+
+#: ../../index.rst:100
+msgid ":ref:`Upload DIP to AtoM <upload-atom>`"
+msgstr ""
+
+#: ../../index.rst:101
+msgid ":ref:`Store DIP <store-dip>`"
+msgstr ""
+
+#: ../../index.rst:102
+msgid ":ref:`Review/Download DIP <review-dip>`"
+msgstr ""
+
+#: ../../index.rst:103
+msgid ":ref:`Access tab <access-tab>`"
+msgstr ""
+
+#: ../../index.rst:104
+msgid ":ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`"
+msgstr ""
+
+#: ../../index.rst:105
+msgid ":ref:`Upload DIP to ContentDM <contentdm>`"
+msgstr ""
+
+#: ../../index.rst:111
+msgid "Preservation planning"
+msgstr ""
+
+#: ../../index.rst:113
+msgid ":ref:`General description <preservation-planning>`"
+msgstr ""
+
+#: ../../index.rst:114
+msgid ":ref:`Preservation planning tab <pres-tab>`"
+msgstr ""
+
+#: ../../index.rst:115
+msgid ":ref:`Format Policy Registry (FPR) <fpr>`"
+msgstr ""
+
+#: ../../index.rst:116
+msgid ":ref:`Preservation policies <pres-policies>`"
+msgstr ""
+
+#: ../../index.rst:122
+msgid "Administer"
+msgstr ""
+
+#: ../../index.rst:124
+msgid ":ref:`Dashboard administration tab <dashboard-admin>`"
+msgstr ""
+
+#: ../../index.rst:125
+msgid ":ref:`Update Format Policy Registry (FPR) <fpr-update>`"
+msgstr ""
+
+#: ../../index.rst:126
+msgid ":ref:`Storage service users <storageservice:users>`"
+msgstr ""
+
+#: ../../index.rst:132
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../index.rst:134
+msgid ":ref:`Error handing <error-handling>`"
+msgstr ""
+
+#: ../../index.rst:135
+msgid ":ref:`Error reporting <error-reporting>`"
+msgstr ""
+
+#: ../../index.rst:136
+msgid ":ref:`FAQ <faq>`"
+msgstr ""
+
+#: ../../index.rst:142
+msgid "Metadata"
+msgstr ""
+
+#: ../../index.rst:145
+msgid ":ref:`PREMIS <premis-template>`"
+msgstr ""
+
+#: ../../index.rst:146
+msgid ":ref:`Dublin Core <dublin_core>`"
+msgstr ""
+
+#: ../../index.rst:152
+msgid "Administrator manual"
+msgstr ""
+
+#: ../../index.rst:154
+msgid ""
+"Manual for Systems Administrators covering installation, configuration, "
+"set-up and maintenance of Archivematica and related systems."
+msgstr ""
+
+#: ../../index.rst:161
+msgid "Installation and setup"
+msgstr ""
+
+#: ../../index.rst:163
+msgid ":ref:`Installation <installation>`"
+msgstr ""
+
+#: ../../index.rst:164
+msgid ":ref:`Storage Service <storageservice:administrators>`"
+msgstr ""
+
+#: ../../index.rst:165
+msgid ":ref:`Dashboard Administration tab <dashboard-config>`"
+msgstr ""
+
+#: ../../index.rst:166
+msgid ":ref:`Format Policy Registry (FPR) <fpr:index>`"
+msgstr ""
+
+#: ../../index.rst:167
+msgid ":ref:`Customization and automation <customization>`"
+msgstr ""
+
+#: ../../index.rst:168
+msgid ":ref:`Duracloud setup <duracloud-setup>`"
+msgstr ""
+
+#: ../../index.rst:174
+msgid "Maintenance"
+msgstr ""
+
+#: ../../index.rst:176
+msgid ":ref:`Elasticsearch <elasticsearch>`"
+msgstr ""
+
+#: ../../index.rst:177
+msgid ":ref:`Data back-up <data-backup>`"
+msgstr ""
+
+#: ../../index.rst:178
+msgid ":ref:`FAQ <admin-faq>`"
+msgstr ""
+
+#: ../../index.rst:184
+msgid "Security"
+msgstr ""
+
+#: ../../index.rst:186
+msgid ":ref:`Elasticsearch <elasticsearch-security>`"
+msgstr ""
+
+#: ../../index.rst:187
+msgid ":ref:`MySQL <mysql-security>`"
+msgstr ""
+
+#: ../../index.rst:188
+msgid ":ref:`AtoM <atom-security>`"
+msgstr ""
+
+#: ../../index.rst:189
+msgid ":ref:`Gearman <gearman-security>`"
+msgstr ""
+

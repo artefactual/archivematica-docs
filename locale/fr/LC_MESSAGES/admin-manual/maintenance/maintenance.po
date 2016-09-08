@@ -1,0 +1,363 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../admin-manual/maintenance/maintenance.rst:5
+msgid "Maintenance"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:7
+msgid ""
+"This page contains information releavant to maintaining your "
+"Archivematica installation."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:10
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:12
+msgid ":ref:`Elasticsearch <elasticsearch>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:14
+msgid ":ref:`Programatic access to indexed AIP data <elasticsearch-access>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:16
+msgid ":ref:`Delete Elasticsearch index <elasticsearch-delete>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:18
+msgid ":ref:`Rebuild AIP or transfer index <elasticsearch-rebuild>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:20
+msgid ":ref:`Data backup <data-backup>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:22
+msgid ":ref:`FAQ <admin-faq>`"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:27
+msgid "Elasticsearch"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:29
+msgid ""
+"Since version 0.9, Archivematica stores AIP file information, such as "
+"METS data, using Elasticsearch. This data can be searched from the "
+"Archival Storage area of the dashboard or can be interfaced with "
+"programmatically."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:36
+msgid "Programatic access to indexed AIP data"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:38
+msgid ""
+"To access indexed AIP data using a custom script or application, find an "
+"Elasticsearch interface library for the programming language you've "
+"chosen to use. In Archivematica we use Python with the `pyes "
+"<https://github.com/aparo/pyes/>`_ library. In our developer "
+"documentation, we'll outline the use of pyes to access AIP data, but any "
+"programming language/interface library, such as PHP and `Elastica "
+"<https://github.com/ruflin/Elastica/>`_, should work."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:45
+msgid "**Connecting to Elasticsearch**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:47
+msgid ""
+"In this section we'll run through an example of interfacing with "
+"Elasticsearch data using a Python script that leverages the pyes library."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:50
+msgid ""
+"The first step, when using pyes, is to require the module. The following "
+"code imports pyes functionality on a system on which Archivematica is "
+"installed."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:59
+msgid "Next you'll want to create a connection to Elasticsearch."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:65
+msgid "**Full text searching**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:67
+msgid ""
+"Once connected to Elasticsearch, you can perform searches. Below is the "
+"code needed to do a \"wildcard\" search for all AIP files indexed by "
+"Elasticsearch and retrieve the first 20 items. Instead of doing a "
+"\"wildcard\" search you could also supply keywords, such as a certain AIP"
+" UUID."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:90
+msgid "**Querying for specific data**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:92
+msgid ""
+"While the \"StringQuery\" query type is good for broad searches, you may "
+"want to narrow a search down to a specific field of data to reduce false "
+"positives. Below is an example of searching documents, using "
+"\"TermQuery\", matching criteria within specific data. As, by default, "
+"Elasticsearch stores term values in lowercase the term value searched for"
+" must also be lowercase."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:114
+msgid "**Displaying search results**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:116
+msgid ""
+"Now that you've performed a couple of searches, you can display some "
+"results. The below logic cycles through each hit in a results set, "
+"representing an AIP file, and prints the UUID of the AIP the file belongs"
+" in, the Elasticsearch document ID corresponding to the indexed file "
+"data, and the path of the file within the AIP."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:133
+msgid "**Fetching specific documents**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:135
+msgid ""
+"If you want to get Elasticsearch data for a specific AIP file, you can "
+"use the Elasticsearch document ID. The above code populates the "
+"document_ids array and the below code uses this data, retrieving "
+"individual documents and extracting a specific item of data from each "
+"document."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:149
+msgid "**Augmenting documents**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:151
+msgid ""
+"To add additional data to an Elasticsearch document, you'll need the "
+"document ID. The following code shows an Elasticsearch query being used "
+"to find a document and update it with additional data. Note that the name"
+" of the data field being added, \"__public\", is prefixed with two "
+"underscores. This practice prevents the accidental overwriting of system "
+"or Archivematica-specific data. System data is prefixed with a single "
+"underscore."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:184
+msgid "Delete Elasticsearch index through GUI"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:186
+msgid ""
+"To help with Elasticsearch development, Archivematica comes with a plugin"
+" for Elasticsearch, called `Elasticsearch Head <http://mobz.github.com"
+"/elasticsearch-head/>`_, that provides a web application forcbrowsing and"
+" administering Elasticsearch data. \\ It can be accessed at "
+"http://your.host.name:9200/_plugin/head/."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:192
+msgid "Elasticsearch Head will allow you to delete an index, if need be."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:201
+msgid "Delete Elasticsearch index programmatically"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:203
+msgid ""
+"If, for whatever reason, you need to delete an Elasticsearch index "
+"programmatically, this can be done with pyes using the following code."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:221
+msgid "Rebuilding the AIP index"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:223
+msgid ""
+"To rebuild the ElasticSearch AIP index enter the following to find the "
+"location of the rebuilding script:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:230
+msgid ""
+"Copy the location of the script then enter the following to perform the "
+"rebuild (substituting \"/your/script/location/rebuild-elasticsearch-aip-"
+"index- from-files\" with the location of the script):"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:239
+msgid "Rebuilding the transfer index"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:241
+msgid ""
+"Similarly, to rebuild the ElasticSearch transfer data index enter the "
+"following to find the location of the rebuilding script:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:248
+msgid ""
+"Copy the location of the script then enter the following to perform the "
+"rebuild (substituting \"/your/script/location/rebuild-elasticsearch-"
+"transfer- index-from-files\" with the location of the script):"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:258
+msgid ""
+"`Elasticsearch troubleshooting "
+"<https://www.accesstomemory.org/en/docs/2.1/admin-"
+"manual/maintenance/elasticsearch/#maintenance-elasticsearch>`_ help from "
+"AtoM documentation."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:264
+msgid "Data back-up"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:266
+msgid ""
+"In Archivematica there are three types of data you'll likely want to back"
+" up:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:268
+msgid "Filesystem (particularly your storage directories)"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:270
+msgid "MySQL"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:272
+msgid "ElasticSearch"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:274
+msgid ""
+"MySQL is used to store short-term processing data. You can back up the "
+"MySQL database by using the following command:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:281
+msgid ""
+"ElasticSearch is used to store long-term data. Instructions and scripts "
+"for backing up and restoring ElasticSearch are available `here "
+"<http://tech.superhappykittymeow.com/?p=296>`_."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:288
+msgid "FAQ"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:291
+msgid "How to restart the Archivematica services"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:293
+msgid "**Stopping**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:304
+msgid "**Starting**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:317
+msgid "Error stack trace"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:319
+msgid ""
+"\"I am getting a white error page in the Dashboard. How can I find out "
+"what the error is?\""
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:322
+msgid ""
+"Seeing an full error stack trace for the Dashboard requires knowing how "
+"to edit a configuration file from the command line."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:325
+msgid "SSH to the Archivematica server"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:327
+msgid ""
+"With your preferred text editor, open the dashboard settings file (vim "
+"shown in example; Note that you must use sudo to edit this file):"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:334
+msgid "Change the \"DEBUG\" flag from \"False\" to \"True\""
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:340
+msgid "Save the file"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:342
+msgid "Restart Apache"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:348
+msgid "Reload the dashboard page reporting the error in your browse"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:350
+msgid "Debug or report error"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:352
+msgid ""
+"Restore DEBUG to False and restart Apache to turn error reporting off "
+"again"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:355
+msgid "Browser compatability"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:357
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"There are known issues with Internet Explorer 11 which result in an "
+"inability to start transfers in the dashboard (`Issue 7246 "
+"<https://projects.artefactual.com/issues/7246>`_). Minimal, but "
+"successful, testing has been done with Microsoft Edge."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:363
+msgid ":ref:`Back to the top <maintenance>`"
+msgstr ""
+

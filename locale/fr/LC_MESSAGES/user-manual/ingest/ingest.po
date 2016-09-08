@@ -1,0 +1,766 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/ingest/ingest.rst:5
+msgid "Ingest"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:7
+msgid ""
+"During ingest, digital objects are packaged into SIPs and run through "
+"several micro-services, including normalization, packaging into an AIP "
+"and generation of a DIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:11
+msgid ""
+"If you would like to skip some of the default decision points or make "
+"preconfigured choices for your desired workflow, see User administration "
+"- Processing configuration"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:15
+msgid "Should you run into an error during ingest, please see Error handling."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:17
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:19
+msgid ":ref:`Create a SIP <create-sip>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:20
+msgid ":ref:`Arrange a SIP from backlog <arrange-sip>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:21
+msgid ":ref:`Add metadata <add-metadata>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:22
+msgid ":ref:`Add PREMIS rights <add-rights>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:23
+msgid ":ref:`Normalize <normalize>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:24
+msgid ":ref:`Transcribe SIP contents <transcribe-contents>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:25
+msgid ":ref:`Store AIP <store-aip>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:26
+msgid ":ref:`Upload DIP <upload-dip>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:27
+msgid ":ref:`Reingest AIP <reingest>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:33
+msgid "Create a SIP"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:36
+msgid "Process transfers as described in :ref:`Transfers <transfer>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:38
+msgid ""
+"Click on the Ingest tab. Please note that if you would like to be "
+"reminded to add metadata or PREMIS rights to the package, you must "
+"configure this in the Administration tab."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:40
+msgid ""
+"The single SIP will move through a number of micro-services. If the user "
+"has preconfigured Archivematica to do so, processing will stop at a "
+"decision point that allows the user to choose a file identification "
+"method to base normalization upon or to choose to use pre-existing data "
+"gathered during identification at the transfer stage. Archivematica "
+"default is to use pre-existing data. For more about this option, see "
+":ref:`Administer — Processing configuration <dashboard-processing>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:42
+msgid "Wait until the SIP reaches \"Normalize\" and a bell icon appears."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:50
+msgid "Normalization micro-service"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:52
+msgid ""
+"To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, "
+"below."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:54
+msgid ""
+"To add PREMIS rights information, see :ref:`Add PREMIS rights <add-"
+"rights>`, below."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:56
+msgid ""
+"For selecting a normalization option, see :ref:`Normalization "
+"<normalize>`, below."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:62
+msgid "Arrange a SIP from backlog"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:64
+msgid ""
+"Retrieve content from transfer backlog. Use the Transfer backlog search "
+"bars at the top of the Ingest tab to find the transfer(s) and/or "
+"object(s)you'd like to ingest, or browse the entire backlog by clicking "
+"Search transfer backlog with a blank search. This will populate the "
+"Originals pane of the Ingest dashboard. Note: Multi-item select is not "
+"yet included in this feature, though entire folders/directories can be "
+"moved."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:72
+msgid "Transfer backlog search results in populating Originals pane"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:74
+msgid ""
+"Archivematica will display the directories in Transfer backlog including "
+"the number of objects in each directory. To hide directories from the "
+"Originals pane, click on the directory and click Hide."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:78
+msgid ""
+"Drag and drop the transfer directory(ies) and/or object(s) you wish to "
+"arrange and ingest as a SIP from the Originals pane to the Arrange pane, "
+"or create an arrangement structure for your SIP (see step 4, below)."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:86
+msgid "Drag and drop from Originals pane to Arrange pane"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:90
+msgid ""
+"There will be a discrepancy between the object count in the originals "
+"pane vs the arrange pane after a directory is dragged over. This is "
+"because the originals pane is counting metadata and submission "
+"documentation, including the METS file created during Transfer."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:95
+msgid ""
+"Click on the directory in the Arrange pane to select, and then click "
+"Create SIP. Archivematica will confirm that you wish to create a SIP, and"
+" then continue through the ingest process."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:97
+msgid ""
+"To arrange your SIP, create one or more directories in the Arrange pane "
+"by clicking on the Add Directory button. You can add separate directories"
+" or directories nested inside of each other. Note: You cannot rename a "
+"directory once you have created it; you must delete it and create a "
+"directory with a new name."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:105
+msgid "Create a new directory in Arrange pane"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:108
+msgid ""
+"Click and drag files from the Originals pane into your desired directory "
+"in the arrange panel. You can move either individual files or entire "
+"directories. Note: All files must be in a directory inside of Arrange. "
+"“Arrange” cannot be used as the top directory."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:110
+msgid ""
+"When you have completed moving files and directories into the Arrange "
+"pane, click on the top level directory which you wish to include in your "
+"SIP. Click on Create SIP. Any files or directories which are not inside "
+"the directory you chose will remain in the Arrange pane until you create "
+"a SIP using these files and directories."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:118
+msgid "Create a new SIP by clicking on a directory within Arrange pane"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:120
+msgid ""
+"Archivematica will confirm that you wish to create a SIP and after "
+"receiving confirmation, proceed to the next micro-services to create AIPs"
+" and DIPs as selected by the user."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:128
+msgid "Add metadata"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:130
+msgid ""
+"In Archivematica, metadata can be added either prior to the normalization"
+" step or after. Archivematica will prompt you with a reminder to add "
+"metadata if desired during the Process metadata directory micro-service. "
+"See :ref:`AtoM Dublin Core <atom:dc-template>`_ for information about the"
+" Dublin Core elements available."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:138
+msgid ""
+"If you are importing lower-level metadata (i.e. metadata to be attached "
+"to subdirectories and files within a SIP) see also:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:140
+#: ../../user-manual/ingest/ingest.rst:182
+msgid ":ref:`Transfer <transfer>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:142
+msgid ":ref:`Import metadata <import-metadata>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:145
+msgid ""
+"If you plan to create a DIP to :ref:`Upload to AtoM<dip-upload-atom>`, "
+"you may wish to add levels of description to your directories and/or "
+"objects. Archivematica will add a logical structMAP to the METS file, "
+"which AtoM will use to create information objects, applying the chosen "
+"levels of description. Note that if you do not apply a level of "
+"description to a digital object, AtoM will automatically assign it the "
+"level of item."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:147
+msgid "This functionality is supported in AtoM 2.2 and higher."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:149
+msgid ""
+"Click to select a directory or object, then click Edit metadata to choose"
+" the level of description."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:157
+msgid ""
+"As you add levels of description they will be shown in the arrange pane "
+"for you to review before finalizing your SIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:167
+msgid ""
+"To have the AtoM levels of description appear you must have entered your "
+"AtoM credentials in Administration. See :ref:`Administer, AtoM DIP upload"
+" <dashboard-atom>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:170
+msgid ""
+"Levels of description in AtoM are managed as a taxonomy. To edit, see "
+":ref:`Terms <atom:terms>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:175
+msgid ""
+"If you choose not to assign levels of description to directories in SIP "
+"arrange, AtoM will flatten the DIP so that all digital objects are child-"
+"level descriptions of the target description."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:183
+msgid "ower-level metadata (i.e. metadata to be attached to"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:179
+msgid "subdirectories and files within a SIP) see also:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:181
+msgid ":ref:`Metadata import <import-metadata>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:185
+#: ../../user-manual/ingest/ingest.rst:246
+msgid "Click on the template icon."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:193
+msgid "To add metadata, click on the template icon"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:196
+msgid ""
+"This will take you to the SIP detail panel. On the left-hand side, under "
+"metadata click Add."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:200
+msgid ":ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:206
+msgid ":ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:202
+msgid "80%"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:203
+msgid "100%"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:204
+#: ../../user-manual/ingest/ingest.rst:206
+#: ../../user-manual/ingest/ingest.rst:265
+msgid "SIP detail panel"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:208
+msgid ""
+"Add metadata as desired and save it by clicking the Create button at the "
+"bottom of the screen. Hovering in a field will activate tooltips that "
+"define the Dublin Core element and provide a link to `ISO 15836 Dublin "
+"Core Metadata Element Set <http://dublincore.org/documents/dces/>`_. Note"
+" that you can only add metadata at the SIP level when using the template."
+" If you would like to add metadata to a digital object, you will need to "
+"do that once the object has been uploaded to your access system."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:216
+msgid "SIP metadata entry form"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:220
+msgid ""
+"If you would like to upload your DIP to AtoM as a child of an existing "
+"target description, you must add at least a Title in the Dublin Core "
+"template."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:224
+msgid ""
+"When you click Create, you will see the metadata entry in the list page. "
+"To edit it further, click Edit on the right-hand side. To delete it, "
+"click Delete. To add more DC metadata, click the Add button below the "
+"list."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:232
+msgid "SIP metadata list"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:234
+#: ../../user-manual/ingest/ingest.rst:311
+msgid "Return to the ingest tab to continue processing the SIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:239
+msgid "Add PREMIS rights"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:241
+msgid ""
+"Archivematica allows you to add PREMIS rights either prior to the "
+"normalization step or after. Archivematica will prompt you with a "
+"reminder to add rights information if desired during the Process metadata"
+" directory micro-service. For more information about the PREMIS rights "
+"fields, see :ref:`PREMIS template <premis-template>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:255
+msgid "To add rights, click on the template icon"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:257
+msgid ""
+"This will take you to the SIP detail panel. On the left-hand side, under "
+"Rights, click Add."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:267
+msgid ""
+"Add rights as desired and save it by clicking the Save button at the "
+"bottom of the screen, or clicking Next if you are finished and ready to "
+"move on to the second page of data entry. Rights entries are made up of "
+"two pages of content."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:275
+msgid "SIP rights template- first page"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:277
+msgid ""
+"To get to the second page to complete data entry, click Next. Note that "
+"you can only add rights at the SIP level. If you would like to add rights"
+" to an individual digital object, you will need to do that once the "
+"object has been uploaded to your access system."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:288
+msgid "SIP rights template- second page"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:291
+msgid ""
+"When you click Save on the second page, you will be given the option to "
+"add another act with its associated grants and/or restrictions."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:299
+msgid "Repeatable acts in rights template"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:301
+msgid ""
+"If you have finished adding acts, click Done. You will see the rights "
+"entry in the list page . To edit it further, click Edit on the right-hand"
+" side."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:309
+msgid "SIP detail panel with rights"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:317
+msgid "Normalize"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:319
+msgid ""
+"Normalizing is the process of converting ingested digital objects to "
+"preservation and/or access formats. Note that the original objects are "
+"always kept along with their normalized versions. For more information "
+"about Archivematica's preservation strategy, go to the Preservation "
+"Planning section of the manual."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:325
+msgid ""
+"At the normalization step, the SIP will appear in the dashboard with a "
+"bell icon next to it. Select one of the normalization options from the "
+"Actions drop-down menu:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:333
+msgid "Selecting a normalization option"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:335
+msgid ""
+"Normalize for preservation and access: creates preservation copies of the"
+" objects plus access copies which will be used to generate the DIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:338
+msgid ""
+"Normalize for access: no preservation copies are created. Creates access "
+"copies which will be used to generate the DIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:341
+msgid ""
+"Normalize for preservation: creates preservation copies. No access copies"
+" are created and no DIP will be generated."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:344
+msgid ""
+"Do not normalize: no preservation copies are created. No access copies "
+"are created and no DIP will be generated."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:347
+msgid "You may also Reject SIP at this stage."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:350
+msgid ""
+"Once normalization is completed you can review the results in the "
+"normalization report. Click on the report icon next to the Actions drop-"
+"down menu."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:358
+msgid "Click on the report icon to open the normalization report"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:360
+msgid ""
+"The report shows what has been normalized and what is already in an "
+"acceptable preservation and access format:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:368
+msgid ""
+"You may review the normalization results in a new tab by clicking on "
+"Review. If your browser has plug-ins to view a file, you may open it in "
+"another tab by clicking on it. If you click on a file and your browser "
+"cannot open it, it will download locally so you can view it using the "
+"appropriate software on your machine."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:376
+msgid "Review normalization results in new tab"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:379
+msgid ""
+"Approve normalization in the Actions drop-down menu to continue "
+"processing the SIP. You may also Reject the SIP or re-do normalization. "
+"If you see errors in normalization, follow the instructions in Error "
+"handling to learn more about the problem."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:383
+msgid ":ref:`Manual normalization <manual-norm>`"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:389
+msgid "Transcribe SIP contents"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:391
+msgid ""
+"Archivematica gives users the option to Transcribe SIP contents using "
+"`Tesseract <https://code.google.com/p/tesseract-ocr/>`_ OCR tool. If Yes "
+"is selected by the user during this micro-service, an OCR file will be "
+"included in the DIP and stored in the AIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:398
+msgid ""
+"This feature is designed to transcribe the text from single images (e.g. "
+"individual pages of a book scanned as image files). It does not support "
+"transcription of multi-page objects or word processing files, PDF files, "
+"etc."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:406
+msgid "Store AIP"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:408
+msgid ""
+"After normalization is approved, the SIP runs through a number of micro-"
+"services, including processing of the submission documentation, "
+"generation of the METS file, indexing, generation of the DIP and "
+"packaging of the AIP."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:410
+msgid ""
+"When these micro-services are complete, the user can upload the DIP and "
+"store the AIP. See below for :ref:`ArchivesSpace <dip-upload-AS>` and "
+"Archivists' Toolkit DIP upload"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:419
+msgid "Archivematica ready to store the AIP and upload the DIP"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:421
+msgid ""
+"If desired, review the contents of the AIP in another tab by clicking on "
+"Review. More information on Archivematica's AIP structure and the "
+"METS/PREMIS file is available in the Archivematica documentation: see "
+":ref:`AIP structure <aip-structure>`. You can download the AIP at this "
+"stage by clicking on it."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:423
+msgid ""
+"From the Action dropdown menu, select \"Store AIP\" to move the AIP into "
+"archival storage. You can store an AIP in any number of preconfigured "
+"directories. For instructions to configure AIP storage locations, see "
+":ref:`Administrator manual - Storage Service "
+"<storageService:administrators>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:425
+msgid ""
+"From the Action dropdown menu, select the AIP storage location from the "
+"pre-configured set of options."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:429
+msgid ""
+"We recommend storing the AIP before uploading the DIP. If there is a "
+"problem with the AIP at this point and the DIP has already been uploaded,"
+" you will have to delete the DIP from the upload location."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:433
+msgid ""
+"For information on viewing and managing stored AIPs go to :ref:`Archival "
+"storage <archival-storage>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:439
+msgid "Upload DIP"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:441
+msgid ""
+"Archivematica supports DIP uploads to AtoM, ArchivesSpace, and "
+"Archivists' Toolkit. For information about uploading DIPs to your access "
+"system, see :ref:`Access <access>`."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:446
+msgid "Reingest AIP"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:448
+msgid ""
+"In Archivematica, AIP reingest is supported for the purpose of adding "
+"metadata and normalizing for access.  There are three methods of starting"
+" AIP reingest: through the dashboard, through the Storage Service, or "
+"through the API."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:454
+msgid "Dashboard"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:456
+msgid ""
+"In the Archival Storage tab, find the AIP you wish to reingest by "
+"searching or browsing. Click on Reingest"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:463
+msgid ""
+"Choose if you wish to reingest the metadata only, or reingest the "
+"metadata and objects."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:470
+msgid ""
+"Click on Re-ingest package. Archivematica will tell you that the AIP has "
+"been sent to the pipeline for reingest."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:475
+msgid ""
+"If you attempt to reingest an AIP which is already in the process of "
+"being reingested in the pipeline, Archivematica will alert you with an "
+"error."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:479
+msgid "Proceed to the Ingest tab and approve the AIP reingest."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:487
+msgid "When the package proceeds to Normalization:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:489
+msgid "**For metadata only** choose \"Do not normalize\""
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:491
+msgid "**For metadata and objects** choose \"Normalize for access\""
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:495
+msgid ""
+"All normalization options will appear as for any SIP being normalized, "
+"but only the two normalization paths above are operational for AIP "
+"reingest in version 1.5. Choosing another normalization path will result "
+"in errors!"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:499
+msgid ""
+"To add new metadata or edit existing metadata, click on the metadata "
+"report icon:"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:508
+msgid ""
+"You can update the metadata either before or after Normalization, but to "
+"ensure the metadata is written to the database before the AIP METS is "
+"prepared, it is recommended practice to add the metadata before "
+"Normalization, or set the metadata reminder to unchecked in Processing "
+"Configuration."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:514
+msgid ""
+"Descriptive or rights metadata can updated or deleted. ``metadata.csv`` "
+"files can also be added by clicking on Add Metadata files. This will "
+"launch a file browser with the same locations available as configured for"
+" Transfer Source."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:523
+msgid ""
+"After normalization and metadata updating, continue processing the SIP as"
+" normal. Note that when performing a metadata-only reingest, there will "
+"be no objects in your AIP in the review stage- Archivematica replaces the"
+" METS file in the existing AIP upon storage."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:528
+msgid "Storage Service"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:530
+msgid ""
+"From the Packages tab in the Storage Service, click on Re-ingest beside "
+"the AIP you wish to reingest."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:537
+msgid ""
+"The Storage Service will ask you to choose a pipeline, and the types of "
+"reingest (metadata only or metadata and objects in version 1.5)"
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:544
+msgid ""
+"The Storage Service will confirm that the AIP has been sent to the "
+"pipeline for reingest. Proceed to the Ingest tab of your pipeline, and "
+"follow steps 3-6 above."
+msgstr ""
+
+#: ../../user-manual/ingest/ingest.rst:546
+msgid ":ref:`Back to the top <ingest>`"
+msgstr ""
+

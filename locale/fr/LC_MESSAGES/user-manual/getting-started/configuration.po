@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/getting-started/configuration.rst:4
+msgid "Configuration"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:7
+msgid "Browser compatibility"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:9
+msgid ""
+"Archivematica is tested most extensively in Firefox and Chrome. There "
+"have been known issues in testing with Internet Explorer (see Bug `#7246 "
+"<https://projects.artefactual.com/issues/7246>`_). Minimal, but "
+"successful, testing has been done with Microsoft Edge."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:15
+msgid "Resource allocation"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:17
+msgid "For recommended resource allocation, please see:"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:19
+msgid ""
+":ref:`Recommended Minimum Requirements for small-scale testing "
+"<requirements-small>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:20
+msgid ""
+":ref:`Recommended Minimum Requirements for production processing "
+"<requirements-production>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:23
+msgid "Workflow settings"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:25
+msgid ""
+"Many workflow choices are pre-configurable through the Administration tab"
+" of the Dashboard. Please see :ref:`Processing configuration <dashboard-"
+"processing>`."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:28
+msgid ""
+"Some users have found processing economies by installing multiple "
+"Archivematica pipelines on separate VM's, each with its own processing "
+"configuration specific to the type of material being processed through "
+"each pipeline."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:33
+msgid "Integration settings"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:35
+msgid ""
+"Archivematica integrates with a number of different access and storage "
+"systems. Please see:"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:38
+msgid ":ref:`AtoM <dashboard-atom>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:39
+msgid ":ref:`ContentDM <dashboard-CDM>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:40
+msgid ":ref:`Archivist's Toolkit <dashboard-AT>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:41
+msgid ":ref:`DSpace <dspace>`"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:42
+msgid ":ref:`LOCKSS <storageService:lockss>` (Administrator documentation)"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:43
+msgid "Duracloud (coming soon)"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:44
+msgid "Arkivum (coming soon)"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:47
+msgid "Add/edit users and passwords"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:49
+msgid ""
+"Administrative users can add/edit users and update passwords. An "
+"administrative user does not need to be a systems administrator and can "
+"perform this function within the Archivematica dashboard Administration "
+"page."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:53
+msgid "Please see :ref:`Users <dashboard-premis>`."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:56
+msgid "Add/edit PREMIS agents"
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:58
+msgid ""
+"Administrative users can add/edit PREMIS agents, which are recorded in "
+"the METS file to identify the agency performing digital preservation "
+"events. This should be configured before processing begins, and can be "
+"set through Archivematica dashboard Administration page."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:63
+msgid "Please see :ref:`PREMIS agent <dashboard-premis>`."
+msgstr ""
+
+#: ../../user-manual/getting-started/configuration.rst:65
+msgid ":ref:`Back to the top <configuration>`"
+msgstr ""
+

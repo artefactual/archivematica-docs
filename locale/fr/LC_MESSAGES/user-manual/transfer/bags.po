@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/transfer/bags.rst:5
+msgid "Library of Congress Bagit format"
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:7
+msgid ""
+"Archivematica allows the ingest of the `Library of Congress Bagit "
+"<http://en.wikipedia.org/wiki/BagIt>`_ format. Users can ingest both "
+"zipped and unzipped bags. Bags must be packaged in accordance with the "
+"Bagit specification."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:12
+msgid ""
+"To ingest a zipped bag, user selects transfer type \"Zipped bag\" from "
+"the dropdown menu in the transfer tab of the Dashboard. Do not add the "
+"directory that the zipped bag is in from the browse dialog, just select "
+"the zipped file (.zip). Note that you cannot add a new title to the "
+"zipped bag transfer, but you can add an accession number."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:23
+msgid ""
+"To ingest an unzipped bag, user selects transfer type \"Unzipped bag\" "
+"from the dropdown menu in the transfer tab of the Dashboard. You may add "
+"a new name or accession number to this unzipped bag."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:36
+msgid "Index and search bag metadata"
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:38
+msgid ""
+"In Archivematica 1.4 and higher, fields in the bag-info.txt file are "
+"indexed as source metadata in the Archivematica METS file, making their "
+"contents searchable in the Archival storage tab after a bag transfer has "
+"been processed and stored."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:43
+msgid ""
+"Labels in bag-info.txt file serialized as XML in METS sourceMD, linked to"
+" the objects directory of the AIP."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:46
+msgid ""
+"Sample bag-info.txt (from https://tools.ietf.org/html/draft-kunze-"
+"bagit-10)"
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:65
+msgid "Sample AIP METS file result:"
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:96
+msgid ""
+"To be parsed into the METS file, Bag labels must be compliant with XML, "
+"so cannot contain spaces or forbidden characters."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:99
+msgid "To search the bag (transfer) metadata in the Archival Storage tab:"
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:107
+msgid ""
+"Use keyword field \"Transfer metadata\" to search all the contents of the"
+" <transfer_metadata> container in the METS file (as indexed in "
+"ElasticSearch)."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:110
+msgid ""
+"Use keyword field \"Transfer metadata (other)\" to search individual "
+"fields in the <transfer_metadata> container.  When the user selects "
+"\"Transfer metadata (other)\" a separate box will appear which will allow"
+" the user to enter the label of the specific field to be searched."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:115
+msgid ""
+"To search on a date range in <transfer_metadata> or one if its sub-"
+"fields, the user enters two dates in ISO date format separated by a "
+"colon. For example, ``2015-01-03:2015-04-14``."
+msgstr ""
+
+#: ../../user-manual/transfer/bags.rst:119
+msgid ":ref:`Back to the top <bags>`."
+msgstr ""
+

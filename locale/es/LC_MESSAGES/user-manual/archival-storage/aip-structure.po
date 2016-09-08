@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:5
+msgid "AIP structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:7
+msgid "This page documents the structure of the AIP produced by Archivematica."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:10
+msgid "Name"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:12
+msgid "The AIP name is composed of the following:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:14
+msgid ""
+"Either the name of the original transfer if no new name has been assigned"
+"    to the SIP upon formation or the name of the SIP or SIPs created from"
+" the transfer and"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:16
+msgid "A UUID assigned during SIP formation"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:18
+msgid "example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:20
+msgid ""
+"\"Pictures_of_my_cat\" is the name assigned by the user and "
+"\"aebbfc44-9f2e-4351-bcfb-bb80d4914112\" is the UUID generated during SIP"
+" formation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:25
+msgid "Directory structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:27
+msgid ""
+"The AIP is zipped in the AIPsStore. The AIP directories are broken down "
+"into UUID quad directories for efficient storage and retrieval."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:36
+msgid "AIP directory - top level"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:40
+msgid ""
+"UUID quad directories: Some file systems limit the number of items "
+"allowed in a directory, so Archivematica uses a directory tree structure "
+"to store AIPs. The tree is based on the AIP UUIDs. The UUID is broken "
+"down into manageable 4 character pieces, or \"UUID quads\", each quad "
+"representing a directory. The first four characters (UUID quad) of the "
+"AIP UUID will compose a sub directory of the AIP storage. The second UUID"
+" quad will be the name of a sub directory of the first, and so on and so "
+"forth, until the last four characters (last UUID Quad) create the leaf of"
+" the AIP store directory tree, and the AIP with that UUID resides in that"
+" directory.)"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:51
+msgid "Bagit documentation"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:53
+msgid ""
+"The AIP is packaged in accordance with the Library of Congress Bagit "
+"specification (PDF, 84KB) As shown below, the BagIt files are bag-"
+"info.txt, bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:63
+msgid "The following describes the contents of the AIP once extracted:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:65
+msgid "**Data directory**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:67
+msgid ""
+"The data directory consists of the METS file for the AIP and three "
+"folders: logs, objects. and thumbnails."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:76
+msgid "AIP data directory"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:78
+msgid "**METS file**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:80
+msgid ""
+"``/data/METS.uuid.xml`` contains the full PREMIS implementation (see "
+"PREMIS metadata for original file, PREMIS metadata: normalized files, "
+"PREMIS metadata: events, and PREMIS metadata: rights The role of the METS"
+" file is to link original objects to their preservation copies and to "
+"their descriptions and submission documentation, as well as to link "
+"PREMIS metadata to the objects in the AIP."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:87
+msgid "**Logs**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:89
+msgid ""
+"``/data/logs`` contains the /transfers directory, normalization log, "
+"malware scan log, and the extraction log (from unpackaging packages) "
+"generated during SIP creation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:99
+msgid "Logs folder content in Data"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:101
+msgid ""
+"The ``/transfers`` directory contains the logs from processing that "
+"occurred to each transfer which is part of the SIP in the transfer "
+"workflow in the dashboard."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:105
+msgid "**Objects**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:107
+msgid ""
+"``/data/objects`` contains original objects, normalized objects, "
+"``/metadata`` and ``/submissionDocumentation``. If there were any lower "
+"level directories within the SIP, that directory structure is maintained."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:117
+msgid "Objects folder content in Data"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:119
+msgid ""
+"``/metadata`` contains ``/transfers``, which contains any metadata which "
+"may have been imported with the transfers"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:122
+msgid ""
+"``/submissionDocumentation`` contains submission documentation for each "
+"transfer which is part of the SIP and each transfer's METS.xml file. The "
+"structmap for the transfer is the closest approximation of original order"
+" for the transfer, along with the tree diagram if the user chose to "
+"create one during transfer."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:128
+msgid "**Thumbnails**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:130
+msgid ""
+"``/data/thumbnails`` contains any thumbnails generated for viewing in the"
+" AIP search interface of the dashboard."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:133
+msgid ":ref:`Back to the top <aip-structure>`"
+msgstr ""
+

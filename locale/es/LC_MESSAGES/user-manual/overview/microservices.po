@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/overview/microservices.rst:5
+msgid "Micro-services"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:7
+msgid ""
+"Archivematica implements a micro-service approach to digital "
+"preservation. The Archivematica micro-services are granular system tasks "
+"which operate on a conceptual entity that is equivalent to an OAIS "
+"information package: Submission Information Package (SIP), Archival "
+"Information Package (AIP), Dissemination Information Package (DIP). The "
+"physical structure of an information package will include files, "
+"checksums, logs, submission documentation, XML metadata, etc."
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:20
+msgid ""
+"These information packages are processed using a series of micro-"
+"services. Micro-services are provided by a combination of Archivematica "
+"Python scripts and one or more of the free, open-source `software tools "
+"<https://www.archivematica.org/wiki/External_tools>`_ bundled in the "
+"Archivematica system. Each micro-service results in a success or error "
+"state and the information package is processed accordingly by the next "
+"micro- service. There are a variety of mechanisms used to connect the "
+"various micro- services together into complex, custom workflows, "
+"resulting in a complete ingest to access system."
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:30
+msgid ""
+"Archivematica implements a default ingest to access workflow that is "
+"compliant with the ISO-OAIS functional model. Micro-services can be "
+"distributed to processing clusters for highly scalable configurations."
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:36
+msgid "Micro-services in Archivematica Releases"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:38
+msgid ""
+"The Archivematica wiki contains an updated `list of micro-services "
+"<https://wiki.archivematica.org/Micro-services>`._"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:40
+msgid ""
+"`Archivematica 1.1 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_1.1_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:42
+msgid ""
+"`Archivematica 1.0 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_1.0_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:44
+msgid ""
+"`Archivematica 0.10 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.10_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:46
+msgid ""
+"`Archivematica 0.9 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.9_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:48
+msgid ""
+"`Archivematica 0.8 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.8_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:50
+msgid ""
+"`Archivematica 0.7.1 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.7.1_Micro-services>`_"
+msgstr ""
+
+#: ../../user-manual/overview/microservices.rst:53
+msgid ":ref:`Back to the top <micro-services>`"
+msgstr ""
+

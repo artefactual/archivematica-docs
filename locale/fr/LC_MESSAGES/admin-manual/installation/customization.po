@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../admin-manual/installation/customization.rst:5
+msgid "Customization and automation"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:7
+msgid ""
+"Some workflow and processing decisions can be made or viewed in the "
+"dashboard and others are created at the development level."
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:11
+msgid "Resources for dashboard configuration"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:13
+msgid ""
+"The Preservation Planning tab allows editing or addition of commands for "
+"identification, tools, characterization, event detail, extraction, "
+"normalization, transcription, validation and verification. Please see the"
+" :ref:`Format Policy Registry (FPR) documentation <fpr:index>` for "
+"instruction."
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:18
+msgid ""
+"Basic workflow configuration is feasible by administrators or end-users "
+"in the :ref:`Administration tab <dashboard-admin>` of the dashboard."
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:23
+msgid "Resources for development configuration"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:25
+msgid ""
+"When processing a SIP or transfer, you may automate workflow choices by "
+"putting a ``processingMCP.xml`` file into the root directory of a "
+"SIP/transfer. See :ref:`Processing configuration <process-config>`."
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:29
+msgid ""
+"The MCP is the core of the Archivematica system. It controls the various "
+"micro-services in the Archivematica system. Developers who wish to modify"
+" the MCP configuration should consult the following resources on the "
+"Archivematica wiki:"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:34
+msgid "`MCP <https://www.archivematica.org/wiki/MCP>`_"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:36
+msgid ""
+"`Basic MCP configuration "
+"<https://www.archivematica.org/wiki/MCP_Basic_Configuration>`_"
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:38
+msgid ""
+"For other development resources, please see the `Development "
+"<https://www.archivematica.org/wiki/Development>`_ section of our wiki."
+msgstr ""
+
+#: ../../admin-manual/installation/customization.rst:41
+msgid ":ref:`Back to the top <customization>`"
+msgstr ""
+

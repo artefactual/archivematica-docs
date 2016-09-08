@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/ingest/manual-normalization.rst:5
+msgid "Manual normalization"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:7
+msgid ""
+"Some users may have access to tools other than those provided in "
+"Archivematica that they wish to use for normalization actions."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:10
+msgid ""
+"There are two manual normalization workflow options. First, the user can "
+"do some normalization before bringing any objects into Archivematica. "
+"Second, the user can process objects through to Ingest and then choose to"
+" do manual normalization on some of the objects. Below are the workflow "
+"steps to test each of these options."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:16
+msgid ""
+"In either option, it is also possible to add PREMIS event detail metadata"
+" about the manual normalization event. See below for details."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:20
+msgid "Option 1: Manual normalization prior to transfer to Archivematica"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:22
+msgid ""
+"The manual normalization feature allows the user to prepare transfers "
+"that already contain manually normalized files. The user adds a "
+"/manualNormalization folder and its subdirectories to the transfer prior "
+"to processing. Archivematica recognizes that this folder already exists "
+"and will not add one during processing. This workflow requires that there"
+" must be a one-to-one relationship between the transfer and the SIP."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:29
+msgid ""
+"First, create your transfers with a structure that mimics the one in this"
+" sample. Name the /topDirectory whatever you want (you can still change "
+"this when you upload the transfer to the dashboard) and place the "
+"original files in it. /manualNormalization contains two directories, "
+"/access and /preservation which include in them the files you've already "
+"normalized for access and/or preservation prior to transfer. In the "
+"sample shown here, file1.tga has a manually normalized preservation "
+"version (file1.tif) and a manually normalized access version (file1.jpg)."
+" Note that the filenames, in this instance \"file1\", MUST match in order"
+" for Archivematica to recognize the links between the original .tga file "
+"and the manually normalized preservation and access versions."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:49
+msgid ""
+"Upload the transfer to the dashboard from your source directories in the "
+"Transfer Tab.For instructions detailing how to set up source directories,"
+" see the Administrator's manual here: :ref:`Administrator manual - "
+"Transfer source location <admin-dashboard-transfer-source>`."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:51
+msgid ""
+"Continue processing as you would a regular SIP. For instructions, see the"
+" :ref:`Transfer <transfer>` and :ref:`Ingest <ingest>`."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:53
+msgid ""
+"In the Ingest tab, at the normalization micro-service, choose whether to "
+"normalize for access, preservation, or both. If you choose to review "
+"normalization results prior to accepting, you will find your "
+"/manualNormalization folder and its contents in the objects directory of "
+"your transfer, with it's /access and/or /preservation folders and their "
+"content intact. If you're happy with the results here, approve "
+"normalization."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:55
+#: ../../user-manual/ingest/manual-normalization.rst:84
+msgid ""
+"Continue processing according to instructions in the User manual. Stop "
+"when you reach the Store AIP micro-service."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:57
+msgid ""
+"At Store AIP, you have the option to review your AIP. If you download the"
+" AIP from the review tab by simply clicking on the file with the 7z "
+"extension, you can download, unzip and view your AIP in your file "
+"browser. Your AIP will consist of a top level folder with the name you "
+"assigned plus a UUID. In that folder, you'll find a /data folder which "
+"contains your objects for preservation, logs, thumbnails and the METS "
+"xml. That data folder will contain your originals and normalized files, "
+"and the METS will include PREMIS events with \"manual normalization\" "
+"noted in the eventDetail of the appropriate normalization events. A "
+"discussion of the overall AIP structure can be found here: :ref:`AIP "
+"structure <aip-structure>`. Additionally, you might note that the "
+"manualNormalization folder and subfolders used during the manual "
+"normalization workflow have been deleted once normalization was approved "
+"rather than being packaged into the AIP."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:59
+msgid ""
+"If you are satisfied with everything here, continue to store your AIP "
+"and/or upload your DIP as per usual."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:62
+msgid "Option 2: Manual normalization during Ingest"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:64
+msgid ""
+"The manual normalization feature allows users to choose to do manual "
+"normalization at the normalization micro-service in the Ingest tab of the"
+" dashboard. The user does not have to manually normalize all of the "
+"objects for preservation and/or access; any files not manually normalized"
+" will be normalized according the regular Archivematica workflow."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:70
+msgid ""
+"Start with any regular transfer in the Transfer tab of the dashboard. "
+"Follow the instructions in the user manual until you get to the "
+"normalization micro-service in the Ingest tab."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:72
+msgid "Select \"Normalize manually\" from the dropdown menu."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:74
+msgid ""
+"In your file browser, open "
+"/archivematica/src/MCPServer/sharedDirectoryStructure/watchedDirectories/approveNormalization/preservation/yourTransfer123abc/objects/"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:76
+msgid "Choose which files you'd like to normalize for preservation and/or access."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:78
+msgid "Do your local normalization."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:80
+msgid ""
+"Once you've done all the normalization for preservation and access, place"
+" your preservation copies in the /manualNormalization/preservation folder"
+" and your access copies in the /manualNormalization/access folder. Note "
+"that any objects you haven't normalized manually will be normalized using"
+" the regular Archivematica workflow. However, if you do not include "
+"anything in the /access folder, no DIP will be generated."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:82
+msgid "Return to the dashboard and approve normalization."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:86
+msgid ""
+"At the Store AIP micro-service, you have the option to review your AIP. "
+"If you download the AIP from the review tab by simply clicking on the "
+"file with the 7z extension, you can download, unzip and view your AIP in "
+"your file browser. Your AIP will consist of a top level folder with the "
+"name you assigned plus a UUID. In that folder, you'll find a /data folder"
+" which contains your objects for preservation, logs, thumbnails and the "
+"METS xml. That data folder will contain your originals and normalized "
+"files, and the METS will include PREMIS events with \"manual "
+"normalization\" noted in the eventDetail of the appropriate normalization"
+" events. A discussion of the overall AIP structure can be found here: "
+":ref:`AIP structure <aip-structure>`. Additionally, you might note that "
+"the manualNormalization folder and subfolders used during the manual "
+"normalization workflow have been deleted once normalization was approved "
+"rather than being packaged into the AIP."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:88
+msgid ""
+"If you are satisfied with everything here, continue to store your AIP "
+"and/or upload your DIP as per the User manual instructions."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:91
+msgid "Adding PREMIS eventDetail for manual normalization"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:95
+msgid ""
+"If you think you will need to use this aspect of the feature, please note"
+" that Archivematica does not offer the option to add PREMIS eventDetail "
+"by default. Instead, you must use the preconfigured choices in the "
+"processing configuration section of the Administrative tab of the "
+"dashboard to adjust your settings prior to ingest. Deselect the Reminder "
+"in the Processing Configuration settings."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:108
+msgid ""
+"If you include manually normalized files in the initial transfer (option "
+"1) or during processing (option 2), the procedure for adding PREMIS "
+"eventDetail is the same."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:112
+msgid ""
+"Approve normalization. For Option 2, this will be after selecting "
+"\"Normalize manually\" at the normalization step and adding the files to "
+"the SIP."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:114
+msgid "Archivematica will stop and remind you to add the metadata."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:116
+msgid "Click on the metadata icon."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:123
+msgid "Select \"Manual normalization event detail\" under metadata."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:130
+#, python-format
+msgid ""
+"Add event detail. This can be technical tool output, like: "
+"program=ImageMagick; version=6.6.4.0; command=%convertPath% "
+"%fileFullName% +compress "
+"%preservationFileDirectory%%fileTitle%.%preservationFormat% -OR- "
+"something more narrative like in the example below."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:138
+msgid "Save the metadata and click on the ingest tab to continue processing."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:140
+msgid "Select Continue from the metadata reminder dropdown box."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:149
+msgid "Normalizing files with the same name"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:151
+msgid ""
+"The  manual normalization workflow outlined above assumes that there are "
+"no conflicts between filenames. For example, if the original filenames "
+"are file1.doc and file2.xls, there is no conflict. But if you are "
+"manually normalizing both file1.doc and file1.xls, even if the extensions"
+" of the normalized files are different, you will need to provide a CSV "
+"file to document the relationships between the original and normalized "
+"files."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:158
+msgid ""
+"The structure of normalization.csv, which is saved in the "
+"manualNormalization directory, is three columns: original file, file "
+"normalized for access, file normalized for preservation. All the files "
+"with duplicate names need to be listed, even if they are not manually "
+"normalized."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:165
+msgid ""
+"The normalization.csv is case-sensitive, meaning that the contents must "
+"match the file names exactly as to their capitalization."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:168
+msgid ""
+"You need to specify the path in the csv file, including any "
+"subdirectories, such as in the example below."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:176
+msgid ""
+"In the example above, there are manually normalized files for both "
+"preservation and access, however it is possible to have manually "
+"normalized files for only access or preservation by leaving the "
+"appropriate column blank."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:180
+msgid "Other scenarios are also possible:"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:182
+msgid "Original file not in a subdirectory, normalized copies are:"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:189
+msgid "Only some normalized copies in a subdirectory:"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:196
+msgid "Subdirectories used only to distinguish file names:"
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:203
+msgid ""
+"If the file names contain spaces or forbidden characters, Archivematica "
+"will sanitize the file names by replacing the spaces/characters with "
+"underscores. The normalization.csv file will still work by using either "
+"the original, unsanitized file names, or by pre-sanitizing the normalized"
+" filenames and the corresponding columns in normalization.csv (see: "
+"`Issue 6870 <https://projects.artefactual.com/issues/6870>`_)."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:210
+msgid ":ref:`Back to the top <manual-norm>`"
+msgstr ""
+

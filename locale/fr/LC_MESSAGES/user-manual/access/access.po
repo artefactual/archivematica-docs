@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/access/access.rst:5
+msgid "Access"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:7
+msgid ""
+"During ingest, access copies of digital objects are generated and "
+"packaged into a DIP (Dissemination Information Package). The user uploads"
+" the DIP to the access system, or stores it for future use."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:11
+msgid ""
+"When the DIP is prepared, Archivematica moves the DIP into the uploadDIP "
+"directory, which triggers the dashboard to display the DIP upload options"
+" to the operator. After a DIP is uploaded/stored, it is moved to the "
+"uploadedDIPs directory, which can be emptied in the Administration tab- "
+"see :ref:`Processing storage usage <dashboard-usage>`."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:19
+msgid ""
+"The user must create the description in AtoM (or other access system) "
+"before uploading the DIP. The user will need to indicate part of the "
+"description's URL or a target collection in order to send the DIP to the "
+"appropriate place in the description."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:24
+msgid ""
+"Should you run into an error during this process, please see :ref:`Error "
+"handling <error-handling>`."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:29
+msgid ":ref:`Upload DIP to ContentDM <dip-contentdm>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:31
+msgid ":ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:34
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:36
+msgid ":ref:`Access systems <access-default>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:37
+msgid ":ref:`Upload DIP to AtoM <upload-atom>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:38
+msgid ":ref:`Upload DIP to ArchivesSpace <upload-as>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:39
+msgid ":ref:`Upload DIP to Archivists' Toolkit <upload-at>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:40
+msgid ":ref:`Store DIP <store-dip>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:41
+msgid ":ref:`Review/Download DIP <review-dip>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:42
+msgid ":ref:`Access tab <access-tab>`"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:47
+msgid "Access systems"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:49
+msgid ""
+"A content management tool called `AtoM <https://www.accesstomemory.org>`_"
+" is Archivematica's default access system. AtoM supports standards-"
+"compliant hierarchical archival description and digital object "
+"management."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:53
+msgid ""
+"AtoM stands for Access to Memory. It is a web-based, open source "
+"application for standards-based archival description and access in a "
+"multilingual, multi- repository environment. User and Administrator "
+"manuals for AtoM are available `here "
+"<https://www.accesstomemory.org/en/docs/>`_ ."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:58
+msgid ""
+"Archivematica has also been developed to integrate with `ArchivesSpace "
+"<http://archivesspace.org/>`_ and `Archivists' Toolkit "
+"<http://www.archiviststoolkit.org/>`_."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:63
+msgid "Upload DIP to AtoM"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:65
+msgid ""
+"To upload DIPs to your AtoM instance, you must enter your AtoM "
+"information and credentials in the Administration tab. See "
+":ref:`Administrator manual - AtoM DIP upload <admin-dashboard-atom>` for "
+"more information."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:70
+msgid ""
+"You must create the target description in AtoM before uploading the DIP. "
+"You will need to indicate part of the description's URL or a target "
+"collection in order to send the DIP to the appropriate place during DIP "
+"upload."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:75
+msgid ""
+"In the ingest tab, select \"Upload DIP to AtoM\" in the Upload DIP "
+"Actions drop-down menu."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:77
+msgid ""
+"A dialogue box will appear. Enter the permalink of the description in the"
+" dialogue box."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:81
+msgid ""
+"The permalink is the \"slug\" from the AtoM target description. See "
+":ref:`slug <atom:slug>` in the AtoM glossary."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:84
+msgid ""
+"Click the blue \"Upload\" button. Digital objects are uploaded as items "
+"within the description to which the DIP is being uploaded. If you want to"
+" create a child level of description under the target description, you "
+"must add the title of that level of description using the DC metadata "
+"template prior to normalization."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:87
+msgid ""
+"If you :ref:`add metadata <add-metadata>` to the DIP during Ingest, a "
+"file-level record will be created in AtoM below the chosen parent record."
+" The metadata will be written to this file-level record and the digital "
+"objects will be added as child items. If you do not add metadata, the "
+"digital objects will be added to the parent record directly."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:89
+msgid ""
+"When the DIP has finished uploading, open the Access tab in the "
+"dashboard. This tab shows the AIP and its uploaded DIP. Click on the DIP "
+"URL to go to the uploaded DIP in AtoM."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:91
+msgid ""
+"If you are not already logged in to AtoM you will need to log in using "
+"your login credentials."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:93
+msgid ""
+"You will see an archival description with the metadata you added during "
+"ingest, displayed in the context of the level of archival description to "
+"which the DIP was uploaded. To view an individual digital object, scroll "
+"through the thumbnails on the left of the screen and click on an image."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:95
+msgid ""
+"The digital object is displayed in AtoM. Clicking on the image will open "
+"the uploaded object."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:100
+msgid "Upload DIP to ArchivesSpace"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:102
+msgid ""
+"To upload DIPs to your ArchivesSpace instance, you must enter your "
+"ArchivesSpace information and credentials in the Administration tab. See "
+":ref:`ArchivesSpace dashboard configuration <dashboard-AS>` for more "
+"information."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:106
+msgid ""
+"Create a SIP using the :ref:`Transfer <transfer>` process as normal. "
+"During Normalization, choose one of the options that normalizes the "
+"package for access. During the Upload DIP micro-service, select Upload "
+"DIP to Archives Space. The Match page should automatically open."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:110
+msgid ""
+"Find the ArchivesSpace collection to which you would like to upload the "
+"DIP. By clicking on the name of the resource, you can drill down into the"
+" collection to upload the DIP at a lower level of description."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:112
+msgid ""
+"When you have navigated to the level of description where you want to "
+"store the DIP, select *Assign DIP objects to this resource*."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:114
+msgid ""
+"On the Assign Objects screen, select which objects you would like to "
+"assign to which resources. Using the filter boxes in the top right, it is"
+" possible to search for specific objects or resources by name."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:116
+msgid ""
+"Once you have selected the objects and the resource you would like to "
+"pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as "
+"needed."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:118
+msgid ""
+"When you are done pairing objects and resources, click on *Review "
+"matches.*"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:120
+msgid "To remove all pairs and restart, click on *Restart matching*."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:122
+msgid "If everything is correct, click on *Finish matching*."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:124
+msgid ""
+"This will take you back to the Ingest tab, where you can finish ingesting"
+" the AIP."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:129
+msgid "Upload DIP to Archivists' Toolkit"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:131
+msgid ""
+"To upload DIPs to your Archivists' Toolkit instance, you must enter your "
+"Archivists' Toolkit information and credentials in the Administration "
+"tab. See :ref:`Archivists' Toolkit dashboard configuration <dashboard-"
+"AT>` for more information."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:135
+msgid ""
+"Create a SIP using the :ref:`Transfer <transfer>` process as normal. "
+"During Normalization, choose one of the options that normalizes the "
+"package for access. During the Upload DIP micro-service, select Upload "
+"DIP to Archivists' Toolkit. The Match page should automatically open."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:140
+msgid ""
+"A page will open allowing the user to select the Archivists' Toolkit "
+"collection where the objects should be added. This page allows the user "
+"to match digital objects to resource components in Archivists' Toolkit."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:142
+msgid "Archivematica will upload the DIP metadata to Archivists' Toolkit."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:148
+msgid "Store DIP"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:150
+msgid ""
+"Archivematica also provides the option to store the DIP to a location "
+"that you have configured via the :ref:`Storage Service "
+"<storageservice:index>`. This can be configured to be a local server, "
+"NFS-mounted or another storage protocol such as DuraCloud."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:155
+msgid "To store a DIP:"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:157
+msgid ""
+"Ensure that at least one DIP storage location has been configured in the "
+":ref:`Storage Service <storageservice:index>`."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:159
+msgid ""
+"When prompted to Upload DIP, either choose Store DIP, or choose to upload"
+" to your desired access system.  If you choose an access system, a second"
+" Store DIP option will be presented to you."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:161
+msgid "Choose the DIP storage location from the configured options."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:163
+msgid ""
+"The DIP will include the access copies made through either "
+"Archivematica's normalization rules or a manual normalization process, "
+"thumbnails, and the METS file."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:169
+msgid "Review/Download DIP"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:171
+msgid ""
+"Regardless of the access path chosen (an integrated access system, or "
+"storing the DIP) the dashboard will present the operator with the option "
+"of reviewing and downloading the DIP objects. When the Upload DIP micro-"
+"service is complete, a \"review\" link will appear:"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:181
+msgid ""
+"This will present the operator with a page displaying the uploadedDIPs "
+"directory which can then be navigated to locate any DIP in this "
+"directory. As shown below, when expanded, the DIP objects, thumbnails and"
+" METS files can be viewed or downloaded within the browser window."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:191
+msgid ""
+"Your ability to view the objects in the browser will be dependent on your"
+" browser having a plugin for the particular filetypes. However, all files"
+" can be downloaded locally in this manner."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:199
+msgid "Access tab"
+msgstr ""
+
+#: ../../user-manual/access/access.rst:201
+msgid ""
+"By clicking the Access tab in the Dashboard, you can see a table showing "
+"all DIPs upload to AtoM including the URL, the associated AIP, the upload"
+" date and status, and the option to delete from the Access tab. Note that"
+" this link will delete the record of the DIP in the Access tab, not the "
+"actual DIP."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:206
+msgid ""
+"At this time, the Access tab only provides links to DIPs uploaded to "
+"AtoM, not to other access systems or DIPs that have been stored."
+msgstr ""
+
+#: ../../user-manual/access/access.rst:209
+msgid ":ref:`Back to the top <access>`"
+msgstr ""
+

@@ -1,0 +1,370 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../admin-manual/installation/duracloud-setup.rst:4
+msgid "Archivematica-Duracloud Quick Start Guide"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:9
+msgid ""
+"`ArchivesDirect <http://www.archivesdirect.org/>`_ is an Archivematica in"
+" DuraCloud hosting plan offered by Artefactual Systems and DuraSpace. "
+"This guide can be used by those who wish to install Archivematica and/or "
+"DuraCloud locally and run the systems themselves and may also be helpful "
+"for those using the hosted service. This guide assumes that you have "
+"already installed Archivematica and DuraCloud, or have arranged for a "
+"hosted instance through Artefactual Systems/DuraSpace. Hosted clients "
+"will have steps 1 and 2 completed for them."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:18
+msgid "For installation instructions please see:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:20
+msgid ":ref:`Archivematica installation <installation>`"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:22
+msgid ""
+"`DuraCloud documentation "
+"<https://wiki.duraspace.org/display/DURACLOUD/DuraCloud>`_"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:25
+msgid "Step 1: Configure DuraCloud"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:27
+msgid ""
+"If you plan to use DuraCloud for transfer source, processing and AIP/DIP "
+"storage, it is recommended that your DuraCloud instance should be "
+"configured to have the following spaces:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:31
+msgid "aip-store : This is the space where completed AIPs will be stored"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:33
+msgid "dip-store : Space where completed DIPs are stored"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:35
+msgid ""
+"transfer-source : Space to sync digital objects for transfer into "
+"Archivematica. You may also create multiple spaces with other names for "
+"this purpose."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:39
+msgid ""
+"transfer-backlog : Space used by Archivematica for material sent to "
+":ref:`backlog <manage-backlog>`."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:42
+msgid ""
+"Note that you can pick and choose what spaces are needed in DuraCloud; "
+"for example, you may choose to use a local server for transfer source but"
+" send your AIPs and DIPs for storage in DuraCloud. You need only create "
+"the relevant spaces in DuraCloud for your particular configuration."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:47
+msgid "Two DuraCloud users should be created:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:49
+msgid ""
+"An Client user, who has **read/write** permissions for transfer-source, "
+"and **read** permissions for aip-store and dip-store."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:52
+msgid ""
+"An Archivematica user, who has **read/write** permissions for aip-store, "
+"dip-store and transfer-backlog, and **read** permission for transfer-"
+"source."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:56
+msgid "Step 2: Configure Archivematica Storage Service"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:58
+msgid ""
+"The :ref:`Archivematica Storage Service <storageservice:index>` was "
+"installed when you installed Archivematica."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:61
+msgid ""
+"Set up a Storage Service space for each of transfer-source, transfer-"
+"backlog,    aip-store and dip-store. Use the following parameters:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:63
+msgid "Access protocol: DuraCloud"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:65
+msgid "Size: optional"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:67
+msgid "Path: leave blank"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:69
+msgid "Staging path: for example, ``/var/archivematica/storage_service/``"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:71
+msgid "Host: Hostname of the DuraCloud instance, e.g. trial.duracloud.org"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:73
+msgid ""
+"Username and Password: Enter Archivematica username and password that you"
+"   created for DuraCloud in step 1."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:75
+msgid ""
+"Duraspace: the name of the space in DuraCloud you are creating this "
+"Storage   Service space for (e.g. transfer-source, aip-store, etc)."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:78
+msgid ""
+"Other possible configurations are possible if you are not using DuraCloud"
+" for all Archivematica spaces."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:80
+msgid ""
+"Create one location in each space for aip-store, dip-store and transfer-"
+"backlog, choosing the appropriate purpose and relative path for each. Be "
+"sure to click on the pipeline to enable the location you are creating."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:82
+msgid ""
+"If using DuraCloud for transfer-source, locations can be configured after"
+"    content is synced- see below."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:86
+msgid "Step 3: Download and configure sync tool"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:88
+msgid ""
+"Content can be added to DuraCloud spaces via the sync tool, which can be "
+"installed from DuraSpace `here "
+"<https://wiki.duraspace.org/display/DURACLOUD/DuraCloud+Downloads>`_. The"
+" DuraCloud sync tool can be run through a GUI or the command line; these "
+"instructions will proceed using the GUI."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:97
+msgid "Step 4: Syncing content to DuraCloud"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:99
+msgid ""
+"These instructions pertain to users who use a DuraCloud space for "
+"transfer- source. DuraCloud offers its own `documentation "
+"<https://wiki.duraspace.org/display/DURACLOUDDOC/DuraCloud+Sync+Tool>`_ "
+"about syncing and configuring the DuraCloud Sync Tool. The following "
+"instructions are configuration requirements specific to users who have "
+"Archivematica transfer source locations in DuraCloud."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:105
+msgid ""
+"It is necessary to have a directory structure with a minimum depth of two"
+" levels inside the synced folder, in order for Archivematica to correctly"
+" interpret the files in DuraCloud as a potential transfer source. "
+"Deciding how to sync directories to DuraCloud is an important step for a "
+"number of reasons:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:110
+msgid "It will help prevent unnecessarily large transfers to Archivematica"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:112
+msgid ""
+"It can create a more efficient workflow for you later in Archivematica "
+"processing"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:115
+msgid ""
+"Note that one transfer to Archivematica can either become one SIP (and "
+"therefore, one AIP and one DIP) or, a transfer can be sent to backlog "
+"where it can be separated and/or combined with other transfers to create "
+"one or more SIP(s). Two scenarios are outlined below:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:120
+msgid "**Create a new directory to sync:**"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:122
+msgid ""
+"Create a top level directory on your local machine or server to sync to"
+"    DuraCloud."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:124
+msgid ""
+"Create at least 2 levels of directories within that directory before any"
+"     digital objects."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:126
+#: ../../admin-manual/installation/duracloud-setup.rst:179
+msgid "Example 1:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:137
+msgid ""
+"In this example, the directory called Transfers will be available in the "
+"Archivematica dashboard to support the choice of a transfer source. "
+"Project1 and Project2 would each be available as a transfer source. The "
+"transfers would each contain all of the digital objects in the directory "
+"in their respective transfers."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:143
+#: ../../admin-manual/installation/duracloud-setup.rst:194
+msgid "Example 2:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:160
+msgid ""
+"In this example, the archivist will have more flexibility when deciding "
+"which directory becomes a transfer in Archivematica. Either Project1 and "
+"Project2 could be transfers, as in the examples above, or the "
+"subdirectories within could become their own transfers (Photographs, "
+"Videos, etc)."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:165
+msgid "**Sync an existing directory**"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:167
+msgid ""
+"If there are existing directories that you wish to sync but do not wish "
+"to    reorganize into a directory structure deep enough to work with "
+"Archivematica,    you can instead use the Sync Tool's prefix option:"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:170
+msgid "Ensure your sync tool is stopped in the Status tab. Then click on the"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:170
+msgid "configuration tab."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:174
+msgid "Under \"Other options,\" create a prefix for your sync folder to create a"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:173
+msgid ""
+"directory structure at least two levels deep. The prefix must end in a "
+"slash (/)."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:176
+msgid ""
+"Note that the prefix will replace the directory name of the sync folder "
+"in DuraCloud."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:186
+msgid ""
+"If the sync directory selected in the sync tool is ``syncFolder``, you "
+"could add a prefix such as: ``transfers/Project1/``. Archivematica would "
+"then recognize ``transfers`` as a transfer source, and ``Project1`` would"
+" be available as a transfer. That transfer would contain all of the "
+"digital objects in ``syncFolder``."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:191
+msgid ""
+"It is also possible to use the prefix option with a sync folder which has"
+" subfolders."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:204
+msgid ""
+"If the sync directory selected in the sync tool is ``syncFolder``, you "
+"could add a prefix such as: ``transfers/Project1``. In this example, "
+"``transfers`` will still be interpreted by Archivematica as a transfer "
+"source, but either ``Project1``, ``Photographs`` or ``Video`` could be "
+"chosen in the dashboard as the transfer."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:211
+msgid "Step 5: Configure transfer sources"
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:213
+msgid ""
+"Assuming that you have configured transfer-source spaces in DuraCloud, "
+"return to the Archivematica Storage Serice at this point to configure "
+"transfer sources locations."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:217
+msgid ""
+"Navigate to the transfer-source Storage Service space and create "
+"locations for each top level directory inside the directory or "
+"directories you have synced."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:222
+msgid ""
+"If you consistently use the same named top-level directory when syncing "
+"(e.g. \"transfers\") you will only need to configure the transfer source "
+"once."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:227
+msgid ""
+"If you browse for a path and do not see the expected directory listed, "
+"this may be caused by a UI bug. You can type the path in instead."
+msgstr ""
+
+#: ../../admin-manual/installation/duracloud-setup.rst:230
+msgid ":ref:`Back to the top <duracloud-setup>`"
+msgstr ""
+

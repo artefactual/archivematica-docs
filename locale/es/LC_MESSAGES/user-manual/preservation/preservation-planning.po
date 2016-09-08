@@ -1,0 +1,812 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../user-manual/preservation/preservation-planning.rst:5
+msgid "Preservation planning"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:7
+msgid ""
+"Archivematica's primary preservation strategy is to normalize files to "
+"preservation and access formats upon ingest. The preservation copies are "
+"added to the AIP and the access copies are used to generate a DIP for "
+"upload to the access system. Note that the original files are always "
+"kept, to allow for different preservation actions in the future, such as "
+"normalization to different archival formats or emulation."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:14
+msgid ""
+"Not all digital objects can be normalized on ingest. For example, for "
+"some digital objects like CAD drawings or Microsoft Visio files there are"
+" no available Linux-based open-source tools to handle the conversions "
+"and/or no agreed upon preservation formats. In addition, some formats "
+"such as Microsoft Word documents are not necessarily in the best "
+"preservation format but are still so ubiquitous and well-supported that "
+"they need not be normalized at the present time. In these cases, the "
+"Archivematica default is to keep them in their original formats; format "
+"risk assessment and information received from our users over time will "
+"allow Artefactual to expand the defaults over time to include more "
+"formats via the :ref:`Format Policy Registry (FPR) <fpr>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:25
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:27
+msgid ":ref:`Preservation planning tab <pres-tab>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:29
+msgid ":ref:`Format Policy Registry (FPR) <fpr>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:31
+msgid ":ref:`Preservation planning policies <pres-policies>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:36
+msgid "Preservation planning tab"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:38
+msgid ""
+"The Preservation Planning tab displays the local :ref:`Format Policy "
+"Registry (FPR) <fpr>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:41
+msgid ""
+"Administrative users can add or edit format policies using forms on this "
+"page. Detailed instructions are in the User manual - Format Policy "
+"Registry (FPR) with more comprehensive, administrative instructions in "
+"Format Policy Registry (FPR) :ref:`Administrators manual <fpr:index>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:46
+msgid ""
+"A format policy consists of the business rules and tool commands for "
+"format normalization. The FPR lists all of Archivematica's default format"
+" policy rules."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:49
+msgid ""
+"In your Archivematica instance you can download updates from the FPR by "
+"selecting Update in the Preservation Planning tab."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:52
+msgid ""
+"To see the success rate of any given format policy, go to the "
+"Normalization rules table in the Preservation Planning tab."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:58
+msgid "Format Policy Registry (FPR)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:60
+msgid ""
+"The Format Policy Registry (FPR) allows Archivematica users to define "
+"format policies for handling file formats. A format policy indicates the "
+"actions, tools and settings to apply to a digital object of a particular "
+"format (e.g. conversion to preservation format, conversion to access "
+"format, extraction of package formats). Format policies will change over "
+"time as local and community standards, practices and tools evolve."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:67
+msgid ""
+"A public Format Policy Registry server containing Archivematica default "
+"format policies is maintained by Artefactual Systems, Inc. at "
+"fpr.archivematica.org. (Note: there is currently no public interface for "
+"this server). This server stores structured information about "
+"normalization format policies for preservation and access. You can update"
+" your local FPR from the FPR server using the UPDATE button in the "
+"preservation planning tab of the dashboard. In addition, you can maintain"
+" local rules to add new formats or customize the behaviour of "
+"Archivematica. The Archivematica dashboard communicates with the FPR "
+"server via a REST API."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:79
+msgid ""
+"As of version 1.4, there is no public facing data at "
+"fpr.archivematica.org. Please see the `public roadmap "
+"<https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_"
+" to review development planning for the public interface and future "
+"functionality of the FPR."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:86
+msgid "First-time configuration"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:88
+msgid ""
+"The first time a new Archivematica installation is set up, it will "
+"attempt to connect to the FPR server as part of the initial configuration"
+" process. As a part of the setup, it will register the Archivematica "
+"install with the server and pull down the current set of format policies."
+" In order to register the server, Archivematica will send the following "
+"information to the FPR Server, over an encrypted connection:"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:95
+msgid ""
+"Agent Identifier (supplied by the user during registration while "
+"installing Archivematica)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:98
+msgid ""
+"Agent Name (supplied by the user during registration while installing "
+"Archivematica)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:101
+msgid "IP address of host"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:103
+msgid "UUID of Archivematica instance"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:105
+msgid "current time"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:107
+msgid ""
+"The only information that will be passed back and forth between "
+"Archivematica and the FPR Server would be these format policies - what "
+"tool to run when normalizing for a given purpose (access, preservation) "
+"when a specific File Identification Tool identifies a specific File "
+"Format. No information about the content that has been run through "
+"Archivematica, or any details about the Archivematica installation or "
+"configuration would be sent to the FPR Server."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:114
+msgid ""
+"Because Archivematica is an open source project, it is possible for any "
+"organization to conduct a software audit/code review before running "
+"Archivematica in a production environment in order to independently "
+"verify the information being shared with the FPR Server. An organization "
+"could choose to run a private FPR Server, accessible only within their "
+"own network(s), to provide at least a limited version of the benefits of "
+"sharing format policies, while guaranteeing a completely self-contained "
+"preservation system. This is something that Artefactual is not intending "
+"to develop, but anyone is free to extend the software as they see fit, or"
+" to hire us or other developers to do so."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:128
+msgid "Updating format policies"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:130
+msgid ""
+"FPR rules can be updated at any time from within the Preservation "
+"Planning tab in Archivematica. Selecting the \"update\" button will "
+"initiate an FPR pull which will bring in any new or altered rules since "
+"the last time an update was performed."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:137
+msgid "Types of FPR entries"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:140
+msgid "Formats"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:142
+msgid ""
+"In the FPR, a \"format\" is a record representing one or more related "
+"format versions, which are records representing a specific file format. "
+"For example, the format record for \"Graphics Interchange Format\" (GIF) "
+"is comprised of format versions for both GIF 1987a and 1989a."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:147
+msgid "When creating a new format version, the following fields are available:"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:150
+msgid ""
+"Description (required) - Text describing the format. This will be saved "
+"in METS files."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:153
+msgid ""
+"Version (required) - The version number for this specific format version "
+"(not the FPR record). For example, for Adobe Illustrator 14 .ai files, "
+"you might choose \"14\"."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:157
+msgid ""
+"PRONOM ID - The specific format version's unique identifier in `PRONOM "
+"<http://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, the UK "
+"National Archives's format registry. This is optional, but highly "
+"recommended. Many tools, including FIDO which is available as an "
+"identification tool option in the format identification micro-service in "
+"transfer and ingest, use PRONOM ID's to recognize formats."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:164
+msgid ""
+"Access format and Preservation format - Indicates whether this format is "
+"suitable as an access format for end users, and for preservation."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:168
+msgid "Groups"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:169
+msgid ""
+"A format group is a convenient grouping of related file formats which "
+"share common properties. For instance, the FPR includes an \"Image "
+"(raster)\" group which contains format records for GIF, JPEG, and PNG. "
+"Each format can belong to one (and only one) format group."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:174
+msgid "The following format groups come pre-populated in the FPR:"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:176
+msgid "Audio"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:178
+msgid "Binary (Data)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:180
+msgid "Binary (Executable)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:182
+msgid "CAD"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:184
+msgid "Database"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:186
+msgid "Desktop Publishing"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:188
+msgid "Disk Image"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:190
+msgid "Email"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:192
+msgid "Font"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:194
+msgid "GIS"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:196
+msgid "Image (Raster)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:198
+msgid "Image (Vector)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:200
+msgid "Package"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:202
+msgid "Portable Document Format"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:204
+msgid "Presentation"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:206
+msgid "Spreadsheet"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:208
+msgid "Statistics"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:210
+msgid "Text (Markup)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:212
+msgid "Text (Plain)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:214
+msgid "Text (Source Code)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:216
+msgid "Test (Structured)"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:218
+msgid "Unknown"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:220
+msgid "Video"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:222
+msgid "Word Processing"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:224
+msgid ""
+"The groups as determined by Artefactual should be perceived as arbritrary"
+" and are simply meant to make the Format Policy Registry easier to read "
+"and navigate. If an institution so desired, they could change the names "
+"and population of the groups in their local Preservation planning tab."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:230
+msgid "Format policy rules"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:232
+msgid ""
+"Throughout the FPR, Format policy rules allow commands to be associated "
+"with specific file types. For example, in the case of Normalization "
+"rules, this allows you to configure the command that uses ImageMagick to "
+"create thumbnails to be run on .gif and .jpeg files, while selecting a "
+"different command to be run on .png files."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:238
+msgid ""
+"When creating a format policy rule, the following mandatory fields must "
+"be filled out:"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:241
+msgid ""
+"Purpose - Allows Archivematica to distinguish rules that should be used "
+"to normalize for preservation, normalize for access, to extract "
+"information, etc."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:244
+msgid "Format - The file format the associated command should be selected for."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:246
+msgid "Command - The specific command to call when this rule is used."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:248
+msgid ""
+"Instructions on writing commands can be found in the :ref:`FPR "
+"Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:252
+msgid "Identification"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:254
+#: ../../user-manual/preservation/preservation-planning.rst:344
+msgid "**Tools**"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:256
+msgid ""
+"The identification tool properties in Archivematica control the ways in "
+"which Archivematica identifies files and associates them with the FPR's "
+"version records. The current version of the FPR server contains three "
+"tools: a script based on the `Open Planets Foundation's "
+"<http://www.openplanetsfoundation.org/>`_ `FIDO "
+"<https://github.com/openplanets/fido/>`_ tool, which identifies based on "
+"the IDs in PRONOM; a simple script which identifies files by their file "
+"extension; and `Siegfried <http://www.itforarchivists.com/siegfried>`_ "
+"which like FIDO, is based on PRONOM ID and provides detailed information "
+"on the basis for format matches in its output.  You can use the "
+"identification tools portion of FPR to customize the behaviour of the "
+"existing tools, or to write your own."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:269
+msgid ""
+"The FIDO command by default in the FPR is set to a buffer size of 1MB, "
+"which is higher than the FIDO default of 256KB. The reason for this "
+"configuration in the FPR is to facilitate the identification of certain "
+"file formats that have their header information later in the file (see "
+"`Issue 5941 <https://projects.artefactual.com/issues/5941>`_. If you "
+"experience slowness using FIDO in Archivematica, you may consider either "
+"1., increasing the available RAM or 2., editing the FIDO identification "
+"rule so that the buffer size is smaller."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:277
+msgid "**Rules**"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:279
+msgid ""
+"Identification rules allow you to define the relationship between the "
+"output created by an identification tool, and one of the formats which "
+"exists in the FPR. This must be done for the format to be tracked "
+"internally by Archivematica, and for it to be used by normalization later"
+" on. For instance, if you created a FIDO configuration which returns MIME"
+" types, you could create a rule which associates the output "
+"\"image/jpeg\" with the \"Generic JPEG\" format in the FPR."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:287
+msgid ""
+"Identification rules are necessary only when a tool is configured to "
+"return file extensions or MIME types. Because PUIDs are universal, "
+"Archivematica will always look these up for you without requiring any "
+"rules to be created, regardless of what tool is being used."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:292
+msgid ""
+"Instructions on writing an identification rule can be found in the "
+":ref:`FPR Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:295
+#: ../../user-manual/preservation/preservation-planning.rst:375
+#: ../../user-manual/preservation/preservation-planning.rst:407
+#: ../../user-manual/preservation/preservation-planning.rst:438
+msgid "**Commands**"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:297
+msgid ""
+"Identification commands contain the actual code that a tool will run when"
+" identifying a file. This command will be run on every file in a "
+"transfer."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:300
+msgid ""
+"Instructions on writing an identification command can be found in the "
+":ref:`FPR Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:304
+msgid "Format policy registry tools"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:306
+msgid ""
+"Format policy tools control how Archivematica processes files during "
+"ingest. The most common kind of these tools are normalization tools, "
+"which produce preservation and access copies from ingested files. "
+"Archivematica comes configured with a number of commands and scripts to "
+"normalize several file formats, and you can use this section of the FPR "
+"to customize them or to create your own. These are organized similarly to"
+" the Identification Tools documented above."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:314
+msgid "Archivematica uses the following kinds of format policy rules:"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:316
+#: ../../user-manual/preservation/preservation-planning.rst:333
+msgid "Characterization"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:318
+#: ../../user-manual/preservation/preservation-planning.rst:396
+msgid "Extraction"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:320
+msgid "Normalization - Access, preservation and thumbnails"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:322
+msgid ""
+"Event detail - Extracts information about a given tool in order to be "
+"inserted into a generated METS file."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:325
+#: ../../user-manual/preservation/preservation-planning.rst:430
+msgid "Transcription"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:327
+msgid ""
+"Verification - Validates a file produced by another command. For "
+"instance, a tool could use Exiftool or JHOVE to determine whether a "
+"thumbnail produced by a normalization command was valid and well-formed."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:335
+msgid ""
+"Characterization is the process of producing technical metadata for an "
+"object. Archivematica's characterization aims both to document the "
+"object's significant properties and to extract technical metadata "
+"contained within the object."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:340
+msgid ""
+"Prior to Archivematica 1.2, the characterization micro-service always ran"
+" the `FITS <http://projects.iq.harvard.edu/fits>`_ tool. As of "
+"Archivematica 1.2, characterization is fully customizable by the "
+"Archivematica administrator."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:346
+msgid ""
+"Archivematica has four default characterization tools upon installation. "
+"Which tool will run on a given file depends on the type of file, as "
+"determined by the selected identification tool."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:350
+msgid "*Default*"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:352
+msgid ""
+"The default characterization tool is FITS; it will be used if no specific"
+" characterization rule exists for the file being scanned."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:355
+msgid ""
+"It is possible to create new default characterization commands, which can"
+" either replace FITS or run alongside it on every file."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:358
+msgid "*Multimedia*"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:360
+msgid ""
+"Archivematica 1.2 introduced three new multimedia characterization tools."
+" These tools were selected for their rich metadata extraction, as well as"
+" for their speed. Depending on the type of the file being scanned, one or"
+" more of these tools may be called instead of FITS."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:366
+msgid ""
+"`FFprobe <http://ffmpeg.org/>`_, a characterization tool built on top of "
+"the"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:366
+msgid "same core as FFmpeg, the normalization software used by Archivematica"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:369
+msgid "`MediaInfo <http://mediaarea.net/en/MediaInfo>`_, a characterization tool"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:369
+msgid "oriented towards audio and video data"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:373
+msgid "`ExifTool <http://www.sno.phy.queensu.ca/~phil/exiftool/index.html>`_, a"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:372
+msgid ""
+"characterization tool oriented towards still image data and extraction of"
+" embedded metadata"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:377
+msgid ""
+"Information on writing new characterization commands can be found in the "
+"FPR administrator's manual."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:380
+msgid ""
+"A characterization command is designed to run a tool and produce output "
+"to standard out. Output from characterization commands is expected to be "
+"valid XML, and will be included in the AIP's METS document within the "
+"file's ``<objectCharacteristicsExtension>`` element."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:386
+msgid "Event Detail"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:387
+msgid ""
+"A command to provide information about the software running a command. "
+"This will be written to the METS file as the \"event detail\" property. "
+"For example, the normalization commands which use ffmpeg use an event "
+"detail command to extract ffmpeg's version number."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:392
+msgid ""
+"For more information, see the :ref:`FPR Administrators manual "
+"<fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:398
+msgid ""
+"Archivematica supports extracting contents from files during the transfer"
+" phase."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:400
+msgid ""
+"Many transfers contain files which are packages of other files; examples "
+"of these include compressed archives, such as ZIP files, or disk images. "
+"Archivematica provides a transcription microservice which comes with "
+"several predefined rules to extract packages, and which is fully "
+"customizeable by Archivematica administrators. Administrators can write "
+"new commands, and assign existing formats to run for other file formats."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:409
+msgid ""
+"An extraction command is passed two arguments: the file to extract, and "
+"the path to which the package should be extracted. Similar to "
+"normalization commands, these arguments will be interpolated directly "
+"into \"bashScript\" and \"command\" scripts, and passed as positional "
+"arguments to \"pythonScript\" and \"asIs\" scripts."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:415
+msgid ""
+"Information on writing a new Extraction command can be found in the "
+":ref:`FPR Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:419
+msgid "Normalization"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:421
+msgid ""
+"Normalization rules determine how Archivematica will handle the creation "
+"of access and preservation copies during the Ingest of packages.  "
+"Normalization commands take those rules and express them as actions that "
+"Archivematica will perform with one of its integrated tools."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:426
+msgid ""
+"Information on writing a new Normalization command can be found in the "
+":ref:`FPR Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:432
+msgid ""
+"Archivematica 1.2 introduces a new transcription microservice. This "
+"microservice provides tools to transcribe the contents of media objects. "
+"In Archivematica 1.2 it is used to perform OCR on images of textual "
+"material, but it can also be used to create commands which perform other "
+"kinds of transcription."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:440
+msgid ""
+"Writing a transcription command is very similar to writing an "
+"identification command or a normalization command."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:443
+msgid ""
+"Transcription commands are expected to write their data to disk inside "
+"the SIP. For commands which perform OCR, metadata can be placed inside "
+"the ``metadata/OCRfiles\"`` directory inside the SIP; other kinds of "
+"transcription should produce files within``metadata``."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:448
+msgid ""
+"Information on writing a new Transcription command can be found in the "
+":ref:`FPR Administrators manual <fpr:index>`."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:452
+msgid "Validation"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:454
+msgid ""
+"Archivematica runs commands to validate files on transfer using `JHOVE "
+"<http://jhove.sourceforge.net/>`_. As of version 1.2, rules for "
+"valiadation are defined in the Format Policy Registry."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:459
+msgid "Verification"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:460
+msgid ""
+"Verification is run after normalization commands. Archivematica will run "
+"two commands: one checks if a file exists, and the other checks if the "
+"file exists and is greater than 0 bytes in size."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:464
+msgid ""
+"Verification is run on the output of normalization, not on the original "
+"file."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:469
+msgid "Preservation planning policies"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:471
+msgid ""
+"At Artefactual, we have a long-term vision that the Format Policy "
+"Registry will be a collaborative tool for the digital preservation "
+"community."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:474
+msgid ""
+"It is important though for institutions to establish local policies and "
+"practices that include monitoring the digitial preservation environment "
+"to help inform format normalization rules over time as standards and "
+"tools evolve."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:478
+msgid ""
+"We recommend documenting your policies and pratices, in accordance with "
+"the TRAC standard for auditing Trusted Digital Repositories (`ISO "
+"16363:2012 "
+"<http://www.iso.org/iso/catalogue_detail.htm?csnumber=56510>`_)."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:484
+msgid ":ref:`TRAC auditing tool <trac>`"
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:487
+msgid ":ref:`Back to the top <preservation-planning>`"
+msgstr ""
+
