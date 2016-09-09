@@ -131,7 +131,7 @@ Administer
 Troubleshooting
 ---------------
 
-* :ref:`Error handing <error-handling>`
+* :ref:`Error handling <error-handling>`
 * :ref:`Error reporting <error-reporting>`
 * :ref:`FAQ <faq>`
 
