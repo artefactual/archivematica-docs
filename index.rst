@@ -86,7 +86,6 @@ Storage
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
-* :ref:`Delete an AIP <delete-aip>`
 * :ref:`AIP structure <aip-structure>`
 * :ref:`AICs <aic>`- managing multi-part AIPs
 
