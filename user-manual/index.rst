@@ -22,6 +22,7 @@ links to each chapter's main sections.
    transfer/digitized
    transfer/forensic
    transfer/dspace
+   transfer/appraisal
    ingest/ingest
    ingest/manual-normalization
    archival-storage/archival-storage
@@ -37,5 +38,4 @@ links to each chapter's main sections.
    troubleshooting/faq
    metadata/dublincore
    metadata/premis
-
 
