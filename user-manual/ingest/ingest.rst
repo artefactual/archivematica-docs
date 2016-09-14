@@ -71,9 +71,7 @@ Arrange a SIP from backlog
 
    Transfer backlog search results in populating Originals pane
 
-Archivematica will display the directories in Transfer backlog including the
-number of objects in each directory. To hide directories from the Originals pane, click on the
-directory and click Hide.
+Archivematica will display the directories in Transfer backlog including the number of objects in each directory. To hide directories from the Originals pane, click on the directory and click Hide.
 
 2. Drag and drop the transfer directory(ies) and/or object(s) you wish to arrange and ingest as a SIP from the Originals pane to the Arrange pane, or create an arrangement structure for your SIP (see step 4, below).
 
@@ -104,7 +102,6 @@ directory and click Hide.
 
    Create a new directory in Arrange pane
 
-
 5. Click and drag files from the Originals pane into your desired directory in the arrange panel. You can move either individual files or entire directories. Note: All files must be in a directory inside of Arrange. “Arrange” cannot be used as the top directory.
 
 6. When you have completed moving files and directories into the Arrange pane, click on the top level directory which you wish to include in your SIP. Click on Create SIP. Any files or directories which are not inside the directory you chose will remain in the Arrange pane until you create a SIP using these files and directories.
@@ -127,35 +124,29 @@ selected by the user.
 Add metadata
 ------------
 
-In Archivematica, metadata can be added either prior to the normalization step
-or after. Archivematica will prompt you with a reminder to add metadata if
-desired during the Process metadata directory micro-service. See
-:ref:`AtoM Dublin Core <atom:dc-template>`_
-for information about the Dublin Core elements available.
+In Archivematica, metadata can be added either prior to the normalization step or after. Archivematica will prompt you with a reminder to add metadata if desired during the Process metadata directory micro-service. See :ref:`AtoM Dublin Core <atom:dc-template>` for information about the Dublin Core elements available.
 
 .. seealso::
 
-    If you are importing lower-level metadata (i.e. metadata to be attached to subdirectories and files within a SIP) see also:
+   If you are importing lower-level metadata (i.e. metadata to be attached to subdirectories and files within a SIP) see also:
 
-    * :ref:`Transfer <transfer>`
-
-    * :ref:`Import metadata <import-metadata>`
+   * :ref:`Transfer <transfer>`
+   * :ref:`Import metadata <import-metadata>`
 
 .. note::
-    If you plan to create a DIP to :ref:`Upload to AtoM<dip-upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of item.
 
-    This functionality is supported in AtoM 2.2 and higher.
+   If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of item.
 
-Click to select a directory or object, then click Edit metadata to choose the
-level of description.
+   This functionality is supported in AtoM 2.2 and higher.
+
+Click to select a directory or object, then click Edit metadata to choose the level of description.
 
 .. image:: images/choose_lod.*
    :align: center
    :width: 80%
    :alt: Choosing the AtoM level of description
 
-As you add levels of description they will be shown in the arrange pane for you
-to review before finalizing your SIP.
+As you add levels of description they will be shown in the arrange pane for you to review before finalizing your SIP.
 
 .. image:: images/view_arrangement.*
    :align: center
@@ -175,12 +166,6 @@ to review before finalizing your SIP.
    If you choose not to assign levels of description to directories in SIP arrange,
    AtoM will flatten the DIP so that all digital objects are child-level descriptions
    of the target description.
-ower-level metadata (i.e. metadata to be attached to
-    subdirectories and files within a SIP) see also:
-
-    * :ref:`Metadata import <import-metadata>`
-    * :ref:`Transfer <transfer>`
-
 
 1. Click on the template icon.
 
@@ -192,13 +177,10 @@ ower-level metadata (i.e. metadata to be attached to
 
    To add metadata, click on the template icon
 
-
 2. This will take you to the SIP detail panel. On the left-hand side, under metadata click Add.
 
 .. figure:: images/SIPDetailPanel1.*
-   :align: center* :ref:`Upload DIP to AtoM <dip-upload-atom>`
-* :ref:`Upload DIP to ArchivesSpace <dip-upload-AS>`
-* :ref:`Upload DIP to Archivists' Toolkit <dip-upload-AT>`
+   :align: center
    :figwidth: 80%
    :width: 100%
    :alt: SIP detail panel
@@ -217,9 +199,7 @@ ower-level metadata (i.e. metadata to be attached to
 
 .. important::
 
-    If you would like to upload your DIP to AtoM as a child of an existing
-    target description, you must add at least a Title in the Dublin Core
-    template.
+   If you would like to upload your DIP to AtoM as a child of an existing target description, you must add at least a Title in the Dublin Core template
 
 4. When you click Create, you will see the metadata entry in the list page. To edit it further, click Edit on the right-hand side. To delete it, click Delete. To add more DC metadata, click the Add button below the list.
 
@@ -244,7 +224,6 @@ if desired during the Process metadata directory micro-service. For more informa
 PREMIS rights fields, see :ref:`PREMIS template <premis-template>`
 
 1. Click on the template icon.
-
 
 .. figure:: images/MetadataIcon1.*
    :align: center
@@ -407,7 +386,7 @@ Store AIP
 
 1. After normalization is approved, the SIP runs through a number of micro-services, including processing of the submission documentation, generation of the METS file, indexing, generation of the DIP and packaging of the AIP.
 
-2. When these micro-services are complete, the user can upload the DIP and store the AIP. See below for :ref:`ArchivesSpace <dip-upload-AS>` and Archivists' Toolkit DIP upload
+2. When these micro-services are complete, the user can upload the DIP and store the AIP. See below for :ref:`ArchivesSpace <upload-as>` and Archivists' Toolkit DIP upload
 
 
 .. figure:: images/StoreAIPUpDIP1.*

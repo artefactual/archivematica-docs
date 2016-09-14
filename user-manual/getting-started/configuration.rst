@@ -35,11 +35,11 @@ Integration settings
 Archivematica integrates with a number of different access and storage systems.
 Please see:
 
-* :ref:`AtoM <dashboard-atom>`
-* :ref:`ContentDM <dashboard-CDM>`
+* :ref:`AtoM <admin-dashboard-atom>`
+* :ref:`ContentDM <contentdm>`
 * :ref:`Archivist's Toolkit <dashboard-AT>`
 * :ref:`DSpace <dspace>`
-* :ref:`LOCKSS <storageService:lockss>` (Administrator documentation)
+* :ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)
 * Duracloud (coming soon)
 * Arkivum (coming soon)
 

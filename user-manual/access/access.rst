@@ -79,7 +79,7 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 .. tip::
 
    The permalink is the "slug" from the AtoM target description.
-   See :ref:`slug <atom:slug>` in the AtoM glossary.
+   See ``slug`` in the AtoM glossary.
 
 3. Click the blue "Upload" button. Digital objects are uploaded as items within the description to which the DIP is being uploaded. If you want to create a child level of description under the target description, you must add the title of that level of description using the DC metadata template prior to normalization.
 

@@ -39,7 +39,7 @@ the rights status is recorded; e.g. copyrighted, publicdomain, unknown."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
        <premis:copyrightInformation>
@@ -55,7 +55,7 @@ Copyright jurisdiction
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -75,7 +75,7 @@ determined."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
        <premis:copyrightInformation>
@@ -92,7 +92,7 @@ Copyright start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -111,7 +111,7 @@ Copyright end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -122,7 +122,7 @@ Copyright end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -140,7 +140,7 @@ identifier is unique."
 
 **MET XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -157,7 +157,7 @@ Copyright documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -175,7 +175,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -192,7 +192,7 @@ Copyright note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:copyrightInformation>
@@ -215,7 +215,7 @@ Statute jurisdiction
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteInformation>
@@ -234,7 +234,7 @@ Statute citation
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteInformation>
@@ -251,7 +251,7 @@ the permission(s) noted."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteInformation>
@@ -269,7 +269,7 @@ Statute start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteApplicableDates>
@@ -287,7 +287,7 @@ Statute end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteApplicableDates>
@@ -297,7 +297,7 @@ Statute end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteApplicableDates>
@@ -314,7 +314,7 @@ identifier is unique."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteDocumentationIdentifier>
@@ -331,7 +331,7 @@ Statute documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteDocumentationIdentifier>
@@ -348,7 +348,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteDocumentationIdentifier>
@@ -365,7 +365,7 @@ Statute note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:statuteInformation>
@@ -389,7 +389,7 @@ License terms
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -405,7 +405,7 @@ License start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -424,7 +424,7 @@ License end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -435,7 +435,7 @@ License end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -453,7 +453,7 @@ identifier is unique."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -470,7 +470,7 @@ License documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -488,7 +488,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -505,7 +505,7 @@ License note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:licenseInformation>
@@ -531,7 +531,7 @@ Donor agreement start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatment>
       <premis:otherRightsInformation>
@@ -549,7 +549,7 @@ Donor agreement end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -560,7 +560,7 @@ Donor agreement end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -578,7 +578,7 @@ identifier is unique."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -594,7 +594,7 @@ Donor documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -612,7 +612,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -628,7 +628,7 @@ Donor agreement note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -656,7 +656,7 @@ Policy start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatment>
       <premis:otherRightsInformation>
@@ -674,7 +674,7 @@ Policy end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -685,7 +685,7 @@ Policy end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -702,7 +702,7 @@ identifier is unique."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -718,7 +718,7 @@ Policy documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -735,7 +735,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -751,7 +751,7 @@ Policy note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -775,7 +775,7 @@ in the rightsStatementIdentifier."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -789,7 +789,7 @@ Other start date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatment>
       <premis:otherRightsInformation>
@@ -805,7 +805,7 @@ Other end date
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -816,7 +816,7 @@ Other end date
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -834,7 +834,7 @@ identifier is unique."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -850,7 +850,7 @@ Other documentation identifier- Value
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -867,7 +867,7 @@ being identified."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -883,7 +883,7 @@ Note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:otherRightsInformation>
@@ -905,7 +905,7 @@ migrate, modify, use, disseminate, delete."
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted>
@@ -920,7 +920,7 @@ Grant/restriction
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted>
@@ -935,7 +935,7 @@ Start
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted>
@@ -953,7 +953,7 @@ End
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted:
@@ -964,7 +964,7 @@ End
 
 End date can be left open by clicking "Open End Date." Resulting METS XML:
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted:
@@ -980,12 +980,11 @@ Grant/restriction note
 
 **METS XML**
 
-.. code-block:: xml
+.. code-block:: none
 
    <premis:rightsStatement>
       <premis:rightsGranted>
          <premis:rightsGrantedNote>Publication restricted until copyright expires.</premis:rightsGrantedNote>
-
 
 
 :ref:`Back to the top <premis-template>`
