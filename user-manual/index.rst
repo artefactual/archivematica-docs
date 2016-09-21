@@ -9,12 +9,6 @@ links to each chapter's main sections.
 
 .. toctree::
 
-   overview/intro
-   overview/dashboard
-   overview/technical
-   overview/microservices
-   getting-started/configuration
-   getting-started/trac
    transfer/transfer
    transfer/import-metadata
    transfer/manage-backlog
@@ -32,9 +26,6 @@ links to each chapter's main sections.
    access/contentdm
    preservation/preservation-planning
    administer/dashboard-admin
-   troubleshooting/error-handling
-   troubleshooting/error-reporting
-   troubleshooting/faq
    metadata/dublincore
    metadata/premis
    appraisal/appraisal

@@ -7,17 +7,15 @@ Archivematica documentation
 .. toctree::
    :hidden:
 
+   /getting-started/index
    /user-manual/index
    /admin-manual/index
 
-.. _user-manual-home:
 
-User manual
-===========
+.. _getting-started-home:
 
-The user manual is intended for archivists, librarians, and other users who
-interact with Archivematica through the web-based user interface. The user manual
-is organized based on the tabs in the Archivematica UI.
+Getting started
+===============
 
 .. _overview:
 
@@ -29,14 +27,31 @@ Overview
 * :ref:`Technical architecture <technical-arch>`
 * :ref:`Micro-services <micro-services>`
 
-.. _getting-started:
+.. _quick-start:
 
-Getting started
----------------
+Quick-start guide
+-----------------
 
 * :ref:`Configuration <configuration>`
 * :ref:`TRAC review tool <trac>`
 
+.. _troubleshooting:
+
+Troubleshooting
+---------------
+
+* :ref:`Error handing <error-handling>`
+* :ref:`Error reporting <error-reporting>`
+* :ref:`FAQ <faq>`
+
+.. _user-manual-home:
+
+User manual
+===========
+
+The user manual is intended for archivists, librarians, and other users who
+interact with Archivematica through the web-based user interface. The user manual
+is organized based on the tabs in the Archivematica UI.
 
 .. _home-transfer:
 
@@ -155,16 +170,6 @@ users, among other things.
 * :ref:`Dashboard administration tab <dashboard-admin>`
 * :ref:`Update Format Policy Registry (FPR) <fpr-update>`
 * :ref:`Storage service users <storageservice:users>`
-
-
-.. _troubleshooting:
-
-Troubleshooting
----------------
-
-* :ref:`Error handing <error-handling>`
-* :ref:`Error reporting <error-reporting>`
-* :ref:`FAQ <faq>`
 
 
 .. _metadata:
