@@ -29,19 +29,17 @@ below.
 Overview
 --------
 
-
-
 * :ref:`What is Archivematica? <intro>`
 * :ref:`Web-based dashboard <web-dashboard>`
 * :ref:`Technical architecture <technical-arch>`
 * :ref:`Micro-services <micro-services>`
+* :ref:`System requirements <system-requirements>`
 
 .. _home-quick-start:
 
 Quick-start guide
 -----------------
 
-* :ref:`System requirements <system-requirements>`
 
 
 .. _home-troubleshooting:
