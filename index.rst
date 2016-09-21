@@ -17,7 +17,7 @@ Archivematica documentation
 Getting started
 ===============
 
-.. _overview:
+.. _home-overview:
 
 Overview
 --------
@@ -27,7 +27,7 @@ Overview
 * :ref:`Technical architecture <technical-arch>`
 * :ref:`Micro-services <micro-services>`
 
-.. _quick-start:
+.. _home-quick-start:
 
 Quick-start guide
 -----------------
@@ -35,7 +35,7 @@ Quick-start guide
 * :ref:`Configuration <configuration>`
 * :ref:`TRAC review tool <trac>`
 
-.. _troubleshooting:
+.. _home-troubleshooting:
 
 Troubleshooting
 ---------------
@@ -43,6 +43,11 @@ Troubleshooting
 * :ref:`Error handing <error-handling>`
 * :ref:`Error reporting <error-reporting>`
 * :ref:`FAQ <faq>`
+
+.. _home-other-resources:
+
+Other resources
+---------------
 
 .. _user-manual-home:
 
