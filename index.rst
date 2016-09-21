@@ -83,6 +83,14 @@ The Ingest tab displays the micro-services and jobs that take place to turn a SI
 * :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`
 
+.. _home-backlog:
+
+Backlog
+-------
+
+The Backlog tab displays content that has been added to the Archivematica backlog.
+Adding content to the backlog is possible from the
+
 
 .. _home-storage:
 
