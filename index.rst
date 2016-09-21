@@ -15,8 +15,9 @@ Archivematica documentation
 User manual
 ===========
 
-Manual for Archivematica users explaining functionality and configuration
-operations performed through the user interface.
+The user manual is intended for archivists, librarians, and other users who
+interact with Archivematica through the web-based user interface. The user manual
+is organized based on the tabs in the Archivematica UI.
 
 .. _overview:
 
@@ -42,6 +43,10 @@ Getting started
 Transfer
 --------
 
+The Transfer tab is the place where an Archivematica transfer begins. Along
+with the transfer widget, this tab displays micro-services and jobs that act upon
+content to prepare your transfer to become a SIP (submission information package).
+
 * :ref:`General description <transfer>`
 * :ref:`Create a transfer <create-transfer>`
 * :ref:`Create a transfer with submission documentation <create-submission>`
@@ -63,6 +68,8 @@ Transfer
 Ingest
 ------
 
+The Ingest tab displays the micro-services and jobs that take place to turn a SIP into an AIP or a DIP. This tab also contains the backlog widget.
+
 * :ref:`General description <ingest>`
 * :ref:`Create a SIP <create-sip>`
 * :ref:`Arrange a SIP from backlog <arrange-sip>`
@@ -82,6 +89,9 @@ Ingest
 Storage
 -------
 
+The Storage tab displays AIPs that have been processed by the Archivematica
+pipeline alongside their current storage location.
+
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
@@ -94,6 +104,9 @@ Storage
 
 Access
 ------
+
+The Access page displays DIPs that have been processed by the Archivematica
+pipeline alongside their current access location.
 
 * :ref:`General description <access>`
 * :ref:`Default access system <access-default>`
@@ -110,6 +123,12 @@ Access
 Preservation planning
 ---------------------
 
+The Preservation Planning tab is the de facto user interface for the Format Policy
+Registry, the extensive format database that informs how Archivematica handles
+files. The Preservation Planning tab allows users to add or edit format policies
+for normalization, characterization, validation, and other tools and workflows
+that act upon content preserved through Archivematica.
+
 * :ref:`General description <preservation-planning>`
 * :ref:`Preservation planning tab <pres-tab>`
 * :ref:`Format Policy Registry (FPR) <fpr>`
@@ -118,8 +137,12 @@ Preservation planning
 
 .. _home-administer:
 
-Administer
-----------
+Administration
+--------------
+
+The Administration tab allows administrative users to set processing configurations,
+transfer and storage locations, DIP upload configurations, and to add and remove
+users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
 * :ref:`Update Format Policy Registry (FPR) <fpr-update>`
@@ -151,8 +174,9 @@ Metadata
 Administrator manual
 ====================
 
-Manual for Systems Administrators covering installation, configuration, set-up
-and maintenance of Archivematica and related systems.
+The administrator manual is intended for archivists, librarians, and/or systems
+administrators who are responsible for installing, configuring, setting up, and
+maintaining Archivematica and related systems.
 
 
 .. _home-install:
