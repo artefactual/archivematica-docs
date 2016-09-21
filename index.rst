@@ -17,6 +17,13 @@ Archivematica documentation
 Getting started
 ===============
 
+The getting started manual is intended for users who are considering implementing
+Archivematica as a digital preservation solution. This manual includes information
+on the Archivematica project, technical architecture, as well as a quick-start guide
+to help new users test it out. For information about installing and using
+Archivematica in a production environment, see the user or administrator manuals
+below.
+
 .. _home-overview:
 
 Overview
@@ -33,7 +40,7 @@ Quick-start guide
 -----------------
 
 * :ref:`Configuration <configuration>`
-* :ref:`TRAC review tool <trac>`
+
 
 .. _home-troubleshooting:
 
@@ -48,6 +55,8 @@ Troubleshooting
 
 Other resources
 ---------------
+
+* :ref:`TRAC review tool <trac>`
 
 .. _user-manual-home:
 
