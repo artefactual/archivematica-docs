@@ -129,7 +129,8 @@ Backlog
 -------
 
 The Backlog tab displays content that has been added to the Archivematica backlog.
-Adding content to the backlog is possible from the
+This step happens between transfer and ingest; however, the tab is placed after
+ingest as it is more closely aligned with storage.
 
 
 .. _home-storage:
