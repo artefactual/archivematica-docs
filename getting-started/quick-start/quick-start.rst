@@ -6,21 +6,21 @@ Archivematica Quick-Start Guide
 
 .. quick-start-intro
 
-Archivematica is a free and open-source digital preservation system that is
-designed to maintain standards-based, long-term access to collections of
-digital objects. Archivematica is packaged with the web-based content
-management system AtoM for access to your digital objects.
-
 This guide will get you up and running with Archivematica for testing purposes.
 This is not a guide to install Archivematica for development or production - please
 see :ref:`Installation <installation>` for full installation instructions.
 
-The instructions below are applicable to both the sandbox and an Archivematica virtual machine, unless otherwise noted. Which one you decide to use is up to you.
+This guide presents a standard, simple transfer and does not go into detail about
+Archivematica's advanced features. For more information about processing more
+complex content, see the :ref:`User manual <user-manual>`
+
+The instructions below are applicable to both the sandbox and an Archivematica
+virtual machine, unless otherwise noted.
 
 *On this page:*
 
 * :ref:`Using the sandbox <quick-start-sandbox>`
-* :ref:`Installing on a virtual machine <quick-start-vm>`
+* :ref:`Installing on a local virtual machine <quick-start-vm>`
 * :ref:`Starting your first transfer <quick-start-transfer>`
 * :ref:`Ingest and normalization <quick-start-ingest>`
 * :ref:`AIP and DIP storage <quick-start-storage>`

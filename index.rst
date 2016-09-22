@@ -11,7 +11,6 @@ Archivematica documentation
    /user-manual/index
    /admin-manual/index
 
-
 .. _getting-started-home:
 
 Getting started
@@ -29,6 +28,9 @@ below.
 Overview
 --------
 
+The overview section provides a description of Archivematica's purpose, technical
+architecture, and microservice framework. There
+
 * :ref:`What is Archivematica? <intro>`
 * :ref:`Web-based dashboard <web-dashboard>`
 * :ref:`Technical architecture <technical-arch>`
@@ -40,14 +42,22 @@ Overview
 Quick-start guide
 -----------------
 
+This section is intended to introduce prospective users to Archivematica for testing
+purposes, using either the Archivematica sandbox or a local virtual machine. This
+is not a guide to installing Archivematica for development or production - please
+see :ref:`Installation <installation>` for full installation instructions.
 
+* :ref:`Quick-start `
 
 .. _home-troubleshooting:
 
 Troubleshooting
 ---------------
 
-* :ref:`Error handing <error-handling>`
+The troubleshooting section contains information on how Archivematica handles
+errors, as well as how to report errors
+
+* :ref:`Error handling <error-handling>`
 * :ref:`Error reporting <error-reporting>`
 * :ref:`FAQ <faq>`
 
