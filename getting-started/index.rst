@@ -13,8 +13,9 @@ of links to each chapter's main sections.
    overview/dashboard
    overview/technical
    overview/microservices
-   getting-started/configuration
-   getting-started/trac
+   overview/system-requirements
+   quick-start/quick-start
    troubleshooting/error-handling
    troubleshooting/error-reporting
    troubleshooting/faq
+   other-resources/trac
