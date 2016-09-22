@@ -45,7 +45,7 @@ Quick-start guide
 This section is intended to introduce prospective users to Archivematica for testing
 purposes, using either the Archivematica sandbox or a local virtual machine. This
 is not a guide to installing Archivematica for development or production - please
-see :ref:`Installation <installation>` for full installation instructions.
+see the :ref:`Administrator manual <admin-manual>` for full installation instructions.
 
 * :ref:`Archivematica quick-start guide <quick-start>`
 * :ref:`Configuration <configuration>`

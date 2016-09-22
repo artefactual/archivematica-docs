@@ -1,3 +1,5 @@
+.. _admin-manual:
+
 ====================
 Administrator manual
 ====================
@@ -13,5 +15,3 @@ set of links to each chapter's main sections.
    installation/duracloud-setup
    maintenance/maintenance
    maintenance/security
-
-
