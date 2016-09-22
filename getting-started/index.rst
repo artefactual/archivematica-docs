@@ -15,6 +15,7 @@ of links to each chapter's main sections.
    overview/microservices
    overview/system-requirements
    quick-start/quick-start
+   quick-start/configuration
    troubleshooting/error-handling
    troubleshooting/error-reporting
    troubleshooting/faq

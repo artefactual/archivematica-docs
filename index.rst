@@ -47,7 +47,8 @@ purposes, using either the Archivematica sandbox or a local virtual machine. Thi
 is not a guide to installing Archivematica for development or production - please
 see :ref:`Installation <installation>` for full installation instructions.
 
-* :ref:`Quick-start `
+* :ref:`Archivematica quick-start guide <quick-start>`
+* :ref:`Configuration <configuration>`
 
 .. _home-troubleshooting:
 

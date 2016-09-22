@@ -4,8 +4,6 @@
 Archivematica Quick-Start Guide
 ===============================
 
-.. quick-start-intro
-
 This guide will get you up and running with Archivematica for testing purposes.
 This is not a guide to install Archivematica for development or production - please
 see :ref:`Installation <installation>` for full installation instructions.
@@ -146,3 +144,5 @@ Processing Configurations
 
 The Format Policy Registry
 --------------------------
+
+:ref:`Back to the top <quick-start>`
