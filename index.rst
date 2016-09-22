@@ -18,18 +18,18 @@ Getting started
 
 The getting started manual is intended for users who are considering implementing
 Archivematica as a digital preservation solution. This manual includes information
-on the Archivematica project, technical architecture, as well as a quick-start guide
-to help new users test it out. For information about installing and using
-Archivematica in a production environment, see the user or administrator manuals
-below.
+on the Archivematica project as well as a quick-start guide to help new users test
+it out. For information about installing and using Archivematica in a production
+environment, see the user or administrator manuals below.
 
 .. _home-overview:
 
 Overview
 --------
 
-The overview section provides a description of Archivematica's purpose, technical
-architecture, and microservice framework. There
+The overview section provides a definition of Archivematica and a description of the
+OAIS model on which it is based, its technical architecture, the microservices
+framework, and information about system requirements for deploying Archivematica.
 
 * :ref:`What is Archivematica? <intro>`
 * :ref:`Web-based dashboard <web-dashboard>`
@@ -45,7 +45,7 @@ Quick-start guide
 This section is intended to introduce prospective users to Archivematica for testing
 purposes, using either the Archivematica sandbox or a local virtual machine. This
 is not a guide to installing Archivematica for development or production - please
-see the :ref:`Administrator manual <admin-manual>` for full installation instructions.
+see the :ref:`Administrator manual <admin-manual-home>` for full installation instructions.
 
 * :ref:`Archivematica quick-start guide <quick-start>`
 * :ref:`Configuration <configuration>`
