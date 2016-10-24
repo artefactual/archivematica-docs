@@ -336,7 +336,7 @@ Some repositories need to be installed in order to fullfill the installation pro
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
    [archivematica]
    name=archivematica
-   baseurl=https://packages.archivematica.org/1.x/centos
+   baseurl=https://packages.archivematica.org/1.5.x/centos
    gpgcheck=0
    enabled=1
    EOF'
@@ -489,7 +489,7 @@ After that, we can enable and start services
 The dashboard will be available on port 81, and the storage service on port 8001.
 You will need to complete the installation by opening up the dashboard in a web browser, and filling in the form you are presented with.
 On the 2nd page of the installer, you are asked for information about the storage service.
-You will need to log into the storage service and find the api key that was generated for your user (in admin->users). 
+You will need to log into the storage service and find the api key that was generated for your user (in admin->users).
 
 **Configuration**
 
