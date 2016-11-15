@@ -71,7 +71,7 @@ normalized according the regular Archivematica workflow.
 
 2. Select "Normalize manually" from the dropdown menu.
 
-3. In your file browser, open /archivematica/src/MCPServer/sharedDirectoryStructure/watchedDirectories/approveNormalization/preservation/yourTransfer123abc/objects/
+3. In your file browser, go to your pipelines Processing Location, and find the approveNormalization watched folder.  The default location is at :file:`/var/archivematica/sharedDirectory/watchedDirectories/approveNormalization/preservation/yourTransfer123abc/objects/'. You may need to look at your storage service configuration to confirm the Processing Location defined for your pipeline.
 
 4. Choose which files you'd like to normalize for preservation and/or access.
 
