@@ -106,7 +106,7 @@ content to prepare your transfer to become a SIP (submission information package
 Backlog
 -------
 
-The Backlog tab displays content that has been added to the Archivematica backlog.
+The Backlog tab displays content that has been added to the Archivematica backlog and allows users to search, download and delete transfers from the backlog location.
 
 .. _home-appraisal:
 
@@ -147,11 +147,11 @@ The Ingest tab displays the micro-services and jobs that take place to turn a SI
 
 .. _home-storage:
 
-Storage
--------
+Archival Storage
+----------------
 
-The Storage tab displays AIPs that have been processed by the Archivematica
-pipeline alongside their current storage location.
+The Archival Storage tab displays AIPs that have been processed by the Archivematica
+pipeline and related metadata such as size of AIP, UUID and date stored.
 
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
@@ -166,8 +166,7 @@ pipeline alongside their current storage location.
 Access
 ------
 
-The Access page displays DIPs that have been processed by the Archivematica
-pipeline alongside their current access location.
+Most of Archivematica's access integrations take place within the Ingest tab. The Access tab displays DIPs which have been sent to AtoM.
 
 * :ref:`General description <access>`
 * :ref:`Default access system <access-default>`
