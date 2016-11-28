@@ -101,7 +101,28 @@ content to prepare your transfer to become a SIP (submission information package
 * :ref:`DSpace exports <dspace>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`
 
+.. _home-backlog:
 
+Backlog
+-------
+
+The Backlog tab displays content that has been added to the Archivematica backlog.
+
+.. _home-appraisal:
+
+Appraisal
+---------
+
+The Appraisal and Arrangement tab is used to analyze and arrange material which has been placed in backlog.
+It can also be used to arrange materials directly to resources in ArchivesSpace.
+
+* :ref:`General description <appraisal>`
+* :ref:`Transfers in the Backlog <backlog_pane>`
+* :ref:`Analysis <analysis_pane>`
+* :ref:`File List <File_list_pane>`
+* :ref:`ArchivesSpace Resources <archivesspace_pane>`
+* :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs <adding_files_archivesspace>`
+* :ref:`Arrangement <arrangement>`
 
 .. _home-ingest:
 
@@ -122,15 +143,6 @@ The Ingest tab displays the micro-services and jobs that take place to turn a SI
 * :ref:`Upload DIP to ArchivesSpace <upload-AS>`
 * :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`
-
-.. _home-backlog:
-
-Backlog
--------
-
-The Backlog tab displays content that has been added to the Archivematica backlog.
-This step happens between transfer and ingest; however, the tab is placed after
-ingest as it is more closely aligned with storage.
 
 
 .. _home-storage:
