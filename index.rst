@@ -108,6 +108,12 @@ Backlog
 
 The Backlog tab displays content that has been added to the Archivematica backlog and allows users to search, download and delete transfers from the backlog location.
 
+* :ref:`General description <backlog>`
+* :ref:`Searching for transfers <backlog-transfer-search>`
+* :ref:`Searching for files <backlog-file-search>`
+* :ref:`Downloading transfers or files <backlog-download>`
+* :ref:`Deletion of transfers <backlog-delete>`
+
 .. _home-appraisal:
 
 Appraisal
