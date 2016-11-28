@@ -36,13 +36,15 @@ Tags can be added to selected files in the backlog by entering a tag name and cl
    :align: center
    :width: 60%
    :alt: Adding tags to files in the backlog
-   
+
 Tags that have already been created appear in the Tags drop-down menu. Choosing a particular tag filters the files that appear within transfers in the Backlog pane by that tag. Filters added in other panes in the Appraisal tab will also appear listed under the Tags drop-down menu. Filters can be removed by clicking the “x” next to them.
 
 .. image:: images/adding_filters.*
    :align: center
    :width: 40%
    :alt: Filters as they appear below the tags drop-down menu
+
+Tags can also be added from within the File list (see below).
 
 .. _analysis_pane:
 
@@ -64,15 +66,15 @@ In the Objects tab, information about selected files can be viewed in the form o
 
    Report showing files selected in the Backlog pane
 
-   
+
 .. figure:: images/analysis_visualization.*
    :align: center
    :figwidth: 60%
    :width: 100%
    :alt: Visualization showing formats by total size of files
-   
+
    Visualization showing formats by total size of the selected files
-   
+
 Files listed in Analysis can also be filtered by Format, PUID, and Group through selecting values for these facets in the Report view. For instance, if the user clicks on the Group “Portable Document Format” listed for one of the files, this filter is added and only PDF files remain listed in the Analysis pane. Filters appear under the Tags drop-down menu and can be removed by clicking the “x” beside the name.
 
 2) Tags
@@ -88,14 +90,14 @@ The Tags tab lists any tags that have been added and how many of each tag are pr
 3) Examine Contents
 ===================
 
-If Examine Contents (using the tool Bulk Extractor) was used during transfer, the Examine Contents tab provides the reports created during this micro-service. This tab includes options for listing files that potentially contain personally identifiable information (PII) or credit card numbers. Examine Contents also includes an option for adding tags to these files. 
+If Examine Contents (using the tool Bulk Extractor) was used during transfer, the Examine Contents tab provides the reports created during this micro-service. This tab includes options for listing files that potentially contain personally identifiable information (PII) or credit card numbers. Examine Contents also includes an option for adding tags to these files.
 
 .. figure:: images/analysis_examine_contents.*
    :align: center
    :figwidth: 60%
    :width: 100%
    :alt: Examine contents tab in the anaysis pane
-   
+
    Examine contents tab showing a selected transfer where no files with PII were found
 
 4) Preview File
@@ -103,33 +105,7 @@ If Examine Contents (using the tool Bulk Extractor) was used during transfer, th
 
 Files selected in the File List pane (see below) can be previewed in the Preview File tab.
 
-.. _File_list_pane:
 
-File List
----------
-
-The File List pane is also populated through selecting files in the Backlog pane. File List provides information about the filenames, sizes, dates files were last modified (if available), and any tags that have been added to the selected files.
-
-Any filters that have been applied in the Analysis pane or through the Tags drop-down menu will affect what files appear in File List. In addition, a date range can be added to filter files by the date they were last modified. 
-
-This pane also provides an option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
-
-.. figure:: images/analysis_file_list.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: File list pane
-   
-   File list pane showing options for adding tags and filtering by date range
-   
-
-Clicking on the name of the file opens a preview in the Analysis pane.
-
-.. image:: images/analysis_preview_file.*
-   :align: center
-   :width: 80%
-   :alt: Preview file window in the Analysis pane
-   
 
 .. _archivesspace_pane:
 
@@ -138,7 +114,7 @@ ArchivesSpace Resources
 
 The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to resources that have been created in an ArchivesSpace repository. Settings for ArchivesSpace DIP upload should be configured in the :ref:`Dashboard administration tab <dashboard-admin>` to associate the ArchivesSpace repository. In the ArchivesSpace pane, files transferred into Archivematica can be associated with resources created in ArchivesSpace and SIPs can be sent to Ingest.
 
-ArchivesSpace Terms 
+ArchivesSpace Terms
 ===================
 
 Finding aids in ArchivesSpace are called “resources” (i.e. fonds, collection, record group, etc.). Lower levels of description nested under resources are “archival objects” (series, files, items, etc.). Metadata about digital files is managed separately as “digital objects” which can be associated with resources/archival objects at any level of description. More information on ArchivesSpace can be found at http://archivesspace.org/
@@ -158,49 +134,49 @@ ArchivesSpace resources can be expanded to show lower levels of description. Fol
 Creating Archival Description
 =============================
 
-Options at the top of the ArchivesSpace pane allow for adding to and changing an existing ArchivesSpace resource, such as adding new archival objects and digital object components. 
+Options at the top of the ArchivesSpace pane allow for adding to and changing an existing ArchivesSpace resource, such as adding new archival objects and digital object components.
 
-Selecting a resource or archival object and using “Add New Child Record” adds a new archival object nested underneath the selected level of description. Clicking this button brings up a dialog box for entering metadata. At a minimum, a new archival object must have a title and a level of description, otherwise “save” is not available. 
+Selecting a resource or archival object and using “Add New Child Record” adds a new archival object nested underneath the selected level of description. Clicking this button brings up a dialog box for entering metadata. At a minimum, a new archival object must have a title and a level of description, otherwise “save” is not available.
 
 .. image:: images/archivesspace_add_new_child.*
    :align: center
    :width: 60%
-   :alt: Add new child record dialog box 
+   :alt: Add new child record dialog box
 
 The new archival object will appear in the ArchivesSpace pane and the change will be reflected in the ArchivesSpace repository. The “Delete Selected” button can be used to remove mistakenly created archival objects.
 
-“Add New Digital Object Component” similarly allows for adding digital object components to ArchivesSpace resources/archival objects. 
+“Add New Digital Object Component” similarly allows for adding digital object components to ArchivesSpace resources/archival objects.
 
 .. note::
 
-   Digital object components will not appear in the ArchivesSpace repository until later in the workflow when the AIP for the digital object is stored. 
+   Digital object components will not appear in the ArchivesSpace repository until later in the workflow when the AIP for the digital object is stored.
 
-Both archival objects and digital object components can be created in the ArchivesSpace pane at any level of description; however, new resources can only be created in ArchivesSpace. 
+Both archival objects and digital object components can be created in the ArchivesSpace pane at any level of description; however, new resources can only be created in ArchivesSpace.
 
-Basic metadata for existing archival objects and digital object components can be edited using the “Edit Metadata” button. 
+Basic metadata for existing archival objects and digital object components can be edited using the “Edit Metadata” button.
 
 .. image:: images/archivesspace_edit_metadata.*
    :align: center
    :width: 60%
-   :alt: Edit metadata dialog box 
+   :alt: Edit metadata dialog box
 
-“Edit Rights Metadata” leads to a form for adding PREMIS rights information. 
+“Edit Rights Metadata” leads to a form for adding PREMIS rights information.
 
 .. figure:: images/archivesspace_edit_rights_metadata1.*
    :align: center
    :figwidth: 70%
    :width: 100%
    :alt: Form for adding rights information
-   
+
    Click "Add" to add rights.
-   
+
 .. figure:: images/archivesspace_edit_rights_metadata2.*
    :align: center
    :figwidth: 70%
    :width: 100%
    :alt: Adding PREMIS rights information
-   
-   Specify the type of rights information from the drop-down menu and fill out the relevant fields.  
+
+   Specify the type of rights information from the drop-down menu and fill out the relevant fields.
 
 The form for adding rights includes two pages of fields. Once added, acts can be edited or deleted and further acts can be added.
 
@@ -211,21 +187,21 @@ The form for adding rights includes two pages of fields. Once added, acts can be
 
 .. note::
 
-   Rights can only be added at the SIP level. 
+   Rights can only be added at the SIP level.
 
 .. _adding_files_archivesspace:
 
 Adding Files to ArchivesSpace Resources and Starting SIPs
 ---------------------------------------------------------
 
-Files from transfers in the Backlog pane can be associated with ArchivesSpace resources by dragging files from the backlog to digital object components. 
+Files from transfers in the Backlog pane can be associated with ArchivesSpace resources by dragging files from the backlog to digital object components.
 
 .. image:: images/backlog_and_archivesspace.*
    :align: center
    :width: 80%
-   :alt: Backlog and analysis panes  
+   :alt: Backlog and analysis panes
 
-Digital object components must be created in the Appraisal tab (digital objects created and linked to resources in ArchivesSpace will not appear in the Appraisal tab). 
+Digital object components must be created in the Appraisal tab (digital objects created and linked to resources in ArchivesSpace will not appear in the Appraisal tab).
 
 One file or directory from a transfer can be moved at a time. A file can only be added once to an ArchivesSpace resource. Files that have been added to a digital object component will appear with a strike-through in the backlog.
 
@@ -236,11 +212,11 @@ Once all files have been added to their place in the arrangement, SIPs can be st
 Arrangement
 -----------
 
-The Arrangement pane replaces the Arrange a SIP from Backlog feature from previous versions of Archivematica. This pane provides options for appraising and arranging files from the backlog for users not using ArchivesSpace.
+The arrangement pane provides options for appraising and arranging files from the backlog for users not using ArchivesSpace.
 
-Files from the Backlog pane can be dragged to the Arrangement pane to arrange the files and create SIPs. 
+Files from the Backlog pane can be dragged to the Arrangement pane to arrange the files and create SIPs.
 
-To create structure within the SIP or to create multiple SIPs, use “Add directory.” This button can be used to create separate directories or to create directories nested within other directories.  
+To create structure within the SIP or to create multiple SIPs, use “Add directory.” This button can be used to create separate directories or to create directories nested within other directories.
 
 Once all relevant files have been dragged from the Backlog pane to directories in Arrangement, select the top-level directory corresponding to the intended SIP, and click “Create SIP” to send the SIP to Ingest. Other directories will remain in the Arrange pane until arrangement is complete and they are sent to Ingest.
 
