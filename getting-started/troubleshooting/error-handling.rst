@@ -196,6 +196,27 @@ based on FITS-DROID results instead.
 
    Redo normalization option in drop-down menu of Approve normalization job
 
+Archivematica will send an email when normalization errors occur. Information given
+in the email report:
+
+* UUID of the pipeline
+* Name and UUID of the SIP
+* File name and file UUID, and whether Preservation or Access normalization failed
+* Exit code
+
+Exit code 1 indicates that a normalization rule and command exists but failed
+to execute properly (due to a problem in the command, a problem with the file, etc).
+Exit code 2 indicates that a normalization rule/command does not exist for that
+format.
+
+.. figure:: images/NormEmailReport.*
+   :align: center
+   :figwidth: 80%
+   :width: 100%
+   :alt: Normalization error report sent by email
+
+   Emailed normalization error report
+
 .. _dip-error:
 
 Dip upload error
