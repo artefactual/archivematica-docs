@@ -139,8 +139,13 @@ DSpace transfer type.
 
 **Storage Service options**
 
-This is where you'll find the complete URL for the Storage Service. See
+This is where you'll find the complete URL for the Storage Service, along with a username and API key. See
 Storage Service for more information about this feature.
+
+**Checksum algorithm**
+
+You can select which checksum algorithm Archivematica will apply upon each object in Assign UUIDs and checksums micro-service in Transfer.
+Choose between MD5, SHA-1, SHA-256 and SHA-512.
 
 .. _dashboard-failures:
 
