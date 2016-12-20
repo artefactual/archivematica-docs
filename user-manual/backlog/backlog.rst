@@ -25,18 +25,22 @@ The backlog tab is used to view, search and request deletion of transfers which 
 Searching for transfers
 -----------------------
 
-1. Navigate to the backlog page, where you should see a pagniated list of all backlogged transfers.
+#. Navigate to the backlog page, where you should see a paginated list of all
+   backlogged transfers.
 
-.. image:: images/backlog_tab.*
-   :align: center
-   :width: 80%
-   :alt: Archivematica backlog tab showing backlogged transfers
+   .. image:: images/backlog_tab.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab showing backlogged transfers
 
-2. Perform your search using the fields at the top of the screen, adding new boolean operators as desired. Searches can be performed on file name, file extension, accession number, Ingest date or SIP (Transfer) UUID. To search on the name of the transfer, leave the field as "Any". Wildcards (*) are allowed.
+#. Perform your search using the fields at the top of the screen, adding new
+   boolean operators as desired. Searches can be performed on file name, file
+   extension, accession number, Ingest date or SIP (Transfer) UUID. To search on
+   the name of the transfer, leave the field as "Any". Wildcards (*) are allowed.
 
-.. hint::
+   .. hint::
 
-   If you're not finding anything in your search results, try switching from "keyword" to "phrase."
+      If you're not finding anything in your search results, try switching from "keyword" to "phrase."
 
    .. image:: images/backlog_transfer_search.*
       :align: center
@@ -75,17 +79,20 @@ Either files or transfers can be downloaded by using the download button on the 
 Deletion of transfers
 ---------------------
 
-1. Transfers can be requested for deletion by clicking the red remove icon beside the transfer.
+#. Transfers can be requested for deletion by clicking the red remove icon
+   beside the transfer.
 
-2. The user will be prompted to provide a reason for deleting the transfer.
+#. The user will be prompted to provide a reason for deleting the transfer.
 
-.. image:: images/backlog_delete.*
-   :align: center
-   :width: 80%
-   :alt: Screen prompting user to provide a reason for deleting a transfer.
+   .. image:: images/backlog_delete.*
+      :align: center
+      :width: 80%
+      :alt: Screen prompting user to provide a reason for deleting a transfer.
 
-3. To complete the deletion, an administrator must login to the Storage Service and approve the deletion.
+#. To complete the deletion, an administrator must login to the Storage Service
+   and approve the deletion.
 
-4. Until the deletion is approved, the transfer will remain visible in the backlog tab and will be available for download from the backlog tab as well.
+#. Until the deletion is approved, the transfer will remain visible in the backlog
+   tab and will be available for download from the backlog tab as well.
 
 :ref:`Back to the top <backlog>`
