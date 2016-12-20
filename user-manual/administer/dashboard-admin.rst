@@ -47,73 +47,100 @@ Processing configuration
    :width: 60%
    :alt: Processing configuration screen in the dashboard
 
-The processing configuration administration page of the dashboard provides you
-with an easy form to configure the default 'processingMCP.xml' that's added to
-a SIP or transfer if it doesn't already contain one. When you change the
-options using the web interface the necessary XML will be written behind the
-scenes.
+The processing configuration administration page of the dashboard allows users
+to configure the job decision points presented by Archivematica during transfer and
+ingest. This screen provides you with an easy form to configure the default
+processingMCP.xml that governs these decisions. When you change the options using
+the web interface the necessary XML will be written behind the scenes.
 
-* For the approval (yes/no) steps, the user ticks the box on the left-hand side
-  to make a choice. If the box is not ticked, the approval step will appear in
-  the dashboard.
+Multiple processing configurations can be created using the *Add* button on the
+Processing Configuration screen. Often, users create multiple configurations for
+different types of content - one for audio-visual material, one for images, one
+for textual records, etc. To edit an existing processing configuration file, click
+on the *Edit* button to the right of the processing configuration name.
 
-* For the other steps, if no actions are selected the choices appear in the
-  dashboard
+In order to edit any of the selections, select a choice from the drop-down menu
+to the right of the job name. Once you've made all of your selections, save the
+processing configuration.
 
-Specific processing configurations available on this page are:
+Processing configuration fields
+===============================
 
-#. Select whether or not to send transfers to quarantine (yes/no) and
-   decide how long you'd like them to stay there (below).
+Many jobs in the Archivematica transfer and ingest tabs have configurable decision
+points. Automating these decisions can make the transfer and ingest process substantially
+quicker, especially if you find yourself selecting the same decisions over and over.
+Below is a list of the processing configuration form fields with a short description
+about how they work.
 
-#. Approve normalization, sending the AIP to storage, and uploading the
-   DIP without interrupting the workflow in the dashboard.
+.. note::
 
-#. Store the AIP without interripting the workflow in the dashboard.
+  Selecting *None* means that Archivematica will prompt you to make the decision
+  as the transfer/ingest is being processed.
 
-#. Select whether or not Archivematica should transcribe files.
+#. **Name**: The name of the processingMCP.xml file that you are editing.
 
-#. Select whether or not Archivematica should generate a transfer structure
-   report (see :ref:`Process the transfer <process-transfer>`)
+#. **Send transfer to quarantine**: Select whether or not to send transfers to
+   quarantine.
 
-#. Select if Archivematica should create one SIP from the transfer and
+#. **Remove from quarantine after (days)**: Indicate how long transfers should
+   remain in quarantine. Once they are removed from quarantine, they will be
+   available for continued processing. Note that this field will not be invoked
+   unless the *Send transfer to quarantine* field is set to "Yes".
+
+#. **Generate transfer structure report**: Select whether or not Archivematica
+   should generate a directory tree of the original transfer and place it as a
+   text file in the AIP.
+
+#. **Select file format identification command (Transfer)**: Select the file format
+   identification tool to be used on file format identification jobs in the transfer tab.
+
+#. **Extract packages**: Select whether or not Archivematica should extract any packages
+   included in the transfer (i.e. .zip files).
+
+#. **Delete packages after extraction**: Select whether packages should be deleted
+   after extraction. Note that this field will not be invoked unless the *Extract packages*
+   field is set to "Yes".
+
+#. **Examine contents**: Select whether or not to run Bulk Extractor to generate
+   content reports to identify personally identifying information (PII).
+
+#. **Create SIP(s)**: Select if Archivematica should create one SIP from the transfer and
    continue processing or send the transfer to backlog.
 
-#. Select whether to extract packages as well as whether to keep and/or
-   delete the extracted objects and/or the package itself.
+#. **Select file format identification comment (Ingest)**: Select the file format
+   identification tool to be used on file format identification jobs in the ingest tab.
 
-#. Select Normalization options (see :ref:`Normalize <normalize>`).
+#. **Normalize**: Select Normalization options (see :ref:`Normalize <normalize>`).
 
-#. Select whether or not Archivematica should remind you to add metadata at the
-   appropriate point during ingest.
+#. **Approve normalization**: Select whether or not to automatically approve normalization.
 
-#. Select whether or not to Examine contents.
+#. **Reminder: add metadata if desired**: Select whether or not Archivematica should
+   remind the user to add metadata to the SIP using the GUI. Note: this job
+   occurs at the last moment that it is possible to add metadata to the SIP; once the
+   ingest proceeds past this point, it is no longer possible to add metadata to the SIP.
 
-#. Select which format identification tool and command to run in both/either
-   transfer and/or ingest to base your normalization upon.
+#. **Transcribe files (OCR)**: Select whether or not to transcribe the contents of
+   the SIP (see :ref:`Transcribe SIP contents <transcribe-contents>`)
 
-#. Select which format identification tool and command to run for Submission
-   documentation and metadata.
+#. **Select file format identification command (Submission documentation & metadata)**: Select
+   the file format identification tool to be used on submission documentation and
+   metadata files.
 
-#. Select whether packages should be deleted after extraction.
+#. **Select compression algorithm**: Select which tool you would like to use to
+   compress your AIP.
 
-#. Select between 7z using lzma and 7zip using bzip or parallel bzip2 algorithms
-   for AIP compression.
+#. **Select compression level**: Select how compressed you would like your AIP to
+   be. Selecting a higher compression level means that the resulting AIP is smaller,
+   but compression also takes longer. Lower compression levels mean quicker compression,
+   but a larger AIP.
 
-#. Select compression levels:
+#. **Store AIP**: Store the AIP without interrupting the workflow in the dashboard.
 
-    * 1 - fastest mode
+#. **Store AIP location**: Select one archival storage location where you will
+   consistently send your AIPs.
 
-    * 3 - fast compression mode
-
-    * 5 - normal compression mode
-
-    * 7 - maximum compression
-
-    * 9 - ultra compression
-
-#. Select one archival storage location where you will consistently send your
-   AIPs and DIPs (if you are storing DIPs rather than sending them immediately
-   to an access system.)
+#. **Store DIP location**: Select one archival storage location where you will
+   consistently send your DIPs, if you wish to store them.
 
 .. _dashboard-general:
 
