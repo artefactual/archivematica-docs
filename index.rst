@@ -162,9 +162,8 @@ pipeline and related metadata such as size of AIP, UUID and date stored.
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
-* :ref:`Delete an AIP <delete-aip>`
 * :ref:`AIP structure <aip-structure>`
-* :ref:`AICs <aic>`- managing multi-part AIPs
+* :ref:`AICs - managing multi-part AIPs <aic>`
 
 
 .. _home-access:
