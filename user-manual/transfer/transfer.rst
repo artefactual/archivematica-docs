@@ -66,41 +66,46 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 Create a transfer
 -----------------
 
-Open the web browser and the Archivematica dashboard to sign in with your
+Open your Archivematica dashboard and sign in with your
 username and password. Please note that if this is your first time logging in
-to a newly installed instance of Archivematica, you will see a log-in that
-allows you to register your repository and get updates to the format policy
-registry. See the User manual - :ref:`Format Policy Registry (FPR) <fpr>` and the
+to a newly installed instance of Archivematica, you will see a form that
+allows you to register your repository in order to get updates to the format policy
+registry. See the :ref:`User manual - Format Policy Registry (FPR) <fpr>` and the
 :ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
 
-1. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
+#. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
 
-2. In transfer tab, name your transfer and select your source directory. Click Browse to select the directory containing your object(s) for upload. Your transfer can be composed of multiple directories from different sources. Repeat this step if your transfer is composed of multiple sources.
+#. Name your transfer. The transfer name will become the name of your AIP, so make
+   sure that the name is meaningful.
 
-.. figure:: images/Browse1.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: Select transfer(s) from source directory(ies)
+#. Select your source directory. Click Browse
+   to select the directory containing your object(s) for upload. Click on the folder
+   icon to expand the directory trees. To select a source folder, click on the name
+   of the folder so that it is highlighted and click Add. Your transfer can be composed
+   of multiple directories from different sources. Repeat this step if your transfer
+   is composed of multiple sources.
 
-   Select transfer for transfers from source directories
+   .. figure:: images/Browse1.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: Select transfer(s) from source directory(ies)
 
-As shown above, Archivematica will display the number of objects in each available
-transfer directory.
+      Select transfer source directories
 
-3. If applicable, enter an accession number for the transfer.
+#. If applicable, enter an accession number for the transfer.
 
+#. Once all of your digital object sources have been uploaded, hit the Start Transfer button for the transfer processing to begin.
 
-4. Once all of your digital object sources have been uploaded, hit the Start Transfer button for the transfer processing to begin.
+   .. figure:: images/Start1.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: Start transfer in dashboard
 
-.. figure:: images/Start1.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: Start transfer in dashboard
+      Start transfer
 
-   Start transfer
-
+#. To close the transfer browser, click on Browse again.
 
 .. _create-submission:
 
@@ -248,11 +253,11 @@ Process the transfer
 Cleaning up the transfer dashboard
 ----------------------------------
 
-The dashboard in the Transfer tab should be cleaned up from time to time. As the 
-list of transfers grows, it takes Archivematica longer and longer to parse this 
+The dashboard in the Transfer tab should be cleaned up from time to time. As the
+list of transfers grows, it takes Archivematica longer and longer to parse this
 information which can create browser timeout issues.
 
-1. When you are ready to remove a transfer from the dashboard, click the remove 
+1. When you are ready to remove a transfer from the dashboard, click the remove
 icon found next to the add metadata icon, to the right of the transfer name.
 
 2. Click the Confirm button to remove the transfer from the dashboard.
@@ -263,11 +268,11 @@ icon found next to the add metadata icon, to the right of the transfer name.
    :width: 100%
    :alt: A transfer that is ready to be removed from the dashboard
 
-   
+
 .. NOTE::
   This does not delete the transfer or related entities, including the source directory.
 
-  
+
 .. _format-identification:
 
 Format identification
