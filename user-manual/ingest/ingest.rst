@@ -424,29 +424,36 @@ Archivematica supports DIP uploads to AtoM, ArchivesSpace, and Archivists' Toolk
 Reingest AIP
 ------------
 
-In Archivematica, AIP reingest is supported for the purpose of adding
-metadata and normalizing for access.  There are three methods of starting
+In Archivematica, AIP reingest is supported for three purposes: adding/updating
+descriptive and/or rights metadata, normalizing for access, or full re-ingest which
+re-runs all major micro-services.  There are three methods of starting
 AIP reingest: through the dashboard, through the Storage Service, or through
 the API.
+
+.. _reingest-dashboard:
 
 Dashboard
 =========
 
-1. In the Archival Storage tab, find the AIP you wish to reingest by searching or browsing. Click on Reingest
+1. In the Archival Storage tab, find the AIP you wish to reingest by searching or browsing. Click on the name of the AIP or View to open that AIP's view page. Under Actions, click on Re-ingest.
 
 .. image:: images/storage_reingest.*
    :align: center
    :width: 80%
    :alt: Click on reingest beside the AIP
 
-2. Choose if you wish to reingest the metadata only, or reingest the metadata and objects.
+2. Choose if you wish to perform a metadata re-ingest, a partial re-ingest (which sends the AIP to the beginning of Ingest to re-normalize for Access and update the metadata if desired) or a full re-ingest (which sends the AIP to the beginning of transfer and re-runs all major micro-services, including re-normalization for preservation if desired).
+
+2a. If performing full re-ingest, enter the name of the processing configuration you wish to use. To add new processing configurations, see :ref:`Processing configuration <dashboard-processing>`.
+
+Full re-ingest can also be used to update the metadata, and re-normalize for access.
 
 .. image:: images/reingest_type.*
    :align: center
    :width: 80%
-   :alt: Choose type of reingest
+   :alt: Choose type of reingest and name of processing configuration
 
-Click on Re-ingest package. Archivematica will tell you that the AIP has been
+Click on Re-ingest. Archivematica will tell you that the AIP has been
 sent to the pipeline for reingest.
 
 .. note::
@@ -454,8 +461,25 @@ sent to the pipeline for reingest.
    If you attempt to reingest an AIP which is already in the process of being
    reingested in the pipeline, Archivematica will alert you with an error.
 
+.. important::
 
-3. Proceed to the Ingest tab and approve the AIP reingest.
+   The following workflows are **not** supported in full AIP re-ingest:
+
+   * Examine contents if not performed on first ingest
+   * Transfer structure report if not performed on first ingest
+   * Extract packages in the AIP and then delete them
+   * Send AIP to backlog for re-arrangement during re-ingest
+   * Store the AIP in the different storage location than used on first ingest
+
+   A note about package extraction in re-ingest: Archivematica will not appear to
+   prevent you from extracting packages on re-ingest, and then deleting the packages.
+   However, the resulting AIP will still contain the packages, and in the METS
+   file they will not have re-ingestion events correctly associated with them.
+   This is documented as a bug here:
+   https://projects.artefactual.com/issues/10699
+
+
+3. Proceed to the Transfer or Ingest tab and approve the AIP reingest.
 
 .. image:: images/reingest_approve.*
    :align: center
@@ -467,13 +491,15 @@ sent to the pipeline for reingest.
 
 **For metadata only** choose "Do not normalize"
 
-**For metadata and objects** choose "Normalize for access"
+**For partial re-ingest** choose "Normalize for access"
+
+**For full re-ingest** use the normalization path of your choosing
 
 .. important::
 
    All normalization options will appear as for any SIP being normalized, but
-   only the two normalization paths above are operational for AIP reingest in
-   version 1.5. Choosing another normalization path will result in errors!
+   when performing metadata only or partial re-ingest, **only** the normalization
+   paths noted above are supported.
 
 5. To add new metadata or edit existing metadata, click on the metadata report icon:
 
@@ -501,7 +527,7 @@ browser with the same locations available as configured for Transfer Source.
 
 7. After normalization and metadata updating, continue processing the SIP as normal. Note that when performing a metadata-only reingest, there will be no objects in your AIP in the review stage- Archivematica replaces the METS file in the existing AIP upon storage.
 
-.. _storage-service:
+.. _re-ingest-storage-service:
 
 Storage Service
 ===============
@@ -513,13 +539,20 @@ Storage Service
    :width: 80%
    :alt: Reingest link in Storage Service Packages tab
 
-2. The Storage Service will ask you to choose a pipeline, and the types of reingest (metadata only or metadata and objects in version 1.5)
+2. The Storage Service will ask you to choose a pipeline, the types of reingest (see above for thorough descriptions of each), and for full re-ingest, the name of the processing configuration.
 
 .. image:: images/reingest_ss_2.*
    :align: center
    :width: 80%
    :alt: Screen to choose pipeline and type of reingest
 
-3. The Storage Service will confirm that the AIP has been sent to the pipeline for reingest. Proceed to the Ingest tab of your pipeline, and follow steps 3-6 above.
+3. The Storage Service will confirm that the AIP has been sent to the pipeline for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and follow steps 3-6 above.
+
+.. _re-ingest-api:
+
+API
+===
+
+Documentation to come.
 
 :ref:`Back to the top <ingest>`
