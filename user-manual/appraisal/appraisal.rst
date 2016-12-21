@@ -105,7 +105,32 @@ If Examine Contents (using the tool Bulk Extractor) was used during transfer, th
 
 Files selected in the File List pane (see below) can be previewed in the Preview File tab.
 
+.. _File_list_pane:
 
+File List
+------------
+The File List pane is also populated through selecting files in the Backlog pane. File List provides information about the filenames, sizes, dates files were last modified (if available), and any tags that have been added to the selected files.
+
+Any filters that have been applied in the Analysis pane or through the Tags drop-down menu will affect what files appear in File List. In addition, a date range can be added to filter files by the date they were last modified.
+
+This pane also provides an option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
+
+.. figure:: images/analysis_file_list.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: File list pane
+
+   File list pane showing options for adding tags and filtering by date range
+
+
+Clicking on the name of the file opens a preview in the Analysis pane.
+
+
+.. image:: images/analysis_preview_file.*
+   :align: center
+   :width: 80%
+   :alt: Preview file window in the Analysis pane
 
 .. _archivesspace_pane:
 
