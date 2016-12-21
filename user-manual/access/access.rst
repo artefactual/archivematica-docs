@@ -94,6 +94,11 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 
 7. The digital object is displayed in AtoM. Clicking on the image will open the uploaded object.
 
+.. _upload-metadata-atom:
+
+Upload metadata to AtoM
+=======================
+
 .. _upload-as:
 
 Upload DIP to ArchivesSpace
