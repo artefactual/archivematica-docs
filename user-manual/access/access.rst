@@ -110,7 +110,31 @@ In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM withou
    The following AtoM-Archivematica workflows are not currently supported with this workflow:
 
    * Descriptive metadata: if descriptive metadata is included by csv or entering in the user interface, the metadata will not display in AtoM in this workflow.
-   * 
+   * SIPs with levels of description assigned using the :ref:`arranging for AtoM <hierarchical-dip>` workflow- the levels of description will be ignored in this workflow.
+
+1. Navigate to Archival Storage and search or browse for the AIP. Click on the name of the AIP, or "View".
+
+2. Under "Actions," in the Upload DIP tab enter the slug of the AtoM description you wish to upload to.
+
+.. image:: /images/metadata_only_upload.*
+   :align: center
+   :width: 80%
+   :alt: Entering the slug of the AtoM description to upload metadata to
+
+3. Upon successful upload, AtoM will have created a File level description for the AIP and an Item level description for each object.
+
+.. image:: images/metadata_only_atom_1.*
+   :align: center
+   :width: 90%
+   :alt: AtoM description showing uploaded content
+
+Each item will have a generic thumbnail associated with it and digital object metadata about the original object, including filename, filesize, date uploaded, object and AIP UUIDs, format name, format version, format registry and key.
+
+.. image:: images/metadata_only_atom_2.*
+   :align: center
+   :width: 90%
+   :alt: AtoM description showing uploaded item with digital object metadata
+
 
 .. _upload-as:
 
