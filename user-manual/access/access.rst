@@ -116,7 +116,7 @@ In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM withou
 
 2. Under "Actions," in the Upload DIP tab enter the slug of the AtoM description you wish to upload to.
 
-.. image:: /images/metadata_only_upload.*
+.. image:: images/metadata_only_upload.*
    :align: center
    :width: 80%
    :alt: Entering the slug of the AtoM description to upload metadata to
