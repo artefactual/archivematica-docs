@@ -154,9 +154,7 @@ This functionality is supported in AtoM 2.2 and higher.
 Add metadata
 ------------
 
-In Archivematica, metadata can be added either prior to the normalization step or after.
-Archivematica will prompt you with a reminder to add metadata if desired during the Process metadata directory micro-service.
-See :ref:`AtoM Dublin Core <atom:dc-template>`for information about the Dublin Core elements available.
+In Archivematica, metadata can be added either prior to the normalization step or after. Archivematica will prompt you with a reminder to add metadata if desired during the Process metadata directory micro-service. See :ref:`AtoM Dublin Core <atom:dc-template>`for information about the Dublin Core elements available.
 
 .. seealso::
 
@@ -165,6 +163,7 @@ See :ref:`AtoM Dublin Core <atom:dc-template>`for information about the Dublin C
     * :ref:`Transfer <transfer>`
 
     * :ref:`Import metadata <import-metadata>`
+
 
 1. Click on the template icon.
 
@@ -461,7 +460,6 @@ sent to the pipeline for reingest.
    * Transfer structure report if not performed on first ingest
    * Extract packages in the AIP and then delete them
    * Send AIP to backlog for re-arrangement during re-ingest
-   * Store the AIP in the different storage location than used on first ingest
 
    A note about package extraction in re-ingest: Archivematica will not appear to
    prevent you from extracting packages on re-ingest, and then deleting the packages.
