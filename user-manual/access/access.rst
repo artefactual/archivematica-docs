@@ -99,6 +99,19 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 Upload metadata to AtoM
 =======================
 
+In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM without uploading dissemination copies of the files. This may be a helpful workflow if you have digital objects which you wish to make discoverable, but not displayed online for rights or privacy reasons.
+
+.. important::
+
+   AtoM 2.4 or higher is required to use this workflow.
+
+.. note::
+
+   The following AtoM-Archivematica workflows are not currently supported with this workflow:
+
+   * Descriptive metadata: if descriptive metadata is included by csv or entering in the user interface, the metadata will not display in AtoM in this workflow.
+   * 
+
 .. _upload-as:
 
 Upload DIP to ArchivesSpace
