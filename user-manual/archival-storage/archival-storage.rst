@@ -44,16 +44,22 @@ Storing an AIP
       used to create the leaf of the AIP store directory tree, and the AIP with
       that UUID resides in that leaf.
 
-4. The Archival storage tab in the Archivematica dashboard consists of a table with information about the stored AIPs. Use the up and down arrows in the column headers to sort by AIP name, size, UUID, date stored or status. Note that at the top of the table is the total size of the stored AIPs and the number of indexed files.
+#. The Archival storage tab in the Archivematica dashboard consists of a table with
+   information about the stored AIPs. Use the up and down arrows in the column headers
+   to sort by AIP name, size, UUID, date stored or status. Note that at the top
+   of the table is the total size of the stored AIPs and the number of indexed files.
 
-.. image:: images/ArchStorTab1.*
-   :align: center
-   :width: 80%
-   :alt: Archival storage tab showing stored AIPs
+   .. image:: images/ArchStorTab1.*
+      :align: center
+      :width: 80%
+      :alt: Archival storage tab showing stored AIPs
 
-5. To open a copy of the AIP, click on the AIP name. You can then open or download the zipped AIP.
+#. To open a copy of the AIP, click on the AIP name. You can then open or download
+   the zipped AIP.
 
-6. The AIP pointer file can be accessed by clicking on the Pointer file link. The pointer file provides information on the AIP and its relationships to the Archivematica, DIPs, and other AIPs as appropriate.
+#. The AIP pointer file can be accessed by clicking on the Pointer file link. The
+   pointer file provides information on the AIP and its relationships to the Archivematica,
+   DIPs, and other AIPs as appropriate.
 
 .. seealso::
 
@@ -66,29 +72,32 @@ Storing an AIP
 Searching the AIP store
 -----------------------
 
-To search the AIP index, use the search bar at the top of the screen.
+To search the AIP index, use the search bar at the top of the screen on the Archival
+Storage tab.
 
-* Use the first dropdown menu to select whether to search for the File UUID, File
-  path, File extension, AIP UUID, or AIP name.
+#. Use the first dropdown menu to select whether to search for the File UUID, File
+   path, File extension, AIP UUID, or AIP name.
 
-* Use the second dropdown menu to select whether to search by keyword, phrase, or date range.
+#. Use the second dropdown menu to select whether to search by keyword, phrase,
+   or date range.
 
-* Select *Show files?* to display discrete files in your results.
+#. Select *Show files?* to display discrete files in your results.
 
-* Select *Show AICs?* to display Archival Information Collections (aggregates of
-  of multiple AIPs) in your results.
+#. Select *Show AICs?* to display Archival Information Collections (aggregates of
+   of multiple AIPs) in your results.
 
-.. image:: images/SearchArchStor.*
-   :align: center
-   :width: 80%
-   :alt: AIP storage search results
+   .. image:: images/SearchArchStor.*
+      :align: center
+      :width: 80%
+      :alt: AIP storage search results
 
 The search index includes AIP names and METS contents. All METS metadata is indexed
 and searchable.
 
-Clicking on the name of an AIP will open the AIP information screen. From this screen,
-it's possible to upload an associated DIP, re-ingest the AIP, or delete the AIP
-as well as downloading the AIP or viewing the pointer file. Clicking on the name of an image will open the image in the browser.
+Clicking on the name of an AIP will open the AIP information page. From this page,
+it is possible to upload an associated DIP, re-ingest the AIP, or delete the AIP
+as well as downloading the AIP or viewing the pointer file. Clicking on the name
+of an image will open the image in the browser.
 
 By clicking on "View raw" next to a search result, you can also view the raw
 JSON data that contains the METS data, the Archivematica version that
@@ -100,28 +109,37 @@ relative file path within the AIP.
 Deleting an AIP
 ---------------
 
-1. To request AIP deletion, click on the red delete icon next the AIP in the Archival storage tab table.
+#. To request AIP deletion, click on the name of the AIP to open the AIP information page.
 
-.. image:: images/DeleteButton.*
-   :align: center
-   :width: 80%
-   :alt:  Dashboard request to delete AIP
+#. In the Actions section at the bottom of the page, select *Delete*.
 
+   .. image:: images/DeleteButton.*
+      :align: center
+      :width: 80%
+      :alt:  Dashboard request to delete AIP
 
-2. Archivematica will ask for a reason for deletion.
+#. To delete the AIP, you must enter the UUID. Archivematica will also ask for a
+   reason for deletion.
 
-.. image:: images/ReasonDelete.*
-   :align: center
-   :width: 80%
-   :alt: Give a reason for deletion
+   .. image:: images/ReasonDelete.*
+      :align: center
+      :width: 80%
+      :alt: Give a reason for deletion
 
-Choosing to delete an AIP will send a request to your Archival Storage Service administrator. If the administrator approves the request, your AIP will be deleted from your Archival Storage and your index will be updated. If the administrator denies the request, the AIP will remain in storage and your administrator should contact you.
+#. Click delete. When you refresh the Archival Storage tab, the status of your AIP
+   should now read *Deletion requested*.
+
+Choosing to delete an AIP will send a request to your Archival Storage Service
+administrator. If the administrator approves the request, your AIP will be deleted
+from your Archival Storage and your index will be updated. If the administrator
+denies the request, the AIP will remain in storage and your administrator should
+contact you.
 
 .. important::
 
    Note that Archivematica tracks the location and existence
-   of AIPs in 2 ways, within the Storage Service and in the Elastic Search index
-   which you can search via the dashboard. Deleting AIP's directly from the file
+   of AIPs in 2 ways: within the Storage Service and in the Elastic Search index
+   which you can search via the dashboard. Deleting AIPs directly from the file
    system rather than through the Storage Service will cause inconsistencies in
    both applications and is not recommended in a production environment.
 
