@@ -29,27 +29,34 @@ Should you run into an error during ingest, please see :ref:`Error handling <err
 Create a SIP
 ------------
 
-1. Process transfers as described in :ref:`Transfers <transfer>`.
+#. Process transfers as described in :ref:`Transfers <transfer>`. If you selected
+   "Create single SIP and continue processing" on the Transfer tab, your SIP has
+   been created and Archivematica will begin running Ingest tasks. Click on the Ingest
+   tab to continue working with your SIP.
 
-2. Click on the Ingest tab.
+#. The single SIP will move through a number of micro-services. If you have
+   preconfigured Archivematica to do so, processing will stop at a decision point
+   that allows you to choose a file identification method to base normalization
+   upon or to choose to use pre-existing data gathered during identification at
+   the transfer stage. Archivematica default is to use pre-existing data. For more
+   about this option, see :ref:`Administer — Processing configuration <dashboard-processing>`.
 
-3. The single SIP will move through a number of micro-services. If the user has preconfigured Archivematica to do so, processing will stop at a decision point that allows the user to choose a file identification method to base normalization upon or to choose to use pre-existing data gathered during identification at the transfer stage. Archivematica default is to use pre-existing data. For more about this option, see :ref:`Administer — Processing configuration <dashboard-processing>`.
+#. Once the SIP reaches "Normalize", you will be given several options for how Archivematica
+   should normalize the SIP. Choose the option most suitable for your workflow.
 
-4. Wait until the SIP reaches "Normalize" and a bell icon appears.
+   .. figure:: images/Normalize1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Archivematica Normalization micro-service
 
-.. figure:: images/Normalize1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Archivematica Normalization micro-service
+      Normalization micro-service
 
-   Normalization micro-service
+#. To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, below.
 
-5. To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, below.
+#. To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`, below.
 
-6. To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`, below.
-
-7. For selecting a normalization option, see :ref:`Normalization <normalize>`, below.
+#. For selecting a normalization option, see :ref:`Normalization <normalize>`, below.
 
 
 .. _arrange-sip:
@@ -57,90 +64,121 @@ Create a SIP
 Arrange a SIP from backlog
 --------------------------
 
-1. First, retrieve content from transfer backlog. Use the Transfer backlog search bars at the top of the Ingest tab to find the transfer(s) and/or object(s)you'd like to ingest, or browse the entire backlog by clicking Search transfer backlog with a blank search. This will populate the Originals pane of the Ingest dashboard. Note: Multi-item select is not yet included in this feature, though entire folders/directories can be moved.
+This section refers to the backlog arrangement feature on the ingest page, rather
+than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog <backlog>`.
 
-.. figure:: images/Ingest-panes.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Transfer backlog search showing population of the Originals pane
+#. Select content from the backlog by either searching for it through the backlog
+   search bars at the top of the Ingest tab or by browsing the backlog by clicking
+   on the folder icons in the *Originals* pane. Note: Multi-item select is not yet included
+   in this feature, though entire folders/directories can be moved.
 
-   Transfer backlog search results in populating Originals pane
+   .. figure:: images/Ingest-panes.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Transfer backlog search showing population of the Originals pane
 
-Archivematica will display the directories in Transfer backlog including the number of objects in each directory. To hide directories from the Originals pane, click on the directory and click Hide.
+      Transfer backlog search results in populating Originals pane
 
-2. Drag and drop the transfer directory(ies) and/or object(s) you wish to arrange and ingest as a SIP from the Originals pane to the Arrange pane, or create an arrangement structure for your SIP (see step 4, below).
+#. Archivematica will display the directories available in Transfer backlog, including the
+   number of objects in each directory. To hide directories from the Originals pane,
+   click on the directory and click Hide.
 
-.. figure:: images/Backlog-arrange-pane.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Dragging and dropping directories from Originals pane to Arrange pane
+#. Drag and drop the transfer directory(ies) and/or object(s) you wish to arrange
+   from the Originals pane to the Arrange pane. By dragging and dropping, you can
+   create an arrangement structure for your SIP. Note that all metadata, submission
+   documentation, and other associated data is also copied to the arrange pane with
+   your object(s). A copy also remains with anything you leave in the Originals pane.
+   These files are hidden because they cannot be arranged independently of the objects
+   to which they relate.
 
-   Drag and drop from Originals pane to Arrange pane
+   .. figure:: images/Backlog-arrange-pane.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Dragging and dropping directories from Originals pane to Arrange pane
 
-.. note::
+      Drag and drop from Originals pane to Arrange pane
 
-   There will be a discrepancy between the object count in the originals pane
-   vs the arrange pane after a directory is dragged over. This is because the
-   originals pane is counting metadata and submission documentation, including
-   the METS file created during Transfer.
+   .. note::
 
-3. Click on the directory in the Arrange pane to select, and then click Create SIP. Archivematica will confirm that you wish to create a SIP, and then continue through the ingest process.
+      In the above example, the Project.zip directory was dragged from the Originals pane
+      to the Arrange pane. Note that the Project.zip directory in the Originals pane
+      has been greyed out to indicate that the file has been added to a potential
+      SIP.
 
-4. To arrange your SIP, create one or more directories in the Arrange pane by clicking on the Add Directory button. You can add separate directories or directories nested inside of each other. Note: You cannot rename a directory once you have created it; you must delete it and create a directory with a new name.
+#. Click on the directory in the Arrange pane to select, and then click Create SIP.
+   Archivematica will confirm that you wish to create a SIP from the selected objects
+   and then proceed through the ingest micro-services.
 
-.. figure:: images/Arrange-new-directory.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Creating a new directory in the Arrange pane
+#. To arrange your SIP, create one or more directories in the Arrange pane by clicking
+   *Add Directory*. You can create directories nested inside of each other. Note: You
+   cannot rename a directory once you have created it; you must delete it and create
+   a directory with a new name.
 
-   Create a new directory in Arrange pane
+   .. figure:: images/Arrange-new-directory.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Creating a new directory in the Arrange pane
 
-5. Click and drag files from the Originals pane into your desired directory in the arrange panel. You can move either individual files or entire directories. Note: All files must be in a directory inside of Arrange. “Arrange” cannot be used as the top directory.
+      Create a new directory in Arrange pane
 
-6. When you have completed moving files and directories into the Arrange pane, click on the top level directory which you wish to include in your SIP. Click on Create SIP. Any files or directories which are not inside the directory you chose will remain in the Arrange pane until you create a SIP using these files and directories.
+#. Click and drag files from the Originals pane into your desired directory in the
+   arrange panel. You can move either individual files or entire directories. Note:
+   All files must be in a directory inside of Arrange. “Arrange” cannot be used as
+   the top directory.
 
-.. figure:: images/Create-SIP.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Create a new SIP in Arrange pane
+#. When you have completed moving files and directories into the Arrange pane, select
+   your desired top-level directory - this is the directory that will become
+   your SIP. Click on Create SIP. Any files or directories which are not inside
+   the directory you choose will remain in the Arrange pane until you create a SIP
+   that includes these files and directories.
 
-   Create a new SIP by clicking on a directory within Arrange pane
+   .. figure:: images/Create-SIP.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Create a new SIP in Arrange pane
 
-Archivematica will confirm that you wish to create a SIP and after receiving
-confirmation, proceed to the next micro-services to create AIPs and DIPs as
-selected by the user.
+      Create a new SIP by clicking on a directory within Arrange pane
+
+#. Archivematica will confirm that you wish to create a SIP and, after receiving
+   confirmation, will proceed to the Ingest microservices.
 
 .. _hierarchical-dip:
 
 Arranging a SIP for AtoM
 ------------------------
 
-If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish to add levels of description to your directories and/or objects. Archivematica will add a logical structMAP to the METS file, which AtoM will use to create information objects, applying the chosen levels of description. Note that if you do not apply a level of description to a digital object, AtoM will automatically assign it the level of "item".
+If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish to add
+levels of description to your directories and/or objects. Archivematica will add a logical
+structMAP to the METS file, which AtoM will use to create information objects, applying the
+chosen levels of description. Note that if you do not apply a level of description to a
+digital object, AtoM will automatically assign it the level of "item".
 
-This functionality is supported in AtoM 2.2 and higher.
+This functionality is supported with AtoM 2.2 and higher.
 
-1. Click to select a directory or object, then click Edit metadata to choose the level of description.
+#. Select a directory or object in the Arrange pane. Click *Edit metadata* to choose the
+   level of description.
 
-.. image:: images/choose_lod.*
-   :align: center
-   :width: 80%
-   :alt: Choosing the AtoM level of description
+   .. image:: images/choose_lod.*
+      :align: center
+      :width: 80%
+      :alt: Choosing the AtoM level of description
 
-2. As you add levels of description they will be shown in the arrange pane for you to review before finalizing your SIP.
+#. As you add levels of description they will be shown in the arrange pane for you
+   to review before finalizing your SIP.
 
-.. image:: images/view_arrangement.*
-   :align: center
-   :width: 70%
-   :alt: Viewing levels of description applied to SIP
+   .. image:: images/view_arrangement.*
+      :align: center
+      :width: 70%
+      :alt: Viewing levels of description applied to SIP
 
 .. note::
 
-   To have the AtoM levels of description appear you must have entered your AtoM credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
-
+   To have the AtoM levels of description appear you must have entered your AtoM
+   credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
    Levels of description in AtoM are managed as a taxonomy. To edit, see :ref:`Terms <atom:terms>`.
 
 .. tip::
@@ -154,7 +192,10 @@ This functionality is supported in AtoM 2.2 and higher.
 Add metadata
 ------------
 
-In Archivematica, metadata can be added either prior to the normalization step or after. Archivematica will prompt you with a reminder to add metadata if desired during the Process metadata directory micro-service. See :ref:`AtoM Dublin Core <atom:dc-template>`for information about the Dublin Core elements available.
+In Archivematica, metadata can be added either prior to the normalization step or after.
+Archivematica will prompt you with a reminder to add metadata if desired during the
+Process metadata directory micro-service. See :ref:`AtoM Dublin Core <atom:dc-template>`
+for information about the Dublin Core elements available.
 
 .. seealso::
 
@@ -165,47 +206,55 @@ In Archivematica, metadata can be added either prior to the normalization step o
     * :ref:`Import metadata <import-metadata>`
 
 
-1. Click on the template icon.
+#. Click on the template icon.
 
-.. figure:: images/MetadataIcon1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Location of the template icon
+   .. figure:: images/MetadataIcon1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Location of the template icon
 
-   To add metadata, click on the template icon
+      To add metadata, click on the template icon
 
-2. This will take you to the SIP detail panel. On the left-hand side, under metadata click Add.
+#. This will take you to the SIP detail panel. Under the Metadata heading, click Add.
 
-.. figure:: images/SIPDetailPanel1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: SIP detail panel
+   .. figure:: images/SIPDetailPanel1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: SIP information page
 
-   SIP detail panel
+      SIP information page
 
-3. Add metadata as desired and save it by clicking the Create button at the bottom of the screen. Hovering in a field will activate tooltips that define the Dublin Core element and provide a link to `ISO 15836 Dublin Core Metadata Element Set <http://dublincore.org/documents/dces/>`_. Note that you can only add metadata at the SIP level when using the template. If you would like to add metadata to a digital object, you will need to do that once the object has been uploaded to your access system.
+#. Add metadata as desired and save it by clicking the Create button at the bottom
+   of the screen. Hovering over a field will activate tooltips that define the Dublin
+   Core element and provide a link to `ISO 15836 Dublin Core Metadata Element Set <http://dublincore.org/documents/dces/>`_.
+   Note that you can only add metadata at the aggregate level when using the template
+   - that is, the metadata will be applied to each object in the SIP. If you would
+   like to add metadata to a digital object, you must :ref:`Import metadata via CSV <import-metadata>`
+   or add the metadata once the object has been uploaded to your access system.
 
-.. figure:: images/Metadataform1.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: SIP metadata entry form
+   .. figure:: images/Metadataform1.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: SIP metadata entry form
 
    SIP metadata entry form
 
-4. When you click Create, you will see the metadata entry in the list page. To edit it further, click Edit on the right-hand side. To delete it, click Delete. To add more DC metadata, click the Add button below the list.
+#. When you click Create, you will see the metadata entry in the list page. To edit
+   it further, click Edit on the right-hand side. To delete it, click Delete. To
+   add more DC metadata, click the Add button below the list.
 
-.. figure:: images/Metadatalist1.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: SIP metadata list
+   .. figure:: images/Metadatalist1.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: SIP metadata list
 
-   SIP metadata list
+      SIP metadata list
 
-5. Return to the ingest tab to continue processing the SIP.
+#. Return to the ingest tab to continue processing the SIP.
 
 .. _add-rights:
 
