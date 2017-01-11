@@ -219,10 +219,22 @@ users, among other things.
 Metadata
 --------
 
+Archivematica employs several metadata standards. This section describes how Archivematica
+implements and makes use of them.
+
 * :ref:`Import metadata <import-metadata>`
 * :ref:`PREMIS <premis-template>`
 * :ref:`Dublin Core <dublin_core>`
 
+
+Translations
+------------
+
+Beginning with Archivematica 1.6.1, the community has been able to support the project
+by volunteering their time and effort to translate the Archivematica documentation,
+the interface, and the Storage Service into other languages.
+
+* :ref:`Contributing translations to the Archivematica project <translations>`
 
 .. _admin-manual-home:
 
