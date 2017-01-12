@@ -49,18 +49,20 @@ data using a Python script that leverages the pyes library.
 
 The first step, when using pyes, is to require the module. The following code
 imports pyes functionality on a system on which Archivematica is installed.
+(Note that you may have to change the path passed to ``sys.path.append`` to
+match your install configuration.)
 
 .. code:: bash
 
    import sys
-   sys.path.append("/home/demo/archivematica/src/archivematicaCommon/lib/externals")
-   from pyes import *
+   sys.path.append("/vagrant/src/archivematica/src/archivematicaCommon/lib/externals")
+   import pyes
 
 Next you'll want to create a connection to Elasticsearch.
 
 .. code:: bash
 
-   conn = ES('127.0.0.1:9200')
+   conn = pyes.ES('127.0.0.1:9200')
 
 **Full text searching**
 
@@ -74,7 +76,7 @@ could also supply keywords, such as a certain AIP UUID.
    start_page     = 1
    items_per_page = 20
 
-   q = StringQuery('*')
+   q = pyes.QueryStringQuery('*')
 
    try:
      results = conn.search_raw(
@@ -89,11 +91,11 @@ could also supply keywords, such as a certain AIP UUID.
 
 **Querying for specific data**
 
-While the "StringQuery" query type is good for broad searches, you may want to
-narrow a search down to a specific field of data to reduce false positives.
-Below is an example of searching documents, using "TermQuery", matching
-criteria within specific data. As, by default, Elasticsearch stores term
-values in lowercase the term value searched for must also be lowercase.
+While the ``pyes.QueryStringQuery`` [1]_ query type is good for broad searches,
+you may want to narrow a search down to a specific field of data to reduce false
+positives. Below is an example of searching documents, using "TermQuery",
+matching criteria within specific data. As, by default, Elasticsearch stores
+term values in lowercase the term value searched for must also be lowercase.
 
 .. code:: bash
 
@@ -103,7 +105,7 @@ values in lowercase the term value searched for must also be lowercase.
 
    conn = pyes.ES('127.0.0.1:9200')
 
-   q = pyes.TermQuery("METS.amdSec.ns0:amdSec_list.@ID", "amdsec_8")
+   q = pyes.TermQuery("mets.ns0:mets_dict_list.ns0:amdSec_dict_list.@ID", "amdsec_1")
 
    try:
        results = conn.search_raw(query=q, indices='aips')
@@ -114,7 +116,7 @@ values in lowercase the term value searched for must also be lowercase.
 **Displaying search results**
 
 Now that you've performed a couple of searches, you can display some results.
-The below logic cycles through each hit in a results set, representing an AIP
+The logic below cycles through each hit in a results set, representing an AIP
 file, and prints the UUID of the AIP the file belongs in, the Elasticsearch
 document ID corresponding to the indexed file data, and the path of the file
 within the AIP.
@@ -125,7 +127,7 @@ within the AIP.
        document_ids = []
        for item in results.hits.hits:
            aip = item._source
-           print 'AIP ID: ' + aip['AIPUUID'] + ' / Document ID: ' + item._id
+           print 'AIP ID: ' + aip['uuid'] + ' / Document ID: ' + item._id
            print 'Filepath: ' + aip['filePath']
            print
            document_ids.append(item._id)
@@ -133,25 +135,36 @@ within the AIP.
 **Fetching specific documents**
 
 If you want to get Elasticsearch data for a specific AIP file, you can use the
-Elasticsearch document ID. The above code populates the document_ids array and
-the below code uses this data, retrieving individual documents and extracting
+Elasticsearch document ID. The code above populates the ``document_ids`` array and
+the code below uses this data, retrieving individual documents and extracting
 a specific item of data from each document.
 
 .. code:: bash
 
    for document_id in document_ids:
-       data = conn.get(index_name, type_name, document_id)
+       data = conn.get('aips', 'aip', document_id)
 
-       format = data['METS']['amdSec']['ns0:amdSec_list'][0]['ns0:techMD_list'][0]['ns0:mdWrap_list'][0]['ns0:xmlData_list'][0]['ns1:object_list'][0]['ns1:objectCharacteristics_list'][0]['ns1:format_list'][0]['ns1:formatDesignation_list'][0]['ns1:formatName']
+       format = data[
+           'mets'][
+           'ns0:mets_dict_list'][0][
+           'ns0:amdSec_dict_list'][0][
+           'ns0:techMD_dict_list'][0][
+           'ns0:mdWrap_dict_list'][0][
+           'ns0:xmlData_dict_list'][0][
+           'ns2:object_dict_list'][0][
+           'ns2:objectCharacteristics_dict_list'][0][
+           'ns2:format_dict_list'][0][
+           'ns2:formatDesignation_dict_list'][0][
+           'ns2:formatName']
 
-       print 'Format for document ID ' + document_id + ' is ' + format
+       print 'Format of one of the files in document ID ' + document_id + ' is ' + format
 
 **Augmenting documents**
 
 To add additional data to an Elasticsearch document, you'll need the document
 ID. The following code shows an Elasticsearch query being used to find a
 document and update it with additional data. Note that the name of the data
-field being added, "__public", is prefixed with two underscores. This practice
+field being added, ``__public``, is prefixed with two underscores. This practice
 prevents the accidental overwriting of system or Archivematica-specific data.
 System data is prefixed with a single underscore.
 
@@ -163,7 +176,7 @@ System data is prefixed with a single underscore.
 
    conn = pyes.ES('127.0.0.1:9200')
 
-   q = pyes.TermQuery("METS.amdSec.ns0:amdSec_list.@ID", "amdsec_8")
+   q = pyes.TermQuery("METS.amdSec.ns0:amdSec_list.@ID", "amdsec_1")
 
    results = conn.search_raw(query=q, indices='aips')
 
@@ -183,14 +196,10 @@ System data is prefixed with a single underscore.
 Delete Elasticsearch index through GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To help with Elasticsearch development, Archivematica comes with a plugin for
-Elasticsearch, called
-`Elasticsearch Head <http://mobz.github.com/elasticsearch-head/>`_, that
-provides a web application forcbrowsing and administering Elasticsearch data. \
-It can be accessed at http://your.host.name:9200/_plugin/head/.
-
+If you want to interact with Archivematica's Elasticsearch interface via a web
+interface, you can install
+`Elasticsearch Head <http://mobz.github.com/elasticsearch-head/>`_.
 Elasticsearch Head will allow you to delete an index, if need be.
-
 
 .. image:: images/Elasticsearch_head_delete.png
    :align: center
@@ -207,11 +216,11 @@ programmatically, this can be done with pyes using the following code.
 
    import sys
    sys.path.append("/home/demo/archivematica/src/archivematicaCommon/lib/externals")
-   from pyes import *
-   conn = ES('127.0.0.1:9200')
+   import pyes
+   conn = pyes.ES('127.0.0.1:9200')
 
    try:
-       conn.delete_index('aips')
+       conn.indices.delete_index('aips')
    except:
        print "Error deleting index or index already deleted."
 
@@ -220,42 +229,24 @@ programmatically, this can be done with pyes using the following code.
 Rebuilding the AIP index
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-To rebuild the ElasticSearch AIP index enter the following to find the
-location of the rebuilding script:
+If you need to rebuild the Elasticsearch AIP index, you should install
+`Archivematica's devtools <https://github.com/artefactual/archivematica-devtools>`_
+and execute the following command.
 
 .. code:: bash
 
-   locate rebuild-elasticsearch-aip-index-from-files
+   am rebuild-elasticsearch-aip-index-from-files /var/archivematica/sharedDirectory/www/AIPsStore/
 
-Copy the location of the script then enter the following to perform the
-rebuild (substituting "/your/script/location/rebuild-elasticsearch-aip-index-
-from-files" with the location of the script):
-
-.. code:: bash
-
-   /your/script/location/rebuild-elasticsearch-aip-index-from-files <location of your AIP store>
 
 Rebuilding the transfer index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Similarly, to rebuild the ElasticSearch transfer data index enter the
-following to find the location of the rebuilding script:
-
-.. code:: bash
-
-   locate rebuild-elasticsearch-transfer-index-from-files
-
-Copy the location of the script then enter the following to perform the
-rebuild (substituting "/your/script/location/rebuild-elasticsearch-transfer-
-index-from-files" with the location of the script):
-
-.. code:: bash
-
-   /your/script/location/rebuild-elasticsearch-transfer-index-from-files <location of your AIP store>
+At present, Archivematica's devtools program is not able to rebuild the
+Elasticsearch transfer index.
 
 .. seealso::
 
-   `Elasticsearch troubleshooting <https://www.accesstomemory.org/en/docs/2.1/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch>`_
+   `Elasticsearch troubleshooting <https://www.accesstomemory.org/en/docs/2.3/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch>`_
    help from AtoM documentation.
 
 .. _data-backup:
@@ -269,7 +260,7 @@ In Archivematica there are three types of data you'll likely want to back up:
 
 * MySQL
 
-* ElasticSearch
+* Elasticsearch
 
 MySQL is used to store short-term processing data. You can back up the MySQL
 database by using the following command:
@@ -278,9 +269,10 @@ database by using the following command:
 
    mysqldump -u <your username> -p<your password> -c MCP > <filename of backup>
 
-ElasticSearch is used to store long-term data. Instructions and scripts for
-backing up and restoring ElasticSearch are available
-`here <http://tech.superhappykittymeow.com/?p=296>`_.
+Elasticsearch is used to store long-term data. Instructions and scripts for
+backing up and restoring Elasticsearch are available
+`here <https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html>`_
+
 
 .. _admin-faq:
 
@@ -298,7 +290,7 @@ How to restart the Archivematica services
    sudo stop archivematica-mcp-client
    sudo /etc/init.d/apache2 stop
    sudo /etc/init.d/gearman-job-server stop
-   sudo stop mysql
+   sudo /etc/init.d/mysql stop
    sudo /etc/init.d/elasticsearch stop
 
 **Starting**
@@ -356,8 +348,10 @@ Browser compatability
 
 Archivematica has been tested most extensively with Firefox and Chrome. There are
 known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_). Minimal, but successful,
-testing has been done with Microsoft Edge.
+transfers in the dashboard
+(`Issue 7246 <https://projects.artefactual.com/issues/7246>`_). Minimal, but
+successful, testing has been done with Microsoft Edge.
 
+.. [1] In older versions of pyes, ``QueryStringQuery`` is ``StringQuery``.
 
 :ref:`Back to the top <maintenance>`
