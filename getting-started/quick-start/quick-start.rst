@@ -148,7 +148,7 @@ by clicking on the Transfer tab in your Archivematica instance.
 The transfer process is made up of a series of micro-services, which are in turn
 made up of jobs. A micro-service is a group of actions that accomplish a specific
 goal within Archivematica, like verifying that your transfer complies with Archivematica's
-transfer requirements. Jobs are discreet actions, like moving the contents of your transfer
+transfer requirements. Jobs are discrete actions, like moving the contents of your transfer
 to a processing directory. Each micro-service can be expanded if you click on the
 micro-service name. This allows you to see every job that makes up the
 micro-service. You can view the command for each job by clicking on the gear icon
