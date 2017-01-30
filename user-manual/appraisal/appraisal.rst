@@ -143,48 +143,79 @@ Clicking on the name of the file opens a preview in the Analysis pane.
 ArchivesSpace Resources
 -----------------------
 
-The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to resources that have been created in an ArchivesSpace repository. Settings for ArchivesSpace DIP upload should be configured in the :ref:`Dashboard administration tab <dashboard-admin>` to associate the ArchivesSpace repository. In the ArchivesSpace pane, files transferred into Archivematica can be associated with resources created in ArchivesSpace and SIPs can be sent to Ingest.
+The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to 
+resources that have been created in an ArchivesSpace repository. Settings for 
+ArchivesSpace DIP upload should be configured in the
+ :ref:`Dashboard administration tab <dashboard-admin>` to associate the 
+ ArchivesSpace repository. In the 
+ArchivesSpace pane, files transferred into Archivematica can be associated with 
+resources created in ArchivesSpace and SIPs can be sent to Ingest.
 
 ArchivesSpace Terms
 ===================
 
-Finding aids in ArchivesSpace are called “resources” (i.e. fonds, collection, record group, etc.). Lower levels of description nested under resources are “archival objects” (series, files, items, etc.). Metadata about digital files is managed separately as “digital objects” which can be associated with resources/archival objects at any level of description. More information on ArchivesSpace can be found at http://archivesspace.org/
+Finding aids in ArchivesSpace are called “resources” (i.e. fonds, collection, 
+record group, etc.). Lower levels of description nested under resources are 
+“archival objects” (series, files, items, etc.). Metadata about digital files is 
+managed separately as “digital objects” which can be associated with 
+resources/archival objects at any level of description. More information on 
+ArchivesSpace can be found at http://archivesspace.org/
 
 Searching for ArchivesSpace Resources
 =====================================
 
-The search box at the top of the ArchivesSpace panel allows for searching for resources within an ArchivesSpace repository. A user can search by the title or identifier of a resource.
+The search box at the top of the ArchivesSpace panel allows for searching for 
+resources within an ArchivesSpace repository. A user can search by the title or 
+identifier of a resource.
 
-ArchivesSpace resources can be expanded to show lower levels of description. Folder icons indicate ArchivesSpace resources and archival objects which have child records nested under them. Page icons indicate resources and archival objects that do not have child records. Digital object components are designated by the parallel lines icon.
+ArchivesSpace resources can be expanded to show lower levels of description. 
+Folder icons indicate ArchivesSpace resources and archival objects which have 
+child records nested under them. Page icons indicate resources and archival 
+objects that do not have child records. Digital object components are designated 
+by the parallel lines icon.
 
 .. image:: images/archivesspace_search.*
    :align: center
    :width: 60%
-   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of heirarchy
+   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show 
+   levels of heirarchy
 
 Creating Archival Description
 =============================
 
-Options at the top of the ArchivesSpace pane allow for adding to and changing an existing ArchivesSpace resource, such as adding new archival objects and digital object components.
+Options at the top of the ArchivesSpace pane allow for adding to and changing an 
+existing ArchivesSpace resource, such as adding new archival objects and digital 
+object components.
 
-Selecting a resource or archival object and using “Add New Child Record” adds a new archival object nested underneath the selected level of description. Clicking this button brings up a dialog box for entering metadata. At a minimum, a new archival object must have a title and a level of description, otherwise “save” is not available.
+Selecting a resource or archival object and using “Add New Child Record” adds a 
+new archival object nested underneath the selected level of description. 
+Clicking this button brings up a dialog box for entering metadata. At a minimum, 
+a new archival object must have a title and a level of description, otherwise 
+“save” is not available.
 
 .. image:: images/archivesspace_add_new_child.*
    :align: center
    :width: 60%
    :alt: Add new child record dialog box
 
-The new archival object will appear in the ArchivesSpace pane and the change will be reflected in the ArchivesSpace repository. The “Delete Selected” button can be used to remove mistakenly created archival objects.
+The new archival object will appear in the ArchivesSpace pane and the change 
+will be reflected in the ArchivesSpace repository. The “Delete Selected” button 
+can be used to remove mistakenly created archival objects.
 
-“Add New Digital Object Component” similarly allows for adding digital object components to ArchivesSpace resources/archival objects.
+“Add New Digital Object Component” similarly allows for adding digital object 
+components to ArchivesSpace resources/archival objects.
 
 .. note::
 
-   Digital object components will not appear in the ArchivesSpace repository until later in the workflow when the AIP for the digital object is stored.
+   Digital object components will not appear in the ArchivesSpace repository 
+   until later in the workflow when the AIP for the digital object is stored.
 
-Both archival objects and digital object components can be created in the ArchivesSpace pane at any level of description; however, new resources can only be created in ArchivesSpace.
+Both archival objects and digital object components can be created in the 
+ArchivesSpace pane at any level of description; however, new resources can only 
+be created in ArchivesSpace.
 
-Basic metadata for existing archival objects and digital object components can be edited using the “Edit Metadata” button.
+Basic metadata for existing archival objects and digital object components can 
+be edited using the “Edit Metadata” button.
 
 .. image:: images/archivesspace_edit_metadata.*
    :align: center
@@ -207,9 +238,11 @@ Basic metadata for existing archival objects and digital object components can b
    :width: 100%
    :alt: Adding PREMIS rights information
 
-   Specify the type of rights information from the drop-down menu and fill out the relevant fields.
+   Specify the type of rights information from the drop-down menu and fill out 
+   the relevant fields.
 
-The form for adding rights includes two pages of fields. Once added, acts can be edited or deleted and further acts can be added.
+The form for adding rights includes two pages of fields. Once added, acts can be 
+edited or deleted and further acts can be added.
 
 .. image:: images/archivesspace_edit_rights_metadata3.*
    :align: center
@@ -225,30 +258,47 @@ The form for adding rights includes two pages of fields. Once added, acts can be
 Adding Files to ArchivesSpace Resources and Starting SIPs
 ---------------------------------------------------------
 
-Files from transfers in the Backlog pane can be associated with ArchivesSpace resources by dragging files from the backlog to digital object components.
+Files from transfers in the Backlog pane can be associated with ArchivesSpace 
+resources by dragging files from the backlog to digital object components.
 
 .. image:: images/backlog_and_archivesspace.*
    :align: center
    :width: 80%
    :alt: Backlog and analysis panes
 
-Digital object components must be created in the Appraisal tab (digital objects created and linked to resources in ArchivesSpace will not appear in the Appraisal tab).
+Digital object components must be created in the Appraisal tab (digital objects 
+created and linked to resources in ArchivesSpace will not appear in the 
+Appraisal tab).
 
-One file or directory from a transfer can be moved at a time. A file can only be added once to an ArchivesSpace resource. Files that have been added to a digital object component will appear with a strike-through in the backlog.
+One file or directory from a transfer can be moved at a time. A file can only be 
+added once to an ArchivesSpace resource. Files that have been added to a digital
+ object component will appear with a strike-through in the backlog.
 
-Once all files have been added to their place in the arrangement, SIPs can be started in Ingest by selecting the resource/archival object and clicking “Finalize Arrangement.” SIPs can be created from any level of description (i.e. a SIP can be started for an entire resource or from an archival object within a resource such as a series).
+Once all files have been added to their place in the arrangement, SIPs can be 
+started in Ingest by selecting the resource/archival object and clicking 
+“Finalize Arrangement.” SIPs can be created from any level of description 
+(i.e. a SIP can be started for an entire resource or from an archival object 
+within a resource such as a series).
 
 .. _arrangement:
 
 Arrangement
 -----------
 
-The arrangement pane provides options for appraising and arranging files from the backlog for users not using ArchivesSpace.
+The arrangement pane provides options for appraising and arranging files from 
+the backlog for users not using ArchivesSpace.
 
-Files from the Backlog pane can be dragged to the Arrangement pane to arrange the files and create SIPs.
+Files from the Backlog pane can be dragged to the Arrangement pane to arrange 
+the files and create SIPs.
 
-To create structure within the SIP or to create multiple SIPs, use “Add directory.” This button can be used to create separate directories or to create directories nested within other directories.
+To create structure within the SIP or to create multiple SIPs, use “Add 
+directory.” This button can be used to create separate directories or to create 
+directories nested within other directories.
 
-Once all relevant files have been dragged from the Backlog pane to directories in Arrangement, select the top-level directory corresponding to the intended SIP, and click “Create SIP” to send the SIP to Ingest. Other directories will remain in the Arrange pane until arrangement is complete and they are sent to Ingest.
+Once all relevant files have been dragged from the Backlog pane to directories 
+in Arrangement, select the top-level directory corresponding to the intended 
+SIP, and click “Create SIP” to send the SIP to Ingest. Other directories will 
+remain in the Arrange pane until arrangement is complete and they are sent to 
+Ingest.
 
 :ref:`Back to the top <appraisal>`
