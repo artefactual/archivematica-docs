@@ -5,8 +5,8 @@ Appraisal
 =========
 
 The Appraisal tab provides a space between Transfer and Ingest for archivists to 
-make decisions about what files from transfers should become SIPs and how these 
-files should be arranged within the SIP. It includes features for examining the 
+decide which files from transfers should become SIPs and how these files should 
+be arranged within the SIP. It includes features for examining the 
 characteristics and contents of the files as well as for connecting files to 
 finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature, 
 found in previous versions of Archivematica, also has moved to the Appraisal tab 
@@ -18,7 +18,8 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 * :ref:`Analysis <analysis_pane>`
 * :ref:`File List <File_list_pane>`
 * :ref:`ArchivesSpace Resources <archivesspace_pane>`
-* :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs <adding_files_archivesspace>`
+* :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs
+ <adding_files_archivesspace>`
 * :ref:`Arrangement <arrangement>`
 
 .. _backlog_pane:
@@ -26,7 +27,9 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 Transfers in the Backlog
 ------------------------
 
-Transfers that have been sent to the backlog can be found in the Backlog pane of the Appraisal tab. Search the backlog by entering search terms and parameters in the search box at the top of the page.
+Transfers that have been sent to the backlog can be found in the Backlog pane of 
+the Appraisal tab. Search the backlog by entering search terms and parameters in 
+the search box at the top of the page.
 
 .. image:: images/search_backlog.*
    :align: center
@@ -36,14 +39,19 @@ Transfers that have been sent to the backlog can be found in the Backlog pane of
 Adding Tags
 ===========
 
-Tags can be added to selected files in the backlog by entering a tag name and clicking the “Add tag to selected files” button at the top of the Backlog pane.
+Tags can be added to selected files in the backlog by entering a tag name and 
+clicking the “Add tag to selected files” button at the top of the Backlog pane.
 
 .. image:: images/tags_backlog.*
    :align: center
    :width: 60%
    :alt: Adding tags to files in the backlog
 
-Tags that have already been created appear in the Tags drop-down menu. Choosing a particular tag filters the files that appear within transfers in the Backlog pane by that tag. Filters added in other panes in the Appraisal tab will also appear listed under the Tags drop-down menu. Filters can be removed by clicking the “x” next to them.
+Tags that have already been created appear in the Tags drop-down menu. Choosing 
+a particular tag filters the files that appear within transfers in the Backlog 
+pane by that tag. Filters added in other panes in the Appraisal tab will also 
+appear listed under the Tags drop-down menu. Filters can be removed by clicking 
+the “x” next to them.
 
 .. image:: images/adding_filters.*
    :align: center
@@ -57,12 +65,19 @@ Tags can also be added from within the File list (see below).
 Analysis
 --------
 
-The analysis pane allows the user to explore files in transfers sent to the backlog. Files selected in the Backlog pane populate the Analysis pane and can be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview File.
+The analysis pane allows the user to explore files in transfers sent to the 
+backlog. Files selected in the Backlog pane populate the Analysis pane and can 
+be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview File.
 
 1) Objects
 ==========
 
-In the Objects tab, information about selected files can be viewed in the form of a report or a visualization. The Report view provides information about the files’ format, PUID, group, number of files, and size. Files can also be analyzed through visualizations with options for representing the total number of files in each format and for representing the total size of files for each format represented in the list.
+In the Objects tab, information about selected files can be viewed in the form 
+of a report or a visualization. The Report view provides information about the 
+files’ format, PUID, group, number of files, and size. Files can also be 
+analyzed through visualizations with options for representing the total number 
+of files in each format and for representing the total size of files for each 
+format represented in the list.
 
 .. figure:: images/analysis_report.*
    :align: center
@@ -81,12 +96,18 @@ In the Objects tab, information about selected files can be viewed in the form o
 
    Visualization showing formats by total size of the selected files
 
-Files listed in Analysis can also be filtered by Format, PUID, and Group through selecting values for these facets in the Report view. For instance, if the user clicks on the Group “Portable Document Format” listed for one of the files, this filter is added and only PDF files remain listed in the Analysis pane. Filters appear under the Tags drop-down menu and can be removed by clicking the “x” beside the name.
+Files listed in Analysis can also be filtered by Format, PUID, and Group through 
+selecting values for these facets in the Report view. For instance, if the user 
+clicks on the Group “Portable Document Format” listed for one of the files, this
+filter is added and only PDF files remain listed in the Analysis pane. Filters
+appear under the Tags drop-down menu and can be removed by clicking the “x” 
+beside the name.
 
 2) Tags
 =======
 
-The Tags tab lists any tags that have been added and how many of each tag are present in the selected files.
+The Tags tab lists any tags that have been added and how many of each tag are 
+present in the selected files.
 
 .. image:: images/analysis_tags.*
    :align: center
@@ -96,7 +117,11 @@ The Tags tab lists any tags that have been added and how many of each tag are pr
 3) Examine Contents
 ===================
 
-If Examine Contents (using the tool Bulk Extractor) was used during transfer, the Examine Contents tab provides the reports created during this micro-service. This tab includes options for listing files that potentially contain personally identifiable information (PII) or credit card numbers. Examine Contents also includes an option for adding tags to these files.
+If Examine Contents (using the tool Bulk Extractor) was used during transfer, 
+the Examine Contents tab provides the reports created during this micro-service. 
+This tab includes options for listing files that potentially contain personally 
+identifiable information (PII) or credit card numbers. Examine Contents also 
+includes an option for adding tags to these files.
 
 .. figure:: images/analysis_examine_contents.*
    :align: center
@@ -104,22 +129,32 @@ If Examine Contents (using the tool Bulk Extractor) was used during transfer, th
    :width: 100%
    :alt: Examine contents tab in the anaysis pane
 
-   Examine contents tab showing a selected transfer where no files with PII were found
+   Examine contents tab showing a selected transfer where no files with PII were 
+   found
 
 4) Preview File
 ===============
 
-Files selected in the File List pane (see below) can be previewed in the Preview File tab.
+Files selected in the File List pane (see below) can be previewed in the Preview 
+File tab.
 
 .. _File_list_pane:
 
 File List
 ------------
-The File List pane is also populated through selecting files in the Backlog pane. File List provides information about the filenames, sizes, dates files were last modified (if available), and any tags that have been added to the selected files.
+The File List pane is also populated by selecting files in the Backlog 
+pane. File List provides information about the filenames, sizes, dates files 
+were last modified (if available), and any tags that have been added to the 
+selected files.
 
-Any filters that have been applied in the Analysis pane or through the Tags drop-down menu will affect what files appear in File List. In addition, a date range can be added to filter files by the date they were last modified.
+Any filters that have been applied in the Analysis pane or through the Tags 
+drop-down menu will affect what files appear in File List. In addition, a date 
+range can be added to filter files by the date they were last modified.
 
-This pane also provides an option for adding tags. Files can be selected by checking the checkbox next to their filename, creating a tag name, and clicking “Add tag to selected files.” Tags can be removed from files by clicking the “-“ next to the tag name.
+This pane also provides an option for adding tags. Files can be selected by 
+checking the checkbox next to their filename, creating a tag name, and clicking 
+“Add tag to selected files.” Tags can be removed from files by clicking the “-“ 
+next to the tag name.
 
 .. figure:: images/analysis_file_list.*
    :align: center
