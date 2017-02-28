@@ -18,6 +18,8 @@ Installation
 
 * :ref:`Install for CentOS/Redhat <centos>`
 
+* :ref:`Upgrade from Archivematica 1.5 for CentOS/Redhat <centos-upgrade>`
+
 * :ref:`Docker <docker>`
 
 * :ref:`Vagrant/Ansible <vagrant>`
@@ -498,6 +500,53 @@ Each service have a configuration file in /etc/sysconfig/archivematica-packagena
 **Troubleshooting**
 
 If IPv6 is disabled, Nginx may refuse to start. If that is the case make sure that the listen directives used under /etc/nginx are not using IPv6 addresses like [::]:80.
+
+
+.. _centos-upgrade:
+
+Upgrade from Archivematica 1.5 for CentOS/Redhat
+------------------------------------------------
+
+* First, upgrade the repositories for 1.6:
+
+.. code:: bash
+
+   sudo sed -i 's/1.5.x/1.6.x/g' /etc/yum.repos.d/archivematica-*
+
+* Then, upgrade the packages:
+
+.. code:: bash
+
+   sudo yum update
+
+* Once the new packages are installed, we need to upgrade the databases for both, archivematica and the storage service. This can be done with:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-storage-service
+   cd /usr/share/archivematica/storage-service
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   ";
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-dashboard
+   cd /usr/share/archivematica/dashboard
+   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   ";
+
+* After that, we can restart the archivematica related services, and continue using the system:
+
+.. code:: bash
+
+   sudo systemctl restart archivematica-storage-service
+   sudo systemctl restart archivematica-dashboard
+   sudo systemctl restart archivematica-mcp-client
+   sudo systemctl restart archivematica-mcp-server
+
 
 .. _docker:
 
