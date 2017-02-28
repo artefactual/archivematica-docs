@@ -127,13 +127,13 @@ Once it's done provisioning, you can log in to your virtual machine::
 
 You can also access your Archivematica instance through the web browser:
 
-* Archivematica: `<http://192.168.168.192>`_. Username: demo@example.com, password: demo.
+* Archivematica: `<http://192.168.168.192>`_. Username & password configured on installation.
 * Storage Service: `<http://192.168.168.192:8000>`_. Username: test, password: test.
 
 To get the Storage Service API key, go to `<http://192.168.168.192:8000>`_
 and click on the Administration tab. In the left sidebar, click on *Users*, then
 click on *Edit* for the default user. Scrolling down, you will see the API key 
-for the default user at the bottom of the screen. Copy this into the
+for the default user at the bottom of the screen. Copy this into the API key field when prompted during installation.
 
 .. _quick-start-transfer:
 
