@@ -294,9 +294,85 @@ If you have trouble with the gearman command try this as an alternative:
 Install from source
 -------------------
 
-Installing from source has been tested using ansible scripts. Ansible installations have been tested for new installations but are not fully tested for upgrades.
+Installing from source has been tested using ansible scripts. Ansible 
+installations have been tested for new installations but are not fully tested 
+for upgrades.
 
-Instructions coming soon.
+These instructions are designed to create a test environment on your local 
+machine. The ansible roles referenced here can be used in production deployments 
+by creating your own ansible playbook to run them. See 
+https://github.com/artefactual/deploy-pub/playbooks/archivematica for more 
+details.
+
+The following instructions detail how to install and run Archivematica from 
+source on a virtual machine.
+
+1. Install VirtualBox, Vagrant, and Ansible:
+
+   .. code:: bash
+
+      sudo apt-get install virtualbox vagrant
+      sudo pip install -U ansible
+
+   Vagrant must be at least version 1.5. Check your version with:
+
+   .. code:: bash
+
+      vagrant --version
+
+   If it is not up to date, you can download the newest version from the 
+   `Vagrant website <https://www.vagrantup.com/downloads.html>`_ .
+
+#. Checkout the deployment repo:
+
+   .. code:: bash
+
+      git clone https://github.com/artefactual/deploy-pub.git
+
+#. Download the Ansible roles:
+
+   .. code:: bash
+
+      cd deploy-pub/playbooks/archivematica
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
+#. Create the virtual machine and provision it:
+
+   .. code:: bash
+
+      vagrant up
+
+   .. warning::
+
+     This will take a while.
+     It depends on your computer, but it could take up to an hour.
+     Your computer may be very slow while Archivematica is being provisioned - 
+     be sure to save any work and be prepared to step away from your computer 
+     while Archivematica is building.
+
+#. If there's an error, you can re-run the setup.
+
+   .. code:: bash
+
+      vagrant provision
+
+Once it's done provisioning, you can log in to your virtual machine::
+
+  vagrant ssh
+
+You can also access your Archivematica instance through the web browser:
+
+* Archivematica: `<http://192.168.168.192>`_. Username & password configured on 
+  installation.
+* Storage Service: `<http://192.168.168.192:8000>`_. Username: test, password: 
+  test.
+
+To get the Storage Service API key, go to `<http://192.168.168.192:8000>`_
+and click on the Administration tab. In the left sidebar, click on *Users*, then 
+click on *Edit* for the default user. Scrolling down, you will see the API key 
+for the default user at the bottom of the screen. Copy this into the API key 
+field when prompted during installation.
+
 
 .. _centos:
 
