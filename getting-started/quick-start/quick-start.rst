@@ -8,9 +8,9 @@ This guide walks you through the Archivematica transfer and ingest process
 for testing purposes. It is intended for people who are new to Archivematica and 
 looking to test it out. This is not a guide to install Archivematica for 
 development or production - please see :ref:`Installation <installation>` for 
-full installation instructions. Before you start, you should know a bit about the
- `OAIS reference model <http://www.oclc.org/research/publications/library/2000/lavoie-oais.html>`_
- enough that the acronyms SIP, AIP, and DIP make sense.
+full installation instructions. Before you start, you should know a bit about the 
+`OAIS Reference Model <http://www.oclc.org/research/publications/library/2000/lavoie-oais.html>`_
+enough that the acronyms SIP, AIP, and DIP make sense.
 
 This guide runs through the basic actions taken on a standard transfer and does 
 not cover Archivematica's advanced features. For information about processing 
@@ -18,7 +18,7 @@ more complex content, see the :ref:`User manual <user-manual>`. The instructions
 below are applicable to both the sandbox and an Archivematica virtual machine, 
 unless otherwise noted.
 
-By the end of this walkthrough, you should be able to:
+By the end of this walkthrough, you will be able to:
 
 * Create a standard transfer in Archivematica
 * Create an AIP and a DIP from the transfer
