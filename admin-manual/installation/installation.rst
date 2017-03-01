@@ -39,6 +39,8 @@ Archivematica is capable of running on almost any hardware supported by Ubuntu; 
 
 Archivematica can be installed on a single machine, or across many machines to spread the processing workload. See :ref:`Advanced <advanced>`.
 
+Note that Archivematica 1.6.0 has not yet been tested with Elasticsearch 2.x and above.
+
 .. _requirements-small:
 
 Recommended Minimum Requirements for small-scale testing
@@ -194,11 +196,11 @@ a new Storage Service user, into this box and click save.
 
 .. _install-new:
 
-Installing Archivematica 1.5 packages (new install)
+Installing Archivematica 1.6 packages (new install)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica packages in the past have been hosted on Launchpad, in an Ubuntu PPA (Personal
-Package Archive). With the 1.5.0 release, there is now a new repository at packages.archivematica.org.
+Package Archive). With the 1.6.0 release, there are repositories at packages.archivematica.org.
 This has been introduced to allow one central place to store packages for multiple operating systems.
 
 There are some dependencies still hosted on Launchpad, that have not yet been migrated to packages.archivematica.org.
@@ -217,8 +219,9 @@ two different sources of packages.
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.5.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 3. Add the ElasticSearch apt repository next:
 
@@ -234,45 +237,65 @@ two different sources of packages.
    sudo apt-get update
    sudo apt-get upgrade
 
-4. Install the storage service package
+5. Install Elasticsearch
+
+.. code:: bash
+
+   sudo apt-get install elasticsearch
+
+6. Install the storage service package
 
 .. code:: bash
 
    sudo apt-get install -y archivematica-storage-service
 
-5. Configure the storage service
+7. Install pip
+
+.. code:: bash
+
+   wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
+   sudo python /tmp/get-pip.py
+
+8. Configure the storage service
 
 .. code:: bash
 
    sudo rm -f /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
-   sudo ln -s /etc/uwsgi/apps-available/storage.ini /etc/uwsgi/apps-enabled/storage.ini
-   sudo service uwsgi restart
-   sudo service nginx restart
 
-6. Install the Archivematica packages (each of these packages can be installed separately, if necessary). Say YES or OK to any prompts you get after entering the following into terminal:
+9. Install the Archivematica packages (each of these packages can be installed separately, if necessary). Say YES or OK to any prompts you get after entering the following into terminal:
 
 .. code:: bash
 
    sudo apt-get install archivematica-mcp-server
-   sudo apt-get install archivematica-mcp-client
    sudo apt-get install archivematica-dashboard
-   sudo apt-get install elasticsearch
+   sudo apt-get install archivematica-mcp-client
 
-7. Configure the dashboard
+10. Configure the dashboard
 
 .. code:: bash
 
-   sudo rm -f /etc/apache2/sites-enabled/*default* [this might change]
-   sudo wget -q https://raw.githubusercontent.com/artefactual/archivematica/stable/1.4.x/localDevSetup/apache/apache.default -O /etc/apache2/sites-available/default.conf
-   sudo ln -s /etc/apache2/sites-available/default.conf /etc/apache2/sites-enabled/default.conf
-   sudo /etc/init.d/apache2 restart
+   sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
+
+11. Start the Elasticsearch service and configure it to start when the system is booted. This step ensures that the Elasticsearch service will start automatically each time the server is rebooted.
+
+.. code:: bash
+
+   sudo /etc/init.d/elasticsearch restart
+   sudo update-rc.d elasticsearch defaults 95 10
+
+12. Start the remaining services
+
+.. code:: bash
+
    sudo freshclam
    sudo /etc/init.d/clamav-daemon start
-   sudo /etc/init.d/elasticsearch restart
    sudo service gearman-job-server restart
    sudo start archivematica-mcp-server
    sudo start archivematica-mcp-client
+   sudo start archivematica-storage-service
+   sudo start archivematica-dashboard
+   sudo service nginx restart
    sudo start fits
 
 If you have trouble with the gearman command try this as an alternative:
@@ -281,13 +304,13 @@ If you have trouble with the gearman command try this as an alternative:
 
    sudo restart gearman-job-server
 
-8. Test the storage service. The storage service runs as a separate web application from the Archivematica dashboard. Go to the following link in a web browser and log in as user *test* with the password *test*: http://localhost:8000 (or use the IP address of the machine you have been installing on)
+13. Test the storage service. The storage service runs as a separate web application from the Archivematica dashboard. Go to the following link in a web browser and log in as user *test* with the password *test*: http://localhost:8000 (or use the IP address of the machine you have been installing on)
 
-9. Create a new administrative user in the Storage service. The storage service has its own set of users. In the User menu in the Administrative tab of the storage service, add at least one administrative user, and delete or modify the test user. After you have created an administrative user, copy its API key to your clipboard.
+14. Create a new administrative user in the Storage service. The storage service has its own set of users. In the User menu in the Administrative tab of the storage service, add at least one administrative user, and delete or modify the test user. After you have created an administrative user, copy its API key to your clipboard.
 
-10. Test the dashboard. You can login to the Archivematica dashboard and finish the installation in a web browser: http://localhost (again, use the IP address of the machine you have been installing on). When prompted, enter the URL of the Storage Service, the name of the administrative user, and that user's API key.
+15. Test the dashboard. You can login to the Archivematica dashboard and finish the installation in a web browser: http://localhost (again, use the IP address of the machine you have been installing on). When prompted, enter the URL of the Storage Service, the name of the administrative user, and that user's API key.
 
-11. Register your installation for full Format Policy Registry interoperability.
+16. Register your installation for full Format Policy Registry interoperability.
 
 .. _install-source:
 
