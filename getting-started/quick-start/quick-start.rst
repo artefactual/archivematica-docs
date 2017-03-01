@@ -72,7 +72,7 @@ locally.
 Installing on a virtual machine
 ===============================
 
-Users may want to desploy Archivematica on a virtual machine in order to test 
+Users may want to deploy Archivematica on a virtual machine in order to test 
 Archivematica's functionality using their own data. The recommended way to 
 install Archivematica on a virtual machine is with Ansible and Vagrant.
 
@@ -158,7 +158,7 @@ made up of jobs.
 
 .. note::
 
-   A jobs is a discrete action within a micro-service. Moving the contents of your 
+   A job is a discrete action within a micro-service. Moving the contents of your 
    transfer to a processing directory is a job. 
 
 Each micro-service can be expanded if you click on the micro-service name. This 
