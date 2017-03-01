@@ -175,15 +175,16 @@ Jobs turn green when they have completed successfully and red if they fail.
 #. Make sure ‘Standard’ is selected in the transfer type box.
 #. Type in a name for your transfer (anything you like).
 #. Click on browse to look through the available content. Make sure to click on 
-the folder icon to expand the directory trees.
+   the folder icon to expand the directory trees.
 #. Find the *images* directory in SampleTransfers and click Add.
 #. The selected directory will be displayed below the selection box.
 #. Click on the green *Start transfer* button to start the transfer.
 #. When prompted, make decisions as you wish; however, don't select anything 
-that would stop the transfer (i.e. anything that says "Reject"). For more 
-information about the decision points, check out the :ref:`transfer tab documentation <transfer>`.
+   that would stop the transfer (i.e. anything that says "Reject"). For more 
+   information about the decision points, check out the 
+   :ref:`transfer tab documentation <transfer>`.
 #. When you reach the *Identify file format* micro-service, stop and read the 
-next section.
+   next section.
 
 Review file formats
 ===================
@@ -196,11 +197,11 @@ those files as best as possible.
 **Steps:**
 
 #. When you are prompted, select a file format identification tool (Siegfried 
-and Fido are the most robust options).
+   and Fido are the most robust options).
 #. Once file format identification is complete, click on the gear icon to the 
-right of the job name to open the job page.
+   right of the job name to open the job page.
 #. On the job page, under the heading STDOUT, you will see information similar 
-to the following:
+   to the following:
 
 .. code-block:: none
 
@@ -249,8 +250,8 @@ create the AIP and the DIP.
 
 #. Click on the Ingest tab.
 #. Make decisions as required (again, don't select anything that says "Reject"). 
-For more information about the decision points that appear during ingest, check 
-out the :ref:`ingest tab documentation <ingest>`.
+   For more information about the decision points that appear during ingest, 
+   check out the :ref:`ingest tab documentation <ingest>`.
 #. When you get to the Normalize decision point, stop and read the next section.
 
 Normalization
@@ -266,18 +267,19 @@ like to normalize your content.
 **Steps:**
 
 #. Select *Normalize for preservation and access* when prompted. By selecting 
-this option, you are telling Archivematica that you would like to create a 
-preservation copy (AIP) and an access copy (DIP) of the contents of your SIP.
+   this option, you are telling Archivematica that you would like to create a 
+   preservation copy (AIP) and an access copy (DIP) of the contents of your SIP.
 #. Once normalization is complete, you will be prompted to approve normalization. 
-Before selecting approve, click on the small page icon next to the drop down menu.
+   Before selecting approve, click on the small page icon next to the drop down 
+   menu.
 #. The Normalization Report will open in a separate tab. Information on how to 
-read this report is included below.
+   read this report is included below.
 #. In your main tab, click on the Preservation Planning tab at the top of the 
-page. When the Preservation Planning tab is open, search for "SVG" (or whatever 
-file format you would like to review). Click on the name of the file format.
+   page. When the Preservation Planning tab is open, search for "SVG" (or whatever 
+   file format you would like to review). Click on the name of the file format.
 #. You should now have two tabs open - the Normalization Report and the 
-Preservation Planning page. Go back to the Normalization Report and review the 
-next two sections.
+   Preservation Planning page. Go back to the Normalization Report and review the 
+   next two sections.
 
 Reviewing normalization for preservation
 ++++++++++++++++++++++++++++++++++++++++
@@ -329,9 +331,9 @@ Preservation Planning tab.
 
 #. Navigate back to the Preservation Planning tab.
 #. Scroll down and find the *Normalization* section in the left-hand sidebar. 
-Click on *Rules*.
+   Click on *Rules*.
 #. Search for "Scalable Vector Graphics" (or whatever file format you are 
-analyzing).
+   analyzing).
 
 The results show the Access and Normalization rules for SVG files. Under the 
 Command column we can see that the preferred access format for an SVG is 
@@ -365,17 +367,17 @@ secure.
 **Steps:**
 
 #. Process your ingest until the *Store AIP* and *Upload DIP* micro-services
-prompt you for a decision point.
+   prompt you for a decision point.
 #. Select "Store AIP" from the *Store AIP* dropdown.
 #. In a moment, another decision point will prompt you to select a storage 
-location for your AIP. There should only be one option - "Store AIP in standard 
-Archivematica directory". Select this option.
+   location for your AIP. There should only be one option - "Store AIP in standard 
+   Archivematica directory". Select this option.
 #. Once the AIP is stored successfully, you can move on to dealing with the DIP. 
-Neither a locally-installed Archivematica VM nor the sandbox is hooked up to an 
-access system, so under *Upload DIP* select "Store DIP".
+   Neither a locally-installed Archivematica VM nor the sandbox is hooked up to 
+   an access system, so under *Upload DIP* select "Store DIP".
 #. You will be prompted to select a storage location for your DIP. There should 
-only be one option - "Store DIP in standard Archivematica directory". Select 
-this option.
+   only be one option - "Store DIP in standard Archivematica directory". Select 
+   this option.
 
 Your AIP and DIP are now stored in Archivematica's internal storage. The 
 Archivematica workflow is complete!
@@ -393,26 +395,26 @@ Review AIP
 **Steps:**
 
 #. Click on the Archival Storage tab. You should see your AIP listed in the 
-search results there, but if not, you can search for it using the name you gave 
-it in Task #1.
+   search results there, but if not, you can search for it using the name you gave 
+   it in Task #1.
 #. Depending on the version of Archivematica you are using, clicking on the name 
-of the AIP will either open the AIP Details page or immediately download the AIP. 
-If you end up on the AIP Details page, click on the ‘download’ button.
+   of the AIP will either open the AIP Details page or immediately download the 
+   AIP. If you end up on the AIP Details page, click on the ‘download’ button.
 #. Once it's downloaded, open the AIP. You will need to a program capable of 
-opening 7zip files installed on your computer. If required, you can download 
-7Zip here: http://www.7-zip.org/download.html
+   opening 7zip files installed on your computer. If required, you can download 
+   7Zip here: http://www.7-zip.org/download.html
 #. Once you have the AIP extracted, navigate through the folders until you find 
-the objects directory. This directory contains the original images from your 
-transfer as well as the preservation copies. You can compare the file formats in 
-the objects directory to the rules in the Preservation Planning tab.
+   the objects directory. This directory contains the original images from your 
+   transfer as well as the preservation copies. You can compare the file formats 
+   in the objects directory to the rules in the Preservation Planning tab.
 #. Navigate through the folders until you find the METS file and open it in a 
-web browser or text editor. It will be titled something like 
-"METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml".
+   web browser or text editor. It will be titled something like 
+   "METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml".
 #. Find the <mets:fileSec> tag in the METS. Within the fileSec, you should be 
-able to find information about every item in your original transfer - these are 
-in the section tagged <mets:fileGrp USE="original">. Scrolling down, you can 
-view complementary information for each of the preservation copies - this is in 
-the section tagged <mets:fileGrp USE="preservation">.
+   able to find information about every item in your original transfer - these are 
+   in the section tagged <mets:fileGrp USE="original">. Scrolling down, you can 
+   view complementary information for each of the preservation copies - this is in 
+   the section tagged <mets:fileGrp USE="preservation">.
 
 The METS.xml file is very long because it contains all of the information about 
 your files as well as information about the processes and tools that acted on 
@@ -430,24 +432,24 @@ Review DIP
 **Steps:**
 
 #. In order to retrieve the DIP, you need to access the Archivematica Storage 
-Service. Add ":8000" to the end of your Archivematica VM's URL (i.e. http://192.168.168.192:8000/). 
-The default login is test/test.
+   Service. Add ":8000" to the end of your Archivematica VM's URL 
+   (i.e. http://192.168.168.192:8000/). The default login is test/test.
 #. In the Storage Service, click on the Packages tab.
 #. On the far right side of the page there is a search box. Search for your DIP 
-by entering the name you gave it in Task #1.
+   by entering the name you gave it in Task #1.
 #. You should see two results. One is your AIP and the other is the DIP, indicated 
-under the "Type" column.
+   under the "Type" column.
 #. Once you've identified which file is your DIP, click on "Download".
 #. Once it's downloaded, open the DIP. You will need to a program capable of 
-opening tar files installed on your computer. 7Zip, mentioned above, can open 
-TAR files: http://www.7-zip.org/download.html
+   opening tar files installed on your computer. 7Zip, mentioned above, can open 
+   TAR files: http://www.7-zip.org/download.html
 #. Once you have the DIP extracted, open the objects directory. This directory 
-contains the access copies derived from your original images. You can compare 
-the file formats in the objects directory to the rules in the Preservation 
-Planning tab.
+   contains the access copies derived from your original images. You can compare 
+   the file formats in the objects directory to the rules in the Preservation 
+   Planning tab.
 #. The DIP also contains a thumbnails directory, which has small JPG versions of 
-your images. If the image could not be converted to a JPG (as is the case with 
-an SVG file), a generic icon is included instead.
+   your images. If the image could not be converted to a JPG (as is the case with 
+   an SVG file), a generic icon is included instead.
 
 .. _quick-start-config:
 
@@ -464,10 +466,10 @@ point.
 **Steps:**
 
 #. Click on the Administration tab. You will see a single processing 
-configuration listed, called ‘default’.
+   configuration listed, called ‘default’.
 #. Review the different options and make changes as you like. 
-You will recognize the options from the decision points you made during previous 
-tasks.
+   You will recognize the options from the decision points you made during 
+   previous tasks.
 
 For example, you may want to automate the compression algorithm and level 
 because you always want to use the same compression tool and you always want to 
@@ -476,10 +478,10 @@ configurations:
 
 #. Check the box next to *Select compression algorithm*.
 #. Using the dropdown to the right, select a compression algorithm
- - *7z using bzip2* is the most common.
+   - *7z using bzip2* is the most common.
 #. Check the box next to *Select compression level*
 #. Using the dropdown to the right, select a compression level - *5 - normal 
-compression mode* is a good balance between speed and size.
+   compression mode* is a good balance between speed and size.
 
 We recommend that you run several tests in Archivematica before setting
 up the processing configurations. As you become more familiar with Archivematica,
