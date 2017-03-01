@@ -511,7 +511,7 @@ Upgrade from Archivematica 1.5 for CentOS/Redhat
 
 .. code:: bash
 
-   sudo sed -i 's/1.5.x/1.6.x/g' /etc/yum.repos.d/archivematica-*
+   sudo sed -i 's/1.5.x/1.6.x/g' /etc/yum.repos.d/archivematica-
 
 * Then, upgrade the packages:
 
