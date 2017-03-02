@@ -406,6 +406,12 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
 
 **Prerequisites**
 
+Update your system
+
+.. code:: bash
+
+   sudo yum update
+
 Extra repos:
 
 Some repositories need to be installed in order to fullfill the installation procedure:
@@ -437,7 +443,7 @@ Some repositories need to be installed in order to fullfill the installation pro
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
    [archivematica]
    name=archivematica
-   baseurl=https://packages.archivematica.org/1.5.x/centos
+   baseurl=https://packages.archivematica.org/1.6.x/centos
    gpgcheck=0
    enabled=1
    EOF'
@@ -546,7 +552,7 @@ Common services like elasticsearch, mariadb and gearmand should be installed and
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
    [archivematica-extras]
    name=archivematica-extras
-   baseurl=https://packages.archivematica.org/1.5.x/centos-extras
+   baseurl=https://packages.archivematica.org/1.6.x/centos-extras
    gpgcheck=0
    enabled=1
    EOF'
@@ -600,6 +606,7 @@ Each service have a configuration file in /etc/sysconfig/archivematica-packagena
 
 If IPv6 is disabled, Nginx may refuse to start. If that is the case make sure that the listen directives used under /etc/nginx are not using IPv6 addresses like [::]:80.
 
+CentOS will install firewalld which will be running default rules likely blocking ports 81 and 8001. If you are not able to access the dashboard and storage service, check if firewalld is running. If it is, you will likely need to modify the firewall rules to allow access to ports 81 and 8001 from your location.
 
 .. _centos-upgrade:
 
