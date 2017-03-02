@@ -555,13 +555,13 @@ Common services like elasticsearch, mariadb and gearmand should be installed and
 
 .. code:: bash
 
-   rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+   sudo rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 * Forensic tools repo
 
 .. code:: bash
 
-   rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
+   sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
 
 * Then, install the package:
 
