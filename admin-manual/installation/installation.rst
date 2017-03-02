@@ -22,7 +22,7 @@ Installation
 
 * :ref:`Docker <docker>`
 
-* :ref:`Vagrant/Ansible <vagrant>`
+* :ref:`Install for development <development>`
 
 * :ref:`Advanced <advanced>`
 
@@ -631,10 +631,10 @@ Docker
 
 Docker installations are experimental at this time- instructions coming soon.
 
-.. _vagrant:
+.. _development:
 
-Vagrant/Ansible
----------------
+Install for development
+-----------------------
 
 The recommended way to install Archivematica for development is with Ansible and
 Vagrant. For instructions on how to install Archivematica from a virtual machine,
