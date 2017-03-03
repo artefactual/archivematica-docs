@@ -130,7 +130,7 @@ Specific processing configurations available on this page are:
 #. Approve normalization, sending the AIP to storage, and uploading the
    DIP without interrupting the workflow in the dashboard.
 
-#. Store the AIP without interripting the workflow in the dashboard.
+#. Store the AIP without interrupting the workflow in the dashboard.
 
 #. Select whether or not Archivematica should transcribe files.
 
