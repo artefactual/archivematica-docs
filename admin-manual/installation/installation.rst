@@ -74,7 +74,7 @@ These requirements may not be suitable for certain types of material, e.g. audio
 Installing from packages
 ------------------------
 
-Installing from packages is tested for both new installations and upgrading from version 1.4.
+Installing from packages is tested for both new installations and upgrading from version 1.5.
 
 Updating from Archivematica 1.5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -160,7 +160,7 @@ Due to a bug in ubuntu's python-pip package (https://bugs.launchpad.net/ubuntu/+
    wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
    sudo python /tmp/get-pip.py
  
- We can't do it in advance, as python-pip was a requirement for Archivematica 1.5. The upgrade can finish with:
+ This step cannot be done in advance, as python-pip was a requirement for Archivematica 1.5. The upgrade can finish with:
  
  
 .. code:: bash
@@ -171,7 +171,7 @@ Due to a bug in ubuntu's python-pip package (https://bugs.launchpad.net/ubuntu/+
 
 **Disable unused services**
 
-Archivematica 1.6.0 uses nginx as http server, and gunicor as wsgi server. This means that some services used in Archivematica 1.5.0 should be stopped and disabled before perfoming the upgrade.
+Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This means that some services used in Archivematica 1.5.0 should be stopped and disabled before performing the upgrade.
 
 .. code:: bash
 
