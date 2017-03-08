@@ -177,7 +177,7 @@ Elasticsearch comes from its own package repository
 2. Update your system 
 
 Update to the most recent 14.04 release. This step will also fetch a list of 
-the software from the PPAs you just added to your system.
+the software from the repositories you just added to your system.
 
 .. code:: bash
 
