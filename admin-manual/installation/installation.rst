@@ -204,8 +204,8 @@ Ubuntu 14.04, which makes this step necessary.
 
 .. code:: bash
 
-   wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
-   sudo python /tmp/get-pip.py
+   sudo apt-get install -y python-pip
+   sudo pip install -U setuptools
 
 6. Configure the storage service
 
@@ -669,8 +669,8 @@ Ubuntu 14.04, which makes this step necessary.
 
 .. code:: bash
 
-   wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
-   sudo python /tmp/get-pip.py
+   sudo apt-get install -y python-pip
+   sudo pip install -U setuptools
 
 3. Update Package Sources
 
