@@ -74,32 +74,31 @@ These requirements may not be suitable for certain types of material, e.g. audio
 Installing from packages
 ------------------------
 
-Installing from packages is tested for both new installations and upgrading from version 1.4.
+Installing from packages is tested for both new installations and upgrading from version 1.5.
 
-Updating from Archivematica 1.4
+Updating from Archivematica 1.5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you have installed an earlier version Archivematica from packages, it is
 possible to update your installation without re-installing. The steps are:
 
 
-**Update python**
+**Update system**
 
 This might be done on your system already, if you have been updating the operating system
 on an ongoing basis.
 
 .. code:: bash
 
-   apt-get update
-   apt-get install python-pip
+   sudo apt-get update
+   sudo apt-get upgrade
 
 **Add source code repositories**
 
 .. code:: bash
 
-   sudo add-apt-repository ppa:archivematica/externals
-   wget -O - https://packages.archivematica.org/1.5.x/key.asc | apt-key add -
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.5.x/ubuntu trusty main' >> /etc/apt/sources.list
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 **Update Archivematica Storage Service**
 
@@ -109,15 +108,17 @@ Ensure that the default user 'test' exists in the Storage Service before updatin
 
    sudo apt-get update
    sudo apt-get install archivematica-storage-service
+   
+**Disable old wsgi server and enable the new one**
 
-**Create new Storage Service user**
+Archivematica Storage Service 0.10.0 uses gunicorn as wsgi server. This means that the old uwsgi server needs to be stopped and disabled after perfoming the upgrade
 
-Archivematica Storage Service 0.8.0 introduces a new security feature - each user is assigned an API key.
-All api interactions with the storage service require the use of an api key, including from the Archivematica Dashboard.
+.. code:: bash
 
-Log into the Storage Service with your existing credentials.  Go to the Administration tab, and then select 'users'
-from the menu on the left.  Create a new user.  Once you have finished creating the new user, copy the api key that
-is displayed on the 'edit user' page.  You will need this later after upgrading the Dashboard.
+   sudo service uwsgi stop
+   sudo update-rc.d uwsgi disable
+   sudo service archivematica-storage-service start
+   
 
 **Update Archivematica**
 
@@ -141,43 +142,51 @@ updating the database, say 'ok' to each of those steps. If you have set a
 password for the root mysql database user, enter it when prompted. It is
 better to update the dashboard before updating the mcp components.
 
-.. code:: bash
-
-   sudo apt-get install archivematica-common
-   sudo apt-get install archivematica-dashboard
-   sudo apt-get install archivematica-mcp-server
-   sudo apt-get install archivematica-mcp-client
-
-**(Optional) Update Elasticsearch**
-
-Archivematica 1.4.1 uses Elasticsearch version 1.4.  Archivematica 1.5.0 will work with any version of Elasticsearch from 1.4 to 1.7.5.  You do not have to upgrade Elasticsearch when upgrading Archivematica, although we recommend doing so, to make future upgrades easier.
-
-Instructions on how to upgrade can be found on the
-`Elasticsearch website <https://www.elastic.co/guide/en/elasticsearch/reference/1.3/setup-upgrade.html>`_.
-In general it should be possible to upgrade Elasticsearch on a standard Archivematica machine with the following commands:
+*This step will fail!*
 
 .. code:: bash
 
-   sudo /etc/init.d/elasticsearch stop
-   sudo echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list
-   sudo apt-get update
-   sudo apt-get install elasticsearch
-   sudo /etc/init.d/elasticsearch start
+   sudo apt-get upgrade
+   
+*This step will fail!*
 
-You will be prompted with questions about modifying configuration files.  If you have not made any modifications to your Elasticsearch configuration, it should be safe to use the new versions of the configuration files that come with Elasticsearch.
+**Remove python-pip system package and install it from source**
 
+Due to a bug in ubuntu's python-pip package (https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844) , we need to remove python-pip in order to finish the upgrade:
+
+.. code:: bash
+
+   sudo apt-get remove python-pip
+   wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py
+   sudo python /tmp/get-pip.py
+ 
+ This step cannot be done in advance, as python-pip was a requirement for Archivematica 1.5. The upgrade can finish with:
+ 
+ 
+.. code:: bash
+
+   sudo apt-get -f install 
+   sudo dpkg-reconfigure archivematica-dashboard
+ 
+
+**Disable unused services**
+
+Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This means that some services used in Archivematica 1.5.0 should be stopped and disabled before performing the upgrade.
+
+.. code:: bash
+
+   sudo service apache2 stop
+   sudo update-rc.d apache2 disable
+   
 **Restart Services**
 
 .. code:: bash
 
-   sudo service uwsgi restart
+   sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
    sudo service nginx restart
-   sudo /etc/init.d/apache2 restart
-   sudo service gearman-job-server restart
    sudo restart archivematica-mcp-server
    sudo restart archivematica-mcp-client
-   sudo restart fits
-   sudo freshclam
+   sudo service nginx restart
 
 Note, depending on how your Ubuntu system is set up, you may have trouble
 restarting gearman with the command in the block above.  If that is the case,
