@@ -196,11 +196,10 @@ the software from the repositories you just added to your system.
 
    sudo apt-get install -y archivematica-storage-service
 
-5. Install pip.  
+5. Upgrade python setuptools
 
 This is used to install python dependencies for both the storage service and 
-the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 with the version of pip installed on 
-Ubuntu 14.04, which makes this step necessary.
+the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 with the version of pip installed on Ubuntu 14.04, which makes this step necessary.
 
 .. code:: bash
 
@@ -747,7 +746,11 @@ try this command instead:
 
 .. code:: bash
 
-    sudo apt-get remove --purge python-pip apache2 uwsgi
+    sudo apt-get remove --purge apache2 uwsgi
+
+10. Known problems
+
+Due to browser caches, there might be problems the first time you load Archivematica 1.6. You can clean your browser cache using Ctrl + Shift + R
 
 .. _upgrade-centos:
 
