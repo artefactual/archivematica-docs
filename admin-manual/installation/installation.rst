@@ -247,12 +247,12 @@ the system is rebooted.
    sudo freshclam
    sudo service clamav-daemon start
    sudo service gearman-job-server restart
-   sudo start archivematica-mcp-server
-   sudo start archivematica-mcp-client
-   sudo start archivematica-storage-service
-   sudo start archivematica-dashboard
+   sudo service archivematica-mcp-server restart
+   sudo service archivematica-mcp-client restart
+   sudo service archivematica-storage-service restart
+   sudo service archivematica-dashboard restart
    sudo service nginx restart
-   sudo start fits
+   sudo service fits restart
 
 If you have trouble with the gearman command try this as an alternative:
 
@@ -725,13 +725,12 @@ Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This
 
 .. code:: bash
 
-   sudo service nginx restart
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
    sudo service gearman-job-server restart
-   sudo restart archivematica-mcp-server
-   sudo restart archivematica-mcp-client
-   sudo start archivematica-dashboard
-   sudo restart fits
+   sudo service archivematica-mcp-server restart
+   sudo service archivematica-mcp-client restart
+   sudo service archivematica-dashboard restart
+   sudo service fits restart
    sudo freshclam
    sudo service clamav-daemon restart
    sudo service nginx restart
@@ -742,7 +741,7 @@ try this command instead:
 
 .. code:: bash
 
-   sudo restart gearman-job-server
+   sudo service gearman-job-server restart
 
 9. Remove unused services
 
