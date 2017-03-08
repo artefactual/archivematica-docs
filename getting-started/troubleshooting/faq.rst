@@ -23,6 +23,9 @@ FAQ
    consider a `maintenance contract <http://www.artefactual.com/services/maintenance/>`_
    through Artefactual Systems.
 
+#. **What does Archivematica do?**
+   The main purpose of Archivematica is to create standards-based, self-documenting and system-independent archival information packages (AIPs). An AIP includes a METS XML file with a robust PREMIS preservation metadata implementation, and is packaged in the Library of Congress BagIt format, which includes file manifests and information about the AIP contents. The physical and logical structure of the AIP is described in the METS structMap. 
+
 #. **Does Archivematica perform fixity checks?**
 
    Archivematica generates checksums upon transfer of objects into the system,
@@ -81,7 +84,7 @@ FAQ
   * Contract Artefactual Systems to `write the code <http://www.artefactual.com/services/development/>`_. We will work with you to identify requirements and include the new integration code in the next software release, for the entire community's benefit.
 
 
-7. **I'm having a problem with installation/Why is Archivematica difficult to
+#. **I'm having a problem with installation/Why is Archivematica difficult to
    install?**
 
    Archivematica is a complex piece of software with many dependencies, all
@@ -103,6 +106,7 @@ FAQ
   * Are you using something other than the recommended requirements from our      :ref:`installation <installation>` instructions.
 
   * Include stack traces or results from error logs if possible.
+
 
 
 :ref:`Back to the top <faq>`
