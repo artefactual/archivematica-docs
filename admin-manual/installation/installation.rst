@@ -9,7 +9,7 @@ Installation
 * :ref:`Overview <overview>`
 * :ref:`Technical requiremnets <tech-requirements>`
 * :ref:`New Installation <new-install>`
-* :ref:`Upgrading from 1.5 <upgrade>`
+* :ref:`Upgrade from 1.5 <upgrade>`
 * :ref:`Advanced <advanced>`
 
 .. _overview:
@@ -694,8 +694,8 @@ Archivematica Storage Service 0.10.0 uses gunicorn as wsgi server. This means th
 
 .. code:: bash
 
-+   sudo service uwsgi stop
-+   sudo update-rc.d uwsgi disable
+   sudo service uwsgi stop
+   sudo update-rc.d uwsgi disable
 
 6. Update Archivematica
 
@@ -717,7 +717,6 @@ Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This
 
     sudo service apache2 stop
     sudo update-rc.d apache2 disable
-
 
 8. Restart Services
 
@@ -747,6 +746,60 @@ try this command instead:
 .. code:: bash
 
     sudo apt-get remove --purge python-pip apache2 uwsgi
+
+10. Update Transfer Index
+
+This is an optional step, and is only required if there are transfers listed in
+the Transfer Backlog of your current 1.5.x installation of Archivematica.
+
+You can confirm this by looking at the Ingest tab and clicking the 
+'search transfer backlog' button, without entering any text in the searchbox.
+If you see one or more transfers listed under 'original', then you need to 
+follow the steps below in order to use the new Appraisal Tab and Backlog Tab.
+
+* Install devtools
+
+Archivematica devtools is a set of utilities that was built by developers While
+working on Archivematica.  Devtools includes helper scripts that make it easier
+to perform certain maintenance tasks.  One of those tools is used to rebuild
+the Transfer index in ElasticSearch, which is used by the different backlog 
+tools such as the new Appraisal Tab.  Currently this must be installed using 
+git.  These instructions will be updated when a packaged version is available.
+See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
+more details.
+
+.. code:: bash
+ 
+    sudo apt-get install git
+    git clone https:github.com/artefactual/archivematica-devtools
+    cd archiveamtica-devtools
+    make install
+
+* Confirm Location of Transfer Backlog
+
+You need to know the path to the Transfer Backlog Location.  The default
+path is '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'.
+You can confirm the path for your installation by: 
+
+* logging into the Storage Service and clicking on the Locations tab.
+* type 'backlog' in the search searchbox
+* copy the value in the column labelled 'path' (there should be only one row)
+
+* Rebuild Transfer Index
+
+Using the path you confirmed above, replace the text '/path/to/transfers' with
+the correct path for your system.
+
+.. code:: bash
+
+    am rebuild-elasticsearch-transfer-index-from-files /path/to/transfers
+
+
+This may take a while if you have a large backlog.  Once it completes, you
+should be able to see your Transfer Backlog in the Appraisal tab and in the
+Backlog tab.
+
+
 
 Depending on your browser settings, you may need to clear your browser cache to
 make the dashboard pages load properly.  For example in Firefox or Chrome you
