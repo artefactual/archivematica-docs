@@ -723,6 +723,7 @@ Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This
 .. code:: bash
 
    sudo service nginx restart
+   sudo restart archivematica-storage-service
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
    sudo service gearman-job-server restart
    sudo restart archivematica-mcp-server
