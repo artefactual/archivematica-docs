@@ -793,7 +793,7 @@ the correct path for your system.
 
 .. code:: bash
 
-    am rebuild-elasticsearch-transfer-index-from-files /path/to/transfers
+    am rebuild-transfer-backlog /path/to/transfers
 
 
 This may take a while if you have a large backlog.  Once it completes, you
