@@ -750,13 +750,19 @@ try this command instead:
 
 10. Update Transfer Index
 
-This is an optional step, and is only required if there are transfers listed in
-the Transfer Backlog of your current 1.5.x installation of Archivematica.
+Archivematica 1.6.0 includes two new features that make use of the Transfer 
+Backlog - the Appraisal Tab and the Backlog Tab.  At the present time, neither
+of these features is recommended to be used with Transfers that were put into
+backlog with the 1.5.x release.  They are both safe to use with new Transfers
+created with Archivematica 1.6.0.
 
-You can confirm this by looking at the Ingest tab and clicking the 
-'search transfer backlog' button, without entering any text in the searchbox.
-If you see one or more transfers listed under 'original', then you need to 
-follow the steps below in order to use the new Appraisal Tab and Backlog Tab.
+If you are interested in experimenting with the use of these new features, 
+with a backlog created in an earlier version of Archivematica, these 
+instructions show how to update your Transfer Backlog Index so it can be 
+used with the Appraisal Tab and the Backlog tab.
+
+These are experimental instructions. Do not use them on a production system
+unless you have a back you can restore from. 
 
 * Install devtools
 
