@@ -771,9 +771,9 @@ more details.
 
 .. code:: bash
  
-    sudo apt-get install git
-    git clone https:github.com/artefactual/archivematica-devtools
-    cd archiveamtica-devtools
+    sudo apt-get install git ruby-ronn
+    git clone https://github.com/artefactual/archivematica-devtools
+    cd archivematica-devtools
     make install
 
 * Confirm Location of Transfer Backlog
