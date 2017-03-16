@@ -750,12 +750,6 @@ try this command instead:
 
 10. Update Transfer Index
 
-Archivematica 1.6.0 includes two new features that make use of the Transfer 
-Backlog - the Appraisal Tab and the Backlog Tab.  At the present time, neither
-of these features is recommended to be used with Transfers that were put into
-backlog with the 1.5.x release.  They are both safe to use with new Transfers
-created with Archivematica 1.6.0.
-
 If you are interested in experimenting with the use of these new features, 
 with a backlog created in an earlier version of Archivematica, these 
 instructions show how to update your Transfer Backlog Index so it can be 
@@ -860,6 +854,57 @@ Upgrade from Archivematica 1.5 for CentOS/Redhat
 Depending on your browser settings, you may need to clear your browser cache to
 make the dashboard pages load properly.  For example in Firefox or Chrome you
 should be able to clear the cache with control-shift-R or command-shift-F5.
+
+* Update Transfer Index
+
+If you are interested in experimenting with the use of these new features, 
+with a backlog created in an earlier version of Archivematica, these 
+instructions show how to update your Transfer Backlog Index so it can be 
+used with the Appraisal Tab and the Backlog tab.
+
+These are experimental instructions. Do not use them on a production system
+unless you have a back you can restore from. 
+
+* Install devtools
+
+Archivematica devtools is a set of utilities that was built by developers While
+working on Archivematica.  Devtools includes helper scripts that make it easier
+to perform certain maintenance tasks.  One of those tools is used to rebuild
+the Transfer index in ElasticSearch, which is used by the different backlog 
+tools such as the new Appraisal Tab.  Currently this must be installed using 
+git.  These instructions will be updated when a packaged version is available.
+See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
+more details.
+
+.. code:: bash
+ 
+    sudo yum install -y archivematica-devtools
+
+* Confirm Location of Transfer Backlog
+
+You need to know the path to the Transfer Backlog Location.  The default
+path is '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'.
+You can confirm the path for your installation by: 
+
+* logging into the Storage Service and clicking on the Locations tab.
+* type 'backlog' in the search searchbox
+* copy the value in the column labelled 'path' (there should be only one row)
+
+* Rebuild Transfer Index
+
+Using the path you confirmed above, replace the text '/path/to/transfers' with
+the correct path for your system.
+
+.. code:: bash
+
+    am rebuild-transfer-backlog /path/to/transfers
+
+
+This may take a while if you have a large backlog.  Once it completes, you
+should be able to see your Transfer Backlog in the Appraisal tab and in the
+Backlog tab.
+
+
 
 .. _advanced:
 
