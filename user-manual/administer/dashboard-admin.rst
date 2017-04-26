@@ -101,6 +101,11 @@ about how they work.
    after extraction. Note that this field will not be invoked unless the *Extract packages*
    field is set to "Yes".
 
+#. **Perform policy checks on originals**: Select "Yes" if you plan to create
+   policies using MediaConch or future validation tools as commands in the
+   Format Policy Registry. You must also create rules based on the formats you
+   want to check.
+
 #. **Examine contents**: Select whether or not to run Bulk Extractor to generate
    content reports to identify personally identifying information (PII).
 
@@ -113,6 +118,16 @@ about how they work.
 #. **Normalize**: Select Normalization options (see :ref:`Normalize <normalize>`).
 
 #. **Approve normalization**: Select whether or not to automatically approve normalization.
+
+#. **Perform policy checks on preservation derivatives**: Select "Yes" if you plan to create
+   policies using MediaConch or future validation tools as commands in the
+   Format Policy Registry. You must also create rules based on the formats you
+   want to check.
+
+#. **Perform policy checks on access derivatives**: Select "Yes" if you plan to create
+    policies using MediaConch or future validation tools as commands in the
+    Format Policy Registry. You must also create rules based on the formats you
+    want to check.
 
 #. **Reminder: add metadata if desired**: Select whether or not Archivematica should
    remind the user to add metadata to the SIP using the GUI. Note: this job
