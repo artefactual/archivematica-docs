@@ -287,8 +287,28 @@ backing up and restoring ElasticSearch are available
 FAQ
 ---
 
+.. _how-to-restart-the-archivematica-services:
+
 How to restart the Archivematica services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Restart all services**
+
+.. code:: bash
+
+   am services
+
+Note that the default action is to restart all services. To see other available
+parameters, type
+
+.. code:: bash
+
+   am services help
+
+   Usage: am services <action> <level>
+    action can be one of 'restart (default), start, stop, status, help'
+    level can be one of 'basic (default), full, storage_service, pipeline'
+
 
 **Stopping**
 
