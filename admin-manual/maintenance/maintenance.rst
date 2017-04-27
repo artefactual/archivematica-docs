@@ -292,6 +292,19 @@ FAQ
 How to restart the Archivematica services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Restart all services**
+
+.. code:: bash
+
+   am services
+
+Note that the default action is to restart all services. To see other available
+parameters, type
+
+.. code:: bash
+
+   am services help
+
 **Stopping**
 
 .. code:: bash
