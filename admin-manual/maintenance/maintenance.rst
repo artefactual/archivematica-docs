@@ -287,6 +287,8 @@ backing up and restoring ElasticSearch are available
 FAQ
 ---
 
+.. _restart-services:
+
 How to restart the Archivematica services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -312,6 +314,7 @@ How to restart the Archivematica services
    sudo start archivematica-mcp-server
    sudo start archivematica-mcp-client
 
+.. _stack-trace:
 
 Error stack trace
 ^^^^^^^^^^^^^^^^^
@@ -350,6 +353,8 @@ edit a configuration file from the command line.
 7. Debug or report error
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
+
+.. _browser compatibility:
 
 Browser compatability
 ^^^^^^^^^^^^^^^^^^^^^
