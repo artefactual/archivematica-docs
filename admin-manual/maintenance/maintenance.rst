@@ -287,7 +287,7 @@ backing up and restoring ElasticSearch are available
 FAQ
 ---
 
-.. _how-to-restart-the-archivematica-services:
+.. _restart-services:
 
 How to restart the Archivematica services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -299,16 +299,11 @@ How to restart the Archivematica services
    am services
 
 Note that the default action is to restart all services. To see other available
-parameters, type
+parameters, type:
 
 .. code:: bash
 
    am services help
-
-   Usage: am services <action> <level>
-    action can be one of 'restart (default), start, stop, status, help'
-    level can be one of 'basic (default), full, storage_service, pipeline'
-
 
 **Stopping**
 
@@ -332,6 +327,7 @@ parameters, type
    sudo start archivematica-mcp-server
    sudo start archivematica-mcp-client
 
+.. _stack-trace:
 
 Error stack trace
 ^^^^^^^^^^^^^^^^^
@@ -357,7 +353,7 @@ edit a configuration file from the command line.
 
     DEBUG = True
 
-4. Save the file
+4. Save the fileservices
 
 5. Restart Apache
 
@@ -370,6 +366,8 @@ edit a configuration file from the command line.
 7. Debug or report error
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
+
+.. _browser-compatibility:
 
 Browser compatability
 ^^^^^^^^^^^^^^^^^^^^^
