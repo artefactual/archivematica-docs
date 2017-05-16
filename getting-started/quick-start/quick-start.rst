@@ -120,7 +120,7 @@ Spin it up
 
       vagrant up
 
-   Vagrant will download our custom box and boot it in VirtualBox. The download can take anywhere from a few minutes to an hour or more, depending on the speed of your connection, as the box is considerably big (approx 3.2 GB in size).
+   Vagrant will download our custom box and boot it in VirtualBox. The download can take anywhere from a few minutes to an hour or more, depending on the speed of your connection, as the box is fairly large (approx 3.2 GB in size).
 
 
 Once it's done provisioning, you can log in to your virtual machine::
