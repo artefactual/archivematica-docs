@@ -40,12 +40,17 @@ Technical Requirements
 
 **Operating System**
 
-Archivematica 1.6.0 has been tested with:
+Archivematica 1.6.1 installation instructions are provided here for the 
+following operating systems:
 
 * Ubuntu 14.04.5 64 bit Server Edition
+* Ubuntu 16.04.2 64 bit Server Edition (beta)
 * CentOS 7.3.1611 64 bit
 
-Support for Ubuntu 16.04 is being tested, and is planned for a future release.
+Archivematica 1.6.1 is the first release to be tested on Ubuntu 16.04.  Support
+for this OS is still considered beta; installation has been tested but production
+deployments are limited. 
+
 Other linux distributions should work, but will require customization of these
 installation instructions.
 
@@ -82,11 +87,11 @@ See :ref:`Advanced <advanced>`.
 
 **Notes**:
 
-Archivematica 1.6.0 requires ElasticSearch 1.x (tested with 1.7.5).
+Archivematica 1.6.1 requires ElasticSearch 1.x (tested with 1.7.5).
 Support for ElasticSearch 2.x and 5.x is being developed and is planned for a
 future release.
 
-Archivematica 1.6.0 has been tested with MySQL 5.5, including the Percona and
+Archivematica 1.6.1 has been tested with MySQL 5.5, including the Percona and
 MariaDB alternatives.  Archivematica should work with MySQL 5.6.
 
 The remaining dependencies should be kept at the versions installed by
@@ -151,7 +156,8 @@ Installing Ubuntu Packages
 --------------------------
 
 Archivematica packages are hosted at packages.archivematica.org. This has been
-introduced to allow one central place to store packages for multiple OS's.
+introduced to allow one central place to store packages for multiple OS's.  
+Packages for both Ubuntu 14.04 and 16.04 are available.
 
 1. Add Package Sources
 
@@ -176,7 +182,7 @@ Elasticsearch comes from its own package repository
 
 2. Update your system
 
-Update to the most recent 14.04 release. This step will also fetch a list of
+Update to the most recent  release (14.04.5, or 16.04.2. This step will also fetch a list of
 the software from the package repositories you just added to your system.
 
 .. code:: bash
@@ -196,7 +202,14 @@ the software from the package repositories you just added to your system.
 
    sudo apt-get install -y archivematica-storage-service
 
-5. Update python setuptools.
+5. Configure the storage service
+
+.. code:: bash
+
+   sudo rm -f /etc/nginx/sites-enabled/default
+   sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+
+6. Update pip
 
 This is used to install python dependencies for both the storage service and
 the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 with the version of pip installed on
@@ -204,18 +217,15 @@ Ubuntu 14.04, which makes this step necessary.
 
 .. code:: bash
 
-   uudo pip install -U setuptools
-
-6. Configure the storage service
-
-.. code:: bash
-
-   sudo rm -f /etc/nginx/sites-enabled/default
-   sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+   sudo wget https://bootstrap.pypa.io/get-pip.py
+   sudo python get-pip.py
 
 7. Install the Archivematica packages
 
-Each of these packages can be installed separately, if necessary).
+The order of installation is important - the mcp-server package must be 
+installed before the dashboard package.  While it is possible to install the
+mcp-client package on a separate machine, that configuration is not 
+documented in these instructions.
 
 .. code:: bash
 
