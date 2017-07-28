@@ -5,12 +5,15 @@ Import metadata
 ===============
 
 You can import metadata by including a directory called ``metadata`` in 
-your transer. The folder can contain any type of metadata that you wish 
-to preserve alongside your digital objects. Archivematica also supports
-conventions for importing descriptive metadata and rights metadata that 
-will tranpose the contents of the metadata files into the METs file. 
-Metadata in the METS file is searchable in the :ref:`Archival Storage 
-<archival-storage>` tab.
+your transer. The directory can contain any type of metadata that you wish 
+to preserve alongside your digital objects. The Process Metadata Directory
+`Microservice <https://wiki.archivematica.org/Micro-services>`_ will 
+perform a number of preservation actions on objects in this directory. 
+
+Archivematica also supports conventions for importing descriptive metadata 
+and rights metadata that will tranpose the contents of the metadata files 
+into the METs file. Metadata in the METS file is searchable in the
+:ref:`Archival Storage <archival-storage>` tab.
 
 *On this page: *
 
@@ -83,7 +86,7 @@ Importing descriptive metadata with metadata.csv
      :width: 100%
      :alt:  Example csv file contents
 
-     Example csv file contents
+     Example metadata.csv file contents
 
 4. At the generate METS micro-service, Archivematica parses the metadata in
    metadata.csv to the METS file, as follows:
@@ -333,18 +336,22 @@ Importing rights metadata with rights.csv
 -----------------------------------------
 
 Rights information can be associated to specific files in a transfer by 
-creating a rights.csv file that conforms to the structure below. You can
-enter multiple acts for the same rights basis. Rows for the same object 
-with the same rights basis will be treated as separate acts for the basis 
-and merged. For example, the first two rows below will be merged, while 
-the third row will be separate.
+creating a rights.csv file that conforms to the structure below. 
+
+You can enter multiple acts for the same rights basis. Rows for the same 
+object with the same rights basis will be treated as separate acts for the 
+basis and merged. For example, the first two rows below will be merged, 
+while the third row will be separate. You can read more about rights 
+metadata here: :ref:`PREMIS metadata in Archivematica <_premis-template>`
 
 =============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  ===============  ==============  ==========  ========================================  ==========================================  ========================================
 file	         basis	      status       determination_date	 jurisdiction	start_date	end_date	   terms	               citation	               note	                 grant_act	   grant_restriction	 grant_start_date	grant_end_date	 grant_note	 doc_id_type                               doc_id_value	                              doc_id_role
+=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========
 image1.tif	   copyright	copyrighted	 2011-01-01	          ca	         2011-01-01	2013-12-31	Terms of copyright.	Citation of copyright.	Note about copyright.  disseminate	disallow	          2011-01-01	      2013-12-31	    Grant note	 Copyright documentation identifier type.	 Copyright documentation identifier value.	Copyright documentation identifier role.
 image1.tif	   copyright	copyrighted	 2011-01-01	          ca	         2011-01-01	2013-12-31	Terms of copyright.	Citation of copyright.	Note about copyright.  use       	disallow	          2011-01-01	      2013-12-31	    Grant note	 Copyright documentation identifier type.	 Copyright documentation identifier value.	Copyright documentation identifier role.
 document.pdf	license				                                          2000-09-09	2010-09-08	Terms of license.		Note about license.	   migrate	              allow	                         2000-09-08		                   Grant note	 License documentation identifier type.	 License documentation identifier value.	   License documentation identifier role.
+=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========
 
-
+The rights.csv file is parsed by the job "Load Rights" within the "Characterize and Extract Metadata" microservice run during :ref:`transfer <transfer>`. 
 
 :ref:`Back to the top <import-metadata>`
