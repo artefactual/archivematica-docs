@@ -40,7 +40,7 @@ Technical Requirements
 
 **Operating System**
 
-Archivematica 1.6.1 installation instructions are provided here for the 
+Archivematica |release| installation instructions are provided here for the 
 following operating systems:
 
 * Ubuntu 14.04.5 64 bit Server Edition
