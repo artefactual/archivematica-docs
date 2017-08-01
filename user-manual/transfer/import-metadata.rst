@@ -15,10 +15,9 @@ and rights metadata that will tranpose the contents of the metadata files
 into the METs file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
 
-*On this page: *
+*On this page:*
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
-
 * :ref:`Importing rights metadata with rights.csv <rights.csv>` 
 
 .. seealso::
@@ -26,6 +25,7 @@ into the METs file. Metadata in the METS file is searchable in the
    :ref:`Create a transfer with submission documentation <create-submission>`
 
 .. _metadata.csv:
+
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
@@ -79,7 +79,6 @@ Importing descriptive metadata with metadata.csv
   if desired. For example, the name "page01.jp2" can occur in multiple
   subdirectories.
 
-
   .. figure:: images/CsvMDimport-10.*
      :align: center
      :figwidth: 60%
@@ -107,7 +106,7 @@ This section provides metadata.csv file and METS file examples for simple object
 i.e. individual files that are not pages in a compound object such as a book
 or a newspaper issue.
 
-**Metadata.csv file**
+**metadata.csv file**
 
 Sample headings and values
 
@@ -215,7 +214,7 @@ Compound objects
 This section provides csv file and METS file examples for compound objects -
 i.e. multi-page digital objects such as newspapers and books.
 
-**Metadata.csv file**
+**metadata.csv file**
 
 Sample headings and values
 
@@ -331,7 +330,9 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
    </structMap>
    </mets>
 
+
 .. _rights.csv:
+
 Importing rights metadata with rights.csv
 -----------------------------------------
 
@@ -342,7 +343,7 @@ You can enter multiple acts for the same rights basis. Rows for the same
 object with the same rights basis will be treated as separate acts for the 
 basis and merged. For example, the first two rows below will be merged, 
 while the third row will be separate. You can read more about rights 
-metadata here: :ref:`PREMIS metadata in Archivematica <_premis-template>`
+metadata here: :ref:`PREMIS metadata in Archivematica <premis-template>`
 
 =============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================  
 file           basis       status       determination_date   jurisdiction  start_date  end_date    terms                citation                note                   grant_act    grant_restriction  grant_start_date   grant_end_date   grant_note  doc_id_type                               doc_id_value                                doc_id_role
