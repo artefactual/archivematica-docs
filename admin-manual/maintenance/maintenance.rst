@@ -220,7 +220,7 @@ programmatically, this can be done with pyes using the following code.
 Rebuilding the AIP index
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-To rebuild the ElasticSearch AIP index enter the following to find the
+To rebuild the Elasticsearch AIP index enter the following to find the
 location of the rebuilding script:
 
 .. code:: bash
@@ -238,7 +238,7 @@ from-files" with the location of the script):
 Rebuilding the transfer index
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Similarly, to rebuild the ElasticSearch transfer data index enter the
+Similarly, to rebuild the Elasticsearch transfer data index enter the
 following to find the location of the rebuilding script:
 
 .. code:: bash
@@ -269,7 +269,7 @@ In Archivematica there are three types of data you'll likely want to back up:
 
 * MySQL
 
-* ElasticSearch
+* Elasticsearch
 
 MySQL is used to store short-term processing data. You can back up the MySQL
 database by using the following command:
@@ -278,8 +278,8 @@ database by using the following command:
 
    mysqldump -u <your username> -p<your password> -c MCP > <filename of backup>
 
-ElasticSearch is used to store long-term data. Instructions and scripts for
-backing up and restoring ElasticSearch are available
+Elasticsearch is used to store long-term data. Instructions and scripts for
+backing up and restoring Elasticsearch are available
 `here <http://tech.superhappykittymeow.com/?p=296>`_.
 
 .. _admin-faq:

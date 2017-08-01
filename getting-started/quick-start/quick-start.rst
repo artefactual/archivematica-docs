@@ -289,8 +289,7 @@ as a Scalable Vector Graphic, with the preservation columnns highlighted.
 .. image:: images/normalization-report-preservation.png
    :align: left
    :width: 100%
-   :alt: A row of the Normalization Report with the preservation columns 
-   indicated by a red box.
+   :alt: A row of the Normalization Report with the preservation columns indicated by a red box.
 
 If you return to the Preservation Planning tab where you searched for SVG, you 
 can see that SVG files are considered a preservation format. Therefore, the 
@@ -313,8 +312,7 @@ highlighted.
 .. image:: images/normalization-report-access.png
    :align: left
    :width: 100%
-   :alt: A row of the Normalization Report with the access columns indicated by 
-   a red box.
+   :alt: A row of the Normalization Report with the access columns indicated by a red box.
 
 For access normalization, the report indicates the following:
 

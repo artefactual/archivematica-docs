@@ -16,9 +16,9 @@ This page outlines various security settings and configurations in Archivematica
 Elasticsearch access control
 ----------------------------
 
-The only way to limit access to ElasticSearch, currently, is using your
+The only way to limit access to Elasticsearch, currently, is using your
 server's firewall configuration. You'll likely want to configure your server's
-firewall to limit access to ElasticSearch's TCP/IP port (9200). It is
+firewall to limit access to Elasticsearch's TCP/IP port (9200). It is
 recommended to only allow access by 127.0.0.1 (the server itself) and the IPs
 of any other servers or workstations that should be able to access it.
 

@@ -7,8 +7,8 @@ Installation
 *On this page*
 
 * :ref:`Overview <overview>`
-* :ref:`Technical requiremnets <tech-requirements>`
-* :ref:`New Installation <new-install>`
+* :ref:`Technical requirements <tech-requirements>`
+* :ref:`New installation <new-install>`
 * :ref:`Upgrade from 1.5 <upgrade>`
 * :ref:`Advanced <advanced>`
 
@@ -78,7 +78,7 @@ to install some of the components on separate machines, to improve performance,
 such as:
 
 * MySQL
-* ElasticSearch
+* Elasticsearch
 * gearman
 
 Using additional machines requires some additional configuration.
@@ -87,15 +87,15 @@ See :ref:`Advanced <advanced>`.
 
 **Notes**:
 
-Archivematica 1.6.1 requires ElasticSearch 1.x (tested with 1.7.6).
-Support for ElasticSearch 2.x and/or 5.x is being developed and is planned for a
+Archivematica 1.6.1 requires Elasticsearch 1.x (tested with 1.7.6).
+Support for Elasticsearch 2.x and/or 5.x is being developed and is planned for a
 future release.
 
 Archivematica 1.6.1 has been tested with MySQL 5.5, including the Percona and
 MariaDB alternatives.  Archivematica uses MySQL 5.7 on Ubuntu 16.04.
 
 Some of the tools run by Archivematica require Java to be installed (primarily 
-ElasticSearch and fits).  On Ubuntu 14.04, Open JDK 7 is used.  On Ubuntu 16.04
+Elasticsearch and fits).  On Ubuntu 14.04, Open JDK 7 is used.  On Ubuntu 16.04
 Open JDK 8 is the default.  It is possible to use Oracle Java 7 or 8 instead.
 
 The remaining dependencies should be kept at the versions installed by
@@ -131,9 +131,9 @@ considered the minimum for a viable production system:
 These requirements may not be suitable for certain types of material, e.g. audio-visual.
 
 
--- _new-install:
+.. _new-install:
 
-New Installation
+New installation
 ================
 
 When intalling Archivematica for the first time, there are a few choices to
@@ -163,36 +163,36 @@ Archivematica packages are hosted at packages.archivematica.org. This has been
 introduced to allow one central place to store packages for multiple OS's.  
 Packages for both Ubuntu 14.04 and 16.04 are available.
 
-1. Add Package Sources
+1. Add Archivematica package sources
 
-* Archivematica
-
-Add packages.archivematica.org to your list of trusted repositories
+Add packages.archivematica.org to your list of trusted repositories.
 
 Using 14.04 (Trusty):
+
 .. code:: bash
 
    sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main" >> /etc/apt/sources.list'
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
-Using 16.04 (Xenial)
+Using 16.04 (Xenial):
+
 .. code:: bash
 
    sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu xenial main" >> /etc/apt/sources.list'
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
-* ElasticSearch
+2. Add Elasticsearch package source
 
-Elasticsearch comes from its own package repository
+Elasticsearch comes from its own package repository.
 
 .. code:: bash
 
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
    sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
-2. Update your system
+3. Update your system
 
 Update to the most recent  release (14.04.5, or 16.04.2. This step will also fetch a list of
 the software from the package repositories you just added to your system.
@@ -202,26 +202,26 @@ the software from the package repositories you just added to your system.
    sudo apt-get update
    sudo apt-get upgrade
 
-3. Install Elasticsearch
+4. Install Elasticsearch
 
 .. code:: bash
 
    sudo apt-get install elasticsearch
 
-4. Install the storage service package
+5. Install the storage service package
 
 .. code:: bash
 
    sudo apt-get install -y archivematica-storage-service
 
-5. Configure the storage service
+6. Configure the storage service
 
 .. code:: bash
 
    sudo rm -f /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
-6. Update pip
+7. Update pip
 
 This is used to install python dependencies for both the storage service and
 the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 
@@ -234,7 +234,7 @@ get the most recent version of pip.
    sudo wget https://bootstrap.pypa.io/get-pip.py
    sudo python get-pip.py
 
-7. Install the Archivematica packages
+8. Install the Archivematica packages
 
 The order of installation is important - the mcp-server package must be 
 installed before the dashboard package.  While it is possible to install the
@@ -258,13 +258,13 @@ changed after the installation is complete.
    sudo apt-get install -y archivematica-dashboard
    sudo apt-get install -y archivematica-mcp-client
 
-8. Configure the dashboard
+9. Configure the dashboard
 
 .. code:: bash
 
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
-9. Start Elasticsearch
+10. Start Elasticsearch
 
 Start the Elasticsearch service and configure it to start automatically when
 the system is rebooted.
@@ -274,7 +274,7 @@ the system is rebooted.
    sudo service elasticsearch restart
    sudo update-rc.d elasticsearch defaults 95 10
 
-10. Start the remaining services
+11. Start the remaining services
 
 .. code:: bash
 
@@ -648,7 +648,7 @@ Follow the instructions in the web browser to complete the installation.
 .. _upgrade:
 
 Upgrade from Archivematica 1.5.x to 1.6.0
-==================================
+=========================================
 
 Archivematica 1.5.x is available for Ubuntu 14.04 and Centos 7.x.  If you are
 running a version of Archivematica older than 1.5.0, you will need to upgrade
@@ -801,7 +801,7 @@ unless you have a back you can restore from.
 Archivematica devtools is a set of utilities that was built by developers While
 working on Archivematica.  Devtools includes helper scripts that make it easier
 to perform certain maintenance tasks.  One of those tools is used to rebuild
-the Transfer index in ElasticSearch, which is used by the different backlog
+the Transfer index in Elasticsearch, which is used by the different backlog
 tools such as the new Appraisal Tab.  Currently this must be installed using
 git.  These instructions will be updated when a packaged version is available.
 See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
@@ -908,7 +908,7 @@ unless you have a back you can restore from.
 Archivematica devtools is a set of utilities that was built by developers While
 working on Archivematica.  Devtools includes helper scripts that make it easier
 to perform certain maintenance tasks.  One of those tools is used to rebuild
-the Transfer index in ElasticSearch, which is used by the different backlog
+the Transfer index in Elasticsearch, which is used by the different backlog
 tools such as the new Appraisal Tab.  Currently this must be installed using
 git.  These instructions will be updated when a packaged version is available.
 See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
@@ -943,7 +943,7 @@ should be able to see your Transfer Backlog in the Appraisal tab and in the
 Backlog tab.
 
 Upgrade from Archivematica 1.6.0 to 1.6.1
-==================================
+=========================================
 
 Archivematica 1.6.1 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.  
 If you are running a version of Archivematica older than 1.6.0, you will need to 
@@ -1004,7 +1004,7 @@ try this command instead:
 .. _upgrade-centos-161:
 
 Upgrade from Archivematica 1.6.0 for CentOS/Redhat
-------------------------------------------------
+--------------------------------------------------
 
 1. Upgrade the packages:
 
