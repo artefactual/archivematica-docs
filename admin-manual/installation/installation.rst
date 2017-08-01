@@ -57,8 +57,8 @@ installation instructions.
 Support for Mac OS X is possibly in theory, but is not being tested, and would
 require more significant deviation from these instructions.
 
-Archivematica is unlikely to ever run in a Windows environment.  Consider the
-use of a virtualization platform to run linux vm's.
+Archivematica is unlikely to ever run directly in a Windows environment.  
+Consider the use of a virtualization platform to run linux vm's.
 
 **Hardware**
 
@@ -87,12 +87,16 @@ See :ref:`Advanced <advanced>`.
 
 **Notes**:
 
-Archivematica 1.6.1 requires ElasticSearch 1.x (tested with 1.7.5).
-Support for ElasticSearch 2.x and 5.x is being developed and is planned for a
+Archivematica 1.6.1 requires ElasticSearch 1.x (tested with 1.7.6).
+Support for ElasticSearch 2.x and/or 5.x is being developed and is planned for a
 future release.
 
 Archivematica 1.6.1 has been tested with MySQL 5.5, including the Percona and
-MariaDB alternatives.  Archivematica should work with MySQL 5.6.
+MariaDB alternatives.  Archivematica uses MySQL 5.7 on Ubuntu 16.04.
+
+Some of the tools run by Archivematica require Java to be installed (primarily 
+ElasticSearch and fits).  On Ubuntu 14.04, Open JDK 7 is used.  On Ubuntu 16.04
+Open JDK 8 is the default.  It is possible to use Oracle Java 7 or 8 instead.
 
 The remaining dependencies should be kept at the versions installed by
 Archivematica.
@@ -165,11 +169,19 @@ Packages for both Ubuntu 14.04 and 16.04 are available.
 
 Add packages.archivematica.org to your list of trusted repositories
 
+Using 14.04 (Trusty):
 .. code:: bash
 
    sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main" >> /etc/apt/sources.list'
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+
+Using 16.04 (Xenial)
+.. code:: bash
+
+   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu xenial main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
 * ElasticSearch
 
@@ -212,8 +224,10 @@ the software from the package repositories you just added to your system.
 6. Update pip
 
 This is used to install python dependencies for both the storage service and
-the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 with the version of pip installed on
-Ubuntu 14.04, which makes this step necessary.
+the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 
+with the version of pip installed on Ubuntu 14.04, which makes this step 
+necessary.  This step is optional on Ubuntu 16.04, but is still a good idea, to
+get the most recent version of pip.
 
 .. code:: bash
 
@@ -226,6 +240,17 @@ The order of installation is important - the mcp-server package must be
 installed before the dashboard package.  While it is possible to install the
 mcp-client package on a separate machine, that configuration is not 
 documented in these instructions.
+
+The mcp-server package will install MySQL and configure the database used by
+Archivematica.  Depending on the version of MySQL that gets installed the 
+prompts you will say can differ.  In all cases, you will be prompted to create
+a password for the 'root' user.  Keep note of the password you create.
+On Ubuntu 14.04, MySQL 5.5 is installed, and
+the default 'archivematica' database user is automatically created with a 
+default password of 'demo'.  On Ubuntu 16.04, MySQL 5.7 is installed, and 
+you are prompted to add a password for the 'archivematica' user.  You must
+use 'demo' as the password during the install process.  The password can be 
+changed after the installation is complete.
 
 .. code:: bash
 
@@ -256,12 +281,12 @@ the system is rebooted.
    sudo freshclam
    sudo service clamav-daemon start
    sudo service gearman-job-server restart
-   sudo start archivematica-mcp-server
-   sudo start archivematica-mcp-client
-   sudo start archivematica-storage-service
-   sudo start archivematica-dashboard
+   sudo service archivematica-mcp-server start
+   sudo service archivematica-mcp-client start
+   sudo service archivematica-storage-service start
+   sudo service archivematica-dashboard start
    sudo service nginx restart
-   sudo start fits
+   sudo service fits start
 
 If you have trouble with the gearman command try this as an alternative:
 
@@ -622,13 +647,16 @@ Follow the instructions in the web browser to complete the installation.
 
 .. _upgrade:
 
-Upgrade from Archivematica 1.5
-==============================
+Upgrade from Archivematica 1.5.x to 1.6.0
+==================================
 
 Archivematica 1.5.x is available for Ubuntu 14.04 and Centos 7.x.  If you are
 running a version of Archivematica older than 1.5.0, you will need to upgrade
 your operating system from Ubuntu 12.04 to Ubuntu 14.04, and upgrade
-Archiveamtica to 1.5.1 before following these instructions.
+Archiveamtica to 1.5.0 before following these instructions.  This section of 
+the instructions is focused on upgrading to Archivematica 1.6.0, as this is a 
+slightly more complicated process.  Upgrading from 1.6.0 to 1.6.1 is quite 
+easy and covered below.
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos>`
@@ -914,7 +942,109 @@ This may take a while if you have a large backlog.  Once it completes, you
 should be able to see your Transfer Backlog in the Appraisal tab and in the
 Backlog tab.
 
+Upgrade from Archivematica 1.6.0 to 1.6.1
+==================================
 
+Archivematica 1.6.1 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.  
+If you are running a version of Archivematica older than 1.6.0, you will need to 
+upgrade Archiveamtica to 1.6.0 before following these instructions.  See the 
+section above for details.  
+
+* :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu-161>`
+* :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos-161>`
+
+While it is possible to upgrade a github based source install using ansible,
+these instructions do not cover that scenario.
+
+**Backup first**
+
+Before starting any upgrade procedure on a production system, it is prudent to
+back up your system.  If you are using a virtual machine, take a snapshot of it
+before making any changes.  Alternatively, back up the file systems being used
+by your system.  Exact procedures for updating will depend on your local
+installation.   See the 'Update from 1.5.x to 1.6.0' section above for an example.
+
+.. _upgrade-ubuntu-161:
+
+Upgrade on Ubuntu
+-----------------
+
+1. Run the Update
+
+.. code:: bash
+
+   sudo apt-get update && sudo apt-get upgrade
+
+2. Restart Services
+
+Alternatively you can use the devtools, if you have that installed.  See the 
+'Upgrade from 1.5.x to 1.6.0' section above for details.
+
+.. code:: bash
+
+   sudo service nginx restart
+   sudo service archivematica-storage-service restart
+   sudo service gearman-job-server restart
+   sudo service archivematica-mcp-server restart
+   sudo service archivematica-mcp-client restart
+   sudo service archivematica-dashboard restart
+   sudo service  fits restart
+   sudo freshclam
+   sudo service clamav-daemon restart
+   sudo service nginx restart
+
+Note, depending on how your Ubuntu system is set up, you may have trouble
+restarting gearman with the command in the block above.  If that is the case,
+try this command instead:
+
+.. code:: bash
+
+   sudo restart gearman-job-server
+
+.. _upgrade-centos-161:
+
+Upgrade from Archivematica 1.6.0 for CentOS/Redhat
+------------------------------------------------
+
+1. Upgrade the packages:
+
+.. code:: bash
+
+   sudo yum update
+
+2. Run Migration tasks
+
+Once the new packages are installed, we need to upgrade the databases for both, archivematica and the storage service. This can be done with:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-storage-service
+   cd /usr/share/archivematica/storage-service
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
+   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   ";
+
+   sudo -u archivematica bash -c " \
+   set -a -e -x
+   source /etc/sysconfig/archivematica-dashboard
+   cd /usr/share/archivematica/dashboard
+   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   ";
+
+3. Restart Services
+
+.. code:: bash
+
+   sudo systemctl restart archivematica-storage-service
+   sudo systemctl restart archivematica-dashboard
+   sudo systemctl restart archivematica-mcp-client
+   sudo systemctl restart archivematica-mcp-server
+
+Depending on your browser settings, you may need to clear your browser cache to
+make the dashboard pages load properly.  For example in Firefox or Chrome you
+should be able to clear the cache with control-shift-R or command-shift-F5.
 
 .. _advanced:
 
