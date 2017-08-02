@@ -33,6 +33,10 @@ Don't be afraid to ask for help if you get stuck, or if you don't understand
 some part of the instructions.  The Archivematica google group is a good place
 to look for assistance.
 
+.. note::
+
+For testing purposes, you may find it easier to install on a virtual machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
+
 .. _tech-requirements:
 
 Technical Requirements
@@ -1067,7 +1071,8 @@ The recommended way to install Archivematica for development is with Ansible and
 Vagrant. For instructions on how to install Archivematica from a virtual machine,
 see the `Ansible & Vagrant Installation instructions
 <https://wiki.archivematica.org/Getting_started#Installation>`_ on the Archivematica
-wiki.
+wiki. See also instructions for installation on a virtual machine using Vagrant in
+the :ref:`Quick Start Guide <quick-start-install>`
 
 .. _multiple-machines:
 
@@ -1156,7 +1161,7 @@ See: :ref:`Swift Storage Service docs <storageservice:swift>`
 Islandora
 ^^^^^^^^^
 
-TODO
+See: :ref:`Fedora Storage Service docs <storageservice:fedora>`
 
 .. _install-arkivum:
 
