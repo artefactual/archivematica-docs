@@ -179,11 +179,10 @@ ArchivesSpace Resources
 
 The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to
 resources that have been created in an ArchivesSpace repository. Settings for
-ArchivesSpace DIP upload should be configured in the
- :ref:`Dashboard administration tab <dashboard-admin>` to associate the
- ArchivesSpace repository. In the
-ArchivesSpace pane, files transferred into Archivematica can be associated with
-resources created in ArchivesSpace and SIPs can be sent to Ingest.
+ArchivesSpace DIP upload should be configured in the :ref:`Dashboard administration tab <dashboard-admin>`
+to associate the ArchivesSpace repository. In the ArchivesSpace pane, files
+transferred into Archivematica can be associated with resources created in
+ArchivesSpace and SIPs can be sent to Ingest.
 
 ArchivesSpace Terms
 ===================
@@ -211,8 +210,7 @@ by the parallel lines icon.
 .. image:: images/archivesspace_search.*
    :align: center
    :width: 60%
-   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show
-   levels of heirarchy
+   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of hierarchy
 
 Creating Archival Description
 =============================
@@ -306,7 +304,7 @@ Appraisal tab).
 
 One file or directory from a transfer can be moved at a time. A file can only be
 added once to an ArchivesSpace resource. Files that have been added to a digital
- object component will appear with a strike-through in the backlog.
+object component will appear with a strike-through in the backlog.
 
 Once all files have been added to their place in the arrangement, SIPs can be
 started in Ingest by selecting the resource/archival object and clicking

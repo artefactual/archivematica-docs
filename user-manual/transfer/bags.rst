@@ -105,7 +105,7 @@ To search the bag (transfer) metadata in the Archival Storage tab:
 
 
 Use keyword field "Transfer metadata" to search all the contents of the
-<transfer_metadata> container in the METS file (as indexed in ElasticSearch).
+<transfer_metadata> container in the METS file (as indexed in Elasticsearch).
 
 Use keyword field "Transfer metadata (other)" to search individual fields in
 the <transfer_metadata> container.  When the user selects "Transfer metadata
