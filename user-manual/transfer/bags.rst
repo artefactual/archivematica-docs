@@ -26,7 +26,7 @@ with the Bagit specification.
 
 .. image:: images/BagTransfer-10.*
    :align: center
-   :width: 80%
+   :width: 100%
    :alt: Unzipped bag transfer in dashboard
 
 

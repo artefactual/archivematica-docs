@@ -35,7 +35,7 @@ to look for assistance.
 
 .. note::
 
-For testing purposes, you may find it easier to install on a virtual machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
+   For testing purposes, you may find it easier to install on a virtual machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
 
 .. _tech-requirements:
 
@@ -44,7 +44,7 @@ Technical Requirements
 
 **Operating System**
 
-Archivematica |release| installation instructions are provided here for the 
+Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
 * Ubuntu 14.04.5 64 bit Server Edition
@@ -53,7 +53,7 @@ following operating systems:
 
 Archivematica 1.6.1 is the first release to be tested on Ubuntu 16.04.  Support
 for this OS is still considered beta; installation has been tested but production
-deployments are limited. 
+deployments are limited.
 
 Other linux distributions should work, but will require customization of these
 installation instructions.
@@ -61,7 +61,7 @@ installation instructions.
 Support for Mac OS X is possibly in theory, but is not being tested, and would
 require more significant deviation from these instructions.
 
-Archivematica is unlikely to ever run directly in a Windows environment.  
+Archivematica is unlikely to ever run directly in a Windows environment.
 Consider the use of a virtualization platform to run linux vm's.
 
 **Hardware**
@@ -98,7 +98,7 @@ future release.
 Archivematica 1.6.1 has been tested with MySQL 5.5, including the Percona and
 MariaDB alternatives.  Archivematica uses MySQL 5.7 on Ubuntu 16.04.
 
-Some of the tools run by Archivematica require Java to be installed (primarily 
+Some of the tools run by Archivematica require Java to be installed (primarily
 Elasticsearch and fits).  On Ubuntu 14.04, Open JDK 7 is used.  On Ubuntu 16.04
 Open JDK 8 is the default.  It is possible to use Oracle Java 7 or 8 instead.
 
@@ -164,7 +164,7 @@ Installing Ubuntu Packages
 --------------------------
 
 Archivematica packages are hosted at packages.archivematica.org. This has been
-introduced to allow one central place to store packages for multiple OS's.  
+introduced to allow one central place to store packages for multiple OS's.
 Packages for both Ubuntu 14.04 and 16.04 are available.
 
 1. Add Archivematica package sources
@@ -228,8 +228,8 @@ the software from the package repositories you just added to your system.
 7. Update pip
 
 This is used to install python dependencies for both the storage service and
-the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 
-with the version of pip installed on Ubuntu 14.04, which makes this step 
+the dashboard.  There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
+with the version of pip installed on Ubuntu 14.04, which makes this step
 necessary.  This step is optional on Ubuntu 16.04, but is still a good idea, to
 get the most recent version of pip.
 
@@ -240,20 +240,20 @@ get the most recent version of pip.
 
 8. Install the Archivematica packages
 
-The order of installation is important - the mcp-server package must be 
+The order of installation is important - the mcp-server package must be
 installed before the dashboard package.  While it is possible to install the
-mcp-client package on a separate machine, that configuration is not 
+mcp-client package on a separate machine, that configuration is not
 documented in these instructions.
 
 The mcp-server package will install MySQL and configure the database used by
-Archivematica.  Depending on the version of MySQL that gets installed the 
+Archivematica.  Depending on the version of MySQL that gets installed the
 prompts you will say can differ.  In all cases, you will be prompted to create
 a password for the 'root' user.  Keep note of the password you create.
 On Ubuntu 14.04, MySQL 5.5 is installed, and
-the default 'archivematica' database user is automatically created with a 
-default password of 'demo'.  On Ubuntu 16.04, MySQL 5.7 is installed, and 
+the default 'archivematica' database user is automatically created with a
+default password of 'demo'.  On Ubuntu 16.04, MySQL 5.7 is installed, and
 you are prompted to add a password for the 'archivematica' user.  You must
-use 'demo' as the password during the install process.  The password can be 
+use 'demo' as the password during the install process.  The password can be
 changed after the installation is complete.
 
 .. code:: bash
@@ -657,9 +657,9 @@ Upgrade from Archivematica 1.5.x to 1.6.0
 Archivematica 1.5.x is available for Ubuntu 14.04 and Centos 7.x.  If you are
 running a version of Archivematica older than 1.5.0, you will need to upgrade
 your operating system from Ubuntu 12.04 to Ubuntu 14.04, and upgrade
-Archiveamtica to 1.5.0 before following these instructions.  This section of 
-the instructions is focused on upgrading to Archivematica 1.6.0, as this is a 
-slightly more complicated process.  Upgrading from 1.6.0 to 1.6.1 is quite 
+Archiveamtica to 1.5.0 before following these instructions.  This section of
+the instructions is focused on upgrading to Archivematica 1.6.0, as this is a
+slightly more complicated process.  Upgrading from 1.6.0 to 1.6.1 is quite
 easy and covered below.
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
@@ -949,10 +949,10 @@ Backlog tab.
 Upgrade from Archivematica 1.6.0 to 1.6.1
 =========================================
 
-Archivematica 1.6.1 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.  
-If you are running a version of Archivematica older than 1.6.0, you will need to 
-upgrade Archiveamtica to 1.6.0 before following these instructions.  See the 
-section above for details.  
+Archivematica 1.6.1 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.
+If you are running a version of Archivematica older than 1.6.0, you will need to
+upgrade Archiveamtica to 1.6.0 before following these instructions.  See the
+section above for details.
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu-161>`
 * :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos-161>`
@@ -981,7 +981,7 @@ Upgrade on Ubuntu
 
 2. Restart Services
 
-Alternatively you can use the devtools, if you have that installed.  See the 
+Alternatively you can use the devtools, if you have that installed.  See the
 'Upgrade from 1.5.x to 1.6.0' section above for details.
 
 .. code:: bash
