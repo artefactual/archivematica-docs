@@ -9,7 +9,7 @@ Installation
 * :ref:`Overview <overview>`
 * :ref:`Technical requirements <tech-requirements>`
 * :ref:`New installation <new-install>`
-* :ref:`Upgrade from 1.5 <upgrade>`
+* :ref:`Upgrade from 1.7 <upgrade>`
 * :ref:`Advanced <advanced>`
 
 .. _overview:
@@ -51,7 +51,7 @@ following operating systems:
 * Ubuntu 16.04.2 64 bit Server Edition (beta)
 * CentOS 7.3.1611 64 bit
 
-Archivematica 1.6.1 is the first release to be tested on Ubuntu 16.04.  Support
+Archivematica 1.8 is the first release to be tested on Ubuntu 16.04.  Support
 for this OS is still considered beta; installation has been tested but production
 deployments are limited.
 
@@ -82,8 +82,8 @@ to install some of the components on separate machines, to improve performance,
 such as:
 
 * MySQL
-* Elasticsearch
 * gearman
+* Elasticsearch (optional, see below)
 
 Using additional machines requires some additional configuration.
 
@@ -91,11 +91,18 @@ See :ref:`Advanced <advanced>`.
 
 **Notes**:
 
-Archivematica 1.6.1 requires Elasticsearch 1.x (tested with 1.7.6).
-Support for Elasticsearch 2.x and/or 5.x is being developed and is planned for a
-future release.
+Indexing
+Archivematica uses Elasticsearch to provide a search index.  
+This is now an optional feature, as of version 1.8.0.  It is possible to 
+install Archivematica without Elasticsearch. This provides the benefit of
+reduced consumption of compute resources, and lower opertional 
+complexity, the trade off being that some functionality is not available.
 
-Archivematica 1.6.1 has been tested with MySQL 5.5, including the Percona and
+When Elasticsearch is used, Archivematica 1.8.0 requires version 1.x 
+(tested with 1.7.6). Support for a more modern version of Elasticsearch
+is being developed and is planned for a future release.
+
+Archivematica 1.8 has been tested with MySQL 5.5, including the Percona and
 MariaDB alternatives.  Archivematica uses MySQL 5.7 on Ubuntu 16.04.
 
 Some of the tools run by Archivematica require Java to be installed (primarily
@@ -175,19 +182,21 @@ Using 14.04 (Trusty):
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu trusty main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 Using 16.04 (Xenial):
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
-2. Add Elasticsearch package source
+2. Add Elasticsearch package source (optional)
+
+If you are planning on running in 'headless' mode, this step should be skipped.
 
 Elasticsearch comes from its own package repository.
 
@@ -206,7 +215,9 @@ the software from the package repositories you just added to your system.
    sudo apt-get update
    sudo apt-get upgrade
 
-4. Install Elasticsearch
+4. Install Elasticsearch (optional)
+
+If you are planning on running in 'headless' mode, this step should be skipped.
 
 .. code:: bash
 
@@ -363,7 +374,7 @@ Some repositories need to be installed in order to fullfill the installation pro
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
    [archivematica]
    name=archivematica
-   baseurl=https://packages.archivematica.org/1.6.x/centos
+   baseurl=https://packages.archivematica.org/1.8.x/centos
    gpgcheck=0
    enabled=1
    EOF'
@@ -475,7 +486,7 @@ and enabled before the archivematica install. It can be done with:
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
    [archivematica-extras]
    name=archivematica-extras
-   baseurl=https://packages.archivematica.org/1.6.x/centos-extras
+   baseurl=https://packages.archivematica.org/1.8.x/centos-extras
    gpgcheck=0
    enabled=1
    EOF'
@@ -665,15 +676,15 @@ Follow the instructions in the web browser to complete the installation.
 
 .. _upgrade:
 
-Upgrade from Archivematica 1.5.x to 1.6.0
+Upgrade from Archivematica 1.5.x to 1.8.0
 =========================================
 
 Archivematica 1.5.x is available for Ubuntu 14.04 and Centos 7.x.  If you are
 running a version of Archivematica older than 1.5.0, you will need to upgrade
 your operating system from Ubuntu 12.04 to Ubuntu 14.04, and upgrade
 Archiveamtica to 1.5.0 before following these instructions.  This section of
-the instructions is focused on upgrading to Archivematica 1.6.0, as this is a
-slightly more complicated process.  Upgrading from 1.6.0 to 1.6.1 is quite
+the instructions is focused on upgrading to Archivematica 1.8.0, as this is a
+slightly more complicated process.  Upgrading from 1.8.0 to 1.8 is quite
 easy and covered below.
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
@@ -731,8 +742,8 @@ Ubuntu 14.04, which makes this step necessary.
 .. code:: bash
 
    sudo add-apt-repository --remove ppa:archivematica/externals
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu trusty main' >> /etc/apt/sources.list
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
 
 Optionally you can remove the lines references packages.archivematica.org/1.5.x from /etc/apt/sources.list.
 
@@ -767,7 +778,7 @@ better to update the dashboard before updating the mcp components.
 
 7. Disable Unused Services
 
-Archivematica 1.6.0 uses nginx as http server, and gunicorn as wsgi server. This means that some services used in Archivematica 1.5.0 should be stopped and disabled before performing the upgrade.
+Archivematica 1.8.0 uses nginx as http server, and gunicorn as wsgi server. This means that some services used in Archivematica 1.5.0 should be stopped and disabled before performing the upgrade.
 
 .. code:: bash
 
@@ -867,11 +878,11 @@ should be able to clear the cache with control-shift-R or command-shift-F5.
 Upgrade from Archivematica 1.5 for CentOS/Redhat
 ------------------------------------------------
 
-* First, upgrade the repositories for 1.6:
+* First, upgrade the repositories for 1.8:
 
 .. code:: bash
 
-   sudo sed -i 's/1.5.x/1.6.x/g' /etc/yum.repos.d/archivematica*
+   sudo sed -i 's/1.5.x/1.8.x/g' /etc/yum.repos.d/archivematica*
 
 * Then, upgrade the packages:
 
@@ -960,12 +971,12 @@ This may take a while if you have a large backlog.  Once it completes, you
 should be able to see your Transfer Backlog in the Appraisal tab and in the
 Backlog tab.
 
-Upgrade from Archivematica 1.6.0 to 1.6.1
+Upgrade from Archivematica 1.8.0 to 1.8
 =========================================
 
-Archivematica 1.6.1 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.
-If you are running a version of Archivematica older than 1.6.0, you will need to
-upgrade Archiveamtica to 1.6.0 before following these instructions.  See the
+Archivematica 1.8 is available for Ubuntu 14.04, Ubuntu 16.04 and Centos 7.x.
+If you are running a version of Archivematica older than 1.8.0, you will need to
+upgrade Archiveamtica to 1.8.0 before following these instructions.  See the
 section above for details.
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu-161>`
@@ -980,7 +991,7 @@ Before starting any upgrade procedure on a production system, it is prudent to
 back up your system.  If you are using a virtual machine, take a snapshot of it
 before making any changes.  Alternatively, back up the file systems being used
 by your system.  Exact procedures for updating will depend on your local
-installation.   See the 'Update from 1.5.x to 1.6.0' section above for an example.
+installation.   See the 'Update from 1.5.x to 1.8.0' section above for an example.
 
 .. _upgrade-ubuntu-161:
 
@@ -996,7 +1007,7 @@ Upgrade on Ubuntu
 2. Restart Services
 
 Alternatively you can use the devtools, if you have that installed.  See the
-'Upgrade from 1.5.x to 1.6.0' section above for details.
+'Upgrade from 1.5.x to 1.8.0' section above for details.
 
 .. code:: bash
 
@@ -1021,7 +1032,7 @@ try this command instead:
 
 .. _upgrade-centos-161:
 
-Upgrade from Archivematica 1.6.0 for CentOS/Redhat
+Upgrade from Archivematica 1.8.0 for CentOS/Redhat
 --------------------------------------------------
 
 1. Upgrade the packages:
@@ -1118,7 +1129,7 @@ able to reach each other on the following ports:
 Using AtoM 2.x with Archivematica
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica 1.6 has been tested with and is recommended for use with AtoM
+Archivematica 1.8 has been tested with and is recommended for use with AtoM
 versions 2.2. AtoM version 2.2 or higher is required for use with the
 hierarchical DIP functionality; see :ref:`Arrange a SIP from backlog <arrange-sip>`.
 
