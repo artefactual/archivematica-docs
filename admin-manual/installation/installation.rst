@@ -75,7 +75,7 @@ however, processing large collections will require better hardware. See
 **Dependencies**
 
 Archivematica has a long list of software it depends on.  All of these
-dependencies are intalled when following the instructions below.
+dependencies are installed when following the instructions below.
 
 In these instructions everything is installed into one machine.  It is possible
 to install some of the components on separate machines, to improve performance,
@@ -83,7 +83,7 @@ such as:
 
 * MySQL
 * gearman
-* Elasticsearch (optional, see below)
+* Elasticsearch (optional as of 1.8.0, see below)
 
 Using additional machines requires some additional configuration.
 
@@ -91,15 +91,15 @@ See :ref:`Advanced <advanced>`.
 
 **Notes**:
 
-Indexing
-Archivematica uses Elasticsearch to provide a search index.  
-This is now an optional feature, as of version 1.8.0.  It is possible to 
-install Archivematica without Elasticsearch. This provides the benefit of
-reduced consumption of compute resources, and lower opertional 
-complexity, the trade off being that some functionality is not available.
+*Indexing*
+Installing Elasticsearch to provide a search index is now 
+optional as of version 1.8.0.  Installing Archivematica in a headless state,
+without Elasticsearch means reduced consumption of compute resources and lower 
+opertional complexity.  However, some functionality, such as the Backlog, 
+Appraisal and Archival Storage tabs, is not available. 
 
 When Elasticsearch is used, Archivematica 1.8.0 requires version 1.x 
-(tested with 1.7.6). Support for a more modern version of Elasticsearch
+(tested with 1.7.6). Support for a more recent version of Elasticsearch
 is being developed and is planned for a future release.
 
 Archivematica 1.8 has been tested with MySQL 5.5, including the Percona and
@@ -147,7 +147,7 @@ These requirements may not be suitable for certain types of material, e.g. audio
 New installation
 ================
 
-When intalling Archivematica for the first time, there are a few choices to
+When installing Archivematica for the first time, there are a few choices to
 make before starting.
 
 * choice of installation method (manual or ansible).
@@ -196,7 +196,8 @@ Using 16.04 (Xenial):
 
 2. Add Elasticsearch package source (optional)
 
-If you are planning on running in 'headless' mode, this step should be skipped.
+Skip this step if you are planning to run Archivematica in headless mode 
+(without Elasticsearch).
 
 Elasticsearch comes from its own package repository.
 
@@ -217,7 +218,8 @@ the software from the package repositories you just added to your system.
 
 4. Install Elasticsearch (optional)
 
-If you are planning on running in 'headless' mode, this step should be skipped.
+Skip this step if you are planning to run Archivematica in headless mode 
+(without Elasticsearch).
 
 .. code:: bash
 
@@ -279,10 +281,10 @@ changed after the installation is complete.
 
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
-10. Start Elasticsearch
+10. Start Elasticsearch (optional)
 
-Start the Elasticsearch service and configure it to start automatically when
-the system is rebooted.
+Skip this step if you running Archivematica in headless mode 
+(without Elasticsearch).
 
 .. code:: bash
 
@@ -353,7 +355,8 @@ Some repositories need to be installed in order to fullfill the installation pro
 
    sudo yum install -y epel-release
 
-* Elasticsearch
+* Elasticsearch (optional - do not install if you are running Archivematica in
+headless mode)
 
 .. code:: bash
 
@@ -379,10 +382,12 @@ Some repositories need to be installed in order to fullfill the installation pro
    enabled=1
    EOF'
 
-3. Service depencencies
+3. Service dependencies
 
-Common services like elasticsearch, mariadb and gearmand should be installed
-and enabled before the archivematica install. It can be done with:
+Common services like Elasticsearch, mariadb and gearmand should be installed
+and enabled before the Archivematica install. 
+
+Do not enable Elasticsearch if you are running Archivematica in headless mode.
 
 .. code:: bash
 
@@ -396,13 +401,13 @@ and enabled before the archivematica install. It can be done with:
 
 4. Install Archivematica Storage Service
 
-* First, we install the packages:
+* First, install the packages:
 
 .. code:: bash
 
    sudo -u root yum install -y python-pip archivematica-storage-service
 
-* After the package is installed, we need to populate the sqlite database, and
+* After the package is installed, populate the sqlite database, and
   collect some static files used by django.
   These tasks must be run as “archivematica” user.
 
@@ -416,7 +421,7 @@ and enabled before the archivematica install. It can be done with:
    /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
    ";
 
-* And now, we enable and start the archivematica-storage-service and it’s nginx frontend
+* Now enable and start the archivematica-storage-service and its nginx frontend
 
 .. code:: bash
 
@@ -427,7 +432,7 @@ and enabled before the archivematica install. It can be done with:
 
 .. note::
 
-   The storage service will be avaliable at http://<ip>:8001
+   The storage service will be available at http://<ip>:8001
 
 5. Installing Archivematica Dashboard and MCP Server
 
@@ -477,7 +482,7 @@ and enabled before the archivematica install. It can be done with:
 
 6. Installing Archivematica MCP client
 
-* First, we need to add some extra repos with the MCP Client dependencies:
+* First, add extra repos with the MCP Client dependencies:
 
 * Archivematica supplied external packages:
 
@@ -503,13 +508,13 @@ and enabled before the archivematica install. It can be done with:
 
    sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
 
-* Then, install the package:
+* Then install the package:
 
 .. code:: bash
 
    sudo -u root yum install -y archivematica-mcp-client
 
-* The MCP Client expect some programs in certain paths, so we put things in place:
+* The MCP Client expects some programs in certain paths, so we put them in place:
 
 .. code:: bash
 
@@ -529,13 +534,19 @@ After that, we can enable and start services
 
 **Configuration**
 
-Each service have a configuration file in /etc/sysconfig/archivematica-packagename
+Each service has a configuration file in /etc/sysconfig/archivematica-packagename
 
 **Troubleshooting**
 
-If IPv6 is disabled, Nginx may refuse to start. If that is the case make sure that the listen directives used under /etc/nginx are not using IPv6 addresses like [::]:80.
+If IPv6 is disabled, Nginx may refuse to start. If that is the case make sure 
+that the listen directives used under /etc/nginx are not using IPv6 addresses 
+like [::]:80.
 
-CentOS will install firewalld which will be running default rules likely blocking ports 81 and 8001. If you are not able to access the dashboard and storage service, check if firewalld is running. If it is, you will likely need to modify the firewall rules to allow access to ports 81 and 8001 from your location.
+CentOS will install firewalld which will be running default rules likely 
+blocking ports 81 and 8001. If you are not able to access the dashboard and 
+storage service, check if firewalld is running. If it is, you will likely need 
+to modify the firewall rules to allow access to ports 81 and 8001 from your 
+location.
 
 8. Post Install Configuration
 
@@ -827,7 +838,7 @@ unless you have a back you can restore from.
 
 * Install devtools
 
-Archivematica devtools is a set of utilities that was built by developers While
+Archivematica devtools is a set of utilities that was built by developers while
 working on Archivematica.  Devtools includes helper scripts that make it easier
 to perform certain maintenance tasks.  One of those tools is used to rebuild
 the Transfer index in Elasticsearch, which is used by the different backlog
