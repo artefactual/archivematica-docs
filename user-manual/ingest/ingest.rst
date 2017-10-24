@@ -492,46 +492,40 @@ Archivists' Toolkit. For information about uploading DIPs to your access system,
 .. _reingest:
 
 Re-ingest AIP
-------------
+-------------
 
 There are three different types of AIP re-ingest:
 
 1. Metadata only
 ================
-   This method is for adding or updating descriptive and/or rights metadata.
-   Doing so will update the dmdSec of the AIP's METS file.  Note that the 
-   original metadata will still be present but if you scroll down you'll also see 
-   another dmdSec that says STATUS="updated", like so:
+This method is for adding or updating descriptive and/or rights metadata. Doing 
+so will update the dmdSec of the AIP's METS file.  Note that the original 
+metadata will still be present but if you scroll down you'll also see another 
+dmdSec that says STATUS="updated", like so: 
 
-   <mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">
+``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">``
 
-   Choosing metadata only AIP re-ingest will take you back to the Ingest tab.
+Choosing metadata only AIP re-ingest will take you back to the Ingest tab.
 
 2. Partial re-ingest
 ====================
-   This method is typically used by institutions who want to create a DIP
-   sometime after they've made an AIP.  They can then send their DIP to their 
-   access system or store it. 
+This method is typically used by institutions who want to create a DIP sometime 
+after they've made an AIP.  They can then send their DIP to their access system 
+or store it. 
 
-   Choosing partial re-ingest will take you back to the Ingest tab.
+Choosing partial re-ingest will take you back to the Ingest tab.
 
 3. Full re-ingest
 =================
-   This method is for institutions who want to be able to run all the major
-   micro-services (including re-normalization for preservation if desired).
-   A possible use case for full re-ingest might be that after a time new file 
-   characterization or validation tools have been developed and integrated with 
-   a future version of Archivematica. Running the micro-services with these 
-   updated tools will result in a updated and better AIP.
+This method is for institutions who want to be able to run all the major micro-services (including re-normalization for preservation if desired). A possible use case for full re-ingest might be that after a time new file characterization or validation tools have been developed and integrated with a future version of Archivematica. Running the micro-services with these updated tools will result in a updated and better AIP.
 
-   Full re-ingest can also be used to update the metadata, and re-normalize 
-   for access. 
+Full re-ingest can also be used to update the metadata, and re-normalize for access. 
 
-   When performing full re-ingest, you will need to enter the name of the 
-   processing configuration you wish to use. To add new processing configurations,
-   see :ref:`Processing configuration <dashboard-processing>`.
+When performing full re-ingest, you will need to enter the name of the 
+processing configuration you wish to use. To add new processing configurations,
+see :ref:`Processing configuration <dashboard-processing>`.
 
-.. important::
+.. Important::
 
    The following workflows are **not** supported in full AIP re-ingest:
 
@@ -540,24 +534,22 @@ There are three different types of AIP re-ingest:
    * Extract packages in the AIP and then delete them
    * Send AIP to backlog for re-arrangement during re-ingest
 
-   Choosing full re-ingest will take you back to the Transfer tab.
+
+Choosing full re-ingest will take you back to the Transfer tab.
 
 How to tell in the METS file if an AIP has been re-ingested
 ===========================================================
 
-1. Look at the Header of the METS file, which will display a CREATEDATE and a 
-   LASTMODDATE
+1. Look at the Header of the METS file, which will display a ``CREATEDATE`` and a 
+``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21" LASTMODDATE="2017-10-17T20:32:36"/>``
 
-   <mets:metsHdr CREATEDATE="2017-10-17T20:29:21" LASTMODDATE="2017-10-17T20:32:36"/>
-
-2. You can also search for the reingest premis:event
-
-   <premis:eventType>reingestion</premis:eventType>
+2. You can also search for the reingest premis:event 
+``<premis:eventType>reingestion</premis:eventType>``
 
 3. If you've updated the descriptive or rights metadata you will find an updated
-   dmdSec
+dmdSec 
 
-   <mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">
+``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">``
 
 
 .. _reingest-dashboard:
@@ -569,27 +561,25 @@ Dashboard, the Storage Service, or the API.
 
 Archival Storage tab on the Dashboard
 =====================================
+Go to the Archival Storage tab abd find the AIP you wish to re-ingest by searching 
+or browsing.
 
-1. Go to the Archival Storage tab.
-
-2. Find the AIP you wish to re-ingest by searching or browsing. 
-
-3. Click on the name of the AIP or View to open that AIP's view page. 
-   Under Actions, click on Re-ingest.
+1. Click on the name of the AIP or View to open that AIP's view page. Under 
+Actions, click on Re-ingest.
 
 .. image:: images/storage_reingest.*
    :align: center
    :width: 80%
    :alt: Click on reingest beside the AIP
 
-4. Choose the type of re-ingest (metadata, partial or full).
+2. Choose the type of re-ingest (metadata, partial or full).
 
 .. image:: images/reingest_type.*
    :align: center
    :width: 80%
    :alt: Choose type of reingest and name of processing configuration
 
-5. Click on Re-ingest. Archivematica will tell you that the AIP has been
+3. Click on Re-ingest. Archivematica will tell you that the AIP has been
    sent to the pipeline for re-ingest.
 
 .. Note::
@@ -605,7 +595,7 @@ Archival Storage tab on the Dashboard
    with them. This is documented as a bug here: 
    https://projects.artefactual.com/issues/10699
 
-6. Proceed to the Transfer or Ingest tab and approve the AIP re-ingest.
+4. Proceed to the Transfer or Ingest tab and approve the AIP re-ingest.
 
 .. image:: images/reingest_approve.*
    :align: center
@@ -613,7 +603,7 @@ Archival Storage tab on the Dashboard
    :alt: Approve AIP reingest in Ingest tab.
 
 
-7. At the Normalization micro-service you will make different choices depending 
+5. At the Normalization micro-service you will make different choices depending 
    on the type of AIP re-ingest you've selected.
 
    **Metadata-only re-ingest**
@@ -671,7 +661,6 @@ Archival Storage tab on the Dashboard
 
    **Partial re-ingest** 
 
-
    1. Add metadata if desired. See **Metadata-only re-ingest** for instructions
 
    2. Select "Normalize for access".
@@ -693,6 +682,8 @@ Archival Storage tab on the Dashboard
    All normalization options will appear as for any SIP being normalized, but
    when performing metadata only or partial re-ingest, **only** the normalization
    paths noted above are supported.
+..
+
 
 .. tip::
 
@@ -701,6 +692,8 @@ Archival Storage tab on the Dashboard
    is prepared, it is recommended practice to add the metadata before
    Normalization, or set the metadata reminder to unchecked in Processing
    Configuration.
+..
+
 
 Storage Service
 ===============
