@@ -170,29 +170,29 @@ archivematica-tech mailing list for more details.
 Installing Ubuntu Packages
 --------------------------
 
-Archivematica packages are hosted at packages.archivematica.org. This has been
+Archivematica packages are hosted at  jenkins-ci.archivematica.org. This has been
 introduced to allow one central place to store packages for multiple OS's.
 Packages for both Ubuntu 14.04 and 16.04 are available.
 
 1. Add Archivematica package sources
 
-Add packages.archivematica.org to your list of trusted repositories.
+Add jenkins-ci.archivematica.org to your list of trusted repositories.
 
 Using 14.04 (Trusty):
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu trusty main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - https://jenkins-ci.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu trusty main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 Using 16.04 (Xenial):
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo wget -O - https://jenkins-ci.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
 2. Add Elasticsearch package source (optional)
 
@@ -203,7 +203,7 @@ Elasticsearch comes from its own package repository.
 
 .. code:: bash
 
-   sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
+   sudo wget -O - http://jenkins-ci.archivematica.org/GPG-KEY-elasticsearch | sudo apt-key add -
    sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
 3. Update your system
@@ -363,7 +363,7 @@ headless mode)
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
    [archivematica]
    name=archivematica
-   baseurl=https://packages.archivematica.org/1.8.x/centos
+   baseurl=https://jenkins-ci.archivematica.org/1.8.x/centos
    gpgcheck=0
    enabled=1
    EOF'
@@ -477,7 +477,7 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
    [archivematica-extras]
    name=archivematica-extras
-   baseurl=https://packages.archivematica.org/1.8.x/centos-extras
+   baseurl=https://jenkins-ci.archivematica.org/1.8.x/centos-extras
    gpgcheck=0
    enabled=1
    EOF'
@@ -739,10 +739,10 @@ Ubuntu 14.04, which makes this step necessary.
 .. code:: bash
 
    sudo add-apt-repository --remove ppa:archivematica/externals
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu trusty main' >> /etc/apt/sources.list
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
 
-Optionally you can remove the lines references packages.archivematica.org/1.5.x from /etc/apt/sources.list.
+Optionally you can remove the lines references jenkins-ci.archivematica.org/1.5.x from /etc/apt/sources.list.
 
 4. Update Archivematica Storage Services
 
