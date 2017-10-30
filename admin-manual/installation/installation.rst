@@ -174,6 +174,8 @@ Archivematica packages are hosted at  jenkins-ci.archivematica.org. This has bee
 introduced to allow one central place to store packages for multiple OS's.
 Packages for both Ubuntu 14.04 and 16.04 are available.
 
+Note: Support currently only exists for 16.04 (Xenial):
+
 1. Add Archivematica package sources
 
 Add jenkins-ci.archivematica.org to your list of trusted repositories.
@@ -190,9 +192,9 @@ Using 16.04 (Xenial):
 
 .. code:: bash
 
-   sudo wget -O - https://jenkins-ci.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
    sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 2. Add Elasticsearch package source (optional)
 
