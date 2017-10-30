@@ -37,6 +37,7 @@ Should you run into an error during this process, please see
 * :ref:`Upload DIP to AtoM <upload-atom>`
 * :ref:`Upload DIP to ArchivesSpace <upload-as>`
 * :ref:`Upload DIP to Archivists' Toolkit <upload-at>`
+* :ref:`Upload DIP <upload-dipjob>`
 * :ref:`Store DIP <store-dip>`
 * :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
@@ -184,6 +185,14 @@ automatically open.
 #. Archivematica will upload the DIP metadata to Archivists' Toolkit.
 
 
+.. _upload-dipjob:
+
+Upload DIP
+----------
+
+If your workflow doesn't include sending a DIP to one of the above systems, you 
+should select `Do not upload DIP`. 
+
 .. _store-dip:
 
 Store DIP
@@ -198,9 +207,9 @@ To store a DIP:
 
 1. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
 
-2. When prompted to Upload DIP, either choose Store DIP, or choose to upload to your desired access system.  If you choose an access system, a second Store DIP option will be presented to you.
+2. When prompted, choose Store DIP.
 
-3. Choose the DIP storage location from the configured options.
+3. At Store DIP location, select the DIP storage location from the configured options.
 
 The DIP will include the access copies made through either Archivematica's
 normalization rules or a manual normalization process, thumbnails, and the METS file.
