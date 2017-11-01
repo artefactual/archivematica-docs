@@ -6,7 +6,7 @@ Installation
 
 *On this page*
 
-* :ref:`Technical requiremnets <tech-requirements>`
+* :ref:`Technical requirements <tech-requirements>`
 
 * :ref:`Recommended Minimum Requirements for small-scale testing <requirements-small>`
 
