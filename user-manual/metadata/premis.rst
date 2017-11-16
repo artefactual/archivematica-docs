@@ -140,7 +140,7 @@ Copyright documentation identifier- Type
 **Rule** "A designation of the domain within which the copyright documentation
 identifier is unique."
 
-**MET XML**
+**METS XML**
 
 .. code-block:: none
 
