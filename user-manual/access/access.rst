@@ -205,11 +205,11 @@ as DuraCloud.
 
 To store a DIP:
 
-1. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
+#. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
 
-2. When prompted, choose Store DIP.
+#. At the Store DIP job at the Upload DIP microservice on the Archival Storage tab, choose Store DIP.
 
-3. At Store DIP location, select the DIP storage location from the configured options.
+#. At Store DIP location, select the DIP storage location from the configured options.
 
 The DIP will include the access copies made through either Archivematica's
 normalization rules or a manual normalization process, thumbnails, and the METS file.
