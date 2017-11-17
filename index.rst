@@ -145,7 +145,6 @@ The Ingest tab displays the micro-services and jobs that take place to turn a SI
 * :ref:`Normalize <normalize>`
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Reingest AIP <reingest>`
-* :ref:`Storage Service <storage-service>`
 * :ref:`Upload DIP to ArchivesSpace <upload-AS>`
 * :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`

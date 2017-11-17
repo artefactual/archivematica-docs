@@ -78,18 +78,18 @@ AIP Encryption
 
 Beginning in the 1.7 version of Archivematica, institutions are able to encrypt
 their AIPs for secure storage. This feature is particularly useful when an
-institution stores its AIPs off-site.  
+institution stores its AIPs off-site.
 
-To create an encrypted AIP, Archivematica needs an encrypted space and location 
+To create an encrypted AIP, Archivematica needs an encrypted space and location
 set up in the Storage Service. Please see :ref:`Encryption <encryption>`
 for more information.
 
 #. Run your transfer through the regular micro-services.
 
-#. At the Store AIP location job on the Ingest tab, choose your encrypted AIP 
-location. You now have an encrypted AIP!
+#. At the Store AIP location job on the Ingest tab, choose your encrypted AIP
+   location. You now have an encrypted AIP!
 
-You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted AIPs 
+You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted AIPs
 appear as True in the Encrypted column.
 
    .. image:: images/ArchiStorEncryptedColumn.*
