@@ -53,6 +53,11 @@ ingest. This screen provides you with an easy form to configure the default
 processingMCP.xml that governs these decisions. When you change the options using
 the web interface the necessary XML will be written behind the scenes.
 
+Starting in 1.7, Archivematica includes both a default and an automated
+processing configuration. The automated processing configuration is used only if
+a transfer source location has been set up to move content through Archivematica
+with no human operator.
+
 Multiple processing configurations can be created using the *Add* button on the
 Processing Configuration screen. Often, users create multiple configurations for
 different types of content - one for audio-visual material, one for images, one
