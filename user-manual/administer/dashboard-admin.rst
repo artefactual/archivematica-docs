@@ -39,9 +39,10 @@ dashboard, allows you to configure application components and manage users.
 
 * :ref:`Handle server config <handle-server>`
 
-* :ref:`Language <language>`
+* :ref:`Language <language-choice>`
 
 * :ref:`Version <version>`
+
 
 .. _dashboard-processing:
 
@@ -496,17 +497,20 @@ a user's username or password, you can do so by clicking the "Edit" button,
 corresponding to the user, on the administration page. Should you need to
 revoke a user's access, you can click the corresponding "Delete" button.
 
+
 .. _handle-server:
 
 Handle server config
 --------------------
 
-.._language:
+
+.. _language-choice:
 
 Language
 --------
 
-.._version:
+
+.. _version:
 
 Version
 -------
