@@ -37,6 +37,12 @@ dashboard, allows you to configure application components and manage users.
 
 * :ref:`Users <dashboard-users>`
 
+* :ref:`Handle server config <handle-server>`
+
+* :ref:`Language <language>`
+
+* :ref:`Version <version>`
+
 .. _dashboard-processing:
 
 Processing configuration
@@ -158,6 +164,10 @@ about how they work.
 
 #. **Store AIP location**: Select one archival storage location where you will
    consistently send your AIPs.
+
+#. **Upload DIP**: Select an access system to send your DIPs or don't upload the DIP.
+
+#. **Store DIP**: Choose to store or not store a DIP.
 
 #. **Store DIP location**: Select one archival storage location where you will
    consistently send your DIPs, if you wish to store them.
@@ -485,6 +495,22 @@ Archivematica using a username/password combination. Should you need to change
 a user's username or password, you can do so by clicking the "Edit" button,
 corresponding to the user, on the administration page. Should you need to
 revoke a user's access, you can click the corresponding "Delete" button.
+
+.. _handle-server:
+
+Handle server config
+--------------------
+
+.._language:
+
+Language
+--------
+
+.._version:
+
+Version
+-------
+This tab is where you can discover the version of Archivematica you're using.
 
 
 :ref:`Back to the top <dashboard-admin>`
