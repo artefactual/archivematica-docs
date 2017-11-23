@@ -67,6 +67,39 @@ Storing an AIP
    * `Archivematica METS file (wiki) <https://www.archivematica.org/wiki/METS>`_
 
 
+.. _aip-encryption:
+
+
+AIP Encryption
+--------------
+
+Beginning in the 1.7 version of Archivematica, institutions are able to encrypt
+their AIPs for secure storage. This feature is particularly useful when an
+institution stores its AIPs off-site.
+
+To create an encrypted AIP, Archivematica needs an encrypted space and location
+set up in the Storage Service. Please see :ref:`Encryption <storageservice:gpg>`
+for more information.
+
+#. Run your transfer through the regular micro-services.
+
+#. At the Store AIP location job on the Ingest tab, choose your encrypted AIP
+   location. You now have an encrypted AIP!
+
+You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted AIPs
+appear as True in the Encrypted column.
+
+   .. image:: images/ArchiStorEncryptedColumn.*
+      :align: center
+      :width: 80%
+      :alt: Archival storage tab showing encrypted AIP
+
+The AIP pointer file contains a `PREMIS:EVENT` element for the encryption event.
+
+The AIP itself can be downloaded in unencrypted form from the Archival Storage
+tab.
+
+
 .. _search-aip:
 
 Searching the AIP store
