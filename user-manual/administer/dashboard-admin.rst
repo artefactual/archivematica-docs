@@ -163,15 +163,20 @@ about how they work.
 
 #. **Store AIP**: Store the AIP without interrupting the workflow in the dashboard.
 
-#. **Store AIP location**: Select one archival storage location where you will
-   consistently send your AIPs.
+#. **Store AIP location**: Select a location to send your AIPs. There are two
+   standard locations: Default and Standard Archivematica Directory.  Default location
+   is usually used for the automated workflow. If you choose Default and you have
+   set up only one location your AIPs will be stored in that one location.
 
 #. **Upload DIP**: Select an access system to send your DIPs or don't upload the DIP.
 
 #. **Store DIP**: Choose to store or not store a DIP.
 
 #. **Store DIP location**: Select one archival storage location where you will
-   consistently send your DIPs, if you wish to store them.
+   consistently send your DIPs. There are two standard locations: Default and
+   Standard Archivematica Directory.  Default location is usually used for the
+   automated workflow. If you choose Default and you have set up only one location
+   your AIPs will be stored in that one location.
 
 .. _dashboard-general:
 
@@ -502,13 +507,15 @@ revoke a user's access, you can click the corresponding "Delete" button.
 
 Handle server config
 --------------------
-
+Archivematica can to be configured to make requests to a Handle System HTTP API
+so that files, directories and entire AIPs can be assigned persistent identifiers
+(PIDS) and derived persistent URLs (PURLs).
 
 .. _language-choice:
 
 Language
 --------
-
+The Archivematica dashboard is in the process of being translated. For more information go to `Translations <https://www.archivematica.org/en/docs/archivematica-1.7/user-manual/translations/translations/>`_.
 
 .. _version:
 
