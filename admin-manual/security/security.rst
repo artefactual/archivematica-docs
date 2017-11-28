@@ -85,4 +85,59 @@ Archivematica relies on the German server for queuing work that needs to be
 done. Gearman currently doesn't support secured connections so Gearman should
 be run locally or on a secure, isolated network. See :issue:`1345`.
 
+.. _user-security:
+
+User security
+-------------
+
+.. important::
+
+   Please note that this is a new feature as of Archivematica 1.7 that has been
+   minimally tested outside of the development environment. If you experience any
+   problems with the feature, please consider creating a `Github issue <https://github.com/artefactual/archivematica/issues>`_
+   or creating a post in the `Archivematica Google Group <https://groups.google.com/forum/#!forum/archivematica>`.
+
+LDAP setup
+==========
+
+`LDAP <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>`_ is
+a directory service protocol used for, among other things, authentication and authorization.
+This feature allows administrators to deploy both the Archivematica dashboard and
+Storage Service Django applications with LDAP authentication.
+
+Enabling LDAP integration
++++++++++++++++++++++++++
+
+#.
+
+#.
+
+#.
+
+LDAP environment variables
+++++++++++++++++++++++++++
+
+
+Shibboleth setup
+================
+
+`Shibboleth <https://www.shibboleth.net/>`_ is a federated identity solution that
+provides Single Sign-On authentication and authorization. This feature allows
+administrators to deploy both the Archivematica dashboard and Storage Service
+Django applications with Shibboleth authentication.
+
+Enabling Shibboleth integration
++++++++++++++++++++++++++++++++
+
+#.
+
+#.
+
+#.
+
+Shibboleth environment variables
+++++++++++++++++++++++++++++++++
+
+
+
 :ref:`Back to the top <security>`

@@ -14,4 +14,4 @@ set of links to each chapter's main sections.
    installation/customization
    installation/duracloud-setup
    maintenance/maintenance
-   maintenance/security
+   security/security
