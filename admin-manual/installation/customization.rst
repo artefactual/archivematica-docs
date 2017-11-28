@@ -33,7 +33,7 @@ wiki:
 
 * `MCP <https://www.archivematica.org/wiki/MCP>`_
 
-* `Basic MCP configuration <https://www.archivematica.org/wiki/MCP_Basic_Configuration>`_
+* `Basic MCP configuration <https://wiki.archivematica.org/MCPServer#Config_File>`_
 
 For other development resources, please see the
 `Development <https://www.archivematica.org/wiki/Development>`_ section of our wiki.
