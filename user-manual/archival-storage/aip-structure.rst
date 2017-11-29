@@ -6,19 +6,21 @@ AIP structure
 
 This page documents the structure of the AIP produced by Archivematica.
 
+
 Name
 ----
 
 The AIP name is composed of the following:
 
-1. Either the name of the original transfer if no new name has been assigned    to the SIP upon formation or the name of the SIP or SIPs created from the transfer and
+1. Either the name of the original transfer if no new name has been assigned to
+the SIP upon formation or the name of the SIP or SIPs created from the transfer and
 
 2. A UUID assigned during SIP formation
 
-example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112
+example: AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c
 
-"Pictures_of_my_cat" is the name assigned by the user and
-"aebbfc44-9f2e-4351-bcfb-bb80d4914112" is the UUID generated during SIP
+"AncientSturgeon" is the name assigned by the user and
+"bbabce6e-OO16-4185-a93e-f2dd71bfbb8c" is the UUID generated during SIP
 formation.
 
 Directory structure
@@ -27,7 +29,7 @@ Directory structure
 The AIP is zipped in the AIPsStore. The AIP directories are broken down into
 UUID quad directories for efficient storage and retrieval.
 
-.. figure:: images/ZippedAIP-10.*
+.. figure:: images/AIPStructureZipped.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -47,14 +49,14 @@ UUID quad directories for efficient storage and retrieval.
    UUID Quad) create the leaf of the AIP store directory tree, and the AIP with
    that UUID resides in that directory.)
 
+The Archivematica AIP consists of Bagit files and a Data directory.
+
 Bagit documentation
 ^^^^^^^^^^^^^^^^^^^
 
-The AIP is packaged in accordance with the Library of Congress Bagit
-specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt,
-bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:
+The AIP is packaged in accordance with the Library of Congress Bagit specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt, bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:
 
-.. image:: images/BagSpec-10.*
+.. image:: images/AIPStructureBagit.*
    :align: center
    :width: 70%
    :alt: Bagit specification files
@@ -64,10 +66,10 @@ The following describes the contents of the AIP once extracted:
 
 **Data directory**
 
-The data directory consists of the METS file for the AIP and three folders:
+The data directory consists of the METS file for the AIP, a README.html file and three folders:
 logs, objects. and thumbnails.
 
-.. figure:: images/AIPdatadirectory-10.*
+.. figure:: images/AIPStructureDataDirectory.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -77,20 +79,25 @@ logs, objects. and thumbnails.
 
 **METS file**
 
-``/data/METS.uuid.xml`` contains the full PREMIS implementation (see PREMIS
-metadata for original file, PREMIS metadata: normalized files, PREMIS
-metadata: events, and PREMIS metadata: rights The role of the METS file is to
+``/data/METS.uuid.xml`` contains the full `PREMIS <https://www.loc.gov/standards/premis/>`_
+ implementation (see PREMIS metadata for original file, PREMIS metadata: normalized files, PREMIS
+metadata: events, and PREMIS metadata: rights.) The role of the `METS file <https://wiki.archivematica.org/METS>`_ is to
 link original objects to their preservation copies and to their descriptions
 and submission documentation, as well as to link PREMIS metadata to the
 objects in the AIP.
 
+**README.html file**
+
+``/data/README.html`` consists of a human readable file that describes the basic structure
+of an Archivematica AIP.  It consists of Acronyms, Introduction, Content Information,
+Preservation Description Information (PDI), and AIP structure.
+
 **Logs**
 
-``/data/logs`` contains the /transfers directory, normalization log, malware scan
-log, and the extraction log (from unpackaging packages) generated during SIP
-creation.
+``/data/logs`` contains the /transfers directory, format identification log, malware scan
+log, and the file name cleanup log generated during SIP creation.
 
-.. figure:: images/DataLogs-10.*
+.. figure:: images/AIPStructureDataLogs.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -108,7 +115,7 @@ dashboard.
 ``/submissionDocumentation``. If there were any lower level directories within
 the SIP, that directory structure is maintained.
 
-.. figure:: images/DataObjects-10.*
+.. figure:: images/AIPStructureObjectsFolder.*
    :align: center
    :figwidth: 70%
    :width: 100%
