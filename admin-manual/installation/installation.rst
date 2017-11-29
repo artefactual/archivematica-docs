@@ -192,9 +192,11 @@ Using 16.04 (Xenial):
 
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.6.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.6.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
+   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/repos/apt/dev-1.8.x-xenial/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://jenkins-ci.archivematica.org/repos/apt/release-0.11-xenial/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
 2. Add Elasticsearch package source (optional)
 
@@ -297,7 +299,7 @@ Skip this step if you running Archivematica in headless mode
 
 .. code:: bash
 
-   sudo freshclam
+   sudo service clamav-freshclam restart
    sudo service clamav-daemon start
    sudo service gearman-job-server restart
    sudo service archivematica-mcp-server start
@@ -377,9 +379,21 @@ headless mode)
 .. code:: bash
 
    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
-   [archivematica]
-   name=archivematica
-   baseurl=https://jenkins-ci.archivematica.org/1.8.x/centos
+   [archivematica-dashboard]
+   name=archivematica-dashboard
+   baseurl=http://jenkins-ci.archivematica.org/repos/rpm/dev-1.8.x
+   gpgcheck=0
+   enabled=1
+
+   [archivematica-ss]
+   name=archivematica-ss
+   baseurl=http://jenkins-ci.archivematica.org/repos/rpm/release-0.11
+   gpgcheck=0
+   enabled=1
+
+   [archivematica-extras]
+   name=archivematica-extras
+   baseurl=https://packages.archivematica.org/1.8.x/centos-extras
    gpgcheck=0
    enabled=1
    EOF'
@@ -418,12 +432,11 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
    sudo -u archivematica bash -c " \
    set -a -e -x
    source /etc/sysconfig/archivematica-storage-service
-   cd /usr/share/archivematica/storage-service
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   cd /usr/lib/archivematica/storage-service
+   /usr/share/python/archivematica-storage-service/bin/python manage.py migrate
    ";
 
-* Now enable and start the archivematica-storage-service and its nginx frontend
+* Now enable and start the archivematica-storage-service, rngd (needed for encrypted spaces) and the nginx frontend:
 
 .. code:: bash
 
@@ -431,6 +444,8 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
    sudo -u root systemctl start archivematica-storage-service
    sudo -u root systemctl enable nginx
    sudo -u root systemctl start nginx
+   sudo -u root systemctl enable rngd
+   sudo -u root systemctl start rngd
 
 .. note::
 
@@ -460,7 +475,7 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
    set -a -e -x
    source /etc/sysconfig/archivematica-dashboard
    cd /usr/share/archivematica/dashboard
-   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   /usr/share/python/archivematica-dashboard/bin/python manage.py migrate
    ";
 
 * Start and enable services:
@@ -472,11 +487,11 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
    sudo -u root systemctl enable archivematica-dashboard
    sudo -u root systemctl start archivematica-dashboard
 
-* Reload nginx in order to load the dashboard config file:
+* Restart nginx in order to load the dashboard config file:
 
 .. code:: bash
 
-   sudo -u root systemctl reload nginx
+   sudo -u root systemctl restart nginx
 
 .. note::
 
@@ -485,18 +500,6 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
 6. Installing Archivematica MCP client
 
 * First, add extra repos with the MCP Client dependencies:
-
-* Archivematica supplied external packages:
-
-.. code:: bash
-
-   sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
-   [archivematica-extras]
-   name=archivematica-extras
-   baseurl=https://jenkins-ci.archivematica.org/1.8.x/centos-extras
-   gpgcheck=0
-   enabled=1
-   EOF'
 
 * Nux multimedia repo
 
@@ -520,8 +523,14 @@ Do not enable Elasticsearch if you are running Archivematica in headless mode.
 
 .. code:: bash
 
-   sudo cp /usr/bin/clamscan /usr/bin/clamdscan
    sudo ln -s /usr/bin/7za /usr/bin/7z
+
+* Tweak ClamAV configuration:
+
+.. code:: bash
+
+   sudo -u root sed -i 's/^#TCPSocket/TCPSocket/g' /etc/clamd.d/scan.conf 
+   sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 
 After that, we can enable and start services
 
@@ -531,7 +540,9 @@ After that, we can enable and start services
    sudo -u root systemctl start archivematica-mcp-client
    sudo -u root systemctl enable fits-nailgun
    sudo -u root systemctl start fits-nailgun
-
+   sudo -u root systemctl enable clamd@scan
+   sudo -u root systemctl start clamd@scan
+ 
 7. Finalizing installation
 
 **Configuration**
@@ -548,7 +559,14 @@ CentOS will install firewalld which will be running default rules likely
 blocking ports 81 and 8001. If you are not able to access the dashboard and 
 storage service, check if firewalld is running. If it is, you will likely need 
 to modify the firewall rules to allow access to ports 81 and 8001 from your 
-location.
+location:
+
+.. code:: bash
+
+   sudo firewall-cmd --zone=public --add-port=81/tcp  --permanent
+   sudo firewall-cmd --zone=public --add-port=8001/tcp  --permanent
+   sudo service firewalld restart
+
 
 8. Post Install Configuration
 
@@ -910,16 +928,15 @@ Upgrade from Archivematica 1.5 for CentOS/Redhat
    sudo -u archivematica bash -c " \
    set -a -e -x
    source /etc/sysconfig/archivematica-storage-service
-   cd /usr/share/archivematica/storage-service
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   cd /usr/lib/archivematica/storage-service
+   /usr/share/python/archivematica-storage-service/bin/python manage.py migrate
    ";
 
    sudo -u archivematica bash -c " \
    set -a -e -x
    source /etc/sysconfig/archivematica-dashboard
    cd /usr/share/archivematica/dashboard
-   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   /usr/share/python/archivematica-dashboard/bin/python manage.py migrate
    ";
 
 * After that, we can restart the archivematica related services, and continue using the system:
@@ -1063,16 +1080,15 @@ Once the new packages are installed, we need to upgrade the databases for both, 
    sudo -u archivematica bash -c " \
    set -a -e -x
    source /etc/sysconfig/archivematica-storage-service
-   cd /usr/share/archivematica/storage-service
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py migrate
-   /usr/lib/python2.7/archivematica/storage-service/bin/python manage.py collectstatic --noinput
+   cd /usr/lib/archivematica/storage-service
+   /usr/share/python/archivematica-storage-service/bin/python manage.py migrate
    ";
 
    sudo -u archivematica bash -c " \
    set -a -e -x
    source /etc/sysconfig/archivematica-dashboard
    cd /usr/share/archivematica/dashboard
-   /usr/lib/python2.7/archivematica/dashboard/bin/python manage.py syncdb --noinput
+   /usr/shre/python/archivematica-dashboard/bin/python manage.py migrate
    ";
 
 3. Restart Services
