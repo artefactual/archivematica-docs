@@ -80,11 +80,12 @@ logs, objects. and thumbnails.
 **METS file**
 
 ``/data/METS.uuid.xml`` contains the full `PREMIS <https://www.loc.gov/standards/premis/>`_
- implementation (see PREMIS metadata for original file, PREMIS metadata: normalized files, PREMIS
-metadata: events, and PREMIS metadata: rights.) The role of the `METS file <https://wiki.archivematica.org/METS>`_ is to
-link original objects to their preservation copies and to their descriptions
-and submission documentation, as well as to link PREMIS metadata to the
-objects in the AIP.
+implementation (see PREMIS metadata for original file, PREMIS metadata:
+normalized files, PREMIS metadata: events, and PREMIS metadata: rights). The
+role of the `METS file <https://wiki.archivematica.org/METS>`_ is to link
+original objects to their preservation copies and to their descriptions and
+submission documentation, as well as to link PREMIS metadata to the objects in
+the AIP.
 
 **README.html file**
 

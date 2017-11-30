@@ -81,8 +81,8 @@ their AIPs for secure storage. This feature is particularly useful when an
 institution stores its AIPs off-site.
 
 To create an encrypted AIP, Archivematica needs an encrypted space and location
-set up in the Storage Service. Please see :ref:`Encryption <storageservice:gpg>`
-for more information.
+set up in the Storage Service. Please see the Encryption section of the
+Storage Service docs for more information.
 
 #. Run your transfer through the regular micro-services.
 
