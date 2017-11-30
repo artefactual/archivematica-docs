@@ -581,21 +581,12 @@ Actions, click on Re-ingest.
 
 3. Click on Re-ingest. Archivematica will tell you that the AIP has been
    sent to the pipeline for re-ingest.
-<<<<<<< 13c35dd909d5a2863c9d4fbc948426880ab36cf8
 
 .. Note::
 
    If you attempt to re-ingest an AIP which is already in the process of being
    re-ingested in the pipeline, Archivematica will alert you with an error.
 
-=======
-
-.. Note::
-
-   If you attempt to re-ingest an AIP which is already in the process of being
-   re-ingested in the pipeline, Archivematica will alert you with an error.
-
->>>>>>> Updated instructions for AIP re-ingest
 .. Note::
 
    Archivematica will appear to allow you to extract and then delete packages. 
@@ -659,7 +650,7 @@ Actions, click on Re-ingest.
 
 
    3. Continue processing the SIP as normal.
-<<<<<<< 13c35dd909d5a2863c9d4fbc948426880ab36cf8
+
 
 .. Note::
 
@@ -669,17 +660,6 @@ Actions, click on Re-ingest.
 ..
 
 
-=======
-
-.. Note::
-
-   When performing a metadata-only re-ingest, there will be no objects 
-   in your AIP in the review stage- Archivematica replaces the METS file in the 
-   existing AIP upon storage.
-..
-
-
->>>>>>> Updated instructions for AIP re-ingest
    **Partial re-ingest** 
 
    1. Add metadata if desired. See **Metadata-only re-ingest** for instructions
@@ -715,11 +695,8 @@ Actions, click on Re-ingest.
    Configuration.
 ..
 
-<<<<<<< 13c35dd909d5a2863c9d4fbc948426880ab36cf8
-=======
 
 .. _re-ingest-storage-service:
->>>>>>> Updated instructions for AIP re-ingest
 
 Storage Service
 ===============
