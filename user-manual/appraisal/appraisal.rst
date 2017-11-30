@@ -210,7 +210,7 @@ by the parallel lines icon.
 .. image:: images/archivesspace_search.*
    :align: center
    :width: 60%
-   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of heirarchy
+   :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of hierarchy
 
 Creating Archival Description
 =============================

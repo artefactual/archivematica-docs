@@ -7,6 +7,8 @@ PREMIS metadata in Archivematica
 Archivematica supports the entry of `PREMIS <http://www.loc.gov/standards/premis/>`_
 rights metadata during :ref:`transfer <transfer>` or :ref:`ingest <ingest>`.
 Rights entered via the GUI interface apply to the entirety of the SIP or transfer.
+Rights can also be entered at the object level by describing them in a rights.csv
+file and using the :ref:`Import metadata <import-metadata>` feature.
 
 Below, the entry template is described as it appears for each rights basis,
 followed by acts granted/restricted.

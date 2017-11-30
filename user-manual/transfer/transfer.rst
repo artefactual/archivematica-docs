@@ -141,17 +141,46 @@ To create a transfer that includes submission documentation, such as a donor agr
 Create a transfer with existing checksums
 -----------------------------------------
 
-You can include checksums with your transfer if you have them. Archivematica
-will verify .md5, .sha1 and .sha256 checksums in the Verify checksums micro-
-service during the Transfer workflow in the dashboard.
+Standard transfers
+++++++++++++++++++
+
+You can include existing checksums with your transfer if you have them. Archivematica
+will verify .md5, .sha1 and .sha256 checksums during the *Verify transfer checksums*
+micro-service.
+
+Checksum files should be named checksum.md5, checksum.sha1, or checksum.sha256.
+The file itself should contain one line for each checksum, beginning with the checksum,
+followed by a space, followed by the file name. For example: ``7f42199657dea535b6ad1963a6c7a2ac bird.mp3``.
+
+.. image:: images/checksum-file.*
+   :align: center
+   :width: 80%
+   :alt: Structure of checksum file
+
+To add the checksum file to your transfer:
 
 1. Place the digital objects into an ``/objects`` folder below the first level of the transfer.
 
-2. Place the metadata files in a /metadata folder at the same level as the ``/objects`` folder. Your checksums should be contained in text files named the following way: checksum.md5, checksum.sha1 or checksum.sha256.
+2. Create a ``/metadata`` folder at the same level as the ``/objects`` folder. Place
+   checksum files in the /metadata folder.
 
 3. Begin your standard transfer in the Archivematica dashboard interface.
 
-4. If your checksum check fails, this micro-service will show an error. The micro-service line will turn red. The log for this is sent to the ``/logs`` folder of the transfer. The file in the log folder should look like "checksum.md5 -Check-Tue Oct 14 13:56:51 PDT 2014"
+4. If your checksum check fails, the *Verify transfer checksums* micro-service will show an error and the transfer will fail. Expanding the micro-service will show that the job *Verify metadata directory checksums* is red. To review the error, click on the gear icon for the job.
+
+Disk image transfers
+++++++++++++++++++++
+
+To add the checksum file to a disk image transfer, prepare your checksum files as
+above. However, there is a slight variation in how the folder should be structured:
+
+1. Place your disk image file at the first level of the transfer (do **not** place in an /objects subdirectory).
+
+2. Create a ``/metadata`` folder in the first level of the transfer. Place checksum files in the /metadata folder.
+
+3. Begin your standard transfer in the Archivematica dashboard interface.
+
+4. If your checksum check fails, the *Verify transfer checksums* micro-service will show an error and the transfer will fail. Expanding the micro-service will show that the job *Verify metadata directory checksums* is red. To review the error, click on the gear icon for the job.
 
 .. _process-transfer:
 

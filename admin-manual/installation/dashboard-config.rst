@@ -130,7 +130,7 @@ Specific processing configurations available on this page are:
 #. Approve normalization, sending the AIP to storage, and uploading the
    DIP without interrupting the workflow in the dashboard.
 
-#. Store the AIP without interripting the workflow in the dashboard.
+#. Store the AIP without interrupting the workflow in the dashboard.
 
 #. Select whether or not Archivematica should transcribe files.
 
@@ -286,6 +286,13 @@ be enabled in order for AtoM to receive uploaded DIPs. Enabling Job scheduling
 (Admin --> Settings --> Job scheduling) is also recommended. From the AtoM
 documentation, see :ref:`Settings <atom:settings>` and
 :ref:`Plugins <atom:manage-plugins>`.
+
+.. NOTE::
+
+   If you are planning to use the *metadata-only DIP upload to AtoM*
+   functionality don't forget to enable the :ref:`the API plugin in AtoM
+   <atom:api-intro>`, generate a API key and update the ``REST API key`` field
+   accordingly. Metadata-only upload is only available since AtoM 2.4.
 
 AtoM server configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^

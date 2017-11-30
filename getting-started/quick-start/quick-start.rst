@@ -69,52 +69,58 @@ locally.
 
   If you are using the sandbox, you can move on to Task #1.
 
-Installing on a virtual machine
-===============================
-
-Users may want to deploy Archivematica on a virtual machine in order to test
-Archivematica's functionality using their own data. The recommended way to
-install Archivematica on a virtual machine is with Ansible and Vagrant.
-
-To install and run Archivematica on a virtual machine, you must be somewhat
-comfortable working on the command line. Note that the commands below are for
-Ubuntu; if you are installing on a Mac or a different Linux distribution the
-commands might be slightly different. The installation has not been tested on
-Windows.
-
-Open your terminal and install VirtualBox, Vagrant, and Ansible with the
-following commands::
-
-  sudo apt-get install virtualbox vagrant
-
-  sudo pip install -U ansible
-
-Vagrant must be at least version 1.5. Check your version with::
-
-  vagrant --version
-
-If it is not up to date, you can download the newest version from the
- `Vagrant website <https://www.vagrantup.com/downloads.html>`_ .
-
-The deployment repository is the source code from which you will be building your
-local Archivematica instance. Check out the deployment repository::
-
-  git clone https://github.com/artefactual/deploy-pub.git
-
-Ansible roles govern deployment - they tell the software how Archivematica should
-be built. Download the Ansible roles::
-
-  cd deploy-pub/playbooks/archivematica
-
-  ansible-galaxy install -f -p roles/ -r requirements.yml
-
-Now that you have the source code and the rules for building Archivematica, it's
-time to start building. This step will create your virtual machine and build, or
-provision, Archivematica::
-
-  vagrant up
+Installing on a virtual machine using Vagrant
+=============================================
 
 .. warning::
+
+   This virtual machine is **not** intended to be used in production. It targets
+   developers or experienced users willing to try out Archivematica using
+   Vagrant. If you want to start using Archivematica in production, please refer
+   to the other methods of installations explained under this manual.
+
+This guide will setup a new Oracle `VirtualBox
+<https://www.virtualbox.org/>`__ virtual machine with Archivematica installed on
+your computer. It works works on most operating systems, including MacOS X,
+Linux, Windows, FreeBSD and others.
+
+**Minimum system requirements**: 4GB RAM; 10GB disk space.
+
+.. _vagrant-install-dependencies:
+
+Install Vagrant and VirtualBox
+++++++++++++++++++++++++++++++
+
+#. Install VirtualBox from https://www.virtualbox.org/ (or use your package
+   manager). VirtualBox 5.1.18 or newer is required.
+#. Install Vagrant from http://www.vagrantup.com/ (or use your package manager).
+   Vagrant 1.9.3 or newer is required. Be aware that Ubuntu 14.04 installs
+   Vagrant 1.4.3, which does not meet the requirements.
+
+Spin it up
+++++++++++
+
+#. using your computer's command-line interface, create a new directory and
+   open it. The location doesn't matter, but you'll need to return to it later
+   - all further command line operations should be run from inside the directory.
+
+   .. code-block:: bash
+
+      mkdir archivematica-vagrant && cd archivematica-vagrant
+
+#. Initialize the current directory to be a Vagrant environment.
+
+   .. code-block:: bash
+
+      vagrant init artefactual/archivematica
+
+#. Run Vagrant (again, from the same directory where you saved the Vagrantfile).
+
+   .. code-block:: bash
+
+      vagrant up
+
+   Vagrant will download our custom box and boot it in VirtualBox. The download can take anywhere from a few minutes to an hour or more, depending on the speed of your connection, as the box is fairly large (approx 3.2 GB in size).
 
   This will take a while. It depends on your computer, but it could take up to
   an hour. Your computer may be very slow while Archivematica is being
@@ -127,13 +133,14 @@ Once it's done provisioning, you can log in to your virtual machine::
 
 You can also access your Archivematica instance through the web browser:
 
-* Archivematica: `<http://192.168.168.192>`_. Username & password configured on installation.
-* Storage Service: `<http://192.168.168.192:8000>`_. Username: test, password: test.
+* Archivematica: `<http://10.10.10.20>`_. Username & password configured on installation.
+* Storage Service: `<http://10.10.10.20:8000>`_. Username: test, password: test.
 
-To get the Storage Service API key, go to `<http://192.168.168.192:8000>`_
-and click on the Administration tab. In the left sidebar, click on *Users*, then
-click on *Edit* for the default user. Scrolling down, you will see the API key
-for the default user at the bottom of the screen. Copy this into the API key field when prompted during installation.
+To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ and click
+on the Administration tab. In the left sidebar, click on *Users*, then click on
+*Edit* for the default user. Scrolling down, you will see the API key for the
+default user at the bottom of the screen. Copy this into the API key field when
+prompted during installation.
 
 .. _quick-start-transfer:
 
@@ -144,8 +151,8 @@ A transfer is any set of one or more files that you decide to process as a group
 It can come from any storage system to which Archivematica has been connected.
 To start your first transfer, go to the Archivematica transfer dashboard - the
 main page of either the `sandbox <sandbox.archivematica.org>`_ or your
-`Archivematica VM <http://192.168.168.192>`_. You can also access the transfer
-page by clicking on the Transfer tab in your Archivematica instance.
+`Archivematica VM <http://10.10.10.20>`_. You can also access the transfer page
+by clicking on the Transfer tab in your Archivematica instance.
 
 The transfer process is made up of a series of micro-services, which are in turn
 made up of jobs.
@@ -431,7 +438,7 @@ Review DIP
 
 #. In order to retrieve the DIP, you need to access the Archivematica Storage
    Service. Add ":8000" to the end of your Archivematica VM's URL
-   (i.e. http://192.168.168.192:8000/). The default login is test/test.
+   (i.e. http://10.10.10.20:8000/). The default login is test/test.
 #. In the Storage Service, click on the Packages tab.
 #. On the far right side of the page there is a search box. Search for your DIP
    by entering the name you gave it in Task #1.
