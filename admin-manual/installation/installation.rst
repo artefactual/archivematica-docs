@@ -309,11 +309,11 @@ Skip this step if you running Archivematica in headless mode
    sudo service nginx restart
    sudo service fits start
 
-If you have trouble with the gearman command try this as an alternative:
+If you have trouble with the gearman command try restarting it:
 
 .. code:: bash
 
-   sudo restart gearman-job-server
+   sudo service gearman-job-server restart
 
 11. Post Install Configuration
 
