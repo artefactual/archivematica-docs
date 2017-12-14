@@ -444,9 +444,13 @@ you should see the API key.
 IP whitelist
 ^^^^^^^^^^^^
 
-In addition to creating API keys, you'll need to add the IP of any computer
-making REST requests to the REST API whitelist. The IP whitelist can be
-edited in the administration interface at ``/administration/api/``.
+The API key is always required but in some cases the administrator may want to
+add an additional security measurement. IP whitelisting allows you to create a
+list of trusted IP addresses from which you can access to the API.
+
+The IP whitelist can be edited in the administration interface at
+``/administration/api/``. If the whitelist is empty all requests will be
+allowed.
 
 Approving a transfer
 ^^^^^^^^^^^^^^^^^^^^
