@@ -1142,6 +1142,16 @@ It is possible to spread Archivematica's processing load across several machines
 
 For help, send an email to `Archivematica tech mailing list. <https://groups.google.com/forum/#!forum/archivematica-tech>`_
 
+.. _SSL-support:
+
+Using Archivematica through https
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica can be configured for https following the sample configs for `dashboard
+ <https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2>`_ and `storage-service <https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/storage-ssl.conf.j2>`_
+
+In order to obtain valid ssl certificates trusted by any browser, you can use `Let's Encrypt <https://letsencrypt.org>`_
+
 
 .. _firewall:
 
