@@ -177,6 +177,24 @@ select Upload DIP to Archives Space. The Match page should automatically open.
 
 This will take you back to the Ingest tab, where you can finish ingesting the AIP.
 
+Alternatively, you can manually create the matches and place them in the metadata folder of the transfer in a file named `archivesspaceids.csv`. For example, given the following transfer tree::
+
+  pictures
+  ├── extra
+  │   └── oakland03.jp2
+  ├── Landing zone.jpg
+  ├── MARBLES.TGA
+  └── metadata
+    └── archivesspaceids.csv
+
+The CSV file needs two columns, one with a relative path to the original file in the transfer directory and the other with the `Ref ID` from the ArchivesSpace Archival Object, which can be obtained from the "Basic information" section in the Archival Object view page. E.g.::
+
+  "Landing zone.jpg",49807e9587de87dbafb459b34bd20b78
+  MARBLES.TGA,468050a6add84d6d89d47a975ce5440f
+  extra/oakland03.jp2,40caf1e2dd47675a92e25011c190fed5
+
+If the `Upload DIP to ArchivesSpace` option is selected in the working processing configuration, the CSV file will be used to create the matches in the upload. Otherwise, after selecting `Upload DIP to ArchivesSpace` in the ingest tab you will be taken to the Match page and, to check the matches created from the CSV file instead of creating new ones, you can click directly on `Review matches` and finalize or restart the matching.
+
 .. _upload-at:
 
 Upload DIP to Archivists' Toolkit
