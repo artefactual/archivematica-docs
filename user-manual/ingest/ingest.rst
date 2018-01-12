@@ -26,6 +26,7 @@ Should you run into an error during ingest, please see :ref:`Error handling <err
 * :ref:`Store AIP <store-aip>`
 * :ref:`Upload DIP <upload-dip>`
 * :ref:`Reingest AIP <reingest>`
+* :ref:`Clean up the ingest dashboard <cleanup-ingest>`
 
 
 .. _create-sip:
@@ -497,7 +498,8 @@ Re-ingest AIP
 There are three different types of AIP re-ingest:
 
 1. Metadata only
-================
+++++++++++++++++
+
 This method is for adding or updating descriptive and/or rights metadata. Doing
 so will update the dmdSec of the AIP's METS file.  Note that the original
 metadata will still be present but if you scroll down you'll also see another
@@ -508,7 +510,8 @@ dmdSec that says STATUS="updated", like so:
 Choosing metadata only AIP re-ingest will take you back to the Ingest tab.
 
 2. Partial re-ingest
-====================
+++++++++++++++++++++
+
 This method is typically used by institutions who want to create a DIP sometime
 after they've made an AIP.  They can then send their DIP to their access system
 or store it.
@@ -516,7 +519,8 @@ or store it.
 Choosing partial re-ingest will take you back to the Ingest tab.
 
 3. Full re-ingest
-=================
++++++++++++++++++
+
 This method is for institutions who want to be able to run all the major micro-services (including re-normalization for preservation if desired). A possible use case for full re-ingest might be that after a time new file characterization or validation tools have been developed and integrated with a future version of Archivematica. Running the micro-services with these updated tools will result in a updated and better AIP.
 
 Full re-ingest can also be used to update the metadata, and re-normalize for access.
@@ -538,7 +542,7 @@ see :ref:`Processing configuration <dashboard-processing>`.
 Choosing full re-ingest will take you back to the Transfer tab.
 
 How to tell in the METS file if an AIP has been re-ingested
-===========================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 1. Look at the Header of the METS file, which will display a ``CREATEDATE`` and a
 ``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21" LASTMODDATE="2017-10-17T20:32:36"/>``
@@ -555,12 +559,14 @@ dmdSec
 .. _reingest-dashboard:
 
 Where to start the re-ingest process
-====================================
+++++++++++++++++++++++++++++++++++++
+
 You can start the re-ingest process through the Archival Storage tab on the
 Dashboard, the Storage Service, or the API.
 
 Archival Storage tab on the Dashboard
-=====================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Go to the Archival Storage tab and find the AIP you wish to re-ingest by searching
 or browsing.
 
@@ -612,8 +618,6 @@ Actions, click on Re-ingest.
       the metadata is written to the database, which means it will be written to
       the AIP METS file. There are two ways to add or update metadata:
 
-
-
       A. Add metadata directly into Archivematica
 
          a. Click on the paper and pencil icon on the same line as the name of
@@ -628,9 +632,7 @@ Actions, click on Re-ingest.
          e. Click on "Ingest" (top left corner) to go back to the Ingest tab
             when you're done.
 
-
-
-      B. Add Metadata files
+      B. Add metadata files
 
          a. Click on the metadata report icon on the same line as the name of
             the SIP to take you to the "Add metadata" page.
@@ -645,9 +647,7 @@ Actions, click on Re-ingest.
             also be staged in the same Transfer Source location that you stage
             your objects for transfer to Archivematica.
 
-
    2. Select "Do not normalize" when you have finished adding your metadata.
-
 
    3. Continue processing the SIP as normal.
 
@@ -656,8 +656,6 @@ Actions, click on Re-ingest.
    When performing a metadata-only re-ingest, there will be no objects
    in your AIP in the review stage- Archivematica replaces the METS file in the
    existing AIP upon storage.
-..
-
 
    **Partial re-ingest**
 
@@ -682,8 +680,6 @@ Actions, click on Re-ingest.
    All normalization options will appear as for any SIP being normalized, but
    when performing metadata only or partial re-ingest, **only** the normalization
    paths noted above are supported.
-..
-
 
 .. tip::
 
@@ -692,13 +688,11 @@ Actions, click on Re-ingest.
    is prepared, it is recommended practice to add the metadata before
    Normalization, or set the metadata reminder to unchecked in Processing
    Configuration.
-..
-
 
 .. _re-ingest-storage-service:
 
 Storage Service
-===============
+^^^^^^^^^^^^^^^
 
 1. From the Packages tab in the Storage Service, click on Re-ingest beside the
    AIP you wish to reingest.
@@ -724,9 +718,48 @@ Storage Service
 .. _re-ingest-api:
 
 API
-===
+^^^
 
 Documentation to come.
+
+.. _cleanup-ingest:
+
+Clean up the ingest dashboard
+-----------------------------
+
+The dashboard in the Ingest tab should be cleaned up from time to time. As the
+list of SIPs grows, it takes Archivematica longer and longer to parse this
+information which can create browser timeout issues.
+
+.. NOTE::
+   This does not delete the SIP or related entities. It merely removes them
+   from the dashboard.
+
+Remove a single ingest
+++++++++++++++++++++++
+
+#. Ensure that the SIP you want to remove doesn't require any user input.
+   You must complete all user inputs and either complete the SIP (i.e.
+   AIPs/DIPs are created and stored/uploaded) or reject the SIP before it can be
+   removed from the dashboard.
+
+#. When you are ready to remove a SIP from the dashboard, click the red circle
+   icon found next to the add metadata icon, to the right of the SIP name.
+
+#. Click the Confirm button to remove the SIP from the dashboard.
+
+
+Remove all completed ingests
+++++++++++++++++++++++++++++
+
+#. Ensure that the SIPs you want to remove are complete (i.e. AIPs/DIPs are
+   created and stored/uploaded). Note that this feature only works on completed SIPs;
+   rejected SIPs will have to be removed one at a time.
+
+#. When you are ready to remove all completed SIPs, click the red circle
+   icon in the table header of the list of SIPs.
+
+#. Click the Confirm button to remove all completed SIPs from the dashboard.
 
 
 :ref:`Back to the top <ingest>`
