@@ -192,7 +192,7 @@ record group, etc.). Lower levels of description nested under resources are
 “archival objects” (series, files, items, etc.). Metadata about digital files is
 managed separately as “digital objects” which can be associated with
 resources/archival objects at any level of description. More information on
-ArchivesSpace can be found at http://archivesspace.org/
+ArchivesSpace can be found at http://archivesspace.org/.
 
 Searching for ArchivesSpace Resources
 =====================================
