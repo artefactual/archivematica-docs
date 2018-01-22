@@ -1,7 +1,7 @@
 .. _contentdm:
 
 ==========
-ContentDM
+CONTENTdm
 ==========
 
 Archivematica can prepare DIPS for upload to CONTENTdm. As of Archivematica

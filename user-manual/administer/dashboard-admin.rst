@@ -15,6 +15,8 @@ dashboard, allows you to configure application components and manage users.
 
 * :ref:`Processing configuration <dashboard-processing>`
 
+  * :ref:`Fields and options <processing-config-fields>`
+
 * :ref:`General <dashboard-general>`
 
 * :ref:`Failures <dashboard-failures>`
@@ -80,6 +82,8 @@ processing configuration. The fields are described in the next section.
    :width: 60%
    :alt: Processing configuration screen in the dashboard
 
+.. _processing-config-fields:
+
 Processing configuration fields
 ===============================
 
@@ -89,183 +93,377 @@ quicker, especially if you find yourself selecting the same decisions over and o
 Below is a list of the processing configuration form fields with a short description
 about how they work and the drop-down options for each.
 
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Job name               | Description                           | Option 1                                 | Option 2                                 | Option 3                                 | Option 4                                 | Option 5                                 | Option 6                          | Option 7                                 |
-+========================+=======================================+==========================================+==========================================+==========================================+==========================================+==========================================+===================================+==========================================+
-| Name                   | The name of the processingMCP.xml that|                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        | you are editing.                      |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Assign UUIDs to        | Directories are given an entry in the | None - the user is prompted for a        | Yes - UUIDs are assigned                 | No - UUIDs are not assigned              |                                          |                                          |                                   |                                          |
-| directories            | fileSec and assigned a UUID. (Note    | decision.                                |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        | that digital objects always get a     |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        | UUID.)                                |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Send transfer to       | Transfers are sequestered until virus | None - the user is prompted for a        | Yes -                                    | No - transfers                           |                                          |                                          |                                   |                                          |
-| quarantine             | definitions can be updated.           | decision.                                | transfers are                            | are not sent                             |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | automatically                            | to quarantine.                           |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | quarantined.                             |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Remove from quarantine | Transfers are automatically removed   | Enter the number of days that transfers should remain in quarantine (i.e. 5).                                                                                                                                                                                                                       |
-| after (days)           | from quarantine and made available for|                                                                                                                                                                                                                                                                                                     |
-|                        | further processing.                   |                                                                                                                                                                                                                                                                                                     |
-|                        |                                       |                                                                                                                                                                                                                                                                                                     |
-|                        |                                       |                                                                                                                                                                                                                                                                                                     |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Generate transfer      | Generate a text file showing a        | None - the                               | Yes -                                    | No - structure                           |                                          |                                          |                                   |                                          |
-| structure report       | directory tree of the original        | user is                                  | structure                                | report is not                            |                                          |                                          |                                   |                                          |
-|                        | transfer structure.                   | prompted for a                           | report is                                | created.                                 |                                          |                                          |                                   |                                          |
-|                        |                                       | decision.                                | created.                                 |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Select file format     | Choose a tool to                      | None - the                               | Identify using                           | Skip File                                | Identify using                           | Identify by                              |                                   |                                          |
-| identification command | identify the format of                | user is                                  | Fido - use                               | Identification                           | Siegfried -                              | File Extension                           |                                   |                                          |
-| (Transfer)             | files in your transfer.               | prompted for a                           | OPF's fido to                            | - files will                             | use Siegfried                            | - identify by                            |                                   |                                          |
-|                        |                                       | decision.                                | identify files                           | not be                                   | to identify                              | file extension                           |                                   |                                          |
-|                        |                                       |                                          | by their file                            | identified.                              | files by their                           | rather than                              |                                   |                                          |
-|                        |                                       |                                          | signature.                               |                                          | signature.                               | signature.                               |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Extract packages       | Packages (such as .zip)               | None - the                               | Yes -                                    | No - package                             |                                          |                                          |                                   |                                          |
-|                        | files) are unzipped and               | user is                                  | package                                  | is left as-is.                           |                                          |                                          |                                   |                                          |
-|                        | extracted into a                      | decision.                                | extracted.                               |                                          |                                          |                                          |                                   |                                          |
-|                        | directory.                            |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Delete packages after  | Packages that have been               | None - the                               | Yes -                                    | No - the                                 |                                          |                                          |                                   |                                          |
-| extraction             | extracted in the                      | user is                                  | the package is                           | package is                               |                                          |                                          |                                   |                                          |
-|                        | previous step can be                  | prompted for a                           | deleted.                                 | preserved                                |                                          |                                          |                                   |                                          |
-|                        | deleted after                         | decision.                                |                                          | along with the                           |                                          |                                          |                                   |                                          |
-|                        | extraction.                           |                                          |                                          | extracted                                |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          | content.                                 |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Perform policy checks  | If you create policies                | None - the                               | Yes - the                                | No - policies                            |                                          |                                          |                                   |                                          |
-| on originals           | using MediaConch, run                 | user is                                  | transfer is                              | are ignored.                             |                                          |                                          |                                   |                                          |
-|                        | the policies against the              | prompted for a                           | checked                                  |                                          |                                          |                                          |                                   |                                          |
-|                        | transfer to assess                    | decision.                                | against the                              |                                          |                                          |                                          |                                   |                                          |
-|                        | conformation.                         |                                          | policy.                                  |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Examine contents       | Run Bulk Extractor, a                 | None - the                               | Yes - Bulk                               | No - Bulk                                |                                          |                                          |                                   |                                          |
-|                        | forensics tool that                   | user is                                  | Extractor                                | Extractor does                           |                                          |                                          |                                   |                                          |
-|                        | can recognize credit                  | prompted for a                           | scans content                            | not run.                                 |                                          |                                          |                                   |                                          |
-|                        | card numbers, social                  | decision.                                | and creates                              |                                          |                                          |                                          |                                   |                                          |
-|                        | security numbers, and                 |                                          | log outputs of                           |                                          |                                          |                                          |                                   |                                          |
-|                        | other patterns in data.               |                                          | recognized                               |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | patterns.                                |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Create SIP(s)          | Create a formal SIP out               | None - the                               | Send to                                  | Create single                            |                                          |                                          |                                   |                                          |
-|                        | of the transfer or send               | user is                                  | backlog -                                | SIP and                                  |                                          |                                          |                                   |                                          |
-|                        | it to the backlog.                    | prompted for a                           | transfer is                              | continue                                 |                                          |                                          |                                   |                                          |
-|                        |                                       | decision.                                | sent to a                                | processing -                             |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | backlog                                  | transfer                                 |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | storage space                            | becomes a SIP                            |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | for temporary                            | and is made                              |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | storage or                               | available for                            |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | appraisal.                               | further                                  |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          | processing on                            |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          | the ingest                               |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          | tab.                                     |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Select file format     | Choose a tool to                      | None - the                               | Use existing                             | Identify using                           | Identify using                           | Identify by                              |                                   |                                          |
-| identification command | identify the format of                | user is                                  | data - reuse                             | Fido - use                               | Siegfried -                              | File Extension                           |                                   |                                          |
-| (Ingest)               | files in your SIP.                    | prompted for a                           | file                                     | OPF's fido to                            | use Siegfried                            | - identify by                            |                                   |                                          |
-|                        |                                       | decision.                                | identification                           | identify files                           | to identify                              | file extension                           |                                   |                                          |
-|                        |                                       |                                          | data from the                            | by their file                            | files by their                           | rather than                              |                                   |                                          |
-|                        |                                       |                                          | transfer tab.                            | signature.                               | signature.                               | signature.                               |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Normalize              | Convert ingested digital              | None - the                               | Normalize for                            | Normalize for                            | Normalize                                | Do not                                   | Normalize                         | Normalize for                            |
-|                        | objects to preservation               | user is                                  | preservation                             | preservation -                           | manually - see                           | normalize -                              | service files                     | access - the                             |
-|                        | and/or access formats.                | prompted for a                           | and access -                             | create                                   | :ref:`Manual Normalization <manual-norm>`| the AIP will                             | preservation                      | AIP will                                 |
-|                        |                                       | decision.                                | create                                   | preservation                             | for more information.                    | contain                                  | - see                             | contain                                  |
-|                        | See                                   |                                          | preservation                             | copies only.                             |                                          | originals                                | :ref:`Digitization <digitized>`   | originals                                |
-|                        | :ref:`Normalize <normalize>`          |                                          | copies of the                            | No access                                |                                          | only. No                                 | for more information.             | only.                                    |
-|                        | for more information.                 |                                          | objects plus                             | copies are                               |                                          | access copies                            |                                   | contain                                  |
-|                        |                                       |                                          | access copies                            | created and no                           |                                          | are generated                            |                                   | originals                                |
-|                        |                                       |                                          | which will be                            | DIP will be                              |                                          | and no DIP                               |                                   | only. Creates                            |
-|                        |                                       |                                          | used to                                  | generated.                               |                                          | will be                                  |                                   | access copies                            |
-|                        |                                       |                                          | generate the                             |                                          |                                          | generated.                               |                                   | that will be                             |
-|                        |                                       |                                          | DIP.                                     |                                          |                                          |                                          |                                   | used to                                  |
-|                        |                                       |                                          |                                          |                                          |                                          |                                          |                                   | generate the                             |
-|                        |                                       |                                          |                                          |                                          |                                          |                                          |                                   | DIP.                                     |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Approve normalization  | The dashboard allows users            | None - the                               | Yes - skip the                           |                                          |                                          |                                          |                                   |                                          |
-|                        | to review the normalization           | user has a                               | review step                              |                                          |                                          |                                          |                                   |                                          |
-|                        | output and the normalization          | chance to                                | and continue                             |                                          |                                          |                                          |                                   |                                          |
-|                        | report.                               | review and                               | processing.                              |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       | approve                                  |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       | normalization.                           |                                          |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Perform policy checks  | If you create policies                | None - the                               | Yes - the                                | No - policies                            |                                          |                                          |                                   |                                          |
-| on preservation        | using MediaConch, run                 | user is                                  | normalized                               | are ignored.                             |                                          |                                          |                                   |                                          |
-| derivatives            | the policies against the              | prompted for a                           | files are                                |                                          |                                          |                                          |                                   |                                          |
-|                        | newly-created preservation            | decision.                                | checked                                  |                                          |                                          |                                          |                                   |                                          |
-|                        | derivatives to ensure                 |                                          | against any                              |                                          |                                          |                                          |                                   |                                          |
-|                        | conformation.                         |                                          | policies.                                |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Perform policy checks  | If you create policies                | None - the                               | Yes - the                                | No - policies                            |                                          |                                          |                                   |                                          |
-| on access              | using MediaConch, run                 | user is                                  | normalized                               | are ignored.                             |                                          |                                          |                                   |                                          |
-| derivatives            | the policies against the              | prompted for a                           | files are                                |                                          |                                          |                                          |                                   |                                          |
-|                        | newly-created access                  | decision.                                | checked                                  |                                          |                                          |                                          |                                   |                                          |
-|                        | derivatives to ensure                 |                                          | against any                              |                                          |                                          |                                          |                                   |                                          |
-|                        | conformation.                         |                                          | policies.                                |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Bind PIDs              | Assign persistent identifiers         | None - the                               | Yes - PIDs are                           | No - PIDs are                            |                                          |                                          |                                   |                                          |
-|                        | and send the information              | user is                                  | created and a                            | not created                              |                                          |                                          |                                   |                                          |
-|                        | to a Handle Server (must be           | prompted for a                           | API call is                              |                                          |                                          |                                          |                                   |                                          |
-|                        | configured).                          | decision.                                | sent to the                              |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          | Handle Server                            |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
-| Document empty         | By default, Archivematica removes     | None - the user is prompted for a        | Yes - an entry for the directory is      | No - the directory is not documented     |                                          |                                          |                                   |                                          |
-| directories            | empty directories and does not        | decision                                 | created in the structmap                 |                                          |                                          |                                          |                                   |                                          |
-|                        | document that they existed.           |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-|                        |                                       |                                          |                                          |                                          |                                          |                                          |                                   |                                          |
-+------------------------+---------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+-----------------------------------+------------------------------------------+
+Name
+++++
 
+The name of the processingMCP.xml that you are editing.
 
+Assign UUIDs to directories
++++++++++++++++++++++++++++
 
+Directories are given an entry in the fileSec and assigned a unique universal
+identifier (UUID). Note that the digital objects in the transfer are always
+assigned a UUID.
 
-fds
+Options:
 
+#. **None** - the user is prompted for a decision.
+#. **Yes** - UUIDs are assigned.
+#. **No** - UUIDs are not assigned.
 
-+------------------------+------------------------------+---------------+---------------+---------------+------------------------------------------+---------------+-----------------------------------+---------------+
-|                        |                              |               |               |               |                                          |               |                                   |               |
-+------------------------+------------------------------+---------------+---------------+---------------+------------------------------------------+---------------+-----------------------------------+---------------+
+Send transfer to quarantine
++++++++++++++++++++++++++++
 
+Transfers are sequestered until virus definitions can be updated.
 
-#. **Reminder: add metadata if desired**: Select whether or not Archivematica should
-   remind the user to add metadata to the SIP using the GUI. Note: this job
-   occurs at the last moment that it is possible to add metadata to the SIP; once the
-   ingest proceeds past this point, it is no longer possible to add metadata to the SIP.
+Options:
 
-#. **Transcribe files (OCR)**: Select whether or not to transcribe the contents of
-   the SIP (see :ref:`Transcribe SIP contents <transcribe-contents>`)
+#. **None** - the user is prompted for a decision.
+#. **Yes** - transfers are automatically quarantined.
+#. **No** - transfers are not sent to quarantine.
 
-#. **Select file format identification command (Submission documentation & metadata)**: Select
-   the file format identification tool to be used on submission documentation and
-   metadata files.
+Remove from quarantine after (days)
++++++++++++++++++++++++++++++++++++
 
-#. **Select compression algorithm**: Select which tool you would like to use to
-   compress your AIP.
+Transfers are automatically removed from quarantine after a defined number of days
+and made available for further processing.
 
-#. **Select compression level**: Select how compressed you would like your AIP to
-   be. Selecting a higher compression level means that the resulting AIP is smaller,
-   but compression also takes longer. Lower compression levels mean quicker compression,
-   but a larger AIP.
+**Data entry field:** Enter the number of days that transfers should remain in
+quarantine (i.e. 5).
 
-#. **Store AIP**: Store the AIP without interrupting the workflow in the dashboard.
+Generate transfer structure report
+++++++++++++++++++++++++++++++++++
 
-#. **Store AIP location**: Select a location to send your AIPs. There are two
-   standard locations: Default and Standard Archivematica Directory.  Default location
-   is usually used for the automated workflow. If you choose Default and you have
-   set up only one location your AIPs will be stored in that one location.
+A text file is generated showing a directory tree of the original transfer structure.
 
-#. **Upload DIP**: Select an access system to send your DIPs or don't upload the DIP.
+Options:
 
-#. **Store DIP**: Choose to store or not store a DIP.
+#. **None** - the user is prompted for a decision.
+#. **Yes** - structure report is created.
+#. **No** - structure report is not created.
 
-#. **Store DIP location**: Select one archival storage location where you will
-   consistently send your DIPs. There are two standard locations: Default and
-   Standard Archivematica Directory.  Default location is usually used for the
-   automated workflow. If you choose Default and you have set up only one location
-   your AIPs will be stored in that one location.
+Select file format identification command (Transfer)
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Choose a tool to identify the format of the files in your transfer.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
+   to identify files by their file signature.
+#. **Skip File Identification** - files will not be identified.
+#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
+   to identify files by their signature.
+#. **Identify by File Extension** - identify files by their extension rather than
+   signature.
+
+Extract packages
+++++++++++++++++
+
+Packages (such as .zip files) are unzipped and extracted into a directory.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the contents of the package are extracted.
+#. **No** - package is left as-is.
+
+Delete packages after extraction
+++++++++++++++++++++++++++++++++
+
+Packages that have been extracted in the previous step can be deleted after extraction.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the package is deleted.
+#. **No** - the package is preserved along with the extracted content.
+
+Perform policy checks on originals
+++++++++++++++++++++++++++++++++++
+
+If you create policies using MediaConch, run the policies against the transfer
+to assess conformation.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the transfer is checked against any policies.
+#. **No** - policies are ignored.
+
+Examine contents
+++++++++++++++++
+
+Run Bulk Extractor, a forensics tool that can recognize credit card numbers,
+social security numbers, and other patterns in data. For more information on
+reviewing Bulk Extractor logs, see the :ref:`Analysis pane <analysis_pane>` on
+the Appraisal tab.
+
+**Options:**
+
+#. **None** - the user is prompted for a decision.use
+#. **Yes** - Bulk Extractor scans content and creates log outputs of recognized
+   patterns for review.
+#. **No** - Bulk Extractor does not run.
+
+Create SIP(s)
++++++++++++++
+
+Create a formal SIP out of the transfer or send it to the backlog.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Send to backlog** - transfer is sent to a backlog storage space for temporary
+   storage or appraisal.
+#. **Create single SIP and continue processing** - transfer becomes a SIP and is made
+   available for further processing on the ingest tab.
+
+Select file format identification command (Ingest)
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Choose a tool to identify the format of files in your SIP.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Use existing data** - reuse file identification data from the transfer tab.
+#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
+   to identify files by their file signature.
+#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
+   to identify files by their signature.
+#. **Identify by File Extension** - identify files by their extension rather than
+   their signature.
+
+Normalize
++++++++++
+
+Convert ingested digital objects to preservation and/or access formats. See
+:ref:`Normalize <normalize>` for more information.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Normalize for preservation and access** - creates preservation copies of the
+   objects plus access copies which will be used to generate the DIP.
+#. **Normalize for preservation** - creates preservation copies only. No access
+   copies are created and no DIP will be generated.
+#. **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
+   more information.
+#. **Do not normalize** - the AIP will contain originals only. No preservation or
+   access copies are generated and no DIP will be generated.
+#. **Normalize service files preservation** - see :ref:`Digitization <digitized>`
+   for more information.
+#. **Normalize for access** - the AIP will contain originals only. No preservation
+   copies will be generated. Access copies will be created which will be used to
+   generate the DIP.
+
+Approve normalization
++++++++++++++++++++++
+
+The dashboard allows users to review the normalization output and the normalization
+report.
+
+Options:
+
+#. **None** - the user has a chance to review and approve normalization.
+#. **Yes** - skip the review step and automatically continue processing.
+
+Perform policy checks on preservation derivatives
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+If you create policies using MediaConch, run the policies against the newly-created
+preservation derivatives to ensure conformation.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the normalized files are checked against any policies.
+#. **No** - policies are ignored.
+
+Perform policy checks on access derivatives
++++++++++++++++++++++++++++++++++++++++++++
+
+If you create policies using MediaConch, run the policies against the newly-created
+preservation derivatives to ensure conformation.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the normalized files are checked against any policies.
+#. **No** - policies are ignored.
+
+Bind PIDs
++++++++++
+
+Assign persistent identifiers and send the information to a Handle Server (must
+be configured).
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - PIDs are created and a API call posts the PIDs to the Handle Server.
+#. **No** - PIDs are not created.
+
+Document empty directories
+++++++++++++++++++++++++++
+
+By default, Archivematica removes empty directories and does not document that they existed.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - an entry for the directory is created in the structmap.
+#. **No** - the directory is not documented.
+
+Reminder: add metadata if desired
++++++++++++++++++++++++++++++++++
+
+Archivematica allows users to see :ref:`add metadata <add-metadata>` to the SIP using
+the GUI. This reminder occurs at the last moment that it is possible to add
+metadata; once the ingest proceeds past this point, it is no longer possible to
+add metadata to the SIP.
+
+Options:
+
+#. **None** - the user has a chance to add metadata.
+#. **Continue** - skip the reminder and automatically continue processing.
+
+Transcribe files (OCR)
+++++++++++++++++++++++
+
+Users can elect to run Tesseract, an OCR tool that is included in Archivematica,
+to produce text files containing file transcripts. For more information,
+see (see :ref:`Transcribe SIP contents <transcribe-contents>`).
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - Tesseract runs on all OCR-able files.
+#. **No** - Tesseract does not run.
+
+Select file format identification command (Submission documentation & metadata)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Choose a tool to identify the format of any submission documentation and/or metadata
+files that were included in your transfer.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
+   to identify files by their signature.
+#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
+   to identify files by their file signature.
+#. **Identify by File Extension** - identify files by their extension rather than
+   their signature.
+#. **Skip File Identification** - file identification is not run on submission
+   documentation or metadata files.
+
+Select compression algorithm
+++++++++++++++++++++++++++++
+
+AIPs created by Archivematica can be stored as compressed packages or uncompressed,
+depending on your storage requirements.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **7z using bzip2** - a 7Zip file is created using the tool `bzip2 <http://www.bzip.org/>`_.
+#. **7z using LZMA** - a 7Zip file is created using the tool `LZMA <http://www.7-zip.org/sdk.html>`_.
+#. **Uncompressed** - the AIP is not compressed.
+#. **Parallel bzip2** - a 7Zip file is created using the tool `Parallel bzip2 (pbzip2) <http://compression.ca/pbzip2/>`_.
+
+Select compression level
+++++++++++++++++++++++++
+
+If you selected a compression choice in the step above, you can determine how
+compressed you would like your AIP to be. Selecting a higher compression level
+means that the resulting AIP is smaller, but compression also takes longer. Lower
+compression levels mean quicker compression, but a larger AIP.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **5 - normal compression mode** - the compression tool will strike a balance
+   between speed and compression to make a moderately-sized, moderately-compressed
+   AIP.
+#. **7 - maximum compression** - a smaller AIP that takes longer to compress.
+#. **9 - ultra compression** - the smallest possible AIP.
+#. **3 - fast compression mode** - a larger AIP that will be compressed quickly.
+#. **1 - fastest mode** - the AIP will be compressed as quickly as possible.
+
+Store AIP
++++++++++
+
+Once processing is complete, AIPs can be stored without interrupting the
+workflow in the dashboard.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the AIP is marked for storage automatically.
+
+Store AIP location
+++++++++++++++++++
+
+If the previous step and this step are configured, all AIPs will be sent to the
+selected storage location (unless you have included a custom processing
+configuration with the transfer that defines another location).
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Default location** - the AIP is stored in the AIP storage location that has
+   been defined as the default in the Storage Service.
+#. **[Other storage locations]** - any other AIP storage locations that are available
+   will also appear on this list.
+
+Upload DIP
+++++++++++
+
+If a DIP was created, it can be automatically sent to an access system for which
+there is an Archivematica integration.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload
+   documentation.
+#. **Upload DIP to Archivists Toolkit** - see :ref:`Archivists Toolkit <archivists-toolkit>`
+   DIP upload documentation.
+#. **Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload documentation.
+#. **Do not upload** - the DIP will not be uploaded to an access system.
+#. **Upload DIP to ArchivesSpace** - see :ref:`ArchivesSpace <upload-as>` DIP
+   upload documentation.
+
+Store DIP
++++++++++
+
+If a DIP was created, it can be stored without interrupting the workflow in the
+dashboard. Note that DIP storage is not required, and that DIPs can be created
+on demand by :ref:`reingesting the AIP <reingest>`.
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Yes** - the DIP is marked for storage automatically.
+
+Store DIP location
+++++++++++++++++++
+
+If the previous step and this step are configured, all DIPs will be sent to the
+selected storage location (unless you have included a custom processing
+configuration with the transfer that defines another location).
+
+Options:
+
+#. **None** - the user is prompted for a decision.
+#. **Default location** - the DIP is stored in the DIP storage location that has
+   been defined as the default in the Storage Service.
+#. **[Other storage locations]** - any other DIP storage locations that are available
+   will also appear on this list.
 
 .. _dashboard-general:
 
