@@ -73,6 +73,17 @@ different types of content - one for audio-visual material, one for images, one
 for textual records, etc. To edit an existing processing configuration file, click
 on the *Edit* button to the right of the processing configuration name.
 
+Note that alternate processing configurations (i.e. anything other than default)
+are used in two ways:
+
+#. When you reingest an AIP, you are given the opportunity to select which
+   processing configuration you'd like to use.
+#. You can download a specific processingMCP.xml via the command line and
+   include it with a transfer. Archivematica will then use this to
+   automate your transfer selections, rather than the default configuration.
+
+All other transfers will use the default processing configuration.
+
 In order to edit any of the selections, select a choice from the drop-down menu
 to the right of the job name. Once you've made all of your selections, save the
 processing configuration. The fields are described in the next section.
