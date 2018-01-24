@@ -240,9 +240,9 @@ the interface, and the Storage Service into other languages.
 Administrator manual
 ====================
 
-The administrator manual is intended for archivists, librarians, and/or systems
-administrators who are responsible for installing, configuring, setting up, and
-maintaining Archivematica and related systems.
+The administrator manual is intended for systems administrators who are
+responsible for installing, configuring, setting up, and maintaining Archivematica
+and related systems.
 
 
 .. _home-install:
