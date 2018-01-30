@@ -194,18 +194,24 @@ managed separately as “digital objects” which can be associated with
 resources/archival objects at any level of description. More information on
 ArchivesSpace can be found at http://archivesspace.org/.
 
+.. _searching-ArchivesSpace-resources:
+
 Searching for ArchivesSpace Resources
 =====================================
 
-The search box at the top of the ArchivesSpace panel allows for searching for
+The search box at the top of the ArchivesSpace panel enables searching for
 resources within an ArchivesSpace repository. A user can search by the title or
 identifier of a resource.
 
 ArchivesSpace resources can be expanded to show lower levels of description.
-Folder icons indicate ArchivesSpace resources and archival objects which have
+Folder icons indicate ArchivesSpace resources and archival objects that have
 child records nested under them. Page icons indicate resources and archival
 objects that do not have child records. Digital object components are designated
 by the parallel lines icon.
+
+.. note::
+
+   Digital objects created and linked to resources in ArchivesSpace will not appear in the ArchivesSpace panel. However, digital objects added to a resource from within the ArchivesSpace panel are displayed.
 
 .. image:: images/archivesspace_search.*
    :align: center
@@ -219,7 +225,7 @@ Options at the top of the ArchivesSpace pane allow for adding to and changing an
 existing ArchivesSpace resource, such as adding new archival objects and digital
 object components.
 
-Selecting a resource or archival object and using “Add New Child Record” adds a
+Selecting a resource or archival object and using “Add new child record” adds a
 new archival object nested underneath the selected level of description.
 Clicking this button brings up a dialog box for entering metadata. At a minimum,
 a new archival object must have a title and a level of description, otherwise
@@ -290,27 +296,47 @@ edited or deleted and further acts can be added.
 Adding Files to ArchivesSpace Resources and Starting SIPs
 ---------------------------------------------------------
 
-Files from transfers in the Backlog pane can be associated with ArchivesSpace
-resources by dragging files from the backlog to digital object components.
+Transfer files in backlog can easily be associated with ArchivesSpace resources by dragging and dropping files from the backlog to digital object components.
+
+To add files to ArchivesSpace resources:
+
+1. Search the backlog by entering terms and parameters in the search box at the top of the page.
+   
+   For a list of all transfers in backlog, simply click within the search box leaving the edit field blank, and then click **Search transfer backlog**.
+
+2. Click **ArchivesSpace** to enable the ArchivesSpace panel, :ref:`search by title or identifier of a resource <searching-ArchivesSpace-resources>`, and then click **Search ArchivesSpace**.
+   
+   A hierarchical view of the resource is displayed.
+   
+3. Create digital object components within the ArchivesSpace panel by clicking **Add new digital object**.   
+   
+   Digital object components must be created in the Appraisal tab.
+
+.. note::
+
+   Digital objects created and linked to resources in ArchivesSpace will not appear in the Appraisal tab.
+
+4. Now click and drag files in the Backlog panel to digital object components in the ArchivesSpace panel.
 
 .. image:: images/backlog_and_archivesspace.*
    :align: center
    :width: 80%
    :alt: Backlog and analysis panes
 
-Digital object components must be created in the Appraisal tab (digital objects
-created and linked to resources in ArchivesSpace will not appear in the
-Appraisal tab).
+.. note::
 
-One file or directory from a transfer can be moved at a time. A file can only be
-added once to an ArchivesSpace resource. Files that have been added to a digital
-object component will appear with a strike-through in the backlog.
+   One file or directory from a transfer can be moved at a time. A file can only be
+   added once to an ArchivesSpace resource. Files that have been added to a digital object component will appear with a strike-through in the backlog.
 
-Once all files have been added to their place in the arrangement, SIPs can be
-started in Ingest by selecting the resource/archival object and clicking
-“Finalize Arrangement.” SIPs can be created from any level of description
-(i.e. a SIP can be started for an entire resource or from an archival object
-within a resource such as a series).
+5. Once all files have been added and the arrangement has been set, SIPs can be
+   started in Ingest. Select the resource/archival object and click
+   **Finalize arrangement**. SIPs can be created from any level of description
+   (i.e. a SIP can be started for an entire resource or from an archival object
+   within a resource such as a series).
+
+.. tip::
+
+   Before starting a SIP in the ArchivesSpace panel, verify that all required metadata associated with an ArchivesSpace resource is in place, particularly at the parent-level of the arrangement. In ArchivesSpace, verify that a material description record is linked to an agent record.
 
 .. _arrangement:
 
