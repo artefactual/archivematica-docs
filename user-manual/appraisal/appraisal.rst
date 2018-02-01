@@ -296,7 +296,7 @@ edited or deleted and further acts can be added.
 Adding Files to ArchivesSpace Resources and Starting SIPs
 ---------------------------------------------------------
 
-Transfer files in backlog can easily be associated with ArchivesSpace resources by dragging and dropping files from the backlog to digital object components.
+Transfer files in backlog can easily be associated with ArchivesSpace resources by dragging and dropping files from the Backlog pane to digital object components in the ArchivesSpace pane.
 
 To add files to ArchivesSpace resources:
 
