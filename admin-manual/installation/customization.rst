@@ -22,9 +22,9 @@ Basic workflow configuration is feasible by administrators or end-users in the
 Resources for development configuration
 ---------------------------------------
 
-When processing a SIP or transfer, you may automate workflow choices by putting a
-``processingMCP.xml`` file into the root directory of a SIP/transfer.
-See :ref:`Processing configuration <process-config>`.
+When processing a SIP or transfer, you may automate workflow choices by putting 
+a ``processingMCP.xml`` file into the root directory of a SIP/transfer. See 
+:ref:`Processing configuration <process-config>`.
 
 The MCP is the core of the Archivematica system. It controls the various
 micro-services in the Archivematica system. Developers who wish to modify the
@@ -36,6 +36,14 @@ wiki:
 * `Basic MCP configuration <https://wiki.archivematica.org/MCPServer#Config_File>`_
 
 For other development resources, please see the
-`Development <https://www.archivematica.org/wiki/Development>`_ section of our wiki.
+`Development <https://www.archivematica.org/wiki/Development>`_ section of our 
+wiki.
+
+Resources for antivirus configuration
+-------------------------------------
+
+Antivirus can be customized through various operating system environment 
+variables rather than via the Dashboard. See :ref:`Antivirus Administration 
+<antivirus-admin>` 
 
 :ref:`Back to the top <customization>`

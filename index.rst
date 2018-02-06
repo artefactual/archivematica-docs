@@ -100,6 +100,7 @@ content to prepare your transfer to become a SIP (submission information package
 * :ref:`Forensic images <forensic>`
 * :ref:`DSpace exports <dspace>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`
+* :ref:`Scan for viruses <scan-for-viruses>`
 
 .. _home-backlog:
 
