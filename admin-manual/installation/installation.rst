@@ -88,10 +88,10 @@ Using additional machines requires some additional configuration.
 See :ref:`Advanced <advanced>`.
 
 .. note:: *Indexing*. Installing Elasticsearch to provide a search index is now
-   optional as of version |release|.  Installing Archivematica in a headless state,
-   without Elasticsearch means reduced consumption of compute resources and
-   lower operational complexity.  However, some functionality, such as the
-   Backlog, Appraisal and Archival Storage tabs, is not available.  
+   optional as of version |release|.  Installing Archivematica without
+   Elasticsearch means reduced consumption of compute resources and lower
+   operational complexity.  However, some functionality, such as the Backlog,
+   Appraisal and Archival Storage tabs, is not available.
 
    When Elasticsearch is used, Archivematica |release| requires version 1.x (tested
    with 1.7.6). Support for a more recent version of Elasticsearch is being
@@ -198,7 +198,7 @@ Using 16.04 (Xenial):
 
 2. Add Elasticsearch package source (optional)
 
-.. note:: Skip this step if you are planning to run Archivematica in headless
+.. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
 
 Elasticsearch comes from its own package repository.
@@ -220,7 +220,7 @@ the software from the package repositories you just added to your system.
 
 4. Install Elasticsearch (optional)
 
-.. note:: Skip this step if you are planning to run Archivematica in headless
+.. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
 
 .. code:: bash
@@ -255,11 +255,13 @@ get the most recent version of pip.
 
 8. Install the Archivematica packages
 
-If you are planning running Archivematica in headless mode (i.e., without
-Elasticsearch), then set the relevant environment variables to ``false``. (See
-the `Dashboard install README`_, the `MCPClient install README`_, and the
-`MCPServer install README`_ for a complete description of the available
-environment variables.
+There are a number of environment variables that Archivematica recognizes which
+can be used to alter how it is configured. For the full list, see the
+`Dashboard install README`_, the `MCPClient install README`_, and the
+`MCPServer install README`_.
+
+If you are planning running Archivematica in indexless mode (i.e., without
+Elasticsearch), then set the relevant environment variables to ``false``.
 
 .. code:: bash
 
@@ -297,7 +299,7 @@ changed after the installation is complete.
 
 10. Start Elasticsearch (optional)
 
-.. note:: Skip this step if you are planning to run Archivematica in headless
+.. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
 
 .. code:: bash
@@ -358,7 +360,7 @@ Some repositories need to be installed in order to fulfill the installation proc
 
 * Elasticsearch (optional)
 
-.. note:: Skip this step if you are planning to run Archivematica in headless
+.. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
 
 .. code:: bash
@@ -391,7 +393,7 @@ Common services like Elasticsearch, mariadb and gearmand should be installed
 and enabled before the Archivematica install. 
 
 .. note:: Do not enable Elasticsearch if you are running Archivematica in
-   headless mode.
+   indexless mode.
 
 .. code:: bash
 
@@ -438,6 +440,11 @@ and enabled before the Archivematica install.
 .. note:: The storage service will be available at http://<ip>:8001
 
 5. Installing Archivematica Dashboard and MCP Server
+
+There are a number of environment variables that Archivematica recognizes which
+can be used to alter how it is configured. For the full list, see the
+`Dashboard install README`_, the `MCPClient install README`_, and the
+`MCPServer install README`_.
 
 * First, install the packages:
 
@@ -516,13 +523,10 @@ and enabled before the Archivematica install.
    sudo -u root sed -i 's/^#TCPSocket/TCPSocket/g' /etc/clamd.d/scan.conf 
    sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 
-* Headless mode:
+* Indexless mode:
 
-If you are planning running Archivematica in headless mode (i.e., without
-Elasticsearch), then set the relevant environment variables to ``false``. (See
-the `Dashboard install README`_, the `MCPClient install README`_, and
-the `MCPServer install README`_ for a complete description of the available
-environment variables.
+If you are planning to run Archivematica in indexless mode (i.e., without
+Elasticsearch), then set the relevant environment variables to ``false``
 
 .. code:: bash
 
