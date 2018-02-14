@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../user-manual/backlog/backlog.rst:5
+msgid "Backlog"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:7
+msgid ""
+"The backlog tab is used to view, search and request deletion of transfers"
+" which have been sent to backlog."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:11
+msgid ""
+"It is important to know that at this time, transfers stored using "
+"Archivematica's backlog functionality can only be accessed by using the "
+"same pipeline that the transfer was created in. If you decommission your "
+"pipeline, you will be unable to reindex and repopulate the backlogged "
+"material in a new Archivematica pipeline."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:15
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:17
+msgid ":ref:`Searching for transfers <backlog-transfer-search>`"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:18
+msgid ":ref:`Searching for files <backlog-file-search>`"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:19
+msgid ":ref:`Downloading transfers or files <backlog-download>`"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:20
+msgid ":ref:`Deletion of transfers <backlog-delete>`"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:26
+msgid "Searching for transfers"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:28
+msgid ""
+"Navigate to the backlog page, where you should see a paginated list of "
+"all backlogged transfers."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:36
+msgid ""
+"Perform your search using the fields at the top of the screen, adding new"
+" boolean operators as desired. Searches can be performed on file name, "
+"file extension, accession number, Ingest date or SIP (Transfer) UUID. To "
+"search on the name of the transfer, leave the field as \"Any\". Wildcards"
+" (*) are allowed."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:43
+msgid ""
+"If you're not finding anything in your search results, try switching from"
+" \"keyword\" to \"phrase.\""
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:53
+msgid "Searching for files"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:55
+msgid ""
+"File searches can be performed using the same instructions as Searching "
+"for transfers, above, by additionally clicking \"Show files?\". You can "
+"also browse all files in backlog by leaving the search blank and clicking"
+" \"Show files?\"."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:57
+msgid ""
+"File searches/browses will show all files in the transfer, including logs"
+" created during transfer."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:68
+msgid "Downloading transfers or files"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:70
+msgid ""
+"Either files or transfers can be downloaded by using the download button "
+"on the right-hand side. Transfers when downloaded will be packaged as a "
+"tar file."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:74
+msgid ""
+"In testing, we have had success in downloading transfers/files of up to 1"
+" GB; further development may be required to scale this feature to larger "
+"transfers/files."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:80
+msgid "Deletion of transfers"
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:82
+msgid ""
+"Transfers can be requested for deletion by clicking the red remove icon "
+"beside the transfer."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:85
+msgid "The user will be prompted to provide a reason for deleting the transfer."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:92
+msgid ""
+"To complete the deletion, an administrator must login to the Storage "
+"Service and approve the deletion."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:95
+msgid ""
+"Until the deletion is approved, the transfer will remain visible in the "
+"backlog tab and will be available for download from the backlog tab as "
+"well."
+msgstr ""
+
+#: ../../user-manual/backlog/backlog.rst:98
+msgid ":ref:`Back to the top <backlog>`"
+msgstr ""
+

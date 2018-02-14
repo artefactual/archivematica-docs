@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../user-manual/translations/translations.rst:5
+msgid "Translations"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:9
+msgid "Archivematica will not be available for translating until version 1.6.1."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:11
+msgid ""
+"Thank you for your interest in translating Archivematica! Community "
+"translators are vital to internationalizing Archivematica for use around "
+"the world. We appreciate efforts of all volunteer translators on the "
+"Archivematica project!"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:15
+msgid ""
+"We use Transifex to support the publication of translations. Transifex "
+"allows multiple users to contribute translated strings, makes the process"
+" faster and easier, and enables Artefactual to publish translations more "
+"often. There are multiple Archivematica projects to translate: the "
+"documentation, the interface, the website, and the Storage Service."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:20
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:22
+msgid ":ref:`Join the Archivematica project <transifex-project>`"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:23
+msgid ":ref:`Start translating <start-translating>`"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:24
+msgid ":ref:`Finding the context of a string <string-context>`"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:25
+msgid ":ref:`Editing translated strings <editing-strings>`"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:30
+msgid "Join the Archivematica project"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:32
+msgid ""
+"Go to `Transifex <https://www.transifex.com/signup>`_ and log in or "
+"create an account, if you don't already have one."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:35
+msgid ""
+"Once you have created an account, you will be redirected to a "
+"configuration page. Fill in your name and preferences."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:38
+msgid ""
+"On the second configuration page, you will be given the option to start "
+"your own project or to join an existing one. Select \"Join an existing "
+"project\"."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:41
+msgid ""
+"The last configuration page will ask you to identify languages that you "
+"speak. Select as many as are applicable and click on \"Get started\"."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:44
+msgid ""
+"A pop-up window will appear. After you click on **Find a project to "
+"translate**, type *archivematica* into the search bar and then click on "
+"the Archivematica project when it appears below. You will be redirected "
+"to the Archivematica project homepage."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:49
+msgid "In the top right corner of the page, select **Join team**."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:51
+msgid ""
+"A pop-up will appear with a list of the available languages. Select your "
+"chosen translation language from the list. When you've found it, click "
+"the Submit button (if you wish to translate Archviematica into multiple "
+"languages, you can repeat this process again later)."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:56
+msgid ""
+"You will see a confirmation message informing you that your request has "
+"been submitted. One of the Artefactual project maintainers will review "
+"the request and approve your account."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:63
+msgid "Start translating"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:65
+msgid ""
+"Once your account is approved by the Archivematica project maintainers, "
+"you will receive an email notification from Transifex. Once you've "
+"received this email, return to the `Archivematica Project homepage "
+"<https://www.transifex.com/artefactual/archivematica/>`_ in Transifex."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:70
+msgid ""
+"Select the project that you would like to translate - the Archivematica "
+"docs, Storage Service, or website - and click on the blue Translate "
+"button to start translating."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:80
+msgid "Select the Translate button"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:82
+msgid "Follow the on-screen prompts to select your language from the dropdown."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:90
+msgid "Select a language."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:93
+msgid ""
+"You will be taken to a page listing the available resources for for your "
+"chosen language. A resource is a component of the project, such as a page"
+" of the documentation."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:102
+msgid "Select a resource."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:104
+msgid ""
+"Once you have selected a resource, you will be taken to the Translations "
+"Editor. From this page, you can select strings (paragraphs) of text to "
+"translate. Note strings that have already been translated will have a "
+"green checkmark on the far left. Select a string that has not been "
+"translated - it will have a grey circle to the far left."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:110
+msgid ""
+"To translate the string, enter your translation in the middle column. "
+"Remember to click save when you're done!"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:119
+msgid "Translate a string of text."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:124
+msgid "Finding the context of a string"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:126
+msgid ""
+"It can be difficult to discern the meaning of a string without looking at"
+" the context in which it appears. It is possible to look at the string as"
+" it appears in the project by following these steps."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:131
+msgid "Archivematica Docs"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:133
+msgid ""
+"In the Translations Editor, look for **More info** in the middle column. "
+"Under this, there is a section called *Occurrences*."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:136
+msgid ""
+"*Occurrences* contains the URL slug where the string occurs in the "
+"documentation. Copy the part of the slug that is located between .. and "
+".rst. For example, if the slug is \"../../admin-"
+"manual/installation/customization.rst:5\", copy \"/admin-"
+"manual/installation/customization\"."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:147
+msgid "Copy the slug that points to the string in situ."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:149
+msgid ""
+"Go to https://www.archivematica.org/en/docs/archivematica-1.6 (or "
+"whatever version of the documentation you are translating, i.e. "
+"archivematica-1.7, 1.8, etc)."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:152
+msgid ""
+"Append the copied slug to the above link. Using the above example, the "
+"URL would now read "
+"https://www.archivematica.org/en/docs/archivematica-1.6/admin-"
+"manual/installation/customization. Press enter to go to this URL."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:156
+msgid ""
+"The page you are now on contains the string that you are translating. "
+"Search for the string on the page by hitting control+f (or command +f) "
+"and typing in the first few words of the string."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:166
+msgid ""
+"The string is highlighted in orange. Note that this example uses Google "
+"Chrome; other browsers may look different."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:172
+msgid "Editing translated strings"
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:174
+msgid ""
+"If you have a better translation or want to fix a typo, it is possible to"
+" edit or recommend edits for strings that have already been translated by"
+" other users."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:177
+msgid ""
+"Click on a string that has already been translated. Make your edits in "
+"the Translation Editor and click save."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:186
+msgid "Make edits in the centre column."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:188
+msgid ""
+"To make a suggestion, rather than a direct edit, click on Suggestions in "
+"the right-hand column. Click on *Add suggestion* and input your "
+"recommendations. A project maintainer will be notified of the suggestion."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:198
+msgid "Make suggestions in the right-hand column."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:200
+msgid "The edit history of a string is available in the right-hand column."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:208
+msgid "View past edits as well as their authors."
+msgstr ""
+
+#: ../../user-manual/translations/translations.rst:211
+msgid ":ref:`Back to the top <translations>`"
+msgstr ""
+

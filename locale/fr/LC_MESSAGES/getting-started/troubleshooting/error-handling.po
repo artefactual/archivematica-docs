@@ -1,0 +1,407 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:5
+msgid "Error handling"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:7
+msgid ""
+"Archivematica anticipates that a number of different types of errors can "
+"occur during processing. Some of them will result in processing being "
+"halted and the transfer or SIP being moved to the failed directory in the"
+" file browser. For others, processing can continue: for example, a "
+"normalization failure is reported and the user is given the opportunity "
+"to continue processing the SIP."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:13
+msgid ""
+"If you don't find an answer here or elsewhere in the user manual, please "
+"try searching the `public user forum "
+"<https://groups.google.com/forum/?fromgroups#!forum/archivematica>`_. "
+"Someone may have had the same problem before and been offered a solution."
+" If you do not find the answer there, feel free to ask us a question. The"
+" best questions to the list include as much information as possible about"
+" the error. This means offering us information about the system(s) you're"
+" using, the content of your transfer(s), and copying the task information"
+" (click on the cog icon on the same line as the micro-service job where "
+"the error occurred) and show arguments data output. See task information "
+"and show arguments data for the same error, below."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:24
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:26
+msgid ":ref:`Dashboard error reporting <error-dashboard>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:28
+msgid ":ref:`Failure reports in Administration tab <failure-reports>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:30
+msgid ":ref:`Email error report <email-failure>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:32
+msgid ":ref:`Normalization errors <normalization-errors>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:34
+msgid ":ref:`DIP upload error <dip-error>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:36
+msgid ":ref:`Common error behaviours <common-errors>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:38
+msgid ":ref:`Rejecting a transfer or SIP <rejecting>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:40
+msgid ":ref:`Removing a transfer or SIP from the dashboard <removing>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:42
+msgid ":ref:`Browser compatability <error-browser>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:47
+msgid "Dashboard error reporting"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:49
+msgid ""
+"When a micro-service fails or encounters an error, the micro-service "
+"background turns from green to pink and a \"failed\" icon appears next to"
+" the transfer or SIP name:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:59
+msgid ""
+"The dashboard showing a transfer has failed at the Verify transfer "
+"checksums micro-service and has been moved to the failed directory"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:62
+msgid ""
+"Note that the transfer has been moved to the failed directory and "
+"processing has been halted."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:65
+msgid ""
+"Clicking on the micro-service will expand to show the specific job that "
+"contains an error:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:75
+msgid ""
+"The Verify transfer checksums micro-service expanded to sholw the failed "
+"job"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:77
+msgid ""
+"Click the tasks icon (the gear icon on the right-hand side) to open up an"
+" error report:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:86
+msgid "An error report showing that a virus has been found in a file"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:88
+msgid ""
+"These reports are generally standard and predictable for certain types of"
+" errors and are useful for trouble-shooting. Note that the failed file(s)"
+" will always appear at the top of the report."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:96
+msgid "Failure reports in Administration tab"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:98
+msgid ""
+"You can view failure reports in the Administration tab of the dashboard. "
+"See :ref:`Dashboard administration tab- Failures <dashboard-failures>` "
+"for more information."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:106
+msgid "Email error report"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:108
+msgid ""
+"If the user has an email address associated with their user account, the "
+"dashboard can email a failure report:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:117
+msgid "An emailed failure report showing an error at Verify bag micro-service"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:119
+msgid ""
+"An e-mail is generated if the transfer or ingest cannot be completed, not"
+" if an error occurs which does not halt processing. Please note that the "
+"server must have mail delivery enabled in order to receive error emails "
+"without additional configuration."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:127
+msgid "Normalization errors"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:129
+msgid "The dashboard will report normalization errors when:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:131
+msgid "Normalization is attempted but fails"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:133
+msgid ""
+"No normalization is attempted and the file is not in a recognized "
+"preservation or access format"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:136
+msgid ""
+"When normalization fails, the SIP continues processing until it reaches "
+"the normalization approval step. At this point, the user has two options:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:139
+msgid "**Option 1**"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:141
+msgid ""
+"Click on the report icon next to the Actions drop-down menu to see a "
+"summary report of the normalization:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:150
+msgid "Normalization report showing failed normalization attempts"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:152
+msgid ""
+"The report shows what has been normalized, what is already in an "
+"acceptable preservation and access format, and what has failed "
+"normalization or is not in a recognized preservation or access format. If"
+" normalization has failed, you can click on \"yes\" to see a task report "
+"of the error in a new tab:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:163
+msgid "Task output for failed normalization job"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:166
+msgid "**Option 2**"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:168
+msgid ""
+"Click Review in parentheses next to the micro-service to view the "
+"normalization results in a directory structure in a new browser tab:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:177
+msgid "Review normalization results in a new tab"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:179
+msgid ""
+"The review allows the user to either open the objects in the browser when"
+" there is an appropriate plug-in or download the objects and open them "
+"using a local application."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:183
+msgid ""
+"The user may choose to continue processing the SIP despite any "
+"normalization errors."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:186
+msgid ""
+"The user may choose to redo normalization, as well. For instance, if the "
+"user chose to normalize based on FITS-JHOVE results and experienced "
+"failures, the user may wish to redo normalization and choose to normalize"
+" based on FITS-DROID results instead."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:197
+msgid "Redo normalization option in drop-down menu of Approve normalization job"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:199
+msgid ""
+"Archivematica will send an email when normalization errors occur. "
+"Information given in the email report:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:202
+msgid "UUID of the pipeline"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:203
+msgid "Name and UUID of the SIP"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:204
+msgid ""
+"File name and file UUID, and whether Preservation or Access normalization"
+" failed"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:205
+msgid "Exit code"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:207
+msgid ""
+"Exit code 1 indicates that a normalization rule and command exists but "
+"failed to execute properly (due to a problem in the command, a problem "
+"with the file, etc). Exit code 2 indicates that a normalization "
+"rule/command does not exist for that format."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:218
+msgid "Emailed normalization error report"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:223
+msgid "Dip upload error"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:225
+msgid ""
+"Archivematica will allow the user to continue to attempt to upload the "
+"DIP if a mistake was made entering the permalink:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:235
+msgid "Warning that permalink was incorrect, allows user to retry upload DIP"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:241
+msgid "Other common error behaviours"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:243
+msgid ""
+"Verify metadata directory checksums: if the checksums in the metadata "
+"directory cannot be verified (i.e. if a file is missing or corrupted) the"
+" micro-service will fail and the transfer will be moved in the failed "
+"directory."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:248
+msgid ""
+"Scan for viruses: if a virus is found the micro-service will fail and the"
+" transfer will be moved in the failed directory."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:251
+msgid ""
+"Characterize and extract metadata: if FITS processing fails, the micro- "
+"service will fail and the transfer will continue processing. Similarly, "
+"if a tool within FITS fails, like JHOVE, you will see the pink error bar "
+"but be able to continue processing."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:256
+msgid ""
+"Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db "
+"file, the micro-service will fail and the SIP will continue processing."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:259
+msgid ""
+"Normalize submission documentation to preservation format: if "
+"normalization fails, the micro-service will fail and the SIP will "
+"continue processing."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:265
+msgid "Rejecting a transfer or SIP"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:267
+msgid ""
+"At any of the workflow approval points the user can choose to reject a "
+"transfer, SIP, AIP or DIP (depending on where the information object is "
+"in the workflow). This will move the transfer or SIP to the Rejected "
+"directory (accessible from the file browser) and will stop all processing"
+" on it. The transfer or SIP will still be listed in the dashboard, "
+"however. See :ref:`Removing a transfer or SIP from the dashboard "
+"<removing>`, below, to remove it from the dashboard."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:279
+msgid "Removing a transfer or SIP from the dashboard"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:281
+msgid ""
+"To remove a transfer or SIP from the dashboard, click on the red "
+"\"Remove\" icon in the dashboard:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:290
+msgid ""
+"Click on the red Remove icon to remove a transfer or SIP from the "
+"dashboard, then click Confirm."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:292
+msgid ""
+"It is recommended that you clear your dashboard of transfers and SIPs "
+"periodically to improve browser performance."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:298
+msgid "Browser compatability"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:300
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"There are known issues with Internet Explorer 11 which result in an "
+"inability to start transfers in the dashboard (`Issue 7246 "
+"<https://projects.artefactual.com/issues/7246>`_).  Minimal, but "
+"successful, testing has been done with Microsoft Edge."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:305
+msgid ":ref:`Back to the top <error-handling>`"
+msgstr ""
+

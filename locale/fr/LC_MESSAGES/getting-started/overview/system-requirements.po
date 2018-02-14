@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../getting-started/overview/system-requirements.rst:4
+msgid "System requirements"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:7
+msgid "Browser compatibility"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:9
+msgid ""
+"Archivematica is tested most extensively in Firefox and Chrome. There "
+"have been known issues in testing with Internet Explorer (see Bug `#7246 "
+"<https://projects.artefactual.com/issues/7246>`_). Minimal, but "
+"successful, testing has been done with Microsoft Edge."
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:15
+msgid "Resource allocation"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:17
+msgid "For recommended resource allocation, please see:"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:19
+msgid ""
+":ref:`Recommended Minimum Requirements for small-scale testing "
+"<requirements-small>`"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:20
+msgid ""
+":ref:`Recommended Minimum Requirements for production processing "
+"<requirements-production>`"
+msgstr ""
+
+#: ../../getting-started/overview/system-requirements.rst:22
+msgid ":ref:`Back to the top <system-requirements>`"
+msgstr ""
+

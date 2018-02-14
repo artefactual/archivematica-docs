@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../getting-started/overview/technical.rst:5
+msgid "Technical architecture"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:13
+msgid "Archivematica Ingest infrastructure overview"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:15
+msgid ""
+"This page provides a high-level overview of Archivematica's technical "
+"architecture."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:22
+msgid "Micro-services design pattern"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:24
+msgid ""
+"Archivematica implements a micro-service approach to digital "
+"preservation. The Archivematica micro-services are granular system tasks "
+"which operate on a conceptual entity that is equivalent to an OAIS "
+"information package: Submission Information Package (SIP), Archival "
+"Information Package (AIP), Dissemination Information Package (DIP). The "
+"physical structure of an information package will include files, "
+"checksums, logs, submission documentation, XML metadata, etc."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:32
+msgid "For more information, see :ref:`Micro-services <micro-services>`."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:37
+msgid "Web-based dashboard"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:39
+msgid ""
+"The web dashboard allow users to process, monitor and control the "
+"Archivematica workflow processes. It is developed using Python-based "
+"Django MVC framework. The Dashboard provides a multi-user interface that "
+"will report on the status of system events and make it simpler to control"
+" and trigger specific micro-services. This interface allows users to "
+"easily add or edit metadata, coordinate AIP and DIP storage and provide "
+"preservation planning information. Notifications include error reports, "
+"monitoring of MCP tasks and manual approvals in the workflow."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:48
+msgid "For more information, see :ref:`Web-based dashboard <web-dashboard>`."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:54
+msgid "Format policies"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:56
+msgid ""
+"Archivematica maintains the original format of all ingested files to  "
+"support migration and emulation strategies. However, the primary "
+"preservation strategy is to normalize files to preservation and access "
+"formats upon ingest. Archivematica groups file formats into format "
+"policies (e.g. text, audio, video, raster image, vector image, etc.). "
+"Archivematica's preservation formats must all be open standards. "
+"Additionally, the choice of formats is based on community best practices,"
+" availability of free and open-source normalization tools, and an "
+"analysis of the significant characteristics for each media type. The "
+"choice of access formats is based largely on the ubiquity of web-based "
+"viewers for the file format."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:67
+msgid ""
+"Since the 1.0 production release, Archivematica format policies have been"
+" moved to a structured, online format policy registry (FPR) that brings "
+"together format identification information with significant "
+"characteristic analysis, risk assessments and normalization tool "
+"information to arrive at default preservation format and access format "
+"policies for Archivematica."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:73
+msgid "For more information, see :ref:`Format Policy Registry (FPR) <fpr>`."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:79
+msgid "From Transfer to SIP to AIP and DIP"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:81
+msgid ""
+"The primary function of Archivematica is to process digital transfers "
+"(accessioned digital objects), turn them into SIPs, apply format policies"
+" and create high-quality, repository-independent Archival Information "
+"Packages (AIP) using `METS <http://www.loc.gov/standards/mets/>`_, "
+"`PREMIS <http://www.loc.gov/standards/premis/>`_ and `Bagit "
+"<https://confluence.ucop.edu/download/attachments/16744580/BagItSpec.pdf?version=1>`_."
+" Archivematica is bundled with `AtoM <http://www.accesstomemory.org>`_ "
+"but is designed to upload Dissemination Information Packages (DIP), "
+"containing descriptive metadata and web-ready access copies, to any "
+"access system (e.g. Dspace, ContentDM, etc.)."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:95
+msgid "Single install"
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:97
+msgid ""
+"Using the latest in virtualization technology, each release of the "
+"Archivematica system packages a customized Xubuntu environment as a "
+"`virtual appliance <http://en.wikipedia.org/wiki/Virtual_appliance>`_, "
+"making it possible to run on top of any consumer-grade hardware and "
+"operating system. This means the entire suite of digital preservation "
+"tools is now available from one simple installation. Archivematica can "
+"also be installed directly on dedicated hardware via its own Ubuntu "
+"repository. Its client/server processing architecture allows it to be "
+"deployed in multi-node, distributed processing configurations to support "
+"large-scale, resource- intensive production environments."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:108
+msgid ":ref:`Back to the top <technical-arch>`"
+msgstr ""
+

@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../user-manual/archival-storage/archival-storage.rst:5
 msgid "Archival storage"
@@ -41,25 +41,29 @@ msgid ":ref:`Storing an AIP <storing-aip>`"
 msgstr ""
 
 #: ../../user-manual/archival-storage/archival-storage.rst:15
+msgid ":ref:`AIP Encryption <aip-encryption>`"
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:17
 msgid ":ref:`Searching the AIP store <search-aip>`"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:16
+#: ../../user-manual/archival-storage/archival-storage.rst:18
 msgid ":ref:`Deleting an AIP <delete-aip>`"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:21
+#: ../../user-manual/archival-storage/archival-storage.rst:23
 msgid "Storing an AIP"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:23
+#: ../../user-manual/archival-storage/archival-storage.rst:25
 msgid ""
 "Once ingest is complete, selecting a location to \"Store AIP\" in the "
 "Actions drop-down menu compresses and zips the AIP and moves it into "
 "Archival storage."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:25
+#: ../../user-manual/archival-storage/archival-storage.rst:28
 msgid ""
 "In the demo version of Archivematica the AIP storage directory is "
 "``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it "
@@ -68,13 +72,13 @@ msgid ""
 "the Store AIP location dropdown, including LOCKSS locations."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:27
+#: ../../user-manual/archival-storage/archival-storage.rst:34
 msgid ""
 "The AIP directories are broken down into UUID quad directories for "
 "efficient storage and retrieval."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:31
+#: ../../user-manual/archival-storage/archival-storage.rst:39
 msgid ""
 "Archivematica uses a directory tree structure to store AIPs. The tree is "
 "based on AIP UUIDs, which are 16-digit alphanumeric unique universal "
@@ -87,7 +91,7 @@ msgid ""
 "tree, and the AIP with that UUID resides in that leaf."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:41
+#: ../../user-manual/archival-storage/archival-storage.rst:49
 msgid ""
 "The Archival storage tab in the Archivematica dashboard consists of a "
 "table with information about the stored AIPs. Use the up and down arrows "
@@ -96,79 +100,123 @@ msgid ""
 " AIPs and the number of indexed files."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:48
+#: ../../user-manual/archival-storage/archival-storage.rst:59
 msgid ""
 "To open a copy of the AIP, click on the AIP name. You can then open or "
 "download the zipped AIP."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:50
+#: ../../user-manual/archival-storage/archival-storage.rst:62
 msgid ""
 "The AIP pointer file can be accessed by clicking on the Pointer file "
 "link. The pointer file provides information on the AIP and its "
 "relationships to the Archivematica, DIPs, and other AIPs as appropriate."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:54
+#: ../../user-manual/archival-storage/archival-storage.rst:68
 msgid ":ref:`AIP structure <aip-structure>`"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:55
+#: ../../user-manual/archival-storage/archival-storage.rst:69
 msgid ""
 "`Archivematica METS file (wiki) "
 "<https://www.archivematica.org/wiki/METS>`_"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:61
-msgid "Searching the AIP store"
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:64
-msgid "To search the AIP index, use the search bar at the top of the screen."
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:66
-msgid "The index includes the AIP names and METS contents."
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:67
-msgid ""
-"Search results show AIPs and AIP parts with their UUIDs and the ability "
-"to click on the raw ElasticSearch file and view it in another screen."
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:75
-msgid "Note that:"
-msgstr ""
-
 #: ../../user-manual/archival-storage/archival-storage.rst:77
-msgid "All METS metadata is indexed and searchable."
+msgid "AIP Encryption"
 msgstr ""
 
 #: ../../user-manual/archival-storage/archival-storage.rst:79
 msgid ""
-"Use the first dropdown menu to search in: File UUID, File path, File "
-"extension, AIP UUID, and AIP name"
+"Beginning in the 1.7 version of Archivematica, institutions are able to "
+"encrypt their AIPs for secure storage. This feature is particularly "
+"useful when an institution stores its AIPs off-site."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:81
-msgid "Use the second dropdown menu to search by keyword or phrase"
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:82
+#: ../../user-manual/archival-storage/archival-storage.rst:83
 msgid ""
-"Click in the box next to the Show files? box to include files in your "
-"results"
+"To create an encrypted AIP, Archivematica needs an encrypted space and "
+"location set up in the Storage Service. Please see the Encryption section"
+" of the Storage Service docs for more information."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:84
+#: ../../user-manual/archival-storage/archival-storage.rst:87
+msgid "Run your transfer through the regular micro-services."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:89
 msgid ""
-"Clicking on search results allows for local download of the entire AIP. "
-"Clicking on a file will result in opening the file if your browser has a "
-"viewer, or downloading it if your browser does not."
+"At the Store AIP location job on the Ingest tab, choose your encrypted "
+"AIP location. You now have an encrypted AIP!"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:88
+#: ../../user-manual/archival-storage/archival-storage.rst:92
+msgid ""
+"You can tell if your AIP is encrypted on the Archival Storage tab. "
+"Encrypted AIPs appear as True in the Encrypted column."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:100
+msgid ""
+"The AIP pointer file contains a `PREMIS:EVENT` element for the encryption"
+" event."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:102
+msgid ""
+"The AIP itself can be downloaded in unencrypted form from the Archival "
+"Storage tab."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:109
+msgid "Searching the AIP store"
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:111
+msgid ""
+"To search the AIP index, use the search bar at the top of the screen on "
+"the Archival Storage tab."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:114
+msgid ""
+"Use the first dropdown menu to select whether to search for the File "
+"UUID, File path, File extension, AIP UUID, or AIP name."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:117
+msgid ""
+"Use the second dropdown menu to select whether to search by keyword, "
+"phrase, or date range."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:120
+msgid "Select *Show files?* to display discrete files in your results."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:122
+msgid ""
+"Select *Show AICs?* to display Archival Information Collections "
+"(aggregates of of multiple AIPs) in your results."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:130
+msgid ""
+"The search index includes AIP names and METS contents. All METS metadata "
+"is indexed and searchable."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:133
+msgid ""
+"Clicking on the name of an AIP will open the AIP information page. From "
+"this page, it is possible to upload an associated DIP, re-ingest the AIP,"
+" or delete the AIP as well as downloading the AIP or viewing the pointer "
+"file. Clicking on the name of an image will open the image in the "
+"browser."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:138
 msgid ""
 "By clicking on \"View raw\" next to a search result, you can also view "
 "the raw JSON data that contains the METS data, the Archivematica version "
@@ -176,21 +224,33 @@ msgid ""
 "the relative file path within the AIP."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:96
+#: ../../user-manual/archival-storage/archival-storage.rst:146
 msgid "Deleting an AIP"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:98
+#: ../../user-manual/archival-storage/archival-storage.rst:148
 msgid ""
-"To request AIP deletion, click on the red delete icon next the AIP in the"
-" Archival storage tab table."
+"To request AIP deletion, click on the name of the AIP to open the AIP "
+"information page."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:106
-msgid "Archivematica will ask for a reason for deletion."
+#: ../../user-manual/archival-storage/archival-storage.rst:150
+msgid "In the Actions section at the bottom of the page, select *Delete*."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:113
+#: ../../user-manual/archival-storage/archival-storage.rst:157
+msgid ""
+"To delete the AIP, you must enter the UUID. Archivematica will also ask "
+"for a reason for deletion."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:165
+msgid ""
+"Click delete. When you refresh the Archival Storage tab, the status of "
+"your AIP should now read *Deletion requested*."
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:168
 msgid ""
 "Choosing to delete an AIP will send a request to your Archival Storage "
 "Service administrator. If the administrator approves the request, your "
@@ -199,20 +259,88 @@ msgid ""
 "storage and your administrator should contact you."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:117
+#: ../../user-manual/archival-storage/archival-storage.rst:176
 msgid ""
 "Note that Archivematica tracks the location and existence of AIPs in 2 "
-"ways, within the Storage Service and in the Elastic Search index which "
-"you can search via the dashboard. Deleting AIP's directly from the file "
+"ways: within the Storage Service and in the Elastic Search index which "
+"you can search via the dashboard. Deleting AIPs directly from the file "
 "system rather than through the Storage Service will cause inconsistencies"
 " in both applications and is not recommended in a production environment."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:125
+#: ../../user-manual/archival-storage/archival-storage.rst:184
 msgid ":ref:`Access <access>`"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:128
+#: ../../user-manual/archival-storage/archival-storage.rst:187
 msgid ":ref:`Back to the top <archival-storage>`"
 msgstr ""
+
+#~ msgid "To search the AIP index, use the search bar at the top of the screen."
+#~ msgstr ""
+
+#~ msgid "The index includes the AIP names and METS contents."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Search results show AIPs and AIP "
+#~ "parts with their UUIDs and the "
+#~ "ability to click on the raw "
+#~ "ElasticSearch file and view it in "
+#~ "another screen."
+#~ msgstr ""
+
+#~ msgid "Note that:"
+#~ msgstr ""
+
+#~ msgid "All METS metadata is indexed and searchable."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Use the first dropdown menu to "
+#~ "search in: File UUID, File path, "
+#~ "File extension, AIP UUID, and AIP "
+#~ "name"
+#~ msgstr ""
+
+#~ msgid "Use the second dropdown menu to search by keyword or phrase"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click in the box next to the "
+#~ "Show files? box to include files "
+#~ "in your results"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Clicking on search results allows for"
+#~ " local download of the entire AIP."
+#~ " Clicking on a file will result "
+#~ "in opening the file if your "
+#~ "browser has a viewer, or downloading "
+#~ "it if your browser does not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To request AIP deletion, click on "
+#~ "the red delete icon next the AIP"
+#~ " in the Archival storage tab table."
+#~ msgstr ""
+
+#~ msgid "Archivematica will ask for a reason for deletion."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Note that Archivematica tracks the "
+#~ "location and existence of AIPs in "
+#~ "2 ways, within the Storage Service "
+#~ "and in the Elastic Search index "
+#~ "which you can search via the "
+#~ "dashboard. Deleting AIP's directly from "
+#~ "the file system rather than through "
+#~ "the Storage Service will cause "
+#~ "inconsistencies in both applications and "
+#~ "is not recommended in a production "
+#~ "environment."
+#~ msgstr ""
 
