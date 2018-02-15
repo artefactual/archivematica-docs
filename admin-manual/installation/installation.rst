@@ -182,6 +182,19 @@ Add packages.archivematica.org to your list of trusted repositories.
 
 Using 14.04 (Trusty):
 
+Run these three commands right now (**Delete this section when the final release
+packages are made**):
+
+.. code:: bash
+
+   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
+   sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
+   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-0.11-trusty/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-1.7-trusty/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+
+Run these three commands when the final release packages are made:
+
 .. code:: bash
 
    sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
@@ -189,6 +202,19 @@ Using 14.04 (Trusty):
    sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
 
 Using 16.04 (Xenial):
+
+Run these three commands right now (**Delete this section when the final release
+packages are made**):
+
+.. code:: bash
+
+   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
+   sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
+   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-0.11-xenial/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-1.7-xenial/ ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+
+Run these three commands when the final release packages are made:
 
 .. code:: bash
 
@@ -255,20 +281,6 @@ get the most recent version of pip.
 
 8. Install the Archivematica packages
 
-There are a number of environment variables that Archivematica recognizes which
-can be used to alter how it is configured. For the full list, see the
-`Dashboard install README`_, the `MCPClient install README`_, and the
-`MCPServer install README`_.
-
-If you are planning running Archivematica in indexless mode (i.e., without
-Elasticsearch), then set the relevant environment variables to ``false``.
-
-.. code:: bash
-
-   export ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
-   export ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
-   export ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
-
 The order of installation is important - the mcp-server package must be
 installed before the dashboard package.  While it is possible to install the
 mcp-client package on a separate machine, that configuration is not
@@ -291,13 +303,40 @@ changed after the installation is complete.
    sudo apt-get install -y archivematica-dashboard
    sudo apt-get install -y archivematica-mcp-client
 
-9. Configure the dashboard
+9. Configure the Archivematica components (optional)
+
+There are a number of environment variables that Archivematica recognizes which
+can be used to alter how it is configured. For the full list, see the
+`Dashboard install README`_, the `MCPClient install README`_, and the
+`MCPServer install README`_.
+
+If you are planning on running Archivematica in indexless mode (i.e., without
+Elasticsearch), then modify the relevant systemd EnvironmentFile files by
+adding lines that set the relevant environment variables to ``false``:
+
+.. code:: bash
+
+    sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
+    sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
+    sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
+
+Note that the same environment variables can also be set using ``systemctl
+set-environment`` as shown below. However, this approach is not persistent
+across machine restarts and is therefore not recommended.
+
+.. code:: bash
+
+   sudo systemctl set-environment ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
+   sudo systemctl set-environment ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
+   sudo systemctl set-environment ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
+
+10. Configure the dashboard
 
 .. code:: bash
 
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
-10. Start Elasticsearch (optional)
+11. Start Elasticsearch (optional)
 
 .. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
@@ -307,7 +346,7 @@ changed after the installation is complete.
    sudo service elasticsearch restart
    sudo update-rc.d elasticsearch defaults 95 10
 
-11. Start the remaining services
+12. Start the remaining services
 
 .. code:: bash
 
@@ -328,7 +367,7 @@ If you have trouble with the gearman command try restarting it:
 
    sudo service gearman-job-server restart
 
-11. Post Install Configuration
+13. Post Install Configuration
 
 See :ref:`Post Install Configuration <post-install-config>`
 
@@ -542,11 +581,25 @@ can be used to alter how it is configured. For the full list, see the
 If you are planning to run Archivematica in indexless mode (i.e., without
 Elasticsearch), then set the relevant environment variables to ``false``
 
+If you are planning on running Archivematica in indexless mode (i.e., without
+Elasticsearch), then modify the relevant systemd EnvironmentFile files by
+adding lines that set the relevant environment variables to ``false``:
+
 .. code:: bash
 
-   export ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
-   export ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
-   export ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
+    sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-dashboard'
+    sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-server'
+    sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
+
+Note that the same environment variables can also be set using ``systemctl
+set-environment`` as shown below. However, this approach is not persistent
+across machine restarts and is therefore not recommended.
+
+.. code:: bash
+
+   sudo -u root systemctl set-environment ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
+   sudo -u root systemctl set-environment ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
+   sudo -u root systemctl set-environment ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
 
 After that, we can enable and start services
 
