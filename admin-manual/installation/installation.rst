@@ -182,45 +182,45 @@ Add packages.archivematica.org to your list of trusted repositories.
 
 Using 14.04 (Trusty):
 
-Run these three commands right now (**Delete this section when the final release
-packages are made**):
+Run these three commands right now (**and delete this section when the final
+release packages are made.**):
 
-.. code:: bash
+.. parsed-literal::
 
-   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
-   sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-0.11-trusty/ ./" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-1.7-trusty/ ./" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - |apt_key| | sudo apt-key add -
+   sudo wget -O - |apt_key_dev| | sudo apt-key add -
+   sudo sh -c 'echo "deb |deb_trusty_ss_url_dev| ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb |deb_trusty_am_url_dev| ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] |deb_externals_url| trusty main" >> /etc/apt/sources.list'
 
 Run these three commands when the final release packages are made:
 
-.. code:: bash
+.. parsed-literal::
 
-   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu trusty main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main" >> /etc/apt/sources.list'
+   sudo wget -O - |apt_key| | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] |deb_url| trusty main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] |deb_externals_url| trusty main" >> /etc/apt/sources.list'
 
 Using 16.04 (Xenial):
 
-Run these three commands right now (**Delete this section when the final release
-packages are made**):
+Run these three commands right now (**and delete this section when the final
+release packages are made**):
 
-.. code:: bash
+.. parsed-literal::
 
-   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
-   sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-0.11-xenial/ ./" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-1.7-xenial/ ./" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo wget -O - |apt_key| | sudo apt-key add -
+   sudo wget -O - |apt_key_dev| | sudo apt-key add -
+   sudo sh -c 'echo "deb |deb_xenial_ss_url_dev| ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb |deb_xenial_am_url_dev| ./" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] |deb_externals_url| xenial main" >> /etc/apt/sources.list'
 
 Run these three commands when the final release packages are made:
 
-.. code:: bash
+.. parsed-literal::
 
-   sudo wget -O - https://packages.archivematica.org/1.7.x/key.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo wget -O - |apt_key| | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] |deb_url| xenial main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] |deb_externals_url| xenial main" >> /etc/apt/sources.list'
 
 2. Add Elasticsearch package source (optional)
 
@@ -432,7 +432,7 @@ Some repositories need to be installed in order to fulfill the installation proc
 
 3. Service dependencies
 
-Common services like Elasticsearch, mariadb and gearmand should be installed
+Common services like Elasticsearch, MariaDB and Gearmand should be installed
 and enabled before the Archivematica install. 
 
 .. note:: Do not enable Elasticsearch if you are running Archivematica in
@@ -456,7 +456,7 @@ and enabled before the Archivematica install.
 
    sudo -u root yum install -y python-pip archivematica-storage-service
 
-* After the package is installed, populate the sqlite database, and
+* After the package is installed, populate the SQLite database, and
   collect some static files used by django.
   These tasks must be run as “archivematica” user.
 
@@ -469,7 +469,7 @@ and enabled before the Archivematica install.
    /usr/share/python/archivematica-storage-service/bin/python manage.py migrate
    ";
 
-* Now enable and start the archivematica-storage-service, rngd (needed for encrypted spaces) and the nginx frontend:
+* Now enable and start the archivematica-storage-service, rngd (needed for encrypted spaces) and the Nginx frontend:
 
 .. code:: bash
 
@@ -523,7 +523,7 @@ can be used to alter how it is configured. For the full list, see the
    sudo -u root systemctl enable archivematica-dashboard
    sudo -u root systemctl start archivematica-dashboard
 
-* Restart nginx in order to load the dashboard config file:
+* Restart Nginx in order to load the dashboard config file:
 
 .. code:: bash
 
@@ -567,9 +567,6 @@ can be used to alter how it is configured. For the full list, see the
    sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 
 * Indexless mode:
-
-If you are planning to run Archivematica in indexless mode (i.e., without
-Elasticsearch), then set the relevant environment variables to ``false``
 
 If you are planning on running Archivematica in indexless mode (i.e., without
 Elasticsearch), then modify the relevant systemd EnvironmentFile files by
@@ -820,11 +817,11 @@ Ubuntu 14.04, which makes this step necessary.
 
 3. Update Package Sources
 
-.. code:: bash
+.. parsed-literal::
 
    sudo add-apt-repository --remove ppa:archivematica/externals
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu trusty main' >> /etc/apt/sources.list
-   echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] |deb_url| trusty main' >> /etc/apt/sources.list
+   echo 'deb [arch=amd64] |deb_externals_url| trusty main' >> /etc/apt/sources.list
 
 Optionally you can remove the lines referencing
 packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -839,7 +836,7 @@ packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
 
 5. Update Application Container
 
-Archivematica Storage Service 0.10.0 uses gunicorn as wsgi server. This means that the old uwsgi server needs to be stopped and disabled after performing the upgrade.
+Archivematica Storage Service 0.10.0 uses Gunicorn as WSGI server. This means that the old uwsgi server needs to be stopped and disabled after performing the upgrade.
 
 .. code:: bash
 
@@ -860,7 +857,7 @@ better to update the dashboard before updating the mcp components.
 
 7. Disable Unused Services
 
-Archivematica |release| uses nginx as http server, and gunicorn as wsgi server.
+Archivematica |release| uses Nginx as HTTP server, and Gunicorn as WSGI server.
 This means that some services used in Archivematica |previous_release| should
 be stopped and disabled before performing the upgrade.
 
