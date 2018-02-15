@@ -12,7 +12,7 @@ Should you run into an error during archival storage, please see
 *On this page*
 
 * :ref:`Storing an AIP <storing-aip>`
-* :ref:`AIP Encryption (aip-encryption>)`
+* :ref:`AIP Encryption <aip-encryption>`
 * :ref:`Searching the AIP store <search-aip>`
 * :ref:`Deleting an AIP <delete-aip>`
 
