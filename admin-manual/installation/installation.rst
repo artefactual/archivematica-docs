@@ -320,16 +320,6 @@ adding lines that set the relevant environment variables to ``false``:
     sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
     sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 
-Note that the same environment variables can also be set using ``systemctl
-set-environment`` as shown below. However, this approach is not persistent
-across machine restarts and is therefore not recommended.
-
-.. code:: bash
-
-   sudo systemctl set-environment ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
-   sudo systemctl set-environment ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
-   sudo systemctl set-environment ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
-
 10. Configure the dashboard
 
 .. code:: bash
@@ -590,16 +580,6 @@ adding lines that set the relevant environment variables to ``false``:
     sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-dashboard'
     sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-server'
     sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
-
-Note that the same environment variables can also be set using ``systemctl
-set-environment`` as shown below. However, this approach is not persistent
-across machine restarts and is therefore not recommended.
-
-.. code:: bash
-
-   sudo -u root systemctl set-environment ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false
-   sudo -u root systemctl set-environment ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false
-   sudo -u root systemctl set-environment ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false
 
 After that, we can enable and start services
 
