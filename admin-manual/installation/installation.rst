@@ -266,6 +266,14 @@ the software from the package repositories you just added to your system.
    sudo rm -f /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
+.. warning:: If you are planning to use the `Sword API`_ of the Archivematica
+   Storage Service, then (due to a `known issue`_), you must instruct Gunicorn
+   to use the ``sync`` worker class:
+
+   .. code:: bash
+
+      sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
+
 7. Update pip
 
 This is used to install python dependencies for both the storage service and
@@ -455,6 +463,14 @@ and enabled before the Archivematica install.
 .. code:: bash
 
    sudo -u root yum install -y python-pip archivematica-storage-service
+
+.. warning:: If you are planning to use the `Sword API`_ of the Archivematica
+   Storage Service, then (due to a `known issue`_), you must instruct Gunicorn
+   to use the ``sync`` worker class:
+
+   .. code:: bash
+
+      sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/sysconfig/archivematica-storage-service'
 
 * After the package is installed, populate the SQLite database, and
   collect some static files used by django.
@@ -1194,3 +1210,5 @@ See: :ref:`Arkivum Storage Service docs <storageservice:arkivum>`
 .. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPClient/install/README.md
 .. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPServer/install/README.md
 .. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
+.. _`Sword API`: https://wiki.archivematica.org/Sword_API
