@@ -81,14 +81,14 @@ such as:
 
 * MySQL
 * gearman
-* Elasticsearch (optional as of |release|, see below)
+* Elasticsearch (optional as of Archivematica 1.7, see below)
 
 Using additional machines requires some additional configuration.
 
 See :ref:`Advanced <advanced>`.
 
 .. note:: *Indexing*. Installing Elasticsearch to provide a search index is now
-   optional as of version |release|.  Installing Archivematica without
+   optional as of Archivematica version 1.7.  Installing Archivematica without
    Elasticsearch means reduced consumption of compute resources and lower
    operational complexity.  However, some functionality, such as the Backlog,
    Appraisal and Archival Storage tabs, is not available.
