@@ -231,6 +231,12 @@ Options:
 #. **Create single SIP and continue processing** - transfer becomes a SIP and is made
    available for further processing on the ingest tab.
 
+.. note::
+
+   If you are running Archivematica in indexless mode (without Elasticsearch),
+   the backlog will be unavailable and the **Send to backlog** option will not
+   be present in this dropdown.
+
 Select file format identification command (Ingest)
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -481,10 +487,10 @@ Options:
 General
 -------
 
-In the general configuration section, you can select interface options and set
-Storage Service options for your Archivematica client.
+In the general configuration section, you can select interface and Storage
+Service options for your Archivematica client.
 
-.. figure:: images/Generalconfig.*
+.. figure:: images/generalConfig.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -492,21 +498,38 @@ Storage Service options for your Archivematica client.
 
    General configuration options in Administration tab of the dashboard
 
-**Interface options**
+Interface options
+=================
 
 Here, you can hide parts of the interface that you don't need to use. In
 particular, you can hide CONTENTdm DIP upload link, AtoM DIP upload link and
 DSpace transfer type.
 
-**Storage Service options**
+Storage Service options
+=======================
 
-This is where you'll find the complete URL for the Storage Service, along with a username and API key. See
-Storage Service for more information about this feature.
+This is where you'll find the complete URL for the Storage Service, along with a
+username and API key. See the Storage Service documentation for more information
+about this feature.
 
-**Checksum algorithm**
+Checksum algorithm
+==================
 
-You can select which checksum algorithm Archivematica will apply upon each object in Assign UUIDs and checksums micro-service in Transfer.
-Choose between MD5, SHA-1, SHA-256 and SHA-512.
+You can select which checksum algorithm Archivematica will use during the
+*Assign UUIDs and checksums* micro-service in Transfer. Choose between MD5,
+SHA-1, SHA-256 and SHA-512.
+
+Elasticsearch indexing
+======================
+
+As of Archivematica 1.7, Elasticsearch is optional. Installing Archivematica
+without Elasticsearch means reduced consumption of compute resources and lower
+operational complexity. Disabling Elasticsearch means that the Backlog,
+Appraisal, and Archival Storage tabs do not appear and their functionality is
+not available.
+
+This section in the General configuration shows if Elasticsearch is enabled or
+disabled.
 
 .. _dashboard-failures:
 

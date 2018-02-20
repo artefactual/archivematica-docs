@@ -4,13 +4,18 @@
 Backlog
 =======
 
-The backlog tab is used to view, search and request deletion of transfers which have been sent to backlog.
+The backlog tab is used to view, search and request deletion of transfers which
+have been sent to backlog.
 
-.. important::
+At this time, transfers stored using Archivematica's backlog functionality can
+only be accessed by using the same pipeline that the transfer was created in. If
+you decommission your pipeline, you will be unable to reindex and repopulate the
+backlogged material in a new Archivematica pipeline.
 
-   It is important to know that at this time, transfers stored using Archivematica's backlog functionality can only be accessed by using the
-   same pipeline that the transfer was created in. If you decommission your pipeline, you will be unable to reindex and repopulate the
-   backlogged material in a new Archivematica pipeline.
+.. note::
+
+  If you are running Archivematica in indexless mode (without Elasticsearch),
+  the Appraisal tab will not appear on your dashboard.
 
 *On this page:*
 

@@ -39,7 +39,6 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
 * :ref:`Extract packages <extract-packages>`
 
-
 .. seealso::
 
    If you would like to import lower-level metadata with your transfer (i.e.
@@ -281,6 +280,11 @@ Process the transfer
       :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
 
       A transfer that is ready to be packaged into a SIP or stored in backlog
+
+.. note::
+
+   If you are running Archivematica in indexless mode (without Elasticsearch),
+   you will not have the option to send the transfer to backlog.
 
 8. See :ref:`Ingest <ingest>` for next steps.
 

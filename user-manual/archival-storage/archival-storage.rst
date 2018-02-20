@@ -9,6 +9,11 @@ During archival storage, the AIP is moved into its storage repository.
 Should you run into an error during archival storage, please see
 :ref:`Error handling <error-handling>`.
 
+.. note::
+
+   If you are running Archivematica in indexless mode (without Elasticsearch),
+   the Archival Storage tab will not appear on your dashboard.
+
 *On this page*
 
 * :ref:`Storing an AIP <storing-aip>`

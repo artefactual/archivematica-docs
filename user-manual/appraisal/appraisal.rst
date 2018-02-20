@@ -12,6 +12,11 @@ finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature,
 found in previous versions of Archivematica, also has moved to the Appraisal tab
 (see :ref:`Arrangement <arrangement>`).
 
+.. note::
+
+   If you are running Archivematica in indexless mode (without Elasticsearch),
+   the Appraisal tab will not appear on your dashboard.
+
 *On this page:*
 
 * :ref:`Transfers in the Backlog <backlog_pane>`
