@@ -8,8 +8,8 @@ Installation
 
 * :ref:`Overview <overview>`
 * :ref:`Technical requirements <tech-requirements>`
-* :ref:`New installation <new-install>`
-* :ref:`Upgrade from 1.6 <upgrade>`
+* :ref:`New installations <new-install>`
+* :ref:`Upgrading from 1.6 <upgrade>`
 * :ref:`Advanced <advanced>`
 
 .. _overview:
@@ -17,16 +17,16 @@ Installation
 Overview
 ========
 
-Archivematica is not a single application - it includes dozens of different
-components and tools required for a full working installation. As a result
-there are many possible deployment configurations.
+Archivematica is not a single application - dozens of different components and
+tools are required for a full working installation. As a result, there are many
+possible deployment configurations.
 
 These instructions are designed to get you up and running as quickly as
 possible, even if you are not familiar the various tools and applications that
 are bundled into Archivematica.
 
 Experience with the Linux command line is helpful, and to support a running
-production system, it should be considered a requirement.
+production system it should be considered a requirement.
 
 Don't be afraid to ask for help if you get stuck, or if you don't understand
 some part of the instructions. The `Archivematica google group`_ is a good place
@@ -63,15 +63,6 @@ require more significant deviation from these instructions.
 Archivematica is unlikely to ever run directly in a Windows environment.
 Consider the use of a virtualization platform to run Linux VMs.
 
-Hardware
---------
-
-Archivematica is capable of running on almost any hardware supported by Linux;
-however, processing large collections will require better hardware. See:
-
-* :ref:`Minimum Hardware Requirements <requirements-small>`
-* :ref:`Recommended Minimum Production Requirements <requirements-production>`
-
 Dependencies
 ------------
 
@@ -94,16 +85,17 @@ to install some of the components, such as MySQL, Elasticsearch, and Gearman,
 on separate machines, to improve performance. Using additional machines will
 require additional configuration. For more information, see :ref:`Advanced <advanced>`.
 
-.. note:: *MySQL*. Archivematica |version| has been tested with MySQL 5.5, including
+.. note::
+   Archivematica |version| has been tested with MySQL 5.5, including
    the Percona and MariaDB alternatives. Archivematica uses MySQL 5.7 on
    Ubuntu 16.04.
 
-.. note:: *Java*. Some of the tools run by Archivematica require Java to be
+   Some of the tools run by Archivematica require Java to be
    installed (primarily Elasticsearch and fits). On Ubuntu 14.04, Open JDK 7
    is used. On Ubuntu 16.04 Open JDK 8 is the default. It is possible to use
    Oracle Java 7 or 8 instead.
 
-.. note:: The remaining dependencies should be kept at the versions installed
+   The remaining dependencies should be kept at the versions installed
    by Archivematica.
 
 Elasticsearch
@@ -120,13 +112,14 @@ with 1.7.6). Support for a more recent version of Elasticsearch is being
 developed and is planned for a future release.
 
 
-.. _requirements-minimum:
+Hardware
+--------
 
-Minimum Requirements
-====================
+Archivematica is capable of running on almost any hardware supported by Linux;
+however, processing large collections will require better hardware.
 
-Minimum Hardware Requirements
------------------------------
+Minimum hardware requirements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For small-scale functionality testing using small collections (transfers with 100
 files or less, files 1 GB or smaller), we recommend the following minimum hardware
@@ -137,8 +130,8 @@ requirements:
 * Disk space (processing): 7GB plus two to three times the disk space required for the
   collection being processed (e.g., 3GB to process a 1GB transfer)
 
-Recommended Minimum Production Requirements
--------------------------------------------
+Recommended minimum production requirements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For production processing, the hardware requirements depend almost entirely on
 the size and number of files being processed. These recommendations should be
@@ -176,7 +169,7 @@ make before starting:
 
 * Installation method: manual or ansible?
 * Installation source: OS packages or github?
-* Operating system: Ubuntu or centos/rhel?
+* Operating system: Ubuntu or CentOS/Redhat?
 
 Instructions are provided for the following choices:
 
@@ -198,13 +191,11 @@ Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
 14.04 and 16.04 are available.
 
-.. note:: Use of 14.04 is not recommended since 14.04 is currently in
-   maintenance updates only mode and will cease to be officially supported in
-   April 2019.
+.. note:: Ubuntu 14.04 is currently in maintenance updates only mode and will
+   cease to be officially supported in April 2019. We recommend upgrading to
+   Ubuntu 16.04.
 
-1. Add Archivematica package sources
-
-Add packages.archivematica.org to your list of trusted repositories.
+1. Add packages.archivematica.org to your list of trusted repositories.
 
 Using 14.04 (Trusty):
 
@@ -248,22 +239,21 @@ Run these three commands when the final release packages are made:
    sudo sh -c 'echo "deb [arch=amd64] |deb_url| xenial main" >> /etc/apt/sources.list'
    sudo sh -c 'echo "deb [arch=amd64] |deb_externals_url| xenial main" >> /etc/apt/sources.list'
 
-2. Add Elasticsearch package source (optional)
+2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
+   package repository.
 
 .. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
-
-Elasticsearch comes from its own package repository.
 
 .. code:: bash
 
    sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
    sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
-3. Update your system
 
-Update to the most recent release (14.04.5, or 16.04.2. This step will also fetch a list of
-the software from the package repositories you just added to your system.
+3. Update to the most recent OS release (14.04.5 or 16.04.2). This step will
+   also fetch a list of the software from the package repositories you just
+   added to your system.
 
 .. code:: bash
 
@@ -279,13 +269,13 @@ the software from the package repositories you just added to your system.
 
    sudo apt-get install elasticsearch
 
-5. Install the storage service package
+5. Install the Storage Service package.
 
 .. code:: bash
 
    sudo apt-get install -y archivematica-storage-service
 
-6. Configure the storage service
+6. Configure the Storage Service.
 
 .. code:: bash
 
@@ -300,38 +290,31 @@ the software from the package repositories you just added to your system.
 
       sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
-7. Update pip
-
-This is used to install python dependencies for both the storage service and
-the dashboard. There is a known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-with the version of pip installed on Ubuntu 14.04, which makes this step
-necessary. This step is optional on Ubuntu 16.04, but is still a good idea, to
-get the most recent version of pip.
-
-miseplled wrd
+7. Update pip. This is used to install python dependencies for both the Storage
+   Service and the dashboard. There is a `known issue with pip`_ on Ubuntu 14.04
+   that makes this step necessary. This step is optional on Ubuntu 16.04, but is
+   still a good idea to get the most recent version of pip.
 
 .. code:: bash
 
    sudo wget https://bootstrap.pypa.io/get-pip.py
    sudo python get-pip.py
 
-8. Install the Archivematica packages
+8. Install the Archivematica packages. The order of installation is important -
+   the mcp-server package must be installed before the dashboard package. While
+   it is possible to install the mcp-client package on a separate machine, that
+   configuration is not documented in these instructions.
 
-The order of installation is important - the mcp-server package must be
-installed before the dashboard package. While it is possible to install the
-mcp-client package on a separate machine, that configuration is not
-documented in these instructions.
-
-The mcp-server package will install MySQL and configure the database used by
-Archivematica. Depending on the version of MySQL that gets installed the
-prompts you will see may differ. In all cases, you will be prompted to create
-a password for the 'root' user. Keep note of the password you create.
-On Ubuntu 14.04, MySQL 5.5 is installed, and
-the default 'archivematica' database user is automatically created with a
-default password of 'demo'. On Ubuntu 16.04, MySQL 5.7 is installed, and
-you are prompted to add a password for the 'archivematica' user. You must
-use 'demo' as the password during the install process. The password can be
-changed after the installation is complete.
+   The mcp-server package will install MySQL and configure the database used by
+   Archivematica. Depending on the version of MySQL that gets installed the
+   prompts you will see may differ. In all cases, you will be prompted to create
+   a password for the 'root' user. Keep note of the password you create.
+   On Ubuntu 14.04, MySQL 5.5 is installed, and
+   the default 'archivematica' database user is automatically created with a
+   default password of 'demo'. On Ubuntu 16.04, MySQL 5.7 is installed, and
+   you are prompted to add a password for the 'archivematica' user. You must
+   use 'demo' as the password during the install process. The password can be
+   changed after the installation is complete.
 
 .. code:: bash
 
@@ -339,30 +322,29 @@ changed after the installation is complete.
    sudo apt-get install -y archivematica-dashboard
    sudo apt-get install -y archivematica-mcp-client
 
-9. Configure the Archivematica components (optional)
+9. Configure the Archivematica components (optional). There are a number of
+   environment variables that Archivematica recognizes which can be used to
+   alter how it is configured. For the full list, see the
+   `Dashboard install README`_, the `MCPClient install README`_, and the
+   `MCPServer install README`_.
 
-There are a number of environment variables that Archivematica recognizes which
-can be used to alter how it is configured. For the full list, see the
-`Dashboard install README`_, the `MCPClient install README`_, and the
-`MCPServer install README`_.
+.. note:: If you are planning on running Archivematica in indexless mode (i.e.
+   without Elasticsearch), then modify the relevant systemd EnvironmentFile
+   files by adding lines that set the relevant environment variables to ``false``:
 
-If you are planning on running Archivematica in indexless mode (i.e., without
-Elasticsearch), then modify the relevant systemd EnvironmentFile files by
-adding lines that set the relevant environment variables to ``false``:
+   .. code:: bash
 
-.. code:: bash
+      sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
+      sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
+      sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 
-    sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
-    sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
-    sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
-
-10. Configure the dashboard
+10. Configure the dashboard.
 
 .. code:: bash
 
    sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
-11. Start Elasticsearch (optional)
+11. Start Elasticsearch (optional).
 
 .. note:: Skip this step if you are planning to run Archivematica in indexless
    mode (without Elasticsearch).
@@ -393,9 +375,7 @@ If you have trouble with the gearman command try restarting it:
 
    sudo service gearman-job-server restart
 
-13. Post Install Configuration
-
-See :ref:`Post Install Configuration <post-install-config>`
+13. Complete :ref:`Post Install Configuration <post-install-config>`.
 
 
 .. _install-pkg-centos:
@@ -524,7 +504,7 @@ and enabled before the Archivematica install.
    sudo -u root systemctl enable rngd
    sudo -u root systemctl start rngd
 
-.. note:: The storage service will be available at http://<ip>:8001
+.. note:: The Storage Service will be available at http://<ip>:8001
 
 5. Installing Archivematica Dashboard and MCP Server
 
@@ -647,7 +627,7 @@ like [::]:80.
 
 CentOS will install firewalld which will be running default rules likely
 blocking ports 81 and 8001. If you are not able to access the dashboard and
-storage service, check if firewalld is running. If it is, you will likely need
+Storage Service, check if firewalld is running. If it is, you will likely need
 to modify the firewall rules to allow access to ports 81 and 8001 from your
 location:
 
@@ -658,9 +638,7 @@ location:
    sudo service firewalld restart
 
 
-8. Post Install Configuration
-
-See :ref:`Post Install Configuration <post-install-config>`
+8. Complete :ref:`Post Install Configuration <post-install-config>`.
 
 
 .. _ansible-git-ubuntu:
@@ -677,18 +655,15 @@ machine. A virtual machine running Ubuntu 14.04 will be created.
 
 It is assumed here that your host operating system is Ubuntu. This can be
 modified for a different Unix based operating system, such as Mac OS X or
-another Linux distribution such as Centos. These instructions will not
+another Linux distribution such as CentOS. These instructions will not
 work if you are using Windows as the host OS. For Windows installations
 you can create a virtual machine and follow the manual install instructions.
 
 The ansible roles referenced here can be used in production deployments
-by creating your own ansible playbook to run them. See
-https://github.com/artefactual/deploy-pub/playbooks/archivematica for more
-details.
+by creating your own ansible playbook to run them. See the `deploy-pub`_ repo
+for more details.
 
-1. Install Dependencies
-
-These instructions require VirtualBox, Vagrant, and Ansible
+1. Install VirtualBox, Vagrant, and Ansible.
 
 .. code:: bash
 
@@ -704,26 +679,20 @@ Vagrant must be at least version 1.5. Check your version with:
 If it is not up to date, you can download the newest version from the
 `Vagrant website <https://www.vagrantup.com/downloads.html>`_ .
 
-2. Download Installer
-
-Checkout the deployment repo:
+2. Checkout the deployment repo:
 
 .. code:: bash
 
    git clone https://github.com/artefactual/deploy-pub.git
 
-3. Dependencies
-
-Download the Ansible roles:
+3. Download the Ansible roles:
 
 .. code:: bash
 
    cd deploy-pub/playbooks/archivematica
    ansible-galaxy install -f -p roles/ -r requirements.yml
 
-4. Install
-
-Create the virtual machine and provision it:
+4. Create the virtual machine and provision it:
 
 .. code:: bash
 
@@ -731,21 +700,18 @@ Create the virtual machine and provision it:
 
 .. warning::
 
-  This will take a while.
-  It depends on your computer, but it could take up to an hour.
-  Your computer may be very slow while Archivematica is being provisioned -
-  be sure to save any work and be prepared to step away from your computer
-  while Archivematica is building.
+  This will take a while. It depends on your computer, but it could take up to
+  an hour. Your computer may be very slow while Archivematica is being
+  provisioned - be sure to save any work and be prepared to step away from your
+  computer while Archivematica is building.
 
-5. Re-provisioning
-
-If there's an error, you can re-run the setup.
+If there are any errors, reprovisioning the VM often fixes the issue.
 
 .. code:: bash
 
    vagrant provision
 
-Once it's done provisioning, you can log in to your virtual machine:
+5. Once it's done provisioning, you can log in to your virtual machine:
 
 .. code:: bash
 
@@ -758,10 +724,6 @@ You can also access your Archivematica instance through the web browser:
 * Storage Service: `<http://192.168.168.192:8000>`_. Username: test, password:
   test.
 
-6. Post Install Configuration
-
-See :ref:`Post Install Configuration <post-install-config>`
-
 
 .. _post-install-config:
 
@@ -771,31 +733,25 @@ Post Install Configuration
 After successfully completing a new installation using one of the methods
 above, follow these steps to complete the configuration of your new server.
 
-1. Test the storage service
+1. The Storage Service runs as a separate web application from the Archivematica
+   dashboard. Go to the following link in a web browser and log in as user *test*
+   with the password *test*: http://localhost:8000 (or use the IP address of the
+   machine you have been installing on).
 
-The storage service runs as a separate web application from the Archivematica
-dashboard. Go to the following link in a web browser and log in as user *test*
-with the password *test*: http://localhost:8000 (or use the IP address of the
-machine you have been installing on).
+2. Create a new administrative user in the Storage Service. The Storage Service
+   has its own set of users. In the User menu in the Administrative tab of the
+   Storage Service, add at least one administrative user, and modify the
+   test user, to change the password at a minimum. After you have created
+   an administrative user, copy its API key to your clipboard.
 
-2. New Storage Service User
-
-Create a new administrative user in the Storage service. The storage service
-has its own set of users. In the User menu in the Administrative tab of the
-storage service, add at least one administrative user, and modify the
-test user, to change the password at a minimum. After you have created
-an administrative user, copy its API key to your clipboard.
-
-3. Test the dashboard
-
-You can login to the Archivematica dashboard and finish the installation in a
-web browser: http://localhost (again, use the IP address of the machine you
-have been installing on). When prompted, enter the URL of the Storage Service,
-the name of the administrative user, and that user's API key.
+3. Log in to the Archivematica dashboard and finish the installation in a
+   web browser: http://localhost (again, use the IP address of the machine you
+   have been installing on). When prompted, enter the URL of the Storage Service,
+   the name of the administrative user, and that user's API key.
 
 4. Register your installation for full Format Policy Registry interoperability.
 
-Follow the instructions in the web browser to complete the installation.
+5. Follow the instructions in the web browser to complete the installation.
 
 .. _upgrade:
 
@@ -804,8 +760,9 @@ Upgrade from Archivematica |previous_version|.x to |release|
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos>`
+* :ref:`Upgrade to indexless mode <upgrade-indexless>`
 
-While it is possible to upgrade a GitHub based source install using ansible,
+While it is possible to upgrade a GitHub-based source install using ansible,
 these instructions do not cover that scenario.
 
 Create a backup
@@ -817,8 +774,8 @@ before making any changes. Alternatively, back up the file systems being used
 by your system. Exact procedures for updating will depend on your local
 installation. At a minimum you should make backups of:
 
-* the storage service sqlite database
-* the dashboard mysql database
+* The Storage Service sqlite database
+* The dashboard mysql database
 
 A simple example of backing up these two databases:
 
@@ -837,23 +794,21 @@ upgrade again.
 Upgrade on Ubuntu
 -----------------
 
-1. Update OS
+1. Update the operating system.
 
 .. code:: bash
 
    sudo apt-get update && sudo apt-get upgrade
 
-2. Update python setup tools
-
-This is used to install python dependencies for both the storage service and
-the dashboard. There is a _known issue: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844 with the version of pip installed on
-Ubuntu 14.04, which makes this step necessary.
+2. Update python setup tools. This is used to install python dependencies for
+   both the Storage Service and the dashboard. There is a `known issue with pip`_
+   on Ubuntu 14.04 which makes this step necessary.
 
 .. code:: bash
 
    sudo pip install -U setuptools
 
-3. Update Package Sources
+3. Update package sources.
 
 .. parsed-literal::
 
@@ -864,47 +819,43 @@ Ubuntu 14.04, which makes this step necessary.
 Optionally you can remove the lines referencing
 packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
 
-4. Update Archivematica Storage Services
-
+4. Update the Storage Service.
 
 .. code:: bash
 
    sudo apt-get update
    sudo apt-get install archivematica-storage-service
 
-5. Update Application Container
-
-Archivematica Storage Service 0.10.0 uses Gunicorn as WSGI server. This means that the old uwsgi server needs to be stopped and disabled after performing the upgrade.
+5. Update the Application Container. As of Storage Service version 0.10.0, the
+   Storage Service uses Gunicorn as WSGI server. This means that the old uwsgi
+   server needs to be stopped and disabled after performing the upgrade.
 
 .. code:: bash
 
    sudo service uwsgi stop
    sudo update-rc.d uwsgi disable
 
-6. Update Archivematica
-
-During the update process you may be asked about updating configuration files.
-Choose to accept the maintainers versions. You will also be asked about
-updating the database, say 'ok' to each of those steps. If you have set a
-password for the root mysql database user, enter it when prompted. It is
-better to update the dashboard before updating the mcp components.
+6. Update Archivematica. During the update process you may be asked about
+   updating configuration files. Choose to accept the maintainers versions. You
+   will also be asked about updating the database - say 'ok' to each of those
+   steps. If you have set a password for the root mysql database user, enter it
+   when prompted. It is better to update the dashboard before updating the mcp
+   components.
 
 .. code:: bash
 
    sudo apt-get upgrade
 
-7. Disable Unused Services
-
-Archivematica |release| uses Nginx as HTTP server, and Gunicorn as WSGI server.
-This means that some services used in Archivematica |previous_release| should
-be stopped and disabled before performing the upgrade.
+7. Disable unused services. Archivematica |release| uses Nginx as HTTP server,
+   and Gunicorn as WSGI server. This means that some services used in Archivematica
+   |previous_release| should be stopped and disabled before performing the upgrade.
 
 .. code:: bash
 
     sudo service apache2 stop
     sudo update-rc.d apache2 disable
 
-8. Restart Services
+8. Restart services.
 
 .. code:: bash
 
@@ -920,15 +871,15 @@ be stopped and disabled before performing the upgrade.
    sudo service clamav-daemon restart
    sudo service nginx restart
 
-Note, depending on how your Ubuntu system is set up, you may have trouble
-restarting gearman with the command in the block above. If that is the case,
-try this command instead:
+.. note:: Depending on how your Ubuntu system is set up, you may have trouble
+   restarting gearman with the command in the block above. If that is the case,
+   try this command instead:
 
-.. code:: bash
+   .. code:: bash
 
-   sudo restart gearman-job-server
+      sudo restart gearman-job-server
 
-9. Remove unused services
+9. Remove unused services.
 
 .. code:: bash
 
@@ -955,6 +906,8 @@ tools such as the new Appraisal Tab. Currently this must be installed using
 git. These instructions will be updated when a packaged version is available.
 See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
 more details.
+
+1. Install devtools.
 
 .. code:: bash
 
@@ -996,20 +949,20 @@ should be able to clear the cache with control-shift-R or command-shift-F5.
 Upgrade from Archivematica |previous_version| for CentOS/Redhat
 --------------------------------------------------------------------------------
 
-* First, upgrade the repositories for |version|:
+1. Upgrade the repositories for |version|:
 
 .. code:: bash
 
    sudo sed -i 's/1.6.x/1.7.x/g' /etc/yum.repos.d/archivematica*
 
-Then, upgrade the packages:
+2. Upgrade the packages:
 
 .. code:: bash
 
    sudo yum update
 
-Once the new packages are installed, we need to upgrade the databases for both
-Archivematica and the Storage Service. This can be done with:
+3. Once the new packages are installed, upgrade the databases for both
+   Archivematica and the Storage Service. This can be done with:
 
 .. code:: bash
 
@@ -1027,7 +980,7 @@ Archivematica and the Storage Service. This can be done with:
    /usr/share/python/archivematica-dashboard/bin/python manage.py migrate
    ";
 
-Now restart the Archivematica related services, and continue using the system:
+4. Restart the Archivematica related services, and continue using the system:
 
 .. code:: bash
 
@@ -1036,11 +989,12 @@ Now restart the Archivematica related services, and continue using the system:
    sudo systemctl restart archivematica-mcp-client
    sudo systemctl restart archivematica-mcp-server
 
-Depending on your browser settings, you may need to clear your browser cache to
-make the dashboard pages load properly. For example in Firefox or Chrome you
-should be able to clear the cache with control-shift-R or command-shift-F5.
+5. Depending on your browser settings, you may need to clear your browser cache to
+   make the dashboard pages load properly. For example in Firefox or Chrome you
+   should be able to clear the cache with control-shift-R or command-shift-F5.
 
-* Update Transfer Index
+Update Transfer Index
+^^^^^^^^^^^^^^^^^^^^^
 
 This new feature allows you to update a backlog created in an earlier version
 of Archivematica so that it can be used with the Appraisal Tab and the Backlog
@@ -1053,33 +1007,31 @@ tab. To test this feature, follow the instructions
 
 1. Install devtools
 
-Archivematica devtools is a set of utilities that was built by developers While
-working on Archivematica. Devtools includes helper scripts that make it easier
-to perform certain maintenance tasks. One of those tools is used to rebuild
-the Transfer index in Elasticsearch, which is used by the different backlog
-tools such as the new Appraisal Tab. Currently this must be installed using
-git. These instructions will be updated when a packaged version is available.
-See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
-more details.
-
 .. code:: bash
 
     sudo yum install -y archivematica-devtools
 
-2. Confirm Location of Transfer Backlog
+.. note::
 
-You need to know the path to the Transfer Backlog Location. The default
-path is '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'.
-You can confirm the path for your installation by:
+   Archivematica devtools is a set of utilities that was built by developers While
+   working on Archivematica. Devtools includes helper scripts that make it easier
+   to perform certain maintenance tasks. One of those tools is used to rebuild
+   the Transfer index in Elasticsearch, which is used by the different backlog
+   tools such as the new Appraisal Tab. Currently this must be installed using
+   git. These instructions will be updated when a packaged version is available.
+   See the _devtools repo: https:github.com/artefactual/archivematica-devtools for
+   more details.
 
-* logging into the Storage Service and clicking on the Locations tab.
-* type 'backlog' in the search searchbox
-* copy the value in the column labelled 'path' (there should be only one row)
+2. Find the path to the Transfer Backlog location. The default path is
+   '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'. You can
+   confirm the path for your installation by searching for it in the Storage Service:
 
-3. Rebuild Transfer Index
+* Log into the Storage Service and click on the Locations tab.
+* Type 'backlog' in the searchbox.
+* Copy the value in the column labelled 'path' (there should be only one row)
 
-Using the path you confirmed above, replace the text '/path/to/transfers' with
-the correct path for your system.
+3. Using the path you confirmed above, replace the text '/path/to/transfers'
+   with the correct path for your system.
 
 .. code:: bash
 
@@ -1090,18 +1042,60 @@ This may take a while if you have a large backlog. Once it completes, you
 should be able to see your Transfer Backlog in the Appraisal tab and in the
 Backlog tab.
 
+.. _upgrade-indexless:
+
+Upgrade to indexless mode
+-------------------------
+
+As of Archivematica 1.7, Archivematica can be run in indexless mode; that is,
+without Elasticsearch. Installing Archivematica without Elasticsearch means
+reduced consumption of compute resources and lower operational complexity.
+Disabling Elasticsearch means that the Backlog, Appraisal, and Archival Storage
+tabs do not appear and their functionality is not available.
+
+1. Upgrade your existing Archivematica pipeline following the instructions
+   above.
+
+2. Modify the relevant systemd EnvironmentFile files by adding lines that set
+   the relevant environment variables to ``false``:
+
+.. code:: bash
+
+   sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
+   sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
+   sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
+
+3. Restart services.
+
+.. code:: bash
+
+   sudo service clamav-freshclam restart
+   sudo service clamav-daemon start
+   sudo service gearman-job-server restart
+   sudo service archivematica-mcp-server start
+   sudo service archivematica-mcp-client start
+   sudo service archivematica-storage-service start
+   sudo service archivematica-dashboard start
+   sudo service nginx restart
+   sudo systemctl enable fits
+   sudo service fits start
+
+4. Turn off the *Index transfer contents* and *Index AIP* microservices.
+
+.. code:: bash
+
+   ENTER HERE.
+
+5. Turn off and uninstall Elasticsearch.
+
+.. code:: bash
+
+   ENTER HERE.
 
 .. _advanced:
 
 Advanced
 ========
-
-.. _docker:
-
-Docker
-------
-
-Docker installations are experimental at this time- instructions coming soon.
 
 .. _development:
 
@@ -1120,13 +1114,14 @@ the :ref:`Quick Start Guide <quick-start-install>`
 Installing across multiple machines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is possible to spread Archivematica's processing load across several machines by installing the following services on separate machines:
+It is possible to spread Archivematica's processing load across several machines
+by installing the following services on separate machines:
 
 * Elasticsearch
 * gearman
 * MySQL
 
-For help, send an email to `Archivematica tech mailing list. <https://groups.google.com/forum/#!forum/archivematica-tech>`_
+For help, send an email to the `archivematica-tech`_ mailing list.
 
 .. _SSL-support:
 
@@ -1228,3 +1223,4 @@ See: :ref:`Arkivum Storage Service docs <storageservice:arkivum>`
 .. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
 .. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
+.. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
