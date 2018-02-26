@@ -48,7 +48,7 @@ locally-installed Archivematica VM.
 Using the sandbox
 =================
 
-Artefactual maintains an `Archivematica sandbox <sandbox.archivematica.org>`_
+Artefactual maintains an `Archivematica sandbox <http://sandbox.archivematica.org/>`_
 with the following credentials:
 
 * Username: demo@example.com
