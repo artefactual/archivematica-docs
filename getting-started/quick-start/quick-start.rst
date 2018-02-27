@@ -81,7 +81,7 @@ Installing on a virtual machine using Vagrant
 
 This guide will setup a new Oracle `VirtualBox
 <https://www.virtualbox.org/>`__ virtual machine with Archivematica installed on
-your computer. It works works on most operating systems, including MacOS X,
+your computer. It works on most operating systems, including MacOS X,
 Linux, Windows, FreeBSD and others.
 
 **Minimum system requirements**: 4GB RAM; 10GB disk space.
