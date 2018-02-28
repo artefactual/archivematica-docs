@@ -323,10 +323,14 @@ At this point you will need to restart dashboard and mcp-server services
    use 'demo' as the password during the install process. The password can be
    changed after the installation is complete.
 
+   The fits package need to be installed as a prerequesite, due to a circular dependencies
+   problem that arises only on Ubuntu 14.04.
+
    .. code:: bash
 
       sudo apt-get install -y archivematica-mcp-server
       sudo apt-get install -y archivematica-dashboard
+      sudo apt-get install -y fits
       sudo apt-get install -y archivematica-mcp-client
 
 9. Configure the Archivematica components (optional). There are a number of
