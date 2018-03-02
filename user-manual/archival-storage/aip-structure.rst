@@ -4,8 +4,15 @@
 AIP structure
 =============
 
-This page documents the structure of the AIP produced by Archivematica.
+This page describes the structure of the AIP produced by Archivematica.
 
+*On this page:*
+
+* :ref:`Name <aip_name>`
+* :ref:`Directory structure <directory_structure>`
+* :ref:`Bagit documentation <bagit_doc>`
+
+.. _aip_name:
 
 Name
 ----
@@ -18,6 +25,8 @@ The AIP name is composed of the following:
 For example: AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c
 
    "AncientSturgeon" is the name assigned by the user and "bbabce6e-OO16-4185-a93e-f2dd71bfbb8c" is the UUID generated during SIP formation.
+
+.. _directory_structure:
 
 Directory structure
 -------------------
@@ -47,6 +56,8 @@ UUID quad directories for efficient storage and retrieval.
 
 The Archivematica AIP consists of Bagit files and a Data directory.
 
+.. _bagit_doc:
+
 Bagit documentation
 ^^^^^^^^^^^^^^^^^^^
 
@@ -60,7 +71,8 @@ The AIP is packaged in accordance with the Library of Congress Bagit specificati
 
 The following describes the contents of the AIP once extracted:
 
-**Data directory**
+Data directory
+==============
 
 The data directory consists of the METS file for the AIP, a README.html file and three folders:
 logs, objects. and thumbnails.
@@ -73,7 +85,8 @@ logs, objects. and thumbnails.
 
    AIP data directory
 
-**METS file**
+METS file
+=========
 
 ``/data/METS.uuid.xml`` contains the full `PREMIS <https://www.loc.gov/standards/premis/>`_
 implementation (see PREMIS metadata for original file, PREMIS metadata:
@@ -83,7 +96,8 @@ original objects to their preservation copies and to their descriptions and
 submission documentation, as well as to link PREMIS metadata to the objects in
 the AIP.
 
-**METS file structure**
+METS file structure
+===================
 
 The METS file will have a basic generic structure that will be present for all AIPs derived from different kinds of transfers. Archivematica currently uses METS version 1.11.
 
@@ -131,7 +145,8 @@ The METS file will have a basic generic structure that will be present for all A
 
          * The second is labeled "Normative Directory Structure" which shows the logical structure of the files in the objects directory. This second structMap is necessary to document empty directories before they are deleted at 'store AIP' in the Storage Service. At AIP re-ingest the new logical structMap will be parsed to re-create the empty directories.  
 
-**README.html file**
+README.html file
+================
 
 ``/data/README.html`` consists of a human readable file that describes the basic structure
 of an Archivematica AIP.  It consists of Acronyms, Introduction, Content Information,
@@ -154,7 +169,8 @@ The ``/transfers`` directory contains the logs from processing that occurred
 to each transfer which is part of the SIP in the transfer workflow in the
 dashboard.
 
-**Objects**
+Objects
+=======
 
 ``/data/objects`` contains original objects, normalized objects, ``/metadata`` and
 ``/submissionDocumentation``. If there were any lower level directories within
@@ -177,7 +193,8 @@ structmap for the transfer is the closest approximation of original order
 for the transfer, along with the tree diagram if the user chose to create one
 during transfer.
 
-**Thumbnails**
+Thumbnails
+==========
 
 ``/data/thumbnails`` contains any thumbnails generated for viewing in the AIP
 search interface of the dashboard.
