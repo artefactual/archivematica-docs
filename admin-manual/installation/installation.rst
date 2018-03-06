@@ -448,6 +448,14 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         enabled=1
         EOF'
 
+        sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
+        [archivematica-extras]
+        name=archivematica-extras
+        baseurl=https://packages.archivematica.org/1.7.x/centos-extras
+        gpgcheck=0
+        enabled=1
+        EOF'
+
 3. Service dependencies
 
    Common services like Elasticsearch, MariaDB and Gearmand should be installed
