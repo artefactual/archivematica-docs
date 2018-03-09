@@ -444,7 +444,8 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         [archivematica]
         name=archivematica
         baseurl=https://packages.archivematica.org/1.7.x/centos
-        gpgcheck=0
+        gpgcheck=1
+        gpgkey=https://packages.archivematica.org/1.7.x/key.asc
         enabled=1
         EOF'
 
@@ -452,7 +453,8 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         [archivematica-extras]
         name=archivematica-extras
         baseurl=https://packages.archivematica.org/1.7.x/centos-extras
-        gpgcheck=0
+        gpgcheck=1
+        gpgkey=https://packages.archivematica.org/1.7.x/key.asc
         enabled=1
         EOF'
 
