@@ -752,6 +752,12 @@ above, follow these steps to complete the configuration of your new server.
    *test* with the password *test*: http://localhost:8000 (or use the IP
    address of the machine you have been installing on).
 
+   If you are running the storage service and the dashboard on the same host you
+   should use 'localhost' or '127.0.0.1'
+
+   If you are using a public IP address you'll need to configure your firewall
+   rules and allow access only to port 80 and 8000 for Archivematica usage.
+
 2. Create a new administrative user in the Storage Service. The Storage Service
    has its own set of users. In the Users section of the Administration tab of
    the Storage Service, add at least one administrative user, and modify the
