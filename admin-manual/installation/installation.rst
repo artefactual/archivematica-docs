@@ -440,14 +440,21 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
 
      .. code:: bash
 
-        sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
-        [archivematica]
-        name=archivematica
-        baseurl=https://packages.archivematica.org/1.7.x/centos
-        gpgcheck=1
-        gpgkey=https://packages.archivematica.org/1.7.x/key.asc
+        sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-dashboard.repo
+        [archivematica-dashboard]
+        name=archivematica-dashboard
+        baseurl=http://jenkins-ci.archivematica.org/repos/rpm/release-1.7/
+        gpgcheck=0
         enabled=1
         EOF'
+
+        sudo -u root bash -c ‘cat << EOF > /etc/yum.repos.d/archivematica-ss.repo
+        [archivematica-ss]
+        name=archivematica-ss
+        baseurl=http://jenkins-ci.archivematica.org/repos/rpm/release-0.11/
+        gpgcheck=0
+        enabled=1
+        EOF’
 
         sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
         [archivematica-extras]
