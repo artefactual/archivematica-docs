@@ -753,7 +753,17 @@ above, follow these steps to complete the configuration of your new server.
    address of the machine you have been installing on).
 
    If you are running the storage service and the dashboard on the same host you
-   should use 'localhost' or '127.0.0.1'
+   should use:
+
+   .. code:: bash
+
+      localhost
+
+   or
+
+   .. code:: bash
+
+      127.0.0.1
 
    If you are using a public IP address you'll need to configure your firewall
    rules and allow access only to port 80 and 8000 for Archivematica usage.
