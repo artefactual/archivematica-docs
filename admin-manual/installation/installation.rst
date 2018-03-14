@@ -448,13 +448,13 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         enabled=1
         EOF'
 
-        sudo -u root bash -c ‘cat << EOF > /etc/yum.repos.d/archivematica-ss.repo
+        sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-ss.repo
         [archivematica-ss]
         name=archivematica-ss
         baseurl=http://jenkins-ci.archivematica.org/repos/rpm/release-0.11/
         gpgcheck=0
         enabled=1
-        EOF’
+        EOF'
 
         sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
         [archivematica-extras]
