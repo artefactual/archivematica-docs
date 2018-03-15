@@ -264,19 +264,19 @@ Archivematica can upload DIPs directly to an AtoM website so the contents can
 be accessed online.  DIP Upload to AtoM is usually a three step process:
 
 #. If AtoM is installed on a remote server, Archivematica uses SSH and rsync to
-copy the DIP to a temporary directory on the AtoM server. If Archivematica and
-AtoM share a common filesystem (e.g. a shared network directory) this step is
-unnecessary.
+   copy the DIP to a temporary directory on the AtoM server. If Archivematica 
+   and AtoM share a common filesystem (e.g. a shared network directory) this 
+   step is unnecessary.
 
 #. Archivematica sends a REST request to AtoM to tell AtoM that which archival
-description is the target of the DIP. The DIP target description is identified
-by the description's "slug".  The actual upload of the DIP contents to AtoM is
-done via a background job, and may take some time to process if a large DIP is
-uploaded.
+   description is the target of the DIP. The DIP target description is 
+   identified by the description's "slug".  The actual upload of the DIP 
+   contents to AtoM is done via a background job, and may take some time to
+   process if a large DIP is uploaded.
 
 #. An AtoM background worker uploads the DIP metadata (METs file) and digital
-objects from the temporary directory to AtoM, links them to the target
-description, and deletes the temporary files.
+   objects from the temporary directory to AtoM, links them to the target
+   description, and deletes the temporary files.
 
 The AtoM DIP upload configuration page is where you specify the details of the
 AtoM installation you'd like the DIPs uploaded to (and, if using Rsync to
