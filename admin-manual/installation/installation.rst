@@ -623,7 +623,7 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
          sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-server'
          sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
 
-   * After that, we can enable and start services
+   * After that, we can enable and start/restart services
 
      .. code:: bash
 
@@ -633,6 +633,8 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         sudo -u root systemctl start fits-nailgun
         sudo -u root systemctl enable clamd@scan
         sudo -u root systemctl start clamd@scan
+        sudo -u root systemctl restart archivematica-dashboard
+        sudo -u root systemctl restart archivematica-mcp-client
 
 7. Finalizing installation
 
