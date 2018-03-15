@@ -195,9 +195,9 @@ for normalization, characterization, validation, and other tools and workflows
 that act upon content preserved through Archivematica.
 
 * :ref:`General description <preservation-planning>`
-* :ref:`Preservation planning tab <pres-tab>`
 * :ref:`Format Policy Registry (FPR) <fpr>`
 * :ref:`Preservation policies <pres-policies>`
+* :ref:`Altering rules and commands <fpr-instruct>`
 
 
 .. _home-administer:
