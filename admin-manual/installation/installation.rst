@@ -634,7 +634,7 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
         sudo -u root systemctl enable clamd@scan
         sudo -u root systemctl start clamd@scan
         sudo -u root systemctl restart archivematica-dashboard
-        sudo -u root systemctl restart archivematica-mcp-client
+        sudo -u root systemctl restart archivematica-mcp-server
 
 7. Finalizing installation
 
