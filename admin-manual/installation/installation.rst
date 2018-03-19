@@ -758,8 +758,8 @@ above, follow these steps to complete the configuration of your new server.
 
 1. The Storage Service runs as a separate web application from the Archivematica
    dashboard. Go to the following link in a web browser and log in as user
-   *test* with the password *test*: http://localhost:8000 (or use the IP
-   address of the machine you have been installing on).
+   *test* with the password *test*: http://localhost:8000, or use the IP address
+   of the machine you have been installing on ( RPM packages use port 8001 ).
 
    If you are running the storage service and the dashboard on the same host you
    should use:
@@ -784,9 +784,10 @@ above, follow these steps to complete the configuration of your new server.
    an administrative user, copy its API key to your clipboard.
 
 3. Log in to the Archivematica dashboard and finish the installation in a
-   web browser: http://localhost (again, use the IP address of the machine you
-   have been installing on). When prompted, enter the URL of the Storage
-   Service, the name of the administrative user, and that user's API key.
+   web browser: http://localhost. Again, you can use the IP address of the machine you
+   have been installing on (RPM packages use port 81). When prompted, enter
+   the URL of the Storage Service, the name of the administrative user, and that
+   user's API key.
 
 4. Register your installation for full Format Policy Registry interoperability.
 
