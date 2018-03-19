@@ -487,8 +487,11 @@ Options:
 General
 -------
 
-In the general configuration section, you can select interface and Storage
-Service options for your Archivematica client.
+In this section, you can configure the following for your Archivematica client:
+
+* Storage Service options
+* Checksum algorithm
+* Elasticsearch indexing
 
 .. figure:: images/generalConfig.*
    :align: center
@@ -497,13 +500,6 @@ Service options for your Archivematica client.
    :alt: General configuration options in Administration tab of the dashboard
 
    General configuration options in Administration tab of the dashboard
-
-Interface options
-=================
-
-Here, you can hide parts of the interface that you don't need to use. In
-particular, you can hide CONTENTdm DIP upload link, AtoM DIP upload link and
-DSpace transfer type.
 
 Storage Service options
 =======================
