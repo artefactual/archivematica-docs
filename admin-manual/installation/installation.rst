@@ -323,8 +323,8 @@ At this point you will need to restart dashboard and mcp-server services
    use 'demo' as the password during the install process. The password can be
    changed after the installation is complete.
 
-   The fits package need to be installed as a prerequesite, due to a circular dependencies
-   problem that arises only on Ubuntu 14.04.
+   The fits package needs to be installed as a prerequisite, due to a
+   circular dependencies problem that arises only on Ubuntu 14.04.
 
    .. code:: bash
 
