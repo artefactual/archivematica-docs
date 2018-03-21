@@ -334,9 +334,7 @@ To add files to ArchivesSpace resources:
 
 5. Once all files have been added and the arrangement has been set, SIPs can be
    started in Ingest. Select the resource/archival object and click
-   **Finalize arrangement**. SIPs can be created from any level of description
-   (i.e. a SIP can be started for an entire resource or from an archival object
-   within a resource such as a series).
+   **Finalize arrangement**. SIPs can be created from ArchivesSpace archival objects at any level of description.
 
 .. tip::
 
