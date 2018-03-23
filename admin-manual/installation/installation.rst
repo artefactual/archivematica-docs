@@ -763,7 +763,8 @@ above, follow these steps to complete the configuration of your new server.
 1. The Storage Service runs as a separate web application from the Archivematica
    dashboard. Go to the following link in a web browser and log in as user
    *test* with the password *test*: http://localhost:8000, or use the IP address
-   of the machine you have been installing on (RPM packages use port 8001).
+   of the machine you have been installing on. Note that RPM packages use port
+   8001.
 
    If you are running the storage service and the dashboard on the same host you
    should use:
@@ -779,23 +780,26 @@ above, follow these steps to complete the configuration of your new server.
       127.0.0.1
 
    If you are using a public IP address you'll need to configure your firewall
-   rules and allow access only to port 80 and 8000 for Archivematica usage.
+   rules and allow access only to port 80 and 8000 for Archivematica usage
+   (port 81 and 8001 for RPM packages).
 
 2. Create a new administrative user in the Storage Service. The Storage Service
-   has its own set of users. In the Users section of the Administration tab of
-   the Storage Service, add at least one administrative user, and modify the
-   test user, to change the password at a minimum. After you have created
-   an administrative user, copy its API key to your clipboard.
+   has its own set of users. Navigate to Administrators > Users and add at
+   least one administrative user. We also recommend modifying the test user and
+   changing the default password. After you have created an administrative user,
+   copy the user's API key to your clipboard.
 
-3. Log in to the Archivematica dashboard and finish the installation in a
+3. Log in to the Archivematica dashboard to finish the installation in a
    web browser: http://localhost. Again, you can use the IP address of the
-   machine you have been installing on (RPM packages use port 81).
-   When prompted, enter the URL of the Storage Service, the name of the
-   administrative user, and that user's API key.
+   machine you have been installing on. Note that RPM packages use port 81.
 
-4. Register your installation for full Format Policy Registry interoperability.
+4. On the Welcome page, create an administrative user for the Archivematica 
+   pipeline by entering the organization name, the organization identifier, 
+   username, email, and password.
 
-5. Follow the instructions in the web browser to complete the installation.
+5. On the next screen, connect your pipeline to the Storage Service by entering
+   the Storage Service URL and User and pasting the API key that you copied in
+   Step 2.
 
 
 .. _upgrade:
