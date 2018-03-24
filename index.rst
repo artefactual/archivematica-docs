@@ -251,12 +251,12 @@ and related systems.
 Installation and setup
 ----------------------
 
-* :ref:`Installation <installation>`
-* :ref:`Storage Service <storageservice:administrators>`
-* :ref:`Dashboard Administration tab <dashboard-config>`
-* :ref:`Format Policy Registry (FPR) <fpr:index>`
+* :ref:`Installing Archivematica <installation>`
+* :ref:`Upgrading Archivematica <upgrade>`
 * :ref:`Customization and automation <customization>`
-* :ref:`Duracloud setup <duracloud-setup>`
+* :ref:`Setting up integrations <integrations>`
+* :ref:`Storage Service <storageservice:administrators>`
+* :ref:`Format Policy Registry (FPR) <fpr:index>`
 
 
 .. _maintenance:

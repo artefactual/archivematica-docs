@@ -9,10 +9,17 @@ set of links to each chapter's main sections.
 
 .. toctree::
 
-   installation/installation
-   installation/dashboard-config
-   installation/customization
-   installation/customization/antivirus-admin
-   installation/duracloud-setup
+   installation-setup/installation/installation
+   installation-setup/installation/install-ubuntu
+   installation-setup/installation/install-centos
+   installation-setup/installation/install-ansible
+   installation-setup/installation/install-advanced
+   installation-setup/upgrading/upgrading
+   installation-setup/customization/customization
+   installation-setup/customization/dashboard-config
+   installation-setup/customization/antivirus-admin
+   installation-setup/integrations/integrations
+   installation-setup/integrations/duracloud-setup
+   installation-setup/integrations/atom-setup
    maintenance/maintenance
    security/security
