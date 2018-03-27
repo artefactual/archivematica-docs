@@ -37,7 +37,7 @@ logs). To make these decisions in the dashboard processing workflow:
 Upload image to dashboard
 -------------------------
 
-1. Select Disk Image type from the drown-down menu on the Transfer tab of the dashboard.
+1. Select Disk Image type from the drop-down menu on the Transfer tab of the dashboard.
 
 2. Add metadata from the imaging process if desired by clicking on the report button.
 
