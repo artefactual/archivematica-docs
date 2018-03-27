@@ -655,15 +655,21 @@ Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
 
    CentOS will install firewalld which will be running default rules likely
    blocking ports 81 and 8001. If you are not able to access the dashboard and
-   Storage Service, check if firewalld is running. If it is, you will likely
-   need to modify the firewall rules to allow access to ports 81 and 8001 from
-   your location:
+   Storage Service, then use the following command to check if firewalld is
+   running:
 
    .. code:: bash
 
-      sudo firewall-cmd --zone=public --add-port=81/tcp  --permanent
-      sudo firewall-cmd --zone=public --add-port=8001/tcp  --permanent
-      sudo service firewalld restart
+      sudo systemctl status firewalld
+
+   If firewalld is running, you will likely need to modify the firewall rules
+   to allow access to ports 81 and 8001 from your location:
+
+   .. code:: bash
+
+      sudo firewall-cmd --add-port=81/tcp --permanent
+      sudo firewall-cmd --add-port=8001/tcp --permanent
+      sudo firewall-cmd --reload
 
 8. Complete :ref:`Post Install Configuration <post-install-config>`.
 
