@@ -392,7 +392,7 @@ At this point you will need to restart dashboard and mcp-server services
 .. _install-pkg-centos:
 
 Install CentOS/Red Hat Packages
-------------------------------
+-------------------------------
 
 Archivematica version 1.5.1 and higher support installation on CentOS/Red Hat.
 
