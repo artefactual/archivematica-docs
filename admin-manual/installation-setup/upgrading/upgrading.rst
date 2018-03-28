@@ -62,11 +62,21 @@ Upgrade on Ubuntu
 
 3. Update package sources.
 
+   In Ubuntu 14.04:
+
    .. code:: bash
 
       sudo add-apt-repository --remove ppa:archivematica/externals
       echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu trusty main' >> /etc/apt/sources.list
       echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
+
+   In Ubuntu 16.04:
+
+   .. code:: bash
+
+      sudo add-apt-repository --remove ppa:archivematica/externals
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
