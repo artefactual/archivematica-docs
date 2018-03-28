@@ -577,7 +577,7 @@ command-line, issue the following commands:
    cd /usr/share/archivematica/dashboard
    export PATH=$PATH:/usr/share/archivematica/dashboard
    export DJANGO_SETTINGS_MODULE=settings.common
-   python manage.py createsuperuser
+   /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
 
 CLI password resetting
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -590,7 +590,7 @@ user, you can change it via the command-line:
    cd /usr/share/archivematica/dashboard
    export PATH=$PATH:/usr/share/archivematica/dashboard
    export DJANGO_SETTINGS_MODULE=settings.common
-   python manage.py changepassword <username>
+   /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
 
 Security
 ^^^^^^^^

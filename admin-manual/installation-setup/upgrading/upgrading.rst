@@ -46,6 +46,18 @@ upgrade again.
 Upgrade on Ubuntu
 -----------------
 
+Before you start: Archivematica 1.7 stopped using ``/usr/share/python`` as the
+home for our Python virtual environments. We did this because it was causing
+Ubuntu Xenial to break when attempting to upgrade a system package called
+``python-minimal``. If you're running Ubuntu Xenial the following commands are
+going to be necessary to continue the upgrade:
+
+.. code:: bash
+
+   sudo rm -rf /usr/share/python/archivematica-dashboard
+   sudo rm -rf /usr/share/python/archivematica-mcp-server
+   sudo rm -rf /usr/share/python/archivematica-mcp-client
+
 1. Update the operating system.
 
    .. code:: bash
@@ -237,14 +249,14 @@ Upgrade from Archivematica |previous_version| for CentOS/Red Hat
       set -a -e -x
       source /etc/sysconfig/archivematica-storage-service
       cd /usr/lib/archivematica/storage-service
-      /usr/share/python/archivematica-storage-service/bin/python manage.py migrate
+      /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
       ";
 
       sudo -u archivematica bash -c " \
       set -a -e -x
       source /etc/sysconfig/archivematica-dashboard
       cd /usr/share/archivematica/dashboard
-      /usr/share/python/archivematica-dashboard/bin/python manage.py migrate
+      /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
       ";
 
 4. Restart the Archivematica related services, and continue using the system:
