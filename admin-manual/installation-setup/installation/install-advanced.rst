@@ -44,9 +44,27 @@ For help, send an email to the `archivematica-tech`_ mailing list.
 Firewall
 ^^^^^^^^
 
-When installing Archivematica on multiple machines, all the machines must be
-able to reach each other on the following ports: : ``http``, ``mysqld``,
-``gearman``, ``nfs``, ``ssh``.
+When installing Archivematica on multiple machines, the various Archivematica
+processes must be able to reach each other on the relevant ports. Your firewall
+configuration must allow for this.
+
+In particular, please ensure that the Archivematica dashboard can talk to the
+Storage Service, and that the pipeline components (i.e., MCPServer, MCPClient)
+can talk to Gearman.
+
+In addition, please ensure that the Elasticsearch (``9200``) and MySQL
+(``3306``) services are not exposed to the world.
+
+The ports of the Archivematica components and related services are provided
+below.
+
+* Archivematica dashboard: ``80`` (``81`` for RPM-based installs)
+* Archivematica Storage Service: ``8000`` (``8001`` for RPM-based installs)
+* MySQL: ``3306``
+* Gearman: ``4730``
+* SSH: ``22``
+* Elasticsearch: ``9200``
+* NFS: ``2049``
 
 .. _SSL-support:
 

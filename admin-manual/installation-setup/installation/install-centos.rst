@@ -270,10 +270,10 @@ Installation instructions
    that the listen directives used under /etc/nginx are not using IPv6 addresses
    like [::]:80.
 
-   CentOS will install firewalld which will be running default rules likely
-   blocking ports 81 and 8001. If you are not able to access the dashboard and
-   Storage Service, then use the following command to check if firewalld is
-   running:
+   CentOS will install firewalld which will be running default rules that will
+   likely be blocking ports 81 and 8001. If you are not able to access the
+   dashboard and Storage Service, then use the following command to check if
+   firewalld is running:
 
    .. code:: bash
 
@@ -300,25 +300,15 @@ After successfully completing a new installation, follow these steps to complete
 the configuration of your new server.
 
 1. The Storage Service runs as a separate web application from the Archivematica
-   dashboard. Go to the following link in a web browser and log in as user
-   *test* with the password *test*: http://localhost:8001, or use the IP address
-   of the machine you have been installing on.
+   dashboard. The Storage Service is exposed on port 8001 by default when
+   deploying using RPM packages. Use your web browser to navigate to the
+   Storage Service at the IP address of the machine you have been installing
+   on, e.g., ``http://<MY-IP-ADDR>:8001`` (or ``http://localhost:8001`` or
+   ``http://127.0.0.1:8001`` if this is a local development setup).
 
-   If you are running the storage service and the dashboard on the same host you
-   should use:
-
-   .. code:: bash
-
-      localhost
-
-   or
-
-   .. code:: bash
-
-      127.0.0.1
-
-   If you are using a public IP address you'll need to configure your firewall
-   rules and allow access only to port 81 and 8001 for Archivematica usage.
+   If you are using a public IP address, you will need to configure your
+   firewall rules and allow access only to ports 81 and 8001 for Archivematica
+   usage.
 
 2. Create a new administrative user in the Storage Service. The Storage Service
    has its own set of users. Navigate to Administrators > Users and add at
@@ -326,17 +316,27 @@ the configuration of your new server.
    changing the default password. After you have created an administrative user,
    copy the user's API key to your clipboard.
 
-3. Log in to the Archivematica dashboard to finish the installation in a
-   web browser: http://localhost. Again, you can use the IP address of the
-   machine you have been installing on. Note that RPM packages use port 81.
+3. To finish the installation, use your web browser to navigate to the
+   Archivematica dashboard using the IP address of the machine you have been
+   installing on. (Note that the dashboard will be exposed on port 81.)
 
-4. On the Welcome page, create an administrative user for the Archivematica
+4. At the Welcome page, create an administrative user for the Archivematica
    pipeline by entering the organization name, the organization identifier,
    username, email, and password.
 
 5. On the next screen, connect your pipeline to the Storage Service by entering
-   the Storage Service URL and User and pasting the API key that you copied in
-   Step 2.
+   the Storage Service URL and username, and by pasting in the API key that you
+   copied in Step (2).
+
+   - If the Storage Service and the Archivematica dashboard are installed on
+     the same machine, then you should supply ``http://127.0.0.1:8001`` as the
+     Storage Service URL at this screen.
+   - If the Storage Service and the Archivematica dashboard are installed on
+     different nodes (servers), then you must use the public IP of your Storage
+     Service instance, e.g., ``http://<MY-IP-ADDR>:8001`` *and* you must ensure
+     that any firewall rules (i.e., firewalld, AWS security groups, etc.) are
+     configured to allow requests from your dashboard IP to your Storage
+     Service IP on the appropriate port.
 
 :ref:`Back to the top <install-pkg-centos>`
 
