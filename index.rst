@@ -279,3 +279,6 @@ Security
 * :ref:`AtoM <atom-security>`
 * :ref:`Gearman <gearman-security>`
 * :ref:`User security <user-security>`
+* :ref:`LDAP setup <ldap-setup>`
+* :ref:`Shibboleth setup <shibboleth-setup>`
+* :ref:`CA certificates <ca-root-certificates>`

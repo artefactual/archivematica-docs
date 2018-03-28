@@ -107,6 +107,8 @@ provided by the Django web framework. Check out their docs for more details!
    `Archivematica Google Group <am-google-groups_>`_. The configuration
    mechanism has some rough edges so it is recommended for advanced users only.
 
+.. _ldap-setup:
+
 LDAP setup
 ==========
 
@@ -131,6 +133,7 @@ LDAP backend configuration
 
 #. Restart the Archivematica Dashboard.
 
+.. _shibboleth-setup:
 
 Shibboleth setup
 ================
@@ -162,6 +165,86 @@ Shibboleth backend configuration in Storage Service
 
 #. Restart the Storage Service.
 
+.. _ca-root-certificates:
+
+CA certificates
+===============
+
+Archivematica uses a HTTP library called `Requests <requests_>`_. There are
+`two main approaches <requests-cas_>`_ for dealing with the updates of the root
+CAs sets:
+
+Upgrade the ``certifi`` package frequently
+++++++++++++++++++++++++++++++++++++++++++
+
+There are three virtual environments where Requests is used: MCPClient,
+Dashboard and Storage Service. This is how you can update ``certifi`` across
+the three environments:
+
+.. code:: bash
+
+   $ sudo /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/pip install -U certifi
+   $ sudo /usr/share/archivematica/virtualenvs/archivematica-mcp-client/bin/pip install -U certifi
+   $ sudo /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/pip install -U certifi
+
+The services need to be restarted after the update, for example if you are
+using systemd:
+
+.. code:: bash
+
+   $ sudo systemctl restart archivematica-dashboard
+   $ sudo systemctl restart archivematica-mcp-client
+   $ sudo systemctl restart archivematica-storage-service
+
+Use the environment string REQUEST_CA_BUNDLE
+++++++++++++++++++++++++++++++++++++++++++++
+
+Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the
+administrator can indicate a custom bundle which could be the system's CA
+bundle.
+
+- The Ubuntu system's CA bundle file is
+  :file:`/etc/ssl/certs/ca-certificates.crt`.
+- The CentOS system's CA bundle file is
+  :file:`/etc/pki/tls/certs/ca-bundle.crt`.
+
+On Ubuntu, add the following line to the :file:`/etc/default/archivematica-*`
+files to use the system's CA bundle:
+
+.. code::
+
+   REQUEST_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+On CentOS, add the following line to the :file:`/etc/default/archivematica-*`
+files to use the system's CA bundle:
+
+.. code::
+
+   REQUEST_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.crt
+
+Trusting additional CAs
++++++++++++++++++++++++
+
+If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional CAs.
+
+On CentOS:
+
+- Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your
+  CentOS machine.
+- Run the `update-ca-trust extract` command.
+
+The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that
+refers to the consolidated output created by the ``update-ca-trust`` command.
+
+On Ubuntu:
+
+- Copy the .crt file to :file:`/usr/local/share/ca-certificates` on your Ubuntu
+  machine.
+- Run the `update-ca-certificates` command.
+
+This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
+
+
 :ref:`Back to the top <security>`
 
 .. _django-auth-infra: https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#authentication-backends
@@ -172,3 +255,5 @@ Shibboleth backend configuration in Storage Service
 .. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
+.. _requests: http://docs.python-requests.org/
+.. _requests-cas: http://docs.python-requests.org/en/master/user/advanced/#ca-certificates
