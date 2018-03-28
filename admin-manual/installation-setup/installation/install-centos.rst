@@ -24,19 +24,19 @@ Installation instructions
 
       sudo yum update
 
-   If your environment uses SELinux, at a minmum you will need to run the
+   If your environment uses SELinux, at a minimum you will need to run the
    following commands. Additional configuration may be required for your local
    setup.
 
    .. code:: bash
 
-      # Allow nginx to use ports 8000 and 8001
-      sudo semanage port -m -t http_port_t -p tcp 8000
+      # Allow Nginx to use ports 81 and 8001
+      sudo semanage port -m -t http_port_t -p tcp 81
       sudo semanage port -a -t http_port_t -p tcp 8001
-      # Allow nginx to connect the mysql server and gunicorn backends:
+      # Allow Nginx to connect the MySQL server and Gunicorn backends
       sudo setsebool -P httpd_can_network_connect_db=1
       sudo setsebool -P httpd_can_network_connect=1
-      # Allow nginx to change system limits
+      # Allow Nginx to change system limits
       sudo setsebool -P httpd_setrlimit 1
 
 2. Some extra repositories need to be installed in order to fulfill the
