@@ -164,17 +164,17 @@ audio-visual material requires more processing power than images or documents.
 New installations
 =================
 
-When intalling Archivematica for the first time, there are a few choices to
+When installing Archivematica for the first time, there are a few choices to
 make before starting:
 
 * Installation method: manual or Ansible?
 * Installation source: OS packages or GitHub?
-* Operating system: Ubuntu or CentOS/Redhat?
+* Operating system: Ubuntu or CentOS/Red Hat?
 
 Instructions are provided for the following choices:
 
 * :ref:`Manual Install of OS Packages on Ubuntu <install-pkg-ubuntu>`
-* :ref:`Manual Install of OS Packages on CentOS/Redhat <install-pkg-centos>`
+* :ref:`Manual Install of OS Packages on CentOS/Red Hat <install-pkg-centos>`
 * :ref:`Automated Install from Github on Ubuntu <ansible-git-ubuntu>`
 
 Other combinations work, but are not covered in this documentation. Please
@@ -391,10 +391,10 @@ At this point you will need to restart dashboard and mcp-server services
 
 .. _install-pkg-centos:
 
-Install CentOS/Redhat Packages
+Install CentOS/Red Hat Packages
 ------------------------------
 
-Archivematica version 1.5.1 and higher support installation on CentOS/Redhat.
+Archivematica version 1.5.1 and higher support installation on CentOS/Red Hat.
 
 1. Prerequisites
 
@@ -814,7 +814,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 ============================================================
 
 * :ref:`Upgrade Ubuntu Package Install <upgrade-ubuntu>`
-* :ref:`Upgrade CentOS/Redhat Package Install <upgrade-centos>`
+* :ref:`Upgrade CentOS/Red Hat Package Install <upgrade-centos>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 
 While it is possible to upgrade a GitHub-based source install using ansible,
@@ -1006,7 +1006,7 @@ tab.
 
 .. _upgrade-centos:
 
-Upgrade from Archivematica |previous_version| for CentOS/Redhat
+Upgrade from Archivematica |previous_version| for CentOS/Red Hat
 --------------------------------------------------------------------------------
 
 1. Upgrade the repositories for |version|:
@@ -1162,7 +1162,7 @@ tabs do not appear and their functionality is not available.
       sudo service elasticsearch stop
       sudo update-rc.d elasticsearch disable
 
-   If you are using Ubuntu 16.04 or CentOS/Redhat, run the following commands.
+   If you are using Ubuntu 16.04 or CentOS/Red Hat, run the following commands.
 
    .. code:: bash
 
