@@ -55,14 +55,6 @@ Ubuntu 16.04 (Xenial) installation instructions
       sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
       sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
 
-   At this point you will need to restart dashboard and archivematica-mcp-server services
-
-   .. code:: bash
-
-      sudo service archivematica-dashboard restart
-      sudo service archivematica-mcp-server restart
-
-
 3. Update to the most recent OS release - for Xenial, this is 16.04.4. This step
    will also fetch a list of the software from the package repositories you just
    added to your system.
