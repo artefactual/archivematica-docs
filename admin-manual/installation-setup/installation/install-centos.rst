@@ -289,7 +289,7 @@ Installation instructions
       sudo firewall-cmd --reload
 
 
-8. Complete :ref:`Post Install Configuration <post-install-config>`.
+8. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
 
 .. _centos-post-install-config:
 
@@ -304,7 +304,8 @@ the configuration of your new server.
    deploying using RPM packages. Use your web browser to navigate to the
    Storage Service at the IP address of the machine you have been installing
    on, e.g., ``http://<MY-IP-ADDR>:8001`` (or ``http://localhost:8001`` or
-   ``http://127.0.0.1:8001`` if this is a local development setup).
+   ``http://127.0.0.1:8001`` if this is a local development setup). The default
+   username and password are ``test``/ ``test``.
 
    If you are using a public IP address, you will need to configure your
    firewall rules and allow access only to ports 81 and 8001 for Archivematica

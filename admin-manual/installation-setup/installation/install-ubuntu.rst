@@ -182,7 +182,7 @@ Ubuntu 16.04 (Xenial) installation instructions
 
        sudo service gearman-job-server restart
 
-13. Complete :ref:`Post Install Configuration <post-install-config>`.
+13. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _trusty-instructions:
 
@@ -371,7 +371,7 @@ Ubuntu 14.04 (Trusty) installation instructions
        sudo ufw allow 80
        sudo ufw allow 8000
 
-14. Complete :ref:`Post Install Configuration <post-install-config>`.
+14. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _ubuntu-post-install-config:
 
@@ -386,7 +386,8 @@ the configuration of your new server.
    package installs. Use your web browser to navigate to the Storage Service at
    the IP address of the machine you have been installing on, e.g.,
    ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or
-   ``http://127.0.0.1:8000`` if this is a local development setup).
+   ``http://127.0.0.1:8000`` if this is a local development setup). The default
+   username and password are ``test``/ ``test``.
 
    If you are using a public IP address, you will need to configure your
    firewall rules and allow access only to ports 80 and 8000 for Archivematica
