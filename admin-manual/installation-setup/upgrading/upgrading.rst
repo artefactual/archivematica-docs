@@ -9,9 +9,11 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Create a backup <create-backup>`
 * :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
+* :ref:`Upgrade search indices <upgrade-search-indices>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 
 .. note::
+
    While it is possible to upgrade a GitHub-based source install using ansible,
    these instructions do not cover that scenario.
 
@@ -160,73 +162,10 @@ going to be necessary to continue the upgrade:
 
        sudo apt-get remove --purge python-pip apache2 uwsgi
 
-.. _update-transfer-index:
-
-Update Transfer Index
-^^^^^^^^^^^^^^^^^^^^^
-
-This new feature allows you to update a backlog created in an earlier version
-of Archivematica so that it can be used with the Appraisal Tab and the Backlog
-tab.
-
-.. IMPORTANT::
-
-   These are experimental instructions. Do not use them on a production system
-   unless you have a back-up you can restore from.
-
-.. note::
-
-   Archivematica devtools is a set of utilities that was built by developers while
-   working on Archivematica. Devtools includes helper scripts that make it easier
-   to perform certain maintenance tasks. One of those tools is used to rebuild
-   the Transfer index in Elasticsearch, which is used by the different backlog
-   tools such as the new Appraisal Tab. Currently this must be installed using
-   git. These instructions will be updated if a packaged version becomes available.
-   See the `devtools repo`_ for more details.
-
-
-1. Install devtools.
-
-   .. code:: bash
-
-       sudo apt-get install git ruby-ronn
-       git clone https://github.com/artefactual/archivematica-devtools
-       cd archivematica-devtools
-       make install
-
-2. Confirm location of transfer backlog
-
-   You need to know the path to the Transfer Backlog Location. The default
-   path is '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'.
-   You can confirm the path for your installation by:
-
-   - logging into the Storage Service and clicking on the Locations tab.
-   - type 'backlog' in the search searchbox
-   - copy the value in the column labelled 'path' (there should be only one row)
-
-
-3. Rebuild transfer index
-
-   Using the path you confirmed above, replace the text '/path/to/transfers'
-   with the correct path for your system.
-
-   .. code:: bash
-
-       am rebuild-transfer-backlog /path/to/transfers
-
-   This may take a while if you have a large backlog. Once it completes, you
-   should be able to see your Transfer Backlog in the Appraisal tab and in the
-   Backlog tab.
-
-   Depending on your browser settings, you may need to clear your browser cache
-   to make the dashboard pages load properly. For example in Firefox or Chrome
-   you should be able to clear the cache with control-shift-R or
-   command-shift-F5.
-
 .. _upgrade-centos:
 
-Upgrade from Archivematica |previous_version| for CentOS/Red Hat
---------------------------------------------------------------------------------
+Upgrade on CentOS/Red Hat
+-------------------------
 
 1. Upgrade the repositories for |version|:
 
@@ -246,17 +185,17 @@ Upgrade from Archivematica |previous_version| for CentOS/Red Hat
    .. code:: bash
 
       sudo -u archivematica bash -c " \
-      set -a -e -x
-      source /etc/sysconfig/archivematica-storage-service
-      cd /usr/lib/archivematica/storage-service
-      /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
+          set -a -e -x
+          source /etc/sysconfig/archivematica-dashboard
+          cd /usr/share/archivematica/dashboard
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
       ";
 
       sudo -u archivematica bash -c " \
-      set -a -e -x
-      source /etc/sysconfig/archivematica-dashboard
-      cd /usr/share/archivematica/dashboard
-      /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
+          set -a -e -x
+          source /etc/sysconfig/archivematica-storage-service
+          cd /usr/lib/archivematica/storage-service
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
       ";
 
 4. Restart the Archivematica related services, and continue using the system:
@@ -273,52 +212,70 @@ Upgrade from Archivematica |previous_version| for CentOS/Red Hat
    you should be able to clear the cache with control-shift-R or
    command-shift-F5.
 
-Update Transfer Index
-^^^^^^^^^^^^^^^^^^^^^
+.. _upgrade-search-indices:
 
-This new feature allows you to update a backlog created in an earlier version
-of Archivematica so that it can be used with the Appraisal Tab and the Backlog
-tab. To test this feature, follow the instructions
+Upgrade search indices
+----------------------
 
-.. IMPORTANT::
+.. note::
 
-   These are experimental instructions. Do not use them on a production system
-   unless you have a back-up you can restore from.
+   Ignore this section if you are planning to run Archivematica without a
+   search index. Instead, follow the instructions on :ref:`how
+   to upgrade Archivematica in indexless mode <upgrade-indexless>`.
 
-1. Install devtools
+To complete these instructions you need to know the paths of your transfer
+backlog and AIP storage locations. Respectively, these usually are:
 
-   .. code:: bash
+* :file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`
+* :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
 
-       sudo yum install -y archivematica-devtools
+You can confirm the paths of your installation in the Location tab of the
+Storage Service.
 
-   .. note::
+This process has two steps:
 
-      Archivematica devtools is a set of utilities that was built by developers
-      while working on Archivematica. Devtools includes helper scripts that
-      make it easier to perform certain maintenance tasks. One of those tools
-      is used to rebuild the Transfer index in Elasticsearch, which is used by
-      the different backlog tools such as the new Appraisal Tab. Currently this
-      must be installed using git. These instructions will be updated when a
-      packaged version is available.  See the `devtools repo`_ for more details.
+1. **Rebuild transfer index:**
 
-2. Find the path to the Transfer Backlog location. The default path is
-   '/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog'. You can
-   confirm the path for your installation by searching for it in the Storage Service:
-
-   * Log into the Storage Service and click on the Locations tab.
-   * Type 'backlog' in the searchbox.
-   * Copy the value in the column labelled 'path' (there should be only one row)
-
-3. Using the path you confirmed above, replace the text '/path/to/transfers'
-   with the correct path for your system.
+   Run the following command passing the path of the transfer backlog location
+   you confirmed above:
 
    .. code:: bash
 
-       am rebuild-transfer-backlog /path/to/transfers
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/sysconfig/archivematica-dashboard
+          cd /usr/share/archivematica/dashboard
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
+              rebuild_transfer_backlog \
+                  --transfer-backlog-dir=/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog
+      ";
 
    This may take a while if you have a large backlog. Once it completes, you
    should be able to see your Transfer Backlog in the Appraisal tab and in the
    Backlog tab.
+
+   Depending on your browser settings, you may need to clear your browser cache
+   to make the dashboard pages load properly. For example in Firefox or Chrome
+   yo should be able to clear the cache with ``control-shift-R`` or
+   ``command-shift-F5``.
+
+2. **Rebuild the AIP index:**
+
+   Run the following command passing the path of the AIP storage location you
+   confirmed above:
+
+   .. code:: bash
+
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/sysconfig/archivematica-dashboard
+          cd /usr/share/archivematica/dashboard
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
+              rebuild_elasticsearch_aip_index_from_files \
+                  /var/archivematica/sharedDirectory/www/AIPsStore
+      ";
+
+   This may take a while if you have many AIPs stored.
 
 .. _upgrade-indexless:
 
@@ -391,4 +348,3 @@ tabs do not appear and their functionality is not available.
 :ref:`Back to the top <upgrade>`
 
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-.. _`devtools repo`: https:github.com/artefactual/archivematica-devtools
