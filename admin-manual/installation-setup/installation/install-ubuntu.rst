@@ -23,10 +23,8 @@ place to store packages for multiple operating systems. Packages for both Ubuntu
 Ubuntu 16.04 (Xenial) installation instructions
 ===============================================
 
-1. Add packages.archivematica.org to your list of trusted repositories.
-
-   Run these three commands right now (**and delete this section when the final
-   release packages are made**):
+1. While Archivematica 1.7 is in development, please use these commands to
+   install the development repositories:
 
    .. code:: bash
 
@@ -36,7 +34,8 @@ Ubuntu 16.04 (Xenial) installation instructions
       sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/apt/release-1.7-xenial/ ./" >> /etc/apt/sources.list'
       sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
-   Run these three commands when the final release packages are made:
+   If the release has been completed, you should use these commands to install
+   the final repositories:
 
    .. code:: bash
 
