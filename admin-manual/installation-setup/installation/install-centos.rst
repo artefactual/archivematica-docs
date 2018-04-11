@@ -91,7 +91,7 @@ Installation instructions
       name=archivematica-extras
       baseurl=https://packages.archivematica.org/1.7.x/centos-extras
       gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.7.x/devel.key
+      gpgkey=https://packages.archivematica.org/1.7.x/key.asc
       enabled=1
       EOF'
 
