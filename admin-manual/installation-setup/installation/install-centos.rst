@@ -341,11 +341,19 @@ the configuration of your new server.
    firewall rules and allow access only to ports 81 and 8001 for Archivematica
    usage.
 
-2. Create a new administrative user in the Storage Service. The Storage Service
-   has its own set of users. Navigate to Administrators > Users and add at
-   least one administrative user. We also recommend modifying the test user and
-   changing the default password. After you have created an administrative user,
-   copy the user's API key to your clipboard.
+2. The Storage Service has its own set of users. Navigate to
+   **Administration > Users** and add at least one administrative user. After
+   you have created this user an API key will be generated that will connect
+   the Archivematica pipeline to the Storage Service API. Click edit to see the
+   new user's details. The API key will be found at the bottom of the page.
+   Copy this to your clipboard as it will be used later on in the
+   post-installation configuration.
+
+   .. note::
+      It is recommended that you also modify the test user and change the
+      default password. This will also result in a new API key for the test
+      user but that does not need to be copied to the clipboard in this
+      instance.
 
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine you have been
