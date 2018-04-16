@@ -107,9 +107,9 @@ the configuration of your new server.
    ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or
    ``http://127.0.0.1:8000`` if this is a local development setup).
 
-   If you are using a public IP address, you will need to configure your
-   firewall rules and allow access only to ports 80 and 8000 for Archivematica
-   usage.
+   If you are using an IP address or fully-qualified domain name instead of
+   localhost, you will need to configure your firewall rules and allow access
+   only to ports 80 and 8000 for Archivematica usage.
 
 2. The Storage Service has its own set of users. Navigate to
    **Administration > Users** and add at least one administrative user. After
@@ -141,11 +141,12 @@ the configuration of your new server.
      the same machine, then you should supply ``http://127.0.0.1:8000`` as the
      Storage Service URL at this screen.
    - If the Storage Service and the Archivematica dashboard are installed on
-     different nodes (servers), then you must use the public IP of your Storage
-     Service instance, e.g., ``http://<MY-IP-ADDR>:8000`` *and* you must ensure
-     that any firewall rules (i.e., iptables, ufw, AWS security groups, etc.)
-     are configured to allow requests from your dashboard IP to your Storage
-     Service IP on the appropriate port.
+     different nodes (servers), then you should use the IP address or
+     fully-qualified domain name of your Storage Service instance,
+     e.g., ``http://<MY-IP-ADDR>:8000`` *and* you must ensure that any firewall
+     rules (i.e., iptables, ufw, AWS security groups, etc.) are configured to
+     allow requests from your dashboard IP to your Storage Service IP on the
+     appropriate port.
 
 :ref:`Back to the top <install-ansible>`
 
