@@ -390,7 +390,7 @@ the configuration of your new server.
 
    If you are using an IP address or fully-qualified domain name instead of
    localhost, you will need to configure your firewall rules and allow access
-   only to ports 81 and 8001 for Archivematica usage.
+   only to ports 80 and 8000 for Archivematica usage.
 
 2. The Storage Service has its own set of users. Navigate to
    **Administration > Users** and add at least one administrative user. After
