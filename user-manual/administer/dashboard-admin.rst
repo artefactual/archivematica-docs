@@ -706,7 +706,7 @@ dashboard have been set.
 
 .. NOTE::
 
-   The *Use statement* field is required. To populate this fields, you **must**
+   The *Use statement* field is optional. To populate this fields, you **must**
    refer to ArchivesSpace's Controlled Value Lists.
 
    The Use statement field in Archivematica is mapped to the Use Statement list in
