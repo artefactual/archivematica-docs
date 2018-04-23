@@ -377,5 +377,44 @@ known issues with Internet Explorer 11 which result in an inability to start
 transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_). Minimal, but successful,
 testing has been done with Microsoft Edge.
 
+.. _postfix:
+
+Postfix
+_______
+
+The standard mail server setup for Archivematica installs a Postfix mail
+service on the same server where the pipeline runs. This Postfix server is
+configured as "Internet Site": a local mail server that sends emails directly
+to the Internet.
+
+.. _postfix-ubuntu:
+
+Ubuntu
+^^^^^^
+
+When installing Postfix (which ``archivematica-mcp-client`` depends on), choose
+"Internet Site" when prompted, then use the hostname or the FQDN if this server
+has a DNS name associated with it when prompted for the "System mail name".
+Note that, if for example, the dashboard user's email is "user@foo.com", the
+foo.com mail server must be able to accept mail originating from the hostname
+or the FQDN configured under "System mail name", and this has to be taken care
+of by the admin of the foo.com mail server. For mail domains registered in
+gmail these emails are accepted, although you may need to check the spam
+settings and manually mark it as legitimate mail.
+
+Other more complex configurations of Postfix, for example those that use a
+smarthost, are out of scope for the typical Archivematica setup and it is up to
+the system administrator to correctly configure Postfix to deliver mail.
+
+.. _postfix-centos:
+
+CentOS
+^^^^^^
+
+The Postfix server is configured as "Internet Site" by default on CentOS
+without prompting the user.
+
+Other, more complex, Postfix configurations are up to the sysadmins, as seen in
+the :ref:`Ubuntu section above <postfix-ubuntu>`.
 
 :ref:`Back to the top <maintenance>`

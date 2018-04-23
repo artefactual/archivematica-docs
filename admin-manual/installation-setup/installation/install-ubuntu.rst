@@ -128,6 +128,10 @@ Ubuntu 16.04 (Xenial) installation instructions
       sudo apt-get install -y fits
       sudo apt-get install -y archivematica-mcp-client
 
+   .. note:: The Postfix configuration will prompt the user to select the type
+      of mail configuration. For more information, see :ref:`Postfix Ubuntu
+      <postfix-ubuntu>`.
+
 9. Configure the Archivematica components (optional). There are a number of
    environment variables that Archivematica recognizes which can be used to
    alter how it is configured. For the full list, see the
@@ -299,6 +303,10 @@ Ubuntu 14.04 (Trusty) installation instructions
       sudo apt-get install -y archivematica-dashboard
       sudo apt-get install -y fits
       sudo apt-get install -y archivematica-mcp-client
+
+   .. note:: The Postfix configuration will prompt the user to select the type
+      of mail configuration. For more information, see :ref:`Postfix Ubuntu
+      <postfix-ubuntu>`
 
 9. Configure the Archivematica components (optional). There are a number of
    environment variables that Archivematica recognizes which can be used to
