@@ -355,9 +355,10 @@ the configuration of your new server.
       user but that does not need to be copied to the clipboard in this
       instance.
 
-3. To finish the installation, use your web browser to navigate to the
-   Archivematica dashboard using the IP address of the machine you have been
-   installing on. (Note that the dashboard will be exposed on port 81.)
+3. To finish the installation, use your web browser to navigate to
+   the Archivematica dashboard using the IP address of the machine on which you
+   have been installing, e.g., http://<MY-IP-ADDR>:81 (or http://localhost:81 or
+   http://127.0.0.1:81 if this is a local development setup).
 
 4. At the Welcome page, create an administrative user for the Archivematica
    pipeline by entering the organization name, the organization identifier,
