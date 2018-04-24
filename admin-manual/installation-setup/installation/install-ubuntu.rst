@@ -110,16 +110,15 @@ Ubuntu 16.04 (Xenial) installation instructions
    instructions.
 
    The archivematica-mcp-server package will install MySQL and configure the
-   database used by Archivematica. Depending on the version of MySQL that gets
-   installed the prompts you will see may differ. In all cases, you will be
-   prompted to create a password for the 'root' user. Keep note of the password
-   you create. On Ubuntu 16.04, MySQL 5.7 is installed, and you are prompted to
-   add a password for the ``archivematica`` user. You must use ``demo`` as the
-   password during the install process. The password can be changed after the
-   installation is complete.
+   database used by Archivematica. Depending on the version of MySQL that is
+   installed, the interfaces that you see may differ slightly.
 
-   The FITS package needs to be installed as a prerequisite, due to a
-   circular dependencies problem that arises only on Ubuntu 14.04.
+   When you are prompted to create a password for the archivematica-mcp-server,
+   you must use ``demo`` as the password during the install process. The
+   password can be changed after the installation is complete.
+
+   FITS is installed as a prerequisite due to a circular dependencies problem
+   that arises only on Ubuntu 14.04.
 
    .. code:: bash
 
