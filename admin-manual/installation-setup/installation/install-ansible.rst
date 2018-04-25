@@ -128,7 +128,7 @@ the configuration of your new server.
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine on which you have
    been installing, e.g., ``http://<MY-IP-ADDR>:80`` (or ``http://localhost:80``
-   or ``http://127.0.0.1:81`` if this is a local development setup).
+   or ``http://127.0.0.1:80`` if this is a local development setup).
 
 4. At the Welcome page, create an administrative user for the Archivematica
    pipeline by entering the organization name, the organization identifier,
