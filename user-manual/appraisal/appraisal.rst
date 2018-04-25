@@ -216,7 +216,9 @@ by the parallel lines icon.
 
 .. note::
 
-   Digital objects created and linked to resources in ArchivesSpace will not appear in the ArchivesSpace panel. However, digital objects added to a resource from within the ArchivesSpace panel are displayed.
+   Digital objects created and linked to resources in ArchivesSpace will 
+   not appear in the ArchivesSpace panel. However, digital objects added 
+   to a resource from within the ArchivesSpace panel are displayed.
 
 .. image:: images/archivesspace_search.*
    :align: center
@@ -230,7 +232,8 @@ Options at the top of the ArchivesSpace pane allow for adding to and changing an
 existing ArchivesSpace resource, such as adding new archival objects and digital
 object components.
 
-Selecting a resource or archival object and using “Add new child record” adds a new archival object nested underneath the selected level of description.
+Selecting a resource or archival object and using “Add new child record” adds 
+a new archival object nested underneath the selected level of description.
 Clicking this button brings up a dialog box for entering metadata. At a minimum,
 a new archival object must have a title and a level of description, otherwise
 “save” is not available.
