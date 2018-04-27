@@ -93,15 +93,13 @@ Ubuntu 16.04 (Xenial) installation instructions
 
       sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
-7. Update pip. This is used to install Python dependencies for both the Storage
-   Service and the dashboard. There is a `known issue with pip`_ on Ubuntu 14.04
-   that makes this step necessary. This step is optional on Ubuntu 16.04, but is
-   still a good idea to get the most recent version of pip.
+7. Update ``pip``. This is used to install Python dependencies for both the
+   Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
+   is still a good idea to get the most recent version of ``pip``.
 
    .. code:: bash
 
-      sudo wget https://bootstrap.pypa.io/get-pip.py
-      sudo python get-pip.py
+      curl -Ls https://bootstrap.pypa.io/get-pip | sudo python -
 
 8. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -266,15 +264,17 @@ Ubuntu 14.04 (Trusty) installation instructions
 
       sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
-7. Update pip. This is used to install Python dependencies for both the Storage
-   Service and the dashboard. There is a `known issue with pip`_ on Ubuntu 14.04
-   that makes this step necessary. This step is optional on Ubuntu 16.04, but is
-   still a good idea to get the most recent version of pip.
+7. Update ``pip``. This is used to install Python dependencies for both the
+   Storage Service and the Dashboard. There is a `known issue with pip`_ on
+   Ubuntu 14.04 that makes this step necessary.
 
    .. code:: bash
 
-      sudo wget https://bootstrap.pypa.io/get-pip.py
-      sudo python get-pip.py
+      curl -Ls https://bootstrap.pypa.io/get-pip | sudo python - "pip==9.0.3"
+
+   Notice that we are using ``pip 9.0.3``, this is important - see
+   `issue #1065`_ for more details.
+
 
 8. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard package. While
@@ -431,6 +431,7 @@ the configuration of your new server.
 
 :ref:`Back to the top <install-pkg-ubuntu>`
 
+.. _`issue #1065`: https://github.com/artefactual/archivematica/issues/1065
 .. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
