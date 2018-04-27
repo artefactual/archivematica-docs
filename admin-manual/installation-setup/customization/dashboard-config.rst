@@ -574,10 +574,15 @@ command-line, issue the following commands:
 
 .. code:: bash
 
-   cd /usr/share/archivematica/dashboard
-   export PATH=$PATH:/usr/share/archivematica/dashboard
-   export DJANGO_SETTINGS_MODULE=settings.common
-   /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       (
+         source /etc/default/archivematica-dashboard ||
+         source /etc/sysconfig/archivematica-dashboard
+       ) || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
+   ";
 
 CLI password resetting
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -587,10 +592,15 @@ user, you can change it via the command-line:
 
 .. code:: bash
 
-   cd /usr/share/archivematica/dashboard
-   export PATH=$PATH:/usr/share/archivematica/dashboard
-   export DJANGO_SETTINGS_MODULE=settings.common
-   /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       (
+         source /etc/default/archivematica-dashboard ||
+         source /etc/sysconfig/archivematica-dashboard
+       ) || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
+   ";
 
 Security
 ^^^^^^^^
