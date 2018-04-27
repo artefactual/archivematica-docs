@@ -270,9 +270,54 @@ Installation instructions
 
      .. code:: bash
 
-         sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-dashboard'
-         sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-server'
-         sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
+        sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-dashboard'
+        sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-server'
+        sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
+
+.. _centos-checkout-clamav:
+
+   * Check out ClamAV signatures (optional):
+
+     To run the clamav-daemon service, it needs the signature files created by
+     clamav-freshclam to start. The first time clamav-freshclam is started it
+     can sometimes take longer than 1 minute.  Please, make sure that the
+     following files have been downloaded at ``/var/lib/clamav`` directory
+     before starting the ClamAV daemon:
+
+     - :file:`bytecode.cvd`
+     - :file:`daily.cld` or :file:`daily.cvd`
+     - :file:`main.cvd`
+
+     These files can be downloaded from the `artefactual-labs/clamav-files
+     <https://github.com/artefactual-labs/clamav-files>`_ repository, running:
+
+     .. code:: bash
+
+        sudo yum install -y wget
+        sudo -u root bash -c " \
+        wget ‑nv ‑nc ‑P /var/lib/clamav \
+            https://github.com/artefactual-labs/clamav-files/releases/download/20180428/main.cvd \
+            https://github.com/artefactual-labs/clamav-files/releases/download/20180428/daily.cvd \
+            https://github.com/artefactual-labs/clamav-files/releases/download/20180428/bytecode.cvd 
+        chown clamupdate:clamupdate /var/lib/clamav/*cvd
+        ";
+
+   * Enable and start ClamAV daemon:
+
+     .. code:: bash
+
+        sudo -u root systemctl enable clamd@scan
+        sudo -u root systemctl start clamd@scan
+
+     To check that the daemon is running:
+
+     .. code:: bash
+
+        sudo systemctl is-active clamav-daemon
+
+     When the service is up, the output is: ``active``
+
+     If the daemon has not started, please check the :ref:`above <centos-checkout-clamav>` section.
 
    * After that, we can enable and start/restart services
 
@@ -282,8 +327,6 @@ Installation instructions
         sudo -u root systemctl start archivematica-mcp-client
         sudo -u root systemctl enable fits-nailgun
         sudo -u root systemctl start fits-nailgun
-        sudo -u root systemctl enable clamd@scan
-        sudo -u root systemctl start clamd@scan
         sudo -u root systemctl restart archivematica-dashboard
         sudo -u root systemctl restart archivematica-mcp-server
 

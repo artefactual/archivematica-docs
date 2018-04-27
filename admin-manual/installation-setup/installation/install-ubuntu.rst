@@ -157,12 +157,56 @@ Ubuntu 16.04 (Xenial) installation instructions
        sudo service elasticsearch restart
        sudo update-rc.d elasticsearch defaults 95 10
 
-12. Start the remaining services
+.. _xenial-checkout-clamav:
+
+12. Check out ClamAV signatures (optional). To run the clamav-daemon service, it
+    needs the signature files created by ``clamav-freshclam`` to start. The first
+    time ``clamav-freshclam`` is started it can sometimes take longer than 1
+    minute.  Please, make sure that the following files have been downloaded at
+    ``/var/lib/clamav`` directory before starting the ClamAV daemon:
+
+    - :file:`bytecode.cvd`
+    - :file:`daily.cld` or :file:`daily.cvd`
+    - :file:`main.cvd`
+
+    These files can be downloaded from the `artefactual-labs/clamav-files
+    <https://github.com/artefactual-labs/clamav-files>`_ repository, running:
+
+    .. code:: bash
+
+       sudo -u root bash -c " \
+       wget ‑nv ‑nc ‑P /var/lib/clamav \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/main.cvd \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/daily.cvd \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/bytecode.cvd 
+       chown clamav:clamav /var/lib/clamav/*cvd
+       ";
+
+13. Start ClamAV daemon.
 
     .. code:: bash
 
        sudo service clamav-freshclam restart
        sudo service clamav-daemon start
+
+    To check that the daemon is running:
+
+    .. code:: bash
+
+       sudo service clamav-daemon status
+
+    When the service is up, the output is: 
+
+    .. code:: bash
+
+       * clamd is running
+
+    If the daemon has not started, please check the :ref:`above <xenial-checkout-clamav>` section.
+
+14. Start the remaining services
+
+    .. code:: bash
+
        sudo service gearman-job-server restart
        sudo service archivematica-mcp-server start
        sudo service archivematica-mcp-client start
@@ -178,7 +222,7 @@ Ubuntu 16.04 (Xenial) installation instructions
 
        sudo service gearman-job-server restart
 
-13. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
+15. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _trusty-instructions:
 
@@ -324,12 +368,56 @@ Ubuntu 14.04 (Trusty) installation instructions
        sudo service elasticsearch restart
        sudo update-rc.d elasticsearch defaults 95 10
 
-12. Start the remaining services
+.. _trusty-checkout-clamav:
+
+12. Check out ClamAV signatures (optional). To run the clamav-daemon service, it
+    needs the signature files created by ``clamav-freshclam`` to start. The first
+    time ``clamav-freshclam`` is started it can sometimes take longer than 1
+    minute.  Please, make sure that the following files have been downloaded at
+    ``/var/lib/clamav`` directory before starting the ClamAV daemon:
+
+    - :file:`bytecode.cvd`
+    - :file:`daily.cld` or :file:`daily.cvd`
+    - :file:`main.cvd`
+
+    These files can be downloaded from the `artefactual-labs/clamav-files
+    <https://github.com/artefactual-labs/clamav-files>`_ repository, running:
+
+    .. code:: bash
+
+       sudo -u root bash -c " \
+       wget ‑nv ‑nc ‑P /var/lib/clamav \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/main.cvd \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/daily.cvd \
+           https://github.com/artefactual-labs/clamav-files/releases/download/20180428/bytecode.cvd 
+       chown clamav:clamav /var/lib/clamav/*cvd
+       ";
+
+13. Start ClamAV daemon.
 
     .. code:: bash
 
        sudo service clamav-freshclam restart
        sudo service clamav-daemon start
+
+    To check that the daemon is running:
+
+    .. code:: bash
+
+       sudo systemctl is-active clamav-daemon
+
+    When the service is up, the output is:
+
+    .. code:: bash
+
+       active
+
+    If the daemon has not started, please check the :ref:`above <trusty-checkout-clamav>` section.
+
+14. Start the remaining services
+
+    .. code:: bash
+
        sudo service gearman-job-server restart
        sudo service archivematica-mcp-server start
        sudo service archivematica-mcp-client start
@@ -345,7 +433,7 @@ Ubuntu 14.04 (Trusty) installation instructions
 
        sudo service gearman-job-server restart
 
-13. Configure your firewall (if applicable)
+15. Configure your firewall (if applicable)
 
     On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated
     Firewall). To see the firewall status, enter:
@@ -362,7 +450,7 @@ Ubuntu 14.04 (Trusty) installation instructions
        sudo ufw allow 80
        sudo ufw allow 8000
 
-14. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
+16. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _ubuntu-post-install-config:
 
