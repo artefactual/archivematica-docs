@@ -99,7 +99,7 @@ Ubuntu 16.04 (Xenial) installation instructions
 
    .. code:: bash
 
-      curl -Ls https://bootstrap.pypa.io/get-pip | sudo python -
+      curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python -
 
 8. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -263,7 +263,7 @@ Ubuntu 14.04 (Trusty) installation instructions
 
    .. code:: bash
 
-      curl -Ls https://bootstrap.pypa.io/get-pip | sudo python - "pip==9.0.3"
+      curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python - "pip==9.0.3"
 
    Notice that we are using ``pip 9.0.3``, this is important - see
    `issue #1065`_ for more details.
