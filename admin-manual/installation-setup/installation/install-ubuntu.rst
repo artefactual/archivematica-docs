@@ -336,7 +336,6 @@ Ubuntu 14.04 (Trusty) installation instructions
        sudo service archivematica-storage-service start
        sudo service archivematica-dashboard start
        sudo service nginx restart
-       sudo systemctl enable fits
        sudo service fits start
 
     If you have trouble with the gearman command try restarting it:
