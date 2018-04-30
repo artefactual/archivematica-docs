@@ -186,20 +186,18 @@ Upgrade on CentOS/Red Hat
 
       sudo -u archivematica bash -c " \
           set -a -e -x
-          (
-            source /etc/default/archivematica-dashboard ||
-            source /etc/sysconfig/archivematica-dashboard
-          ) || (echo 'Environment file not found'; exit 1)
+          source /etc/default/archivematica-dashboard || \
+              source /etc/sysconfig/archivematica-dashboard \
+                  || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
           /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
       ";
 
       sudo -u archivematica bash -c " \
           set -a -e -x
-          (
-            source /etc/default/archivematica-storage-service ||
-            source /etc/sysconfig/archivematica-storage-service
-          ) || (echo 'Environment file not found'; exit 1)
+          source /etc/default/archivematica-storage-service || \
+              source /etc/sysconfig/archivematica-storage-service \
+                  || (echo 'Environment file not found'; exit 1)
           cd /usr/lib/archivematica/storage-service
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
       ";
@@ -249,10 +247,9 @@ This process has two steps:
 
       sudo -u archivematica bash -c " \
           set -a -e -x
-          (
-            source /etc/default/archivematica-dashboard ||
-            source /etc/sysconfig/archivematica-dashboard
-          ) || (echo 'Environment file not found'; exit 1)
+          source /etc/default/archivematica-dashboard || \
+              source /etc/sysconfig/archivematica-dashboard \
+                  || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
           /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
               rebuild_transfer_backlog \
@@ -277,10 +274,9 @@ This process has two steps:
 
       sudo -u archivematica bash -c " \
           set -a -e -x
-          (
-            source /etc/default/archivematica-dashboard ||
-            source /etc/sysconfig/archivematica-dashboard
-          ) || (echo 'Environment file not found'; exit 1)
+          source /etc/default/archivematica-dashboard || \
+              source /etc/sysconfig/archivematica-dashboard \
+                  || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
           /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
               rebuild_elasticsearch_aip_index_from_files \

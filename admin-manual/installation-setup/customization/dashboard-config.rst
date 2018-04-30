@@ -576,10 +576,9 @@ command-line, issue the following commands:
 
    sudo -u archivematica bash -c " \
        set -a -e -x
-       (
-         source /etc/default/archivematica-dashboard ||
-         source /etc/sysconfig/archivematica-dashboard
-       ) || (echo 'Environment file not found'; exit 1)
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
    ";
@@ -594,10 +593,9 @@ user, you can change it via the command-line:
 
    sudo -u archivematica bash -c " \
        set -a -e -x
-       (
-         source /etc/default/archivematica-dashboard ||
-         source /etc/sysconfig/archivematica-dashboard
-       ) || (echo 'Environment file not found'; exit 1)
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
    ";
