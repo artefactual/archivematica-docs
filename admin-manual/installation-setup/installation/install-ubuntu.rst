@@ -8,6 +8,9 @@ Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
 14.04 and 16.04 are available.
 
+.. note:: Manual installation using packages on Ubuntu is not officially
+   supported. Please see :ref:`Instructions for new installation <instructions>`.
+
 .. note:: Ubuntu 14.04 is currently in maintenance updates only mode and will
    cease to be officially supported in April 2019. We recommend upgrading to
    Ubuntu 16.04.

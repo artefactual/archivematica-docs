@@ -4,12 +4,8 @@
 Automated installation using Ansible
 ====================================
 
-Installing from source has been tested using Ansible scripts. Ansible
-installations have been tested for new installations but are not fully tested
-for upgrades.
-
-These instructions are designed to create a test environment on your local
-machine. A virtual machine running Ubuntu 14.04 will be created.
+Installing from source using Ansible is the preferred method for new
+installations on Ubuntu.
 
 It is assumed here that your host operating system is Ubuntu. This can be
 modified for a different Unix based operating system, such as Mac OS X or
@@ -55,10 +51,21 @@ Instructions
 
 3. Download the Ansible roles:
 
+   Ubuntu 14.04 (Trusty):
+
    .. code:: bash
 
       cd deploy-pub/playbooks/archivematica
       ansible-galaxy install -f -p roles/ -r requirements.yml
+
+
+   Ubuntu 16.04 (Xenial):
+
+    .. code:: bash
+
+       cd deploy-pub/playbooks/archivematica-xenial
+       ansible-galaxy install -f -p roles/ -r requirements.yml
+
 
 4. Create the virtual machine and provision it:
 

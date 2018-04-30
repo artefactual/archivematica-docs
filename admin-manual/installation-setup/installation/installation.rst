@@ -160,9 +160,11 @@ CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
 At this time, installation instructions are provided for officially tested and
 supported installation environments:
 
-* :ref:`Automated install using Ansible <install-ansible>`
-* :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
+* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
+
+:ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
+is documented but not officially supported.
 
 Installing Archivematica using :ref:`Docker <docker>` is not officially
 supported for production deployments. However, it is the preferred development
