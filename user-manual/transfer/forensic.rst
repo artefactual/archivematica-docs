@@ -82,7 +82,7 @@ upload. This metadata is included as another dmdsec in the transfer METS.xml.
 
 4. Continue though regular Transfer workflow. We recommend selecting FIDO for format identification as some images from Kryoflux and raw disk images can have generic extensions. You can preconfigure Archivematica to choose FIDO for identification in the Administration tab of the dashboard when you are signed in as a administrative user.
 
-5. At the Extract packages micro-service, you can choose YES to extract content objects from the image. You can choose NO if you would like to continue processing the image itself without extract its content for automated analysis. Format policy rules for extraction are set using the Format Policy Registry in the Preservation Planning tab of the dashboard.
+5. At the Extract packages micro-service, you can choose YES to extract content objects from the image. Only digital images stored in the RAW format can use the Extract micro-service. You can choose NO if you would like to continue processing the image itself without extract its content for automated analysis. Format policy rules for extraction are set using the Format Policy Registry in the Preservation Planning tab of the dashboard.
 
     * If you choose YES, Archivematica will also ask you if you'd like to delete
       the package itself once extraction of its contents is complete. Here, you
@@ -93,7 +93,7 @@ occur:
 
 1. The Characterize and extract metadata micro-service runs a tool called fiwalk on digital forensic images.
 
-2. The Examine contents micro-service allows you to choose whether you would like to run a tool called bulk extractor, which identifies and outputs text reports about PII information contained in the set of objects. These reports can be analyzed later using other tools such as BitCurator. In Archivematica, the reports are contained in the logs folder of the transfer, and later the logs folder for each SIP that all or part of the transfer is contained within.
+2. The Examine contents micro-service allows you to choose whether you would like to run a tool called bulk extractor, which identifies and outputs text reports about PII information contained in the set of objects. These reports can be analyzed later using other tools such as BitCurator. In Archivematica, the reports are contained in the logs folder of the transfer, and later the logs folder for each SIP that all or part of the transfer is contained within. 
 
 .. note::
 
