@@ -4,6 +4,13 @@
 Preservation planning
 =====================
 
+.. IMPORTANT::
+
+  As of Archivematica 1.7, the FPR server was turned off. For more information
+  about this decision, see the `Archivematica 1.7 release notes`_. Note that the
+  **Update** button will still appear on the Preservation Planning tab in
+  versions of Archivematica prior to 1.7, but it will not work.
+
 The Preservation Planning tab displays the local
 :ref:`Format Policy Registry (FPR) <fpr>`. Administrative users can add or edit
 format policies using forms on this page. Detailed instructions are below:
@@ -424,7 +431,7 @@ any useful extra information to stderr if identification succeeds.
 
 Here's a very simple Python script that identifies files by their file extension:
 
-.. code:: bash
+.. code::
 
    import os.path, sys
    (_, extension) = os.path.splitext(sys.argv[1])
@@ -437,7 +444,7 @@ Here's a more complex Python example, which uses
 `Exiftool's <http://www.sno.phy.queensu.ca/~phil/exiftool/>`_ XML output to
 return the MIME type of a file:
 
-.. code:: bash
+.. code::
 
    #!/usr/bin/env python
 
@@ -725,6 +732,6 @@ images using the `Tesseract <https://code.google.com/p/tesseract-ocr/>`_ softwar
 
    tesseract %fileFullName% "$ocrfiles/%fileName%"
 
-
-
 :ref:`Back to the top <preservation-planning>`
+
+.. _`Archivematica 1.7 release notes`: https://wiki.archivematica.org/Archivematica_1.7_and_Storage_Service_0.11_release_notes#Archivematica_decoupled_from_the_FPR_server
