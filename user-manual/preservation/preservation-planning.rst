@@ -4,6 +4,13 @@
 Preservation planning
 =====================
 
+.. IMPORTANT::
+
+  As of Archivematica 1.7, the FPR server was turned off. For more information
+  about this decision, see the `Archivematica 1.7 release notes`_. Note that the
+  **Update** button will still appear on the Preservation Planning tab in
+  versions of Archivematica prior to 1.7, but it will not work.
+
 Archivematica's primary preservation strategy is to normalize files to
 preservation and access formats upon ingest. The preservation copies are added
 to the AIP and the access copies are used to generate a DIP for upload to the
@@ -121,17 +128,6 @@ while guaranteeing a completely self-contained preservation system. This is
 something that Artefactual is not intending to develop, but anyone is free to
 extend the software as they see fit, or to hire us or other developers to do
 so.
-
-.. _fpr-update:
-
-Updating format policies
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-FPR rules can be updated at any time from within the Preservation Planning tab
-in Archivematica. Selecting the "update" button will initiate an FPR pull
-which will bring in any new or altered rules since the last time an update was
-performed.
-
 
 Types of FPR entries
 ^^^^^^^^^^^^^^^^^^^^
@@ -486,3 +482,4 @@ standard for auditing Trusted Digital Repositories
 
 :ref:`Back to the top <preservation-planning>`
 
+.. _`Archivematica 1.7 release notes`: https://wiki.archivematica.org/Archivematica_1.7_and_Storage_Service_0.11_release_notes#Archivematica_decoupled_from_the_FPR_server
