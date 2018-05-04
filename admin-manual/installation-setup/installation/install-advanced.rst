@@ -17,7 +17,7 @@ Install for development
 
 The recommended way to install Archivematica for development is with Docker.
 For instructions on how to deploy Archivematica in Docker containers, see
-the :ref:`Archivematica Docker repo <docker>`.
+the `Archivematica Docker repo`_.
 
 
 It's also possible to deploy Archivematica using Ansible and Vagrant. For
@@ -81,4 +81,4 @@ In order to obtain valid SSL certificates trusted by any browser, you can use `L
 :ref:`Back to the top <install-advanced>`
 
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
-.. _`docker`: https://github.com/artefactual-labs/am/tree/master/compose
+.. _`Archivematica Docker repo`: https://github.com/artefactual-labs/am/tree/master/compose

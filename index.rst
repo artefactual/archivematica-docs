@@ -210,7 +210,6 @@ transfer and storage locations, DIP upload configurations, and to add and remove
 users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* :ref:`Update Format Policy Registry (FPR) <fpr-update>`
 * :ref:`Storage service users <storageservice:users>`
 
 

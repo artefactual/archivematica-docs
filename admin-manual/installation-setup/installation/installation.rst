@@ -109,6 +109,8 @@ Hardware
 Archivematica is capable of running on almost any hardware supported by Linux;
 however, processing large collections will require better hardware.
 
+.. _requirements-small:
+
 Minimum hardware requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -120,6 +122,8 @@ hardware requirements:
 * Memory: 2GB+
 * Disk space (processing): 7GB plus two to three times the disk space required for the
   collection being processed (e.g., 3GB to process a 1GB transfer)
+
+.. _requirements-production:
 
 Recommended minimum production requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -166,7 +170,7 @@ supported installation environments:
 :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
 is documented but not officially supported.
 
-Installing Archivematica using :ref:`Docker <docker>` is not officially
+Installing Archivematica using :ref:`Docker <development>` is not officially
 supported for production deployments. However, it is the preferred development
 environment for those who work on Archivematica's code.
 
