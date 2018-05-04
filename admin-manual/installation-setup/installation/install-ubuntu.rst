@@ -156,9 +156,9 @@ Ubuntu 16.04 (Xenial) installation instructions
        sudo service clamav-daemon start
        sudo service gearman-job-server restart
        sudo service archivematica-mcp-server start
-       sudo service archivematica-mcp-client start
+       sudo service archivematica-mcp-client restart
        sudo service archivematica-storage-service start
-       sudo service archivematica-dashboard start
+       sudo service archivematica-dashboard restart
        sudo service nginx restart
        sudo systemctl enable fits
        sudo service fits start
