@@ -10,6 +10,7 @@ Customization and automation
 * :ref:`Preservation planning configuration <config-using-fpr>`
 * :ref:`Antivirus configuration <antivirus-config>`
 * :ref:`Resources for development configuration <development-config>`
+* :ref:`Task output capturing configuration <task-config>`
 
 .. _config-using-dashboard:
 
@@ -60,5 +61,24 @@ wiki:
 For other development resources, please see the
 `Development <https://www.archivematica.org/wiki/Development>`_ section of our
 wiki.
+
+.. _task-config:
+
+Task output capturing configuration
+-----------------------------------
+
+When Archivematica's MCP client (a Gearman worker) runs a client script in
+order to perform a preservation task, e.g., normalizing a single file, that
+client script may write data to standard streams, i.e., standard output
+(stdout) or standard error (stderr). By default, the worker serializes those
+outputs and sends them back to the MCP server (the task manager), at which
+point they are stored in the database (the ``Tasks`` table). However, in some
+cases these outputs may be quite large and the job of serializing and moving
+them around can have a noticeable performance impact. For this reason,
+Archivematica allows users to configure their MCP clients in order to control
+whether or not these output streams are captured. See
+:ref:`Task output capturing configuration <task-output-capturing-admin>` for
+more details.
+
 
 :ref:`Back to the top <customization>`

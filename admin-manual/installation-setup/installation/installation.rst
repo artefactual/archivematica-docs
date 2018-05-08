@@ -192,6 +192,8 @@ individual user. We have documented some common advanced installation setups.
 * :ref:`Installing for development <development>`
 * :ref:`Installing across multiple machines <multiple-machines>`
 * :ref:`Configure Archivematica with SSL <SSL-support>`
+* :ref:`Configure Archivematica with task output capturing disabled <task-output-capturing-admin>`
+
 
 :ref:`Back to the top <installation>`
 

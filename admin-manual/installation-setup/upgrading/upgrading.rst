@@ -11,6 +11,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
 * :ref:`Upgrade search indices <upgrade-search-indices>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
+* :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
 
 .. note::
 
@@ -352,6 +353,22 @@ tabs do not appear and their functionality is not available.
 
       sudo -u root systemctl stop elasticsearch
       sudo -u root systemctl disable elasticsearch
+
+.. _upgrade-no-output-capture:
+
+Upgrade with output capturing disabled
+--------------------------------------
+
+As of Archivematica 1.7.1, output capturing can be disabled at upgrade or at
+any other time. This means the stdout and stderr from preservation tasks are
+not captured, which can result in a performane improvement. See the
+`Task output capturing configuration <task-output-capturing-admin>` page for
+more details. In order to disable output capturing, set the
+``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` environment
+variable to ``false`` and restart the MCP Client process(es). Consult the
+installation instructions for your deployment method for more details on how to
+set environment variables and restart Archivematica processes.
+
 
 :ref:`Back to the top <upgrade>`
 
