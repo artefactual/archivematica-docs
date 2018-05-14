@@ -149,6 +149,12 @@ going to be necessary to continue the upgrade:
       sudo service clamav-daemon restart
       sudo service nginx restart
 
+   .. note:: Depending on which service manager (init system) you are using
+      (e.g., `systemd <https://freedesktop.org/wiki/Software/systemd/>`_,
+      `Upstart <http://upstart.ubuntu.com/>`_, or init), the above ``start``
+      and ``restart`` commands may not work. Please refer to the documentation
+      for your operating system's service manager for more details.
+
    .. note:: Depending on how your Ubuntu system is set up, you may have trouble
       restarting gearman with the command in the block above. If that is the
       case, try this command instead:
