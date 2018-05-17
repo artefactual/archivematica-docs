@@ -20,33 +20,23 @@ Installation instructions
 
    Update your system
 
-   .. code:: bash
-
-      sudo yum update
+   .. literalinclude:: scripts/10_install_centos-yum_upgrade.sh
+      :language: bash
 
    If your environment uses SELinux, at a minimum you will need to run the
    following commands. Additional configuration may be required for your local
    setup.
 
-   .. code:: bash
-
-      # Allow Nginx to use ports 81 and 8001
-      sudo semanage port -m -t http_port_t -p tcp 81
-      sudo semanage port -a -t http_port_t -p tcp 8001
-      # Allow Nginx to connect the MySQL server and Gunicorn backends
-      sudo setsebool -P httpd_can_network_connect_db=1
-      sudo setsebool -P httpd_can_network_connect=1
-      # Allow Nginx to change system limits
-      sudo setsebool -P httpd_setrlimit 1
+    .. literalinclude:: scripts/20_install_centos-selinux.sh
+      :language: bash
 
 2. Some extra repositories need to be installed in order to fulfill the
    installation procedure.
 
    * Extra packages for enterprise Linux:
 
-   .. code:: bash
-
-      sudo yum install -y epel-release
+    .. literalinclude:: scripts/30_install_centos-epel_repo.sh
+      :language: bash
 
    * Elasticsearch (optional):
 
@@ -54,41 +44,15 @@ Installation instructions
       Skip this step if you are planning to run Archivematica in
       indexless mode (without Elasticsearch).
 
-   .. code:: bash
-
-      sudo -u root rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-      [elasticsearch-1.7]
-      name=Elasticsearch repository for 1.7 packages
-      baseurl=https://packages.elastic.co/elasticsearch/1.7/centos
-      gpgcheck=1
-      gpgkey=https://packages.elastic.co/GPG-KEY-elasticsearch
-      enabled=1
-      EOF'
+    .. literalinclude:: scripts/40_install_centos-elasticsearch_repo.sh
+      :language: bash
 
    * Archivematica:
 
    Use these commands to install the repositories:
 
-   .. code:: bash
-
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
-      [archivematica]
-      name=archivematica
-      baseurl=https://packages.archivematica.org/1.7.x/centos
-      gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.7.x/key.asc
-      enabled=1
-      EOF'
-
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
-      [archivematica-extras]
-      name=archivematica-extras
-      baseurl=https://packages.archivematica.org/1.7.x/centos-extras
-      gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.7.x/key.asc
-      enabled=1
-      EOF'
+.. literalinclude:: scripts/50_install_centos-archivematica_repo.sh
+      :language: bash      
 
 3. Common services like Elasticsearch, MariaDB and Gearmand should be installed
    and enabled before the Archivematica install.
