@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/security/security.rst:5
+msgid "Security"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:9
+msgid ""
+"Once you've set up Archivematica it's a good practice, for the sake of "
+"security, to change the default passwords."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:12
+msgid ""
+"This page outlines various security settings and configurations in "
+"Archivematica."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:18
+msgid "Elasticsearch access control"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:20
+msgid ""
+"The only way to limit access to Elasticsearch, currently, is using your "
+"server's firewall configuration. You'll likely want to configure your "
+"server's firewall to limit access to Elasticsearch's TCP/IP port (9200). It "
+"is recommended to only allow access by 127.0.0.1 (the server itself) and the"
+" IPs of any other servers or workstations that should be able to access it."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:28
+msgid ""
+"If you are using AtoM as your access system, remember to perform this task "
+"on your AtoM Elasticsearch index. Your AtoM site is more likely to be a "
+"public- facing IP and therefore this is an important step."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:32
+msgid ""
+"To further enhance your Elasticsearch index's security make the following "
+"changes in your Elasticsearch ``/etc/elasticsearch/elasticsearch.yml`` file:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:40
+msgid "Then, ``/etc/init.d/elasticsearch restart``."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:45
+msgid "MySQL"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:47
+msgid ""
+"You should create a new MySQL user or change the password of the default "
+"``archivematica`` MySQL user. The change the password of the default user, "
+"enter the following into the command-line:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:57
+msgid ""
+"Once you've done this you can change Archivematica's MySQL database access "
+"credentials by editing these two files:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:60
+msgid ""
+"``/etc/archivematica/archivematicaCommon/dbsettings`` (change the ``user`` "
+"and ``password`` settings)"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:63
+msgid ""
+"``/usr/share/archivematica/dashboard/settings/common.py`` (change the "
+"``USER`` and ``PASSWORD`` settings in the ``DATABASES`` section)"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:66
+msgid ""
+"Archivematica does not presently support secured MySQL communication so "
+"MySQL should be run locally or on a secure, isolated network. See "
+":issue:`1645`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:72
+msgid "AtoM"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:74
+msgid ""
+"In addition to changing the MySQL credentials, if you've also installed AtoM"
+" you'll want to set the password for it as well. Note that after changing "
+"your AtoM credentials you should update the credentials on the :ref:`AtoM "
+"DIP upload administration page <admin-dashboard-atom>` as well."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:82
+msgid "Gearman"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:84
+msgid ""
+"Archivematica relies on the German server for queuing work that needs to be "
+"done. Gearman currently doesn't support secured connections so Gearman "
+"should be run locally or on a secure, isolated network. See :issue:`1345`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:91
+msgid "User security"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:93
+msgid ""
+"We added support for two authentication backends in Archivematica 1.7: LDAP "
+"and Shibboleth. Authentication backends provide an extensible system for "
+"when a ``username`` and ``password`` stored with the user model need to be "
+"authenticated against a different service than the default."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:98
+msgid ""
+"This feature relies on the `authentication infrastructure <django-auth-"
+"infra_>`_ provided by the Django web framework. Check out their docs for "
+"more details!"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:103
+msgid ""
+"Please note that this is a new feature as of Archivematica 1.7 that has been"
+" minimally tested outside of the development environment. If you experience "
+"any problems with the feature, please consider creating a `GitHub issue <am-"
+"gh-issues_>`_ or creating a post in the `Archivematica Google Group <am-"
+"google-groups_>`_. The configuration mechanism has some rough edges so it is"
+" recommended for advanced users only."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:111
+msgid "LDAP setup"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:113
+msgid ""
+"`LDAP <ldap_>`_ is a directory service protocol used for, among other "
+"things, authentication and authorization. This feature allows administrators"
+" to deploy the Archivematica Dashboard Django application with LDAP "
+"authentication."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:117
+msgid ""
+"This functionality has not been made available yet in the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:120
+msgid "LDAP backend configuration"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:122
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. You can find more"
+" details about this environment string in the `configuration document <am-"
+"dashboard-config_>`_."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:127
+msgid ""
+"Customize the ``ldap_auth.py`` settings module as needed. Open the file to "
+"find what are the existing environment variable lookups. You can inject the "
+"configuration via the environment string or changing the settings mode "
+"manually."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:132
+#: ../../admin-manual/security/security.rst:152
+msgid "Restart the Archivematica Dashboard."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:136
+msgid "Shibboleth setup"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:138
+msgid ""
+"`Shibboleth <shibboleth_>`_ is a federated identity solution that provides "
+"Single Sign-On authentication and authorization. This feature allows "
+"administrators to deploy both the Archivematica Dashboard and Storage "
+"Service Django applications with Shibboleth authentication."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:144
+msgid "Shibboleth backend configuration in Archivematica Dashboard"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:146
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_SHIBBOLETH_AUTHENTICATION``. You can find more details about this "
+"environment string in the `configuration document <am-dashboard-config_>`_."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:150
+msgid "Customize the ``shibboleth_auth.py`` settings module as needed."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:155
+msgid "Shibboleth backend configuration in Storage Service"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:157
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_SHIBBOLETH_AUTHENTICATION``. Assign a string value ``true`` to enable "
+"it."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:161
+msgid "Customize the ``base.py`` settings module as needed."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:163
+msgid "Restart the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:165
+msgid ":ref:`Back to the top <security>`"
+msgstr ""

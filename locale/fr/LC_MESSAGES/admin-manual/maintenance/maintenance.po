@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../admin-manual/maintenance/maintenance.rst:5
 msgid "Maintenance"
@@ -57,6 +57,7 @@ msgid ":ref:`FAQ <admin-faq>`"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:27
+#: ../../admin-manual/maintenance/maintenance.rst:272
 msgid "Elasticsearch"
 msgstr ""
 
@@ -205,7 +206,7 @@ msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:223
 msgid ""
-"To rebuild the ElasticSearch AIP index enter the following to find the "
+"To rebuild the Elasticsearch AIP index enter the following to find the "
 "location of the rebuilding script:"
 msgstr ""
 
@@ -222,7 +223,7 @@ msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:241
 msgid ""
-"Similarly, to rebuild the ElasticSearch transfer data index enter the "
+"Similarly, to rebuild the Elasticsearch transfer data index enter the "
 "following to find the location of the rebuilding script:"
 msgstr ""
 
@@ -259,10 +260,6 @@ msgstr ""
 msgid "MySQL"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:272
-msgid "ElasticSearch"
-msgstr ""
-
 #: ../../admin-manual/maintenance/maintenance.rst:274
 msgid ""
 "MySQL is used to store short-term processing data. You can back up the "
@@ -271,8 +268,8 @@ msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:281
 msgid ""
-"ElasticSearch is used to store long-term data. Instructions and scripts "
-"for backing up and restoring ElasticSearch are available `here "
+"Elasticsearch is used to store long-term data. Instructions and scripts "
+"for backing up and restoring Elasticsearch are available `here "
 "<http://tech.superhappykittymeow.com/?p=296>`_."
 msgstr ""
 
@@ -280,75 +277,85 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:291
+#: ../../admin-manual/maintenance/maintenance.rst:293
 msgid "How to restart the Archivematica services"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:293
+#: ../../admin-manual/maintenance/maintenance.rst:295
+msgid "**Restart all services**"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:301
+msgid ""
+"Note that the default action is to restart all services. To see other "
+"available parameters, type:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:308
 msgid "**Stopping**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:304
+#: ../../admin-manual/maintenance/maintenance.rst:319
 msgid "**Starting**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:317
+#: ../../admin-manual/maintenance/maintenance.rst:333
 msgid "Error stack trace"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:319
+#: ../../admin-manual/maintenance/maintenance.rst:335
 msgid ""
 "\"I am getting a white error page in the Dashboard. How can I find out "
 "what the error is?\""
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:322
+#: ../../admin-manual/maintenance/maintenance.rst:338
 msgid ""
 "Seeing an full error stack trace for the Dashboard requires knowing how "
 "to edit a configuration file from the command line."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:325
+#: ../../admin-manual/maintenance/maintenance.rst:341
 msgid "SSH to the Archivematica server"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:327
+#: ../../admin-manual/maintenance/maintenance.rst:343
 msgid ""
 "With your preferred text editor, open the dashboard settings file (vim "
 "shown in example; Note that you must use sudo to edit this file):"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:334
+#: ../../admin-manual/maintenance/maintenance.rst:350
 msgid "Change the \"DEBUG\" flag from \"False\" to \"True\""
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:340
-msgid "Save the file"
+#: ../../admin-manual/maintenance/maintenance.rst:356
+msgid "Save the fileservices"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:342
+#: ../../admin-manual/maintenance/maintenance.rst:358
 msgid "Restart Apache"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:348
+#: ../../admin-manual/maintenance/maintenance.rst:364
 msgid "Reload the dashboard page reporting the error in your browse"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:350
+#: ../../admin-manual/maintenance/maintenance.rst:366
 msgid "Debug or report error"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:352
+#: ../../admin-manual/maintenance/maintenance.rst:368
 msgid ""
 "Restore DEBUG to False and restart Apache to turn error reporting off "
 "again"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:355
+#: ../../admin-manual/maintenance/maintenance.rst:373
 msgid "Browser compatability"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:357
+#: ../../admin-manual/maintenance/maintenance.rst:375
 msgid ""
 "Archivematica has been tested most extensively with Firefox and Chrome. "
 "There are known issues with Internet Explorer 11 which result in an "
@@ -357,7 +364,34 @@ msgid ""
 "successful, testing has been done with Microsoft Edge."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:363
+#: ../../admin-manual/maintenance/maintenance.rst:381
 msgid ":ref:`Back to the top <maintenance>`"
 msgstr ""
+
+#~ msgid ""
+#~ "To rebuild the ElasticSearch AIP index"
+#~ " enter the following to find the "
+#~ "location of the rebuilding script:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Similarly, to rebuild the ElasticSearch "
+#~ "transfer data index enter the following"
+#~ " to find the location of the "
+#~ "rebuilding script:"
+#~ msgstr ""
+
+#~ msgid "ElasticSearch"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "ElasticSearch is used to store long-"
+#~ "term data. Instructions and scripts for"
+#~ " backing up and restoring ElasticSearch "
+#~ "are available `here "
+#~ "<http://tech.superhappykittymeow.com/?p=296>`_."
+#~ msgstr ""
+
+#~ msgid "Save the file"
+#~ msgstr ""
 

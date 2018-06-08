@@ -4,21 +4,21 @@
 Import metadata
 ===============
 
-You can import metadata by including a directory called ``metadata`` in 
-your transer. The directory can contain any type of metadata that you wish 
+You can import metadata by including a directory called ``metadata`` in
+your transfer. The directory can contain any type of metadata that you wish
 to preserve alongside your digital objects. The Process Metadata Directory
-`Microservice <https://wiki.archivematica.org/Micro-services>`_ will 
-perform a number of preservation actions on objects in this directory. 
+`Microservice <https://wiki.archivematica.org/Micro-services>`_ will
+perform a number of preservation actions on objects in this directory.
 
-Archivematica also supports conventions for importing descriptive metadata 
-and rights metadata that will tranpose the contents of the metadata files 
-into the METs file. Metadata in the METS file is searchable in the
+Archivematica also supports conventions for importing descriptive metadata
+and rights metadata that will tranpose the contents of the metadata files
+into the METS file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
 
 *On this page:*
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
-* :ref:`Importing rights metadata with rights.csv <rights.csv>` 
+* :ref:`Importing rights metadata with rights.csv <rights.csv>`
 
 .. seealso::
 
@@ -29,17 +29,25 @@ into the METs file. Metadata in the METS file is searchable in the
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
-1. Create a transfer folder that contains a folder called ``metadata``. For
-   simple objects, the user places files in the objects directory, with or
-   without intervening subdirectories.
+Archivematica natively supports the Dublin Core Metadata Elements Set, the
+basic 15 Dublin Core metadata elements. Using the metadata.csv method, users
+can include non-Dublin Core metadata; however, Archivematica will not be
+able to pass this metadata to AtoM or ArchivesSpace.
+
+Dublin Core metadata is written to the dmdSec of the METS file with the flag
+MDTYPE="DC". Extended Dublin Core or non-Dublin Core metadata will be transposed
+into a separate dmdSec with the flag MDTYPE="OTHER". A sample of the METS output
+is available below.
+
+1. Create a transfer that contains a directory called ``metadata``. For
+   simple objects, digital objects should also be placed in the top-level
+   directory.
 
 .. figure:: images/MdfolderMDimport-10.*
    :align: center
-   :figwidth: 60%
-   :width: 100%
    :alt: Metadata folder in transfer directory contains metadata.csv file
 
-   Metadata folder in transfer directory contains metadata.csv file
+   Metadata folder in transfer directory containing metadata.csv file.
 
 2. For compound objects, create one or more subdirectories in the
    objects directory, each containing the files that form a compound object.
@@ -51,52 +59,52 @@ Importing descriptive metadata with metadata.csv
 3. Add a csv file to the metadata folder for the transfer called
    ``metadata.csv``.
 
-* The first row of the csv file consists of field names. Field names must not
-  include spaces.
+   * The first row of the csv file consists of field names. Field names must not
+     include spaces.
 
-* Dublin Core field names must contain the "dc" element in the name, eg
-  "dc.title". Note that the Dublin Core is not validated, this is up to the
-  user.
+   * Dublin Core field names must contain the "dc" element in the name, eg
+     "dc.title". Note that the Dublin Core is not validated - this is up to the
+     user.
 
-* Each subsequent row contains the complete set of field values for a single
-  directory or file.
+   * Each subsequent row contains the field values for a single directory or file.
 
-* As of version 1.4, mixed directory and object level metadata is allowed
-  in the metadata.csv.
+   * As of version 1.4, both directory and object level metadata is allowed
+     in the metadata.csv.
 
-* For multi-value fields (such as dc.subject), the entire column is repeated
-  and each column contains a single value.
+   * For multi-value fields (such as dc.subject), the entire column is repeated
+     and each column contains a single value (i.e. there should be multiple
+     dc.subject columns if there are multiple subject terms).
 
-* If the metadata are for simple objects, the csv file must contain a
-  "filename" column listing the filepath and filename of each objects: eg
-  "objects/BrocktonOval.jp2"
+   * Empty columns can be deleted, if you prefer.
 
-* If the metadata are for compound objects, the "filename" column contains the
-  names of the directories containing the items that form the compound object:
-  eg "objects/Jan021964"
+   * If the metadata are for simple objects, the csv file must contain a
+     "filename" column listing the filepath and filename of each objects: eg
+     "objects/BrocktonOval.jp2"
 
-* Note that filenames can be duplicates of filenames in other subdirectories
-  if desired. For example, the name "page01.jp2" can occur in multiple
-  subdirectories.
+   * If the metadata are for compound objects, the "filename" column is instead
+     called "parts" and contains the names of the directories containing the
+     items that form the compound object (i.e. "objects/Jan021964").
+
+   * Note that filenames can be duplicates of filenames in other subdirectories
+     if desired. For example, the name "page01.jp2" can occur in multiple
+     subdirectories.
 
   .. figure:: images/CsvMDimport-10.*
      :align: center
-     :figwidth: 60%
-     :width: 100%
      :alt:  Example csv file contents
 
-     Example metadata.csv file contents
+     Example of metadata.csv file contents
 
 4. At the generate METS micro-service, Archivematica parses the metadata in
    metadata.csv to the METS file, as follows:
 
-* All Dublin Core elements are used to generate a dmdSec for each directory or
-  file with MDTYPE="DC"
+   * All Dublin Core elements are used to generate a dmdSec for each directory or
+     file with MDTYPE="DC"
 
-* All non-Dublin Core elements are used to generate a dmdSec for each
-  directory or file with MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"
+   * All non-Dublin Core elements are used to generate a dmdSec for each
+     directory or file with MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"
 
-* The dmdSecs are linked to their directories or files in the structMap.
+   * The dmdSecs are linked to their directories or files in the structMap.
 
 
 Simple objects
@@ -106,105 +114,83 @@ This section provides metadata.csv file and METS file examples for simple object
 i.e. individual files that are not pages in a compound object such as a book
 or a newspaper issue.
 
-**metadata.csv file**
+**Sample metadata.csv file**
 
-Sample headings and values
+=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
+filename                   dc.title                  dc.creator                dc.subject                dc.subject                dc.subject                dc.description            dc.publisher              dc.contributor            dc.date                   dc.type                   dc.format                 dc.identifier             dc.source                 dc.language               dc.relation               dc.coverage               dc.rights
+=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
+objects/bird.mp3           14000 Caen, France - Bird Nicolas Germain           field recording           soundscapes               radio aporee              Bird singing in my        Radio Aporee                                        2017-05-27                sound                     audio/mp3                                           Internet Archive                                                                                        Public domain
+                           in my garden                                                                                                                      garden, Caen, France,
+                                                                                                                                                             Zoom H6
+objects/beihai.tif         Beihai, Guanxi, China,    NASA/GSFC/METI/ERSDAC/    China                     Beihai                                              Beihai is a city in the   NASA Jet Propulsion                                 February 29, 2016         image                     image.tif                                           NASA Jet Propulsion                                                                                     Public domain
+                           1988                      JAROS and U.S./Japan                                                                                    south of Guangxi,         Laboratory                                                                                                                                                  Laboratory
+                                                     ASTER Science Team                                                                                      People's  republic of
+                                                                                                                                                             China.
+=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
 
-========================  ========================= ==============  ==============  =========================== ======================= ==========  ========== ========================= ================================== ======================== ============================ =============================== ========================================== =========
-filename                  dc.title                  dcterms.issued  dc.publisher    dc.contributor              dc.subject              dc.subject  dc.date    dc.description            notes                              dcterms.isPartOf         repository                   dc.rights                       project_website                            dc.format
-========================  ========================= ==============  ==============  =========================== ======================= ==========  ========== ========================= ================================== ======================== ============================ =============================== ========================================== =========
-objects/BrocktonOval.jp2  Stanley Park in December  1996-01-17      Riley Studios,  Don Langfield, photographer Vancouver (B.C.)--Parks Landscapes  1992/12/04 Image shows Brockton Oval Originally part of series entitled Riley Studios collection New Caledonia Public Library Copyright held by Riley Studios http://www.ncpl/donlangfieldphotographs.ca image/jp2
-                                                                    Vancouver BC                                                                               after light snowfall      "Winter in Vancouver"
-objects/QEParksunset.jp2  Sunset in Queen Elizabeth                 Riley Studios,  Don Langfield, photographer Vancouver (B.C.)--Parks             1994/07/13                                                              Riley Studios collection New Caledonia Public Library Copyright held by Riley Studios http://www.ncpl/donlangfieldphotographs.ca image/jp2
-                          Park                                      Vancouver BC
-========================  ========================= ==============  ==============  =========================== ======================= ==========  ========== ========================= ================================== ======================== ============================ =============================== ========================================== =========
+Note that empty columns (i.e. dc.contributor) were left in to demonstrate the
+full range of possible Dublin Core values. If you prefer, you can delete empty
+columns.
 
 **METS file**
 
-.. code:: bash
+Below is a snippet of the METS file, containing two descriptive metadata
+sections (dmdSec), one for each file. These contain the Dublin Core metadata
+parsed from the metadata.csv. Note in the mdWrap that they are given an MDTYPE
+of "DC". If there had been non-Dublin Core metadata in the metadata.csv, there
+would be a separate mdWrap with an MDTYPE of "OTHER".
+
+.. code:: xml
 
    <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
-   <dmdSec ID="dmdSec_1">
-       <mdWrap MDTYPE="DC">
-          <xmlData>
-             <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
-               <title>Stanley Park in December</title>
-               <issued>1996-01-17</issued>
-               <subject>Vancouver (B.C.)--Parks</subject>
-               <subject>Landscapes</subject>
-               <description>Image shows Brockton Oval after light snowfall</description>
-               <publisher>Riley Studios, Vancouver B.C.</publisher>
-               <contributor>Don Langfield, photographer</contributor>
-               <date>1992-12-04</date>
-               <isPartOf>Riley Studios collection</isPartOf>
-               <rights>Copyright held by Riley Studios</rights>
-               <format>image/jp2</format>
-              </dublincore>
-          </xmlData>
-         </mdWrap>
-      </dmdSec>
-   <dmdSec ID="dmdSec_2">
-       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
-           <xmlData>
-               <notes>
-                   Originally part of series entitled "Winter in Vancouver"
-               </notes>
-               <repository>
-                   New Caledonia Public Library
-               </repository>
-               <project_website>http://www.ncpl/donlangfieldphotographs.ca</project_website>
-           </xmlData>
-       </mdWrap>
-   </dmdSec>
-   <dmdSec ID="dmdSec_3">
-       <mdWrap MDTYPE="DC">
-           <xmlData>
-               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
-               <title>Sunset in Queen Elizabeth Park</title>
-               <subject>Vancouver (B.C.)--Parks</subject>
-               <publisher>Riley Studios, Vancouver BC</publisher>
-               <contributor>Don Langfield, photographer</contributor>
-               <date>1994-07-13</date>
-               <rights>Copyright held by Riley Studios</rights>
-           </dublincore>
-       </xmlData>
-   </mdWrap>
-   </dmdSec>
-   <dmdSec ID="dmdSec_4">
-       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
-           <xmlData>
-               <forms_part_of>Riley Studios collection </forms_part_of>
-               <repository>New Caledonia Public Library</repository>
-               <project_website>http://www.ncpl/donlangfieldphotographs.ca</project_website>
-               <digital_image_format>image/jp2</digital_image_format>
-           </xmlData>
-       </mdWrap>
-   </dmdSec>
-   <fileSec>
-       <fileGrp USE="original">
-           <file ID="BrocktonOval.jp2-aeebe429-9b5f-453c-8f73-57ed53f12b6f" GROUPID="Group-aeebe429-9b5f-453c-8f73-57ed53f12b6f" ADMID="amdSec_1">
-               <FLocat xlink:href="objects/BrocktonOval.jp2" LOCTYPE="OTHER" OTHERLOCATYPE="SYSTEM"/>
-           </file>
-           <file ID="QE_Park_sunset.jp2-47faa4c2-fa23-4484-aa08-8d50945b1c5d" GROUPID="Group-47faa4c2-fa23-4484-aa08-8d50945b1c5d" ADMID="amdSec_2">
-               <FLocat xlink:href="objects/QE_Park_sunset.jp2" LOCTYPE="OTHER" OTHERLOCATYPE="SYSTEM"/>
-           </file>
-       </fileGrp>
-   </fileSec>
-   <structMap TYPE="physical" LABEL="Archivematica default">
-       <div TYPE="directory" LABEL="Simple-0c754dae-6a7f-4837-9ecd-8a0ff36e694b">
-           <div TYPE="directory" LABEL="objects">
-               <div TYPE="Item" DMDID="dmdSec_1 dmdSec_2">
-                   <fptr FILEID="BrocktonOval.jp2-aeebe429-9b5f-453c-8f73-57ed53f12b6f"/>
-               </div>
-               <div TYPE="Item" DMDID="dmdSec_3 dmdSec_4">
-                   <fptr FILEID="QE_Park_sunset.jp2-47faa4c2-fa23-4484-aa08-8d50945b1c5d"/>
-               </div>
-               <div TYPE="directory" LABEL="submissionDocumentation">
-                   <div TYPE="directory" LABEL="transfer-Simple-525a57bb-cec8-4279-ae77-b95171f84c59"/>
-               </div>
-           </div>
-       </div>
-   </structMap>
+    <dmdSec ID="dmdSec_1">
+      <mdWrap MDTYPE="DC">
+        <xmlData>
+          <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+            <dc:title>Beihai, Guanxi, China, 1988</dc:title>
+            <dc:creator>NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team</dc:creator>
+            <dc:subject>satellite imagery</dc:subject>
+            <dc:subject>China|Beihai</dc:subject>
+            <dc:description>Beihai is a city in the south of Guangxi, Peoples republic of China.</dc:description>
+            <dc:publisher>NASA Jet Propulsion Laboratory</dc:publisher>
+            <dc:contributor></dc:contributor>
+            <dc:date>February 29,2016</dc:date>
+            <dc:type>image</dc:type>
+            <dc:format>image/tif</dc:format>
+            <dc:identifier></dc:identifier>
+            <dc:source>NASA Jet Propulsion Laboratory</dc:source>
+            <dc:language></dc:language>
+            <dc:relation></dc:relation>
+            <dc:coverage></dc:coverage>
+            <dc:rights>Public domain</dc:rights>
+          </dublincore>
+        </xmlData>
+      </mdWrap>
+    </dmdSec>
+    <mets:dmdSec ID="dmdSec_2">
+      <mets:mdWrap MDTYPE="DC">
+        <mets:xmlData>
+          <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+            <dc:title>14000 Caen, France - Bird in my garden</dc:title>
+            <dc:creator>Nicolas Germain</dc:creator>
+            <dc:subject>field recording</dc:subject>
+            <dc:subject>phonography|soundscape|sound art|soundmap|radio|ephemeral|listening|radio aporee</dc:subject>
+            <dc:description>Bird singing in my garden, Caen, France, Zoom H6</dc:description>
+            <dc:publisher>Radio Aporee</dc:publisher>
+            <dc:contributor></dc:contributor>
+            <dc:date>2017-05-27</dc:date>
+            <dc:type>sound</dc:type>
+            <dc:format>audio/mp3</dc:format>
+            <dc:identifier></dc:identifier>
+            <dc:source>Internet Archive</dc:source>
+            <dc:language></dc:language>
+            <dc:relation></dc:relation>
+            <dc:coverage></dc:coverage>
+            <dc:rights>Public domain</dc:rights>
+          </dcterms:dublincore>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:dmdSec>
    </mets>
 
 
@@ -228,7 +214,7 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
 
 **METS file**
 
-.. code:: bash
+.. code:: xml
 
    <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
    <dmdSec ID="dmdSec_1">
@@ -336,23 +322,23 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
 Importing rights metadata with rights.csv
 -----------------------------------------
 
-Rights information can be associated to specific files in a transfer by 
-creating a rights.csv file that conforms to the structure below. 
+Rights information can be associated to specific files in a transfer by
+creating a rights.csv file that conforms to the structure below.
 
-You can enter multiple acts for the same rights basis. Rows for the same 
-object with the same rights basis will be treated as separate acts for the 
-basis and merged. For example, the first two rows below will be merged, 
-while the third row will be separate. You can read more about rights 
+You can enter multiple acts for the same rights basis. Rows for the same
+object with the same rights basis will be treated as separate acts for the
+basis and merged. For example, the first two rows below will be merged,
+while the third row will be separate. You can read more about rights
 metadata here: :ref:`PREMIS metadata in Archivematica <premis-template>`
 
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================  
+=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
 file           basis       status       determination_date   jurisdiction  start_date  end_date    terms                citation                note                   grant_act    grant_restriction  grant_start_date   grant_end_date   grant_note  doc_id_type                               doc_id_value                                doc_id_role
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================  
+=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
 image1.tif     copyright   copyrighted  2011-01-01           ca            2011-01-01  2013-12-31  Terms of copyright.  Citation of copyright.  Note about copyright.  disseminate  disallow           2011-01-01         2013-12-31       Grant note  Copyright documentation identifier type.  Copyright documentation identifier value.   Copyright documentation identifier role.
 image1.tif     copyright   copyrighted  2011-01-01           ca            2011-01-01  2013-12-31  Terms of copyright.  Citation of copyright.  Note about copyright.  use          disallow           2011-01-01         2013-12-31       Grant note  Copyright documentation identifier type.  Copyright documentation identifier value.   Copyright documentation identifier role.
 document.pdf   license                                                     2000-09-09  2010-09-08  Terms of license.    Note about license.     migrate                allow                                              2000-09-00       Grant note  License documentation identifier type.    License documentation identifier value.     License documentation identifier role.
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  ========================================= 
+=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
 
-The rights.csv file is parsed by the job "Load Rights" within the "Characterize and Extract Metadata" microservice run during :ref:`transfer <transfer>`. 
+The rights.csv file is parsed by the job "Load Rights" within the "Characterize and Extract Metadata" microservice run during :ref:`transfer <transfer>`.
 
 :ref:`Back to the top <import-metadata>`

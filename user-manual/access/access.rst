@@ -4,9 +4,11 @@
 Access
 ======
 
-During ingest, access copies of digital objects are generated and packaged
-into a DIP (Dissemination Information Package). The user uploads the DIP to
-the access system, or stores it for future use.
+During ingest, access copies of digital objects can be generated and packaged
+into a DIP (Dissemination Information Package) by choosing Normalize for Access 
+at the Normalization micro-service. For more information please see :ref:`Normalize <normalize>`
+
+The user uploads the DIP to the access system, or stores it for future use.
 
 When the DIP is prepared, Archivematica moves the DIP into the uploadDIP
 directory, which triggers the dashboard to display the DIP upload options
@@ -41,10 +43,19 @@ Should you run into an error during this process, please see
 * :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
 
+
 .. _access-default:
 
 Access systems
 --------------
+
+If you have chosen to generate a DIP (dissemination information package) at the 
+Normalize micro-service, you can upload it to one of several content management 
+tools (listed below).
+
+The DIP includes the access copies made through either Archivematica's
+normalization rules or a manual normalization process, as well as thumbnails, 
+and a DIP METS file.
 
 A content management tool called `AtoM <https://www.accesstomemory.org>`_ is
 Archivematica's default access system. AtoM supports standards-compliant
@@ -55,7 +66,8 @@ for standards-based archival description and access in a multilingual, multi-
 repository environment. User and Administrator manuals for AtoM are available
 `here <https://www.accesstomemory.org/en/docs/>`_ .
 
-Archivematica has also been developed to integrate with `ArchivesSpace <http://archivesspace.org/>`_ and `Archivists' Toolkit <http://www.archiviststoolkit.org/>`_.
+Archivematica has also been developed to integrate with `ArchivesSpace <http://archivesspace.org/>`_ and `Archivists' Toolkit <http://www.archiviststoolkit.org/>`_ and `ContentDM <http://www.oclc.org/en/contentdm.html>`_
+
 
 .. _upload-atom:
 
@@ -86,11 +98,11 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 .. IMPORTANT::
     If you :ref:`add metadata <add-metadata>` to the DIP during Ingest, a file-level record will be created in AtoM below the chosen parent record. The metadata will be written to this file-level record and the digital objects will be added as child items. If you do not add metadata, the digital objects will be added to the parent record directly.
 
-4. When the DIP has finished uploading, open the Access tab in the dashboard. This tab shows the AIP and its uploaded DIP. Click on the DIP URL to go to the uploaded DIP in AtoM.
+4. When the DIP has finished uploading, open the Access tab in the dashboard. This tab shows the AIP and its uploaded DIP.
 
 5. If you are not already logged in to AtoM you will need to log in using your login credentials.
 
-6. You will see an archival description with the metadata you added during ingest, displayed in the context of the level of archival description to which the DIP was uploaded. To view an individual digital object, scroll through the thumbnails on the left of the screen and click on an image.
+6. You will see an archival description with the metadata you added during ingest, displayed in the context of the level of archival description to which the DIP was uploaded. To view an individual digital object, scroll through the thumbnails click on an image.
 
 7. The digital object is displayed in AtoM. Clicking on the image will open the uploaded object.
 
@@ -99,7 +111,7 @@ information and credentials in the Administration tab. See :ref:`Administrator m
 Upload metadata to AtoM
 =======================
 
-In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM without uploading dissemination copies of the files. This may be a helpful workflow if you have digital objects which you wish to make discoverable, but not displayed online for rights or privacy reasons.
+In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM without uploading dissemination copies of the files. This may be a helpful workflow if you have digital objects which you wish to make discoverable, but not displayed online for copyright or privacy reasons.
 
 .. important::
 
@@ -153,9 +165,9 @@ select Upload DIP to Archives Space. The Match page should automatically open.
 
 #. When you have navigated to the level of description where you want to store the DIP, select *Assign DIP objects to this resource*.
 
-#. On the Assign Objects screen, select which objects you would like to assign to which resources. Using the filter boxes in the top right, it is possible to search for specific objects or resources by name.
+#. On the Assign Objects screen, select which objects you would like to assign to which resources. Using the filter boxes in the top right allow you to search for specific objects or resources by name.
 
-#. Once you have selected the objects and the resource you would like to pair them to, click *Pair* in the top right corner. Repeat steps 2-4 as needed.
+#. Once you have selected the objects and the resource you would like to pair them with, click *Pair* in the top right corner. Repeat steps 2-4 as needed.
 
 #. When you are done pairing objects and resources, click on *Review matches.*
 
@@ -196,14 +208,12 @@ as DuraCloud.
 
 To store a DIP:
 
-1. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
+#. Ensure that at least one DIP storage location has been configured in the :ref:`Storage Service <storageservice:index>`.
 
-2. When prompted to Upload DIP, either choose Store DIP, or choose to upload to your desired access system.  If you choose an access system, a second Store DIP option will be presented to you.
+#. At the Store DIP job at the Upload DIP microservice on the Archival Storage tab, choose Store DIP.
 
-3. Choose the DIP storage location from the configured options.
+#. At Store DIP location, select the DIP storage location from the configured options.
 
-The DIP will include the access copies made through either Archivematica's
-normalization rules or a manual normalization process, thumbnails, and the METS file.
 
 .. _review-dip:
 
@@ -231,7 +241,7 @@ downloaded within the browser window.
    :alt: Download DIP screen showing a DIP directory expanded.
 
 Your ability to view the objects in the browser will be dependent on your browser
-having a plugin for the particular filetypes. However, all files can be
+having plugins for the particular filetypes. However, all files can be
 downloaded locally in this manner.
 
 

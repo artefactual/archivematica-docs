@@ -46,9 +46,9 @@ same error, below.
 Dashboard error reporting
 -------------------------
 
-When a micro-service fails or encounters an error, the micro-service
-background turns from green to pink and a "failed" icon appears next to the
-transfer or SIP name:
+When a micro-service fails or encounters an error, the workflow will be halted
+and Archivematica will report a 'Failed transfer'. The micro-service drop-down
+can be expanded to show the specific task that failed. 
 
 .. figure:: images/PinkChecksumFail.*
    :align: center
@@ -57,14 +57,10 @@ transfer or SIP name:
    :alt: The dashboard showing a transfer has failed
 
    The dashboard showing a transfer has failed at the Verify transfer checksums
-   micro-service and has been moved to the failed directory
+   micro-service 
 
 Note that the transfer has been moved to the failed directory and processing
 has been halted.
-
-Clicking on the micro-service will expand to show the specific job that contains
-an error:
-
 
 .. figure:: images/PinkFailMSexpandJob.*
    :align: center
@@ -72,18 +68,18 @@ an error:
    :width: 100%
    :alt: Micro-service expanded to show the failed job
 
-   The Verify transfer checksums micro-service expanded to sholw the failed job
+   The expanded detail on 'Failed transfer'
 
 Click the tasks icon (the gear icon on the right-hand side) to open up an
 error report:
 
-.. figure:: images/ErrorRptFailVirusScan-10.*
+.. figure:: images/ErrorRptFailChecksum.*
    :align: center
    :figwidth: 80%
    :width: 100%
    :alt: An error report showing that a virus has been found in a file
 
-   An error report showing that a virus has been found in a file
+   An error report showing that a file has failed checksum validation
 
 These reports are generally standard and predictable for certain types of
 errors and are useful for trouble-shooting. Note that the failed file(s) will

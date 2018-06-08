@@ -1,5 +1,6 @@
 .. _duracloud-setup:
 
+=========================================
 Archivematica-Duracloud Quick Start Guide
 =========================================
 

@@ -100,6 +100,7 @@ content to prepare your transfer to become a SIP (submission information package
 * :ref:`Forensic images <forensic>`
 * :ref:`DSpace exports <dspace>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`
+* :ref:`Scan for viruses <scan-for-viruses>`
 
 .. _home-backlog:
 
@@ -194,9 +195,9 @@ for normalization, characterization, validation, and other tools and workflows
 that act upon content preserved through Archivematica.
 
 * :ref:`General description <preservation-planning>`
-* :ref:`Preservation planning tab <pres-tab>`
 * :ref:`Format Policy Registry (FPR) <fpr>`
 * :ref:`Preservation policies <pres-policies>`
+* :ref:`Altering rules and commands <fpr-instruct>`
 
 
 .. _home-administer:
@@ -209,7 +210,6 @@ transfer and storage locations, DIP upload configurations, and to add and remove
 users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* :ref:`Update Format Policy Registry (FPR) <fpr-update>`
 * :ref:`Storage service users <storageservice:users>`
 
 
@@ -240,9 +240,9 @@ the interface, and the Storage Service into other languages.
 Administrator manual
 ====================
 
-The administrator manual is intended for archivists, librarians, and/or systems
-administrators who are responsible for installing, configuring, setting up, and
-maintaining Archivematica and related systems.
+The administrator manual is intended for systems administrators who are
+responsible for installing, configuring, setting up, and maintaining Archivematica
+and related systems.
 
 
 .. _home-install:
@@ -250,12 +250,12 @@ maintaining Archivematica and related systems.
 Installation and setup
 ----------------------
 
-* :ref:`Installation <installation>`
-* :ref:`Storage Service <storageservice:administrators>`
-* :ref:`Dashboard Administration tab <dashboard-config>`
-* :ref:`Format Policy Registry (FPR) <fpr:index>`
+* :ref:`Installing Archivematica <installation>`
+* :ref:`Upgrading Archivematica <upgrade>`
 * :ref:`Customization and automation <customization>`
-* :ref:`Duracloud setup <duracloud-setup>`
+* :ref:`Setting up integrations <integrations>`
+* :ref:`Storage Service <storageservice:administrators>`
+* :ref:`Format Policy Registry (FPR) <fpr:index>`
 
 
 .. _maintenance:
@@ -277,3 +277,7 @@ Security
 * :ref:`MySQL <mysql-security>`
 * :ref:`AtoM <atom-security>`
 * :ref:`Gearman <gearman-security>`
+* :ref:`User security <user-security>`
+* :ref:`LDAP setup <ldap-setup>`
+* :ref:`Shibboleth setup <shibboleth-setup>`
+* :ref:`CA certificates <ca-root-certificates>`

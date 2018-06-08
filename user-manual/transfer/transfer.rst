@@ -39,7 +39,6 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
 * :ref:`Extract packages <extract-packages>`
 
-
 .. seealso::
 
    If you would like to import lower-level metadata with your transfer (i.e.
@@ -203,79 +202,91 @@ Process the transfer
 
 4. The transfer will now run through a series of micro-services. These include:
 
-* Verify transfer compliance: verifies that the transfer is properly
-  structured - i.e. with the logs, metadata and objects folders.
+   * Verify transfer compliance: verifies that the transfer is properly
+     structured - i.e. with the logs, metadata and objects folders.
 
-* Rename with transfer UUID: assigns a unique universal identifier for the
-  transfer as a whole; directly associates the transfer with its metadata.
+   * Rename with transfer UUID: assigns a unique universal identifier for the
+     transfer as a whole; directly associates the transfer with its metadata.
 
-* Assign file UUIDs and checksums to objects: assigns a unique universal
-  identifier and sha-256 checksum to each file in the /objects directory.
+   * Assign file UUIDs and checksums to objects: assigns a unique universal
+     identifier and sha-256 checksum to each file in the /objects directory.
 
-* Verify transfer checksums: verifies any checksums included with the transfer
-  in its metadata directory.
+   * Verify transfer checksums: verifies any checksums included with the transfer
+     in its metadata directory.
 
-* Generate METS.xml document: creates a METS file capturing the original order
-  of the transfer. This METS file is added to any SIPs generated from this
-  transfer.
+   * Generate METS.xml document: creates a METS file capturing the original order
+     of the transfer. This METS file is added to any SIPs generated from this
+     transfer.
 
-* Quarantine: quarantines the transfer to a set duration based on
-  preconfiguration settings in the Administration tab of the dashboard. This can be used to allow virus definitions to update before a virus scan.
+   * Quarantine: quarantines the transfer to a set duration based on
+     preconfiguration settings in the Administration tab of the dashboard. This
+     can be used to allow virus definitions to update before a virus scan.
 
-* Scan for viruses: scans for viruses and malware.
+   * Scan for viruses: scans for viruses and malware.
 
-* Generate transfer structure report: generates a directory tree of the original
-  transfer and places as a text file in the AIP.
+   * Generate transfer structure report: generates a directory tree of the original
+     transfer and places as a text file in the AIP.
 
-* Clean up file and directory names: removes prohibited characters from folder
-  and filenames, such as ampersands.
+   * Clean up file and directory names: removes prohibited characters from folder
+     and filenames, such as ampersands.
 
-* Identify file format: this is the identification that normalization will be
-  based upon, the user can choose between FIDO and extension or skipping
-  format identification at this stage. See :ref:`Format identification <format-identification>` below for
-  more information.
+   * Identify file format: this is the identification that normalization will be
+     based upon, the user can choose between FIDO and extension or skipping
+     format identification at this stage. See :ref:`Format identification <format-identification>` below for
+     more information.
 
-* Extract packages: extracts contents from zipped or otherwise packaged
-  files. You can change your preconfigured workflow settings to allow for
-  some choices about package extraction. See :ref:`Extract Packages <extract-packages>` below for more information.
+   * Extract packages: extracts contents from zipped or otherwise packaged
+     files. You can change your preconfigured workflow settings to allow for
+     some choices about package extraction. See :ref:`Extract Packages <extract-packages>` below for more information.
 
-* Characterize and extract metadata: identifies and validates file formats;
-  extracts technical metadata embedded in the files. If you have
-  preconfigured it to do so, Archivematica will stop during this micro-service
-  and allow the user to choose a file identification command from a dropdown
-  menu. To learn about preconfigured options, please see
-  :ref:`Administrator manual - Processing configuration <process-config>`.
-  Archivematica's file identification default is set to identification by file
-  extension. You can also choose to skip identification and run it later,
-  during Ingest, instead.
+   * Characterize and extract metadata: identifies and validates file formats;
+     extracts technical metadata embedded in the files. If you have
+     preconfigured it to do so, Archivematica will stop during this micro-service
+     and allow the user to choose a file identification command from a dropdown
+     menu. To learn about preconfigured options, please see
+     :ref:`Administrator manual - Processing configuration <process-config>`.
+     Archivematica's file identification default is set to identification by file
+     extension. You can also choose to skip identification and run it later,
+     during Ingest, instead.
 
-* Complete transfer: Includes indexing the transfer.
+   * Complete transfer: Includes indexing the transfer.
 
-5. A transfer that is in the middle of processing will show which micro-services have been completed (green) and which are in progress (orange).
+5. A transfer that is in the middle of processing will show which micro-services
+   have been completed (green) and which are in progress (orange).
 
-6. When a micro-service fails or encounters an error, the micro-service background turns from green to pink and a "failed" icon appears next to the transfer or SIP name. See Error handling for more information about how to handle an error.
+6. When a micro-service fails or encounters an error, the micro-service
+   background turns from green to pink and a "failed" icon appears next to the
+   transfer or SIP name. See Error handling for more information about how to
+   handle an error.
 
-7. Once the transfer micro-services are completed, a bell icon will appear next to the transfer. This means that the transfer is ready to be packaged into a SIP for ingest or sent to a backlog, indexed and stored to be retrieved for processing at a later date
+7. Once the transfer micro-services are completed, a bell icon will appear next
+   to the transfer. This means that the transfer is ready to be packaged into a
+   SIP for ingest or sent to a backlog, indexed and stored to be retrieved for
+   processing at a later date
 
-.. figure:: images/CreateSIP.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
+   * Option 1: Select "Create single SIP and continue processing"
 
-   A transfer that is ready to be packaged into a SIP or stored in backlog
+   * Option 2: Select "Send transfer to backlog". In this case, your transfer
+     will be stored in a backlog in the same location as your AIP store so that
+     you can retrieve one or more transfers from the Ingest tab for processing at
+     a later date. See :ref:`Managing a backlog <manage-backlog>`.
 
+   * Option 3: Select "Reject the transfer".
 
-* Option 1: Select "Create single SIP and continue processing"
+   .. figure:: images/CreateSIP.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
 
-* Option 2: Select "Send transfer to backlog". In this case, your transfer
-  will be stored in a backlog in the same location as your AIP store so that
-  you can retrieve one or more transfers from the Ingest tab for processing at
-  a later date. See :ref:`Managing a backlog <manage-backlog>`.
+      A transfer that is ready to be packaged into a SIP or stored in backlog
 
-* Option 3: Select "Reject the transfer".
+.. note::
 
-8. See Ingest for next steps.
+   If you are running Archivematica in indexless mode (without Elasticsearch),
+   you will not have the option to send the transfer to backlog.
+
+8. See :ref:`Ingest <ingest>` for next steps.
 
 .. _cleanup:
 
@@ -286,10 +297,18 @@ The dashboard in the Transfer tab should be cleaned up from time to time. As the
 list of transfers grows, it takes Archivematica longer and longer to parse this
 information which can create browser timeout issues.
 
-1. When you are ready to remove a transfer from the dashboard, click the remove
-icon found next to the add metadata icon, to the right of the transfer name.
+Remove a single transfer
+++++++++++++++++++++++++
 
-2. Click the Confirm button to remove the transfer from the dashboard.
+#. Ensure that the transfer you want to remove doesn't require any user input.
+   You must complete all user inputs and either complete the transfer (i.e.
+   send to backlog or create a SIP) or reject the transfer before it can be
+   removed from the dashboard.
+
+#. When you are ready to remove a transfer from the dashboard, click the red circle
+   icon found next to the add metadata icon, to the right of the transfer name.
+
+#. Click the Confirm button to remove the transfer from the dashboard.
 
 .. figure:: images/remove-sip.*
    :align: center
@@ -299,8 +318,20 @@ icon found next to the add metadata icon, to the right of the transfer name.
 
 
 .. NOTE::
-  This does not delete the transfer or related entities, including the source directory.
+   This does not delete the transfer or related entities, including the source
+   directory. It merely removes them from the dashboard.
 
+Remove all completed transfers
+++++++++++++++++++++++++++++++
+
+#. Ensure that the transfers you want to remove are complete (i.e. sent to
+   backlog or ingest). Note that this feature only works on completed transfers;
+   rejected transfers will have to be removed one at a time.
+
+#. When you are ready to remove all completed transfers, click the red circle
+   icon in the table header of the list of transfers.
+
+#. Click the Confirm button to remove all completed transfers from the dashboard.
 
 .. _format-identification:
 

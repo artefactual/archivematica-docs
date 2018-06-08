@@ -261,9 +261,26 @@ AtoM DIP upload
 ---------------
 
 Archivematica can upload DIPs directly to an AtoM website so the contents can
-be accessed online. The AtoM DIP upload configuration page is where you
-specify the details of the AtoM installation you'd like the DIPs uploaded to
-(and, if using Rsync to transfer the DIP files, Rsync transfer details).
+be accessed online.  DIP Upload to AtoM is usually a three step process:
+
+#. If AtoM is installed on a remote server, Archivematica uses SSH and rsync to
+   copy the DIP to a temporary directory on the AtoM server. If Archivematica
+   and AtoM share a common filesystem (e.g. a shared network directory) this
+   step is unnecessary.
+
+#. Archivematica sends a REST request to AtoM to tell AtoM which archival
+   description is the target of the DIP. The DIP target description is
+   identified by the description's "slug".  The actual upload of the DIP
+   contents to AtoM is done via a background job, and may take some time to
+   process if a large DIP is uploaded.
+
+#. An AtoM background worker uploads the DIP metadata (METS file) and digital
+   objects from the temporary directory to AtoM, links them to the target
+   description, then deletes the temporary files.
+
+The AtoM DIP upload configuration page is where you specify the details of the
+AtoM installation you'd like the DIPs uploaded to (and, if using Rsync to
+transfer the DIP files, Rsync transfer details).
 
 The parameters that you'll most likely want to set are url, email, and
 password. These parameters, respectively, specify the destination AtoM
@@ -444,9 +461,13 @@ you should see the API key.
 IP whitelist
 ^^^^^^^^^^^^
 
-In addition to creating API keys, you'll need to add the IP of any computer
-making REST requests to the REST API whitelist. The IP whitelist can be
-edited in the administration interface at ``/administration/api/``.
+The API key is always required but in some cases the administrator may want to
+add an additional security measurement. IP whitelisting allows you to create a
+list of trusted IP addresses from which you can access to the API.
+
+The IP whitelist can be edited in the administration interface at
+``/administration/api/``. If the whitelist is empty all requests will be
+allowed.
 
 Approving a transfer
 ^^^^^^^^^^^^^^^^^^^^
@@ -553,10 +574,14 @@ command-line, issue the following commands:
 
 .. code:: bash
 
-   cd /usr/share/archivematica/dashboard
-   export PATH=$PATH:/usr/share/archivematica/dashboard
-   export DJANGO_SETTINGS_MODULE=settings.common
-   python manage.py createsuperuser
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
+   ";
 
 CLI password resetting
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -566,10 +591,14 @@ user, you can change it via the command-line:
 
 .. code:: bash
 
-   cd /usr/share/archivematica/dashboard
-   export PATH=$PATH:/usr/share/archivematica/dashboard
-   export DJANGO_SETTINGS_MODULE=settings.common
-   python manage.py changepassword <username>
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
+   ";
 
 Security
 ^^^^^^^^

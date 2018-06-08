@@ -1,829 +1,907 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/metadata/premis.rst:5
 msgid "PREMIS metadata in Archivematica"
-msgstr ""
+msgstr "Métadonnées PREMIS dans Archivematica"
 
 #: ../../user-manual/metadata/premis.rst:7
 msgid ""
 "Archivematica supports the entry of `PREMIS "
 "<http://www.loc.gov/standards/premis/>`_ rights metadata during "
-":ref:`transfer <transfer>` or :ref:`ingest <ingest>`. Rights entered via "
-"the GUI interface apply to the entirety of the SIP or transfer."
+":ref:`transfer <transfer>` or :ref:`ingest <ingest>`. Rights entered via the"
+" GUI interface apply to the entirety of the SIP or transfer. Rights can also"
+" be entered at the object level by describing them in a rights.csv file and "
+"using the :ref:`Import metadata <import-metadata>` feature."
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:11
+#: ../../user-manual/metadata/premis.rst:13
 msgid ""
-"Below, the entry template is described as it appears for each rights "
-"basis, followed by acts granted/restricted."
+"Below, the entry template is described as it appears for each rights basis, "
+"followed by acts granted/restricted."
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:14
-msgid "Skip to:"
-msgstr ""
+"Ci-dessous, le modèle de saisie correspondant à chaque base de privilèges "
+"est décrit, suivi des actions « accordé/limité »."
 
 #: ../../user-manual/metadata/premis.rst:16
-msgid ":ref:`Basis: Copyight <basis-copyight>`"
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:17
-msgid ":ref:`Basis: Statute <basis-statute>`"
-msgstr ""
+msgid "Skip to:"
+msgstr "Aller à :"
 
 #: ../../user-manual/metadata/premis.rst:18
-msgid ":ref:`Basis: License <basis-license>`"
-msgstr ""
+msgid ":ref:`Basis: Copyight <basis-copyight>`"
+msgstr ":ref:`Base : Droits d’auteurs <basis-copyight>`"
 
 #: ../../user-manual/metadata/premis.rst:19
-msgid ":ref:`Basis: Donor <basis-donor>`"
-msgstr ""
+msgid ":ref:`Basis: Statute <basis-statute>`"
+msgstr ":ref:`Base : Loi <basis-statute>`"
 
 #: ../../user-manual/metadata/premis.rst:20
-msgid ":ref:`Basis: Policy <basis-policy>`"
-msgstr ""
+msgid ":ref:`Basis: License <basis-license>`"
+msgstr ":ref:`Base : Licence <basis-license>`"
 
 #: ../../user-manual/metadata/premis.rst:21
-msgid ":ref:`Basis: Other <basis-other>`"
-msgstr ""
+msgid ":ref:`Basis: Donor <basis-donor>`"
+msgstr ":ref:`Base : Donateur <basis-donor>`"
 
 #: ../../user-manual/metadata/premis.rst:22
-msgid ":ref:`Acts granted or restricted <acts-granted>`"
-msgstr ""
+msgid ":ref:`Basis: Policy <basis-policy>`"
+msgstr ":ref:`Base : Politique <basis-policy>`"
 
-#: ../../user-manual/metadata/premis.rst:28
-msgid "Basis: Copyright"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:23
+msgid ":ref:`Basis: Other <basis-other>`"
+msgstr ":ref:`Base : Autre <basis-other>`"
+
+#: ../../user-manual/metadata/premis.rst:24
+msgid ":ref:`Acts granted or restricted <acts-granted>`"
+msgstr ":ref:`Actions accordées ou limitées <acts-granted>` "
 
 #: ../../user-manual/metadata/premis.rst:30
-msgid "PREMIS in METS XML: ``<premis:rightsBasis>Copyright</premis:rightsBasis>``"
-msgstr ""
+msgid "Basis: Copyright"
+msgstr "Base : Droits d’auteur"
 
-#: ../../user-manual/metadata/premis.rst:33
-msgid "Copyright status"
+#: ../../user-manual/metadata/premis.rst:32
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>Copyright</premis:rightsBasis>``"
 msgstr ""
+"PREMIS dans METS XML : ``<premis:rightsBasis>Droit "
+"d’auteur</premis:rightsBasis>``"
 
 #: ../../user-manual/metadata/premis.rst:35
-msgid "**Template field** Copyright status"
-msgstr ""
+msgid "Copyright status"
+msgstr "Statut des droits d’auteur"
 
 #: ../../user-manual/metadata/premis.rst:37
+msgid "**Template field** Copyright status"
+msgstr "**Champ du modèle** Statut des droits d’auteur"
+
+#: ../../user-manual/metadata/premis.rst:39
 msgid ""
-"**Rule** \"A coded designation of the copyright status of the object at "
-"the time the rights status is recorded; e.g. copyrighted, publicdomain, "
+"**Rule** \"A coded designation of the copyright status of the object at the "
+"time the rights status is recorded; e.g. copyrighted, publicdomain, "
 "unknown.\""
 msgstr ""
+"**Règle** \"Code désignant le statut des droits d’auteur concernant l’objet "
+"au moment de sa saisie; p. ex. : Protégé, domaine public, inconnu.\""
 
-#: ../../user-manual/metadata/premis.rst:40
-#: ../../user-manual/metadata/premis.rst:56
-#: ../../user-manual/metadata/premis.rst:76
-#: ../../user-manual/metadata/premis.rst:93
-#: ../../user-manual/metadata/premis.rst:112
-#: ../../user-manual/metadata/premis.rst:158
-#: ../../user-manual/metadata/premis.rst:176
-#: ../../user-manual/metadata/premis.rst:193
-#: ../../user-manual/metadata/premis.rst:216
-#: ../../user-manual/metadata/premis.rst:235
-#: ../../user-manual/metadata/premis.rst:252
-#: ../../user-manual/metadata/premis.rst:270
-#: ../../user-manual/metadata/premis.rst:288
-#: ../../user-manual/metadata/premis.rst:315
-#: ../../user-manual/metadata/premis.rst:332
-#: ../../user-manual/metadata/premis.rst:349
-#: ../../user-manual/metadata/premis.rst:366
-#: ../../user-manual/metadata/premis.rst:390
-#: ../../user-manual/metadata/premis.rst:406
-#: ../../user-manual/metadata/premis.rst:425
-#: ../../user-manual/metadata/premis.rst:454
-#: ../../user-manual/metadata/premis.rst:471
-#: ../../user-manual/metadata/premis.rst:489
-#: ../../user-manual/metadata/premis.rst:506
-#: ../../user-manual/metadata/premis.rst:532
-#: ../../user-manual/metadata/premis.rst:550
-#: ../../user-manual/metadata/premis.rst:579
-#: ../../user-manual/metadata/premis.rst:595
-#: ../../user-manual/metadata/premis.rst:613
-#: ../../user-manual/metadata/premis.rst:629
-#: ../../user-manual/metadata/premis.rst:657
-#: ../../user-manual/metadata/premis.rst:675
-#: ../../user-manual/metadata/premis.rst:703
-#: ../../user-manual/metadata/premis.rst:719
-#: ../../user-manual/metadata/premis.rst:736
-#: ../../user-manual/metadata/premis.rst:752
-#: ../../user-manual/metadata/premis.rst:776
-#: ../../user-manual/metadata/premis.rst:790
-#: ../../user-manual/metadata/premis.rst:806
-#: ../../user-manual/metadata/premis.rst:835
-#: ../../user-manual/metadata/premis.rst:851
-#: ../../user-manual/metadata/premis.rst:868
-#: ../../user-manual/metadata/premis.rst:884
-#: ../../user-manual/metadata/premis.rst:906
-#: ../../user-manual/metadata/premis.rst:921
-#: ../../user-manual/metadata/premis.rst:936
-#: ../../user-manual/metadata/premis.rst:954
-#: ../../user-manual/metadata/premis.rst:981
+#: ../../user-manual/metadata/premis.rst:42
+#: ../../user-manual/metadata/premis.rst:58
+#: ../../user-manual/metadata/premis.rst:78
+#: ../../user-manual/metadata/premis.rst:95
+#: ../../user-manual/metadata/premis.rst:114
+#: ../../user-manual/metadata/premis.rst:143
+#: ../../user-manual/metadata/premis.rst:160
+#: ../../user-manual/metadata/premis.rst:178
+#: ../../user-manual/metadata/premis.rst:195
+#: ../../user-manual/metadata/premis.rst:218
+#: ../../user-manual/metadata/premis.rst:237
+#: ../../user-manual/metadata/premis.rst:254
+#: ../../user-manual/metadata/premis.rst:272
+#: ../../user-manual/metadata/premis.rst:290
+#: ../../user-manual/metadata/premis.rst:317
+#: ../../user-manual/metadata/premis.rst:334
+#: ../../user-manual/metadata/premis.rst:351
+#: ../../user-manual/metadata/premis.rst:368
+#: ../../user-manual/metadata/premis.rst:392
+#: ../../user-manual/metadata/premis.rst:408
+#: ../../user-manual/metadata/premis.rst:427
+#: ../../user-manual/metadata/premis.rst:456
+#: ../../user-manual/metadata/premis.rst:473
+#: ../../user-manual/metadata/premis.rst:491
+#: ../../user-manual/metadata/premis.rst:508
+#: ../../user-manual/metadata/premis.rst:534
+#: ../../user-manual/metadata/premis.rst:552
+#: ../../user-manual/metadata/premis.rst:581
+#: ../../user-manual/metadata/premis.rst:597
+#: ../../user-manual/metadata/premis.rst:615
+#: ../../user-manual/metadata/premis.rst:631
+#: ../../user-manual/metadata/premis.rst:659
+#: ../../user-manual/metadata/premis.rst:677
+#: ../../user-manual/metadata/premis.rst:705
+#: ../../user-manual/metadata/premis.rst:721
+#: ../../user-manual/metadata/premis.rst:738
+#: ../../user-manual/metadata/premis.rst:754
+#: ../../user-manual/metadata/premis.rst:778
+#: ../../user-manual/metadata/premis.rst:792
+#: ../../user-manual/metadata/premis.rst:808
+#: ../../user-manual/metadata/premis.rst:837
+#: ../../user-manual/metadata/premis.rst:853
+#: ../../user-manual/metadata/premis.rst:870
+#: ../../user-manual/metadata/premis.rst:886
+#: ../../user-manual/metadata/premis.rst:908
+#: ../../user-manual/metadata/premis.rst:923
+#: ../../user-manual/metadata/premis.rst:938
+#: ../../user-manual/metadata/premis.rst:956
+#: ../../user-manual/metadata/premis.rst:983
 msgid "**METS XML**"
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:50
-msgid "Copyright jurisdiction"
-msgstr ""
+msgstr "**METS XML**"
 
 #: ../../user-manual/metadata/premis.rst:52
-msgid "**Template field** Copyright jurisdiction"
-msgstr ""
+msgid "Copyright jurisdiction"
+msgstr "Compétence juridique"
 
 #: ../../user-manual/metadata/premis.rst:54
+msgid "**Template field** Copyright jurisdiction"
+msgstr "**Champ du modèle** Compétence juridique"
+
+#: ../../user-manual/metadata/premis.rst:56
 msgid "**Rule** \"The country whose copyright laws apply\""
 msgstr ""
+"**Règle** \"Pays dont les lois concernant la propriété intellectuelle "
+"s’appliquent\""
 
-#: ../../user-manual/metadata/premis.rst:64
+#: ../../user-manual/metadata/premis.rst:66
 msgid ""
-"**Notes** Values should be taken from a controlled vocabulary. "
-"Recommended: ISO 3166."
+"**Notes** Values should be taken from a controlled vocabulary. Recommended: "
+"ISO 3166."
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:69
-msgid "Copyright determination date"
-msgstr ""
+"**Notes** Les valeurs saisies devraient être choisies parmi des termes "
+"standardisés. Recommandation : ISO 3166."
 
 #: ../../user-manual/metadata/premis.rst:71
-msgid "**Template field** Copyright determination date"
-msgstr ""
+msgid "Copyright determination date"
+msgstr "Date de détermination des droits d’auteur"
 
 #: ../../user-manual/metadata/premis.rst:73
+msgid "**Template field** Copyright determination date"
+msgstr "**Champ du modèle** Date de détermination des droits d’auteur"
+
+#: ../../user-manual/metadata/premis.rst:75
 msgid ""
-"**Rule** \"The date that the copyright status recorded in copyrightStatus"
-" was determined.\""
+"**Rule** \"The date that the copyright status recorded in copyrightStatus "
+"was determined.\""
 msgstr ""
+"**Règle** “Date à laquelle le statut des droits d’auteur saisi dans "
+"StatutDroitsAuteur a été déterminé.”"
 
-#: ../../user-manual/metadata/premis.rst:84
+#: ../../user-manual/metadata/premis.rst:86
 msgid "**Notes**  Uses ISO 8061."
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:87
-msgid "Copyright start date"
-msgstr ""
+msgstr "**Notes** Utilise la norme ISO 8061."
 
 #: ../../user-manual/metadata/premis.rst:89
-msgid "**Template field** Copyright start date"
-msgstr ""
+msgid "Copyright start date"
+msgstr "Date d’entrée en vigueur des droits d’auteur"
 
 #: ../../user-manual/metadata/premis.rst:91
+msgid "**Template field** Copyright start date"
+msgstr "**Champ du modèle** Date d’entrée en vigueur des droits d’auteur"
+
+#: ../../user-manual/metadata/premis.rst:93
 msgid ""
-"**Rule** \"Date when the particular copyright applies or is applied to "
-"the content.\""
+"**Rule** \"Date when the particular copyright applies or is applied to the "
+"content.\""
 msgstr ""
+"**Règle** \"Date à laquelle les droits d’auteur ont pris effet ou "
+"s’appliquent au contenu.\""
 
-#: ../../user-manual/metadata/premis.rst:102
-#: ../../user-manual/metadata/premis.rst:121
+#: ../../user-manual/metadata/premis.rst:104
+#: ../../user-manual/metadata/premis.rst:123
 msgid "**Notes** Uses ISO 8061."
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:106
-msgid "Copyright end date"
-msgstr ""
+msgstr "**Notes** Utilise la norme ISO 8061."
 
 #: ../../user-manual/metadata/premis.rst:108
-msgid "**Template field** Copyright end date"
-msgstr ""
+msgid "Copyright end date"
+msgstr "Date d’expiration des droits d’auteur"
 
 #: ../../user-manual/metadata/premis.rst:110
+msgid "**Template field** Copyright end date"
+msgstr "**Champ du modèle** Date d’expiration des droits d’auteur"
+
+#: ../../user-manual/metadata/premis.rst:112
 msgid ""
 "**Rule** \"Date when the particular copyright no longer applies or is "
 "applied to the content.\""
 msgstr ""
+"**Règle** \"Date à laquelle les droits d’auteur prennent fin ou cessent de "
+"s’appliquer au contenu.\""
 
-#: ../../user-manual/metadata/premis.rst:123
-#: ../../user-manual/metadata/premis.rst:298
-#: ../../user-manual/metadata/premis.rst:436
-#: ../../user-manual/metadata/premis.rst:561
-#: ../../user-manual/metadata/premis.rst:686
-#: ../../user-manual/metadata/premis.rst:817
-#: ../../user-manual/metadata/premis.rst:965
+#: ../../user-manual/metadata/premis.rst:125
+#: ../../user-manual/metadata/premis.rst:300
+#: ../../user-manual/metadata/premis.rst:438
+#: ../../user-manual/metadata/premis.rst:563
+#: ../../user-manual/metadata/premis.rst:688
+#: ../../user-manual/metadata/premis.rst:819
+#: ../../user-manual/metadata/premis.rst:967
 msgid ""
-"End date can be left open by clicking \"Open End Date.\" Resulting METS "
-"XML:"
+"End date can be left open by clicking \"Open End Date.\" Resulting METS XML:"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:134
-msgid "Copyright documentation identifier- Type"
-msgstr ""
+"Si les droits d’auteur n’ont pas pris fin ou si la date est inconnue, saisir"
+" \"Date indéterminée.\" Résultat METS XML :"
 
 #: ../../user-manual/metadata/premis.rst:136
-msgid "**Template field** Copyright documentation identifier- Type"
-msgstr ""
+msgid "Copyright documentation identifier- Type"
+msgstr "Identifiant de documentation concernant les droits d’auteur- Type"
 
 #: ../../user-manual/metadata/premis.rst:138
+msgid "**Template field** Copyright documentation identifier- Type"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant les droits "
+"d’auteur - Type"
+
+#: ../../user-manual/metadata/premis.rst:140
 msgid ""
 "**Rule** \"A designation of the domain within which the copyright "
 "documentation identifier is unique.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:141
-msgid "**MET XML**"
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:152
-msgid "Copyright documentation identifier- Value"
-msgstr ""
+"**Règle** \"Désignation du domaine dans lequel l’identifiant de la "
+"documentation concernant les droits d’auteur est unique.\" "
 
 #: ../../user-manual/metadata/premis.rst:154
-msgid "**Template field** Copyright documentation identifier- Value"
-msgstr ""
+msgid "Copyright documentation identifier- Value"
+msgstr "Identifiant de documentation concernant les droits d’auteur - Valeur"
 
 #: ../../user-manual/metadata/premis.rst:156
+msgid "**Template field** Copyright documentation identifier- Value"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant les droits "
+"d’auteur - Valeur"
+
+#: ../../user-manual/metadata/premis.rst:158
 msgid "**Rule** \"The value of the copyrightDocumentationIdentifier.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:169
-msgid "Copyright documentation identifier- Role"
-msgstr ""
+"**Règle** \"Valeur de l’identifiant de documentation concernant les droits "
+"d’auteur.\""
 
 #: ../../user-manual/metadata/premis.rst:171
-msgid "**Template field** Copyright documentation identifier- Role"
-msgstr ""
+msgid "Copyright documentation identifier- Role"
+msgstr "Identifiant de documentation concernant les droits d’auteur - Rôle"
 
 #: ../../user-manual/metadata/premis.rst:173
-#: ../../user-manual/metadata/premis.rst:346
-#: ../../user-manual/metadata/premis.rst:486
+msgid "**Template field** Copyright documentation identifier- Role"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant les droits "
+"d’auteur - Rôle"
+
+#: ../../user-manual/metadata/premis.rst:175
+#: ../../user-manual/metadata/premis.rst:348
+#: ../../user-manual/metadata/premis.rst:488
 msgid ""
 "**Rule** \"A value indicating the purpose or expected use of the "
 "documentation being identified.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:187
-msgid "Copyright note"
-msgstr ""
+"**Règle** \"Valeur indiquant le rôle et l’utilisation supposés de la "
+"documentation identifiée.\""
 
 #: ../../user-manual/metadata/premis.rst:189
-msgid "**Template field** Copyright note"
-msgstr ""
+msgid "Copyright note"
+msgstr "Note sur les droits d’auteur"
 
 #: ../../user-manual/metadata/premis.rst:191
+msgid "**Template field** Copyright note"
+msgstr "**Champ du modèle** Note sur les droits d’auteur"
+
+#: ../../user-manual/metadata/premis.rst:193
 msgid ""
 "**Rule** \"Additional information about the copyright status of the "
 "object\"."
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:205
-msgid "Basis: Statute"
-msgstr ""
+"**Règle** \"Informations supplémentaires sur l’état des droits d’auteur de "
+"l’objet.\""
 
 #: ../../user-manual/metadata/premis.rst:207
-msgid "PREMIS in METS XML: ``<premis:rightsBasis>Statute</premis:rightsBasis>``"
-msgstr ""
+msgid "Basis: Statute"
+msgstr "Base : Loi"
 
-#: ../../user-manual/metadata/premis.rst:210
-msgid "Statute jurisdiction"
+#: ../../user-manual/metadata/premis.rst:209
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>Statute</premis:rightsBasis>``"
 msgstr ""
+"PREMIS dans METS XML: ``<premis:rightsBasis>Loi</premis:rightsBasis>``"
 
 #: ../../user-manual/metadata/premis.rst:212
-msgid "**Template field** Statute jurisdiction"
-msgstr ""
+msgid "Statute jurisdiction"
+msgstr "Domaine de compétence juridique"
 
 #: ../../user-manual/metadata/premis.rst:214
+msgid "**Template field** Statute jurisdiction"
+msgstr "**Champ du modèle** Domaine de compétence juridique"
+
+#: ../../user-manual/metadata/premis.rst:216
 msgid "**Rule** \"The country or other political body enacting the statute.\""
-msgstr ""
+msgstr "**Règle** \"Pays ou autre entité juridique où s’applique la loi.\""
 
-#: ../../user-manual/metadata/premis.rst:224
+#: ../../user-manual/metadata/premis.rst:226
 msgid ""
-"**Notes** Values should be taken from a controlled vocabulary. "
-"Recommended: ISO ISO 3166."
+"**Notes** Values should be taken from a controlled vocabulary. Recommended: "
+"ISO ISO 3166."
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:229
-msgid "Statute citation"
-msgstr ""
+"**Notes** Les valeurs saisies devraient être choisies parmi des termes "
+"standardisés. Recommandation : ISO 3166."
 
 #: ../../user-manual/metadata/premis.rst:231
-msgid "**Template field** Statute citation"
-msgstr ""
+msgid "Statute citation"
+msgstr "Référence à la loi"
 
 #: ../../user-manual/metadata/premis.rst:233
-msgid "**Rule** \"An identifying designation for the statute.\""
-msgstr ""
+msgid "**Template field** Statute citation"
+msgstr "**Champ du modèle** Référence à la loi"
 
-#: ../../user-manual/metadata/premis.rst:245
-msgid "Statute information determination date"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:235
+msgid "**Rule** \"An identifying designation for the statute.\""
+msgstr "**Règle** \"Désignation permettant d’identifier la loi.\""
 
 #: ../../user-manual/metadata/premis.rst:247
-msgid "**Template field** Statute determination date"
-msgstr ""
+msgid "Statute information determination date"
+msgstr "Date de détermination de la loi"
 
 #: ../../user-manual/metadata/premis.rst:249
+msgid "**Template field** Statute determination date"
+msgstr "**Champ du modèle** Date de détermination de la loi"
+
+#: ../../user-manual/metadata/premis.rst:251
 msgid ""
 "**Rule** \"The date that the determination was made the the statute "
 "authorized the permission(s) noted.\""
 msgstr ""
+"**Règle** \"Date à laquelle il a été déterminé que la loi autorisait les "
+"permissions données.\""
 
-#: ../../user-manual/metadata/premis.rst:260
-#: ../../user-manual/metadata/premis.rst:278
-#: ../../user-manual/metadata/premis.rst:296
-#: ../../user-manual/metadata/premis.rst:963
+#: ../../user-manual/metadata/premis.rst:262
+#: ../../user-manual/metadata/premis.rst:280
+#: ../../user-manual/metadata/premis.rst:298
+#: ../../user-manual/metadata/premis.rst:965
 msgid "**Note** Uses ISO 8061"
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:264
-msgid "Statute start date"
-msgstr ""
+msgstr "**Note** Utilise la norme ISO 8061"
 
 #: ../../user-manual/metadata/premis.rst:266
-msgid "**Template field** Statute start date"
-msgstr ""
+msgid "Statute start date"
+msgstr "Date d’entrée en vigueur de la loi"
 
 #: ../../user-manual/metadata/premis.rst:268
-msgid ""
-"**Rule** \"The date when the statute begins to apply or is applied to the"
-" content.\""
-msgstr ""
+msgid "**Template field** Statute start date"
+msgstr "**Champ du modèle** Date d’entrée en vigueur de la loi"
 
-#: ../../user-manual/metadata/premis.rst:282
-msgid "Statute end date"
+#: ../../user-manual/metadata/premis.rst:270
+msgid ""
+"**Rule** \"The date when the statute begins to apply or is applied to the "
+"content.\""
 msgstr ""
+"**Règle** \"Date à laquelle une loi particulière prend effet ou s’applique "
+"au contenu.\""
 
 #: ../../user-manual/metadata/premis.rst:284
-msgid "**Template field** Statute end date"
-msgstr ""
+msgid "Statute end date"
+msgstr "Date d’expiration de la loi"
 
 #: ../../user-manual/metadata/premis.rst:286
-msgid ""
-"**Rule** \"The date when the statute ceases to apply or is applied to the"
-" content.\""
-msgstr ""
+msgid "**Template field** Statute end date"
+msgstr "**Champ du modèle** Date d’expiration de la loi"
 
-#: ../../user-manual/metadata/premis.rst:308
-msgid "Statute documentation identifier- Type"
+#: ../../user-manual/metadata/premis.rst:288
+msgid ""
+"**Rule** \"The date when the statute ceases to apply or is applied to the "
+"content.\""
 msgstr ""
+"**Règle** \"Date à laquelle une loi particulière prend fin ou cesse de "
+"s’appliquer au contenu.\""
 
 #: ../../user-manual/metadata/premis.rst:310
-msgid "**Template field** Statute documentation identifier- Type"
-msgstr ""
+msgid "Statute documentation identifier- Type"
+msgstr "Identifiant de documentation concernant la loi - Type"
 
 #: ../../user-manual/metadata/premis.rst:312
+msgid "**Template field** Statute documentation identifier- Type"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la loi - Type"
+
+#: ../../user-manual/metadata/premis.rst:314
 msgid ""
 "**Rule** \"A designation of the domain within which the statute "
 "documentation identifier is unique.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:326
-msgid "Statute documentation identifier- Value"
-msgstr ""
+"**Règle** \"Désignation du domaine dans lequel l’identifiant de la "
+"documentation concernant la loi est unique.\""
 
 #: ../../user-manual/metadata/premis.rst:328
-msgid "**Template field** Statute documentation identifier- Value"
-msgstr ""
+msgid "Statute documentation identifier- Value"
+msgstr "Identifiant de la documentation concernant la loi- Valeur"
 
 #: ../../user-manual/metadata/premis.rst:330
-msgid "**Rule** \"The value of the statuteDocumentationIdentifier.\""
+msgid "**Template field** Statute documentation identifier- Value"
 msgstr ""
+"**Champ du modèle** Identifiant de la documentation concernant la loi- "
+"Valeur"
 
-#: ../../user-manual/metadata/premis.rst:342
-msgid "Statute documentation identifier- Role"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:332
+msgid "**Rule** \"The value of the statuteDocumentationIdentifier.\""
+msgstr "**Règle** \"Valeur de l’identifiant de documentation concernant la loi.\""
 
 #: ../../user-manual/metadata/premis.rst:344
+msgid "Statute documentation identifier- Role"
+msgstr "Identifiant de la documentation concernant la loi - Rôle"
+
+#: ../../user-manual/metadata/premis.rst:346
 msgid "**Template field** Statute documentation identifier- Role"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:360
-msgid "Statute note"
-msgstr ""
+"**Champ du modèle** Identifiant de la documentation concernant la loi - Rôle"
 
 #: ../../user-manual/metadata/premis.rst:362
-msgid "**Template field** Statute note"
-msgstr ""
+msgid "Statute note"
+msgstr "**Notes sur la loi**"
 
 #: ../../user-manual/metadata/premis.rst:364
-msgid "**Rule** \"Additional information about the statute.\""
-msgstr ""
+msgid "**Template field** Statute note"
+msgstr "**Champ du modèle** Notes sur la loi"
 
-#: ../../user-manual/metadata/premis.rst:379
-msgid "Basis: License"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:366
+msgid "**Rule** \"Additional information about the statute.\""
+msgstr "**Règle** \"Informations supplémentaires sur la loi.\""
 
 #: ../../user-manual/metadata/premis.rst:381
-msgid "PREMIS in METS XML: ``<premis:rightsBasis>License</premis:rightsBasis>``"
-msgstr ""
+msgid "Basis: License"
+msgstr "Base : Licence"
 
-#: ../../user-manual/metadata/premis.rst:384
-msgid "License terms"
+#: ../../user-manual/metadata/premis.rst:383
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>License</premis:rightsBasis>``"
 msgstr ""
+"PREMIS dans METS XML : ``<premis:rightsBasis>Licence</premis:rightsBasis>``"
 
 #: ../../user-manual/metadata/premis.rst:386
-msgid "**Template field** License terms"
-msgstr ""
+msgid "License terms"
+msgstr "Termes et conditions de la licence"
 
 #: ../../user-manual/metadata/premis.rst:388
-msgid ""
-"**Rule** \"Text describing the license or agreement by which permission "
-"was granted.\""
-msgstr ""
+msgid "**Template field** License terms"
+msgstr "**Champ du modèle** Termes et conditions de la licence"
 
-#: ../../user-manual/metadata/premis.rst:400
-msgid "License start date"
+#: ../../user-manual/metadata/premis.rst:390
+msgid ""
+"**Rule** \"Text describing the license or agreement by which permission was "
+"granted.\""
 msgstr ""
+"**Règle** \"Description de la licence ou de l’entente accordant la "
+"permission.\""
 
 #: ../../user-manual/metadata/premis.rst:402
-msgid "**Template field** License start date"
-msgstr ""
+msgid "License start date"
+msgstr "Date d’entrée en vigueur de la licence"
 
 #: ../../user-manual/metadata/premis.rst:404
+msgid "**Template field** License start date"
+msgstr "**Champ du modèle** Date d’entrée en vigueur de la licence"
+
+#: ../../user-manual/metadata/premis.rst:406
 msgid ""
-"**Rule** \"The date at which the license is first applies or is applied "
-"to the content.\""
+"**Rule** \"The date at which the license is first applies or is applied to "
+"the content.\""
 msgstr ""
+"**Règle** \"Date à laquelle un statut particulier prend effet ou s’applique "
+"au contenu.\""
 
-#: ../../user-manual/metadata/premis.rst:415
-#: ../../user-manual/metadata/premis.rst:434
-#: ../../user-manual/metadata/premis.rst:541
-#: ../../user-manual/metadata/premis.rst:559
-#: ../../user-manual/metadata/premis.rst:666
-#: ../../user-manual/metadata/premis.rst:684
-#: ../../user-manual/metadata/premis.rst:799
-#: ../../user-manual/metadata/premis.rst:815
-#: ../../user-manual/metadata/premis.rst:945
+#: ../../user-manual/metadata/premis.rst:417
+#: ../../user-manual/metadata/premis.rst:436
+#: ../../user-manual/metadata/premis.rst:543
+#: ../../user-manual/metadata/premis.rst:561
+#: ../../user-manual/metadata/premis.rst:668
+#: ../../user-manual/metadata/premis.rst:686
+#: ../../user-manual/metadata/premis.rst:801
+#: ../../user-manual/metadata/premis.rst:817
+#: ../../user-manual/metadata/premis.rst:947
 msgid "**Note** Uses ISO 8061."
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:419
-msgid "License end date"
-msgstr ""
+msgstr "**Note** Utilise la norme ISO 8061."
 
 #: ../../user-manual/metadata/premis.rst:421
-msgid "**Template field** License end date"
-msgstr ""
+msgid "License end date"
+msgstr "Date d’expiration de la licence"
 
 #: ../../user-manual/metadata/premis.rst:423
-msgid ""
-"**Rule** \"The date at which the license no longer applies or is applied "
-"to the content.\""
-msgstr ""
+msgid "**Template field** License end date"
+msgstr "**Champ du modèle** Date d’expiration de la licence"
 
-#: ../../user-manual/metadata/premis.rst:447
-msgid "License documentation identifier- Type"
+#: ../../user-manual/metadata/premis.rst:425
+msgid ""
+"**Rule** \"The date at which the license no longer applies or is applied to "
+"the content.\""
 msgstr ""
+"**Règle** \"Date à laquelle la licence prend fin ou cesse de s’appliquer au "
+"contenu.\""
 
 #: ../../user-manual/metadata/premis.rst:449
-msgid "**Template field** License documentation identifier- Type"
-msgstr ""
+msgid "License documentation identifier- Type"
+msgstr "Identifiant de documentation concernant la licence - Type"
 
 #: ../../user-manual/metadata/premis.rst:451
+msgid "**Template field** License documentation identifier- Type"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la licence- Type"
+
+#: ../../user-manual/metadata/premis.rst:453
 msgid ""
 "**Rule** \"A designation of the domain within which the license "
 "documentation identifier is unique.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:465
-msgid "License documentation identifier- Value"
-msgstr ""
+"**Règle** \"Désignation du domaine dans lequel l’identifiant de "
+"documentation concernant la licence est unique.\""
 
 #: ../../user-manual/metadata/premis.rst:467
-msgid "**Template field** License documentation identifier- Value"
-msgstr ""
+msgid "License documentation identifier- Value"
+msgstr "Identifiant de documentation concernant la licence- Valeur"
 
 #: ../../user-manual/metadata/premis.rst:469
+msgid "**Template field** License documentation identifier- Value"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la licence- "
+"Valeur"
+
+#: ../../user-manual/metadata/premis.rst:471
 msgid "**Rule** \"The value of the licenseDocumentationIdentifier.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:482
-msgid "License documentation identifier- Role"
-msgstr ""
+"**Règle** \"Valeur de l’identifiant de documentation concernant la "
+"licence.\""
 
 #: ../../user-manual/metadata/premis.rst:484
+msgid "License documentation identifier- Role"
+msgstr "Identifiant de documentation concernant la licence- Rôle"
+
+#: ../../user-manual/metadata/premis.rst:486
 msgid "**Template field** License documentation identifier- Role"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:500
-msgid "License note"
-msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la licence- Rôle"
 
 #: ../../user-manual/metadata/premis.rst:502
-msgid "**Template field** License note"
-msgstr ""
+msgid "License note"
+msgstr "Notes sur la licence"
 
 #: ../../user-manual/metadata/premis.rst:504
+msgid "**Template field** License note"
+msgstr "**Champ du modèle** Notes sur la licence"
+
+#: ../../user-manual/metadata/premis.rst:506
 msgid "**Rule** \"Additional information about the license.\""
-msgstr ""
+msgstr "**Règle** \"Informations supplémentaires sur la licence.\""
 
-#: ../../user-manual/metadata/premis.rst:517
+#: ../../user-manual/metadata/premis.rst:519
 msgid "Basis: Donor"
-msgstr ""
+msgstr "Base : Donateur"
 
-#: ../../user-manual/metadata/premis.rst:521
+#: ../../user-manual/metadata/premis.rst:523
 msgid ""
-"Archivematica provides a template for donor rights, which are translated "
-"in PREMIS as \"other\".  In the METS file, you will find Donor rights in "
-"a rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:526
-msgid "Donor agreement start date"
+"Archivematica provides a template for donor rights, which are translated in "
+"PREMIS as \"other\".  In the METS file, you will find Donor rights in a "
+"rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
 msgstr ""
 
 #: ../../user-manual/metadata/premis.rst:528
-msgid "**Template field** Donor agreement start date"
-msgstr ""
+msgid "Donor agreement start date"
+msgstr "Date d'entrée en vigueur de la convention de donation "
 
 #: ../../user-manual/metadata/premis.rst:530
-#: ../../user-manual/metadata/premis.rst:655
-msgid ""
-"**Rule** \"Date when the other right applies or is applied to the "
-"content.\""
+msgid "**Template field** Donor agreement start date"
 msgstr ""
+"**Champ du modèle** Date d’entrée en vigueur de la convention de donation "
 
-#: ../../user-manual/metadata/premis.rst:544
-msgid "Donor agreement end date"
+#: ../../user-manual/metadata/premis.rst:532
+#: ../../user-manual/metadata/premis.rst:657
+msgid ""
+"**Rule** \"Date when the other right applies or is applied to the content.\""
 msgstr ""
 
 #: ../../user-manual/metadata/premis.rst:546
-msgid "**Template field** Donor agreement end date"
-msgstr ""
+msgid "Donor agreement end date"
+msgstr "Date d’expiration de la convention de donation"
 
 #: ../../user-manual/metadata/premis.rst:548
-#: ../../user-manual/metadata/premis.rst:673
-msgid ""
-"**Rule** \"Date when the other right no longer applies or is applied to "
-"the content.\""
-msgstr ""
+msgid "**Template field** Donor agreement end date"
+msgstr "**Champ du modèle** Date d’expiration de la convention de donation "
 
-#: ../../user-manual/metadata/premis.rst:572
-msgid "Donor documentation identifier- Type"
+#: ../../user-manual/metadata/premis.rst:550
+#: ../../user-manual/metadata/premis.rst:675
+msgid ""
+"**Rule** \"Date when the other right no longer applies or is applied to the "
+"content.\""
 msgstr ""
 
 #: ../../user-manual/metadata/premis.rst:574
-msgid "**Template field** Donor documentation identifier- Type"
-msgstr ""
+msgid "Donor documentation identifier- Type"
+msgstr "Identifiant de documentation concernant le donateur- Type"
 
 #: ../../user-manual/metadata/premis.rst:576
-#: ../../user-manual/metadata/premis.rst:700
-#: ../../user-manual/metadata/premis.rst:832
+msgid "**Template field** Donor documentation identifier- Type"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant le donateur- "
+"Type"
+
+#: ../../user-manual/metadata/premis.rst:578
+#: ../../user-manual/metadata/premis.rst:702
+#: ../../user-manual/metadata/premis.rst:834
 msgid ""
 "**Rule** \"A designation of the domain within which the rights statement "
 "documentation identifier is unique.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:589
-msgid "Donor documentation identifier- Value"
-msgstr ""
-
 #: ../../user-manual/metadata/premis.rst:591
-msgid "**Template field** Donor documentation identifier- Value"
-msgstr ""
+msgid "Donor documentation identifier- Value"
+msgstr "Identifiant de documentation concernant le donateur- Valeur"
 
 #: ../../user-manual/metadata/premis.rst:593
-#: ../../user-manual/metadata/premis.rst:849
+msgid "**Template field** Donor documentation identifier- Value"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant le donateur- "
+"Valeur"
+
+#: ../../user-manual/metadata/premis.rst:595
+#: ../../user-manual/metadata/premis.rst:851
 msgid "**Rule** \"The value of the otherRightsDocumentationIdentifier.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:606
-msgid "Donor documentation identifier- Role"
-msgstr ""
-
 #: ../../user-manual/metadata/premis.rst:608
-msgid "**Template field** Donor documentation identifier- Role"
-msgstr ""
+msgid "Donor documentation identifier- Role"
+msgstr "Identifiant de documentation concernant le donateur- Rôle"
 
 #: ../../user-manual/metadata/premis.rst:610
-#: ../../user-manual/metadata/premis.rst:733
-#: ../../user-manual/metadata/premis.rst:865
+msgid "**Template field** Donor documentation identifier- Role"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant le donateur- "
+"Rôle"
+
+#: ../../user-manual/metadata/premis.rst:612
+#: ../../user-manual/metadata/premis.rst:735
+#: ../../user-manual/metadata/premis.rst:867
 msgid ""
 "**Rule** \"The value indicating the purpose or expected use of the "
 "documentation being identified.\""
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:623
-msgid "Donor agreement note"
-msgstr ""
+"**Règle** \"Valeur indiquant le rôle et l’utilisation supposés de la "
+"documentation identifiée.\""
 
 #: ../../user-manual/metadata/premis.rst:625
-msgid "**Template field** Donor agreement note"
-msgstr ""
+msgid "Donor agreement note"
+msgstr "Note sur la convention de donation"
 
 #: ../../user-manual/metadata/premis.rst:627
-#: ../../user-manual/metadata/premis.rst:750
-#: ../../user-manual/metadata/premis.rst:882
+msgid "**Template field** Donor agreement note"
+msgstr "**Champ du modèle** Note sur la convention de donation"
+
+#: ../../user-manual/metadata/premis.rst:629
+#: ../../user-manual/metadata/premis.rst:752
+#: ../../user-manual/metadata/premis.rst:884
 msgid "**Rule** \"Additional information about the rights of the object\"."
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:642
+#: ../../user-manual/metadata/premis.rst:644
 msgid "Basis: Policy"
-msgstr ""
+msgstr "Base : Politique "
 
-#: ../../user-manual/metadata/premis.rst:646
+#: ../../user-manual/metadata/premis.rst:648
 msgid ""
-"Archivematica provides a template for policy rights, which are translated"
-" in PREMIS as \"other\".  In the METS file, you will find Policy rights "
-"in a rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:651
-msgid "Policy start date"
+"Archivematica provides a template for policy rights, which are translated in"
+" PREMIS as \"other\".  In the METS file, you will find Policy rights in a "
+"rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
 msgstr ""
 
 #: ../../user-manual/metadata/premis.rst:653
-msgid "**Template field** Policy start date"
-msgstr ""
+msgid "Policy start date"
+msgstr "Date d’entrée en vigueur de la politique"
 
-#: ../../user-manual/metadata/premis.rst:669
-msgid "Policy end date"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:655
+msgid "**Template field** Policy start date"
+msgstr "**Champ du modèle** Date d’entrée en vigueur de la politique"
 
 #: ../../user-manual/metadata/premis.rst:671
-msgid "**Template field** Policy end date"
-msgstr ""
+msgid "Policy end date"
+msgstr "Date d’expiration de la politique"
 
-#: ../../user-manual/metadata/premis.rst:696
-msgid "Policy documentation identifier- Type"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:673
+msgid "**Template field** Policy end date"
+msgstr "**Champ du modèle** Date d’expiration de la politique"
 
 #: ../../user-manual/metadata/premis.rst:698
+msgid "Policy documentation identifier- Type"
+msgstr "Identifiant de documentation concernant la politique- Type"
+
+#: ../../user-manual/metadata/premis.rst:700
 msgid "**Template field** Policy documentation identifier- Type"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:713
-msgid "Policy documentation identifier- Value"
-msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la politique- "
+"Type"
 
 #: ../../user-manual/metadata/premis.rst:715
-msgid "**Template field** Policy documentation identifier- Value"
-msgstr ""
+msgid "Policy documentation identifier- Value"
+msgstr "Identifiant de documentation concernant la politique- Valeur"
 
 #: ../../user-manual/metadata/premis.rst:717
+msgid "**Template field** Policy documentation identifier- Value"
+msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la politique- "
+"Valeur"
+
+#: ../../user-manual/metadata/premis.rst:719
 msgid "**Rule** The value of the otherRightsDocumentationIdentifier"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:729
-msgid "Policy documentation identifier- Role"
-msgstr ""
-
 #: ../../user-manual/metadata/premis.rst:731
+msgid "Policy documentation identifier- Role"
+msgstr "Identifiant de documentation concernant la politique- Rôle"
+
+#: ../../user-manual/metadata/premis.rst:733
 msgid "**Template field** Policy documentation identifier- Role"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:746
-msgid "Policy note"
-msgstr ""
+"**Champ du modèle** Identifiant de documentation concernant la politique- "
+"Rôle"
 
 #: ../../user-manual/metadata/premis.rst:748
-msgid "**Template field** Policy note"
-msgstr ""
+msgid "Policy note"
+msgstr "Note sur la politique"
 
-#: ../../user-manual/metadata/premis.rst:764
-msgid "Basis: Other"
-msgstr ""
+#: ../../user-manual/metadata/premis.rst:750
+msgid "**Template field** Policy note"
+msgstr "**Champ du modèle** Note sur la politique"
 
 #: ../../user-manual/metadata/premis.rst:766
+msgid "Basis: Other"
+msgstr "Base : Autre"
+
+#: ../../user-manual/metadata/premis.rst:768
 msgid "PREMIS in METS XML: ``<premis:rightsBasis>Other</premisrightsBasis>``"
 msgstr ""
+"PREMIS dans METS XML: ``<premis:rightsBasis>Autre</premisrightsBasis>``"
 
-#: ../../user-manual/metadata/premis.rst:769
+#: ../../user-manual/metadata/premis.rst:771
 msgid "Other rights basis"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:771
+#: ../../user-manual/metadata/premis.rst:773
 msgid "**Template field** Other rights basis"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:773
+#: ../../user-manual/metadata/premis.rst:775
 msgid ""
 "**Rule** \"Designation of the basis for the other right or permission "
 "described in the rightsStatementIdentifier.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:786
+#: ../../user-manual/metadata/premis.rst:788
 msgid "Other start date"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:788
+#: ../../user-manual/metadata/premis.rst:790
 msgid "**Template field** Other start date"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:802
+#: ../../user-manual/metadata/premis.rst:804
 msgid "Other end date"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:804
+#: ../../user-manual/metadata/premis.rst:806
 msgid "**Template field** Other end date"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:828
+#: ../../user-manual/metadata/premis.rst:830
 msgid "Other documentation identifier- Type"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:830
+#: ../../user-manual/metadata/premis.rst:832
 msgid "**Template field** Other documentation identifier- Type"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:845
+#: ../../user-manual/metadata/premis.rst:847
 msgid "Other documentation identifier- Value"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:847
+#: ../../user-manual/metadata/premis.rst:849
 msgid "**Template field** Other documentation identifier- Value"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:861
+#: ../../user-manual/metadata/premis.rst:863
 msgid "Other documentation identifier- Role"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:863
+#: ../../user-manual/metadata/premis.rst:865
 msgid "**Template field** Other documentation identifier- Role"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:878
-msgid "Note"
-msgstr ""
-
 #: ../../user-manual/metadata/premis.rst:880
+msgid "Note"
+msgstr "Note"
+
+#: ../../user-manual/metadata/premis.rst:882
 msgid "**Template field** Note"
-msgstr ""
+msgstr "**Champ du modèle** Note"
 
-#: ../../user-manual/metadata/premis.rst:896
+#: ../../user-manual/metadata/premis.rst:898
 msgid "Acts granted or restricted"
-msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:899
-msgid "Act"
-msgstr ""
+msgstr "Actions accordées ou limitées"
 
 #: ../../user-manual/metadata/premis.rst:901
-msgid "**Template field** Act"
-msgstr ""
+msgid "Act"
+msgstr "Action"
 
 #: ../../user-manual/metadata/premis.rst:903
-msgid ""
-"**Rule** \"The action the preservation repository is allowed to take; "
-"e.g. replicate, migrate, modify, use, disseminate, delete.\""
-msgstr ""
+msgid "**Template field** Act"
+msgstr "**Champ du modèle** Action"
 
-#: ../../user-manual/metadata/premis.rst:915
-msgid "Grant/restriction"
+#: ../../user-manual/metadata/premis.rst:905
+msgid ""
+"**Rule** \"The action the preservation repository is allowed to take; e.g. "
+"replicate, migrate, modify, use, disseminate, delete.\""
 msgstr ""
 
 #: ../../user-manual/metadata/premis.rst:917
+msgid "Grant/restriction"
+msgstr "Accordé/limité"
+
+#: ../../user-manual/metadata/premis.rst:919
 msgid "**Template field** Grant/restriction"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:919
+#: ../../user-manual/metadata/premis.rst:921
 msgid "**Rule** Drop-down field: choose between Allow, Disallow, Conditional"
 msgstr ""
-
-#: ../../user-manual/metadata/premis.rst:930
-msgid "Start"
-msgstr ""
+"**Règle** Menu déroulant: choisir entre Permis, Interdit, Conditionnel"
 
 #: ../../user-manual/metadata/premis.rst:932
-msgid "**Template field** Start"
-msgstr ""
+msgid "Start"
+msgstr "Début"
 
 #: ../../user-manual/metadata/premis.rst:934
+msgid "**Template field** Start"
+msgstr "**Champ du modèle** Début"
+
+#: ../../user-manual/metadata/premis.rst:936
 msgid "**Rule** \"Beginning date of the rights or restrictions granted.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:948
-msgid "End"
-msgstr ""
-
 #: ../../user-manual/metadata/premis.rst:950
-msgid "**Template field** End"
-msgstr ""
+msgid "End"
+msgstr "Fin"
 
 #: ../../user-manual/metadata/premis.rst:952
+msgid "**Template field** End"
+msgstr "**Champ du modèle** Fin"
+
+#: ../../user-manual/metadata/premis.rst:954
 msgid "**Rule** \"Ending date of the rights or restrictions granted.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:975
+#: ../../user-manual/metadata/premis.rst:977
 msgid "Grant/restriction note"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:977
+#: ../../user-manual/metadata/premis.rst:979
 msgid "**Template field** Grant/restriction note"
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:979
+#: ../../user-manual/metadata/premis.rst:981
 msgid "**Rule** \"Additional information about the rights granted.\""
 msgstr ""
 
-#: ../../user-manual/metadata/premis.rst:991
+#: ../../user-manual/metadata/premis.rst:992
 msgid ":ref:`Back to the top <premis-template>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <premis-template>`"

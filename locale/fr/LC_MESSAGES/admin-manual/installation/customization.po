@@ -1,55 +1,66 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Louise Charlebois <lcharlebois@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../admin-manual/installation/customization.rst:5
 msgid "Customization and automation"
-msgstr ""
+msgstr "Personnalisation et automatisation"
 
 #: ../../admin-manual/installation/customization.rst:7
 msgid ""
 "Some workflow and processing decisions can be made or viewed in the "
 "dashboard and others are created at the development level."
 msgstr ""
+"Certains processus et décisions de traitement peuvent être réalisés ou "
+"visualusés à partir du tableau de bord, d'autres sont crées au niveau "
+"développement"
 
 #: ../../admin-manual/installation/customization.rst:11
 msgid "Resources for dashboard configuration"
-msgstr ""
+msgstr "Ressources pour la configuration du tableau de bord"
 
 #: ../../admin-manual/installation/customization.rst:13
 msgid ""
 "The Preservation Planning tab allows editing or addition of commands for "
 "identification, tools, characterization, event detail, extraction, "
-"normalization, transcription, validation and verification. Please see the"
-" :ref:`Format Policy Registry (FPR) documentation <fpr:index>` for "
+"normalization, transcription, validation and verification. Please see the "
+":ref:`Format Policy Registry (FPR) documentation <fpr:index>` for "
 "instruction."
 msgstr ""
+"L'onglet Planification de la préservation permet de modifier ou d'ajouter "
+"des commandes d'authentification, outils, caractérisation , détail "
+"d'évenement, extraction, normalisation, transcription, validation et "
+"vérification. Voir la :ref:`documentation du Registre de politiques de "
+"format (FPR) <fpr:index>` pour consulter les instructions."
 
 #: ../../admin-manual/installation/customization.rst:18
 msgid ""
-"Basic workflow configuration is feasible by administrators or end-users "
-"in the :ref:`Administration tab <dashboard-admin>` of the dashboard."
+"Basic workflow configuration is feasible by administrators or end-users in "
+"the :ref:`Administration tab <dashboard-admin>` of the dashboard."
 msgstr ""
+"La configuration de base des flux des opérations est réalisable par les "
+"administrateurs ou les utilisateurs finaux sous l':ref:`onglet "
+"Administration <dashboard-admin>` du tableau de bord."
 
 #: ../../admin-manual/installation/customization.rst:23
 msgid "Resources for development configuration"
-msgstr ""
+msgstr "Ressources pour la configuration du développement"
 
 #: ../../admin-manual/installation/customization.rst:25
 msgid ""
@@ -57,23 +68,31 @@ msgid ""
 "putting a ``processingMCP.xml`` file into the root directory of a "
 "SIP/transfer. See :ref:`Processing configuration <process-config>`."
 msgstr ""
+"Lors du traitement d'un SIP ou un transfert, vous pouvez automatiser les "
+"choix de processus en mettant un fichier \"processingMCP.xml\" dans le "
+"repertoire principal du SIP/transfert. Voir :ref:'Configuration du "
+"traitement<process-config>'."
 
 #: ../../admin-manual/installation/customization.rst:29
 msgid ""
 "The MCP is the core of the Archivematica system. It controls the various "
-"micro-services in the Archivematica system. Developers who wish to modify"
-" the MCP configuration should consult the following resources on the "
+"micro-services in the Archivematica system. Developers who wish to modify "
+"the MCP configuration should consult the following resources on the "
 "Archivematica wiki:"
 msgstr ""
+"Le MCP est le noyau du système Archivematica. Il controle les divers "
+"microservices dans le système Archivematica. Les developpeurs qui voudraient"
+" modifier la configuration du MCP doivent consulter les ressources suivantes"
+" sur le wiki d'Archivematica :"
 
 #: ../../admin-manual/installation/customization.rst:34
 msgid "`MCP <https://www.archivematica.org/wiki/MCP>`_"
-msgstr ""
+msgstr "'MCP<https://www.archivematica.org/wiki/MCP>'_"
 
 #: ../../admin-manual/installation/customization.rst:36
 msgid ""
 "`Basic MCP configuration "
-"<https://www.archivematica.org/wiki/MCP_Basic_Configuration>`_"
+"<https://wiki.archivematica.org/MCPServer#Config_File>`_"
 msgstr ""
 
 #: ../../admin-manual/installation/customization.rst:38
@@ -81,8 +100,10 @@ msgid ""
 "For other development resources, please see the `Development "
 "<https://www.archivematica.org/wiki/Development>`_ section of our wiki."
 msgstr ""
+"Pour d'autres ressources de developpement, voir la "
+"'section_Developpement<https://www.archivematica.org/wiki/Development>' de "
+"notre wiki."
 
 #: ../../admin-manual/installation/customization.rst:41
 msgid ":ref:`Back to the top <customization>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <customization>`"

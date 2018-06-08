@@ -4,12 +4,12 @@
 Ingest
 ======
 
-During ingest, digital objects are packaged into SIPs and run through several 
-micro-services, including normalization, packaging into an AIP and generation of 
+During ingest, digital objects are packaged into SIPs and run through several
+micro-services, including normalization, packaging into an AIP and generation of
 a DIP.
 
-If you would like to skip some of the default decision points or make preconfigured 
-choices for your desired workflow, see :ref:`User administration - Processing 
+If you would like to skip some of the default decision points or make preconfigured
+choices for your desired workflow, see :ref:`User administration - Processing
 configuration <dashboard-processing>`.
 
 Should you run into an error during ingest, please see :ref:`Error handling <error-handling>`.
@@ -26,6 +26,7 @@ Should you run into an error during ingest, please see :ref:`Error handling <err
 * :ref:`Store AIP <store-aip>`
 * :ref:`Upload DIP <upload-dip>`
 * :ref:`Reingest AIP <reingest>`
+* :ref:`Clean up the ingest dashboard <cleanup-ingest>`
 
 
 .. _create-sip:
@@ -45,8 +46,8 @@ Create a SIP
    the transfer stage. Archivematica default is to use pre-existing data. For more
    about this option, see :ref:`Administer — Processing configuration <dashboard-processing>`.
 
-#. Once the SIP reaches "Normalize", you will be given several options for how 
-   Archivematica should normalize the SIP. Choose the option most suitable for 
+#. Once the SIP reaches "Normalize", you will be given several options for how
+   Archivematica should normalize the SIP. Choose the option most suitable for
    your workflow.
 
    .. figure:: images/Normalize1.*
@@ -74,7 +75,7 @@ than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog
 
 #. Select content from the backlog by either searching for it through the backlog
    search bars at the top of the Ingest tab or by browsing the backlog by clicking
-   on the folder icons in the *Originals* pane. Note: Multi-item select is not 
+   on the folder icons in the *Originals* pane. Note: Multi-item select is not
    yet included in this feature, though entire folders/directories can be moved.
 
    .. figure:: images/Ingest-panes.*
@@ -204,7 +205,7 @@ for information about the Dublin Core elements available.
 
 .. seealso::
 
-    If you are importing lower-level metadata (i.e. metadata to be attached to 
+    If you are importing lower-level metadata (i.e. metadata to be attached to
     subdirectories and files within a SIP) see also:
 
     * :ref:`Transfer <transfer>`
@@ -282,7 +283,7 @@ PREMIS rights fields, see :ref:`PREMIS template <premis-template>`
 
    To add rights, click on the template icon
 
-2. This will take you to the SIP detail panel. On the left-hand side, under 
+2. This will take you to the SIP detail panel. On the left-hand side, under
    Rights, click Add.
 
 .. figure:: images/SIPDetailPanel1.*
@@ -293,8 +294,8 @@ PREMIS rights fields, see :ref:`PREMIS template <premis-template>`
 
    SIP detail panel
 
-3. Add rights as desired and save it by clicking the Save button at the bottom 
-   of the screen, or clicking Next if you are finished and ready to move on to the 
+3. Add rights as desired and save it by clicking the Save button at the bottom
+   of the screen, or clicking Next if you are finished and ready to move on to the
    second page of data entry. Rights entries are made up of two pages of content.
 
 .. figure:: images/CopyrightNext.*
@@ -319,7 +320,7 @@ been uploaded to your access system.
    SIP rights template- second page
 
 
-4. When you click Save on the second page, you will be given the option to add 
+4. When you click Save on the second page, you will be given the option to add
    another act with its associated grants and/or restrictions.
 
 .. figure:: images/Createnewgrant.*
@@ -330,7 +331,7 @@ been uploaded to your access system.
 
    Repeatable acts in rights template
 
-5. If you have finished adding acts, click Done. You will see the rights entry 
+5. If you have finished adding acts, click Done. You will see the rights entry
    in the list page . To edit it further, click Edit on the right-hand side.
 
 .. figure:: images/RightsPanelwRights.*
@@ -355,8 +356,8 @@ kept along with their normalized versions. For more information about
 Archivematica's preservation strategy, go to the Preservation Planning section
 of the manual.
 
-1. At the normalization step, the SIP will appear in the dashboard with a bell 
-   icon next to it. Select one of the normalization options from the Actions 
+1. At the normalization step, the SIP will appear in the dashboard with a bell
+   icon next to it. Select one of the normalization options from the Actions
    drop-down menu:
 
 .. figure:: images/NormPresAccess1.*
@@ -382,7 +383,7 @@ of the manual.
 * You may also Reject SIP at this stage.
 
 
-2. Once normalization is completed you can review the results in the normalization 
+2. Once normalization is completed you can review the results in the normalization
    report. Click on the report icon next to the Actions drop-down menu.
 
 .. figure:: images/ReportIcon1.*
@@ -401,10 +402,10 @@ preservation and access format:
    :width: 80%
    :alt: Normalization report
 
-3. You may review the normalization results in a new tab by clicking on Review. 
-   If your browser has plug-ins to view a file, you may open it in another tab by 
-   clicking on it. If you click on a file and your browser cannot open it, it 
-   will download locally so you can view it using the appropriate software on 
+3. You may review the normalization results in a new tab by clicking on Review.
+   If your browser has plug-ins to view a file, you may open it in another tab by
+   clicking on it. If you click on a file and your browser cannot open it, it
+   will download locally so you can view it using the appropriate software on
    your machine.
 
 .. figure:: images/ReviewNorm1.*
@@ -416,9 +417,9 @@ preservation and access format:
    Review normalization results in new tab
 
 
-4. Approve normalization in the Actions drop-down menu to continue processing 
-   the SIP. You may also Reject the SIP or re-do normalization. If you see errors 
-   in normalization, follow the instructions in Error handling to learn more 
+4. Approve normalization in the Actions drop-down menu to continue processing
+   the SIP. You may also Reject the SIP or re-do normalization. If you see errors
+   in normalization, follow the instructions in Error handling to learn more
    about the problem.
 
 .. seealso::
@@ -448,8 +449,8 @@ the DIP and stored in the AIP.
 Store AIP
 ---------
 
-1. After normalization is approved, the SIP runs through a number of micro-services, 
-   including processing of the submission documentation, generation of the METS file, 
+1. After normalization is approved, the SIP runs through a number of micro-services,
+   including processing of the submission documentation, generation of the METS file,
    indexing, generation of the DIP and packaging of the AIP.
 
 .. figure:: images/StoreAIPUpDIP1.*
@@ -460,16 +461,16 @@ Store AIP
 
    Archivematica ready to store the AIP and upload the DIP
 
-2. If desired, review the contents of the AIP in another tab by clicking on Review. 
-   More information on Archivematica's AIP structure and the METS/PREMIS file is 
-   available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`. 
+2. If desired, review the contents of the AIP in another tab by clicking on Review.
+   More information on Archivematica's AIP structure and the METS/PREMIS file is
+   available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`.
    You can download the AIP at this stage by clicking on it.
 
-3. From the Action dropdown menu, select "Store AIP" to move the AIP into archival 
-   storage. You can store an AIP in any number of preconfigured directories. For 
+3. From the Action dropdown menu, select "Store AIP" to move the AIP into archival
+   storage. You can store an AIP in any number of preconfigured directories. For
    instructions to configure AIP storage locations, see :ref:`Administrator manual - Storage Service <storageService:administrators>`.
 
-4. From the Action dropdown menu, select the AIP storage location from the 
+4. From the Action dropdown menu, select the AIP storage location from the
    pre-configured set of options.
 
 .. note::
@@ -486,59 +487,49 @@ Store AIP
 Upload DIP
 ----------
 
-Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and 
+Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and
 Archivists' Toolkit. For information about uploading DIPs to your access system, see :ref:`Access <access>`.
 
 .. _reingest:
 
-Reingest AIP
-------------
+Re-ingest AIP
+-------------
 
-In Archivematica, AIP reingest is supported for three purposes: adding/updating
-descriptive and/or rights metadata, normalizing for access, or full re-ingest which
-re-runs all major micro-services.  There are three methods of starting
-AIP reingest: through the dashboard, through the Storage Service, or through
-the API.
+There are three different types of AIP re-ingest:
 
-.. _reingest-dashboard:
+1. Metadata only
+++++++++++++++++
 
-Dashboard
-=========
+This method is for adding or updating descriptive and/or rights metadata. Doing
+so will update the dmdSec of the AIP's METS file.  Note that the original
+metadata will still be present but if you scroll down you'll also see another
+dmdSec that says STATUS="updated", like so:
 
-1. In the Archival Storage tab, find the AIP you wish to reingest by searching 
-   or browsing. Click on the name of the AIP or View to open that AIP's view page. 
-   Under Actions, click on Re-ingest.
+``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">``
 
-.. image:: images/storage_reingest.*
-   :align: center
-   :width: 80%
-   :alt: Click on reingest beside the AIP
+Choosing metadata only AIP re-ingest will take you back to the Ingest tab.
 
-2. Choose if you wish to perform a metadata re-ingest, a partial re-ingest (which 
-   sends the AIP to the beginning of Ingest to re-normalize for Access and update 
-   the metadata if desired) or a full re-ingest (which sends the AIP to the beginning 
-   of transfer and re-runs all major micro-services, including re-normalization 
-   for preservation if desired).
+2. Partial re-ingest
+++++++++++++++++++++
 
-2a. If performing full re-ingest, enter the name of the processing configuration 
-    you wish to use. To add new processing configurations, see :ref:`Processing configuration <dashboard-processing>`.
+This method is typically used by institutions who want to create a DIP sometime
+after they've made an AIP.  They can then send their DIP to their access system
+or store it.
+
+Choosing partial re-ingest will take you back to the Ingest tab.
+
+3. Full re-ingest
++++++++++++++++++
+
+This method is for institutions who want to be able to run all the major micro-services (including re-normalization for preservation if desired). A possible use case for full re-ingest might be that after a time new file characterization or validation tools have been developed and integrated with a future version of Archivematica. Running the micro-services with these updated tools will result in a updated and better AIP.
 
 Full re-ingest can also be used to update the metadata, and re-normalize for access.
 
-.. image:: images/reingest_type.*
-   :align: center
-   :width: 80%
-   :alt: Choose type of reingest and name of processing configuration
+When performing full re-ingest, you will need to enter the name of the
+processing configuration you wish to use. To add new processing configurations,
+see :ref:`Processing configuration <dashboard-processing>`.
 
-Click on Re-ingest. Archivematica will tell you that the AIP has been
-sent to the pipeline for reingest.
-
-.. note::
-
-   If you attempt to reingest an AIP which is already in the process of being
-   reingested in the pipeline, Archivematica will alert you with an error.
-
-.. important::
+.. Important::
 
    The following workflows are **not** supported in full AIP re-ingest:
 
@@ -547,15 +538,70 @@ sent to the pipeline for reingest.
    * Extract packages in the AIP and then delete them
    * Send AIP to backlog for re-arrangement during re-ingest
 
-   A note about package extraction in re-ingest: Archivematica will not appear to
-   prevent you from extracting packages on re-ingest, and then deleting the packages.
-   However, the resulting AIP will still contain the packages, and in the METS
-   file they will not have re-ingestion events correctly associated with them.
-   This is documented as a bug here:
+
+Choosing full re-ingest will take you back to the Transfer tab.
+
+How to tell in the METS file if an AIP has been re-ingested
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Look at the Header of the METS file, which will display a ``CREATEDATE`` and a
+``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21" LASTMODDATE="2017-10-17T20:32:36"/>``
+
+2. You can also search for the reingest premis:event
+``<premis:eventType>reingestion</premis:eventType>``
+
+3. If you've updated the descriptive or rights metadata you will find an updated
+dmdSec
+
+``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">``
+
+
+.. _reingest-dashboard:
+
+Where to start the re-ingest process
+++++++++++++++++++++++++++++++++++++
+
+You can start the re-ingest process through the Archival Storage tab on the
+Dashboard, the Storage Service, or the API.
+
+Archival Storage tab on the Dashboard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Go to the Archival Storage tab and find the AIP you wish to re-ingest by searching
+or browsing.
+
+1. Click on the name of the AIP or View to open that AIP's view page. Under
+Actions, click on Re-ingest.
+
+.. image:: images/storage_reingest.*
+   :align: center
+   :width: 80%
+   :alt: Click on reingest beside the AIP
+
+2. Choose the type of re-ingest (metadata, partial or full).
+
+.. image:: images/reingest_type.*
+   :align: center
+   :width: 80%
+   :alt: Choose type of reingest and name of processing configuration
+
+3. Click on Re-ingest. Archivematica will tell you that the AIP has been
+   sent to the pipeline for re-ingest.
+
+.. Note::
+
+   If you attempt to re-ingest an AIP which is already in the process of being
+   re-ingested in the pipeline, Archivematica will alert you with an error.
+
+.. Note::
+
+   Archivematica will appear to allow you to extract and then delete packages.
+   However, the resulting AIP will still actually contain the packages, and in
+   the METS file they will not have re-ingestion events correctly associated
+   with them. This is documented as a bug here:
    https://projects.artefactual.com/issues/10699
 
-
-3. Proceed to the Transfer or Ingest tab and approve the AIP reingest.
+4. Proceed to the Transfer or Ingest tab and approve the AIP re-ingest.
 
 .. image:: images/reingest_approve.*
    :align: center
@@ -563,13 +609,71 @@ sent to the pipeline for reingest.
    :alt: Approve AIP reingest in Ingest tab.
 
 
-4. When the package proceeds to Normalization:
+5. At the Normalization micro-service you will make different choices depending
+   on the type of AIP re-ingest you've selected.
 
-**For metadata only** choose "Do not normalize"
+   **Metadata-only re-ingest**
 
-**For partial re-ingest** choose "Normalize for access"
+   1. Add or update your metadata *before* you approve Normalization to ensure
+      the metadata is written to the database, which means it will be written to
+      the AIP METS file. There are two ways to add or update metadata:
 
-**For full re-ingest** use the normalization path of your choosing
+      A. Add metadata directly into Archivematica
+
+         a. Click on the paper and pencil icon on the same line as the name of
+            the SIP to take you to the "Add metadata" page.
+
+         b. Click "Add" under "Rights" if you have rights-related metadata to add.
+
+         c. Click on "Add" under "Metadata" if you have descriptive metadata to add.
+
+         d. Enter your metadata.
+
+         e. Click on "Ingest" (top left corner) to go back to the Ingest tab
+            when you're done.
+
+      B. Add metadata files
+
+         a. Click on the metadata report icon on the same line as the name of
+            the SIP to take you to the "Add metadata" page.
+
+         b. Click on "Add metadata files" under "Metadata"
+
+         c. Click on "Browse"
+
+         d. Select a ``metadata.csv`` file.  Note name of the file must be
+            exactly ``metadata.csv`` and the file must follow the structure
+            outlined in :ref:`Import metadata <import-metadata>`.  The file must
+            also be staged in the same Transfer Source location that you stage
+            your objects for transfer to Archivematica.
+
+   2. Select "Do not normalize" when you have finished adding your metadata.
+
+   3. Continue processing the SIP as normal.
+
+.. Note::
+
+   When performing a metadata-only re-ingest, there will be no objects
+   in your AIP in the review stage- Archivematica replaces the METS file in the
+   existing AIP upon storage.
+
+   **Partial re-ingest**
+
+   1. Add metadata if desired. See **Metadata-only re-ingest** for instructions
+
+   2. Select "Normalize for access".
+
+   3. Continue processing the SIP as normal.
+
+
+   **Full re-ingest**
+
+   1. Add metadata if desired. See **Metadata-only re-ingest** for instructions.
+
+   2. Select the normalization path of your choosing.
+
+   3. Continue processing the SIP as normal.
+
 
 .. important::
 
@@ -577,41 +681,20 @@ sent to the pipeline for reingest.
    when performing metadata only or partial re-ingest, **only** the normalization
    paths noted above are supported.
 
-5. To add new metadata or edit existing metadata, click on the metadata report icon:
-
-.. image:: images/reingest_metadata.*
-   :align: center
-   :width: 80%
-   :alt: Click on the metadata report icon
-
 .. tip::
 
-   You can update the metadata either before or after Normalization, but to
+   You can add or update the metadata either before or after Normalization, but to
    ensure the metadata is written to the database before the AIP METS
    is prepared, it is recommended practice to add the metadata before
    Normalization, or set the metadata reminder to unchecked in Processing
    Configuration.
 
-Descriptive or rights metadata can updated or deleted. ``metadata.csv`` files
-can also be added by clicking on Add Metadata files. This will launch a file
-browser with the same locations available as configured for Transfer Source.
-
-.. image:: images/reingest_metadata_upload.*
-   :align: center
-   :width: 80%
-   :alt: Add new metadata files
-
-7. After normalization and metadata updating, continue processing the SIP as normal. 
-   Note that when performing a metadata-only reingest, there will be no objects 
-   in your AIP in the review stage- Archivematica replaces the METS file in the 
-   existing AIP upon storage.
-
 .. _re-ingest-storage-service:
 
 Storage Service
-===============
+^^^^^^^^^^^^^^^
 
-1. From the Packages tab in the Storage Service, click on Re-ingest beside the 
+1. From the Packages tab in the Storage Service, click on Re-ingest beside the
    AIP you wish to reingest.
 
 .. image:: images/reingest_ss.*
@@ -619,8 +702,8 @@ Storage Service
    :width: 80%
    :alt: Reingest link in Storage Service Packages tab
 
-2. The Storage Service will ask you to choose a pipeline, the types of reingest 
-   (see above for thorough descriptions of each), and for full re-ingest, the 
+2. The Storage Service will ask you to choose a pipeline, the types of reingest
+   (see above for thorough descriptions of each), and for full re-ingest, the
    name of the processing configuration.
 
 .. image:: images/reingest_ss_2.*
@@ -628,16 +711,55 @@ Storage Service
    :width: 80%
    :alt: Screen to choose pipeline and type of reingest
 
-3. The Storage Service will confirm that the AIP has been sent to the pipeline 
-   for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and follow 
+3. The Storage Service will confirm that the AIP has been sent to the pipeline
+   for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and follow
    steps 3-6 above.
 
 .. _re-ingest-api:
 
 API
-===
+^^^
 
 Documentation to come.
+
+.. _cleanup-ingest:
+
+Clean up the ingest dashboard
+-----------------------------
+
+The dashboard in the Ingest tab should be cleaned up from time to time. As the
+list of SIPs grows, it takes Archivematica longer and longer to parse this
+information which can create browser timeout issues.
+
+.. NOTE::
+   This does not delete the SIP or related entities. It merely removes them
+   from the dashboard.
+
+Remove a single ingest
+++++++++++++++++++++++
+
+#. Ensure that the SIP you want to remove doesn't require any user input.
+   You must complete all user inputs and either complete the SIP (i.e.
+   AIPs/DIPs are created and stored/uploaded) or reject the SIP before it can be
+   removed from the dashboard.
+
+#. When you are ready to remove a SIP from the dashboard, click the red circle
+   icon found next to the add metadata icon, to the right of the SIP name.
+
+#. Click the Confirm button to remove the SIP from the dashboard.
+
+
+Remove all completed ingests
+++++++++++++++++++++++++++++
+
+#. Ensure that the SIPs you want to remove are complete (i.e. AIPs/DIPs are
+   created and stored/uploaded). Note that this feature only works on completed SIPs;
+   rejected SIPs will have to be removed one at a time.
+
+#. When you are ready to remove all completed SIPs, click the red circle
+   icon in the table header of the list of SIPs.
+
+#. Click the Confirm button to remove all completed SIPs from the dashboard.
 
 
 :ref:`Back to the top <ingest>`

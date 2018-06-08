@@ -16,6 +16,7 @@ links to each chapter's main sections.
    transfer/digitized
    transfer/forensic
    transfer/dspace
+   transfer/scan-for-viruses
    ingest/ingest
    ingest/manual-normalization
    archival-storage/archival-storage

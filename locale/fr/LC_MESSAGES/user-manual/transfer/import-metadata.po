@@ -1,437 +1,783 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/transfer/import-metadata.rst:5
 msgid "Import metadata"
-msgstr ""
+msgstr "Importer des métadonnées"
 
 #: ../../user-manual/transfer/import-metadata.rst:7
 msgid ""
-"To import metadata with your transfer, you must structure your transfer "
-"to include a directory called ``metadata``. The folder can contain any "
-"type of metadata that you wish to preserve alongside your digital "
-"objects. If you include a ``metadata.csv`` file structured as described "
-"on this page, Archivematica is able to parse the metadata into the dmdSec"
-" (descriptive metadata section) of the METS file. This metadata also "
-"becomes searchable in the :ref:`Archival Storage <archival-storage>` tab."
+"You can import metadata by including a directory called ``metadata`` in your"
+" transfer. The directory can contain any type of metadata that you wish to "
+"preserve alongside your digital objects. The Process Metadata Directory "
+"`Microservice <https://wiki.archivematica.org/Micro-services>`_ will perform"
+" a number of preservation actions on objects in this directory."
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:17
-msgid ":ref:`Create a transfer with submission documentation <create-submission>`"
+#: ../../user-manual/transfer/import-metadata.rst:13
+msgid ""
+"Archivematica also supports conventions for importing descriptive metadata "
+"and rights metadata that will tranpose the contents of the metadata files "
+"into the METS file. Metadata in the METS file is searchable in the "
+":ref:`Archival Storage <archival-storage>` tab."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:18
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:20
+msgid ":ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`"
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:21
-msgid "Workflow"
+msgid ":ref:`Importing rights metadata with rights.csv <rights.csv>`"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:23
+#: ../../user-manual/transfer/import-metadata.rst:25
 msgid ""
-"Create a transfer folder that contains a folder called ``metadata``. For "
-"simple objects, the user places files in the objects directory, with or "
-"without intervening subdirectories."
+":ref:`Create a transfer with submission documentation <create-submission>`"
+msgstr ""
+": ref:`Joindre la documentation de soumission à un transfert <create-"
+"submission>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:30
+msgid "Importing descriptive metadata with metadata.csv"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:33
-msgid "Metadata folder in transfer directory contains metadata.csv file"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:35
+#: ../../user-manual/transfer/import-metadata.rst:32
 msgid ""
-"For compound objects, create one or more subdirectories in the objects "
-"directory, each containing the files that form a compound object."
+"Archivematica natively supports the Dublin Core Metadata Elements Set, the "
+"basic 15 Dublin Core metadata elements. Using the metadata.csv method, users"
+" can include non-Dublin Core metadata; however, Archivematica will not be "
+"able to pass this metadata to AtoM or ArchivesSpace."
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:40
+#: ../../user-manual/transfer/import-metadata.rst:37
 msgid ""
-"The subdirectory names must not contain spaces or other forbidden "
-"characters."
+"Dublin Core metadata is written to the dmdSec of the METS file with the flag"
+" MDTYPE=\"DC\". Extended Dublin Core or non-Dublin Core metadata will be "
+"transposed into a separate dmdSec with the flag MDTYPE=\"OTHER\". A sample "
+"of the METS output is available below."
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:42
 msgid ""
-"Add a csv file to the metadata folder for the transfer called "
-"``metadata.csv``."
+"Create a transfer that contains a directory called ``metadata``. For simple "
+"objects, digital objects should also be placed in the top-level directory."
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:45
-msgid ""
-"The first row of the csv file consists of field names. Field names must "
-"not include spaces."
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:48
-msgid ""
-"Dublin Core field names must contain the \"dc\" element in the name, eg "
-"\"dc.title\". Note that the Dublin Core is not validated, this is up to "
-"the user."
+#: ../../user-manual/transfer/import-metadata.rst:50
+msgid "Metadata folder in transfer directory containing metadata.csv file."
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:52
 msgid ""
-"Each subsequent row contains the complete set of field values for a "
-"single directory or file."
+"For compound objects, create one or more subdirectories in the objects "
+"directory, each containing the files that form a compound object."
 msgstr ""
+"Pour des objets complexes, créez un ou plusieurs sous-répertoires dans le "
+"répertoire des objets, chacun contenant les fichiers nécessaires à la "
+"recomposition de l’objet concerné."
 
-#: ../../user-manual/transfer/import-metadata.rst:55
+#: ../../user-manual/transfer/import-metadata.rst:57
 msgid ""
-"As of version 1.4, mixed directory and object level metadata is allowed "
-"in the metadata.csv."
+"The subdirectory names must not contain spaces or other forbidden "
+"characters."
 msgstr ""
+"Les noms des sous-répertoires ne doivent contenir aucune espace ni autre "
+"caractère interdit."
 
-#: ../../user-manual/transfer/import-metadata.rst:58
+#: ../../user-manual/transfer/import-metadata.rst:59
 msgid ""
-"For multi-value fields (such as dc.subject), the entire column is "
-"repeated and each column contains a single value."
+"Add a csv file to the metadata folder for the transfer called "
+"``metadata.csv``."
 msgstr ""
+"Ajoutez un fichier csv au dossier de métadonnées appelé « metadata.csv » "
+"pour le transfert."
 
-#: ../../user-manual/transfer/import-metadata.rst:61
+#: ../../user-manual/transfer/import-metadata.rst:62
 msgid ""
-"If the metadata are for simple objects, the csv file must contain a "
-"\"filename\" column listing the filepath and filename of each objects: eg"
-" \"objects/BrocktonOval.jp2\""
+"The first row of the csv file consists of field names. Field names must not "
+"include spaces."
 msgstr ""
+"La première rangée du ficher csv comporte les noms de champs. Les noms de "
+"champs ne doivent pas contenir d’espace."
 
 #: ../../user-manual/transfer/import-metadata.rst:65
 msgid ""
-"If the metadata are for compound objects, the \"filename\" column "
-"contains the names of the directories containing the items that form the "
-"compound object: eg \"objects/Jan021964\""
+"Dublin Core field names must contain the \"dc\" element in the name, eg "
+"\"dc.title\". Note that the Dublin Core is not validated - this is up to the"
+" user."
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:69
 msgid ""
-"Note that filenames can be duplicates of filenames in other "
-"subdirectories if desired. For example, the name \"page01.jp2\" can occur"
-" in multiple subdirectories."
+"Each subsequent row contains the field values for a single directory or "
+"file."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:71
+msgid ""
+"As of version 1.4, both directory and object level metadata is allowed in "
+"the metadata.csv."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:74
+msgid ""
+"For multi-value fields (such as dc.subject), the entire column is repeated "
+"and each column contains a single value (i.e. there should be multiple "
+"dc.subject columns if there are multiple subject terms)."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:78
+msgid "Empty columns can be deleted, if you prefer."
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:80
-msgid "Example csv file contents"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:82
 msgid ""
-"At the generate METS micro-service, Archivematica parses the metadata in "
-"metadata.csv to the METS file, as follows:"
+"If the metadata are for simple objects, the csv file must contain a "
+"\"filename\" column listing the filepath and filename of each objects: eg "
+"\"objects/BrocktonOval.jp2\""
 msgstr ""
+"Dans le cas de métadonnées liées à un objet simple, le fichier csv doit "
+"contenir une colonne « filename » comprenant le chemin logique et le nom de "
+"chaque objet, p. ex., « objects/BrocktonOval.jp2 »."
 
-#: ../../user-manual/transfer/import-metadata.rst:85
+#: ../../user-manual/transfer/import-metadata.rst:84
 msgid ""
-"All Dublin Core elements are used to generate a dmdSec for each directory"
-" or file with MDTYPE=\"DC\""
+"If the metadata are for compound objects, the \"filename\" column is instead"
+" called \"parts\" and contains the names of the directories containing the "
+"items that form the compound object (i.e. \"objects/Jan021964\")."
 msgstr ""
 
 #: ../../user-manual/transfer/import-metadata.rst:88
 msgid ""
+"Note that filenames can be duplicates of filenames in other subdirectories "
+"if desired. For example, the name \"page01.jp2\" can occur in multiple "
+"subdirectories."
+msgstr ""
+"Veuillez noter que les noms de fichier peuvent être les mêmes que ceux des "
+"fichiers contenus dans d’autres sous-répertoires, si c’est votre préférence."
+" Par exemple, le nom « page01.jp2 » peut se trouver dans plusieurs "
+"répertoires."
+
+#: ../../user-manual/transfer/import-metadata.rst:96
+msgid "Example of metadata.csv file contents"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:98
+msgid ""
+"At the generate METS micro-service, Archivematica parses the metadata in "
+"metadata.csv to the METS file, as follows:"
+msgstr ""
+"Le microservice METS d’Archivematica incorpore les métadonnées contenues "
+"dans le fichier « metadata.csv » au fichier METS, comme suit :"
+
+#: ../../user-manual/transfer/import-metadata.rst:101
+msgid ""
+"All Dublin Core elements are used to generate a dmdSec for each directory or"
+" file with MDTYPE=\"DC\""
+msgstr ""
+"Les éléments Dublin Core servent à générer une dmdSec pour chaque répertoire"
+" ou fichier identifié comme MDTYPE=\"DC\""
+
+#: ../../user-manual/transfer/import-metadata.rst:104
+msgid ""
 "All non-Dublin Core elements are used to generate a dmdSec for each "
 "directory or file with MDTYPE=\"OTHER\" OTHERMDTYPE=\"CUSTOM\""
 msgstr ""
+"Les autres éléments servent à générer une dmdSec pour chaque répertoire ou "
+"fichier avec  MDTYPE=\"OTHER\" OTHERMDTYPE=\"CUSTOM\""
 
-#: ../../user-manual/transfer/import-metadata.rst:91
+#: ../../user-manual/transfer/import-metadata.rst:107
 msgid "The dmdSecs are linked to their directories or files in the structMap."
 msgstr ""
+"Les dmdSec sont liées à leurs répertoires et fichiers respectifs dans "
+"structMap."
 
-#: ../../user-manual/transfer/import-metadata.rst:95
+#: ../../user-manual/transfer/import-metadata.rst:111
 msgid "Simple objects"
-msgstr ""
+msgstr "Objets simples"
 
-#: ../../user-manual/transfer/import-metadata.rst:97
+#: ../../user-manual/transfer/import-metadata.rst:113
 msgid ""
-"This section provides csv file and METS file examples for simple objects "
-"- i.e. individual files that are not pages in a compound object such as a"
-" book or a newspaper issue."
+"This section provides metadata.csv file and METS file examples for simple "
+"objects - i.e. individual files that are not pages in a compound object such"
+" as a book or a newspaper issue."
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:101
-#: ../../user-manual/transfer/import-metadata.rst:209
-msgid "**CSV file**"
+#: ../../user-manual/transfer/import-metadata.rst:117
+msgid "**Sample metadata.csv file**"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:103
-#: ../../user-manual/transfer/import-metadata.rst:211
-msgid "Sample headings and values"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
+#: ../../user-manual/transfer/import-metadata.rst:120
 msgid "filename"
-msgstr ""
+msgstr "filename"
 
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "dc.title"
+msgstr "dc.title"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.creator"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:106
-msgid "dcterms.issued"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
-msgid "dc.publisher"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-msgid "dc.contributor"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "dc.subject"
-msgstr ""
+msgstr "dc.subject"
 
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
-msgid "dc.date"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "dc.description"
+msgstr "dc.description"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
+msgid "dc.publisher"
+msgstr "dc.publisher"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.contributor"
+msgstr "dc.publisher"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
+msgid "dc.date"
+msgstr "dc.date"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.type"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:106
-msgid "notes"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-msgid "dcterms.isPartOf"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
-msgid "repository"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-msgid "dc.rights"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
-#: ../../user-manual/transfer/import-metadata.rst:214
-msgid "project_website"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:106
+#: ../../user-manual/transfer/import-metadata.rst:120
 msgid "dc.format"
+msgstr "dc.format"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.identifier"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "objects/BrocktonOval.jp2"
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.source"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "Stanley Park in December"
+#: ../../user-manual/transfer/import-metadata.rst:120
+#: ../../user-manual/transfer/import-metadata.rst:208
+msgid "dc.language"
+msgstr "dc.language"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.relation"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "1996-01-17"
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.coverage"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Riley Studios, Vancouver BC"
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid "dc.rights"
+msgstr "dc.rights"
+
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "objects/bird.mp3"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Don Langfield, photographer"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "14000 Caen, France - Bird in my garden"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Vancouver (B.C.)--Parks"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "Nicolas Germain"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "Landscapes"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "field recording"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "1992/12/04"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "soundscapes"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "Image shows Brockton Oval after light snowfall"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "radio aporee"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-msgid "Originally part of series entitled \"Winter in Vancouver\""
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "Bird singing in my garden, Caen, France, Zoom H6"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Riley Studios collection"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "Radio Aporee"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "New Caledonia Public Library"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "2017-05-27"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Copyright held by Riley Studios"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "sound"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "http://www.ncpl/donlangfieldphotographs.ca"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "audio/mp3"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:108
-#: ../../user-manual/transfer/import-metadata.rst:110
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
-msgid "image/jp2"
+#: ../../user-manual/transfer/import-metadata.rst:122
+msgid "Internet Archive"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "objects/QEParksunset.jp2"
+#: ../../user-manual/transfer/import-metadata.rst:122
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "Public domain"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "Sunset in Queen Elizabeth Park"
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "objects/beihai.tif"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:110
-msgid "1994/07/13"
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "Beihai, Guanxi, China, 1988"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:114
-#: ../../user-manual/transfer/import-metadata.rst:221
-msgid "**METS file**"
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "NASA/GSFC/METI/ERSDAC/ JAROS and U.S./Japan ASTER Science Team"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:204
-msgid "Compound objects"
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "China"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:206
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "Beihai"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "Beihai is a city in the south of Guangxi, People's  republic of China."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:125
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "NASA Jet Propulsion Laboratory"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "February 29, 2016"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "image"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:125
+msgid "image.tif"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:131
 msgid ""
-"This section provides csv file and METS file examples for compound "
-"objects - i.e. multi-page digital objects such as newspapers and books."
+"Note that empty columns (i.e. dc.contributor) were left in to demonstrate "
+"the full range of possible Dublin Core values. If you prefer, you can delete"
+" empty columns."
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:135
+#: ../../user-manual/transfer/import-metadata.rst:215
+msgid "**METS file**"
+msgstr "**Fichier METS**"
+
+#: ../../user-manual/transfer/import-metadata.rst:137
+msgid ""
+"Below is a snippet of the METS file, containing two descriptive metadata "
+"sections (dmdSec), one for each file. These contain the Dublin Core metadata"
+" parsed from the metadata.csv. Note in the mdWrap that they are given an "
+"MDTYPE of \"DC\". If there had been non-Dublin Core metadata in the "
+"metadata.csv, there would be a separate mdWrap with an MDTYPE of \"OTHER\"."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:198
+msgid "Compound objects"
+msgstr "Objets complexes"
+
+#: ../../user-manual/transfer/import-metadata.rst:200
+msgid ""
+"This section provides csv file and METS file examples for compound objects -"
+" i.e. multi-page digital objects such as newspapers and books."
+msgstr ""
+"Cette section fournit des exemples de fichiers csv et METS pour des objets "
+"complexes, par exemple des objets numériques comportant plusieurs pages, "
+"tels qu’un livre ou un journal."
+
+#: ../../user-manual/transfer/import-metadata.rst:203
+msgid "**metadata.csv file**"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:205
+msgid "Sample headings and values"
+msgstr "Exemples de titres de colonne et de valeurs"
+
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "parts"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "alternative_title"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "dates_of_publication"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "frequency"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
-msgid "dc.language"
-msgstr ""
-
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "forms_part_of"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:214
+#: ../../user-manual/transfer/import-metadata.rst:208
+msgid "repository"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:208
+msgid "project_website"
+msgstr "project_website"
+
+#: ../../user-manual/transfer/import-metadata.rst:208
 msgid "digital_file_format"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:216
+#: ../../user-manual/transfer/import-metadata.rst:210
 msgid "objects/Jan021964"
-msgstr ""
+msgstr "objects/Jan021964"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
+#: ../../user-manual/transfer/import-metadata.rst:210
 msgid "Coast News, January 02, 1964"
-msgstr ""
+msgstr "Coast News, 2 janvier 1964"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Sunshine Coast News"
-msgstr ""
+msgstr "Sunshine Coast News"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Fred Cruice"
-msgstr ""
+msgstr "Fred Cruice"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "1945-1995"
-msgstr ""
+msgstr "1945-1995"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Gibsons (B.C.)--Newspapers"
-msgstr ""
+msgstr "Gibsons (C.-B.)--Journaux"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
+#: ../../user-manual/transfer/import-metadata.rst:210
 msgid "1964/01/02"
-msgstr ""
+msgstr "1964/01/02"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Serving the Growing Sunshine Coast"
-msgstr ""
+msgstr "Au service de la Sunshine Coast"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Weekly"
-msgstr ""
+msgstr "Hebdomadaire"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "English"
-msgstr ""
+msgstr "Anglais"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "British Columbia Historical Newspapers collection"
-msgstr ""
+msgstr "Collection de journaux historiques de la Colombie-Britannique"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Sunshine Coast Museum and Archives"
-msgstr ""
+msgstr "Sunshine Coast Museum and Archives"
 
-#: ../../user-manual/transfer/import-metadata.rst:216
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "http://historicalnewspapers.library.ubc.ca"
-msgstr ""
+msgstr "http://historicalnewspapers.library.ubc.ca"
 
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:210
+#: ../../user-manual/transfer/import-metadata.rst:211
+msgid "image/jp2"
+msgstr "image/jp2"
+
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "objects/Jan091964"
-msgstr ""
+msgstr "objects/Jan091964"
 
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "Coast News, January 09, 1964"
-msgstr ""
+msgstr "Coast News, 9 janvier 1964"
 
-#: ../../user-manual/transfer/import-metadata.rst:217
+#: ../../user-manual/transfer/import-metadata.rst:211
 msgid "1964/01/09"
+msgstr "1964/01/09"
+
+#: ../../user-manual/transfer/import-metadata.rst:323
+msgid "Importing rights metadata with rights.csv"
 msgstr ""
 
-#: ../../user-manual/transfer/import-metadata.rst:326
+#: ../../user-manual/transfer/import-metadata.rst:325
+msgid ""
+"Rights information can be associated to specific files in a transfer by "
+"creating a rights.csv file that conforms to the structure below."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:328
+msgid ""
+"You can enter multiple acts for the same rights basis. Rows for the same "
+"object with the same rights basis will be treated as separate acts for the "
+"basis and merged. For example, the first two rows below will be merged, "
+"while the third row will be separate. You can read more about rights "
+"metadata here: :ref:`PREMIS metadata in Archivematica <premis-template>`"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "file"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "basis"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "status"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "determination_date"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "jurisdiction"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "start_date"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "end_date"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "terms"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "citation"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "note"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "grant_act"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "grant_restriction"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "grant_start_date"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "grant_end_date"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "grant_note"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "doc_id_type"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "doc_id_value"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:335
+msgid "doc_id_role"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "image1.tif"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "copyright"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "copyrighted"
+msgstr "protégé"
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+#: ../../user-manual/transfer/import-metadata.rst:338
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "2011-01-01"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "ca"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "2013-12-31"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Terms of copyright."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Citation of copyright."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Note about copyright."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+msgid "disseminate"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "disallow"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "Grant note"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Copyright documentation identifier type."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Copyright documentation identifier value."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:337
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "Copyright documentation identifier role."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid "use"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "document.pdf"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "license"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "2000-09-09"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "2010-09-08"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "Terms of license."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "Note about license."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "migrate"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "allow"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "2000-09-00"
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "License documentation identifier type."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "License documentation identifier value."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:339
+msgid "License documentation identifier role."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:342
+msgid ""
+"The rights.csv file is parsed by the job \"Load Rights\" within the "
+"\"Characterize and Extract Metadata\" microservice run during :ref:`transfer"
+" <transfer>`."
+msgstr ""
+
+#: ../../user-manual/transfer/import-metadata.rst:344
 msgid ":ref:`Back to the top <import-metadata>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <import-metadata>`"

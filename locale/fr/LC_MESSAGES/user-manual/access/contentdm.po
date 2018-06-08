@@ -1,91 +1,105 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/access/contentdm.rst:5
-msgid "ContentDM"
+msgid "CONTENTdm"
 msgstr ""
 
 #: ../../user-manual/access/contentdm.rst:7
 msgid ""
-"Archivematica can prepare DIPS for upload to CONTENTdm. As of "
-"Archivematica version 1.4, no configuration with your CONTENTdm "
-"installation is necessary. Rather, Archivematica will prepare the DIP and"
-" allow you to download via the Dashboard or by SFTP to the server "
-"Archivematica is installed on."
+"Archivematica can prepare DIPS for upload to CONTENTdm. As of Archivematica "
+"version 1.4, no configuration with your CONTENTdm installation is necessary."
+" Rather, Archivematica will prepare the DIP and allow you to download via "
+"the Dashboard or by SFTP to the server Archivematica is installed on."
 msgstr ""
+"Archivematica peut préparer des DIP à télécharger dans CONTENTdm . Depuis la"
+" version 1.4 d’Archivematica il n’est plus nécessaire de configurer le "
+"CONTENTdm à l’installation. Archivematica prépare le DIP et permet le "
+"téléchargement depuis le Tableau de bord ou par SFTP vers le serveur sur "
+"lequel est hébergé Archivematica."
 
 #: ../../user-manual/access/contentdm.rst:12
 msgid ""
 "In Archivematica version 1.4, direct upload to CONTENTdm is no longer "
-"available. The process described below assumes the user will use `Project"
-" Client <http://www.contentdm.org/help6/projectclient/index.asp>`_ to "
-"upload DIPs to CONTENTdm."
+"available. The process described below assumes the user will use `Project "
+"Client <http://www.contentdm.org/help6/projectclient/index.asp>`_ to upload "
+"DIPs to CONTENTdm."
 msgstr ""
+"Dans la version 1.4 d’Archivematica , il n’est plus possible de télécharger "
+"du contenu directement dans CONTENTdm. La démarche décrite ci-dessous "
+"suppose que l’utilisateur se serve de `Project Client "
+"<http://www.contentdm.org/help6/projectclient/index.asp>`_ pour télécharger "
+"des DIP dans CONTENTdm."
 
 #: ../../user-manual/access/contentdm.rst:17
 msgid ""
 "Should you run into an error during this process, please see :ref:`Error "
 "handling <error-handling>`."
 msgstr ""
+"Si une erreur ce produit pendant le déroulement de cette opération, "
+"consulter :ref:`Gestion erreurs <error-handling>`."
 
 #: ../../user-manual/access/contentdm.rst:20
 msgid "*On this page*"
-msgstr ""
+msgstr "*Sur cette page*"
 
 #: ../../user-manual/access/contentdm.rst:22
 msgid ":ref:`Preparing a transfer for CONTENTdm <transfer-contentdm>`"
-msgstr ""
+msgstr ":ref:`Préparer un transfert pour CONTENTdm <transfer-contentdm>`"
 
 #: ../../user-manual/access/contentdm.rst:24
 msgid ":ref:`Controlling the file order <contentdm-order>`"
-msgstr ""
+msgstr ":ref:`Contrôler l’ordre des fichiers <contentdm-order>`"
 
 #: ../../user-manual/access/contentdm.rst:26
 msgid ":ref:`Create DIP for CONTENTdm <dip-contentdm>`"
-msgstr ""
+msgstr ":ref:`Créer des DIP pour CONTENTdm <dip-contentdm>`"
 
 #: ../../user-manual/access/contentdm.rst:31
 msgid "Preparing a transfer for CONTENTdm"
-msgstr ""
+msgstr "Préparer un transfert pour CONTENTdm"
 
 #: ../../user-manual/access/contentdm.rst:35
 msgid ":ref:`Manual normalization <manual-norm>`"
-msgstr ""
+msgstr ":ref:`Normalisation manuelle <manual-norm>`"
 
 #: ../../user-manual/access/contentdm.rst:37
 msgid ":ref:`Import metadata <import-metadata>`"
-msgstr ""
+msgstr ":ref:`Importer des métadonnées <import-metadata>`"
 
 #: ../../user-manual/access/contentdm.rst:39
 msgid ""
-"Note that it is possible to follow these instructions for either a single"
-" simple or compound object, or multiple simple or compound objects."
+"Note that it is possible to follow these instructions for either a single "
+"simple or compound object, or multiple simple or compound objects."
 msgstr ""
+"Veuillez noter que ces instructions s’appliquent aux objets simples comme "
+"aux objets complexes. Il est possible de traiter de multiples objets "
+"simultanément."
 
 #: ../../user-manual/access/contentdm.rst:42
 msgid "**Preparing the transfer**"
-msgstr ""
+msgstr "**Préparer un transfert**"
 
 #: ../../user-manual/access/contentdm.rst:44
 msgid "For a transfer of simple objects:"
-msgstr ""
+msgstr "Pour transférer un objet simple :"
 
 #: ../../user-manual/access/contentdm.rst:46
 #: ../../user-manual/access/contentdm.rst:67
@@ -93,102 +107,132 @@ msgid ""
 "Inside the directory you wish to use as a transfer, create two "
 "subdirectories: ``metadata``, and ``objects``."
 msgstr ""
+"Dans le répertoire à transférer, créer deux sous-répertoires : « metadata »,"
+" et « objects »."
 
 #: ../../user-manual/access/contentdm.rst:48
 msgid "Inside ``objects``, place the digital objects you wish to transfer."
-msgstr ""
+msgstr "Dans « objects », placer les objets numériques à transférer."
 
 #: ../../user-manual/access/contentdm.rst:50
 msgid ""
-"Inside ``metadata``, place a file called ``metadata.csv``. See "
-"preparation instructions below."
+"Inside ``metadata``, place a file called ``metadata.csv``. See preparation "
+"instructions below."
 msgstr ""
+"Dans « metadata », placer un fichier nommé « metadata.csv ». Voir les "
+"instructions de préparation ci-dessous."
 
 #: ../../user-manual/access/contentdm.rst:52
 #: ../../user-manual/access/contentdm.rst:73
 msgid "Example:"
-msgstr ""
+msgstr "Exemple :"
 
 #: ../../user-manual/access/contentdm.rst:65
 msgid "For a transfer of compound objects:"
-msgstr ""
+msgstr "Pour transférer un objet complexe :"
 
 #: ../../user-manual/access/contentdm.rst:69
 msgid ""
-"Inside ``objects``, create or place directories, one corrsponding to each"
-" compound object. Place the digital objects inside those directories."
+"Inside ``objects``, create or place directories, one corrsponding to each "
+"compound object. Place the digital objects inside those directories."
 msgstr ""
+"Dans « objects », créer ou placer les répertoires correspondant à chaque "
+"objet composé. Placer les objets numériques dans ces répertoires."
 
 #: ../../user-manual/access/contentdm.rst:71
 msgid ""
 "Inside metadata, place a file called ``metadata.csv``. See preparation "
 "instructions below."
 msgstr ""
+"Dans « metadata », placer un fichier nommé « metadata.csv ». Voir les "
+"instructions de préparation ci-dessous."
 
 #: ../../user-manual/access/contentdm.rst:91
 msgid "**Preparing the metadata.csv**"
-msgstr ""
+msgstr "**Préparer le fichier metadata.csv**"
 
 #: ../../user-manual/access/contentdm.rst:93
 msgid ""
-"The first column in the metadata.csv must be called filename. The "
-"contents will be the path to the object and/or the directory. For a "
-"simple transfer:"
+"The first column in the metadata.csv must be called filename. The contents "
+"will be the path to the object and/or the directory. For a simple transfer:"
 msgstr ""
+"La première colonne du document metadata.csv doit être nommée « filename ». "
+"Cette colonne contiendra les chemins d’adresse menant aux objets et/ou "
+"répertoires. Pour un transfert simple : "
 
 #: ../../user-manual/access/contentdm.rst:96
 msgid "``objects/filename.tif``"
-msgstr ""
+msgstr "``objects/filename.tif``"
 
 #: ../../user-manual/access/contentdm.rst:98
 msgid "For a compound transfer:"
-msgstr ""
+msgstr "Pour un transfert complexe :"
 
 #: ../../user-manual/access/contentdm.rst:100
 msgid "``objects/directoryName``"
-msgstr ""
+msgstr "``objects/directoryName``"
 
 #: ../../user-manual/access/contentdm.rst:102
 msgid "Or, for a compound transfer with object-level metadata"
 msgstr ""
+"Ou, pour un transfert complexe comprenant des métadonnées au niveau des "
+"objets :"
 
 #: ../../user-manual/access/contentdm.rst:104
 msgid "``objects/directoryName/filename.tif``"
-msgstr ""
+msgstr "``objects/directoryName/filename.tif``"
 
 #: ../../user-manual/access/contentdm.rst:106
 msgid ""
-"If there are both Dublin Core and non-Dublin Core fields in metadata.csv,"
-" Archivematica will look for \"custom\" (non-Dublin Core) field names in "
-"the metadata.csv file file and create a tab delimited file based on those"
-" fields. This allows the operator to use the field names as they appear "
+"If there are both Dublin Core and non-Dublin Core fields in metadata.csv, "
+"Archivematica will look for \"custom\" (non-Dublin Core) field names in the "
+"metadata.csv file file and create a tab delimited file based on those "
+"fields. This allows the operator to use the field names as they appear "
 "exactly as they do in the CONTENTdm collection, which eases the field "
-"matching in Project Client. It is also recommended that you enter the "
-"non-Dublin Core fields in the same order as in your CONTENTdm collection."
-" However, if metadata.csv contains *only* Dublin Core namespaced fields, "
+"matching in Project Client. It is also recommended that you enter the non-"
+"Dublin Core fields in the same order as in your CONTENTdm collection. "
+"However, if metadata.csv contains *only* Dublin Core namespaced fields, "
 "Archivematica will create the tab delimited file using those fieldnames, "
 "stripping out the dc namespace. For example, ``dc.title`` will become "
 "``title``."
 msgstr ""
+"Si metadata.csv contient à la fois des champs Dublin Core et des champs "
+"d’autres types, Archivematica cherchera des noms de champs « personnalisés »"
+" (c.-à.-d. non conforme à Dublin Core)  et créera un fichier balisé en "
+"fonction de ces champs. Cela permettra à l’utilisateur de reprendre les noms"
+" de champs verbatim, exactement tels qu’ils apparaissent dans CONTENTdm, "
+"pour faciliter la correspondance des noms de champs dans Project Client. On "
+"recommande également de saisir les champs de type autre que Dublin Core, "
+"dans le même ordre que celui qui apparaît dans CONTENTdm. Cependant, si,  "
+"metadata.csv contient *seulement* des champs de type Dublin Core, "
+"Archivematica créera le fichier balisé selon ces noms de champs en omettant "
+"le préfixe « dc. ». P. ex., ``dc.titre`` devient ``titre``."
 
 #: ../../user-manual/access/contentdm.rst:117
 msgid ""
-"For more information regarding the creation and transfer of a "
-"metadata.csv file, see :ref:`Import metadata <import-metadata>`."
+"For more information regarding the creation and transfer of a metadata.csv "
+"file, see :ref:`Import metadata <import-metadata>`."
 msgstr ""
+"Pour en savoir plus au sujet de la création et du transfert de fichiers "
+"metadata.csv, voir :ref:`Importer des métadonnées<import-metadata>`."
 
 #: ../../user-manual/access/contentdm.rst:123
 msgid "Controlling the file order"
-msgstr ""
+msgstr "Contrôler l’ordre des fichiers"
 
 #: ../../user-manual/access/contentdm.rst:125
 msgid ""
-"Currently, the only method of controlling the order of files and "
-"directories as listed in the tab delimited file is to ensure they are in "
-"alphabetical order. The sort method is based on `ASCII "
+"Currently, the only method of controlling the order of files and directories"
+" as listed in the tab delimited file is to ensure they are in alphabetical "
+"order. The sort method is based on `ASCII "
 "<http://en.wikipedia.org/wiki/ASCII>`_ characters (e.g. numbers, capital "
 "letters, underscores, small case letters)."
 msgstr ""
+"Actuellement, le seul moyen de contrôler l’ordre dans lequel les fichiers et"
+" répertoires apparaissent dans le fichier balisé est de s’assurer qu’ils "
+"soient en ordre alphabétique. Cette méthode est basée sur les caractères "
+"`ASCII<http://en.wikipedia.org/wiki/ASCII>`_ , (c.-à-d. les nombres, les "
+"lettres majuscules, les tirets de soulignement, et les lettres minuscules)."
 
 #: ../../user-manual/access/contentdm.rst:130
 msgid ""
@@ -196,51 +240,72 @@ msgid ""
 "releases. Please see `Issue 8448 "
 "<https://projects.artefactual.com/issues/8448>`_."
 msgstr ""
+"On envisage d’autres méthodes de contrôle de l’ordre des fichiers dans une "
+"version ultérieure. Voir `Issue "
+"8448<https://projects.artefactual.com/issues/8448>`_."
 
 #: ../../user-manual/access/contentdm.rst:136
 msgid "Create DIP for CONTENTdm"
-msgstr ""
+msgstr "Créer des DIP pour CONTENTdm"
 
 #: ../../user-manual/access/contentdm.rst:140
 msgid ""
-"Ensure that your CONTENTdm target collection has a field called \"AIP "
-"UUID and a field called \"File UUID\". The tab file produced by "
-"Archivematica will populate these two fields."
+"Ensure that your CONTENTdm target collection has a field called \"AIP UUID "
+"and a field called \"File UUID\". The tab file produced by Archivematica "
+"will populate these two fields."
 msgstr ""
+"S’assurer que la collection cible dans CONTENTdm contient un champ appelé « "
+"AIP UUID » et un champ appelé « \"File UUID »\". Le fichier balisé produit "
+"par Archivematica remplira ces deux champs."
 
 #: ../../user-manual/access/contentdm.rst:144
 msgid ""
-"In the Archivematica dashboard at “Upload DIP”, choose the action “Upload"
-" DIP to CONTENTdm” from the drop-down menu."
+"In the Archivematica dashboard at “Upload DIP”, choose the action “Upload "
+"DIP to CONTENTdm” from the drop-down menu."
 msgstr ""
+"À partir du Tableau de bord Archivematica, dans « Télécharger le DIP », "
+"choisissez l’action « Télécharger le DIP dans CONTENTdm » dans le menu "
+"déroulant."
 
 #: ../../user-manual/access/contentdm.rst:146
 msgid ""
-"Archivematica will create a DIP consisting of normalized or "
-":ref:`manually normalized <manual-norm>` access objects and a tab "
-"delimited file for use in Project Client."
+"Archivematica will create a DIP consisting of normalized or :ref:`manually "
+"normalized <manual-norm>` access objects and a tab delimited file for use in"
+" Project Client."
 msgstr ""
+"Archivematica créera un DIP comprenant des objets normalisés ou "
+":ref:`normalisés manuellement <manual-norm>` et un fichier balisé à utiliser"
+" dans Project Client."
 
 #: ../../user-manual/access/contentdm.rst:148
 msgid ""
 "To review the DIP in the dashboard and download individual DIP objects "
 "and/or the tab file, click \"review\":"
 msgstr ""
+"Pour examiner le DIP dans le Tableau de bord et télécharger des objets DIP "
+"et/ou le fichier balisé, cliquer sur « Examiner »."
 
 #: ../../user-manual/access/contentdm.rst:156
 msgid ""
-"The next screen will display the uploadedDIPs directory, which operators "
-"can navigate to locate the required DIP objects. The CONTENTdm tab file "
-"will be in the same directory as the DIP objects."
+"The next screen will display the uploadedDIPs directory, which operators can"
+" navigate to locate the required DIP objects. The CONTENTdm tab file will be"
+" in the same directory as the DIP objects."
 msgstr ""
+"Le répertoire uploadedDIPs apparaît sur l’écran suivant, et les opérateurs "
+"peuvent y localiser les objets DIP recherchés. Le fichier balisé dans "
+"CONTENTdm se trouve dans le même répertoire que les objets DIP téléchargés."
 
 #: ../../user-manual/access/contentdm.rst:166
 msgid ""
 "By default, the DIP will be stored in "
-"``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. "
-"It can be retrieved from this location via SFTP client, or individual "
-"objects downloaded through the web browser."
+"``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. It "
+"can be retrieved from this location via SFTP client, or individual objects "
+"downloaded through the web browser."
 msgstr ""
+"Par défaut, les DIP sont conservés dans "
+"``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. On "
+"peut les ouvrir à partir de cet emplacement au moyen d’un client SFTP, ou "
+"télécharger les objets individuellement à l’aide d’un navigateur Web."
 
 #: ../../user-manual/access/contentdm.rst:173
 msgid ""
@@ -250,8 +315,13 @@ msgid ""
 "manageable. This can be done through the :ref:`Administration tab, "
 "Processing storage usage <dashboard-usage>`."
 msgstr ""
+"Un fois le travail dans Project Client/CONTENTdm terminé, et vos objets "
+"numériques téléchargés, il est recommandé de « nettoyer » votre répertoire "
+"uploadedDIPs, pour libérer de l’espace mémoire et éviter des problèmes "
+"futurs. Cette opération peut être effectuée à partir de l’onglet "
+"Administration :ref:`Administration, Utilisation de l’espace de traitement "
+"<dashboard-usage>."
 
 #: ../../user-manual/access/contentdm.rst:180
 msgid ":ref:`Back to the top <contentdm>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <contentdm>`"

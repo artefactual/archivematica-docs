@@ -9,17 +9,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../user-manual/access/contentdm.rst:5
-msgid "ContentDM"
+msgid "CONTENTdm"
 msgstr ""
 
 #: ../../user-manual/access/contentdm.rst:7
@@ -254,4 +254,7 @@ msgstr ""
 #: ../../user-manual/access/contentdm.rst:180
 msgid ":ref:`Back to the top <contentdm>`"
 msgstr ""
+
+#~ msgid "ContentDM"
+#~ msgstr ""
 

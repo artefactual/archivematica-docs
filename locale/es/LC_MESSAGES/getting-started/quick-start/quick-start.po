@@ -1,0 +1,899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.3\n"
+
+#: ../../getting-started/quick-start/quick-start.rst:5
+msgid "Archivematica Quick-Start Guide"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:7
+msgid ""
+"This guide walks you through the Archivematica transfer and ingest "
+"process for testing purposes. It is intended for people who are new to "
+"Archivematica and looking to test it out. This is not a guide to install "
+"Archivematica for development or production - please see "
+":ref:`Installation <installation>` for full installation instructions. "
+"Before you start, you should know a bit about the `OAIS Reference Model "
+"<http://www.oclc.org/research/publications/library/2000/lavoie-"
+"oais.html>`_ enough that the acronyms SIP, AIP, and DIP make sense."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:15
+msgid ""
+"This guide runs through the basic actions taken on a standard transfer "
+"and does not cover Archivematica's advanced features. For information "
+"about processing more complex content, see the :ref:`User manual <user-"
+"manual>`. The instructions below are applicable to both the sandbox and "
+"an Archivematica virtual machine, unless otherwise noted."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:21
+msgid "By the end of this walkthrough, you will be able to:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:23
+msgid "Create a standard transfer in Archivematica"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:24
+msgid "Create an AIP and a DIP from the transfer"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:25
+msgid "Review file identification"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:26
+msgid "Review file normalization"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:27
+msgid "Automate an Archivematica pipeline"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:29
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:31
+msgid ""
+":ref:`Task #0 - Set up your Archivematica test instance <quick-start-"
+"install>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:32
+msgid ":ref:`Task #1 - Start a standard transfer <quick-start-transfer>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:33
+msgid ":ref:`Task #2 - Make AIPs and DIPs <quick-start-ingest>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:34
+msgid ":ref:`Task #3 - Store AIPs and DIPs <quick-start-storage>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:35
+msgid ":ref:`Task #4 - Review AIPs and DIPs <quick-start-review>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:36
+msgid ""
+":ref:`Task #5 - Automate workflow through configuration <quick-start-"
+"config>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:37
+msgid ""
+":ref:`More ways to get familiar with Archivematica <quick-start-"
+"resources>`"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:42
+msgid "Task #0 - Set up your Archivematica test instance"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:44
+msgid ""
+"If you do not have access to a full installation of Archivematica, there "
+"are two options for testing the software - the hosted Archviematica "
+"sandbox or a locally-installed Archivematica VM."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:49
+msgid "Using the sandbox"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:51
+msgid ""
+"Artefactual maintains an `Archivematica sandbox "
+"<sandbox.archivematica.org>`_ with the following credentials:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:54
+msgid "Username: demo@example.com"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:55
+msgid "Password: demodemo"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:57
+msgid ""
+"The sandbox is provided as an easy way to test the latest release of "
+"Archivematica. Please note that the website will automatically reset "
+"daily. Any packages that you create will not be permanently saved. "
+"Additionally, there may be more than one demo user logged in at the same "
+"time, so you may see changes made by others while you are using the "
+"software."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:63
+msgid ""
+"The demo site is publicly edited and unmoderated. For security, test "
+"transfers are limited to Artefactual's provided sample data. Users who "
+"wish to test using their own data may download the Vagrant box (described"
+" below) and test locally."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:70
+msgid "If you are using the sandbox, you can move on to Task #1."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:73
+msgid "Installing on a virtual machine using Vagrant"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:77
+msgid ""
+"This virtual machine is **not** intended to be used in production. It "
+"targets developers or experienced users willing to try out Archivematica "
+"using Vagrant. If you want to start using Archivematica in production, "
+"please refer to the other methods of installations explained under this "
+"manual."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:82
+msgid ""
+"This guide will setup a new Oracle `VirtualBox "
+"<https://www.virtualbox.org/>`__ virtual machine with Archivematica "
+"installed on your computer. It works works on most operating systems, "
+"including MacOS X, Linux, Windows, FreeBSD and others."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:87
+msgid "**Minimum system requirements**: 4GB RAM; 10GB disk space."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:92
+msgid "Install Vagrant and VirtualBox"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:94
+msgid ""
+"Install VirtualBox from https://www.virtualbox.org/ (or use your package "
+"manager). VirtualBox 5.1.18 or newer is required."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:96
+msgid ""
+"Install Vagrant from http://www.vagrantup.com/ (or use your package "
+"manager). Vagrant 1.9.3 or newer is required. Be aware that Ubuntu 14.04 "
+"installs Vagrant 1.4.3, which does not meet the requirements."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:101
+msgid "Spin it up"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:103
+msgid ""
+"using your computer's command-line interface, create a new directory and "
+"open it. The location doesn't matter, but you'll need to return to it "
+"later - all further command line operations should be run from inside the"
+" directory."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:111
+msgid "Initialize the current directory to be a Vagrant environment."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:117
+msgid ""
+"Run Vagrant (again, from the same directory where you saved the "
+"Vagrantfile)."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:123
+msgid ""
+"Vagrant will download our custom box and boot it in VirtualBox. The "
+"download can take anywhere from a few minutes to an hour or more, "
+"depending on the speed of your connection, as the box is fairly large "
+"(approx 3.2 GB in size)."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:125
+msgid ""
+"This will take a while. It depends on your computer, but it could take up"
+" to an hour. Your computer may be very slow while Archivematica is being "
+"provisioned - be sure to save any work and be prepared to step away from "
+"your computer while Archivematica is building."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:130
+msgid "Once it's done provisioning, you can log in to your virtual machine::"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:134
+msgid "You can also access your Archivematica instance through the web browser:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:136
+msgid ""
+"Archivematica: `<http://10.10.10.20>`_. Username & password configured on"
+" installation."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:137
+msgid ""
+"Storage Service: `<http://10.10.10.20:8000>`_. Username: test, password: "
+"test."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:139
+msgid ""
+"To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ "
+"and click on the Administration tab. In the left sidebar, click on "
+"*Users*, then click on *Edit* for the default user. Scrolling down, you "
+"will see the API key for the default user at the bottom of the screen. "
+"Copy this into the API key field when prompted during installation."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:148
+msgid "Task #1 - Start a standard transfer"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:150
+msgid ""
+"A transfer is any set of one or more files that you decide to process as "
+"a group. It can come from any storage system to which Archivematica has "
+"been connected. To start your first transfer, go to the Archivematica "
+"transfer dashboard - the main page of either the `sandbox "
+"<sandbox.archivematica.org>`_ or your `Archivematica VM "
+"<http://10.10.10.20>`_. You can also access the transfer page by clicking"
+" on the Transfer tab in your Archivematica instance."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:157
+msgid ""
+"The transfer process is made up of a series of micro-services, which are "
+"in turn made up of jobs."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:162
+msgid ""
+"A micro-service is a group of actions that accomplish a specific goal "
+"within Archivematica. Verifying that your transfer complies with "
+"Archivematica's transfer requirements is a micro-service."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:168
+msgid ""
+"A job is a discrete action within a micro-service. Moving the contents of"
+" your transfer to a processing directory is a job."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:171
+msgid ""
+"Each micro-service can be expanded if you click on the micro-service "
+"name. This allows you to see every job that makes up the micro-service. "
+"You can view the command for each job by clicking on the gear icon to the"
+" right of each job name which will open a new window that lists the "
+"command information. Clicking on *Show arguments* will list the exact "
+"python command that Archivematica uses to run the job."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:178
+msgid ""
+"Jobs turn green when they have completed successfully and red if they "
+"fail."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:180
+#: ../../getting-started/quick-start/quick-start.rst:204
+#: ../../getting-started/quick-start/quick-start.rst:242
+#: ../../getting-started/quick-start/quick-start.rst:256
+#: ../../getting-started/quick-start/quick-start.rst:274
+#: ../../getting-started/quick-start/quick-start.rst:335
+#: ../../getting-started/quick-start/quick-start.rst:372
+#: ../../getting-started/quick-start/quick-start.rst:400
+#: ../../getting-started/quick-start/quick-start.rst:437
+#: ../../getting-started/quick-start/quick-start.rst:471
+msgid "**Steps:**"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:182
+msgid "Make sure ‘Standard’ is selected in the transfer type box."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:183
+msgid "Type in a name for your transfer (anything you like)."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:184
+msgid ""
+"Click on browse to look through the available content. Make sure to click"
+" on the folder icon to expand the directory trees."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:186
+msgid "Find the *images* directory in SampleTransfers and click Add."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:187
+msgid "The selected directory will be displayed below the selection box."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:188
+msgid "Click on the green *Start transfer* button to start the transfer."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:189
+msgid ""
+"When prompted, make decisions as you wish; however, don't select anything"
+" that would stop the transfer (i.e. anything that says \"Reject\"). For "
+"more information about the decision points, check out the :ref:`transfer "
+"tab documentation <transfer>`."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:193
+msgid ""
+"When you reach the *Identify file format* micro-service, stop and read "
+"the next section."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:197
+msgid "Review file formats"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:199
+msgid ""
+"You do not need to consult the command for every job, but we do recommend"
+" taking a look at the output of the *Identify file format* micro-service."
+" One of Archivematica's most important jobs is to identify file formats "
+"and then preserve those files as best as possible."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:206
+msgid ""
+"When you are prompted, select a file format identification tool "
+"(Siegfried and Fido are the most robust options)."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:208
+msgid ""
+"Once file format identification is complete, click on the gear icon to "
+"the right of the job name to open the job page."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:210
+msgid ""
+"On the job page, under the heading STDOUT, you will see information "
+"similar to the following:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:222
+msgid ""
+"The above tells us that the file MARBLES.TGA was identified as a "
+"Truevision TGA Bitmap 2.0. Archivematica uses `PRONOM "
+"<https://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, a registry "
+"of technical information maintained by the National Archives of the UK, "
+"for file identification and to inform normalization, characterization, "
+"and other file-manipulation events. Archivematica identifies a TGA file "
+"as `fmt/402 <https://www.nationalarchives.gov.uk/PRONOM/fmt/402>`_ "
+"(format 402), which is the PRONOM format identifier for a Truvision TGA "
+"Bitmap 2.0. There should be a similar STDOUT section for each item in "
+"your transfer."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:231
+msgid ""
+"Archivematica will continue processing your transfer in the background. "
+"When you reach the *Create SIP from Transfer micro-service*, read the "
+"next section."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:235
+msgid "Create a SIP"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:237
+msgid ""
+"The final micro-service on the Transfer tab is *Create SIP from "
+"Transfer*. The final job, *Create SIP(s)*, allows you to either proceed "
+"directly to the Ingest tab or to send the transfer to the backlog. For "
+"more information on the backlog, check out the :ref:`backlog "
+"documentation <manage-backlog>`."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:244
+msgid "When prompted, select *Create single SIP and continue processing*."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:249
+msgid "Task #2 - Make AIPs and DIPs"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:251
+msgid ""
+"The primary function of Archivematica is to produce Archival Information "
+"Packages (AIPs) and Dissemination Information Packaes (DIPs) from SIPs.  "
+"You just created a SIP on the Transfer tab. The Ingest tab is where you "
+"run micro-services that create the AIP and the DIP."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:258
+msgid "Click on the Ingest tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:259
+msgid ""
+"Make decisions as required (again, don't select anything that says "
+"\"Reject\"). For more information about the decision points that appear "
+"during ingest, check out the :ref:`ingest tab documentation <ingest>`."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:262
+msgid ""
+"When you get to the Normalize decision point, stop and read the next "
+"section."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:265
+msgid "Normalization"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:267
+msgid ""
+"Ingest, like Transfer, is also made up of a series of micro-services. The"
+" most significant micro-service that takes place during ingest is "
+"Normalize. Normalization is the process of converting your digital "
+"content into appropriate formats for long-term storage (for an AIP) and "
+"access (for a DIP). When you reach the Normalization micro-service, you "
+"will be prompted to decide how you would like to normalize your content."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:276
+msgid ""
+"Select *Normalize for preservation and access* when prompted. By "
+"selecting this option, you are telling Archivematica that you would like "
+"to create a preservation copy (AIP) and an access copy (DIP) of the "
+"contents of your SIP."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:279
+msgid ""
+"Once normalization is complete, you will be prompted to approve "
+"normalization. Before selecting approve, click on the small page icon "
+"next to the drop down menu."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:282
+msgid ""
+"The Normalization Report will open in a separate tab. Information on how "
+"to read this report is included below."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:284
+msgid ""
+"In your main tab, click on the Preservation Planning tab at the top of "
+"the page. When the Preservation Planning tab is open, search for \"SVG\" "
+"(or whatever file format you would like to review). Click on the name of "
+"the file format."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:287
+msgid ""
+"You should now have two tabs open - the Normalization Report and the "
+"Preservation Planning page. Go back to the Normalization Report and "
+"review the next two sections."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:292
+msgid "Reviewing normalization for preservation"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:294
+msgid ""
+"The Normalization Report details whether or not normalization was "
+"attempted on the contents of your SIP. This screenshot shows the report "
+"for lion.svg, identified as a Scalable Vector Graphic, with the "
+"preservation columnns highlighted."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:303
+msgid ""
+"If you return to the Preservation Planning tab where you searched for "
+"SVG, you can see that SVG files are considered a preservation format. "
+"Therefore, the Normalization Report indicates the following:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:307
+msgid "Preservation normalization was attempted."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:308
+msgid "Preservation normalization did not fail."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:309
+msgid "The image was already in a preservation format."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:311
+msgid ""
+"Essentially, this means that preservation normalization kicked off, but "
+"Archivematica realized that the file was already in a preservation format"
+" and so no action was taken."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:316
+msgid "Reviewing normalization for access"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:318
+msgid ""
+"This screenshot shows the report for lion.svg with the access columnns "
+"highlighted."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:326
+msgid "For access normalization, the report indicates the following:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:328
+msgid "Access normalization was attempted."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:329
+msgid "Access normalization did not fail."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:330
+msgid "The image was not in an access format."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:332
+msgid ""
+"To review what this means for lion.svg, we'll dig a little deeper into "
+"the Preservation Planning tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:337
+msgid "Navigate back to the Preservation Planning tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:338
+msgid ""
+"Scroll down and find the *Normalization* section in the left-hand "
+"sidebar. Click on *Rules*."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:340
+msgid ""
+"Search for \"Scalable Vector Graphics\" (or whatever file format you are "
+"analyzing)."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:343
+msgid ""
+"The results show the Access and Normalization rules for SVG files. Under "
+"the Command column we can see that the preferred access format for an SVG"
+" is PDF. Archivematica follows these rules to create access copies, so we"
+" can infer from the Normalization Report that a PDF copy of the SVG file "
+"has been successfully created for the DIP. You can confirm this by "
+"checking the command output for the *Normalize for access* job (similar "
+"to how you checked the command output for *Identify file format*, above) "
+"or by reviewing the DIP once it has been stored."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:352
+msgid ""
+"Continue processing your ingest, stopping when you reach the AIP and DIP "
+"decision points."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:358
+msgid "Task #3 - Store AIPs and DIPs"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:360
+msgid ""
+"Archivematica is a tool for creating packages. In a production "
+"environment, storage occurs externally to Archivematica in a storage "
+"system selected by the user or institution, but for the sake of this demo"
+" we'll store our AIP and DIP in Archivematica's default internal storage."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:365
+msgid ""
+"AIPs should always be stored first. Because the packages are smaller, "
+"storage options for DIPs are usually the first to appear, so it's "
+"tempting to store them right away. However, if anything goes wrong with "
+"your AIP, you would then have to delete the DIP from the storage and "
+"access systems. Dealing with the AIP first allows you to store and "
+"provide access to DIPs knowing that that the AIP is secure."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:374
+msgid ""
+"Process your ingest until the *Store AIP* and *Upload DIP* micro-services"
+" prompt you for a decision point."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:376
+msgid "Select \"Store AIP\" from the *Store AIP* dropdown."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:377
+msgid ""
+"In a moment, another decision point will prompt you to select a storage "
+"location for your AIP. There should only be one option - \"Store AIP in "
+"standard Archivematica directory\". Select this option."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:380
+msgid ""
+"Once the AIP is stored successfully, you can move on to dealing with the "
+"DIP. Neither a locally-installed Archivematica VM nor the sandbox is "
+"hooked up to an access system, so under *Upload DIP* select \"Store "
+"DIP\"."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:383
+msgid ""
+"You will be prompted to select a storage location for your DIP. There "
+"should only be one option - \"Store DIP in standard Archivematica "
+"directory\". Select this option."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:387
+msgid ""
+"Your AIP and DIP are now stored in Archivematica's internal storage. The "
+"Archivematica workflow is complete!"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:393
+msgid "Task #4 - Review AIPs and DIPs"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:395
+msgid "Now that your AIP and DIP have been stored, they can be reviewed."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:398
+msgid "Review AIP"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:402
+msgid ""
+"Click on the Archival Storage tab. You should see your AIP listed in the "
+"search results there, but if not, you can search for it using the name "
+"you gave it in Task #1."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:405
+msgid ""
+"Depending on the version of Archivematica you are using, clicking on the "
+"name of the AIP will either open the AIP Details page or immediately "
+"download the AIP. If you end up on the AIP Details page, click on the "
+"‘download’ button."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:408
+msgid ""
+"Once it's downloaded, open the AIP. You will need to a program capable of"
+" opening 7zip files installed on your computer. If required, you can "
+"download 7Zip here: http://www.7-zip.org/download.html"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:411
+msgid ""
+"Once you have the AIP extracted, navigate through the folders until you "
+"find the objects directory. This directory contains the original images "
+"from your transfer as well as the preservation copies. You can compare "
+"the file formats in the objects directory to the rules in the "
+"Preservation Planning tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:415
+msgid ""
+"Navigate through the folders until you find the METS file and open it in "
+"a web browser or text editor. It will be titled something like "
+"\"METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml\"."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:418
+msgid ""
+"Find the <mets:fileSec> tag in the METS. Within the fileSec, you should "
+"be able to find information about every item in your original transfer - "
+"these are in the section tagged <mets:fileGrp USE=\"original\">. "
+"Scrolling down, you can view complementary information for each of the "
+"preservation copies - this is in the section tagged <mets:fileGrp "
+"USE=\"preservation\">."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:424
+msgid ""
+"The METS.xml file is very long because it contains all of the information"
+" about your files as well as information about the processes and tools "
+"that acted on those original files. For more information about the "
+"contents and structure of the METS file, check out the `Archivematica "
+"wiki <https://wiki.archivematica.org/METS>`_."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:430
+msgid "Review DIP"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:434
+msgid ""
+"This section is only applicable to those using a VM. The Archivematica "
+"sandbox does not allow access to the Storage Service."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:439
+msgid ""
+"In order to retrieve the DIP, you need to access the Archivematica "
+"Storage Service. Add \":8000\" to the end of your Archivematica VM's URL "
+"(i.e. http://10.10.10.20:8000/). The default login is test/test."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:442
+msgid "In the Storage Service, click on the Packages tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:443
+msgid ""
+"On the far right side of the page there is a search box. Search for your "
+"DIP by entering the name you gave it in Task #1."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:445
+msgid ""
+"You should see two results. One is your AIP and the other is the DIP, "
+"indicated under the \"Type\" column."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:447
+msgid "Once you've identified which file is your DIP, click on \"Download\"."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:448
+msgid ""
+"Once it's downloaded, open the DIP. You will need to a program capable of"
+" opening tar files installed on your computer. 7Zip, mentioned above, can"
+" open TAR files: http://www.7-zip.org/download.html"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:451
+msgid ""
+"Once you have the DIP extracted, open the objects directory. This "
+"directory contains the access copies derived from your original images. "
+"You can compare the file formats in the objects directory to the rules in"
+" the Preservation Planning tab."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:455
+msgid ""
+"The DIP also contains a thumbnails directory, which has small JPG "
+"versions of your images. If the image could not be converted to a JPG (as"
+" is the case with an SVG file), a generic icon is included instead."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:462
+msgid "Task #5 - Automate workflow through configuration"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:464
+msgid ""
+"Clicking on the Administration tab opens up Archivematica's processing "
+"configurations screen, the most basic way of automating Archivematica. "
+"Each of the decision points that you encountered during the Archivematica"
+" test that you ran in Steps #1 to #3 can be automated on this page. This "
+"is mostly used if you know you will be making the same decision each time"
+" you encounter a decision point."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:473
+msgid ""
+"Click on the Administration tab. You will see a single processing "
+"configuration listed, called ‘default’."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:475
+msgid ""
+"Review the different options and make changes as you like. You will "
+"recognize the options from the decision points you made during previous "
+"tasks."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:479
+msgid ""
+"For example, you may want to automate the compression algorithm and level"
+" because you always want to use the same compression tool and you always "
+"want to compress packages at the same rate. To set the compression-"
+"related processing configurations:"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:484
+msgid "Check the box next to *Select compression algorithm*."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:485
+msgid ""
+"Using the dropdown to the right, select a compression algorithm - *7z "
+"using bzip2* is the most common."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:487
+msgid "Check the box next to *Select compression level*"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:488
+msgid ""
+"Using the dropdown to the right, select a compression level - *5 - normal"
+" compression mode* is a good balance between speed and size."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:491
+msgid ""
+"We recommend that you run several tests in Archivematica before setting "
+"up the processing configurations. As you become more familiar with "
+"Archivematica, you will begin to recognize which decisions you make over "
+"and over again. These are great candidates for automation via the "
+"processing configurations."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:499
+msgid "More ways to get familiar with Archivematica"
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:501
+msgid ""
+"This tutorial covers a very basic Archivematica workflow. For information"
+" about processing more complex content, see the :ref:`User manual <user-"
+"manual>`."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:504
+msgid ""
+"The tasks above are based on the Archivematica Worksheet first developed "
+"by Justin Simpson for the HEAP-AIM25 Network Meeting in November 2016. "
+"The worksheet runs through several more examples of Archivematica "
+"workflows. It is available for download via the `Archivematica Camp "
+"Github repo <https://github.com/artefactual-labs/archivematica-camp>`_. "
+"Feel free to use this worksheet for personal use or in a teaching context"
+" - see the licence file in the repo."
+msgstr ""
+
+#: ../../getting-started/quick-start/quick-start.rst:511
+msgid ":ref:`Back to the top <quick-start>`"
+msgstr ""
+

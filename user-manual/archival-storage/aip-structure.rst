@@ -4,22 +4,29 @@
 AIP structure
 =============
 
-This page documents the structure of the AIP produced by Archivematica.
+This page describes the structure of the AIP produced by Archivematica.
+
+*On this page:*
+
+* :ref:`Name <aip_name>`
+* :ref:`Directory structure <directory_structure>`
+* :ref:`Bagit documentation <bagit_doc>`
+
+.. _aip_name:
 
 Name
 ----
 
 The AIP name is composed of the following:
 
-1. Either the name of the original transfer if no new name has been assigned    to the SIP upon formation or the name of the SIP or SIPs created from the transfer and
+1. Either the name of the original transfer if no new name has been assigned to the SIP upon formation or the name of the SIP or SIPs created from the transfer.
+2. A UUID assigned during SIP formation.
+   
+For example: AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c
 
-2. A UUID assigned during SIP formation
+   "AncientSturgeon" is the name assigned by the user and "bbabce6e-OO16-4185-a93e-f2dd71bfbb8c" is the UUID generated during SIP formation.
 
-example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112
-
-"Pictures_of_my_cat" is the name assigned by the user and
-"aebbfc44-9f2e-4351-bcfb-bb80d4914112" is the UUID generated during SIP
-formation.
+.. _directory_structure:
 
 Directory structure
 -------------------
@@ -27,7 +34,7 @@ Directory structure
 The AIP is zipped in the AIPsStore. The AIP directories are broken down into
 UUID quad directories for efficient storage and retrieval.
 
-.. figure:: images/ZippedAIP-10.*
+.. figure:: images/AIPStructureZipped.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -47,14 +54,16 @@ UUID quad directories for efficient storage and retrieval.
    UUID Quad) create the leaf of the AIP store directory tree, and the AIP with
    that UUID resides in that directory.)
 
+The Archivematica AIP consists of Bagit files and a Data directory.
+
+.. _bagit_doc:
+
 Bagit documentation
 ^^^^^^^^^^^^^^^^^^^
 
-The AIP is packaged in accordance with the Library of Congress Bagit
-specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt,
-bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:
+The AIP is packaged in accordance with the Library of Congress Bagit specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt, bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:
 
-.. image:: images/BagSpec-10.*
+.. image:: images/AIPStructureBagit.*
    :align: center
    :width: 70%
    :alt: Bagit specification files
@@ -62,12 +71,13 @@ bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:
 
 The following describes the contents of the AIP once extracted:
 
-**Data directory**
+Data directory
+==============
 
-The data directory consists of the METS file for the AIP and three folders:
+The data directory consists of the METS file for the AIP, a README.html file and three folders:
 logs, objects. and thumbnails.
 
-.. figure:: images/AIPdatadirectory-10.*
+.. figure:: images/AIPStructureDataDirectory.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -75,22 +85,79 @@ logs, objects. and thumbnails.
 
    AIP data directory
 
-**METS file**
+METS file
+=========
 
-``/data/METS.uuid.xml`` contains the full PREMIS implementation (see PREMIS
-metadata for original file, PREMIS metadata: normalized files, PREMIS
-metadata: events, and PREMIS metadata: rights The role of the METS file is to
-link original objects to their preservation copies and to their descriptions
-and submission documentation, as well as to link PREMIS metadata to the
-objects in the AIP.
+``/data/METS.uuid.xml`` contains the full `PREMIS <https://www.loc.gov/standards/premis/>`_
+implementation (see PREMIS metadata for original file, PREMIS metadata:
+normalized files, PREMIS metadata: events, and PREMIS metadata: rights). The
+role of the `METS file <https://wiki.archivematica.org/METS>`_ is to link
+original objects to their preservation copies and to their descriptions and
+submission documentation, as well as to link PREMIS metadata to the objects in
+the AIP.
+
+METS file structure
+===================
+
+The METS file will have a basic generic structure that will be present for all AIPs derived from different kinds of transfers. Archivematica currently uses METS version 1.11.
+
+.. figure:: images/METS_outline.png
+   :align: center
+   :figwidth: 70%
+   :width: 100%
+   :alt: Sample METS from 1.0: Media:METS.752545fa-6869-41d4-95b1-710ac659525d.xml
+
+``<dmdSec>``
+
+    * There may be one dmdSec for the AIP as a whole. Each original file may also have a dmdSec.
+    * The dmdSecs are numbered dmdSec_1, dmdSec_2 etc.
+    * The dmdSec contains Dublin Core metadata. If the user does not enter any DC metadata during transfer/ingest and no DC metadata was included in the transfer (eg as part of a DSpace export), there will be no dmdSec.
+    * The dmdSec may contain a reference to metadata in another file, such as a mets.xml file included in a DSpace export. 
+
+``<amdSec>``
+
+    * There is one amdSec for each object.
+    * The amdSecs are numbered amdSec_1, amdSec_2 etc.
+    * Each amdSec will include one techMD and multiple digiprovMDs
+    * An amdSec for an original object may also contain one or more rightsMDs. The rightsMD may contain a reference to metadata in another file, such as a mets.xml file included in a DSpace export. 
+
+``<fileSec>``
+
+    * There is one fileSec listing all files.
+    * The fileSec is organized into the following fileGrps:
+         * original
+         * preservation
+         * service
+         * access
+         * submissionDocumentation
+         * license
+         * text/ocr 
+    * Original is required for all METS files.
+    * SubmissionDocumentation is included if the AIP includes submission documentation.
+    * Preservation is included if the AIP includes normalized files.
+    * Service and access may be used if the AIP contains those subfolders - i.e as the output of digitization workflows.
+    * License and text/ocr are used if the AIP was created from a DSpace export containing licenses and ocr text files. 
+
+``<structMap>``
+
+    * As of Archivematica 1.7 there are two structMaps:
+         * The first is labeled "Archivematica Default" and shows the physical layout of the files in the objects directory. 
+
+         * The second is labeled "Normative Directory Structure" which shows the logical structure of the files in the objects directory. This second structMap is necessary to document empty directories before they are deleted at 'store AIP' in the Storage Service. At AIP re-ingest the new logical structMap will be parsed to re-create the empty directories.  
+
+README.html file
+================
+
+``/data/README.html`` consists of a human readable file that describes the basic structure
+of an Archivematica AIP.  It consists of Acronyms, Introduction, Content Information,
+Preservation Description Information (PDI), and AIP structure.
 
 **Logs**
 
-``/data/logs`` contains the /transfers directory, normalization log, malware scan
-log, and the extraction log (from unpackaging packages) generated during SIP
-creation.
+``/data/logs`` contains the /transfers directory, format identification log, malware scan
+log, and the file name cleanup log generated during SIP creation.
 
-.. figure:: images/DataLogs-10.*
+.. figure:: images/AIPStructureDataLogs.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -102,13 +169,14 @@ The ``/transfers`` directory contains the logs from processing that occurred
 to each transfer which is part of the SIP in the transfer workflow in the
 dashboard.
 
-**Objects**
+Objects
+=======
 
 ``/data/objects`` contains original objects, normalized objects, ``/metadata`` and
 ``/submissionDocumentation``. If there were any lower level directories within
 the SIP, that directory structure is maintained.
 
-.. figure:: images/DataObjects-10.*
+.. figure:: images/AIPStructureObjectsFolder.*
    :align: center
    :figwidth: 70%
    :width: 100%
@@ -125,7 +193,8 @@ structmap for the transfer is the closest approximation of original order
 for the transfer, along with the tree diagram if the user chose to create one
 during transfer.
 
-**Thumbnails**
+Thumbnails
+==========
 
 ``/data/thumbnails`` contains any thumbnails generated for viewing in the AIP
 search interface of the dashboard.

@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-02-14 07:11-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: ../../user-manual/archival-storage/aip-structure.rst:5
 msgid "AIP structure"
@@ -26,51 +26,50 @@ msgstr ""
 msgid "This page documents the structure of the AIP produced by Archivematica."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:10
+#: ../../user-manual/archival-storage/aip-structure.rst:11
 msgid "Name"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:12
+#: ../../user-manual/archival-storage/aip-structure.rst:13
 msgid "The AIP name is composed of the following:"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:14
+#: ../../user-manual/archival-storage/aip-structure.rst:15
 msgid ""
-"Either the name of the original transfer if no new name has been assigned"
-"    to the SIP upon formation or the name of the SIP or SIPs created from"
-" the transfer and"
-msgstr ""
-
-#: ../../user-manual/archival-storage/aip-structure.rst:16
-msgid "A UUID assigned during SIP formation"
+"1. Either the name of the original transfer if no new name has been "
+"assigned to the SIP upon formation or the name of the SIP or SIPs created"
+" from the transfer and"
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:18
-msgid "example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112"
+msgid "A UUID assigned during SIP formation"
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:20
-msgid ""
-"\"Pictures_of_my_cat\" is the name assigned by the user and "
-"\"aebbfc44-9f2e-4351-bcfb-bb80d4914112\" is the UUID generated during SIP"
-" formation."
+msgid "example: AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:25
-msgid "Directory structure"
+#: ../../user-manual/archival-storage/aip-structure.rst:22
+msgid ""
+"\"AncientSturgeon\" is the name assigned by the user and \"bbabce6e-"
+"OO16-4185-a93e-f2dd71bfbb8c\" is the UUID generated during SIP formation."
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:27
+msgid "Directory structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:29
 msgid ""
 "The AIP is zipped in the AIPsStore. The AIP directories are broken down "
 "into UUID quad directories for efficient storage and retrieval."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:36
+#: ../../user-manual/archival-storage/aip-structure.rst:38
 msgid "AIP directory - top level"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:40
+#: ../../user-manual/archival-storage/aip-structure.rst:42
 msgid ""
 "UUID quad directories: Some file systems limit the number of items "
 "allowed in a directory, so Archivematica uses a directory tree structure "
@@ -84,93 +83,111 @@ msgid ""
 " directory.)"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:51
+#: ../../user-manual/archival-storage/aip-structure.rst:52
+msgid "The Archivematica AIP consists of Bagit files and a Data directory."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:55
 msgid "Bagit documentation"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:53
+#: ../../user-manual/archival-storage/aip-structure.rst:57
 msgid ""
 "The AIP is packaged in accordance with the Library of Congress Bagit "
 "specification (PDF, 84KB) As shown below, the BagIt files are bag-"
-"info.txt, bagit.txt, manifest-sha512.txt and tagmanifest-md5.txt:"
-msgstr ""
-
-#: ../../user-manual/archival-storage/aip-structure.rst:63
-msgid "The following describes the contents of the AIP once extracted:"
+"info.txt, bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:"
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:65
-msgid "**Data directory**"
+msgid "The following describes the contents of the AIP once extracted:"
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:67
-msgid ""
-"The data directory consists of the METS file for the AIP and three "
-"folders: logs, objects. and thumbnails."
+msgid "**Data directory**"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:76
-msgid "AIP data directory"
+#: ../../user-manual/archival-storage/aip-structure.rst:69
+msgid ""
+"The data directory consists of the METS file for the AIP, a README.html "
+"file and three folders: logs, objects. and thumbnails."
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:78
-msgid "**METS file**"
+msgid "AIP data directory"
 msgstr ""
 
 #: ../../user-manual/archival-storage/aip-structure.rst:80
-msgid ""
-"``/data/METS.uuid.xml`` contains the full PREMIS implementation (see "
-"PREMIS metadata for original file, PREMIS metadata: normalized files, "
-"PREMIS metadata: events, and PREMIS metadata: rights The role of the METS"
-" file is to link original objects to their preservation copies and to "
-"their descriptions and submission documentation, as well as to link "
-"PREMIS metadata to the objects in the AIP."
+msgid "**METS file**"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:87
+#: ../../user-manual/archival-storage/aip-structure.rst:82
+msgid ""
+"``/data/METS.uuid.xml`` contains the full `PREMIS "
+"<https://www.loc.gov/standards/premis/>`_ implementation (see PREMIS "
+"metadata for original file, PREMIS metadata: normalized files, PREMIS "
+"metadata: events, and PREMIS metadata: rights). The role of the `METS "
+"file <https://wiki.archivematica.org/METS>`_ is to link original objects "
+"to their preservation copies and to their descriptions and submission "
+"documentation, as well as to link PREMIS metadata to the objects in the "
+"AIP."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:90
+msgid "**README.html file**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:92
+msgid ""
+"``/data/README.html`` consists of a human readable file that describes "
+"the basic structure of an Archivematica AIP.  It consists of Acronyms, "
+"Introduction, Content Information, Preservation Description Information "
+"(PDI), and AIP structure."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:96
 msgid "**Logs**"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:89
+#: ../../user-manual/archival-storage/aip-structure.rst:98
 msgid ""
-"``/data/logs`` contains the /transfers directory, normalization log, "
-"malware scan log, and the extraction log (from unpackaging packages) "
-"generated during SIP creation."
+"``/data/logs`` contains the /transfers directory, format identification "
+"log, malware scan log, and the file name cleanup log generated during SIP"
+" creation."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:99
+#: ../../user-manual/archival-storage/aip-structure.rst:107
 msgid "Logs folder content in Data"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:101
+#: ../../user-manual/archival-storage/aip-structure.rst:109
 msgid ""
 "The ``/transfers`` directory contains the logs from processing that "
 "occurred to each transfer which is part of the SIP in the transfer "
 "workflow in the dashboard."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:105
+#: ../../user-manual/archival-storage/aip-structure.rst:113
 msgid "**Objects**"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:107
+#: ../../user-manual/archival-storage/aip-structure.rst:115
 msgid ""
 "``/data/objects`` contains original objects, normalized objects, "
 "``/metadata`` and ``/submissionDocumentation``. If there were any lower "
 "level directories within the SIP, that directory structure is maintained."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:117
+#: ../../user-manual/archival-storage/aip-structure.rst:125
 msgid "Objects folder content in Data"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:119
+#: ../../user-manual/archival-storage/aip-structure.rst:127
 msgid ""
 "``/metadata`` contains ``/transfers``, which contains any metadata which "
 "may have been imported with the transfers"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:122
+#: ../../user-manual/archival-storage/aip-structure.rst:130
 msgid ""
 "``/submissionDocumentation`` contains submission documentation for each "
 "transfer which is part of the SIP and each transfer's METS.xml file. The "
@@ -179,17 +196,73 @@ msgid ""
 "create one during transfer."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:128
+#: ../../user-manual/archival-storage/aip-structure.rst:136
 msgid "**Thumbnails**"
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:130
+#: ../../user-manual/archival-storage/aip-structure.rst:138
 msgid ""
 "``/data/thumbnails`` contains any thumbnails generated for viewing in the"
 " AIP search interface of the dashboard."
 msgstr ""
 
-#: ../../user-manual/archival-storage/aip-structure.rst:133
+#: ../../user-manual/archival-storage/aip-structure.rst:141
 msgid ":ref:`Back to the top <aip-structure>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Either the name of the original "
+#~ "transfer if no new name has been"
+#~ " assigned    to the SIP upon "
+#~ "formation or the name of the SIP"
+#~ " or SIPs created from the transfer"
+#~ " and"
+#~ msgstr ""
+
+#~ msgid "example: Pictures_of_my_cat-aebbfc44-9f2e-4351-bcfb-bb80d4914112"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\"Pictures_of_my_cat\" is the name assigned"
+#~ " by the user and \"aebbfc44-9f2e-4351"
+#~ "-bcfb-bb80d4914112\" is the UUID generated"
+#~ " during SIP formation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The AIP is packaged in accordance "
+#~ "with the Library of Congress Bagit "
+#~ "specification (PDF, 84KB) As shown "
+#~ "below, the BagIt files are bag-"
+#~ "info.txt, bagit.txt, manifest-sha512.txt and"
+#~ " tagmanifest-md5.txt:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The data directory consists of the "
+#~ "METS file for the AIP and three"
+#~ " folders: logs, objects. and thumbnails."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``/data/METS.uuid.xml`` contains the full "
+#~ "PREMIS implementation (see PREMIS metadata "
+#~ "for original file, PREMIS metadata: "
+#~ "normalized files, PREMIS metadata: events, "
+#~ "and PREMIS metadata: rights The role "
+#~ "of the METS file is to link "
+#~ "original objects to their preservation "
+#~ "copies and to their descriptions and "
+#~ "submission documentation, as well as to"
+#~ " link PREMIS metadata to the objects"
+#~ " in the AIP."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``/data/logs`` contains the /transfers "
+#~ "directory, normalization log, malware scan "
+#~ "log, and the extraction log (from "
+#~ "unpackaging packages) generated during SIP "
+#~ "creation."
+#~ msgstr ""
 
