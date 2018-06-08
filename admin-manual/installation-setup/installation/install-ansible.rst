@@ -118,19 +118,22 @@ the configuration of your new server.
    localhost, you will need to configure your firewall rules and allow access
    only to ports 80 and 8000 for Archivematica usage.
 
-2. The Storage Service has its own set of users. Navigate to
-   **Administration > Users** and add at least one administrative user. After
-   you have created this user an API key will be generated that will connect
-   the Archivematica pipeline to the Storage Service API. Click edit to see the
-   new user's details. The API key will be found at the bottom of the page.
-   Copy this to your clipboard as it will be used later on in the
-   post-installation configuration.
+2. The Storage Service has its own set of users. It is necessary to create a
+   user with full admin privileges:
 
-   .. note::
-      It is recommended that you also modify the test user and change the
-      default password. This will also result in a new API key for the test
-      user but that does not need to be copied to the clipboard in this
-      instance.
+   .. code:: bash
+
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/default/archivematica-storage-service || \
+              source /etc/sysconfig/archivematica-storage-service \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /usr/lib/archivematica/storage-service
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
+      ";
+
+   The API key will be generated automatically. The API key can be found via the
+   web interface (go to **Administration > Users**).
 
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine on which you have
