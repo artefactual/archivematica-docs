@@ -29,15 +29,13 @@ into the METS file. Metadata in the METS file is searchable in the
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
-Archivematica natively supports the Dublin Core Metadata Elements Set, the
-basic 15 Dublin Core metadata elements. Using the metadata.csv method, users
-can include non-Dublin Core metadata; however, Archivematica will not be
-able to pass this metadata to AtoM or ArchivesSpace.
+Archivematica natively supports the Dublin Core Metadata Elements Set as well as
+Dublin Core Terms. Using the metadata.csv method, users can include Simple
+Dublin Core, Dublin Core terms, non-Dublin Core metadata or a combination of all.
 
-Dublin Core metadata is written to the dmdSec of the METS file with the flag
-MDTYPE="DC". Extended Dublin Core or non-Dublin Core metadata will be transposed
-into a separate dmdSec with the flag MDTYPE="OTHER". A sample of the METS output
-is available below.
+Dublin Core metadata is written to the dmdSec of the METS file as
+MDTYPE="DC". Non-Dublin Core metadata will be written into a separate dmdSec as
+MDTYPE="OTHER". A sample of the METS output is available below.
 
 1. Create a transfer that contains a directory called ``metadata``. For
    simple objects, digital objects should also be placed in the top-level
@@ -62,14 +60,19 @@ is available below.
    * The first row of the csv file consists of field names. Field names must not
      include spaces.
 
-   * Dublin Core field names must contain the "dc" element in the name, eg
+   * Dublin Core field names must contain the "dc" element in the name, e.g.
      "dc.title". Note that the Dublin Core is not validated - this is up to the
      user.
+
+   * Dublin Core terms must contain "dcterms" in the name, e.g.
+     "dcterms:abstract". As above, the Dublin Core is not validated - this is up
+     to the user.
 
    * Each subsequent row contains the field values for a single directory or file.
 
    * As of version 1.4, both directory and object level metadata is allowed
-     in the metadata.csv.
+     in the metadata.csv. The csv can contain only object level, only directory
+     level, or a combination of both.
 
    * For multi-value fields (such as dc.subject), the entire column is repeated
      and each column contains a single value (i.e. there should be multiple
@@ -77,13 +80,9 @@ is available below.
 
    * Empty columns can be deleted, if you prefer.
 
-   * If the metadata are for simple objects, the csv file must contain a
-     "filename" column listing the filepath and filename of each objects: eg
-     "objects/BrocktonOval.jp2"
-
-   * If the metadata are for compound objects, the "filename" column is instead
-     called "parts" and contains the names of the directories containing the
-     items that form the compound object (i.e. "objects/Jan021964").
+   * The first column in the metadata.csv file must be a "filename" column
+     listing the filepath and filename or directory name of each object or
+     directory: e.g. "objects/BrocktonOval.jp2" , or "objects/Jan021964".
 
    * Note that filenames can be duplicates of filenames in other subdirectories
      if desired. For example, the name "page01.jp2" can occur in multiple
