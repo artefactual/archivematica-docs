@@ -1,6 +1,1 @@
-Version of the documentation:
-
-Page (and section, if applicable) where the issue occurs:
-
-Description of the issue:
-
+Please do not file an issue here.  Instead, go to the [archivematica/issues](https://github.com/archivematica/Issues) repo to file your issue.
