@@ -4,14 +4,15 @@
 TRAC review tool
 ================
 
-Drupal TRAC review tool
------------------------
+The Trustworthy Repositories Audit & Certification (TRAC) review tool is a
+Drupal implementation of the TRAC checklist, an auditing tool to assess the
+reliability, commitment and readiness of institutions to assume long-term
+preservation responsibilities.
 
-Developed by MIT in a project led by Nancy McGovern, Head of
-`Curation and Preservation Services <http://libraries.mit.edu/preservation/>`_
-at MIT Libraries. Artefactual has permission to host this tool for community use.
-The copy provided here contains data about the TRAC requirements that Archivematica
-fulfills for the repository.
+The review tool was developed by MIT in a project led by Nancy McGovern, Head
+of `Curation and Preservation Services`_ at MIT Libraries. Artefactual has
+permission to host this tool for community use. The copy provided here contains
+data about the TRAC requirements that Archivematica fulfills for the repository.
 
 Installation
 ------------
@@ -31,23 +32,22 @@ Review site.
 
 The home page of the site provides an overview of an organization's efforts to
 document its evidence for meeting the requirements of the CCSDS Audit and
-Certification of Trustworthy Digital Repositories
-`checklist <http://public.ccsds.org/publications/archive/652x0m1.pdf>`_ that was
-approved as ISO 16363 and is based on Trustworthy Repositories Audit and
-Certification (TRAC): Criteria and Checklist that was released in January
-2007. A TRAC review is a self-assessment method for an organization to
-demonstrate good practice and conformance as a trusted digital repository to
-its designated communities and prepare for a peer review or other external
-audit. In many organizations, responsibilities for TRAC compliance are
-distributed throughout the organization, with specific units and committees
-having certain responsibilities for each requirement.
+Certification of Trustworthy Digital Repositories `checklist`_ that was approved
+as ISO 16363 and is based on Trustworthy Repositories Audit and Certification
+(TRAC): Criteria and Checklist that was released in January 2007. A TRAC review
+is a self-assessment method for an organization to demonstrate good practice and
+conformance as a trusted digital repository to its designated communities and
+prepare for a peer review or other external audit. In many organizations,
+responsibilities for TRAC compliance are distributed throughout the
+organization, with specific units and committees having certain responsibilities
+for each requirement.
 
 Responsibilities
 ^^^^^^^^^^^^^^^^
 
 Each entity is assigned a role for each requirement using the RACI
-responsibility assignment
-`matrix <http://en.wikipedia.org/wiki/Responsibility_assignment_matrix>`_.
+responsibility assignment `matrix`_.
+
 The RACI Matrix describes participation by various organizational roles in
 completing tasks for a project. RACI is especially useful in clarifying roles
 in projects and processes requiring distributed responsibilities. See the
@@ -65,9 +65,7 @@ Requirements
 In the site, each TRAC requirement has its own page. Sub- and Sub-sub
 requirements are referred to on the relevant high-level requirement page.
 Current compliance with TRAC requirements is assessed on a rating system from
-0 to 4 (see example:
-`SGDS report <http://206.191.128.204/trac/sites/default/files/SGDS%202009-9421%20%28D.%20BOUCON%29.pdf>`_,
-page 14):
+0 to 4 (see example: `SGDS report`_, page 14):
 
 *  4 = fully compliant - the repository can demonstrate that has
    comprehensively addressed the requirement
@@ -120,12 +118,10 @@ Support
 -------
 
 Artefactual will not be providing free support for this tool. However, we
-encourage users to discuss it using our
-`public discussion list <https://groups.google.com/group/archivematica>`_.
+encourage users to discuss it using our `public discussion list`_.
 
 If you have questions about an internal review that are unrelated to this
-tool, contact the
-`NDSA Standards and Practices Working Group <http://www.digitalpreservation.gov/ndsa/working_groups/standards.html>`_.
+tool, contact the `NDSA Standards and Practices Working Group`_.
 
 Thanks
 ------
@@ -135,3 +131,10 @@ work towards the development of this tool and for allowing us to host it for
 community consumption here on the Archivematica website.
 
 :ref:`Back to the top <trac>`
+
+.. _`Curation and Preservation Services`: http://libraries.mit.edu/preservation/
+.. _`checklist`: http://public.ccsds.org/publications/archive/652x0m1.pdf
+.. _`matrix`: http://en.wikipedia.org/wiki/Responsibility_assignment_matrix
+.. _`SGDS report`: http://206.191.128.204/trac/sites/default/files/SGDS%202009-9421%20%28D.%20BOUCON%29.pdf
+.. _`public discussion list`: https://groups.google.com/group/archivematica
+.. _`NDSA Standards and Practices Working Group`: http://www.digitalpreservation.gov/ndsa/working_groups/standards.html
