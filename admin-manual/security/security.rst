@@ -211,14 +211,14 @@ bundle.
 On Ubuntu, add the following line to the :file:`/etc/default/archivematica-*`
 files to use the system's CA bundle:
 
-.. code::
+.. code:: bash
 
    REQUEST_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 On CentOS, add the following line to the :file:`/etc/default/archivematica-*`
 files to use the system's CA bundle:
 
-.. code::
+.. code:: bash
 
    REQUEST_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.crt
 

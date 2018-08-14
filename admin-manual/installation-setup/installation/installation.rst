@@ -109,6 +109,14 @@ Hardware
 Archivematica is capable of running on almost any hardware supported by Linux;
 however, processing large collections will require better hardware.
 
+Browser compatability
+---------------------
+
+Archivematica has been tested most extensively with Firefox and Chrome. There are
+known issues with Internet Explorer 11 which result in an inability to start
+transfers in the dashboard (`Issue 7246`_). Minimal, but successful,
+testing has been done with Microsoft Edge.
+
 .. _requirements-small:
 
 Minimum hardware requirements
@@ -202,3 +210,4 @@ individual user. We have documented some common advanced installation setups.
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
 .. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
 .. _`docker`: https://github.com/artefactual-labs/am/tree/master/compose
+.. _`Issue 7246`: https://projects.artefactual.com/issues/7246
