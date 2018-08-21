@@ -398,8 +398,7 @@ Writing commands
 Identification commands
 """""""""""""""""""""""
 
-Identification commands are very simple to write, though they require some
-familiarity with Unix scripting.
+Identification commands require some familiarity with Unix scripting.
 
 An identification command run once for every file in a transfer. It will be
 passed a single argument (the path to the file to identify), and no switches.
@@ -412,8 +411,9 @@ On success, a command should:
 On failure, a command should:
 
 * Print nothing to stdout
-* Exit non-zero (Archivematica does not assign special significance to non-zero
-  exit codes)
+* Exit non-zero
+
+Archivematica does not assign special significance to non-zero exit codes.
 
 A command can print anything to stderr on success or error, but this is purely
 informational - Archivematica won't do anything special with it. Anything
@@ -422,7 +422,7 @@ Archivematica dashboard's detailed tool output page. You should print any
 useful error output to stderr if identification fails, but you can also print
 any useful extra information to stderr if identification succeeds.
 
-Here's a very simple Python script that identifies files by their file extension:
+Here's a Python script that identifies files by their file extension:
 
 .. code:: bash
 
@@ -662,7 +662,7 @@ Name (bashScript and command)   Commandline position (pythonScript and asIs)  De
 %inputFile%                     Second                                        The full path to the package file      /path/to/filename
 =============================   ============================================  ===================================    =======================
 
-Here's a simple example of how to call an existing tool (7-zip) without any
+Here's an example of how to call an existing tool (7-zip) without any
 extra logic:
 
 .. code:: bash
