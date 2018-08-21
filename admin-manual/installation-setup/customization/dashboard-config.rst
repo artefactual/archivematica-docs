@@ -93,16 +93,16 @@ The XML file format is:
       </preconfiguredChoices>
      </processingMCP>
 
-Where ``appliesTo`` is the UUID associated with the micro-service job presented in
-the dashboard, and ``goToChain`` is the UUID of the desired selection. The default
-``processingMCP.xml`` file is located at ``/var/archivematica/sharedDirectory/share
+Where ``appliesTo`` is the UUID associated with the micro-service job presented
+in the dashboard, and ``goToChain`` is the UUID of the desired selection. The
+default ``processingMCP.xml`` file is located at
+``/var/archivematica/sharedDirectory/share
 dMicroServiceTasksConfigs/processingMCPConfigs/defaultProcessingMCP.xml``.
 
 The processing configuration administration page of the dashboard provides you
 with an easy form to configure the default ``processingMCP.xml`` that's added to
-a SIP or transfer if it doesn't already contain one. When you change the
-options using the web interface the necessary XML will be written behind the
-scenes.
+a SIP or transfer if it doesn't already contain one. When you change the options
+using the web interface the necessary XML will be written behind the scenes.
 
 .. image:: images/dashboard-1.*
    :align: center
@@ -282,10 +282,10 @@ The AtoM DIP upload configuration page is where you specify the details of the
 AtoM installation you'd like the DIPs uploaded to (and, if using Rsync to
 transfer the DIP files, Rsync transfer details).
 
-The parameters that you'll most likely want to set are url, email, and
-password. These parameters, respectively, specify the destination AtoM
-website's URL, the email address used to log in to the website, and the
-password used to log in to the website.
+The parameters that you'll most likely want to set are url, email, and password.
+These parameters, respectively, specify the destination AtoM website's URL, the
+email address used to log in to the website, and the password used to log in to
+the website.
 
 AtoM DIP upload can also use Rsync as a transfer mechanism. Rsync is an open
 source utility for efficiently transferring files. The rsync-target parameter
