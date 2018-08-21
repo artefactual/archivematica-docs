@@ -1,7 +1,7 @@
 .. _preservation-planning:
 
 =====================
-Preservation planning
+Preservation Planning
 =====================
 
 The Preservation Planning tab displays the local
@@ -144,10 +144,10 @@ The following format groups come pre-populated in the FPR:
 
 * Word Processing
 
-The groups as determined by Artefactual should be perceived as arbritrary and
-are simply meant to make the Format Policy Registry easier to read and navigate.
+The groups as determined by Artefactual should be perceived as arbitrary and
+are meant to make the Format Policy Registry easier to read and navigate.
 If an institution so desired, they could change the names and population of the
-groups in their local Preservation planning tab.
+groups in their local Preservation Planning tab.
 
 Format policy rules and commands
 """"""""""""""""""""""""""""""""
@@ -304,7 +304,7 @@ The success rate of each normalization rule is show in the "Success" column.
 
 Archivematica by default has 15 normalization commands, some of which use
 Archivematica-specific scripts, the rest of which use tools such as ImageMagick
-(convert command), Ghostscript, Inkscape, ps2pdf and ffmpeg.
+(convert command), Ghostscript, Inkscape, ps2pdf and FFmpeg.
 
 Transcription
 """""""""""""
@@ -353,14 +353,14 @@ Verification is run on the output of normalization, not on the original file.
 
 .. _pres-policies:
 
-Preservation planning policies
+Preservation Planning policies
 ------------------------------
 
 It is important for institutions to establish local policies and practices
-that include monitoring the digitial preservation environment to help inform
+that include monitoring the digital preservation environment to help inform
 format normalization rules over time as standards and tools evolve.
 
-We recommend documenting your policies and pratices, in accordance with the TRAC
+We recommend documenting your policies and practices, in accordance with the TRAC
 standard for auditing Trusted Digital Repositories
 (`ISO 16363:2012 <http://www.iso.org/iso/catalogue_detail.htm?csnumber=56510>`_).
 
@@ -378,7 +378,7 @@ Changing Format Policy Rules
 
 Format policy rules allow existing commands to be associated with specific file
 types. To create a new rule, click on "Create new rule" while viewing the page
-of rules for the relevant micro-service (Characteriaztion, Normalization, etc.)
+of rules for the relevant micro-service (Characterization, Normalization, etc.)
 
 When creating a format policy rule, the following mandatory fields must be
 filled out:
@@ -477,7 +477,7 @@ tool with the FPR's format records. This needs to be done once for every
 supported format; we'll show it with MP3, as an example.
 
 1. Navigate to the "Identification Rules" page, and click "Create New Rule".
-2. Choose the appropriate foramt from the Format dropdown - in our case, "Audio:
+2. Choose the appropriate format from the Format dropdown - in our case, "Audio:
    MPEG Audio: MPEG 1/2 Audio Layer 3".
 3. Choose your command from the Command dropdown.
 4. Enter the text your command will output when it identifies this format. For
@@ -508,7 +508,7 @@ directly in your code, like this:
    inkscape -z "%fileFullName%" --export-pdf="%outputDirectory%%prefix%%fileName%%postfix%.pdf"
 
 When writing a script in Python or other languages, the values will be passed
-to your script as commandline options, which you will need to parse. The
+to your script as command line options, which you will need to parse. The
 following script provides an example using the argparse module that comes with
 Python:
 
@@ -534,7 +534,7 @@ Python:
    subprocess.call(args)
 
 Once you've created a command, the process of registering it is similar to
-creating a new identification tool. The folling examples will use the Python
+creating a new identification tool. The following examples will use the Python
 normalization script above.
 
 First, create a new tool record:
@@ -565,7 +565,7 @@ Next, create a record for your new command:
    verifications.
 8. Finally, choose a command to produce the "Event detail" text that will be
    written in the section of the METS file covering the normalization event.
-   Archivematica already includes a suitable command for ffmpeg, but you can
+   Archivematica already includes a suitable command for FFmpeg, but you can
    also create a custom command.
 9. Click "Create command".
 
