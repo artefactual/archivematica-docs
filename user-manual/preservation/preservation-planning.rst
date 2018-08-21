@@ -70,8 +70,8 @@ When creating a new format version, the following fields are available:
   choose "14".
 
 * PRONOM ID - The specific format version's unique identifier in
-  `PRONOM <http://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, the UK
-  National Archives's format registry. This is optional, but highly recommended.
+  `PRONOM <PRONOM_>`_, the UK National Archives's format registry. This is 
+  optional, but highly recommended.
   Many identification and characterization tools, use PRONOM ID's to recognize
   formats.
 
@@ -177,9 +177,9 @@ The identification tool properties in Archivematica control the ways in which
 Archivematica identifies files and associates them with the FPR's version
 records. The current version of the FPR server contains three tools: the
 `Open Preservation Foundation's <http://openpreservation.org//>`_
-`Fido <https://github.com/openpreserve/fido/>`_ tool, which identifies based on
+`Fido <FIDO_>`_ tool, which identifies based on
 the IDs in PRONOM; a simple script which identifies files by their file
-extension; and `Siegfried <http://www.itforarchivists.com/siegfried>`_ which like
+extension; and `Siegfried <Siegfried_>`_ which like
 Fido, is based on PRONOM ID and provides detailed information on the basis for
 format matches in its output.  You can use the identification tools portion of
 FPR to customize the behaviour of the existing tools, or to write your own.
@@ -238,13 +238,13 @@ either replace FITS or run alongside it on every file.
 If using Archivematica's default commands, all three of these tools are run on
 multimedia files:
 
-* `FFprobe <http://ffmpeg.org/>`_, a characterization tool built on top of the
+* `FFprobe <FFprobe_>`_, a characterization tool built on top of the
    same core as FFmpeg, the normalization software used by Archivematica
 
-* `MediaInfo <http://mediaarea.net/en/MediaInfo>`_, a characterization tool
+* `MediaInfo <MediaInfo_>`_, a characterization tool
    oriented towards audio and video data
 
-* `ExifTool <http://www.sno.phy.queensu.ca/~phil/exiftool/index.html>`_, a
+* `ExifTool <ExifTool_>`_, a
    characterization tool oriented towards still image data and extraction of
    embedded metadata
 
@@ -318,7 +318,7 @@ This lists the transcription commands associated with various formats.
 **Commands**
 
 By default, Archivematica supports one transcription command, which uses
-the OCR tool Tesseract.
+the OCR tool `Tesseract <Tesseract_>`_.
 
 Validation
 """"""""""
@@ -340,8 +340,8 @@ on a wide variety of formats, and MediaConch which is used to validate Matroska
 (mkv) files. MediaConch can also be used to create custom validation commands
 which check files against a local policy on a variety of multimedia formats.
 These policy checks can be performed on originals, preservation derivatives and
-access derivatives. For more information please see:
-`MediaConch workflow <https://wiki.archivematica.org/MediaConch_workflow>`_.
+access derivatives. For more information please see: 
+`MediaConch workflow <MediaConch_>`_.
 
 Verification
 """"""""""""
@@ -716,7 +716,7 @@ SIP. For commands which perform OCR, metadata can be placed inside the
 should produce files within "metadata".
 
 For example, the following bash script is used by Archivematica to transcribe
-images using the `Tesseract <https://code.google.com/p/tesseract-ocr/>`_ software:
+images using the `Tesseract <Tesseract_>`_ software:
 
 .. code:: bash
 
@@ -728,3 +728,12 @@ images using the `Tesseract <https://code.google.com/p/tesseract-ocr/>`_ softwar
 
 
 :ref:`Back to the top <preservation-planning>`
+
+.. _ExifTool: http://www.sno.phy.queensu.ca/~phil/exiftool/index.html
+.. _FFprobe: http://ffmpeg.org/
+.. _FIDO: https://github.com/openpreserve/fido/
+.. _MediaConch: https://wiki.archivematica.org/MediaConch_workflow
+.. _MediaInfo: http://mediaarea.net/en/MediaInfo
+.. _PRONOM: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx
+.. _Siegfried: http://www.itforarchivists.com/siegfried
+.. _Tesseract: https://code.google.com/p/tesseract-ocr/
