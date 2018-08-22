@@ -71,9 +71,8 @@ When creating a new format version, the following fields are available:
 
 * PRONOM ID - The specific format version's unique identifier in
   `PRONOM <PRONOM_>`_, the UK National Archives's format registry. This is 
-  optional, but highly recommended.
-  Many identification and characterization tools, use PRONOM ID's to recognize
-  formats.
+  optional, but highly recommended. Many identification and characterization 
+  tools use PRONOM ID's to recognize formats.
 
 * Access format and Preservation format - Indicates whether this format is
   suitable as an access format for end users, and for preservation.
