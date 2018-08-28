@@ -55,7 +55,7 @@ Instructions
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica
+      cd deploy-pub/playbooks/archivematica-trusty
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
 
