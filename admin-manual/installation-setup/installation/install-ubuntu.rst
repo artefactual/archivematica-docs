@@ -356,8 +356,7 @@ the configuration of your new server.
    package installs. Use your web browser to navigate to the Storage Service at
    the IP address of the machine you have been installing on, e.g.,
    ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or
-   ``http://127.0.0.1:8000`` if this is a local development setup). The default
-   username and password are ``test``/ ``test``.
+   ``http://127.0.0.1:8000`` if this is a local development setup).
 
    If you are using an IP address or fully-qualified domain name instead of
    localhost, you will need to configure your firewall rules and allow access
