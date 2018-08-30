@@ -237,14 +237,15 @@ either replace FITS or run alongside it on every file.
 If using Archivematica's default commands, all three of these tools are run on
 multimedia files:
 
-* `FFprobe <FFprobe_>`_, a characterization tool built on top of the
-   same core as FFmpeg, the normalization software used by Archivematica
+* `FFprobe <FFprobe_>`_
+   a characterization tool built on top of the same core as FFmpeg, the normalization 
+   software used by Archivematica
 
-* `MediaInfo <MediaInfo_>`_, a characterization tool
-   oriented towards audio and video data
+* `MediaInfo <MediaInfo_>`_
+   a characterization tool oriented towards audio and video data
 
-* `ExifTool <ExifTool_>`_, a
-   characterization tool oriented towards still image data and extraction of
+* `ExifTool <ExifTool_>`_ 
+   a characterization tool oriented towards still image data and extraction of 
    embedded metadata
 
 *Disk images*
