@@ -70,6 +70,14 @@ Instructions
        cd deploy-pub/playbooks/archivematica-xenial
        ansible-galaxy install -f -p roles/ -r requirements.yml
 
+   Ubuntu 18.04 (Bionic) **EXPERIMENTAL**:
+
+    .. code:: bash
+
+       cd deploy-pub/playbooks/archivematica-bionic
+       ansible-galaxy install -f -p roles/ -r requirements.yml
+
+
 
 4. Create the virtual machine and provision it:
 

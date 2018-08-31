@@ -44,7 +44,8 @@ Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
 * Ubuntu 14.04 64-bit Server Edition
-* Ubuntu 16.04 64-bit Server Edition (beta)
+* Ubuntu 16.04 64-bit Server Edition
+* Ubuntu 18.04 64-bit Server Edition ( Experimental support )
 * CentOS 7 64-bit
 
 Archivematica |version| is the first release to be tested on Ubuntu 16.04. Support
@@ -172,7 +173,8 @@ CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
 At this time, installation instructions are provided for officially tested and
 supported installation environments:
 
-* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`
+* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`. Ansible playbooks for Ubuntu 18.04 are also available, but experimental
+
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
 
 :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
