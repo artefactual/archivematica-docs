@@ -29,7 +29,9 @@ Instructions
 
 .. note::
 
-     These instructions assume that you have a Python package manager, such as pip, installed on your system. From pip, you should be able to install a released version of Ansible.
+   These instructions assume that you have a Python package manager, such as
+   pip, installed on your system. From pip, you should be able to install a
+   released version of Ansible.
 
 1. Install VirtualBox, Vagrant, and Ansible.
 
@@ -62,20 +64,19 @@ Instructions
       cd deploy-pub/playbooks/archivematica-trusty
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
-
    Ubuntu 16.04 (Xenial):
 
-    .. code:: bash
+   .. code:: bash
 
-       cd deploy-pub/playbooks/archivematica-xenial
-       ansible-galaxy install -f -p roles/ -r requirements.yml
+      cd deploy-pub/playbooks/archivematica-xenial
+      ansible-galaxy install -f -p roles/ -r requirements.yml
 
    Ubuntu 18.04 (Bionic) **EXPERIMENTAL**:
 
-    .. code:: bash
+   .. code:: bash
 
-       cd deploy-pub/playbooks/archivematica-bionic
-       ansible-galaxy install -f -p roles/ -r requirements.yml
+      cd deploy-pub/playbooks/archivematica-bionic
+      ansible-galaxy install -f -p roles/ -r requirements.yml
 
 
 
@@ -144,7 +145,7 @@ the configuration of your new server.
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
         ";
 
-  After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**). 
+  After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**).
 
 
 3. To finish the installation, use your web browser to navigate to the
