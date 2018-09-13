@@ -11,6 +11,7 @@ listed below.
 *On this page*
 
 * :ref:`AtoM integration <atom-integration>`
+* :ref:`ArchivesSpace integration <archivesspace-integration>`
 * :ref:`Duracloud integration <duracloud-integration>`
 * :ref:`Swift integration <swift-integration>`
 * :ref:`Islandora integration <islandora-integration>`
@@ -26,6 +27,18 @@ standards-based archival description and access in multilingual,
 multi-repository environment.
 
 See :ref:`Using AtoM 2.x with Archivematica <atom-setup>`.
+
+.. _archivesspace-integration:
+
+ArchivesSpace integration
+-------------------------
+
+`ArchivesSpace`_ is an open source archives information management application
+for managing and providing web access to archives, manuscripts and digital
+objects.
+
+See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`.
+
 
 .. _duracloud-integration:
 
@@ -79,6 +92,7 @@ See :ref:`Arkivum Storage Service integration documentation <storageservice:arki
 :ref:`Back to the top <integrations>`
 
 .. _`AtoM`: https://www.accesstomemory.org/
+.. _`ArchivesSpace`: http://archivesspace.org/
 .. _`DuraCloud`: https://duraspace.org/duracloud/
 .. _`ArchivesDirect`: https://duraspace.org/archivesdirect/
 .. _`Swift`: https://wiki.openstack.org/wiki/Swift
