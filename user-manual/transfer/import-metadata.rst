@@ -31,16 +31,19 @@ Importing descriptive metadata with metadata.csv
 
 Archivematica natively supports the Dublin Core Metadata Elements Set, the
 basic 15 Dublin Core metadata elements. Using the metadata.csv method, users
-can include non-Dublin Core metadata; however, Archivematica will not be
-able to pass this metadata to AtoM or ArchivesSpace.
+can include non-Dublin Core metadata at the directory level or at the object
+level.
+
+Archivematica will not be able to pass this metadata to AtoM or to ArchivesSpace.
 
 Dublin Core metadata is written to the dmdSec of the METS file with the flag
 MDTYPE="DC". Extended Dublin Core or non-Dublin Core metadata will be transposed
 into a separate dmdSec with the flag MDTYPE="OTHER". A sample of the METS output
 is available below.
 
-1. Create a transfer that contains a directory called ``metadata``. For
-   simple objects, digital objects should also be placed in the top-level
+1. Create a transfer that contains a directory called ``metadata``.
+
+2. For simple objects, digital objects should also be placed in the top-level
    directory.
 
 .. figure:: images/MdfolderMDimport-10.*
@@ -84,6 +87,9 @@ is available below.
    * If the metadata are for compound objects, the "filename" column is instead
      called "parts" and contains the names of the directories containing the
      items that form the compound object (i.e. "objects/Jan021964").
+
+   * If you have directory level metadata fill out the fields on the same line
+     as the directory (ie objects/)
 
    * Note that filenames can be duplicates of filenames in other subdirectories
      if desired. For example, the name "page01.jp2" can occur in multiple
