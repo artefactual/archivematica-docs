@@ -169,4 +169,4 @@ environment itself.
 .. _clamav-manual-pages: https://manpages.debian.org/jessie/clamav-daemon/clamd.conf.5.en.html
 .. _docker-compose-env: https://github.com/artefactual-labs/am/blob/stable/1.7.x/compose/.env
 .. _ansible-default-config: https://github.com/artefactual-labs/ansible-clamav/blob/master/defaults/main.yml
-.. _ansible-envars: https://github.com/artefactual-labs/ansible-archivematica-src/tree/qa/1.7.x#environment-variables
+.. _ansible-envars: https://github.com/artefactual-labs/ansible-archivematica-src#environment-variables
