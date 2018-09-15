@@ -1,8 +1,8 @@
 .. _install-pkg-ubuntu:
 
-==================================
-Installing Archivematica on Ubuntu
-==================================
+===========================================
+Manually Installing Archivematica on Ubuntu
+===========================================
 
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
@@ -363,8 +363,21 @@ the configuration of your new server.
    only to ports 80 and 8000 for Archivematica usage.
 
 2. The Storage Service has its own set of users. Navigate to
-   **Administration > Users** and add at least one administrative user. After
-   you have created this user an API key will be generated that will connect
+   **Administration > Users** and add at least one administrative user:
+   ::
+
+      ::
+
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/default/archivematica-storage-service || \
+              source /etc/sysconfig/archivematica-storage-service \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /usr/lib/archivematica/storage-service
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
+        ";
+
+   After you have created this user an API key will be generated that will connect
    the Archivematica pipeline to the Storage Service API. Click edit to see the
    new user's details. The API key will be found at the bottom of the page.
    Copy this to your clipboard as it will be used later on in the

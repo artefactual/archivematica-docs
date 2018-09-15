@@ -7,7 +7,7 @@ Installing Archivematica
 *On this page*
 
 * :ref:`Overview <overview>`
-* :ref:`Technical requirements <tech-requirements>`
+* :ref:`Technical requirements <treq>`
 * :ref:`Instructions for new installations <instructions>`
 * :ref:`Advanced installation options <advanced>`
 
@@ -20,8 +20,8 @@ Archivematica is not a single application - dozens of different components and
 tools are required for a fully working installation. As a result, there are many
 possible deployment configurations.
 
-These instructions are designed to get you up and running as quickly as
-possible, even if you are not familiar the various tools and applications that
+The following table lists all help topics on installing Archivematica for various intended uses and host environments. The related document links are designed to get you up and running as quickly as
+possible, even if you are not familiar with the various tools and applications that
 are bundled into Archivematica. Experience with the Linux command line is
 helpful, and to support a running production system it should be considered a
 requirement.
@@ -29,10 +29,10 @@ requirement.
 If you need assistance or clarification regarding the installation instructions,
 the `Archivematica google group`_ is a good place ask questions.
 
-.. note:: For testing purposes, you may find it easier to install on a virtual
-   machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
+.. csv-table::
+   :file: _csv/install-landing.csv
 
-.. _tech-requirements:
+.. _treq:
 
 Technical requirements
 ======================
@@ -43,10 +43,10 @@ Operating system
 Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
-* Ubuntu 14.04 64-bit Server Edition
-* Ubuntu 16.04 64-bit Server Edition
-* Ubuntu 18.04 64-bit Server Edition ( Experimental support )
-* CentOS 7 64-bit
+Ubuntu 14.04 64-bit Server Edition
+Ubuntu 16.04 64-bit Server Edition
+Ubuntu 18.04 64-bit Server Edition ( Experimental support )
+CentOS 7 64-bit
 
 Archivematica |version| is the first release to be tested on Ubuntu 16.04. Support
 for this OS is still considered beta; installation has been tested but production
@@ -186,7 +186,7 @@ environment for those who work on Archivematica's code.
 
 For more information about installation environments, please see the
 `ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the
-`archivematica-tech`_ mailing list for more details.
+`Archivematica google group`_ for more details.
 
 If you are upgrading from a previous version of Archivematica, please see the
 :ref:`upgrading instructions <upgrade>`.
