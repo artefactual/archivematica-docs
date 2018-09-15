@@ -56,6 +56,8 @@ Instructions
       git clone https://github.com/artefactual/deploy-pub.git
 
 3. Download the Ansible roles:
+   
+   .. _ubuntu-14.04:
 
    Ubuntu 14.04 (Trusty):
 
@@ -64,12 +66,16 @@ Instructions
       cd deploy-pub/playbooks/archivematica-trusty
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
+   .. _ubuntu-16.04:
+
    Ubuntu 16.04 (Xenial):
 
    .. code:: bash
 
       cd deploy-pub/playbooks/archivematica-xenial
       ansible-galaxy install -f -p roles/ -r requirements.yml
+
+   .. _ubuntu-18.04:
 
    Ubuntu 18.04 (Bionic) **EXPERIMENTAL**:
 

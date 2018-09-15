@@ -45,6 +45,8 @@ If you do not have access to a full installation of Archivematica, there are two
 options for testing the software - the hosted Archviematica sandbox or a
 locally-installed Archivematica VM.
 
+.. _using-the-sandbox:
+
 Using the sandbox
 =================
 
@@ -68,6 +70,8 @@ locally.
 .. note::
 
   If you are using the sandbox, you can move on to Task #1.
+
+.. _installing-on-vm:  
 
 Installing on a virtual machine using Vagrant
 =============================================
