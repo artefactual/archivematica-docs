@@ -14,6 +14,7 @@ The current integrations are listed below.
 * :ref:`Swift integration <swift-integration>`
 * :ref:`Islandora integration <islandora-integration>`
 * :ref:`Arkivum integration <arkivum-integration>`
+* :ref:`Dataverse integration <dataverse-integration>`
 
 .. _atom-integration:
 
@@ -49,5 +50,16 @@ Arkivum
 -------
 
 See :ref:`Arkivum Storage Service docs <storageservice:arkivum>`.
+
+.. _dataverse-integration:
+
+Dataverse
+---------
+
+See :ref:`Dataverse integration <dataverse-transfers>` for an overview of how 
+Dataverse datasets are preserved. 
+For instructions to configure a Dataverse integration, see 
+:ref:`Storage Service docs <storageservice:administrators>`.
+
 
 :ref:`Back to the top <integrations>`
