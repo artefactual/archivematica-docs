@@ -39,7 +39,7 @@ by installing the following services on separate machines:
 * Gearman
 * MySQL
 
-For help, ask on the `Archivematica google group`_ for more details.
+For help, ask on the `Archivematica user forum`_ for more details.
 
 Firewall
 ^^^^^^^^
@@ -82,4 +82,4 @@ In order to obtain valid SSL certificates trusted by any browser, you can use `L
 
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`Archivematica Docker repo`: https://github.com/artefactual-labs/am/tree/master/compose
-.. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
