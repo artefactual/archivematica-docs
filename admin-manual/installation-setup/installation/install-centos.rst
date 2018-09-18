@@ -313,8 +313,7 @@ the configuration of your new server.
    only to ports 81 and 8001 for Archivematica usage.
 
 2. The Storage Service has its own set of users. Navigate to
-   **Administration > Users** and create a new user with full admin privileges:
-   ::
+   **Administration > Users** and create a new user with full admin privileges::
  
       sudo -u archivematica bash -c " \
           set -a -e -x
