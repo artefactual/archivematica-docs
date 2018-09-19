@@ -54,6 +54,9 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
    If your transfer is composed of digital forensic disk images, please see
    :ref:`Forensic image processing <forensic>`.
+   
+   If your transfer is a Dataverse dataset, please see 
+   :ref:`Dataverse Integration <dataverse>`
 
    If you would like to skip some of the default choices for dashboard decision
    points or make preconfigured choices for your desired workflow, see
