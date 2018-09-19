@@ -17,6 +17,7 @@ listed below.
 * :ref:`Swift integration <swift-integration>`
 * :ref:`Islandora integration <islandora-integration>`
 * :ref:`Arkivum integration <arkivum-integration>`
+* :ref:`Handle.Net integration <handlenet-integration>`
 * :ref:`Dataverse integration <dataverse-integration>`
 
 .. _atom-integration:
@@ -111,6 +112,19 @@ layer for `Arkivum Perpetua`_ clients.
 
 See :ref:`Arkivum Storage Service integration documentation <storageservice:arkivum>`.
 
+.. _handlenet-integration:
+
+Handle.Net integration
+----------------------
+
+`Handle.Net`_ (also called Handle System) is a registry that assigns persistent
+identifiers, or handles, to information resources. Archivematica can mint
+persistent identifiers (PIDs) for digital objects, directories, or AIPs by
+defining the PIDs in a configured Handle.Net registry. Handle.Net can then
+create persistent URLs (PURLs) from the PIDs and can reroute requests to the
+persistent URLs to a target URL that is configured in Handle.Net.
+
+See :ref:`Handle.Net integration documentation <handlesystem-setup>`
 
 .. _dataverse-integration:
 
@@ -132,5 +146,6 @@ For instructions to configure a Dataverse integration, see
 .. _`Swift`: https://wiki.openstack.org/wiki/Swift
 .. _`Arkivum`: https://arkivum.com/
 .. _`Arkivum Perpetua`: https://arkivum.com/heritage-higher-education-and-corporate-archives/
+.. _`Handle.Net`: https://www.handle.net/index.html
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`TMS`: https://www.gallerysystems.com/products-and-services/tms-suite/tms/

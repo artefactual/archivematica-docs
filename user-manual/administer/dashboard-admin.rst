@@ -36,7 +36,6 @@ integrations and users.
 * :ref:`Language <language-choice>`
 * :ref:`Version <version>`
 
-
 .. _dashboard-processing:
 
 Processing configuration
@@ -340,8 +339,8 @@ Options:
 Bind PIDs
 +++++++++
 
-Assign persistent identifiers and send the information to a Handle Server (must
-be configured).
+Assign persistent identifiers and send the information to a Handle.Net server.
+See :ref:`Bind PIDs <bind-pids>` for more information.
 
 Options:
 
