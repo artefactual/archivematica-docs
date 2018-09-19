@@ -1,10 +1,10 @@
-.. _dataverse:
+.. _dataverse-integration:
 
 =====================
 Dataverse Integration
 =====================
 
-.. _overview:
+.. _dataverse-overview:
 
 Overview
 --------
@@ -22,13 +22,13 @@ has been developed and tested using Dataverse version 4.8.6
 
 *On this page*
 
-* :ref:`Selecting Datasets for preservation <selecting>`
-* :ref:`Processing Dataverse datasets <processing>`
+* :ref:`Selecting Datasets for preservation <selecting-datasets>`
+* :ref:`Processing Dataverse datasets <processing-datasets>`
 * :ref:`Dataverse METS file <dataverse-mets>`
-* :ref:`AIP METS file <aip-mets>`
-* :ref:`Configuration <configuration>`
+* :ref:`AIP METS file <dataverse-aip-mets>`
+* :ref:`Configuration <dataverse-configuration>`
 
-.. _selecting:
+.. _selecting-datasets:
 
 Selecting Datasets for preservation
 -----------------------------------
@@ -41,7 +41,7 @@ the dataset. Individual files can’t be selected for Transfer.
 When a Dataverse dataset is selected, the Transfer Type ‘Dataverse’ must also 
 be selected.
 
-.. _processing:
+.. _processing-datasets:
 
 Processing Dataverse datasets
 -----------------------------
@@ -70,18 +70,18 @@ the dataset as retrieved from Dataverse. The Dataverse METS includes:
 * descriptive metadata about the dataset, mapped to the `DDI standard`_
 
 * a <mets:fileSec> section that lists all files provided, grouped by type 
-(original, metadata or derivative)
+  (original, metadata or derivative)
 
 * a <mets:structMap> section that describes the structure of the files as 
-provided by Dataverse (particularly helpful for understanding which files were
-provided in `Tabular Data file bundle`_
+  provided by Dataverse (particularly helpful for understanding which files were
+  provided in `Tabular Data file bundle`_
 
 The Dataverse METS is found in the final AIP in this location: 
 <AIP Name>/data/objects/metadata/transfers/<transfer name>/METS.xml 
 (This is also where you will find the dataset.json metadata file provided by 
 Dataverse, and the agents.json metadata file created by Archivematica).
 
-.. _aip-mets:
+.. _dataverse-aip-mets:
 
 AIP METS file
 -------------
@@ -103,7 +103,7 @@ Fixity checks that use checksums provided by Dataverse are recorded as PREMIS
 events using the eventOutcomeDetailNote attribute to indicate the source of 
 the checksum.
 
-.. _configuration:
+.. _dataverse-configuration:
 
 Configuration
 -------------
