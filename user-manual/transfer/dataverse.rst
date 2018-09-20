@@ -1,4 +1,4 @@
-.. _dataverse-integration:
+.. _dataverse-transfers:
 
 =====================
 Dataverse Integration
