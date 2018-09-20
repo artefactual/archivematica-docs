@@ -56,7 +56,7 @@ See :ref:`Arkivum Storage Service docs <storageservice:arkivum>`.
 Dataverse
 ---------
 
-See :ref:`Dataverse integration <dataverse>` for an overview of how 
+See :ref:`Dataverse integration <dataverse-transfer>` for an overview of how 
 Dataverse datasets are preserved. 
 For instructions to configure a Dataverse integration, see 
 :ref:`Storage Service docs <storageservice:administrators>`
