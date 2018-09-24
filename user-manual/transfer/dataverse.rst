@@ -109,7 +109,7 @@ Configuration
 -------------
 
 Integration with a Dataverse repository is configured in the Storage Service. 
-For detailed instructions, see the :ref:`Administrators Manual <storageservice:administrators>`
+For detailed instructions, see the :ref:`Administrators Manual <storageservice:administrators>`.
 
 :ref:`Back to the top <dataverse>`
 
