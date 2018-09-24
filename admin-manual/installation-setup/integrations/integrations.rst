@@ -59,7 +59,7 @@ Dataverse
 See :ref:`Dataverse integration <dataverse-transfers>` for an overview of how 
 Dataverse datasets are preserved. 
 For instructions to configure a Dataverse integration, see 
-:ref:`Storage Service docs <storageservice:administrators>`
+:ref:`Storage Service docs <storageservice:administrators>`.
 
 
 :ref:`Back to the top <integrations>`
