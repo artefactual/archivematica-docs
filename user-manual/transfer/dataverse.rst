@@ -52,7 +52,7 @@ the files included in the dataset as well as other descriptive metadata.
 
 When a dataset includes tabular data files, Dataverse creates derivative 
 formats and additional metadata files. See the Dataverse guide describing how a 
- `tabular data file bundle`_ works.
+`tabular data file bundle`_ works.
 
 Archivematica detects tabular data file bundles and retrieves all derivative 
 files and metadata files. 
