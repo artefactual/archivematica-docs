@@ -90,7 +90,7 @@ the dataset as retrieved from Dataverse. The Dataverse METS includes:
 
 * a ``<mets:structMap>`` section that describes the structure of the files as 
   provided by Dataverse. This is particularly helpful for understanding which 
-  files were provided in a `tabular data file bundle`_)
+  files were provided in a `tabular data file bundle`_.
 
 The Dataverse METS is found in the final AIP in this location: 
 ``<AIP Name>/data/objects/metadata/transfers/<transfer name>/METS.xml`` 
