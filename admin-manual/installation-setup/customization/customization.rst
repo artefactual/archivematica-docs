@@ -19,7 +19,7 @@ Configuring microservices using the dashboard
 
 It is possible for administrators or end-users to automate almost all of
 Archivematica's microservices by preconfiguring choices using the
-:ref:`Administration tab <dashboard-admin>` of the dashboard.
+:ref:`Administration tab <dashboard-config>` of the dashboard.
 
 .. _config-using-fpr:
 

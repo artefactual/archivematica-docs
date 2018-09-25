@@ -306,17 +306,14 @@ the configuration of your new server.
    deploying using RPM packages. Use your web browser to navigate to the
    Storage Service at the IP address of the machine you have been installing
    on, e.g., ``http://<MY-IP-ADDR>:8001`` (or ``http://localhost:8001`` or
-   ``http://127.0.0.1:8001`` if this is a local development setup). The default
-   username and password are ``test``/ ``test``.
+   ``http://127.0.0.1:8001`` if this is a local development setup).
 
    If you are using an IP address or fully-qualified domain name instead of
    localhost, you will need to configure your firewall rules and allow access
    only to ports 81 and 8001 for Archivematica usage.
 
-2. The Storage Service has its own set of users. It is necessary to create a
-   user with full admin privileges:
-
-   .. code:: bash
+2. The Storage Service has its own set of users. Navigate to
+   **Administration > Users** and create a new user with full admin privileges::
 
       sudo -u archivematica bash -c " \
           set -a -e -x
@@ -325,10 +322,12 @@ the configuration of your new server.
                   || (echo 'Environment file not found'; exit 1)
           cd /usr/lib/archivematica/storage-service
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
-      ";
+        ";
 
-   The API key will be generated automatically. The API key can be found via the
-   web interface (go to **Administration > Users**).
+  After you have created this user, the API key will be generated automatically,
+  and that key will connect the Archivematica pipeline to the Storage Service
+  API. The API key can be found via the web interface (go to **Administration >
+  Users**).
 
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine on which you have

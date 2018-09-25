@@ -1,7 +1,7 @@
 .. _preservation-planning:
 
 =====================
-Preservation planning
+Preservation Planning
 =====================
 
 The Preservation Planning tab displays the local
@@ -70,10 +70,9 @@ When creating a new format version, the following fields are available:
   choose "14".
 
 * PRONOM ID - The specific format version's unique identifier in
-  `PRONOM <http://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, the UK
-  National Archives's format registry. This is optional, but highly recommended.
-  Many identification and characterization tools, use PRONOM ID's to recognize
-  formats.
+  `PRONOM <PRONOM_>`_, the UK National Archives's format registry. This is 
+  optional, but highly recommended. Many identification and characterization 
+  tools use PRONOM ID's to recognize formats.
 
 * Access format and Preservation format - Indicates whether this format is
   suitable as an access format for end users, and for preservation.
@@ -144,10 +143,10 @@ The following format groups come pre-populated in the FPR:
 
 * Word Processing
 
-The groups as determined by Artefactual should be perceived as arbritrary and
-are simply meant to make the Format Policy Registry easier to read and navigate.
+The groups as determined by Artefactual should be perceived as arbitrary and
+are meant to make the Format Policy Registry easier to read and navigate.
 If an institution so desired, they could change the names and population of the
-groups in their local Preservation planning tab.
+groups in their local Preservation Planning tab.
 
 Format policy rules and commands
 """"""""""""""""""""""""""""""""
@@ -177,9 +176,9 @@ The identification tool properties in Archivematica control the ways in which
 Archivematica identifies files and associates them with the FPR's version
 records. The current version of the FPR server contains three tools: the
 `Open Preservation Foundation's <http://openpreservation.org//>`_
-`Fido <https://github.com/openpreserve/fido/>`_ tool, which identifies based on
+`Fido <FIDO_>`_ tool, which identifies based on
 the IDs in PRONOM; a simple script which identifies files by their file
-extension; and `Siegfried <http://www.itforarchivists.com/siegfried>`_ which like
+extension; and `Siegfried <Siegfried_>`_ which like
 Fido, is based on PRONOM ID and provides detailed information on the basis for
 format matches in its output.  You can use the identification tools portion of
 FPR to customize the behaviour of the existing tools, or to write your own.
@@ -238,14 +237,15 @@ either replace FITS or run alongside it on every file.
 If using Archivematica's default commands, all three of these tools are run on
 multimedia files:
 
-* `FFprobe <http://ffmpeg.org/>`_, a characterization tool built on top of the
-   same core as FFmpeg, the normalization software used by Archivematica
+* `FFprobe <FFprobe_>`_
+   a characterization tool built on top of the same core as FFmpeg, the normalization 
+   software used by Archivematica
 
-* `MediaInfo <http://mediaarea.net/en/MediaInfo>`_, a characterization tool
-   oriented towards audio and video data
+* `MediaInfo <MediaInfo_>`_
+   a characterization tool oriented towards audio and video data
 
-* `ExifTool <http://www.sno.phy.queensu.ca/~phil/exiftool/index.html>`_, a
-   characterization tool oriented towards still image data and extraction of
+* `ExifTool <ExifTool_>`_ 
+   a characterization tool oriented towards still image data and extraction of 
    embedded metadata
 
 *Disk images*
@@ -304,7 +304,7 @@ The success rate of each normalization rule is show in the "Success" column.
 
 Archivematica by default has 15 normalization commands, some of which use
 Archivematica-specific scripts, the rest of which use tools such as ImageMagick
-(convert command), Ghostscript, Inkscape, ps2pdf and ffmpeg.
+(convert command), Ghostscript, Inkscape, ps2pdf and FFmpeg.
 
 Transcription
 """""""""""""
@@ -318,7 +318,7 @@ This lists the transcription commands associated with various formats.
 **Commands**
 
 By default, Archivematica supports one transcription command, which uses
-the OCR tool Tesseract.
+the OCR tool `Tesseract <Tesseract_>`_.
 
 Validation
 """"""""""
@@ -340,8 +340,8 @@ on a wide variety of formats, and MediaConch which is used to validate Matroska
 (mkv) files. MediaConch can also be used to create custom validation commands
 which check files against a local policy on a variety of multimedia formats.
 These policy checks can be performed on originals, preservation derivatives and
-access derivatives. For more information please see:
-`MediaConch workflow <https://wiki.archivematica.org/MediaConch_workflow>`_.
+access derivatives. For more information please see: 
+`MediaConch workflow <MediaConch_>`_.
 
 Verification
 """"""""""""
@@ -353,14 +353,14 @@ Verification is run on the output of normalization, not on the original file.
 
 .. _pres-policies:
 
-Preservation planning policies
+Preservation Planning policies
 ------------------------------
 
 It is important for institutions to establish local policies and practices
-that include monitoring the digitial preservation environment to help inform
+that include monitoring the digital preservation environment to help inform
 format normalization rules over time as standards and tools evolve.
 
-We recommend documenting your policies and pratices, in accordance with the TRAC
+We recommend documenting your policies and practices, in accordance with the TRAC
 standard for auditing Trusted Digital Repositories
 (`ISO 16363:2012 <http://www.iso.org/iso/catalogue_detail.htm?csnumber=56510>`_).
 
@@ -378,7 +378,7 @@ Changing Format Policy Rules
 
 Format policy rules allow existing commands to be associated with specific file
 types. To create a new rule, click on "Create new rule" while viewing the page
-of rules for the relevant micro-service (Characteriaztion, Normalization, etc.)
+of rules for the relevant micro-service (Characterization, Normalization, etc.)
 
 When creating a format policy rule, the following mandatory fields must be
 filled out:
@@ -398,8 +398,7 @@ Writing commands
 Identification commands
 """""""""""""""""""""""
 
-Identification commands are very simple to write, though they require some
-familiarity with Unix scripting.
+Identification commands require some familiarity with Unix scripting.
 
 An identification command run once for every file in a transfer. It will be
 passed a single argument (the path to the file to identify), and no switches.
@@ -412,8 +411,9 @@ On success, a command should:
 On failure, a command should:
 
 * Print nothing to stdout
-* Exit non-zero (Archivematica does not assign special significance to non-zero
-  exit codes)
+* Exit non-zero
+
+Archivematica does not assign special significance to non-zero exit codes.
 
 A command can print anything to stderr on success or error, but this is purely
 informational - Archivematica won't do anything special with it. Anything
@@ -422,7 +422,7 @@ Archivematica dashboard's detailed tool output page. You should print any
 useful error output to stderr if identification fails, but you can also print
 any useful extra information to stderr if identification succeeds.
 
-Here's a very simple Python script that identifies files by their file extension:
+Here's a Python script that identifies files by their file extension:
 
 .. code:: bash
 
@@ -477,7 +477,7 @@ tool with the FPR's format records. This needs to be done once for every
 supported format; we'll show it with MP3, as an example.
 
 1. Navigate to the "Identification Rules" page, and click "Create New Rule".
-2. Choose the appropriate foramt from the Format dropdown - in our case, "Audio:
+2. Choose the appropriate format from the Format dropdown - in our case, "Audio:
    MPEG Audio: MPEG 1/2 Audio Layer 3".
 3. Choose your command from the Command dropdown.
 4. Enter the text your command will output when it identifies this format. For
@@ -508,7 +508,7 @@ directly in your code, like this:
    inkscape -z "%fileFullName%" --export-pdf="%outputDirectory%%prefix%%fileName%%postfix%.pdf"
 
 When writing a script in Python or other languages, the values will be passed
-to your script as commandline options, which you will need to parse. The
+to your script as command line options, which you will need to parse. The
 following script provides an example using the argparse module that comes with
 Python:
 
@@ -534,7 +534,7 @@ Python:
    subprocess.call(args)
 
 Once you've created a command, the process of registering it is similar to
-creating a new identification tool. The folling examples will use the Python
+creating a new identification tool. The following examples will use the Python
 normalization script above.
 
 First, create a new tool record:
@@ -565,7 +565,7 @@ Next, create a record for your new command:
    verifications.
 8. Finally, choose a command to produce the "Event detail" text that will be
    written in the section of the METS file covering the normalization event.
-   Archivematica already includes a suitable command for ffmpeg, but you can
+   Archivematica already includes a suitable command for FFmpeg, but you can
    also create a custom command.
 9. Click "Create command".
 
@@ -662,7 +662,7 @@ Name (bashScript and command)   Commandline position (pythonScript and asIs)  De
 %inputFile%                     Second                                        The full path to the package file      /path/to/filename
 =============================   ============================================  ===================================    =======================
 
-Here's a simple example of how to call an existing tool (7-zip) without any
+Here's an example of how to call an existing tool (7-zip) without any
 extra logic:
 
 .. code:: bash
@@ -716,7 +716,7 @@ SIP. For commands which perform OCR, metadata can be placed inside the
 should produce files within "metadata".
 
 For example, the following bash script is used by Archivematica to transcribe
-images using the `Tesseract <https://code.google.com/p/tesseract-ocr/>`_ software:
+images using the `Tesseract <Tesseract_>`_ software:
 
 .. code:: bash
 
@@ -728,3 +728,12 @@ images using the `Tesseract <https://code.google.com/p/tesseract-ocr/>`_ softwar
 
 
 :ref:`Back to the top <preservation-planning>`
+
+.. _ExifTool: http://www.sno.phy.queensu.ca/~phil/exiftool/index.html
+.. _FFprobe: http://ffmpeg.org/
+.. _FIDO: https://github.com/openpreserve/fido/
+.. _MediaConch: https://wiki.archivematica.org/MediaConch_workflow
+.. _MediaInfo: http://mediaarea.net/en/MediaInfo
+.. _PRONOM: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx
+.. _Siegfried: http://www.itforarchivists.com/siegfried
+.. _Tesseract: https://code.google.com/p/tesseract-ocr/
