@@ -69,9 +69,9 @@ Installation instructions
    * Archivematica:
 
    Use these commands to install the repositories:
-      
+
    .. code:: bash
-      
+   
       sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
       [archivematica]
       name=archivematica
