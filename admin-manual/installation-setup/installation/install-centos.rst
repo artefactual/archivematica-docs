@@ -71,7 +71,7 @@ Installation instructions
    Use these commands to install the repositories:
 
    .. code:: bash
-   
+
       sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
       [archivematica]
       name=archivematica
@@ -80,7 +80,7 @@ Installation instructions
       gpgkey=https://packages.archivematica.org/1.8.x/key.asc
       enabled=1
       EOF'
-      
+
       sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
       [archivematica-extras]
       name=archivematica-extras
