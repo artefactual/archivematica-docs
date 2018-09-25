@@ -7,7 +7,7 @@ Installing Archivematica
 *On this page*
 
 * :ref:`Overview <overview>`
-* :ref:`Technical requirements <tech-requirements>`
+* :ref:`Technical requirements <treq>`
 * :ref:`Instructions for new installations <instructions>`
 * :ref:`Advanced installation options <advanced>`
 
@@ -16,23 +16,15 @@ Installing Archivematica
 Overview
 ========
 
-Archivematica is not a single application - dozens of different components and
-tools are required for a fully working installation. As a result, there are many
-possible deployment configurations.
-
-These instructions are designed to get you up and running as quickly as
-possible, even if you are not familiar the various tools and applications that
-are bundled into Archivematica. Experience with the Linux command line is
-helpful, and to support a running production system it should be considered a
-requirement.
+The following table lists all help topics on installing Archivematica for various intended uses and host environments.
 
 If you need assistance or clarification regarding the installation instructions,
-the `Archivematica google group`_ is a good place ask questions.
+the `Archivematica user forum`_ is a good place ask questions.
 
-.. note:: For testing purposes, you may find it easier to install on a virtual
-   machine using Vagrant. See the :ref:`Quick Start Guide <quick-start-install>`
+.. csv-table::
+   :file: _csv/install-landing.csv
 
-.. _tech-requirements:
+.. _treq:
 
 Technical requirements
 ======================
@@ -44,7 +36,8 @@ Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
 * Ubuntu 14.04 64-bit Server Edition
-* Ubuntu 16.04 64-bit Server Edition (beta)
+* Ubuntu 16.04 64-bit Server Edition
+* Ubuntu 18.04 64-bit Server Edition (experimental support)
 * CentOS 7 64-bit
 
 Archivematica |version| is the first release to be tested on Ubuntu 16.04. Support
@@ -172,7 +165,8 @@ CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
 At this time, installation instructions are provided for officially tested and
 supported installation environments:
 
-* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`
+* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`. Ansible playbooks for Ubuntu 18.04 are also available, but experimental
+
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
 
 :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
@@ -184,7 +178,7 @@ environment for those who work on Archivematica's code.
 
 For more information about installation environments, please see the
 `ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the
-`archivematica-tech`_ mailing list for more details.
+`Archivematica user forum`_ for more details.
 
 If you are upgrading from a previous version of Archivematica, please see the
 :ref:`upgrading instructions <upgrade>`.
@@ -208,6 +202,6 @@ individual user. We have documented some common advanced installation setups.
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
-.. _`Archivematica google group`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
 .. _`docker`: https://github.com/artefactual-labs/am/tree/master/compose
 .. _`Issue 7246`: https://projects.artefactual.com/issues/7246

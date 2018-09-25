@@ -27,6 +27,12 @@ for more details.
 Instructions
 ------------
 
+.. note::
+
+   These instructions assume that you have a Python package manager, such as
+   pip, installed on your system. From pip, you should be able to install a
+   released version of Ansible.
+
 1. Install VirtualBox, Vagrant, and Ansible.
 
    .. code:: bash
@@ -51,6 +57,8 @@ Instructions
 
 3. Download the Ansible roles:
 
+   .. _ubuntu-14.04:
+
    Ubuntu 14.04 (Trusty):
 
    .. code:: bash
@@ -58,13 +66,24 @@ Instructions
       cd deploy-pub/playbooks/archivematica-trusty
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
+   .. _ubuntu-16.04:
 
    Ubuntu 16.04 (Xenial):
 
-    .. code:: bash
+   .. code:: bash
 
-       cd deploy-pub/playbooks/archivematica-xenial
-       ansible-galaxy install -f -p roles/ -r requirements.yml
+      cd deploy-pub/playbooks/archivematica-xenial
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
+   .. _ubuntu-18.04:
+
+   Ubuntu 18.04 (Bionic) **EXPERIMENTAL**:
+
+   .. code:: bash
+
+      cd deploy-pub/playbooks/archivematica-bionic
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
 
 
 4. Create the virtual machine and provision it:
@@ -96,8 +115,8 @@ Instructions
 
    * Archivematica: `<http://192.168.168.192>`_. Username & password configured
      on installation.
-   * Storage Service: `<http://192.168.168.192:8000>`_. Username: test,
-     password: test.
+   * Storage Service: `<http://192.168.168.192:8000>`_. Username & password configured
+     on installation.
 
 .. _ansible-post-install-config:
 
@@ -118,10 +137,9 @@ the configuration of your new server.
    localhost, you will need to configure your firewall rules and allow access
    only to ports 80 and 8000 for Archivematica usage.
 
-2. The Storage Service has its own set of users. It is necessary to create a
-   user with full admin privileges:
-
-   .. code:: bash
+2. The Storage Service has its own set of users. Create a new user with full
+   admin privileges:
+   ::
 
       sudo -u archivematica bash -c " \
           set -a -e -x
@@ -130,10 +148,12 @@ the configuration of your new server.
                   || (echo 'Environment file not found'; exit 1)
           cd /usr/lib/archivematica/storage-service
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
-      ";
+        ";
 
-   The API key will be generated automatically. The API key can be found via the
-   web interface (go to **Administration > Users**).
+  After you have created this user, the API key will be generated automatically,
+  and that key will connect the Archivematica pipeline to the Storage Service
+  API. The API key can be found via the web interface (go to **Administration >
+  Users**). 
 
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine on which you have
