@@ -178,7 +178,7 @@ Upgrade on CentOS/Red Hat
 
    .. code:: bash
 
-      sudo sed -i 's/1.6.x/1.7.x/g' /etc/yum.repos.d/archivematica*
+      sudo sed -i 's/1.7.x/1.8.x/g' /etc/yum.repos.d/archivematica*
 
 2. Upgrade the packages:
 
