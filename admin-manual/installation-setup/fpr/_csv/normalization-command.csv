@@ -1,0 +1,18 @@
+Name (bashScript and command),Command line option (pythonScript and asIs),Description,Sample value
+%SIPUUID%,–sipuuid=,The UUID of the SIP or transfer being processed.,4941c1e7-722b-41dc-900a-a17f7cfd32a9
+%sipName%,–sip-name=,"The name of the SIP or transfer being processed, parsed from its path.",this-is-a-sip
+%SIPDirectory%,–sip-directory=,The full path of the SIP or transfer.,/dir/this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9
+%SIPDirectoryBasename%,–sip-directory-basename=,The basename of the SIP or transfer.,this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9
+%SIPLogsDirectory%,–sip-logs-directory=,The full path of the SIP or transfer’s logs directory.,/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/logs
+%SIPObjectsDirectory%,–sip-objects-directory=,The full path of the SIP or transfer’s objects directory.,/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects
+%fileUUID%,–file-uuid=,The UUID of the file being processed.,baa67175-f04d-4df6-8615-d05d0651eae2
+%originalLocation%,–original-location=,"The original path of the file, as first recorded by Archivematica. Note that the filename component of this path is unsanitized, so it is possible for this string to contain data in arbitrary text encodings, including mixed encodings.",/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects/ …/file name unsanitized.jpeg
+%fileName%,–input-file=,"The filename of the file to process. This variable holds the file’s basename, not the whole path.",video.mov
+%fileDirectory%,–file-directory=,The directory containing the input file.,/path/to
+%inputFile%,–file-name=,The fully-qualified path to the file to process.,/path/to/video.mov
+%fileExtension%,–file-extension=,The file extension of the input file.,mov
+%fileExtensionWithDot%,–file-extension-with-dot=,"As above, without stripping the period.",.mov
+%outputFileUUID%,–output-file-uuid=,The unique identifier assigned by Archivematica to the output file.,1abedf3e-3a4b-46d7-97da-bd9ae13859f5
+%outputDirectory%,–output-directory=,The fully-qualified path to the directory where the new file should be written.,/var/archivematica/sharedDirectory/www/AIPsStore/uuid
+%outputFileName%,–output-file-name=,"The fully-qualified path to the output file, minus the file extension.",/path/to/access/copies/video-uuid
+%fileGrpUse%,–file-grp-use=,The file grouping for this file. Possible values are: * original * submissionDocumentation * preservation * access * service * license * text/ocr * metadata,original
