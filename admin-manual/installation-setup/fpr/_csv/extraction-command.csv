@@ -1,0 +1,3 @@
+Name (bashScript and command),Commandline position (pythonScript and asIs),Description,Sample value
+%outputDirectory%,First,The full path to the directory in which the package’s contents should be extracted,/path/to/filename-uuid/
+%inputFile%,Second,The full path to the package file,/path/to/filename
