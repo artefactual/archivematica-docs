@@ -16,20 +16,22 @@ Archivematica documentation
 Getting started
 ===============
 
-The getting started manual is intended for users who are considering implementing
-Archivematica as a digital preservation solution. This manual includes information
-on the Archivematica project as well as a quick-start guide to help new users test
-it out. For information about installing and using Archivematica in a production
-environment, see the user or administrator manuals below.
+The getting started manual is intended for users who are considering
+implementing Archivematica as a digital preservation solution. This manual
+includes information on the Archivematica project as well as a quick-start guide
+to help new users test it out. For information about installing and using
+Archivematica in a production environment, see the user or administrator manuals
+below.
 
 .. _home-overview:
 
 Overview
 --------
 
-The overview section provides a definition of Archivematica and a description of the
-OAIS model on which it is based, its technical architecture, the microservices
-framework, and information about system requirements for deploying Archivematica.
+The overview section provides a definition of Archivematica and a description of
+the OAIS model on which it is based, its technical architecture, the
+microservices framework, and information about system requirements for deploying
+Archivematica.
 
 * :ref:`What is Archivematica? <intro>`
 * :ref:`Web-based dashboard <web-dashboard>`
@@ -42,10 +44,11 @@ framework, and information about system requirements for deploying Archivematica
 Quick-start guide
 -----------------
 
-This section is intended to introduce prospective users to Archivematica for testing
-purposes, using either the Archivematica sandbox or a local virtual machine. This
-is not a guide to installing Archivematica for development or production - please
-see the :ref:`Administrator manual <admin-manual-home>` for full installation instructions.
+This section is intended to introduce prospective users to Archivematica for
+testing purposes, using either the Archivematica sandbox or a local virtual
+machine. This is not a guide to installing Archivematica for development or
+production - please see the :ref:`Administrator manual <admin-manual-home>` for
+full installation instructions.
 
 * :ref:`Archivematica quick-start guide <quick-start>`
 * :ref:`Configuration <configuration>`
@@ -75,17 +78,18 @@ User manual
 ===========
 
 The user manual is intended for archivists, librarians, and other users who
-interact with Archivematica through the web-based user interface. The user manual
-is organized based on the tabs in the Archivematica UI.
+interact with Archivematica through the web-based user interface. The user
+manual is organized based on the tabs in the Archivematica UI.
 
 .. _home-transfer:
 
 Transfer
 --------
 
-The Transfer tab is the place where an Archivematica transfer begins. Along
-with the transfer widget, this tab displays micro-services and jobs that act upon
-content to prepare your transfer to become a SIP (submission information package).
+The Transfer tab is the place where an Archivematica transfer begins. Along with
+the transfer widget, this tab displays micro-services and jobs that act upon
+content to prepare your transfer to become a SIP (submission information
+package).
 
 * :ref:`General description <transfer>`
 * :ref:`Create a transfer <create-transfer>`
@@ -107,7 +111,9 @@ content to prepare your transfer to become a SIP (submission information package
 Backlog
 -------
 
-The Backlog tab displays content that has been added to the Archivematica backlog and allows users to search, download and delete transfers from the backlog location.
+The Backlog tab displays content that has been added to the Archivematica
+backlog and allows users to search, download and delete transfers from the
+backlog location.
 
 * :ref:`General description <backlog>`
 * :ref:`Searching for transfers <backlog-transfer-search>`
@@ -120,8 +126,9 @@ The Backlog tab displays content that has been added to the Archivematica backlo
 Appraisal
 ---------
 
-The Appraisal and Arrangement tab is used to analyze and arrange material which has been placed in backlog.
-It can also be used to arrange materials directly to resources in ArchivesSpace.
+The Appraisal and Arrangement tab is used to analyze and arrange material which
+has been placed in backlog. It can also be used to arrange materials directly to
+resources in ArchivesSpace.
 
 * :ref:`General description <appraisal>`
 * :ref:`Transfers in the Backlog <backlog_pane>`
@@ -136,7 +143,8 @@ It can also be used to arrange materials directly to resources in ArchivesSpace.
 Ingest
 ------
 
-The Ingest tab displays the micro-services and jobs that take place to turn a SIP into an AIP or a DIP. This tab also contains the backlog widget.
+The Ingest tab displays the micro-services and jobs that take place to turn a
+SIP into an AIP or a DIP. This tab also contains the backlog widget.
 
 * :ref:`General description <ingest>`
 * :ref:`Create a SIP <create-sip>`
@@ -156,8 +164,9 @@ The Ingest tab displays the micro-services and jobs that take place to turn a SI
 Archival Storage
 ----------------
 
-The Archival Storage tab displays AIPs that have been processed by the Archivematica
-pipeline and related metadata such as size of AIP, UUID and date stored.
+The Archival Storage tab displays AIPs that have been processed by the
+Archivematica pipeline and related metadata such as size of AIP, UUID and date
+stored.
 
 * :ref:`Storing an AIP <storing-aip>`
 * :ref:`Searching the AIP store <search-aip>`
@@ -171,7 +180,8 @@ pipeline and related metadata such as size of AIP, UUID and date stored.
 Access
 ------
 
-Most of Archivematica's access integrations take place within the Ingest tab. The Access tab displays DIPs which have been sent to AtoM.
+Most of Archivematica's access integrations take place within the Ingest tab.
+The Access tab displays DIPs which have been sent to AtoM.
 
 * :ref:`General description <access>`
 * :ref:`Default access system <access-default>`
@@ -188,11 +198,12 @@ Most of Archivematica's access integrations take place within the Ingest tab. Th
 Preservation planning
 ---------------------
 
-The Preservation Planning tab is the de facto user interface for the Format Policy
-Registry, the extensive format database that informs how Archivematica handles
-files. The Preservation Planning tab allows users to add or edit format policies
-for normalization, characterization, validation, and other tools and workflows
-that act upon content preserved through Archivematica.
+The Preservation Planning tab is the de facto user interface for the Format
+Policy Registry (FPR), the extensive format database that controls how
+Archivematica handles file formats. The Preservation Planning tab allows users
+to add or edit format policies for normalization, characterization, validation,
+and other tools and workflows that act upon content preserved through
+Archivematica.
 
 * :ref:`General description <preservation-planning>`
 * :ref:`Format Policy Registry (FPR) <fpr>`
@@ -205,9 +216,9 @@ that act upon content preserved through Archivematica.
 Administration
 --------------
 
-The Administration tab allows administrative users to set processing configurations,
-transfer and storage locations, DIP upload configurations, and to add and remove
-users, among other things.
+The Administration tab allows administrative users to set processing
+configurations, transfer and storage locations, DIP upload configurations, and
+to add and remove users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
 * :ref:`Storage service users <storageservice:users>`
@@ -218,8 +229,8 @@ users, among other things.
 Metadata
 --------
 
-Archivematica employs several metadata standards. This section describes how Archivematica
-implements and makes use of them.
+Archivematica employs several metadata standards. This section describes how
+Archivematica implements and makes use of them.
 
 * :ref:`Import metadata <import-metadata>`
 * :ref:`PREMIS <premis-template>`
@@ -229,9 +240,9 @@ implements and makes use of them.
 Translations
 ------------
 
-Beginning with Archivematica 1.6.1, the community has been able to support the project
-by volunteering their time and effort to translate the Archivematica documentation,
-the interface, and the Storage Service into other languages.
+Beginning with Archivematica 1.6.1, the community has been able to support the
+project by volunteering their time and effort to translate the Archivematica
+documentation, the interface, and the Storage Service into other languages.
 
 * :ref:`Contributing translations to the Archivematica project <translations>`
 
@@ -241,8 +252,8 @@ Administrator manual
 ====================
 
 The administrator manual is intended for systems administrators who are
-responsible for installing, configuring, setting up, and maintaining Archivematica
-and related systems.
+responsible for installing, configuring, setting up, and maintaining
+Archivematica and related systems.
 
 
 .. _home-install:
@@ -254,9 +265,8 @@ Installation and setup
 * :ref:`Upgrading Archivematica <upgrade>`
 * :ref:`Customization and automation <customization>`
 * :ref:`Setting up integrations <integrations>`
-* :ref:`Storage Service <storageservice:administrators>`
-* :ref:`Format Policy Registry (FPR) <fpr:index>`
-
+* :ref:`Administering the Storage Service <storageservice:administrators>`
+* :ref:`Preservation planning <preservation-planning>`
 
 .. _maintenance:
 
