@@ -271,7 +271,7 @@ Add PREMIS rights
 Archivematica allows you to add PREMIS rights either prior to the normalization step or
 after. Archivematica will prompt you with a reminder to add rights information
 if desired during the Process metadata directory micro-service. For more information about the
-PREMIS rights fields, see :ref:`PREMIS template <premis-template>`
+PREMIS rights fields, see :ref:`PREMIS template <premis-template>`.
 
 1. Click on the template icon.
 
@@ -350,15 +350,17 @@ been uploaded to your access system.
 Normalize
 ---------
 
-Normalizing is the process of converting ingested digital objects to
-preservation and/or access formats. Note that the original objects are always
-kept along with their normalized versions. For more information about
-Archivematica's preservation strategy, go to the Preservation Planning section
-of the manual.
+Normalization is the process of converting an ingested digital object to a
+preferred preservation and/or access format.
 
-1. At the normalization step, the SIP will appear in the dashboard with a bell
-   icon next to it. Select one of the normalization options from the Actions
-   drop-down menu:
+Note that the original objects are always kept along with their normalized
+versions. For more information about Archivematica's preservation strategy, go
+to the :ref:`Preservation Planning <preservation-planning>` section of the
+manual.
+
+1. At the normalization micro-service, the SIP will appear in the dashboard with
+   a bell icon next to it. Select one of the normalization options from the
+   Actions drop-down menu:
 
 .. figure:: images/NormPresAccess1.*
    :align: right
@@ -368,20 +370,23 @@ of the manual.
 
    Selecting a normalization option
 
-* Normalize for preservation and access: creates preservation copies of the
+* **None** - the user is prompted for a decision.
+* **Normalize for preservation and access** - creates preservation copies of the
   objects plus access copies which will be used to generate the DIP.
+* **Normalize for preservation** - creates preservation copies only. No access
+  copies are created and no DIP will be generated.
+* **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
+  more information.
+* **Do not normalize** - the AIP will contain originals only. No preservation or
+  access copies are generated and no DIP will be generated.
+* **Normalize service files preservation** - see :ref:`Digitization <digitized>`
+  for more information.
+* **Normalize for access** - the AIP will contain originals only. No preservation
+  copies will be generated. Access copies will be created which will be used to
+  generate the DIP.
 
-* Normalize for access: no preservation copies are created. Creates access
-  copies which will be used to generate the DIP.
-
-* Normalize for preservation: creates preservation copies. No access copies
-  are created and no DIP will be generated.
-
-* Do not normalize: no preservation copies are created. No access copies are
-  created and no DIP will be generated.
-
-* You may also Reject SIP at this stage.
-
+Note that depending on the setup of your transfer, you may not see all of the
+options listed above.
 
 2. Once normalization is completed you can review the results in the normalization
    report. Click on the report icon next to the Actions drop-down menu.

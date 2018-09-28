@@ -45,6 +45,8 @@ If you do not have access to a full installation of Archivematica, there are two
 options for testing the software - the hosted Archviematica sandbox or a
 locally-installed Archivematica VM.
 
+.. _using-the-sandbox:
+
 Using the sandbox
 =================
 
@@ -68,6 +70,8 @@ locally.
 .. note::
 
   If you are using the sandbox, you can move on to Task #1.
+
+.. _installing-on-vm:  
 
 Installing on a virtual machine using Vagrant
 =============================================
@@ -134,7 +138,7 @@ Once it's done provisioning, you can log in to your virtual machine::
 You can also access your Archivematica instance through the web browser:
 
 * Archivematica: `<http://10.10.10.20>`_. Username & password configured on installation.
-* Storage Service: `<http://10.10.10.20:8000>`_. Username: test, password: test.
+* Storage Service: `<http://10.10.10.20:8000>`_. Username & password configured on installation.
 
 To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ and click
 on the Administration tab. In the left sidebar, click on *Users*, then click on
@@ -438,7 +442,7 @@ Review DIP
 
 #. In order to retrieve the DIP, you need to access the Archivematica Storage
    Service. Add ":8000" to the end of your Archivematica VM's URL
-   (i.e. http://10.10.10.20:8000/). The default login is test/test.
+   (i.e. http://10.10.10.20:8000/).
 #. In the Storage Service, click on the Packages tab.
 #. On the far right side of the page there is a search box. Search for your DIP
    by entering the name you gave it in Task #1.

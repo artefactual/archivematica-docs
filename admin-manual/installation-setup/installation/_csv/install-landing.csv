@@ -1,0 +1,12 @@
+Intended use,Environment,Related documents,Notes
+Test-driving the latest release,Archivematica sandbox,:ref:`Using the sandbox <using-the-sandbox>`,"The sandbox will automatically reset daily. Any packages created will not be permanently saved. Additionally, there may be more than one demo user logged in at the same time, so you may see changes made by others while using the software."
+,Local virtual machine using Vagrant and VirtualBox,:ref:`Installing on a virtual machine using Vagrant <installing-on-vm>`,This virtual machine is not intended to be used in production.
+New installations – Production deployment,Ubuntu 14.04 64-bit Server Edition,:ref:`Automated install using Ansible \> Ubuntu 14.04 \(Trusty\)<ubuntu-14.04>`,"These instructions will not work if you are using a Windows machine as the host environment. For Windows installations, see the manual install instructions for production."
+,Ubuntu 16.04 64-bit Server Edition,:ref:`Automated install using Ansible \> Ubuntu 16.04 \(Xenial\)<ubuntu-16.04>`,"These instructions will not work if you are using a Windows machine as the host environment. For Windows installations, see the manual install instructions for production."
+,Ubuntu 18.04 64-bit Server Edition ( Experimental support ),:ref:`Automated install using Ansible \> Ubuntu 18.04 \(Bionic\)<ubuntu-18.04>`,Ansible playbooks for Ubuntu 18.04 are available but experimental.
+,CentOS 7 64-bit,:ref:`Installing Archivematica on CentOS/Red Hat<install-pkg-centos>`,Archivematica versions 1.5.1 and higher support installation on CentOS/Red Hat.
+,Windows OS,,Not supported
+Development,"Docker and Linux
+",`Installing Archivematica Using Docker Compose on Linux <https://github.com/artefactual-labs/am/tree/master/compose#docker-and-linux>`_,Docker will provide instructions on how to use it as a non-root user. This may not be desirable for all.
+,Docker and Mac,`Installing Archivematica Using Docker Compose on Mac <https://github.com/artefactual-labs/am/tree/master/compose#docker-and-mac>`_ ,Installation of Archivematica on machines running macOS using Docker is possible but still in development and may require some extra steps.
+Spreading Archivematica’s processing load across several machines,Base on your customized setup and network configuration,:ref:`Installing across multiple machines<multiple-machines>`,"When installing Archivematica on multiple machines, the various Archivematica processes must be able to reach each other on the relevant ports. Your firewall configuration must allow for this."
