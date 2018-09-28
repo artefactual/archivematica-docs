@@ -366,10 +366,10 @@ click "Save".
 .. NOTE::
 
    If you are planning to use the :ref:`metadata-only DIP upload to AtoM
-   <upload-metadata-atom>` functionality don't forget to enable the :ref:`the
-   API plugin in AtoM <atom:api-intro>`, generate a API key, and update the
-   ``REST API key`` field accordingly. Metadata-only DIP upload is only
-   available if you are using AtoM 2.4 or higher.
+   <upload-metadata-atom>` functionality don't forget to enable the :ref:`API
+   plugin in AtoM <atom:api-intro>`, generate a API key, and update the ``REST
+   API key`` field accordingly. Metadata-only DIP upload is only available if
+   you are using AtoM 2.4 or higher.
 
 AtoM server configuration
 +++++++++++++++++++++++++
@@ -861,28 +861,60 @@ Fields:
 * **Verify SSL certificates**: Selecting this box will ensure that Archivematica
   verifies SSL certificates when making requests to bind PIDs.
 * **Archive resolve URL template**: Template (Django or Jinja2) for the URL that
-  a unit's PURL should resolve to. Has access to "pid" and "naming_authority"
-  variables.
+  a unit's PURL should resolve to. Has access to ``pid`` and
+  ``naming_authority`` variables. Example:
+  ``https://access.myinstitution.org/dip/{{ naming_authority }}/{{ pid }}``
 * **METS resolve URL template**: Template (Django or Jinja2) for the URL that a
   unit's PURL with the "mets" qualifier should resolve to. Has access to "pid"
-  and "naming_authority" variables.
+  and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/mets/{{ naming_authority }}/{{ pid }}``
 * **File resolve URL template**: Template (Django or Jinja2) for the URL
   that a file's PURL should resolve to. Has access to "pid" and
-  "naming_authority" variables.
+  "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``
 * **Access derivative resolve URL template**: Template (Django or Jinja2) for
   the URL that a file's PURL with the "access" qualifier should resolve to. Has
-  access to "pid" and "naming_authority" variables.
+  access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``
 * **Preservation derivative resolve URL template**: Template (Django or Jinja2)
   for the URL that a file's PURL with the "preservation" qualifier should
-  resolve to. Has access to "pid" and "naming_authority" variables.
+  resolve to. Has access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/preservation/{{ naming_authority }}/{{ pid }}``
 * **Original file resolve URL template**: Template (Django or Jinja2) for the
   URL that a file's PURL with the "original" qualifier should resolve to. Has
-  access to "pid" and "naming_authority" variables.
+  access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/original/{{ naming_authority }}/{{ pid }}``
 * **PID/handle request request body template**: Template (Django or Jinja2) that
   constructs the HTTP request body using the rendered URL templates above. Has
   access to the following variables: "pid", "naming_authority",
   "base_resolve_url", and "qualified_resolve_urls", the last of which is a list
-  of dicts with "url" and "qualifier" keys.
+  of dicts with "url" and "qualifier" keys. Example::
+
+    <?xml version='1.0' encoding='UTF-8'?>
+    <soapenv:Envelope
+      xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+      xmlns:pid='http://pid.myinstitution.org/'>
+      <soapenv:Body>
+        <pid:UpsertPidRequest>
+          <pid:na>{{ naming_authority }}</pid:na>
+          <pid:handle>
+            <pid:pid>{{ naming_authority }}/{{ pid }}</pid:pid>
+            <pid:locAtt>
+              <pid:location weight='1' href='{{ base_resolve_url }}'/>
+              {% for qrurl in qualified_resolve_urls %}
+                <pid:location
+                  weight='0'
+                  href='{{ qrurl.url }}'
+                  view='{{ qrurl.qualifier }}'/>
+              {% endfor %}
+            </pid:locAtt>
+          </pid:handle>
+        </pid:UpsertPidRequest>
+      </soapenv:Body>
+    </soapenv:Envelope>
+
+
+
 
 .. _admin-language-choice:
 

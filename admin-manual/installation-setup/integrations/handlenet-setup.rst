@@ -16,7 +16,7 @@ For more information about Handle System, see the `Handle.Net`_ website.
 Connecting Archivematica and Handle.Net
 ------------------------------------------
 
-Before users begin minting persistent identifiers (PIDs) and binding them to a
+Before Archivematica can mint persistent identifiers (PIDs) via requests a
 Handle.Net server, you must fill in the Handle server settings in the
 Administration tab.
 

@@ -406,7 +406,7 @@ preservation and access format.
 Bind PIDs
 ---------
 
-PID binding refers to making use of Archivematica's integration with Handle.Net,
+Bind PIDs refers to making use of Archivematica's integration with Handle.Net,
 a registry that assigns persistent identifiers, or handles, to information
 resources. If you do not use Handle.Net, consider setting your default
 :ref:`dashboard processing <dashboard-processing>` configuration setting for
@@ -429,6 +429,7 @@ if you entered an accession number on the transfer screen.
 
 .. IMPORTANT::
 
+   
    Only use the accession number as the basis for the PID if you can guarantee
    that no other AIP will use the same accession number. If you will be creating
    multiple AIPs with the same accession number, set the AIP PID source to UUID.
