@@ -429,10 +429,13 @@ if you entered an accession number on the transfer screen.
 
 .. IMPORTANT::
 
-   
-   Only use the accession number as the basis for the PID if you can guarantee
-   that no other AIP will use the same accession number. If you will be creating
-   multiple AIPs with the same accession number, set the AIP PID source to UUID.
+   If you are generating PIDs for the AIP as a whole, only use the accession number
+   as the basis for the PID if you can guarantee that no other AIP will use the
+   same accession number. If you will be creating multiple AIPs with the same
+   accession number, set the AIP PID source to UUID.
+
+   Note that files and directories will always use the UUID of the file or
+   directory as the basis for the PID.
 
 .. _transcribe-contents:
 
