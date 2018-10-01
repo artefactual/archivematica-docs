@@ -17,4 +17,3 @@ Note that some documentation lives in separate repositories:
 
 * [Archivematica docs](https://github.com/artefactual/archivematica-docs): This repository! Contains the main user and administrator docs.
 * [Storage Service docs](https://github.com/artefactual/archivematica-storage-service-docs): Contains documentation for the Storage Service, Archivematica's back end.
-* [Format Policy Registry docs](https://github.com/artefactual/archivematica-fpr-admin/tree/dev/docs): Contains documentation for the Format Policy Registry, which feeds Archivematica preservation planning rules and commands.

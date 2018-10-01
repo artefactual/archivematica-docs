@@ -70,7 +70,7 @@ together format identification information with significant characteristic
 analysis, risk assessments and normalization tool information to arrive at
 default preservation format and access format policies for Archivematica.
 
-For more information, see :ref:`Format Policy Registry (FPR) <fpr>`.
+For more information, see :ref:`Preservation Planning <preservation-planning>`.
 
 
 .. _technical-dip:

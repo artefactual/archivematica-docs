@@ -23,6 +23,7 @@ the `Archivematica user forum`_ is a good place ask questions.
 
 .. csv-table::
    :file: _csv/install-landing.csv
+   :header-rows: 1
 
 .. _treq:
 
