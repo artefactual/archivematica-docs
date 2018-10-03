@@ -24,7 +24,7 @@ dashboard, allow you to configure application components and manage users.
 * :ref:`PREMIS agent <admin-dashboard-premis>`
 * :ref:`REST API <admin-dashboard-rest>`
 * :ref:`Users <admin-dashboard-users>`
-* :ref:`Handle Server config <admin-handle-server>`
+* :ref:`Handle Server config<admin-handle-server>`
 * :ref:`Language <admin-language-choice>`
 * :ref:`Version <admin-version>`
 
@@ -35,47 +35,59 @@ Processing configuration
 
 The processing configuration administration page of the dashboard allows users
 to configure the job decision points presented by Archivematica during transfer
-and ingest. This screen provides you with an easy form to configure the default
-processingMCP.xml that governs these decisions. When you change the options
-using the web interface the necessary XML will be written behind the scenes.
+and ingest. When you install Archivematica, there are two default processing
+configurations:
+
+* ``Default``, which is used for any transfer started manually from the
+  :ref:`Transfer tab <create-transfer>`, automatically via the `automation tools`_,
+  or in any other context where no other processing configuration is specified.
+* ``Automated``, which is used for transfers automatically started from Jisc
+  RDSS environments (if you are not a Jisc user, feel free to delete this
+  configuration).
 
 .. image:: images/processing-config.*
    :align: center
    :width: 80%
-   :alt: Image showing the Processing configuration page in the dashboard
+   :alt: Image showing the processing configuration page in the dashboard
+
+By clicking **Edit**, you will be taken to a form where you can configure the
+default processingMCP.xml that governs these decisions. Clicking on **Add** will
+allow you to create a new processing configuration. When you change the options
+using the web interface the necessary XML will be written behind the scenes.
+
+.. image:: images/processing-config-choices.*
+   :align: center
+   :width: 80%
+   :alt: Image showing the processing configuration edit page in the dashboard
 
 For more information about configuring processing decisions in the Archivematica
-dashboard, see the :ref:`Processing configuration <dashboard-processing>` in the
-User Manual. This page contains a list of all of the decision points and their
-options.
+dashboard, see :ref:`Processing configuration <dashboard-processing>` page in
+the User Manual. This page contains a list of all of the decision points and
+their options.
+
+You can also revert the default and automated processing configurations to their
+pre-sets by clicking on **Reset**. Please note that the pre-sets for the
+default processing configuration are noted on the :ref:`Processing
+configuration <dashboard-processing>` in the User Manual.
+
+Changes to this form are written to a file called ``processingMCP.xml``. When
+you start a transfer in the Archivematica dashboard, it automatically uses the
+default processingMCP.xml.
 
 .. _processingmcp-file:
 
-Creating a custom config with processingMCP.xml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Using a custom processing configuration file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When processing a SIP or transfer, you may want to automate some of the workflow
-choices. The processing configuration administration page of the dashboard
-provides you with an easy form to configure various decision points in the
-Archivematica workflow. Changes to this form are written to a file called
-``processingMCP.xml``. When you start a transfer in the Archivematica dashboard,
-it automatically uses the default processingMCP.xml.
-
-For more advanced workflows, it might be desirable to create multiple processing
-configurations - for example, along with the default config, users might want
-to have a configuration specific to video files. You can add a new processing
-config through the user interface by clicking on the **Add** button.
-
-.. image:: images/add-processing-config.*
-   :align: center
-   :width: 80%
-   :alt: Image showing the Processing configuration page in the dashboard
+For more advanced workflows, you may wants to create multiple processing
+configurations - for example, along with the default config, users might want to
+have a configuration specific to video files. You can add a new processing
+configuration through the user interface by clicking on the **Add** button.
 
 Once you have created a custom processing configuration, you can download the
-XML file from ``/var/archivematica/sharedDirectory/share
-dMicroServiceTasksConfigs/processingMCPConfigs/``. Then place this file in the
-root directory of the transfer. Archivematica will now use the included file
-to make processing decisions.
+XML file by clicking on **Download**. Then place this file in the root directory
+of the transfer. Archivematica will now use the included file to make processing
+decisions.
 
 The processingMCP.xml follows a specific XML format:
 
@@ -127,8 +139,9 @@ The processingMCP.xml follows a specific XML format:
       </preconfiguredChoices>
      </processingMCP>
 
-Note that ``appliesTo`` is the UUID associated with the micro-service job presented
-in the dashboard and ``goToChain`` is the UUID of the desired selection.
+Note that ``appliesTo`` is the UUID associated with the micro-service job
+presented in the dashboard and ``goToChain`` is the UUID of the desired
+selection.
 
 .. _admin-dashboard-general:
 
@@ -744,3 +757,4 @@ This tab displays the version of Archivematica you're using.
 
 .. _AtoM: www.accesstomemory.org
 .. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _automation tools: https://github.com/artefactual/automation-tools

@@ -54,8 +54,8 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 
    If your transfer is composed of digital forensic disk images, please see
    :ref:`Forensic image processing <forensic>`.
-   
-   If your transfer is from a Dataverse repository, please see 
+
+   If your transfer is from a Dataverse repository, please see
    :ref:`Dataverse Integration <dataverse>`.
 
    If you would like to skip some of the default choices for dashboard decision
@@ -69,11 +69,7 @@ Create a transfer
 -----------------
 
 Open your Archivematica dashboard and sign in with your
-username and password. Please note that if this is your first time logging in
-to a newly installed instance of Archivematica, you will see a form that
-allows you to register your repository in order to get updates to the format policy
-registry. See the :ref:`User manual - Format Policy Registry (FPR) <fpr>` and the
-:ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
+username and password.
 
 #. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
 

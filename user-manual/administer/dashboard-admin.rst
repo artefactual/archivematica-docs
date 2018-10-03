@@ -44,36 +44,44 @@ Processing configuration
 
 The processing configuration administration page of the dashboard allows users
 to configure the job decision points presented by Archivematica during transfer
-and ingest. This screen provides you with an easy form to configure the default
-processingMCP.xml that governs these decisions. When you change the options
-using the web interface the necessary XML will be written behind the scenes.
+and ingest. As of Archivematica 1.7, there are two processing configurations
+available on installation:
 
-Starting in 1.7, Archivematica includes both a default and an automated
-processing configuration. The automated processing configuration is used only if
-a transfer source location has been set up to move content through Archivematica
-with no human operator.
+* ``Default``, which is used for any transfer started manually from the
+  :ref:`Transfer tab <create-transfer>`, automatically via the `automation tools`_,
+  or in any other context where no other processing configuration is specified.
+* ``Automated``, which is used for transfers automatically started from Jisc
+  RDSS environments (if you are not a Jisc user, feel free to delete this
+  configuration).
 
-.. image:: images/ProcessingConfigOptions.*
+.. image:: images/processing-config.*
    :align: center
    :width: 60%
-   :alt: Processing configuration selection screen, showing three config options: automated, borndigital, and default
+   :alt: Processing configuration screen, showing two configurations: default and automated
 
-Multiple processing configurations can be created using the *Add* button on the
-Processing Configuration screen. Often, users create multiple configurations for
-different types of content - one for audio-visual material, one for images, one
-for textual records, etc. To edit an existing processing configuration file,
-click on the *Edit* button to the right of the processing configuration name.
+To edit an existing processing configuration file, click on the **Edit** button
+to the right of the processing configuration name.
+
+Multiple processing configurations can be created using the **Add** button on
+the Processing Configuration screen. Often, users create multiple configurations
+for different types of content - one for audio-visual material, one for images,
+one for textual records, etc.
+
+You can also revert the default and automated processing configurations to their
+pre-sets by clicking on **Reset**. Please note that the pre-sets for the default
+processing configuration are noted in the :ref:`Processing configuration fields
+<processing-config-fields>` section below.
 
 Note that alternate processing configurations (i.e. anything other than default)
 are used in two ways:
 
 #. When you reingest an AIP, you are given the opportunity to select which
    processing configuration you'd like to use.
-#. You can download a specific processingMCP.xml via the command line and
-   include it with a transfer. Archivematica will then use this to
-   automate your transfer selections, rather than the default configuration. For
-   more information on the processingMCP.xml file, see :ref:`Creating a custom
-   config with processingMCP.xml <processingmcp-file>`.
+#. You can download the processingMCP.xml file by clicking **Download** and
+   include it at the top level of your transfer. Archivematica will then use
+   this to automate your transfer selections, rather than the default
+   configuration. For more information on the processingMCP.xml file, see
+   :ref:`Creating a custom config with processingMCP.xml <processingmcp-file>`.
 
 All other transfers will use the default processing configuration.
 
@@ -98,6 +106,10 @@ same decisions over and over. Below is a list of the processing configuration
 form fields with a short description about how they work and the drop-down
 options for each.
 
+The option marked by an asterisk is the pre-set value for the default processing
+configuration. If you change the default configuration, you can click on
+**Reset** to revert all changes back to the installation pre-sets.
+
 Name
 ++++
 
@@ -112,7 +124,7 @@ assigned a UUID.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - UUIDs are assigned.
 #. **No** - UUIDs are not assigned.
 
@@ -125,27 +137,29 @@ Options:
 
 #. **None** - the user is prompted for a decision.
 #. **Yes** - transfers are automatically quarantined.
-#. **No** - transfers are not sent to quarantine.
+#. **No** - transfers are not sent to quarantine.*
 
 Remove from quarantine after (days)
 +++++++++++++++++++++++++++++++++++
 
-Transfers are automatically removed from quarantine after a defined number of days
-and made available for further processing.
+Transfers are automatically removed from quarantine after a defined number of
+days and made available for further processing.
 
-**Data entry field:** Enter the number of days that transfers should remain in
-quarantine (i.e. 5).
+Enter the number of days that transfers should remain in quarantine (i.e. 5).
+
+The default value for this field is 28 days.
 
 Generate transfer structure report
 ++++++++++++++++++++++++++++++++++
 
-A text file is generated showing a directory tree of the original transfer structure.
+A text file is generated showing a directory tree of the original transfer
+structure.
 
 Options:
 
 #. **None** - the user is prompted for a decision.
 #. **Yes** - structure report is created.
-#. **No** - structure report is not created.
+#. **No** - structure report is not created.*
 
 Select file format identification command (Transfer)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -154,14 +168,14 @@ Choose a tool to identify the format of the files in your transfer.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
-   to identify files by their file signature.
-#. **Skip File Identification** - files will not be identified.
-#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
-   to identify files by their signature.
-#. **Identify by File Extension** - identify files by their extension rather than
+#. **None** - the user is prompted for a decision.*
+#. **Identify using Fido** - use `Fido`_ to identify files by their file
    signature.
+#. **Skip File Identification** - files will not be identified.
+#. **Identify using Siegfried** - use `Siegfried`_ to identify files by their
+   signature.
+#. **Identify by File Extension** - identify files by their extension rather
+   than signature.
 
 Extract packages
 ++++++++++++++++
@@ -171,18 +185,19 @@ Packages (such as .zip files) are unzipped and extracted into a directory.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes** - the contents of the package are extracted.
+#. **Yes** - the contents of the package are extracted.*
 #. **No** - package is left as-is.
 
 Delete packages after extraction
 ++++++++++++++++++++++++++++++++
 
-Packages that have been extracted in the previous step can be deleted after extraction.
+Packages that have been extracted in the previous step can be deleted after
+extraction.
 
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes** - the package is deleted.
+#. **Yes** - the package is deleted.*
 #. **No** - the package is preserved along with the extracted content.
 
 Perform policy checks on originals
@@ -193,7 +208,7 @@ to assess conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - the transfer is checked against any policies.
 #. **No** - policies are ignored.
 
@@ -208,9 +223,9 @@ the Appraisal tab.
 **Options:**
 
 #. **None** - the user is prompted for a decision.use
+#. **Skip examine contents** - Bulk Extractor does not run.*
 #. **Yes** - Bulk Extractor scans content and creates log outputs of recognized
    patterns for review.
-#. **No** - Bulk Extractor does not run.
 
 Create SIP(s)
 +++++++++++++
@@ -219,11 +234,11 @@ Create a formal SIP out of the transfer or send it to the backlog.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Send to backlog** - transfer is sent to a backlog storage space for temporary
-   storage or appraisal.
-#. **Create single SIP and continue processing** - transfer becomes a SIP and is made
-   available for further processing on the ingest tab.
+#. **None** - the user is prompted for a decision.*
+#. **Send to backlog** - transfer is sent to a backlog storage space for
+   temporary storage or appraisal.
+#. **Create single SIP and continue processing** - transfer becomes a SIP and is
+   made available for further processing on the ingest tab.
 
 .. note::
 
@@ -239,13 +254,14 @@ Choose a tool to identify the format of files in your SIP.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Use existing data** - reuse file identification data from the transfer tab.
-#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
+#. **Use existing data** - re-use file identification data from the transfer
+   tab.*
+#. **Identify using Fido** - use `fido`_
    to identify files by their file signature.
-#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
+#. **Identify using Siegfried** - use `Siegfried`_
    to identify files by their signature.
-#. **Identify by File Extension** - identify files by their extension rather than
-   their signature.
+#. **Identify by File Extension** - identify files by their extension rather
+   than their signature.
 
 Normalize
 +++++++++
@@ -255,53 +271,53 @@ Convert ingested digital objects to preservation and/or access formats. See
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Normalize for preservation and access** - creates preservation copies of the
-   objects plus access copies which will be used to generate the DIP.
+#. **None** - the user is prompted for a decision.*
+#. **Normalize for preservation and access** - creates preservation copies of
+   the objects plus access copies which will be used to generate the DIP.
 #. **Normalize for preservation** - creates preservation copies only. No access
    copies are created and no DIP will be generated.
 #. **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
    more information.
-#. **Do not normalize** - the AIP will contain originals only. No preservation or
-   access copies are generated and no DIP will be generated.
+#. **Do not normalize** - the AIP will contain originals only. No preservation
+   or access copies are generated and no DIP will be generated.
 #. **Normalize service files preservation** - see :ref:`Digitization <digitized>`
    for more information.
-#. **Normalize for access** - the AIP will contain originals only. No preservation
-   copies will be generated. Access copies will be created which will be used to
-   generate the DIP.
+#. **Normalize for access** - the AIP will contain originals only. No
+   preservation copies will be generated. Access copies will be created which
+   will be used to generate the DIP.
 
 Approve normalization
 +++++++++++++++++++++
 
-The dashboard allows users to review the normalization output and the normalization
-report.
+The dashboard allows users to review the normalization output and the
+normalization report.
 
 Options:
 
-#. **None** - the user has a chance to review and approve normalization.
+#. **None** - the user has a chance to review and approve normalization.*
 #. **Yes** - skip the review step and automatically continue processing.
 
 Perform policy checks on preservation derivatives
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
-If you create policies using MediaConch, run the policies against the newly-created
-preservation derivatives to ensure conformation.
+If you create policies using MediaConch, run the policies against the
+newly-created preservation derivatives to ensure conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - the normalized files are checked against any policies.
 #. **No** - policies are ignored.
 
 Perform policy checks on access derivatives
 +++++++++++++++++++++++++++++++++++++++++++
 
-If you create policies using MediaConch, run the policies against the newly-created
-preservation derivatives to ensure conformation.
+If you create policies using MediaConch, run the policies against the
+newly-created preservation derivatives to ensure conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - the normalized files are checked against any policies.
 #. **No** - policies are ignored.
 
@@ -313,33 +329,34 @@ be configured).
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - PIDs are created and a API call posts the PIDs to the Handle Server.
 #. **No** - PIDs are not created.
 
 Document empty directories
 ++++++++++++++++++++++++++
 
-By default, Archivematica removes empty directories and does not document that they existed.
+By default, Archivematica removes empty directories and does not document that
+they existed.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - an entry for the directory is created in the structmap.
 #. **No** - the directory is not documented.
 
 Reminder: add metadata if desired
 +++++++++++++++++++++++++++++++++
 
-Archivematica allows users to see :ref:`add metadata <add-metadata>` to the SIP using
-the GUI. This reminder occurs at the last moment that it is possible to add
-metadata; once the ingest proceeds past this point, it is no longer possible to
-add metadata to the SIP.
+Archivematica allows users to see :ref:`add metadata <add-metadata>` to the SIP
+using the GUI. This reminder occurs at the last moment that it is possible to
+add metadata; once the ingest proceeds past this point, it is no longer possible
+to add metadata to the SIP.
 
 Options:
 
 #. **None** - the user has a chance to add metadata.
-#. **Continue** - skip the reminder and automatically continue processing.
+#. **Continue** - skip the reminder and automatically continue processing.*
 
 Transcribe files (OCR)
 ++++++++++++++++++++++
@@ -352,23 +369,23 @@ Options:
 
 #. **None** - the user is prompted for a decision.
 #. **Yes** - Tesseract runs on all OCR-able files.
-#. **No** - Tesseract does not run.
+#. **No** - Tesseract does not run.*
 
 Select file format identification command (Submission documentation & metadata)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Choose a tool to identify the format of any submission documentation and/or metadata
-files that were included in your transfer.
+Choose a tool to identify the format of any submission documentation and/or
+metadata files that were included in your transfer.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Identify using Siegfried** - use `Siegfried <https://www.itforarchivists.com/siegfried>`_
+#. **None** - the user is prompted for a decision.*
+#. **Identify using Siegfried** - use `Siegfried`_
    to identify files by their signature.
-#. **Identify using Fido** - use `fido <http://openpreservation.org/technology/products/fido/>`_
+#. **Identify using Fido** - use `fido`_
    to identify files by their file signature.
-#. **Identify by File Extension** - identify files by their extension rather than
-   their signature.
+#. **Identify by File Extension** - identify files by their extension rather
+   than their signature.
 #. **Skip File Identification** - file identification is not run on submission
    documentation or metadata files.
 
@@ -381,25 +398,25 @@ depending on your storage requirements.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **7z using bzip2** - a 7Zip file is created using the tool `bzip2 <http://www.bzip.org/>`_.
-#. **7z using LZMA** - a 7Zip file is created using the tool `LZMA <http://www.7-zip.org/sdk.html>`_.
+#. **7z using bzip2** - a 7Zip file is created using the tool `bzip2`_.*
+#. **7z using LZMA** - a 7Zip file is created using the tool `LZMA`_.
 #. **Uncompressed** - the AIP is not compressed.
-#. **Parallel bzip2** - a 7Zip file is created using the tool `Parallel bzip2 (pbzip2) <http://compression.ca/pbzip2/>`_.
+#. **Parallel bzip2** - a 7Zip file is created using the tool `Parallel bzip2 (pbzip2)`_.
 
 Select compression level
 ++++++++++++++++++++++++
 
 If you selected a compression choice in the step above, you can determine how
 compressed you would like your AIP to be. Selecting a higher compression level
-means that the resulting AIP is smaller, but compression also takes longer. Lower
-compression levels mean quicker compression, but a larger AIP.
+means that the resulting AIP is smaller, but compression also takes longer.
+Lower compression levels mean quicker compression, but a larger AIP.
 
 Options:
 
 #. **None** - the user is prompted for a decision.
 #. **5 - normal compression mode** - the compression tool will strike a balance
-   between speed and compression to make a moderately-sized, moderately-compressed
-   AIP.
+   between speed and compression to make a moderately-sized, moderately-
+   compressed AIP.*
 #. **7 - maximum compression** - a smaller AIP that takes longer to compress.
 #. **9 - ultra compression** - the smallest possible AIP.
 #. **3 - fast compression mode** - a larger AIP that will be compressed quickly.
@@ -413,7 +430,7 @@ workflow in the dashboard.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - the AIP is marked for storage automatically.
 
 Store AIP location
@@ -425,11 +442,11 @@ configuration with the transfer that defines another location).
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Default location** - the AIP is stored in the AIP storage location that has
    been defined as the default in the Storage Service.
-#. **[Other storage locations]** - any other AIP storage locations that are available
-   will also appear on this list.
+#. **[Other storage locations]** - any other AIP storage locations that are
+   available will also appear on this list.
 
 Upload DIP
 ++++++++++
@@ -439,12 +456,13 @@ there is an Archivematica integration.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload
    documentation.
-#. **Upload DIP to Archivists Toolkit** - see :ref:`Archivists Toolkit <archivists-toolkit>`
-   DIP upload documentation.
-#. **Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload documentation.
+#. **Upload DIP to Archivists Toolkit** - see :ref:`Archivists Toolkit
+   <archivists-toolkit>` DIP upload documentation.
+#. **Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload
+   documentation.
 #. **Do not upload** - the DIP will not be uploaded to an access system.
 #. **Upload DIP to ArchivesSpace** - see :ref:`ArchivesSpace <upload-as>` DIP
    upload documentation.
@@ -458,7 +476,7 @@ on demand by :ref:`reingesting the AIP <reingest>`.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - the DIP is marked for storage automatically.
 
 Store DIP location
@@ -470,7 +488,7 @@ configuration with the transfer that defines another location).
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Default location** - the DIP is stored in the DIP storage location that has
    been defined as the default in the Storage Service.
 #. **[Other storage locations]** - any other DIP storage locations that are available
@@ -747,3 +765,9 @@ This tab displays the version of Archivematica you're using.
 
 .. _AtoM: www.accesstomemory.org
 .. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _automation tools: https://github.com/artefactual/automation-tools
+.. _Fido: http://openpreservation.org/technology/products/fido/
+.. _Siegfried: https://www.itforarchivists.com/siegfried
+.. _bzip2: http://www.bzip.org/
+.. _LZMA: http://www.7-zip.org/sdk.html
+.. _Parallel bzip2 (pbzip2): http://compression.ca/pbzip2/
