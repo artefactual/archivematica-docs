@@ -33,6 +33,14 @@ Instructions
    pip, installed on your system. From pip, you should be able to install a
    released version of Ansible.
 
+.. important::
+
+   If you would like to install :ref:`Archivematica without Elasticsearch
+   <install-elasticsearch>`, you must first change the role variable
+   ``archivematica_src_search_enabled`` to ``false``. For more information about
+   Archivematica's Ansible role, please see the `ansible-archivematica-src`_
+   repo.
+
 1. Install VirtualBox, Vagrant, and Ansible.
 
    .. code:: bash
@@ -47,7 +55,7 @@ Instructions
       vagrant --version
 
    If it is not up to date, you can download the newest version from the
-   `Vagrant website <https://www.vagrantup.com/downloads.html>`_ .
+   `Vagrant website`_ .
 
 2. Checkout the deployment repo:
 
@@ -83,8 +91,6 @@ Instructions
 
       cd deploy-pub/playbooks/archivematica-bionic
       ansible-galaxy install -f -p roles/ -r requirements.yml
-
-
 
 4. Create the virtual machine and provision it:
 
@@ -179,3 +185,5 @@ the configuration of your new server.
 :ref:`Back to the top <install-ansible>`
 
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
+.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/#disable-elasticsearch-use
+.. _`Vagrant website`: https://www.vagrantup.com/downloads.html

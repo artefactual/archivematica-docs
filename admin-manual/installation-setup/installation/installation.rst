@@ -86,6 +86,8 @@ information, see :ref:`Advanced <advanced>`.
    The remaining dependencies should be kept at the versions installed
    by Archivematica.
 
+.. _install-elasticsearch:
+
 Elasticsearch
 ^^^^^^^^^^^^^
 
