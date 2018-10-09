@@ -19,13 +19,11 @@ The recommended way to install Archivematica for development is with Docker.
 For instructions on how to deploy Archivematica in Docker containers, see
 the `Archivematica Docker repo`_.
 
-
 It's also possible to deploy Archivematica using Ansible and Vagrant. For
 instructions on how to install Archivematica from a virtual machine, see the
-`Ansible & Vagrant Installation instructions <https://wiki.archivematica.org/Getting_started#Installation>`_
-on the Archivematica wiki. See also instructions for installation on a
-virtual machine using Vagrant in the :ref:`Quick Start Guide <quick-start-install>`.
-
+`Ansible & Vagrant installation instructions`_ on the Archivematica wiki. See
+also instructions for installation on a virtual machine using Vagrant in the
+:ref:`Quick Start Guide <quick-start-install>`.
 
 .. _multiple-machines:
 
@@ -71,15 +69,19 @@ below.
 Configure Archivematica with SSL
 --------------------------------
 
-Archivematica can be configured for HTTPS following the sample configurations for
-`dashboard <https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2>`_
-and
-`storage-service <https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/storage-ssl.conf.j2>`_.
+Archivematica can be configured for HTTPS following the
+`sample configurations for the dashboard`_
+and `sample configurations for the Storage Service`_.
 
-In order to obtain valid SSL certificates trusted by any browser, you can use `Let's Encrypt <https://letsencrypt.org>`_.
+In order to obtain valid SSL certificates trusted by any browser, you can use
+`Let's Encrypt`_.
 
 :ref:`Back to the top <install-advanced>`
 
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`Archivematica Docker repo`: https://github.com/artefactual-labs/am/tree/master/compose
 .. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`Ansible & Vagrant installation instructions`: https://wiki.archivematica.org/Getting_started#Installation
+.. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
+.. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/storage-ssl.conf.j2
+.. _`Let's Encrypt`: https://letsencrypt.org
