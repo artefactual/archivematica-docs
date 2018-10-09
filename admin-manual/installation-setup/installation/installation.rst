@@ -14,9 +14,12 @@ Installing Archivematica
 .. _overview:
 
 Overview
-========
+--------
 
-The following table lists all help topics on installing Archivematica for various intended uses and host environments.
+The following table lists all help topics on installing Archivematica for
+various intended uses and host environments. Further down the page, you will
+find more detailed information about new installations and advanced installation
+options.
 
 If you need assistance or clarification regarding the installation instructions,
 the `Archivematica user forum`_ is a good place ask questions.
@@ -28,10 +31,10 @@ the `Archivematica user forum`_ is a good place ask questions.
 .. _treq:
 
 Technical requirements
-======================
+----------------------
 
 Operating system
-----------------
+^^^^^^^^^^^^^^^^
 
 Archivematica |release| installation instructions are provided here for the
 following operating systems:
@@ -41,9 +44,9 @@ following operating systems:
 * Ubuntu 18.04 64-bit Server Edition (experimental support)
 * CentOS 7 64-bit
 
-Archivematica |version| is the first release to be tested on Ubuntu 16.04. Support
-for this OS is still considered beta; installation has been tested but production
-deployments are limited.
+Archivematica |version| is the first release to be tested on Ubuntu 18.04.
+Support for this OS is still considered beta; installation has been tested but
+production deployments are limited.
 
 Other Linux distributions should work, but will require customization of these
 installation instructions.
@@ -55,7 +58,7 @@ Archivematica is unlikely to ever run directly in a Windows environment.
 Consider the use of a virtualization platform to run Linux VMs.
 
 Dependencies
-------------
+^^^^^^^^^^^^
 
 Archivematica has a long list of software it depends on. All of these
 dependencies are installed when following the instructions below.
@@ -96,39 +99,30 @@ When Elasticsearch is used, Archivematica |release| requires version 1.x (tested
 with 1.7.6). Support for a more recent version of Elasticsearch is being
 developed and is planned for a future release.
 
-
 Hardware
---------
+^^^^^^^^
 
 Archivematica is capable of running on almost any hardware supported by Linux;
 however, processing large collections will require better hardware.
 
-Browser compatability
----------------------
-
-Archivematica has been tested most extensively with Firefox and Chrome. There are
-known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (`Issue 7246`_). Minimal, but successful,
-testing has been done with Microsoft Edge.
-
 .. _requirements-small:
 
 Minimum hardware requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++
 
-For small-scale functionality testing using small collections (transfers with 100
-files or less, total file size 1 GB or smaller), we recommend the following minimum
-hardware requirements:
+For small-scale functionality testing using small collections (transfers with
+100 files or less, total file size 1 GB or smaller), we recommend the following
+minimum hardware requirements:
 
 * Processor: 2 CPU cores
 * Memory: 2GB+
-* Disk space (processing): 7GB plus two to three times the disk space required for the
-  collection being processed (e.g., 3GB to process a 1GB transfer)
+* Disk space (processing): 7GB plus two to three times the disk space required
+  for the collection being processed (e.g., 3GB to process a 1GB transfer)
 
 .. _requirements-production:
 
 Recommended minimum production requirements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++
 
 For production processing, the hardware requirements depend almost entirely on
 the size and number of files being processed. These recommendations should be
@@ -153,21 +147,31 @@ individual workflows.
 The amount of storage disk space needed will depend on how much material you
 intend to store, as well as how it is stored (compressed or uncompressed).
 
-These requirements may not be suitable for certain types of material - for example,
-audio-visual material requires more processing power than images or documents.
+These requirements may not be suitable for certain types of material - for
+example, audio-visual material requires more processing power than images or
+documents.
+
+Browser compatability
+^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica has been tested most extensively with Firefox and Chrome. There
+are known issues with Internet Explorer 11 which result in an inability to start
+transfers in the dashboard (`Issue 7246`_). Minimal, but successful, testing has
+been done with Microsoft Edge.
 
 .. _instructions:
 
 Instructions for new installations
-==================================
+----------------------------------
 
 Archivematica can be installed using packages or Ansible scripts in either
 CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
 At this time, installation instructions are provided for officially tested and
 supported installation environments:
 
-* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-ansible>`. Ansible playbooks for Ubuntu 18.04 are also available, but experimental
-
+* :ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible
+  <install-ansible>`. Ansible playbooks for Ubuntu 18.04 are also available, but
+  experimental
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
 
 :ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-pkg-ubuntu>`
@@ -187,7 +191,7 @@ If you are upgrading from a previous version of Archivematica, please see the
 .. _advanced:
 
 Advanced installation options
-=============================
+-----------------------------
 
 There are many ways to install Archivematica, depending on the needs of the
 individual user. We have documented some common advanced installation setups.
