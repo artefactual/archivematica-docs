@@ -5,7 +5,7 @@ Access
 ======
 
 During ingest, access copies of digital objects can be generated and packaged
-into a DIP (Dissemination Information Package) by choosing Normalize for Access 
+into a DIP (Dissemination Information Package) by choosing Normalize for Access
 at the Normalization micro-service. For more information please see :ref:`Normalize <normalize>`
 
 The user uploads the DIP to the access system, or stores it for future use.
@@ -49,13 +49,14 @@ Should you run into an error during this process, please see
 Access systems
 --------------
 
-If you have chosen to generate a DIP (dissemination information package) at the 
-Normalize micro-service, you can upload it to one of several content management 
+If you have chosen to generate a DIP (dissemination information package) at the
+Normalize micro-service, you can upload it to one of several content management
 tools (listed below).
 
 The DIP includes the access copies made through either Archivematica's
-normalization rules or a manual normalization process, as well as thumbnails, 
-and a DIP METS file.
+normalization rules or a manual normalization process, as well as thumbnails,
+and a DIP METS file. Thumbnails are optional, and can be configured in the
+:ref:`processing configuration <dashboard-processing>`.
 
 A content management tool called `AtoM <https://www.accesstomemory.org>`_ is
 Archivematica's default access system. AtoM supports standards-compliant
@@ -66,7 +67,10 @@ for standards-based archival description and access in a multilingual, multi-
 repository environment. User and Administrator manuals for AtoM are available
 `here <https://www.accesstomemory.org/en/docs/>`_ .
 
-Archivematica has also been developed to integrate with `ArchivesSpace <http://archivesspace.org/>`_ and `Archivists' Toolkit <http://www.archiviststoolkit.org/>`_ and `ContentDM <http://www.oclc.org/en/contentdm.html>`_
+Archivematica has also been developed to have workflows with
+`ArchivesSpace <http://archivesspace.org/>`_ and 
+`Archivists' Toolkit <http://www.archiviststoolkit.org/>`_ ,
+`ContentDM <http://www.oclc.org/en/contentdm.html>`_.
 
 
 .. _upload-atom:

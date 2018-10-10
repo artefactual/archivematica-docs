@@ -759,6 +759,10 @@ for example, if you have a rule that states that PNGs are normalized to TIFF for
 the purpose of preservation, you cannot have a second rule that states that
 PNGs are normalized to GIF for the purpose of preservation.
 
+You can decide whether or not normalization for thumbnails occurs for the
+entire pipeline, rather than on a format-by-format basis, by altering the
+:ref:`processing configuration <dashboard-processing>`.
+
 The success rate of each normalization rule is show in the "Success" column on
 the normalization rules page.
 
