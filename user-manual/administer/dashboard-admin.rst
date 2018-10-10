@@ -297,6 +297,22 @@ Options:
 #. **None** - the user has a chance to review and approve normalization.*
 #. **Yes** - skip the review step and automatically continue processing.
 
+Generate thumbnails
++++++++++++++++++++
+
+This gives the option of generating thumbnails for use in the AIP and DIP.
+
+Options:
+
+#. **None** - the user is prompted for a decision.*
+#. **Yes, without default** - thumbnails will be produced for any format which
+   has a :ref:`normalize for thumbnails <normalization>` rule in the FPR. Formats
+   which do not have a rule will not have a thumbnail generated.
+#. **No** - thumbnails will not be generated.
+#. **Yes** - thumbnails will be generated according to the format rules in the
+   FPR. Formats which do not have a rule will have a default thumbnail
+   generated (grey document icon).
+
 Perform policy checks on preservation derivatives
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
