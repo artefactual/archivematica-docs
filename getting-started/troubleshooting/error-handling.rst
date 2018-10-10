@@ -48,7 +48,7 @@ Dashboard error reporting
 
 When a micro-service fails or encounters an error, the workflow will be halted
 and Archivematica will report a 'Failed transfer'. The micro-service drop-down
-can be expanded to show the specific task that failed. 
+can be expanded to show the specific task that failed.
 
 .. figure:: images/PinkChecksumFail.*
    :align: center
@@ -57,7 +57,7 @@ can be expanded to show the specific task that failed.
    :alt: The dashboard showing a transfer has failed
 
    The dashboard showing a transfer has failed at the Verify transfer checksums
-   micro-service 
+   micro-service
 
 Note that the transfer has been moved to the failed directory and processing
 has been halted.
@@ -101,8 +101,11 @@ more information.
 Email error report
 ------------------
 
-If the user has an email address associated with their user account, the
-dashboard can email a failure report:
+Archivematica will send email reports for two kinds of failures:
+
+* Normalization reports are sent when the normalization process has resulted in
+  at least one error.
+* Failure reports are sent when the workflow fails unexpectedly.
 
 .. figure:: images/EmailFail-10.*
    :align: center
@@ -116,6 +119,9 @@ An e-mail is generated if the transfer or ingest cannot be completed, not if
 an error occurs which does not halt processing. Please note that the server
 must have mail delivery enabled in order to receive error emails without
 additional configuration.
+
+For more information about email reports, please see :ref:`Email notification
+configuration <email-config>`
 
 .. _normalization-errors:
 
@@ -192,8 +198,8 @@ based on FITS-DROID results instead.
 
    Redo normalization option in drop-down menu of Approve normalization job
 
-Archivematica will send an email when normalization errors occur. Information given
-in the email report:
+Archivematica will send an :ref:`email <email-failure>` when normalization
+errors occur. Information given in the email report:
 
 * UUID of the pipeline
 * Name and UUID of the SIP
