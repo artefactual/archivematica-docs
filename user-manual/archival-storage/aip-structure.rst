@@ -80,7 +80,7 @@ Data directory
 ==============
 
 The data directory consists of the METS file for the AIP, a README.html file
-and three folders: logs, objects. and thumbnails.
+and three folders: logs, objects and thumbnails.
 
 .. figure:: images/AIPStructureDataDirectory.*
    :align: center
@@ -93,11 +93,9 @@ and three folders: logs, objects. and thumbnails.
 METS file
 =========
 
-``/data/METS.uuid.xml`` contains the full
-`PREMIS <https://www.loc.gov/standards/premis/>`_
-implementation (see PREMIS metadata for original file, PREMIS metadata:
-normalized files, PREMIS metadata: events, and PREMIS metadata: rights). The
-role of the `METS file <https://wiki.archivematica.org/METS>`_ is to link
+``/data/METS.uuid.xml`` contains the full `PREMIS`_ implementation (see PREMIS
+metadata for original file, PREMIS metadata: normalized files, PREMIS metadata:
+events, and PREMIS metadata: rights). The role of the `METS file`_ is to link
 original objects to their preservation copies and to their descriptions and
 submission documentation, as well as to link PREMIS metadata to the objects in
 the AIP.
@@ -227,3 +225,6 @@ The creation of thumbnails is optional and configurable in the
 :ref:`processing configuration <dashboard-processing>`.
 
 :ref:`Back to the top <aip-structure>`
+
+.. _`PREMIS`: https://www.loc.gov/standards/premis/
+.. _`METS file`: https://wiki.archivematica.org/METS
