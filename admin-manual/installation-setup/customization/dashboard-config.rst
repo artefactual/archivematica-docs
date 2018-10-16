@@ -62,8 +62,8 @@ using the web interface the necessary XML will be written behind the scenes.
 
 For more information about configuring processing decisions in the Archivematica
 dashboard, see :ref:`Processing configuration <dashboard-processing>` page in
-the User Manual. This page contains a list of all of the decision points and
-their options.
+the User Manual. The Processing configuration page contains a list of all of the
+decision points and their options.
 
 You can also revert the default and automated processing configurations to their
 pre-sets by clicking on **Reset**. Please note that the pre-sets for the
@@ -85,13 +85,14 @@ have a configuration specific to video files. You can add a new processing
 configuration through the user interface by clicking on the **Add** button.
 
 Once you have created a custom processing configuration, you can download the
-XML file by clicking on **Download**. Then place this file in the root directory
-of the transfer. Archivematica will now use the included file to make processing
-decisions.
+XML file by clicking on **Download**. Rename this file `processingMCP.xml`. Then
+place this file in the root directory of the transfer. Archivematica will now
+use the included file to make processing decisions, rather than the default
+configuration.
 
 The processingMCP.xml follows a specific XML format:
 
-.. code:: bash
+.. code:: xml
 
    <processingMCP>
     <preconfiguredChoices>

@@ -44,8 +44,7 @@ Processing configuration
 
 The processing configuration administration page of the dashboard allows users
 to configure the job decision points presented by Archivematica during transfer
-and ingest. As of Archivematica 1.7, there are two processing configurations
-available on installation:
+and ingest. There are two processing configurations available on installation:
 
 * ``Default``, which is used for any transfer started manually from the
   :ref:`Transfer tab <create-transfer>`, automatically via the `automation tools`_,
@@ -77,11 +76,12 @@ are used in two ways:
 
 #. When you reingest an AIP, you are given the opportunity to select which
    processing configuration you'd like to use.
-#. You can download the processingMCP.xml file by clicking **Download** and
-   include it at the top level of your transfer. Archivematica will then use
-   this to automate your transfer selections, rather than the default
-   configuration. For more information on the processingMCP.xml file, see
-   :ref:`Creating a custom config with processingMCP.xml <processingmcp-file>`.
+#. You can download the processingMCP.xml file by clicking **Download**. Then,
+   rename the file `processingMCP.xml` and include it at the top level of your
+   transfer. Archivematica will then use this to automate your transfer
+   selections, rather than the default configuration. For more information on
+   the processingMCP.xml file, see :ref:`Creating a custom config with
+   processingMCP.xml <processingmcp-file>`.
 
 All other transfers will use the default processing configuration.
 
