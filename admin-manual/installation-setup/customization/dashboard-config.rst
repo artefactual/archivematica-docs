@@ -85,9 +85,9 @@ have a configuration specific to video files. You can add a new processing
 configuration through the user interface by clicking on the **Add** button.
 
 Once you have created a custom processing configuration, you can download the
-XML file by clicking on **Download**. Rename this file `processingMCP.xml`. Then
-place this file in the root directory of the transfer. Archivematica will now
-use the included file to make processing decisions, rather than the default
+XML file by clicking on **Download**. Rename this file ``processingMCP.xml``.
+Then place this file in the root directory of the transfer. Archivematica will
+now use the included file to make processing decisions, rather than the default
 configuration.
 
 The processingMCP.xml follows a specific XML format:

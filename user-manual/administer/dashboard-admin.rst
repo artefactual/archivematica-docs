@@ -77,7 +77,7 @@ are used in two ways:
 #. When you reingest an AIP, you are given the opportunity to select which
    processing configuration you'd like to use.
 #. You can download the processingMCP.xml file by clicking **Download**. Then,
-   rename the file `processingMCP.xml` and include it at the top level of your
+   rename the file ``processingMCP.xml`` and include it at the top level of your
    transfer. Archivematica will then use this to automate your transfer
    selections, rather than the default configuration. For more information on
    the processingMCP.xml file, see :ref:`Creating a custom config with
