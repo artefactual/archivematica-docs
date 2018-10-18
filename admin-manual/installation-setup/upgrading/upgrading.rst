@@ -67,43 +67,38 @@ going to be necessary to continue the upgrade:
 
       sudo apt-get update && sudo apt-get upgrade
 
-2. Update Python Setuptools. This is used to install Python dependencies for
-   both the Storage Service and the dashboard. There is a `known issue with pip`_
-   on Ubuntu 14.04 which makes this step necessary.
-
-   .. code:: bash
-
-      sudo pip install -U setuptools
-
-3. Update package sources.
-
-   In Ubuntu 14.04:
-
-   .. code:: bash
-
-      sudo add-apt-repository --remove ppa:archivematica/externals
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu trusty main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals trusty main' >> /etc/apt/sources.list
+2. Update package sources.
 
    In Ubuntu 16.04:
 
    .. code:: bash
 
       sudo add-apt-repository --remove ppa:archivematica/externals
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu xenial main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.7.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
 
-4. Update the Storage Service.
+   In Ubuntu 18.04:
+
+   .. code:: bash
+
+      sudo add-apt-repository --remove ppa:archivematica/externals
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
+
+   Optionally you can remove the lines referencing
+   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
+
+3. Update the Storage Service.
 
    .. code:: bash
 
       sudo apt-get update
       sudo apt-get install archivematica-storage-service
 
-5. Update the Application Container. As of Storage Service version 0.10.0, the
+4. Update the Application Container. As of Storage Service version 0.10.0, the
    Storage Service uses Gunicorn as WSGI server. This means that the old uwsgi
    server needs to be stopped and disabled after performing the upgrade.
 
@@ -112,7 +107,7 @@ going to be necessary to continue the upgrade:
       sudo service uwsgi stop
       sudo update-rc.d uwsgi disable
 
-6. Update Archivematica. During the update process you may be asked about
+5. Update Archivematica. During the update process you may be asked about
    updating configuration files. Choose to accept the maintainers versions. You
    will also be asked about updating the database - say 'ok' to each of those
    steps. If you have set a password for the root MySQL database user, enter it
@@ -123,7 +118,7 @@ going to be necessary to continue the upgrade:
 
       sudo apt-get upgrade
 
-7. Disable unused services. Archivematica |release| uses Nginx as HTTP server,
+6. Disable unused services. Archivematica |release| uses Nginx as HTTP server,
    and Gunicorn as WSGI server. This means that some services used in
    Archivematica |previous_release| should be stopped and disabled before
    performing the upgrade.
@@ -133,7 +128,7 @@ going to be necessary to continue the upgrade:
        sudo service apache2 stop
        sudo update-rc.d apache2 disable
 
-8. Restart services.
+7. Restart services.
 
    .. code:: bash
 
@@ -163,7 +158,7 @@ going to be necessary to continue the upgrade:
 
       sudo restart gearman-job-server
 
-9. Remove unused services.
+8. Remove unused services.
 
    .. code:: bash
 
@@ -347,15 +342,6 @@ searching across several different dashboard pages.
 
 4. If you had previously installed and started the Elasticsearch service, you
    can turn it off now.
-
-   If you are using Ubuntu 14.04, run the following commands.
-
-   .. code:: bash
-
-      sudo service elasticsearch stop
-      sudo update-rc.d elasticsearch disable
-
-   If you are using Ubuntu 16.04 or CentOS/Red Hat, run the following commands.
 
    .. code:: bash
 
