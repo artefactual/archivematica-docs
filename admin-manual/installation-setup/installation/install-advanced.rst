@@ -7,7 +7,7 @@ Advanced installation options
 *On this page*
 
 * :ref:`Installing for development <development>`
-* :ref:`Installing across multiple machines <multiple-machines>`
+* :ref:`Scaling Archivematica <installation-scaling>`
 * :ref:`Configuring Archivematica with SSL <SSL-support>`
 
 .. _development:
@@ -25,44 +25,19 @@ instructions on how to install Archivematica from a virtual machine, see the
 also instructions for installation on a virtual machine using Vagrant in the
 :ref:`Quick Start Guide <quick-start-install>`.
 
-.. _multiple-machines:
+.. _installation-scaling:
 
-Installing across multiple machines
------------------------------------
+Scaling Archivematica
+---------------------
 
-It is possible to spread Archivematica's processing load across several machines
-by installing the following services on separate machines:
+There are several approaches to installing and configuring Archivematica 
+to handle large volumes of data and improve system performance. 
 
-* Elasticsearch
-* Gearman
-* MySQL
+The :ref:`Scaling Archivematica <scaling-archivematica>` section includes: 
 
-For help, ask on the `Archivematica user forum`_ for more details.
-
-Firewall
-^^^^^^^^
-
-When installing Archivematica on multiple machines, the various Archivematica
-processes must be able to reach each other on the relevant ports. Your firewall
-configuration must allow for this.
-
-In particular, please ensure that the Archivematica dashboard can talk to the
-Storage Service, and that the pipeline components (i.e., MCPServer, MCPClient)
-can talk to Gearman.
-
-In addition, please ensure that the Elasticsearch (``9200``) and MySQL
-(``3306``) services are not exposed to the world.
-
-The ports of the Archivematica components and related services are provided
-below.
-
-* Archivematica dashboard: ``80`` (``81`` for RPM-based installs)
-* Archivematica Storage Service: ``8000`` (``8001`` for RPM-based installs)
-* MySQL: ``3306``
-* Gearman: ``4730``
-* SSH: ``22``
-* Elasticsearch: ``9200``
-* NFS: ``2049``
+* :ref:`Scaling up: optimising on one machine <scaling-up>` 
+* :ref:`Scaling out: optimising across multiple machines <scaling-out>`
+* :ref:`Process configuration strategies <config-strategies>`
 
 .. _SSL-support:
 
@@ -80,7 +55,6 @@ In order to obtain valid SSL certificates trusted by any browser, you can use
 
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`Archivematica Docker repo`: https://github.com/artefactual-labs/am/tree/master/compose
-.. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
 .. _`Ansible & Vagrant installation instructions`: https://wiki.archivematica.org/Getting_started#Installation
 .. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
 .. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/storage-ssl.conf.j2

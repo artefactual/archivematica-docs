@@ -19,6 +19,7 @@ set of links to each chapter's main sections.
    installation-setup/customization/dashboard-config
    installation-setup/customization/antivirus-admin
    installation-setup/customization/task-config
+   installation-setup/customization/scaling-archivematica
    installation-setup/integrations/integrations
    installation-setup/integrations/duracloud-setup
    installation-setup/integrations/atom-setup

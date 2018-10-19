@@ -12,6 +12,7 @@ Customization and automation
 * :ref:`Antivirus configuration <antivirus-config>`
 * :ref:`Resources for development configuration <development-config>`
 * :ref:`Task output capturing configuration <task-config>`
+* :ref:`Customizing for scalability and performance <customize-scalability>`
 
 .. _config-admin-tab:
 
@@ -131,10 +132,24 @@ users to configure their MCP clients in order to control whether or not these
 output streams are captured. See :ref:`Task output capturing configuration
 <task-output-capturing-admin>` for more details.
 
+.. _customize-scalability:
+
+Customizing for scalability and performance
+-------------------------------------------
+
+Archivematica includes a number of features and options to improve scalability
+& performance. The default configuration options are geared towards “typical” 
+use cases and for many users won’t require any modification. However, some 
+users will benefit from optimizing configuration options to meet their 
+specific preservation needs & available computing resources.
+
+See :ref:`Scaling Archivematica <scaling-archivematica>` for a description of 
+three broad approaches to scaling & optimization and the specific techniques 
+available to each approach. 
 
 :ref:`Back to the top <customization>`
 
 .. _`MCP`: https://www.archivematica.org/wiki/MCP
 .. _`Basic MCP configuration`: https://wiki.archivematica.org/MCPServer#Config_File
 .. _`Development`: https://www.archivematica.org/wiki/Development
-.. _MCPClient configuration documentation: https://github.com/artefactual/archivematica/blob/qa/1.x/src/MCPClient/install/README.md
+.. _`MCPClient configuration documentation`: https://github.com/artefactual/archivematica/blob/qa/1.x/src/MCPClient/install/README.md
