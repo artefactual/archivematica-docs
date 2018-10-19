@@ -17,7 +17,7 @@ dashboard, allow you to configure application components and manage users.
 * :ref:`Processing storage usage <admin-dashboard-usage>`
 * :ref:`DIP upload <admin-dashboard-dip-upload>`
 
-  * :ref:`AtoM DIP upload <admin-dashboard-atom>`
+  * :ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`
   * :ref:`Archivists' Toolkit DIP upload <admin-dashboard-AT>`
 
@@ -265,13 +265,39 @@ ArchivesSpace, and Archivists' Toolkit.
 
 .. _admin-dashboard-atom:
 
-AtoM DIP upload
-^^^^^^^^^^^^^^^
+AtoM/Binder DIP upload
+^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica can upload DIPs directly to an `AtoM`_ website so that the
-contents can be accessed online. The AtoM DIP upload configuration page is where
-you specify the AtoM installation where you'd like to upload DIPs (and, if you
-are using Rsync to transfer the DIP files, the Rsync transfer details).
+contents can be accessed online. Using the same configuration screen, you can
+also configure Archivematica to upload DIPs to `Binder`_, which is built off the
+AtoM framework.
+
+The AtoM/Binder DIP upload configuration page is where you specify the details
+of the AtoM or Binder installation you'd like the DIPs uploaded to (and, if
+using Rsync to transfer the DIP files, Rsync transfer details).
+
+.. image:: images/AtoMDIPConfig.*
+   :align: center
+   :width: 80%
+   :alt: Configuration screen for AtoM or Binder DIP uploads
+
+Fields:
+
+* **Upload URL**: the URL of the destination AtoM or Binder website.
+* **Login email**: the email address used to log in to AtoM or Binder.
+* **Login password**: the password used to log in to AtoM or Binder.
+* **AtoM/Binder version**: the version of the destination AtoM or Binder website.
+* **Rsync target**: if you'd like to send the DIP with Rsync before it is
+  deposited in AtoM or Binder, enter the destination value for rsync, e.g.
+  ``foobar.com:/dips``. This field is optional.
+* **Rsync command**: if you've entered an Rsync target, specify the remote
+  shell manually, e.g. ``ssh -p 22222 -l user``. This field is optional.
+* **Debug mode**: if you would like to have additional details in failure
+  reports, also enable debug mode by choosing "Yes".
+
+AtoM DIP upload
++++++++++++++++
 
 If AtoM is installed on a remote server, Archivematica uses SSH and rsync to
 copy the DIP to a temporary directory on the AtoM server. If Archivematica and
@@ -287,29 +313,6 @@ uploaded.
 An AtoM background worker uploads the DIP metadata (METS file) and digital
 objects from the temporary directory to AtoM, links them to the target
 description, then deletes the temporary files.
-
-The AtoM DIP upload configuration page is where you specify the details of the
-AtoM installation you'd like the DIPs uploaded to (and, if using Rsync to
-transfer the DIP files, Rsync transfer details).
-
-.. image:: images/AtoMDIPConfig.*
-   :align: center
-   :width: 80%
-   :alt: Configuration screen for AtoM DIP uploads
-
-Fields:
-
-* **Upload URL**: the URL of the destination AtoM website.
-* **Login email**: the email address used to log in to AtoM.
-* **Login password**: the password used to log in to AtoM.
-* **AtoM version**: the version of the destination AtoM website.
-* **Rsync target**: if you'd like to send the DIP with Rsync before it is
-  deposited in AtoM, enter the destination value for rsync, e.g.
-  ``foobar.com:/dips``. This field is optional.
-* **Rsync command**: if you've entered an Rsync target, specify the remote
-  shell manually, e.g. ``ssh -p 22222 -l user``. This field is optional.
-* **Debug mode**: if you would like to have additional details in failure
-  reports, also enable debug mode by choosing "Yes".
 
 You will also need to make some changes in the AtoM user interface:
 
@@ -392,6 +395,12 @@ Generic parameters:
    --uuid="%SIPUUID%" \
    --rsync-target="archivematica@atom-hostname:/tmp" \
    --debug
+
+Binder DIP upload
++++++++++++++++++
+
+For more information about configuring Binder, please see the :ref:`Binder
+integrations page <binder-setup>`.
 
 .. _admin-dashboard-AS:
 
@@ -759,3 +768,4 @@ This tab displays the version of Archivematica you're using.
 .. _AtoM: www.accesstomemory.org
 .. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
 .. _automation tools: https://github.com/artefactual/automation-tools
+.. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html

@@ -25,7 +25,7 @@ integrations and users.
 * :ref:`Processing storage usage <dashboard-usage>`
 * :ref:`DIP upload <dashboard-dip-upload>`
 
-  * :ref:`AtoM DIP upload <dashboard-atom>`
+  * :ref:`AtoM/Binder DIP upload <dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <dashboard-AS>`
   * :ref:`Archivists' Toolkit DIP upload <dashboard-AT>`
 
@@ -627,21 +627,22 @@ DIP upload
 ----------
 
 Archivematica has access integrations with three access platforms: AtoM,
-ArchivesSpace, and Archivists' Toolkit.
+ArchivesSpace, and Archivists' Toolkit. For more information on Archivematica
+integrations, please see the :ref:`Integrations <integrations>` page.
 
 .. _dashboard-atom:
 
-AtoM DIP upload
-^^^^^^^^^^^^^^^
+AtoM/Binder DIP upload
+^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica can upload DIPs directly to an `AtoM`_ website so that the
-contents can be accessed online. The AtoM DIP upload configuration page is where
-you specify the AtoM installation where you'd like to upload DIPs (and, if you
-are using Rsync to transfer the DIP files, the Rsync transfer details).
+contents can be accessed online. Using the same configuration screen, you can
+also configure Archivematica to upload DIPs to `Binder`_, which is built off the
+AtoM framework.
 
-For more information on configuring the AtoM DIP upload parameters and the
-servers, please see the Admin Manual :ref:`AtoM DIP upload
-<admin-dashboard-atom>` configuration instructions.
+For more information on configuring the AtoM/Binder DIP upload parameters and
+the servers, please see the :ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`
+configuration instructions.
 
 **Levels of description**
 
@@ -787,3 +788,4 @@ This tab displays the version of Archivematica you're using.
 .. _bzip2: http://www.bzip.org/
 .. _LZMA: http://www.7-zip.org/sdk.html
 .. _Parallel bzip2 (pbzip2): http://compression.ca/pbzip2/
+.. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html

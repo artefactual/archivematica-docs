@@ -12,6 +12,7 @@ listed below.
 
 * :ref:`AtoM integration <atom-integration>`
 * :ref:`ArchivesSpace integration <archivesspace-integration>`
+* :ref:`Binder integration <binder-integration>`
 * :ref:`Duracloud integration <duracloud-integration>`
 * :ref:`Swift integration <swift-integration>`
 * :ref:`Islandora integration <islandora-integration>`
@@ -40,6 +41,27 @@ objects.
 
 See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`.
 
+.. _binder-integration:
+
+Binder integration
+------------------
+
+`Binder`_ is an open-source web application for supporting the care, management,
+and preservation of complex digital collections such as time-based media and
+born-digital artworks. It provides users with a central interface through which
+they can access, view and manage the rich technical metadata contained in
+Archival Information Packages (AIPs) held by the repository, as well as managing
+and describing the relationships between the components of a collections object,
+its constituent digital objects, and the various external dependencies required
+to preserve and display the collection over the long-term.
+
+See :ref:`Using Binder with Archivematica <binder-setup>`.
+
+.. note::
+
+   Binder is dependent on `TMS`_, a proprietary collections management software
+   primarily used in museum and gallery settings. Binder cannot currently work
+   without TMS.
 
 .. _duracloud-integration:
 
@@ -95,9 +117,9 @@ See :ref:`Arkivum Storage Service integration documentation <storageservice:arki
 Dataverse
 ---------
 
-See :ref:`Dataverse integration <dataverse-transfers>` for an overview of how 
-Dataverse datasets are preserved. 
-For instructions to configure a Dataverse integration, see 
+See :ref:`Dataverse integration <dataverse-transfers>` for an overview of how
+Dataverse datasets are preserved.
+For instructions to configure a Dataverse integration, see
 :ref:`Storage Service docs <storageservice:administrators>`.
 
 
@@ -110,3 +132,5 @@ For instructions to configure a Dataverse integration, see
 .. _`Swift`: https://wiki.openstack.org/wiki/Swift
 .. _`Arkivum`: https://arkivum.com/
 .. _`Arkivum Perpetua`: https://arkivum.com/heritage-higher-education-and-corporate-archives/
+.. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
+.. _`TMS`: https://www.gallerysystems.com/products-and-services/tms-suite/tms/

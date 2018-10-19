@@ -22,6 +22,7 @@ set of links to each chapter's main sections.
    installation-setup/integrations/integrations
    installation-setup/integrations/duracloud-setup
    installation-setup/integrations/atom-setup
+   installation-setup/integrations/binder-setup
    installation-setup/integrations/archivesspace-setup
    maintenance/maintenance
    security/security

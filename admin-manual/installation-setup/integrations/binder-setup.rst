@@ -1,0 +1,39 @@
+.. _binder-setup:
+
+===============================
+Using Binder with Archivematica
+===============================
+
+Archivematica |version| has been tested with and is recommended for use with the
+latest version of Binder.
+
+Binder is still very much an experimental application. There are very few
+production installations in use today. For more information about the status of
+the Binder project, please see the `Binder documentation`_ and the
+`Binder GitHub repository`_.
+
+*On this page*
+
+* :ref:`Install Binder <install-binder>`
+* :ref:`Configure DIP upload to Binder <config-dip-upload-binder>`
+
+.. _install-binder:
+
+Install Binder
+--------------
+
+The Binder GitHub repository includes `installation instructions`_ for Binder.
+
+.. _config-dip-upload-binder:
+
+Configure DIP upload to Binder
+------------------------------
+
+The Binder GitHub repository includes `configuration instructions`_ for Binder.
+
+:ref:`Back to the top <binder-setup>`
+
+.. _`Binder documentation`: https://binder.readthedocs.io/en/latest/user-manual/overview/project-status.html
+.. _`Binder GitHub repository`: https://github.com/artefactual/binder
+.. _`installation instructions`: https://github.com/artefactual/binder#installation
+.. _`configuration instructions`: https://github.com/artefactual/binder#configuration
