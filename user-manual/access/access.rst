@@ -59,9 +59,10 @@ environment. Access integration workflows also exist for `ArchivesSpace`_,
 Upload a DIP to AtoM
 --------------------
 
-To upload DIPs to your AtoM instance, you must enter your AtoM information and
-credentials in the Administration tab. See :ref:`AtoM/Binder DIP upload
-<admin-dashboard-atom>` for more information.
+To upload DIPs to AtoM, you must first have a working AtoM instance. An
+administrator will need to configure the AtoM instance to talk to Archivematica.
+For more information about setting up an integration with AtoM, see :ref:`Using
+AtoM 2.x with Archivematica <atom-setup>`.
 
 .. important::
 

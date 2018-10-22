@@ -277,6 +277,11 @@ The AtoM/Binder DIP upload configuration page is where you specify the details
 of the AtoM or Binder installation you'd like the DIPs uploaded to (and, if
 using Rsync to transfer the DIP files, Rsync transfer details).
 
+Before setting these details, please ensure that you have a working AtoM or
+Binder site that is properly connected to Archivematica. See :ref:`Using AtoM
+2.x with Archivematica <atom-setup>` or :ref:`Using Binder with Archivematica
+<binder-setup>` for more information.
+
 .. image:: images/AtoMDIPConfig.*
    :align: center
    :width: 80%
