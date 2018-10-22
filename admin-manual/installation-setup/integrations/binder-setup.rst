@@ -16,6 +16,7 @@ the Binder project, please see the `Binder documentation`_ and the
 
 * :ref:`Install Binder <install-binder>`
 * :ref:`Configure DIP upload to Binder <config-dip-upload-binder>`
+* :ref:`User instructions <user-instructions-binder>`
 
 .. _install-binder:
 
@@ -30,6 +31,18 @@ Configure DIP upload to Binder
 ------------------------------
 
 The Binder GitHub repository includes `configuration instructions`_ for Binder.
+
+You must also configure Binder within Archivematica by entering the appropriate
+credentials and information on the Administration tab. See :ref:`AtoM/Binder DIP
+upload <admin-dashboard-atom>` for more information. 
+
+.. _user-instructions-binder:
+
+User instructions
+-----------------
+
+Instructions on how to upload a DIP to Binder can be found in the User Manual
+section :ref:`Upload a DIP to Binder <upload-binder>`.
 
 :ref:`Back to the top <binder-setup>`
 
