@@ -760,6 +760,62 @@ user, you can change it via the command-line:
        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
    ";
 
+CLI configuration pipeline and registration on the Storage Service
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On new installations, the superuser can be configured and the pipeline
+registered on the Storage Service using the command-line instead of the GUI.
+These commands configure the pipeline and register it on the Storage Service
+exactly like the GUI for the initial configuration screen:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/python/archivematica-dashboard/bin/python manage.py install \
+           --username=<username> \
+           --password=<password> \
+           --email=<email-address> \
+           --org-name=<org-name> \
+           --org-id=<org-id> \
+           --api-key=<api-key>\
+           --ss-url=<ss-ulr> \
+           --ss-user=<ss-username> \
+           --ss-api-key=<ss-api-key> \
+           --whitelist=<whitelist>
+   ";
+
+Where:
+
+* ``api-key``: API key that will be added to the username <username>. For
+  example: "test", "4e5f32ab2aefd3577e1b19a2de5d4dd65f90101a".
+
+* ``ss-url``: Archivematica Storage Service URL. For example:
+  http://example.archivematica.org:8000.
+
+* ``ss-user``: The Storage Service username that will be used to register the
+  pipeline. This username must already exist in the Storage Service.
+
+* ``ss-api-key``: The <ss-username> API key. This key must already exist in the
+  Storage Service for the user <ss-username>.
+
+* ``whitelist``: Whitespace-separated list of IP addresses or hostnames allowed
+  to use the API. If the whitelist is left empty, all IP addresses and
+  hostnames will be allowed. For example: "192.168.1.3
+  example.archivematica.org 127.0.0.1" or "".
+
+This command is most suitable to use on automated installations, for example
+when deploying using ansible. For manual installations, please use the web
+configuration method described in the Post Install Configuration sections:
+
+* :ref:`Ubuntu Post Install Configuration <ubuntu-post-install-config>`.
+* :ref:`CentOS Post Install Configuration <centos-post-install-config>`.
+* :ref:`Ansible Post Install Configuration <ansible-post-install-config>`.
+
 Security
 ^^^^^^^^
 
