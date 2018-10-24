@@ -1,7 +1,7 @@
 .. _dashboard-config:
 
 ============================
-Dashboard administration tab
+Dashboard Administration tab
 ============================
 
 The Archivematica administration pages, under the Administration tab of the
@@ -149,11 +149,9 @@ selection.
 General
 -------
 
-In this section, you can configure the following for your Archivematica client:
-
-* Storage Service options
-* Checksum algorithm
-* Elasticsearch indexing
+The General configuration page allows you to connect your Archivematica instance
+to the Storage Service and set the default checksum algorithm used in
+processing.
 
 .. figure:: images/generalConfig.*
    :align: center
@@ -163,12 +161,39 @@ In this section, you can configure the following for your Archivematica client:
 
    General configuration options in Administration tab of the dashboard
 
+General configuration
+^^^^^^^^^^^^^^^^^^^^^
+
+Fields:
+
+* **Site URL**: This is the public URL of your Archivematica dashboard. This
+  field is optional.
+
+.. note::
+   Archivematica will try to register itself with the Storage Service. If you
+   have installed Archivematica with a static URL or IP address, you may not
+   need to set the Site URL here. However, if you expect the URL or IP address
+   to change you should use a URL that will not change over time.
+
 Storage Service options
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-This is where you'll find the complete URL for the Storage Service, along with a
-username and API key. See the Storage Service documentation for more information
-about this feature.
+Archivematica's storage spaces and locations are controlled by a back-end
+application called the Storage Service. For more information about the Storage
+Service, see the :ref:`Storage Service documentation <storageservice:index>`.
+
+Fields:
+
+* **Storage Service URL**: Full URL of the storage service. E.g.
+  https://192.168.168.192:8000
+* **Storage Service User**: User in the Storage Service to authenticate as.
+  Obtain Storage Service credentials from the Administration tab of the Storage
+  Service.
+* **API key**: API key of the storage service user. Obtain Storage Service
+  credentials from the Administration tab of the Storage Service.
+* **Use default configuration**: Check this box if you have deployed the Storage
+  Service using the default space and location configurations. If you have set
+  up custom configurations, uncheck it.
 
 Checksum algorithm
 ^^^^^^^^^^^^^^^^^^
