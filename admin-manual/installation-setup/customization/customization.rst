@@ -13,7 +13,7 @@ Customization and automation
 * :ref:`Resources for development configuration <development-config>`
 * :ref:`Task output capturing configuration <task-config>`
 
-.. _config-admin-tab
+.. _config-admin-tab:
 
 Administration tab
 ------------------
