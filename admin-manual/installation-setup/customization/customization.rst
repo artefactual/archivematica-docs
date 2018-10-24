@@ -6,11 +6,23 @@ Customization and automation
 
 *On this page*
 
+* :ref:`Administration tab <config-admin-tab>`
 * :ref:`Automating microservice decisions using the dashboard <config-using-dashboard>`
 * :ref:`Preservation planning configuration <config-using-fpr>`
 * :ref:`Antivirus configuration <antivirus-config>`
 * :ref:`Resources for development configuration <development-config>`
 * :ref:`Task output capturing configuration <task-config>`
+
+.. _config-admin-tab
+
+Administration tab
+------------------
+
+Archivematica's Administration tab is where users and administrators can create
+users, change the language of the interface, review storage locations, and set
+configuration details like DIP upload integrations and PREMIS agent information.
+For more information about the Administration tab, see :ref:`Dashboard
+Administration tab <dashboard-config>`.
 
 .. _config-using-dashboard:
 
