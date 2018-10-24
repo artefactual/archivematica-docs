@@ -51,8 +51,8 @@ Installation instructions
    * Elasticsearch (optional):
 
    .. note::
-      Skip this step if you are planning to run Archivematica in
-      indexless mode (without Elasticsearch).
+      Skip this step if you are planning to run :ref:`Archivematica without
+      Elasticsearch <install-elasticsearch>`.
 
    .. code:: bash
 

@@ -298,10 +298,12 @@ Upgrade in indexless mode
 -------------------------
 
 As of Archivematica 1.7, Archivematica can be run in indexless mode; that is,
-without Elasticsearch. Installing Archivematica without Elasticsearch means
-reduced consumption of compute resources and lower operational complexity.
-Disabling Elasticsearch means that the Backlog, Appraisal, and Archival Storage
-tabs do not appear and their functionality is not available.
+without Elasticsearch. Installing Archivematica without Elasticsearch, or with
+limited Elasticsearch functionality, means reduced consumption of compute
+resources and lower operational complexity. By setting the
+``archivematica_src_search_enabled`` configuration attribute, administrators can
+define how many things Elasticsearch is indexing, if any. This can impact
+searching across several different dashboard pages.
 
 1. Upgrade your existing Archivematica pipeline following the instructions
    above.

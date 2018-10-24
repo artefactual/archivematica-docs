@@ -14,8 +14,9 @@ backlogged material in a new Archivematica pipeline.
 
 .. note::
 
-  If you are running Archivematica in indexless mode (without Elasticsearch),
-  the Appraisal tab will not appear on your dashboard.
+   If you are running :ref:`Archivematica without Elasticsearch
+   <install-elasticsearch>` or with limited Elasticsearch functionality, the
+   Backlog tab will not appear in your dashboard.
 
 *On this page:*
 

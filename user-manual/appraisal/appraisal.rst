@@ -14,8 +14,9 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 
 .. note::
 
-   If you are running Archivematica in indexless mode (without Elasticsearch),
-   the Appraisal tab will not appear on your dashboard.
+   If you are running :ref:`Archivematica without Elasticsearch
+   <install-elasticsearch>` or with limited Elasticsearch functionality, the
+   Appraisal tab will not appear in your dashboard.
 
 *On this page:*
 
@@ -216,8 +217,8 @@ by the parallel lines icon.
 
 .. note::
 
-   Digital objects created and linked to resources in ArchivesSpace will 
-   not appear in the ArchivesSpace panel. However, digital objects added 
+   Digital objects created and linked to resources in ArchivesSpace will
+   not appear in the ArchivesSpace panel. However, digital objects added
    to a resource from within the ArchivesSpace panel are displayed.
 
 .. image:: images/archivesspace_search.*
@@ -232,7 +233,7 @@ Options at the top of the ArchivesSpace pane allow for adding to and changing an
 existing ArchivesSpace resource, such as adding new archival objects and digital
 object components.
 
-Selecting a resource or archival object and using “Add new child record” adds 
+Selecting a resource or archival object and using “Add new child record” adds
 a new archival object nested underneath the selected level of description.
 Clicking this button brings up a dialog box for entering metadata. At a minimum,
 a new archival object must have a title and a level of description, otherwise
@@ -308,15 +309,15 @@ Transfer files in backlog can easily be associated with ArchivesSpace resources 
 To add files to ArchivesSpace resources:
 
 1. Search the backlog by entering terms and parameters in the search box at the top of the page.
-   
+
    For a list of all transfers in backlog, simply click within the search box leaving the edit field blank, and then click **Search transfer backlog**.
 
 2. Click **ArchivesSpace** to enable the ArchivesSpace panel, :ref:`search by title or identifier of a resource <searching-ArchivesSpace-resources>`, and then click **Search ArchivesSpace**.
-   
+
    A hierarchical view of the resource is displayed.
-   
-3. Create digital object components within the ArchivesSpace panel by clicking **Add new digital object**.   
-   
+
+3. Create digital object components within the ArchivesSpace panel by clicking **Add new digital object**.
+
    Digital object components must be created in the Appraisal tab.
 
 .. note::

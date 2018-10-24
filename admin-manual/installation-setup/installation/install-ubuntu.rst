@@ -37,8 +37,9 @@ Ubuntu 16.04 (Xenial) installation instructions
 2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
 
-   .. note:: Skip this step if you are planning to run Archivematica in indexless
-      mode (without Elasticsearch).
+   .. note::
+      Skip this step if you are planning to run :ref:`Archivematica without
+      Elasticsearch <install-elasticsearch>`.
 
    .. code:: bash
 

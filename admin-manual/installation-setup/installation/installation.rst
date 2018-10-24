@@ -91,15 +91,31 @@ information, see :ref:`Advanced <advanced>`.
 Elasticsearch
 ^^^^^^^^^^^^^
 
-Installing Elasticsearch to provide a search index is now optional as of
-Archivematica version 1.7. Installing Archivematica without Elasticsearch means
-reduced consumption of compute resources and lower operational complexity.
-However, some functionality, such as the Backlog, Appraisal and Archival Storage
-tabs, is not available.
+Installing Elasticsearch with a search index is optional as of Archivematica
+1.7. Installing Archivematica without Elasticsearch, or with limited
+Elasticsearch functionality, means reduced consumption of compute resources and
+lower operational complexity. By setting the
+``archivematica_src_search_enabled`` configuration attribute, administrators can
+define how many things Elasticsearch is indexing, if any. This can impact
+searching across several different dashboard pages.
+
+Possible ``archivematica_src_search_enabled`` configuration attribute values:
+
+* ``transfers``: Only transfers are indexed. Search is enabled on the Backlog
+  and Appraisal tabs, but not the Archival Storage tab.
+* ``aips``: Only AIPs are indexed. Search is enabled on the Archival Storage
+  tab, but not the Backlog or Appraisal tabs.
+* ``aips,transfers``, or ``true``: Both AIPs and transfers are indexed.
+  Search works on the Backlog, Appraisal, and Archival Storage tabs.
+* ``false``: Indexless mode. Neither AIPs nor transfers are indexed. The
+  Backlog, Appraisal, and Archival Storage tabs will be non-functional.
 
 When Elasticsearch is used, Archivematica |release| requires version 1.x (tested
 with 1.7.6). Support for a more recent version of Elasticsearch is being
 developed and is planned for a future release.
+
+For more information on disabling Elasticsearch, please see the README for
+Archivematica's ansible role,
 
 Hardware
 ^^^^^^^^
