@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-04-03 15:31+0000\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/overview/microservices.rst:5
+msgid "Micro-services"
+msgstr "Micro-serviços"
+
+#: ../../getting-started/overview/microservices.rst:7
+msgid ""
+"Archivematica implements a micro-service approach to digital preservation. "
+"The Archivematica micro-services are granular system tasks which operate on "
+"a conceptual entity that is equivalent to an OAIS information package: "
+"Submission Information Package (SIP), Archival Information Package (AIP), "
+"Dissemination Information Package (DIP). The physical structure of an "
+"information package will include files, checksums, logs, submission "
+"documentation, XML metadata, etc."
+msgstr "O Archivematica implementa uma abordagem de micro-serviço para preservação digital. Os micro-serviços Archivematica são tarefas granulares do sistema que operam em uma entidade conceitual equivalente a um pacote de informações OAIS: Pacote de informação de submissação (SIP), Pacote de informação arquivística (AIP), Pacote de informação de divulgação (DIP). A estrutura física de um pacote de informações incluirá arquivos, checksums, logs, documentação de submissão, metadados XML, etc."
+
+#: ../../getting-started/overview/microservices.rst:20
+msgid ""
+"These information packages are processed using a series of micro-services. "
+"Micro-services are provided by a combination of Archivematica Python scripts"
+" and one or more of the free, open-source `software tools "
+"<https://www.archivematica.org/wiki/External_tools>`_ bundled in the "
+"Archivematica system. Each micro-service results in a success or error state"
+" and the information package is processed accordingly by the next micro- "
+"service. There are a variety of mechanisms used to connect the various "
+"micro- services together into complex, custom workflows, resulting in a "
+"complete ingest to access system."
+msgstr "Esses pacotes de informações são processados ​​usando uma série de micro-serviços. Os micro-serviços são fornecidos por uma combinação de scripts do Archivematica Python e um ou mais dos recursos gratuitos e de código aberto. `ferramentas de software <https://www.archivematica.org/wiki/External_tools>` _ incluídas no sistema Archivematica. Cada micro-serviço resulta em um estado de acerto ou erro e o pacote de informações é processado de acordo com o próximo micro-serviço. Há uma variedade de mecanismos usados ​​para conectar os vários micro-serviços em fluxos de trabalho complexos e personalizados, resultando em um processo completo de acesso ao sistema."
+
+#: ../../getting-started/overview/microservices.rst:30
+msgid ""
+"Archivematica implements a default ingest to access workflow that is "
+"compliant with the ISO-OAIS functional model. Micro-services can be "
+"distributed to processing clusters for highly scalable configurations."
+msgstr "O Archivematica implementa uma entrada padrão para acessar o fluxo de trabalho que é compatível com o modelo funcional ISO-OAIS. Micro-serviços podem ser distribuídos para processamento de clusters para configurações altamente escalonáveis."
+
+#: ../../getting-started/overview/microservices.rst:36
+msgid "Micro-services in Archivematica Releases"
+msgstr "Micro-serviços em lançamentos do Archivematica"
+
+#: ../../getting-started/overview/microservices.rst:38
+msgid ""
+"The Archivematica wiki contains an updated `list of micro-services "
+"<https://wiki.archivematica.org/Micro-services>`._"
+msgstr "O wiki Archivematica contém uma `lista de micro-serviços atualizada <https://wiki.archivematica.org/Micro-services> ._"
+
+#: ../../getting-started/overview/microservices.rst:40
+msgid ""
+"`Archivematica 1.1 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_1.1_Micro-services>`_"
+msgstr "`Micro-serviços Archivematica 1.1 <https://www.archivematica.org/wiki/Archivematica_1.1_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:42
+msgid ""
+"`Archivematica 1.0 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_1.0_Micro-services>`_"
+msgstr "`Micro-serviços Archivematica 1.0 <https://www.archivematica.org/wiki/Archivematica_1.0_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:44
+msgid ""
+"`Archivematica 0.10 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.10_Micro-services>`_"
+msgstr "`Micro-serviços Archivematica 0.10<https://www.archivematica.org/wiki/Archivematica_0.10_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:46
+msgid ""
+"`Archivematica 0.9 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.9_Micro-services>`_"
+msgstr "`Micro-serviços Archivematica 0.9 <https://www.archivematica.org/wiki/Archivematica_0.9_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:48
+msgid ""
+"`Archivematica 0.8 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.8_Micro-services>`_"
+msgstr "`Archivematica 0.8 Micro-serviços <https://www.archivematica.org/wiki/Archivematica_0.8_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:50
+msgid ""
+"`Archivematica 0.7.1 Micro-services "
+"<https://www.archivematica.org/wiki/Archivematica_0.7.1_Micro-services>`_"
+msgstr "`Micro-serviços Archivematica 0.7.1 <https://www.archivematica.org/wiki/Archivematica_0.7.1_Micro-services>` _"
+
+#: ../../getting-started/overview/microservices.rst:53
+msgid ":ref:`Back to the top <micro-services>`"
+msgstr ":ref:`Voltar ao topo <micro-services>`"

@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:5
+msgid "Antivirus administration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:7
+msgid ""
+"Archivematica provides antivirus capabilities through the `ClamAV`_ "
+"antivirus engine. The default antivirus settings are configured to "
+"capture the largest possible number of viruses across the largest breadth"
+" of file types and sizes possible."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:12
+msgid ""
+"If configuration of ClamAV is required then you can do this through "
+"various environment variables inside the operating system."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:16
+msgid "Clamdscan or Clamscan"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:18
+msgid ""
+"Clamscan is a standalone application. Clamdscan is a server-based "
+"implementation of the same tool."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:21
+msgid ""
+"Depending on your method of deployment, the Archivematica MCP Client will"
+" need to have the environment variable ``CLAMAV_CLIENT_BACKEND`` set to "
+"one of two case-insensitive values:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:25
+msgid "``clamdscanner`` for Clamdscan"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:26
+msgid "``clamscanner`` for Clamscan"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:28
+msgid ""
+"Archivematica will look for one of these values. If a value is not "
+"recognised then it will default to Clamdscan."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:33
+msgid "It is recommended that you employ Clamdscan for virus checking."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:35
+msgid ""
+"Clamscan is slower than Clamdscan because the process has to be started "
+"and the virus database reloaded for each file that is passed to it."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:38
+msgid ""
+"Clamdscan's utility is due in part to the antivirus definition database "
+"only being loaded once when the service is started. Files are passed to "
+"the service by stream or by filesystem reference."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:42
+msgid ""
+"To illustrate the difference in performance, a 1 MB image file can be "
+"scanned by Clamdscan in an average of 2 seconds. Using Clamscan the "
+"average for the same file will be 1 minute 20 seconds."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:47
+msgid "Antivirus settings and their impacts"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:49
+msgid ""
+"Antivirus in Archivematica is configured using environment variables. "
+"These are documented in detail on the Archivematica GitHub pages for the "
+"`MCPClient environment variables`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:53
+msgid ""
+"There are three values for antivirus that can impact whether a file is "
+"scanned or not - MaxFileSize, MaxScanSize, and StreamMaxLength. If any of"
+" these are exceeded, Archivematica cannot guarantee that a file has been "
+"scanned in its entirety for viruses."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:58
+msgid ""
+"Given that Archivematica cannot guarantee in such cases that all "
+"instances of any virus have been detected, a :ref:`PREMIS <premis-"
+"template>` event will not be recorded."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:62
+msgid "From the `ClamAV manual pages`_::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:86
+msgid "Configuration of ClamAV values"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:88
+msgid "Defaults in Archivematica are set to::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:98
+msgid ""
+"Clamscan defaults cannot be set above 2GB (2000M) as per this link to "
+"ClamAV `Bug 11958`_ (note that you must create an account with Bugzilla "
+"to view bugs for the ClamAV project)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:102
+msgid ""
+"Configuration is done via environment variable or deployment script, e.g."
+" Ansible playbook."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:106
+msgid "Ansible"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:108
+msgid ""
+"The defaults for the ClamAV Ansible role can be configured in the default"
+" `configuration file`_ before proceeding with the Ansible installation "
+"process."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:112
+msgid "Docker-compose"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:114
+msgid ""
+"Before a container is built, the Compose ``.env`` file can be modified to"
+" reflect new values. For example, in Archivematica 1.7 you would modify "
+"this `Compose .env file`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:118
+msgid "The container can then be recreated::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:123
+msgid "Impact of various configuration settings"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:125
+msgid ""
+"Where defaults are *increased*, processing times of transfers will be "
+"*slower* for transfers with larger digital files. *More* digital files "
+"will be completely scanned."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:129
+msgid ""
+"Where defaults are *decreased*, processing times of transfers will be "
+"*faster* for all digital files. *Fewer* digital files will be completely "
+"scanned."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:134
+msgid "Virus definition updates"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:136
+msgid ""
+"An update service called ``freshclam`` is run regularly to update virus "
+"definitions in Archivematica. To see when the virus database was last "
+"updated you can review the log at the following location::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:143
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:145
+msgid ""
+"If the Scan for Viruses microservice is reporting that a file is too big "
+"but the defaults you have set look accurate, then there is a chance the "
+"MCP Client configuration needs updating. The microservice will look at "
+"the environment variables:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:150
+msgid "``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CLAMAV_CLIENT_MAX_FILE_SIZE``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:151
+msgid "``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CLAMAV_CLIENT_MAX_SCAN_SIZE``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:153
+msgid ""
+"To determine whether to pass the file to the virus scanner. These values "
+"are configured in `Ansible environment variables`_ or inside the "
+"operating system environment itself."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/antivirus-admin.rst:157
+msgid ":ref:`Back to the top <antivirus-admin>`"
+msgstr ""
+

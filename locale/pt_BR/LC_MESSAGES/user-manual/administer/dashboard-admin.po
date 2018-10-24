@@ -1,0 +1,1255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/administer/dashboard-admin.rst:5
+msgid "Dashboard administration tab"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:7
+msgid ""
+"This page describes dashboard user administration in Archivematica via the "
+"dashboard. For higher level, technical administrative documentation, please "
+"see :ref:`Administrator manual <home>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:11
+msgid ""
+"The Archivematica administration pages, under the Administration tab of the "
+"dashboard, allows you to configure various parts of the application and "
+"manage integrations and users."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:15
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:17
+msgid ":ref:`Processing configuration <dashboard-processing>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:19
+msgid ":ref:`Fields and options <processing-config-fields>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:21
+msgid ":ref:`General <dashboard-general>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:22
+msgid ":ref:`Failures <dashboard-failures>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:23
+msgid ":ref:`Transfer source locations <dashboard-transfer-source>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:24
+msgid ":ref:`AIP storage locations <dashboard-AIP-stor>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:25
+msgid ":ref:`Processing storage usage <dashboard-usage>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:26
+msgid ":ref:`DIP upload <dashboard-dip-upload>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:28
+msgid ":ref:`AtoM/Binder DIP upload <dashboard-atom>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:29
+msgid ":ref:`ArchivesSpace DIP upload <dashboard-AS>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:30
+msgid ":ref:`Archivists' Toolkit DIP upload <dashboard-AT>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:32
+msgid ":ref:`PREMIS agent <dashboard-premis>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:33
+msgid ":ref:`REST API <dashboard-rest>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:34
+msgid ":ref:`Users <dashboard-users>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:35
+msgid ":ref:`Handle server config <handle-server>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:36
+msgid ":ref:`Language <language-choice>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:37
+msgid ":ref:`Version <version>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:43
+msgid "Processing configuration"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:45
+msgid ""
+"The processing configuration administration page of the dashboard allows "
+"users to configure the job decision points presented by Archivematica during"
+" transfer and ingest. There are two processing configurations available on "
+"installation:"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:49
+msgid ""
+"``Default``, which is used for any transfer started manually from the "
+":ref:`Transfer tab <create-transfer>`, automatically via the `automation "
+"tools`_, or in any other context where no other processing configuration is "
+"specified."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:52
+msgid ""
+"``Automated``, which is used for transfers automatically started from Jisc "
+"RDSS environments (if you are not a Jisc user, feel free to delete this "
+"configuration)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:61
+msgid ""
+"To edit an existing processing configuration file, click on the **Edit** "
+"button to the right of the processing configuration name."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:64
+msgid ""
+"Multiple processing configurations can be created using the **Add** button "
+"on the Processing Configuration screen. Often, users create multiple "
+"configurations for different types of content - one for audio-visual "
+"material, one for images, one for textual records, etc."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:69
+msgid ""
+"You can also revert the default and automated processing configurations to "
+"their pre-sets by clicking on **Reset**. Please note that the pre-sets for "
+"the default processing configuration are noted in the :ref:`Processing "
+"configuration fields <processing-config-fields>` section below."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:74
+msgid ""
+"Note that alternate processing configurations (i.e. anything other than "
+"default) are used in two ways:"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:77
+msgid ""
+"When you reingest an AIP, you are given the opportunity to select which "
+"processing configuration you'd like to use."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:79
+msgid ""
+"You can download the processingMCP.xml file by clicking **Download**. Then, "
+"rename the file ``processingMCP.xml`` and include it at the top level of "
+"your transfer. Archivematica will then use this to automate your transfer "
+"selections, rather than the default configuration. For more information on "
+"the processingMCP.xml file, see :ref:`Creating a custom config with "
+"processingMCP.xml <processingmcp-file>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:86
+msgid "All other transfers will use the default processing configuration."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:88
+msgid ""
+"In order to edit any of the selections, select a choice from the drop-down "
+"menu to the right of the job name. Once you've made all of your selections, "
+"save the processing configuration. The fields are described in the next "
+"section."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:100
+msgid "Processing configuration fields"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:102
+msgid ""
+"Many jobs in the Archivematica transfer and ingest tabs have configurable "
+"decision points. Automating these decisions can make the transfer and ingest"
+" process substantially quicker, especially if you find yourself selecting "
+"the same decisions over and over. Below is a list of the processing "
+"configuration form fields with a short description about how they work and "
+"the drop-down options for each."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:109
+msgid ""
+"The option marked by an asterisk is the pre-set value for the default "
+"processing configuration. If you change the default configuration, you can "
+"click on **Reset** to revert all changes back to the installation pre-sets."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:114
+msgid "Name"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:116
+msgid "The name of the processingMCP.xml that you are editing."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:119
+msgid "Assign UUIDs to directories"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:121
+msgid ""
+"Directories are given an entry in the fileSec and assigned a unique "
+"universal identifier (UUID). Note that the digital objects in the transfer "
+"are always assigned a UUID."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:125
+#: ../../user-manual/administer/dashboard-admin.rst:136
+#: ../../user-manual/administer/dashboard-admin.rst:158
+#: ../../user-manual/administer/dashboard-admin.rst:169
+#: ../../user-manual/administer/dashboard-admin.rst:185
+#: ../../user-manual/administer/dashboard-admin.rst:197
+#: ../../user-manual/administer/dashboard-admin.rst:209
+#: ../../user-manual/administer/dashboard-admin.rst:235
+#: ../../user-manual/administer/dashboard-admin.rst:254
+#: ../../user-manual/administer/dashboard-admin.rst:272
+#: ../../user-manual/administer/dashboard-admin.rst:295
+#: ../../user-manual/administer/dashboard-admin.rst:305
+#: ../../user-manual/administer/dashboard-admin.rst:322
+#: ../../user-manual/administer/dashboard-admin.rst:334
+#: ../../user-manual/administer/dashboard-admin.rst:346
+#: ../../user-manual/administer/dashboard-admin.rst:358
+#: ../../user-manual/administer/dashboard-admin.rst:372
+#: ../../user-manual/administer/dashboard-admin.rst:384
+#: ../../user-manual/administer/dashboard-admin.rst:396
+#: ../../user-manual/administer/dashboard-admin.rst:414
+#: ../../user-manual/administer/dashboard-admin.rst:430
+#: ../../user-manual/administer/dashboard-admin.rst:447
+#: ../../user-manual/administer/dashboard-admin.rst:459
+#: ../../user-manual/administer/dashboard-admin.rst:473
+#: ../../user-manual/administer/dashboard-admin.rst:493
+#: ../../user-manual/administer/dashboard-admin.rst:505
+msgid "Options:"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:127
+#: ../../user-manual/administer/dashboard-admin.rst:171
+#: ../../user-manual/administer/dashboard-admin.rst:211
+#: ../../user-manual/administer/dashboard-admin.rst:237
+#: ../../user-manual/administer/dashboard-admin.rst:274
+#: ../../user-manual/administer/dashboard-admin.rst:307
+#: ../../user-manual/administer/dashboard-admin.rst:324
+#: ../../user-manual/administer/dashboard-admin.rst:336
+#: ../../user-manual/administer/dashboard-admin.rst:348
+#: ../../user-manual/administer/dashboard-admin.rst:360
+#: ../../user-manual/administer/dashboard-admin.rst:398
+#: ../../user-manual/administer/dashboard-admin.rst:449
+#: ../../user-manual/administer/dashboard-admin.rst:461
+#: ../../user-manual/administer/dashboard-admin.rst:475
+#: ../../user-manual/administer/dashboard-admin.rst:495
+#: ../../user-manual/administer/dashboard-admin.rst:507
+msgid "**None** - the user is prompted for a decision.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:128
+msgid "**Yes** - UUIDs are assigned."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:129
+msgid "**No** - UUIDs are not assigned."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:132
+msgid "Send transfer to quarantine"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:134
+msgid "Transfers are sequestered until virus definitions can be updated."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:138
+#: ../../user-manual/administer/dashboard-admin.rst:160
+#: ../../user-manual/administer/dashboard-admin.rst:187
+#: ../../user-manual/administer/dashboard-admin.rst:199
+#: ../../user-manual/administer/dashboard-admin.rst:256
+#: ../../user-manual/administer/dashboard-admin.rst:386
+#: ../../user-manual/administer/dashboard-admin.rst:416
+#: ../../user-manual/administer/dashboard-admin.rst:432
+msgid "**None** - the user is prompted for a decision."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:139
+msgid "**Yes** - transfers are automatically quarantined."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:140
+msgid "**No** - transfers are not sent to quarantine.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:143
+msgid "Remove from quarantine after (days)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:145
+msgid ""
+"Transfers are automatically removed from quarantine after a defined number "
+"of days and made available for further processing."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:148
+msgid ""
+"Enter the number of days that transfers should remain in quarantine (i.e. "
+"5)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:150
+msgid "The default value for this field is 28 days."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:153
+msgid "Generate transfer structure report"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:155
+msgid ""
+"A text file is generated showing a directory tree of the original transfer "
+"structure."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:161
+msgid "**Yes** - structure report is created."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:162
+msgid "**No** - structure report is not created.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:165
+msgid "Select file format identification command (Transfer)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:167
+msgid "Choose a tool to identify the format of the files in your transfer."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:172
+msgid ""
+"**Identify using Fido** - use `Fido`_ to identify files by their file "
+"signature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:174
+msgid "**Skip File Identification** - files will not be identified."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:175
+#: ../../user-manual/administer/dashboard-admin.rst:261
+#: ../../user-manual/administer/dashboard-admin.rst:399
+msgid ""
+"**Identify using Siegfried** - use `Siegfried`_ to identify files by their "
+"signature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:177
+msgid ""
+"**Identify by File Extension** - identify files by their extension rather "
+"than signature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:181
+msgid "Extract packages"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:183
+msgid ""
+"Packages (such as .zip files) are unzipped and extracted into a directory."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:188
+msgid "**Yes** - the contents of the package are extracted.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:189
+msgid "**No** - package is left as-is."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:192
+msgid "Delete packages after extraction"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:194
+msgid ""
+"Packages that have been extracted in the previous step can be deleted after "
+"extraction."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:200
+msgid "**Yes** - the package is deleted.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:201
+msgid "**No** - the package is preserved along with the extracted content."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:204
+msgid "Perform policy checks on originals"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:206
+msgid ""
+"If you create policies using MediaConch, run the policies against the "
+"transfer to assess conformation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:212
+msgid "**Yes** - the transfer is checked against any policies."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:213
+#: ../../user-manual/administer/dashboard-admin.rst:326
+#: ../../user-manual/administer/dashboard-admin.rst:338
+msgid "**No** - policies are ignored."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:216
+msgid "Examine contents"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:218
+msgid ""
+"Run Bulk Extractor, a forensics tool that can recognize credit card numbers,"
+" social security numbers, and other patterns in data. For more information "
+"on reviewing Bulk Extractor logs, see the :ref:`Analysis pane "
+"<analysis_pane>` on the Appraisal tab."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:223
+msgid "**Options:**"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:225
+msgid "**None** - the user is prompted for a decision.use"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:226
+msgid "**Skip examine contents** - Bulk Extractor does not run.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:227
+msgid ""
+"**Yes** - Bulk Extractor scans content and creates log outputs of recognized"
+" patterns for review."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:231
+msgid "Create SIP(s)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:233
+msgid "Create a formal SIP out of the transfer or send it to the backlog."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:238
+msgid ""
+"**Send to backlog** - transfer is sent to a backlog storage space for "
+"temporary storage or appraisal."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:240
+msgid ""
+"**Create single SIP and continue processing** - transfer becomes a SIP and "
+"is made available for further processing on the ingest tab."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:245
+msgid ""
+"If you are running Archivematica in indexless mode (without Elasticsearch), "
+"the backlog will be unavailable and the **Send to backlog** option will not "
+"be present in this dropdown."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:250
+msgid "Select file format identification command (Ingest)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:252
+msgid "Choose a tool to identify the format of files in your SIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:257
+msgid ""
+"**Use existing data** - re-use file identification data from the transfer "
+"tab.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:259
+#: ../../user-manual/administer/dashboard-admin.rst:401
+msgid ""
+"**Identify using Fido** - use `fido`_ to identify files by their file "
+"signature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:263
+#: ../../user-manual/administer/dashboard-admin.rst:403
+msgid ""
+"**Identify by File Extension** - identify files by their extension rather "
+"than their signature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:267
+msgid "Normalize"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:269
+msgid ""
+"Convert ingested digital objects to preservation and/or access formats. See "
+":ref:`Normalize <normalize>` for more information."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:275
+msgid ""
+"**Normalize for preservation and access** - creates preservation copies of "
+"the objects plus access copies which will be used to generate the DIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:277
+msgid ""
+"**Normalize for preservation** - creates preservation copies only. No access"
+" copies are created and no DIP will be generated."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:279
+msgid ""
+"**Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for "
+"more information."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:281
+msgid ""
+"**Do not normalize** - the AIP will contain originals only. No preservation "
+"or access copies are generated and no DIP will be generated."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:283
+msgid ""
+"**Normalize service files preservation** - see :ref:`Digitization "
+"<digitized>` for more information."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:285
+msgid ""
+"**Normalize for access** - the AIP will contain originals only. No "
+"preservation copies will be generated. Access copies will be created which "
+"will be used to generate the DIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:290
+msgid "Approve normalization"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:292
+msgid ""
+"The dashboard allows users to review the normalization output and the "
+"normalization report."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:297
+msgid "**None** - the user has a chance to review and approve normalization.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:298
+msgid "**Yes** - skip the review step and automatically continue processing."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:301
+msgid "Generate thumbnails"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:303
+msgid ""
+"This gives the option of generating thumbnails for use in the AIP and DIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:308
+msgid ""
+"**Yes, without default** - thumbnails will be produced for any format which "
+"has a :ref:`normalize for thumbnails <normalization>` rule in the FPR. "
+"Formats which do not have a rule will not have a thumbnail generated."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:311
+msgid "**No** - thumbnails will not be generated."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:312
+msgid ""
+"**Yes** - thumbnails will be generated according to the format rules in the "
+"FPR. Formats which do not have a rule will have a default thumbnail "
+"generated (grey document icon)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:317
+msgid "Perform policy checks on preservation derivatives"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:319
+#: ../../user-manual/administer/dashboard-admin.rst:331
+msgid ""
+"If you create policies using MediaConch, run the policies against the newly-"
+"created preservation derivatives to ensure conformation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:325
+#: ../../user-manual/administer/dashboard-admin.rst:337
+msgid "**Yes** - the normalized files are checked against any policies."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:329
+msgid "Perform policy checks on access derivatives"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:341
+msgid "Bind PIDs"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:343
+msgid ""
+"Assign persistent identifiers and send the information to a Handle Server "
+"(must be configured)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:349
+msgid ""
+"**Yes** - PIDs are created and a API call posts the PIDs to the Handle "
+"Server."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:350
+msgid "**No** - PIDs are not created."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:353
+msgid "Document empty directories"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:355
+msgid ""
+"By default, Archivematica removes empty directories and does not document "
+"that they existed."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:361
+msgid "**Yes** - an entry for the directory is created in the structmap."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:362
+msgid "**No** - the directory is not documented."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:365
+msgid "Reminder: add metadata if desired"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:367
+msgid ""
+"Archivematica allows users to see :ref:`add metadata <add-metadata>` to the "
+"SIP using the GUI. This reminder occurs at the last moment that it is "
+"possible to add metadata; once the ingest proceeds past this point, it is no"
+" longer possible to add metadata to the SIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:374
+msgid "**None** - the user has a chance to add metadata."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:375
+msgid ""
+"**Continue** - skip the reminder and automatically continue processing.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:378
+msgid "Transcribe files (OCR)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:380
+msgid ""
+"Users can elect to run Tesseract, an OCR tool that is included in "
+"Archivematica, to produce text files containing file transcripts. For more "
+"information, see (see :ref:`Transcribe SIP contents <transcribe-contents>`)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:387
+msgid "**Yes** - Tesseract runs on all OCR-able files."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:388
+msgid "**No** - Tesseract does not run.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:391
+msgid ""
+"Select file format identification command (Submission documentation & "
+"metadata)"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:393
+msgid ""
+"Choose a tool to identify the format of any submission documentation and/or "
+"metadata files that were included in your transfer."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:405
+msgid ""
+"**Skip File Identification** - file identification is not run on submission "
+"documentation or metadata files."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:409
+msgid "Select compression algorithm"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:411
+msgid ""
+"AIPs created by Archivematica can be stored as compressed packages or "
+"uncompressed, depending on your storage requirements."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:417
+msgid "**7z using bzip2** - a 7Zip file is created using the tool `bzip2`_.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:418
+msgid "**7z using LZMA** - a 7Zip file is created using the tool `LZMA`_."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:419
+msgid "**Uncompressed** - the AIP is not compressed."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:420
+msgid ""
+"**Parallel bzip2** - a 7Zip file is created using the tool `Parallel bzip2 "
+"(pbzip2)`_."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:423
+msgid "Select compression level"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:425
+msgid ""
+"If you selected a compression choice in the step above, you can determine "
+"how compressed you would like your AIP to be. Selecting a higher compression"
+" level means that the resulting AIP is smaller, but compression also takes "
+"longer. Lower compression levels mean quicker compression, but a larger AIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:433
+msgid ""
+"**5 - normal compression mode** - the compression tool will strike a balance"
+" between speed and compression to make a moderately-sized, moderately- "
+"compressed AIP.*"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:436
+msgid ""
+"**7 - maximum compression** - a smaller AIP that takes longer to compress."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:437
+msgid "**9 - ultra compression** - the smallest possible AIP."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:438
+msgid ""
+"**3 - fast compression mode** - a larger AIP that will be compressed "
+"quickly."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:439
+msgid ""
+"**1 - fastest mode** - the AIP will be compressed as quickly as possible."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:442
+msgid "Store AIP"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:444
+msgid ""
+"Once processing is complete, AIPs can be stored without interrupting the "
+"workflow in the dashboard."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:450
+msgid "**Yes** - the AIP is marked for storage automatically."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:453
+msgid "Store AIP location"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:455
+msgid ""
+"If the previous step and this step are configured, all AIPs will be sent to "
+"the selected storage location (unless you have included a custom processing "
+"configuration with the transfer that defines another location)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:462
+msgid ""
+"**Default location** - the AIP is stored in the AIP storage location that "
+"has been defined as the default in the Storage Service."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:464
+msgid ""
+"**[Other storage locations]** - any other AIP storage locations that are "
+"available will also appear on this list."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:468
+msgid "Upload DIP"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:470
+msgid ""
+"If a DIP was created, it can be automatically sent to an access system for "
+"which there is an Archivematica integration."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:476
+msgid ""
+"**Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload "
+"documentation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:478
+msgid ""
+"**Upload DIP to Archivists Toolkit** - see :ref:`Archivists Toolkit "
+"<archivists-toolkit>` DIP upload documentation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:480
+msgid ""
+"**Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload "
+"documentation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:482
+msgid "**Do not upload** - the DIP will not be uploaded to an access system."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:483
+msgid ""
+"**Upload DIP to ArchivesSpace** - see :ref:`ArchivesSpace <upload-as>` DIP "
+"upload documentation."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:487
+msgid "Store DIP"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:489
+msgid ""
+"If a DIP was created, it can be stored without interrupting the workflow in "
+"the dashboard. Note that DIP storage is not required, and that DIPs can be "
+"created on demand by :ref:`reingesting the AIP <reingest>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:496
+msgid "**Yes** - the DIP is marked for storage automatically."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:499
+msgid "Store DIP location"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:501
+msgid ""
+"If the previous step and this step are configured, all DIPs will be sent to "
+"the selected storage location (unless you have included a custom processing "
+"configuration with the transfer that defines another location)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:508
+msgid ""
+"**Default location** - the DIP is stored in the DIP storage location that "
+"has been defined as the default in the Storage Service."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:510
+msgid ""
+"**[Other storage locations]** - any other DIP storage locations that are "
+"available will also appear on this list."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:516
+msgid "General"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:518
+msgid ""
+"In this section, you can configure the following for your Archivematica "
+"client:"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:520
+#: ../../user-manual/administer/dashboard-admin.rst:533
+msgid "Storage Service options"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:521
+#: ../../user-manual/administer/dashboard-admin.rst:540
+msgid "Checksum algorithm"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:522
+#: ../../user-manual/administer/dashboard-admin.rst:547
+msgid "Elasticsearch indexing"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:530
+msgid "General configuration options in Administration tab of the dashboard"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:535
+msgid ""
+"This is where you'll find the complete URL for the Storage Service, along "
+"with a username and API key. See the Storage Service documentation for more "
+"information about this feature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:542
+msgid ""
+"You can select which checksum algorithm Archivematica will use during the "
+"*Assign UUIDs and checksums* micro-service in Transfer. Choose between MD5, "
+"SHA-1, SHA-256 and SHA-512."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:549
+msgid ""
+"As of Archivematica 1.7, Elasticsearch is optional. Installing Archivematica"
+" without Elasticsearch means reduced consumption of compute resources and "
+"lower operational complexity. Disabling Elasticsearch means that the "
+"Backlog, Appraisal, and Archival Storage tabs do not appear and their "
+"functionality is not available."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:555
+msgid ""
+"This section in the General configuration shows if Elasticsearch is enabled "
+"or disabled."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:561
+msgid "Failures"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:563
+msgid "This page displays packages that failed during processing."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:571
+msgid "Failures report in the dashboard"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:574
+msgid "Clicking the date, name or UUID will display a report of the failure:"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:581
+msgid ""
+"The failure report can be removed from the Dashboard by clicking Delete."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:586
+msgid "Transfer source location"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:588
+msgid ""
+"Archivematica allows you to start transfers using the operating system's "
+"file browser or via a web interface. Source files for transfers, however, "
+"cannot be uploaded using the web interface; they must exist on volumes "
+"accessible to the Archivematica MCP server and configured via the Storage "
+"Service."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:593
+msgid ""
+"When starting a transfer you are required to select one or more directories "
+"of files to add to the transfer."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:599
+msgid "AIP storage locations"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:601
+msgid ""
+"AIP storage directories are directories in which completed AIPs are stored. "
+"Storage directories can be specified in a manner similar to transfer source "
+"directories using the Storage Service."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:605
+msgid ""
+"You can view your transfer source directories in the Administrative tab of "
+"the dashboard under \"AIP storage locations\"."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:611
+msgid "Processing storage usage"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:613
+msgid ""
+"This section of the Administration page displays various processing "
+"locations with their current usage of available space."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:621
+msgid ""
+"Administrators can use the \"clear\" buttons to delete the contents of these"
+" processing locations to make more room on their server."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:627
+msgid "DIP upload"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:629
+msgid ""
+"Archivematica has access integrations with three access platforms: AtoM, "
+"ArchivesSpace, and Archivists' Toolkit. For more information on "
+"Archivematica integrations, please see the :ref:`Integrations "
+"<integrations>` page."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:636
+msgid "AtoM/Binder DIP upload"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:638
+msgid ""
+"Archivematica can upload DIPs directly to an `AtoM`_ website so that the "
+"contents can be accessed online. Using the same configuration screen, you "
+"can also configure Archivematica to upload DIPs to `Binder`_, which is built"
+" off the AtoM framework."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:643
+msgid ""
+"For more information on configuring the AtoM/Binder DIP upload parameters "
+"and the servers, please see the :ref:`AtoM/Binder DIP upload <admin-"
+"dashboard-atom>` configuration instructions."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:647
+msgid "**Levels of description**"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:649
+msgid ""
+"You can fetch levels of description from AtoM so that they can be used in "
+":ref:`SIP arrange <arrange-sip>`. Click on Levels of Description, then Fetch"
+" from AtoM to get an updated list from the AtoM levels of description "
+"taxonomy."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:659
+msgid ""
+"If there are levels of description in the AtoM taxonomy that you prefer not "
+"to use in Archivematica SIP arrange, you can remove them using the red "
+"delete button. You can change the order that they appear in SIP arrange by "
+"using the up/down arrows in this screen."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:666
+msgid ""
+"You may need an administrator to configure AtoM for DIP uploads from "
+"Archivematica. For administrator instructions, see :ref:`AtoM DIP upload "
+"<admin-dashboard-atom>` in the Administrator manual"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:673
+msgid "ArchivesSpace DIP upload"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:675
+msgid ""
+"Before ingesting digital objects destined for ArchivesSpace, ensure that the"
+" ArchivesSpace DIP upload settings in the administration tab of the "
+"dashboard have been set."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:679
+msgid ""
+"For more information on configuring the ArchivesSpace DIP upload parameters,"
+" please see the Admin Manual :ref:`ArchivesSpace DIP upload <admin-"
+"dashboard-AS>` configuration instructions."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:686
+msgid "Archivists Toolkit DIP upload"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:688
+msgid ""
+"Before ingesting digital objects destined for Archivists' Toolkit, ensure "
+"that the Achivists' Toolkit DIP upload settings in the administration tab of"
+" the dashboard have been set."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:692
+msgid ""
+"Should you wish to enable the PREMIS-based restrictions functionality, "
+"choose *base on PREMIS* under **Restrictions Apply**. To add PREMIS rights, "
+"please see :ref:`Add PREMIS rights and restrictions <at-premis>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:696
+msgid ""
+"For more information on configuring the Archivists' Toolkit DIP upload "
+"parameters, please see the Admin Manual :ref:`Archivists' Toolkit DIP upload"
+" <admin-dashboard-AT>` configuration instructions."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:702
+msgid ":ref:`Archivists Toolkit <archivists-toolkit>`"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:706
+msgid "We no longer actively test DIP uploads to Archivists' Toolkit."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:711
+msgid "PREMIS agent"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:713
+msgid ""
+"The PREMIS agent name and code can be set via the administration interface."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:720
+msgid ""
+"The PREMIS agent information is used in the METS files created by "
+"Archivematica to identify the agency performing the digital preservation "
+"events."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:726
+msgid "REST API"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:728
+msgid ""
+"Archivematica includes a REST API for automating transfer approval. "
+"Artefactual recommends that a technical administrator configure the options "
+"for this feature."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:732
+msgid ""
+"To configure Archivematica to use the REST API for automation, see "
+":ref:`Administrator manual - REST API <admin-dashboard-rest>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:738
+msgid "Users"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:740
+msgid ""
+"The dashboard provides a simple cookie-based user authentication system "
+"using the `Django authentication framework`_. Access to the dashboard is "
+"limited only to logged-in users and a login page will be shown when the user"
+" is not recognized. If the application can't find any user in the database, "
+"the user creation page will be shown instead, allowing the creation of an "
+"administrator account."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:747
+msgid ""
+"Users can be also created, modified and deleted from the Administration tab."
+" Only users who are administrators can create and edit user accounts."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:750
+msgid ""
+"You can add a new user to the system by clicking the \"Add new\" button on "
+"the user administration page. By adding a user you provide a way to access "
+"Archivematica using a username/password combination. Should you need to "
+"change a user's username or password, you can do so by clicking the \"Edit\""
+" button, corresponding to the user, on the administration page. Should you "
+"need to revoke a user's access, you can click the corresponding \"Delete\" "
+"button."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:757
+msgid ""
+"For more information about user creation, deletion, and security, please see"
+" the :ref:`Users <admin-dashboard-users>` section in the Admin Manual."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:763
+msgid "Handle Server config"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:764
+msgid ""
+"Archivematica can to be configured to make requests to a Handle System HTTP "
+"API so that files, directories and entire AIPs can be assigned persistent "
+"identifiers (PIDS) and derived persistent URLs (PURLs)."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:771
+msgid "Language"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:772
+msgid ""
+"The Archivematica dashboard is in the process of being translated. For more "
+"information, see :ref:`Translations <translations>`."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:778
+msgid "Version"
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:779
+msgid "This tab displays the version of Archivematica you're using."
+msgstr ""
+
+#: ../../user-manual/administer/dashboard-admin.rst:781
+msgid ":ref:`Back to the top <dashboard-admin>`"
+msgstr ""

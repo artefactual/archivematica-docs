@@ -1,100 +1,108 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Canadian Council of Archives <cca@archivescanada.ca>, 2017
+# Isabelle Alain <ialain@archivescanada.ca>, 2017
+# Louise Charlebois <lcharlebois@archivescanada.ca>, 2017
+# Robert Nahuet <robert.nahuet@canada.ca>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-05 20:19+0000\n"
+"Last-Translator: artefactual <translate@artefactual.com>\n"
+"Language-Team: French (http://www.transifex.com/artefactual/archivematica-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../getting-started/other-resources/trac.rst:5
 msgid "TRAC review tool"
-msgstr ""
+msgstr "Outil de révision TRAC"
 
-#: ../../getting-started/other-resources/trac.rst:8
-msgid "Drupal TRAC review tool"
-msgstr ""
-
-#: ../../getting-started/other-resources/trac.rst:10
+#: ../../getting-started/other-resources/trac.rst:7
 msgid ""
-"Developed by MIT in a project led by Nancy McGovern, Head of `Curation "
-"and Preservation Services <http://libraries.mit.edu/preservation/>`_ at "
-"MIT Libraries. Artefactual has permission to host this tool for community"
-" use. The copy provided here contains data about the TRAC requirements "
-"that Archivematica fulfills for the repository."
+"The Trustworthy Repositories Audit & Certification (TRAC) review tool is a "
+"Drupal implementation of the TRAC checklist, an auditing tool to assess the "
+"reliability, commitment and readiness of institutions to assume long-term "
+"preservation responsibilities."
 msgstr ""
 
-#: ../../getting-started/other-resources/trac.rst:17
+#: ../../getting-started/other-resources/trac.rst:12
+msgid ""
+"The review tool was developed by MIT in a project led by Nancy McGovern, "
+"Head of `Curation and Preservation Services`_ at MIT Libraries. Artefactual "
+"has permission to host this tool for community use. The copy provided here "
+"contains data about the TRAC requirements that Archivematica fulfills for "
+"the repository."
+msgstr ""
+
+#: ../../getting-started/other-resources/trac.rst:18
 msgid "Installation"
-msgstr ""
+msgstr "Installation"
 
-#: ../../getting-started/other-resources/trac.rst:19
+#: ../../getting-started/other-resources/trac.rst:20
 msgid "Download link: https://www.archivematica.org/download/trac.tar.gz"
-msgstr ""
+msgstr "Lien de téléchargement : https://www.archivematica.org/download/trac.tar.gz"
 
-#: ../../getting-started/other-resources/trac.rst:21
+#: ../../getting-started/other-resources/trac.rst:22
 msgid "Instructions for installation:"
-msgstr ""
+msgstr "Instructions d'installation : "
 
-#: ../../getting-started/other-resources/trac.rst:23
+#: ../../getting-started/other-resources/trac.rst:24
 msgid ""
-"Be sure to consult the README.txt and README_TRAC.txt files in the "
-"tarball prior to installation."
-msgstr ""
+"Be sure to consult the README.txt and README_TRAC.txt files in the tarball "
+"prior to installation."
+msgstr "Assurez vous de consulter les fichiers README.txt et README_TRAC.txt avant de procéder à l'installation."
 
-#: ../../getting-started/other-resources/trac.rst:27
+#: ../../getting-started/other-resources/trac.rst:28
 msgid "Summary"
-msgstr ""
+msgstr "Résumé"
 
-#: ../../getting-started/other-resources/trac.rst:29
+#: ../../getting-started/other-resources/trac.rst:30
 msgid ""
-"The following text is slightly edited from the home page of the Drupal "
-"TRAC Review site."
-msgstr ""
+"The following text is slightly edited from the home page of the Drupal TRAC "
+"Review site."
+msgstr "Le texte qui suit est une version quelque peu remaniée de la page d'accueil du site de révision TRAC Drupal."
 
-#: ../../getting-started/other-resources/trac.rst:32
+#: ../../getting-started/other-resources/trac.rst:33
 msgid ""
-"The home page of the site provides an overview of an organization's "
-"efforts to document its evidence for meeting the requirements of the "
-"CCSDS Audit and Certification of Trustworthy Digital Repositories "
-"`checklist <http://public.ccsds.org/publications/archive/652x0m1.pdf>`_ "
-"that was approved as ISO 16363 and is based on Trustworthy Repositories "
-"Audit and Certification (TRAC): Criteria and Checklist that was released "
-"in January 2007. A TRAC review is a self-assessment method for an "
-"organization to demonstrate good practice and conformance as a trusted "
-"digital repository to its designated communities and prepare for a peer "
-"review or other external audit. In many organizations, responsibilities "
-"for TRAC compliance are distributed throughout the organization, with "
-"specific units and committees having certain responsibilities for each "
-"requirement."
+"The home page of the site provides an overview of an organization's efforts "
+"to document its evidence for meeting the requirements of the CCSDS Audit and"
+" Certification of Trustworthy Digital Repositories `checklist`_ that was "
+"approved as ISO 16363 and is based on Trustworthy Repositories Audit and "
+"Certification (TRAC): Criteria and Checklist that was released in January "
+"2007. A TRAC review is a self-assessment method for an organization to "
+"demonstrate good practice and conformance as a trusted digital repository to"
+" its designated communities and prepare for a peer review or other external "
+"audit. In many organizations, responsibilities for TRAC compliance are "
+"distributed throughout the organization, with specific units and committees "
+"having certain responsibilities for each requirement."
 msgstr ""
 
 #: ../../getting-started/other-resources/trac.rst:46
 msgid "Responsibilities"
-msgstr ""
+msgstr "Responsabilités"
 
 #: ../../getting-started/other-resources/trac.rst:48
 msgid ""
 "Each entity is assigned a role for each requirement using the RACI "
-"responsibility assignment `matrix "
-"<http://en.wikipedia.org/wiki/Responsibility_assignment_matrix>`_. The "
-"RACI Matrix describes participation by various organizational roles in "
+"responsibility assignment `matrix`_."
+msgstr ""
+
+#: ../../getting-started/other-resources/trac.rst:51
+msgid ""
+"The RACI Matrix describes participation by various organizational roles in "
 "completing tasks for a project. RACI is especially useful in clarifying "
-"roles in projects and processes requiring distributed responsibilities. "
-"See the Responsibilities for TRAC page of the Drupal site for more "
-"information on RACI responsibilities, and a listing of units and "
-"committees that have roles in TRAC conformance."
+"roles in projects and processes requiring distributed responsibilities. See "
+"the Responsibilities for TRAC page of the Drupal site for more information "
+"on RACI responsibilities, and a listing of units and committees that have "
+"roles in TRAC conformance."
 msgstr ""
 
 #: ../../getting-started/other-resources/trac.rst:58
@@ -102,136 +110,129 @@ msgid ""
 "In each requirement where Archivematica provides all or part of the "
 "evidence, the Operations Group is identified as one of the Responsible "
 "parties. Other organizational roles indicated are simply suggestions."
-msgstr ""
+msgstr "Pour chaque exigence, Archivematica fournit toutes ou une partie des preuves, le groupe des opérations est identifié comme une des parties responsables. Les autres rôles organisationnels indiqués ne sont que des suggestions."
 
 #: ../../getting-started/other-resources/trac.rst:63
 msgid "Requirements"
-msgstr ""
+msgstr "Exigences"
 
 #: ../../getting-started/other-resources/trac.rst:65
-#, python-format
 msgid ""
 "In the site, each TRAC requirement has its own page. Sub- and Sub-sub "
-"requirements are referred to on the relevant high-level requirement page."
-" Current compliance with TRAC requirements is assessed on a rating system"
-" from 0 to 4 (see example: `SGDS report "
-"<http://206.191.128.204/trac/sites/default/files/SGDS%202009-9421%20%28D.%20BOUCON%29.pdf>`_,"
-" page 14):"
+"requirements are referred to on the relevant high-level requirement page. "
+"Current compliance with TRAC requirements is assessed on a rating system "
+"from 0 to 4 (see example: `SGDS report`_, page 14):"
 msgstr ""
 
-#: ../../getting-started/other-resources/trac.rst:72
+#: ../../getting-started/other-resources/trac.rst:70
 msgid ""
 "4 = fully compliant - the repository can demonstrate that has "
 "comprehensively addressed the requirement"
-msgstr ""
+msgstr "4 = complètement conforme -  le dépôt est en mesure de démontrer qu'il répond de façon exhaustive à l'exigence"
 
-#: ../../getting-started/other-resources/trac.rst:75
+#: ../../getting-started/other-resources/trac.rst:73
 msgid ""
 "3 = mostly compliant - the repository can demonstrate that it has mostly "
 "addressed the requirement and is on working on full compliance"
-msgstr ""
+msgstr "3 = généralement conforme - le dépôt est en mesure de démontrer qu'il répond à l'exigence en grande partie et continue le processus afin de devenir complètement conforme"
 
-#: ../../getting-started/other-resources/trac.rst:78
+#: ../../getting-started/other-resources/trac.rst:76
 msgid ""
-"2 = half compliant - the repository has partially addressed the "
-"requirement and has significant work remaining to fully address the "
-"requirement"
-msgstr ""
+"2 = half compliant - the repository has partially addressed the requirement "
+"and has significant work remaining to fully address the requirement"
+msgstr "2 = à demi conforme - le dépôt répond partiellement à l'exigence et doit faire un travail considérable avant de répondre pleinement à l'exigence"
 
-#: ../../getting-started/other-resources/trac.rst:81
+#: ../../getting-started/other-resources/trac.rst:79
 msgid ""
-"1 = slightly compliant - the repository has something in place, but has a"
-" lot of work to do in addressing the requirement"
-msgstr ""
+"1 = slightly compliant - the repository has something in place, but has a "
+"lot of work to do in addressing the requirement"
+msgstr "1 = partiellement conforme - le dépôt a quelque chose en place, mais beaucoup de travail reste à faire afin de répondre à l'exigence"
 
-#: ../../getting-started/other-resources/trac.rst:84
+#: ../../getting-started/other-resources/trac.rst:82
 msgid ""
-"0 = non-compliant or not started - the repository has not yet addressed "
-"the requirement or has not started the review of the requirement"
-msgstr ""
+"0 = non-compliant or not started - the repository has not yet addressed the "
+"requirement or has not started the review of the requirement"
+msgstr "0 = non-conforme ou le travail n'a pas commencé -- le dépôt n'a pas encore pris en compte l'exigence ou n'a pas débuté la revue de l'exigence"
 
-#: ../../getting-started/other-resources/trac.rst:87
+#: ../../getting-started/other-resources/trac.rst:85
 msgid ""
 "Any group in the organization that is involved in defining policy and "
 "practice should update the status of relevant requirements. When listing "
-"evidence, please include sufficient information for reviewers to get to "
-"the cited evidence (e.g., a document title, date, a link) and note the "
-"name of the group or department that is adding an entry to the evidence "
-"addressing the requirement along with the date of the annotations (e.g., "
-"[Right Management group, 2/13/2013]). (Note that for requirements where "
+"evidence, please include sufficient information for reviewers to get to the "
+"cited evidence (e.g., a document title, date, a link) and note the name of "
+"the group or department that is adding an entry to the evidence addressing "
+"the requirement along with the date of the annotations (e.g., [Right "
+"Management group, 2/13/2013]). (Note that for requirements where "
 "Archivematica provides all or part of the evidence, no date or group is "
-"specified as this evidence must be reviewed and assigned a responsible "
-"group per repository) For additional guidance, please see the "
-"Responsibilities for TRAC page of the site."
-msgstr ""
+"specified as this evidence must be reviewed and assigned a responsible group"
+" per repository) For additional guidance, please see the Responsibilities "
+"for TRAC page of the site."
+msgstr "Tout groupe de l'organisation, impliqué dans la définition des politiques et pratiques, doit mettre à jour le statut des exigences pertinentes. Lorsque l'on établit la liste des éléments probants, il faut inclure suffisamment de renseignements pour les réviseurs afin qu'ils puissent accéder à l'élément identifié (p. ex., titre du document, date, lien) et il faut inscrire le nom du groupe ou du service qui ajoute une entrée à l'élément probant concernant l'exigence avec la date des annotations (p. ex., [Groupe de gestion des droits, 13/02/2013]). (Notez que pour certaines exigences, notamment lorsque Archivematica fournit en tout ou en partie l'élément probant, aucune date ou groupe n'est spécifié puisque cet élément doit être revu et attribué à un groupe responsable pour chaque dépôt.) Pour un suivi additionnel, voir la page des Responsabilités du TRAC sur le site."
+
+#: ../../getting-started/other-resources/trac.rst:98
+msgid "Status"
+msgstr "Statut"
 
 #: ../../getting-started/other-resources/trac.rst:100
-msgid "Status"
-msgstr ""
+msgid "The site provides a sequence of status levels for each requirement:"
+msgstr "Le site fournit une séquence des différents niveaux de statuts pour chaque exigence:"
 
 #: ../../getting-started/other-resources/trac.rst:102
-msgid "The site provides a sequence of status levels for each requirement:"
-msgstr ""
-
-#: ../../getting-started/other-resources/trac.rst:104
 msgid ""
-"Accepted – the evidence provided has been accepted as sufficient for this"
-" review round"
-msgstr ""
+"Accepted – the evidence provided has been accepted as sufficient for this "
+"review round"
+msgstr "Accepté - l'élément probant présenté a été accepté comme suffisant pour cette partie de la revue"
 
-#: ../../getting-started/other-resources/trac.rst:107
+#: ../../getting-started/other-resources/trac.rst:105
 msgid ""
 "Ready for review – the Responsible group has completed its work and the "
 "evidence is ready for review"
-msgstr ""
+msgstr "Prêt pour une révision - le groupe responsable a complété son travail et l'élément probant est prêt pour une revue"
 
-#: ../../getting-started/other-resources/trac.rst:110
+#: ../../getting-started/other-resources/trac.rst:108
 msgid ""
 "In progress – the Responsible group is in the process of compiling or "
 "generating relevant evidence"
-msgstr ""
+msgstr "En cours - le groupe responsable est en train de compiler ou d'établir l'élément probant pertinent"
+
+#: ../../getting-started/other-resources/trac.rst:111
+msgid "Not started – no evidence or information has been provided yet"
+msgstr "Pas commencé - aucun élément probant ou renseignement n'a été présenté jusqu'ici"
 
 #: ../../getting-started/other-resources/trac.rst:113
-msgid "Not started – no evidence or information has been provided yet"
-msgstr ""
-
-#: ../../getting-started/other-resources/trac.rst:115
 msgid ""
-"For requirements where Archivematica provides all or part of the "
-"evidence, the status is indicated as In Progress as it should still be "
-"reviewed, edited, and/or completed by the repository."
-msgstr ""
+"For requirements where Archivematica provides all or part of the evidence, "
+"the status is indicated as In Progress as it should still be reviewed, "
+"edited, and/or completed by the repository."
+msgstr "En ce qui concerne des exigences pour lesquelles Archivematica fournit en tout ou en partie les éléments probants, le statut est indiqué comme étant En cours puisqu’il devra quand même faire l’objet de révision, d’édition ou devra être complété par les responsables du dépôt."
+
+#: ../../getting-started/other-resources/trac.rst:118
+msgid "Support"
+msgstr "Soutien"
 
 #: ../../getting-started/other-resources/trac.rst:120
-msgid "Support"
-msgstr ""
-
-#: ../../getting-started/other-resources/trac.rst:122
 msgid ""
-"Artefactual will not be providing free support for this tool. However, we"
-" encourage users to discuss it using our `public discussion list "
-"<https://groups.google.com/group/archivematica>`_."
+"Artefactual will not be providing free support for this tool. However, we "
+"encourage users to discuss it using our `public discussion list`_."
 msgstr ""
 
-#: ../../getting-started/other-resources/trac.rst:126
+#: ../../getting-started/other-resources/trac.rst:123
 msgid ""
-"If you have questions about an internal review that are unrelated to this"
-" tool, contact the `NDSA Standards and Practices Working Group "
-"<http://www.digitalpreservation.gov/ndsa/working_groups/standards.html>`_."
+"If you have questions about an internal review that are unrelated to this "
+"tool, contact the `NDSA Standards and Practices Working Group`_."
 msgstr ""
 
-#: ../../getting-started/other-resources/trac.rst:131
+#: ../../getting-started/other-resources/trac.rst:127
 msgid "Thanks"
-msgstr ""
+msgstr "Merci"
 
-#: ../../getting-started/other-resources/trac.rst:133
+#: ../../getting-started/other-resources/trac.rst:129
 msgid ""
 "Artefactual is grateful to Nancy McGovern and Matt Bernhardt of MIT for "
-"their work towards the development of this tool and for allowing us to "
-"host it for community consumption here on the Archivematica website."
-msgstr ""
+"their work towards the development of this tool and for allowing us to host "
+"it for community consumption here on the Archivematica website."
+msgstr "Artefactual tient à remercier Nancy McGovern et Matt Bernhardt du MIT pour leur travail tout au long du développement de cet outil ainsi que nous avoir permis de l'héberger sur le site Web d'Archivematica, afin de le rendre accessible à la communauté."
 
-#: ../../getting-started/other-resources/trac.rst:137
+#: ../../getting-started/other-resources/trac.rst:133
 msgid ":ref:`Back to the top <trac>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <trac>`"

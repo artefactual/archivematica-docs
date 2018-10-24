@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../admin-manual/maintenance/maintenance.rst:5
 msgid "Maintenance"
@@ -24,8 +24,8 @@ msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:7
 msgid ""
-"This page contains information releavant to maintaining your "
-"Archivematica installation."
+"This page contains information relevant to maintaining your Archivematica"
+" installation."
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:10
@@ -37,7 +37,7 @@ msgid ":ref:`Elasticsearch <elasticsearch>`"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:14
-msgid ":ref:`Programatic access to indexed AIP data <elasticsearch-access>`"
+msgid ":ref:`Programmatic access to indexed AIP data <elasticsearch-access>`"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:16
@@ -57,8 +57,7 @@ msgid ":ref:`FAQ <admin-faq>`"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:27
-#: ../../admin-manual/maintenance/maintenance.rst:272
-msgid "Elasticsearch"
+msgid "Maintaining Elasticsearch"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:29
@@ -70,18 +69,17 @@ msgid ""
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:36
-msgid "Programatic access to indexed AIP data"
+msgid "Programmatic access to indexed AIP data"
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:38
 msgid ""
 "To access indexed AIP data using a custom script or application, find an "
 "Elasticsearch interface library for the programming language you've "
-"chosen to use. In Archivematica we use Python with the `pyes "
-"<https://github.com/aparo/pyes/>`_ library. In our developer "
-"documentation, we'll outline the use of pyes to access AIP data, but any "
-"programming language/interface library, such as PHP and `Elastica "
-"<https://github.com/ruflin/Elastica/>`_, should work."
+"chosen to use. In Archivematica we use Python with the `pyes`_ library. "
+"In our developer documentation, we'll outline the use of pyes to access "
+"AIP data, but any programming language/interface library, such as PHP and"
+" `Elastica`_, should work."
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:45
@@ -145,11 +143,11 @@ msgid ""
 "data, and the path of the file within the AIP."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:133
+#: ../../admin-manual/maintenance/maintenance.rst:134
 msgid "**Fetching specific documents**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:135
+#: ../../admin-manual/maintenance/maintenance.rst:136
 msgid ""
 "If you want to get Elasticsearch data for a specific AIP file, you can "
 "use the Elasticsearch document ID. The above code populates the "
@@ -158,11 +156,11 @@ msgid ""
 "document."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:149
+#: ../../admin-manual/maintenance/maintenance.rst:150
 msgid "**Augmenting documents**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:151
+#: ../../admin-manual/maintenance/maintenance.rst:152
 msgid ""
 "To add additional data to an Elasticsearch document, you'll need the "
 "document ID. The following code shows an Elasticsearch query being used "
@@ -173,17 +171,16 @@ msgid ""
 "underscore."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:184
-msgid "Delete Elasticsearch index through GUI"
+#: ../../admin-manual/maintenance/maintenance.rst:185
+msgid "Delete the Elasticsearch index through the GUI"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:186
+#: ../../admin-manual/maintenance/maintenance.rst:187
 msgid ""
 "To help with Elasticsearch development, Archivematica comes with a plugin"
-" for Elasticsearch, called `Elasticsearch Head <http://mobz.github.com"
-"/elasticsearch-head/>`_, that provides a web application forcbrowsing and"
-" administering Elasticsearch data. \\ It can be accessed at "
-"http://your.host.name:9200/_plugin/head/."
+" for Elasticsearch, called `Elasticsearch Head`_, that provides a web "
+"application for browsing and administering Elasticsearch data. It can be "
+"accessed at http://your.host.name:9200/_plugin/head/."
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:192
@@ -235,136 +232,246 @@ msgid ""
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:258
-msgid ""
-"`Elasticsearch troubleshooting "
-"<https://www.accesstomemory.org/en/docs/2.1/admin-"
-"manual/maintenance/elasticsearch/#maintenance-elasticsearch>`_ help from "
-"AtoM documentation."
+msgid "`Elasticsearch troubleshooting`_ help from AtoM documentation."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:264
+#: ../../admin-manual/maintenance/maintenance.rst:263
 msgid "Data back-up"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:266
+#: ../../admin-manual/maintenance/maintenance.rst:265
 msgid ""
 "In Archivematica there are three types of data you'll likely want to back"
 " up:"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:268
+#: ../../admin-manual/maintenance/maintenance.rst:267
 msgid "Filesystem (particularly your storage directories)"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:270
+#: ../../admin-manual/maintenance/maintenance.rst:269
 msgid "MySQL"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:274
+#: ../../admin-manual/maintenance/maintenance.rst:271
+msgid "Elasticsearch"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:273
 msgid ""
 "MySQL is used to store short-term processing data. You can back up the "
 "MySQL database by using the following command:"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:281
+#: ../../admin-manual/maintenance/maintenance.rst:280
 msgid ""
 "Elasticsearch is used to store long-term data. Instructions and scripts "
-"for backing up and restoring Elasticsearch are available `here "
-"<http://tech.superhappykittymeow.com/?p=296>`_."
+"for backing up and restoring Elasticsearch are available in the "
+"`Elasticsearch documentation`_."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:288
+#: ../../admin-manual/maintenance/maintenance.rst:287
 msgid "FAQ"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:293
+#: ../../admin-manual/maintenance/maintenance.rst:292
 msgid "How to restart the Archivematica services"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:295
+#: ../../admin-manual/maintenance/maintenance.rst:294
 msgid "**Restart all services**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:301
+#: ../../admin-manual/maintenance/maintenance.rst:300
 msgid ""
 "Note that the default action is to restart all services. To see other "
 "available parameters, type:"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:308
+#: ../../admin-manual/maintenance/maintenance.rst:307
 msgid "**Stopping**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:319
+#: ../../admin-manual/maintenance/maintenance.rst:318
 msgid "**Starting**"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:333
+#: ../../admin-manual/maintenance/maintenance.rst:332
 msgid "Error stack trace"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:335
+#: ../../admin-manual/maintenance/maintenance.rst:334
 msgid ""
 "\"I am getting a white error page in the Dashboard. How can I find out "
 "what the error is?\""
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:338
+#: ../../admin-manual/maintenance/maintenance.rst:337
 msgid ""
 "Seeing an full error stack trace for the Dashboard requires knowing how "
 "to edit a configuration file from the command line."
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:341
+#: ../../admin-manual/maintenance/maintenance.rst:340
 msgid "SSH to the Archivematica server"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:343
+#: ../../admin-manual/maintenance/maintenance.rst:342
 msgid ""
 "With your preferred text editor, open the dashboard settings file (vim "
 "shown in example; Note that you must use sudo to edit this file):"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:350
+#: ../../admin-manual/maintenance/maintenance.rst:349
 msgid "Change the \"DEBUG\" flag from \"False\" to \"True\""
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:356
+#: ../../admin-manual/maintenance/maintenance.rst:355
 msgid "Save the fileservices"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:358
+#: ../../admin-manual/maintenance/maintenance.rst:357
 msgid "Restart Apache"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:364
+#: ../../admin-manual/maintenance/maintenance.rst:363
 msgid "Reload the dashboard page reporting the error in your browse"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:366
+#: ../../admin-manual/maintenance/maintenance.rst:365
 msgid "Debug or report error"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:368
+#: ../../admin-manual/maintenance/maintenance.rst:367
 msgid ""
 "Restore DEBUG to False and restart Apache to turn error reporting off "
 "again"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:373
-msgid "Browser compatability"
+#: ../../admin-manual/maintenance/maintenance.rst:370
+msgid "Resolve hanging decisions"
 msgstr ""
 
-#: ../../admin-manual/maintenance/maintenance.rst:375
+#: ../../admin-manual/maintenance/maintenance.rst:372
 msgid ""
-"Archivematica has been tested most extensively with Firefox and Chrome. "
-"There are known issues with Internet Explorer 11 which result in an "
-"inability to start transfers in the dashboard (`Issue 7246 "
-"<https://projects.artefactual.com/issues/7246>`_). Minimal, but "
-"successful, testing has been done with Microsoft Edge."
+"\"My Transfer or Ingest tab has a red circle indicating that a decision "
+"is awaiting user input, but there are no decisions to be made on the "
+"screen. How do I get rid of the red circle?\""
 msgstr ""
 
 #: ../../admin-manual/maintenance/maintenance.rst:381
+msgid ""
+"Any time a decision in the Transfer or Ingest tab is awaiting user input,"
+" Archivematica visually indicates the need for user input by placing a "
+"red circle on the tab. The numeral inside the circle indicates how many "
+"decisions are awaiting user input on the tab."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:386
+msgid ""
+"It is possible to `remove transfers or SIPs`_ from the Transfer or Ingest"
+" tab without resolving a decision, which results in the red circle "
+"remaining even if there is no decision awaiting user input on the tab. "
+"While this isn't a critical issue, it is annoying. To get rid of the red "
+"circle, you need to use a command line tool to resolve the user input "
+"first and then either complete or reject the transfer/SIP. In the "
+"Archivematica source code, there is a python module containing an RPC "
+"client that can give you information about the transfers and SIPs that "
+"you have in your dashboard. It also allows you to add user inputs, as an "
+"alternative to using the dashboard."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:398
+msgid ""
+"The tool that is currently being used for this workflow, mcp-rpc-cli, may"
+" be deprecated or replaced in future releases. These instructions are "
+"accurate as of Archivematica 1.7.2."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:404
+msgid ""
+"These instructions work on Archivematica 1.7.x, deployed on either CentOS"
+" or Ubuntu via ansible or RPMs. If you are using this tool on a vagrant "
+"deployment, please note the specific instructions related to vagrant. For"
+" more information about installation methods, please see "
+":ref:`installation`."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:409
+msgid ""
+"Clone the `archivematica-devtools`_ repository into your Archivematica "
+"source repository. On Ubuntu or CentOS, clone the repository to "
+"`/opt/archivematica`. On vagrant, clone the repository to "
+"`/vagrant/src/`."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:413
+msgid ""
+"Navigate to the Archivematica MCP Client directory and start the mcp-rpc-"
+"cli."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:415
+msgid "Ubuntu or CentOS:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:428
+msgid "Vagrant:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:441
+msgid "You should see an output that looks like the snippet here:"
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:493
+msgid ""
+"The above is showing two SIPs that were cleared from the Ingest tab while"
+" waiting for user input at the Store AIP decision point. Each SIP is "
+"given an entry number, beginning with 0. Note that transfers that were "
+"cleared from the Transfer tab while waiting for user input would also "
+"appear in this list."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:498
+msgid ""
+"Below the entry number, we get some basic information about the SIP "
+"within the <unit> element (the type, UUID, and the current location). "
+"Following that, we have the <choices> element, which presents the "
+"currently-available choices for the SIP. The Store AIP decision point "
+"gives the user two choices: Reject AIP or Store AIP."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:504
+msgid ""
+"Select the transfer or SIP that you would like to work with by entering "
+"the entry number."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:511
+msgid ""
+"You should now see a list of the available choices for the transfer or "
+"SIP. Each choice is preceded by an entry number."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:532
+msgid "Make the decision by entering the choice's entry number."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:538
+msgid ""
+"In this example, we have chosen to store the AIP by selecting the Store "
+"AIP choice. We could now confirm that this action worked by checking the "
+"Archivematica instance's Storage tab to confirm that the AIP was stored."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:542
+msgid ""
+"To update the list and continue, enter `u` when prompted to enter a "
+"value. Repeat the steps above until there are no more choices left to "
+"make."
+msgstr ""
+
+#: ../../admin-manual/maintenance/maintenance.rst:545
 msgid ":ref:`Back to the top <maintenance>`"
 msgstr ""
 
@@ -393,5 +500,76 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Save the file"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This page contains information releavant "
+#~ "to maintaining your Archivematica "
+#~ "installation."
+#~ msgstr ""
+
+#~ msgid ":ref:`Programatic access to indexed AIP data <elasticsearch-access>`"
+#~ msgstr ""
+
+#~ msgid "Programatic access to indexed AIP data"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To access indexed AIP data using a"
+#~ " custom script or application, find "
+#~ "an Elasticsearch interface library for "
+#~ "the programming language you've chosen "
+#~ "to use. In Archivematica we use "
+#~ "Python with the `pyes "
+#~ "<https://github.com/aparo/pyes/>`_ library. In our"
+#~ " developer documentation, we'll outline the"
+#~ " use of pyes to access AIP "
+#~ "data, but any programming language/interface"
+#~ " library, such as PHP and `Elastica"
+#~ " <https://github.com/ruflin/Elastica/>`_, should work."
+#~ msgstr ""
+
+#~ msgid "Delete Elasticsearch index through GUI"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To help with Elasticsearch development, "
+#~ "Archivematica comes with a plugin for"
+#~ " Elasticsearch, called `Elasticsearch Head "
+#~ "<http://mobz.github.com/elasticsearch-head/>`_, that "
+#~ "provides a web application forcbrowsing "
+#~ "and administering Elasticsearch data. \\ "
+#~ "It can be accessed at "
+#~ "http://your.host.name:9200/_plugin/head/."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Elasticsearch troubleshooting "
+#~ "<https://www.accesstomemory.org/en/docs/2.1/admin-"
+#~ "manual/maintenance/elasticsearch/#maintenance-elasticsearch>`_"
+#~ " help from AtoM documentation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Elasticsearch is used to store long-"
+#~ "term data. Instructions and scripts for"
+#~ " backing up and restoring Elasticsearch "
+#~ "are available `here "
+#~ "<http://tech.superhappykittymeow.com/?p=296>`_."
+#~ msgstr ""
+
+#~ msgid "Browser compatability"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Archivematica has been tested most "
+#~ "extensively with Firefox and Chrome. "
+#~ "There are known issues with Internet "
+#~ "Explorer 11 which result in an "
+#~ "inability to start transfers in the "
+#~ "dashboard (`Issue 7246 "
+#~ "<https://projects.artefactual.com/issues/7246>`_). Minimal, "
+#~ "but successful, testing has been done"
+#~ " with Microsoft Edge."
 #~ msgstr ""
 

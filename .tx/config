@@ -2,15 +2,15 @@
 host = https://www.transifex.com
 type = PO
 
-[archivematica-docs.contents]
-file_filter = locale/<lang>/LC_MESSAGES/contents.po
-source_file = _build/locale/contents.pot
-source_lang = en
-type = PO
-
 [archivematica-docs.index]
 file_filter = locale/<lang>/LC_MESSAGES/index.po
 source_file = _build/locale/index.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.contents]
+file_filter = locale/<lang>/LC_MESSAGES/contents.po
+source_file = _build/locale/contents.pot
 source_lang = en
 type = PO
 
@@ -20,27 +20,9 @@ source_file = _build/locale/admin-manual/index.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.admin-manual--installation--customization]
-file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation/customization.po
-source_file = _build/locale/admin-manual/installation/customization.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.admin-manual--installation--dashboard-config]
-file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation/dashboard-config.po
-source_file = _build/locale/admin-manual/installation/dashboard-config.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.admin-manual--installation--duracloud-setup]
-file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation/duracloud-setup.po
-source_file = _build/locale/admin-manual/installation/duracloud-setup.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.admin-manual--installation--installation]
-file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation/installation.po
-source_file = _build/locale/admin-manual/installation/installation.pot
+[archivematica-docs.admin-manual--security--security]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/security/security.po
+source_file = _build/locale/admin-manual/security/security.pot
 source_lang = en
 type = PO
 
@@ -50,9 +32,93 @@ source_file = _build/locale/admin-manual/maintenance/maintenance.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.admin-manual--security--security]
-file_filter = locale/<lang>/LC_MESSAGES/admin-manual/security/security.po
-source_file = _build/locale/admin-manual/security/security.pot
+[archivematica-docs.admin-manual--installation-setup--installation--install-ubuntu]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/installation/install-ubuntu.po
+source_file = _build/locale/admin-manual/installation-setup/installation/install-ubuntu.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--installation--install-advanced]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/installation/install-advanced.po
+source_file = _build/locale/admin-manual/installation-setup/installation/install-advanced.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--installation--install-centos]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/installation/install-centos.po
+source_file = _build/locale/admin-manual/installation-setup/installation/install-centos.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--installation--install-ansible]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/installation/install-ansible.po
+source_file = _build/locale/admin-manual/installation-setup/installation/install-ansible.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--installation--installation]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/installation/installation.po
+source_file = _build/locale/admin-manual/installation-setup/installation/installation.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--integrations--integrations]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/integrations/integrations.po
+source_file = _build/locale/admin-manual/installation-setup/integrations/integrations.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--integrations--atom-setup]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/integrations/atom-setup.po
+source_file = _build/locale/admin-manual/installation-setup/integrations/atom-setup.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--integrations--archivesspace-setup]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/integrations/archivesspace-setup.po
+source_file = _build/locale/admin-manual/installation-setup/integrations/archivesspace-setup.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--integrations--duracloud-setup]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/integrations/duracloud-setup.po
+source_file = _build/locale/admin-manual/installation-setup/integrations/duracloud-setup.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--integrations--binder-setup]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/integrations/binder-setup.po
+source_file = _build/locale/admin-manual/installation-setup/integrations/binder-setup.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--upgrading--upgrading]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/upgrading/upgrading.po
+source_file = _build/locale/admin-manual/installation-setup/upgrading/upgrading.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--customization--dashboard-config]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/customization/dashboard-config.po
+source_file = _build/locale/admin-manual/installation-setup/customization/dashboard-config.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--customization--task-config]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/customization/task-config.po
+source_file = _build/locale/admin-manual/installation-setup/customization/task-config.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--customization--antivirus-admin]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/customization/antivirus-admin.po
+source_file = _build/locale/admin-manual/installation-setup/customization/antivirus-admin.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.admin-manual--installation-setup--customization--customization]
+file_filter = locale/<lang>/LC_MESSAGES/admin-manual/installation-setup/customization/customization.po
+source_file = _build/locale/admin-manual/installation-setup/customization/customization.pot
 source_lang = en
 type = PO
 
@@ -62,15 +128,9 @@ source_file = _build/locale/getting-started/index.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.getting-started--other-resources--trac]
-file_filter = locale/<lang>/LC_MESSAGES/getting-started/other-resources/trac.po
-source_file = _build/locale/getting-started/other-resources/trac.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.getting-started--overview--dashboard]
-file_filter = locale/<lang>/LC_MESSAGES/getting-started/overview/dashboard.po
-source_file = _build/locale/getting-started/overview/dashboard.pot
+[archivematica-docs.getting-started--overview--microservices]
+file_filter = locale/<lang>/LC_MESSAGES/getting-started/overview/microservices.po
+source_file = _build/locale/getting-started/overview/microservices.pot
 source_lang = en
 type = PO
 
@@ -80,9 +140,9 @@ source_file = _build/locale/getting-started/overview/intro.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.getting-started--overview--microservices]
-file_filter = locale/<lang>/LC_MESSAGES/getting-started/overview/microservices.po
-source_file = _build/locale/getting-started/overview/microservices.pot
+[archivematica-docs.getting-started--overview--dashboard]
+file_filter = locale/<lang>/LC_MESSAGES/getting-started/overview/dashboard.po
+source_file = _build/locale/getting-started/overview/dashboard.pot
 source_lang = en
 type = PO
 
@@ -98,21 +158,21 @@ source_file = _build/locale/getting-started/overview/technical.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.getting-started--quick-start--configuration]
-file_filter = locale/<lang>/LC_MESSAGES/getting-started/quick-start/configuration.po
-source_file = _build/locale/getting-started/quick-start/configuration.pot
-source_lang = en
-type = PO
-
 [archivematica-docs.getting-started--quick-start--quick-start]
 file_filter = locale/<lang>/LC_MESSAGES/getting-started/quick-start/quick-start.po
 source_file = _build/locale/getting-started/quick-start/quick-start.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.getting-started--troubleshooting--error-handling]
-file_filter = locale/<lang>/LC_MESSAGES/getting-started/troubleshooting/error-handling.po
-source_file = _build/locale/getting-started/troubleshooting/error-handling.pot
+[archivematica-docs.getting-started--quick-start--configuration]
+file_filter = locale/<lang>/LC_MESSAGES/getting-started/quick-start/configuration.po
+source_file = _build/locale/getting-started/quick-start/configuration.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.getting-started--other-resources--trac]
+file_filter = locale/<lang>/LC_MESSAGES/getting-started/other-resources/trac.po
+source_file = _build/locale/getting-started/other-resources/trac.pot
 source_lang = en
 type = PO
 
@@ -128,111 +188,21 @@ source_file = _build/locale/getting-started/troubleshooting/faq.pot
 source_lang = en
 type = PO
 
+[archivematica-docs.getting-started--troubleshooting--error-handling]
+file_filter = locale/<lang>/LC_MESSAGES/getting-started/troubleshooting/error-handling.po
+source_file = _build/locale/getting-started/troubleshooting/error-handling.pot
+source_lang = en
+type = PO
+
 [archivematica-docs.user-manual--index]
 file_filter = locale/<lang>/LC_MESSAGES/user-manual/index.po
 source_file = _build/locale/user-manual/index.pot
 source_lang = en
 type = PO
 
-[archivematica-docs.user-manual--access--access]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/access.po
-source_file = _build/locale/user-manual/access/access.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--access--archivists-toolkit]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/archivists-toolkit.po
-source_file = _build/locale/user-manual/access/archivists-toolkit.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--access--contentdm]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/contentdm.po
-source_file = _build/locale/user-manual/access/contentdm.pot
-source_lang = en
-type = PO
-
 [archivematica-docs.user-manual--administer--dashboard-admin]
 file_filter = locale/<lang>/LC_MESSAGES/user-manual/administer/dashboard-admin.po
 source_file = _build/locale/user-manual/administer/dashboard-admin.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--appraisal--appraisal]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/appraisal/appraisal.po
-source_file = _build/locale/user-manual/appraisal/appraisal.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--archival-storage--aic]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/aic.po
-source_file = _build/locale/user-manual/archival-storage/aic.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--archival-storage--aip-structure]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/aip-structure.po
-source_file = _build/locale/user-manual/archival-storage/aip-structure.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--archival-storage--archival-storage]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/archival-storage.po
-source_file = _build/locale/user-manual/archival-storage/archival-storage.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--backlog--backlog]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/backlog/backlog.po
-source_file = _build/locale/user-manual/backlog/backlog.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--ingest--ingest]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/ingest/ingest.po
-source_file = _build/locale/user-manual/ingest/ingest.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--ingest--manual-normalization]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/ingest/manual-normalization.po
-source_file = _build/locale/user-manual/ingest/manual-normalization.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--metadata--dublincore]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/metadata/dublincore.po
-source_file = _build/locale/user-manual/metadata/dublincore.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--metadata--premis]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/metadata/premis.po
-source_file = _build/locale/user-manual/metadata/premis.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--preservation--preservation-planning]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/preservation/preservation-planning.po
-source_file = _build/locale/user-manual/preservation/preservation-planning.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--transfer--bags]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/bags.po
-source_file = _build/locale/user-manual/transfer/bags.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--transfer--digitized]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/digitized.po
-source_file = _build/locale/user-manual/transfer/digitized.pot
-source_lang = en
-type = PO
-
-[archivematica-docs.user-manual--transfer--dspace]
-file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/dspace.po
-source_file = _build/locale/user-manual/transfer/dspace.pot
 source_lang = en
 type = PO
 
@@ -254,15 +224,123 @@ source_file = _build/locale/user-manual/transfer/manage-backlog.pot
 source_lang = en
 type = PO
 
+[archivematica-docs.user-manual--transfer--dataverse]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/dataverse.po
+source_file = _build/locale/user-manual/transfer/dataverse.pot
+source_lang = en
+type = PO
+
 [archivematica-docs.user-manual--transfer--transfer]
 file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/transfer.po
 source_file = _build/locale/user-manual/transfer/transfer.pot
 source_lang = en
 type = PO
 
+[archivematica-docs.user-manual--transfer--scan-for-viruses]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/scan-for-viruses.po
+source_file = _build/locale/user-manual/transfer/scan-for-viruses.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--transfer--dspace]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/dspace.po
+source_file = _build/locale/user-manual/transfer/dspace.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--transfer--bags]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/bags.po
+source_file = _build/locale/user-manual/transfer/bags.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--transfer--digitized]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/transfer/digitized.po
+source_file = _build/locale/user-manual/transfer/digitized.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--metadata--dublincore]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/metadata/dublincore.po
+source_file = _build/locale/user-manual/metadata/dublincore.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--metadata--premis]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/metadata/premis.po
+source_file = _build/locale/user-manual/metadata/premis.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--appraisal--appraisal]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/appraisal/appraisal.po
+source_file = _build/locale/user-manual/appraisal/appraisal.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--preservation--preservation-planning]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/preservation/preservation-planning.po
+source_file = _build/locale/user-manual/preservation/preservation-planning.pot
+source_lang = en
+type = PO
+
 [archivematica-docs.user-manual--translations--translations]
 file_filter = locale/<lang>/LC_MESSAGES/user-manual/translations/translations.po
 source_file = _build/locale/user-manual/translations/translations.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--access--access]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/access.po
+source_file = _build/locale/user-manual/access/access.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--access--contentdm]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/contentdm.po
+source_file = _build/locale/user-manual/access/contentdm.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--access--archivists-toolkit]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/access/archivists-toolkit.po
+source_file = _build/locale/user-manual/access/archivists-toolkit.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--backlog--backlog]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/backlog/backlog.po
+source_file = _build/locale/user-manual/backlog/backlog.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--archival-storage--archival-storage]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/archival-storage.po
+source_file = _build/locale/user-manual/archival-storage/archival-storage.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--archival-storage--aic]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/aic.po
+source_file = _build/locale/user-manual/archival-storage/aic.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--archival-storage--aip-structure]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/archival-storage/aip-structure.po
+source_file = _build/locale/user-manual/archival-storage/aip-structure.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--ingest--ingest]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/ingest/ingest.po
+source_file = _build/locale/user-manual/ingest/ingest.pot
+source_lang = en
+type = PO
+
+[archivematica-docs.user-manual--ingest--manual-normalization]
+file_filter = locale/<lang>/LC_MESSAGES/user-manual/ingest/manual-normalization.po
+source_file = _build/locale/user-manual/ingest/manual-normalization.pot
 source_lang = en
 type = PO
 

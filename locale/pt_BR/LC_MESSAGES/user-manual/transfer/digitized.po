@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/transfer/digitized.rst:5
+msgid "Processing digitization output"
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:7
+msgid ""
+"During a digitization project, it is common to create a master digital "
+"object (such as a high-resolution TIFF) as well as an access or service copy"
+" of the object (such as a lower-resolution JPG). Archivematica can recognize"
+" the relationship between the master and access or service versions of the "
+"object and use them to generate a DIP."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:14
+msgid "Generating a DIP using access derivatives"
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:16
+#: ../../user-manual/transfer/digitized.rst:36
+msgid "Place the master digital objects in the transfer directory."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:18
+msgid ""
+"In the top level of the transfer directory, create a subdirectory called "
+"*access* (no capitalization)."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:21
+msgid ""
+"Place the access copies in the access directory. The master and access "
+"copies must have the same filename, although the extensions can be different"
+" - for example, image-1.tif (master) and image-1.jpg (access)."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:25
+msgid "Process the transfer."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:27
+msgid "At the normalization microservice, choose \"Do not normalize\"."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:29
+msgid ""
+"Archivematica will keep the master digital objects in the AIP and generate a"
+" DIP from the copies in the access directory."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:34
+msgid "Generating a DIP using service files"
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:38
+msgid ""
+"Create a subdirectory called *service* (no capitalization). Place the "
+"service copies in this subdirectory.  The master and service copies must "
+"have the same filename, although the extensions can be different - for "
+"example, image-1.tif (master) and image-1.jpg (service)."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:43
+msgid ""
+"If there is an access directory created as per the instructions above, "
+"process the transfer as before, choosing \"Do not normalize\" at the "
+"normalization microservice. Archivematica will generate a DIP from the "
+"objects in the access directory."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:48
+msgid ""
+"If there are no access derivatives, choose \"Normalize service files for "
+"access\" at the normalization microservice. Archivematica will use the "
+"service copies as the basis for generating the access derivatives, instead "
+"of the master objects."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:52
+msgid ""
+"The service copies will be retained along with the master digitized objects "
+"in the AIP and Archivematica will capture their derivation relationships in "
+"the AIP METS file."
+msgstr ""
+
+#: ../../user-manual/transfer/digitized.rst:56
+msgid ":ref:`Back to the top <digitized>`"
+msgstr ""

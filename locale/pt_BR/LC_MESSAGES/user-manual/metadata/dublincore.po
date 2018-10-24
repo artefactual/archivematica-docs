@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/metadata/dublincore.rst:5
+msgid "Dublin Core in Archivematica"
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:8
+msgid "General description"
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:10
+msgid ""
+"The use of `Dublin Core <http://dublincore.org/>`_ descriptive metadata is "
+"supported in Archivematica through both import and manual entry."
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:13
+msgid ""
+"For instructions on importing metadata with a transfer, please see "
+":ref:`Import metadata <import-metadata>`."
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:16
+msgid ""
+"For instructions on adding descriptive metadata through the user interface "
+"during ingest, please see :ref:`Add metadata <add-metadata>`."
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:19
+msgid ""
+"Artefactual's archival description software, `AtoM (Access to Memory) "
+"<www.accesstomemory.org>`_ provides a field-by-field description of the "
+"Dublin Core metatadata template :ref:`here <atom:dc-template>`."
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:24
+msgid "Metadata handling"
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:26
+msgid ""
+"When descriptive metadata is added through either of the methods described "
+"above, Archivematica handles this metadata by parsing it to the METS file. "
+"For example:"
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:52
+msgid ""
+"When a DIP is sent to :ref:`AtoM <upload-atom>`, Dublin Core metadata is "
+"parsed into the appropriate fields in the AtoM descriptive template. "
+"Descriptive metadata is also indexed in the Archival Storage tab in "
+"Archivematica; search results will show the AIP, not individual files."
+msgstr ""
+
+#: ../../user-manual/metadata/dublincore.rst:57
+msgid ":ref:`Back to the top <dublin_core>`."
+msgstr ""

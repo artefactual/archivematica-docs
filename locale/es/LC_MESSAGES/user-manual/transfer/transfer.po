@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../user-manual/transfer/transfer.rst:5
 msgid "Transfer"
@@ -83,71 +83,72 @@ msgstr ""
 msgid ":ref:`Extract packages <extract-packages>`"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:45
+#: ../../user-manual/transfer/transfer.rst:44
 msgid ""
 "If you would like to import lower-level metadata with your transfer (i.e."
 " metadata to be attached to subdirectories and files within a SIP), see "
 ":ref:`Metadata import <import-metadata>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:49
+#: ../../user-manual/transfer/transfer.rst:48
 msgid ""
 "If your transfer is a DSpace export, please see :ref:`DSpace export "
 "<dspace>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:51
+#: ../../user-manual/transfer/transfer.rst:50
 msgid "If your transfer is a bag or a zipped bag, please see :ref:`Bags <bags>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:53
+#: ../../user-manual/transfer/transfer.rst:52
 msgid ""
 "If your transfer is composed of objects that are the result of "
 "digitization, please see :ref:`Digitization output <digitized>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:56
+#: ../../user-manual/transfer/transfer.rst:55
 msgid ""
 "If your transfer is composed of digital forensic disk images, please see "
 ":ref:`Forensic image processing <forensic>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:59
+#: ../../user-manual/transfer/transfer.rst:58
+msgid ""
+"If your transfer is from a Dataverse repository, please see "
+":ref:`Dataverse Integration <dataverse>`."
+msgstr ""
+
+#: ../../user-manual/transfer/transfer.rst:61
 msgid ""
 "If you would like to skip some of the default choices for dashboard "
 "decision points or make preconfigured choices for your desired workflow, "
 "see :ref:`Processing configuration <dashboard-processing>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:67
+#: ../../user-manual/transfer/transfer.rst:69
 msgid "Create a transfer"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:69
+#: ../../user-manual/transfer/transfer.rst:71
 msgid ""
 "Open your Archivematica dashboard and sign in with your username and "
-"password. Please note that if this is your first time logging in to a "
-"newly installed instance of Archivematica, you will see a form that "
-"allows you to register your repository in order to get updates to the "
-"format policy registry. See the :ref:`User manual - Format Policy "
-"Registry (FPR) <fpr>` and the :ref:`Administrator manual - Format Policy "
-"Registry (FPR) <fpr:index>`."
+"password."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:76
+#: ../../user-manual/transfer/transfer.rst:74
 msgid ""
 "In the transfer tab, select your transfer type in the dropdown menu. "
 "Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and "
 "Disk Image."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:78
+#: ../../user-manual/transfer/transfer.rst:76
 msgid ""
 "Name your transfer. The transfer name will become the name of your AIP, "
 "so make sure that the name is meaningful."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:81
+#: ../../user-manual/transfer/transfer.rst:79
 msgid ""
 "Select your source directory. Click Browse to select the directory "
 "containing your object(s) for upload. Click on the folder icon to expand "
@@ -157,33 +158,33 @@ msgid ""
 " if your transfer is composed of multiple sources."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:94
+#: ../../user-manual/transfer/transfer.rst:92
 msgid "Select transfer source directories"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:96
+#: ../../user-manual/transfer/transfer.rst:94
 msgid "If applicable, enter an accession number for the transfer."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:98
+#: ../../user-manual/transfer/transfer.rst:96
 msgid ""
 "Once all of your digital object sources have been uploaded, hit the Start"
 " Transfer button for the transfer processing to begin."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:106
+#: ../../user-manual/transfer/transfer.rst:104
 msgid "Start transfer"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:108
+#: ../../user-manual/transfer/transfer.rst:106
 msgid "To close the transfer browser, click on Browse again."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:113
+#: ../../user-manual/transfer/transfer.rst:111
 msgid "Create a transfer with submission documentation"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:115
+#: ../../user-manual/transfer/transfer.rst:113
 msgid ""
 "The structured directory in Archivematica is the basic configuration of "
 "the transfer. If you just add a directory to the dashboard and start "
@@ -192,7 +193,7 @@ msgid ""
 "structured directory prior to beginning processing in Archivematica."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:118
+#: ../../user-manual/transfer/transfer.rst:116
 msgid ""
 "To create a transfer that includes submission documentation, such as a "
 "donor agreement, you must create a structured directory prior to "
@@ -200,13 +201,13 @@ msgid ""
 "contain three subdirectories, titled as below:"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:120
+#: ../../user-manual/transfer/transfer.rst:118
 msgid ""
 "objects: The *objects* directory contains the digital objects that are to"
 " be preserved. You can create subdirectories within objects if desired."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:122
+#: ../../user-manual/transfer/transfer.rst:120
 msgid ""
 "metadata: The *metadata* directory contains the checksum, the METS file, "
 "and a submissionDocumentation subfolder, which can be used for transfer "
@@ -214,13 +215,13 @@ msgid ""
 "acquisition of the records."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:124
+#: ../../user-manual/transfer/transfer.rst:122
 msgid ""
 "logs: The *logs* directory will eventually contain logs generated when "
 "processing the transfer in Archivematica."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:128
+#: ../../user-manual/transfer/transfer.rst:126
 msgid ""
 "Please do not include submission documentation that has non-standard "
 "characters in the filename, as submission documentation names are not "
@@ -228,13 +229,13 @@ msgid ""
 " processing."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:133
+#: ../../user-manual/transfer/transfer.rst:131
 msgid ""
 "Open the file browser by clicking on the Home folder on the Archivematica"
 " desktop."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:135
+#: ../../user-manual/transfer/transfer.rst:133
 msgid ""
 "The structured directory should contain three subdirectories: logs, "
 "metadata, objects. Copy the digital files to be preserved into the "
@@ -242,7 +243,7 @@ msgid ""
 "objects."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:137
+#: ../../user-manual/transfer/transfer.rst:135
 msgid ""
 "Add submission documentation. In the transfer you have just created, "
 "navigate to the /metadata/ folder and add a /submissionDocumentation "
@@ -252,22 +253,22 @@ msgid ""
 "will automatically contain copies of this documentation."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:142
+#: ../../user-manual/transfer/transfer.rst:140
 msgid "Create a transfer with existing checksums"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:145
+#: ../../user-manual/transfer/transfer.rst:143
 msgid "Standard transfers"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:147
+#: ../../user-manual/transfer/transfer.rst:145
 msgid ""
 "You can include existing checksums with your transfer if you have them. "
 "Archivematica will verify .md5, .sha1 and .sha256 checksums during the "
 "*Verify transfer checksums* micro-service."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:151
+#: ../../user-manual/transfer/transfer.rst:149
 msgid ""
 "Checksum files should be named checksum.md5, checksum.sha1, or "
 "checksum.sha256. The file itself should contain one line for each "
@@ -276,29 +277,29 @@ msgid ""
 "bird.mp3``."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:160
+#: ../../user-manual/transfer/transfer.rst:158
 msgid "To add the checksum file to your transfer:"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:162
+#: ../../user-manual/transfer/transfer.rst:160
 msgid ""
 "Place the digital objects into an ``/objects`` folder below the first "
 "level of the transfer."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:164
+#: ../../user-manual/transfer/transfer.rst:162
 msgid ""
 "Create a ``/metadata`` folder at the same level as the ``/objects`` "
 "folder. Place checksum files in the /metadata folder."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:167
-#: ../../user-manual/transfer/transfer.rst:181
+#: ../../user-manual/transfer/transfer.rst:165
+#: ../../user-manual/transfer/transfer.rst:179
 msgid "Begin your standard transfer in the Archivematica dashboard interface."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:169
-#: ../../user-manual/transfer/transfer.rst:183
+#: ../../user-manual/transfer/transfer.rst:167
+#: ../../user-manual/transfer/transfer.rst:181
 msgid ""
 "If your checksum check fails, the *Verify transfer checksums* micro-"
 "service will show an error and the transfer will fail. Expanding the "
@@ -307,95 +308,95 @@ msgid ""
 "job."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:172
+#: ../../user-manual/transfer/transfer.rst:170
 msgid "Disk image transfers"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:174
+#: ../../user-manual/transfer/transfer.rst:172
 msgid ""
 "To add the checksum file to a disk image transfer, prepare your checksum "
 "files as above. However, there is a slight variation in how the folder "
 "should be structured:"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:177
+#: ../../user-manual/transfer/transfer.rst:175
 msgid ""
 "Place your disk image file at the first level of the transfer (do **not**"
 " place in an /objects subdirectory)."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:179
+#: ../../user-manual/transfer/transfer.rst:177
 msgid ""
 "Create a ``/metadata`` folder in the first level of the transfer. Place "
 "checksum files in the /metadata folder."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:188
+#: ../../user-manual/transfer/transfer.rst:186
 msgid "Process the transfer"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:190
+#: ../../user-manual/transfer/transfer.rst:188
 msgid ""
 "In the dashboard transfer tab, the transfer will appear in the dashboard "
 "with a bell icon next to it. This means that it is awaiting a decision by"
 " the user."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:192
+#: ../../user-manual/transfer/transfer.rst:190
 msgid ""
 "Click on the micro-service to display jobs that have completed, including"
 " the one requiring action."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:194
+#: ../../user-manual/transfer/transfer.rst:192
 msgid ""
 "In the Actions drop-down menu, select \"Approve transfer\" to begin "
 "processing the transfer. You may also \"Reject transfer\" and quit "
 "processing."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:202
+#: ../../user-manual/transfer/transfer.rst:200
 msgid "In the Actions drop-down menu, select \"Approve transfer\""
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:204
+#: ../../user-manual/transfer/transfer.rst:202
 msgid ""
 "The transfer will now run through a series of micro-services. These "
 "include:"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:206
+#: ../../user-manual/transfer/transfer.rst:204
 msgid ""
 "Verify transfer compliance: verifies that the transfer is properly "
 "structured - i.e. with the logs, metadata and objects folders."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:209
+#: ../../user-manual/transfer/transfer.rst:207
 msgid ""
 "Rename with transfer UUID: assigns a unique universal identifier for the "
 "transfer as a whole; directly associates the transfer with its metadata."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:212
+#: ../../user-manual/transfer/transfer.rst:210
 msgid ""
 "Assign file UUIDs and checksums to objects: assigns a unique universal "
 "identifier and sha-256 checksum to each file in the /objects directory."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:215
+#: ../../user-manual/transfer/transfer.rst:213
 msgid ""
 "Verify transfer checksums: verifies any checksums included with the "
 "transfer in its metadata directory."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:218
+#: ../../user-manual/transfer/transfer.rst:216
 msgid ""
 "Generate METS.xml document: creates a METS file capturing the original "
 "order of the transfer. This METS file is added to any SIPs generated from"
 " this transfer."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:222
+#: ../../user-manual/transfer/transfer.rst:220
 msgid ""
 "Quarantine: quarantines the transfer to a set duration based on "
 "preconfiguration settings in the Administration tab of the dashboard. "
@@ -403,23 +404,23 @@ msgid ""
 "scan."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:226
+#: ../../user-manual/transfer/transfer.rst:224
 msgid "Scan for viruses: scans for viruses and malware."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:228
+#: ../../user-manual/transfer/transfer.rst:226
 msgid ""
 "Generate transfer structure report: generates a directory tree of the "
 "original transfer and places as a text file in the AIP."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:231
+#: ../../user-manual/transfer/transfer.rst:229
 msgid ""
 "Clean up file and directory names: removes prohibited characters from "
 "folder and filenames, such as ampersands."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:234
+#: ../../user-manual/transfer/transfer.rst:232
 msgid ""
 "Identify file format: this is the identification that normalization will "
 "be based upon, the user can choose between FIDO and extension or skipping"
@@ -427,7 +428,7 @@ msgid ""
 "<format-identification>` below for more information."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:239
+#: ../../user-manual/transfer/transfer.rst:237
 msgid ""
 "Extract packages: extracts contents from zipped or otherwise packaged "
 "files. You can change your preconfigured workflow settings to allow for "
@@ -435,7 +436,7 @@ msgid ""
 "<extract-packages>` below for more information."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:243
+#: ../../user-manual/transfer/transfer.rst:241
 msgid ""
 "Characterize and extract metadata: identifies and validates file formats;"
 " extracts technical metadata embedded in the files. If you have "
@@ -448,17 +449,17 @@ msgid ""
 "later, during Ingest, instead."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:253
+#: ../../user-manual/transfer/transfer.rst:251
 msgid "Complete transfer: Includes indexing the transfer."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:255
+#: ../../user-manual/transfer/transfer.rst:253
 msgid ""
 "A transfer that is in the middle of processing will show which micro-"
 "services have been completed (green) and which are in progress (orange)."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:258
+#: ../../user-manual/transfer/transfer.rst:256
 msgid ""
 "When a micro-service fails or encounters an error, the micro-service "
 "background turns from green to pink and a \"failed\" icon appears next to"
@@ -466,7 +467,7 @@ msgid ""
 "how to handle an error."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:263
+#: ../../user-manual/transfer/transfer.rst:261
 msgid ""
 "Once the transfer micro-services are completed, a bell icon will appear "
 "next to the transfer. This means that the transfer is ready to be "
@@ -474,11 +475,11 @@ msgid ""
 "to be retrieved for processing at a later date"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:268
+#: ../../user-manual/transfer/transfer.rst:266
 msgid "Option 1: Select \"Create single SIP and continue processing\""
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:270
+#: ../../user-manual/transfer/transfer.rst:268
 msgid ""
 "Option 2: Select \"Send transfer to backlog\". In this case, your "
 "transfer will be stored in a backlog in the same location as your AIP "
@@ -487,34 +488,41 @@ msgid ""
 "backlog>`."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:275
+#: ../../user-manual/transfer/transfer.rst:273
 msgid "Option 3: Select \"Reject the transfer\"."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:283
+#: ../../user-manual/transfer/transfer.rst:281
 msgid "A transfer that is ready to be packaged into a SIP or stored in backlog"
 msgstr ""
 
 #: ../../user-manual/transfer/transfer.rst:285
+msgid ""
+"If you are running Archivematica in indexless mode (without "
+"Elasticsearch), you will not have the option to send the transfer to "
+"backlog."
+msgstr ""
+
+#: ../../user-manual/transfer/transfer.rst:288
 msgid "See :ref:`Ingest <ingest>` for next steps."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:290
+#: ../../user-manual/transfer/transfer.rst:293
 msgid "Cleaning up the transfer dashboard"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:292
+#: ../../user-manual/transfer/transfer.rst:295
 msgid ""
 "The dashboard in the Transfer tab should be cleaned up from time to time."
 " As the list of transfers grows, it takes Archivematica longer and longer"
 " to parse this information which can create browser timeout issues."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:297
+#: ../../user-manual/transfer/transfer.rst:300
 msgid "Remove a single transfer"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:299
+#: ../../user-manual/transfer/transfer.rst:302
 msgid ""
 "Ensure that the transfer you want to remove doesn't require any user "
 "input. You must complete all user inputs and either complete the transfer"
@@ -522,51 +530,51 @@ msgid ""
 "can be removed from the dashboard."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:304
+#: ../../user-manual/transfer/transfer.rst:307
 msgid ""
 "When you are ready to remove a transfer from the dashboard, click the red"
 " circle icon found next to the add metadata icon, to the right of the "
 "transfer name."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:307
+#: ../../user-manual/transfer/transfer.rst:310
 msgid "Click the Confirm button to remove the transfer from the dashboard."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:317
+#: ../../user-manual/transfer/transfer.rst:320
 msgid ""
 "This does not delete the transfer or related entities, including the "
 "source directory. It merely removes them from the dashboard."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:321
+#: ../../user-manual/transfer/transfer.rst:324
 msgid "Remove all completed transfers"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:323
+#: ../../user-manual/transfer/transfer.rst:326
 msgid ""
 "Ensure that the transfers you want to remove are complete (i.e. sent to "
 "backlog or ingest). Note that this feature only works on completed "
 "transfers; rejected transfers will have to be removed one at a time."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:327
+#: ../../user-manual/transfer/transfer.rst:330
 msgid ""
 "When you are ready to remove all completed transfers, click the red "
 "circle icon in the table header of the list of transfers."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:330
+#: ../../user-manual/transfer/transfer.rst:333
 msgid ""
 "Click the Confirm button to remove all completed transfers from the "
 "dashboard."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:335
+#: ../../user-manual/transfer/transfer.rst:338
 msgid "Format identification"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:337
+#: ../../user-manual/transfer/transfer.rst:340
 msgid ""
 "Archivematica's default is to allow the user to choose identification "
 "options to base normalization actions upon during transfer and then use "
@@ -576,7 +584,7 @@ msgid ""
 "allow for user choice in the dashboard."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:344
+#: ../../user-manual/transfer/transfer.rst:347
 msgid ""
 "Artefactual included the ability to skip identification at transfer "
 "and/or to change identification tool before normalization mainly to allow"
@@ -589,7 +597,7 @@ msgid ""
 "normalization attempted based on those identifications."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:353
+#: ../../user-manual/transfer/transfer.rst:356
 msgid ""
 "There may be other use case scenarios in the future that this "
 "configuration flexibility facilitates. In general, we aim to include as "
@@ -599,17 +607,17 @@ msgid ""
 "influence on ingest."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:359
+#: ../../user-manual/transfer/transfer.rst:362
 msgid ""
 "Format identification is logged as a PREMIS event in the METS.xml using "
 "the results of running whichever tool chosen during processing."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:365
+#: ../../user-manual/transfer/transfer.rst:368
 msgid "Extract packages"
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:367
+#: ../../user-manual/transfer/transfer.rst:370
 msgid ""
 "If you adjust your processing configuration settings, Archivematica will "
 "stop after format identification and allow you to extract any packages in"
@@ -617,7 +625,7 @@ msgid ""
 "keep the package with the extracted objects or not."
 msgstr ""
 
-#: ../../user-manual/transfer/transfer.rst:373
+#: ../../user-manual/transfer/transfer.rst:376
 msgid ":ref:`Back to the top <transfer>`"
 msgstr ""
 
@@ -701,5 +709,21 @@ msgstr ""
 #~ "This does not delete the transfer "
 #~ "or related entities, including the "
 #~ "source directory."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open your Archivematica dashboard and "
+#~ "sign in with your username and "
+#~ "password. Please note that if this "
+#~ "is your first time logging in to"
+#~ " a newly installed instance of "
+#~ "Archivematica, you will see a form "
+#~ "that allows you to register your "
+#~ "repository in order to get updates "
+#~ "to the format policy registry. See "
+#~ "the :ref:`User manual - Format Policy"
+#~ " Registry (FPR) <fpr>` and the "
+#~ ":ref:`Administrator manual - Format Policy "
+#~ "Registry (FPR) <fpr:index>`."
 #~ msgstr ""
 

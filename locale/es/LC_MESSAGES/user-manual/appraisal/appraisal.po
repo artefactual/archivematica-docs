@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../user-manual/appraisal/appraisal.rst:5
 msgid "Appraisal"
@@ -34,59 +34,65 @@ msgid ""
 " <arrangement>`)."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:15
-msgid "*On this page:*"
-msgstr ""
-
 #: ../../user-manual/appraisal/appraisal.rst:17
-msgid ":ref:`Transfers in the Backlog <backlog_pane>`"
-msgstr ""
-
-#: ../../user-manual/appraisal/appraisal.rst:18
-msgid ":ref:`Analysis <analysis_pane>`"
-msgstr ""
-
-#: ../../user-manual/appraisal/appraisal.rst:19
-msgid ":ref:`File List <File_list_pane>`"
+msgid ""
+"If you are running Archivematica in indexless mode (without "
+"Elasticsearch), the Appraisal tab will not appear on your dashboard."
 msgstr ""
 
 #: ../../user-manual/appraisal/appraisal.rst:20
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:22
+msgid ":ref:`Transfers in the Backlog <backlog_pane>`"
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:23
+msgid ":ref:`Analysis <analysis_pane>`"
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:24
+msgid ":ref:`File List <File_list_pane>`"
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:25
 msgid ":ref:`ArchivesSpace Resources <archivesspace_pane>`"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:21
+#: ../../user-manual/appraisal/appraisal.rst:26
 msgid ""
 ":ref:`Adding Files to ArchivesSpace Resources and Starting SIPs "
 "<adding_files_archivesspace>`"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:22
+#: ../../user-manual/appraisal/appraisal.rst:27
 msgid ":ref:`Arrangement <arrangement>`"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:27
+#: ../../user-manual/appraisal/appraisal.rst:32
 msgid "Transfers in the Backlog"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:29
+#: ../../user-manual/appraisal/appraisal.rst:34
 msgid ""
 "Transfers that have been sent to the backlog can be found in the Backlog "
 "pane of the Appraisal tab. Search the backlog by entering search terms "
 "and parameters in the search box at the top of the page."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:39
+#: ../../user-manual/appraisal/appraisal.rst:44
 msgid "Adding Tags"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:41
+#: ../../user-manual/appraisal/appraisal.rst:46
 msgid ""
 "Tags can be added to selected files in the backlog by entering a tag name"
 " and clicking the “Add tag to selected files” button at the top of the "
 "Backlog pane."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:49
+#: ../../user-manual/appraisal/appraisal.rst:54
 msgid ""
 "Tags that have already been created appear in the Tags drop-down menu. "
 "Choosing a particular tag filters the files that appear within transfers "
@@ -95,15 +101,15 @@ msgid ""
 "Filters can be removed by clicking the “x” next to them."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:60
+#: ../../user-manual/appraisal/appraisal.rst:65
 msgid "Tags can also be added from within the File list (see below)."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:65
+#: ../../user-manual/appraisal/appraisal.rst:70
 msgid "Analysis"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:67
+#: ../../user-manual/appraisal/appraisal.rst:72
 msgid ""
 "The analysis pane allows the user to explore files in transfers sent to "
 "the backlog. Files selected in the Backlog pane populate the Analysis "
@@ -111,11 +117,11 @@ msgid ""
 "Contents, and Preview File."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:72
+#: ../../user-manual/appraisal/appraisal.rst:77
 msgid "1) Objects"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:74
+#: ../../user-manual/appraisal/appraisal.rst:79
 msgid ""
 "In the Objects tab, information about selected files can be viewed in the"
 " form of a report or a visualization. The Report view provides "
@@ -126,15 +132,15 @@ msgid ""
 "list."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:87
+#: ../../user-manual/appraisal/appraisal.rst:92
 msgid "Report showing files selected in the Backlog pane"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:96
+#: ../../user-manual/appraisal/appraisal.rst:101
 msgid "Visualization showing formats by total size of the selected files"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:98
+#: ../../user-manual/appraisal/appraisal.rst:103
 msgid ""
 "Files listed in Analysis can also be filtered by Format, PUID, and Group "
 "through selecting values for these facets in the Report view. For "
@@ -144,21 +150,21 @@ msgid ""
 "down menu and can be removed by clicking the “x” beside the name."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:106
+#: ../../user-manual/appraisal/appraisal.rst:111
 msgid "2) Tags"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:108
+#: ../../user-manual/appraisal/appraisal.rst:113
 msgid ""
 "The Tags tab lists any tags that have been added and how many of each tag"
 " are present in the selected files."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:117
+#: ../../user-manual/appraisal/appraisal.rst:122
 msgid "3) Examine Contents"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:119
+#: ../../user-manual/appraisal/appraisal.rst:124
 msgid ""
 "If Examine Contents (using the tool Bulk Extractor) was used during "
 "transfer, the Examine Contents tab provides the reports created during "
@@ -168,27 +174,27 @@ msgid ""
 " these files."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:131
+#: ../../user-manual/appraisal/appraisal.rst:136
 msgid ""
 "Examine contents tab showing a selected transfer where no files with PII "
 "were found"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:135
+#: ../../user-manual/appraisal/appraisal.rst:140
 msgid "4) Preview File"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:137
+#: ../../user-manual/appraisal/appraisal.rst:142
 msgid ""
 "Files selected in the File List pane (see below) can be previewed in the "
 "Preview File tab."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:143
+#: ../../user-manual/appraisal/appraisal.rst:148
 msgid "File List"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:144
+#: ../../user-manual/appraisal/appraisal.rst:149
 msgid ""
 "The File List pane is also populated by selecting files in the Backlog "
 "pane. File List provides information about the filenames, sizes, dates "
@@ -196,7 +202,7 @@ msgid ""
 "added to the selected files."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:149
+#: ../../user-manual/appraisal/appraisal.rst:154
 msgid ""
 "Any filters that have been applied in the Analysis pane or through the "
 "Tags drop-down menu will affect what files appear in File List. In "
@@ -204,7 +210,7 @@ msgid ""
 " last modified."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:153
+#: ../../user-manual/appraisal/appraisal.rst:158
 msgid ""
 "This pane also provides an option for adding tags. Files can be selected "
 "by checking the checkbox next to their filename, creating a tag name, and"
@@ -212,19 +218,19 @@ msgid ""
 "clicking the “-“ next to the tag name."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:164
+#: ../../user-manual/appraisal/appraisal.rst:169
 msgid "File list pane showing options for adding tags and filtering by date range"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:167
+#: ../../user-manual/appraisal/appraisal.rst:172
 msgid "Clicking on the name of the file opens a preview in the Analysis pane."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:178
+#: ../../user-manual/appraisal/appraisal.rst:183
 msgid "ArchivesSpace Resources"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:180
+#: ../../user-manual/appraisal/appraisal.rst:185
 msgid ""
 "The ArchivesSpace pane in the Appraisal tab allows for retrieving and "
 "adding to resources that have been created in an ArchivesSpace "
@@ -235,11 +241,11 @@ msgid ""
 "in ArchivesSpace and SIPs can be sent to Ingest."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:188
+#: ../../user-manual/appraisal/appraisal.rst:193
 msgid "ArchivesSpace Terms"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:190
+#: ../../user-manual/appraisal/appraisal.rst:195
 msgid ""
 "Finding aids in ArchivesSpace are called “resources” (i.e. fonds, "
 "collection, record group, etc.). Lower levels of description nested under"
@@ -250,47 +256,54 @@ msgid ""
 "http://archivesspace.org/."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:198
+#: ../../user-manual/appraisal/appraisal.rst:205
 msgid "Searching for ArchivesSpace Resources"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:200
+#: ../../user-manual/appraisal/appraisal.rst:207
 msgid ""
-"The search box at the top of the ArchivesSpace panel allows for searching"
-" for resources within an ArchivesSpace repository. A user can search by "
+"The search box at the top of the ArchivesSpace panel enables searching "
+"for resources within an ArchivesSpace repository. A user can search by "
 "the title or identifier of a resource."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:204
+#: ../../user-manual/appraisal/appraisal.rst:211
 msgid ""
 "ArchivesSpace resources can be expanded to show lower levels of "
 "description. Folder icons indicate ArchivesSpace resources and archival "
-"objects which have child records nested under them. Page icons indicate "
+"objects that have child records nested under them. Page icons indicate "
 "resources and archival objects that do not have child records. Digital "
 "object components are designated by the parallel lines icon."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:216
+#: ../../user-manual/appraisal/appraisal.rst:219
+msgid ""
+"Digital objects created and linked to resources in ArchivesSpace will not"
+" appear in the ArchivesSpace panel. However, digital objects added to a "
+"resource from within the ArchivesSpace panel are displayed."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:229
 msgid "Creating Archival Description"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:218
+#: ../../user-manual/appraisal/appraisal.rst:231
 msgid ""
 "Options at the top of the ArchivesSpace pane allow for adding to and "
 "changing an existing ArchivesSpace resource, such as adding new archival "
 "objects and digital object components."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:222
+#: ../../user-manual/appraisal/appraisal.rst:235
 msgid ""
-"Selecting a resource or archival object and using “Add New Child Record” "
+"Selecting a resource or archival object and using “Add new child record” "
 "adds a new archival object nested underneath the selected level of "
 "description. Clicking this button brings up a dialog box for entering "
 "metadata. At a minimum, a new archival object must have a title and a "
 "level of description, otherwise “save” is not available."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:233
+#: ../../user-manual/appraisal/appraisal.rst:246
 msgid ""
 "The new archival object will appear in the ArchivesSpace pane and the "
 "change will be reflected in the ArchivesSpace repository. The “Delete "
@@ -298,77 +311,120 @@ msgid ""
 "objects."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:237
+#: ../../user-manual/appraisal/appraisal.rst:250
 msgid ""
 "“Add New Digital Object Component” similarly allows for adding digital "
 "object components to ArchivesSpace resources/archival objects."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:242
+#: ../../user-manual/appraisal/appraisal.rst:255
 msgid ""
 "Digital object components will not appear in the ArchivesSpace repository"
 " until later in the workflow when the AIP for the digital object is "
 "stored."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:245
+#: ../../user-manual/appraisal/appraisal.rst:258
 msgid ""
 "Both archival objects and digital object components can be created in the"
 " ArchivesSpace pane at any level of description; however, new resources "
 "can only be created in ArchivesSpace."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:249
+#: ../../user-manual/appraisal/appraisal.rst:262
 msgid ""
 "Basic metadata for existing archival objects and digital object "
 "components can be edited using the “Edit Metadata” button."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:257
+#: ../../user-manual/appraisal/appraisal.rst:270
 msgid ""
 "“Edit Rights Metadata” leads to a form for adding PREMIS rights "
 "information."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:265
+#: ../../user-manual/appraisal/appraisal.rst:278
 msgid "Click \"Add\" to add rights."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:273
+#: ../../user-manual/appraisal/appraisal.rst:286
 msgid ""
 "Specify the type of rights information from the drop-down menu and fill "
 "out the relevant fields."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:276
+#: ../../user-manual/appraisal/appraisal.rst:289
 msgid ""
 "The form for adding rights includes two pages of fields. Once added, acts"
 " can be edited or deleted and further acts can be added."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:286
+#: ../../user-manual/appraisal/appraisal.rst:299
 msgid "Rights can only be added at the SIP level."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:291
+#: ../../user-manual/appraisal/appraisal.rst:304
 msgid "Adding Files to ArchivesSpace Resources and Starting SIPs"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:293
+#: ../../user-manual/appraisal/appraisal.rst:306
 msgid ""
-"Files from transfers in the Backlog pane can be associated with "
-"ArchivesSpace resources by dragging files from the backlog to digital "
-"object components."
+"Transfer files in backlog can easily be associated with ArchivesSpace "
+"resources by dragging and dropping files from the Backlog pane to digital"
+" object components in the ArchivesSpace pane."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:301
-msgid ""
-"Digital object components must be created in the Appraisal tab (digital "
-"objects created and linked to resources in ArchivesSpace will not appear "
-"in the Appraisal tab)."
+#: ../../user-manual/appraisal/appraisal.rst:308
+msgid "To add files to ArchivesSpace resources:"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:305
+#: ../../user-manual/appraisal/appraisal.rst:310
+msgid ""
+"Search the backlog by entering terms and parameters in the search box at "
+"the top of the page."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:312
+msgid ""
+"For a list of all transfers in backlog, simply click within the search "
+"box leaving the edit field blank, and then click **Search transfer "
+"backlog**."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:314
+msgid ""
+"Click **ArchivesSpace** to enable the ArchivesSpace panel, :ref:`search "
+"by title or identifier of a resource <searching-ArchivesSpace-"
+"resources>`, and then click **Search ArchivesSpace**."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:316
+msgid "A hierarchical view of the resource is displayed."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:318
+msgid ""
+"Create digital object components within the ArchivesSpace panel by "
+"clicking **Add new digital object**."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:320
+msgid "Digital object components must be created in the Appraisal tab."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:324
+msgid ""
+"Digital objects created and linked to resources in ArchivesSpace will not"
+" appear in the Appraisal tab."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:326
+msgid ""
+"Now click and drag files in the Backlog panel to digital object "
+"components in the ArchivesSpace panel."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:335
 msgid ""
 "One file or directory from a transfer can be moved at a time. A file can "
 "only be added once to an ArchivesSpace resource. Files that have been "
@@ -376,39 +432,46 @@ msgid ""
 "the backlog."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:309
+#: ../../user-manual/appraisal/appraisal.rst:338
 msgid ""
-"Once all files have been added to their place in the arrangement, SIPs "
-"can be started in Ingest by selecting the resource/archival object and "
-"clicking “Finalize Arrangement.” SIPs can be created from any level of "
-"description (i.e. a SIP can be started for an entire resource or from an "
-"archival object within a resource such as a series)."
+"Once all files have been added and the arrangement has been set, SIPs can"
+" be started in Ingest. Select the resource/archival object and click "
+"**Finalize arrangement**. SIPs can be created from ArchivesSpace archival"
+" objects at any level of description."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:318
+#: ../../user-manual/appraisal/appraisal.rst:344
+msgid ""
+"Before starting a SIP in the ArchivesSpace panel, verify that all "
+"required metadata associated with an ArchivesSpace resource is in place, "
+"particularly at the parent-level of the arrangement. In ArchivesSpace, "
+"verify that a material description record is linked to an agent record."
+msgstr ""
+
+#: ../../user-manual/appraisal/appraisal.rst:349
 msgid "Arrangement"
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:320
+#: ../../user-manual/appraisal/appraisal.rst:351
 msgid ""
 "The arrangement pane provides options for appraising and arranging files "
 "from the backlog for users not using ArchivesSpace."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:323
+#: ../../user-manual/appraisal/appraisal.rst:354
 msgid ""
 "Files from the Backlog pane can be dragged to the Arrangement pane to "
 "arrange the files and create SIPs."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:326
+#: ../../user-manual/appraisal/appraisal.rst:357
 msgid ""
 "To create structure within the SIP or to create multiple SIPs, use “Add "
 "directory.” This button can be used to create separate directories or to "
 "create directories nested within other directories."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:330
+#: ../../user-manual/appraisal/appraisal.rst:361
 msgid ""
 "Once all relevant files have been dragged from the Backlog pane to "
 "directories in Arrangement, select the top-level directory corresponding "
@@ -417,7 +480,7 @@ msgid ""
 "complete and they are sent to Ingest."
 msgstr ""
 
-#: ../../user-manual/appraisal/appraisal.rst:336
+#: ../../user-manual/appraisal/appraisal.rst:367
 msgid ":ref:`Back to the top <appraisal>`"
 msgstr ""
 
@@ -472,5 +535,68 @@ msgstr ""
 #~ "appraising and arranging files from the"
 #~ " backlog for users not using "
 #~ "ArchivesSpace."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The search box at the top of "
+#~ "the ArchivesSpace panel allows for "
+#~ "searching for resources within an "
+#~ "ArchivesSpace repository. A user can "
+#~ "search by the title or identifier "
+#~ "of a resource."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "ArchivesSpace resources can be expanded "
+#~ "to show lower levels of description. "
+#~ "Folder icons indicate ArchivesSpace resources"
+#~ " and archival objects which have "
+#~ "child records nested under them. Page"
+#~ " icons indicate resources and archival "
+#~ "objects that do not have child "
+#~ "records. Digital object components are "
+#~ "designated by the parallel lines icon."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Selecting a resource or archival object"
+#~ " and using “Add New Child Record” "
+#~ "adds a new archival object nested "
+#~ "underneath the selected level of "
+#~ "description. Clicking this button brings "
+#~ "up a dialog box for entering "
+#~ "metadata. At a minimum, a new "
+#~ "archival object must have a title "
+#~ "and a level of description, otherwise"
+#~ " “save” is not available."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Files from transfers in the Backlog "
+#~ "pane can be associated with "
+#~ "ArchivesSpace resources by dragging files "
+#~ "from the backlog to digital object "
+#~ "components."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Digital object components must be "
+#~ "created in the Appraisal tab (digital"
+#~ " objects created and linked to "
+#~ "resources in ArchivesSpace will not "
+#~ "appear in the Appraisal tab)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once all files have been added to"
+#~ " their place in the arrangement, SIPs"
+#~ " can be started in Ingest by "
+#~ "selecting the resource/archival object and "
+#~ "clicking “Finalize Arrangement.” SIPs can "
+#~ "be created from any level of "
+#~ "description (i.e. a SIP can be "
+#~ "started for an entire resource or "
+#~ "from an archival object within a "
+#~ "resource such as a series)."
 #~ msgstr ""
 

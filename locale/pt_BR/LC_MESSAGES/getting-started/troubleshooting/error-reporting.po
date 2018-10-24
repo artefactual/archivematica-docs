@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cintya Takahaschi <cintya.takahaschi@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-10 20:59+0000\n"
+"Last-Translator: Cintya Takahaschi <cintya.takahaschi@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:5
+msgid "Error reporting"
+msgstr "Relato de erros"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:9
+msgid ""
+"If you find a security vulnerability, do NOT open an issue. Email "
+"info@artefactual.com instead."
+msgstr "Se você encontrar uma vulnerabilidade de segurança, NÃO abra um issue. Ao invés disso, envie um email para info@artefactual.com."
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:12
+msgid ""
+"When an error or bug is encountered, we request that Archivematica users:"
+msgstr "Quando um erro ou bug for encontrado, solicitamos aos usuários do Archivematica que"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:14
+msgid ""
+"Search the `User Forum "
+"<https://groups.google.com/forum/#!forum/archivematica>`_ for similar "
+"problems and post a new thread if necessary."
+msgstr "Busquem no `Fórum de usuários <https://groups.google.com/forum/#!forum/archivematica>`_ por problemas similares, e postem um novo assunto, se necessário."
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:17
+msgid ""
+"Search and/or report in our issue tracker. We use a GitHub repository to "
+"track issues for Archivematica: https://github.com/archivematica/Issues/"
+msgstr "Busque e ou registre em nosso issue tracker. Usamos um repositório do GitHub para rastrear erros do Archivematica: https://github.com/archivematica/Issues/"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:20
+msgid ""
+"You will need a `GitHub account <https://github.com/join?source=experiment-"
+"header-dropdowns-home>`_ to file a new issue or comment on an existing one. "
+"Optionally, you can also join the Archivematica Issues-Committers team to "
+"add labels to issues and edit the Issues Wiki. Please see the `Issues wiki "
+"<https://github.com/archivematica/Issues/wiki>`_ for more details."
+msgstr "Você precisará ter uma `conta do GitHub <https://github.com/join?source=experiment-header-dropdowns-home>`_ para registrar um novo issue ou comentar um existente. Opcionalmente, você pode se juntar à equipe Archivematica Issues-Committers para adicionar legendas a problemas e editar o Issues Wiki. Por favor, consulte o `Issues wiki <https://github.com/archivematica/Issues/wiki>`_ para maiores detalhes."
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:27
+msgid ":ref:`Back to the top <error-reporting>`"
+msgstr ":ref:`Voltar ao topo <error-reporting>`"

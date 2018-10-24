@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-04-03 17:33+0000\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/overview/system-requirements.rst:4
+msgid "System requirements"
+msgstr "Requisitos do sistema"
+
+#: ../../getting-started/overview/system-requirements.rst:7
+msgid "Browser compatibility"
+msgstr "Compatibilidade do navegador"
+
+#: ../../getting-started/overview/system-requirements.rst:9
+msgid ""
+"Archivematica is tested most extensively in Firefox and Chrome. There have "
+"been known issues in testing with Internet Explorer (see Bug `#7246 "
+"<https://projects.artefactual.com/issues/7246>`_). Minimal, but successful, "
+"testing has been done with Microsoft Edge."
+msgstr "O Archivematica é testado extensivamente no Firefox e no Chrome. Houve problemas conhecidos nos testes com o Internet Explorer (veja Bug `# 7246 <https://projects.artefactual.com/issues/7246>` _). Testes mínimos, mas bem-sucedidos, foram feitos com o Microsoft Edge."
+
+#: ../../getting-started/overview/system-requirements.rst:15
+msgid "Resource allocation"
+msgstr "Alocação de recursos"
+
+#: ../../getting-started/overview/system-requirements.rst:17
+msgid "For recommended resource allocation, please see:"
+msgstr "Para a alocação recomendada de recursos, consulte:"
+
+#: ../../getting-started/overview/system-requirements.rst:19
+msgid ""
+":ref:`Recommended Minimum Requirements for small-scale testing "
+"<requirements-small>`"
+msgstr ":ref:`Requisitos mínimos recomendados para testes de pequena escala <requirements-small>`"
+
+#: ../../getting-started/overview/system-requirements.rst:20
+msgid ""
+":ref:`Recommended Minimum Requirements for production processing "
+"<requirements-production>`"
+msgstr ":ref:`Requisitos mínimos recomendados para processamento de produção <requirements-production>`"
+
+#: ../../getting-started/overview/system-requirements.rst:22
+msgid ":ref:`Back to the top <system-requirements>`"
+msgstr ":ref:`Voltar ao topo <system-requirements>`"

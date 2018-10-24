@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:5
+msgid "Using AtoM 2.x with Archivematica"
+msgstr "Utilisation d'AtoM 2.x avec Archivematica"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:7
+msgid ""
+"Archivematica |version| has been tested with and is recommended for use with"
+" the latest version of AtoM. AtoM version 2.2 or higher is required if you "
+"wish to use the :ref:`hierarchical DIP functionality <hierarchical-dip>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:11
+msgid "*On this page*"
+msgstr "*Sur cette page*"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:13
+msgid ":ref:`Install AtoM <install-atom>`"
+msgstr ":ref:`Installation d'AtoM <install-atom>`"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:14
+msgid ":ref:`Configure DIP upload <config-dip-upload>`"
+msgstr ":ref:`Configurer le téléchargement de DIP <config-dip-upload>`"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:15
+msgid ":ref:`User instructions <user-instructions-atom>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:20
+msgid "Install AtoM"
+msgstr "Install AtoM"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:22
+msgid ""
+"Installation instructions for AtoM 2 are available in the "
+":ref:`accesstomemory.org documentation <atom:home>`. When following those "
+"instructions, it is best to download AtoM from the git repository (rather "
+"than use one of the supplied tarballs)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:30
+msgid "Configure DIP upload"
+msgstr "Configurer le téléchargement de DIP"
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:32
+msgid ""
+"Once you have a working AtoM installation, enter the appropriate credentials"
+" and information on the Administration tab. See :ref:`AtoM/Binder DIP upload"
+" <admin-dashboard-atom>` for more information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:36
+msgid "Once this is complete, there are"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:38
+msgid ""
+"Confirm atom-worker is configured on the AtoM server (copy the ``atom- "
+"worker.conf`` file from AtoM source to ``/etc/init/``)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:40
+msgid ""
+"Enable the :ref:`SWORD plugin <atom:manage-plugins>` from the AtoM Plugins "
+"menu."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:42
+msgid ""
+"Enable `job scheduling`_ in the AtoM settings page (AtoM version 2.1 or "
+"lower only)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:44
+msgid "Confirm gearman is installed on the AtoM server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:45
+msgid ""
+"Configure SSH keys to allow rsync to work for the Archivematica user, from "
+"the Archivematica server to the AtoM server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:47
+msgid "Restart gearman on the AtoM server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:48
+msgid "Restart the AtoM worker on the AtoM server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:53
+msgid "User instructions"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:55
+msgid ""
+"Instructions on how to upload a DIP to AtoM can be found in the User Manual "
+"section :ref:`Upload a DIP to AtoM <upload-atom>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/atom-setup.rst:58
+msgid ":ref:`Back to the top <atom-setup>`"
+msgstr ":ref:`Retour en haut de page <atom-setup>`"

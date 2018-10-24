@@ -6,11 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2017\n"
 "Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,44 +35,55 @@ msgid ""
 "using Archivematica in a production environment, see the user or "
 "administrator manuals below."
 msgstr ""
+"Le manuel de démarrage s'adresse aux utilisateurs qui envisagent "
+"d'implémenter Archivematica en tant que solution de préservation numérique. "
+"Ce manuel contient des informations sur le projet Archivematica ainsi qu'un "
+"guide de démarrage rapide pour aider les nouveaux utilisateurs à le tester. "
+"Pour plus d'informations sur l'installation et l'utilisation d'Archivematica"
+" dans un environnement de production, consultez les manuels de l'utilisateur"
+" ou de l'administrateur ci-dessous."
 
-#: ../../index.rst:28
+#: ../../index.rst:29
 msgid "Overview"
 msgstr "Aperçu"
 
-#: ../../index.rst:30
+#: ../../index.rst:31
 msgid ""
 "The overview section provides a definition of Archivematica and a "
 "description of the OAIS model on which it is based, its technical "
 "architecture, the microservices framework, and information about system "
 "requirements for deploying Archivematica."
 msgstr ""
+"La section Aperçu vous présente une définition d'Archivematica et une "
+"description du modèle OAIS sur lequel il est basé, son architecture "
+"technique, la structure de ses microservices, ainsi que de l’information sur"
+" les exigences système requises pour le déploiement d'Archivematica."
 
-#: ../../index.rst:34
+#: ../../index.rst:36
 msgid ":ref:`What is Archivematica? <intro>`"
 msgstr ":ref:`Qu'est ce qu'Archivematica? <intro>`"
 
-#: ../../index.rst:35
+#: ../../index.rst:37
 msgid ":ref:`Web-based dashboard <web-dashboard>`"
 msgstr ":ref:`Tableau de bord en ligne <web-dashboard>`"
 
-#: ../../index.rst:36
+#: ../../index.rst:38
 msgid ":ref:`Technical architecture <technical-arch>`"
-msgstr ""
+msgstr ":ref:`Architecture technique <technical-arch>`"
 
-#: ../../index.rst:37
+#: ../../index.rst:39
 msgid ":ref:`Micro-services <micro-services>`"
 msgstr ":ref:`Microservices <micro-services>`"
 
-#: ../../index.rst:38
+#: ../../index.rst:40
 msgid ":ref:`System requirements <system-requirements>`"
-msgstr ""
+msgstr ":ref:`Configuration requise <system-requirements>`"
 
-#: ../../index.rst:43
+#: ../../index.rst:45
 msgid "Quick-start guide"
 msgstr "Guide de démarrage rapide"
 
-#: ../../index.rst:45
+#: ../../index.rst:47
 msgid ""
 "This section is intended to introduce prospective users to Archivematica for"
 " testing purposes, using either the Archivematica sandbox or a local virtual"
@@ -80,487 +91,550 @@ msgid ""
 " production - please see the :ref:`Administrator manual <admin-manual-home>`"
 " for full installation instructions."
 msgstr ""
+"Cette section a pour but de présenter Archivematica à des utilisateurs "
+"potentiels à des fins d’essai, en utilisant le bac à sable Archivematica ou "
+"une machine virtuelle locale. Cette section n'est donc pas un guide "
+"d'installation d'Archivematica pour le développement ou la production – pour"
+" ce faire, veuillez consulter le :ref:`manuel de l'administrateur <admin-"
+"manual-home>` pour les instructions d'installation complètes."
 
-#: ../../index.rst:50
+#: ../../index.rst:53
 msgid ":ref:`Archivematica quick-start guide <quick-start>`"
 msgstr ":ref:`Guide de démarrage rapide Archivematica <quick-start>`"
 
-#: ../../index.rst:51
+#: ../../index.rst:54
 msgid ":ref:`Configuration <configuration>`"
 msgstr ":ref:`Configuration <configuration>`"
 
-#: ../../index.rst:56
+#: ../../index.rst:59
 msgid "Troubleshooting"
 msgstr "Dépannage"
 
-#: ../../index.rst:58
+#: ../../index.rst:61
 msgid ""
 "The troubleshooting section contains information on how Archivematica "
 "handles errors, as well as how to report errors"
 msgstr ""
+"La section de dépannage contient des informations sur la façon dont "
+"Archivematica traite les erreurs, ainsi que sur la façon de signaler les "
+"erreurs"
 
-#: ../../index.rst:61
+#: ../../index.rst:64
 msgid ":ref:`Error handling <error-handling>`"
 msgstr ":ref:`Gestion d'erreur <error-handling>`"
 
-#: ../../index.rst:62
+#: ../../index.rst:65
 msgid ":ref:`Error reporting <error-reporting>`"
-msgstr ""
+msgstr ":ref:`Signaler une erreur <error-reporting>`"
 
-#: ../../index.rst:63
+#: ../../index.rst:66
 msgid ":ref:`FAQ <faq>`"
 msgstr ":ref:`FAQ <faq>`"
 
-#: ../../index.rst:68
+#: ../../index.rst:71
 msgid "Other resources"
 msgstr "Autres ressources"
 
-#: ../../index.rst:70
+#: ../../index.rst:73
 msgid ":ref:`TRAC review tool <trac>`"
 msgstr ":ref:`Outil de révision TRAC <trac>`"
 
-#: ../../index.rst:75
+#: ../../index.rst:78
 msgid "User manual"
 msgstr "Guide de l'utilisateur"
 
-#: ../../index.rst:77
+#: ../../index.rst:80
 msgid ""
 "The user manual is intended for archivists, librarians, and other users who "
 "interact with Archivematica through the web-based user interface. The user "
 "manual is organized based on the tabs in the Archivematica UI."
 msgstr ""
+"Le guide de l'utilisateur est destiné aux archivistes, bibliothécaires et "
+"autres utilisateurs qui interagissent avec Archivematica via l'interface de "
+"l'utilisateur en ligne. Le guide de l'utilisateur est organisé en fonction "
+"des onglets de l'interface de l'utilisateur Archivematica."
 
-#: ../../index.rst:84
+#: ../../index.rst:87
 msgid "Transfer"
 msgstr "Transfert"
 
-#: ../../index.rst:86
+#: ../../index.rst:89
 msgid ""
 "The Transfer tab is the place where an Archivematica transfer begins. Along "
 "with the transfer widget, this tab displays micro-services and jobs that act"
 " upon content to prepare your transfer to become a SIP (submission "
 "information package)."
 msgstr ""
+"L'onglet Transfert est l'endroit où débute les transferts avec "
+"Archivematica. Avec le widget de transfert, cet onglet affiche les "
+"microservices et les tâches qui agissent sur le contenu afin de préparer "
+"votre transfert pour devenir un SIP (paquet d'information à verser ou "
+"submission information package)."
 
-#: ../../index.rst:90
+#: ../../index.rst:94
 msgid ":ref:`General description <transfer>`"
 msgstr ":ref:`Description générale <transfer>`"
 
-#: ../../index.rst:91
+#: ../../index.rst:95
 msgid ":ref:`Create a transfer <create-transfer>`"
 msgstr ":ref:`Créer un transfert <create-transfer>`"
 
-#: ../../index.rst:92
+#: ../../index.rst:96
 msgid ""
 ":ref:`Create a transfer with submission documentation <create-submission>`"
 msgstr ""
-": ref:`Joindre la documentation de soumission à un transfert <create-"
+":ref:`Joindre la documentation de soumission à un transfert <create-"
 "submission>`"
 
-#: ../../index.rst:93
+#: ../../index.rst:97
 msgid ":ref:`Create a transfer with existing checksums <transfer-checksums>`"
 msgstr ""
+":ref:`Créer un transfert avec une somme de contrôle existante <transfer-"
+"checksums>`"
 
-#: ../../index.rst:94
+#: ../../index.rst:98
 msgid ":ref:`Process the transfer <process-transfer>`"
 msgstr ":ref:`Traiter un transfert <process-transfer>`"
 
-#: ../../index.rst:95
+#: ../../index.rst:99
 msgid ":ref:`Extract packages <extract-packages>`"
 msgstr ":ref:`Extraire les paquets <extract-packages>`"
 
-#: ../../index.rst:96 ../../index.rst:224
+#: ../../index.rst:100 ../../index.rst:236
 msgid ":ref:`Import metadata <import-metadata>`"
 msgstr ":ref:`Importer des métadonnées <import-metadata>`"
 
-#: ../../index.rst:97
-msgid ":ref:`Manage a backlog <manage-backlog>`"
-msgstr ""
-
-#: ../../index.rst:98
-msgid ":ref:`Bags (Library of Congress Bagit format) <bags>`"
-msgstr ""
-
-#: ../../index.rst:99
-msgid ":ref:`Digitized files <digitized>`"
-msgstr ""
-
-#: ../../index.rst:100
-msgid ":ref:`Forensic images <forensic>`"
-msgstr ""
-
 #: ../../index.rst:101
-msgid ":ref:`DSpace exports <dspace>`"
-msgstr ""
+msgid ":ref:`Manage a backlog <manage-backlog>`"
+msgstr ":ref:`Gérer un backlog <manage-backlog>`"
 
 #: ../../index.rst:102
+msgid ":ref:`Bags (Library of Congress Bagit format) <bags>`"
+msgstr ":ref:`Bags (Format BagIt de la Library of Congress) <bags>`"
+
+#: ../../index.rst:103
+msgid ":ref:`Digitized files <digitized>`"
+msgstr ":ref:`Fichiers numérisés <digitized>`"
+
+#: ../../index.rst:104
+msgid ":ref:`Forensic images <forensic>`"
+msgstr ":ref:`Image disque d'investigation <forensic>`"
+
+#: ../../index.rst:105
+msgid ":ref:`DSpace exports <dspace>`"
+msgstr ":ref:`Transferts DSpace <dspace>`"
+
+#: ../../index.rst:106
+msgid ":ref:`Dataverse transfers <dataverse-transfers>`"
+msgstr ""
+
+#: ../../index.rst:107
 msgid ":ref:`ContentDM (transfer and ingest) <contentdm>`"
 msgstr ":ref:`ContentDM (transfert et acquisition) <contentdm>`"
 
-#: ../../index.rst:107
+#: ../../index.rst:108
+msgid ":ref:`Scan for viruses <scan-for-viruses>`"
+msgstr ""
+
+#: ../../index.rst:113
 msgid "Backlog"
 msgstr "Backlog"
 
-#: ../../index.rst:109
+#: ../../index.rst:115
 msgid ""
 "The Backlog tab displays content that has been added to the Archivematica "
 "backlog and allows users to search, download and delete transfers from the "
 "backlog location."
 msgstr ""
+"L'onglet Backlog affiche le contenu qui a été ajouté au backlog "
+"Archivematica et permet aux utilisateurs de faire des recherche, télécharger"
+" et supprimer des transferts à partir de l'emplacement du backlog."
 
-#: ../../index.rst:111
+#: ../../index.rst:119
 msgid ":ref:`General description <backlog>`"
 msgstr ":ref:`Description générale <backlog>`"
 
-#: ../../index.rst:112
+#: ../../index.rst:120
 msgid ":ref:`Searching for transfers <backlog-transfer-search>`"
-msgstr ""
+msgstr ":ref:`Recherche de transferts <backlog-transfer-search>`"
 
-#: ../../index.rst:113
+#: ../../index.rst:121
 msgid ":ref:`Searching for files <backlog-file-search>`"
-msgstr ""
+msgstr ":ref:`Recherche de fichiers <backlog-file-search>`"
 
-#: ../../index.rst:114
+#: ../../index.rst:122
 msgid ":ref:`Downloading transfers or files <backlog-download>`"
-msgstr ""
+msgstr ":ref:`Téléchargement de transferts ou fichiers <backlog-download>`"
 
-#: ../../index.rst:115
+#: ../../index.rst:123
 msgid ":ref:`Deletion of transfers <backlog-delete>`"
 msgstr ":ref:`Supprimer des transferts <backlog-delete>`"
 
-#: ../../index.rst:120
+#: ../../index.rst:128
 msgid "Appraisal"
-msgstr ""
+msgstr "Évaluation"
 
-#: ../../index.rst:122
+#: ../../index.rst:130
 msgid ""
 "The Appraisal and Arrangement tab is used to analyze and arrange material "
 "which has been placed in backlog. It can also be used to arrange materials "
 "directly to resources in ArchivesSpace."
 msgstr ""
+"L'onglet Évaluation et Classement est utilisé pour analyser et classer le "
+"matériel qui a été placé dans le backlog. Il peut également être utilisé "
+"pour classer le matériel directement aux ressources d’ArchivesSpace."
 
-#: ../../index.rst:125
+#: ../../index.rst:134
 msgid ":ref:`General description <appraisal>`"
 msgstr ":ref:`Description générale <appraisal>`"
 
-#: ../../index.rst:126
+#: ../../index.rst:135
 msgid ":ref:`Transfers in the Backlog <backlog_pane>`"
-msgstr ""
+msgstr ":ref:`Transferts dans Backlog <backlog_pane>`"
 
-#: ../../index.rst:127
+#: ../../index.rst:136
 msgid ":ref:`Analysis <analysis_pane>`"
 msgstr ":ref:`Analyse <analysis_pane>`"
 
-#: ../../index.rst:128
+#: ../../index.rst:137
 msgid ":ref:`File List <File_list_pane>`"
-msgstr ""
+msgstr ":ref:`Liste de fichiers <File_list_pane>`"
 
-#: ../../index.rst:129
+#: ../../index.rst:138
 msgid ":ref:`ArchivesSpace Resources <archivesspace_pane>`"
 msgstr ":ref:`Ressources ArchivesSpace <archivesspace_pane>`"
 
-#: ../../index.rst:130
+#: ../../index.rst:139
 msgid ""
 ":ref:`Adding Files to ArchivesSpace Resources and Starting SIPs "
 "<adding_files_archivesspace>`"
 msgstr ""
+":ref:`Ajouter des fichiers dans Ressources ArchiveSpace et lancer un SIP "
+"<adding_files_archivesspace>`"
 
-#: ../../index.rst:131
+#: ../../index.rst:140
 msgid ":ref:`Arrangement <arrangement>`"
 msgstr ":ref:`Classement <arrangement>`"
 
-#: ../../index.rst:136
+#: ../../index.rst:145
 msgid "Ingest"
 msgstr "Acquisition"
 
-#: ../../index.rst:138
+#: ../../index.rst:147
 msgid ""
 "The Ingest tab displays the micro-services and jobs that take place to turn "
 "a SIP into an AIP or a DIP. This tab also contains the backlog widget."
 msgstr ""
+"L'onglet Acquisition affiche les microservices et les tâches qui ont lieu "
+"lors de la transformation d’un SIP en AIP ou en DIP. Cet onglet contient "
+"également le widget backlog."
 
-#: ../../index.rst:140
+#: ../../index.rst:150
 msgid ":ref:`General description <ingest>`"
 msgstr ":ref:`Description générale <ingest>`"
 
-#: ../../index.rst:141
+#: ../../index.rst:151
 msgid ":ref:`Create a SIP <create-sip>`"
 msgstr ":ref:`Créer un SIP <create-sip>`"
 
-#: ../../index.rst:142
+#: ../../index.rst:152
 msgid ":ref:`Arrange a SIP from backlog <arrange-sip>`"
 msgstr ":ref:`Classer un SIP à partir du backlog <arrange-sip>`"
 
-#: ../../index.rst:143
+#: ../../index.rst:153
 msgid ":ref:`Add metadata <add-metadata>`"
 msgstr ":ref:`Ajouter des métadonnées <add-metadata>`"
 
-#: ../../index.rst:144
+#: ../../index.rst:154
 msgid ":ref:`Add PREMIS rights <add-rights>`"
 msgstr ":ref:`Ajouter des privilèges PREMIS <add-rights>`"
 
-#: ../../index.rst:145
+#: ../../index.rst:155
 msgid ":ref:`Normalize <normalize>`"
 msgstr ":ref:`Normaliser <normalize>`"
 
-#: ../../index.rst:146
+#: ../../index.rst:156
 msgid ":ref:`Store the AIP <store-aip>`"
 msgstr ":ref:`Stocker l’AIP <store-aip>`"
 
-#: ../../index.rst:147
+#: ../../index.rst:157
 msgid ":ref:`Reingest AIP <reingest>`"
 msgstr ":ref:`Réacquistion de l’AIP <reingest>`"
 
-#: ../../index.rst:148
+#: ../../index.rst:158
 msgid ":ref:`Upload DIP to ArchivesSpace <upload-AS>`"
 msgstr ":ref:`Télécharger le DIP dans ArchivesSpace <upload-as>`"
 
-#: ../../index.rst:149
+#: ../../index.rst:159
 msgid ":ref:`Upload DIP to Archivists Toolkit <upload-AT>`"
 msgstr ":ref:`Télécharger le DIP dans Archivists' Toolkit <upload-at>`"
 
-#: ../../index.rst:150
+#: ../../index.rst:160
 msgid ":ref:`Manual normalization <manual-norm>`"
 msgstr ":ref:`Normalisation manuelle <manual-norm>`"
 
-#: ../../index.rst:156
+#: ../../index.rst:166
 msgid "Archival Storage"
 msgstr "Dossier de stockage des archives"
 
-#: ../../index.rst:158
+#: ../../index.rst:168
 msgid ""
 "The Archival Storage tab displays AIPs that have been processed by the "
 "Archivematica pipeline and related metadata such as size of AIP, UUID and "
 "date stored."
 msgstr ""
+"L'onglet Dossier de stockage des archives affiche les AIP qui ont été "
+"traités par le pipeline Archivematica et les métadonnées associées, telles "
+"que la taille de l'AIP, l'UUID et la date de stockage."
 
-#: ../../index.rst:161
+#: ../../index.rst:172
 msgid ":ref:`Storing an AIP <storing-aip>`"
-msgstr ""
+msgstr ":ref:`Stocker  un AIP <storing-aip>`"
 
-#: ../../index.rst:162
+#: ../../index.rst:173
 msgid ":ref:`Searching the AIP store <search-aip>`"
-msgstr ""
+msgstr ":ref:`Faire une recherche dans le aip-store <search-aip>`"
 
-#: ../../index.rst:163
+#: ../../index.rst:174
 msgid ":ref:`Deleting an AIP <delete-aip>`"
 msgstr ":ref:`Supprimer un AIP <delete-aip>`"
 
-#: ../../index.rst:164
+#: ../../index.rst:175
 msgid ":ref:`AIP structure <aip-structure>`"
-msgstr ""
+msgstr ":ref:`Structure d'un AIP <aip-structure>`"
 
-#: ../../index.rst:165
+#: ../../index.rst:176
 msgid ":ref:`AICs - managing multi-part AIPs <aic>`"
-msgstr ""
+msgstr ":ref:`AIC - Gestion d'AIP en plusieurs parties <aic>`"
 
-#: ../../index.rst:171
+#: ../../index.rst:182
 msgid "Access"
 msgstr "Accès"
 
-#: ../../index.rst:173
+#: ../../index.rst:184
 msgid ""
 "Most of Archivematica's access integrations take place within the Ingest "
 "tab. The Access tab displays DIPs which have been sent to AtoM."
 msgstr ""
+"La plupart des intégrations d'accès d'Archivematica ont lieu dans l'onglet "
+"Acquisition. L'onglet Accès affiche les DIP qui ont été envoyés à AtoM."
 
-#: ../../index.rst:175
+#: ../../index.rst:187
 msgid ":ref:`General description <access>`"
 msgstr ":ref:`Description générale <access>`"
 
-#: ../../index.rst:176
+#: ../../index.rst:188
 msgid ":ref:`Default access system <access-default>`"
 msgstr ":ref:`Système d'accès par défaut <access-default>`"
 
-#: ../../index.rst:177
+#: ../../index.rst:189
 msgid ":ref:`Upload DIP to AtoM <upload-atom>`"
 msgstr ":ref:`Télécharger le DIP dans AtoM <upload-atom>`"
 
-#: ../../index.rst:178
+#: ../../index.rst:190
 msgid ":ref:`Store DIP <store-dip>`"
 msgstr ":ref:`Entreposer le DIP <store-dip>`"
 
-#: ../../index.rst:179
+#: ../../index.rst:191
 msgid ":ref:`Review/Download DIP <review-dip>`"
 msgstr ":ref:`Vérifier/Télécharger le DIP <review-dip>`"
 
-#: ../../index.rst:180
+#: ../../index.rst:192
 msgid ":ref:`Access tab <access-tab>`"
 msgstr ":ref:`Menu Accès <access-tab>`"
 
-#: ../../index.rst:181
+#: ../../index.rst:193
 msgid ":ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`"
 msgstr ""
 ":ref:`Télécharger les métadonnées du DIP dans le module Archivists' Toolkit "
 "<archivists-toolkit>`"
 
-#: ../../index.rst:182
+#: ../../index.rst:194
 msgid ":ref:`Upload DIP to ContentDM <contentdm>`"
 msgstr ":ref:`Télécharger le DIP dans ContentDM <contentdm>`"
 
-#: ../../index.rst:188
+#: ../../index.rst:200
 msgid "Preservation planning"
 msgstr "Planification de la préservation"
 
-#: ../../index.rst:190
+#: ../../index.rst:202
 msgid ""
 "The Preservation Planning tab is the de facto user interface for the Format "
-"Policy Registry, the extensive format database that informs how "
-"Archivematica handles files. The Preservation Planning tab allows users to "
-"add or edit format policies for normalization, characterization, validation,"
-" and other tools and workflows that act upon content preserved through "
-"Archivematica."
+"Policy Registry (FPR), the extensive format database that controls how "
+"Archivematica handles file formats. The Preservation Planning tab allows "
+"users to add or edit format policies for normalization, characterization, "
+"validation, and other tools and workflows that act upon content preserved "
+"through Archivematica."
 msgstr ""
 
-#: ../../index.rst:196
+#: ../../index.rst:209
 msgid ":ref:`General description <preservation-planning>`"
 msgstr ":ref:`Description générale <preservation-planning>`"
 
-#: ../../index.rst:197
-msgid ":ref:`Preservation planning tab <pres-tab>`"
-msgstr ":ref:`Onglet de Planification de préservation <pres-tab>`"
-
-#: ../../index.rst:198
+#: ../../index.rst:210
 msgid ":ref:`Format Policy Registry (FPR) <fpr>`"
 msgstr ":ref:`Registre de politiques de formats (FPR) <fpr>`"
 
-#: ../../index.rst:199
+#: ../../index.rst:211
 msgid ":ref:`Preservation policies <pres-policies>`"
 msgstr ":ref:`Politiques de planification de préservation <pres-policies>`"
 
-#: ../../index.rst:205
+#: ../../index.rst:212
+msgid ":ref:`Altering rules and commands <fpr-instruct>`"
+msgstr ":ref:`Modifier les règles et commandes <fpr-instruct>`"
+
+#: ../../index.rst:218
 msgid "Administration"
 msgstr "Administration"
 
-#: ../../index.rst:207
+#: ../../index.rst:220
 msgid ""
 "The Administration tab allows administrative users to set processing "
 "configurations, transfer and storage locations, DIP upload configurations, "
 "and to add and remove users, among other things."
 msgstr ""
+"L'onglet Administration permet, entre autre, aux utilisateurs administratifs"
+" de définir les configurations de traitement, les emplacements de transfert "
+"et de stockage, les configurations de téléchargement des DIP, et d'ajouter "
+"et de supprimer des utilisateurs."
 
-#: ../../index.rst:211
+#: ../../index.rst:224
 msgid ":ref:`Dashboard administration tab <dashboard-admin>`"
 msgstr ":ref:`Onglet Administration du tableau de bord <dashboard-admin>`"
 
-#: ../../index.rst:212
-msgid ":ref:`Update Format Policy Registry (FPR) <fpr-update>`"
-msgstr ""
-
-#: ../../index.rst:213
+#: ../../index.rst:225
 msgid ":ref:`Storage service users <storageservice:users>`"
-msgstr ""
+msgstr "ref:`Utilisateurs du Service de stockage <storageservice:users>`"
 
-#: ../../index.rst:219
+#: ../../index.rst:231
 msgid "Metadata"
 msgstr "Métadonnées"
 
-#: ../../index.rst:221
+#: ../../index.rst:233
 msgid ""
 "Archivematica employs several metadata standards. This section describes how"
 " Archivematica implements and makes use of them."
 msgstr ""
+"Archivematica utilise plusieurs normes de métadonnées. Cette section décrit "
+"comment Archivematica les implémente et les utilise."
 
-#: ../../index.rst:225
+#: ../../index.rst:237
 msgid ":ref:`PREMIS <premis-template>`"
 msgstr ":ref:`PREMIS <premis-template>`"
 
-#: ../../index.rst:226
+#: ../../index.rst:238
 msgid ":ref:`Dublin Core <dublin_core>`"
 msgstr ":ref:`Dublin Core <dublin_core>`"
 
-#: ../../index.rst:230
+#: ../../index.rst:242
 msgid "Translations"
 msgstr "Traductions"
 
-#: ../../index.rst:232
+#: ../../index.rst:244
 msgid ""
 "Beginning with Archivematica 1.6.1, the community has been able to support "
 "the project by volunteering their time and effort to translate the "
 "Archivematica documentation, the interface, and the Storage Service into "
 "other languages."
 msgstr ""
+"Depuis la version 1.6.1 d'Archivematica, la communauté a soutenu le projet "
+"en offrant temps et efforts pour traduire dans d'autres langues la "
+"documentation d'Archivematica,  son interface et son service de stockage."
 
-#: ../../index.rst:236
+#: ../../index.rst:248
 msgid ""
 ":ref:`Contributing translations to the Archivematica project <translations>`"
 msgstr ""
+":ref:`Contribuer à la traduction du projet Archivematica <translations>`"
 
-#: ../../index.rst:241
+#: ../../index.rst:253
 msgid "Administrator manual"
 msgstr "Manuel de l'administrateur"
 
-#: ../../index.rst:243
+#: ../../index.rst:255
 msgid ""
 "The administrator manual is intended for systems administrators who are "
 "responsible for installing, configuring, setting up, and maintaining "
 "Archivematica and related systems."
 msgstr ""
 
-#: ../../index.rst:251
+#: ../../index.rst:263
 msgid "Installation and setup"
+msgstr "Installation et configuration"
+
+#: ../../index.rst:265
+msgid ":ref:`Installing Archivematica <installation>`"
 msgstr ""
 
-#: ../../index.rst:253
-msgid ":ref:`Installation <installation>`"
-msgstr ":ref:`Installation <installation>`"
+#: ../../index.rst:266
+msgid ":ref:`Upgrading Archivematica <upgrade>`"
+msgstr ""
 
-#: ../../index.rst:254
-msgid ":ref:`Storage Service <storageservice:administrators>`"
-msgstr ":ref:`Service de stockage <storageservice:administrators>`"
-
-#: ../../index.rst:255
-msgid ":ref:`Dashboard Administration tab <dashboard-config>`"
-msgstr ":ref:`Onglet Administration du tableau de bord <dashboard-config>`"
-
-#: ../../index.rst:256
-msgid ":ref:`Format Policy Registry (FPR) <fpr:index>`"
-msgstr ":ref:`Registre de politiques de formats (FPR) <fpr:index>`"
-
-#: ../../index.rst:257
+#: ../../index.rst:267
 msgid ":ref:`Customization and automation <customization>`"
 msgstr ":ref:`Personnalisation et automatisation <customization>`"
 
-#: ../../index.rst:258
-msgid ":ref:`Duracloud setup <duracloud-setup>`"
+#: ../../index.rst:268
+msgid ":ref:`Setting up integrations <integrations>`"
 msgstr ""
 
-#: ../../index.rst:264
+#: ../../index.rst:269
+msgid ""
+":ref:`Administering the Storage Service <storageservice:administrators>`"
+msgstr ""
+
+#: ../../index.rst:270
+msgid ":ref:`Preservation planning <preservation-planning>`"
+msgstr ""
+
+#: ../../index.rst:275
 msgid "Maintenance"
 msgstr "Entretien"
 
-#: ../../index.rst:266
+#: ../../index.rst:277
 msgid ":ref:`Elasticsearch <elasticsearch>`"
 msgstr ":ref:`Elasticsearch <elasticsearch>`"
 
-#: ../../index.rst:267
+#: ../../index.rst:278
 msgid ":ref:`Data back-up <data-backup>`"
 msgstr ":ref:`Sauvegarder les données <data-backup>`"
 
-#: ../../index.rst:268
+#: ../../index.rst:279
 msgid ":ref:`FAQ <admin-faq>`"
 msgstr ":ref:`FAQ <admin-faq>`"
 
-#: ../../index.rst:274
+#: ../../index.rst:285
 msgid "Security"
 msgstr "Sécurité"
 
-#: ../../index.rst:276
+#: ../../index.rst:287
 msgid ":ref:`Elasticsearch <elasticsearch-security>`"
 msgstr ":ref:`Elasticsearch <elasticsearch-security>`"
 
-#: ../../index.rst:277
+#: ../../index.rst:288
 msgid ":ref:`MySQL <mysql-security>`"
 msgstr ":ref:`MySQL <mysql-security>`"
 
-#: ../../index.rst:278
+#: ../../index.rst:289
 msgid ":ref:`AtoM <atom-security>`"
 msgstr ":ref:`AtoM <atom-security>`"
 
-#: ../../index.rst:279
+#: ../../index.rst:290
 msgid ":ref:`Gearman <gearman-security>`"
 msgstr ":ref:`Gearman <gearman-security>`"
 
-#: ../../index.rst:280
+#: ../../index.rst:291
 msgid ":ref:`User security <user-security>`"
+msgstr ""
+
+#: ../../index.rst:292
+msgid ":ref:`LDAP setup <ldap-setup>`"
+msgstr ""
+
+#: ../../index.rst:293
+msgid ":ref:`Shibboleth setup <shibboleth-setup>`"
+msgstr ""
+
+#: ../../index.rst:294
+msgid ":ref:`CA certificates <ca-root-certificates>`"
 msgstr ""

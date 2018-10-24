@@ -1,0 +1,1066 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:5
+msgid "Dashboard administration tab"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:7
+msgid ""
+"The Archivematica administration pages, under the Administration tab of "
+"the dashboard, allow you to configure application components and manage "
+"users."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:10
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:12
+msgid ":ref:`Processing configuration <process-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:13
+msgid ":ref:`General <admin-dashboard-general>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:14
+msgid ":ref:`Failures <admin-dashboard-failures>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:15
+msgid ":ref:`Transfer source locations <admin-dashboard-transfer-source>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:16
+msgid ":ref:`AIP storage locations <admin-dashboard-AIP-stor>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:17
+msgid ":ref:`Processing storage usage <admin-dashboard-usage>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:18
+msgid ":ref:`DIP upload <admin-dashboard-dip-upload>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:20
+msgid ":ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:21
+msgid ":ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:22
+msgid ":ref:`Archivists' Toolkit DIP upload <admin-dashboard-AT>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:24
+msgid ":ref:`PREMIS agent <admin-dashboard-premis>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:25
+msgid ":ref:`REST API <admin-dashboard-rest>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:26
+msgid ":ref:`Users <admin-dashboard-users>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:27
+msgid ":ref:`Handle Server config<admin-handle-server>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:28
+msgid ":ref:`Language <admin-language-choice>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:29
+msgid ":ref:`Version <admin-version>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:34
+msgid "Processing configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:36
+msgid ""
+"The processing configuration administration page of the dashboard allows "
+"users to configure the job decision points presented by Archivematica "
+"during transfer and ingest. When you install Archivematica, there are two"
+" default processing configurations:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:41
+msgid ""
+"``Default``, which is used for any transfer started manually from the "
+":ref:`Transfer tab <create-transfer>`, automatically via the `automation "
+"tools`_, or in any other context where no other processing configuration "
+"is specified."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:44
+msgid ""
+"``Automated``, which is used for transfers automatically started from "
+"Jisc RDSS environments (if you are not a Jisc user, feel free to delete "
+"this configuration)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:53
+msgid ""
+"By clicking **Edit**, you will be taken to a form where you can configure"
+" the default processingMCP.xml that governs these decisions. Clicking on "
+"**Add** will allow you to create a new processing configuration. When you"
+" change the options using the web interface the necessary XML will be "
+"written behind the scenes."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:63
+msgid ""
+"For more information about configuring processing decisions in the "
+"Archivematica dashboard, see :ref:`Processing configuration <dashboard-"
+"processing>` page in the User Manual. The Processing configuration page "
+"contains a list of all of the decision points and their options."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:68
+msgid ""
+"You can also revert the default and automated processing configurations "
+"to their pre-sets by clicking on **Reset**. Please note that the pre-sets"
+" for the default processing configuration are noted on the "
+":ref:`Processing configuration <dashboard-processing>` in the User "
+"Manual."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:73
+msgid ""
+"Changes to this form are written to a file called ``processingMCP.xml``. "
+"When you start a transfer in the Archivematica dashboard, it "
+"automatically uses the default processingMCP.xml."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:80
+msgid "Using a custom processing configuration file"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:82
+msgid ""
+"For more advanced workflows, you may wants to create multiple processing "
+"configurations - for example, along with the default config, users might "
+"want to have a configuration specific to video files. You can add a new "
+"processing configuration through the user interface by clicking on the "
+"**Add** button."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:87
+msgid ""
+"Once you have created a custom processing configuration, you can download"
+" the XML file by clicking on **Download**. Rename this file "
+"``processingMCP.xml``. Then place this file in the root directory of the "
+"transfer. Archivematica will now use the included file to make processing"
+" decisions, rather than the default configuration."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:93
+msgid "The processingMCP.xml follows a specific XML format:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:143
+msgid ""
+"Note that ``appliesTo`` is the UUID associated with the micro-service job"
+" presented in the dashboard and ``goToChain`` is the UUID of the desired "
+"selection."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:150
+msgid "General"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:152
+msgid ""
+"In this section, you can configure the following for your Archivematica "
+"client:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:154
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:167
+msgid "Storage Service options"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:155
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:174
+msgid "Checksum algorithm"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:156
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:181
+msgid "Elasticsearch indexing"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:164
+msgid "General configuration options in Administration tab of the dashboard"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:169
+msgid ""
+"This is where you'll find the complete URL for the Storage Service, along"
+" with a username and API key. See the Storage Service documentation for "
+"more information about this feature."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:176
+msgid ""
+"You can select which checksum algorithm Archivematica will use during the"
+" *Assign UUIDs and checksums* micro-service in Transfer. Choose between "
+"MD5, SHA-1, SHA-256 and SHA-512."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:183
+msgid ""
+"As of Archivematica 1.7, Elasticsearch is optional. Installing "
+"Archivematica without Elasticsearch means reduced consumption of compute "
+"resources and lower operational complexity. Disabling Elasticsearch means"
+" that the Backlog, Appraisal, and Archival Storage tabs do not appear and"
+" their functionality is not available."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:189
+msgid ""
+"This section in the General configuration shows if Elasticsearch is "
+"enabled or disabled."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:195
+msgid "Failures"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:197
+msgid "This page displays packages that failed during processing."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:205
+msgid "Failures report in the dashboard"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:208
+msgid "Clicking the date, name or UUID will display a report of the failure:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:215
+msgid "The failure report can be removed from the Dashboard by clicking Delete."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:220
+msgid "Transfer source location"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:222
+msgid ""
+"Archivematica allows you to start transfers using the operating system's "
+"file browser or via a web interface. Source files for transfers, however,"
+" cannot be uploaded using the web interface; they must exist on volumes "
+"accessible to the Archivematica MCP server and configured via the Storage"
+" Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:227
+msgid ""
+"When starting a transfer you are required to select one or more "
+"directories of files to add to the transfer."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:233
+msgid "AIP storage locations"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:235
+msgid ""
+"AIP storage directories are directories in which completed AIPs are "
+"stored. Storage directories can be specified in a manner similar to "
+"transfer source directories using the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:239
+msgid ""
+"You can view your transfer source directories in the Administrative tab "
+"of the dashboard under \"AIP storage locations\"."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:245
+msgid "Processing storage usage"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:247
+msgid ""
+"This section of the Administration page displays various processing "
+"locations with their current usage of available space."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:255
+msgid ""
+"Administrators can use the \"clear\" buttons to delete the contents of "
+"these processing locations to make more room on their server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:261
+msgid "DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:263
+msgid ""
+"Archivematica has access integrations with three access platforms: AtoM, "
+"ArchivesSpace, and Archivists' Toolkit."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:269
+msgid "AtoM/Binder DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:271
+msgid ""
+"Archivematica can upload DIPs directly to an `AtoM`_ website so that the "
+"contents can be accessed online. Using the same configuration screen, you"
+" can also configure Archivematica to upload DIPs to `Binder`_, which is "
+"built off the AtoM framework."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:276
+msgid ""
+"The AtoM/Binder DIP upload configuration page is where you specify the "
+"details of the AtoM or Binder installation you'd like the DIPs uploaded "
+"to (and, if using Rsync to transfer the DIP files, Rsync transfer "
+"details)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:280
+msgid ""
+"Before setting these details, please ensure that you have a working AtoM "
+"or Binder site that is properly connected to Archivematica. See "
+":ref:`Using AtoM 2.x with Archivematica <atom-setup>` or :ref:`Using "
+"Binder with Archivematica <binder-setup>` for more information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:290
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:429
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:507
+msgid "Fields:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:292
+msgid "**Upload URL**: the URL of the destination AtoM or Binder website."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:293
+msgid "**Login email**: the email address used to log in to AtoM or Binder."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:294
+msgid "**Login password**: the password used to log in to AtoM or Binder."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:295
+msgid ""
+"**AtoM/Binder version**: the version of the destination AtoM or Binder "
+"website."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:296
+msgid ""
+"**Rsync target**: if you'd like to send the DIP with Rsync before it is "
+"deposited in AtoM or Binder, enter the destination value for rsync, e.g. "
+"``foobar.com:/dips``. This field is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:299
+msgid ""
+"**Rsync command**: if you've entered an Rsync target, specify the remote "
+"shell manually, e.g. ``ssh -p 22222 -l user``. This field is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:301
+msgid ""
+"**Debug mode**: if you would like to have additional details in failure "
+"reports, also enable debug mode by choosing \"Yes\"."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:305
+msgid "AtoM DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:307
+msgid ""
+"If AtoM is installed on a remote server, Archivematica uses SSH and rsync"
+" to copy the DIP to a temporary directory on the AtoM server. If "
+"Archivematica and AtoM share a common filesystem (e.g. a shared network "
+"directory) this step is unnecessary."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:312
+msgid ""
+"Archivematica sends a REST request to AtoM to tell AtoM which archival "
+"description is the target of the DIP. The DIP target description is "
+"identified by the description's \"slug\".  The actual upload of the DIP "
+"contents to AtoM is done via a background job, and may take some time to "
+"process if a large DIP is uploaded."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:318
+msgid ""
+"An AtoM background worker uploads the DIP metadata (METS file) and "
+"digital objects from the temporary directory to AtoM, links them to the "
+"target description, then deletes the temporary files."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:322
+msgid "You will also need to make some changes in the AtoM user interface:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:324
+msgid ""
+"The SWORD plugin (Admin --> Plugins --> qtSwordPlugin) must be enabled in"
+" order for AtoM to receive uploaded DIPs."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:327
+msgid ""
+"Enabling Job scheduling (Admin --> Settings --> Job scheduling) in "
+"version 2.1 or lower is also recommended."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:330
+msgid ""
+"AtoM DIP upload can use Rsync as a transfer mechanism. Rsync is an open "
+"source utility for efficiently transferring files. The rsync-target "
+"parameter is used to specify an Rsync-style target host/directory "
+"pairing, ``foobar.com:~/dips/`` for example. The rsync-command parameter "
+"is used to specify rsync connection options, ``ssh -p 22222 -l user`` for"
+" example. If you are using the rsync option, please see AtoM server "
+"configuration below."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:337
+msgid ""
+"To set any parameters for AtoM DIP upload change the values, preserving "
+"the existing format they're specified in, in the ``Command arguments`` "
+"field then click \"Save\"."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:343
+msgid ""
+"If you are planning to use the *metadata-only DIP upload to AtoM* "
+"functionality don't forget to enable the :ref:`the API plugin in AtoM "
+"<atom:api-intro>`, generate a API key and update the ``REST API key`` "
+"field accordingly. Metadata-only upload is only available since AtoM 2.4."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:349
+msgid "AtoM server configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:351
+msgid ""
+"This server configuration step is necessary to allow Archivematica to log"
+" in to the AtoM server without passwords, and only when the user is "
+"deploying the rsync option described above in the AtoM DIP upload "
+"section."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:355
+msgid "To enable sending DIPs from Archivematica to the AtoM server:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:357
+msgid ""
+"Generate SSH keys for the Archivematica user. Leave the passphrase field "
+"blank."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:365
+msgid ""
+"Copy the contents of ``/var/lib/archivematica/.ssh/id_rsa.pub`` somewhere"
+" handy, you will need it later."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:368
+msgid ""
+"Now, it's time to configure the AtoM server so Archivematica can send the"
+" DIPs using SSH/rsync. For that purpose, you will create a user called "
+"``archivematica`` and we are going to assign that user a restricted shell"
+" with access only to rsync:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:380
+msgid "Add the SSH key that we generated before:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:389
+msgid ""
+"In Archivematica, make sure that you update the ``--rsync-target`` "
+"accordingly. These are the parameters that we are passing to the upload-"
+"qubit microservice. Go to the Administration > Upload DIP page in the "
+"dashboard."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:393
+msgid "Generic parameters:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:405
+msgid "Binder DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:407
+msgid ""
+"For more information about configuring Binder, please see the "
+":ref:`Binder integrations page <binder-setup>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:413
+msgid "ArchivesSpace DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:415
+msgid ""
+"Before ingesting digital objects destined for ArchivesSpace, ensure that "
+"the ArchivesSpace DIP upload settings in the Administration tab of the "
+"dashboard have been set."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:419
+msgid ""
+"These settings should be created and saved before digital objects "
+"destined for upload to ArchivesSpace are processed. Note that these can "
+"be set once and used for processing any number of transfers (i.e. they do"
+" not need to be re-set for each transfer)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:431
+msgid ""
+"**ArchivesSpace host**: the URL of the host database. Do not include "
+"``https://`` or ``www.``, e.g. ``aspace.test.org``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:433
+msgid "**ArchivesSpace backend port**: the port of the database, e.g. ``8089``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:434
+msgid ""
+"**ArchivesSpace administrative user**: the username of a user with "
+"administrative permissions in ArchivesSpace."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:436
+msgid ""
+"**ArchivesSpace administrative user password**: the password for user set"
+" above. If you make changes to this configuration, you will need to re-"
+"enter the password."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:439
+msgid ""
+"**Restrictions Apply**: Selecting *Yes* will apply a blanket access "
+"restriction to all content uploaded from Archivematica to ArchivesSpace. "
+"Selecting *No* will send all content to ArchivesSpace without "
+"restrictions. Should you wish to enable the PREMIS-based restrictions "
+"functionality, choose *Base on PREMIS*."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:444
+msgid ""
+"**XLink Show**: indicate how the link to the digital object, as it "
+"appears in ArchivesSpace, should operate."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:447
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:532
+msgid "*Embed*: the digital object screen is embedded in the current window."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:448
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:533
+msgid "*New*: the digital object screen opens in a new window."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:449
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:457
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:523
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:534
+msgid "*None*: no specific behaviour is passed to the link."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:450
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:460
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:526
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:535
+msgid "*Other*: no specific behaviour is passed to the link."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:451
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:536
+msgid "*Replace*: the digital object screen opens in the current window."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:453
+msgid ""
+"**XLink Actuate**: indicates when a digital object should display in "
+"ArchivesSpace (e.g. whether the link occurs automatically or must be "
+"requested by the user). Used in conjunction with XLink Show attribute."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:458
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:524
+msgid ""
+"*onLoad*: link is activated when the document loads (used when Show = "
+"Embed)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:461
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:527
+msgid "*onRequest*: link is activated when the user selects the link."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:463
+msgid ""
+"**Object Type**: entering a value from ArchivesSpace's controlled list of"
+" object types will apply this value to all objects. This field is "
+"optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:465
+msgid ""
+"**Use statement**: entering a value from ArchivesSpace's controlled list "
+"of use statements will apply this value to all objects. This field is "
+"optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:467
+msgid ""
+"**URL prefix**: the URL of DIP object server as you wish it to appear in "
+"ArchivesSpace record. Example: ``http://example.com``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:469
+msgid ""
+"**Conditions governing access**: entering a value in this field will "
+"populate the Conditions governing access note in ArchivesSpace for all "
+"objects."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:471
+msgid ""
+"**Conditions governing use**: entering a value in this field will "
+"populate the Conditions governing use note in ArchivesSpace for all "
+"objects."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:473
+msgid ""
+"**ArchivesSpace repository number**: the identifier for the ArchivesSpace"
+" repository where you are uploading DIPs. Note that the default "
+"identifier for a single-repository ArchivesSpace instance is *2*."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:478
+msgid ""
+"In order to save changes to the ArchivesSpace DIP upload configuration, "
+"you must enter the password before clicking save. Note that Archivematica"
+" will *not* display an error if the password is not entered."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:485
+msgid "Archivists' Toolkit"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:487
+msgid ""
+"Before ingesting digital objects destined for Archivists' Toolkit, ensure"
+" that the Achivists' Toolkit DIP upload settings in the Administration "
+"tab of the dashboard have been set."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:491
+msgid ""
+"These settings should be created and saved before digital objects "
+"destined for upload to Archivists Toolkit are processed. Note that these "
+"can be set once and used for processing any number of transfers (i.e. "
+"they do not need to be re-set for each transfer). The screenshots below "
+"show the template in the dashboard."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:498
+msgid ""
+"Archivists' Toolkit is a legacy application that is no longer being "
+"maintained as of September 2013. DIP upload to Archivists' Toolkit is "
+"deprecated and this feature is maintained for historical purposes."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:509
+msgid ""
+"**Database host**: the URL of the host database. Do not include "
+"``https://`` or ``www.``, e.g. ``atoolkit.test.org``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:511
+msgid "**Database port**: the port of the database, e.g. ``8089``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:512
+msgid "**Database name**: the name of the database."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:513
+msgid "**Database user**: a username with administrative access to the database."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:514
+msgid "**Database password**: the password for the above user."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:515
+msgid "**Archivists' Toolkit username**: a username for Archivists' Toolkit."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:516
+msgid ""
+"**Restrictions apply**: if you wish to enable the PREMIS-based "
+"restrictions functionality, choose *base on PREMIS*. To add PREMIS "
+"rights, please see :ref:`Add PREMIS rights and restrictions <at-premis>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:519
+msgid ""
+"**EAD DAO actuate**: indicates when a digital object should display in "
+"Archivists' Toolkit (e.g. whether the link occurs automatically or must "
+"be requested by the user). Used in conjunction with EAD DAO Show "
+"attribute."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:529
+msgid ""
+"**EAD DAO show**: indicate how the link to the digital object, as it "
+"appears in Archivists' Toolkit, should operate."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:538
+msgid ""
+"**Object type**: entering a value from Archivists' Toolkit's controlled "
+"list of use statements will apply this value to all objects. This field "
+"is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:541
+msgid ""
+"**Use statement**: entering a value from Archivists' Toolkit's controlled"
+" list of use statements will apply this value to all objects. This field "
+"is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:544
+msgid ""
+"**URL prefix**: the URL of DIP object server as you wish it to appear in "
+"Archivists' Toolkit record. Example: ``http://example.com``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:546
+msgid ""
+"**Conditions governing access**: entering a value in this field will "
+"populate the Conditions governing access note in Archivists' Toolkit for "
+"all objects. This field is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:549
+msgid ""
+"**Conditions governing use**: entering a value in this field will "
+"populate the Conditions governing use note in Archivists' Toolkit for all"
+" objects. This field is optional."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:556
+msgid "PREMIS agent"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:558
+msgid ""
+"The PREMIS agent name and code can be set here via the administration "
+"interface."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:565
+msgid ""
+"The PREMIS agent information is used in the METS files created by "
+"Archivematica to identify the agency performing the digital preservation "
+"events."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:571
+msgid "Rest API"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:573
+msgid ""
+"In addition to automation using the ``processingMCP.xml`` file, "
+"Archivematica includes a REST API for automating transfer approval. Using"
+" this API, you can create a custom script that copies a transfer to the "
+"appropriate directory then uses the curl command, or some other means, to"
+" let Archivematica know that the copy is complete."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:580
+msgid "API keys"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:582
+msgid ""
+"Use of the REST API requires the use of API keys. An API key is "
+"associated with a specific user. To generate an API key for a user:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:585
+msgid "Browse to /administration/accounts/list/"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:587
+msgid ""
+"Click the \"Edit\" button for the user you'd like to generate an API key "
+"for"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:589
+msgid "Click the \"Regenerate API key\" checkbox"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:591
+msgid "Click \"Save\""
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:593
+msgid ""
+"After generating an API key, you can click the \"Edit\" button for the "
+"user and you should see the API key."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:597
+msgid "IP whitelist"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:599
+msgid ""
+"The API key is always required but in some cases the administrator may "
+"want to add an additional security measurement. IP whitelisting allows "
+"you to create a list of trusted IP addresses from which you can access to"
+" the API."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:603
+msgid ""
+"The IP whitelist can be edited in the administration interface at "
+"``/administration/api/``. If the whitelist is empty all requests will be "
+"allowed."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:608
+msgid "Approving a transfer"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:610
+msgid ""
+"The REST API can be used to approve a transfer. The transfer must first "
+"be copied into the appropriate watch directory. To determine the location"
+" of the appropriate watch directory, first figure out where the shared "
+"directory is from the watchDirectoryPath value of "
+"``/etc/archivematica/MCPServer/serverConfig.conf``. Within that directory"
+" is a subdirectory activeTransfers. In this subdirectory are watch "
+"directories for the various transfer types."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:618
+msgid ""
+"When using the REST API to approve a transfer, if a transfer type isn't "
+"specified, the transfer will be deemed a standard transfer."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:621
+msgid "**HTTP Method**: POST"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:623
+msgid "**URL**: /api/transfer/approve"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:625
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:657
+msgid "**Parameters**:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:627
+msgid "``directory``: directory name of the transfer"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:629
+msgid ""
+"``type`` (optional): transfer type [standard|dspace|unzipped bag|zipped "
+"bag]"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:631
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:659
+msgid "``api_key``: an API key"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:633
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:661
+msgid "``username``: the username associated with the API key"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:635
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:663
+msgid "Example curl command:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:641
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:669
+msgid "Example result:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:648
+msgid "Listing unapproved transfers"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:650
+msgid ""
+"The REST API can be used to get a list of unapproved transfers. Each "
+"transfer's directory name and type is returned."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:653
+msgid "**Method**: ``GET``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:655
+msgid "**URL**: ``/api/transfer/unapproved``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:685
+msgid "Users"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:687
+msgid ""
+"The dashboard provides a simple cookie-based user authentication system "
+"using the `Django authentication framework`_. Access to the dashboard is "
+"limited only to logged-in users and a login page will be shown when the "
+"user is not recognized. If the application can't find any user in the "
+"database, the user creation page will be shown instead, allowing the "
+"creation of an administrator account."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:694
+msgid ""
+"Users can be also created, modified and deleted from the Administration "
+"tab. Only users who are administrators can create and edit user accounts."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:697
+msgid ""
+"You can add a new user to the system by clicking the \"Add new\" button "
+"on the user administration page. By adding a user you provide a way to "
+"access Archivematica using a username/password combination. Should you "
+"need to change a user's username or password, you can do so by clicking "
+"the \"Edit\" button, corresponding to the user, on the administration "
+"page. Should you need to revoke a user's access, you can click the "
+"corresponding \"Delete\" button."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:705
+msgid "CLI creation of administrative users"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:707
+msgid ""
+"If you need an additional administrator user one can be created via the "
+"command-line, issue the following commands:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:722
+msgid "CLI password resetting"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:724
+msgid ""
+"If you've forgotten the password for your administrator user, or any "
+"other user, you can change it via the command-line:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:739
+msgid "Security"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:741
+msgid ""
+"Archivematica uses `PBKDF2 <http://en.wikipedia.org/wiki/PBKDF2>`_ as the"
+" default algorithm to store passwords. This should be sufficient for most"
+" users: it's quite secure, requiring massive amounts of computing time to"
+" break. However, other algorithms could be used as the following document"
+" explains: `How Django stores passwords "
+"<https://docs.djangoproject.com/en/1.4/topics/auth/#how-django-stores-"
+"passwords>`_ ."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:747
+msgid ""
+"Our plan is to extend this functionality in the future adding groups and "
+"granular permissions support."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:753
+msgid "Handle server config"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:754
+msgid ""
+"Archivematica can to be configured to make requests to a Handle System "
+"HTTP API so that files, directories and entire AIPs can be assigned "
+"persistent identifiers (PIDS) and derived persistent URLs (PURLs)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:761
+msgid "Language"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:762
+msgid ""
+"The Archivematica dashboard is in the process of being translated. For "
+"more information, see :ref:`Translations <translations>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:768
+msgid "Version"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:769
+msgid "This tab displays the version of Archivematica you're using."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:771
+msgid ":ref:`Back to the top <dashboard-config>`"
+msgstr ""
+

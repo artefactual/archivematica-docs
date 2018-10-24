@@ -1,60 +1,61 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Canadian Council of Archives <cca@archivescanada.ca>, 2017
+# Isabelle Alain <ialain@archivescanada.ca>, 2017-2018
+# Louise Charlebois <lcharlebois@archivescanada.ca>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-03-01 14:43+0000\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>\n"
+"Language-Team: French (http://www.transifex.com/artefactual/archivematica-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../getting-started/overview/system-requirements.rst:4
 msgid "System requirements"
-msgstr ""
+msgstr "Configuration requise"
 
 #: ../../getting-started/overview/system-requirements.rst:7
 msgid "Browser compatibility"
-msgstr ""
+msgstr "Navigateurs compatibles"
 
 #: ../../getting-started/overview/system-requirements.rst:9
 msgid ""
-"Archivematica is tested most extensively in Firefox and Chrome. There "
-"have been known issues in testing with Internet Explorer (see Bug `#7246 "
-"<https://projects.artefactual.com/issues/7246>`_). Minimal, but "
-"successful, testing has been done with Microsoft Edge."
-msgstr ""
+"Archivematica is tested most extensively in Firefox and Chrome. There have "
+"been known issues in testing with Internet Explorer (see Bug `#7246 "
+"<https://projects.artefactual.com/issues/7246>`_). Minimal, but successful, "
+"testing has been done with Microsoft Edge."
+msgstr "Archivematica a été testé principalement en association avec Firefox et Chrome. Des problèmes connus de compatibilité avec Explorer (voir le problème `#7246 <https://projects.artefactual.com/issues/7246>`_). Peu de tests ont été faits sur Microsoft Edge, mais aucun problème majeur n’a été détecté jusqu’à présent."
 
 #: ../../getting-started/overview/system-requirements.rst:15
 msgid "Resource allocation"
-msgstr ""
+msgstr "Répartition des ressources "
 
 #: ../../getting-started/overview/system-requirements.rst:17
 msgid "For recommended resource allocation, please see:"
-msgstr ""
+msgstr "Pour connaître les recommandations de répartition des ressources, voir :"
 
 #: ../../getting-started/overview/system-requirements.rst:19
 msgid ""
 ":ref:`Recommended Minimum Requirements for small-scale testing "
 "<requirements-small>`"
-msgstr ""
+msgstr ":ref:`Configuration minimale requise pour un essai à petite échelle <requirements-small>`"
 
 #: ../../getting-started/overview/system-requirements.rst:20
 msgid ""
 ":ref:`Recommended Minimum Requirements for production processing "
 "<requirements-production>`"
-msgstr ""
+msgstr ":ref:`Configuration minimale requise pour le traitement de la production <requirements-production>`"
 
 #: ../../getting-started/overview/system-requirements.rst:22
 msgid ":ref:`Back to the top <system-requirements>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <system-requirements>`"

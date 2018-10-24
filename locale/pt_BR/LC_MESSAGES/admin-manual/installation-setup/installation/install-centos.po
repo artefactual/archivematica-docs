@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:5
+msgid "Installing Archivematica on CentOS/Red Hat"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:7
+msgid ""
+"Archivematica versions 1.5.1 and higher support installation on CentOS/Red "
+"Hat."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:9
+msgid "*On this page*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:11
+msgid ":ref:`Installation instructions <centos-instructions>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:12
+msgid ":ref:`Post-installation configuration <centos-post-install-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:17
+msgid "Installation instructions"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:19
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:21
+msgid "Update your system"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:27
+msgid ""
+"If your environment uses SELinux, at a minimum you will need to run the "
+"following commands. Additional configuration may be required for your local "
+"setup."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:42
+msgid ""
+"Some extra repositories need to be installed in order to fulfill the "
+"installation procedure."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:45
+msgid "Extra packages for enterprise Linux:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:51
+msgid "Elasticsearch (optional):"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:54
+msgid ""
+"Skip this step if you are planning to run Archivematica in indexless mode "
+"(without Elasticsearch)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:69
+msgid "Archivematica:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:71
+msgid "Use these commands to install the repositories:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:93
+msgid ""
+"Common services like Elasticsearch, MariaDB and Gearmand should be installed"
+" and enabled before the Archivematica install."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:96
+msgid ""
+"Do not enable Elasticsearch if you are running Archivematica in indexless "
+"mode."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:109
+msgid "Install Archivematica Storage Service"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:111
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:159
+msgid "First, install the packages:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:117
+msgid ""
+"If you are planning to use the `Sword API`_ of the Archivematica Storage "
+"Service, then (due to a `known issue`_), you must instruct Gunicorn to use "
+"the ``sync`` worker class:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:125
+msgid ""
+"After the package is installed, populate the SQLite database, and collect "
+"some static files used by django.  These tasks must be run as "
+"“archivematica” user."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:138
+msgid ""
+"Now enable and start the archivematica-storage-service, rngd (needed for "
+"encrypted spaces) and the Nginx frontend:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:150
+msgid "The Storage Service will be available at ``http://<ip>:8001``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:152
+msgid "Installing Archivematica Dashboard and MCP Server"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:154
+msgid ""
+"There are a number of environment variables that Archivematica recognizes "
+"which can be used to alter how it is configured. For the full list, see the "
+"`Dashboard install README`_, the `MCPClient install README`_, and the "
+"`MCPServer install README`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:165
+msgid "Create user and mysql database with:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:173
+msgid "And as archivematica user, run migrations:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:184
+msgid "Start and enable services:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:193
+msgid "Restart Nginx in order to load the dashboard config file:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:199
+msgid "The dashboard will be available at ``http://<ip>:81``"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:201
+msgid "Installing Archivematica MCP client"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:203
+msgid "First, add extra repos with the MCP Client dependencies:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:205
+msgid "Nux multimedia repo"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:211
+msgid "Forensic tools repo"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:217
+msgid "Then install the package:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:223
+msgid ""
+"The MCP Client expects some programs in certain paths, so we put them in "
+"place:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:229
+msgid "Tweak ClamAV configuration:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:236
+msgid "Indexless mode:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:238
+msgid ""
+"If you are planning on running Archivematica in indexless mode (i.e., "
+"without Elasticsearch), then modify the relevant systemd EnvironmentFile "
+"files by adding lines that set the relevant environment variables to "
+"``false``:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:249
+msgid "After that, we can enable and start/restart services"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:262
+msgid "Finalizing installation"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:264
+msgid "**Configuration**"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:266
+msgid ""
+"Each service has a configuration file in /etc/sysconfig/archivematica-"
+"packagename"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:269
+msgid "**Troubleshooting**"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:271
+msgid ""
+"If IPv6 is disabled, Nginx may refuse to start. If that is the case make "
+"sure that the listen directives used under /etc/nginx are not using IPv6 "
+"addresses like [::]:80."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:275
+msgid ""
+"CentOS will install firewalld which will be running default rules that will "
+"likely be blocking ports 81 and 8001. If you are not able to access the "
+"dashboard and Storage Service, then use the following command to check if "
+"firewalld is running:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:284
+msgid ""
+"If firewalld is running, you will likely need to modify the firewall rules "
+"to allow access to ports 81 and 8001 from your location:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:294
+msgid ""
+"Complete :ref:`Post Install Configuration <centos-post-install-config>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:299
+msgid "Post-install configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:301
+msgid ""
+"After successfully completing a new installation, follow these steps to "
+"complete the configuration of your new server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:304
+msgid ""
+"The Storage Service runs as a separate web application from the "
+"Archivematica dashboard. The Storage Service is exposed on port 8001 by "
+"default when deploying using RPM packages. Use your web browser to navigate "
+"to the Storage Service at the IP address of the machine you have been "
+"installing on, e.g., ``http://<MY-IP-ADDR>:8001`` (or "
+"``http://localhost:8001`` or ``http://127.0.0.1:8001`` if this is a local "
+"development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:311
+msgid ""
+"If you are using an IP address or fully-qualified domain name instead of "
+"localhost, you will need to configure your firewall rules and allow access "
+"only to ports 81 and 8001 for Archivematica usage."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:315
+msgid ""
+"The Storage Service has its own set of users. Navigate to **Administration >"
+" Users** and create a new user with full admin privileges::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:327
+msgid ""
+"After you have created this user, the API key will be generated "
+"automatically, and that key will connect the Archivematica pipeline to the "
+"Storage Service API. The API key can be found via the web interface (go to "
+"**Administration > Users**)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:329
+msgid ""
+"To finish the installation, use your web browser to navigate to the "
+"Archivematica dashboard using the IP address of the machine on which you "
+"have been installing, e.g., ``http://<MY-IP-ADDR>:81`` (or "
+"``http://localhost:81`` or ``http://127.0.0.1:81`` if this is a local "
+"development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:334
+msgid ""
+"At the Welcome page, create an administrative user for the Archivematica "
+"pipeline by entering the organization name, the organization identifier, "
+"username, email, and password."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:338
+msgid ""
+"On the next screen, connect your pipeline to the Storage Service by entering"
+" the Storage Service URL and username, and by pasting in the API key that "
+"you copied in Step (2)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:342
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on the "
+"same machine, then you should supply ``http://127.0.0.1:8001`` as the "
+"Storage Service URL at this screen."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:345
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on "
+"different nodes (servers), then you should use the IP address or fully-"
+"qualified domain name of your Storage Service instance, e.g., ``http://<MY-"
+"IP-ADDR>:8001`` *and* you must ensure that any firewall rules (i.e., "
+"iptables, ufw, AWS security groups, etc.) are configured to allow requests "
+"from your dashboard IP to your Storage Service IP on the appropriate port."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-centos.rst:353
+msgid ":ref:`Back to the top <install-pkg-centos>`"
+msgstr ""

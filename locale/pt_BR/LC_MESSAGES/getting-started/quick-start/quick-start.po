@@ -1,0 +1,893 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cintya Takahaschi <cintya.takahaschi@gmail.com>, 2018
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-10 20:00+0000\n"
+"Last-Translator: Cintya Takahaschi <cintya.takahaschi@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/quick-start/quick-start.rst:5
+msgid "Archivematica Quick-Start Guide"
+msgstr "Guia de início rápido do Archivematica"
+
+#: ../../getting-started/quick-start/quick-start.rst:7
+msgid ""
+"This guide walks you through the Archivematica transfer and ingest process "
+"for testing purposes. It is intended for people who are new to Archivematica"
+" and looking to test it out. This is not a guide to install Archivematica "
+"for development or production - please see :ref:`Installation "
+"<installation>` for full installation instructions. Before you start, you "
+"should know a bit about the `OAIS Reference Model "
+"<http://www.oclc.org/research/publications/library/2000/lavoie-oais.html>`_ "
+"enough that the acronyms SIP, AIP, and DIP make sense."
+msgstr "Este guia irá orientá-lo através do processo de transferência e de admissão do Archivematica para fins de teste. Destina-se a pessoas que são novas no Archivematica e procuram testá-lo. Este não é um guia para instalar o Archivematica para desenvolvimento ou produção - consulte: ref: `Installation<installation>` para instruções completas de instalação. Antes de começar, você deve conhecer o `OAIS Reference Model <http://www.oclc.org/research/publications/library/2000/lavoie-oais.html> `_ o suficiente para que as siglas SIP, AIP e DIP façam sentido."
+
+#: ../../getting-started/quick-start/quick-start.rst:15
+msgid ""
+"This guide runs through the basic actions taken on a standard transfer and "
+"does not cover Archivematica's advanced features. For information about "
+"processing more complex content, see the :ref:`User manual <user-manual>`. "
+"The instructions below are applicable to both the sandbox and an "
+"Archivematica virtual machine, unless otherwise noted."
+msgstr "Este guia descreve ações básicas executadas em uma transferência padrão e não abrange os recursos avançados do Archivematica. Para obter informações sobre o processamento de conteúdo mais complexo, consulte o: ref: `Manual do usuário<user-manual>`. As instruções abaixo são aplicáveis tanto à sandbox quanto a uma máquina virtual Archivematica, a menos que indicado de outra forma."
+
+#: ../../getting-started/quick-start/quick-start.rst:21
+msgid "By the end of this walkthrough, you will be able to:"
+msgstr "No final deste passo a passo, você será capaz de:"
+
+#: ../../getting-started/quick-start/quick-start.rst:23
+msgid "Create a standard transfer in Archivematica"
+msgstr "Criar uma transferência padrão no Archivematica"
+
+#: ../../getting-started/quick-start/quick-start.rst:24
+msgid "Create an AIP and a DIP from the transfer"
+msgstr "Criar um AIP e um DIP da transferência"
+
+#: ../../getting-started/quick-start/quick-start.rst:25
+msgid "Review file identification"
+msgstr "Revisar a identificação do arquivo"
+
+#: ../../getting-started/quick-start/quick-start.rst:26
+msgid "Review file normalization"
+msgstr "Revisar a normalização do arquivo"
+
+#: ../../getting-started/quick-start/quick-start.rst:27
+msgid "Automate an Archivematica pipeline"
+msgstr "Automatizar um pipeline Archivematica"
+
+#: ../../getting-started/quick-start/quick-start.rst:29
+msgid "*On this page:*"
+msgstr "*Nesta página:*"
+
+#: ../../getting-started/quick-start/quick-start.rst:31
+msgid ""
+":ref:`Task #0 - Set up your Archivematica test instance <quick-start-"
+"install>`"
+msgstr ":ref:`Tarefa nº 0 - Configurar sua instância de teste do Archivematica <quick-start-install>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:32
+msgid ":ref:`Task #1 - Start a standard transfer <quick-start-transfer>`"
+msgstr ":ref: `Tarefa nº 1 - Iniciar uma transferência padrão <quick-start-transfer>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:33
+msgid ":ref:`Task #2 - Make AIPs and DIPs <quick-start-ingest>`"
+msgstr ":ref: `Tarefa nº 2 - Fazer AIPs e DIPs <quick-start-ingest>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:34
+msgid ":ref:`Task #3 - Store AIPs and DIPs <quick-start-storage>`"
+msgstr ":ref: `Tarefa nº 3 - Armazenar AIPs e DIPs <quick-start-storage>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:35
+msgid ":ref:`Task #4 - Review AIPs and DIPs <quick-start-review>`"
+msgstr ":ref: `Tarefa nº 4 - Revisar os AIPs e DIPs<quick-start-review>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:36
+msgid ""
+":ref:`Task #5 - Automate workflow through configuration <quick-start-"
+"config>`"
+msgstr ":ref:``Tarefa nº 5 - Automatizar o fluxo de trabalho através da configuração <quick-start-config>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:37
+msgid ""
+":ref:`More ways to get familiar with Archivematica <quick-start-resources>`"
+msgstr "ref: `Mais maneiras de se familiarizar com o Archivematica<quick-start-resources>`"
+
+#: ../../getting-started/quick-start/quick-start.rst:42
+msgid "Task #0 - Set up your Archivematica test instance"
+msgstr "Tarefa nº 0 - Configurar sua instância de teste do Archivematica"
+
+#: ../../getting-started/quick-start/quick-start.rst:44
+msgid ""
+"If you do not have access to a full installation of Archivematica, there are"
+" two options for testing the software - the hosted Archviematica sandbox or "
+"a locally-installed Archivematica VM."
+msgstr "Se você não tiver acesso a uma instalação completa do Archivematica, há duas opções para testar o software: a sandbox hospedada do Archviematica ou uma máquina virtual com o Archivematica instalada localmente."
+
+#: ../../getting-started/quick-start/quick-start.rst:51
+msgid "Using the sandbox"
+msgstr "Usando a sandbox"
+
+#: ../../getting-started/quick-start/quick-start.rst:53
+msgid ""
+"Artefactual maintains an `Archivematica sandbox "
+"<http://sandbox.archivematica.org/>`_ with the following credentials:"
+msgstr "A Artefactual mantém uma `sandbox do Archivematica <http://sandbox.archivematica.org/>`_ com as seguintes credenciais:"
+
+#: ../../getting-started/quick-start/quick-start.rst:56
+msgid "Username: demo@example.com"
+msgstr "Nome de usuário: demo@example.com"
+
+#: ../../getting-started/quick-start/quick-start.rst:57
+msgid "Password: demodemo"
+msgstr "Senha: demodemo"
+
+#: ../../getting-started/quick-start/quick-start.rst:59
+msgid ""
+"The sandbox is provided as an easy way to test the latest release of "
+"Archivematica. Please note that the website will automatically reset daily. "
+"Any packages that you create will not be permanently saved. Additionally, "
+"there may be more than one demo user logged in at the same time, so you may "
+"see changes made by others while you are using the software."
+msgstr "A sandbox é fornecida como uma maneira fácil de testar a última versão do Archivematica. Por favor, note que o site será redefinido automaticamente diariamente. Todos os pacotes que você irá criar não serão salvos permanentemente. Além disso, pode haver mais de um usuário demo logado ao mesmo tempo, portanto, você poderá ver as alterações feitas por outras pessoas enquanto estiver usando o software."
+
+#: ../../getting-started/quick-start/quick-start.rst:65
+msgid ""
+"The demo site is publicly edited and unmoderated. For security, test "
+"transfers are limited to Artefactual's provided sample data. Users who wish "
+"to test using their own data may download the Vagrant box (described below) "
+"and test locally."
+msgstr "O site demo é publicamente editado e não moderado. Por segurança, as transferências de teste são limitadas aos dados de amostra fornecidos pela Artefactual. Os usuários que desejam testar usando seus próprios dados podem baixar a caixa Vagrant (descrita abaixo) e testar localmente."
+
+#: ../../getting-started/quick-start/quick-start.rst:72
+msgid "If you are using the sandbox, you can move on to Task #1."
+msgstr "Se você estiver usando a sandbox, poderá seguir para a Tarefa nº 1."
+
+#: ../../getting-started/quick-start/quick-start.rst:77
+msgid "Installing on a virtual machine using Vagrant"
+msgstr "Instalação em uma máquina virtual usando o Vagrant"
+
+#: ../../getting-started/quick-start/quick-start.rst:81
+msgid ""
+"This virtual machine is **not** intended to be used in production. It "
+"targets developers or experienced users willing to try out Archivematica "
+"using Vagrant. If you want to start using Archivematica in production, "
+"please refer to the other methods of installations explained under this "
+"manual."
+msgstr "Esta máquina virtual **não é** destinada a ser usada na produção. Tem como alvo desenvolvedores ou usuários experientes dispostos a experimentar o Archivematica usando o Vagrant. Se você quiser começar a usar o Archivematica em produção, consulte os outros métodos de instalação explicados neste manual."
+
+#: ../../getting-started/quick-start/quick-start.rst:86
+msgid ""
+"This guide will setup a new Oracle `VirtualBox "
+"<https://www.virtualbox.org/>`__ virtual machine with Archivematica "
+"installed on your computer. It works on most operating systems, including "
+"MacOS X, Linux, Windows, FreeBSD and others."
+msgstr "Este guia instalará em seu computador uma nova máquina virtual Oracle `VirtualBox <https://www.virtualbox.org/>`__ com o Archivematica instalado. Ele funciona na maioria dos sistemas operacionais, incluindo MacOS X, Linux, Windows, FreeBSD entre outros."
+
+#: ../../getting-started/quick-start/quick-start.rst:91
+msgid "**Minimum system requirements**: 4GB RAM; 10GB disk space."
+msgstr "**Requisitos mínimos de sistema**: 4GB de RAM; 10GB de espaço em disco."
+
+#: ../../getting-started/quick-start/quick-start.rst:96
+msgid "Install Vagrant and VirtualBox"
+msgstr "Instale o Vagrant e o VirtualBox"
+
+#: ../../getting-started/quick-start/quick-start.rst:98
+msgid ""
+"Install VirtualBox from https://www.virtualbox.org/ (or use your package "
+"manager). VirtualBox 5.1.18 or newer is required."
+msgstr "Instale o VirtualBox em https://www.virtualbox.org/ (ou use o gerenciador de pacotes). VirtualBox 5.1.18 ou mais recente é obrigatório."
+
+#: ../../getting-started/quick-start/quick-start.rst:100
+msgid ""
+"Install Vagrant from http://www.vagrantup.com/ (or use your package "
+"manager). Vagrant 1.9.3 or newer is required. Be aware that Ubuntu 14.04 "
+"installs Vagrant 1.4.3, which does not meet the requirements."
+msgstr "Instale o Vagrant em http://www.vagrantup.com/ (ou use o gerenciador de pacotes). O Vagrant 1.9.3 ou mais novo é obrigatório requerido. Esteja ciente de que o Ubuntu 14.04 instala o Vagrant 1.4.3, que não atende aos requisitos."
+
+#: ../../getting-started/quick-start/quick-start.rst:105
+msgid "Spin it up"
+msgstr "Executar"
+
+#: ../../getting-started/quick-start/quick-start.rst:107
+msgid ""
+"using your computer's command-line interface, create a new directory and "
+"open it. The location doesn't matter, but you'll need to return to it later "
+"- all further command line operations should be run from inside the "
+"directory."
+msgstr "Usando a interface de linha de comando do seu computador, crie um novo diretório e abra-o. A localização não importa, mas você precisará retornar a ela mais tarde - todas as outras operações de linha de comando devem ser executadas dentro do diretório."
+
+#: ../../getting-started/quick-start/quick-start.rst:115
+msgid "Initialize the current directory to be a Vagrant environment."
+msgstr "Inicialize o diretório atual para ser um ambiente Vagrant."
+
+#: ../../getting-started/quick-start/quick-start.rst:121
+msgid ""
+"Run Vagrant (again, from the same directory where you saved the "
+"Vagrantfile)."
+msgstr "Execute o Vagrant (novamente, no mesmo diretório em que você salvou o Vagrantfile)."
+
+#: ../../getting-started/quick-start/quick-start.rst:127
+msgid ""
+"Vagrant will download our custom box and boot it in VirtualBox. The download"
+" can take anywhere from a few minutes to an hour or more, depending on the "
+"speed of your connection, as the box is fairly large (approx 3.2 GB in "
+"size)."
+msgstr "O Vagrant baixará nossa caixa personalizada e inicializará no VirtualBox. O download pode levar de alguns minutos a uma hora ou mais, dependendo da velocidade da sua conexão, pois a caixa é bastante grande (aproximadamente 3,2 GB de tamanho)."
+
+#: ../../getting-started/quick-start/quick-start.rst:129
+msgid ""
+"This will take a while. It depends on your computer, but it could take up to"
+" an hour. Your computer may be very slow while Archivematica is being "
+"provisioned - be sure to save any work and be prepared to step away from "
+"your computer while Archivematica is building."
+msgstr "Isto levará algum tempo. Depende de seu computador, mas pode levar até uma hora. Seu computador pode ficar muito lento enquanto o Archivematica estiver sendo provisionado - certifique-se de salvar qualquer trabalho e esteja preparado para afastar-se de seu computador enquanto o Archivematica é instalado."
+
+#: ../../getting-started/quick-start/quick-start.rst:134
+msgid "Once it's done provisioning, you can log in to your virtual machine::"
+msgstr "Uma vez feito o provisionamento, você pode efetuar login na sua máquina virtual::"
+
+#: ../../getting-started/quick-start/quick-start.rst:138
+msgid ""
+"You can also access your Archivematica instance through the web browser:"
+msgstr "Você também pode acessar sua instância do Archivematica por meio do navegador da Web:"
+
+#: ../../getting-started/quick-start/quick-start.rst:140
+msgid ""
+"Archivematica: `<http://10.10.10.20>`_. Username & password configured on "
+"installation."
+msgstr "Archivematica: `<http://10.10.10.20>` _. Nome de usuário e senha configurados na instalação."
+
+#: ../../getting-started/quick-start/quick-start.rst:141
+msgid ""
+"Storage Service: `<http://10.10.10.20:8000>`_. Username & password "
+"configured on installation."
+msgstr "Storage Service: `<http://10.10.10.20:8000>`_. Usuário e senha configurados durante a instalação."
+
+#: ../../getting-started/quick-start/quick-start.rst:143
+msgid ""
+"To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ and "
+"click on the Administration tab. In the left sidebar, click on *Users*, then"
+" click on *Edit* for the default user. Scrolling down, you will see the API "
+"key for the default user at the bottom of the screen. Copy this into the API"
+" key field when prompted during installation."
+msgstr "Para pegar a chave API do Storage Service acesse `<http://10.10.10.20:8000>`_ e clique no link Administração. Na barra lateral esquerda, clique em *Usuários*, e então clique em *Editar* para o usuário padrão. Rolando para baixo na tela, você verá a chave API para o usuário padrão, na parte inferior da tela. Copie-a para o campo chave API quando solicitado durante a instalação."
+
+#: ../../getting-started/quick-start/quick-start.rst:152
+msgid "Task #1 - Start a standard transfer"
+msgstr "Tarefa nº 1 - Iniciar uma transferência padrão"
+
+#: ../../getting-started/quick-start/quick-start.rst:154
+msgid ""
+"A transfer is any set of one or more files that you decide to process as a "
+"group. It can come from any storage system to which Archivematica has been "
+"connected. To start your first transfer, go to the Archivematica transfer "
+"dashboard - the main page of either the `sandbox "
+"<sandbox.archivematica.org>`_ or your `Archivematica VM "
+"<http://10.10.10.20>`_. You can also access the transfer page by clicking on"
+" the Transfer tab in your Archivematica instance."
+msgstr "Uma transferência é qualquer conjunto de um ou mais arquivos que você decidiu processar como um grupo. Pode vir de qualquer sistema de armazenamento ao qual o Archivematica esteja conectado. Para iniciar sua primeira transferência, acesse o dashboard de transferência do Archivematica - a página principal, tanto na `sandbox <sandbox.archivematica.org>`_ quanto em sua  `máquina virtual com Archivematica <http://10.10.10.20>`_. Você também pode acessar a página de transferência clicando no link Transferência em sua instância do Archivematica."
+
+#: ../../getting-started/quick-start/quick-start.rst:161
+msgid ""
+"The transfer process is made up of a series of micro-services, which are in "
+"turn made up of jobs."
+msgstr "O processo de transferência é formado por uma série de microsserviços, que, por sua vez, estão divididos em tarefas."
+
+#: ../../getting-started/quick-start/quick-start.rst:166
+msgid ""
+"A micro-service is a group of actions that accomplish a specific goal within"
+" Archivematica. Verifying that your transfer complies with Archivematica's "
+"transfer requirements is a micro-service."
+msgstr "Um microsserviço é um grupo de ações efetuadas para atingir um objetivo específico no Archivematica. A verificação se sua transferência atende as requisitos de transferência do Archivematica é um microsserviço."
+
+#: ../../getting-started/quick-start/quick-start.rst:172
+msgid ""
+"A job is a discrete action within a micro-service. Moving the contents of "
+"your transfer to a processing directory is a job."
+msgstr "Uma tarefa é uma ação discreta dentro de um microsserviço. Mover os conteúdos de sua transferência para um diretório de processamento é uma tarefa."
+
+#: ../../getting-started/quick-start/quick-start.rst:175
+msgid ""
+"Each micro-service can be expanded if you click on the micro-service name. "
+"This allows you to see every job that makes up the micro-service. You can "
+"view the command for each job by clicking on the gear icon to the right of "
+"each job name which will open a new window that lists the command "
+"information. Clicking on *Show arguments* will list the exact python command"
+" that Archivematica uses to run the job."
+msgstr "Cada microsserviço pode ser expandido se você clicar no nome do microsserviço. Isto permite que você veja cada tarefa que forma o microsserviço. Você pode ver o comando de cada tarefa clicando no ícone de engrenagem à direita de cada nome de tarefa, que abrirá uma nova janela que listará informações do comando. Ao clicar em *Mostar argumentos* será listado o comando python exato que o Archivematica usa para executar a tarefa."
+
+#: ../../getting-started/quick-start/quick-start.rst:182
+msgid ""
+"Jobs turn green when they have completed successfully and red if they fail."
+msgstr "A tarefa fica verde se completada com sucesso, e vermelha se falhar."
+
+#: ../../getting-started/quick-start/quick-start.rst:184
+#: ../../getting-started/quick-start/quick-start.rst:208
+#: ../../getting-started/quick-start/quick-start.rst:246
+#: ../../getting-started/quick-start/quick-start.rst:260
+#: ../../getting-started/quick-start/quick-start.rst:278
+#: ../../getting-started/quick-start/quick-start.rst:339
+#: ../../getting-started/quick-start/quick-start.rst:376
+#: ../../getting-started/quick-start/quick-start.rst:404
+#: ../../getting-started/quick-start/quick-start.rst:441
+#: ../../getting-started/quick-start/quick-start.rst:475
+msgid "**Steps:**"
+msgstr "**Passos:**"
+
+#: ../../getting-started/quick-start/quick-start.rst:186
+msgid "Make sure ‘Standard’ is selected in the transfer type box."
+msgstr "Certifique-se que 'Padrão' está selecionado na caixa de tipo de transferência."
+
+#: ../../getting-started/quick-start/quick-start.rst:187
+msgid "Type in a name for your transfer (anything you like)."
+msgstr "Digite um nome para sua transferência (qualquer coisa que desejar)."
+
+#: ../../getting-started/quick-start/quick-start.rst:188
+msgid ""
+"Click on browse to look through the available content. Make sure to click on"
+" the folder icon to expand the directory trees."
+msgstr "Clique em Pesquisar para navegar pelo conteúdo disponível. Certifique-se de clicar no ícone de pasta para expandir as árvores de diretórios."
+
+#: ../../getting-started/quick-start/quick-start.rst:190
+msgid "Find the *images* directory in SampleTransfers and click Add."
+msgstr "Encontre o diretório *images* dentro de SampleTransfers e clique em Adicionar."
+
+#: ../../getting-started/quick-start/quick-start.rst:191
+msgid "The selected directory will be displayed below the selection box."
+msgstr "O diretório selecionado será exibido abaixo da caixa de seleção."
+
+#: ../../getting-started/quick-start/quick-start.rst:192
+msgid "Click on the green *Start transfer* button to start the transfer."
+msgstr "Clique no botão verde *Iniciar transferência* para inciar a transferência."
+
+#: ../../getting-started/quick-start/quick-start.rst:193
+msgid ""
+"When prompted, make decisions as you wish; however, don't select anything "
+"that would stop the transfer (i.e. anything that says \"Reject\"). For more "
+"information about the decision points, check out the :ref:`transfer tab "
+"documentation <transfer>`."
+msgstr "Quando perguntado, tome decisões conforme desejar; entretanto, não selecione nada que possa parar a transferência (ou seja, qualquer coisa que diga \"Rejeitar\"). Para mais informações sobre pontos de decisão, consulte a  :ref:`documentação da janela transferência <transfer>`."
+
+#: ../../getting-started/quick-start/quick-start.rst:197
+msgid ""
+"When you reach the *Identify file format* micro-service, stop and read the "
+"next section."
+msgstr "Quando chegar ao microsserviço *Identificar formato de arquivo*, pare e leia a próxima seção."
+
+#: ../../getting-started/quick-start/quick-start.rst:201
+msgid "Review file formats"
+msgstr "Revisar formatos de arquivo"
+
+#: ../../getting-started/quick-start/quick-start.rst:203
+msgid ""
+"You do not need to consult the command for every job, but we do recommend "
+"taking a look at the output of the *Identify file format* micro-service. One"
+" of Archivematica's most important jobs is to identify file formats and then"
+" preserve those files as best as possible."
+msgstr "Você não precisa consultar o comando de cada tarefa, mas recomendamos que dê uma olhada na saída do microsserviço *Identificar formato de arquivo\". Uma das tarefas mais importantes do Archivematica é identificar os formatos de arquivo e então preservar esses arquivos da melhor forma possível."
+
+#: ../../getting-started/quick-start/quick-start.rst:210
+msgid ""
+"When you are prompted, select a file format identification tool (Siegfried "
+"and Fido are the most robust options)."
+msgstr "Quando solicitado, selecione uma ferramenta para identificação de formato de arquivo (Siegfried e Fido são as opções mais robustas)."
+
+#: ../../getting-started/quick-start/quick-start.rst:212
+msgid ""
+"Once file format identification is complete, click on the gear icon to the "
+"right of the job name to open the job page."
+msgstr "Uma vez que a identificação de formato tenha completado, clique no ícone de engrenagem à direita do nome da tarefa para abrir a página da tarefa."
+
+#: ../../getting-started/quick-start/quick-start.rst:214
+msgid ""
+"On the job page, under the heading STDOUT, you will see information similar "
+"to the following:"
+msgstr "Na página da tarefa, sob o cabeçalho STDOUT, você verá informações semelhantes ao seguinte:"
+
+#: ../../getting-started/quick-start/quick-start.rst:226
+msgid ""
+"The above tells us that the file MARBLES.TGA was identified as a Truevision "
+"TGA Bitmap 2.0. Archivematica uses `PRONOM "
+"<https://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, a registry of "
+"technical information maintained by the National Archives of the UK, for "
+"file identification and to inform normalization, characterization, and other"
+" file-manipulation events. Archivematica identifies a TGA file as `fmt/402 "
+"<https://www.nationalarchives.gov.uk/PRONOM/fmt/402>`_ (format 402), which "
+"is the PRONOM format identifier for a Truvision TGA Bitmap 2.0. There should"
+" be a similar STDOUT section for each item in your transfer."
+msgstr "A imagem acima diz que o arquivo MARBLES.TGA foi identificado como um arquivo Truevision TGA Bitmap 2.0. O Archivematica utiliza o `PRONOM <https://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_, um registro de informações técnicas mantida pelo National Archives of the UK, para identificação e para informar a normalização, caracterização, e outros eventos de manipulação de arquivos. O Archivematica identifica um arquivo TGA como `fmt/402 <https://www.nationalarchives.gov.uk/PRONOM/fmt/402>`_ (format 402), que é o identificador de formado do PRONOM para um Truvision TGA Bitmap 2.0. Deve haver uma seção STDOUT similar para cada item em sua transferência."
+
+#: ../../getting-started/quick-start/quick-start.rst:235
+msgid ""
+"Archivematica will continue processing your transfer in the background. When"
+" you reach the *Create SIP from Transfer micro-service*, read the next "
+"section."
+msgstr "O Archivematica continuará processando sua transferência em segundo plano. Quando chegar ao microsserviço *Criar SIP da Transferência*, leia a próxima seção."
+
+#: ../../getting-started/quick-start/quick-start.rst:239
+msgid "Create a SIP"
+msgstr "Criar uma SIP"
+
+#: ../../getting-started/quick-start/quick-start.rst:241
+msgid ""
+"The final micro-service on the Transfer tab is *Create SIP from Transfer*. "
+"The final job, *Create SIP(s)*, allows you to either proceed directly to the"
+" Ingest tab or to send the transfer to the backlog. For more information on "
+"the backlog, check out the :ref:`backlog documentation <manage-backlog>`."
+msgstr "O microsserviço final da janela Transferência é *Criar SIP da Transferência*. A tarefa final, \"Criar SIP(s)*, permite que você ou continue diretamente para a janela Admissão, ou envie a transferência para o backlog. Para mais informações sobre o backlog, consulte a :ref:`documentação de backlog <manage-backlog>`."
+
+#: ../../getting-started/quick-start/quick-start.rst:248
+msgid "When prompted, select *Create single SIP and continue processing*."
+msgstr "Quando solicitado, selecione *Criar único SIP e continuar a processar*."
+
+#: ../../getting-started/quick-start/quick-start.rst:253
+msgid "Task #2 - Make AIPs and DIPs"
+msgstr "Tarefa nº 2 - Fazer AIPs e DIPs"
+
+#: ../../getting-started/quick-start/quick-start.rst:255
+msgid ""
+"The primary function of Archivematica is to produce Archival Information "
+"Packages (AIPs) and Dissemination Information Packaes (DIPs) from SIPs.  You"
+" just created a SIP on the Transfer tab. The Ingest tab is where you run "
+"micro-services that create the AIP and the DIP."
+msgstr "A função primária do Archivematica é produzir Archival Information Packages (AIP) e Dissemination Information Packages (DIPs) a partir de SIPs. Você acabou de criar um SIP na janela Transferência. A janela Admissão é onde você executará microsserviços que criam o AIP e o DIP."
+
+#: ../../getting-started/quick-start/quick-start.rst:262
+msgid "Click on the Ingest tab."
+msgstr "Clique no link Admissão"
+
+#: ../../getting-started/quick-start/quick-start.rst:263
+msgid ""
+"Make decisions as required (again, don't select anything that says "
+"\"Reject\"). For more information about the decision points that appear "
+"during ingest, check out the :ref:`ingest tab documentation <ingest>`."
+msgstr "Tome decisões como desejar (novamente, não selecione nada que diga \"Rejeitar\"). Para mais informações sobre os pontos de decisão que aparecem durante a admissão, consulte a :ref:`documentação da janela admissão <ingest>`."
+
+#: ../../getting-started/quick-start/quick-start.rst:266
+msgid ""
+"When you get to the Normalize decision point, stop and read the next "
+"section."
+msgstr "Quando chegar ao ponto de decisão de Normalização, pare e leia a próxima seção."
+
+#: ../../getting-started/quick-start/quick-start.rst:269
+msgid "Normalization"
+msgstr "Normalização"
+
+#: ../../getting-started/quick-start/quick-start.rst:271
+msgid ""
+"Ingest, like Transfer, is also made up of a series of micro-services. The "
+"most significant micro-service that takes place during ingest is Normalize. "
+"Normalization is the process of converting your digital content into "
+"appropriate formats for long-term storage (for an AIP) and access (for a "
+"DIP). When you reach the Normalization micro-service, you will be prompted "
+"to decide how you would like to normalize your content."
+msgstr "A Admissão, assim como a Transferência, é formada por uma série de microsserviços. O microsserviço mais significativo que é feito durante a admissão é a Normalização. Normalização é o processo de converter seu conteúdo digital em formatos apropriados para armazenamento de longo prazo (para um AIP) e acesso (para um DIP). Quando você chegar ao microsserviço Normalização, terá de decidir como deseja normalizar seu conteúdo."
+
+#: ../../getting-started/quick-start/quick-start.rst:280
+msgid ""
+"Select *Normalize for preservation and access* when prompted. By selecting "
+"this option, you are telling Archivematica that you would like to create a "
+"preservation copy (AIP) and an access copy (DIP) of the contents of your "
+"SIP."
+msgstr "Selecione *Normalizar para preservação e acesso* quando solicitado. Selecionando esta opção, você estará dizendo ao Archivematica que deseja criar uma cópia de preservação (AIP) e uma cópia de acesso (DIP) dos conteúdos de seu SIP."
+
+#: ../../getting-started/quick-start/quick-start.rst:283
+msgid ""
+"Once normalization is complete, you will be prompted to approve "
+"normalization. Before selecting approve, click on the small page icon next "
+"to the drop down menu."
+msgstr "Uma vez que a normalização tenha completado, será solicitado que você aprove a normalização. Antes de selecionar aprovar, clique no ícone de uma pequena página, próximo ao menu de seleção."
+
+#: ../../getting-started/quick-start/quick-start.rst:286
+msgid ""
+"The Normalization Report will open in a separate tab. Information on how to "
+"read this report is included below."
+msgstr "O Relatório de Normalização será aberto em uma janela separada. Informações de como ler este relatório estão incluídas a seguir."
+
+#: ../../getting-started/quick-start/quick-start.rst:288
+msgid ""
+"In your main tab, click on the Preservation Planning tab at the top of the "
+"page. When the Preservation Planning tab is open, search for \"SVG\" (or "
+"whatever file format you would like to review). Click on the name of the "
+"file format."
+msgstr "Em sua janela principal, clique no atalho Plano de Preservação, no topo da página. Quando a janela de Plano de Preservação abrir, procure por \"SVG\" (ou pelo formato de arquivo que você gostaria de revisar). Clique no nome do formato de arquivo."
+
+#: ../../getting-started/quick-start/quick-start.rst:291
+msgid ""
+"You should now have two tabs open - the Normalization Report and the "
+"Preservation Planning page. Go back to the Normalization Report and review "
+"the next two sections."
+msgstr "Você terá agora duas janelas abertas - o Relatório de Normalização e a página do Plano de Preservação. Volte para o Relatório de Normalização e reveja as próximas duas seções."
+
+#: ../../getting-started/quick-start/quick-start.rst:296
+msgid "Reviewing normalization for preservation"
+msgstr "Revisar a normalização para preservação"
+
+#: ../../getting-started/quick-start/quick-start.rst:298
+msgid ""
+"The Normalization Report details whether or not normalization was attempted "
+"on the contents of your SIP. This screenshot shows the report for lion.svg, "
+"identified as a Scalable Vector Graphic, with the preservation columnns "
+"highlighted."
+msgstr "O Relatório de Normalização detalha se houve ou não tentativa de normalização dos conteúdos de seu SIP. Esta captura de tela mostra o relatório para lion.svg, identificado como um Scalable Vector Graphic, com as colunas de preservação destacadas."
+
+#: ../../getting-started/quick-start/quick-start.rst:307
+msgid ""
+"If you return to the Preservation Planning tab where you searched for SVG, "
+"you can see that SVG files are considered a preservation format. Therefore, "
+"the Normalization Report indicates the following:"
+msgstr "Se você retornar à janela do Plano de Preservação, onde você procurou pelo SVG, poderá ver que arquivos SVG são considerados um formato de preservação. Logo, o Relatório de Normalização indica o seguinte:"
+
+#: ../../getting-started/quick-start/quick-start.rst:311
+msgid "Preservation normalization was attempted."
+msgstr "Houve tentativa de normalização para preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:312
+msgid "Preservation normalization did not fail."
+msgstr "A normalização não falhou."
+
+#: ../../getting-started/quick-start/quick-start.rst:313
+msgid "The image was already in a preservation format."
+msgstr "A imagem já estava em formato para preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:315
+msgid ""
+"Essentially, this means that preservation normalization kicked off, but "
+"Archivematica realized that the file was already in a preservation format "
+"and so no action was taken."
+msgstr "Essencialmente, isto significa que a normalização de preservação foi disparada, mas o Archivematica entendeu que o arquivo já estava em um formato de preservação, então nenhuma ação foi realizada."
+
+#: ../../getting-started/quick-start/quick-start.rst:320
+msgid "Reviewing normalization for access"
+msgstr "Revisar a normalização para acesso"
+
+#: ../../getting-started/quick-start/quick-start.rst:322
+msgid ""
+"This screenshot shows the report for lion.svg with the access columnns "
+"highlighted."
+msgstr "Esta captura de tela mostra o relatório pra lion.svg, com as colunas de acesso destacadas."
+
+#: ../../getting-started/quick-start/quick-start.rst:330
+msgid "For access normalization, the report indicates the following:"
+msgstr "Para normalização de acesso, o relatório indica o seguinte:"
+
+#: ../../getting-started/quick-start/quick-start.rst:332
+msgid "Access normalization was attempted."
+msgstr "Houve tentativa de normalização para acesso."
+
+#: ../../getting-started/quick-start/quick-start.rst:333
+msgid "Access normalization did not fail."
+msgstr "A normalização para acesso não falhou."
+
+#: ../../getting-started/quick-start/quick-start.rst:334
+msgid "The image was not in an access format."
+msgstr "A imagem não estava em formato para acesso."
+
+#: ../../getting-started/quick-start/quick-start.rst:336
+msgid ""
+"To review what this means for lion.svg, we'll dig a little deeper into the "
+"Preservation Planning tab."
+msgstr "Para entender o que isto significa para lion.svg, aprofundaremo-nos na janela de Plano de Preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:341
+msgid "Navigate back to the Preservation Planning tab."
+msgstr "Navegue de volta à janela Plano de Preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:342
+msgid ""
+"Scroll down and find the *Normalization* section in the left-hand sidebar. "
+"Click on *Rules*."
+msgstr "Role para baixo na tela e encontre a seção *Normalização* na barra lateral esquerda. Clique em *Regras*."
+
+#: ../../getting-started/quick-start/quick-start.rst:344
+msgid ""
+"Search for \"Scalable Vector Graphics\" (or whatever file format you are "
+"analyzing)."
+msgstr "Procure por \"Scalable Vector Graphics\" (ou qualquer formato de arquivo que vocês estiver analisando)."
+
+#: ../../getting-started/quick-start/quick-start.rst:347
+msgid ""
+"The results show the Access and Normalization rules for SVG files. Under the"
+" Command column we can see that the preferred access format for an SVG is "
+"PDF. Archivematica follows these rules to create access copies, so we can "
+"infer from the Normalization Report that a PDF copy of the SVG file has been"
+" successfully created for the DIP. You can confirm this by checking the "
+"command output for the *Normalize for access* job (similar to how you "
+"checked the command output for *Identify file format*, above) or by "
+"reviewing the DIP once it has been stored."
+msgstr "Os resultados exibem as regras de Acesso e Normalização para arquivos SVG. Sob a coluna Comando, podemos ver que o formato preferencialmente usado para acesso para um SVG é o PDF. O Archivematica segue estas regras para criar cópias de acesso, então podemos inferir do Relatório de Normalização que a cópia PDF do arquivo SVG foi criado com sucesso para o DIP. Você pode confirmar isso verificando a saída do comando para a tarefa *Normalizar para acesso* (de forma similar a como você verificou a saída do comando para *Identificar formato de arquivo* anteriormente), ou revendo o DIP, uma vez que tenha sido armazenado."
+
+#: ../../getting-started/quick-start/quick-start.rst:356
+msgid ""
+"Continue processing your ingest, stopping when you reach the AIP and DIP "
+"decision points."
+msgstr "Continue processando sua admissão, parando quando chegar aos pontos de decisão sobre AIP e DIP."
+
+#: ../../getting-started/quick-start/quick-start.rst:362
+msgid "Task #3 - Store AIPs and DIPs"
+msgstr "Tarefa nº 3 - Armazenar AIPs e DIPs"
+
+#: ../../getting-started/quick-start/quick-start.rst:364
+msgid ""
+"Archivematica is a tool for creating packages. In a production environment, "
+"storage occurs externally to Archivematica in a storage system selected by "
+"the user or institution, but for the sake of this demo we'll store our AIP "
+"and DIP in Archivematica's default internal storage."
+msgstr "O Archivematica é uma ferramenta para criação de pacotes. Em um ambiente de produção, o armazenamento ocorre externamente ao Archivematica, em um sistema de armazenamento selecionado pelo usuário ou instituição, mas para esta demonstração, armazenaremos nossos AIP e DIP no armazenamento interno padrão do Archivematica."
+
+#: ../../getting-started/quick-start/quick-start.rst:369
+msgid ""
+"AIPs should always be stored first. Because the packages are smaller, "
+"storage options for DIPs are usually the first to appear, so it's tempting "
+"to store them right away. However, if anything goes wrong with your AIP, you"
+" would then have to delete the DIP from the storage and access systems. "
+"Dealing with the AIP first allows you to store and provide access to DIPs "
+"knowing that that the AIP is secure."
+msgstr "Os AIPs devem sempre ser armazenados primeiro. Como os pacotes são menores, as opções para armazenamento dos DIPs geralmente aparecem primeiro, então é tentador armazená-los imediatamente. Entretanto, se ocorrer algo de errado com seu AIP, você terá de apagar o DIP dos sistemas de armazenamento e acesso. Ao lidar com o AIP primeiro você poderá armazenar e permitir acesso aos DIPs sabendo que o AIP está seguro."
+
+#: ../../getting-started/quick-start/quick-start.rst:378
+msgid ""
+"Process your ingest until the *Store AIP* and *Upload DIP* micro-services "
+"prompt you for a decision point."
+msgstr "Processe sua admissão até que os microsserviços *Armazenar AIP* e *Fazer upload o DIP* solicitem uma decisão sua."
+
+#: ../../getting-started/quick-start/quick-start.rst:380
+msgid "Select \"Store AIP\" from the *Store AIP* dropdown."
+msgstr "Selecione \"Armazenar AIP\" no menu de seleção \"Armazenar AIP\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:381
+msgid ""
+"In a moment, another decision point will prompt you to select a storage "
+"location for your AIP. There should only be one option - \"Store AIP in "
+"standard Archivematica directory\". Select this option."
+msgstr "Após algum tempo, outro ponto de decisão solicitará que você selecione um local de armazenamento para seu AIP. Deve haver apenas uma opção - \"Armazenar o AIP no diretório padrão do Archivematica\". Selecione esta opção."
+
+#: ../../getting-started/quick-start/quick-start.rst:384
+msgid ""
+"Once the AIP is stored successfully, you can move on to dealing with the "
+"DIP. Neither a locally-installed Archivematica VM nor the sandbox is hooked "
+"up to an access system, so under *Upload DIP* select \"Store DIP\"."
+msgstr "Uma vez que o AIP tenha sido armazenado com sucesso, você pode começar a lidar com o DIP. Nem uma máquina virtual com Archivematica, nem a sandbox estão ligados a um sistema de acesso, então em *Fazer upload do DIP* selecione \"Armazenar DIP\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:387
+msgid ""
+"You will be prompted to select a storage location for your DIP. There should"
+" only be one option - \"Store DIP in standard Archivematica directory\". "
+"Select this option."
+msgstr "Será solicitado que você selecione um local de armazenamento para seu DIP. Deve haver somente uma opção - \"Armazenar o DIP no diretório padrão do Archivematica\". Selecione esta opção."
+
+#: ../../getting-started/quick-start/quick-start.rst:391
+msgid ""
+"Your AIP and DIP are now stored in Archivematica's internal storage. The "
+"Archivematica workflow is complete!"
+msgstr "Seus AIP e DIP estão agora armazenados no armazenamento interno do Archivematica. O fluxo de trabalho do Archivematica está completo!"
+
+#: ../../getting-started/quick-start/quick-start.rst:397
+msgid "Task #4 - Review AIPs and DIPs"
+msgstr "Tarefa nº 4 - Revisar AIPs e DIPs"
+
+#: ../../getting-started/quick-start/quick-start.rst:399
+msgid "Now that your AIP and DIP have been stored, they can be reviewed."
+msgstr "Agora que seus AIP e DIP foram armazenados, eles podem ser revisados."
+
+#: ../../getting-started/quick-start/quick-start.rst:402
+msgid "Review AIP"
+msgstr "Revisar o AIP"
+
+#: ../../getting-started/quick-start/quick-start.rst:406
+msgid ""
+"Click on the Archival Storage tab. You should see your AIP listed in the "
+"search results there, but if not, you can search for it using the name you "
+"gave it in Task #1."
+msgstr "Clique no atalho Armazenamento Arquivístico. Você deve ver seu AIP listado nos resultados da busca nesta janela, mas se não vir, pode procurar por ele usando o nome que você deu a ele na Tarefa nº 1."
+
+#: ../../getting-started/quick-start/quick-start.rst:409
+msgid ""
+"Depending on the version of Archivematica you are using, clicking on the "
+"name of the AIP will either open the AIP Details page or immediately "
+"download the AIP. If you end up on the AIP Details page, click on the "
+"‘download’ button."
+msgstr "Dependendo da versão do Archivematica que você estiver usando, ao clicar no nome do AIP será aberta a página de detalhes do AIP ou será feito o download imediato do AIP. Se você acabar na página de detalhes do AIP, clique no botão 'download'."
+
+#: ../../getting-started/quick-start/quick-start.rst:412
+msgid ""
+"Once it's downloaded, open the AIP. You will need to a program capable of "
+"opening 7zip files installed on your computer. If required, you can download"
+" 7Zip here: http://www.7-zip.org/download.html"
+msgstr "Uma vez que o download tenha finalizado, abra o AIP. Você precisará ter um programa capaz de abrir arquivos 7zip instalado em seu computador. Se necessário, você pode fazer o download do programa 7zip aqui: http://www.7-zip.org/download.html"
+
+#: ../../getting-started/quick-start/quick-start.rst:415
+msgid ""
+"Once you have the AIP extracted, navigate through the folders until you find"
+" the objects directory. This directory contains the original images from "
+"your transfer as well as the preservation copies. You can compare the file "
+"formats in the objects directory to the rules in the Preservation Planning "
+"tab."
+msgstr "Uma vez que você tenha extraído o AIP, navegue pelas pastas até encontrar o diretório objects. Este diretório contém as imagens originais de sua transferência, bem como as cópias de preservação. Você pode comparar os formatos de arquivo no diretório objects com as regras na janela Plano de Preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:419
+msgid ""
+"Navigate through the folders until you find the METS file and open it in a "
+"web browser or text editor. It will be titled something like "
+"\"METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml\"."
+msgstr "Navegue pelas pastas até encontrar o arquivo METS, e abra-o em um navegador de internet ou editor de texto. Será algo com o título semelhante a  \"METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:422
+msgid ""
+"Find the <mets:fileSec> tag in the METS. Within the fileSec, you should be "
+"able to find information about every item in your original transfer - these "
+"are in the section tagged <mets:fileGrp USE=\"original\">. Scrolling down, "
+"you can view complementary information for each of the preservation copies -"
+" this is in the section tagged <mets:fileGrp USE=\"preservation\">."
+msgstr "Encontre a tag <mets:fileSec> no METS. Dentro de fileSec, você deve encontrar informações sobre cada item em sua transferência original - eles estarão na seção com a tag <mets:fileGrp USE=\"original\">. Rolando para baixo na tela, você poderá ver informações complementares para cada uma das cópias para preservação - elas estarão na seção com a tag <mets:fileGrp USE=\"preservation\">."
+
+#: ../../getting-started/quick-start/quick-start.rst:428
+msgid ""
+"The METS.xml file is very long because it contains all of the information "
+"about your files as well as information about the processes and tools that "
+"acted on those original files. For more information about the contents and "
+"structure of the METS file, check out the `Archivematica wiki "
+"<https://wiki.archivematica.org/METS>`_."
+msgstr "O arquivo METS.xml é muito grande porque contém todas as informações sobre seus arquivos, bem como informações sobre os processos e ferramentas que atuaram nos arquivos originais. Para maiores informações sobre o conteúdo e estrutura do arquivo METS, consulte o `Archivematica wiki <https://wiki.archivematica.org/METS>`_."
+
+#: ../../getting-started/quick-start/quick-start.rst:434
+msgid "Review DIP"
+msgstr "Revisar o DIP"
+
+#: ../../getting-started/quick-start/quick-start.rst:438
+msgid ""
+"This section is only applicable to those using a VM. The Archivematica "
+"sandbox does not allow access to the Storage Service."
+msgstr "Esta seção é aplicável somente a quem estiver usando uma máquina virtual. A sandbox do Archivematica não permite acesso ao Storage Service."
+
+#: ../../getting-started/quick-start/quick-start.rst:443
+msgid ""
+"In order to retrieve the DIP, you need to access the Archivematica Storage "
+"Service. Add \":8000\" to the end of your Archivematica VM's URL (i.e. "
+"http://10.10.10.20:8000/)."
+msgstr "Para acessar o DIP, você terá de acessar o Storage Service do Archivematica. Adicone \":8000\" ao final da URL de sua máquina virtual com Archivematica (ou seja, http://10.10.10.20:8000/)."
+
+#: ../../getting-started/quick-start/quick-start.rst:446
+msgid "In the Storage Service, click on the Packages tab."
+msgstr "No Storage Service, clique no link Pacotes."
+
+#: ../../getting-started/quick-start/quick-start.rst:447
+msgid ""
+"On the far right side of the page there is a search box. Search for your DIP"
+" by entering the name you gave it in Task #1."
+msgstr "Bem à direita na página há uma caixa de busca. Procure pelo seu DIP inserindo o nome que você deu na Tarefa nº 1."
+
+#: ../../getting-started/quick-start/quick-start.rst:449
+msgid ""
+"You should see two results. One is your AIP and the other is the DIP, "
+"indicated under the \"Type\" column."
+msgstr "Você deverá ver dois resultados. Um é seu AIP, e o outro seu DIP, indicados sob a coluna \"Tipo\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:451
+msgid "Once you've identified which file is your DIP, click on \"Download\"."
+msgstr "Uma vez que você tenha identificado qual arquivo é seu DIP, clique em \"Download\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:452
+msgid ""
+"Once it's downloaded, open the DIP. You will need to a program capable of "
+"opening tar files installed on your computer. 7Zip, mentioned above, can "
+"open TAR files: http://www.7-zip.org/download.html"
+msgstr "Uma vez finalizado o download, abra o DIP. Você precisará ter um programa capaz de abrir arquivos TAR instalado em seu computador. O programa 7zip, mencionado anteriormente, consegue abrir arquivos TAR: http://www.7-zip.org/download.html"
+
+#: ../../getting-started/quick-start/quick-start.rst:455
+msgid ""
+"Once you have the DIP extracted, open the objects directory. This directory "
+"contains the access copies derived from your original images. You can "
+"compare the file formats in the objects directory to the rules in the "
+"Preservation Planning tab."
+msgstr "Uma vez que você tenha extraído o DIP, abra o diretório objects. Este diretório contém as cópias de acesso derivadas de suas imagens originais. Você pode comparar os formatos de arquivo no diretório objects com as regras na janela Plano de Preservação."
+
+#: ../../getting-started/quick-start/quick-start.rst:459
+msgid ""
+"The DIP also contains a thumbnails directory, which has small JPG versions "
+"of your images. If the image could not be converted to a JPG (as is the case"
+" with an SVG file), a generic icon is included instead."
+msgstr "O DIP também contém um diretório de miniaturas - thumbnails, que são pequenas versões JPG de suas imagens. Se a imagem não puder ser convertida para JPG (como no caso de um arquivo SVG), um ícone genérico será incluído em seu lugar."
+
+#: ../../getting-started/quick-start/quick-start.rst:466
+msgid "Task #5 - Automate workflow through configuration"
+msgstr "Tarefa nº 5 - Automatizar o fluxo de trabalho através da configuração"
+
+#: ../../getting-started/quick-start/quick-start.rst:468
+msgid ""
+"Clicking on the Administration tab opens up Archivematica's processing "
+"configurations screen, the most basic way of automating Archivematica. Each "
+"of the decision points that you encountered during the Archivematica test "
+"that you ran in Steps #1 to #3 can be automated on this page. This is mostly"
+" used if you know you will be making the same decision each time you "
+"encounter a decision point."
+msgstr "Clicar no link Administração abre a tela de configurações de processamento do Archivematica, a forma mais básica de automatizar o Archivematica. Cada um dos pontos de decisão que você encontrou durante o teste do Archivematica que executou nas tarefas nº 1 a nº 3 podem ser automatizadas nesta página. Isto é mais usado se você souber que estará tomando a mesma decisão cada vez que encontrar determinado ponto de decisão."
+
+#: ../../getting-started/quick-start/quick-start.rst:477
+msgid ""
+"Click on the Administration tab. You will see a single processing "
+"configuration listed, called ‘default’."
+msgstr "Clique no link Administração. Você verá uma única configuração de processamento listada, chamada 'default'."
+
+#: ../../getting-started/quick-start/quick-start.rst:479
+msgid ""
+"Review the different options and make changes as you like. You will "
+"recognize the options from the decision points you made during previous "
+"tasks."
+msgstr "Revise as diferentes opções e faça mudanças conforme desejar. Você reconhecerá as opções dos pontos de decisão que você tomou durante as tarefas anteriores."
+
+#: ../../getting-started/quick-start/quick-start.rst:483
+msgid ""
+"For example, you may want to automate the compression algorithm and level "
+"because you always want to use the same compression tool and you always want"
+" to compress packages at the same rate. To set the compression-related "
+"processing configurations:"
+msgstr "Por exemplo, você pode desejar automatizar o algoritmo e nível de compactação, porque você sempre deseja usar a mesma ferramenta de compactação, e você sempre deseja compactar os pacotes à mesma taxa. Para definir as configurações de processamento relacionadas à compactação:"
+
+#: ../../getting-started/quick-start/quick-start.rst:488
+msgid "Check the box next to *Select compression algorithm*."
+msgstr "Ative a caixa próxima a \"Selecionar algoritmo de compactação\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:489
+msgid ""
+"Using the dropdown to the right, select a compression algorithm - *7z using "
+"bzip2* is the most common."
+msgstr "Usando a caixa de seleção à direita, selecione o algoritmo de compactação - *7z usando bzip2* é o mais comum."
+
+#: ../../getting-started/quick-start/quick-start.rst:491
+msgid "Check the box next to *Select compression level*"
+msgstr "Ative a caixa próxima a \"Selecione o nível de compactação\"."
+
+#: ../../getting-started/quick-start/quick-start.rst:492
+msgid ""
+"Using the dropdown to the right, select a compression level - *5 - normal "
+"compression mode* is a good balance between speed and size."
+msgstr "Usando a caixa de seleção à direita, selecione o nível de compactação - *5 - modo de compactação normal* oferece um bom equilíbrio entre velocidade e tamanho."
+
+#: ../../getting-started/quick-start/quick-start.rst:495
+msgid ""
+"We recommend that you run several tests in Archivematica before setting up "
+"the processing configurations. As you become more familiar with "
+"Archivematica, you will begin to recognize which decisions you make over and"
+" over again. These are great candidates for automation via the processing "
+"configurations."
+msgstr "Recomendamos que você execute diversos testes no Archivematica antes de definir as configurações de processamento. Conforme ficar mais familiarizado com o Archivematica, você começará a reconhecer quais decisões toma repetidamente. Estes são ótimos candidatos à automação através das configurações de processamento."
+
+#: ../../getting-started/quick-start/quick-start.rst:503
+msgid "More ways to get familiar with Archivematica"
+msgstr "Mais formas de se familiarizar com o Archivematica"
+
+#: ../../getting-started/quick-start/quick-start.rst:505
+msgid ""
+"This tutorial covers a very basic Archivematica workflow. For information "
+"about processing more complex content, see the :ref:`User manual <user-"
+"manual>`."
+msgstr "Este tutorial aborda um fluxo de trabalho bem básico do Archivematica. Para informações sobre o processamento de conteúdo mais complexo, consulte o :ref:`Manual do Usuário <user-manual>`."
+
+#: ../../getting-started/quick-start/quick-start.rst:508
+msgid ""
+"The tasks above are based on the Archivematica Worksheet first developed by "
+"Justin Simpson for the HEAP-AIM25 Network Meeting in November 2016. The "
+"worksheet runs through several more examples of Archivematica workflows. It "
+"is available for download via the `Archivematica Camp Github repo "
+"<https://github.com/artefactual-labs/archivematica-camp>`_. Feel free to use"
+" this worksheet for personal use or in a teaching context - see the licence "
+"file in the repo."
+msgstr "As tarefas acima foram baseadas no Archivematica Worksheet feita por Justin Simpson para o HEAP-AIM25 Network Meeting em novembro de 2016. O documento descreve diversos outros exemplos de fluxo de trabalho do Archivematica. Está disponível para download no `repositório do Archivematica Camp no Github <https://github.com/artefactual-labs/archivematica-camp>`_. Sinta-se à vontade para usar esta worksheet para uso pessoal ou em um contexto de ensino - consulte o arquivo de licença no repositório."
+
+#: ../../getting-started/quick-start/quick-start.rst:515
+msgid ":ref:`Back to the top <quick-start>`"
+msgstr ":ref:`Voltar ao topo <quick-start>`"

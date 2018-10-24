@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/archival-storage/aic.rst:5
+msgid "AIC"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:7
+msgid ""
+"Because datasets and digital object collections can be large and "
+"heterogeneous, one dataset or collection of digital objects may be broken "
+"into multiple AIPs. In such cases, the multiple AIPs can be intellectually "
+"combined into one AIC, or Archival Information Collection, defined by the "
+"OAIS reference model as \"[a]n Archival Information Package whose Content "
+"Information is an aggregation of other Archival Information Packages.\" "
+"(OAIS 1-9)."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:15
+msgid "A basic AIC in Archivematica consists of:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:17
+msgid "any number of related AIPs and"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:19
+msgid ""
+"a METS file containing a fileSec and a logical structMap listing all the "
+"related AIPs."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:22
+msgid ""
+"In storage, a pointer.xml file gives storage and compression information for"
+" each AIC METS file and each AIP."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:25
+msgid "This part of the user guide is for creating and updating AICs."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:29
+msgid "Creating AICs"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:31
+msgid "**Step 1: Create AIPs**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:33
+msgid ""
+"Ingest a standard transfer consisting of metadata and data files, or create "
+"a SIP from backlog using the :ref:`SIP arrange pane <arrange-sip>`."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:35
+msgid "At the Normalize micro-service, click on the metadata button:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:42
+msgid "Under Metadata, select Add:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:49
+msgid ""
+"Enter Dublin Core metadata. At a minimum, the AIC identifier (Part of AIC "
+"field) is required. However, if desired, use the metadata entry template to "
+"create a more detailed description of the AIP contents:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:58
+msgid "The AIC can be represented by any combination of letters and numbers."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:61
+msgid "At bottom of screen, click the Create button."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:63
+msgid ""
+"Return to the ingest tab, finish processing and place the AIP in archival "
+"storage."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:65
+msgid ""
+"Repeat steps 1 through 6 to create as many AIPs as desired. In step 1.4, be "
+"sure to enter the same value in Part of AIC if all of the AIPs are destined "
+"to be added to the same AIC."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:67
+msgid ""
+"Once all the AIPs have been placed in storage, open the archival storage "
+"tab."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:69
+msgid "**Step 2: Create AIC**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:71
+msgid ""
+"To retrieve all AIPs with the same value in Part of AIC, enter AIC#[number] "
+"in the search box and select Part of AIC as the search field. On the right "
+"hand side, select \"Show AICs?\". Then click the Search archival storage "
+"button:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:78
+msgid ""
+"To create an AIC comprising all of the AIPs listed in the search results, "
+"click the Create an AIC button:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:85
+msgid ""
+"Archivematica will produce a metadata entry template for the AIC. In the "
+"template, at a minimum enter values into Title and Identifier fields."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:89
+msgid "The Identifier value must be structured as AIC#[number]."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:91
+msgid ""
+"If desired, use the metadata entry template to create a more detailed "
+"description of the AIC contents:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:100
+msgid ""
+"Click the Create button at the bottom of the metadata entry template. Return"
+" to the ingest tab. When the AIC appears in the dashboard, approve the AIC:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:107
+msgid "Continue processing the AIC and place it in archival storage."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:111
+msgid "Retrieve and update AICs"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:113
+msgid "**Retrieve an AIC and related AIPs**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:115
+msgid ""
+"Open the Archival storage tab. To view a list of an AIC and its constituent "
+"AIPs, search for the AIPs as described in Create AIC, above. Click Add new "
+"to add a second search query using the OR boolean operator. In the second "
+"query line, enter AIC#[number] in the search box and select AIC Identifier "
+"as the search field. Click the Search archival storage button."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:121
+msgid ""
+"In the results list, the AIC is distinguishable by the entry in the AIC # "
+"column, as shown in the screenshot (the constituent AIPs are shown with Part"
+" of AIC#[number]) in that field."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:132
+msgid ""
+"The Files column lists the number of AIPs in the AIC. This should match the "
+"number of AIPs shown in the search results. A bug is preventing the correct "
+"AIC file count in version 1.2 (see `Bug #7155 "
+"<https://projects.artefactual.com/issues/7155>`_ ."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:138
+msgid "**Update an AIC**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:140
+msgid ""
+"If you would like to add more AIPs to an existing AIC, the original AIC "
+"should be deleted via the archival storage tab. An AIC is deleted in the "
+"same way an AIP is deleted: see :ref:`Delete an AIP <delete-aip>`."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:144
+msgid ""
+"Add as many new AIPs as desired as shown Creating AIPs above, and create a "
+"new AIC as shown in Creating AICs."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aic.rst:147
+msgid ":ref:`Back to the top <aic>`"
+msgstr ""

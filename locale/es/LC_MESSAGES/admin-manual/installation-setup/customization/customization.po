@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:5
+msgid "Customization and automation"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:7
+msgid "*On this page*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:9
+msgid ""
+":ref:`Automating microservice decisions using the dashboard <config-"
+"using-dashboard>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:10
+msgid ":ref:`Preservation planning configuration <config-using-fpr>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:11
+msgid ":ref:`Antivirus configuration <antivirus-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:12
+msgid ":ref:`Resources for development configuration <development-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:13
+msgid ":ref:`Task output capturing configuration <task-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:18
+msgid "Automating microservice decisions using the dashboard"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:20
+msgid ""
+"It is possible for administrators or end-users to automate almost all of "
+"Archivematica's workflow decision points by changing the default "
+"processing configuration through the Administration tab. For more "
+"information, please see :ref:`Processing configuration <process-config>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:25
+msgid ""
+"You can also automate workflow choices by placing a ``processingMCP.xml``"
+" file into the root directory of your transfer. For more information "
+"about the processingMCP file and how to use it, please see :ref:`Using a "
+"custom processing configuration file <processingmcp-file>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:33
+msgid "Preservation planning configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:35
+msgid ""
+"The Preservation Planning tab allows users to edit, add, or disable "
+"commands for a variety of preservation tasks, including identification, "
+"characterization, normalization, validation, and verification. Please see"
+" the :ref:`Preservation Planning <preservation-planning>` documentation "
+"for more information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:43
+msgid "Antivirus configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:45
+msgid ""
+"Archivematica's antivirus capabilities can be customized by editing "
+"various operating system environment variables. Please see "
+":ref:`Antivirus Administration <antivirus-admin>` for more information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:52
+msgid "Email notification configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:54
+msgid "Archivematica's MCPClient sends two types of email reports:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:56
+msgid ""
+"Normalization reports are sent when the normalization process has "
+"resulted in at least one error."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:58
+msgid "Failure reports are sent when the workflow fails unexpectedly."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:60
+msgid ""
+"The email reports are sent to all users who have an account on the "
+"pipeline. Currently, there is no way to configure which users receive the"
+" email. If you don't want a user to receive the email, the easiest way to"
+" disable this is to change the email address associated with the user to "
+"an invalid one."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:65
+msgid ""
+"If you are running a QA environment, it is possible that your only "
+"registered user is ``demo@example.com``. Be aware that Archivematica "
+"ignores this address and will not send notifications to it. If you want "
+"to test the email reporting functionality make sure to register a "
+"functional email address for a user."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:70
+msgid ""
+"Currently, emails are only sent by MCPClient. This means that in order to"
+" configure the email backend settings, changes are required in the "
+"MCPClient service configuration. For example, you can use the following "
+"environment strings to send emails via a local MTA such as Postfix::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:79
+msgid ""
+"For more information about configuring the MCPClient, please see the "
+"`MCPClient configuration documentation`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:82
+msgid ""
+"Archivematica sends emails using the Django Web Framework. You can "
+"install third-party packages like ``django-ses`` to support additional "
+"email backends. Packages must be installed in the Python environment of "
+"MCPClient."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:89
+msgid "Resources for development configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:91
+msgid "If you are working on developing Archivematica, it may be helpful to"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:93
+msgid ""
+"A common area for development work is the MCP (Master Control Program). "
+"The MCP is the core of Archivematica, and controls the various micro-"
+"services that Archivematica uses to carry out preservation tasks. "
+"Developers who wish to modify the MCP configuration should consult the "
+"following resources on the Archivematica wiki:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:99
+msgid "`MCP`_"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:100
+msgid "`Basic MCP configuration`_"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:102
+msgid ""
+"For other development resources, please see the `Development`_ section of"
+" the Archivematica wiki."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:108
+msgid "Task output capturing configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:110
+msgid ""
+"When Archivematica's MCP client (a Gearman worker) runs a client script "
+"in order to perform a preservation task, e.g., normalizing a single file,"
+" that client script may write data to standard streams, i.e., standard "
+"output (stdout) or standard error (stderr). By default, the worker "
+"serializes those outputs and sends them back to the MCP server (the task "
+"manager), at which point they are stored in the database (the ``Tasks`` "
+"table). However, in some cases these outputs may be quite large and the "
+"job of serializing and moving them around can have a noticeable "
+"performance impact. For this reason, Archivematica allows users to "
+"configure their MCP clients in order to control whether or not these "
+"output streams are captured. See :ref:`Task output capturing "
+"configuration <task-output-capturing-admin>` for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:123
+msgid ":ref:`Back to the top <customization>`"
+msgstr ""
+

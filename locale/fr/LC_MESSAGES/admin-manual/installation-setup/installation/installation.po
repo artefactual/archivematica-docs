@@ -1,0 +1,551 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:5
+msgid "Installing Archivematica"
+msgstr "Installer Archivematica"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:7
+msgid "*On this page*"
+msgstr "*Sur cette page*"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:9
+msgid ":ref:`Overview <overview>`"
+msgstr ":ref:`Aperçu <overview>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:10
+msgid ":ref:`Technical requirements <treq>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:11
+msgid ":ref:`Instructions for new installations <instructions>`"
+msgstr ":ref:`Instructions pour une nouvelle installation <instructions>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:12
+msgid ":ref:`Advanced installation options <advanced>`"
+msgstr ":ref:`Options d'installation avancées <advanced>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:17
+msgid "Overview"
+msgstr "Aperçu"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:19
+msgid ""
+"The following table lists all help topics on installing Archivematica for "
+"various intended uses and host environments. Further down the page, you will"
+" find more detailed information about new installations and advanced "
+"installation options."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:24
+msgid ""
+"If you need assistance or clarification regarding the installation "
+"instructions, the `Archivematica user forum`_ is a good place ask questions."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Intended use"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Environment"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Related documents"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Notes"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Test-driving the latest release"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Archivematica sandbox"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ":ref:`Using the sandbox <using-the-sandbox>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"The sandbox will automatically reset daily. Any packages created will not be"
+" permanently saved. Additionally, there may be more than one demo user "
+"logged in at the same time, so you may see changes made by others while "
+"using the software."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Local virtual machine using Vagrant and VirtualBox"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+":ref:`Installing on a virtual machine using Vagrant <installing-on-vm>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "This virtual machine is not intended to be used in production."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "New installations – Production deployment"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+#: ../../admin-manual/installation-setup/installation/installation.rst:42
+msgid "Ubuntu 14.04 64-bit Server Edition"
+msgstr "Ubuntu 14.04 64-bit Server Edition"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+":ref:`Automated install using Ansible \\> Ubuntu 14.04 "
+"\\(Trusty\\)<ubuntu-14.04>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"These instructions will not work if you are using a Windows machine as the "
+"host environment. For Windows installations, see the :ref:`manual install "
+"instructions <install-pkg-ubuntu>` for production."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+#: ../../admin-manual/installation-setup/installation/installation.rst:43
+msgid "Ubuntu 16.04 64-bit Server Edition"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+":ref:`Automated install using Ansible \\> Ubuntu 16.04 "
+"\\(Xenial\\)<ubuntu-16.04>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Ubuntu 18.04 64-bit Server Edition ( Experimental support )"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+":ref:`Automated install using Ansible \\> Ubuntu 18.04 "
+"\\(Bionic\\)<ubuntu-18.04>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Ansible playbooks for Ubuntu 18.04 are available but experimental."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+#: ../../admin-manual/installation-setup/installation/installation.rst:45
+msgid "CentOS 7 64-bit"
+msgstr "CentOS 7 64-bit"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ":ref:`Installing Archivematica on CentOS/Red Hat<install-pkg-centos>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"Archivematica versions 1.5.1 and higher support installation on CentOS/Red "
+"Hat."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Windows OS"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Not supported"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Development"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Docker and Linux"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"`Installing Archivematica Using Docker Compose on Linux <https://github.com"
+"/artefactual-labs/am/tree/master/compose#docker-and-linux>`_"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"Docker will provide instructions on how to use it as a non-root user. This "
+"may not be desirable for all."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Docker and Mac"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"`Installing Archivematica Using Docker Compose on Mac <https://github.com"
+"/artefactual-labs/am/tree/master/compose#docker-and-mac>`_"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"Installation of Archivematica on machines running macOS using Docker is "
+"possible but still in development and may require some extra steps."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Spreading Archivematica’s processing load across several machines"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid "Base on your customized setup and network configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ":ref:`Installing across multiple machines<multiple-machines>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-landing.csv:1
+msgid ""
+"When installing Archivematica on multiple machines, the various "
+"Archivematica processes must be able to reach each other on the relevant "
+"ports. Your firewall configuration must allow for this."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:34
+msgid "Technical requirements"
+msgstr "Exigences techniques"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:37
+msgid "Operating system"
+msgstr "Système d’exploitation"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:39
+msgid ""
+"Archivematica |release| installation instructions are provided here for the "
+"following operating systems:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:44
+msgid "Ubuntu 18.04 64-bit Server Edition (experimental support)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:47
+msgid ""
+"Archivematica |version| is the first release to be tested on Ubuntu 18.04. "
+"Support for this OS is still considered beta; installation has been tested "
+"but production deployments are limited."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:51
+msgid ""
+"Other Linux distributions should work, but will require customization of "
+"these installation instructions."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:54
+msgid ""
+"Support for macOS is possibly in theory, but is not being tested, and would "
+"require more significant deviation from these instructions."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:57
+msgid ""
+"Archivematica is unlikely to ever run directly in a Windows environment. "
+"Consider the use of a virtualization platform to run Linux VMs."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:61
+msgid "Dependencies"
+msgstr "Dépendances"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:63
+msgid ""
+"Archivematica has a long list of software it depends on. All of these "
+"dependencies are installed when following the instructions below."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:66
+msgid ""
+"Note that it is possible to install some of the components on separate "
+"machines in order to improve performance, such as:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:69
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:70
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:71
+msgid "Elasticsearch (optional as of Archivematica 1.7, see below)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:73
+msgid ""
+"Using additional machines will require additional configuration. For more "
+"information, see :ref:`Advanced <advanced>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:77
+msgid ""
+"Archivematica |version| has been tested with MySQL 5.5, including the "
+"Percona and MariaDB alternatives. Archivematica uses MySQL 5.7 on Ubuntu "
+"16.04."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:81
+msgid ""
+"Some of the tools run by Archivematica require Java to be installed "
+"(primarily Elasticsearch and fits). On Ubuntu 14.04, Open JDK 7 is used. On "
+"Ubuntu 16.04, Open JDK 8 is the default. It is possible to use Oracle Java 7"
+" or 8 instead."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:86
+msgid ""
+"The remaining dependencies should be kept at the versions installed by "
+"Archivematica."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:92
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:94
+msgid ""
+"Installing Elasticsearch to provide a search index is now optional as of "
+"Archivematica version 1.7. Installing Archivematica without Elasticsearch "
+"means reduced consumption of compute resources and lower operational "
+"complexity. However, some functionality, such as the Backlog, Appraisal and "
+"Archival Storage tabs, is not available."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:100
+msgid ""
+"When Elasticsearch is used, Archivematica |release| requires version 1.x "
+"(tested with 1.7.6). Support for a more recent version of Elasticsearch is "
+"being developed and is planned for a future release."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:105
+msgid "Hardware"
+msgstr "Matériel"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:107
+msgid ""
+"Archivematica is capable of running on almost any hardware supported by "
+"Linux; however, processing large collections will require better hardware."
+msgstr ""
+"Archivematica peut fonctionner sur presque tout le matériel supporté par "
+"Linux, mais le traitement de collections importantes demandera du matériel "
+"plus puissant. "
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:113
+msgid "Minimum hardware requirements"
+msgstr "Configuration minimale requise"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:115
+msgid ""
+"For small-scale functionality testing using small collections (transfers "
+"with 100 files or less, total file size 1 GB or smaller), we recommend the "
+"following minimum hardware requirements:"
+msgstr ""
+"Pour l’essai de fonctionnalité à petite échelle à l’aide de petites "
+"collections (transferts d’au plus 100 fichiers, maximum de 1 Go), nous "
+"recommandons la configuration minimale suivante :"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:119
+#: ../../admin-manual/installation-setup/installation/installation.rst:133
+msgid "Processor: 2 CPU cores"
+msgstr "Processeur : 2 coeurs CPU"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:120
+msgid "Memory: 2GB+"
+msgstr "Mémoire : 2 Go+"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:121
+msgid ""
+"Disk space (processing): 7GB plus two to three times the disk space required"
+" for the collection being processed (e.g., 3GB to process a 1GB transfer)"
+msgstr ""
+"Espace disque (traitement) : 7 Go plus 2 ou 3 fois l'espace disque "
+"nécessaire pour héberger la collection (p.ex., 3 Go sont nécessaire pour un "
+"transfert de 1 Go)"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:127
+msgid "Recommended minimum production requirements"
+msgstr "Configuration minimale requise pour le traitement de la production"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:129
+msgid ""
+"For production processing, the hardware requirements depend almost entirely "
+"on the size and number of files being processed. These recommendations "
+"should be considered the minimum for a viable production system:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:134
+msgid "Memory: 4GB"
+msgstr "Mémoire : 4 Go"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:135
+msgid "Disk space (processing): 200GB"
+msgstr "Espace disque (traitement) : 200 Go"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:137
+msgid "More commonly, we deploy the following:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:139
+msgid "Processor: 8 CPU cores"
+msgstr "Processeur : 8 coeurs CPU"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:140
+msgid "Memory: 16GB"
+msgstr "Mémoire : 16 Go"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:142
+msgid ""
+"For processing disk space, we recommend allocating 20GB plus four times the "
+"disk space required for the largest transfer that you expect to process. If "
+"your largest transfer is 50GB, allocation at least 220GBs of disk space."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:146
+msgid ""
+"The amount of transfer source disk space needed is subjective, and depends "
+"on individual workflows."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:149
+msgid ""
+"The amount of storage disk space needed will depend on how much material you"
+" intend to store, as well as how it is stored (compressed or uncompressed)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:152
+msgid ""
+"These requirements may not be suitable for certain types of material - for "
+"example, audio-visual material requires more processing power than images or"
+" documents."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:157
+msgid "Browser compatability"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:159
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"There are known issues with Internet Explorer 11 which result in an "
+"inability to start transfers in the dashboard (`Issue 7246`_). Minimal, but "
+"successful, testing has been done with Microsoft Edge."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:167
+msgid "Instructions for new installations"
+msgstr "Instructions pour une nouvelle installation"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:169
+msgid ""
+"Archivematica can be installed using packages or Ansible scripts in either "
+"CentOS/Red Hat or Ubuntu environments. It can also be installed using "
+"Docker. At this time, installation instructions are provided for officially "
+"tested and supported installation environments:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:174
+msgid ""
+":ref:`Automated install on Ubuntu (14.04 and 16.04) using Ansible <install-"
+"ansible>`. Ansible playbooks for Ubuntu 18.04 are also available, but "
+"experimental"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:177
+msgid ""
+":ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:179
+msgid ""
+":ref:`Manual install of OS packages on Ubuntu (14.04 and 16.04) <install-"
+"pkg-ubuntu>` is documented but not officially supported."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:182
+msgid ""
+"Installing Archivematica using :ref:`Docker <development>` is not officially"
+" supported for production deployments. However, it is the preferred "
+"development environment for those who work on Archivematica's code."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:186
+msgid ""
+"For more information about installation environments, please see the "
+"`ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the "
+"`Archivematica user forum`_ for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:190
+msgid ""
+"If you are upgrading from a previous version of Archivematica, please see "
+"the :ref:`upgrading instructions <upgrade>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:196
+msgid "Advanced installation options"
+msgstr "Options d'installation avancées"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:198
+msgid ""
+"There are many ways to install Archivematica, depending on the needs of the "
+"individual user. We have documented some common advanced installation "
+"setups."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:201
+msgid ":ref:`Installing for development <development>`"
+msgstr ":ref:`Installation pour le développement <development>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:202
+msgid ":ref:`Installing across multiple machines <multiple-machines>`"
+msgstr ":ref:`Installation sur des machines multiples <multiple-machines>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:203
+msgid ":ref:`Configure Archivematica with SSL <SSL-support>`"
+msgstr ":ref:`Configurer Archivematica avec SSL <SSL-support>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:204
+msgid ""
+":ref:`Configure Archivematica with task output capturing disabled <task-"
+"output-capturing-admin>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:207
+msgid ":ref:`Back to the top <installation>`"
+msgstr ":ref:`Retour en haut de page <installation>`"

@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:5
+msgid "Upgrade from Archivematica |previous_version|.x to |release|"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:7
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:9
+msgid ":ref:`Create a backup <create-backup>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:10
+msgid ":ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:11
+msgid ":ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:12
+msgid ":ref:`Upgrade search indices <upgrade-search-indices>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:13
+msgid ":ref:`Upgrade in indexless mode <upgrade-indexless>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:14
+msgid ":ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:18
+msgid ""
+"While it is possible to upgrade a GitHub-based source install using "
+"ansible, these instructions do not cover that scenario."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:24
+msgid "Create a backup"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:26
+msgid ""
+"Before starting any upgrade procedure on a production system, we strongly"
+" recommend backing up your system. If you are using a virtual machine, "
+"take a snapshot of it before making any changes. Alternatively, back up "
+"the file systems being used by your system. Exact procedures for updating"
+" will depend on your local installation. At a minimum you should make "
+"backups of:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:32
+msgid "The Storage Service SQLite (or MySQL) database"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:33
+msgid "The dashboard MySQL database"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:35
+msgid "This is a simple example of backing up these two databases:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:42
+msgid ""
+"If you do not have a password set for the root user in MySQL, you can "
+"take out the '-p' portion of that command. If there is a problem during "
+"the upgrade process, you can restore your MySQL database from this backup"
+" and try the upgrade again."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:50
+msgid "Upgrade on Ubuntu"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:52
+msgid ""
+"Before you start: Archivematica 1.7 stopped using ``/usr/share/python`` "
+"as the home for our Python virtual environments. We did this because it "
+"was causing Ubuntu Xenial to break when attempting to upgrade a system "
+"package called ``python-minimal``. If you're running Ubuntu Xenial the "
+"following commands are going to be necessary to continue the upgrade:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:64
+msgid "Update the operating system."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:70
+msgid ""
+"Update Python Setuptools. This is used to install Python dependencies for"
+" both the Storage Service and the dashboard. There is a `known issue with"
+" pip`_ on Ubuntu 14.04 which makes this step necessary."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:78
+msgid "Update package sources."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:80
+msgid "In Ubuntu 14.04:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:88
+msgid "In Ubuntu 16.04:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:96
+msgid ""
+"Optionally you can remove the lines referencing "
+"packages.archivematica.org/|previous_version|.x from "
+"/etc/apt/sources.list."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:99
+msgid "Update the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:106
+msgid ""
+"Update the Application Container. As of Storage Service version 0.10.0, "
+"the Storage Service uses Gunicorn as WSGI server. This means that the old"
+" uwsgi server needs to be stopped and disabled after performing the "
+"upgrade."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:115
+msgid ""
+"Update Archivematica. During the update process you may be asked about "
+"updating configuration files. Choose to accept the maintainers versions. "
+"You will also be asked about updating the database - say 'ok' to each of "
+"those steps. If you have set a password for the root MySQL database user,"
+" enter it when prompted. It is better to update the dashboard before "
+"updating the mcp components."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:126
+msgid ""
+"Disable unused services. Archivematica |release| uses Nginx as HTTP "
+"server, and Gunicorn as WSGI server. This means that some services used "
+"in Archivematica |previous_release| should be stopped and disabled before"
+" performing the upgrade."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:136
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:328
+msgid "Restart services."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:152
+msgid ""
+"Depending on which service manager (init system) you are using (e.g., "
+"`systemd <https://freedesktop.org/wiki/Software/systemd/>`_, `Upstart "
+"<http://upstart.ubuntu.com/>`_, or init), the above ``start`` and "
+"``restart`` commands may not work. Please refer to the documentation for "
+"your operating system's service manager for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:158
+msgid ""
+"Depending on how your Ubuntu system is set up, you may have trouble "
+"restarting gearman with the command in the block above. If that is the "
+"case, try this command instead:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:166
+msgid "Remove unused services."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:175
+msgid "Upgrade on CentOS/Red Hat"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:177
+msgid "Upgrade the repositories for |version|:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:183
+msgid "Upgrade the packages:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:189
+msgid ""
+"Once the new packages are installed, upgrade the databases for both "
+"Archivematica and the Storage Service. This can be done with:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:212
+msgid "Restart the Archivematica related services, and continue using the system:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:221
+msgid ""
+"Depending on your browser settings, you may need to clear your browser "
+"cache to make the dashboard pages load properly. For example in Firefox "
+"or Chrome you should be able to clear the cache with control-shift-R or "
+"command-shift-F5."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:229
+msgid "Upgrade search indices"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:233
+msgid ""
+"Ignore this section if you are planning to run Archivematica without a "
+"search index. Instead, follow the instructions on :ref:`how to upgrade "
+"Archivematica in indexless mode <upgrade-indexless>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:237
+msgid ""
+"To complete these instructions you need to know the paths of your "
+"transfer backlog and AIP storage locations. Respectively, these usually "
+"are:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:240
+msgid ":file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:241
+msgid ":file:`/var/archivematica/sharedDirectory/www/AIPsStore`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:243
+msgid ""
+"You can confirm the paths of your installation in the Location tab of the"
+" Storage Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:246
+msgid "This process has two steps:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:248
+msgid "**Rebuild transfer index:**"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:250
+msgid ""
+"Run the following command passing the path of the transfer backlog "
+"location you confirmed above:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:266
+msgid ""
+"This may take a while if you have a large backlog. Once it completes, you"
+" should be able to see your Transfer Backlog in the Appraisal tab and in "
+"the Backlog tab."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:270
+msgid ""
+"Depending on your browser settings, you may need to clear your browser "
+"cache to make the dashboard pages load properly. For example in Firefox "
+"or Chrome yo should be able to clear the cache with ``control-shift-R`` "
+"or ``command-shift-F5``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:275
+msgid "**Rebuild the AIP index:**"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:277
+msgid ""
+"Run the following command passing the path of the AIP storage location "
+"you confirmed above:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:293
+msgid "This may take a while if you have many AIPs stored."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:298
+msgid "Upgrade in indexless mode"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:300
+msgid ""
+"As of Archivematica 1.7, Archivematica can be run in indexless mode; that"
+" is, without Elasticsearch. Installing Archivematica without "
+"Elasticsearch means reduced consumption of compute resources and lower "
+"operational complexity. Disabling Elasticsearch means that the Backlog, "
+"Appraisal, and Archival Storage tabs do not appear and their "
+"functionality is not available."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:306
+msgid ""
+"Upgrade your existing Archivematica pipeline following the instructions "
+"above."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:309
+msgid ""
+"Modify the relevant systemd EnvironmentFile files by adding lines that "
+"set the relevant environment variables to ``false``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:312
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:330
+msgid "If you are using Ubuntu, run the following commands."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:320
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:338
+msgid "If you are using CentOS, run the following commands."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:346
+msgid ""
+"If you had previously installed and started the Elasticsearch service, "
+"you can turn it off now."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:349
+msgid "If you are using Ubuntu 14.04, run the following commands."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:356
+msgid ""
+"If you are using Ubuntu 16.04 or CentOS/Red Hat, run the following "
+"commands."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:366
+msgid "Upgrade with output capturing disabled"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:368
+msgid ""
+"As of Archivematica 1.7.1, output capturing can be disabled at upgrade or"
+" at any other time. This means the stdout and stderr from preservation "
+"tasks are not captured, which can result in a performane improvement. See"
+" the `Task output capturing configuration <task-output-capturing-admin>` "
+"page for more details. In order to disable output capturing, set the "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` "
+"environment variable to ``false`` and restart the MCP Client process(es)."
+" Consult the installation instructions for your deployment method for "
+"more details on how to set environment variables and restart "
+"Archivematica processes."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:379
+msgid ":ref:`Back to the top <upgrade>`"
+msgstr ""
+

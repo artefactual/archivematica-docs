@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-04-03 15:20+0000\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/overview/dashboard.rst:5
+msgid "Web-based dashboard"
+msgstr "Painel baseado na Web"
+
+#: ../../getting-started/overview/dashboard.rst:7
+msgid ""
+"From the end-user perspective, all of Archivematica's functions take place "
+"within a web-based dashboard which can be accessed from anywhere by logging "
+"in through a web browser."
+msgstr "Do ponto de vista do usuário final, todas as funções do Archivematica ocorrem dentro de um painel baseado na web, que pode ser acessado de qualquer lugar, fazendo login através de um navegador da web."
+
+#: ../../getting-started/overview/dashboard.rst:16
+msgid ""
+"The Dashboard is akin to a \"processing space\" for digital archives, "
+"allowing archivists to move packages of digital materials through the "
+"Archivematica pipeline before sending packages for storage or dissemination."
+msgstr "O Painel é semelhante a um \"espaço de processamento\" para arquivos digitais, permitindo que os arquivistas movam pacotes de materiais digitais através do pipeline Archivematica antes de enviar pacotes para armazenamento ou disseminação."
+
+#: ../../getting-started/overview/dashboard.rst:20
+msgid ""
+"A description of the Dashboard elements follows, with numbers referencing "
+"the image above."
+msgstr "Segue-se uma descrição dos elementos do painel, com números referentes à imagem acima."
+
+#: ../../getting-started/overview/dashboard.rst:24
+msgid "1. Tabs"
+msgstr "1. Abas"
+
+#: ../../getting-started/overview/dashboard.rst:26
+msgid ""
+"The Dashboard is divided into a number of tabs, with the grey area "
+"indicating the tab currently in view. Alerts appear in red circles when "
+"there is action required by the archivist in a tab. The names of the tabs "
+"(Transfer, Ingest, Archival storage, Preservation planning, Access, "
+"Administration) reference both the OAIS model, as well as sections of the "
+"user documentation."
+msgstr "O painel é dividido em várias abas, com a área cinza indicando a aba atualmente em exibição. Os alertas aparecem em círculos vermelhos quando há uma ação exigida pelo arquivista em uma aba. Os nomes das guias (Transferência, Ingest, Armazenamento de arquivamento, Planejamento de preservação, Acesso, Administração) fazem referência ao modelo OAIS, bem como às seções da documentação do usuário."
+
+#: ../../getting-started/overview/dashboard.rst:33
+msgid "2. User login"
+msgstr "2. Login do usuário"
+
+#: ../../getting-started/overview/dashboard.rst:35
+msgid ""
+"The user login name appears beside the tabs, and is where the user logs out "
+"from when processing work is complete."
+msgstr "O nome de login do usuário aparece ao lado das abas, e é onde o usuário efetua logout quando o trabalho de processamento é concluído."
+
+#: ../../getting-started/overview/dashboard.rst:39
+msgid "3. Packages"
+msgstr "3. Pacotes"
+
+#: ../../getting-started/overview/dashboard.rst:41
+msgid ""
+"At any given time, any number of packages could be present in the Transfer "
+"and Ingest tabs, representing a Transfer of material or a Submission "
+"Information Package (SIP), respectively. A package will either be:"
+msgstr "A qualquer momento, qualquer número de pacotes pode estar presente nas abas Transferência e Ingest, representando uma transferência de material ou um pacote de informações de envio (SIP), respectivamente. Um pacote será:"
+
+#: ../../getting-started/overview/dashboard.rst:45
+msgid "In progress, indicated by green arrows"
+msgstr "Em andamento, indicado por setas verdes"
+
+#: ../../getting-started/overview/dashboard.rst:46
+msgid "In need of a decision to be made, indicated by a bell icon"
+msgstr "Necessidade de uma decisão a ser tomada, indicado por um ícone de sino"
+
+#: ../../getting-started/overview/dashboard.rst:47
+msgid "Completed, indicated by a green checkmark"
+msgstr "Concluído, indicado por uma marca de verificação verde"
+
+#: ../../getting-started/overview/dashboard.rst:48
+msgid "Failed, indicated by a red stop symbol"
+msgstr "Falhou, indicado por um símbolo de parada vermelho"
+
+#: ../../getting-started/overview/dashboard.rst:49
+msgid "Rejected by the archivist, indicated by a grey stop symbol"
+msgstr "Rejeitado pelo arquivista, indicado por um símbolo de parada cinza"
+
+#: ../../getting-started/overview/dashboard.rst:51
+msgid ""
+"It is a good practice to \"clean up\" the Dashboard periodically by removing"
+" packages using the red \"remove\" button (see below)."
+msgstr "É uma boa prática \"limpar\" o Painel periodicamente removendo pacotes usando o botão vermelho \"remover\" (veja abaixo)."
+
+#: ../../getting-started/overview/dashboard.rst:55
+msgid "4. Micro-services and Jobs"
+msgstr "4. Micro-serviços e tarefa"
+
+#: ../../getting-started/overview/dashboard.rst:57
+msgid ""
+"Archivematica's processing is performed through a number of :ref:`micro-"
+"services <micro-services>`. Micro-services are provided by a combination of "
+"Archivematica Python scripts and one or more of the free, open-source "
+"`software tools <https://www.archivematica.org/wiki/External_tools>`_ "
+"bundled in the Archivematica system."
+msgstr "O processamento do Archivematica é realizado por meio de vários:ref:`micro-serviços <micro-services>`. Os micro-serviços são fornecidos por uma combinação de scripts do Archivematica Python e um ou mais dos recursos gratuitos e de código aberto. `ferramentas de software <https://www.archivematica.org/wiki/External_tools>`_ agrupados no sistema Archivematica.."
+
+#: ../../getting-started/overview/dashboard.rst:63
+msgid ""
+"These micro-services are broken down  into a number of jobs, which users can"
+" see by clicking on the micro-service to expand. Clicking on the gear icon "
+"within a job will open a new browser tab showing the tasks performed for "
+"that particular job."
+msgstr "Esses micro-serviços são divididos em várias tarefas, que os usuários podem ver clicando no micro-serviço para expandir. Clicar no ícone de engrenagem em um trabalho abrirá uma nova guia do navegador, mostrando as tarefas executadas para esse trabalho específico."
+
+#: ../../getting-started/overview/dashboard.rst:69
+msgid "5. Decision"
+msgstr "5. Decisão"
+
+#: ../../getting-started/overview/dashboard.rst:71
+msgid ""
+"Certain micro-services result in a decision point for the archivist. The "
+"decision is completed by choosing an available option from a drop-down menu."
+" Many of the decision points can be pre-configured if desired in the "
+":ref:`Administration tab <dashboard-processing>`."
+msgstr "Certos micro-serviços resultam em um ponto de decisão para o arquivista. A decisão é concluída escolhendo uma opção disponível em um menu suspenso. Muitos dos pontos de decisão podem ser pré-configurados, se desejado, na aba: ref: `Administração<dashboard-processing>`."
+
+#: ../../getting-started/overview/dashboard.rst:77
+msgid "6. Report/remove icons"
+msgstr "6. Informar/remover ícones"
+
+#: ../../getting-started/overview/dashboard.rst:79
+msgid ""
+"Report (paper and pencil) icons appear on Transfer and Ingest packages and "
+"link the user to the :ref:`descriptive <add-metadata>` and :ref:`rights "
+"<add-rights>` metadata entry page. (The same icon is used for forensic disk "
+"image transfer metadata entry as well as the :ref:`normalization report "
+"<normalize>`)."
+msgstr "Ícones de relatório (papel e lápis) aparecem nos pacotes Transferência e Ingest e vinculam o usuário ao: ref: `descritivo<add-metadata>` e :ref: `direitos <add-rights>` página de entrada de metadados. (O mesmo ícone é usado para entrada de metadados de transferência de imagens de disco forense, assim como :ref:`relatório de normalização <normalize>`)."
+
+#: ../../getting-started/overview/dashboard.rst:85
+msgid ""
+"The red remove icon removes the package from the Dashboard. The package can "
+"be removed whether the processing is completed or not. It is best practice "
+"to remove completed packages periodically as a \"cleanup\" procedure to keep"
+" the web browser running smoothly. Note that removing a package **does not**"
+" delete the package or any AIPs or DIPs associated with it."
+msgstr "O ícone vermelho remove exclui o pacote do painel. O pacote pode ser removido se o processamento estiver concluído ou não. É uma prática recomendada remover pacotes concluídos periodicamente como um procedimento de \"limpeza\" para manter o navegador da web funcionando sem problemas. Observe que remover um pacote **não** exclui o pacote ou quaisquer AIPs ou DIPs associados a ele."
+
+#: ../../getting-started/overview/dashboard.rst:91
+msgid ":ref:`Back to the top <web-dashboard>`"
+msgstr ":ref:`Voltar ao topo <web-dashboard>`"

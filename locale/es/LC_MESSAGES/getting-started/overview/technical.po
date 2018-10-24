@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../getting-started/overview/technical.rst:5
 msgid "Technical architecture"
@@ -101,7 +101,9 @@ msgid ""
 msgstr ""
 
 #: ../../getting-started/overview/technical.rst:73
-msgid "For more information, see :ref:`Format Policy Registry (FPR) <fpr>`."
+msgid ""
+"For more information, see :ref:`Preservation Planning <preservation-"
+"planning>`."
 msgstr ""
 
 #: ../../getting-started/overview/technical.rst:79
@@ -143,4 +145,7 @@ msgstr ""
 #: ../../getting-started/overview/technical.rst:108
 msgid ":ref:`Back to the top <technical-arch>`"
 msgstr ""
+
+#~ msgid "For more information, see :ref:`Format Policy Registry (FPR) <fpr>`."
+#~ msgstr ""
 

@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cintya Takahaschi <cintya.takahaschi@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-24 19:38+0000\n"
+"Last-Translator: artefactual <translate@artefactual.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:5
+msgid "Error handling"
+msgstr "Tratamento de erros"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:7
+msgid ""
+"Archivematica anticipates that a number of different types of errors can "
+"occur during processing. Some of them will result in processing being halted"
+" and the transfer or SIP being moved to the failed directory in the file "
+"browser. For others, processing can continue: for example, a normalization "
+"failure is reported and the user is given the opportunity to continue "
+"processing the SIP."
+msgstr "O Archivematica prevê que diversos tipos diferentes de erros podem ocorrer durante o processamento. Alguns deles resultarão na interrupção do processamento, com a transferência ou SIP sendo movido para um diretório de falhas no navegador de arquivos. Para outros, o processamento pode continuar: por exemplo, uma falha na normalização é relatada, sendo dada ao usuário a oportunidade de continuar a processar o SIP."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:13
+msgid ""
+"If you don't find an answer here or elsewhere in the user manual, please try"
+" searching the `public user forum "
+"<https://groups.google.com/forum/?fromgroups#!forum/archivematica>`_. "
+"Someone may have had the same problem before and been offered a solution. If"
+" you do not find the answer there, feel free to ask us a question. The best "
+"questions to the list include as much information as possible about the "
+"error. This means offering us information about the system(s) you're using, "
+"the content of your transfer(s), and copying the task information (click on "
+"the cog icon on the same line as the micro-service job where the error "
+"occurred) and show arguments data output. See task information and show "
+"arguments data for the same error, below."
+msgstr "Se você não encontrar uma resposta aqui, ou em outro local deste manual do usuário, por favor tente procurar no `fórum público de usuários <https://groups.google.com/forum/?fromgroups#!forum/archivematica>`_. Pode ser que alguém tenha enfrentado o mesmo problema antes, e tenha oferecido uma solução. Se você não encontrar a resposta lá, sinta-se à vontade para fazer-nos uma pergunta. As melhores perguntas na lista incluem tanta informação quanto possível sobre o erro. O que significa oferecer informações sobre o(s) sistema(s) que você estiver usando, o conteúdo de sua(s) transferência(s) e cópia das informações da tarefa (clique no ícone de engrenagem na mesma linha da tarefa do microsserviço onde o erro ocorreu) e mostra dados de argumentos da resposta. Consulte as informações da tarefa e mostrar dados de argumentos para o mesmo erro, a seguir."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:24
+msgid "*On this page:*"
+msgstr "*Nesta página:*"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:26
+msgid ":ref:`Dashboard error reporting <error-dashboard>`"
+msgstr ":ref:`Relatório de erros do Dashboard <error-dashboard>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:28
+msgid ":ref:`Failure reports in Administration tab <failure-reports>`"
+msgstr ":ref:`Relatório de falhas na tela Administração <failure-reports>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:30
+msgid ":ref:`Email error report <email-failure>`"
+msgstr ":ref:`Relatório de erros por e-mail <email-failure>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:32
+msgid ":ref:`Normalization errors <normalization-errors>`"
+msgstr ":ref:`Erros de normalização <normalization-errors>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:34
+msgid ":ref:`DIP upload error <dip-error>`"
+msgstr ":ref:`Erro de upload de DIP <dip-error>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:36
+msgid ":ref:`Common error behaviours <common-errors>`"
+msgstr ":ref:`Comportamentos comuns de erros <common-errors>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:38
+msgid ":ref:`Rejecting a transfer or SIP <rejecting>`"
+msgstr ":ref:`Rejeitar uma transferência ou SIP <rejecting>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:40
+msgid ":ref:`Removing a transfer or SIP from the dashboard <removing>`"
+msgstr ":ref:`Remover uma transferência ou SIP do dashboard <removing>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:42
+msgid ":ref:`Browser compatability <error-browser>`"
+msgstr ":ref:`Compatibilidade de navegador <error-browser>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:47
+msgid "Dashboard error reporting"
+msgstr "Relatório de erros do Dashboard"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:49
+msgid ""
+"When a micro-service fails or encounters an error, the workflow will be "
+"halted and Archivematica will report a 'Failed transfer'. The micro-service "
+"drop-down can be expanded to show the specific task that failed."
+msgstr "Quando um microsserviço falha ou encontra um erro, o fluxo de trabalho será interrompido e o Archivematica relatará uma 'Falha na transferência'. A caixa de microsserviço pode ser expandida para mostrar a tarefa específica que falhou."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:59
+msgid ""
+"The dashboard showing a transfer has failed at the Verify transfer checksums"
+" micro-service"
+msgstr "Dashboard exibindo uma transferência que falhou no microsserviço Verificar soma de verificação da transferência"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:62
+msgid ""
+"Note that the transfer has been moved to the failed directory and processing"
+" has been halted."
+msgstr "Observe que a transferência foi movida para o diretório de falhas, e o processamento foi interrompido."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:71
+msgid "The expanded detail on 'Failed transfer'"
+msgstr "O detalhe expandido de 'Falha na transferência'"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:73
+msgid ""
+"Click the tasks icon (the gear icon on the right-hand side) to open up an "
+"error report:"
+msgstr "Clique no ícone de tarefas (o ícone de engrenagem do lado direito) para abrir um relatório de erros:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:82
+msgid "An error report showing that a file has failed checksum validation"
+msgstr "Um relatório de erros mostrando que um arquivou falhou na validação de soma de verificação"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:84
+msgid ""
+"These reports are generally standard and predictable for certain types of "
+"errors and are useful for trouble-shooting. Note that the failed file(s) "
+"will always appear at the top of the report."
+msgstr "Estes relatórios geralmente são padrão e previsíveis para certos tipos de erros, e são úteis para resolução de problemas. Observe que o(s) arquivo(s) que falhou(aram) sempre aparecerá(ão) no topo do relatório."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:92
+msgid "Failure reports in Administration tab"
+msgstr "Relatório de falhas na tela Administração"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:94
+msgid ""
+"You can view failure reports in the Administration tab of the dashboard. See"
+" :ref:`Dashboard administration tab- Failures <dashboard-failures>` for more"
+" information."
+msgstr "Você pode ver relatórios de falhas na tela Administração do dashboard. Consulte :ref:`Tela administração do dashboard - Falhas<dashboard-failures>` para maiores informações."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:102
+msgid "Email error report"
+msgstr "Relatório de erro por e-mail"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:104
+msgid "Archivematica will send email reports for two kinds of failures:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:106
+msgid ""
+"Normalization reports are sent when the normalization process has resulted "
+"in at least one error."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:108
+msgid "Failure reports are sent when the workflow fails unexpectedly."
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:116
+msgid "An emailed failure report showing an error at Verify bag micro-service"
+msgstr "Um relatório de falhas enviado por e-mail mostrando um erro no microsserviço Verificar bag"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:118
+msgid ""
+"An e-mail is generated if the transfer or ingest cannot be completed, not if"
+" an error occurs which does not halt processing. Please note that the server"
+" must have mail delivery enabled in order to receive error emails without "
+"additional configuration."
+msgstr "Um e-mail é gerado se a transferência ou admissão não puder ser completada, não se ocorrer um erro que não interrompa o processamento. Por favor, observe que o servidor deve ser a entrega de e-mail habilitada para receber e-mails de erros sem configuração adicional."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:123
+msgid ""
+"For more information about email reports, please see :ref:`Email "
+"notification configuration <email-config>`"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:129
+msgid "Normalization errors"
+msgstr "Erros de normalização"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:131
+msgid "The dashboard will report normalization errors when:"
+msgstr "O dashboard relatará erros de normalização quando:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:133
+msgid "Normalization is attempted but fails"
+msgstr "Houve tentativa de normalização, mas falhou"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:135
+msgid ""
+"No normalization is attempted and the file is not in a recognized "
+"preservation or access format"
+msgstr "Não houve tentativa de normalização e o arquivo não é reconhecido como um formato para preservação ou acesso"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:138
+msgid ""
+"When normalization fails, the SIP continues processing until it reaches the "
+"normalization approval step. At this point, the user has two options:"
+msgstr "Quando a normalização falhar, o SIP continuará a ser processado até que atinja a etapa de aprovação da normalização. Neste ponto, o usuário terá duas opções:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:141
+msgid "**Option 1**"
+msgstr "**Opção 1**"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:143
+msgid ""
+"Click on the report icon next to the Actions drop-down menu to see a summary"
+" report of the normalization:"
+msgstr "Clicar no ícone de relatório, próximo ao menu de seleção Ações, para ver um relatório resumido da normalização:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:152
+msgid "Normalization report showing failed normalization attempts"
+msgstr "Relatório de normalização mostrando tentativas de normalização que falharam"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:154
+msgid ""
+"The report shows what has been normalized, what is already in an acceptable "
+"preservation and access format, and what has failed normalization or is not "
+"in a recognized preservation or access format. If normalization has failed, "
+"you can click on \"yes\" to see a task report of the error in a new tab:"
+msgstr "O relatório mostra o que foi normalizado, o que já estava em um formato aceitável para preservação e acesso, e o que falhou na normalização, ou não for reconhecido como formato para preservação ou acesso. Se a normalização falhou, você pode clicar em \"sim\" para ver um relatório de tarefa do erro em uma nova janela:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:165
+msgid "Task output for failed normalization job"
+msgstr "Retorno da tarefa para a tarefa de normalização"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:168
+msgid "**Option 2**"
+msgstr "**Opção 2**"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:170
+msgid ""
+"Click Review in parentheses next to the micro-service to view the "
+"normalization results in a directory structure in a new browser tab:"
+msgstr "Clicar em Revisar entre parênteses, próximo ao microsserviço, para visualizar os resultados da normalização em uma estrutura de diretório em uma nova janela do navegador:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:179
+msgid "Review normalization results in a new tab"
+msgstr "Revisão dos resultados da normalização em uma nova janela"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:181
+msgid ""
+"The review allows the user to either open the objects in the browser when "
+"there is an appropriate plug-in or download the objects and open them using "
+"a local application."
+msgstr "A revisão permite que o usuário abra os objetos no navegador quando houver o plug-in apropriado, ou faça o download dos objetos e abra-os usando uma aplicação local."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:185
+msgid ""
+"The user may choose to continue processing the SIP despite any normalization"
+" errors."
+msgstr "O usuário pode optar por continuar processando o SIP independente de quaisquer erros de normalização."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:188
+msgid ""
+"The user may choose to redo normalization, as well. For instance, if the "
+"user chose to normalize based on FITS-JHOVE results and experienced "
+"failures, the user may wish to redo normalization and choose to normalize "
+"based on FITS-DROID results instead."
+msgstr "O usuário pode escolhe refazer a normalização também. Por exemplo, se o usuário escolher fazer a normalização baseado nos resultados FITS-JHOVE e enfrentar problemas, pode escolher refazer a normalização, mas escolher a normalização baseada nos resultados do FITS-DROID."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:199
+msgid ""
+"Redo normalization option in drop-down menu of Approve normalization job"
+msgstr "Opção de refazer a normalização no menu de seleção da tarefa Aprovar normalização"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:201
+msgid ""
+"Archivematica will send an :ref:`email <email-failure>` when normalization "
+"errors occur. Information given in the email report:"
+msgstr ""
+
+#: ../../getting-started/troubleshooting/error-handling.rst:204
+msgid "UUID of the pipeline"
+msgstr "UUID da pipeline"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:205
+msgid "Name and UUID of the SIP"
+msgstr "Nome e UUID do SIP"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:206
+msgid ""
+"File name and file UUID, and whether Preservation or Access normalization "
+"failed"
+msgstr "Nome do arquivo e UUID do arquivo, e se a normalização para Preservação ou Acesso falhou"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:207
+msgid "Exit code"
+msgstr "Código de saída"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:209
+msgid ""
+"Exit code 1 indicates that a normalization rule and command exists but "
+"failed to execute properly (due to a problem in the command, a problem with "
+"the file, etc). Exit code 2 indicates that a normalization rule/command does"
+" not exist for that format."
+msgstr "O código de saída 1 indica que uma regra e comando de normalização existem, mas falhou em ser executado apropriadamente (devido a um problema no comando, um problema com o arquivo, etc.). O código de saída 2 indica que uma regra/comando de normalização não existe para este formato."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:220
+msgid "Emailed normalization error report"
+msgstr "Relatório de erro de normalização enviado por e-mail"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:225
+msgid "Dip upload error"
+msgstr "Erro de upload do DIP"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:227
+msgid ""
+"Archivematica will allow the user to continue to attempt to upload the DIP "
+"if a mistake was made entering the permalink:"
+msgstr "O Archivematica permitirá ao usuário continuar a tentar fazer o upload o DIP se um erro foi cometido na entrada do permalink:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:237
+msgid "Warning that permalink was incorrect, allows user to retry upload DIP"
+msgstr "Aviso de que o permalink estava incorreto, permite ao usuário tentar refazer o upload do DIP"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:243
+msgid "Other common error behaviours"
+msgstr "Outros comportamentos comuns de erro"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:245
+msgid ""
+"Verify metadata directory checksums: if the checksums in the metadata "
+"directory cannot be verified (i.e. if a file is missing or corrupted) the "
+"micro-service will fail and the transfer will be moved in the failed "
+"directory."
+msgstr "Verificação somas de verificação do diretório de metadados: se a soma de verificação no diretório de metadados não puder ser verificado (ou seja, se um arquivo estiver faltando, ou corrompido), o microsserviço falhará e a transferência será movida para o diretório de falhas."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:250
+msgid ""
+"Scan for viruses: if a virus is found the micro-service will fail and the "
+"transfer will be moved in the failed directory."
+msgstr "Scan por vírus: se um vírus for encontrado, o microsserviço falhará e a transferência será movida para o diretório de falhas."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:253
+msgid ""
+"Characterize and extract metadata: if FITS processing fails, the micro- "
+"service will fail and the transfer will continue processing. Similarly, if a"
+" tool within FITS fails, like JHOVE, you will see the pink error bar but be "
+"able to continue processing."
+msgstr "Caracterização e extração de metadados: se o processamento FITS falhar, o microsserviço falhará e a transferência continuará a ser processada. Similarmente, se uma ferramenta do FITS falhar, como o JHOVE, você verá uma barra rosa de erro, mas poderá continuar a processar."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:258
+msgid ""
+"Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db "
+"file, the micro-service will fail and the SIP will continue processing."
+msgstr "Remoção do arquivo thumbs.db: se o Archivematica não conseguir remover um arquivo thumbs.db, o microsserviço falhará e o SIP continuará a ser processado."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:261
+msgid ""
+"Normalize submission documentation to preservation format: if normalization "
+"fails, the micro-service will fail and the SIP will continue processing."
+msgstr "Normalização de documento de submissão para o formato para preservação: se a normalização falhar, o microsserviço falhará e o SIP continuará a ser processado."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:267
+msgid "Rejecting a transfer or SIP"
+msgstr "Rejeitar uma transferência ou SIP"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:269
+msgid ""
+"At any of the workflow approval points the user can choose to reject a "
+"transfer, SIP, AIP or DIP (depending on where the information object is in "
+"the workflow). This will move the transfer or SIP to the Rejected directory "
+"(accessible from the file browser) and will stop all processing on it. The "
+"transfer or SIP will still be listed in the dashboard, however. See "
+":ref:`Removing a transfer or SIP from the dashboard <removing>`, below, to "
+"remove it from the dashboard."
+msgstr "Em qualquer dos pontos de aprovação do fluxo de trabalho, o usuário poderá escolher rejeitar a transferência, SIP, AIP ou DIP (dependendo de onde o objeto de informação está no fluxo de trabalho). Isto moverá a transferência ou SIP para o diretório de rejeitados (acessível através do navegador de arquivos) e parará todo processamento dele. Entretanto, a transferência ou SIP continuará sendo listado no dashboard. Consulte::ref:`Remover uma transferência ou SIP do dashboard <removing>`, a seguir, para removê-lo do dashboard."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:281
+msgid "Removing a transfer or SIP from the dashboard"
+msgstr "Remover uma transferência ou SIP do dashboard"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:283
+msgid ""
+"To remove a transfer or SIP from the dashboard, click on the red \"Remove\" "
+"icon in the dashboard:"
+msgstr "Para remover uma transferência ou SIP do dashboard, clique no ícone vermelho \"Remover\" no dashboard:"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:292
+msgid ""
+"Click on the red Remove icon to remove a transfer or SIP from the dashboard,"
+" then click Confirm."
+msgstr "Clique no ícone vermelho Remover para remover uma transferência ou SIP do dashboard, e então clique em Confirmar."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:294
+msgid ""
+"It is recommended that you clear your dashboard of transfers and SIPs "
+"periodically to improve browser performance."
+msgstr "É recomendável que você limpe seu dashboard de transferências e SIPs periodicamente, para melhor a performance do navegador."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:300
+msgid "Browser compatability"
+msgstr "Compatibilidade de navegador"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:302
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"There are known issues with Internet Explorer 11 which result in an "
+"inability to start transfers in the dashboard (`Issue 7246 "
+"<https://projects.artefactual.com/issues/7246>`_).  Minimal, but successful,"
+" testing has been done with Microsoft Edge."
+msgstr "O Archivematica foi testado mais extensivamente com o Firefox e Chrome. Há problemas conhecidos com o Internet Explorer 11, que resultam em uma incapacidade de iniciar transferências no dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_).  Testes mínimos, mas com sucesso, foram feitos com o Microsoft Edge."
+
+#: ../../getting-started/troubleshooting/error-handling.rst:307
+msgid ":ref:`Back to the top <error-handling>`"
+msgstr ":ref:`Voltar ao topo <error-handling>`"

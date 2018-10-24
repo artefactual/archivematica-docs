@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../admin-manual/security/security.rst:5
 msgid "Security"
@@ -156,11 +156,11 @@ msgid ""
 "rough edges so it is recommended for advanced users only."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:111
+#: ../../admin-manual/security/security.rst:113
 msgid "LDAP setup"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:113
+#: ../../admin-manual/security/security.rst:115
 msgid ""
 "`LDAP <ldap_>`_ is a directory service protocol used for, among other "
 "things, authentication and authorization. This feature allows "
@@ -168,15 +168,15 @@ msgid ""
 "with LDAP authentication."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:117
+#: ../../admin-manual/security/security.rst:119
 msgid "This functionality has not been made available yet in the Storage Service."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:120
+#: ../../admin-manual/security/security.rst:122
 msgid "LDAP backend configuration"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:122
+#: ../../admin-manual/security/security.rst:124
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. You can find "
@@ -184,7 +184,7 @@ msgid ""
 " <am-dashboard-config_>`_."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:127
+#: ../../admin-manual/security/security.rst:129
 msgid ""
 "Customize the ``ldap_auth.py`` settings module as needed. Open the file "
 "to find what are the existing environment variable lookups. You can "
@@ -192,16 +192,16 @@ msgid ""
 "settings mode manually."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:132
-#: ../../admin-manual/security/security.rst:152
+#: ../../admin-manual/security/security.rst:134
+#: ../../admin-manual/security/security.rst:155
 msgid "Restart the Archivematica Dashboard."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:136
+#: ../../admin-manual/security/security.rst:139
 msgid "Shibboleth setup"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:138
+#: ../../admin-manual/security/security.rst:141
 msgid ""
 "`Shibboleth <shibboleth_>`_ is a federated identity solution that "
 "provides Single Sign-On authentication and authorization. This feature "
@@ -209,11 +209,11 @@ msgid ""
 "Storage Service Django applications with Shibboleth authentication."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:144
+#: ../../admin-manual/security/security.rst:147
 msgid "Shibboleth backend configuration in Archivematica Dashboard"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:146
+#: ../../admin-manual/security/security.rst:149
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``SS_SHIBBOLETH_AUTHENTICATION``. You can find more details about this "
@@ -221,30 +221,142 @@ msgid ""
 "config_>`_."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:150
+#: ../../admin-manual/security/security.rst:153
 msgid "Customize the ``shibboleth_auth.py`` settings module as needed."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:155
+#: ../../admin-manual/security/security.rst:158
 msgid "Shibboleth backend configuration in Storage Service"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:157
+#: ../../admin-manual/security/security.rst:160
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``SS_SHIBBOLETH_AUTHENTICATION``. Assign a string value ``true`` to "
 "enable it."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:161
+#: ../../admin-manual/security/security.rst:164
 msgid "Customize the ``base.py`` settings module as needed."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:163
+#: ../../admin-manual/security/security.rst:166
 msgid "Restart the Storage Service."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:165
+#: ../../admin-manual/security/security.rst:171
+msgid "CA certificates"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:173
+msgid ""
+"Archivematica uses a HTTP library called `Requests <requests_>`_. There "
+"are `two main approaches <requests-cas_>`_ for dealing with the updates "
+"of the root CAs sets:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:178
+msgid "Upgrade the ``certifi`` package frequently"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:180
+msgid ""
+"There are three virtual environments where Requests is used: MCPClient, "
+"Dashboard and Storage Service. This is how you can update ``certifi`` "
+"across the three environments:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:190
+msgid ""
+"The services need to be restarted after the update, for example if you "
+"are using systemd:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:200
+msgid "Use the environment string REQUEST_CA_BUNDLE"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:202
+msgid ""
+"Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the "
+"administrator can indicate a custom bundle which could be the system's CA"
+" bundle."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:206
+msgid ""
+"The Ubuntu system's CA bundle file is :file:`/etc/ssl/certs/ca-"
+"certificates.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:208
+msgid ""
+"The CentOS system's CA bundle file is :file:`/etc/pki/tls/certs/ca-"
+"bundle.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:211
+msgid ""
+"On Ubuntu, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:218
+msgid ""
+"On CentOS, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:226
+msgid "Trusting additional CAs"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:228
+msgid ""
+"If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional "
+"CAs."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:230
+msgid "On CentOS:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:232
+msgid ""
+"Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your "
+"CentOS machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:234
+msgid "Run the `update-ca-trust extract` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:236
+msgid ""
+"The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that"
+" refers to the consolidated output created by the ``update-ca-trust`` "
+"command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:239
+msgid "On Ubuntu:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:241
+msgid ""
+"Copy the .crt file to :file:`/usr/local/share/ca-certificates` on your "
+"Ubuntu machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:243
+msgid "Run the `update-ca-certificates` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:245
+msgid "This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:248
 msgid ":ref:`Back to the top <security>`"
 msgstr ""
 

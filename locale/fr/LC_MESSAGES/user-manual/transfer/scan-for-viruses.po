@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:5
+msgid "Scan for viruses"
+msgstr "Lancer l’antivirus"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:7
+msgid ""
+"The scan for viruses Microservice runs at multiple points in the transfer "
+"and ingest workflows inside Archivematica. Archivematica uses the ClamAV "
+"antivirus engine and its configuration is discussed :ref:`here <antivirus-"
+"admin>`. The configuration of this service can effect whether PREMIS events "
+"are recorded for files or not."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:19
+msgid "The event log for a successful virus check"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:21
+msgid "We look at the impact of various settings below."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:24
+msgid "Exploring ClamAV settings"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:26
+msgid ""
+"``MaxFileSize`` If a file is passed to the scanner that is larger than this "
+"then it will not be scanned. No event will be recorded."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:29
+msgid ""
+"``MaxScanSize`` limits the number of bytes that will be scanned. This might "
+"be used in a standard operating environment where one might be confident a "
+"virus or malware will only appear within that range. In Archivematica, "
+"because of the possibility of a virus still existing outside of that range, "
+"a PREMIS event cannot be recorded confidently."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:35
+msgid ""
+"``MaxStreamLength`` is a setting used in Clamdscan only. The maximum number "
+"of bytes that can be sent to the ClamAV daemon. Files that are larger than "
+"this limit cannot be sent in their entirety to the server and so a PREMIS "
+"event that states the existence or non-existence of malware in the file "
+"cannot be recorded confidently."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:41
+msgid ""
+"We can observe the impact of different combinations of configuration options"
+" in the following two tables."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:45
+msgid "Clamscan"
+msgstr "Clamscan"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:47
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "FileSize"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:47
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "MaxFileSize"
+msgstr "MaxFileSize"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:47
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "MaxScanSize"
+msgstr "MaxScanSize"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:47
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "Scanned?"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:47
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "Premis Event"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:49
+#: ../../user-manual/transfer/scan-for-viruses.rst:49
+#: ../../user-manual/transfer/scan-for-viruses.rst:49
+#: ../../user-manual/transfer/scan-for-viruses.rst:51
+#: ../../user-manual/transfer/scan-for-viruses.rst:51
+#: ../../user-manual/transfer/scan-for-viruses.rst:51
+#: ../../user-manual/transfer/scan-for-viruses.rst:53
+#: ../../user-manual/transfer/scan-for-viruses.rst:55
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+msgid "42M"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:49
+#: ../../user-manual/transfer/scan-for-viruses.rst:49
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+msgid "Yes"
+msgstr "Oui"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:51
+#: ../../user-manual/transfer/scan-for-viruses.rst:51
+#: ../../user-manual/transfer/scan-for-viruses.rst:53
+#: ../../user-manual/transfer/scan-for-viruses.rst:53
+#: ../../user-manual/transfer/scan-for-viruses.rst:55
+#: ../../user-manual/transfer/scan-for-viruses.rst:55
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+msgid "No"
+msgstr "Non"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:53
+#: ../../user-manual/transfer/scan-for-viruses.rst:53
+#: ../../user-manual/transfer/scan-for-viruses.rst:55
+#: ../../user-manual/transfer/scan-for-viruses.rst:55
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+msgid "84M"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:59
+msgid "Clamdscan"
+msgstr "Clamdscan"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:61
+msgid "StreamMaxLength"
+msgstr "StreamMaxLength"
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:63
+#: ../../user-manual/transfer/scan-for-viruses.rst:67
+#: ../../user-manual/transfer/scan-for-viruses.rst:69
+msgid "100M"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:65
+msgid "21M"
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:72
+msgid ""
+"In both tables you can see that if for any reason a file is not scanned, or "
+"*'not-completely-scanned'*, a PREMIS event will not be recorded. A PREMIS "
+"event in either instance of `PASS` or `FAIL` would be a false-positive."
+msgstr ""
+
+#: ../../user-manual/transfer/scan-for-viruses.rst:76
+msgid ":ref:`Back to the top <scan-for-viruses>`"
+msgstr ":ref:`Retour en haut de page <scan-for-viruses>`"

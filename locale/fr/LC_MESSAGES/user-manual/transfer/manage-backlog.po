@@ -1,110 +1,145 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/transfer/manage-backlog.rst:5
 msgid "Managing a backlog"
-msgstr ""
+msgstr "Gérer un backlog"
 
 #: ../../user-manual/transfer/manage-backlog.rst:7
 msgid ""
-"Users may wish to send their transfers to a backlog for storage until "
-"they are ready to be retrieved and processed at a later date. Sending "
-"transfers through the micro-services in the transfer tab of the dashboard"
-" allows the repository a minimum amount of control over their digital "
-"objects. The transfer contents and METS file are indexed to facilitate "
-"retrieval."
+"Users may wish to send their transfers to a backlog for storage until they "
+"are ready to be retrieved and processed at a later date. Sending transfers "
+"through the micro-services in the transfer tab of the dashboard allows the "
+"repository a minimum amount of control over their digital objects. The "
+"transfer contents and METS file are indexed to facilitate retrieval."
 msgstr ""
+"Les utilisateurs peuvent souhaiter envoyer leurs transferts à un backlog "
+"pour le stockage jusqu'à ce qu'ils soient prêts à être récupérés et traités "
+"à une date ultérieure. L'envoi de transferts par l’entremise des "
+"microservices dans l'onglet Transfert du tableau de bord permet au dépôt "
+"d'avoir un minimum de contrôle sur leurs objets numériques. Le contenu du "
+"transfert et le fichier METS sont indexés pour faciliter la récupération."
 
 #: ../../user-manual/transfer/manage-backlog.rst:13
 msgid ""
-"This workflow assumes that users have sent transfers to backlog from the "
-"end of the transfer workflow in the dashboard, in the Micro-service: "
-"Create SIP from Transfer, Job: Create SIP(s) dropdown menu. (Option 2 in "
-"Step 7 in :ref:`Process the transfer <process-transfer>`)."
+"This workflow assumes that users have sent transfers to backlog from the end"
+" of the transfer workflow in the dashboard, in the Micro-service: Create SIP"
+" from Transfer, Job: Create SIP(s) dropdown menu. (Option 2 in Step 7 in "
+":ref:`Process the transfer <process-transfer>`)."
 msgstr ""
+"Ce flux de travail suppose que les utilisateurs ont envoyé des transferts au"
+" backlog à partir de la fin du déroulement des opérations de transfert dans "
+"le tableau de bord, dans le menu déroulant Microservice : Création d’un SIP "
+"à partir du transfert, Tâche : Création de SIP(s). (Option 2 de l'étape 7 "
+"dans Traiter un transfert)."
 
 #: ../../user-manual/transfer/manage-backlog.rst:19
 msgid "Retrieve from backlog"
-msgstr ""
+msgstr "Récupérer à partir du backlog"
 
 #: ../../user-manual/transfer/manage-backlog.rst:21
 msgid ""
-"Use the Transfer backlog search bars at the top of the Ingest tab to find"
-" the transfer(s) and/or object(s) you'd like to ingest, or browse the "
-"entire backlog by clicking Search transfer backlog with a blank search. "
-"This will populate the Originals pane of the Ingest dashboard."
+"Use the Transfer backlog search bars at the top of the Ingest tab to find "
+"the transfer(s) and/or object(s) you'd like to ingest, or browse the entire "
+"backlog by clicking Search transfer backlog with a blank search. This will "
+"populate the Originals pane of the Ingest dashboard."
 msgstr ""
+"Pour repérer les transferts et/ou les objets que vous souhaitez acquérir, "
+"utilisez les champs de recherche du Backlog des transferts figurant en haut "
+"de l'onglet Acquisition, ou parcourez le backlog complet en cliquant sur "
+"Chercher dans le backlog des transferts tout en laissant la case de "
+"recherche vide, ce qui alimentera le volet Originaux de l’onglet "
+"Acquisition."
 
 #: ../../user-manual/transfer/manage-backlog.rst:25
 msgid ""
 "Multi-item select is not yet included in this feature, though entire "
 "folders/directories can be moved."
 msgstr ""
+"Vous ne pouvez pas sélectionner plusieurs éléments ici, mais vous pouvez "
+"déplacer des dossiers/répertoires complets."
 
 #: ../../user-manual/transfer/manage-backlog.rst:28
 msgid ""
 "To hide directories from the Originals pane, click on the directory and "
 "click Hide."
 msgstr ""
+"Pour masquer les répertoires du volet Originaux, cliquez sur le répertoire "
+"puis sur Masquer."
 
 #: ../../user-manual/transfer/manage-backlog.rst:37
 msgid "Transfer backlog search results populate Originals pane"
 msgstr ""
+"Transférer les résultats de la recherche du backlog dans le volet Originaux"
 
 #: ../../user-manual/transfer/manage-backlog.rst:40
 msgid ""
 "Drag and drop the transfer directory(ies) and/or object(s) you wish to "
-"arrange and ingest as a SIP from the Originals panel to the Arrange "
-"panel, or create an arrangement structure for your SIP."
+"arrange and ingest as a SIP from the Originals panel to the Arrange panel, "
+"or create an arrangement structure for your SIP."
 msgstr ""
+"Glissez-déplacez les répertoires et/ou les objets du transfert que vous "
+"voulez classer et acquérir du volet Originaux au volet Classer, ou créez une"
+" structure de classement pour votre SIP."
 
 #: ../../user-manual/transfer/manage-backlog.rst:42
 msgid ""
-"If you wish to create one or more SIP(s) from one or more transfer(s), "
-"see :ref:`Arrange SIP(s) <arrange-sip>`."
+"If you wish to create one or more SIP(s) from one or more transfer(s), see "
+":ref:`Arrange SIP(s) <arrange-sip>`."
 msgstr ""
+"Si vous souhaitez créer un ou plusieurs SIP à partir d'un ou plusieurs "
+"transferts, voir :ref:`Classer un SIP <arrange-sip>`."
 
 #: ../../user-manual/transfer/manage-backlog.rst:44
 msgid ""
-"Click on the directory in the Arrange pane to select, and then click "
-"Create SIP. Archivematica will confirm that you wish to create a SIP, and"
-" then continue through the ingest process."
+"Click on the directory in the Arrange pane to select, and then click Create "
+"SIP. Archivematica will confirm that you wish to create a SIP, and then "
+"continue through the ingest process."
 msgstr ""
+"Cliquez sur le répertoire du volet Classer pour le sélectionner et ensuite "
+"sur Créer un SIP. Archivematica confirmera que vous désirez bien créer un "
+"SIP, et procédera ensuite à l’acquisition."
 
 #: ../../user-manual/transfer/manage-backlog.rst:46
 msgid ""
 "In the Ingest tab, your SIP will be waiting for a user decision. Select "
 "\"SIP creation complete\" from the dropdown menu."
 msgstr ""
+"Dans l'onglet Acquisition, votre SIP attend une décision de l'utilisateur. "
+"Sélectionnez \"Création du SIP complète\" dans le menu déroulant."
 
 #: ../../user-manual/transfer/manage-backlog.rst:48
-msgid "Continue processing using the ingest workflow. See :ref:`Ingest <ingest>`."
+msgid ""
+"Continue processing using the ingest workflow. See :ref:`Ingest <ingest>`."
 msgstr ""
+"Poursuivre le traitement à l'aide du flux de travail pour l'acquisition. "
+"Voir :ref:`Acquisition <ingest>`."
 
 #: ../../user-manual/transfer/manage-backlog.rst:50
 msgid ""
 "Once you've created an AIP and uploaded it to archival storage, your "
 "transfer will be removed from the backlog and the index will be updated."
 msgstr ""
+"Une fois l'AIP créé et téléchargé dans le Dossier de stockage des archives, "
+"votre transfert sera retiré du backlog et l'index sera mis à jour."
 
 #: ../../user-manual/transfer/manage-backlog.rst:53
 msgid ":ref:`Back to the top <manage-backlog>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <manage-backlog>`"

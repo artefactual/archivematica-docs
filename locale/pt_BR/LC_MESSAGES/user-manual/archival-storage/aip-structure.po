@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:5
+msgid "AIP structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:7
+msgid ""
+"This page describes the structure of the AIP produced by Archivematica."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:9
+msgid "*On this page:*"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:11
+msgid ":ref:`Name <aip_name>`"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:12
+msgid ":ref:`Directory structure <directory_structure>`"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:13
+msgid ":ref:`Bagit documentation <bagit_doc>`"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:18
+msgid "Name"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:20
+msgid "The AIP name is composed of the following:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:22
+msgid ""
+"Either the name of the original transfer if no new name has been assigned to"
+" the SIP upon formation or the name of the SIP or SIPs created from the "
+"transfer."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:24
+msgid "A UUID assigned during SIP formation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:26
+msgid "For example: AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:28
+msgid ""
+"\"AncientSturgeon\" is the name assigned by the user and \"bbabce6e-"
+"OO16-4185-a93e-f2dd71bfbb8c\" is the UUID generated during SIP formation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:35
+msgid "Directory structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:37
+msgid ""
+"The AIP is zipped in the AIPsStore. The AIP directories are broken down into"
+" UUID quad directories for efficient storage and retrieval."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:46
+msgid "AIP directory - top level"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:50
+msgid ""
+"UUID quad directories: Some file systems limit the number of items allowed "
+"in a directory, so Archivematica uses a directory tree structure to store "
+"AIPs. The tree is based on the AIP UUIDs. The UUID is broken down into "
+"manageable 4 character pieces, or \"UUID quads\", each quad representing a "
+"directory. The first four characters (UUID quad) of the AIP UUID will "
+"compose a sub directory of the AIP storage. The second UUID quad will be the"
+" name of a sub directory of the first, and so on and so forth, until the "
+"last four characters (last UUID Quad) create the leaf of the AIP store "
+"directory tree, and the AIP with that UUID resides in that directory.)"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:60
+msgid "The Archivematica AIP consists of Bagit files and a Data directory."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:65
+msgid "Bagit documentation"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:67
+msgid ""
+"The AIP is packaged in accordance with the Library of Congress Bagit "
+"specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt, "
+"bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:77
+msgid "The following describes the contents of the AIP once extracted:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:80
+msgid "Data directory"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:82
+msgid ""
+"The data directory consists of the METS file for the AIP, a README.html file"
+" and three folders: logs, objects and thumbnails."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:91
+msgid "AIP data directory"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:94
+msgid "METS file"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:96
+msgid ""
+"``/data/METS.uuid.xml`` contains the full `PREMIS`_ implementation (see "
+"PREMIS metadata for original file, PREMIS metadata: normalized files, PREMIS"
+" metadata: events, and PREMIS metadata: rights). The role of the `METS "
+"file`_ is to link original objects to their preservation copies and to their"
+" descriptions and submission documentation, as well as to link PREMIS "
+"metadata to the objects in the AIP."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:104
+msgid "METS file structure"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:106
+msgid ""
+"The METS file will have a basic generic structure that will be present for "
+"all AIPs derived from different kinds of transfers. Archivematica currently "
+"uses METS version 1.11."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:116
+msgid "``<dmdSec>``"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:118
+msgid ""
+"There may be one dmdSec for the AIP as a whole. Each original file may also "
+"have a dmdSec."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:120
+msgid "The dmdSecs are numbered dmdSec_1, dmdSec_2 etc."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:121
+msgid ""
+"The dmdSec contains Dublin Core metadata. If the user does not enter any DC "
+"metadata during transfer/ingest and no DC metadata was included in the "
+"transfer (eg as part of a DSpace export), there will be no dmdSec."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:124
+msgid ""
+"The dmdSec may contain a reference to metadata in another file, such as a "
+"mets.xml file included in a DSpace export."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:127
+msgid "``<amdSec>``"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:129
+msgid "There is one amdSec for each object."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:130
+msgid "The amdSecs are numbered amdSec_1, amdSec_2 etc."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:131
+msgid "Each amdSec will include one techMD and multiple digiprovMDs"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:132
+msgid ""
+"An amdSec for an original object may also contain one or more rightsMDs. The"
+" rightsMD may contain a reference to metadata in another file, such as a "
+"mets.xml file included in a DSpace export."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:136
+msgid "``<fileSec>``"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:138
+msgid "There is one fileSec listing all files."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:145
+msgid "The fileSec is organized into the following fileGrps:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:140
+msgid "original"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:141
+msgid "preservation"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:142
+msgid "service"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:143
+msgid "access"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:144
+msgid "submissionDocumentation"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:145
+msgid "license"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:146
+msgid "text/ocr"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:147
+msgid "Original is required for all METS files."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:148
+msgid ""
+"SubmissionDocumentation is included if the AIP includes submission "
+"documentation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:150
+msgid "Preservation is included if the AIP includes normalized files."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:151
+msgid ""
+"Service and access may be used if the AIP contains those subfolders - i.e as"
+" the output of digitization workflows."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:153
+msgid ""
+"License and text/ocr are used if the AIP was created from a DSpace export "
+"containing licenses and ocr text files."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:156
+msgid "``<structMap>``"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:167
+msgid "As of Archivematica 1.7 there are two structMaps:"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:159
+msgid ""
+"The first is labeled \"Archivematica Default\" and shows the physical layout"
+" of the files in the objects directory."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:162
+msgid ""
+"The second is labeled \"Normative Directory Structure\" which shows the "
+"logical structure of the files in the objects directory. This second "
+"structMap is necessary to document empty directories before they are deleted"
+" at 'store AIP' in the Storage Service. At AIP re-ingest the new logical "
+"structMap will be parsed to re-create the empty directories."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:170
+msgid "README.html file"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:172
+msgid ""
+"``/data/README.html`` consists of a human readable file that describes the "
+"basic structure of an Archivematica AIP.  It consists of Acronyms, "
+"Introduction, Content Information, Preservation Description Information "
+"(PDI), and AIP structure."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:177
+msgid "**Logs**"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:179
+msgid ""
+"``/data/logs`` contains the /transfers directory, format identification log,"
+" malware scan log, and the file name cleanup log generated during SIP "
+"creation."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:188
+msgid "Logs folder content in Data"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:190
+msgid ""
+"The ``/transfers`` directory contains the logs from processing that occurred"
+" to each transfer which is part of the SIP in the transfer workflow in the "
+"dashboard."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:195
+msgid "Objects"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:197
+msgid ""
+"``/data/objects`` contains original objects, normalized objects, "
+"``/metadata`` and ``/submissionDocumentation``. If there were any lower "
+"level directories within the SIP, that directory structure is maintained."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:207
+msgid "Objects folder content in Data"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:209
+msgid ""
+"``/metadata`` contains ``/transfers``, which contains any metadata which may"
+" have been imported with the transfers"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:212
+msgid ""
+"``/submissionDocumentation`` contains submission documentation for each "
+"transfer which is part of the SIP and each transfer's METS.xml file. The "
+"structmap for the transfer is the closest approximation of original order "
+"for the transfer, along with the tree diagram if the user chose to create "
+"one during transfer."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:219
+msgid "Thumbnails"
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:221
+msgid ""
+"``/data/thumbnails`` contains any thumbnails generated for viewing in the "
+"AIP search interface of the dashboard."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:224
+msgid ""
+"The creation of thumbnails is optional and configurable in the "
+":ref:`processing configuration <dashboard-processing>`."
+msgstr ""
+
+#: ../../user-manual/archival-storage/aip-structure.rst:227
+msgid ":ref:`Back to the top <aip-structure>`"
+msgstr ""

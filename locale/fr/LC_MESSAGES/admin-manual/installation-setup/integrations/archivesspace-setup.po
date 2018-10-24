@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:5
+msgid "Using ArchivesSpace with Archivematica"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:7
+msgid ""
+"Archivematica |version| has been tested with and is recommended for use with"
+" the latest version of ArchivesSpace."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:10
+msgid ""
+"For more information about ArchivesSpace, see the `ArchivesSpace`_ website."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:12
+msgid "*On this page*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:14
+msgid ""
+":ref:`Connecting Archivematica and ArchivesSpace <config_archivesspace>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:15
+msgid ":ref:`Sending material to ArchivesSpace <using-archivesspace>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:20
+msgid "Connecting Archivematica and ArchivesSpace"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:22
+msgid ""
+"Before users begin uploading data to ArchivesSpace from Archivematica, you "
+"must fill in the ArchivesSpace DIP upload settings in the administration "
+"tab."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:25
+msgid ""
+"See :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>` for more "
+"information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:30
+msgid "Sending material to ArchivesSpace"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:32
+msgid ""
+"There are two primary methods of using ArchivesSpace and Archivematica "
+"together: using the matching GUI on the Appraisal tab or using the DIP "
+"upload option on the Ingest tab."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:37
+msgid "Matching objects to ArchivesSpace resources on the Appraisal tab"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:39
+msgid ""
+"The ArchivesSpace pane in the Appraisal tab allows users to retrieve a list "
+"of resources that have been created in an ArchivesSpace repository and match"
+" them to digital objects in Archivematica. This information is then sent to "
+"ArchivesSpace when you upload a DIP to ArchivesSpace."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:44
+msgid ""
+"See :ref:`ArchivesSpace resources <archivesspace_pane>` for more "
+"information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:47
+msgid "Uploading to ArchivesSpace using DIP upload"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:49
+msgid ""
+"DIP objects can be uploaded to ArchivesSpace without making use of the "
+"Appraisal tab matching GUI, described above. Instead, users can select "
+"**Upload DIP to ArchivesSpace** during the Upload DIP job in the Ingest tab."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:53
+msgid ""
+"See :ref:`Upload DIP to ArchivesSpace <upload-as>` for more information."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:55
+msgid ":ref:`Back to the top <atom-setup>`"
+msgstr ""

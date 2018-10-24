@@ -1,119 +1,147 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/transfer/bags.rst:5
 msgid "Library of Congress Bagit format"
-msgstr ""
+msgstr "Format BagIt de la Library of Congress"
 
 #: ../../user-manual/transfer/bags.rst:7
 msgid ""
 "Archivematica allows the ingest of the `Library of Congress Bagit "
-"<http://en.wikipedia.org/wiki/BagIt>`_ format. Users can ingest both "
-"zipped and unzipped bags. Bags must be packaged in accordance with the "
-"Bagit specification."
+"<http://en.wikipedia.org/wiki/BagIt>`_ format. Users can ingest both zipped "
+"and unzipped bags. Bags must be packaged in accordance with the Bagit "
+"specification."
 msgstr ""
+"Archivematica permet l’acquisition de fichiers au format "
+"`BagIt<http://en.wikipedia.org/wiki/BagIt>`_ de la Library of Congress. Les "
+"utilisateurs peuvent acquérir des « bags  » (ensembles de contenus dits "
+"arbitraires ou aléatoires), compressés ou non. Ces bags doivent être agencés"
+" selon les normes BagIt."
 
 #: ../../user-manual/transfer/bags.rst:12
 msgid ""
-"To ingest a zipped bag, user selects transfer type \"Zipped bag\" from "
-"the dropdown menu in the transfer tab of the Dashboard. Do not add the "
-"directory that the zipped bag is in from the browse dialog, just select "
-"the zipped file (.zip). Note that you cannot add a new title to the "
-"zipped bag transfer, but you can add an accession number."
+"To ingest a zipped bag, user selects transfer type \"Zipped bag\" from the "
+"dropdown menu in the transfer tab of the Dashboard. Do not add the directory"
+" that the zipped bag is in from the browse dialog, just select the zipped "
+"file (.zip). Note that you cannot add a new title to the zipped bag "
+"transfer, but you can add an accession number."
 msgstr ""
+"Pour acquérir un bag compressé, l’utilisateur sélectionne le type de "
+"transfert « Bag compressé » à partir du Tableau de bord. Ne pas ajouter le "
+"répertoire d’origine du bag dans la boîte de dialogue, sélectionner "
+"simplement le fichier .zip. Note : il n’est pas possible de renommer le "
+"transfert d’un bag compressé, mais on peut y associer un numéro "
+"d’acquisition ."
 
 #: ../../user-manual/transfer/bags.rst:23
 msgid ""
-"To ingest an unzipped bag, user selects transfer type \"Unzipped bag\" "
-"from the dropdown menu in the transfer tab of the Dashboard. You may add "
-"a new name or accession number to this unzipped bag."
+"To ingest an unzipped bag, user selects transfer type \"Unzipped bag\" from "
+"the dropdown menu in the transfer tab of the Dashboard. You may add a new "
+"name or accession number to this unzipped bag."
 msgstr ""
+"Pour acquérir un bag non compressé, l’utilisateur sélectionne le type de "
+"transfert « Bag non compressé » dans le menu déroulant du Tableau de bord. "
+"Il est possible de renommer le transfert ou d’y ajouter un numéro "
+"d’acquisition."
 
 #: ../../user-manual/transfer/bags.rst:36
 msgid "Index and search bag metadata"
-msgstr ""
+msgstr "Indexer et faire une recherche dans les métadonnées d’un bag"
 
 #: ../../user-manual/transfer/bags.rst:38
 msgid ""
-"In Archivematica 1.4 and higher, fields in the bag-info.txt file are "
-"indexed as source metadata in the Archivematica METS file, making their "
-"contents searchable in the Archival storage tab after a bag transfer has "
-"been processed and stored."
+"In Archivematica 1.4 and higher, fields in the bag-info.txt file are indexed"
+" as source metadata in the Archivematica METS file, making their contents "
+"searchable in the Archival storage tab after a bag transfer has been "
+"processed and stored."
 msgstr ""
+"Depuis la version 1.4 d’Archivematica, les champs du fichier bag-info.txt "
+"sont indexés comme des métadonnées sources dans le fichier METS, ce qui "
+"permet d’effectuer une recherche à partir de l’onglet Dossier de stockage "
+"des archives, une fois le bag transféré et archivé."
 
 #: ../../user-manual/transfer/bags.rst:43
 msgid ""
-"Labels in bag-info.txt file serialized as XML in METS sourceMD, linked to"
-" the objects directory of the AIP."
+"Labels in bag-info.txt file serialized as XML in METS sourceMD, linked to "
+"the objects directory of the AIP."
 msgstr ""
+"Les étiquettes du fichier bag-info.txt sont rendues au format XML dans le "
+"dossier METS sourceMD, et liées au répertoire contenant les objets de l’AIP."
 
 #: ../../user-manual/transfer/bags.rst:46
 msgid ""
-"Sample bag-info.txt (from https://tools.ietf.org/html/draft-kunze-"
-"bagit-10)"
+"Sample bag-info.txt (from https://tools.ietf.org/html/draft-kunze-bagit-10)"
 msgstr ""
+"Exemple : bag-info.txt (https://tools.ietf.org/html/draft-kunze-bagit-10)"
 
 #: ../../user-manual/transfer/bags.rst:65
 msgid "Sample AIP METS file result:"
-msgstr ""
+msgstr "Exemple de résultat dans le ficher METS de l’AIP :"
 
 #: ../../user-manual/transfer/bags.rst:96
 msgid ""
-"To be parsed into the METS file, Bag labels must be compliant with XML, "
-"so cannot contain spaces or forbidden characters."
+"To be parsed into the METS file, Bag labels must be compliant with XML, so "
+"cannot contain spaces or forbidden characters."
 msgstr ""
+"Pour être rendues dans le fichier METS, les étiquettes du bag doivent être "
+"compatibles avec le format XML, et ne doivent donc comporter aucune espace "
+"ni aucun caractère interdit."
 
 #: ../../user-manual/transfer/bags.rst:99
 msgid "To search the bag (transfer) metadata in the Archival Storage tab:"
 msgstr ""
+"Pour faire une recherche dans les métadonnées du bag (transfert) à partir de"
+" l’onglet Dossier de stockage des archives :"
 
 #: ../../user-manual/transfer/bags.rst:107
 msgid ""
-"Use keyword field \"Transfer metadata\" to search all the contents of the"
-" <transfer_metadata> container in the METS file (as indexed in "
+"Use keyword field \"Transfer metadata\" to search all the contents of the "
+"<transfer_metadata> container in the METS file (as indexed in "
 "Elasticsearch)."
 msgstr ""
+"Utiliser le terme « Transférer les métadonnées »  pour lancer une recherché "
+"dans la totalité du contenu <transfer_metadata> du fichier METS, (tel "
+"qu’indexé dans Elasticsearch)."
 
 #: ../../user-manual/transfer/bags.rst:110
 msgid ""
-"Use keyword field \"Transfer metadata (other)\" to search individual "
-"fields in the <transfer_metadata> container.  When the user selects "
-"\"Transfer metadata (other)\" a separate box will appear which will allow"
-" the user to enter the label of the specific field to be searched."
+"Use keyword field \"Transfer metadata (other)\" to search individual fields "
+"in the <transfer_metadata> container.  When the user selects \"Transfer "
+"metadata (other)\" a separate box will appear which will allow the user to "
+"enter the label of the specific field to be searched."
 msgstr ""
+"Utiliser le terme « Transférer les métadonnées (autres) » pour lancer une "
+"recherche dans des champs particuliers du contenu <transfer_metadata>. Quand"
+" l’utilisateur sélectionne ce terme, une boîte de dialogue apparaît pour "
+"permettre la saisie des champs dans lesquels la recherche doit se faire."
 
 #: ../../user-manual/transfer/bags.rst:115
 msgid ""
-"To search on a date range in <transfer_metadata> or one if its sub-"
-"fields, the user enters two dates in ISO date format separated by a "
-"colon. For example, ``2015-01-03:2015-04-14``."
+"To search on a date range in <transfer_metadata> or one if its sub-fields, "
+"the user enters two dates in ISO date format separated by a colon. For "
+"example, ``2015-01-03:2015-04-14``."
 msgstr ""
+"Pour préciser une plage de dates dans <transfer_metadata> ou dans l’un des "
+"champs, l’utilisateur doit saisir deux dates en format ISO, séparées par "
+"deux points (:), p.ex., 2015-01-03:2015-04-14."
 
 #: ../../user-manual/transfer/bags.rst:119
 msgid ":ref:`Back to the top <bags>`."
-msgstr ""
-
-#~ msgid ""
-#~ "Use keyword field \"Transfer metadata\" "
-#~ "to search all the contents of the"
-#~ " <transfer_metadata> container in the METS"
-#~ " file (as indexed in ElasticSearch)."
-#~ msgstr ""
-
+msgstr ":ref:`Retour en haut de page <bags>`."

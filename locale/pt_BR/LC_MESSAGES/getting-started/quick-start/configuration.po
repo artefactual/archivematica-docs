@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-04-04 17:15+0000\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/quick-start/configuration.rst:4
+msgid "Configuration"
+msgstr "Configuração"
+
+#: ../../getting-started/quick-start/configuration.rst:7
+msgid "Workflow settings"
+msgstr "Configurações de fluxo de trabalho"
+
+#: ../../getting-started/quick-start/configuration.rst:9
+msgid ""
+"Many workflow choices are pre-configurable through the Administration tab of"
+" the Dashboard. Please see :ref:`Processing configuration <dashboard-"
+"processing>`."
+msgstr "Muitas opções de fluxo de trabalho são pré-configuráveis ​​por meio da aba Administração do Painel. Por favor, veja: ref:`Configuração de processamento <dashboard-processing>`."
+
+#: ../../getting-started/quick-start/configuration.rst:12
+msgid ""
+"Some users have found processing economies by installing multiple "
+"Archivematica pipelines on separate VM's, each with its own processing "
+"configuration specific to the type of material being processed through each "
+"pipeline."
+msgstr "Alguns usuários encontraram economias de processamento instalando vários pipelines do Archivematica em VMs separadas, cada uma com sua própria configuração de processamento específica para o tipo de material que está sendo processado em cada pipeline."
+
+#: ../../getting-started/quick-start/configuration.rst:17
+msgid "Integration settings"
+msgstr "Configurações de integração"
+
+#: ../../getting-started/quick-start/configuration.rst:19
+msgid ""
+"Archivematica integrates with a number of different access and storage "
+"systems. Please see:"
+msgstr "O Archivematica integra-se a vários sistemas de acesso e armazenamento diferentes. Por favor, veja:"
+
+#: ../../getting-started/quick-start/configuration.rst:22
+msgid ":ref:`AtoM <admin-dashboard-atom>`"
+msgstr ":ref:`AtoM <admin-dashboard-atom>`"
+
+#: ../../getting-started/quick-start/configuration.rst:23
+msgid ":ref:`ContentDM <contentdm>`"
+msgstr ":ref:`ContentDM <contentdm>`"
+
+#: ../../getting-started/quick-start/configuration.rst:24
+msgid ":ref:`Archivist's Toolkit <dashboard-AT>`"
+msgstr ":ref:`Archivist's Toolkit <dashboard-AT>`"
+
+#: ../../getting-started/quick-start/configuration.rst:25
+msgid ":ref:`DSpace <dspace>`"
+msgstr ":ref:`DSpace <dspace>`"
+
+#: ../../getting-started/quick-start/configuration.rst:26
+msgid ""
+":ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)"
+msgstr ":ref:`LOCKSS <storageService:admin-lockss>` (Documentação do Administrador)"
+
+#: ../../getting-started/quick-start/configuration.rst:27
+msgid "Duracloud (coming soon)"
+msgstr "Duracloud (em breve)"
+
+#: ../../getting-started/quick-start/configuration.rst:28
+msgid "Arkivum (coming soon)"
+msgstr "Arkivum (em breve)"
+
+#: ../../getting-started/quick-start/configuration.rst:31
+msgid "Add/edit users and passwords"
+msgstr "Adicionar/editar usuários e senhas"
+
+#: ../../getting-started/quick-start/configuration.rst:33
+msgid ""
+"Administrative users can add/edit users and update passwords. An "
+"administrative user does not need to be a systems administrator and can "
+"perform this function within the Archivematica dashboard Administration "
+"page."
+msgstr "Usuários com perfil de administrador podem adicionar/editar usuários e atualizar senhas. Este usuário não precisa ser um administrador de sistemas e pode executar essa função na página Administração do painel do Archivematica."
+
+#: ../../getting-started/quick-start/configuration.rst:37
+msgid "Please see :ref:`Users <dashboard-premis>`."
+msgstr "Por favor, veja: ref: `Usuários"
+
+#: ../../getting-started/quick-start/configuration.rst:40
+msgid "Add/edit PREMIS agents"
+msgstr "Adicionar/editar agentes PREMIS"
+
+#: ../../getting-started/quick-start/configuration.rst:42
+msgid ""
+"Administrative users can add/edit PREMIS agents, which are recorded in the "
+"METS file to identify the agency performing digital preservation events. "
+"This should be configured before processing begins, and can be set through "
+"Archivematica dashboard Administration page."
+msgstr "Usuários com perfil de administrador podem adicionar/editar agentes PREMIS, que são registrados no arquivo METS para identificar a agência que realiza eventos de preservação digital."
+
+#: ../../getting-started/quick-start/configuration.rst:47
+msgid "Please see :ref:`PREMIS agent <dashboard-premis>`."
+msgstr "Por favor, veja: ref: `PREMIS agent <dashboard-premis>`."
+
+#: ../../getting-started/quick-start/configuration.rst:49
+msgid ":ref:`Back to the top <configuration>`"
+msgstr ":ref:`Voltar ao topo <configuration>`"

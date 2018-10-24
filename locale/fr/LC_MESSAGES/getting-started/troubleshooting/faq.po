@@ -1,53 +1,53 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Canadian Council of Archives <cca@archivescanada.ca>, 2017
+# Isabelle Alain <ialain@archivescanada.ca>, 2017-2018
+# Louise Charlebois <lcharlebois@archivescanada.ca>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-24 19:38+0000\n"
+"Last-Translator: artefactual <translate@artefactual.com>\n"
+"Language-Team: French (http://www.transifex.com/artefactual/archivematica-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../getting-started/troubleshooting/faq.rst:5
 msgid "FAQ"
-msgstr ""
+msgstr "FAQ"
 
 #: ../../getting-started/troubleshooting/faq.rst:7
 msgid ""
 "**What technical skills are required to install/maintain/operate "
 "Archivematica?**"
-msgstr ""
+msgstr "**Quelles compétences techniques sont nécessaires pour installer / entretenir / exploiter Archivematica?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:9
 msgid ""
-"To install and maintain Archivematica successfully, you or someone in "
-"your organization should be comfortable using and maintaining Linux-based"
-" servers, logging in to the server and performing operations via the "
-"command line. This individual should also be able to read and understand "
-"and/or research errors in Linux based systems to assist with "
-"troubleshooting."
-msgstr ""
+"To install and maintain Archivematica successfully, you or someone in your "
+"organization should be comfortable using and maintaining Linux-based "
+"servers, logging in to the server and performing operations via the command "
+"line. This individual should also be able to read and understand and/or "
+"research errors in Linux based systems to assist with troubleshooting."
+msgstr "Pour installer et entretenir Archivematica avec succès, vous ou quelqu'un de votre organisation devrait être à l'aise avec l’utilisation et la maintenance de serveurs Linux, et être en mesure de se connecter au serveur et d’exécuter des opérations par l’entremise de la ligne de commande. Cette personne devrait également être capable de lire et de comprendre et / ou de chercher des erreurs dans les systèmes Linux afin d'en faciliter le dépannage."
 
 #: ../../getting-started/troubleshooting/faq.rst:15
 msgid ""
 "Operating Archivematica takes place in a web-based dashboard so an "
-"archivist/librarian/curator does not necessarily need to have the same "
-"skill set described above, so long as someone in their organization is "
-"able to provide technical support. Some familiarity with `OAIS "
-"<http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ will "
-"make Archivematica more intuitive to use but is not necessarily a "
-"prerequisite."
-msgstr ""
+"archivist/librarian/curator does not necessarily need to have the same skill"
+" set described above, so long as someone in their organization is able to "
+"provide technical support. Some familiarity with `OAIS "
+"<http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ will make "
+"Archivematica more intuitive to use but is not necessarily a prerequisite."
+msgstr "Le fonctionnement d'Archivematica se fait dans un tableau de bord  en ligne ; il n’est donc pas nécessaire pour l’archiviste, bibliothécaire ou conservateur d’avoir les compétences décrites ci-dessus, pourvu que quelqu'un dans son organisation soit en mesure d’offrir du support technique. Une certaine familiarité avec `OAIS <https://fr.wikipedia.org/wiki/Open_Archival_Information_System>`_ rendra l’utilisation d’Archivematica plus intuitive, mais n'est pas nécessairement une condition préalable."
 
 #: ../../getting-started/troubleshooting/faq.rst:22
 msgid ""
@@ -55,93 +55,91 @@ msgid ""
 "consider a `maintenance contract "
 "<http://www.artefactual.com/services/maintenance/>`_ through Artefactual "
 "Systems."
-msgstr ""
+msgstr "Les organisations qui n’ont pas l’infrastructure nécessaire pour offrir un support technique à l’interne peuvent envisager de signer un `contrat de maintenance <http://www.artefactual.com/services/maintenance/>`_ avec Artefactual Systems."
 
 #: ../../getting-started/troubleshooting/faq.rst:26
 msgid ""
-"**I'm having a problem with installation/Why is Archivematica difficult "
-"to install?**"
-msgstr ""
+"**I'm having a problem with installation/Why is Archivematica difficult to "
+"install?**"
+msgstr "**J'ai un problème lors de l'installation/Pourquoi Archivematica est-il difficile à installer?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:28
 msgid ""
-"Archivematica is a complex piece of software with many dependencies, all "
-"of which are open-source. Because of its complex, open-source nature, it "
-"is not feasible to create a click-through executible file for "
-"installation."
-msgstr ""
+"Archivematica is a complex piece of software with many dependencies, all of "
+"which are open-source. Because of its complex, open-source nature, it is not"
+" feasible to create a click-through executible file for installation."
+msgstr "Archivematica est un logiciel complexe avec de nombreuses dépendances, toutes de source ouverte. En raison de sa nature complexe et de source ouverte, il n'est pas possible de créer un fichier exécutable à cliquer pour l'installation."
 
 #: ../../getting-started/troubleshooting/faq.rst:32
 msgid ""
-"If you encounter errors during :ref:`installation <installation>` you are"
-" welcome to post your errors to our `user forum "
+"If you encounter errors during :ref:`installation <installation>` you are "
+"welcome to post your errors to our `user forum "
 "<https://groups.gtoogle.com/forum/#!forum/archivematica>`_. Artefactual "
 "Systems, or other Archivematica community members, will do their best to "
-"help you. Please be patient: answering questions from users is "
-"unsponsored work and it can take a while for us to respond when we are "
-"busy."
-msgstr ""
+"help you. Please be patient: answering questions from users is unsponsored "
+"work and it can take a while for us to respond when we are busy."
+msgstr "Lorsqu’une erreur survient durant l':ref:`installation<installation>`, nous vous invitons à partager vos erreurs sur notre `forum des utilisateurs <https://groups.gtoogle.com/forum/#!forum/archivematica>`_. Artefactual Systems, ou d'autres membres de la communauté Archivematica, feront de leur mieux pour vous aider. Veuillez faire preuve de patience : répondre aux questions des utilisateurs est un travail non sponsorisé et cela peut nous prendre un certain temps pour répondre quand nous sommes occupés."
 
 #: ../../getting-started/troubleshooting/faq.rst:39
 msgid "**What does Archivematica do?**"
-msgstr ""
+msgstr "**Que fait Archivematica?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:41
 msgid ""
 "The main purpose of Archivematica is to create standards-based, self-"
-"documenting and system-independent archival information packages (AIPs). "
-"An AIP includes a METS XML file with a robust PREMIS preservation "
-"metadata implementation, and is packaged in the Library of Congress BagIt"
-" format, which includes file manifests and information about the AIP "
-"contents. The physical and logical structure of the AIP is described in "
-"the METS structMap."
+"documenting and system-independent archival information packages (AIPs). An "
+"AIP includes a METS XML file with a robust PREMIS preservation metadata "
+"implementation, and is packaged in the Library of Congress BagIt format, "
+"which includes file manifests and information about the AIP contents. The "
+"physical and logical structure of the AIP is described in the METS "
+"structMap."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:48
 msgid "**Does Archivematica perform fixity checks?**"
-msgstr ""
+msgstr "**Est-ce qu'Archivematica effectue des contrôle de fixité?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:50
 msgid ""
-"Archivematica generates checksums upon transfer of objects into the "
-"system, and will verify those checksums before storing the AIP. It is "
-"also possible to include :ref:`pre-existing checksums <transfer-"
-"checksums>`, which Archivematica will also verify."
-msgstr ""
+"Archivematica generates checksums upon transfer of objects into the system, "
+"and will verify those checksums before storing the AIP. It is also possible "
+"to include :ref:`pre-existing checksums <transfer-checksums>`, which "
+"Archivematica will also verify."
+msgstr "Archivematica génère des sommes de contrôle lors du transfert d'objets dans le système et vérifie ces sommes de contrôle avant de stocker l'AIP. Il est également possible d'inclure :ref:`les sommes de contrôle préexistantes <transfer-checksums>`, ce dont Archivematica s’assurera."
 
 #: ../../getting-started/troubleshooting/faq.rst:55
 msgid ""
 "To check fixity of AIPs in storage, Artefactual has written a separate "
-"command-line app called `Fixity <https://github.com/artefactual/fixity>`_"
-" (further user documentation for Fixity is pending)."
+"command-line app called `Fixity <https://github.com/artefactual/fixity>`_ "
+"(further user documentation for Fixity is pending)."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:59
 msgid "**Is Archivematica a storage system?**"
-msgstr ""
+msgstr "**Est-ce qu'Archivematica est un système de stockage?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:61
 msgid ""
 "Archivematica is purposefully designed to be storage system agnostic, "
 "leaving the door open for integration with a wide variety of existing "
 "storage systems."
-msgstr ""
+msgstr "Archivematica est intentionnellement conçu pour être un système de stockage agnostique permettant l'intégration avec une grande variété de systèmes de stockage existants."
 
 #: ../../getting-started/troubleshooting/faq.rst:64
 msgid ""
 "**What is the Archivematica Storage Service and why is there a separate "
 "application?**"
-msgstr ""
+msgstr "**Qu'est ce que le Service de stockage Archivematica et pourquoi y a-t-il une application distincte?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:66
 msgid ""
-"The Archivematica Storage Service manages the storage and transfer source"
-" locations for Archivematica installations. Our recommendation is for "
-"each institution to have one or two administrators who are responsible "
-"for managing the Storage Service and restrict access to only those "
-"individuals. This is one of the reasons why it is maintained as a "
-"separate application; another reason is so that multiple Archivematica "
-"pipelines can be managed through one Storage Service."
+"The Archivematica Storage Service manages the storage and transfer source "
+"locations for Archivematica installations. Our recommendation is for each "
+"institution to have one or two administrators who are responsible for "
+"managing the Storage Service and restrict access to only those individuals. "
+"This is one of the reasons why it is maintained as a separate application; "
+"another reason is so that multiple Archivematica pipelines can be managed "
+"through one Storage Service."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:74
@@ -150,12 +148,12 @@ msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:76
 msgid ""
-"Capacity is highly dependent on the resources allocated to the servers on"
-" which the software is installed. Archivematica has been successfully "
-"tested with SIPs of 100,000 files and with video files of several TB "
-"each. No maximum size or number of files can be specified; Artefactual "
-"works with clients to determine optimal use cases and workflows on a per-"
-"institution basis."
+"Capacity is highly dependent on the resources allocated to the servers on "
+"which the software is installed. Archivematica has been successfully tested "
+"with SIPs of 100,000 files and with video files of several TB each. No "
+"maximum size or number of files can be specified; Artefactual works with "
+"clients to determine optimal use cases and workflows on a per-institution "
+"basis."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:82
@@ -168,12 +166,12 @@ msgstr ""
 msgid ""
 "The `Archivematica AIP "
 "<https://www.archivematica.org/en/docs/archivematica-1.6/user-manual"
-"/archival-storage/aip-structure/#aip-structure>`_ consists primarily of "
-"the ingested objects, any preservation masters generated during "
-"processing, and technical, preservation, audit and descriptive metadata "
-"encoded in METS XML. The METS file contains a robust PREMIS "
-"implementation, including the Object, Event, Agent and Rights entities. "
-"Dublin Core is supported as a descriptive metadata standard."
+"/archival-storage/aip-structure/#aip-structure>`_ consists primarily of the "
+"ingested objects, any preservation masters generated during processing, and "
+"technical, preservation, audit and descriptive metadata encoded in METS XML."
+" The METS file contains a robust PREMIS implementation, including the "
+"Object, Event, Agent and Rights entities. Dublin Core is supported as a "
+"descriptive metadata standard."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:91
@@ -184,14 +182,14 @@ msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:93
 msgid ""
-"Archivematica by default includes a very robust PREMIS implementation "
-"which includes the Object, Event, Agent and Rights entities. Standard "
-"Events include ingestion, fixity check, message digest calculation,  "
-"unpacking, decompression, virus check, format identification, format "
-"validation and normalization. The names of the software platform, the "
-"organization and the logged-in user are captured as Agents for each "
-"Event. Rights statements can be ingested as csv metadata or added by the "
-"user via a metadata-entry template during processing."
+"Archivematica by default includes a very robust PREMIS implementation which "
+"includes the Object, Event, Agent and Rights entities. Standard Events "
+"include ingestion, fixity check, message digest calculation,  unpacking, "
+"decompression, virus check, format identification, format validation and "
+"normalization. The names of the software platform, the organization and the "
+"logged-in user are captured as Agents for each Event. Rights statements can "
+"be ingested as csv metadata or added by the user via a metadata-entry "
+"template during processing."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:101
@@ -200,42 +198,41 @@ msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:103
 msgid ""
-"Yes! In Archivematica 1.6 an appraisal dashboard allows the user to "
-"perform archival appraisal and arrangement activities on ingested files. "
-"Submission documentation such as donor agreements, transfer forms and "
-"accession records can be added to the SIP for preservation along with the"
-" ingested digital objects, and are identified as submission documentation"
-" in the preservation metadata in the AIP. In AtoM, an accessions module "
-"allows users to record accessions, accruals and deaccessions and to "
-"record information about appraisal and selection."
+"Yes! In Archivematica 1.6 an appraisal dashboard allows the user to perform "
+"archival appraisal and arrangement activities on ingested files. Submission "
+"documentation such as donor agreements, transfer forms and accession records"
+" can be added to the SIP for preservation along with the ingested digital "
+"objects, and are identified as submission documentation in the preservation "
+"metadata in the AIP. In AtoM, an accessions module allows users to record "
+"accessions, accruals and deaccessions and to record information about "
+"appraisal and selection."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:111
 msgid ""
-"**Why doesn't Archivematica have a module for providing access to digital"
-" materials?**"
-msgstr ""
+"**Why doesn't Archivematica have a module for providing access to digital "
+"materials?**"
+msgstr "**Pourquoi Archivematica n'a-t-il pas de module pour fournir l'accès aux documents numériques?**"
 
 #: ../../getting-started/troubleshooting/faq.rst:114
 msgid ""
-"In a manner of speaking, it does! It's called :ref:`AtoM <atom:home>` and"
-" it is another open-source, freely available software application managed"
-" and developed by Artefactual Systems. Archivematica and AtoM are "
-"developed in conjunction with one another, and you can send access copies"
-" from Archivematica to AtoM, while maintaining a link between your "
-"preservation copies and the access copies. AtoM can also be used to "
-"manage archival descriptions for all of your digital and analogue "
-"material, so your users do not have to consult multiple systems to do "
-"their research."
+"In a manner of speaking, it does! It's called :ref:`AtoM <atom:home>` and it"
+" is another open-source, freely available software application managed and "
+"developed by Artefactual Systems. Archivematica and AtoM are developed in "
+"conjunction with one another, and you can send access copies from "
+"Archivematica to AtoM, while maintaining a link between your preservation "
+"copies and the access copies. AtoM can also be used to manage archival "
+"descriptions for all of your digital and analogue material, so your users do"
+" not have to consult multiple systems to do their research."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:123
 msgid ""
-"We recognize that you may wish to use a different access system than "
-"AtoM, which is why we have developed workflows with CONTENTdm, Islandora,"
-" DSpace, Archivist's Toolkit and ArchivesSpace, for example. Other "
-"integrations are possible; see the next question below."
-msgstr ""
+"We recognize that you may wish to use a different access system than AtoM, "
+"which is why we have developed workflows with CONTENTdm, Islandora, DSpace, "
+"Archivist's Toolkit and ArchivesSpace, for example. Other integrations are "
+"possible; see the next question below."
+msgstr "Nous sommes conscients que vous voudrez peut-être utiliser un système d'accès autre qu'AtoM, et c'est pourquoi nous avons élaboré des flux de production avec, entre autres, CONTENTdm, Islandora, DSpace, Archivists' Toolkit et ArchivesSpace. Il y a d'autres  possibilités d'intégrations ; voir la question suivante."
 
 #: ../../getting-started/troubleshooting/faq.rst:128
 msgid "**Can I describe content in Archivematica?**"
@@ -244,9 +241,9 @@ msgstr ""
 #: ../../getting-started/troubleshooting/faq.rst:130
 msgid ""
 "You can ingest metadata as a CSV file or through the dashboard while "
-"processing. However, Archivematica is not an archival description system."
-"  In-depth contextual and content description can be done through an "
-"access system like AtoM."
+"processing. However, Archivematica is not an archival description system.  "
+"In-depth contextual and content description can be done through an access "
+"system like AtoM."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:135
@@ -255,10 +252,9 @@ msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:137
 msgid ""
-"All ingested content is automatically scanned for viruses and malware "
-"using clamAV, a well-established open-source software tool that comes "
-"bundled with Archivematica. Virus definitions are updated on a regular "
-"basis."
+"All ingested content is automatically scanned for viruses and malware using "
+"clamAV, a well-established open-source software tool that comes bundled with"
+" Archivematica. Virus definitions are updated on a regular basis."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:141
@@ -267,13 +263,13 @@ msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:143
 msgid ""
-"Transcoding, or normalization, is automated through the use of "
-"preservation commands entered into the `Format Policy Registry "
+"Transcoding, or normalization, is automated through the use of preservation "
+"commands entered into the `Format Policy Registry "
 "<https://www.archivematica.org/en/docs/archivematica-1.6/user-"
 "manual/preservation/preservation-planning/#fpr>`_. Bundled tools for "
-"transcoding include ffmpeg, Inkscape, Ghostscript and ImageMagick. The "
-"FPR comes with hundreds of format-specific commands which can be edited "
-"by the user."
+"transcoding include ffmpeg, Inkscape, Ghostscript and ImageMagick. The FPR "
+"comes with hundreds of format-specific commands which can be edited by the "
+"user."
 msgstr ""
 
 #: ../../getting-started/troubleshooting/faq.rst:149
@@ -283,54 +279,54 @@ msgstr ""
 #: ../../getting-started/troubleshooting/faq.rst:151
 msgid ""
 "Errors are indicated in the Archivematica dashboard during processing. "
-"Alerts can also be emailed to designated users and certain types of error"
-" reports are retained in the Administration tab of the dashboard. The "
-"corrective action will depend on the nature of the error; examples "
-"include rejecting the transfer or SIP and starting again, accepting the "
-"error and continuing the process, taking corrective action and re-running"
-" the micro-service or troubleshooting the issue through the command-line."
+"Alerts can also be :ref:`emailed <email-config>` to designated users and "
+"certain types of error reports  are retained in the Administration tab of "
+"the dashboard. The corrective action  will depend on the nature of the "
+"error; examples include rejecting the transfer  or SIP and starting again, "
+"accepting the error and continuing the process,  taking corrective action "
+"and re-running the micro-service or troubleshooting  the issue through the "
+"command-line."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:159
+#: ../../getting-started/troubleshooting/faq.rst:160
 msgid ""
 "**I need to use Archivematica in conjunction with another system (for "
 "access, storage, etc). How can I integrate the two systems?**"
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:162
+#: ../../getting-started/troubleshooting/faq.rst:163
 msgid ""
-"The list of systems and tools that Archivematica is integrated with grows"
-" with almost every release. If you are interested in having Archivematica"
-" integrate with a system which is not currently on our `Roadmap "
-"<https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_,"
-" here are a few ideas:"
+"The list of systems and tools that Archivematica is integrated with grows "
+"with almost every release. If you are interested in having Archivematica "
+"integrate with a system which is not currently on our `Roadmap "
+"<https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_, "
+"here are a few ideas:"
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:166
+#: ../../getting-started/troubleshooting/faq.rst:167
 msgid ""
 "Post to the `user forum "
-"<https://groups.gtoogle.com/forum/#!forum/archivematica>`_ and ask "
-"community members if they have any experience creating a workflow between"
-" Archivematica and the other system."
+"<https://groups.gtoogle.com/forum/#!forum/archivematica>`_ and ask community"
+" members if they have any experience creating a workflow between "
+"Archivematica and the other system."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:170
+#: ../../getting-started/troubleshooting/faq.rst:171
 msgid ""
-"If you have software development skills, consider writing to code "
-"required to integrate the two systems. If practical, we would gladly "
-"accept the code into the Archivematica code base via a `pull request "
+"If you have software development skills, consider writing to code required "
+"to integrate the two systems. If practical, we would gladly accept the code "
+"into the Archivematica code base via a `pull request "
 "<https://www.archivematica.org/wiki/Contribute_code>`_ ."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:175
+#: ../../getting-started/troubleshooting/faq.rst:176
 msgid ""
 "Contract Artefactual Systems to `write the code "
-"<http://www.artefactual.com/services/development/>`_. We will work with "
-"you to identify requirements and include the new integration code in the "
-"next software release, for the entire community's benefit."
+"<http://www.artefactual.com/services/development/>`_. We will work with you "
+"to identify requirements and include the new integration code in the next "
+"software release, for the entire community's benefit."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:182
+#: ../../getting-started/troubleshooting/faq.rst:183
 msgid ":ref:`Back to the top <faq>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <faq>`"

@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:5
+msgid "Integrations"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:7
+msgid ""
+"Archivematica is built to integrate widely with a number of external "
+"systems, including dedicated storage and access systems. The current "
+"integrations are listed below."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:11
+msgid "*On this page*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:13
+msgid ":ref:`AtoM integration <atom-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:14
+msgid ":ref:`ArchivesSpace integration <archivesspace-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:15
+msgid ":ref:`Binder integration <binder-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:16
+msgid ":ref:`Duracloud integration <duracloud-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:17
+msgid ":ref:`Swift integration <swift-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:18
+msgid ":ref:`Islandora integration <islandora-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:19
+msgid ":ref:`Arkivum integration <arkivum-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:20
+msgid ":ref:`Dataverse integration <dataverse-integration>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:25
+msgid "AtoM integration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:27
+msgid ""
+"`AtoM`_ (Access to Memory) is a web-based, open source application for "
+"standards-based archival description and access in multilingual, multi-"
+"repository environment."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:31
+msgid "See :ref:`Using AtoM 2.x with Archivematica <atom-setup>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:36
+msgid "ArchivesSpace integration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:38
+msgid ""
+"`ArchivesSpace`_ is an open source archives information management "
+"application for managing and providing web access to archives, "
+"manuscripts and digital objects."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:42
+msgid "See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:47
+msgid "Binder integration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:49
+msgid ""
+"`Binder`_ is an open-source web application for supporting the care, "
+"management, and preservation of complex digital collections such as time-"
+"based media and born-digital artworks. It provides users with a central "
+"interface through which they can access, view and manage the rich "
+"technical metadata contained in Archival Information Packages (AIPs) held"
+" by the repository, as well as managing and describing the relationships "
+"between the components of a collections object, its constituent digital "
+"objects, and the various external dependencies required to preserve and "
+"display the collection over the long-term."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:58
+msgid "See :ref:`Using Binder with Archivematica <binder-setup>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:62
+msgid ""
+"Binder is dependent on `TMS`_, a proprietary collections management "
+"software primarily used in museum and gallery settings. Binder cannot "
+"currently work without TMS."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:69
+msgid "Duracloud"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:71
+msgid ""
+"`DuraCloud`_ is a hosted archival cloud storage and preservation service "
+"from DuraSpace that makes it easy for organizations and end users to use "
+"cloud services. Archivematica can automatically transfer AIP packages to "
+"DuraCloud for long-term secure archival storage. DuraCloud is used as the"
+" storage layer for `ArchivesDirect`_ clients."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:77
+msgid "See :ref:`Archivematica DuraCloud quick start guide <duracloud-setup>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:82
+msgid "Swift"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:84
+msgid ""
+"`Swift`_ is a simple API developed by OpenStack that offers cloud storage"
+" and retrieval intended to work at scale. Swift is optimized for "
+"durability, availability, and concurrency across the entire data set. "
+"Archivematica integrates with Swift through the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:89
+msgid ""
+"See :ref:`Swift Storage Service integration documentation "
+"<storageservice:swift>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:94
+msgid "Islandora"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:96
+msgid ""
+"`Islandora`_ is an open-source software framework designed to help "
+"institutions and organizations and their audiences collaboratively "
+"manage, and discover digital assets. Archivematica integrates with "
+"Islandora through the Storage Service, which connects to Islandora's "
+"underlying Fedora repository."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:101
+msgid ""
+"See :ref:`Fedora Storage Service integration documentation "
+"<storageservice:fedora>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:106
+msgid "Arkivum"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:108
+msgid ""
+"`Arkivum`_ is an archival storage back-end for Archivematica packages "
+"that provides both cloud- and tape-based storage. Arkivum is used as the "
+"storage layer for `Arkivum Perpetua`_ clients."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:112
+msgid ""
+"See :ref:`Arkivum Storage Service integration documentation "
+"<storageservice:arkivum>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:118
+msgid "Dataverse"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:120
+msgid ""
+"See :ref:`Dataverse integration <dataverse-transfers>` for an overview of"
+" how Dataverse datasets are preserved. For instructions to configure a "
+"Dataverse integration, see :ref:`Storage Service docs "
+"<storageservice:administrators>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:126
+msgid ":ref:`Back to the top <integrations>`"
+msgstr ""
+

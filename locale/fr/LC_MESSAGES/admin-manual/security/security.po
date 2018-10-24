@@ -6,10 +6,11 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
 "Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,23 +20,27 @@ msgstr ""
 
 #: ../../admin-manual/security/security.rst:5
 msgid "Security"
-msgstr ""
+msgstr "Sécurité"
 
 #: ../../admin-manual/security/security.rst:9
 msgid ""
 "Once you've set up Archivematica it's a good practice, for the sake of "
 "security, to change the default passwords."
 msgstr ""
+"Par mesure de sécurité, il est recommandé de changer les mots de passe par "
+"défaut après avoir configuré Archivematica."
 
 #: ../../admin-manual/security/security.rst:12
 msgid ""
 "This page outlines various security settings and configurations in "
 "Archivematica."
 msgstr ""
+"Cette page présente différents paramètres de sécurité et de configuration "
+"pour Archivematica."
 
 #: ../../admin-manual/security/security.rst:18
 msgid "Elasticsearch access control"
-msgstr ""
+msgstr "Contrôle de l'accès à ElasticSearch"
 
 #: ../../admin-manual/security/security.rst:20
 msgid ""
@@ -52,20 +57,27 @@ msgid ""
 "on your AtoM Elasticsearch index. Your AtoM site is more likely to be a "
 "public- facing IP and therefore this is an important step."
 msgstr ""
+"Si vous utilisez AtoM comme système d'accès, n'oubliez pas d'effectuer cette"
+" tâche sur votre index Elasticsearch d'AtoM. C'est une étape importante "
+"puisque votre site AtoM est plus susceptible d'avoir une adresse IP "
+"publique."
 
 #: ../../admin-manual/security/security.rst:32
 msgid ""
 "To further enhance your Elasticsearch index's security make the following "
 "changes in your Elasticsearch ``/etc/elasticsearch/elasticsearch.yml`` file:"
 msgstr ""
+"Faites les changements suivant dans le fichier Elasticsearch "
+"``/etc/elasticsearch/elasticsearch.yml`` afin d'améliorer la sécurité de "
+"votre index Elasticsearch :"
 
 #: ../../admin-manual/security/security.rst:40
 msgid "Then, ``/etc/init.d/elasticsearch restart``."
-msgstr ""
+msgstr "Ensuite: ``/etc/init.d/elasticsearch restart``."
 
 #: ../../admin-manual/security/security.rst:45
 msgid "MySQL"
-msgstr ""
+msgstr "MySQL"
 
 #: ../../admin-manual/security/security.rst:47
 msgid ""
@@ -101,7 +113,7 @@ msgstr ""
 
 #: ../../admin-manual/security/security.rst:72
 msgid "AtoM"
-msgstr ""
+msgstr "AtoM"
 
 #: ../../admin-manual/security/security.rst:74
 msgid ""
@@ -113,7 +125,7 @@ msgstr ""
 
 #: ../../admin-manual/security/security.rst:82
 msgid "Gearman"
-msgstr ""
+msgstr "Gearman"
 
 #: ../../admin-manual/security/security.rst:84
 msgid ""
@@ -124,7 +136,7 @@ msgstr ""
 
 #: ../../admin-manual/security/security.rst:91
 msgid "User security"
-msgstr ""
+msgstr "Sécurité des utilisateurs"
 
 #: ../../admin-manual/security/security.rst:93
 msgid ""
@@ -151,11 +163,11 @@ msgid ""
 " recommended for advanced users only."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:111
-msgid "LDAP setup"
-msgstr ""
-
 #: ../../admin-manual/security/security.rst:113
+msgid "LDAP setup"
+msgstr "Configuration du protocole LDAP"
+
+#: ../../admin-manual/security/security.rst:115
 msgid ""
 "`LDAP <ldap_>`_ is a directory service protocol used for, among other "
 "things, authentication and authorization. This feature allows administrators"
@@ -163,16 +175,16 @@ msgid ""
 "authentication."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:117
+#: ../../admin-manual/security/security.rst:119
 msgid ""
 "This functionality has not been made available yet in the Storage Service."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:120
+#: ../../admin-manual/security/security.rst:122
 msgid "LDAP backend configuration"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:122
+#: ../../admin-manual/security/security.rst:124
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. You can find more"
@@ -180,7 +192,7 @@ msgid ""
 "dashboard-config_>`_."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:127
+#: ../../admin-manual/security/security.rst:129
 msgid ""
 "Customize the ``ldap_auth.py`` settings module as needed. Open the file to "
 "find what are the existing environment variable lookups. You can inject the "
@@ -188,16 +200,16 @@ msgid ""
 "manually."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:132
-#: ../../admin-manual/security/security.rst:152
+#: ../../admin-manual/security/security.rst:134
+#: ../../admin-manual/security/security.rst:155
 msgid "Restart the Archivematica Dashboard."
-msgstr ""
+msgstr "Relancer le tableau de bord Archivematica."
 
-#: ../../admin-manual/security/security.rst:136
+#: ../../admin-manual/security/security.rst:139
 msgid "Shibboleth setup"
-msgstr ""
+msgstr "Configuration de Shibboleth"
 
-#: ../../admin-manual/security/security.rst:138
+#: ../../admin-manual/security/security.rst:141
 msgid ""
 "`Shibboleth <shibboleth_>`_ is a federated identity solution that provides "
 "Single Sign-On authentication and authorization. This feature allows "
@@ -205,40 +217,152 @@ msgid ""
 "Service Django applications with Shibboleth authentication."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:144
+#: ../../admin-manual/security/security.rst:147
 msgid "Shibboleth backend configuration in Archivematica Dashboard"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:146
+#: ../../admin-manual/security/security.rst:149
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``SS_SHIBBOLETH_AUTHENTICATION``. You can find more details about this "
 "environment string in the `configuration document <am-dashboard-config_>`_."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:150
+#: ../../admin-manual/security/security.rst:153
 msgid "Customize the ``shibboleth_auth.py`` settings module as needed."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:155
+#: ../../admin-manual/security/security.rst:158
 msgid "Shibboleth backend configuration in Storage Service"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:157
+#: ../../admin-manual/security/security.rst:160
 msgid ""
 "Enable the authentication backend using the environment variable "
 "``SS_SHIBBOLETH_AUTHENTICATION``. Assign a string value ``true`` to enable "
 "it."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:161
+#: ../../admin-manual/security/security.rst:164
 msgid "Customize the ``base.py`` settings module as needed."
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:163
+#: ../../admin-manual/security/security.rst:166
 msgid "Restart the Storage Service."
+msgstr "Relancer le Service de stockage."
+
+#: ../../admin-manual/security/security.rst:171
+msgid "CA certificates"
 msgstr ""
 
-#: ../../admin-manual/security/security.rst:165
-msgid ":ref:`Back to the top <security>`"
+#: ../../admin-manual/security/security.rst:173
+msgid ""
+"Archivematica uses a HTTP library called `Requests <requests_>`_. There are "
+"`two main approaches <requests-cas_>`_ for dealing with the updates of the "
+"root CAs sets:"
 msgstr ""
+
+#: ../../admin-manual/security/security.rst:178
+msgid "Upgrade the ``certifi`` package frequently"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:180
+msgid ""
+"There are three virtual environments where Requests is used: MCPClient, "
+"Dashboard and Storage Service. This is how you can update ``certifi`` across"
+" the three environments:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:190
+msgid ""
+"The services need to be restarted after the update, for example if you are "
+"using systemd:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:200
+msgid "Use the environment string REQUEST_CA_BUNDLE"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:202
+msgid ""
+"Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the "
+"administrator can indicate a custom bundle which could be the system's CA "
+"bundle."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:206
+msgid ""
+"The Ubuntu system's CA bundle file is :file:`/etc/ssl/certs/ca-"
+"certificates.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:208
+msgid ""
+"The CentOS system's CA bundle file is :file:`/etc/pki/tls/certs/ca-"
+"bundle.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:211
+msgid ""
+"On Ubuntu, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:218
+msgid ""
+"On CentOS, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:226
+msgid "Trusting additional CAs"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:228
+msgid ""
+"If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional CAs."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:230
+msgid "On CentOS:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:232
+msgid ""
+"Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your "
+"CentOS machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:234
+msgid "Run the `update-ca-trust extract` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:236
+msgid ""
+"The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that "
+"refers to the consolidated output created by the ``update-ca-trust`` "
+"command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:239
+msgid "On Ubuntu:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:241
+msgid ""
+"Copy the .crt file to :file:`/usr/local/share/ca-certificates` on your "
+"Ubuntu machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:243
+msgid "Run the `update-ca-certificates` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:245
+msgid ""
+"This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:248
+msgid ":ref:`Back to the top <security>`"
+msgstr ":ref:`Retour en haut de page <security>`"

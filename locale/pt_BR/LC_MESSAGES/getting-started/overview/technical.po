@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-10-05 20:19+0000\n"
+"Last-Translator: artefactual <translate@artefactual.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/overview/technical.rst:5
+msgid "Technical architecture"
+msgstr "Arquitetura técnica"
+
+#: ../../getting-started/overview/technical.rst:13
+msgid "Archivematica Ingest infrastructure overview"
+msgstr "Archivematica Ingest visão geral da infraestrutura"
+
+#: ../../getting-started/overview/technical.rst:15
+msgid ""
+"This page provides a high-level overview of Archivematica's technical "
+"architecture."
+msgstr "Esta página fornece uma visão geral de alto nível da arquitetura técnica do Archivematica."
+
+#: ../../getting-started/overview/technical.rst:22
+msgid "Micro-services design pattern"
+msgstr "Padrão de design de micro-serviços"
+
+#: ../../getting-started/overview/technical.rst:24
+msgid ""
+"Archivematica implements a micro-service approach to digital preservation. "
+"The Archivematica micro-services are granular system tasks which operate on "
+"a conceptual entity that is equivalent to an OAIS information package: "
+"Submission Information Package (SIP), Archival Information Package (AIP), "
+"Dissemination Information Package (DIP). The physical structure of an "
+"information package will include files, checksums, logs, submission "
+"documentation, XML metadata, etc."
+msgstr "Os micro-serviços Archivematica são tarefas granulares do sistema que operam em uma entidade conceitual equivalente a um pacote de informações OAIS: Pacote de Informação de Submissão (SIP), Pacote de Informação Arquivística (AIP), Pacote de Informação de Divulgação (DIP). A estrutura física de um pacote de informações incluirá arquivos, somas de verificação, logs, documentação de envio, metadados XML, etc."
+
+#: ../../getting-started/overview/technical.rst:32
+msgid "For more information, see :ref:`Micro-services <micro-services>`."
+msgstr "Para mais informações, consulte: ref: `Micro-serviços <micro-services>`."
+
+#: ../../getting-started/overview/technical.rst:37
+msgid "Web-based dashboard"
+msgstr "Painel baseado na Web"
+
+#: ../../getting-started/overview/technical.rst:39
+msgid ""
+"The web dashboard allow users to process, monitor and control the "
+"Archivematica workflow processes. It is developed using Python-based Django "
+"MVC framework. The Dashboard provides a multi-user interface that will "
+"report on the status of system events and make it simpler to control and "
+"trigger specific micro-services. This interface allows users to easily add "
+"or edit metadata, coordinate AIP and DIP storage and provide preservation "
+"planning information. Notifications include error reports, monitoring of MCP"
+" tasks and manual approvals in the workflow."
+msgstr "O painel da web permite que os usuários processem, monitorem e controlem os processos de fluxo de trabalho do Archivematica. Ele é desenvolvido usando o framework Django MVC baseado em Python. O Painel fornece uma interface multiususo que relatará o status dos eventos do sistema e simplificará o controle e o acionamento de micro-serviços específicos. Essa interface permite que os usuários adicionem ou editem facilmente metadados, coordenem o armazenamento de AIP e DIP e forneçam informações de planejamento de preservação. As notificações incluem relatórios de erros, monitoramento de tarefas do MCP e aprovações manuais no fluxo de trabalho."
+
+#: ../../getting-started/overview/technical.rst:48
+msgid "For more information, see :ref:`Web-based dashboard <web-dashboard>`."
+msgstr "Para mais informações, consulte: ref: `Painel de controle baseado na Web <web-dashboard>`."
+
+#: ../../getting-started/overview/technical.rst:54
+msgid "Format policies"
+msgstr "Políticas de formato"
+
+#: ../../getting-started/overview/technical.rst:56
+msgid ""
+"Archivematica maintains the original format of all ingested files to  "
+"support migration and emulation strategies. However, the primary "
+"preservation strategy is to normalize files to preservation and access "
+"formats upon ingest. Archivematica groups file formats into format policies "
+"(e.g. text, audio, video, raster image, vector image, etc.). Archivematica's"
+" preservation formats must all be open standards. Additionally, the choice "
+"of formats is based on community best practices, availability of free and "
+"open-source normalization tools, and an analysis of the significant "
+"characteristics for each media type. The choice of access formats is based "
+"largely on the ubiquity of web-based viewers for the file format."
+msgstr "O Archivematica mantém o formato original de todos os arquivos ingeridos para suportar as estratégias de migração e emulação. No entanto, a principal estratégia de preservação é normalizar os arquivos para preservar e acessar os formatos após a ingestão. O Archivematica agrupa formatos de arquivo em políticas de formato (por exemplo, texto, áudio, vídeo, imagem rasterizada, imagem vetorial, etc.). Os formatos de preservação do Archivematica devem todos ser padrões abertos. Além disso, a escolha de formatos é baseada nas melhores práticas da comunidade, na disponibilidade de ferramentas de normalização gratuitas e de código aberto e na análise das características significativas de cada tipo de mídia. A escolha dos formatos de acesso é baseada em grande parte na onipresença de visualizadores baseados na Web para o formato de arquivo."
+
+#: ../../getting-started/overview/technical.rst:67
+msgid ""
+"Since the 1.0 production release, Archivematica format policies have been "
+"moved to a structured, online format policy registry (FPR) that brings "
+"together format identification information with significant characteristic "
+"analysis, risk assessments and normalization tool information to arrive at "
+"default preservation format and access format policies for Archivematica."
+msgstr "Desde o release de produção 1.0, as políticas de formato Archivematica foram movidas para um registro de políticas de formato online estruturado (FPR) que reúne informações de identificação de formato com análise de característica significativa, avaliações de risco e informações de ferramentas de normalização para chegar ao formato de preservação padrão e políticas de formato de acesso para o Archivematica."
+
+#: ../../getting-started/overview/technical.rst:73
+msgid ""
+"For more information, see :ref:`Preservation Planning <preservation-"
+"planning>`."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:79
+msgid "From Transfer to SIP to AIP and DIP"
+msgstr "De Transferência para SIP para AIP e DIP"
+
+#: ../../getting-started/overview/technical.rst:81
+msgid ""
+"The primary function of Archivematica is to process digital transfers "
+"(accessioned digital objects), turn them into SIPs, apply format policies "
+"and create high-quality, repository-independent Archival Information "
+"Packages (AIP) using `METS <http://www.loc.gov/standards/mets/>`_, `PREMIS "
+"<http://www.loc.gov/standards/premis/>`_ and `Bagit "
+"<https://confluence.ucop.edu/download/attachments/16744580/BagItSpec.pdf?version=1>`_."
+" Archivematica is bundled with `AtoM <http://www.accesstomemory.org>`_ but "
+"is designed to upload Dissemination Information Packages (DIP), containing "
+"descriptive metadata and web-ready access copies, to any access system (e.g."
+" Dspace, ContentDM, etc.)."
+msgstr "A função principal do Archivematica é processar transferências digitais (objetos digitais acessados), transformá-los em SIPs, aplicar políticas de formato e criar Pacotes de Informações de Arquivamento (AIP) independentes de repositório e de alta qualidade usando `METS <http://www.loc.gov/standards/mets/>`_, `PREMIS <http://www.loc.gov/standards/premis/>`_ and `Bagit <https://confluence.ucop.edu/download/attachments/16744580/BagItSpec.pdf?version=1>`_. O Archivematica é agrupado com o `AtoM <http://www.accesstomemory.org>` _, mas é projetado para carregar Pacotes de Informações de Divulgação (DIP), contendo metadados descritivos e cópias de acesso à web, para qualquer sistema de acesso (por exemplo, Dspace, ContentDM , etc.)."
+
+#: ../../getting-started/overview/technical.rst:95
+msgid "Single install"
+msgstr "Instalação única"
+
+#: ../../getting-started/overview/technical.rst:97
+msgid ""
+"Using the latest in virtualization technology, each release of the "
+"Archivematica system packages a customized Xubuntu environment as a `virtual"
+" appliance <http://en.wikipedia.org/wiki/Virtual_appliance>`_, making it "
+"possible to run on top of any consumer-grade hardware and operating system. "
+"This means the entire suite of digital preservation tools is now available "
+"from one simple installation. Archivematica can also be installed directly "
+"on dedicated hardware via its own Ubuntu repository. Its client/server "
+"processing architecture allows it to be deployed in multi-node, distributed "
+"processing configurations to support large-scale, resource- intensive "
+"production environments."
+msgstr "Usando o mais recente em tecnologia de virtualização, cada versão do sistema Archivematica empacota um ambiente Xubuntu customizado como um `appliance virtual <http://en.wikipedia.org/wiki/Virtual_appliance>` _, tornando possível rodar em cima de qualquer hardware e sistema operacional ao nível de consumidor. Isso significa que todo o conjunto de ferramentas de preservação digital está disponível a partir de uma instalação simples. O Archivematica também pode ser instalado diretamente no hardware dedicado através do seu próprio repositório do Ubuntu. Sua arquitetura de processamento cliente/servidor permite que ele seja implementado em configurações de processamento distribuído de vários nós para suportar ambientes de produção em larga escala e com uso intensivo de recursos."
+
+#: ../../getting-started/overview/technical.rst:108
+msgid ":ref:`Back to the top <technical-arch>`"
+msgstr ":ref:`Voltar ao topo <technical-arch>`"

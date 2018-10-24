@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:5
+msgid "Advanced installation options"
+msgstr "Options d'installation avancées"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:7
+msgid "*On this page*"
+msgstr "*Sur cette page*"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:9
+msgid ":ref:`Installing for development <development>`"
+msgstr ":ref:`Installation pour le développement <development>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:10
+msgid ":ref:`Installing across multiple machines <multiple-machines>`"
+msgstr ":ref:`Installation sur des machines multiples <multiple-machines>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:11
+msgid ":ref:`Configuring Archivematica with SSL <SSL-support>`"
+msgstr ":ref:`Configurer Archivematica avec SSL <SSL-support>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:16
+msgid "Install for development"
+msgstr "Installation pour le développement"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:18
+msgid ""
+"The recommended way to install Archivematica for development is with Docker."
+" For instructions on how to deploy Archivematica in Docker containers, see "
+"the `Archivematica Docker repo`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:22
+msgid ""
+"It's also possible to deploy Archivematica using Ansible and Vagrant. For "
+"instructions on how to install Archivematica from a virtual machine, see the"
+" `Ansible & Vagrant installation instructions`_ on the Archivematica wiki. "
+"See also instructions for installation on a virtual machine using Vagrant in"
+" the :ref:`Quick Start Guide <quick-start-install>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:31
+msgid "Installing across multiple machines"
+msgstr "Installation sur des machines multiples"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:33
+msgid ""
+"It is possible to spread Archivematica's processing load across several "
+"machines by installing the following services on separate machines:"
+msgstr ""
+"Il est possible de répartir la charge de traitement d’Archivematica sur "
+"plusieurs machines en installant les services suivants sur des machines "
+"distinctes :"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:36
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:37
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:38
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:40
+msgid "For help, ask on the `Archivematica user forum`_ for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:43
+msgid "Firewall"
+msgstr "Pare-feu"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:45
+msgid ""
+"When installing Archivematica on multiple machines, the various "
+"Archivematica processes must be able to reach each other on the relevant "
+"ports. Your firewall configuration must allow for this."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:49
+msgid ""
+"In particular, please ensure that the Archivematica dashboard can talk to "
+"the Storage Service, and that the pipeline components (i.e., MCPServer, "
+"MCPClient) can talk to Gearman."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:53
+msgid ""
+"In addition, please ensure that the Elasticsearch (``9200``) and MySQL "
+"(``3306``) services are not exposed to the world."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:56
+msgid ""
+"The ports of the Archivematica components and related services are provided "
+"below."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:59
+msgid "Archivematica dashboard: ``80`` (``81`` for RPM-based installs)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:60
+msgid ""
+"Archivematica Storage Service: ``8000`` (``8001`` for RPM-based installs)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:61
+msgid "MySQL: ``3306``"
+msgstr "MySQL : ``3306``"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:62
+msgid "Gearman: ``4730``"
+msgstr "Gearman : ``4730``"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:63
+msgid "SSH: ``22``"
+msgstr "SSH : ``22``"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:64
+msgid "Elasticsearch: ``9200``"
+msgstr "Elasticsearch : ``9200``"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:65
+msgid "NFS: ``2049``"
+msgstr "NFS : ``2049``"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:70
+msgid "Configure Archivematica with SSL"
+msgstr "Configurer Archivematica avec SSL"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:72
+msgid ""
+"Archivematica can be configured for HTTPS following the `sample "
+"configurations for the dashboard`_ and `sample configurations for the "
+"Storage Service`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:76
+msgid ""
+"In order to obtain valid SSL certificates trusted by any browser, you can "
+"use `Let's Encrypt`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:79
+msgid ":ref:`Back to the top <install-advanced>`"
+msgstr ":ref:`Retour en haut de page <install-advanced>`"

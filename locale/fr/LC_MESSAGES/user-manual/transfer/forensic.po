@@ -1,30 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.6\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-08 16:34-0700\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../user-manual/transfer/forensic.rst:5
 msgid "Forensic images"
-msgstr ""
+msgstr "Images disques d'investigation"
 
 #: ../../user-manual/transfer/forensic.rst:8
 msgid "Workflow"
-msgstr ""
+msgstr "Flux de travail"
 
 #: ../../user-manual/transfer/forensic.rst:10
 msgid "**Preconfigured workflow choices**"
@@ -32,92 +32,91 @@ msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:12
 msgid ""
-"If you are processing disk images, you will want to adjust the "
-"Archivematica default configuration options in the Administration tab of "
-"the dashboard for some decision points in the workflow. Archivematica "
-"default is to extract content from any packages, which includes forensic "
-"image formats as well as compressed content like zip files, and to then "
-"delete the package itself (though the metadata and logs for the package "
-"are retained in the metadata and logs). To make these decisions in the "
-"dashboard processing workflow:"
+"If you are processing disk images, you will want to adjust the Archivematica"
+" default configuration options in the Administration tab of the dashboard "
+"for some decision points in the workflow. Archivematica default is to "
+"extract content from any packages, which includes forensic image formats as "
+"well as compressed content like zip files, and to then delete the package "
+"itself (though the metadata and logs for the package are retained in the "
+"metadata and logs). To make these decisions in the dashboard processing "
+"workflow:"
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:20
 msgid ""
-"Deselect 'Extract packages' - If you find you are selecting YES or NO "
-"most of the time, you can preconfigure this choice accordingly to YES or "
-"NO in the administration tab of the dashboard instead."
+"Deselect 'Extract packages' - If you find you are selecting YES or NO most "
+"of the time, you can preconfigure this choice accordingly to YES or NO in "
+"the administration tab of the dashboard instead."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:24
 msgid ""
-"Deselect 'Examine contents' - If you find you are selecting YES or NO "
-"most of the time, you can preconfigure this choice accordingly to YES or "
-"NO in the administration tab of the dashboard instead."
+"Deselect 'Examine contents' - If you find you are selecting YES or NO most "
+"of the time, you can preconfigure this choice accordingly to YES or NO in "
+"the administration tab of the dashboard instead."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:28
 msgid ""
-"Deselect 'Delete packages after extraction' - If you find you are "
-"selecting YES or NO most of the time, you can preconfigure this choice "
-"accordingly to YES or NO in the administration tab of the dashboard "
-"instead."
+"Deselect 'Delete packages after extraction' - If you find you are selecting "
+"YES or NO most of the time, you can preconfigure this choice accordingly to "
+"YES or NO in the administration tab of the dashboard instead."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:34
 msgid ":ref:`Processing configuration <dashboard-processing>`"
-msgstr ""
+msgstr ":ref:`Configuration du traitement <dashboard-processing>`"
 
 #: ../../user-manual/transfer/forensic.rst:38
 msgid "Upload image to dashboard"
-msgstr ""
+msgstr "Télécharger l'image sur le tableau de bord"
 
 #: ../../user-manual/transfer/forensic.rst:40
 msgid ""
-"Select Disk Image type from the drown-down menu on the Transfer tab of "
-"the dashboard."
+"Select Disk Image type from the drown-down menu on the Transfer tab of the "
+"dashboard."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:42
 msgid ""
-"Add metadata from the imaging process if desired by clicking on the "
-"report button."
+"Add metadata from the imaging process if desired by clicking on the report "
+"button."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:50
 msgid "Click on the report button to add metadata"
-msgstr ""
+msgstr "Cliquez sur le bouton de rapport pour ajouter des métadonnées"
 
 #: ../../user-manual/transfer/forensic.rst:53
 msgid ""
-"Enter your metadata and click save before navigating back to the Transfer"
-" tab."
+"Enter your metadata and click save before navigating back to the Transfer "
+"tab."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:61
 msgid ""
-"Fill in the metadata template and click save. Then navigate back to "
-"Transfer to continue."
+"Fill in the metadata template and click save. Then navigate back to Transfer"
+" to continue."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:64
 msgid ""
-"You may begin entering metadata for the next image loading to the "
-"dashboard by clicking on the Add Next button to the right of Start "
-"Transfer."
+"You may begin entering metadata for the next image loading to the dashboard "
+"by clicking on the Add Next button to the right of Start Transfer."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:73
 msgid "Add the metadata for the next image by clicking Add Next"
 msgstr ""
+"Ajoutez des métadonnées à l'image suivante en cliquant Ajoutez à la suivante"
 
 #: ../../user-manual/transfer/forensic.rst:75
 msgid ""
-"After an image is loaded, you can add or edit that metadata using the "
-"icon next to the loaded image below the transfer upload form. If you are "
-"loading multiple images at once, the Add Next button will apply to the "
-"next current upload. This metadata is included as another dmdsec in the "
-"transfer METS.xml."
+"After an image is loaded, you can add or edit that metadata using the icon "
+"next to the loaded image below the transfer upload form. If you are loading "
+"multiple images at once, the Add Next button will apply to the next current "
+"upload. This metadata is included as another dmdsec in the transfer "
+"METS.xml."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:81
@@ -125,36 +124,38 @@ msgid ""
 "Once all images are loaded to the dashboard and all metadata is added, "
 "select Start Transfer."
 msgstr ""
+"Lorsque toutes les images sont chargées sur le tableau de bord et que toutes"
+" les métadonnées ont été ajoutées, sélectionnez Démarrer le transfert"
 
 #: ../../user-manual/transfer/forensic.rst:83
 msgid ""
-"Continue though regular Transfer workflow. We recommend selecting FIDO "
-"for format identification as some images from Kryoflux and raw disk "
-"images can have generic extensions. You can preconfigure Archivematica to"
-" choose FIDO for identification in the Administration tab of the "
-"dashboard when you are signed in as a administrative user."
+"Continue though regular Transfer workflow. We recommend selecting FIDO for "
+"format identification as some images from Kryoflux and raw disk images can "
+"have generic extensions. You can preconfigure Archivematica to choose FIDO "
+"for identification in the Administration tab of the dashboard when you are "
+"signed in as a administrative user."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:85
 msgid ""
-"At the Extract packages micro-service, you can choose YES to extract "
-"content objects from the image. You can choose NO if you would like to "
-"continue processing the image itself without extract its content for "
-"automated analysis. Format policy rules for extraction are set using the "
-"Format Policy Registry in the Preservation Planning tab of the dashboard."
+"At the Extract packages micro-service, you can choose YES to extract content"
+" objects from the image. You can choose NO if you would like to continue "
+"processing the image itself without extract its content for automated "
+"analysis. Format policy rules for extraction are set using the Format Policy"
+" Registry in the Preservation Planning tab of the dashboard."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:87
 msgid ""
-"If you choose YES, Archivematica will also ask you if you'd like to "
-"delete the package itself once extraction of its contents is complete. "
-"Here, you can choose YES or NO."
+"If you choose YES, Archivematica will also ask you if you'd like to delete "
+"the package itself once extraction of its contents is complete. Here, you "
+"can choose YES or NO."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:91
 msgid ""
-"During this workflow, some deviations from standard micro-service "
-"behaviors occur:"
+"During this workflow, some deviations from standard micro-service behaviors "
+"occur:"
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:94
@@ -165,39 +166,38 @@ msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:96
 msgid ""
-"The Examine contents micro-service allows you to choose whether you would"
-" like to run a tool called bulk extractor, which identifies and outputs "
-"text reports about PII information contained in the set of objects. These"
-" reports can be analyzed later using other tools such as BitCurator. In "
-"Archivematica, the reports are contained in the logs folder of the "
-"transfer, and later the logs folder for each SIP that all or part of the "
-"transfer is contained within."
+"The Examine contents micro-service allows you to choose whether you would "
+"like to run a tool called bulk extractor, which identifies and outputs text "
+"reports about PII information contained in the set of objects. These reports"
+" can be analyzed later using other tools such as BitCurator. In "
+"Archivematica, the reports are contained in the logs folder of the transfer,"
+" and later the logs folder for each SIP that all or part of the transfer is "
+"contained within."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:100
 msgid ""
-"This micro-service can be run effectively on ALL transfer types, they do "
-"not have to be digital forensic disk images."
+"This micro-service can be run effectively on ALL transfer types, they do not"
+" have to be digital forensic disk images."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:103
 msgid ""
-"For simple image transfers, continue directly into the Ingest workflow "
-"and finish processing using the standard :ref:`Archivematica processing "
+"For simple image transfers, continue directly into the Ingest workflow and "
+"finish processing using the standard :ref:`Archivematica processing "
 "instructions <ingest>`."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:107
 msgid ""
-"For compound images, send each transfer part to the Transfer backlog at "
-"the end of the transfer workflow. Then, create your SIP from the parts "
-"using the transfer backlog search functionality combined with the "
-":ref:`SIP arrange workflow <arrange-sip>`. Once you've selected your SIP "
-"and entered the Ingest workflow, finish processing using the standard "
-":ref:`Archivematica processing instructions <ingest>`."
+"For compound images, send each transfer part to the Transfer backlog at the "
+"end of the transfer workflow. Then, create your SIP from the parts using the"
+" transfer backlog search functionality combined with the :ref:`SIP arrange "
+"workflow <arrange-sip>`. Once you've selected your SIP and entered the "
+"Ingest workflow, finish processing using the standard :ref:`Archivematica "
+"processing instructions <ingest>`."
 msgstr ""
 
 #: ../../user-manual/transfer/forensic.rst:115
 msgid ":ref:`Back to the top <forensic>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <forensic>`"

@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>, 2018\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/security/security.rst:5
+msgid "Security"
+msgstr "Segurança"
+
+#: ../../admin-manual/security/security.rst:9
+msgid ""
+"Once you've set up Archivematica it's a good practice, for the sake of "
+"security, to change the default passwords."
+msgstr ""
+"Depois de configurar o Archivematica, é uma boa prática, por motivos de "
+"segurança, alterar as senhas padrão."
+
+#: ../../admin-manual/security/security.rst:12
+msgid ""
+"This page outlines various security settings and configurations in "
+"Archivematica."
+msgstr ""
+"Esta página descreve várias instalações e configurações de segurança no "
+"Archivematica."
+
+#: ../../admin-manual/security/security.rst:18
+msgid "Elasticsearch access control"
+msgstr "Controle de acesso Elasticsearch"
+
+#: ../../admin-manual/security/security.rst:20
+msgid ""
+"The only way to limit access to Elasticsearch, currently, is using your "
+"server's firewall configuration. You'll likely want to configure your "
+"server's firewall to limit access to Elasticsearch's TCP/IP port (9200). It "
+"is recommended to only allow access by 127.0.0.1 (the server itself) and the"
+" IPs of any other servers or workstations that should be able to access it."
+msgstr ""
+"A única maneira de limitar o acesso ao Elasticsearch, atualmente, é usar a "
+"configuração de firewall do seu servidor. Você provavelmente desejará "
+"configurar o firewall do seu servidor para limitar o acesso à porta TCP / IP"
+" do Elasticsearch (9200). Recomenda-se que apenas permita o acesso por "
+"127.0.0.1 (o próprio servidor) e os IPs de quaisquer outros servidores ou "
+"estações de trabalho que possam acessá-lo."
+
+#: ../../admin-manual/security/security.rst:28
+msgid ""
+"If you are using AtoM as your access system, remember to perform this task "
+"on your AtoM Elasticsearch index. Your AtoM site is more likely to be a "
+"public- facing IP and therefore this is an important step."
+msgstr ""
+"Se você estiver usando o AtoM como seu sistema de acesso, lembre-se de "
+"executar essa tarefa em seu índice AtoM Elasticsearch. É mais provável que o"
+" seu site AtoM seja um IP voltado para o público e, portanto, esse é um "
+"passo importante."
+
+#: ../../admin-manual/security/security.rst:32
+msgid ""
+"To further enhance your Elasticsearch index's security make the following "
+"changes in your Elasticsearch ``/etc/elasticsearch/elasticsearch.yml`` file:"
+msgstr ""
+"Para melhorar ainda mais a segurança do seu índice Elasticsearch, faça as "
+"seguintes alterações em seu Elasticsearch "
+"``/etc/elasticsearch/elasticsearch.yml`` file:"
+
+#: ../../admin-manual/security/security.rst:40
+msgid "Then, ``/etc/init.d/elasticsearch restart``."
+msgstr "Então, ``/etc/init.d/elasticsearch restart``."
+
+#: ../../admin-manual/security/security.rst:45
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../admin-manual/security/security.rst:47
+msgid ""
+"You should create a new MySQL user or change the password of the default "
+"``archivematica`` MySQL user. The change the password of the default user, "
+"enter the following into the command-line:"
+msgstr ""
+"Você deve criar um novo usuário MySQL ou alterar a senha padrão do "
+"``archivematica`` usuário do MySQL."
+
+#: ../../admin-manual/security/security.rst:57
+msgid ""
+"Once you've done this you can change Archivematica's MySQL database access "
+"credentials by editing these two files:"
+msgstr ""
+"Depois de fazer isso, você pode alterar as credenciais de acesso ao banco de"
+" dados MySQL do Archivematica editando esses dois arquivos:"
+
+#: ../../admin-manual/security/security.rst:60
+msgid ""
+"``/etc/archivematica/archivematicaCommon/dbsettings`` (change the ``user`` "
+"and ``password`` settings)"
+msgstr ""
+"``/etc/archivematica/archivematicaCommon/dbsettings`` (mude as configurações"
+" ``usuário`` e ``senha``)"
+
+#: ../../admin-manual/security/security.rst:63
+msgid ""
+"``/usr/share/archivematica/dashboard/settings/common.py`` (change the "
+"``USER`` and ``PASSWORD`` settings in the ``DATABASES`` section)"
+msgstr ""
+"``/usr/share/archivematica/dashboard/settings/common.py`` (mude as "
+"configurações `` USUÁRIO`` e `` SENHA`` na seção `` BASE DE DADOS``)"
+
+#: ../../admin-manual/security/security.rst:66
+msgid ""
+"Archivematica does not presently support secured MySQL communication so "
+"MySQL should be run locally or on a secure, isolated network. See "
+":issue:`1645`."
+msgstr ""
+"O Archivematica atualmente não suporta comunicação segura com o MySQL, então"
+" o MySQL deve ser executado localmente ou em uma rede segura e isolada. Veja"
+" :problema:`1645`."
+
+#: ../../admin-manual/security/security.rst:72
+msgid "AtoM"
+msgstr "AtoM"
+
+#: ../../admin-manual/security/security.rst:74
+msgid ""
+"In addition to changing the MySQL credentials, if you've also installed AtoM"
+" you'll want to set the password for it as well. Note that after changing "
+"your AtoM credentials you should update the credentials on the :ref:`AtoM "
+"DIP upload administration page <admin-dashboard-atom>` as well."
+msgstr ""
+"Além de alterar as credenciais do MySQL, se você também instalou o AtoM, "
+"também deverá definir a senha para ele. Observe que depois de alterar suas "
+"credenciais AtoM você deve atualizar as credenciais no :ref:`AtoM DIP upload"
+" administration page <admin-dashboard-atom>` também."
+
+#: ../../admin-manual/security/security.rst:82
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/security/security.rst:84
+msgid ""
+"Archivematica relies on the German server for queuing work that needs to be "
+"done. Gearman currently doesn't support secured connections so Gearman "
+"should be run locally or on a secure, isolated network. See :issue:`1345`."
+msgstr ""
+"O Archivematica depende do German para o trabalho de enfileiramento que "
+"precisa ser feito. O Gearman atualmente não suporta conexões seguras, "
+"portanto, o Gearman deve ser executado localmente ou em uma rede segura e "
+"isolada. Veja: problema: `1345`."
+
+#: ../../admin-manual/security/security.rst:91
+msgid "User security"
+msgstr "Segurança do usuário"
+
+#: ../../admin-manual/security/security.rst:93
+msgid ""
+"We added support for two authentication backends in Archivematica 1.7: LDAP "
+"and Shibboleth. Authentication backends provide an extensible system for "
+"when a ``username`` and ``password`` stored with the user model need to be "
+"authenticated against a different service than the default."
+msgstr ""
+"Adicionamos suporte para dois backends de autenticação no Archivematica 1.7:"
+" LDAP e Shibboleth. Os backends de autenticação fornecem um sistema "
+"extensível para quando um ``nome de usuário`` e ``senha`` armazenado com o "
+"modelo do usuário precisam ser autenticados em um serviço diferente do "
+"padrão."
+
+#: ../../admin-manual/security/security.rst:98
+msgid ""
+"This feature relies on the `authentication infrastructure <django-auth-"
+"infra_>`_ provided by the Django web framework. Check out their docs for "
+"more details!"
+msgstr ""
+"Esse recurso depende da infraestrutura de autenticação<django-auth-infra_>`_"
+" fornecido pelo framework web Django. Confira seus docs para mais detalhes!"
+
+#: ../../admin-manual/security/security.rst:103
+msgid ""
+"Please note that this is a new feature as of Archivematica 1.7 that has been"
+" minimally tested outside of the development environment. If you experience "
+"any problems with the feature, please consider creating a `GitHub issue <am-"
+"gh-issues_>`_ or creating a post in the `Archivematica Google Group <am-"
+"google-groups_>`_. The configuration mechanism has some rough edges so it is"
+" recommended for advanced users only."
+msgstr ""
+"Observe que esse é um novo recurso do Archivematica 1.7 que foi testado "
+"minimamente fora do ambiente de desenvolvimento. Se você tiver algum "
+"problema com o recurso, considere a possibilidade de criar uma questão no "
+"GitHub<am-gh-issues_>`_  ou escreva um post no `Archivematica Google Group"
+"<am-google-groups_>`_. O mecanismo de configuração possui algumas arestas, "
+"portanto é recomendado apenas para usuários avançados."
+
+#: ../../admin-manual/security/security.rst:113
+msgid "LDAP setup"
+msgstr " instalação LDAP"
+
+#: ../../admin-manual/security/security.rst:115
+msgid ""
+"`LDAP <ldap_>`_ is a directory service protocol used for, among other "
+"things, authentication and authorization. This feature allows administrators"
+" to deploy the Archivematica Dashboard Django application with LDAP "
+"authentication."
+msgstr ""
+"`LDAP <ldap_>`_ é um protocolo de serviço de diretório usado para, entre "
+"outras coisas, autenticação e autorização. Esse recurso permite que os "
+"administradores implantem o aplicativo Django do painel de controle do "
+"Archivematica com autenticação LDAP."
+
+#: ../../admin-manual/security/security.rst:119
+msgid ""
+"This functionality has not been made available yet in the Storage Service."
+msgstr ""
+"Esta funcionalidade ainda não foi disponibilizada no Serviço de "
+"Armazenamento."
+
+#: ../../admin-manual/security/security.rst:122
+msgid "LDAP backend configuration"
+msgstr "Configuração backend LDAP"
+
+#: ../../admin-manual/security/security.rst:124
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. You can find more"
+" details about this environment string in the `configuration document <am-"
+"dashboard-config_>`_."
+msgstr ""
+"Ativar o backend de autenticação usando a variável de ambiente "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. Você pode "
+"encontrar mais detalhes sobre esta cadeia de ambiente no documento de "
+"configuração <am-dashboard-config_>`_."
+
+#: ../../admin-manual/security/security.rst:129
+msgid ""
+"Customize the ``ldap_auth.py`` settings module as needed. Open the file to "
+"find what are the existing environment variable lookups. You can inject the "
+"configuration via the environment string or changing the settings mode "
+"manually."
+msgstr ""
+"Personalize o módulo de instalação `` ldap_auth.py`` conforme necessário. "
+"Abra o arquivo para localizar quais são as pesquisas de variáveis ​​de "
+"ambiente existentes. Você pode introduzir a configuração através da string "
+"de ambiente ou alterar o modo da instalações manualmente."
+
+#: ../../admin-manual/security/security.rst:134
+#: ../../admin-manual/security/security.rst:155
+msgid "Restart the Archivematica Dashboard."
+msgstr "Reinicie o painel do Archivematica."
+
+#: ../../admin-manual/security/security.rst:139
+msgid "Shibboleth setup"
+msgstr "instalação Shibboleth"
+
+#: ../../admin-manual/security/security.rst:141
+msgid ""
+"`Shibboleth <shibboleth_>`_ is a federated identity solution that provides "
+"Single Sign-On authentication and authorization. This feature allows "
+"administrators to deploy both the Archivematica Dashboard and Storage "
+"Service Django applications with Shibboleth authentication."
+msgstr ""
+"`Shibboleth <shibboleth_>`_ é uma solução de identidade federada que fornece"
+" autenticação e autorização do Single Sign-On. Esse recurso permite que os "
+"administradores implantem os aplicativos Storage Server Django e "
+"Archivematica Dashboard com a autenticação Shibboleth."
+
+#: ../../admin-manual/security/security.rst:147
+msgid "Shibboleth backend configuration in Archivematica Dashboard"
+msgstr "Configuração de backend do Shibboleth no Archivematica Dashboard"
+
+#: ../../admin-manual/security/security.rst:149
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_SHIBBOLETH_AUTHENTICATION``. You can find more details about this "
+"environment string in the `configuration document <am-dashboard-config_>`_."
+msgstr ""
+"Ativar o backend de autenticação usando a variável de "
+"ambiente``SS_SHIBBOLETH_AUTHENTICATION``. Você pode encontrar mais detalhes "
+"sobre este srting de ambiente no `documento de configuração <am-dashboard-"
+"config_>`_."
+
+#: ../../admin-manual/security/security.rst:153
+msgid "Customize the ``shibboleth_auth.py`` settings module as needed."
+msgstr ""
+"Personalize o ``shibboleth_auth.py`` módulo de instalações, conforme "
+"necessário."
+
+#: ../../admin-manual/security/security.rst:158
+msgid "Shibboleth backend configuration in Storage Service"
+msgstr "Configuração de backend do Shibboleth no serviço de armazenamento"
+
+#: ../../admin-manual/security/security.rst:160
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_SHIBBOLETH_AUTHENTICATION``. Assign a string value ``true`` to enable "
+"it."
+msgstr ""
+"Habilitar o backend de autenticação usando a variável de ambiente "
+"``SS_SHIBBOLETH_AUTHENTICATION``. Atribua um valor de string ``true`` para "
+"habilitar."
+
+#: ../../admin-manual/security/security.rst:164
+msgid "Customize the ``base.py`` settings module as needed."
+msgstr "Personalize o módulo de instalação ``base.py`` conforme necessário."
+
+#: ../../admin-manual/security/security.rst:166
+msgid "Restart the Storage Service."
+msgstr "Reinicie o serviço de armazenamento."
+
+#: ../../admin-manual/security/security.rst:171
+msgid "CA certificates"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:173
+msgid ""
+"Archivematica uses a HTTP library called `Requests <requests_>`_. There are "
+"`two main approaches <requests-cas_>`_ for dealing with the updates of the "
+"root CAs sets:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:178
+msgid "Upgrade the ``certifi`` package frequently"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:180
+msgid ""
+"There are three virtual environments where Requests is used: MCPClient, "
+"Dashboard and Storage Service. This is how you can update ``certifi`` across"
+" the three environments:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:190
+msgid ""
+"The services need to be restarted after the update, for example if you are "
+"using systemd:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:200
+msgid "Use the environment string REQUEST_CA_BUNDLE"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:202
+msgid ""
+"Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the "
+"administrator can indicate a custom bundle which could be the system's CA "
+"bundle."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:206
+msgid ""
+"The Ubuntu system's CA bundle file is :file:`/etc/ssl/certs/ca-"
+"certificates.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:208
+msgid ""
+"The CentOS system's CA bundle file is :file:`/etc/pki/tls/certs/ca-"
+"bundle.crt`."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:211
+msgid ""
+"On Ubuntu, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:218
+msgid ""
+"On CentOS, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:226
+msgid "Trusting additional CAs"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:228
+msgid ""
+"If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional CAs."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:230
+msgid "On CentOS:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:232
+msgid ""
+"Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your "
+"CentOS machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:234
+msgid "Run the `update-ca-trust extract` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:236
+msgid ""
+"The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that "
+"refers to the consolidated output created by the ``update-ca-trust`` "
+"command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:239
+msgid "On Ubuntu:"
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:241
+msgid ""
+"Copy the .crt file to :file:`/usr/local/share/ca-certificates` on your "
+"Ubuntu machine."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:243
+msgid "Run the `update-ca-certificates` command."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:245
+msgid ""
+"This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file."
+msgstr ""
+
+#: ../../admin-manual/security/security.rst:248
+msgid ":ref:`Back to the top <security>`"
+msgstr ":ref:`Voltar ao topo <security>`"

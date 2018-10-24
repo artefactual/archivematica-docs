@@ -9,14 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Archivematica 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../getting-started/troubleshooting/faq.rst:5
 msgid "FAQ"
@@ -283,21 +283,22 @@ msgstr ""
 #: ../../getting-started/troubleshooting/faq.rst:151
 msgid ""
 "Errors are indicated in the Archivematica dashboard during processing. "
-"Alerts can also be emailed to designated users and certain types of error"
-" reports are retained in the Administration tab of the dashboard. The "
-"corrective action will depend on the nature of the error; examples "
-"include rejecting the transfer or SIP and starting again, accepting the "
-"error and continuing the process, taking corrective action and re-running"
-" the micro-service or troubleshooting the issue through the command-line."
+"Alerts can also be :ref:`emailed <email-config>` to designated users and "
+"certain types of error reports  are retained in the Administration tab of"
+" the dashboard. The corrective action  will depend on the nature of the "
+"error; examples include rejecting the transfer  or SIP and starting "
+"again, accepting the error and continuing the process,  taking corrective"
+" action and re-running the micro-service or troubleshooting  the issue "
+"through the command-line."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:159
+#: ../../getting-started/troubleshooting/faq.rst:160
 msgid ""
 "**I need to use Archivematica in conjunction with another system (for "
 "access, storage, etc). How can I integrate the two systems?**"
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:162
+#: ../../getting-started/troubleshooting/faq.rst:163
 msgid ""
 "The list of systems and tools that Archivematica is integrated with grows"
 " with almost every release. If you are interested in having Archivematica"
@@ -306,7 +307,7 @@ msgid ""
 " here are a few ideas:"
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:166
+#: ../../getting-started/troubleshooting/faq.rst:167
 msgid ""
 "Post to the `user forum "
 "<https://groups.gtoogle.com/forum/#!forum/archivematica>`_ and ask "
@@ -314,7 +315,7 @@ msgid ""
 " Archivematica and the other system."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:170
+#: ../../getting-started/troubleshooting/faq.rst:171
 msgid ""
 "If you have software development skills, consider writing to code "
 "required to integrate the two systems. If practical, we would gladly "
@@ -322,7 +323,7 @@ msgid ""
 "<https://www.archivematica.org/wiki/Contribute_code>`_ ."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:175
+#: ../../getting-started/troubleshooting/faq.rst:176
 msgid ""
 "Contract Artefactual Systems to `write the code "
 "<http://www.artefactual.com/services/development/>`_. We will work with "
@@ -330,7 +331,24 @@ msgid ""
 "next software release, for the entire community's benefit."
 msgstr ""
 
-#: ../../getting-started/troubleshooting/faq.rst:182
+#: ../../getting-started/troubleshooting/faq.rst:183
 msgid ":ref:`Back to the top <faq>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Errors are indicated in the "
+#~ "Archivematica dashboard during processing. "
+#~ "Alerts can also be emailed to "
+#~ "designated users and certain types of"
+#~ " error reports are retained in the"
+#~ " Administration tab of the dashboard. "
+#~ "The corrective action will depend on "
+#~ "the nature of the error; examples "
+#~ "include rejecting the transfer or SIP"
+#~ " and starting again, accepting the "
+#~ "error and continuing the process, taking"
+#~ " corrective action and re-running the"
+#~ " micro-service or troubleshooting the "
+#~ "issue through the command-line."
+#~ msgstr ""
 

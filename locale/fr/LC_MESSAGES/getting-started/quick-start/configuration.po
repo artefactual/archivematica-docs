@@ -1,87 +1,89 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2016, Artefactual Systems Inc.
-# This file is distributed under the same license as the Archivematica
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Canadian Council of Archives <cca@archivescanada.ca>, 2017
+# Isabelle Alain <ialain@archivescanada.ca>, 2017-2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-05-14 18:09+0000\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>\n"
+"Language-Team: French (http://www.transifex.com/artefactual/archivematica-docs/language/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../../getting-started/quick-start/configuration.rst:4
 msgid "Configuration"
-msgstr ""
+msgstr "Configuration"
 
 #: ../../getting-started/quick-start/configuration.rst:7
 msgid "Workflow settings"
-msgstr ""
+msgstr "Paramètres du flux de travail"
 
 #: ../../getting-started/quick-start/configuration.rst:9
 msgid ""
-"Many workflow choices are pre-configurable through the Administration tab"
-" of the Dashboard. Please see :ref:`Processing configuration <dashboard-"
+"Many workflow choices are pre-configurable through the Administration tab of"
+" the Dashboard. Please see :ref:`Processing configuration <dashboard-"
 "processing>`."
-msgstr ""
+msgstr "Plusieurs des choix du flux de travail sont préconfigurables via l'onglet Administration du tableau de bord. Voir :ref:`Configuration du traitement <dashboard-processing>`."
 
 #: ../../getting-started/quick-start/configuration.rst:12
 msgid ""
 "Some users have found processing economies by installing multiple "
 "Archivematica pipelines on separate VM's, each with its own processing "
-"configuration specific to the type of material being processed through "
-"each pipeline."
-msgstr ""
+"configuration specific to the type of material being processed through each "
+"pipeline."
+msgstr "Certains utilisateurs arrivent à sauver du temps de traitement en installant plusieurs pipelines Archivematica sur des machines virtuelles distinctes, chacune ayant sa propre configuration de traitement spécifique au type de matériel traité par chaque pipeline."
 
 #: ../../getting-started/quick-start/configuration.rst:17
 msgid "Integration settings"
-msgstr ""
+msgstr "Paramètres d'intégration"
 
 #: ../../getting-started/quick-start/configuration.rst:19
 msgid ""
 "Archivematica integrates with a number of different access and storage "
 "systems. Please see:"
-msgstr ""
+msgstr "Archivematica est conçu pour s'intégrer avec une variété de systèmes d'accès et de stockage. Voir: "
 
 #: ../../getting-started/quick-start/configuration.rst:22
 msgid ":ref:`AtoM <admin-dashboard-atom>`"
-msgstr ""
+msgstr ":ref:`AtoM <admin-dashboard-atom>`"
 
 #: ../../getting-started/quick-start/configuration.rst:23
 msgid ":ref:`ContentDM <contentdm>`"
-msgstr ""
+msgstr ":ref:`ContentDM <contentdm>`"
 
 #: ../../getting-started/quick-start/configuration.rst:24
 msgid ":ref:`Archivist's Toolkit <dashboard-AT>`"
-msgstr ""
+msgstr ":ref:`Archivists' Toolkit <dashboard-AT>`"
 
 #: ../../getting-started/quick-start/configuration.rst:25
 msgid ":ref:`DSpace <dspace>`"
-msgstr ""
+msgstr ":ref:`DSpace <dspace>`"
 
 #: ../../getting-started/quick-start/configuration.rst:26
-msgid ":ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)"
-msgstr ""
+msgid ""
+":ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)"
+msgstr ":ref:`LOCKSS <storageService:admin-lockss>` (Documentation de l'administrateur)"
 
 #: ../../getting-started/quick-start/configuration.rst:27
 msgid "Duracloud (coming soon)"
-msgstr ""
+msgstr "Duracloud (à venir)"
 
 #: ../../getting-started/quick-start/configuration.rst:28
 msgid "Arkivum (coming soon)"
-msgstr ""
+msgstr "Arkivum (à venir)"
 
 #: ../../getting-started/quick-start/configuration.rst:31
 msgid "Add/edit users and passwords"
-msgstr ""
+msgstr "Ajouter/modifier les utilisateurs et mots de passe"
 
 #: ../../getting-started/quick-start/configuration.rst:33
 msgid ""
@@ -89,29 +91,28 @@ msgid ""
 "administrative user does not need to be a systems administrator and can "
 "perform this function within the Archivematica dashboard Administration "
 "page."
-msgstr ""
+msgstr "Les utilisateurs administratifs peuvent ajouter/modifier les comptes utilisateurs et mettre à jour les mots de passe. Un utilisateur administratif n'a pas besoin d'être administrateur système et peut exécuter cette fonction dans la page d'administration du tableau de bord Archivematica."
 
 #: ../../getting-started/quick-start/configuration.rst:37
 msgid "Please see :ref:`Users <dashboard-premis>`."
-msgstr ""
+msgstr "Voir :ref:`Utilisateurs <dashboard-premis>`."
 
 #: ../../getting-started/quick-start/configuration.rst:40
 msgid "Add/edit PREMIS agents"
-msgstr ""
+msgstr "Ajouter/modifier les agents PREMIS"
 
 #: ../../getting-started/quick-start/configuration.rst:42
 msgid ""
-"Administrative users can add/edit PREMIS agents, which are recorded in "
-"the METS file to identify the agency performing digital preservation "
-"events. This should be configured before processing begins, and can be "
-"set through Archivematica dashboard Administration page."
-msgstr ""
+"Administrative users can add/edit PREMIS agents, which are recorded in the "
+"METS file to identify the agency performing digital preservation events. "
+"This should be configured before processing begins, and can be set through "
+"Archivematica dashboard Administration page."
+msgstr "Les utilisateurs administratifs peuvent ajouter/modifier les agents PREMIS qui sont enregistrés dans le fichier METS afin d’identifier l’organisation qui exécute les événements de préservation numérique. Cette configuration devrait être effectuée avant le début du traitement via la page d'administration du tableau de bord Archivematica."
 
 #: ../../getting-started/quick-start/configuration.rst:47
 msgid "Please see :ref:`PREMIS agent <dashboard-premis>`."
-msgstr ""
+msgstr "Voir :ref:`Agent PREMIS  <dashboard-premis>`."
 
 #: ../../getting-started/quick-start/configuration.rst:49
 msgid ":ref:`Back to the top <configuration>`"
-msgstr ""
-
+msgstr ":ref:`Retour en haut de page <configuration>`"

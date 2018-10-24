@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# 
+# Translators:
+# Cristina Ruth Santos <cristiruth@an.gov.br>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica docs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: 2018-03-26 18:23+0000\n"
+"Last-Translator: Cristina Ruth Santos <cristiruth@an.gov.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/artefactual/archivematica-docs/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../getting-started/overview/intro.rst:5
+msgid "What is Archivematica?"
+msgstr "O que é o Archivematica?"
+
+#: ../../getting-started/overview/intro.rst:7
+msgid ""
+"Archivematica is a free and open-source digital preservation system that is "
+"designed to maintain standards-based, long-term access to collections of "
+"digital objects. Archivematica is packaged with the web-based content "
+"management system AtoM for access to your digital objects."
+msgstr "O Archivematica é um sistema de preservação digital gratuito e de código aberto que foi projetado para manter o acesso de longo prazo baseado em normas para coleções de objetos digitais. O Archivematica é empacotado com o sistema de gerenciamento de conteúdo em plataforma web AtoM para acesso aos seus objetos digitais."
+
+#: ../../getting-started/overview/intro.rst:16
+msgid "Open source OAIS"
+msgstr "OAIS de código aberto"
+
+#: ../../getting-started/overview/intro.rst:23
+msgid ""
+"Archivematica provides an integrated suite of free and open-source tools "
+"that allows users to process digital objects from ingest to archival storage"
+" and access in compliance with the `ISO-OAIS "
+"<http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ functional"
+" model and other digital preservation standards and best practices. All of "
+"the Archivematica code is released under a `GNU Affero General Public "
+"License <http://www.gnu.org/licenses/agpl-3.0.en.html>`_ and Archivematica "
+"documentation is released under a `Creative Commons Attribution-ShareAlike "
+"4.0 International License <http://creativecommons.org/licenses/by-"
+"sa/4.0/>`_."
+msgstr "O Archivematica fornece um conjunto integrado de ferramentas gratuitas e de código aberto que permite aos usuários processar objetos digitais desde o armazenamento até o arquivamento e acesso em conformidade com o `ISO-OAIS<http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ modelo funcional e outros padrões de preservação digital e melhores práticas. Todo o código do Archivematica é liberado sob uma `Licença Pública Geral GNU Affero  <http://www.gnu.org/licenses/agpl-3.0.en.html>`_ e documentação Archivematica é liberada sob uma `Licença Creative Commons Attribution-ShareAlikel 4.0 Internacional <http://creativecommons.org/licenses/by-sa/4.0/> `_."
+
+#: ../../getting-started/overview/intro.rst:36
+msgid "Lowering the barriers to best-practice digital preservation"
+msgstr "Reduzindo as barreiras à preservação digital das melhores práticas"
+
+#: ../../getting-started/overview/intro.rst:38
+msgid ""
+"The goal of the Archivematica project is to give archivists and librarians "
+"with limited technical and financial capacity the tools, methodology and "
+"confidence to begin preserving digital information today. The project has "
+"conducted a thorough OAIS use case and process analysis to synthesize the "
+"specific, concrete steps that must be carried out to comply with the OAIS "
+"functional model from Ingest to Access. Through deployment experiences and "
+"user feedback, the project has expanded even beyond OAIS to address analysis"
+" and arrangement of transferred digital objects into SIPs and allow for "
+"archival appraisal at multiple decision points. Wherever possible, these "
+"requirements are assigned to software tools within the Archivematica system."
+" If it is not possible to automate these steps in the current system "
+"iteration, they are incorporated and documented into a manual procedure to "
+"be carried out by the end user. This ensures that the entire set of "
+"preservation requirements is being carried out, even in the early, pre 1.0 "
+"system releases. In short, the system is conceptualized as an integrated "
+"whole of technology, people and procedures, not just a set of software "
+"tools. For institutions that want technical assistance to install and "
+"customize Archivematica, optional technical support services are provided by"
+" Artefactual Systems."
+msgstr "O objetivo do projeto Archivematica é dar aos arquivistas e bibliotecários com capacidade técnica e financeira limitada as ferramentas, metodologia e confiança para começar a preservar a informação digital hoje. O projeto conduziu um caso de uso OAIS minucioso e uma análise de processo para sintetizar as etapas específicas e concretas que devem ser realizadas para cumprir o modelo funcional OAIS de Ingestão para o Acesso. Por meio de experiências de implantação e feedback do usuário, o projeto expandiu-se até mesmo além do OAIS para abordar a análise e a organização de objetos digitais transferidos em SIPs e permitir a avaliação de arquivamento em vários pontos de decisão. Sempre que possível, esses requisitos são atribuídos a ferramentas de software no sistema Archivematica. Se não for possível automatizar essas etapas na interação atual do sistema, elas serão incorporadas e documentadas em um procedimento manual a ser executado pelo usuário final. Isso garante que todo o conjunto de requisitos de preservação esteja sendo executado, mesmo nos primeiros lançamentos do sistema pré 1.0. Em suma, o sistema é concebido como um todo integrado de tecnologia, pessoas e procedimentos, não apenas um conjunto de ferramentas de software. Para instituições que desejam assistência técnica para instalar e personalizar o Archivematica, os serviços de suporte técnico opcionais são fornecidos pela Artefactual Systems."
+
+#: ../../getting-started/overview/intro.rst:57
+msgid ""
+"All of the software, documentation and development infrastructure are "
+"available free of charge and released under AGPL and Creative Commons "
+"licenses to give users the freedom to study, adapt and re-distribute these "
+"resources as best suits them. Rather than spend precious funding on "
+"proprietary software licenses that restrict these freedoms, the "
+"Archivematica project encourages memory institutions tackling the challenges"
+" of digital preservation to pool their financial and technical resources in "
+"projects like Archivematica to maximize their long-term investments for the "
+"benefit of their colleagues, users and professional community as a whole."
+msgstr "Toda a infra-estrutura de software, documentação e desenvolvimento está disponível gratuitamente e é liberada sob as licenças AGPL e Creative Commons para dar aos usuários a liberdade de estudar, adaptar e redistribuir esses recursos da forma que melhor lhes convier. Em vez de gastar financiamentos preciosos em licenças proprietárias de software que restringem essas liberdades, o projeto Archivematica incentiva entidades de memória a enfrentar os desafios da preservação digital para reunir seus recursos financeiros e técnicos em projetos como o Archivematica para maximizar seus investimentos de longo prazo em benefício de seus colegas, usuários e comunidade profissional como um todo."
+
+#: ../../getting-started/overview/intro.rst:69
+msgid ":ref:`Back to the top <intro>`"
+msgstr ":ref: `Voltar ao topo<intro>`"

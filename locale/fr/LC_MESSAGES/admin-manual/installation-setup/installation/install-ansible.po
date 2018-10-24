@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Isabelle Alain <ialain@archivescanada.ca>, 2018\n"
+"Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:5
+msgid "Automated installation using Ansible"
+msgstr "Installation automatisée avec Ansible"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:7
+msgid ""
+"Installing from source using Ansible is the preferred method for new "
+"installations on Ubuntu."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:10
+msgid ""
+"It is assumed here that your host operating system is Ubuntu. This can be "
+"modified for a different Unix based operating system, such as Mac OS X or "
+"another Linux distribution such as CentOS. These instructions will not work "
+"if you are using Windows as the host OS. For Windows installations you can "
+"create a virtual machine and follow the manual install instructions."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:16
+msgid ""
+"The Ansible roles referenced here can be used in production deployments by "
+"creating your own Ansible playbook to run them. See the `deploy-pub`_ repo "
+"for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:20
+msgid "*On this page*"
+msgstr "*Sur cette page*"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:22
+msgid ":ref:`Installation instructions <ansible-instructions>`"
+msgstr ":ref:`Instructions d'installation<ansible-instructions>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:23
+msgid ":ref:`Post-installation configuration <ansible-post-install-config>`"
+msgstr ":ref:`Configuration post-installation <ansible-post-install-config>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:28
+msgid "Instructions"
+msgstr "Instructions"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:32
+msgid ""
+"These instructions assume that you have a Python package manager, such as "
+"pip, installed on your system. From pip, you should be able to install a "
+"released version of Ansible."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:38
+msgid ""
+"If you would like to install :ref:`Archivematica without Elasticsearch "
+"<install-elasticsearch>`, you must first change the role variable "
+"``archivematica_src_search_enabled`` to ``false``. For more information "
+"about Archivematica's Ansible role, please see the `ansible-archivematica-"
+"src`_ repo."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:44
+msgid "Install VirtualBox, Vagrant, and Ansible."
+msgstr "Installer VirtualBox, Vagrant et Ansible."
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:51
+msgid "Vagrant must be at least version 1.5. Check your version with:"
+msgstr ""
+"La version Vagrant doit être au moins 1.5. Vous pouvez vérifier votre "
+"version ainsi :"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:57
+msgid ""
+"If it is not up to date, you can download the newest version from the "
+"`Vagrant website`_ ."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:60
+msgid "Checkout the deployment repo:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:66
+msgid "Download the Ansible roles:"
+msgstr "Télécharger les rôles Ansible :"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:70
+msgid "Ubuntu 14.04 (Trusty):"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:79
+msgid "Ubuntu 16.04 (Xenial):"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:88
+msgid "Ubuntu 18.04 (Bionic) **EXPERIMENTAL**:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:95
+msgid "Create the virtual machine and provision it:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:103
+msgid ""
+"This will take a while. It depends on your computer, but it could take up to"
+" an hour. Your computer may be very slow while Archivematica is being "
+"provisioned - be sure to save any work and be prepared to step away from "
+"your computer while Archivematica is building."
+msgstr ""
+"Cette étape prendra du temps. Cela dépend de votre ordinateur, mais cela "
+"peut prendre jusqu'à une heure. Votre ordinateur peut être très lent alors "
+"de l’assemblage d’Archivematica - assurez-vous donc d'enregistrer tout "
+"travail et soyez prêt à vous éloigner de votre ordinateur pendant la "
+"construction d'Archivematica."
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:108
+msgid "If there are any errors, reprovisioning the VM often fixes the issue."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:114
+msgid "Once it's done provisioning, you can log in to your virtual machine:"
+msgstr ""
+"Lorsque l’assemblage est terminé, vous pouvez accéder à votre machine "
+"virtuelle :"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:120
+msgid ""
+"You can also access your Archivematica instance through the web browser:"
+msgstr ""
+"Vous pouvez également accéder à votre milieu Archivematica à l’aide de votre"
+" navigateur :"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:122
+msgid ""
+"Archivematica: `<http://192.168.168.192>`_. Username & password configured "
+"on installation."
+msgstr ""
+"Archivematica : `<http://192.168.168.192>`_. Nom d'utilisateur et mot de "
+"passe configurés durant l'installation."
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:124
+msgid ""
+"Storage Service: `<http://192.168.168.192:8000>`_. Username & password "
+"configured on installation."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:130
+msgid "Post-install configuration"
+msgstr "Configuration post-installation"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:132
+msgid ""
+"After successfully completing a new installation, follow these steps to "
+"complete the configuration of your new server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:135
+msgid ""
+"The Storage Service runs as a separate web application from the "
+"Archivematica dashboard. The Storage Service is exposed on port 8000 by "
+"default for Ansible installs. Use your web browser to navigate to the "
+"Storage Service at the IP address of the machine you have been installing "
+"on, e.g., ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or "
+"``http://127.0.0.1:8000`` if this is a local development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:142
+msgid ""
+"If you are using an IP address or fully-qualified domain name instead of "
+"localhost, you will need to configure your firewall rules and allow access "
+"only to ports 80 and 8000 for Archivematica usage."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:146
+msgid ""
+"The Storage Service has its own set of users. Create a new user with full "
+"admin privileges: ::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:159
+msgid ""
+"After you have created this user, the API key will be generated "
+"automatically, and that key will connect the Archivematica pipeline to the "
+"Storage Service API. The API key can be found via the web interface (go to "
+"**Administration > Users**)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:161
+msgid ""
+"To finish the installation, use your web browser to navigate to the "
+"Archivematica dashboard using the IP address of the machine on which you "
+"have been installing, e.g., ``http://<MY-IP-ADDR>:80`` (or "
+"``http://localhost:80`` or ``http://127.0.0.1:80`` if this is a local "
+"development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:166
+msgid ""
+"At the Welcome page, create an administrative user for the Archivematica "
+"pipeline by entering the organization name, the organization identifier, "
+"username, email, and password."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:170
+msgid ""
+"On the next screen, connect your pipeline to the Storage Service by entering"
+" the Storage Service URL and username, and by pasting in the API key that "
+"you copied in Step (2)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:174
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on the "
+"same machine, then you should supply ``http://127.0.0.1:8000`` as the "
+"Storage Service URL at this screen."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:177
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on "
+"different nodes (servers), then you should use the IP address or fully-"
+"qualified domain name of your Storage Service instance, e.g., ``http://<MY-"
+"IP-ADDR>:8000`` *and* you must ensure that any firewall rules (i.e., "
+"iptables, ufw, AWS security groups, etc.) are configured to allow requests "
+"from your dashboard IP to your Storage Service IP on the appropriate port."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:185
+msgid ":ref:`Back to the top <install-ansible>`"
+msgstr ":ref:`Retour en haut de page <install-ansible>`"

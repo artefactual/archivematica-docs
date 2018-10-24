@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/artefactual/teams/1506/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:5
+msgid "Manually Installing Archivematica on Ubuntu"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:7
+msgid ""
+"Archivematica packages are hosted at packages.archivematica.org as a central"
+" place to store packages for multiple operating systems. Packages for both "
+"Ubuntu 14.04 and 16.04 are available."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:11
+msgid ""
+"Manual installation using packages on Ubuntu is not officially supported. "
+"Please see :ref:`Instructions for new installation <instructions>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:14
+msgid ""
+"Ubuntu 14.04 is currently in maintenance updates only mode and will cease to"
+" be officially supported in April 2019. We recommend upgrading to Ubuntu "
+"16.04."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:18
+msgid "*On this page*"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:20
+msgid ""
+":ref:`Installation instructions for Ubuntu 16.04 (Xenial) <xenial-"
+"instructions>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:21
+msgid ""
+":ref:`Installation instructions for Ubuntu 14.04 (Trusty) <trusty-"
+"instructions>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:22
+msgid ":ref:`Post-installation configuration <ubuntu-post-install-config>`"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:27
+msgid "Ubuntu 16.04 (Xenial) installation instructions"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:29
+msgid "Use these commands to install the repositories:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:37
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:190
+msgid ""
+"Add Elasticsearch package source (optional). Elasticsearch comes from its "
+"own package repository."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:40
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:59
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:143
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:193
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:212
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:299
+msgid ""
+"Skip this step if you are planning to run Archivematica in indexless mode "
+"(without Elasticsearch)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:48
+msgid ""
+"Update to the most recent OS release - for Xenial, this is 16.04.4. This "
+"step will also fetch a list of the software from the package repositories "
+"you just added to your system."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:57
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:210
+msgid "Install Elasticsearch (optional)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:66
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:219
+msgid "Install the Storage Service package."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:72
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:225
+msgid "Configure the Storage Service."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:79
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:232
+msgid ""
+"If you are planning to use the `Sword API`_ of the Archivematica Storage "
+"Service, then (due to a `known issue`_), you must instruct Gunicorn to use "
+"the ``sync`` worker class:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:87
+msgid ""
+"Update ``pip``. This is used to install Python dependencies for both the "
+"Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, "
+"but is still a good idea to get the most recent version of ``pip``."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:95
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:252
+msgid ""
+"Install the Archivematica packages. The order of installation is important -"
+" the archivematica-mcp-server package must be installed before the dashboard"
+" package. While it is possible to install the archivematica-mcp-client "
+"package on a separate machine, that configuration is not documented in these"
+" instructions."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:101
+msgid ""
+"The archivematica-mcp-server package will install MySQL and configure the "
+"database used by Archivematica. Depending on the version of MySQL that is "
+"installed, the interfaces that you see may differ slightly."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:105
+msgid ""
+"When you are prompted to create a password for the archivematica-mcp-server,"
+" you must use ``demo`` as the password during the install process. The "
+"password can be changed after the installation is complete."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:109
+msgid ""
+"FITS is installed as a prerequisite due to a circular dependencies problem "
+"that arises only on Ubuntu 14.04."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:119
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:275
+msgid ""
+"Configure the Archivematica components (optional). There are a number of "
+"environment variables that Archivematica recognizes which can be used to "
+"alter how it is configured. For the full list, see the `Dashboard install "
+"README`_, the `MCPClient install README`_, and the `MCPServer install "
+"README`_."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:125
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:281
+msgid ""
+"If you are planning on running Archivematica in indexless mode (i.e. without"
+" Elasticsearch), then modify the relevant systemd EnvironmentFile files by "
+"adding lines that set the relevant environment variables to ``false``:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:135
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:291
+msgid "Configure the dashboard."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:141
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:297
+msgid "Start Elasticsearch (optional)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:151
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:307
+msgid "Start the remaining services"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:166
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:321
+msgid "If you have trouble with the gearman command try restarting it:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:172
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:344
+msgid ""
+"Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:177
+msgid "Ubuntu 14.04 (Trusty) installation instructions"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:179
+msgid "Add packages.archivematica.org to your list of trusted repositories."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:181
+msgid "Run these three commands to install the repositories:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:201
+msgid ""
+"Update to the most recent OS release - for Trusty, this is 14.04.5. This "
+"step will also fetch a list of the software from the package repositories "
+"you just added to your system."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:240
+msgid ""
+"Update ``pip``. This is used to install Python dependencies for both the "
+"Storage Service and the Dashboard. There is a `known issue with pip`_ on "
+"Ubuntu 14.04 that makes this step necessary."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:248
+msgid ""
+"Notice that we are using ``pip 9.0.3``, this is important - see `issue "
+"#1065`_ for more details."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:257
+msgid ""
+"The archivematica-mcp-server package will install MySQL and configure the "
+"database used by Archivematica. Depending on the version of MySQL that gets "
+"installed the prompts you will see may differ. In all cases, you will be "
+"prompted to create a password for the 'root' user. Keep note of the password"
+" you create. On Ubuntu 14.04, MySQL 5.5 is installed, and the default "
+"'archivematica' database user is automatically created with a default "
+"password of 'demo'. The password can be changed after the installation is "
+"complete."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:265
+msgid ""
+"The FITS package needs to be installed as a prerequisite, due to a circular "
+"dependencies problem that arises only on Ubuntu 14.04."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:327
+msgid "Configure your firewall (if applicable)"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:329
+msgid ""
+"On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated "
+"Firewall). To see the firewall status, enter:"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:336
+msgid ""
+"If ufw is active, you must ensure that it is not blocking the ports used by "
+"the dashboard and the Storage Service, i.e., 80 and 8000."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:349
+msgid "Post-install configuration"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:351
+msgid ""
+"After successfully completing a new installation, follow these steps to "
+"complete the configuration of your new server."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:354
+msgid ""
+"The Storage Service runs as a separate web application from the "
+"Archivematica dashboard. The Storage Service is exposed on port 8000 by "
+"default for Ubuntu package installs. Use your web browser to navigate to the"
+" Storage Service at the IP address of the machine you have been installing "
+"on, e.g., ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or "
+"``http://127.0.0.1:8000`` if this is a local development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:361
+msgid ""
+"If you are using an IP address or fully-qualified domain name instead of "
+"localhost, you will need to configure your firewall rules and allow access "
+"only to ports 80 and 8000 for Archivematica usage."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:365
+msgid ""
+"The Storage Service has its own set of users. Navigate to **Administration >"
+" Users** and add at least one administrative user: ::"
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:378
+msgid ""
+"After you have created this user an API key will be generated that will "
+"connect the Archivematica pipeline to the Storage Service API. Click edit to"
+" see the new user's details. The API key will be found at the bottom of the "
+"page. Copy this to your clipboard as it will be used later on in the post-"
+"installation configuration."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:385
+msgid ""
+"It is recommended that you also modify the test user and change the default "
+"password. This will also result in a new API key for the test user but that "
+"does not need to be copied to the clipboard in this instance."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:390
+msgid ""
+"To finish the installation, use your web browser to navigate to the "
+"Archivematica dashboard using the IP address of the machine on which you "
+"have been installing, e.g., ``http://<MY-IP-ADDR>:80`` (or "
+"``http://localhost:80`` or ``http://127.0.0.1:80`` if this is a local "
+"development setup)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:395
+msgid ""
+"At the Welcome page, create an administrative user for the Archivematica "
+"pipeline by entering the organization name, the organization identifier, "
+"username, email, and password."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:399
+msgid ""
+"On the next screen, connect your pipeline to the Storage Service by entering"
+" the Storage Service URL and username, and by pasting in the API key that "
+"you copied in Step (2)."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:403
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on the "
+"same machine, then you should supply ``http://127.0.0.1:8000`` as the "
+"Storage Service URL at this screen."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:406
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on "
+"different nodes (servers), then you should use the IP address or fully-"
+"qualified domain name of your Storage Service instance, e.g., ``http://<MY-"
+"IP-ADDR>:8000`` *and* you must ensure that any firewall rules (i.e., "
+"iptables, ufw, AWS security groups, etc.) are configured to allow requests "
+"from your dashboard IP to your Storage Service IP on the appropriate port."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:414
+msgid ":ref:`Back to the top <install-pkg-ubuntu>`"
+msgstr ""

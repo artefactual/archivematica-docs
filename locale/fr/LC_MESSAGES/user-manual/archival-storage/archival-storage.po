@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Archivematica 1.7\n"
+"Project-Id-Version: Archivematica 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 07:11-0800\n"
+"POT-Creation-Date: 2018-10-24 12:33-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Canadian Council of Archives <cca@archivescanada.ca>, 2017\n"
 "Language-Team: French (https://www.transifex.com/artefactual/teams/1506/fr/)\n"
@@ -25,45 +25,55 @@ msgstr "Dossier de stockage des archives"
 #: ../../user-manual/archival-storage/archival-storage.rst:7
 msgid "During archival storage, the AIP is moved into its storage repository."
 msgstr ""
+"Lors du stockage des archives, l'AIP est transféré dans son répertoire de "
+"stockage."
 
 #: ../../user-manual/archival-storage/archival-storage.rst:9
 msgid ""
 "Should you run into an error during archival storage, please see :ref:`Error"
 " handling <error-handling>`."
 msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:12
-msgid "*On this page*"
-msgstr "*Sur cette page*"
+"Si une erreur se produit durant le stockage des archives, consultez "
+":ref:`Gestion des erreurs <error-handling>`."
 
 #: ../../user-manual/archival-storage/archival-storage.rst:14
-msgid ":ref:`Storing an AIP <storing-aip>`"
-msgstr ""
-
-#: ../../user-manual/archival-storage/archival-storage.rst:15
-msgid ":ref:`AIP Encryption <aip-encryption>`"
+msgid ""
+"If you are running Archivematica in indexless mode (without Elasticsearch), "
+"the Archival Storage tab will not appear on your dashboard."
 msgstr ""
 
 #: ../../user-manual/archival-storage/archival-storage.rst:17
-msgid ":ref:`Searching the AIP store <search-aip>`"
+msgid "*On this page*"
+msgstr "*Sur cette page*"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:19
+msgid ":ref:`Storing an AIP <storing-aip>`"
+msgstr ":ref:`Stocker  un AIP <storing-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:20
+msgid ":ref:`AIP Encryption <aip-encryption>`"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:18
+#: ../../user-manual/archival-storage/archival-storage.rst:21
+msgid ":ref:`Searching the AIP store <search-aip>`"
+msgstr ":ref:`Faire une recherche dans le aip-store <search-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:22
 msgid ":ref:`Deleting an AIP <delete-aip>`"
 msgstr ":ref:`Supprimer un AIP <delete-aip>`"
 
-#: ../../user-manual/archival-storage/archival-storage.rst:23
+#: ../../user-manual/archival-storage/archival-storage.rst:27
 msgid "Storing an AIP"
 msgstr "Stocker un AIP"
 
-#: ../../user-manual/archival-storage/archival-storage.rst:25
+#: ../../user-manual/archival-storage/archival-storage.rst:29
 msgid ""
 "Once ingest is complete, selecting a location to \"Store AIP\" in the "
 "Actions drop-down menu compresses and zips the AIP and moves it into "
 "Archival storage."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:28
+#: ../../user-manual/archival-storage/archival-storage.rst:32
 msgid ""
 "In the demo version of Archivematica the AIP storage directory is "
 "``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it can "
@@ -72,13 +82,13 @@ msgid ""
 "location dropdown, including LOCKSS locations."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:34
+#: ../../user-manual/archival-storage/archival-storage.rst:38
 msgid ""
 "The AIP directories are broken down into UUID quad directories for efficient"
 " storage and retrieval."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:39
+#: ../../user-manual/archival-storage/archival-storage.rst:43
 msgid ""
 "Archivematica uses a directory tree structure to store AIPs. The tree is "
 "based on AIP UUIDs, which are 16-digit alphanumeric unique universal "
@@ -91,7 +101,7 @@ msgid ""
 "AIP with that UUID resides in that leaf."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:49
+#: ../../user-manual/archival-storage/archival-storage.rst:53
 msgid ""
 "The Archival storage tab in the Archivematica dashboard consists of a table "
 "with information about the stored AIPs. Use the up and down arrows in the "
@@ -100,69 +110,69 @@ msgid ""
 "number of indexed files."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:59
+#: ../../user-manual/archival-storage/archival-storage.rst:63
 msgid ""
 "To open a copy of the AIP, click on the AIP name. You can then open or "
 "download the zipped AIP."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:62
+#: ../../user-manual/archival-storage/archival-storage.rst:66
 msgid ""
 "The AIP pointer file can be accessed by clicking on the Pointer file link. "
 "The pointer file provides information on the AIP and its relationships to "
 "the Archivematica, DIPs, and other AIPs as appropriate."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:68
+#: ../../user-manual/archival-storage/archival-storage.rst:72
 msgid ":ref:`AIP structure <aip-structure>`"
-msgstr ""
+msgstr ":ref:`Structure d'un AIP <aip-structure>`"
 
-#: ../../user-manual/archival-storage/archival-storage.rst:69
+#: ../../user-manual/archival-storage/archival-storage.rst:73
 msgid ""
 "`Archivematica METS file (wiki) <https://www.archivematica.org/wiki/METS>`_"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:77
+#: ../../user-manual/archival-storage/archival-storage.rst:78
 msgid "AIP Encryption"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:79
+#: ../../user-manual/archival-storage/archival-storage.rst:80
 msgid ""
 "Beginning in the 1.7 version of Archivematica, institutions are able to "
 "encrypt their AIPs for secure storage. This feature is particularly useful "
 "when an institution stores its AIPs off-site."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:83
+#: ../../user-manual/archival-storage/archival-storage.rst:84
 msgid ""
 "To create an encrypted AIP, Archivematica needs an encrypted space and "
-"location set up in the Storage Service. Please see the Encryption section of"
-" the Storage Service docs for more information."
+"location set up in the Storage Service. Please see :ref:`Encryption "
+"<storageservice:gpg>` for more information."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:87
+#: ../../user-manual/archival-storage/archival-storage.rst:88
 msgid "Run your transfer through the regular micro-services."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:89
+#: ../../user-manual/archival-storage/archival-storage.rst:90
 msgid ""
 "At the Store AIP location job on the Ingest tab, choose your encrypted AIP "
 "location. You now have an encrypted AIP!"
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:92
+#: ../../user-manual/archival-storage/archival-storage.rst:93
 msgid ""
 "You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted"
 " AIPs appear as True in the Encrypted column."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:100
+#: ../../user-manual/archival-storage/archival-storage.rst:101
 msgid ""
 "The AIP pointer file contains a `PREMIS:EVENT` element for the encryption "
 "event."
 msgstr ""
 
-#: ../../user-manual/archival-storage/archival-storage.rst:102
+#: ../../user-manual/archival-storage/archival-storage.rst:103
 msgid ""
 "The AIP itself can be downloaded in unencrypted form from the Archival "
 "Storage tab."
@@ -170,7 +180,7 @@ msgstr ""
 
 #: ../../user-manual/archival-storage/archival-storage.rst:109
 msgid "Searching the AIP store"
-msgstr ""
+msgstr "Faire une recherche dans le aip-store"
 
 #: ../../user-manual/archival-storage/archival-storage.rst:111
 msgid ""
