@@ -244,7 +244,7 @@ Process configuration strategies
 --------------------------------
 
 Optimising what and how preservation actions get executed
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The final strategy for improving the performance and capacity of your 
 Archivematica deployment is to ensure that Archivematica is only carrying out 
