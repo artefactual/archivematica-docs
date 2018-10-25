@@ -769,8 +769,13 @@ identifiers (PIDS) and derived persistent URLs (PURLs).
 
 Language
 --------
-The Archivematica dashboard is in the process of being translated. For more
-information, see :ref:`Translations <translations>`.
+
+The language menu allows you to choose from select languages.
+
+Archivematica is translated by volunteers through `Transifex`_. The completeness
+of a language is dependent on how many strings have been translated in
+Transifex. For information about contributing translations to the Archivematica
+project, see :ref:`Translations <translations>`.
 
 .. _version:
 
@@ -789,3 +794,4 @@ This tab displays the version of Archivematica you're using.
 .. _LZMA: http://www.7-zip.org/sdk.html
 .. _Parallel bzip2 (pbzip2): http://compression.ca/pbzip2/
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
+.. _`Transifex`: https://www.transifex.com/artefactual/archivematica/
