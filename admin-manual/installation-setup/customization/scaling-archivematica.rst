@@ -10,12 +10,12 @@ Overview
 --------
 
 Archivematica includes a number of features and options to improve scalability
-& performance. The default configuration options are geared towards "typical" 
+and performance. The default configuration options are geared towards "typical" 
 use cases and for many users won't require any modification. However, some 
 users will benefit from optimizing configuration options to meet their 
-specific preservation needs & available computing resources.
+specific preservation needs and available computing resources.
 
-This guide describes three broad approaches to scaling & optimization and the 
+This guide describes three broad approaches to scaling and optimization and the 
 specific techniques available to each approach. 
 
 This is not a detailed 'how to' guide or set of specific recommendations. The 
@@ -34,7 +34,7 @@ Scaling up: optimising on one machine
 -------------------------------------
 
 Processing speed and capacity will generally increase in line with increases 
-in computing resources (CPU, memory & disk space). When a deployment uses a 
+in computing resources (CPU, memory and disk space). When a deployment uses a 
 machine with considerably more (or less) resources than the 
 :ref:`recommended minimum production requirements <requirements-production>`, 
 there are several different configuration options that may help further 
@@ -243,7 +243,7 @@ less impact on performance when distributed to remote storage locations.
 Process configuration strategies 
 --------------------------------
 
-Optimising what & how preservation actions get executed
+Optimising what and how preservation actions get executed
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The final strategy for improving the performance and capacity of your 
@@ -251,7 +251,7 @@ Archivematica deployment is to ensure that Archivematica is only carrying out
 the work you deem important and necessary. Archivematica provides a wide 
 range of preservation actions and the default settings tend to make use of the 
 majority of them. There are several techniques for limiting which actions are 
-taken, that can have a significant impact on the overall time & compute 
+taken, that can have a significant impact on the overall time and compute 
 required to process a particular Transfer or SIP. 
 
 Environment configuration options
