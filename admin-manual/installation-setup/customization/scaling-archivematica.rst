@@ -10,15 +10,15 @@ Overview
 --------
 
 Archivematica includes a number of features and options to improve scalability
-& performance. The default configuration options are geared towards “typical” 
-use cases and for many users won’t require any modification. However, some 
+& performance. The default configuration options are geared towards "typical" 
+use cases and for many users won't require any modification. However, some 
 users will benefit from optimizing configuration options to meet their 
 specific preservation needs & available computing resources.
 
 This guide describes three broad approaches to scaling & optimization and the 
 specific techniques available to each approach. 
 
-This is not a detailed ‘how to’ guide or set of specific recommendations. The 
+This is not a detailed 'how to' guide or set of specific recommendations. The 
 goal here is to explain what broad strategies are available and enough of the 
 implementation details to allow skilled administrators to choose and implement 
 the right strategy for their institution. 
@@ -203,20 +203,20 @@ Adjusting timeouts
 ++++++++++++++++++
 
 Timeout settings are an important tool to mitigate failure scenarios created 
-when one component can’t connect to another. The challenge is to set timeouts 
+when one component can't connect to another. The challenge is to set timeouts 
 so that they are long enough to allow particular processes to complete, but 
-not so long that system resources are left idle (or user’s time is wasted), 
-waiting for a response from another component that has failed or can’t be 
+not so long that system resources are left idle (or user's time is wasted), 
+waiting for a response from another component that has failed or can't be 
 reached due to network connectivity issues.  
 
 The standard timeout parameters for each component are used for long-running 
-(generally asynchronous) processes. “Quick” timeout values are for processes 
+(generally asynchronous) processes. "Quick" timeout values are for processes 
 that are synchronous and short (for instance, when an API is called to return 
 information to the UI for a waiting user). 
 
-The default value for the “Quick” timeouts is 120 seconds. This is optimal for 
-components that are located on the same machine, and will be adequate in many 
-cases for components that are distributed to machines that are co-located. 
+The default value for the "Quick" timeouts is optimal for components that are 
+located on the same machine, and will be adequate in many cases for components 
+that are distributed to machines that are co-located. 
 
 There may be times when timeout values should be increased for distributed 
 components that are not co-located, or are slower due to the nature of the 
@@ -234,7 +234,7 @@ The Storage Service Administrator manual describes the different types of
 
 In many cases it may be necessary to use different machines for different types
 of storage locations. In general, we recommend having the most frequently used 
-locations (e.g. the “currently processing” location) on a local machine. 
+locations (e.g. the "currently processing" location) on a local machine. 
 Locations that are used less frequently, such as AIP or DIP storage, will have 
 less impact on performance when distributed to remote storage locations.  
 
@@ -289,14 +289,14 @@ Allow indexing to fail
 
 Indexing very large datasets can be so resource-intensive that indexing will 
 fail. By default, Archivematica will abort processing and invoked the 
-“Failed SIP” microservice. 
+"Failed SIP" microservice. 
 
 The ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_INDEX_AIP_CONTINUE_ON_ERROR`` parameter 
 can be set to allow indexing to fail. When this is set and indexing fails, 
-the AIP will carry on with processing and be stored. It can’t be found using 
+the AIP will carry on with processing and be stored. It can't be found using 
 the normal search features in the Appraisal and Archival Storage tabs. 
 
-This feature doesn’t optimize performance so much as mitigate performance 
+This feature doesn't optimize performance so much as mitigate performance 
 limitations. See `MCPClient`_ Configuration for details. 
 
 Disabling task output
@@ -331,7 +331,8 @@ should be adequate and will save processing time.
 without defaults` will only generate thumbnail images for formats that have a 
 specific thumbnail rule defined. The default thumbnail rule only produces a 
 grey icon and for many formats has little value, but in transfers with many 
-files, can take significant processing time. 
+files, can take significant processing time. It is also possible to disable
+generation of thumbnails entirely by selecting  `no`.  
 
 **Select compression algorithm:** AIP compression causes an AIP to be put into 
 a container (e.g. a 7Zip container).  Using containers makes AIP storage and 
@@ -363,12 +364,12 @@ files, or binary files created by instruments in scientific experiments, the
 output can be verbose without being useful. 
 
 **Reduce number of image characterization rules:** Archivematica has rules 
-defined for all image formats to use ExifTool, Mediainfo and ffprobe for 
-characterisation. Using multiple tools ensures as much characterization output 
-as possible, but also introduces some level of duplication. Only using one of 
-the three tools for certain formats may provide an adequate level of 
-characterization with the benefit of reducing processing time and the size of 
-the final AIP. 
+defined for all image and audio-visual formats to use ExifTool, Mediainfo and 
+ffprobe for characterisation. Using multiple tools ensures as much 
+characterization output as possible, but also introduces some level of 
+duplication. Only using one of the three tools for certain formats may provide 
+an adequate level of characterization with the benefit of reducing processing 
+time and the size of the final AIP. 
 
 See :ref:`Characterization <characterization>` and 
 :ref:`Altering commands and rules <altering-commands-rules>` for more details.  
@@ -379,8 +380,8 @@ General Configuration Settings
 **Checksum Algorithm:** In the :ref:`General settings <dashboard-general>` 
 screen you can select which checksum algorithm Archivematica will use during 
 the Assign UUIDs and checksums micro-service. For the purposes of fixity 
-checking, the MD5 algorithm is perfectly adequate and takes less processing 
-time to create (and check) than the alternatives (e.g. SHA-256). 
+checking, the MD5 algorithm may be adequate and takes less processing time 
+to create (and check) than the alternatives (e.g. SHA-256). 
 
 :ref:`Back to the top <scaling-archivematica>`
 

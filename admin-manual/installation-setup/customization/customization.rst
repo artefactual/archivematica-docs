@@ -138,8 +138,8 @@ Customizing for scalability and performance
 -------------------------------------------
 
 Archivematica includes a number of features and options to improve scalability
-& performance. The default configuration options are geared towards “typical” 
-use cases and for many users won’t require any modification. However, some 
+& performance. The default configuration options are geared towards "typical" 
+use cases and for many users won't require any modification. However, some 
 users will benefit from optimizing configuration options to meet their 
 specific preservation needs & available computing resources.
 
