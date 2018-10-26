@@ -14,36 +14,31 @@ FAQ
 
    Operating Archivematica takes place in a web-based dashboard so an
    archivist/librarian/curator does not necessarily need to have the same skill
-   set described above, so long as someone in their organization is able to provide
-   technical support. Some familiarity with
-   `OAIS <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_ will
-   make Archivematica more intuitive to use but is not necessarily a prerequisite.
+   set described above, so long as someone in their organization is able to
+   provide technical support. Some familiarity with `OAIS`_ will make
+   Archivematica more intuitive to use but is not necessarily a prerequisite.
 
    Organizations that are unable to provide in-house technical support may
-   consider a `maintenance contract <http://www.artefactual.com/services/maintenance/>`_
-   through Artefactual Systems.
+   consider a `maintenance contract`_ through Artefactual Systems.
 
 #. **I'm having a problem with installation/Why is Archivematica difficult to install?**
 
    Archivematica is a complex piece of software with many dependencies, all
    of which are open-source. Because of its complex, open-source nature,
-   it is not feasible to create a click-through executible file for installation.
+   it is not feasible to create a click-through executible file for
+   installation.
 
-   If you encounter errors during :ref:`installation <installation>` you are
-   welcome to post your errors to our
-   `user forum <https://groups.gtoogle.com/forum/#!forum/archivematica>`_.
-   Artefactual Systems, or other Archivematica community members, will do their
-   best to help you. Please be patient: answering questions from users is
-   unsponsored work and it can take a while for us to respond when we are busy.
+   If you encounter errors during :ref:`installation <installation>` we
+   recommend posting your errors to the `Archivematica user forum`_.
 
 #. **What does Archivematica do?**
 
-   The main purpose of Archivematica is to create standards-based, self-documenting
-   and system-independent archival information packages (AIPs). An AIP includes
-   a METS XML file with a robust PREMIS preservation metadata implementation,
-   and is packaged in the Library of Congress BagIt format, which includes file
-   manifests and information about the AIP contents. The physical and logical
-   structure of the AIP is described in the METS structMap.
+   The main purpose of Archivematica is to create standards-based, self-
+   documenting and system-independent archival information packages (AIPs). An
+   AIP includes a METS XML file with a robust PREMIS preservation metadata
+   implementation, and is packaged in the Library of Congress BagIt format,
+   which includes file manifests and information about the AIP contents. The
+   physical and logical structure of the AIP is described in the METS structMap.
 
 #. **Does Archivematica perform fixity checks?**
 
@@ -53,13 +48,14 @@ FAQ
    Archivematica will also verify.
 
    To check fixity of AIPs in storage, Artefactual has written a separate
-   command-line app called `Fixity <https://github.com/artefactual/fixity>`_
-   (further user documentation for Fixity is pending).
+   command-line app called `Fixity`_ (further user documentation for Fixity is
+   pending).
 
 #. **Is Archivematica a storage system?**
 
    Archivematica is purposefully designed to be storage system agnostic, leaving
-   the door open for integration with a wide variety of existing storage systems.
+   the door open for integration with a wide variety of existing storage
+   systems.
 
 #. **What is the Archivematica Storage Service and why is there a separate application?**
 
@@ -75,17 +71,18 @@ FAQ
 
    Capacity is highly dependent on the resources allocated to the servers on
    which the software is installed. Archivematica has been successfully tested
-   with SIPs of 100,000 files and with video files of several TB each. No maximum
-   size or number of files can be specified; Artefactual works with clients to
-   determine optimal use cases and workflows on a per-institution basis.
+   with SIPs of 100,000 files and with video files of several TB each. No
+   maximum size or number of files can be specified; Artefactual works with
+   clients to determine optimal use cases and workflows on a per-institution
+   basis.
 
 #. **What is the format and structure of the Archival Information Package (AIP)?**
 
-   The `Archivematica AIP <https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure>`_ consists primarily of the
-   ingested objects, any preservation masters generated during processing, and
-   technical, preservation, audit and descriptive metadata encoded in METS XML.
-   The METS file contains a robust PREMIS implementation, including the Object,
-   Event, Agent and Rights entities. Dublin Core is supported as a descriptive
+   The `Archivematica AIP`_ consists primarily of the ingested objects, any
+   preservation masters generated during processing, and technical,
+   preservation, audit and descriptive metadata encoded in METS XML. The METS
+   file contains a robust PREMIS implementation, including the Object, Event,
+   Agent and Rights entities. Dublin Core is supported as a descriptive
    metadata standard.
 
 #. **What kinds of preservation metadata is included in an AIP’s METS XML file?**
@@ -127,10 +124,10 @@ FAQ
 
 #. **Can I describe content in Archivematica?**
 
-   You can ingest metadata as a CSV file or through the dashboard while processing.
-   However, Archivematica is not an archival description system.  In-depth
-   contextual and content description can be done through an access system like
-   AtoM.
+   You can ingest metadata as a CSV file or through the dashboard while
+   processing. However, Archivematica is not an archival description system.
+   In-depth contextual and content description can be done through an access
+   system like AtoM.
 
 #. **How does Archivematica prevent viruses?**
 
@@ -141,10 +138,10 @@ FAQ
 #. **What is normalization and how does normalization work?**
 
    Transcoding, or normalization, is automated through the use of preservation
-   commands entered into the `Format Policy Registry <https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/preservation/preservation-planning/#fpr>`_.
-   Bundled tools for transcoding include ffmpeg, Inkscape, Ghostscript and
-   ImageMagick. The FPR comes with hundreds of format-specific commands which
-   can be edited by the user.
+   commands entered into the :ref:`Preservation Planning tab
+   <preservation-planning>`. Bundled tools for transcoding include ffmpeg,
+   Inkscape, Ghostscript and ImageMagick. The Preservation Planning tab comes
+   with hundreds of format-specific commands which can be edited by the user.
 
 #. **How do I know if there are errors during ingest?**
 
@@ -154,30 +151,36 @@ FAQ
    dashboard. The corrective action  will depend on the nature of the error;
    examples include rejecting the transfer  or SIP and starting again, accepting
    the error and continuing the process,  taking corrective action and
-   re-running the micro-service or troubleshooting  the issue through the
+   re-running the microservice or troubleshooting  the issue through the
    command-line.
 
 #. **I need to use Archivematica in conjunction with another system (for access,
    storage, etc). How can I integrate the two systems?**
 
-   The list of systems and tools that Archivematica is integrated with grows with
-   almost every release. If you are interested in having Archivematica integrate
-   with a system which is not currently on our `Roadmap <https://www.archivematica.org/wiki/Development_roadmap:_Archivematica>`_, here are a few ideas:
+   The list of systems and tools that Archivematica is integrated with grows
+   with almost every release. If you are interested in having Archivematica
+   integrate with a system which is not currently on our `Roadmap`_, here are a
+   few ideas:
 
-  * Post to the `user forum <https://groups.gtoogle.com/forum/#!forum/archivematica>`_
-    and ask community members if they have any experience creating a workflow
-    between Archivematica and the other system.
+  * Post to the `Archivematica user forum`_ and ask community members if they
+    have any experience creating a workflow between Archivematica and the other
+    system.
 
   * If you have software development skills, consider writing to code required
     to integrate the two systems. If practical, we would gladly accept the code
-    into the Archivematica code base via a
-    `pull request <https://www.archivematica.org/wiki/Contribute_code>`_ .
+    into the Archivematica code base via a `pull request`_ .
 
-  * Contract Artefactual Systems to `write the code <http://www.artefactual.com/services/development/>`_.
-    We will work with you to identify requirements and include the new integration
-    code in the next software release, for the entire community's benefit.
-
-
-
+  * Contract Artefactual Systems to `write the code`_. We will work with you to
+    identify requirements and include the new integration code in the next
+    software release, for the entire community's benefit.
 
 :ref:`Back to the top <faq>`
+
+.. _`Roadmap`: https://www.archivematica.org/wiki/Development_roadmap:_Archivematica
+.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
+.. _`pull request`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
+.. _`write the code`: http://www.artefactual.com/services/development/
+.. _`OAIS`: http://en.wikipedia.org/wiki/Open_Archival_Information_System
+.. _`maintenance contract`: http://www.artefactual.com/services/maintenance/
+.. _`Fixity`: https://github.com/artefactual/fixity
+.. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure

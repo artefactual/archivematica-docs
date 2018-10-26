@@ -16,20 +16,20 @@ This page provides a high-level overview of Archivematica's technical
 architecture.
 
 
-.. _technical-micro-services:
+.. _technical-microservices:
 
-Micro-services design pattern
+Microservices design pattern
 -----------------------------
 
-Archivematica implements a micro-service approach to digital preservation. The
-Archivematica micro-services are granular system tasks which operate on a
+Archivematica implements a microservice approach to digital preservation. The
+Archivematica microservices are granular system tasks which operate on a
 conceptual entity that is equivalent to an OAIS information package:
 Submission Information Package (SIP), Archival Information Package (AIP),
 Dissemination Information Package (DIP). The physical structure of an
 information package will include files, checksums, logs, submission
 documentation, XML metadata, etc.
 
-For more information, see :ref:`Micro-services <micro-services>`.
+For more information, see :ref:`Microservices <microservices>`.
 
 .. _technical-dashboard:
 
@@ -40,7 +40,7 @@ The web dashboard allow users to process, monitor and control the
 Archivematica workflow processes. It is developed using Python-based Django
 MVC framework. The Dashboard provides a multi-user interface that will report
 on the status of system events and make it simpler to control and trigger
-specific micro-services. This interface allows users to easily add or edit
+specific microservices. This interface allows users to easily add or edit
 metadata, coordinate AIP and DIP storage and provide preservation planning
 information. Notifications include error reports, monitoring of MCP tasks and
 manual approvals in the workflow.

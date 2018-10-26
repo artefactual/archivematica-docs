@@ -140,7 +140,7 @@ The processingMCP.xml follows a specific XML format:
       </preconfiguredChoices>
      </processingMCP>
 
-Note that ``appliesTo`` is the UUID associated with the micro-service job
+Note that ``appliesTo`` is the UUID associated with the microservice job
 presented in the dashboard and ``goToChain`` is the UUID of the desired
 selection.
 
@@ -199,7 +199,7 @@ Checksum algorithm
 ^^^^^^^^^^^^^^^^^^
 
 You can select which checksum algorithm Archivematica will use during the
-*Assign UUIDs and checksums* micro-service in Transfer. Choose between MD5,
+*Assign UUIDs and checksums* microservice in Transfer. Choose between MD5,
 SHA-1, SHA-256 and SHA-512.
 
 Elasticsearch indexing

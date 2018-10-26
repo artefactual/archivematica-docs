@@ -5,14 +5,15 @@ Ingest
 ======
 
 During ingest, digital objects are packaged into SIPs and run through several
-micro-services, including normalization, packaging into an AIP and generation of
+microservices, including normalization, packaging into an AIP and generation of
 a DIP.
 
-If you would like to skip some of the default decision points or make preconfigured
-choices for your desired workflow, see :ref:`User administration - Processing
-configuration <dashboard-processing>`.
+If you would like to skip some of the default decision points or make
+preconfigured choices for your desired workflow, see :ref:`User administration -
+Processing configuration <dashboard-processing>`.
 
-Should you run into an error during ingest, please see :ref:`Error handling <error-handling>`.
+Should you run into an error during ingest, please see :ref:`Error handling
+<error-handling>`.
 
 *On this page:*
 
@@ -34,17 +35,18 @@ Should you run into an error during ingest, please see :ref:`Error handling <err
 Create a SIP
 ------------
 
-#. Process transfers as described in :ref:`Transfers <transfer>`. If you selected
-   "Create single SIP and continue processing" on the Transfer tab, your SIP has
-   been created and Archivematica will begin running Ingest tasks. Click on the Ingest
-   tab to continue working with your SIP.
+#. Process transfers as described in :ref:`Transfers <transfer>`. If you
+   selected "Create single SIP and continue processing" on the Transfer tab,
+   your SIP has been created and Archivematica will begin running Ingest tasks.
+   Click on the Ingest tab to continue working with your SIP.
 
-#. The single SIP will move through a number of micro-services. If you have
-   preconfigured Archivematica to do so, processing will stop at a decision point
-   that allows you to choose a file identification method to base normalization
-   upon or to choose to use pre-existing data gathered during identification at
-   the transfer stage. Archivematica default is to use pre-existing data. For more
-   about this option, see :ref:`Administer — Processing configuration <dashboard-processing>`.
+#. The single SIP will move through a number of microservices. If you have
+   preconfigured Archivematica to do so, processing will stop at a decision
+   point that allows you to choose a file identification method to base
+   normalization upon or to choose to use pre-existing data gathered during
+   identification at the transfer stage. Archivematica default is to use
+   pre-existing data. For more about this option, see :ref:`Processing
+   configuration <dashboard-processing>`.
 
 #. Once the SIP reaches "Normalize", you will be given several options for how
    Archivematica should normalize the SIP. Choose the option most suitable for
@@ -54,29 +56,32 @@ Create a SIP
       :align: center
       :figwidth: 80%
       :width: 100%
-      :alt: Archivematica Normalization micro-service
+      :alt: Archivematica Normalization microservice
 
-      Normalization micro-service
+      Normalization microservice
 
 #. To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, below.
 
-#. To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`, below.
+#. To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`,
+   below.
 
-#. For selecting a normalization option, see :ref:`Normalization <normalize>`, below.
-
+#. For selecting a normalization option, see :ref:`Normalization <normalize>`,
+   below.
 
 .. _arrange-sip:
 
 Arrange a SIP from backlog
 --------------------------
 
-This section refers to the backlog arrangement feature on the ingest page, rather
-than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog <backlog>`.
+This section refers to the backlog arrangement feature on the ingest page,
+rather than the Backlog tab. For more information on the Backlog tab, see
+:ref:`Backlog <backlog>`.
 
-#. Select content from the backlog by either searching for it through the backlog
-   search bars at the top of the Ingest tab or by browsing the backlog by clicking
-   on the folder icons in the *Originals* pane. Note: Multi-item select is not
-   yet included in this feature, though entire folders/directories can be moved.
+#. Select content from the backlog by either searching for it through the
+   backlog search bars at the top of the Ingest tab or by browsing the backlog
+   by clicking on the folder icons in the *Originals* pane. Note: Multi-item
+   select is not yet included in this feature, though entire folders/directories
+   can be moved.
 
    .. figure:: images/Ingest-panes.*
       :align: center
@@ -86,17 +91,17 @@ than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog
 
       Transfer backlog search results in populating Originals pane
 
-#. Archivematica will display the directories available in Transfer backlog, including the
-   number of objects in each directory. To hide directories from the Originals pane,
-   click on the directory and click Hide.
+#. Archivematica will display the directories available in Transfer backlog,
+   including the number of objects in each directory. To hide directories from
+   the Originals pane, click on the directory and click Hide.
 
-#. Drag and drop the transfer directory(ies) and/or object(s) you wish to arrange
-   from the Originals pane to the Arrange pane. By dragging and dropping, you can
-   create an arrangement structure for your SIP. Note that all metadata, submission
-   documentation, and other associated data is also copied to the arrange pane with
-   your object(s). A copy also remains with anything you leave in the Originals pane.
-   These files are hidden because they cannot be arranged independently of the objects
-   to which they relate.
+#. Drag and drop the transfer directory(ies) and/or object(s) you wish to
+   arrange from the Originals pane to the Arrange pane. By dragging and
+   dropping, you can create an arrangement structure for your SIP. Note that all
+   metadata, submission documentation, and other associated data is also copied
+   to the arrange pane with your object(s). A copy also remains with anything
+   you leave in the Originals pane. These files are hidden because they cannot
+   be arranged independently of the objects to which they relate.
 
    .. figure:: images/Backlog-arrange-pane.*
       :align: center
@@ -108,19 +113,19 @@ than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog
 
    .. note::
 
-      In the above example, the Project.zip directory was dragged from the Originals pane
-      to the Arrange pane. Note that the Project.zip directory in the Originals pane
-      has been greyed out to indicate that the file has been added to a potential
-      SIP.
+      In the above example, the Project.zip directory was dragged from the
+      Originals pane to the Arrange pane. Note that the Project.zip directory in
+      the Originals pane has been greyed out to indicate that the file has been
+      added to a potential SIP.
 
-#. Click on the directory in the Arrange pane to select, and then click Create SIP.
-   Archivematica will confirm that you wish to create a SIP from the selected objects
-   and then proceed through the ingest micro-services.
+#. Click on the directory in the Arrange pane to select, and then click Create
+   SIP. Archivematica will confirm that you wish to create a SIP from the
+   selected objects and then proceed through the ingest microservices.
 
-#. To arrange your SIP, create one or more directories in the Arrange pane by clicking
-   *Add Directory*. You can create directories nested inside of each other. Note: You
-   cannot rename a directory once you have created it; you must delete it and create
-   a directory with a new name.
+#. To arrange your SIP, create one or more directories in the Arrange pane by
+   clicking *Add Directory*. You can create directories nested inside of each
+   other. Note: You cannot rename a directory once you have created it; you must
+   delete it and create a directory with a new name.
 
    .. figure:: images/Arrange-new-directory.*
       :align: center
@@ -130,16 +135,16 @@ than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog
 
       Create a new directory in Arrange pane
 
-#. Click and drag files from the Originals pane into your desired directory in the
-   arrange panel. You can move either individual files or entire directories. Note:
-   All files must be in a directory inside of Arrange. “Arrange” cannot be used as
-   the top directory.
+#. Click and drag files from the Originals pane into your desired directory in
+   the arrange panel. You can move either individual files or entire
+   directories. Note: all files must be in a directory inside of Arrange.
+   “Arrange” cannot be used as the top directory.
 
-#. When you have completed moving files and directories into the Arrange pane, select
-   your desired top-level directory - this is the directory that will become
-   your SIP. Click on Create SIP. Any files or directories which are not inside
-   the directory you choose will remain in the Arrange pane until you create a SIP
-   that includes these files and directories.
+#. When you have completed moving files and directories into the Arrange pane,
+   select your desired top-level directory - this is the directory that will
+   become your SIP. Click on Create SIP. Any files or directories which are not
+   inside the directory you choose will remain in the Arrange pane until you
+   create a SIP that includes these files and directories.
 
    .. figure:: images/Create-SIP.*
       :align: center
@@ -157,24 +162,25 @@ than the Backlog tab. For more information on the Backlog tab, see :ref:`Backlog
 Arranging a SIP for AtoM
 ------------------------
 
-If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish to add
-levels of description to your directories and/or objects. Archivematica will add a logical
-structMAP to the METS file, which AtoM will use to create information objects, applying the
-chosen levels of description. Note that if you do not apply a level of description to a
-digital object, AtoM will automatically assign it the level of "item".
+If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish
+to add levels of description to your directories and/or objects. Archivematica
+will add a logical structMAP to the METS file, which AtoM will use to create
+information objects, applying the chosen levels of description. Note that if you
+do not apply a level of description to a digital object, AtoM will automatically
+assign it the level of "item".
 
 This functionality is supported with AtoM 2.2 and higher.
 
-#. Select a directory or object in the Arrange pane. Click *Edit metadata* to choose the
-   level of description.
+#. Select a directory or object in the Arrange pane. Click *Edit metadata* to
+   choose the level of description.
 
    .. image:: images/choose_lod.*
       :align: center
       :width: 80%
       :alt: Choosing the AtoM level of description
 
-#. As you add levels of description they will be shown in the arrange pane for you
-   to review before finalizing your SIP.
+#. As you add levels of description they will be shown in the arrange pane for
+   you to review before finalizing your SIP.
 
    .. image:: images/view_arrangement.*
       :align: center
@@ -184,24 +190,26 @@ This functionality is supported with AtoM 2.2 and higher.
 .. note::
 
    To have the AtoM levels of description appear you must have entered your AtoM
-   credentials in Administration. See :ref:`Administer, AtoM DIP upload <dashboard-atom>`.
-   Levels of description in AtoM are managed as a taxonomy. To edit, see :ref:`Terms <atom:terms>`.
+   credentials in Administration. See :ref:`Administer, AtoM DIP upload
+   <dashboard-atom>`. Levels of description in AtoM are managed as a taxonomy.
+   To edit, see :ref:`Terms <atom:terms>`.
 
 .. tip::
 
-   If you choose not to assign levels of description to directories in SIP arrange,
-   AtoM will flatten the DIP so that all digital objects are child-level descriptions
-   of the target description.
+   If you choose not to assign levels of description to directories in SIP
+   arrange, AtoM will flatten the DIP so that all digital objects are
+   child-level descriptions of the target description.
 
 .. _add-metadata:
 
 Add metadata
 ------------
 
-In Archivematica, metadata can be added either prior to the normalization step or after.
-Archivematica will prompt you with a reminder to add metadata if desired during the
-Process metadata directory micro-service. See :ref:`AtoM Dublin Core <atom:dc-template>`
-for information about the Dublin Core elements available.
+In Archivematica, metadata can be added either prior to the normalization step
+or after. Archivematica will prompt you with a reminder to add metadata if
+desired during the Process metadata directory microservice. See :ref:`AtoM
+Dublin Core <atom:dc-template>` for information about the Dublin Core elements
+available.
 
 .. seealso::
 
@@ -223,7 +231,8 @@ for information about the Dublin Core elements available.
 
       To add metadata, click on the template icon
 
-#. This will take you to the SIP detail panel. Under the Metadata heading, click Add.
+#. This will take you to the SIP detail panel. Under the Metadata heading, click
+   Add.
 
    .. figure:: images/SIPDetailPanel1.*
       :align: center
@@ -233,13 +242,15 @@ for information about the Dublin Core elements available.
 
       SIP information page
 
-#. Add metadata as desired and save it by clicking the Create button at the bottom
-   of the screen. Hovering over a field will activate tooltips that define the Dublin
-   Core element and provide a link to `ISO 15836 Dublin Core Metadata Element Set <http://dublincore.org/documents/dces/>`_.
-   Note that you can only add metadata at the aggregate level when using the template
-   - that is, the metadata will be applied to each object in the SIP. If you would
-   like to add metadata to a digital object, you must :ref:`Import metadata via CSV <import-metadata>`
-   or add the metadata once the object has been uploaded to your access system.
+#. Add metadata as desired and save it by clicking the Create button at the
+   bottom of the screen. Hovering over a field will activate tooltips that
+   define the Dublin Core element and provide a link to
+   `ISO 15836 Dublin Core Metadata Element Set`_. Note that you can only add
+   metadata at the aggregate level when using the template - that is, the
+   metadata will be applied to each object in the SIP. If you would like to add
+   metadata to a digital object, you must :ref:`Import metadata via CSV
+   <import-metadata>` or add the metadata once the object has been uploaded to
+   your access system.
 
    .. figure:: images/Metadataform1.*
       :align: center
@@ -249,9 +260,9 @@ for information about the Dublin Core elements available.
 
    SIP metadata entry form
 
-#. When you click Create, you will see the metadata entry in the list page. To edit
-   it further, click Edit on the right-hand side. To delete it, click Delete. To
-   add more DC metadata, click the Add button below the list.
+#. When you click Create, you will see the metadata entry in the list page. To
+   edit it further, click Edit on the right-hand side. To delete it, click
+   Delete. To add more DC metadata, click the Add button below the list.
 
    .. figure:: images/Metadatalist1.*
       :align: center
@@ -268,10 +279,11 @@ for information about the Dublin Core elements available.
 Add PREMIS rights
 -----------------
 
-Archivematica allows you to add PREMIS rights either prior to the normalization step or
-after. Archivematica will prompt you with a reminder to add rights information
-if desired during the Process metadata directory micro-service. For more information about the
-PREMIS rights fields, see :ref:`PREMIS template <premis-template>`.
+Archivematica allows you to add PREMIS rights either prior to the normalization
+step or after. Archivematica will prompt you with a reminder to add rights
+information if desired during the Process metadata directory microservice. For
+more information about the PREMIS rights fields, see :ref:`PREMIS template
+<premis-template>`.
 
 1. Click on the template icon.
 
@@ -295,8 +307,9 @@ PREMIS rights fields, see :ref:`PREMIS template <premis-template>`.
    SIP detail panel
 
 3. Add rights as desired and save it by clicking the Save button at the bottom
-   of the screen, or clicking Next if you are finished and ready to move on to the
-   second page of data entry. Rights entries are made up of two pages of content.
+   of the screen, or clicking Next if you are finished and ready to move on to
+   the second page of data entry. Rights entries are made up of two pages of
+   content.
 
 .. figure:: images/CopyrightNext.*
    :align: center
@@ -358,7 +371,7 @@ versions. For more information about Archivematica's preservation strategy, go
 to the :ref:`Preservation Planning <preservation-planning>` section of the
 manual.
 
-1. At the normalization micro-service, the SIP will appear in the dashboard with
+1. At the normalization microservice, the SIP will appear in the dashboard with
    a bell icon next to it. Select one of the normalization options from the
    Actions drop-down menu:
 
@@ -381,15 +394,16 @@ manual.
   access copies are generated and no DIP will be generated.
 * **Normalize service files preservation** - see :ref:`Digitization <digitized>`
   for more information.
-* **Normalize for access** - the AIP will contain originals only. No preservation
-  copies will be generated. Access copies will be created which will be used to
-  generate the DIP.
+* **Normalize for access** - the AIP will contain originals only. No
+  preservation copies will be generated. Access copies will be created which
+  will be used to generate the DIP.
 
 Note that depending on the setup of your transfer, you may not see all of the
 options listed above.
 
-2. Once normalization is completed you can review the results in the normalization
-   report. Click on the report icon next to the Actions drop-down menu.
+2. Once normalization is completed you can review the results in the
+   normalization report. Click on the report icon next to the Actions drop-down
+   menu.
 
 .. figure:: images/ReportIcon1.*
    :align: center
@@ -400,7 +414,7 @@ options listed above.
    Click on the report icon to open the normalization report
 
 The report shows what has been normalized and what is already in an acceptable
-preservation and access format:
+preservation and access format.
 
 .. image:: images/NormReport1.*
    :align: center
@@ -408,8 +422,8 @@ preservation and access format:
    :alt: Normalization report
 
 3. You may review the normalization results in a new tab by clicking on Review.
-   If your browser has plug-ins to view a file, you may open it in another tab by
-   clicking on it. If you click on a file and your browser cannot open it, it
+   If your browser has plug-ins to view a file, you may open it in another tab
+   by clicking on it. If you click on a file and your browser cannot open it, it
    will download locally so you can view it using the appropriate software on
    your machine.
 
@@ -423,9 +437,9 @@ preservation and access format:
 
 
 4. Approve normalization in the Actions drop-down menu to continue processing
-   the SIP. You may also Reject the SIP or re-do normalization. If you see errors
-   in normalization, follow the instructions in Error handling to learn more
-   about the problem.
+   the SIP. You may also Reject the SIP or re-do normalization. If you see
+   errors in normalization, follow the instructions in Error handling to learn
+   more about the problem.
 
 .. seealso::
 
@@ -438,9 +452,8 @@ Transcribe SIP contents
 -----------------------
 
 Archivematica gives users the option to Transcribe SIP contents using
-`Tesseract <https://code.google.com/p/tesseract-ocr/>`_ OCR tool. If Yes is
-selected by the user during this micro-service, an OCR file will be included in
-the DIP and stored in the AIP.
+`Tesseract`_ OCR tool. If Yes is selected by the user during this microservice,
+an OCR file will be included in the DIP and stored in the AIP.
 
 .. note::
 
@@ -454,9 +467,10 @@ the DIP and stored in the AIP.
 Store AIP
 ---------
 
-1. After normalization is approved, the SIP runs through a number of micro-services,
-   including processing of the submission documentation, generation of the METS file,
-   indexing, generation of the DIP and packaging of the AIP.
+1. After normalization is approved, the SIP runs through a number of
+   microservices, including processing of the submission documentation,
+   generation of the METS file, indexing, generation of the DIP and packaging
+   of the AIP.
 
 .. figure:: images/StoreAIPUpDIP1.*
    :align: center
@@ -466,14 +480,16 @@ Store AIP
 
    Archivematica ready to store the AIP and upload the DIP
 
-2. If desired, review the contents of the AIP in another tab by clicking on Review.
-   More information on Archivematica's AIP structure and the METS/PREMIS file is
-   available in the Archivematica documentation: see :ref:`AIP structure <aip-structure>`.
-   You can download the AIP at this stage by clicking on it.
+2. If desired, review the contents of the AIP in another tab by clicking on
+   Review. More information on Archivematica's AIP structure and the METS/PREMIS
+   file is available in the Archivematica documentation: see :ref:`AIP structure
+   <aip-structure>`. You can download the AIP at this stage by clicking on it.
 
-3. From the Action dropdown menu, select "Store AIP" to move the AIP into archival
-   storage. You can store an AIP in any number of preconfigured directories. For
-   instructions to configure AIP storage locations, see :ref:`Administrator manual - Storage Service <storageService:administrators>`.
+3. From the Action dropdown menu, select "Store AIP" to move the AIP into
+   archival storage. You can store an AIP in any number of preconfigured
+   directories. For instructions to configure AIP storage locations, see
+   :ref:`Administrator manual - Storage Service
+   <storageService:administrators>`.
 
 4. From the Action dropdown menu, select the AIP storage location from the
    pre-configured set of options.
@@ -481,11 +497,11 @@ Store AIP
 .. note::
 
    We recommend storing the AIP before uploading the DIP. If there is a problem
-   with the AIP at this point and the DIP has already been uploaded, you will have
-   to delete the DIP from the upload location.
+   with the AIP at this point and the DIP has already been uploaded, you will
+   have to delete the DIP from the upload location.
 
-   For information on viewing and managing stored AIPs go to
-   :ref:`Archival storage <archival-storage>`.
+   For information on viewing and managing stored AIPs go to :ref:`Archival
+   storage <archival-storage>`.
 
 .. _upload-dip:
 
@@ -493,7 +509,8 @@ Upload DIP
 ----------
 
 Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and
-Archivists' Toolkit. For information about uploading DIPs to your access system, see :ref:`Access <access>`.
+Archivists' Toolkit. For information about uploading DIPs to your access system,
+see :ref:`Access <access>`.
 
 .. _reingest:
 
@@ -526,15 +543,21 @@ Choosing partial re-ingest will take you back to the Ingest tab.
 3. Full re-ingest
 +++++++++++++++++
 
-This method is for institutions who want to be able to run all the major micro-services (including re-normalization for preservation if desired). A possible use case for full re-ingest might be that after a time new file characterization or validation tools have been developed and integrated with a future version of Archivematica. Running the micro-services with these updated tools will result in a updated and better AIP.
+This method is for institutions who want to be able to run all the major
+microservices (including re-normalization for preservation if desired). A
+possible use case for full re-ingest might be that after a time new file
+characterization or validation tools have been developed and integrated with a
+future version of Archivematica. Running the microservices with these updated
+tools will result in a updated and better AIP.
 
-Full re-ingest can also be used to update the metadata, and re-normalize for access.
+Full re-ingest can also be used to update the metadata, and re-normalize for
+access.
 
 When performing full re-ingest, you will need to enter the name of the
 processing configuration you wish to use. To add new processing configurations,
 see :ref:`Processing configuration <dashboard-processing>`.
 
-.. Important::
+.. important::
 
    The following workflows are **not** supported in full AIP re-ingest:
 
@@ -549,16 +572,16 @@ Choosing full re-ingest will take you back to the Transfer tab.
 How to tell in the METS file if an AIP has been re-ingested
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Look at the Header of the METS file, which will display a ``CREATEDATE`` and a
-``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21" LASTMODDATE="2017-10-17T20:32:36"/>``
+1. Look at the Header of the METS file, which will display a ``CREATEDATE`` and
+a ``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21"
+LASTMODDATE="2017-10-17T20:32:36"/>``
 
 2. You can also search for the reingest premis:event
 ``<premis:eventType>reingestion</premis:eventType>``
 
 3. If you've updated the descriptive or rights metadata you will find an updated
-dmdSec
-
-``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36" STATUS="updated">``
+dmdSec: ``<mets:dmdSec ID="dmdSec_792149" CREATED="2017-10-17T20:32:36"
+STATUS="updated">``
 
 
 .. _reingest-dashboard:
@@ -572,8 +595,8 @@ Dashboard, the Storage Service, or the API.
 Archival Storage tab on the Dashboard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Go to the Archival Storage tab and find the AIP you wish to re-ingest by searching
-or browsing.
+Go to the Archival Storage tab and find the AIP you wish to re-ingest by
+searching or browsing.
 
 1. Click on the name of the AIP or View to open that AIP's view page. Under
 Actions, click on Re-ingest.
@@ -614,7 +637,7 @@ Actions, click on Re-ingest.
    :alt: Approve AIP reingest in Ingest tab.
 
 
-5. At the Normalization micro-service you will make different choices depending
+5. At the Normalization microservice you will make different choices depending
    on the type of AIP re-ingest you've selected.
 
    **Metadata-only re-ingest**
@@ -628,9 +651,11 @@ Actions, click on Re-ingest.
          a. Click on the paper and pencil icon on the same line as the name of
             the SIP to take you to the "Add metadata" page.
 
-         b. Click "Add" under "Rights" if you have rights-related metadata to add.
+         b. Click "Add" under "Rights" if you have rights-related metadata to
+            add.
 
-         c. Click on "Add" under "Metadata" if you have descriptive metadata to add.
+         c. Click on "Add" under "Metadata" if you have descriptive metadata to
+            add.
 
          d. Enter your metadata.
 
@@ -683,13 +708,13 @@ Actions, click on Re-ingest.
 .. important::
 
    All normalization options will appear as for any SIP being normalized, but
-   when performing metadata only or partial re-ingest, **only** the normalization
-   paths noted above are supported.
+   when performing metadata only or partial re-ingest, **only** the
+   normalization paths noted above are supported.
 
 .. tip::
 
-   You can add or update the metadata either before or after Normalization, but to
-   ensure the metadata is written to the database before the AIP METS
+   You can add or update the metadata either before or after Normalization, but
+   to ensure the metadata is written to the database before the AIP METS
    is prepared, it is recommended practice to add the metadata before
    Normalization, or set the metadata reminder to unchecked in Processing
    Configuration.
@@ -717,8 +742,8 @@ Storage Service
    :alt: Screen to choose pipeline and type of reingest
 
 3. The Storage Service will confirm that the AIP has been sent to the pipeline
-   for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and follow
-   steps 3-6 above.
+   for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and
+   follow steps 3-6 above.
 
 .. _re-ingest-api:
 
@@ -758,8 +783,8 @@ Remove all completed ingests
 ++++++++++++++++++++++++++++
 
 #. Ensure that the SIPs you want to remove are complete (i.e. AIPs/DIPs are
-   created and stored/uploaded). Note that this feature only works on completed SIPs;
-   rejected SIPs will have to be removed one at a time.
+   created and stored/uploaded). Note that this feature only works on completed
+   SIPs; rejected SIPs will have to be removed one at a time.
 
 #. When you are ready to remove all completed SIPs, click the red circle
    icon in the table header of the list of SIPs.
@@ -768,3 +793,6 @@ Remove all completed ingests
 
 
 :ref:`Back to the top <ingest>`
+
+.. _`ISO 15836 Dublin Core Metadata Element Set`: http://dublincore.org/documents/dces/
+.. _`Tesseract`: https://code.google.com/p/tesseract-ocr/

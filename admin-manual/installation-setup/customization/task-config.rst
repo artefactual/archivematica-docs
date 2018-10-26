@@ -10,7 +10,7 @@ captured and then passed from the task workers to the task manager (the MCP
 server).
 
 In the default configuration, these output streams *are* captured. In this
-state, when a user clicks on the gear icon of a micro-service in order to view
+state, when a user clicks on the gear icon of a microservice in order to view
 the tasks that have run, each task representation will contain a section
 entitled ``Standard streams`` which will contain a sub-section entitled
 ``Standard output (stdout)`` containing the stdout from the client script and

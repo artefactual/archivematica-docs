@@ -270,7 +270,7 @@ information.
 
 Create a SIP using the :ref:`Transfer <transfer>` process as normal.
 During Normalization, choose one of the options that normalizes the package for
-access. During the Upload DIP micro-service, select Upload DIP to Archives
+access. During the Upload DIP microservice, select Upload DIP to Archives
 Space. The Match page should automatically open.
 
 #. Find the ArchivesSpace collection to which you would like to upload the DIP.
@@ -336,7 +336,7 @@ information.
 
 Create a SIP using the :ref:`Transfer <transfer>` process as normal. During
 Normalization, choose one of the options that normalizes the package for access.
-During the Upload DIP micro-service, select Upload DIP to Archivists' Toolkit.
+During the Upload DIP microservice, select Upload DIP to Archivists' Toolkit.
 The Match page should automatically open.
 
 #. A page will open allowing the user to select the Archivists' Toolkit
@@ -375,13 +375,13 @@ Review/download DIP
 
 Regardless of the access path chosen (an integrated access system, or storing
 the DIP) the dashboard will present the operator with the option of reviewing
-and downloading the DIP objects. When the Upload DIP micro-service is complete,
+and downloading the DIP objects. When the Upload DIP microservice is complete,
 a "review" link will appear:
 
 .. image:: images/ReviewDIP.*
    :align: center
    :width: 80%
-   :alt: Click on the "review" link in the Upload DIP micro-service
+   :alt: Click on the "review" link in the Upload DIP microservice
 
 This will present the operator with a page displaying the uploadedDIPs directory
 which can then be navigated to locate any DIP in this directory. As shown below,

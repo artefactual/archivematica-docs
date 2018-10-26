@@ -47,8 +47,9 @@ to configure the job decision points presented by Archivematica during transfer
 and ingest. There are two processing configurations available on installation:
 
 * ``Default``, which is used for any transfer started manually from the
-  :ref:`Transfer tab <create-transfer>`, automatically via the `automation tools`_,
-  or in any other context where no other processing configuration is specified.
+  :ref:`Transfer tab <create-transfer>`, automatically via the
+  `automation tools`_, or in any other context where no other processing
+  configuration is specified.
 * ``Automated``, which is used for transfers automatically started from Jisc
   RDSS environments (if you are not a Jisc user, feel free to delete this
   configuration).
@@ -280,8 +281,8 @@ Options:
    more information.
 #. **Do not normalize** - the AIP will contain originals only. No preservation
    or access copies are generated and no DIP will be generated.
-#. **Normalize service files preservation** - see :ref:`Digitization <digitized>`
-   for more information.
+#. **Normalize service files preservation** - see :ref:`Digitization
+   <digitized>` for more information.
 #. **Normalize for access** - the AIP will contain originals only. No
    preservation copies will be generated. Access copies will be created which
    will be used to generate the DIP.
@@ -306,8 +307,8 @@ Options:
 
 #. **None** - the user is prompted for a decision.*
 #. **Yes, without default** - thumbnails will be produced for any format which
-   has a :ref:`normalize for thumbnails <normalization>` rule in the FPR. Formats
-   which do not have a rule will not have a thumbnail generated.
+   has a :ref:`normalize for thumbnails <normalization>` rule in the FPR.
+   Formats which do not have a rule will not have a thumbnail generated.
 #. **No** - thumbnails will not be generated.
 #. **Yes** - thumbnails will be generated according to the format rules in the
    FPR. Formats which do not have a rule will have a default thumbnail
@@ -346,7 +347,8 @@ be configured).
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Yes** - PIDs are created and a API call posts the PIDs to the Handle Server.
+#. **Yes** - PIDs are created and a API call posts the PIDs to the Handle
+   Server.
 #. **No** - PIDs are not created.
 
 Document empty directories
@@ -408,8 +410,8 @@ Options:
 Select compression algorithm
 ++++++++++++++++++++++++++++
 
-AIPs created by Archivematica can be stored as compressed packages or uncompressed,
-depending on your storage requirements.
+AIPs created by Archivematica can be stored as compressed packages or
+uncompressed, depending on your storage requirements.
 
 Options:
 
@@ -417,7 +419,8 @@ Options:
 #. **7z using bzip2** - a 7Zip file is created using the tool `bzip2`_.*
 #. **7z using LZMA** - a 7Zip file is created using the tool `LZMA`_.
 #. **Uncompressed** - the AIP is not compressed.
-#. **Parallel bzip2** - a 7Zip file is created using the tool `Parallel bzip2 (pbzip2)`_.
+#. **Parallel bzip2** - a 7Zip file is created using the tool
+   `Parallel bzip2 (pbzip2)`_.
 
 Select compression level
 ++++++++++++++++++++++++
@@ -507,8 +510,8 @@ Options:
 #. **None** - the user is prompted for a decision.*
 #. **Default location** - the DIP is stored in the DIP storage location that has
    been defined as the default in the Storage Service.
-#. **[Other storage locations]** - any other DIP storage locations that are available
-   will also appear on this list.
+#. **[Other storage locations]** - any other DIP storage locations that are
+   available will also appear on this list.
 
 .. _dashboard-general:
 
@@ -540,7 +543,7 @@ Checksum algorithm
 ^^^^^^^^^^^^^^^^^^
 
 You can select which checksum algorithm Archivematica will use during the
-*Assign UUIDs and checksums* micro-service in Transfer. Choose between MD5,
+*Assign UUIDs and checksums* microservice in Transfer. Choose between MD5,
 SHA-1, SHA-256 and SHA-512.
 
 Elasticsearch indexing

@@ -36,7 +36,7 @@ Archivematica.
 * :ref:`What is Archivematica? <intro>`
 * :ref:`Web-based dashboard <web-dashboard>`
 * :ref:`Technical architecture <technical-arch>`
-* :ref:`Micro-services <micro-services>`
+* :ref:`Microservices <microservices>`
 * :ref:`System requirements <system-requirements>`
 
 .. _home-quick-start:
@@ -87,7 +87,7 @@ Transfer
 --------
 
 The Transfer tab is the place where an Archivematica transfer begins. Along with
-the transfer widget, this tab displays micro-services and jobs that act upon
+the transfer widget, this tab displays microservices and jobs that act upon
 content to prepare your transfer to become a SIP (submission information
 package).
 
@@ -144,7 +144,7 @@ resources in ArchivesSpace.
 Ingest
 ------
 
-The Ingest tab displays the micro-services and jobs that take place to turn a
+The Ingest tab displays the microservices and jobs that take place to turn a
 SIP into an AIP or a DIP. This tab also contains the backlog widget.
 
 * :ref:`General description <ingest>`

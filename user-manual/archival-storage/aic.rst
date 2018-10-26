@@ -4,13 +4,12 @@
 AIC
 ===
 
-Because datasets and digital object collections can be large and
-heterogeneous, one dataset or collection of digital objects may be broken into
-multiple AIPs. In such cases, the multiple AIPs can be intellectually combined
-into one AIC, or Archival Information Collection, defined by the OAIS
-reference model as "[a]n Archival Information Package whose Content
-Information is an aggregation of other Archival Information Packages." (OAIS
-1-9).
+Because datasets and digital object collections can be large and heterogeneous,
+one dataset or collection of digital objects may be broken into multiple AIPs.
+In such cases, the multiple AIPs can be intellectually combined into one AIC, or
+Archival Information Collection, defined by the OAIS reference model as "[a]n
+Archival Information Package whose Content Information is an aggregation of
+other Archival Information Packages." (OAIS 1-9).
 
 A basic AIC in Archivematica consists of:
 
@@ -30,9 +29,10 @@ Creating AICs
 
 **Step 1: Create AIPs**
 
-1. Ingest a standard transfer consisting of metadata and data files, or create a SIP from backlog using the :ref:`SIP arrange pane <arrange-sip>`.
+1. Ingest a standard transfer consisting of metadata and data files, or create a
+   SIP from backlog using the :ref:`SIP arrange pane <arrange-sip>`.
 
-2. At the Normalize micro-service, click on the metadata button:
+2. At the Normalize microservice, click on the metadata button:
 
 .. image:: images/AIC-Normalize.*
    :align: center
@@ -46,7 +46,9 @@ Creating AICs
    :width: 80%
    :alt: Click on Add under Metadata
 
-4. Enter Dublin Core metadata. At a minimum, the AIC identifier (Part of AIC field) is required. However, if desired, use the metadata entry template to create a more detailed description of the AIP contents:
+4. Enter Dublin Core metadata. At a minimum, the AIC identifier (Part of AIC
+   field) is required. However, if desired, use the metadata entry template to
+   create a more detailed description of the AIP contents:
 
 .. image:: images/AIC_metadata.*
    :align: center
@@ -60,29 +62,37 @@ Creating AICs
 
 5. At bottom of screen, click the Create button.
 
-6. Return to the ingest tab, finish processing and place the AIP in archival storage.
+6. Return to the ingest tab, finish processing and place the AIP in archival
+   storage.
 
-7. Repeat steps 1 through 6 to create as many AIPs as desired. In step 1.4, be sure to enter the same value in Part of AIC if all of the AIPs are destined to be added to the same AIC.
+7. Repeat steps 1 through 6 to create as many AIPs as desired. In step 1.4, be
+   sure to enter the same value in Part of AIC if all of the AIPs are destined
+   to be added to the same AIC.
 
 8. Once all the AIPs have been placed in storage, open the archival storage tab.
 
 **Step 2: Create AIC**
 
-1. To retrieve all AIPs with the same value in Part of AIC, enter AIC#[number] in the search box and select Part of AIC as the search field. On the right hand side, select "Show AICs?". Then click the Search archival storage button:
+1. To retrieve all AIPs with the same value in Part of AIC, enter AIC#[number]
+   in the search box and select Part of AIC as the search field. On the right
+   hand side, select "Show AICs?". Then click the Search archival storage
+   button.
 
 .. image:: images/AIC_search.*
    :align: center
    :width: 80%
    :alt: Search for AIPs in Archival storage
 
-2. To create an AIC comprising all of the AIPs listed in the search results, click the Create an AIC button:
+2. To create an AIC comprising all of the AIPs listed in the search results,
+   click the Create an AIC button:
 
 .. image:: images/AIC_Create_button.*
    :align: center
    :width: 80%
    :alt: Click the Create an AIC button
 
-3. Archivematica will produce a metadata entry template for the AIC. In the template, at a minimum enter values into Title and Identifier fields.
+3. Archivematica will produce a metadata entry template for the AIC. In the
+   template, at a minimum enter values into Title and Identifier fields.
 
 .. note::
 
@@ -97,7 +107,8 @@ description of the AIC contents:
    :alt: Enter metadata about the AIC.
 
 
-4. Click the Create button at the bottom of the metadata entry template. Return to the ingest tab. When the AIC appears in the dashboard, approve the AIC:
+4. Click the Create button at the bottom of the metadata entry template. Return
+   to the ingest tab. When the AIC appears in the dashboard, approve the AIC:
 
 .. image:: images/AIC_approve.*
    :align: center
@@ -130,10 +141,7 @@ of AIC#[number]) in that field.
 .. note::
 
    The Files column lists the number of AIPs in the AIC. This should match the
-   number of AIPs shown in the search results. A bug is preventing the correct
-   AIC file count in version 1.2 (see
-   `Bug #7155 <https://projects.artefactual.com/issues/7155>`_ .
-
+   number of AIPs shown in the search results.
 
 **Update an AIC**
 

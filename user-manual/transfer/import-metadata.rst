@@ -4,11 +4,11 @@
 Import metadata
 ===============
 
-You can import metadata by including a directory called ``metadata`` in
-your transfer. The directory can contain any type of metadata that you wish
-to preserve alongside your digital objects. The Process Metadata Directory
-`Microservice <https://wiki.archivematica.org/Micro-services>`_ will
-perform a number of preservation actions on objects in this directory.
+You can import metadata by including a directory called ``metadata`` in your
+transfer. The directory can contain any type of metadata that you wish to
+preserve alongside your digital objects. The Process Metadata Directory
+`Microservice`_ will perform a number of preservation actions on objects in this
+directory.
 
 Archivematica also supports conventions for importing descriptive metadata
 and rights metadata that will tranpose the contents of the metadata files
@@ -29,15 +29,15 @@ into the METS file. Metadata in the METS file is searchable in the
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
-Archivematica natively supports the Dublin Core Metadata Elements Set, the
-basic 15 Dublin Core metadata elements. Using the metadata.csv method, users
-can include non-Dublin Core metadata at the directory level or at the object
-level.
+Archivematica natively supports the Dublin Core Metadata Elements Set, the basic
+15 Dublin Core metadata elements. Using the metadata.csv method, users can
+include non-Dublin Core metadata at the directory level or at the object level.
 
-Archivematica will not be able to pass this metadata to AtoM or to ArchivesSpace.
+Archivematica will not be able to pass this metadata to AtoM or to
+ArchivesSpace.
 
-Dublin Core metadata is written to the dmdSec of the METS file as
-MDTYPE="DC". Non-Dublin Core metadata will be written into a separate dmdSec as
+Dublin Core metadata is written to the dmdSec of the METS file as MDTYPE="DC".
+Non-Dublin Core metadata will be written into a separate dmdSec as
 MDTYPE="OTHER". A sample of the METS output is available below.
 
 1. Create a transfer that contains a directory called ``metadata``.
@@ -72,7 +72,8 @@ MDTYPE="OTHER". A sample of the METS output is available below.
      "dcterms:abstract". As above, the Dublin Core is not validated - this is up
      to the user.
 
-   * Each subsequent row contains the field values for a single directory or file.
+   * Each subsequent row contains the field values for a single directory or
+     file.
 
    * As of version 1.4, both directory and object level metadata is allowed
      in the metadata.csv. The csv can contain only object level, only directory
@@ -101,11 +102,11 @@ MDTYPE="OTHER". A sample of the METS output is available below.
 
      Example of metadata.csv file contents
 
-4. At the generate METS micro-service, Archivematica parses the metadata in
+4. At the generate METS microservice, Archivematica parses the metadata in
    metadata.csv to the METS file, as follows:
 
-   * All Dublin Core elements are used to generate a dmdSec for each directory or
-     file with MDTYPE="DC"
+   * All Dublin Core elements are used to generate a dmdSec for each directory
+     or file with MDTYPE="DC"
 
    * All non-Dublin Core elements are used to generate a dmdSec for each
      directory or file with MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"
@@ -116,9 +117,9 @@ MDTYPE="OTHER". A sample of the METS output is available below.
 Simple objects
 --------------
 
-This section provides metadata.csv file and METS file examples for simple objects -
-i.e. individual files that are not pages in a compound object such as a book
-or a newspaper issue.
+This section provides metadata.csv file and METS file examples for simple
+objects - i.e. individual files that are not pages in a compound object such as
+a book or a newspaper issue.
 
 **Sample metadata.csv file**
 
@@ -328,14 +329,14 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
 Importing rights metadata with rights.csv
 -----------------------------------------
 
-Rights information can be associated to specific files in a transfer by
-creating a rights.csv file that conforms to the structure below.
+Rights information can be associated to specific files in a transfer by creating
+a rights.csv file that conforms to the structure below.
 
-You can enter multiple acts for the same rights basis. Rows for the same
-object with the same rights basis will be treated as separate acts for the
-basis and merged. For example, the first two rows below will be merged,
-while the third row will be separate. You can read more about rights
-metadata here: :ref:`PREMIS metadata in Archivematica <premis-template>`
+You can enter multiple acts for the same rights basis. Rows for the same object
+with the same rights basis will be treated as separate acts for the basis and
+merged. For example, the first two rows below will be merged, while the third
+row will be separate. You can read more about rights metadata here: :ref:`PREMIS
+metadata in Archivematica <premis-template>`.
 
 =============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
 file           basis       status       determination_date   jurisdiction  start_date  end_date    terms                citation                note                   grant_act    grant_restriction  grant_start_date   grant_end_date   grant_note  doc_id_type                               doc_id_value                                doc_id_role
@@ -345,6 +346,9 @@ image1.tif     copyright   copyrighted  2011-01-01           ca            2011-
 document.pdf   license                                                     2000-09-09  2010-09-08  Terms of license.    Note about license.     migrate                allow                                              2000-09-00       Grant note  License documentation identifier type.    License documentation identifier value.     License documentation identifier role.
 =============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
 
-The rights.csv file is parsed by the job "Load Rights" within the "Characterize and Extract Metadata" microservice run during :ref:`transfer <transfer>`.
+The rights.csv file is parsed by the job "Load Rights" within the "Characterize
+and Extract Metadata" microservice run during :ref:`transfer <transfer>`.
 
 :ref:`Back to the top <import-metadata>`
+
+.. _`Microservice`: https://wiki.archivematica.org/Micro-services

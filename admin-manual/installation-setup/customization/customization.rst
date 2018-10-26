@@ -104,7 +104,7 @@ Resources for development configuration
 If you are working on developing Archivematica, it may be helpful to
 
 A common area for development work is the MCP (Master Control Program). The MCP
-is the core of Archivematica, and controls the various micro-services that
+is the core of Archivematica, and controls the various microservices that
 Archivematica uses to carry out preservation tasks. Developers who wish to
 modify the MCP configuration should consult the following resources on the
 Archivematica wiki:
@@ -138,14 +138,14 @@ Customizing for scalability and performance
 -------------------------------------------
 
 Archivematica includes a number of features and options to improve scalability
-& performance. The default configuration options are geared towards "typical" 
-use cases and for many users won't require any modification. However, some 
-users will benefit from optimizing configuration options to meet their 
+& performance. The default configuration options are geared towards "typical"
+use cases and for many users won't require any modification. However, some
+users will benefit from optimizing configuration options to meet their
 specific preservation needs & available computing resources.
 
-See :ref:`Scaling Archivematica <scaling-archivematica>` for a description of 
-three broad approaches to scaling & optimization and the specific techniques 
-available to each approach. 
+See :ref:`Scaling Archivematica <scaling-archivematica>` for a description of
+three broad approaches to scaling & optimization and the specific techniques
+available to each approach.
 
 :ref:`Back to the top <customization>`
 

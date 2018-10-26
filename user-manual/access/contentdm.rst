@@ -11,8 +11,7 @@ Dashboard or by SFTP to the server Archivematica is installed on.
 
 In Archivematica version 1.4, direct upload to CONTENTdm is no longer
 available. The process described below assumes the user will use
-`Project Client <http://www.contentdm.org/help6/projectclient/index.asp>`_
-to upload DIPs to CONTENTdm.
+`CONTENTdm Project Client`_ to upload DIPs to CONTENTdm.
 
 Should you run into an error during this process, please see
 :ref:`Error handling <error-handling>`.
@@ -43,11 +42,13 @@ or compound object, or multiple simple or compound objects.
 
 For a transfer of simple objects:
 
-1. Inside the directory you wish to use as a transfer, create two subdirectories: ``metadata``, and ``objects``.
+1. Inside the directory you wish to use as a transfer, create two
+   subdirectories: ``metadata``, and ``objects``.
 
 2. Inside ``objects``, place the digital objects you wish to transfer.
 
-3. Inside ``metadata``, place a file called ``metadata.csv``. See preparation instructions below.
+3. Inside ``metadata``, place a file called ``metadata.csv``. See preparation
+   instructions below.
 
 Example:
 
@@ -64,11 +65,14 @@ Example:
 
 For a transfer of compound objects:
 
-1. Inside the directory you wish to use as a transfer, create two subdirectories: ``metadata``, and ``objects``.
+1. Inside the directory you wish to use as a transfer, create two
+   subdirectories: ``metadata``, and ``objects``.
 
-2. Inside ``objects``, create or place directories, one corrsponding to each compound object. Place the digital objects inside those directories.
+2. Inside ``objects``, create or place directories, one corrsponding to each
+   compound object. Place the digital objects inside those directories.
 
-3. Inside metadata, place a file called ``metadata.csv``. See preparation instructions below.
+3. Inside metadata, place a file called ``metadata.csv``. See preparation
+   instructions below.
 
 Example:
 
@@ -109,10 +113,10 @@ metadata.csv file file and create a tab delimited file based on those fields.
 This allows the operator to use the field names as they appear exactly as they
 do in the CONTENTdm collection, which eases the field matching in Project
 Client. It is also recommended that you enter the non-Dublin Core fields in
-the same order as in your CONTENTdm collection. However, if metadata.csv contains
-*only* Dublin Core namespaced fields, Archivematica will create the tab delimited
-file using those fieldnames, stripping out the dc namespace. For example,
-``dc.title`` will become ``title``.
+the same order as in your CONTENTdm collection. However, if metadata.csv
+contains *only* Dublin Core namespaced fields, Archivematica will create the tab
+delimited file using those fieldnames, stripping out the dc namespace. For
+example,``dc.title`` will become ``title``.
 
 For more information regarding the creation and transfer of a metadata.csv file,
 see :ref:`Import metadata <import-metadata>`.
@@ -124,11 +128,11 @@ Controlling the file order
 
 Currently, the only method of controlling the order of files and directories as
 listed in the tab delimited file is to ensure they are in alphabetical order.
-The sort method is based on `ASCII <http://en.wikipedia.org/wiki/ASCII>`_
-characters (e.g. numbers, capital letters, underscores, small case letters).
+The sort method is based on `ASCII`_ characters (e.g. numbers, capital letters,
+underscores, small case letters).
 
 Other methods of controlling file order could be implemented in future releases.
-Please see `Issue 8448 <https://projects.artefactual.com/issues/8448>`_.
+Please see `Issue 8448`_.
 
 .. _dip-contentdm:
 
@@ -141,9 +145,12 @@ Create DIP for CONTENTdm
    and a field called "File UUID". The tab file produced by Archivematica
    will populate these two fields.
 
-1. In the Archivematica dashboard at “Upload DIP”, choose the action “Upload DIP to CONTENTdm” from the drop-down menu.
+1. In the Archivematica dashboard at “Upload DIP”, choose the action “Upload DIP
+   to CONTENTdm” from the drop-down menu.
 
-2. Archivematica will create a DIP consisting of normalized or :ref:`manually normalized <manual-norm>` access objects and a tab delimited file for use in Project Client.
+2. Archivematica will create a DIP consisting of normalized or :ref:`manually
+   normalized <manual-norm>` access objects and a tab delimited file for use in
+   Project Client.
 
 To review the DIP in the dashboard and download individual DIP objects and/or
 the tab file, click "review":
@@ -151,7 +158,7 @@ the tab file, click "review":
 .. image:: images/ReviewDIP.*
    :align: center
    :width: 80%
-   :alt: Click "review" in Upload DIP micro-service to access DIP objects and tab file
+   :alt: Click "review" in Upload DIP microservice to access DIP objects and tab file
 
 The next screen will display the uploadedDIPs directory, which operators can
 navigate to locate the required DIP objects. The CONTENTdm tab file will be
@@ -165,8 +172,8 @@ in the same directory as the DIP objects.
 
 By default, the DIP will be stored in
 ``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. It can
-be retrieved from this location via SFTP client, or individual objects downloaded
-through the web browser.
+be retrieved from this location via SFTP client, or individual objects
+downloaded through the web browser.
 
 .. tip::
 
@@ -178,3 +185,7 @@ through the web browser.
 
 
 :ref:`Back to the top <contentdm>`
+
+.. _`CONTENTdm project client`: http://www.contentdm.org/help6/projectclient/index.asp
+.. _`ASCII`: http://en.wikipedia.org/wiki/ASCII
+.. _`Issue 8448`: https://projects.artefactual.com/issues/8448

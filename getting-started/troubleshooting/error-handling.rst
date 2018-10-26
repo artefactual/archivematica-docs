@@ -11,34 +11,25 @@ others, processing can continue: for example, a normalization failure is
 reported and the user is given the opportunity to continue processing the SIP.
 
 If you don't find an answer here or elsewhere in the user manual, please try
-searching the `public user forum <https://groups.google.com/forum/?fromgroups#!forum/archivematica>`_.
-Someone may have had the same problem before and been offered a solution. If you
-do not find the answer there, feel free to ask us a question. The best questions
-to the list include as much information as possible about the error. This
-means offering us information about the system(s) you're using, the content of
-your transfer(s), and copying the task information (click on the cog icon on
-the same line as the micro-service job where the error occurred) and show
-arguments data output. See task information and show arguments data for the
-same error, below.
+searching the `Archivematica user forum`_. Someone may have had the same problem
+before and been offered a solution. If you do not find the answer there, feel
+free to ask us a question. The best questions to the list include as much
+information as possible about the error. This means offering us information
+about the system(s) you're using, the content of your transfer(s), and copying
+the task information (click on the cog icon on the same line as the microservice
+job where the error occurred) and show arguments data output. See task
+information and show arguments data for the same error, below.
 
 *On this page:*
 
 * :ref:`Dashboard error reporting <error-dashboard>`
-
 * :ref:`Failure reports in Administration tab <failure-reports>`
-
 * :ref:`Email error report <email-failure>`
-
 * :ref:`Normalization errors <normalization-errors>`
-
 * :ref:`DIP upload error <dip-error>`
-
 * :ref:`Common error behaviours <common-errors>`
-
 * :ref:`Rejecting a transfer or SIP <rejecting>`
-
 * :ref:`Removing a transfer or SIP from the dashboard <removing>`
-
 * :ref:`Browser compatability <error-browser>`
 
 .. _error-dashboard:
@@ -46,8 +37,8 @@ same error, below.
 Dashboard error reporting
 -------------------------
 
-When a micro-service fails or encounters an error, the workflow will be halted
-and Archivematica will report a 'Failed transfer'. The micro-service drop-down
+When a microservice fails or encounters an error, the workflow will be halted
+and Archivematica will report a 'Failed transfer'. The microservice drop-down
 can be expanded to show the specific task that failed.
 
 .. figure:: images/PinkChecksumFail.*
@@ -57,7 +48,7 @@ can be expanded to show the specific task that failed.
    :alt: The dashboard showing a transfer has failed
 
    The dashboard showing a transfer has failed at the Verify transfer checksums
-   micro-service
+   microservice
 
 Note that the transfer has been moved to the failed directory and processing
 has been halted.
@@ -66,7 +57,7 @@ has been halted.
    :align: center
    :figwidth: 80%
    :width: 100%
-   :alt: Micro-service expanded to show the failed job
+   :alt: Microservice expanded to show the failed job
 
    The expanded detail on 'Failed transfer'
 
@@ -111,9 +102,9 @@ Archivematica will send email reports for two kinds of failures:
    :align: center
    :figwidth: 80%
    :width: 100%
-   :alt: An emailed failure report showing an error at Verify bag micro-service
+   :alt: An emailed failure report showing an error at Verify bag microservice
 
-   An emailed failure report showing an error at Verify bag micro-service
+   An emailed failure report showing an error at Verify bag microservice
 
 An e-mail is generated if the transfer or ingest cannot be completed, not if
 an error occurs which does not halt processing. Please note that the server
@@ -167,7 +158,7 @@ failed, you can click on "yes" to see a task report of the error in a new tab:
 
 **Option 2**
 
-Click Review in parentheses next to the micro-service to view the
+Click Review in parentheses next to the microservice to view the
 normalization results in a directory structure in a new browser tab:
 
 .. figure:: images/RvrNorm-10.*
@@ -244,10 +235,10 @@ Other common error behaviours
 
 #. Verify metadata directory checksums: if the checksums in the metadata
    directory cannot be verified (i.e. if a file is missing or corrupted) the
-   micro-service will fail and the transfer will be moved in the failed
+   microservice will fail and the transfer will be moved in the failed
    directory.
 
-#. Scan for viruses: if a virus is found the micro-service will fail and the
+#. Scan for viruses: if a virus is found the microservice will fail and the
    transfer will be moved in the failed directory.
 
 #. Characterize and extract metadata: if FITS processing fails, the micro-
@@ -256,10 +247,10 @@ Other common error behaviours
    be able to continue processing.
 
 #. Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db
-   file, the micro-service will fail and the SIP will continue processing.
+   file, the microservice will fail and the SIP will continue processing.
 
 #. Normalize submission documentation to preservation format: if normalization
-   fails, the micro-service will fail and the SIP will continue processing.
+   fails, the microservice will fail and the SIP will continue processing.
 
 .. _rejecting:
 
@@ -289,7 +280,8 @@ in the dashboard:
    :width: 100%
    :alt: Click on the red Remove icon to remove a transfer or SIP from the dashboard
 
-   Click on the red Remove icon to remove a transfer or SIP from the dashboard, then click Confirm.
+   Click on the red Remove icon to remove a transfer or SIP from the dashboard,
+   then click Confirm.
 
 It is recommended that you clear your dashboard of transfers and SIPs periodically
 to improve browser performance.
@@ -301,7 +293,10 @@ Browser compatability
 
 Archivematica has been tested most extensively with Firefox and Chrome. There are
 known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (`Issue 7246 <https://projects.artefactual.com/issues/7246>`_).  Minimal, but successful,
+transfers in the dashboard (`Issue 7246`_).  Minimal, but successful,
 testing has been done with Microsoft Edge.
 
 :ref:`Back to the top <error-handling>`
+
+.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
+.. _`Issue 7246`: https://projects.artefactual.com/issues/7246

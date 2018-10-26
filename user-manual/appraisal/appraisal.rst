@@ -29,7 +29,7 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 
 .. _backlog_pane:
 
-Transfers in the Backlog
+Transfers in the backlog
 ------------------------
 
 Transfers that have been sent to the backlog can be found in the Backlog pane of
@@ -72,7 +72,8 @@ Analysis
 
 The analysis pane allows the user to explore files in transfers sent to the
 backlog. Files selected in the Backlog pane populate the Analysis pane and can
-be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview File.
+be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview
+File.
 
 1) Objects
 ==========
@@ -123,7 +124,7 @@ present in the selected files.
 ===================
 
 If Examine Contents (using the tool Bulk Extractor) was used during transfer,
-the Examine Contents tab provides the reports created during this micro-service.
+the Examine Contents tab provides the reports created during this microservice.
 This tab includes options for listing files that potentially contain personally
 identifiable information (PII) or credit card numbers. Examine Contents also
 includes an option for adding tags to these files.
@@ -185,10 +186,11 @@ ArchivesSpace Resources
 
 The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to
 resources that have been created in an ArchivesSpace repository. Settings for
-ArchivesSpace DIP upload should be configured in the :ref:`Dashboard administration tab <dashboard-admin>`
-to associate the ArchivesSpace repository. In the ArchivesSpace pane, files
-transferred into Archivematica can be associated with resources created in
-ArchivesSpace and SIPs can be sent to Ingest.
+ArchivesSpace DIP upload should be configured in the :ref:`Dashboard
+administration tab <dashboard-admin>` to associate the ArchivesSpace repository.
+In the ArchivesSpace pane, files transferred into Archivematica can be
+associated with resources created in ArchivesSpace and SIPs can be sent to
+Ingest.
 
 ArchivesSpace Terms
 ===================
@@ -304,27 +306,33 @@ edited or deleted and further acts can be added.
 Adding Files to ArchivesSpace Resources and Starting SIPs
 ---------------------------------------------------------
 
-Transfer files in backlog can easily be associated with ArchivesSpace resources by dragging and dropping files from the Backlog pane to digital object components in the ArchivesSpace pane.
+Transfer files in backlog can easily be associated with ArchivesSpace resources
+by dragging and dropping files from the Backlog pane to digital object
+components in the ArchivesSpace pane.
 
 To add files to ArchivesSpace resources:
 
-1. Search the backlog by entering terms and parameters in the search box at the top of the page.
+1. Search the backlog by entering terms and parameters in the search box at the
+   top of the page. For a list of all transfers in backlog, simply click within
+   the search box leaving the edit field blank, and then click **Search transfer
+   backlog**.
 
-   For a list of all transfers in backlog, simply click within the search box leaving the edit field blank, and then click **Search transfer backlog**.
+2. Click **ArchivesSpace** to enable the ArchivesSpace panel, :ref:`search by
+   title or identifier of a resource <searching-ArchivesSpace-resources>`, and
+   then click **Search ArchivesSpace**. A hierarchical view of the resource is
+   displayed.
 
-2. Click **ArchivesSpace** to enable the ArchivesSpace panel, :ref:`search by title or identifier of a resource <searching-ArchivesSpace-resources>`, and then click **Search ArchivesSpace**.
-
-   A hierarchical view of the resource is displayed.
-
-3. Create digital object components within the ArchivesSpace panel by clicking **Add new digital object**.
-
-   Digital object components must be created in the Appraisal tab.
+3. Create digital object components within the ArchivesSpace panel by clicking
+   **Add new digital object**. Digital object components must be created in the
+   Appraisal tab.
 
 .. note::
 
-   Digital objects created and linked to resources in ArchivesSpace will not appear in the Appraisal tab.
+   Digital objects created and linked to resources in ArchivesSpace will not
+   appear in the Appraisal tab.
 
-4. Now click and drag files in the Backlog panel to digital object components in the ArchivesSpace panel.
+4. Now click and drag files in the Backlog panel to digital object components in
+   the ArchivesSpace panel.
 
 .. image:: images/backlog_and_archivesspace.*
    :align: center
@@ -333,16 +341,21 @@ To add files to ArchivesSpace resources:
 
 .. note::
 
-   One file or directory from a transfer can be moved at a time. A file can only be
-   added once to an ArchivesSpace resource. Files that have been added to a digital object component will appear with a strike-through in the backlog.
+   One file or directory from a transfer can be moved at a time. A file can only
+   be added once to an ArchivesSpace resource. Files that have been added to a
+   digital object component will appear with a strike-through in the backlog.
 
 5. Once all files have been added and the arrangement has been set, SIPs can be
    started in Ingest. Select the resource/archival object and click
-   **Finalize arrangement**. SIPs can be created from ArchivesSpace archival objects at any level of description.
+   **Finalize arrangement**. SIPs can be created from ArchivesSpace archival
+   objects at any level of description.
 
 .. tip::
 
-   Before starting a SIP in the ArchivesSpace panel, verify that all required metadata associated with an ArchivesSpace resource is in place, particularly at the parent-level of the arrangement. In ArchivesSpace, verify that a material description record is linked to an agent record.
+   Before starting a SIP in the ArchivesSpace panel, verify that all required
+   metadata associated with an ArchivesSpace resource is in place, particularly
+   at the parent-level of the arrangement. In ArchivesSpace, verify that a
+   material description record is linked to an agent record.
 
 .. _arrangement:
 

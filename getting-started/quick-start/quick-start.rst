@@ -4,13 +4,13 @@
 Archivematica Quick-Start Guide
 ===============================
 
-This guide walks you through the Archivematica transfer and ingest process
-for testing purposes. It is intended for people who are new to Archivematica and
+This guide walks you through the Archivematica transfer and ingest process for
+testing purposes. It is intended for people who are new to Archivematica and
 looking to test it out. This is not a guide to install Archivematica for
 development or production - please see :ref:`Installation <installation>` for
-full installation instructions. Before you start, you should know a bit about the
-`OAIS Reference Model <http://www.oclc.org/research/publications/library/2000/lavoie-oais.html>`_
-enough that the acronyms SIP, AIP, and DIP make sense.
+full installation instructions. Before you start, you should know a bit about
+the `OAIS Reference Model`_ enough that the acronyms SIP, AIP, and DIP make
+sense.
 
 This guide runs through the basic actions taken on a standard transfer and does
 not cover Archivematica's advanced features. For information about processing
@@ -50,8 +50,8 @@ locally-installed Archivematica VM.
 Using the sandbox
 =================
 
-Artefactual maintains an `Archivematica sandbox <http://sandbox.archivematica.org/>`_
-with the following credentials:
+Artefactual maintains an `Archivematica sandbox`_ with the following
+credentials:
 
 * Username: demo@example.com
 * Password: demodemo
@@ -71,7 +71,7 @@ locally.
 
   If you are using the sandbox, you can move on to Task #1.
 
-.. _installing-on-vm:  
+.. _installing-on-vm:
 
 Installing on a virtual machine using Vagrant
 =============================================
@@ -104,9 +104,10 @@ Install Vagrant and VirtualBox
 Spin it up
 ++++++++++
 
-#. using your computer's command-line interface, create a new directory and
+#. Using your computer's command-line interface, create a new directory and
    open it. The location doesn't matter, but you'll need to return to it later
-   - all further command line operations should be run from inside the directory.
+   - all further command line operations should be run from inside the
+   directory.
 
    .. code-block:: bash
 
@@ -124,12 +125,14 @@ Spin it up
 
       vagrant up
 
-   Vagrant will download our custom box and boot it in VirtualBox. The download can take anywhere from a few minutes to an hour or more, depending on the speed of your connection, as the box is fairly large (approx 3.2 GB in size).
+   Vagrant will download our custom box and boot it in VirtualBox. The download
+   can take anywhere from a few minutes to an hour or more, depending on the
+   speed of your connection, as the box is fairly large (approx 3.2 GB in size).
 
-  This will take a while. It depends on your computer, but it could take up to
-  an hour. Your computer may be very slow while Archivematica is being
-  provisioned - be sure to save any work and be prepared to step away from your
-  computer while Archivematica is building.
+   This will take a while. It depends on your computer, but it could take up to
+   an hour. Your computer may be very slow while Archivematica is being
+   provisioned - be sure to save any work and be prepared to step away from your
+   computer while Archivematica is building.
 
 Once it's done provisioning, you can log in to your virtual machine::
 
@@ -137,8 +140,10 @@ Once it's done provisioning, you can log in to your virtual machine::
 
 You can also access your Archivematica instance through the web browser:
 
-* Archivematica: `<http://10.10.10.20>`_. Username & password configured on installation.
-* Storage Service: `<http://10.10.10.20:8000>`_. Username & password configured on installation.
+* Archivematica: `<http://10.10.10.20>`_. Username & password configured on
+  installation.
+* Storage Service: `<http://10.10.10.20:8000>`_. Username & password configured
+  on installation.
 
 To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ and click
 on the Administration tab. In the left sidebar, click on *Users*, then click on
@@ -151,29 +156,29 @@ prompted during installation.
 Task #1 - Start a standard transfer
 -----------------------------------
 
-A transfer is any set of one or more files that you decide to process as a group.
-It can come from any storage system to which Archivematica has been connected.
-To start your first transfer, go to the Archivematica transfer dashboard - the
-main page of either the `sandbox <sandbox.archivematica.org>`_ or your
-`Archivematica VM <http://10.10.10.20>`_. You can also access the transfer page
-by clicking on the Transfer tab in your Archivematica instance.
+A transfer is any set of one or more files that you decide to process as a
+group. It can come from any storage system to which Archivematica has been
+connected. To start your first transfer, go to the Archivematica transfer
+dashboard - the main page of either the `Archivematica sandbox`_ or your
+Archivematica VM. You can also access the transfer page by clicking on the
+Transfer tab in your Archivematica instance.
 
-The transfer process is made up of a series of micro-services, which are in turn
+The transfer process is made up of a series of microservices, which are in turn
 made up of jobs.
 
 .. note::
 
-   A micro-service is a group of actions that accomplish a specific goal within
+   A microservice is a group of actions that accomplish a specific goal within
    Archivematica. Verifying that your transfer complies with Archivematica's
-   transfer requirements is a micro-service.
+   transfer requirements is a microservice.
 
 .. note::
 
-   A job is a discrete action within a micro-service. Moving the contents of your
+   A job is a discrete action within a microservice. Moving the contents of your
    transfer to a processing directory is a job.
 
-Each micro-service can be expanded if you click on the micro-service name. This
-allows you to see every job that makes up the micro-service. You can view the
+Each microservice can be expanded if you click on the microservice name. This
+allows you to see every job that makes up the microservice. You can view the
 command for each job by clicking on the gear icon to the right of each job name
 which will open a new window that lists the command information. Clicking on
 *Show arguments* will list the exact python command that Archivematica uses to
@@ -194,14 +199,14 @@ Jobs turn green when they have completed successfully and red if they fail.
    that would stop the transfer (i.e. anything that says "Reject"). For more
    information about the decision points, check out the
    :ref:`transfer tab documentation <transfer>`.
-#. When you reach the *Identify file format* micro-service, stop and read the
+#. When you reach the *Identify file format* microservice, stop and read the
    next section.
 
 Review file formats
 ===================
 
 You do not need to consult the command for every job, but we do recommend taking
-a look at the output of the *Identify file format* micro-service. One of
+a look at the output of the *Identify file format* microservice. One of
 Archivematica's most important jobs is to identify file formats and then preserve
 those files as best as possible.
 
@@ -212,33 +217,32 @@ those files as best as possible.
 #. Once file format identification is complete, click on the gear icon to the
    right of the job name to open the job page.
 #. On the job page, under the heading STDOUT, you will see information similar
-   to the following:
+   to the following
 
-.. code-block:: none
+.. code::
 
-  IDCommand UUID: 8cc792b4-362d-4002-8981-a4e808c04b24
-  File: (9305a71e-5180-4c49-b93e-c934d7a433dc) /var/archivematica/sharedDirectory/currentlyProcessing/demo-test-f706d98d-faa6-450f-92c7-b608f1106f2e/objects/pictures/MARBLES.TGA
-  fmt/402
+   IDCommand UUID: 8cc792b4-362d-4002-8981-a4e808c04b24
+   File: (9305a71e-5180-4c49-b93e-c934d7a433dc) /var/archivematica/sharedDirectory/currentlyProcessing/demo-test-f706d98d-faa6-450f-92c7-b608f1106f2e/objects/pictures/MARBLES.TGA
+   fmt/402
 
-  Command output: fmt/402
-  /var/archivematica/sharedDirectory/currentlyProcessing/demo-test-f706d98d-faa6-450f-92c7-b608f1106f2e/objects/pictures/MARBLES.TGA identified as a Truevision TGA Bitmap 2.0
+   Command output: fmt/402
+   /var/archivematica/sharedDirectory/currentlyProcessing/demo-test-f706d98d-faa6-450f-92c7-b608f1106f2e/objects/pictures/MARBLES.TGA identified as a Truevision TGA Bitmap 2.0
 
 The above tells us that the file MARBLES.TGA was identified as a Truevision TGA
-Bitmap 2.0. Archivematica uses `PRONOM <https://www.nationalarchives.gov.uk/PRONOM/Default.aspx>`_,
-a registry of technical information maintained by the National Archives of the UK,
-for file identification and to inform normalization, characterization, and other
-file-manipulation events. Archivematica identifies a TGA file as
-`fmt/402 <https://www.nationalarchives.gov.uk/PRONOM/fmt/402>`_ (format 402),
-which is the PRONOM format identifier for a Truvision TGA Bitmap 2.0. There
-should be a similar STDOUT section for each item in your transfer.
+Bitmap 2.0. Archivematica uses `PRONOM`_, a registry of technical information
+maintained by the National Archives of the UK, for file identification and to
+inform normalization, characterization, and other file-manipulation events.
+Archivematica identifies a TGA file as `fmt/402`_ (format 402), which is the
+PRONOM format identifier for a Truvision TGA Bitmap 2.0. There should be a
+similar STDOUT section for each item in your transfer.
 
 Archivematica will continue processing your transfer in the background. When you
-reach the *Create SIP from Transfer micro-service*, read the next section.
+reach the *Create SIP from Transfer microservice*, read the next section.
 
 Create a SIP
 ============
 
-The final micro-service on the Transfer tab is *Create SIP from Transfer*. The
+The final microservice on the Transfer tab is *Create SIP from Transfer*. The
 final job, *Create SIP(s)*, allows you to either proceed directly to the Ingest
 tab or to send the transfer to the backlog. For more information on the backlog,
 check out the :ref:`backlog documentation <manage-backlog>`.
@@ -252,10 +256,10 @@ check out the :ref:`backlog documentation <manage-backlog>`.
 Task #2 - Make AIPs and DIPs
 ----------------------------
 
-The primary function of Archivematica is to produce Archival Information Packages
-(AIPs) and Dissemination Information Packaes (DIPs) from SIPs.  You just created
-a SIP on the Transfer tab. The Ingest tab is where you run micro-services that
-create the AIP and the DIP.
+The primary function of Archivematica is to produce Archival Information
+Packages (AIPs) and Dissemination Information Packaes (DIPs) from SIPs.  You
+just created a SIP on the Transfer tab. The Ingest tab is where you run
+microservices that create the AIP and the DIP.
 
 **Steps:**
 
@@ -268,36 +272,38 @@ create the AIP and the DIP.
 Normalization
 =============
 
-Ingest, like Transfer, is also made up of a series of micro-services. The most
-significant micro-service that takes place during ingest is Normalize.
+Ingest, like Transfer, is also made up of a series of microservices. The most
+significant microservice that takes place during ingest is Normalize.
 Normalization is the process of converting your digital content into appropriate
-formats for long-term storage (for an AIP) and access (for a DIP). When you reach
-the Normalization micro-service, you will be prompted to decide how you would
-like to normalize your content.
+formats for long-term storage (for an AIP) and access (for a DIP). When you
+reach the Normalization microservice, you will be prompted to decide how you
+would like to normalize your content.
 
 **Steps:**
 
 #. Select *Normalize for preservation and access* when prompted. By selecting
    this option, you are telling Archivematica that you would like to create a
    preservation copy (AIP) and an access copy (DIP) of the contents of your SIP.
-#. Once normalization is complete, you will be prompted to approve normalization.
-   Before selecting approve, click on the small page icon next to the drop down
-   menu.
+#. Once normalization is complete, you will be prompted to approve
+   normalization. Before selecting approve, click on the small page icon next to
+   the drop down menu.
 #. The Normalization Report will open in a separate tab. Information on how to
    read this report is included below.
 #. In your main tab, click on the Preservation Planning tab at the top of the
-   page. When the Preservation Planning tab is open, search for "SVG" (or whatever
-   file format you would like to review). Click on the name of the file format.
+   page. When the Preservation Planning tab is open, search for "SVG" (or
+   whatever file format you would like to review). Click on the name of the file
+   format.
 #. You should now have two tabs open - the Normalization Report and the
-   Preservation Planning page. Go back to the Normalization Report and review the
-   next two sections.
+   Preservation Planning page. Go back to the Normalization Report and review
+   the next two sections.
 
 Reviewing normalization for preservation
 ++++++++++++++++++++++++++++++++++++++++
 
-The Normalization Report details whether or not normalization was attempted on the
-contents of your SIP. This screenshot shows the report for lion.svg, identified
-as a Scalable Vector Graphic, with the preservation columnns highlighted.
+The Normalization Report details whether or not normalization was attempted on
+the contents of your SIP. This screenshot shows the report for lion.svg,
+identified as a Scalable Vector Graphic, with the preservation columnns
+highlighted.
 
 .. image:: images/normalization-report-preservation.png
    :align: left
@@ -363,24 +369,24 @@ Task #3 - Store AIPs and DIPs
 
 Archivematica is a tool for creating packages. In a production environment,
 storage occurs externally to Archivematica in a storage system selected by the
-user or institution, but for the sake of this demo we'll store our AIP and DIP in
-Archivematica's default internal storage.
+user or institution, but for the sake of this demo we'll store our AIP and DIP
+in Archivematica's default internal storage.
 
 AIPs should always be stored first. Because the packages are smaller, storage
 options for DIPs are usually the first to appear, so it's tempting to store them
-right away. However, if anything goes wrong with your AIP, you would then have to
-delete the DIP from the storage and access systems. Dealing with the AIP first
-allows you to store and provide access to DIPs knowing that that the AIP is
-secure.
+right away. However, if anything goes wrong with your AIP, you would then have
+to delete the DIP from the storage and access systems. Dealing with the AIP
+first allows you to store and provide access to DIPs knowing that that the AIP
+is secure.
 
 **Steps:**
 
-#. Process your ingest until the *Store AIP* and *Upload DIP* micro-services
+#. Process your ingest until the *Store AIP* and *Upload DIP* microservices
    prompt you for a decision point.
 #. Select "Store AIP" from the *Store AIP* dropdown.
 #. In a moment, another decision point will prompt you to select a storage
-   location for your AIP. There should only be one option - "Store AIP in standard
-   Archivematica directory". Select this option.
+   location for your AIP. There should only be one option - "Store AIP in
+   standard Archivematica directory". Select this option.
 #. Once the AIP is stored successfully, you can move on to dealing with the DIP.
    Neither a locally-installed Archivematica VM nor the sandbox is hooked up to
    an access system, so under *Upload DIP* select "Store DIP".
@@ -404,8 +410,8 @@ Review AIP
 **Steps:**
 
 #. Click on the Archival Storage tab. You should see your AIP listed in the
-   search results there, but if not, you can search for it using the name you gave
-   it in Task #1.
+   search results there, but if not, you can search for it using the name you
+   gave it in Task #1.
 #. Depending on the version of Archivematica you are using, clicking on the name
    of the AIP will either open the AIP Details page or immediately download the
    AIP. If you end up on the AIP Details page, click on the ‘download’ button.
@@ -420,15 +426,15 @@ Review AIP
    web browser or text editor. It will be titled something like
    "METS.7e58760a-e357-4165-9428-26f5bb2ba8ee.xml".
 #. Find the <mets:fileSec> tag in the METS. Within the fileSec, you should be
-   able to find information about every item in your original transfer - these are
-   in the section tagged <mets:fileGrp USE="original">. Scrolling down, you can
-   view complementary information for each of the preservation copies - this is in
-   the section tagged <mets:fileGrp USE="preservation">.
+   able to find information about every item in your original transfer - these
+   are in the section tagged <mets:fileGrp USE="original">. Scrolling down, you
+   can view complementary information for each of the preservation copies - this
+   is in the section tagged <mets:fileGrp USE="preservation">.
 
 The METS.xml file is very long because it contains all of the information about
 your files as well as information about the processes and tools that acted on
 those original files. For more information about the contents and structure of
-the METS file, check out the `Archivematica wiki <https://wiki.archivematica.org/METS>`_.
+the METS file, check out the `METS page on the Archivematica wiki`_.
 
 Review DIP
 ==========
@@ -492,10 +498,10 @@ configurations:
 #. Using the dropdown to the right, select a compression level - *5 - normal
    compression mode* is a good balance between speed and size.
 
-We recommend that you run several tests in Archivematica before setting
-up the processing configurations. As you become more familiar with Archivematica,
-you will begin to recognize which decisions you make over and over again. These
-are great candidates for automation via the processing configurations.
+We recommend that you run several tests in Archivematica before setting up the
+processing configurations. As you become more familiar with Archivematica, you
+will begin to recognize which decisions you make over and over again. These are
+great candidates for automation via the processing configurations.
 
 .. _quick-start-resources:
 
@@ -505,11 +511,10 @@ More ways to get familiar with Archivematica
 This tutorial covers a very basic Archivematica workflow. For information about
 processing more complex content, see the :ref:`User manual <user-manual>`.
 
-The tasks above are based on the Archivematica Worksheet first developed by
-Justin Simpson for the HEAP-AIM25 Network Meeting in November 2016. The worksheet
-runs through several more examples of Archivematica workflows. It is available
-for download via the `Archivematica Camp Github repo <https://github.com/artefactual-labs/archivematica-camp>`_.
-Feel free to use this worksheet for personal use or in a teaching context - see
-the licence file in the repo.
-
 :ref:`Back to the top <quick-start>`
+
+.. _`OAIS Reference Model`: http://www.oclc.org/research/publications/library/2000/lavoie-oais.html
+.. _`Archivematica sandbox`: http://sandbox.archivematica.org/
+.. _`PRONOM`: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
+.. _`fmt/402`: https://www.nationalarchives.gov.uk/PRONOM/fmt/402
+.. _`METS page on the Archivematica wiki`: https://wiki.archivematica.org/METS

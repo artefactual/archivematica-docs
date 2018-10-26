@@ -12,14 +12,14 @@ and commands that Archivematica will use to complete the desired preservation
 action.
 
 Preservation actions such as normalization, package extraction,
-characterization, validation, identification, verification, and transcription are
-managed in Archivematica's Preservation Planning tab.
+characterization, validation, identification, verification, and transcription
+are managed in Archivematica's Preservation Planning tab.
 
 When you install Archivematica, default formats, rules and commands are
 installed and accessed through the Preservation Planning tab. When you upgrade
 to a new release of Archivematica, new formats, rules and commands may be added
-(check the release notes for the specific release to find out). In addition,
-you can maintain local rules to add new formats or customize the behaviour of
+(check the release notes for the specific release to find out). In addition, you
+can maintain local rules to add new formats or customize the behaviour of
 Archivematica. Your local changes are maintained if you upgrade your
 Archivematica pipeline to a new version. Archivematica's default format policies
 are maintained by Artefactual. Format policies will change as community
@@ -412,8 +412,7 @@ Here's a Python script that identifies files by their file extension:
    else:
            print extension.lower()
 
-Here's a more complex Python example, which uses
-`Exiftool's <http://www.sno.phy.queensu.ca/~phil/exiftool/>`_ XML output to
+Here's a more complex Python example, which uses `ExifTool`_ XML output to
 return the MIME type of a file:
 
 .. code:: python
@@ -864,13 +863,13 @@ a rule to invoke the policy checking command for the desired format. For
 example, if you have created a MediaConch policy command to check against JPG
 files, you must also create a rule that connects the format with the command.
 
-Validation rules are called during several micro-services:
+Validation rules are called during several microservices:
 
-* During the *Validate* micro-service on the Transfer tab, which includes
+* During the *Validate* microservice on the Transfer tab, which includes
   validating formats as well as checking original files against a policy.
-* During the *Normalize* micro-service on the Ingest tab, where access and
+* During the *Normalize* microservice on the Ingest tab, where access and
   preservation derivatives generated during normalization are validated.
-* During the *Policy checks for derivatives* micro-service on the Ingest tab,
+* During the *Policy checks for derivatives* microservice on the Ingest tab,
   where access derivatives and preservation derivatives can be checked against
   a policy.
 

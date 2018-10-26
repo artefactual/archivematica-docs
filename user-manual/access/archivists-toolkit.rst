@@ -68,7 +68,7 @@ dashboard have been set.
 Mapping Archivematica DIP objects to Archivists' Toolkit resource components
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-At the DIP upload micro-service in the Archivematica dashboard, the user can
+At the DIP upload microservice in the Archivematica dashboard, the user can
 choose to upload the DIP to AT. Archivematica then loads a screen listing all
 AT collections. The user navigates to a specific collection either by
 searching for it or by navigating to it using the screen pager. To start
@@ -223,7 +223,7 @@ Add PREMIS rights and restrictions
 Prior to normalization, the user can enter PREMIS rights information which can
 be used to populate some fields in the AT database. Information about
 Archivematica’s PREMIS rights module is available at
-`PREMIS metadata: rights <https://www.archivematica.org/wiki/PREMIS_metadata:_rights_-_0.10>`_ .
+`PREMIS metadata: rights`_ .
 
 This feature focuses on two acts to affect the AT DIP metadata (Disseminate
 and Publish), and three different types of restrictions (Allow, Disallow and
@@ -270,3 +270,5 @@ PREMIS rightsGrantedNote:
    :alt: PREMIS rights template with Grant/restriction note
 
 :ref:`Back to the top <archivists-toolkit>`
+
+.. _`PREMIS metadata: rights`: https://www.archivematica.org/wiki/PREMIS_metadata:_rights_-_0.10
