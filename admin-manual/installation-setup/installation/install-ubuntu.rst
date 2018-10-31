@@ -178,8 +178,8 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
        sudo service archivematica-storage-service start
        sudo service archivematica-dashboard restart
        sudo service nginx restart
-       sudo systemctl enable fits
-       sudo service fits start
+       sudo systemctl enable fits-nailgun
+       sudo service fits-nailgun start
 
     If you have trouble with the gearman command try restarting it:
 

@@ -139,7 +139,7 @@ going to be necessary to continue the upgrade:
       sudo restart archivematica-mcp-server
       sudo restart archivematica-mcp-client
       sudo start archivematica-dashboard
-      sudo restart fits
+      sudo restart fits-nailgun
       sudo freshclam
       sudo service clamav-daemon restart
       sudo service nginx restart
