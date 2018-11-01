@@ -68,6 +68,31 @@ Installation instructions
 
    * Archivematica:
 
+   While Archivematica 1.8 is in development, please use these commands to
+   install the development repositories:
+
+   .. code:: bash
+
+      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
+      [archivematica]
+      name=archivematica
+      baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/centos7
+      gpgcheck=0
+      enabled=1
+      EOF'
+
+      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
+      [archivematica-extras]
+      name=archivematica-extras
+      baseurl=https://packages.archivematica.org/1.8.x/centos-extras
+      gpgcheck=1
+      gpgkey=https://packages.archivematica.org/1.8.x/key.asc
+      enabled=1
+      EOF'
+
+   If the release has been completed, you should use these commands to install
+   the final repositories:
+
    Use these commands to install the repositories:
 
    .. code:: bash
