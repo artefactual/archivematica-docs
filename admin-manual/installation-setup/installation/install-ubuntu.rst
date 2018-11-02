@@ -31,7 +31,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
       sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
       sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-      sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/xenial/ ./" >> /etc/apt/sources.list'
+      sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/xenial/ ./" >> /etc/apt/sources.list'
       sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
    Ubuntu 18.04 (Bionic):
@@ -40,10 +40,10 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
       sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
       sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-      sudo sh -c 'echo "deb http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/bionic/ ./" >> /etc/apt/sources.list'
+      sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/bionic/ ./" >> /etc/apt/sources.list'
       sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals bionic main" >> /etc/apt/sources.list'
 
-    If the release has been completed, you should use these commands to install
+   If the release has been completed, you should use these commands to install
    the final repositories:
 
 1. Use these commands to install the repositories:
