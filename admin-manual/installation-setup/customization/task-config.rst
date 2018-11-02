@@ -44,4 +44,17 @@ non-zero exit code (i.e., when it fails). This allows the user to get the
 performance benefits while still having useful debugging information in the
 case where a task fails.
 
+.. tip::
+
+   It is also possible to tweak the configuration of your database server in
+   order to push the existing limits further. This can be a good solution for
+   users familiar with the MySQL storage engine. In particular we have had some
+   success increasing the InnoDB log file size (``innodb_log_file_size``). See
+   `Should MySQL update the default innodb_log_file_size?`_ for more. In the
+   long term, we expect to find better ways to store task results - if you are
+   interested, please see `issue #314`_.
+
 :ref:`Back to the top <task-output-capturing-admin>`
+
+.. _`Should MySQL update the default innodb_log_file_size?`: https://www.percona.com/blog/2011/11/21/should-mysql-update-the-default-innodb_log_file_size/
+.. _`issue #314`: https://github.com/archivematica/Issues/issues/314
