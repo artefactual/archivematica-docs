@@ -337,8 +337,8 @@ the configuration of your new server.
    localhost, you will need to configure your firewall rules and allow access
    only to ports 81 and 8001 for Archivematica usage.
 
-2. The Storage Service has its own set of users. Navigate to
-   **Administration > Users** and create a new user with full admin privileges::
+2. The Storage Service has its own set of users. Create a new user with full
+   admin privileges::
 
       sudo -u archivematica bash -c " \
           set -a -e -x

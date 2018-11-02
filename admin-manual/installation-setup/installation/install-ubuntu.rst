@@ -82,9 +82,8 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
    Skip this step, the package will be downloaded directly in step 4.
 
-3. Update to the most recent OS release - for Xenial, this is 16.04.4. This step
-   will also fetch a list of the software from the package repositories you just
-   added to your system.
+3. Update to the most recent OS release. This step will also fetch a list of
+   the software from the package repositories you just added to your system.
 
    .. code:: bash
 
@@ -251,9 +250,8 @@ the configuration of your new server.
    localhost, you will need to configure your firewall rules and allow access
    only to ports 80 and 8000 for Archivematica usage.
 
-2. The Storage Service has its own set of users. Navigate to
-   **Administration > Users** and add at least one administrative user:
-   ::
+2. The Storage Service has its own set of users. Add at least one
+   administrative user:: 
 
     sudo -u archivematica bash -c " \
         set -a -e -x
