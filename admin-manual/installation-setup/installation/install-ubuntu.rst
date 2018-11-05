@@ -188,7 +188,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     .. code:: bash
 
        sudo service elasticsearch restart
-       sudo update-rc.d elasticsearch defaults 95 10
+       sudo systemctl enable elasticsearch
 
 12. Start the remaining services
 
