@@ -1,8 +1,8 @@
 .. _forensic:
 
-===============
-Forensic images
-===============
+====================
+Forensic disk images
+====================
 
 Workflow
 --------

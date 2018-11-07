@@ -4,319 +4,590 @@
 Transfer
 ========
 
-In Archivematica, Transfer is the process of transforming any set of digital
-objects and/or directories into a SIP. Transformation may include appraisal,
-arrangement, description and identification of donor restricted, private or
-confidential contents. The Transfer tab prepares your content for preservation
-in Archivematica.
-
-In the Transfer tab of the Dashboard, the user moves digital objects from source
-directories accessible via the Storage Service into Archivematica. See
-:ref:`Administrator manual - Storage Service <storageService:administrators>`
-for instructions on how to set up shared transfer source directories. Once
-uploaded to the dashboard, transfers run through several microservices: UUID
-assignment; checksum verification (if checksums are present); package extraction
-(i.e. unzipping of zipped or otherwise packaged files); virus checking;
-indexing; format identification and validation; and metadata extraction.
-
-At the end of transfer, the user creates a SIP from one or more standard
-transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
-:ref:`backlog <manage-backlog>` for processing later.
+In Archivematica, *transfer* is the process of moving any set of digital objects
+into Archivematica and turning the materials into a Submission Information
+Package (SIP). The Transfer tab prepares your content for preservation in
+Archivematica.
 
 *On this page:*
 
-* :ref:`Create a transfer <create-transfer>`
-* :ref:`Create a transfer with submission documentation <create-submission>`
-* :ref:`Create a transfer with existing checksums <transfer-checksums>`
-* :ref:`Process the transfer <process-transfer>`
-* :ref:`Cleaning up the transfer dashboard <cleanup>`
-* :ref:`Format identification <format-identification>`
-* :ref:`Extract packages <extract-packages>`
+* :ref:`The Transfer tab <transfer-tab>`
 
-.. seealso::
+* :ref:`Preparing digital objects for transfer <prepare-transfer>`
 
-   If you would like to import lower-level metadata with your transfer (i.e.
-   metadata to be attached to subdirectories and files within a SIP), see
-   :ref:`Metadata import <import-metadata>`.
+  * :ref:`Transfer types <transfer-types>`
+  * :ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
+  * :ref:`Transfers with submission documentation <create-submission>`
+  * :ref:`Transfers with existing checksums <transfer-checksums>`
+  * :ref:`Transferring material with preservation or access derivatives (manual normalization) <transfer-derivatives>`
+  * :ref:`Transferring material with access copies only <transfer-access-copies>`
+  * :ref:`Transferring material with service (mezzanine) files <transfer-service-files>`
 
-   If your transfer is a DSpace export, please see :ref:`DSpace export
-   <dspace>`.
+* :ref:`Processing a transfer <process-transfer>`
 
-   If your transfer is a bag or a zipped bag, please see :ref:`Bags <bags>`.
+  * :ref:`Start a transfer <create-transfer>`
+  * :ref:`Transfer tab microservices <transfer-tab-microservices>`
 
-   If your transfer is composed of objects that are the result of digitization,
-   please see :ref:`Digitization output <digitized>`.
+* :ref:`Cleaning up the Transfer tab <cleanup>`
 
-   If your transfer is composed of digital forensic disk images, please see
-   :ref:`Forensic image processing <forensic>`.
+.. _transfer-tab:
 
-   If your transfer is from a Dataverse repository, please see
-   :ref:`Dataverse Integration <dataverse>`.
+The Transfer tab
+----------------
 
-   If you would like to skip some of the default choices for dashboard decision
-   points or make preconfigured choices for your desired workflow, see
-   :ref:`Processing configuration <dashboard-processing>`.
+The Transfer tab is where many users begin the process of turning their digital
+objects into Archival Information Packages (AIPs). On the Transfer tab, users
+select the material to be preserved, name the transfer, and kick off the
+transfer process.
 
+.. image:: images/transfer-tab.*
+   :align: center
+   :width: 80%
+   :alt: The Transfer tab is where transfers into Archivematica begin.
 
-.. _create-transfer:
+The section at the top of the Transfer tab is where you your materials for
+transfer into Archivematica. There are four fields to fill out, as well as the
+``Browse`` and ``Start transfer`` buttons and the ``Approve automatically``
+checkbox.
 
-Create a transfer
------------------
+* **Transfer type**: The kind of material being transferred. See :ref:`Transfer
+  types <transfer-types>` for more information.
+* **Transfer name**: A name for your transfer. This will become the name of the
+  resulting Archival Information Package (AIP). This is a required field.
+* **Accession no.**: Entering an accession number for your transfer will result
+  in the accession number being copied into the AIP METS file as a registration
+  event. It is not used for identifying or searching for the AIP within
+  Archivematica. This field is optional.
+* **Access system ID**: Entering an access system ID field when you are setting
+  up your transfer allows you to automate the process of uploading a DIP to AtoM
+  or Binder. Archivematica will automatically grab this value when it reaches
+  the Upload DIP microservice. See :ref:`Upload a DIP to AtoM <upload-atom>` and
+  :ref:`Upload a DIP to Binder <upload-binder>` for more information. This field
+  is optional.
+* **Browse**: The Browse button toggles open the transfer browser. This allows
+  users to view and browse through the configured transfer source location(s).
+  For more information about setting up transfer source locations that
+  Archivematica can access, see :ref:`Administrator manual - Storage Service
+  <storageService:administrators>`. Selecting a directory and clicking **Add**
+  adds the directory of materials to the transfer.
 
-Open your Archivematica dashboard and sign in with your
-username and password.
+.. image:: images/transfer-browser.*
+   :align: center
+   :width: 80%
+   :alt: Clicking on the Browse button opens the transfer browser, a list of directories and files available for transfer into Archivematica
 
-#. In the transfer tab, select your transfer type in the dropdown menu. Types
-   include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
+* **Start transfer**: Once you have given your transfer a name and selected
+  material from the transfer browser, the Start transfer button kicks off the
+  transfer microservices.
+* **Approve automatically**: If this box is unchecked, Archivematica will pause
+  at the first microservice, *Approve transfer*, and give you a chance to
+  confirm that your transfer has been set up properly. If the box is checked,
+  Archivematica will not pause at this step.
 
-#. Name your transfer. The transfer name will become the name of your AIP, so
-   make sure that the name is meaningful.
+Once a transfer has been started, it appears below the transfer preparation
+area. Several :ref:`microservices <microservices>` run on the transferred
+material to prepare it to become a SIP. The list of microservices should be read
+from bottom to top.
 
-#. Select your source directory. Click Browse to select the directory containing
-   your object(s) for upload. Click on the folder icon to expand the directory
-   trees. To select a source folder, click on the name of the folder so that it
-   is highlighted and click Add. Your transfer can be composed of multiple
-   directories from different sources. Repeat this step if your transfer is
-   composed of multiple sources.
+.. image:: images/transfer-microservices-1.8.*
+   :align: center
+   :width: 80%
+   :alt: Image shows the many microservices that run on a standard transfer in Archivematica 1.8
 
-   .. figure:: images/Browse1.*
-      :align: center
-      :figwidth: 60%
-      :width: 100%
-      :alt: Select transfer(s) from source directory(ies)
+At the end of the transfer process, the transferred material can be sent to the
+:ref:`backlog <manage-backlog>`, where it can be stored until you are ready to
+turn it into an AIP. The backlog also gives users a chance to carry out
+:ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
+transferred material into a SIP and send it along to the :ref:`Ingest <ingest>`
+tab.
 
-      Select transfer source directories
+You can clean up the Transfer tab by removing completed or rejected transfers.
+For more information, see :ref:`Cleaning up the Transfer tab <cleanup>` below.
 
-#. If applicable, enter an accession number for the transfer.
+.. _prepare-transfer:
 
-#. Once all of your digital object sources have been uploaded, hit the Start
-   Transfer button for the transfer processing to begin.
+Preparing digital objects for transfer
+--------------------------------------
 
-   .. figure:: images/Start1.*
-      :align: center
-      :figwidth: 60%
-      :width: 100%
-      :alt: Start transfer in dashboard
+Archivematica is format-agnostic, meaning that it can accept any file that you
+pass to the system for processing. A single transfer can be homogenous or it can
+be a mix of many different formats. However, the way that your material is
+structured for transfer into Archivematica can have big impacts on how it is
+processed. Below, there are details about structuring your transfer to
+accomplish specific digital preservation-related goals with the materials.
 
-      Start transfer
+With the exception of zipped bag transfers, Archivematica requires that all of
+the materials in the transfer are contained within a top-level directory. The
+directory structure of the transfer can be simple (i.e. all files located in
+the same directory) or it can be nested and hierarchical.
 
-#. To close the transfer browser, click on Browse again.
+The following screenshot shows a basic transfer called ``basicTransfer``. Four
+digital objects sit within the top-level directory, while two more objects are
+nested within a subdirectory.
+
+.. image:: images/basic-transfer.*
+   :align: center
+   :width: 50%
+   :alt: A folder called basicTransfer, which contains four top-level digital objects as well as a folder called "subdirectory" containing two more objects
+
+How quickly Archivematica can process a transfer depends on two things: the size
+of the transfer (both the individual objects and the transfer as a whole) and
+the transfer's complexity. Speed and efficiency of an Archivematica pipeline is
+very subjective and much of it depends on the specifications of the
+Archivematica instance that you are using. For more information on configuring
+Archivematica to handle large and/or complex transfers, see :ref:`Scaling
+Archivematica <scaling-archivematica>`.
+
+.. _transfer-types:
+
+Transfer types
+^^^^^^^^^^^^^^
+
+Some materials that are transferred into Archivematica require special
+processing. To kick off these specialized workflows, you can select a specific
+*transfer type*. There are six different transfer types available.
+
+.. image:: images/transfer-types.*
+   :align: center
+   :width: 80%
+   :alt: The transfer types dropdown menu on the left-hand side of the Transfer tab shows six different transfer type options
+
+**Standard**: Standard transfers are the default in Archivematica. All materials
+can be transferred using the standard transfer type. No special processing tasks
+are carried out. If you're unsure which transfer type to choose, start with a
+standard transfer.
+
+**Unzipped bags**: Archivematica can recognize and make use of materials that
+have been packaged according to the `BagIt File Packaging Format`_, colloquially
+known as bags. If you are in the practice of making bags before transferring
+material into Archivematica, you can continue to do so. Archivematica will
+verify the bag early on in the transfer process, looking at manifest information
+created during the bagging process such as checksums and the payload oxum. The
+Unzipped bags transfer type can be used for bags that are not saved in a
+compressed format.
+
+This screenshot shows the layout of a bagged transfer. The bagging process moves
+the digital objects to be preserved to a ``data`` directory and creates various
+metadata files required by the BagIt specification (i.e. ``bag-info.txt``,
+``manifest-md5.txt``).
+
+.. image:: images/bag-transfer.*
+   :align: center
+   :width: 50%
+   :alt: A bagged transfer containing digital objects and bag metadata
+
+**Zipped bags**: Similar to Unzipped bags, the Zipped bags transfer type can br
+used for materials that have been packaged according to the
+`BagIt File Packaging Format`_. The Zipped bags transfer type should be used for
+bags that have been saved in a compressed (or zipped) format, such as a
+``.zip``, ``.tar``, or ``.tar.gz``. When you switch the transfer type to Zipped
+bags, only compressed formats are available to be selected in the transfer
+browser.
+
+**DSpace**: When you export materials from a `DSpace`_ repository, the export is
+packaged with a METS file for the export as a whole as well as each individual
+item. Archivematica can reuse some of the data in these METS files.
+
+**Disk image**: Selecting the disk image transfer type is not required to
+preserve disk images (you can use the standard transfer type or the bag transfer
+types, if your disk image is also bagged); however, it does give you an extra
+disk image-specific metadata form where you can record information about the
+imaging process. For more information, see :ref:`Forensic disk images
+<forensic>`.
+
+**Dataverse**: Similar to the DSpace transfer type, materials exported from a
+`Dataverse`_ repository contain metadata that Archivematica can reuse. For more
+information, see :ref:`Dataverse <dataverse>`.
+
+.. _transfers-with-metadata:
+
+Transfers with descriptive and/or rights metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica can recognize descriptive and/or rights metadata that is included
+with your transfer. As long as the metadata is in a format that Archivematica
+can understand, Archivematica can parse the metadata to include it in the AIP
+METS file. If you are using AtoM or ArchivesSpace, the metadata can be passed
+on to these access systems for further use.
+
+To include descriptive and/or rights metadata with your transfer, you must add a
+subdirectory called ``metadata`` to the top level of the transfer. The metadata
+directory named is a reserved name in Archivematica; it must not be used for
+anything else.
+
+.. image:: images/transfer-with-metadata.*
+   :align: center
+   :width: 50%
+   :alt: A transfer containing a metadata subdirectory, which contains a metadata.csv and rights.csv file
+
+For more information about importing metadata into Archivematica, including how
+to structure the metadata and rights CSV files, see :ref:`Import metadata
+<import-metadata>`.
+
+Adding metadata to a bag
+++++++++++++++++++++++++
+
+If you are creating unzipped or zipped bags to transfer into Archivematica, we
+recommend creating the bag first, then adding the metadata directory and the
+metadata.csv and/or rights.csv file manually. Even though the metadata directory
+and contents will not appear in the bag information, Archivematica will ignore
+the metadata directory during **Job: Verify bag, and restructure for
+compliance** so that the bag is verified successfully, and will then parse the
+metadata as usual. Note that the filename paths in the CSV files must reflect
+the structure of the bag.
 
 .. _create-submission:
 
-Create a transfer with submission documentation
------------------------------------------------
+Transfers with submission documentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The structured directory in Archivematica is the basic configuration of the
-transfer. If you just add a directory to the dashboard and start transfer
-processing, Archivematica will restructure it so it complies with this
-structure. Another option is to create a transfer in a structured directory
-prior to beginning processing in Archivematica.
+Submission documentation is a concept in Archivematica that accounts for
+materials that are related to the digital objects being preserved, but aren't
+strictly part of the collection - for example, donor agreements, correspondence
+about the materials, conservation reports, etc. If Archivematica sees that a
+transfer includes submission documentation, it can include descriptions of this
+material in the AIP METS file.
 
-To create a transfer that includes submission documentation, such as a donor
-agreement, you must create a structured directory prior to beginning processing
-in Archivematica. Your source directory should contain three subdirectories,
-titled as below:
+To create a transfer that includes submission documentation, your top-level
+directory must contain a ``metadata`` directory. Inside the metadata directory,
+a nested directory called ``submissionDocumentation`` contains the submission
+documentation files.
 
-1. objects: The *objects* directory contains the digital objects that are to be
-   preserved. You can create subdirectories within objects if desired.
+.. image:: images/transfer-with-subdocs.*
+   :align: center
+   :width: 50%
+   :alt: A transfer containing a metadata subdirectory, which contains another subdirectory called submissionDocumentation
 
-2. metadata: The *metadata* directory contains the checksum, the METS file, and
-   a submissionDocumentation subfolder, which can be used for transfer forms,
-   donation agreements or any other documents that relate to the acquisition of the records.
+Adding submission documentation to a bag
+++++++++++++++++++++++++++++++++++++++++
 
-3. logs: The *logs* directory will eventually contain logs generated when
-   processing the transfer in Archivematica.
-
-.. important::
-
-   Please do not include submission documentation that has non-standard
-   characters in the filename, as submission documentation names are not
-   sanitized. Any filenames other than plain ASCII names may cause errors in
-   processing.
-
-1. Open the file browser by clicking on the Home folder on the Archivematica
-   desktop.
-
-2. The structured directory should contain three subdirectories: logs, metadata,
-   objects. Copy the digital files to be preserved into the objects directory.
-   Note that you can create subdirectories within objects.
-
-3. Add submission documentation. In the transfer you have just created, navigate
-   to the /metadata/ folder and add a /submissionDocumentation directory. Add
-   files to that folder like donor agreements, transfer forms, copyright
-   agreements and any correspondence or other documentation relating to the
-   transfer. Any SIPs subsequently made from this transfer will automatically
-   contain copies of this documentation.
+If you are creating unzipped or zipped bags to transfer into Archivematica, we
+recommend creating the bag first, then adding the metadata and
+submissionDocumentation directories and contents manually. Even though the
+metadata directory, submissionDocumentation directory, and contents will not
+appear in the bag information, Archivematica will ignore the metadata directory
+during **Job: Verify bag, and restructure for compliance** so that the bag is
+verified successfully, and will then parse the submission documentation as
+usual.
 
 .. _transfer-checksums:
 
 Create a transfer with existing checksums
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Standard transfers
-++++++++++++++++++
+Archivematica can verify MD5, SHA1, and SHA256 checksums that were created
+outside of Archivematica. Creating checksums outside of Archivematica is a good
+idea if you are concerned about loss of data integrity during the move into
+Archivematica. Checksums are checked during the *Verify transfer checksums*
+microservice on the Transfer tab.
 
-You can include existing checksums with your transfer if you have them.
-Archivematica will verify .md5, .sha1 and .sha256 checksums during the *Verify
-transfer checksums* microservice.
+Checksum files are placed in the ``metadata`` directory. Note that you can also
+place descriptive and rights metadata CSVs in this directory, as per the
+:ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
+section above.
 
-Checksum files should be named checksum.md5, checksum.sha1, or checksum.sha256.
-The file itself should contain one line for each checksum, beginning with the
-checksum, followed by a space, followed by the file name. For example:
-``7f42199657dea535b6ad1963a6c7a2ac bird.mp3``.
-
-.. image:: images/checksum-file.*
+.. image:: images/transfer-with-checksums.*
    :align: center
-   :width: 80%
-   :alt: Structure of checksum file
+   :width: 50%
+   :alt: A transfer containing a metadata subdirectory, which contains another subdirectory called submissionDocumentation
 
-To add the checksum file to your transfer:
+Checksum files should be named ``checksum.md5``, ``checksum.sha1``, or
+``checksum.sha256``. The file itself should contain one line for each checksum,
+beginning with the checksum, followed by a space, followed by the file name::
 
-1. Place the digital objects into an ``/objects`` folder below the first level
-   of the transfer.
+  2121dca88ad7f701d3f3e2d041004a56  beihai.tif
+  7f42199657dea535b6ad1963a6c7a2ac  bird.mp3
+  6dc1519418859ea5c20fd708e89d7254  ocr-image.png
+  4737e4dacfc9510915ea58cf12e51712  View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg
+  75388a532283b988f79206d63f65e9a2  subdirectory/piiTestDataCreditCardNumbers.txt
+  1d7193ea3b2193c79f55ea7e645503a9  subdirectory/piiTestDataSocialSecurityNumbers.txt
 
-2. Create a ``/metadata`` folder at the same level as the ``/objects`` folder.
-   Place checksum files in the /metadata folder.
+If your checksum check fails, the *Verify transfer checksums* microservice will
+show an error and the transfer will fail. Expanding the microservice will show
+that the job *Verify metadata directory checksums* is red. To review the error,
+click on the gear icon for the job.
 
-3. Begin your standard transfer in the Archivematica dashboard interface.
+.. important::
 
-4. If your checksum check fails, the *Verify transfer checksums* microservice
-   will show an error and the transfer will fail. Expanding the microservice
-   will show that the job *Verify metadata directory checksums* is red. To
-   review the error, click on the gear icon for the job.
+   If you are creating bags, checksum files will be created as part of the
+   bagging process. You do not need to create checksums manually.
 
-Disk image transfers
-++++++++++++++++++++
+.. _transfer-derivatives:
 
-To add the checksum file to a disk image transfer, prepare your checksum files
-as above. However, there is a slight variation in how the folder should be
-structured:
+Transferring material with preservation or access derivatives (manual normalization)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Place your disk image file at the first level of the transfer (do **not**
-   place in an /objects subdirectory).
+Archivematica's main strategy for preserving files is to :ref:`normalize
+<normalize>` them according to :ref:`preservation planning rules
+<preservation-planning>`. However, you may have created - or may want to create -
+preservation or access copies of your digital objects before transferring your
+materials into Archivematica (i.e. during a digitization project). Archivematica
+can recognize manual normalization work and use the preservation and action
+copies instead of creating new derivatives.
 
-2. Create a ``/metadata`` folder in the first level of the transfer. Place
-   checksum files in the /metadata folder.
+In order to have Archivematica recognize manually normalized files, the transfer
+needs to be structured in a specific way. Your top-level directory must contain
+a ``manualNormalization`` directory. Inside the manualNormalization directory,
+a ``preservation`` directory is where you will store preservation derivatives
+and an ``access`` directory is where you will place the access derivatives. You
+can include both of these directories or just one, depending on the kinds of
+derivatives that you have created.
 
-3. Begin your standard transfer in the Archivematica dashboard interface.
-
-4. If your checksum check fails, the *Verify transfer checksums* microservice
-   will show an error and the transfer will fail. Expanding the microservice
-   will show that the job *Verify metadata directory checksums* is red. To
-   review the error, click on the gear icon for the job.
-
-.. _process-transfer:
-
-Process the transfer
---------------------
-
-1. In the dashboard transfer tab, the transfer will appear in the dashboard with
-   a bell icon next to it. This means that it is awaiting a decision by the
-   user.
-
-2. Click on the microservice to display jobs that have completed, including the
-   one requiring action.
-
-3. In the Actions drop-down menu, select "Approve transfer" to begin processing
-   the transfer. You may also "Reject transfer" and quit processing.
-
-.. figure:: images/Approve1.*
+.. image:: images/transfer-with-derivatives.*
    :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt:  In the Actions drop-down menu, select "Approve transfer"
+   :width: 50%
+   :alt: A transfer containing a manualNormalization subdirectory, which contains access and preservation derivatives
 
-   In the Actions drop-down menu, select "Approve transfer"
+In the example shown above, the original files are PNGs (i.e. ``beihai.png``).
+For each file, there is an access copy in the form of a JPG (``beihai.jpg``) and
+a preservation copy in the form of a TIF (``beihai.tif``). Note that the base
+filenames (before the extension) must match in order for Archivematica to
+recognize the links between the original file and the manually normalized
+preservation and access versions.
 
-4. The transfer will now run through a series of microservices. These include:
+You do not need to have matches for every original file. If you only have
+manually normalized derivatives for some files, Archivematica can fill in the
+gaps and create any missing access or preservation derivatives during the
+:ref:`normalization <normalize>` microservice.
 
-   * Verify transfer compliance: verifies that the transfer is properly
-     structured - i.e. with the logs, metadata and objects folders.
-
-   * Rename with transfer UUID: assigns a unique universal identifier for the
-     transfer as a whole; directly associates the transfer with its metadata.
-
-   * Assign file UUIDs and checksums to objects: assigns a unique universal
-     identifier and sha-256 checksum to each file in the /objects directory.
-
-   * Verify transfer checksums: verifies any checksums included with the
-     transfer in its metadata directory.
-
-   * Generate METS.xml document: creates a METS file capturing the original
-     order of the transfer. This METS file is added to any SIPs generated from
-     this transfer.
-
-   * Quarantine: quarantines the transfer to a set duration based on
-     preconfiguration settings in the Administration tab of the dashboard. This
-     can be used to allow virus definitions to update before a virus scan.
-
-   * Scan for viruses: scans for viruses and malware.
-
-   * Generate transfer structure report: generates a directory tree of the
-     original transfer and places as a text file in the AIP.
-
-   * Clean up file and directory names: removes prohibited characters from
-     folder and filenames, such as ampersands.
-
-   * Identify file format: this is the identification that normalization will be
-     based upon, the user can choose between FIDO and extension or skipping
-     format identification at this stage. See :ref:`Format identification
-     <format-identification>` below for more information.
-
-   * Extract packages: extracts contents from zipped or otherwise packaged
-     files. You can change your preconfigured workflow settings to allow for
-     some choices about package extraction. See :ref:`Extract Packages
-     <extract-packages>` below for more information.
-
-   * Characterize and extract metadata: identifies and validates file formats;
-     extracts technical metadata embedded in the files. If you have
-     preconfigured it to do so, Archivematica will stop during this microservice
-     and allow the user to choose a file identification command from a dropdown
-     menu. To learn about preconfigured options, please see
-     :ref:`Administrator manual - Processing configuration <process-config>`.
-     Archivematica's file identification default is set to identification by
-     file extension. You can also choose to skip identification and run it
-     later, during Ingest, instead.
-
-   * Complete transfer: Includes indexing the transfer.
-
-5. A transfer that is in the middle of processing will show which microservices
-   have been completed (green) and which are in progress (orange).
-
-6. When a microservice fails or encounters an error, the microservice
-   background turns from green to pink and a "failed" icon appears next to the
-   transfer or SIP name. See Error handling for more information about how to
-   handle an error.
-
-7. Once the transfer microservices are completed, a bell icon will appear next
-   to the transfer. This means that the transfer is ready to be packaged into a
-   SIP for ingest or sent to a backlog, indexed and stored to be retrieved for
-   processing at a later date
-
-   * Option 1: Select "Create single SIP and continue processing"
-
-   * Option 2: Select "Send transfer to backlog". In this case, your transfer
-     will be stored in a backlog in the same location as your AIP store so that
-     you can retrieve one or more transfers from the Ingest tab for processing
-     at a later date. See :ref:`Managing a backlog <manage-backlog>`.
-
-   * Option 3: Select "Reject the transfer".
-
-   .. figure:: images/CreateSIP.*
-      :align: center
-      :figwidth: 60%
-      :width: 100%
-      :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
-
-      A transfer that is ready to be packaged into a SIP or stored in backlog
+.. image:: images/transfer-with-some-derivatives.*
+   :align: center
+   :width: 50%
+   :alt: A transfer containing a manualNormalization subdirectory, which contains access and preservation derivates for only some of the originals
 
 .. note::
 
-   If you are running Archivematica in indexless mode (without Elasticsearch),
-   you will not have the option to send the transfer to backlog.
+   You can also add manually normalized files during the :ref:`ingest <ingest>`
+   phase in Archivematica.
 
-8. See :ref:`Ingest <ingest>` for next steps.
+.. _transfer-access-copies:
+
+Transferring material with access derivatives
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you are only transferring originals plus their access derivatives, there is a
+slightly more streamlined workflow than the :ref:`manual normalization
+<transfer-derivatives>` option described above.
+
+Inside your top-level directory, create an ``access`` subdirectory and place the
+access copies of your originals inside this file.
+
+.. image:: images/transfer-with-access-copies.*
+   :align: center
+   :width: 50%
+   :alt: A transfer containing an access subdirectory, which contains access derivatives only
+
+In the example shown above, the original files are PNGs (i.e. ``beihai.png``).
+For each file, there is an access copy in the form of a JPG (``beihai.jpg``).
+Note that the base filenames (before the extension) must match in order for
+Archivematica to recognize the links between the original file and access copy.
+
+When you process this transfer, Archivematica will automatically recognize the
+existence of the access copies. At the :ref:`normalization <normalize>`
+microservice on the :ref:`Ingest tab <ingest>`, fewer normalization options will
+appear because Archivematica will always make a Dissemination Information
+Package (DIP) from the provided access copies.
+
+.. image:: images/normalize-access-copies.*
+   :align: center
+   :width: 50%
+   :alt: The normalization microservice in Archivematica only provides three options - Normalize for preservation, Reject SIP, and Do not normalize - if an access directory is detected
+
+.. _transfer-service-files:
+
+Transferring material with service (mezzanine) files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Somewhat similar to the :ref:`manual normalization <transfer-derivatives>` and
+:ref:`manual normalization <transfer-access-copies>` options described above,
+Archivematica can also recognize the presence of service (or mezzanine) files.
+Service files are high-quality derivatives created from the original file, which
+are then used to create every other derivative. For example, during a
+digitization project you may scan an image as a very high-quality TIFF, then
+generate a high-quality JP2000 from the TIFF. Instead of accessing the TIFF
+every time a new access derivative is required, you would then use the JP2000 to
+make new copies of the file.
+
+Inside your top-level directory, create a ``service`` subdirectory and place the
+service copies of your originals inside this file.
+
+.. image:: images/transfer-with-service-files.*
+   :align: center
+   :width: 50%
+   :alt: A transfer containing a service subdirectory, which contains service or mezzanine copies of the originals
+
+In the example shown above, the original files are TIFFs (i.e. ``beihai.tif``).
+For each file, there is a service copy in the form of a JP2000 (``beihai.jp2``).
+Note that the base filenames (before the extension) must match in order for
+Archivematica to recognize the links between the original file and the service
+copy.
+
+When you process this transfer, Archivematica will automatically recognize the
+existence of the service copies. At the :ref:`normalization <normalize>`
+microservice on the :ref:`Ingest tab <ingest>`, you will be given the option to
+use the service copies to generate access derivatives, rather than the original
+files.
+
+.. image:: images/normalize-service-files.*
+   :align: center
+   :width: 50%
+   :alt: The normalization microservice in Archivematica provides an extra option - Normalize service files for access - if a service directory is detected
+
+.. note::
+
+   If you want to create access copies from your service files, select
+   *Normalize service files for access* at the Normalize microservice. If you
+   have included access copies as per the instructions in :ref:`Transferring
+   material with access derivatives <transfer-access-copies>` above, select *Do
+   not normalize* at the Normalize microservice - the DIP will be automatically
+   created because Archivematica has detected the access directory.
+
+.. _process-transfer:
+
+Processing a transfer
+---------------------
+
+Once your material is packaged for Archivematica, you can begin the transfer
+process.
+
+.. _create-transfer:
+
+Start a transfer
+^^^^^^^^^^^^^^^^^
+
+#. Sign in to Archivematica and navigate to the Transfer tab by clicking on
+   ``Transfer`` or the Archivematica logo.
+
+#. Select your :ref:`transfer type <transfer-types>` from the Transfer types
+   dropdown menu.
+
+#. Name your transfer. The transfer name will become the name of your AIP, so
+   make sure that the name is meaningful.
+
+#. If needed, also add an accession number and/or access system ID, and check or
+   uncheck the ``Approve transfer`` checkbox.
+
+#. Click **Browse** to open the transfer browser, where you can select a
+   the digital object(s) you want to preserve. You can toggle between transfer
+   source locations by clicking on the top bar of the transfer browser (called
+   ``archivematica-sampledata`` in the screenshot below).
+
+#. Click on the yellow folder icon to explore nested directories. To select the
+   material that you want to preserve, click on the name of the folder (or .zip
+   file, if you are transferring a Zipped Bag) so that it is highlighted and
+   click **Add**. To close the browser, click on **Browse** again.
+
+   .. image:: images/browse-and-add.*
+      :align: center
+      :width: 80%
+      :alt: A folder called "Images" has been selected
+
+#. Once you are happy with your transfer preparation, click the **Start
+   transfer** button.
+
+.. _transfer-tab-microservices:
+
+Transfer tab microservices
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once you click on **Start transfer**, the transfer should appear below the
+transfer preparation area. This should only take a few seconds, though there
+might be a longer delay if the transfer is very large. If the transfer never
+appears, do not try to start another transfer - instead, contact your systems
+administrator as it is possible that you have run out of processing space and
+starting another new transfer will only compound the issue.
+
+Each microservice in the Transfer tab is carrying out some step towards
+preparing your material to become a Submission Information Package (SIP) and
+then an Archival Information Package (AIP). For more information about
+Archivematica's microservice architecture, please see :ref:`microservices
+<microservices>`.
+
+Some microservices occur with no human intervention, while others will prompt
+the user for a decision. An early example is the *Identify file format*
+microservice, which prompts the user to decide which tool to use to identify
+file formats.
+
+.. figure:: images/select-file-id-tool.*
+   :align: center
+   :figwidth: 60%
+   :width: 100%
+   :alt: For the Identify file format microservice, the user is given the option between various file ID tools
+
+Note that it is possible to automate all decision points in Archivematica. For
+more information, see :ref:`Processing configuration <dashboard-processing>`.
+
+The microservices that run on the Transfer tab include:
+
+* **Verify transfer compliance**: verifies that the transfer is properly
+  structured according to the requirements of the transfer type.
+
+* **Rename with transfer UUID**: assigns a unique universal identifier for the
+  transfer as a whole.
+
+* **Assign file UUIDs and checksums to objects**: assigns a unique universal
+  identifier and checksums to each digital object.
+
+* **Verify transfer checksums**: verifies any :ref:`checksums included with the
+  transfer <transfer-checksums>`.
+
+* **Generate METS.xml document**: creates a METS file capturing the original
+  order of the transfer. This METS file is added to any SIPs generated from
+  this transfer.
+
+* **Quarantine**: quarantines the transfer for a set duration. Sending the
+  transfer to quarantine can give you a chance to update virus definitions
+  before the transfer is scanned for viruses.
+
+* **Scan for viruses**: scans for viruses and malware. For more information, see
+  :ref:`Scan for viruses <scan-for-viruses>`.
+
+* **Generate transfer structure report**: generates a directory tree of the
+  original transfer and places as a text file in the AIP.
+
+* **Clean up names**: removes prohibited characters from folder and filenames,
+  such as ampersands.
+
+* **Identify file format**: allows the user to choose between various format
+  identification tools, or to skip format identification at this stage. See
+  :ref:`Identification <identification>` for more information.
+
+* **Extract packages**: extracts contents from zipped or otherwise packaged
+  files. See :ref:`Extraction <extraction>` for more information.
+
+* **Characterize and extract metadata**: extracts technical metadata embedded in
+  the files. See :ref:`Characterization <characterization>` for more
+  information.
+
+* **Validation**: validates file formats against the format's specification. See
+  :ref:`Validation <validation>` for more information.
+
+* **Examine contents**: runs `Bulk Extractor`_.
+
+* **Create SIP from transfer**: gives users the chance to send the transfer to
+  the :ref:`Backlog tab <manage-backlog>`, where it can be stored for processing
+  later. Using the backlog also gives users a chance to carry out
+  :ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
+  transferred material into a SIP and send it along to the :ref:`Ingest
+  <ingest>` tab. The transfer can also be rejected at this point.
+
+.. image:: images/create-sip.*
+   :align: center
+   :width: 100%
+   :alt: A transfer that is ready to be packaged into a SIP or stored in backlog
+
+.. note::
+
+  If you are running :ref:`Archivematica without Elasticsearch
+  <install-elasticsearch>`, you may not have the option to send the transfer to
+  the backlog.
+
+A transfer that is in the middle of processing will show which microservices
+have been completed (green) and which are in progress (orange). When a
+microservice fails or encounters an error, the microservice background turns
+from green to pink and a "failed" icon appears next to the transfer or SIP name.
+See :ref:`Error handling <error-handling>` for more information about how to
+handle an error.
 
 .. _cleanup:
 
@@ -328,7 +599,7 @@ list of transfers grows, it takes Archivematica longer and longer to parse this
 information which can create browser timeout issues.
 
 Remove a single transfer
-++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure that the transfer you want to remove doesn't require any user input.
    You must complete all user inputs and either complete the transfer (i.e.
@@ -336,24 +607,22 @@ Remove a single transfer
    removed from the dashboard.
 
 #. When you are ready to remove a transfer from the dashboard, click the red
-   circle icon found next to the add metadata icon, to the right of the transfer
-   name.
+   circle icon to the right of the transfer name.
 
 #. Click the Confirm button to remove the transfer from the dashboard.
 
-.. figure:: images/remove-sip.*
+.. figure:: images/delete-single-transfer.*
    :align: center
    :figwidth: 60%
    :width: 100%
-   :alt: A transfer that is ready to be removed from the dashboard
-
+   :alt: Remove a single transfer from the dashboard
 
 .. NOTE::
    This does not delete the transfer or related entities, including the source
-   directory. It merely removes them from the dashboard.
+   directory. It merely removes them from view on the dashboard.
 
 Remove all completed transfers
-++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. Ensure that the transfers you want to remove are complete (i.e. sent to
    backlog or ingest). Note that this feature only works on completed transfers;
@@ -365,45 +634,15 @@ Remove all completed transfers
 #. Click the Confirm button to remove all completed transfers from the
    dashboard.
 
-.. _format-identification:
-
-Format identification
----------------------
-
-Archivematica's default is to allow the user to choose identification options to
-base normalization actions upon during transfer and then use those results to
-base normalization upon in ingest. However, you can set your preconfiguration
-options to allow for the opposite (skip at transfer and identify before
-normalization) or for both transfer and ingest to allow for user choice in the
-dashboard.
-
-Artefactual included the ability to skip identification at transfer and/or to
-change identification tool before normalization mainly to allow for the
-possibility that content in the transfer backlog may contain formats for which
-there are not currently entries in the :ref:`Format Policy Registry (FPR)
-<fpr>`. While the transfers are in the backlog, you can add rules that allow for
-the format(s) not identified or identifiable at time of transfer to the FPR so
-that, when they are processed through ingest, all formats will be identified and
-normalization attempted based on those identifications.
-
-There may be other use case scenarios in the future that this configuration
-flexibility facilitates. In general, we aim to include as much flexibility as
-possible when it comes to workflow choices so that the archivist is as central
-as possible to AIP and DIP processing rather than hardcoding and automating so
-much that the archivist is left less influence on ingest.
-
-Format identification is logged as a PREMIS event in the METS.xml using the
-results of running whichever tool chosen during processing.
-
-.. _extract-packages:
-
-Extract packages
-----------------
-
-If you adjust your processing configuration settings, Archivematica will stop
-after format identification and allow you to extract any packages in your
-transfer. Additionally, you can decide whether you would like to keep the
-package with the extracted objects or not.
-
+.. figure:: images/delete-all-transfers.*
+  :align: center
+  :figwidth: 60%
+  :width: 100%
+  :alt: Remove all transfers from the dashboard.
 
 :ref:`Back to the top <transfer>`
+
+.. _`BagIt File Packaging Format`: https://tools.ietf.org/html/rfc8493
+.. _`DSpace`: https://duraspace.org/dspace/
+.. _`Dataverse`: https://dataverse.org/
+.. _`Bulk Extractor`: https://www.forensicswiki.org/wiki/Bulk_extractor

@@ -11,9 +11,7 @@ links to each chapter's main sections.
 
    transfer/transfer
    transfer/import-metadata
-   transfer/manage-backlog
    transfer/bags
-   transfer/digitized
    transfer/forensic
    transfer/dspace
    transfer/scan-for-viruses
@@ -32,4 +30,5 @@ links to each chapter's main sections.
    metadata/premis
    appraisal/appraisal
    backlog/backlog
+   backlog/manage-backlog
    translations/translations

@@ -92,16 +92,12 @@ content to prepare your transfer to become a SIP (submission information
 package).
 
 * :ref:`General description <transfer>`
-* :ref:`Create a transfer <create-transfer>`
-* :ref:`Create a transfer with submission documentation <create-submission>`
-* :ref:`Create a transfer with existing checksums <transfer-checksums>`
-* :ref:`Process the transfer <process-transfer>`
-* :ref:`Extract packages <extract-packages>`
+* :ref:`Preparing digital objects for transfer <prepare-transfer>`
+* :ref:`Processing a transfer <process-transfer>`
+* :ref:`Cleaning up the Transfer tab <cleanup>`
 * :ref:`Import metadata <import-metadata>`
-* :ref:`Manage a backlog <manage-backlog>`
 * :ref:`Bags (Library of Congress Bagit format) <bags>`
-* :ref:`Digitized files <digitized>`
-* :ref:`Forensic images <forensic>`
+* :ref:`Forensic disk images <forensic>`
 * :ref:`DSpace exports <dspace>`
 * :ref:`Dataverse transfers <dataverse-transfers>`
 * :ref:`ContentDM (transfer and ingest) <contentdm>`
@@ -121,6 +117,7 @@ backlog location.
 * :ref:`Searching for files <backlog-file-search>`
 * :ref:`Downloading transfers or files <backlog-download>`
 * :ref:`Deletion of transfers <backlog-delete>`
+* :ref:`Manage a backlog <manage-backlog>`
 
 .. _home-appraisal:
 
