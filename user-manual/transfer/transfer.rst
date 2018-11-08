@@ -16,6 +16,7 @@ Archivematica.
 * :ref:`Preparing digital objects for transfer <prepare-transfer>`
 
   * :ref:`Transfer types <transfer-types>`
+  * :ref:`Basic transfers <basic-transfers>`
   * :ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
   * :ref:`Transfers with submission documentation <create-submission>`
   * :ref:`Transfers with existing checksums <transfer-checksums>`
@@ -116,20 +117,6 @@ structured for transfer into Archivematica can have big impacts on how it is
 processed. Below, there are details about structuring your transfer to
 accomplish specific digital preservation-related goals with the materials.
 
-With the exception of zipped bag transfers, Archivematica requires that all of
-the materials in the transfer are contained within a top-level directory. The
-directory structure of the transfer can be simple (i.e. all files located in
-the same directory) or it can be nested and hierarchical.
-
-The following screenshot shows a basic transfer called ``basicTransfer``. Four
-digital objects sit within the top-level directory, while two more objects are
-nested within a subdirectory.
-
-.. image:: images/basic-transfer.*
-   :align: center
-   :width: 50%
-   :alt: A folder called basicTransfer, which contains four top-level digital objects as well as a folder called "subdirectory" containing two more objects
-
 How quickly Archivematica can process a transfer depends on two things: the size
 of the transfer (both the individual objects and the transfer as a whole) and
 the transfer's complexity. Speed and efficiency of an Archivematica pipeline is
@@ -164,7 +151,8 @@ material into Archivematica, you can continue to do so. Archivematica will
 verify the bag early on in the transfer process, looking at manifest information
 created during the bagging process such as checksums and the payload oxum. The
 Unzipped bags transfer type can be used for bags that are not saved in a
-compressed format.
+compressed format. For more information about how Archivematica implements bags,
+see :ref:`Bags <bags>`.
 
 This screenshot shows the layout of a bagged transfer. The bagging process moves
 the digital objects to be preserved to a ``data`` directory and creates various
@@ -182,11 +170,13 @@ used for materials that have been packaged according to the
 bags that have been saved in a compressed (or zipped) format, such as a
 ``.zip``, ``.tar``, or ``.tar.gz``. When you switch the transfer type to Zipped
 bags, only compressed formats are available to be selected in the transfer
-browser.
+browser. For more information about how Archivematica implements bags,
+see :ref:`Bags <bags>`.
 
 **DSpace**: When you export materials from a `DSpace`_ repository, the export is
 packaged with a METS file for the export as a whole as well as each individual
-item. Archivematica can reuse some of the data in these METS files.
+item. Archivematica can reuse some of the data in these METS files. For more
+information, see :ref:`DSpace <dspace>`.
 
 **Disk image**: Selecting the disk image transfer type is not required to
 preserve disk images (you can use the standard transfer type or the bag transfer
@@ -198,6 +188,39 @@ imaging process. For more information, see :ref:`Forensic disk images
 **Dataverse**: Similar to the DSpace transfer type, materials exported from a
 `Dataverse`_ repository contain metadata that Archivematica can reuse. For more
 information, see :ref:`Dataverse <dataverse>`.
+
+.. _basic-transfers:
+
+Basic transfers
+^^^^^^^^^^^^^^^
+
+This section describes the basic setup for a standard transfer. If you are
+planning to use any other transfer type, please see the :ref:`Transfer types
+<transfer-types>` section above.
+
+With the exception of zipped bag transfers, Archivematica requires that all of
+the materials in the transfer are contained within a top-level directory. The
+directory structure of the transfer can be simple (i.e. all files located in
+the same directory) or it can be nested and hierarchical.
+
+The following screenshot shows a basic transfer called ``basicTransfer``. Four
+digital objects sit within the top-level directory, while two more objects are
+nested within a subdirectory.
+
+.. image:: images/basic-transfer.*
+   :align: center
+   :width: 50%
+   :alt: A folder called basicTransfer, which contains four top-level digital objects as well as a folder called "subdirectory" containing two more objects
+
+The transfer can have as many subdirectories as you wish, though this may impact
+processing time. The digital objects can be in any format, though what exactly
+Archivematica can do with a given file format varies widely. For more
+information on how Archivematica carries out file format preservation, see
+:ref:`Preservation planning <preservation-planning>`.
+
+This is the basic structure of a transfer in Archivematica; however, there are
+many variations. The following sections build on the basic transfer to achieve
+specific goals relating to the preservation of the digital objects.
 
 .. _transfers-with-metadata:
 
