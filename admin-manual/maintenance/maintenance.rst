@@ -407,8 +407,10 @@ an alternative to using the dashboard.
    more information about installation methods, please see :ref:`installation`.
 
 1. Clone the `archivematica-devtools`_ repository into your Archivematica source
+   repository and follow the installation instructions found within the 
    repository. On Ubuntu or CentOS, clone the repository to
-   `/opt/archivematica`. On vagrant, clone the repository to `/vagrant/src/`.
+   `/opt/archivematica`. On vagrant, clone the repository to `/vagrant/src/`. 
+   You should be able to access the devtools by running the `am` command.
 
 2. Navigate to the Archivematica MCP Client directory and start the mcp-rpc-cli.
 
