@@ -201,6 +201,11 @@ Options:
 #. **Yes** - the package is deleted.*
 #. **No** - the package is preserved along with the extracted content.
 
+.. note::
+
+   If you are processing a :ref:`Dataverse <dataverse>` transfer, you must
+   select "No". The Dataverse transfer will fail if packages are deleted.
+
 Perform policy checks on originals
 ++++++++++++++++++++++++++++++++++
 
