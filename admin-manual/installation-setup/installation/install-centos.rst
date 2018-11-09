@@ -20,33 +20,26 @@ Installation instructions
 
    Update your system
 
-   .. code:: bash
-
-      sudo yum update
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 3
 
    If your environment uses SELinux, at a minimum you will need to run the
    following commands. Additional configuration may be required for your local
    setup.
 
-   .. code:: bash
-
-      # Allow Nginx to use ports 81 and 8001
-      sudo semanage port -m -t http_port_t -p tcp 81
-      sudo semanage port -a -t http_port_t -p tcp 8001
-      # Allow Nginx to connect the MySQL server and Gunicorn backends
-      sudo setsebool -P httpd_can_network_connect_db=1
-      sudo setsebool -P httpd_can_network_connect=1
-      # Allow Nginx to change system limits
-      sudo setsebool -P httpd_setrlimit 1
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 5-12
 
 2. Some extra repositories need to be installed in order to fulfill the
    installation procedure.
 
    * Extra packages for enterprise Linux:
 
-   .. code:: bash
-
-      sudo yum install -y epel-release
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 14
 
    * Elasticsearch (optional):
 
@@ -54,66 +47,18 @@ Installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. code:: bash
-
-      sudo -u root rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-      [elasticsearch-1.7]
-      name=Elasticsearch repository for 1.7 packages
-      baseurl=https://packages.elastic.co/elasticsearch/1.7/centos
-      gpgcheck=1
-      gpgkey=https://packages.elastic.co/GPG-KEY-elasticsearch
-      enabled=1
-      EOF'
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 16-24
 
    * Archivematica:
 
-   While Archivematica 1.8 is in development, please use these commands to
-   install the development repositories:
+      Use these commands to install the repositories (** NEEDS UPDATE AFTER OFFICIAL RELEASE ):
 
-   .. code:: bash
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 26-42
 
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
-      [archivematica]
-      name=archivematica
-      baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/centos7
-      gpgcheck=0
-      enabled=1
-      EOF'
-
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
-      [archivematica-extras]
-      name=archivematica-extras
-      baseurl=https://packages.archivematica.org/1.8.x/centos-extras
-      gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.8.x/key.asc
-      enabled=1
-      EOF'
-
-   If the release has been completed, you should use these commands to install
-   the final repositories:
-
-   Use these commands to install the repositories:
-
-   .. code:: bash
-
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
-      [archivematica]
-      name=archivematica
-      baseurl=https://packages.archivematica.org/1.8.x/centos
-      gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.8.x/key.asc
-      enabled=1
-      EOF'
-
-      sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
-      [archivematica-extras]
-      name=archivematica-extras
-      baseurl=https://packages.archivematica.org/1.8.x/centos-extras
-      gpgcheck=1
-      gpgkey=https://packages.archivematica.org/1.8.x/key.asc
-      enabled=1
-      EOF'
 
 3. Common services like Elasticsearch, MariaDB and Gearmand should be installed
    and enabled before the Archivematica install.
@@ -121,24 +66,19 @@ Installation instructions
    .. note:: Do not enable Elasticsearch if you are running Archivematica in
       indexless mode.
 
-   .. code:: bash
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 44-50
 
-      sudo -u root yum install -y java-1.8.0-openjdk-headless elasticsearch mariadb-server gearmand
-      sudo -u root systemctl enable elasticsearch
-      sudo -u root systemctl start elasticsearch
-      sudo -u root systemctl enable mariadb
-      sudo -u root systemctl start mariadb
-      sudo -u root systemctl enable gearmand
-      sudo -u root systemctl start gearmand
 
 4. Install Archivematica Storage Service
 
    * First, install the packages:
 
-     .. code:: bash
-
-        sudo -u root yum install -y python-pip archivematica-storage-service
-
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 52
+     
      .. warning:: If you are planning to use the `Sword API`_ of the
         Archivematica Storage Service, then (due to a `known issue`_), you must
         instruct Gunicorn to use the ``sync`` worker class:
@@ -151,26 +91,17 @@ Installation instructions
      some static files used by django.  These tasks must be run as
      “archivematica” user.
 
-     .. code:: bash
-
-        sudo -u archivematica bash -c " \
-        set -a -e -x
-        source /etc/sysconfig/archivematica-storage-service
-        cd /usr/lib/archivematica/storage-service
-        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
-        ";
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 54-58
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
-     .. code:: bash
 
-        sudo -u root systemctl enable archivematica-storage-service
-        sudo -u root systemctl start archivematica-storage-service
-        sudo -u root systemctl enable nginx
-        sudo -u root systemctl start nginx
-        sudo -u root systemctl enable rngd
-        sudo -u root systemctl start rngd
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 74-79
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -183,43 +114,33 @@ Installation instructions
 
    * First, install the packages:
 
-     .. code:: bash
-
-        sudo -u root yum install -y archivematica-common archivematica-mcp-server archivematica-dashboard
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 81
 
    * Create user and mysql database with:
 
-     .. code:: bash
-
-        sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS MCP; CREATE DATABASE MCP CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
-        sudo -H -u root mysql -hlocalhost -uroot -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
-        sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON MCP.* TO 'archivematica'@'localhost';"
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 83-85
 
    * And as archivematica user, run migrations:
 
-     .. code:: bash
-
-        sudo -u archivematica bash -c " \
-        set -a -e -x
-        source /etc/sysconfig/archivematica-dashboard
-        cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
-        ";
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 87-92
 
    * Start and enable services:
 
-     .. code:: bash
-
-        sudo -u root systemctl enable archivematica-mcp-server
-        sudo -u root systemctl start archivematica-mcp-server
-        sudo -u root systemctl enable archivematica-dashboard
-        sudo -u root systemctl start archivematica-dashboard
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 94-97
 
    * Restart Nginx in order to load the dashboard config file:
 
-     .. code:: bash
-
-        sudo -u root systemctl restart nginx
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 99
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -229,34 +150,33 @@ Installation instructions
 
      * Nux multimedia repo
 
-       .. code:: bash
-
-          sudo rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+       .. literalinclude:: scripts/am18-centos-rpm.sh
+          :language: bash
+          :lines: 101
 
      * Forensic tools repo
 
-       .. code:: bash
-
-          sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
+       .. literalinclude:: scripts/am18-centos-rpm.sh
+          :language: bash
+          :lines: 102
 
    * Then install the package:
 
-     .. code:: bash
-
-        sudo -u root yum install -y archivematica-mcp-client
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 104
 
    * The MCP Client expects some programs in certain paths, so we put them in place:
 
-     .. code:: bash
-
-        sudo ln -s /usr/bin/7za /usr/bin/7z
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 106
 
    * Tweak ClamAV configuration:
 
-     .. code:: bash
-
-        sudo -u root sed -i 's/^#TCPSocket/TCPSocket/g' /etc/clamd.d/scan.conf
-        sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 107-108
 
    * Indexless mode:
 
@@ -272,17 +192,10 @@ Installation instructions
          sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
 
    * After that, we can enable and start/restart services
-
-     .. code:: bash
-
-        sudo -u root systemctl enable archivematica-mcp-client
-        sudo -u root systemctl start archivematica-mcp-client
-        sudo -u root systemctl enable fits-nailgun
-        sudo -u root systemctl start fits-nailgun
-        sudo -u root systemctl enable clamd@scan
-        sudo -u root systemctl start clamd@scan
-        sudo -u root systemctl restart archivematica-dashboard
-        sudo -u root systemctl restart archivematica-mcp-server
+    
+     .. literalinclude:: scripts/am18-centos-rpm.sh
+        :language: bash
+        :lines: 110-117
 
 7. Finalizing installation
 
@@ -309,12 +222,9 @@ Installation instructions
    If firewalld is running, you will likely need to modify the firewall rules
    to allow access to ports 81 and 8001 from your location:
 
-   .. code:: bash
-
-      sudo firewall-cmd --add-port=81/tcp --permanent
-      sudo firewall-cmd --add-port=8001/tcp --permanent
-      sudo firewall-cmd --reload
-
+   .. literalinclude:: scripts/am18-centos-rpm.sh
+      :language: bash
+      :lines: 119-121
 
 8. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
 
