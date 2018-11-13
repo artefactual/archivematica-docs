@@ -25,19 +25,15 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
    Ubuntu 16.04 (Xenial):
 
-   .. code:: bash
-
-      sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc  | sudo apt-key add -
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 14-18
 
    Ubuntu 18.04 (Bionic):
 
-   .. code:: bash
-
-      sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc  | sudo apt-key add -
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu bionic main" >> /etc/apt/sources.list'
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals bionic main" >> /etc/apt/sources.list'
+   .. literalinclude:: scripts/am18-bionic-deb.sh
+      :language: bash
+      :lines: 14-18
 
 2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
@@ -46,31 +42,27 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   Ubuntu 16.04 (Xenial):  
+   Ubuntu 16.04 (Xenial):
 
-   .. code:: bash
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 19-20
 
-      sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-      sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
-
-   Ubuntu 18.04 (Bionic): 
+   Ubuntu 18.04 (Bionic):
 
    Skip this step, the package will be downloaded directly in step 4.
 
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
-   .. code:: bash
-
-      sudo apt-get update
-      sudo apt-get upgrade
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 22-23
 
 4. Install Elasticsearch (optional)
 
    .. note:: Skip this step if you are planning to run Archivematica in indexless
       mode (without Elasticsearch).
-
-   Ubuntu 16.04 (Xenial):
 
    .. code:: bash
 
@@ -86,16 +78,16 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 5. Install the Storage Service package.
 
-   .. code:: bash
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 27
 
-      sudo apt-get install -y archivematica-storage-service
 
 6. Configure the Storage Service.
 
-   .. code:: bash
-
-      sudo rm -f /etc/nginx/sites-enabled/default
-      sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 29-30
 
    .. warning:: If you are planning to use the `Sword API`_ of the Archivematica
       Storage Service, then (due to a `known issue`_), you must instruct
@@ -109,9 +101,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
    is still a good idea to get the most recent version of ``pip``.
 
-   .. code:: bash
-
-      curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python -
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 32
 
 8. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -127,11 +119,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    you must use ``demo`` as the password during the install process. The
    password can be changed after the installation is complete.
 
-   .. code:: bash
-
-      sudo apt-get install -y archivematica-mcp-server
-      sudo apt-get install -y archivematica-dashboard
-      sudo apt-get install -y archivematica-mcp-client
+   .. literalinclude:: scripts/am18-xenial-deb.sh
+      :language: bash
+      :lines: 34-36
 
 9. Configure the Archivematica components (optional). There are a number of
    environment variables that Archivematica recognizes which can be used to
@@ -151,34 +141,24 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 10. Configure the dashboard.
 
-    .. code:: bash
-
-       sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
+    .. literalinclude:: scripts/am18-xenial-deb.sh
+       :language: bash
+       :lines: 38
 
 11. Start Elasticsearch (optional).
 
     .. note:: Skip this step if you are planning to run Archivematica in indexless
        mode (without Elasticsearch).
 
-    .. code:: bash
-
-       sudo service elasticsearch restart
-       sudo update-rc.d elasticsearch defaults 95 10
+    .. literalinclude:: scripts/am18-xenial-deb.sh
+       :language: bash
+       :lines: 40-41
 
 12. Start the remaining services
 
-    .. code:: bash
-
-       sudo service clamav-freshclam restart
-       sudo service clamav-daemon start
-       sudo service gearman-job-server restart
-       sudo service archivematica-mcp-server start
-       sudo service archivematica-mcp-client restart
-       sudo service archivematica-storage-service start
-       sudo service archivematica-dashboard restart
-       sudo service nginx restart
-       sudo systemctl enable fits-nailgun
-       sudo service fits-nailgun start
+    .. literalinclude:: scripts/am18-xenial-deb.sh
+       :language: bash
+       :lines: 43-52
 
     If you have trouble with the gearman command try restarting it:
 
@@ -198,11 +178,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     If ufw is active, you must ensure that it is not blocking the ports used by
     the dashboard and the Storage Service, i.e., 80 and 8000.
 
-    .. code:: bash
-
-       sudo ufw allow 80
-       sudo ufw allow 8000
-       sudo ufw reload
+    .. literalinclude:: scripts/am18-xenial-deb.sh
+       :language: bash
+       :lines: 55-57
 
 14. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
