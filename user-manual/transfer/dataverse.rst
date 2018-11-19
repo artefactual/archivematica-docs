@@ -21,6 +21,21 @@ processing steps as described below.
 Dataverse integration is supported in Archivematica 1.8 and above, and has been
 developed and tested using Dataverse version 4.8.6.
 
+.. important::
+   
+   As of Archivematica 1.8 there are a number of workflow limitations that users
+   may need to be aware of. Namely:
+
+   * Multiple authors are not captured in the Dataverse METS- only the first 
+     author listed is.
+   * It is not possible to delete packages after extraction using the Dataverse
+     transfer type
+
+   There are a number of other enhancements/improvements to the workflow that
+   could be supported in a future release along with these two issues. Please
+   see `issues filed in Github`_. 
+
+
 *On this page*
 
 * :ref:`Selecting Datasets for preservation <selecting-datasets>`
@@ -144,3 +159,4 @@ For detailed instructions, see the :ref:`Administrators Manual <storageservice:a
 .. _`DDI standard`: https://www.ddialliance.org/Specification/DDI-Codebook/2.5/
 .. _`tabular data file bundle`: http://guides.dataverse.org/en/latest/user/tabulardataingest/index.html
 .. _`known bug`: https://github.com/archivematica/Issues/issues/269
+.. _`issues filed in Github`: https://github.com/archivematica/Issues/labels/OCUL%3A%20AM-Dataverse
