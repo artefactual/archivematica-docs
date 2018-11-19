@@ -33,8 +33,7 @@ developed and tested using Dataverse version 4.8.6.
 
    There are a number of other enhancements/improvements to the workflow that
    could be supported in a future release along with these two issues. Please
-   see `issues filed in Github`_. 
-
+   see `issues filed in GitHub`_. 
 
 *On this page*
 
@@ -159,4 +158,4 @@ For detailed instructions, see the :ref:`Administrators Manual <storageservice:a
 .. _`DDI standard`: https://www.ddialliance.org/Specification/DDI-Codebook/2.5/
 .. _`tabular data file bundle`: http://guides.dataverse.org/en/latest/user/tabulardataingest/index.html
 .. _`known bug`: https://github.com/archivematica/Issues/issues/269
-.. _`issues filed in Github`: https://github.com/archivematica/Issues/labels/OCUL%3A%20AM-Dataverse
+.. _`issues filed in GitHub`: https://github.com/archivematica/Issues/labels/OCUL%3A%20AM-Dataverse
