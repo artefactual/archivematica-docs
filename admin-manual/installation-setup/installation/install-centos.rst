@@ -53,7 +53,7 @@ Installation instructions
 
    * Archivematica:
 
-      Use these commands to install the repositories (** NEEDS UPDATE AFTER OFFICIAL RELEASE ):
+      Use these commands to install the repositories:
 
    .. literalinclude:: scripts/am18-centos-rpm.sh
       :language: bash

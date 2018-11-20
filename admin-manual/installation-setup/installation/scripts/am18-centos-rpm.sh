@@ -26,8 +26,8 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/centos7
-gpgcheck=0
+baseurl=https://packages.archivematica.org/1.8.x/centos
+gpgcheck=1
 gpgkey=https://packages.archivematica.org/1.8.x/key.asc
 enabled=1
 EOF'
