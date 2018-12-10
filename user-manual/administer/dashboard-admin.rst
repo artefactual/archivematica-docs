@@ -286,8 +286,9 @@ Options:
    more information.
 #. **Do not normalize** - the AIP will contain originals only. No preservation
    or access copies are generated and no DIP will be generated.
-#. **Normalize service files preservation** - see :ref:`Digitization
-   <digitized>` for more information.
+#. **Normalize service files preservation** - see :ref:`Transferring material
+   with service (mezzanine) files <transfer-service-files>` for more
+   information.
 #. **Normalize for access** - the AIP will contain originals only. No
    preservation copies will be generated. Access copies will be created which
    will be used to generate the DIP.

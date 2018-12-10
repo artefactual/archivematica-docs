@@ -392,8 +392,9 @@ manual.
   more information.
 * **Do not normalize** - the AIP will contain originals only. No preservation or
   access copies are generated and no DIP will be generated.
-* **Normalize service files preservation** - see :ref:`Digitization <digitized>`
-  for more information.
+* **Normalize service files preservation** - see see :ref:`Transferring material
+  with service (mezzanine) files <transfer-service-files>` for more
+  information.
 * **Normalize for access** - the AIP will contain originals only. No
   preservation copies will be generated. Access copies will be created which
   will be used to generate the DIP.
@@ -483,8 +484,8 @@ Store AIP
 2. If desired, review the contents of the AIP in another tab by clicking on
    Review. You can download the AIP at this stage by clicking on it.
    You can also view and validate the METS file by clicking on the temporary
-   file that ends in "validatorTester.html". Click on this file will open the 
-   METS XML in a new window and allow you to validate the document against the 
+   file that ends in "validatorTester.html". Click on this file will open the
+   METS XML in a new window and allow you to validate the document against the
    METS specification.
 
    More information on Archivematica's AIP structure and the METS/PREMIS

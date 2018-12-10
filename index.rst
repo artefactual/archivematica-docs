@@ -204,9 +204,9 @@ and other tools and workflows that act upon content preserved through
 Archivematica.
 
 * :ref:`General description <preservation-planning>`
-* :ref:`Format Policy Registry (FPR) <fpr>`
+* :ref:`Definitions <preservation-planning-definitions>`
 * :ref:`Preservation policies <pres-policies>`
-* :ref:`Altering rules and commands <fpr-instruct>`
+* :ref:`Altering rules and commands <altering-commands-rules>`
 
 
 .. _home-administer:
