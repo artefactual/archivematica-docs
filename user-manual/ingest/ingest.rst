@@ -481,9 +481,15 @@ Store AIP
    Archivematica ready to store the AIP and upload the DIP
 
 2. If desired, review the contents of the AIP in another tab by clicking on
-   Review. More information on Archivematica's AIP structure and the METS/PREMIS
+   Review. You can download the AIP at this stage by clicking on it.
+   You can also view and validate the METS file by clicking on the temporary
+   file that ends in "validatorTester.html". Click on this file will open the 
+   METS XML in a new window and allow you to validate the document against the 
+   METS specification.
+
+   More information on Archivematica's AIP structure and the METS/PREMIS
    file is available in the Archivematica documentation: see :ref:`AIP structure
-   <aip-structure>`. You can download the AIP at this stage by clicking on it.
+   <aip-structure>`.
 
 3. From the Action dropdown menu, select "Store AIP" to move the AIP into
    archival storage. You can store an AIP in any number of preconfigured
