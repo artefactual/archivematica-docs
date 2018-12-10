@@ -1,3 +1,5 @@
+[![Travis CI](https://travis-ci.org/artefactual/archivematica-docs.svg?branch=1.8)](https://travis-ci.org/artefactual/archivematica-docs)
+
 # Archivematica documentation
 
 [Archivematica](https://www.archivematica.org/en/) is a web- and standards-based, open-source application which allows your institution to preserve long-term access to trustworthy, authentic and reliable digital content.
