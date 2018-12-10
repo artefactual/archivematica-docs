@@ -93,7 +93,8 @@ upload. This metadata is included as another dmdsec in the transfer METS.xml.
    objects from the image. You can choose NO if you would like to continue
    processing the image itself without extract its content for automated
    analysis. Format policy rules for extraction are set using the Format Policy
-   Registry in the Preservation Planning tab of the dashboard.
+   Registry in the Preservation Planning tab of the dashboard. For BitCurator 
+   integration, only exported RAW files can use the Extract microservice.
 
     * If you choose YES, Archivematica will also ask you if you'd like to delete
       the package itself once extraction of its contents is complete. Here, you
