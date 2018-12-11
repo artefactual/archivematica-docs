@@ -142,7 +142,10 @@ processing. To kick off these specialized workflows, you can select a specific
 **Standard**: Standard transfers are the default in Archivematica. All materials
 can be transferred using the standard transfer type. No special processing tasks
 are carried out. If you're unsure which transfer type to choose, start with a
-standard transfer.
+standard transfer. For more information on how standard transfers can be
+structured, see :ref:`basic transfers <basic-transfers>` and subsequent
+sections below.
+
 
 **Unzipped bags**: Archivematica can recognize and make use of materials that
 have been packaged according to the `BagIt File Packaging Format`_, colloquially
@@ -167,11 +170,11 @@ metadata files required by the BagIt specification (i.e. ``bag-info.txt``,
 **Zipped bags**: Similar to Unzipped bags, the Zipped bags transfer type can br
 used for materials that have been packaged according to the
 `BagIt File Packaging Format`_. The Zipped bags transfer type should be used for
-bags that have been saved in a compressed (or zipped) format, such as a
-``.zip``, ``.tar``, or ``.tar.gz``. When you switch the transfer type to Zipped
-bags, only compressed formats are available to be selected in the transfer
-browser. For more information about how Archivematica implements bags,
-see :ref:`Bags <bags>`.
+bags that have been saved in a compressed (or zipped) format. Archivematica
+accepts ``.zip``, ``.tgz``, or ``.tar.gz`` formats. When you switch the transfer
+type to Zipped bags, only files saved as .zip, .tgz, and .tar.gz will be
+available to be selected in the transfer browser. For more information about how
+Archivematica implements bags, see :ref:`Bags <bags>`.
 
 **DSpace**: When you export materials from a `DSpace`_ repository, the export is
 packaged with a METS file for the export as a whole as well as each individual
@@ -196,7 +199,7 @@ Basic transfers
 
 This section describes the basic setup for a standard transfer. If you are
 planning to use any other transfer type, please see the :ref:`Transfer types
-<transfer-types>` section above.
+<transfer-types>` section above for more information about your transfer type.
 
 With the exception of zipped bag transfers, Archivematica requires that all of
 the materials in the transfer are contained within a top-level directory. The
@@ -219,8 +222,8 @@ information on how Archivematica carries out file format preservation, see
 :ref:`Preservation planning <preservation-planning>`.
 
 This is the basic structure of a transfer in Archivematica; however, there are
-many variations. The following sections build on the basic transfer to achieve
-specific goals relating to the preservation of the digital objects.
+many variations. The following sections build on the basic standard transfer to
+achieve specific goals relating to the preservation of the digital objects.
 
 .. _transfers-with-metadata:
 
@@ -232,6 +235,9 @@ with your transfer. As long as the metadata is in a format that Archivematica
 can understand, Archivematica can parse the metadata to include it in the AIP
 METS file. If you are using AtoM or ArchivesSpace, the metadata can be passed
 on to these access systems for further use.
+
+Descriptive and/or rights metadata can be added to standard, unzipped, zipped,
+and disk image transfer types.
 
 To include descriptive and/or rights metadata with your transfer, you must add a
 subdirectory called ``metadata`` to the top level of the transfer. The metadata
@@ -250,14 +256,8 @@ to structure the metadata and rights CSV files, see :ref:`Import metadata
 Adding metadata to a bag
 ++++++++++++++++++++++++
 
-If you are creating unzipped or zipped bags to transfer into Archivematica, we
-recommend creating the bag first, then adding the metadata directory and the
-metadata.csv and/or rights.csv file manually. Even though the metadata directory
-and contents will not appear in the bag information, Archivematica will ignore
-the metadata directory during **Job: Verify bag, and restructure for
-compliance** so that the bag is verified successfully, and will then parse the
-metadata as usual. Note that the filename paths in the CSV files must reflect
-the structure of the bag.
+See :ref:`Adding descriptive/rights metadata and submission documentation to
+bags <adding-metadata-bags>` for more information.
 
 .. _create-submission:
 
@@ -270,6 +270,9 @@ strictly part of the collection - for example, donor agreements, correspondence
 about the materials, conservation reports, etc. If Archivematica sees that a
 transfer includes submission documentation, it can include descriptions of this
 material in the AIP METS file.
+
+Submission documentation can be added to standard, unzipped, zipped, and disk
+image transfer types.
 
 To create a transfer that includes submission documentation, your top-level
 directory must contain a ``metadata`` directory. Inside the metadata directory,
@@ -284,14 +287,8 @@ documentation files.
 Adding submission documentation to a bag
 ++++++++++++++++++++++++++++++++++++++++
 
-If you are creating unzipped or zipped bags to transfer into Archivematica, we
-recommend creating the bag first, then adding the metadata and
-submissionDocumentation directories and contents manually. Even though the
-metadata directory, submissionDocumentation directory, and contents will not
-appear in the bag information, Archivematica will ignore the metadata directory
-during **Job: Verify bag, and restructure for compliance** so that the bag is
-verified successfully, and will then parse the submission documentation as
-usual.
+See :ref:`Adding descriptive/rights metadata and submission documentation to
+bags <adding-metadata-bags>` for more information.
 
 .. _transfer-checksums:
 
@@ -303,6 +300,10 @@ outside of Archivematica. Creating checksums outside of Archivematica is a good
 idea if you are concerned about loss of data integrity during the move into
 Archivematica. Checksums are checked during the *Verify transfer checksums*
 microservice on the Transfer tab.
+
+Checksums can be added to standard, DSpace, and disk image transfer types. Note
+that checksums are added to both unzipped and zipped transfer types as part of
+the bag requirements.
 
 Checksum files are placed in the ``metadata`` directory. Note that you can also
 place descriptive and rights metadata CSVs in this directory, as per the
@@ -348,6 +349,8 @@ materials into Archivematica (i.e. during a digitization project). Archivematica
 can recognize manual normalization work and use the preservation and action
 copies instead of creating new derivatives.
 
+Preservation or access derivatives can be added to standard transfer types.
+
 In order to have Archivematica recognize manually normalized files, the transfer
 needs to be structured in a specific way. Your top-level directory must contain
 a ``manualNormalization`` directory. Inside the manualNormalization directory,
@@ -392,6 +395,8 @@ If you are only transferring originals plus their access derivatives, there is a
 slightly more streamlined workflow than the :ref:`manual normalization
 <transfer-derivatives>` option described above.
 
+Access derivatives can be added to standard transfer types.
+
 Inside your top-level directory, create an ``access`` subdirectory and place the
 access copies of your originals inside this file.
 
@@ -430,6 +435,8 @@ digitization project you may scan an image as a very high-quality TIFF, then
 generate a high-quality JP2000 from the TIFF. Instead of accessing the TIFF
 every time a new access derivative is required, you would then use the JP2000 to
 make new copies of the file.
+
+Service (or mezzanine) files can be added to standard transfer types.
 
 Inside your top-level directory, create a ``service`` subdirectory and place the
 service copies of your originals inside this file.

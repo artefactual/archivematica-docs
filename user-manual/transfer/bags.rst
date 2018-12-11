@@ -1,51 +1,119 @@
 .. _bags:
 
-================================
-Library of Congress Bagit format
-================================
+========================
+Unzipped and zipped bags
+========================
 
-Archivematica allows the ingest of the
-`Library of Congress Bagit <http://en.wikipedia.org/wiki/BagIt>`_ format. Users
-can ingest both zipped and unzipped bags. Bags must be packaged in accordance
-with the Bagit specification.
+Archivematica supports the ingest of materials packaged in accordance with the
+Library of Congress `BagIt`_ specification. Users can ingest both zipped and
+unzipped bags by using the appropriate :ref:`transfer type <transfer-types>`.
 
-* To ingest a zipped bag, user selects transfer type "Zipped bag" from the
-  dropdown menu in the transfer tab of the Dashboard. Do not add the directory
-  that the zipped bag is in from the browse dialog, just select the zipped file
-  (.zip). Note that you cannot add a new title to the zipped bag transfer, but
-  you can add an accession number.
+*On this page:*
 
-.. image:: images/ZippedBag-10.*
+* :ref:`Unzipped bags <unzipped-bags>`
+* :ref:`Zipped bags <zipped-bags>`
+* :ref:`Adding descriptive/rights metadata and submission documentation to bags <adding-metadata-bags>`
+* :ref:`Index and search bag metadata <searching-bags>`
+
+.. _unzipped-bags:
+
+Unzipped bags
+-------------
+
+Unzipped bags can be created by hand or by using a BagIt tool like
+`BagIt-python`_ or `Bagger`_. The bag must comply with the `BagIt`_
+specification.
+
+To ingest an unzipped bag, select **Unzipped bag** from the transfer type
+dropdown menu in the Transfer tab and then select your material from the
+transfer browser.
+
+.. image:: images/unzipped-bag-transfer.*
+   :align: center
+   :width: 80%
+   :alt: Unzipped bag transfer in dashboard
+
+The screenshot above shows a simple bag containing three digital objects to be
+preserved (``LICENSE``, ``README``, and ``TRADEMARK``) as well as the
+accompanying files required by the BagIt specification (``bag-info.txt``,
+``bagit.txt``, and a manifest file, in this case for sha512 checksums.) Note
+that the digital objects to be preserved are within a subdirectory called
+``data``.
+
+For more information on processing your transfer, see :ref:`process transfer
+<process-transfer>` on the Transfer page.
+
+.. _zipped-bags:
+
+Zipped bags
+-----------
+
+Zipped bags can be created by hand or by using a BagIt tool like `BagIt-python`_
+or `Bagger`_. The bag must comply with the `BagIt`_ specification.
+
+To ingest a zipped bag, select the transfer type **Zipped bag** from the
+dropdown menu in the transfer tab of the Dashboard. When you open the transfer
+browser, you will notice that only materials that use the compression formats
+``.zip``, ``.tgz``, or ``tar.gz`` can be selected for transfer. These are the
+only compressed formats that Archivematica accepts for zipped bag transfers.
+
+.. image:: images/zipped-bag.*
    :align: center
    :width: 80%
    :alt: Zipped bag transfer in dashboard
 
-* To ingest an unzipped bag, user selects transfer type "Unzipped bag" from
-  the dropdown menu in the transfer tab of the Dashboard. You may add a new name
-  or accession number to this unzipped bag.
+The bag itself should be structured internally like an :ref:`unzipped bag
+<unzipped-bags>`, as shown above.
 
-.. image:: images/BagTransfer-10.*
+Note that zipped bag transfers always use the name of the bag as the transfer
+name.
+
+For more information on processing your transfer, see :ref:`process transfer
+<process-transfer>` on the Transfer page.
+
+.. _adding-metadata-bags:
+
+Adding descriptive/rights metadata and submission documentation to bags
+-----------------------------------------------------------------------
+
+Similar to standard transfers, it is possible to add descriptive and rights
+metadata to unzipped and zipped bag transfers. We recommend creating the bag
+first, then adding the ``metadata`` directory and the metadata.csv and/or rights.csv
+file manually. You can also add submission documentation to the bag by adding a
+``submissionDocumentation`` directory inside the ``metadata`` directory.
+
+.. image:: images/bag-with-metadata.*
    :align: center
-   :width: 100%
-   :alt: Unzipped bag transfer in dashboard
+   :width: 80%
+   :alt: Image shows a directory containing a metadata folder with CSV files and submission documentation inside
 
+Even though the ``metadata`` directory, ``submissionDocumentation`` directory,
+and contents are not represented in the BagIt files (i.e. the checksum
+manifests), Archivematica will ignore the metadata directory during **Job:
+Verify bag, and restructure for compliance** so that the bag is verified
+successfully. Archivematica will then parse the metadata as usual. Note that the
+filename paths in the CSV files must reflect the structure of the bag.
 
-.. _bag-metadata:
+For more information about adding metadata and submission documentation to
+transfers in Archivematica, please see :ref:`Preparing digital objects for
+transfer <prepare-transfer>`.
+
+.. _searching-bags:
 
 Index and search bag metadata
 -----------------------------
 
-In Archivematica 1.4 and higher, fields in the bag-info.txt file are indexed as
-source metadata in the Archivematica METS file, making their contents
-searchable in the Archival storage tab after a bag transfer has been processed
-and stored.
+In Archivematica 1.4 and higher, fields in the ``bag-info.txt`` file are indexed
+as source metadata in Elasticsearch, making their contents searchable in the
+Archival Storage tab after the bag transfer has been stored.
 
-Labels in bag-info.txt file serialized as XML in METS sourceMD, linked to the
-objects directory of the AIP.
+Labels in the ``bag-info.txt`` file are serialized as XML in the METS
+``sourceMD`` field and linked to the objects directory of the AIP.
 
-Sample bag-info.txt (from https://tools.ietf.org/html/draft-kunze-bagit-10)
+For example, the bag-info.txt might include the following information (sample
+provided via https://tools.ietf.org/html/draft-kunze-bagit-10).
 
-.. code:: bash
+.. code::
 
    Source-Organization: Spengler University
    Organization-Address: 1400 Elm St., Cupertino, California, 95014
@@ -62,11 +130,12 @@ Sample bag-info.txt (from https://tools.ietf.org/html/draft-kunze-bagit-10)
    Internal-Sender-Identifier: /storage/images/yoshimuri
    Internal-Sender-Description: Uncompressed greyscale TIFFs created from microfilm and are...</pre>
 
-Sample AIP METS file result:
+When preserved in the resulting AIP's METS XML file, the above information is
+represented like so:
 
-.. code:: bash
+.. code:: xml
 
-   <pre><mets:amdSec ID="amdSec_14">
+   <mets:amdSec ID="amdSec_14">
      <mets:sourceMD ID="sourceMD_1">
        <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="BagIt">
          <mets:xmlData>
@@ -89,31 +158,58 @@ Sample AIP METS file result:
          </mets:xmlData>
        </mets:mdWrap>
      </mets:sourceMD>
-   </mets:amdSec></pre>
+   </mets:amdSec>
 
 .. note::
 
-   To be parsed into the METS file, Bag labels must be compliant with XML, so
-   cannot contain spaces or forbidden characters.
+   In order to be parsed into the METS file, bag-info.txt labels (i.e.
+   Source-Organization) must be compliant with XML so they cannot contain
+   spaces or forbidden characters.
 
-To search the bag (transfer) metadata in the Archival Storage tab:
+The metadata contained within the ``<transfer_metadata>`` tags can now be used
+for searching on the :ref:`Archival Storage <archival-storage>` tab.
 
-.. image:: images/bag-metadata.*
+Searching for any of the terms (i.e. ``Spengler University``) in the
+bag-info.txt using the search parameter **Any** should display stored
+packages that includes the search term in any field (or in the AIP name, etc. as
+per :ref:`Searching the AIP store <search-aip>`).
+
+.. image:: images/bag-info-basic-search.*
    :align: center
    :width: 80%
-   :alt: Search interface using transfer metadata fields
+   :alt: The image shows a search carried out using the term "Spengler University" with the search parameter set to "Any" and the search type set to "Keyword"
 
+In the above example, the AIP ``coyote`` contained the search phrase in the
+descriptive metadata, rather than bag-info.txt. The other two AIPs contained
+the search phrase in bag-info.txt.
 
-Use keyword field "Transfer metadata" to search all the contents of the
-<transfer_metadata> container in the METS file (as indexed in Elasticsearch).
+You can narrow the search results to just search the metadata that comes from
+bag-info.txt by selecting **Transfer metadata** as the search parameter. This
+will search for anything within the ``<transfer_metadata>`` tags in the METS
+file.
 
-Use keyword field "Transfer metadata (other)" to search individual fields in
-the <transfer_metadata> container.  When the user selects "Transfer metadata
-(other)" a separate box will appear which will allow the user to enter the
-label of the specific field to be searched.
+.. image:: images/bag-info-transfer-md-search.*
+   :align: center
+   :width: 80%
+   :alt: The image shows a search carried out using the term "Spengler University" with the search parameter set to "Transfer metadata" and the search type set to "Keyword"
+
+You can narrow the search results even further by using the **Transfer metadata
+(other)** search parameter, which allows you to define the specific sub-field
+within the ``<transfer_metadata>`` that you want to search. For example, you may
+want to search for AIPs where the search phrase "Spengler University" is present
+in the ``Source-Organization`` field, but not other fields.
+
+.. image:: images/bag-info-transfer-md-other-search.*
+   :align: center
+   :width: 80%
+   :alt: The image shows a search carried out using the term "Spengler University" with the search parameter set to "Transfer metadata (other)", the field name set to "Source-Organization", and the search type set to "Keyword"
 
 To search on a date range in <transfer_metadata> or one if its sub-fields, the
 user enters two dates in ISO date format separated by a colon. For example,
 ``2015-01-03:2015-04-14``.
 
 :ref:`Back to the top <bags>`.
+
+.. _`BagIt`: https://tools.ietf.org/html/rfc8493
+.. _`BagIt-python`: https://github.com/LibraryOfCongress/bagit-python
+.. _`Bagger`: https://github.com/LibraryOfCongress/bagger
