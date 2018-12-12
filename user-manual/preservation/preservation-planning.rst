@@ -829,9 +829,96 @@ Validation tools
 ^^^^^^^^^^^^^^^^
 
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
+
+
+MediaConch
+^^^^^^^^^^
+
 MediaConch was introduced in Archivematica 1.7 as a validation tool specifically
-for Matroska (MKV) files, opening up the possibility to include more specialized
-tools in future releases.
+for files utilizing the Matroska (MKV) container format, the FFV1 video codec
+format, and the LPCM audio codec format. This is the file format used and 
+recommended by Archivematica when performing normalization on audiovisual files.
+For more information about normalization rules, see the :ref:`Normalization
+<normalization>` section below.
+
+In addition to validating files against their format specification, MediaConch 
+can also be used to validate file formats against an internal policy created by 
+any institution. 
+
+Users can use `MediaConchOnline`_ or a local installation of MediaConch to 
+create a policy to check against files being ingested in Archivematica. Policies 
+can include rules such as aspect ratios, bit rate, track information, etc. 
+Policy checking is not restricted to mkv files. A policy can be created for any 
+format which can be characterized by `MediaInfo`_. 
+
+To create a policy within Archivematica:
+
+1. Ensure that the Archivematica processing configuration is set to perform 
+policy checks on originals. You can also use these policies to check 
+preservation and access derivatives created by Archivematica or through manual 
+normalization against a local policy. 
+
+2. In the Preservation Planning tab, click on Commands under Validation. You 
+should see a sample policy called Check against policy 
+PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch. Either replace this command 
+or create a new one using it as a template.
+
+Here is a blank command:
+
+.. code-block:: none
+
+  import sys
+  from ammcpc import MediaConchPolicyCheckerCommand
+
+  # Valuate this constant with the text (XML) of the policy.
+  POLICY = """
+  <!-- Add your MediaConch policy here! -->
+  """.strip()
+
+  # Valuate this constant with the name of the policy.
+  POLICY_NAME = 'Add your policy name here'
+
+  if __name__ == '__main__':
+      target = sys.argv[1]
+      policy_checker = MediaConchPolicyCheckerCommand(
+          policy=POLICY,
+          policy_file_name=POLICY_NAME)
+      sys.exit(policy_checker.check(target))
+
+2a. To use your own command, add the MediaConch-created xml between 
+`POLICY = """` and `""".strip()` in
+the Command section. As an example, here's a very simple policy to check that a 
+file is an mp4:
+
+.. code-block:: none
+
+   <policy type="and" name="Is Mp4?" license="CC-BY-SA-4.0+">
+     <description>New Is Mp4</description>
+     <rule name="Is Mp4?" value="Format" tracktype="General" occurrence="*" operator="=">mp4</rule>
+   </policy>
+
+
+2b. In the command above, update the POLICY_NAME field with the name of your 
+policy. This can be anything you like, but it cannot be left blank.
+
+2c. After the policy and policy name fields have been updated, you can save
+your new FPR policy command.
+
+3. Create or replace a rule (in the Rules section under Validation) with the 
+purpose "Validation against a Policy" for the format you want to check, using 
+the command you just created/edited. 
+
+4. Now, when processing a new transfer, there should be a microservice called 
+"Policy checks on originals." Clicking on the gear icon associated with 
+that microservice will give you details related to your MediaConch policy. Like 
+with other microservices in Archivematica, its background will be green when all 
+policies pass, and turn pink if one or more policies fail. Likewise, if
+performing policy checks on preservation or access derivatives, this new 
+microservice will appear under the Normalization service during Ingest.
+
+For more information about how to create a policy for policy validation, please 
+see the "Create a Policy" section of the `MediaConch documentation`_.
+
 
 Validation commands
 ^^^^^^^^^^^^^^^^^^^
@@ -841,12 +928,6 @@ There are three default validation commands in Archivematica |version|:
 * Validate using JHOVE
 * Validate using MediaConch
 * Check against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch
-
-MediaConch serves two functions: it can validate Matroska files against the
-published specification for Matroska, and it can also validate many file formats
-against an internal policy created by any institution. For more information
-about creating a policy for policy validation, please see
-`MediaConch workflow`_.
 
 For more information about writing a command, see :ref:`Writing commands
 <writing-commands>` above.
@@ -895,7 +976,7 @@ You do not need to create rules for verification.
 .. _ExifTool: http://www.sno.phy.queensu.ca/~phil/exiftool/index.html
 .. _FFprobe: http://ffmpeg.org/
 .. _FIDO: https://github.com/openpreserve/fido/
-.. _MediaConch: https://wiki.archivematica.org/MediaConch_workflow
+.. _MediaConch: https://mediaarea.net/MediaConch
 .. _MediaInfo: http://mediaarea.net/en/MediaInfo
 .. _PRONOM: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx
 .. _Siegfried: http://www.itforarchivists.com/siegfried
@@ -909,7 +990,7 @@ You do not need to create rules for verification.
 .. _Archivematica issues repo: https://github.com/archivematica/Issues
 .. _FITS: https://projects.iq.harvard.edu/fits/home
 .. _JHOVE: http://openpreservation.org/technology/products/jhove/
-.. _MediaConch workflow: https://wiki.archivematica.org/MediaConch_workflow
-.. _MediaConch online: https://mediaarea.net/MediaConchOnline/
+.. _MediaConch documentation: https://mediaarea.net/MediaConch/Documentation/HowToUse
+.. _MediaConchOnline: https://mediaarea.net/MediaConchOnline/
 .. _7zip: https://www.7-zip.org/
 .. _Sleuthkit: https://www.sleuthkit.org/
