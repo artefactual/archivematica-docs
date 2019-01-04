@@ -372,10 +372,10 @@ Options:
 Reminder: add metadata if desired
 +++++++++++++++++++++++++++++++++
 
-Archivematica allows users to see :ref:`add metadata <add-metadata>` to the SIP
-using the GUI. This reminder occurs at the last moment that it is possible to
-add metadata; once the ingest proceeds past this point, it is no longer possible
-to add metadata to the SIP.
+Archivematica allows users to see :ref:`add metadata <add-metadata>` to a SIP
+through the user interface. This reminder occurs at the last moment that it is
+possible to add metadata; once the ingest proceeds past this point, it is no
+longer possible to add metadata to the SIP.
 
 Options:
 

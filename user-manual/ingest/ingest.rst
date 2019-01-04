@@ -20,7 +20,7 @@ Should you run into an error during ingest, please see :ref:`Error handling
 * :ref:`Create a SIP <create-sip>`
 * :ref:`Arrange a SIP from backlog <arrange-sip>`
 * :ref:`Arrange a SIP for AtoM <hierarchical-dip>`
-* :ref:`Add metadata <add-metadata>`
+* :ref:`Add descriptive metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
 * :ref:`Transcribe SIP contents <transcribe-contents>`
@@ -202,26 +202,54 @@ This functionality is supported with AtoM 2.2 and higher.
 
 .. _add-metadata:
 
-Add metadata
-------------
+Add descriptive metadata
+------------------------
 
-In Archivematica, metadata can be added either prior to the normalization step
-or after. Archivematica will prompt you with a reminder to add metadata if
-desired during the Process metadata directory microservice. See :ref:`AtoM
-Dublin Core <atom:dc-template>` for information about the Dublin Core elements
+Archivematica can accept descriptive metadata about your digital objects. For
+information on including descriptive metadata prior to starting your transfer,
+see :ref:`Transfers with descriptive and/or rights metadata
+<transfers-with-metadata>`. This section will describe how to add descriptive
+metadata to your materials once processing has begun in Archivematica.
+
+Archivematica can be configured to prompt you with a reminder to add metadata by
+setting the :ref:`processing configuration <dashboard-processing>` field
+``Reminder: add metadata if desired`` to ``None``. This reminder occurs at the
+last moment that it is possible to add metadata; once the ingest proceeds past
+this point, it is no longer possible to add metadata to the SIP.
+
+There are two methods for adding metadata while materials are being processed:
+by :ref:`entering it into a form <metadata-form-ui>` or by :ref:`uploading a CSV
+file <metadata-csv-ui>`.
+
+If you are planning to pass descriptive metadata to AtoM, see :ref:`AtoM Dublin
+Core <atom:dc-template>` for information about the Dublin Core elements
 available.
 
-.. seealso::
+.. _metadata-form-ui:
 
-    If you are importing lower-level metadata (i.e. metadata to be attached to
-    subdirectories and files within a SIP) see also:
+Adding metadata using the user interface form
++++++++++++++++++++++++++++++++++++++++++++++
 
-    * :ref:`Transfer <transfer>`
+This method is best for users who are creating transfer-level metadata at the
+time of processing, or who don't wish to do the extra work to prepare a CSV to
+upload metadata to Archivematica. The metadata form implements the
+`Dublin Core Metadata Element Set`_.
 
-    * :ref:`Import metadata <import-metadata>`
+Note that this method only allows you to add descriptive metadata to the
+transfer as a whole. To add metadata on a per-item basis, you must :ref:`import
+metadata using a CSV file <import-metadata>` and either :ref:`include the CSV
+with your transfer <transfers-with-metadata>` before transfer or :ref:`upload
+the CSV through the user interface <metadata-csv-ui>`.
 
+.. important::
 
-#. Click on the template icon.
+   You must carry out the following steps **before** the microservice
+   ``Reminder: add metadata if desired`` is completed. After this point, any
+   metadata that is entered will not be properly attached to the SIP or entered
+   into the METS.
+
+#. While on the Transfer or Ingest tab, click on the metadata template icon to
+   the right of the transfer name.
 
    .. figure:: images/MetadataIcon1.*
       :align: center
@@ -231,8 +259,8 @@ available.
 
       To add metadata, click on the template icon
 
-#. This will take you to the SIP detail panel. Under the Metadata heading, click
-   Add.
+#. This will take you to the SIP detail page. Under the *Metadata* heading,
+   click **Add**.
 
    .. figure:: images/SIPDetailPanel1.*
       :align: center
@@ -242,27 +270,23 @@ available.
 
       SIP information page
 
-#. Add metadata as desired and save it by clicking the Create button at the
-   bottom of the screen. Hovering over a field will activate tooltips that
-   define the Dublin Core element and provide a link to
-   `ISO 15836 Dublin Core Metadata Element Set`_. Note that you can only add
-   metadata at the aggregate level when using the template - that is, the
-   metadata will be applied to each object in the SIP. If you would like to add
-   metadata to a digital object, you must :ref:`Import metadata via CSV
-   <import-metadata>` or add the metadata once the object has been uploaded to
-   your access system.
+#. Add metadata as desired and save it by clicking **Create** at the bottom of
+   the screen. Clicking and hovering over a field will show a tooltip that
+   defines element and provide a link to the
+   `Dublin Core Metadata Element Set`_.
 
-   .. figure:: images/Metadataform1.*
+   .. figure:: images/descriptive-metadata-entry-form.*
       :align: center
       :figwidth: 60%
       :width: 100%
-      :alt: SIP metadata entry form
+      :alt: Metadata entry form
 
-   SIP metadata entry form
+   Metadata entry form
 
-#. When you click Create, you will see the metadata entry in the list page. To
-   edit it further, click Edit on the right-hand side. To delete it, click
-   Delete. To add more DC metadata, click the Add button below the list.
+#. When you click **Create**, you will see the metadata entry in the list page.
+   To edit it further, click **Edit** on the right-hand side. To delete it,
+   click **Delete**. To add more descriptive metadata, click the **Add** button
+   below the list.
 
    .. figure:: images/Metadatalist1.*
       :align: center
@@ -272,90 +296,155 @@ available.
 
       SIP metadata list
 
-#. Return to the ingest tab to continue processing the SIP.
+#. Return to the Transfer or Ingest tab to continue processing the SIP.
+
+.. _metadata-csv-ui:
+
+Uploading metadata CSV files through the user interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Descriptive metadata CSV files are ideal if you are creating hierarchical
+metadata, want to apply metadata to individual objects, or if you want to use
+metadata fields other than those available in the Dublin Core Metadata Element
+Set.
+
+In order to upload a CSV file, it must be available in a transfer source
+location connected to Archivematica, the same way that digital objects are made
+available. For more information about transfer source locations, see
+:ref:`Transfer source locations <admin-dashboard-transfer-source>`.
+
+For more information about importing metadata into Archivematica, including how
+to structure metadata CSV files, see :ref:`Import metadata <import-metadata>`.
+
+.. important::
+
+   You must carry out the following steps **before** the microservice
+   ``Reminder: add metadata if desired``. After this point, any metadata that is
+   entered will not be properly attached to the SIP or entered into the METS.
+
+#. While on the Ingest tab, click on the metadata template icon to the right of
+   the transfer name.
+
+   .. figure:: images/MetadataIcon1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Location of the template icon
+
+      To add metadata, click on the template icon
+
+#. This will take you to the SIP detail page. Under the *Metadata* heading,
+   click **Add metadata files**.
+
+   .. figure:: images/SIPDetailPanel1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: SIP information page
+
+      SIP information page
+
+#. Select a transfer source location and click **Browse**. Navigate through
+   the folders to find your CSV file. Once you have located the CSV file, click
+   **Add** to the right of the file name. Repeat as needed.
+
+#. Once you've added all of your files, click **Add files**. A spinning wheel
+   will indicate that the file is being uploaded. Once it disappears, return to
+   the Ingest tab to continue processing the SIP.
 
 .. _add-rights:
 
 Add PREMIS rights
 -----------------
 
-Archivematica allows you to add PREMIS rights either prior to the normalization
-step or after. Archivematica will prompt you with a reminder to add rights
-information if desired during the Process metadata directory microservice. For
-more information about the PREMIS rights fields, see :ref:`PREMIS template
-<premis-template>`.
+Archivematica can accept PREMIS rights metadata about your digital objects and
+parse this information into the METS file. For information on including
+rights metadata prior to starting your transfer, see :ref:`Transfers with
+descriptive and/or rights metadata <transfers-with-metadata>`. This section will
+describe how to add rights metadata to your materials once processing has
+begun in Archivematica.
 
-1. Click on the template icon.
+Archivematica can be configured to prompt you with a reminder to add metadata by
+setting the :ref:`processing configuration <dashboard-processing>` field
+``Reminder: add metadata if desired`` to ``None``. This reminder occurs at the
+last moment that it is possible to add metadata; once the ingest proceeds past
+this point, it is no longer possible to add metadata to the SIP.
 
-.. figure:: images/MetadataIcon1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Location of the template icon
+.. note::
 
-   To add rights, click on the template icon
+   The rights form consists of two pages: one for the rights basis, and another
+   for acts. For more information about Archivematica's PREMIS rights
+   implementation, see :ref:`PREMIS template <premis-template>`.
 
-2. This will take you to the SIP detail panel. On the left-hand side, under
-   Rights, click Add.
+#. While on the Transfer or Ingest tab, click on the metadata template icon to
+   the right of the transfer name.
 
-.. figure:: images/SIPDetailPanel1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: SIP detail panel
+   .. figure:: images/MetadataIcon1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Location of the template icon
 
-   SIP detail panel
+      To add rights, click on the template icon.
 
-3. Add rights as desired and save it by clicking the Save button at the bottom
-   of the screen, or clicking Next if you are finished and ready to move on to
-   the second page of data entry. Rights entries are made up of two pages of
-   content.
+#. This will take you to the SIP detail panel. On the left-hand side, under
+   *Rights*, click **Add**.
 
-.. figure:: images/CopyrightNext.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: SIP rights template- first page
+   .. figure:: images/SIPDetailPanel1.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: SIP detail panel
 
-   SIP rights template- first page
+      SIP detail panel
 
-To get to the second page to complete data entry, click Next. Note
-that you can only add rights at the SIP level. If you would like to add rights
-to an individual digital object, you will need to do that once the object has
-been uploaded to your access system.
+#. Add the rights basis information and save the data by clicking the **Save**
+   button at the bottom of the screen, or click **Next** if you are finished and
+   ready to move on to the second page of data entry.
 
-.. figure:: images/RightsPg2AddAct.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: SIP rights template- second page
+   .. figure:: images/CopyrightNext.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: SIP rights template- first page
 
-   SIP rights template- second page
+      SIP rights template- first page
 
+#. Enter act information and the associated grants/restrictions and save the
+   data by clicking **Save**.
 
-4. When you click Save on the second page, you will be given the option to add
-   another act with its associated grants and/or restrictions.
+   .. figure:: images/RightsPg2AddAct.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: SIP rights template- second page
 
-.. figure:: images/Createnewgrant.*
-   :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: Button to repeat acts in rights template
+      SIP rights template- second page
 
-   Repeatable acts in rights template
+#. When you click **Save** on the acts page, you will be given the option to add
+   another act and further grants/restrictions.
 
-5. If you have finished adding acts, click Done. You will see the rights entry
-   in the list page . To edit it further, click Edit on the right-hand side.
+   .. figure:: images/Createnewgrant.*
+      :align: center
+      :figwidth: 60%
+      :width: 100%
+      :alt: Button to repeat acts in rights template
 
-.. figure:: images/RightsPanelwRights.*
-   :align: center
-   :figwidth: 75%
-   :width: 100%
-   :alt: SIP detail panel with rights
+      Repeatable acts in rights template
 
-   SIP detail panel with rights
+#. Once you have finished adding acts, click **Done**. You will see the rights
+   entry in the list page. You can add more rights by clicking **Add** again, or
+   edit or delete existing rights from this page.
 
-6. Return to the ingest tab to continue processing the SIP.
+   .. figure:: images/RightsPanelwRights.*
+      :align: center
+      :figwidth: 75%
+      :width: 100%
+      :alt: SIP detail panel with rights
+
+      SIP detail panel with rights
+
+6. Return to the Transfer or Ingest tab to continue processing the SIP.
 
 
 .. _normalize:
@@ -801,5 +890,5 @@ Remove all completed ingests
 
 :ref:`Back to the top <ingest>`
 
-.. _`ISO 15836 Dublin Core Metadata Element Set`: http://dublincore.org/documents/dces/
+.. _`Dublin Core Metadata Element Set`: http://dublincore.org/documents/dces/
 .. _`Tesseract`: https://code.google.com/p/tesseract-ocr/
