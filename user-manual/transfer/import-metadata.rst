@@ -7,17 +7,19 @@ Import metadata
 You can import metadata by including a directory called ``metadata`` in your
 transfer. The directory can contain any type of metadata that you wish to
 preserve alongside your digital objects. The Process Metadata Directory
-`Microservice`_ will perform a number of preservation actions on objects in this
+Microservice will perform a number of preservation actions on objects in this
 directory.
 
 Archivematica also supports conventions for importing descriptive metadata
-and rights metadata that will tranpose the contents of the metadata files
+and rights metadata that will transpose the contents of the metadata files
 into the METS file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
 
 *On this page:*
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
+    * :ref:`Simple objects <simple-objects>`
+    * :ref:`Compound objects <compound-objects>`
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 
 .. seealso::
@@ -30,15 +32,21 @@ Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
 Archivematica natively supports the Dublin Core Metadata Elements Set, the basic
-15 Dublin Core metadata elements. Using the metadata.csv method, users can
-include non-Dublin Core metadata at the directory level or at the object level.
+15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can 
+also include non-Dublin Core metadata at the directory level or at the object 
+level. Archivematica is able to pass Dublic Core metadata to AtoM or 
+ArchivesSpace, but not any non-Dublin Core metadata.
 
-Archivematica will not be able to pass this metadata to AtoM or to
-ArchivesSpace.
+Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as 
+``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate 
+``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available 
+below.
 
-Dublin Core metadata is written to the dmdSec of the METS file as MDTYPE="DC".
-Non-Dublin Core metadata will be written into a separate dmdSec as
-MDTYPE="OTHER". A sample of the METS output is available below.
+.. important::
+
+   As of version 1.4, both directory and object level metadata is allowed in 
+   the ``metadata.csv``. The CSV can contain only object level, only directory 
+   level, or a combination of both.
 
 1. Create a transfer that contains a directory called ``metadata``.
 
@@ -54,30 +62,32 @@ MDTYPE="OTHER". A sample of the METS output is available below.
 2. For compound objects, create one or more subdirectories in the
    objects directory, each containing the files that form a compound object.
 
+.. figure:: images/compound-csv-view.*
+   :align: center
+   :alt: Metadata folder in transfer directory with compound objects
+
+   Compound object file structure.
+
 .. important::
 
    The subdirectory names must not contain spaces or other forbidden characters.
 
-3. Add a csv file to the metadata folder for the transfer called
+3. Add a CSV file to the metadata folder for the transfer called
    ``metadata.csv``.
 
-   * The first row of the csv file consists of field names. Field names must not
+   * The first row of the CSV file consists of field names. Field names must not
      include spaces.
 
    * Dublin Core field names must contain the "dc" element in the name, e.g.
-     "dc.title". Note that the Dublin Core is not validated - this is up to the
+     "dc.title". Note that the Dublin Core is not validated -- this is up to the
      user.
 
    * Dublin Core terms must contain "dcterms" in the name, e.g.
-     "dcterms:abstract". As above, the Dublin Core is not validated - this is up
-     to the user.
+     "dcterms:abstract". As above, the Dublin Core is not validated -- this is 
+     up to the user.
 
    * Each subsequent row contains the field values for a single directory or
      file.
-
-   * As of version 1.4, both directory and object level metadata is allowed
-     in the metadata.csv. The csv can contain only object level, only directory
-     level, or a combination of both.
 
    * For multi-value fields (such as dc.subject), the entire column is repeated
      and each column contains a single value (i.e. there should be multiple
@@ -85,12 +95,13 @@ MDTYPE="OTHER". A sample of the METS output is available below.
 
    * Empty columns can be deleted, if you prefer.
 
-   * The first column in the metadata.csv file must be a "filename" column
-     listing the filepath and filename or directory name of each object or
-     directory: e.g. "objects/BrocktonOval.jp2" , or "objects/Jan021964".
+   * The first column in the ``metadata.csv`` file must be a "filename" column.
+     This column should list the filepath and filename (e.g. 
+     "objects/BrocktonOval.jp2") or directory name of each object or
+     directory (e.g. "objects/Jan021964").
 
-   * If you have directory level metadata fill out the fields on the same line
-     as the directory (ie objects/)
+   * If you have directory level metadata, fill out the fields on the same line
+     as the directory (e.g. objects/).
 
    * Note that filenames can be duplicates of filenames in other subdirectories
      if desired. For example, the name "page01.jp2" can occur in multiple
@@ -102,50 +113,45 @@ MDTYPE="OTHER". A sample of the METS output is available below.
 
      Example of metadata.csv file contents
 
-4. At the generate METS microservice, Archivematica parses the metadata in
-   metadata.csv to the METS file, as follows:
+4. At the Generate METS microservice, Archivematica parses the metadata in
+   ``metadata.csv`` to the METS file, as follows:
 
-   * All Dublin Core elements are used to generate a dmdSec for each directory
-     or file with MDTYPE="DC"
+   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each 
+     directory or file with ``MDTYPE="DC"``
 
-   * All non-Dublin Core elements are used to generate a dmdSec for each
-     directory or file with MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"
+   * All non-Dublin Core elements are used to generate a ``<dmdSec>`` for each
+     directory or file with ``MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"``
 
-   * The dmdSecs are linked to their directories or files in the structMap.
+   * The ``<dmdSec>`` are linked to their directories or files in the 
+     ``<structMap>`` section of the METS file.
 
+.. _simple-objects:
 
 Simple objects
 --------------
 
-This section provides metadata.csv file and METS file examples for simple
-objects - i.e. individual files that are not pages in a compound object such as
-a book or a newspaper issue.
+This section provides CSV and METS file examples for simple objects -- i.e. 
+individual files that are not pages in a compound object such as a book or a 
+newspaper issue.
 
-**Sample metadata.csv file**
+**Example Simple Objects CSV file:**
 
-=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
-filename                   dc.title                  dc.creator                dc.subject                dc.subject                dc.subject                dc.description            dc.publisher              dc.contributor            dc.date                   dc.type                   dc.format                 dc.identifier             dc.source                 dc.language               dc.relation               dc.coverage               dc.rights
-=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
-objects/bird.mp3           14000 Caen, France - Bird Nicolas Germain           field recording           soundscapes               radio aporee              Bird singing in my        Radio Aporee                                        2017-05-27                sound                     audio/mp3                                           Internet Archive                                                                                        Public domain
-                           in my garden                                                                                                                      garden, Caen, France,
-                                                                                                                                                             Zoom H6
-objects/beihai.tif         Beihai, Guanxi, China,    NASA/GSFC/METI/ERSDAC/    China                     Beihai                                              Beihai is a city in the   NASA Jet Propulsion                                 February 29, 2016         image                     image.tif                                           NASA Jet Propulsion                                                                                     Public domain
-                           1988                      JAROS and U.S./Japan                                                                                    south of Guangxi,         Laboratory                                                                                                                                                  Laboratory
-                                                     ASTER Science Team                                                                                      People's  republic of
-                                                                                                                                                             China.
-=========================  ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= ========================= =========================
+.. csv-table::
+   :file: _csv/simple-objects.csv
+   :header-rows: 1
 
 Note that empty columns (i.e. dc.contributor) were left in to demonstrate the
 full range of possible Dublin Core values. If you prefer, you can delete empty
 columns.
 
-**METS file**
+**Example Simple Objects METS file:**
 
-Below is a snippet of the METS file, containing two descriptive metadata
-sections (dmdSec), one for each file. These contain the Dublin Core metadata
-parsed from the metadata.csv. Note in the mdWrap that they are given an MDTYPE
-of "DC". If there had been non-Dublin Core metadata in the metadata.csv, there
-would be a separate mdWrap with an MDTYPE of "OTHER".
+Below is a snippet of the METS file, containing two descriptive metadata 
+sections (``<dmdSec>``), one for each file. These contain the Dublin Core 
+metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they 
+are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the 
+``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of 
+"OTHER".
 
 .. code:: xml
 
@@ -200,26 +206,22 @@ would be a separate mdWrap with an MDTYPE of "OTHER".
     </mets:dmdSec>
    </mets>
 
+.. _compound-objects:
 
 Compound objects
 ----------------
 
-This section provides csv file and METS file examples for compound objects -
+This section provides CSV file and METS file examples for compound objects --
 i.e. multi-page digital objects such as newspapers and books.
 
-**metadata.csv file**
+**Example Compound objects CSV file:**
 
-Sample headings and values
-
-=================  ============================ ===================  ============ ==================== ==========================  ==========  ==================================  =========   ===========  =================================================  ==================================  ==========================================  ===================
-parts              dc.title                     alternative_title    dc.publisher dates_of_publication dc.subject                  dc.date     dc.description                      frequency   dc.language  forms_part_of                                      repository                          project_website                             digital_file_format
-=================  ============================ ===================  ============ ==================== ==========================  ==========  ==================================  =========   ===========  =================================================  ==================================  ==========================================  ===================
-objects/Jan021964  Coast News, January 02, 1964 Sunshine Coast News  Fred Cruice  1945-1995            Gibsons (B.C.)--Newspapers  1964/01/02  Serving the Growing Sunshine Coast  Weekly      English      British Columbia Historical Newspapers collection  Sunshine Coast Museum and Archives  http://historicalnewspapers.library.ubc.ca  image/jp2
-objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice  1945-1995            Gibsons (B.C.)--Newspapers  1964/01/09  Serving the Growing Sunshine Coast  Weekly      English      British Columbia Historical Newspapers collection  Sunshine Coast Museum and Archives  http://historicalnewspapers.library.ubc.ca  image/jp2
-=================  ============================ ===================  ============ ==================== ==========================  ==========  ==================================  =========   ===========  =================================================  ==================================  ==========================================  ===================
+.. csv-table::
+   :file: _csv/compound-objects.csv
+   :header-rows: 1
 
 
-**METS file**
+**Example Compound Objects METS file:**
 
 .. code:: xml
 
@@ -323,14 +325,13 @@ objects/Jan091964  Coast News, January 09, 1964 Sunshine Coast News  Fred Cruice
    </structMap>
    </mets>
 
-
 .. _rights.csv:
 
 Importing rights metadata with rights.csv
 -----------------------------------------
 
 Rights information can be associated to specific files in a transfer by creating
-a rights.csv file that conforms to the structure below.
+a ``rights.csv`` file that conforms to the structure below.
 
 You can enter multiple acts for the same rights basis. Rows for the same object
 with the same rights basis will be treated as separate acts for the basis and
@@ -338,17 +339,12 @@ merged. For example, the first two rows below will be merged, while the third
 row will be separate. You can read more about rights metadata here: :ref:`PREMIS
 metadata in Archivematica <premis-template>`.
 
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
-file           basis       status       determination_date   jurisdiction  start_date  end_date    terms                citation                note                   grant_act    grant_restriction  grant_start_date   grant_end_date   grant_note  doc_id_type                               doc_id_value                                doc_id_role
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
-image1.tif     copyright   copyrighted  2011-01-01           ca            2011-01-01  2013-12-31  Terms of copyright.  Citation of copyright.  Note about copyright.  disseminate  disallow           2011-01-01         2013-12-31       Grant note  Copyright documentation identifier type.  Copyright documentation identifier value.   Copyright documentation identifier role.
-image1.tif     copyright   copyrighted  2011-01-01           ca            2011-01-01  2013-12-31  Terms of copyright.  Citation of copyright.  Note about copyright.  use          disallow           2011-01-01         2013-12-31       Grant note  Copyright documentation identifier type.  Copyright documentation identifier value.   Copyright documentation identifier role.
-document.pdf   license                                                     2000-09-09  2010-09-08  Terms of license.    Note about license.     migrate                allow                                              2000-09-00       Grant note  License documentation identifier type.    License documentation identifier value.     License documentation identifier role.
-=============  ==========  ===========  ===================  ============  ==========  ==========  ===================  ======================  =====================  ===========  =================  =================  ===============  ==========  ========================================  ==========================================  =========================================
+.. csv-table::
+   :file: _csv/rights.csv
+   :header-rows: 1
 
-The rights.csv file is parsed by the job "Load Rights" within the "Characterize
-and Extract Metadata" microservice run during :ref:`transfer <transfer>`.
+The ``rights.csv`` file is parsed by the job "Load Rights" within the 
+"Characterize and Extract Metadata" microservice run during 
+:ref:`transfer <transfer>`.
 
 :ref:`Back to the top <import-metadata>`
-
-.. _`Microservice`: https://wiki.archivematica.org/Micro-services
