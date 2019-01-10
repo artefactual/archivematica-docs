@@ -544,6 +544,51 @@ an alternative to using the dashboard.
 6. To update the list and continue, enter `u` when prompted to enter a value.
    Repeat the steps above until there are no more choices left to make.
 
+
+.. _transfer-wont-start:
+
+Transfer won't start
+^^^^^^^^^^^^^^^^^^^^
+    "I try to create a new transfer, but nothing happens. What can I do?"
+
+Sometimes a user may attempt to start a transfer and it will never seem to 
+initiate the Archivematica processes. There are a few issues to look out for 
+and investigate if this happens.
+
+1. File permissions
+
+  First, the issue may be related to file permissions in the transfer source 
+  directory. Check the permissions in the directory and on the files to ensure 
+  that all files can be read by Archivematica.
+
+2. System timeouts
+
+  If it is a large transfer, it may just be taking a long time to copy the files
+  and initially load them into the system, and the user can wait a bit longer 
+  and see if the processes begin after a bit of time. It is also possible that 
+  it is taking a long time because some of the system timeouts are being 
+  exceeded and the transfer has failed. This can be verified by checking the 
+  Storage Service logs and by checking where the transfer exists on the 
+  filesystem.
+
+  For inadequate timeouts, check the Storage Service configuration and adjust 
+  if necessary.
+
+3. Communication between Dashboard and Gearman
+
+  If the transfer has successfully moved to the shared Directory (i.e. it can be
+  found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders), but 
+  is still not showing up in the dashboard, there could have been a problem with 
+  the communication between the dashboard and Gearman. Restarting all of the 
+  services can resolve this problem and the transfer will appear.
+
+  Restart services in the follow order: ``gearmand``, 
+  ``archivematica-mcp-server``, ``archivematica-mcp-client``, 
+  and ``archivematica-dashboard``.
+
+  Note that on some installations, ``gearmand`` may be called 
+  ``gearman-job-server``.
+
 :ref:`Back to the top <maintenance>`
 
 .. _`pyes`: https://github.com/aparo/pyes/
