@@ -50,7 +50,7 @@ below.
 
 1. Create a transfer that contains a directory called ``metadata``.
 
-2. For simple objects, digital objects should also be placed in the top-level
+2a. For simple objects, digital objects should be placed in the top-level
    directory.
 
 .. figure:: images/MdfolderMDimport-10.*
@@ -59,7 +59,7 @@ below.
 
    Metadata folder in transfer directory containing metadata.csv file.
 
-2. For compound objects, create one or more subdirectories in the
+2b. For compound objects, create one or more subdirectories in the
    objects directory, each containing the files that form a compound object.
 
 .. figure:: images/compound-csv-view.*
@@ -98,7 +98,9 @@ below.
    * The first column in the ``metadata.csv`` file must be a "filename" column.
      This column should list the filepath and filename (e.g. 
      "objects/BrocktonOval.jp2") or directory name of each object or
-     directory (e.g. "objects/Jan021964").
+     directory (e.g. "objects/Jan021964"). Note that the filepath or directory
+     path must start with ``objects/``. This is a legacy artifact when all 
+     digital objects in the transfer had to be nested in such a way.
 
    * If you have directory level metadata, fill out the fields on the same line
      as the directory (e.g. objects/).
