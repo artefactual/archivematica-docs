@@ -15,6 +15,7 @@ links to each chapter's main sections.
    transfer/forensic
    transfer/dspace
    transfer/scan-for-viruses
+   transfer/clean-up-names
    transfer/dataverse
    ingest/ingest
    ingest/manual-normalization
