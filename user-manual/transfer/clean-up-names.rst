@@ -9,16 +9,17 @@ Transfer tab and once on the Ingest tab. The purpose of this microservice is to
 ensure that Archivematica's tools and processes do not fail because of
 characters that appear in file or directory names.
 
-Archivematica groups a wide variety of tools together to create preservation
+Archivematica groups a wide variety of tools, such as :ref:` preservation
+planning tools <preservation-planning-tools>`, together to create preservation
 workflows. Some of the tools that Archivematica uses have a narrowly-defined
 scope in terms of what the tool considers to be a valid character for a file or
 directory name. Encountering a character that the tool considers to be invalid
 can cause the tool to fail, which can halt processing and interfere with normal
 operation of Archivematica.
 
-To prevent these kinds of tool failures from happening, Archivematica implements
-a script that changes file and directory names to conform to requirements of the
-most restrictive tools. Valid characters are defined by `specific code`_ in
+To prevent these kinds of failures from happening, Archivematica implements
+a script that changes file and directory names to conform to the requirements of
+more restrictive tools. Valid characters are defined by `specific code`_ used by
 Archivematica:
 
 ``-_.()abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789``
