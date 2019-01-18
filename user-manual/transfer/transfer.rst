@@ -576,7 +576,8 @@ The microservices that run on the Transfer tab include:
   original transfer and places as a text file in the AIP.
 
 * **Clean up names**: removes prohibited characters from folder and filenames,
-  such as ampersands.
+  such as ampersands. For more information, see :ref:`Clean up names
+  <clean-up-names>`.
 
 * **Identify file format**: allows the user to choose between various format
   identification tools, or to skip format identification at this stage. See
