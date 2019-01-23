@@ -11,10 +11,10 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 
 
 
-sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc | sudo apt-key add -
+sudo wget -O - https://packages.archivematica.org/1.9.x/key.asc | sudo apt-key add -
 sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.8.0/xenial/ ./" >> /etc/apt/sources.list.d/xenial-dev.list' 
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" > /etc/apt/sources.list.d/xenial-externas.list'
+sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/xenial/ ./" >> /etc/apt/sources.list.d/xenial-dev.list'
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals xenial main" > /etc/apt/sources.list.d/xenial-externas.list'
 
 sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
 sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list.d/elasticsearch.list'

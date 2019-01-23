@@ -25,13 +25,13 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
    Ubuntu 16.04 (Xenial):
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 14-18
 
    Ubuntu 18.04 (Bionic):
 
-   .. literalinclude:: scripts/am18-bionic-deb.sh
+   .. literalinclude:: scripts/am19-bionic-deb.sh
       :language: bash
       :lines: 14-18
 
@@ -44,7 +44,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
    Ubuntu 16.04 (Xenial):
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 19-20
 
@@ -55,7 +55,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 22-23
 
@@ -78,14 +78,14 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 5. Install the Storage Service package.
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 27
 
 
 6. Configure the Storage Service.
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 29-30
 
@@ -101,7 +101,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
    is still a good idea to get the most recent version of ``pip``.
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 32
 
@@ -119,7 +119,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    you must use ``demo`` as the password during the install process. The
    password can be changed after the installation is complete.
 
-   .. literalinclude:: scripts/am18-xenial-deb.sh
+   .. literalinclude:: scripts/am19-xenial-deb.sh
       :language: bash
       :lines: 34-36
 
@@ -141,7 +141,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 10. Configure the dashboard.
 
-    .. literalinclude:: scripts/am18-xenial-deb.sh
+    .. literalinclude:: scripts/am19-xenial-deb.sh
        :language: bash
        :lines: 38
 
@@ -150,13 +150,13 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     .. note:: Skip this step if you are planning to run Archivematica in indexless
        mode (without Elasticsearch).
 
-    .. literalinclude:: scripts/am18-xenial-deb.sh
+    .. literalinclude:: scripts/am19-xenial-deb.sh
        :language: bash
        :lines: 40-41
 
 12. Start the remaining services
 
-    .. literalinclude:: scripts/am18-xenial-deb.sh
+    .. literalinclude:: scripts/am19-xenial-deb.sh
        :language: bash
        :lines: 43-52
 
@@ -178,7 +178,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     If ufw is active, you must ensure that it is not blocking the ports used by
     the dashboard and the Storage Service, i.e., 80 and 8000.
 
-    .. literalinclude:: scripts/am18-xenial-deb.sh
+    .. literalinclude:: scripts/am19-xenial-deb.sh
        :language: bash
        :lines: 55-57
 
