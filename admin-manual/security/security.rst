@@ -197,7 +197,7 @@ using systemd:
    $ sudo systemctl restart archivematica-storage-service
 
 Use the environment string REQUESTS_CA_BUNDLE
-++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
 
 Requests honours the environment string ``REQUESTS_CA_BUNDLE`` so the
 administrator can indicate a custom bundle which could be the system's CA
