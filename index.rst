@@ -219,7 +219,7 @@ configurations, transfer and storage locations, DIP upload configurations, and
 to add and remove users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* :ref:`Storage service users <storageservice:users>`
+* :ref:`Storage service documentation <storageservice:index>`
 
 
 .. _metadata:
