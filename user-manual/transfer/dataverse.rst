@@ -22,18 +22,10 @@ Dataverse integration is supported in Archivematica 1.8 and above, and has been
 developed and tested using Dataverse version 4.8.6.
 
 .. important::
-   
-   As of Archivematica 1.8 there are a number of workflow limitations that users
-   may need to be aware of. Namely:
-
-   * Multiple authors are not captured in the Dataverse METS- only the first 
-     author listed is.
-   * It is not possible to delete packages after extraction using the Dataverse
-     transfer type
 
    There are a number of other enhancements/improvements to the workflow that
    could be supported in a future release along with these two issues. Please
-   see `issues filed in GitHub`_. 
+   see `issues filed in GitHub`_.
 
 *On this page*
 
