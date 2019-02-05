@@ -345,12 +345,12 @@ msgid ""
 msgstr ""
 
 #: ../../admin-manual/security/security.rst:200
-msgid "Use the environment string REQUEST_CA_BUNDLE"
+msgid "Use the environment string REQUESTS_CA_BUNDLE"
 msgstr ""
 
 #: ../../admin-manual/security/security.rst:202
 msgid ""
-"Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the "
+"Requests honours the environment string ``REQUESTS_CA_BUNDLE`` so the "
 "administrator can indicate a custom bundle which could be the system's CA "
 "bundle."
 msgstr ""
@@ -385,7 +385,7 @@ msgstr ""
 
 #: ../../admin-manual/security/security.rst:228
 msgid ""
-"If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional CAs."
+"If you are using ``REQUESTS_CA_BUNDLE`` you may want to trust additional CAs."
 msgstr ""
 
 #: ../../admin-manual/security/security.rst:230
