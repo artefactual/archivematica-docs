@@ -196,10 +196,10 @@ using systemd:
    $ sudo systemctl restart archivematica-mcp-client
    $ sudo systemctl restart archivematica-storage-service
 
-Use the environment string REQUEST_CA_BUNDLE
-++++++++++++++++++++++++++++++++++++++++++++
+Use the environment string REQUESTS_CA_BUNDLE
++++++++++++++++++++++++++++++++++++++++++++++
 
-Requests honours the environment string ``REQUEST_CA_BUNDLE`` so the
+Requests honours the environment string ``REQUESTS_CA_BUNDLE`` so the
 administrator can indicate a custom bundle which could be the system's CA
 bundle.
 
@@ -213,19 +213,19 @@ files to use the system's CA bundle:
 
 .. code:: bash
 
-   REQUEST_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+   REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 On CentOS, add the following line to the :file:`/etc/default/archivematica-*`
 files to use the system's CA bundle:
 
 .. code:: bash
 
-   REQUEST_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.crt
+   REQUESTS_CA_BUNDLE=/etc/pki/tls/certs/ca-bundle.crt
 
 Trusting additional CAs
 +++++++++++++++++++++++
 
-If you are using ``REQUEST_CA_BUNDLE`` you may want to trust additional CAs.
+If you are using ``REQUESTS_CA_BUNDLE`` you may want to trust additional CAs.
 
 On CentOS:
 
