@@ -73,7 +73,7 @@ a digital storage medium. Archivematica recognizes hundreds of file formats
 by extracting format information from `PRONOM`_, a technical registry of file
 formats maintained by the National Archives of the UK.
 
-Selecting **Formats** at the top of the right-hand sidebar in the Preservation
+Selecting **Formats** at the top of the left-hand sidebar in the Preservation
 Planning tab will take you to the formats view page, which displays a list of
 all the formats that Archivematica currently knows about. Each entry in this
 table is a record representing one or more related format versions. Each format
@@ -118,7 +118,7 @@ common properties. For instance, the FPR includes an "Image (raster)" group
 which contains format records for GIF, JPEG, and PNG. Each format can belong
 to one format group.
 
-Selecting **Groups** near the top of the right-hand sidebar in the Preservation
+Selecting **Groups** near the top of the left-hand sidebar in the Preservation
 Planning tab will take you to the Format groups view page, which displays a list
 of the format groups that Archivematica uses to categorize formats. Clicking on
 a format name will display all of the formats belonging to that group.
@@ -184,7 +184,7 @@ preservation actions. These include digital preservation specific tools like
 handling different file formats like `Inkscape`_, which is a design program used
 to handle vector images.
 
-The full list of tools can be accessed in the right-hand sidebar by selecting
+The full list of tools can be accessed in the left-hand sidebar by selecting
 **Tools** under the *Format policy registry* heading.
 
 Tools are called by commands, and act on formats.
@@ -203,7 +203,7 @@ tool Siegfried the files included in the transfer. This command will be run once
 on every file in the transfer.
 
 To see the current commands for a particular purpose, find the purpose in the
-right-hand sidebar (i.e. **Identification**) and select the sub-menu-item
+left-hand sidebar (i.e. **Identification**) and select the sub-menu-item
 **Commands**.
 
 .. image:: images/identification-commands.*
@@ -228,7 +228,7 @@ this way, tools, rules, and commands all work together to implement preservation
 policies.
 
 To see the current rules for a particular purpose, find the purpose in the
-right-hand sidebar (i.e. **Normalization**) and select the sub-menu-item
+left-hand sidebar (i.e. **Normalization**) and select the sub-menu-item
 **Rules**.
 
 .. image:: images/normalization-rules.*
@@ -260,7 +260,7 @@ Preservation Planning ta, which contains specific information regarding the
 commands for each section.
 
 To add a new command, decide which purpose your command will fulfill (i.e.
-Identification or Characterization). Then find the purpose in the right-hand
+Identification or Characterization). Then find the purpose in the left-hand
 sidebar (i.e. **Characterization**) and select the sub-menu item **Commands**.
 Once the Commands page is open, click on **Create new command**.
 
@@ -314,7 +314,7 @@ Changing rules
 ^^^^^^^^^^^^^^
 
 To see the current rules for a particular purpose, find the purpose in the
-right-hand sidebar (i.e. **Normalization**) and select the sub-menu-item
+left-hand sidebar (i.e. **Normalization**) and select the sub-menu-item
 **Rules**.
 
 Archivematica contains default rules for many different formats. You can disable
