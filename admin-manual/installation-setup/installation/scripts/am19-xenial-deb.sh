@@ -9,27 +9,26 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password mcp_password"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password mcp_password"
 
-
-
 sudo wget -O - https://packages.archivematica.org/1.9.x/key.asc | sudo apt-key add -
 sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
-sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/xenial/ ./" >> /etc/apt/sources.list.d/xenial-dev.list'
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals xenial main" > /etc/apt/sources.list.d/xenial-externas.list'
+sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/xenial/ ./" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
 
-sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list.d/elasticsearch.list'
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 
 sudo apt-get update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y htop ntp unzip openjdk-8-jre-headless elasticsearch
+sudo apt-get install -y htop ntp unzip apt-transport-https openjdk-8-jre-headless
+sudo apt-get install -y elasticsearch
 
 sudo apt-get install -y archivematica-storage-service
 
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
-curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python -
+wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python -
 
 sudo apt-get install -y archivematica-mcp-server
 sudo apt-get install -y archivematica-dashboard
