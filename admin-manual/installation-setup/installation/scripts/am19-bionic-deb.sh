@@ -16,20 +16,21 @@ sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-ke
 sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/bionic/ ./" >> /etc/apt/sources.list'
 sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals bionic main" >> /etc/apt/sources.list'
 
-sudo curl -s https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.6.deb -o /var/cache/apt/archives/elasticsearch-1.7.6.deb
-sudo dpkg -i /var/cache/apt/archives/elasticsearch-1.7.6.deb
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 
 sudo apt-get update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y htop ntp unzip openjdk-8-jre-headless
+sudo apt-get install -y htop ntp apt-transport-https unzip openjdk-8-jre-headless
+sudo apt-get install -y elasticsearch
 
 sudo apt-get install -y archivematica-storage-service
 
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
-curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python -
+wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python -
 
 sudo apt-get install -y archivematica-mcp-server
 sudo apt-get install -y archivematica-dashboard
@@ -41,6 +42,7 @@ sudo service elasticsearch restart
 sudo systemctl enable elasticsearch
 
 sudo service clamav-freshclam restart
+sleep 10s
 sudo service clamav-daemon start
 sudo service gearman-job-server restart
 sudo service archivematica-mcp-server start

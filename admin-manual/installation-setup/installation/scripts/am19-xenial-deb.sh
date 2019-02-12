@@ -40,6 +40,7 @@ sudo service elasticsearch restart
 sudo systemctl enable elasticsearch
 
 sudo service clamav-freshclam restart
+sleep 10s
 sudo service clamav-daemon start
 sudo service gearman-job-server restart
 sudo service archivematica-mcp-server start
