@@ -13,31 +13,38 @@ sudo setsebool -P httpd_setrlimit 1
 
 sudo yum install -y epel-release
 
-sudo -u root rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
+sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-[elasticsearch-1.7]
-name=Elasticsearch repository for 1.7 packages
-baseurl=https://packages.elastic.co/elasticsearch/1.7/centos
+[elasticsearch-6.x]
+name=Elasticsearch repository for 6.x packages
+baseurl=https://artifacts.elastic.co/packages/6.x/yum
 gpgcheck=1
-gpgkey=https://packages.elastic.co/GPG-KEY-elasticsearch
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=1
+autorefresh=1
+type=rpm-md
 EOF'
 
-sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
+sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematicadev.repo
 [archivematica]
 name=archivematica
-baseurl=https://packages.archivematica.org/1.9.x/centos
-gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.9.x/key.asc
+baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/centos7/
+gpgcheck=0
 enabled=1
+[archivematica-ss]
+name=archivematica
+baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/0.14.0/centos7/
+gpgcheck=0
+enabled=1
+
 EOF'
 
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
 [archivematica-extras]
 name=archivematica-extras
-baseurl=https://packages.archivematica.org/1.9.x/centos-extras
+baseurl=https://packages.archivematica.org/1.8.x/centos-extras
 gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.9.x/key.asc
+gpgkey=https://packages.archivematica.org/1.8.x/key.asc
 enabled=1
 EOF'
 
