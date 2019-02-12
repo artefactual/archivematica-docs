@@ -14,6 +14,7 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 sudo wget -O - https://packages.archivematica.org/1.9.x/key.asc | sudo apt-key add -
 sudo wget -O - http://jenkins-ci.archivematica.org/repos/devel.key | sudo apt-key add -
 sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/bionic/ ./" >> /etc/apt/sources.list'
+sudo sh -c 'echo "deb [trusted=yes] http://jenkins-ci.archivematica.org/repos/am-packbuild/0.14.0/bionic/ ./" >> /etc/apt/sources.list'
 sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals bionic main" >> /etc/apt/sources.list'
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
