@@ -579,9 +579,10 @@ The microservices that run on the Transfer tab include:
   such as ampersands. For more information, see :ref:`Clean up names
   <clean-up-names>`.
 
-* **Identify file format**: allows the user to choose between various format
-  identification tools, or to skip format identification at this stage. See
-  :ref:`Identification <identification>` for more information.
+* **Identify file format**: allows the user to choose whether or not to
+  identify file formats. Selecting "Yes" will prompt the enabled file
+  identification command to run. See :ref:`Identification <identification>` for
+  more information.
 
 * **Extract packages**: extracts contents from zipped or otherwise packaged
   files. See :ref:`Extraction <extraction>` for more information.

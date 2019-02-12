@@ -42,11 +42,10 @@ Create a SIP
 
 #. The single SIP will move through a number of microservices. If you have
    preconfigured Archivematica to do so, processing will stop at a decision
-   point that allows you to choose a file identification method to base
-   normalization upon or to choose to use pre-existing data gathered during
-   identification at the transfer stage. Archivematica default is to use
-   pre-existing data. For more about this option, see :ref:`Processing
-   configuration <dashboard-processing>`.
+   point that allows you to run file identification again or to use the existing
+   file identification information captured during transfer. Archivematica's
+   default is to use existing data. For more about this option, see
+   :ref:`Processing configuration <dashboard-processing>`.
 
 #. Once the SIP reaches "Normalize", you will be given several options for how
    Archivematica should normalize the SIP. Choose the option most suitable for

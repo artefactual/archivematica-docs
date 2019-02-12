@@ -125,9 +125,9 @@ assigned a UUID.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - UUIDs are assigned.
-#. **No** - UUIDs are not assigned.
+#. **No** - UUIDs are not assigned.*
 
 Send transfer to quarantine
 +++++++++++++++++++++++++++
@@ -159,24 +159,20 @@ structure.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes** - structure report is created.
-#. **No** - structure report is not created.*
+#. **Yes** - structure report is created.*
+#. **No** - structure report is not created.
 
-Select file format identification command (Transfer)
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+Perform file identification (Transfer)
+++++++++++++++++++++++++++++++++++++++
 
-Choose a tool to identify the format of the files in your transfer.
+Choose whether or not to identify the format of the files in your transfer.
 
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Identify using Fido** - use `Fido`_ to identify files by their file
-   signature.
-#. **Skip File Identification** - files will not be identified.
-#. **Identify using Siegfried** - use `Siegfried`_ to identify files by their
-   signature.
-#. **Identify by File Extension** - identify files by their extension rather
-   than signature.
+#. **Yes** - use the enabled file identification command. See :ref:`Identification
+   <identification>` for more information.*
+#. **No** - files will not be identified.
 
 Extract packages
 ++++++++++++++++
@@ -185,8 +181,8 @@ Packages (such as .zip files) are unzipped and extracted into a directory.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Yes** - the contents of the package are extracted.*
+#. **None** - the user is prompted for a decision.*
+#. **Yes** - the contents of the package are extracted.
 #. **No** - package is left as-is.
 
 Delete packages after extraction
@@ -197,8 +193,8 @@ extraction.
 
 Options:
 
-#. **None** - the user is prompted for a decision.
-#. **Yes** - the package is deleted.*
+#. **None** - the user is prompted for a decision.*
+#. **Yes** - the package is deleted.
 #. **No** - the package is preserved along with the extracted content.
 
 .. note::
@@ -214,9 +210,9 @@ to assess conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - the transfer is checked against any policies.
-#. **No** - policies are ignored.
+#. **No** - policies are ignored.*
 
 Examine contents
 ++++++++++++++++
@@ -228,8 +224,8 @@ the Appraisal tab.
 
 **Options:**
 
-#. **None** - the user is prompted for a decision.use
-#. **Skip examine contents** - Bulk Extractor does not run.*
+#. **None** - the user is prompted for a decision.*
+#. **Skip examine contents** - Bulk Extractor does not run.
 #. **Yes** - Bulk Extractor scans content and creates log outputs of recognized
    patterns for review.
 
@@ -260,14 +256,10 @@ Choose a tool to identify the format of files in your SIP.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Use existing data** - re-use file identification data from the transfer
-   tab.*
-#. **Identify using Fido** - use `fido`_
-   to identify files by their file signature.
-#. **Identify using Siegfried** - use `Siegfried`_
-   to identify files by their signature.
-#. **Identify by File Extension** - identify files by their extension rather
-   than their signature.
+#. **Yes** - use the enabled file identification command. See :ref:`Identification
+   <identification>` for more information.
+#. **No, use existing data** - re-uses file identification data from the
+   transfer tab.*
 
 Normalize
 +++++++++
@@ -311,14 +303,14 @@ This gives the option of generating thumbnails for use in the AIP and DIP.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes, without default** - thumbnails will be produced for any format which
    has a :ref:`normalize for thumbnails <normalization>` rule in the FPR.
    Formats which do not have a rule will not have a thumbnail generated.
 #. **No** - thumbnails will not be generated.
 #. **Yes** - thumbnails will be generated according to the format rules in the
    FPR. Formats which do not have a rule will have a default thumbnail
-   generated (grey document icon).
+   generated (grey document icon).*
 
 Perform policy checks on preservation derivatives
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -328,9 +320,9 @@ newly-created preservation derivatives to ensure conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - the normalized files are checked against any policies.
-#. **No** - policies are ignored.
+#. **No** - policies are ignored.*
 
 Perform policy checks on access derivatives
 +++++++++++++++++++++++++++++++++++++++++++
@@ -340,9 +332,9 @@ newly-created preservation derivatives to ensure conformation.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - the normalized files are checked against any policies.
-#. **No** - policies are ignored.
+#. **No** - policies are ignored.*
 
 Bind PIDs
 +++++++++
@@ -352,10 +344,10 @@ be configured).
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - PIDs are created and a API call posts the PIDs to the Handle
    Server.
-#. **No** - PIDs are not created.
+#. **No** - PIDs are not created.*
 
 Document empty directories
 ++++++++++++++++++++++++++
@@ -365,9 +357,9 @@ they existed.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
+#. **None** - the user is prompted for a decision.
 #. **Yes** - an entry for the directory is created in the structmap.
-#. **No** - the directory is not documented.
+#. **No** - the directory is not documented.*
 
 Reminder: add metadata if desired
 +++++++++++++++++++++++++++++++++
@@ -379,8 +371,8 @@ longer possible to add metadata to the SIP.
 
 Options:
 
-#. **None** - the user has a chance to add metadata.
-#. **Continue** - skip the reminder and automatically continue processing.*
+#. **None** - the user has a chance to add metadata.*
+#. **Continue** - skip the reminder and automatically continue processing.
 
 Transcribe files (OCR)
 ++++++++++++++++++++++
@@ -391,9 +383,9 @@ see (see :ref:`Transcribe SIP contents <transcribe-contents>`).
 
 Options:
 
-#. **None** - the user is prompted for a decision.
+#. **None** - the user is prompted for a decision.*
 #. **Yes** - Tesseract runs on all OCR-able files.
-#. **No** - Tesseract does not run.*
+#. **No** - Tesseract does not run.
 
 Select file format identification command (Submission documentation & metadata)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -403,15 +395,10 @@ metadata files that were included in your transfer.
 
 Options:
 
-#. **None** - the user is prompted for a decision.*
-#. **Identify using Siegfried** - use `Siegfried`_
-   to identify files by their signature.
-#. **Identify using Fido** - use `fido`_
-   to identify files by their file signature.
-#. **Identify by File Extension** - identify files by their extension rather
-   than their signature.
-#. **Skip File Identification** - file identification is not run on submission
-   documentation or metadata files.
+#. **None** - the user is prompted for a decision.
+#. **Yes** - use the enabled file identification command. See :ref:`Identification
+   <identification>` for more information.*
+#. **No** - files will not be identified.
 
 Select compression algorithm
 ++++++++++++++++++++++++++++
