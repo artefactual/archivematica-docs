@@ -125,18 +125,20 @@ Spin it up
 
       vagrant up
 
-   Vagrant will download our custom box and boot it in VirtualBox. The download
-   can take anywhere from a few minutes to an hour or more, depending on the
-   speed of your connection, as the box is fairly large (approx 3.2 GB in size).
+Vagrant will download our custom box and boot it in VirtualBox. The download
+can take anywhere from a few minutes to an hour or more, depending on the
+speed of your connection, as the box is fairly large (approx 3.2 GB in size).
 
-   This will take a while. It depends on your computer, but it could take up to
-   an hour. Your computer may be very slow while Archivematica is being
-   provisioned - be sure to save any work and be prepared to step away from your
-   computer while Archivematica is building.
+This will take a while. It depends on your computer, but it could take up to
+an hour. Your computer may be very slow while Archivematica is being
+provisioned - be sure to save any work and be prepared to step away from your
+computer while Archivematica is building.
 
 Once it's done provisioning, you can log in to your virtual machine::
 
-  vagrant ssh
+.. code-block:: bash
+
+   vagrant ssh
 
 You can also access your Archivematica instance through the web browser:
 
@@ -212,12 +214,11 @@ those files as best as possible.
 
 **Steps:**
 
-#. When you are prompted, select a file format identification tool (Siegfried
-   and Fido are the most robust options).
+#. When you are prompted, select Yes to identify file formats.
 #. Once file format identification is complete, click on the gear icon to the
    right of the job name to open the job page.
 #. On the job page, under the heading STDOUT, you will see information similar
-   to the following
+   to the following:
 
 .. code::
 

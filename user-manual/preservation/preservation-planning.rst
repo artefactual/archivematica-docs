@@ -196,11 +196,12 @@ Commands
 
 Format policy commands are scripts or command line statements which control how
 a tool runs. A command is created for a particular purpose, such as file
-identification. For example, during the :ref:`Transfer <transfer>` process you
-might tell Archivematica to identify your files using `Siegfried`_. This kicks
-off the command "Identify using Siegfried", which runs the file identification
-tool Siegfried the files included in the transfer. This command will be run once
-on every file in the transfer.
+identification. For example, during :ref:`Transfer <transfer>` you might tell
+Archivematica to identify the format of your files. This tells Archivematica to
+run the file identification command - in a default Archivematica instance, this
+would be "Identify using `Siegfried`_", which runs the file identification tool
+Siegfried the files included in the transfer. This command will be run once on
+every file in the transfer.
 
 To see the current commands for a particular purpose, find the purpose in the
 left-hand sidebar (i.e. **Identification**) and select the sub-menu-item
@@ -209,7 +210,7 @@ left-hand sidebar (i.e. **Identification**) and select the sub-menu-item
 .. image:: images/identification-commands.*
    :align: center
    :width: 80%
-   :alt: The list of identification commands in Archivematica 1.7.2
+   :alt: The list of identification commands in Archivematica 1.9
 
 Archivematica contains default commands for many different tools. You can
 disable or replace these commands at any time.
@@ -338,8 +339,8 @@ The revision history is tracked and can be viewed by clicking "View," and then
 Identification
 --------------
 
-Identification is the process of analyzing given information about
-a file to derive its format. Archivematica can do this either by looking at
+Identification is the process of analyzing given information about a file to
+derive its format. Archivematica can do this by using tools that either look at
 the file extension of the file or by analyzing the file's signature, depending
 on which tool is selected to perform the action. Archivematica can also be
 configured to skip file identification, if required.
@@ -349,12 +350,13 @@ Identification tools
 
 In Archivematica |version|, there are three file identification tools:
 
-* `FIDO`_, developed and maintained by the Open Preservation Foundation,
-  which identifies files by their signature and connects this to a PRONOM ID.
 * File Extension, a simple script which identifies files by their file
   extension.
+* `FIDO`_, developed and maintained by the Open Preservation Foundation,
+  which identifies files by their signature and connects this to a PRONOM ID.
 * `Siegfried`_, developed and maintained by Richard Lehane, which also
   identifies files by their signature and connects this to a PRONOM ID.
+  Siegfried is the default tool for file identification in Archivematica.
 
 From the Preservation Planning tab you can customize the behaviour of the
 existing tools or you can add new file identification tools.
@@ -362,13 +364,17 @@ existing tools or you can add new file identification tools.
 .. image:: images/file-identification-tools.*
    :align: center
    :width: 80%
-   :alt: The list of file identification tools in Archivematica 1.7.2
+   :alt: The list of file identification tools in Archivematica 1.9
 
 Identification commands
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Identification commands contain the actual code that a tool will run when
 identifying a file. This command will be run on every file in a transfer.
+
+The default command in Archivematica is to run `Siegfried`_. Only one command
+can be enabled at a time - Archivematica will automatically disable a command
+if a new one is enabled.
 
 When coding a command, you should expect your script to take the path to the
 file to be identifed as the first command line argument. When returning an
@@ -836,31 +842,31 @@ MediaConch
 
 MediaConch was introduced in Archivematica 1.7 as a validation tool specifically
 for files utilizing the Matroska (MKV) container format, the FFV1 video codec
-format, and the LPCM audio codec format. This is the file format used and 
+format, and the LPCM audio codec format. This is the file format used and
 recommended by Archivematica when performing normalization on audiovisual files.
 For more information about normalization rules, see the :ref:`Normalization
 <normalization>` section below.
 
-In addition to validating files against their format specification, MediaConch 
-can also be used to validate file formats against an internal policy created by 
-any institution. 
+In addition to validating files against their format specification, MediaConch
+can also be used to validate file formats against an internal policy created by
+any institution.
 
-Users can use `MediaConchOnline`_ or a local installation of MediaConch to 
-create a policy to check against files being ingested in Archivematica. Policies 
-can include rules such as aspect ratios, bit rate, track information, etc. 
-Policy checking is not restricted to mkv files. A policy can be created for any 
-format which can be characterized by `MediaInfo`_. 
+Users can use `MediaConchOnline`_ or a local installation of MediaConch to
+create a policy to check against files being ingested in Archivematica. Policies
+can include rules such as aspect ratios, bit rate, track information, etc.
+Policy checking is not restricted to mkv files. A policy can be created for any
+format which can be characterized by `MediaInfo`_.
 
 To create a policy within Archivematica:
 
-1. Ensure that the Archivematica processing configuration is set to perform 
-policy checks on originals. You can also use these policies to check 
-preservation and access derivatives created by Archivematica or through manual 
-normalization against a local policy. 
+1. Ensure that the Archivematica processing configuration is set to perform
+policy checks on originals. You can also use these policies to check
+preservation and access derivatives created by Archivematica or through manual
+normalization against a local policy.
 
-2. In the Preservation Planning tab, click on Commands under Validation. You 
-should see a sample policy called Check against policy 
-PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch. Either replace this command 
+2. In the Preservation Planning tab, click on Commands under Validation. You
+should see a sample policy called Check against policy
+PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch. Either replace this command
 or create a new one using it as a template.
 
 Here is a blank command:
@@ -885,9 +891,9 @@ Here is a blank command:
           policy_file_name=POLICY_NAME)
       sys.exit(policy_checker.check(target))
 
-2a. To use your own command, add the MediaConch-created xml between 
+2a. To use your own command, add the MediaConch-created xml between
 `POLICY = """` and `""".strip()` in
-the Command section. As an example, here's a very simple policy to check that a 
+the Command section. As an example, here's a very simple policy to check that a
 file is an mp4:
 
 .. code-block:: none
@@ -898,25 +904,25 @@ file is an mp4:
    </policy>
 
 
-2b. In the command above, update the POLICY_NAME field with the name of your 
+2b. In the command above, update the POLICY_NAME field with the name of your
 policy. This can be anything you like, but it cannot be left blank.
 
 2c. After the policy and policy name fields have been updated, you can save
 your new FPR policy command.
 
-3. Create or replace a rule (in the Rules section under Validation) with the 
-purpose "Validation against a Policy" for the format you want to check, using 
-the command you just created/edited. 
+3. Create or replace a rule (in the Rules section under Validation) with the
+purpose "Validation against a Policy" for the format you want to check, using
+the command you just created/edited.
 
-4. Now, when processing a new transfer, there should be a microservice called 
-"Policy checks on originals." Clicking on the gear icon associated with 
-that microservice will give you details related to your MediaConch policy. Like 
-with other microservices in Archivematica, its background will be green when all 
+4. Now, when processing a new transfer, there should be a microservice called
+"Policy checks on originals." Clicking on the gear icon associated with
+that microservice will give you details related to your MediaConch policy. Like
+with other microservices in Archivematica, its background will be green when all
 policies pass, and turn pink if one or more policies fail. Likewise, if
-performing policy checks on preservation or access derivatives, this new 
+performing policy checks on preservation or access derivatives, this new
 microservice will appear under the Normalization service during Ingest.
 
-For more information about how to create a policy for policy validation, please 
+For more information about how to create a policy for policy validation, please
 see the "Create a Policy" section of the `MediaConch documentation`_.
 
 

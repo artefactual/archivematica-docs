@@ -318,7 +318,7 @@ settings can improve performance.
 
 **Select file format identification command (Transfer):** Using Siegfried for
 file identification has been shown to be faster than Fido in this
-`benchmarking`_ study.
+`benchmarking`_ study. See :ref:`Identification <identification>` for more information.
 
 **Select file format identification command (Ingest):** If you are using the
 Archivematica backlog and have accumulated items in the backlog for a long
@@ -379,7 +379,7 @@ General Configuration Settings
 
 **Checksum Algorithm:** In the :ref:`General settings <dashboard-general>`
 screen you can select which checksum algorithm Archivematica will use during
-the Assign UUIDs and checksums microservice. For the purposes of fixity 
+the Assign UUIDs and checksums microservice. For the purposes of fixity
 checking, the MD5 algorithm may be adequate and takes less processing time
 to create (and check) than the alternatives (e.g. SHA-256).
 
