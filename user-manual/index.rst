@@ -25,6 +25,7 @@ links to each chapter's main sections.
    access/access
    access/archivists-toolkit
    access/contentdm
+   access/new-page
    preservation/preservation-planning
    administer/dashboard-admin
    metadata/dublincore
