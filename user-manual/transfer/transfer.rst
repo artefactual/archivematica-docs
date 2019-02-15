@@ -46,7 +46,7 @@ transfer process.
    :width: 80%
    :alt: The Transfer tab is where transfers into Archivematica begin.
 
-The section at the top of the Transfer tab is where you your materials for
+The section at the top of the Transfer tab is where you will find materials for
 transfer into Archivematica. There are four fields to fill out, as well as the
 ``Browse`` and ``Start transfer`` buttons and the ``Approve automatically``
 checkbox.
