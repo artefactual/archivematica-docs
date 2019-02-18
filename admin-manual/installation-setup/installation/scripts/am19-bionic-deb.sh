@@ -31,6 +31,17 @@ sudo apt-get install -y archivematica-storage-service
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
+#Fix for mysql UTF8 problems
+sudo bash -c 'cat << EOF >  /etc/mysql/conf.d/charset.cnf
+[mysqld]
+character-set-server = utf8
+
+[mysql]
+default-character-set=utf8
+EOF'
+sudo service mysql restart
+
+
 wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python -
 
 sudo apt-get install -y archivematica-mcp-server
