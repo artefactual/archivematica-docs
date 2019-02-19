@@ -20,7 +20,7 @@ Installation instructions
 
    Update your system
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
       :lines: 3
 
@@ -28,7 +28,7 @@ Installation instructions
    following commands. Additional configuration may be required for your local
    setup.
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
       :lines: 5-12
 
@@ -37,7 +37,7 @@ Installation instructions
 
    * Extra packages for enterprise Linux:
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
       :lines: 14
 
@@ -47,7 +47,7 @@ Installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
       :lines: 16-26
 
@@ -55,9 +55,9 @@ Installation instructions
 
       Use these commands to install the repositories:
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
-      :lines: 28-44
+      :lines: 28-49
 
 
 3. Common services like Elasticsearch, MariaDB and Gearmand should be installed
@@ -66,18 +66,18 @@ Installation instructions
    .. note:: Do not enable Elasticsearch if you are running Archivematica in
       indexless mode.
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
-      :lines: 46-52
+      :lines: 51-57
 
 
 4. Install Archivematica Storage Service
 
    * First, install the packages:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 54
+        :lines: 59
 
      .. warning:: If you are planning to use the `Sword API`_ of the
         Archivematica Storage Service, then (due to a `known issue`_), you must
@@ -91,17 +91,17 @@ Installation instructions
      some static files used by django.  These tasks must be run as
      “archivematica” user.
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 56-60
+        :lines: 61-65
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 76-81
+        :lines: 81-86
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -114,33 +114,33 @@ Installation instructions
 
    * First, install the packages:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 83
+        :lines: 88
 
    * Create user and mysql database with:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 85-87
+        :lines: 90-92
 
    * And as archivematica user, run migrations:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 89-94
+        :lines: 94-99
 
    * Start and enable services:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 96-99
+        :lines: 101-104
 
    * Restart Nginx in order to load the dashboard config file:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 101
+        :lines: 106
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -150,33 +150,33 @@ Installation instructions
 
      * Nux multimedia repo
 
-       .. literalinclude:: scripts/am18-centos-rpm.sh
+       .. literalinclude:: scripts/am-centos-rpm.sh
           :language: bash
-          :lines: 103
+          :lines: 108
 
      * Forensic tools repo
 
-       .. literalinclude:: scripts/am18-centos-rpm.sh
+       .. literalinclude:: scripts/am-centos-rpm.sh
           :language: bash
-          :lines: 104
+          :lines: 109
 
    * Then install the package:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 106
+        :lines: 111
 
    * The MCP Client expects some programs in certain paths, so we put them in place:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 108
+        :lines: 113
 
    * Tweak ClamAV configuration:
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 109-110
+        :lines: 114-115
 
    * Indexless mode:
 
@@ -193,9 +193,9 @@ Installation instructions
 
    * After that, we can enable and start/restart services
 
-     .. literalinclude:: scripts/am18-centos-rpm.sh
+     .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 112-119
+        :lines: 117-124
 
 7. Finalizing installation
 
@@ -222,9 +222,9 @@ Installation instructions
    If firewalld is running, you will likely need to modify the firewall rules
    to allow access to ports 81 and 8001 from your location:
 
-   .. literalinclude:: scripts/am18-centos-rpm.sh
+   .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
-      :lines: 121-123
+      :lines: 126-128
 
 8. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
 
