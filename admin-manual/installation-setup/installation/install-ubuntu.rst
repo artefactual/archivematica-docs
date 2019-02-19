@@ -25,19 +25,16 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
    Ubuntu 16.04 (Xenial):
 
-   .. code:: bash
-
-      sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc  | sudo apt-key add -
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   .. literalinclude:: scripts/am-xenial-deb.sh
+      :language: bash
+      :lines: 14-18
 
    Ubuntu 18.04 (Bionic):
 
-   .. code:: bash
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 14-18
 
-      sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc  | sudo apt-key add -
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu bionic main" >> /etc/apt/sources.list'
-      sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals bionic main" >> /etc/apt/sources.list'
 
 2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
@@ -46,40 +43,43 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. code:: bash
-
-      sudo wget -O - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-      sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list'
-
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 20-21
+  
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
-   .. code:: bash
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 23-24
 
-      sudo apt-get update
-      sudo apt-get upgrade
+4. Install some needed packages
 
-4. Install Elasticsearch (optional)
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 26
+  
+5. Install Elasticsearch (optional)
 
    .. note:: Skip this step if you are planning to run Archivematica in indexless
       mode (without Elasticsearch).
 
-   .. code:: bash
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 27
 
-      sudo apt-get install elasticsearch
+6. Install the Storage Service package.
 
-5. Install the Storage Service package.
+  .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 29
 
-   .. code:: bash
+7. Configure the Storage Service.
 
-      sudo apt-get install -y archivematica-storage-service
-
-6. Configure the Storage Service.
-
-   .. code:: bash
-
-      sudo rm -f /etc/nginx/sites-enabled/default
-      sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 31-32
 
    .. warning:: If you are planning to use the `Sword API`_ of the Archivematica
       Storage Service, then (due to a `known issue`_), you must instruct
@@ -89,15 +89,16 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
       sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
-7. Update ``pip``. This is used to install Python dependencies for both the
+8. Update ``pip``. This is used to install Python dependencies for both the
    Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
    is still a good idea to get the most recent version of ``pip``.
 
-   .. code:: bash
 
-      curl -Ls https://bootstrap.pypa.io/get-pip.py | sudo python -
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 34
 
-8. Install the Archivematica packages. The order of installation is important -
+9. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
    package. While it is possible to install the archivematica-mcp-client package
    on a separate machine, that configuration is not documented in these
@@ -111,67 +112,55 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    you must use ``demo`` as the password during the install process. The
    password can be changed after the installation is complete.
 
-   .. code:: bash
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 36-38
 
-      sudo apt-get install -y archivematica-mcp-server
-      sudo apt-get install -y archivematica-dashboard
-      sudo apt-get install -y archivematica-mcp-client
+10. Configure the Archivematica components (optional). There are a number of
+    environment variables that Archivematica recognizes which can be used to
+    alter how it is configured. For the full list, see the
+    `Dashboard install README`_, the `MCPClient install README`_, and the
+    `MCPServer install README`_.
 
-9. Configure the Archivematica components (optional). There are a number of
-   environment variables that Archivematica recognizes which can be used to
-   alter how it is configured. For the full list, see the
-   `Dashboard install README`_, the `MCPClient install README`_, and the
-   `MCPServer install README`_.
+    .. note:: If you are planning on running Archivematica in indexless mode (i.e.
+       without Elasticsearch), then modify the relevant systemd EnvironmentFile
+       files by adding lines that set the relevant environment variables to ``false``:
 
-   .. note:: If you are planning on running Archivematica in indexless mode (i.e.
-      without Elasticsearch), then modify the relevant systemd EnvironmentFile
-      files by adding lines that set the relevant environment variables to ``false``:
-
-   .. code:: bash
+    .. code:: bash
 
       sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
       sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
       sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 
-10. Configure the dashboard.
+11. Configure the dashboard.
 
-    .. code:: bash
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 40
 
-       sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
-
-11. Start Elasticsearch (optional).
+12. Start Elasticsearch (optional).
 
     .. note:: Skip this step if you are planning to run Archivematica in indexless
        mode (without Elasticsearch).
 
-    .. code:: bash
+    .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 42-44
 
-       sudo systemctl daemon-reload
-       sudo systemctl start elasticsearch
-       sudo systemctl enable elasticsearch
+13. Start the remaining services
 
-12. Start the remaining services
+    .. literalinclude:: scripts/am-bionic-deb.sh
+       :language: bash
+       :lines: 46-56
 
-    .. code:: bash
-
-       sudo service clamav-freshclam restart
-       sudo service clamav-daemon start
-       sudo service gearman-job-server restart
-       sudo service archivematica-mcp-server start
-       sudo service archivematica-mcp-client restart
-       sudo service archivematica-storage-service start
-       sudo service archivematica-dashboard restart
-       sudo service nginx restart
-       sudo systemctl enable fits-nailgun
-       sudo service fits-nailgun start
-
-    If you have trouble with the gearman command try restarting it:
+    If you have trouble with the gearman or clamav command try restarting it:
 
     .. code:: bash
 
        sudo service gearman-job-server restart
+       sudo service clamav-daemon restart
 
-13. Configure your firewall (if applicable)
+14. Configure your firewall (if applicable)
 
     On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated
     Firewall). To see the firewall status, enter:
@@ -183,13 +172,13 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     If ufw is active, you must ensure that it is not blocking the ports used by
     the dashboard and the Storage Service, i.e., 80 and 8000.
 
-    .. code:: bash
 
-       sudo ufw allow 80
-       sudo ufw allow 8000
-       sudo ufw reload
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 58-61
 
-14. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
+
+15. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _ubuntu-post-install-config:
 
