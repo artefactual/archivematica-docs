@@ -16,7 +16,7 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 
    If you are running :ref:`Archivematica without Elasticsearch
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
-   Appraisal tab will not appear in your dashboard.
+   Appraisal tab may not appear in your dashboard.
 
 *On this page:*
 

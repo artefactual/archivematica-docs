@@ -44,6 +44,11 @@ the '-p' portion of that command. If there is a problem during the upgrade
 process, you can restore your MySQL database from this backup and try the
 upgrade again.
 
+If you're upgrading from Archivematica 1.8 or lower to the 1.9 version or
+higher, the Elasticsearch version support changed from 1.x to 6.x and it's
+also recommended to create a backup of your Elasticsearch data, specially if
+you don't have access to the AIP storage locations in the local filesystem.
+
 .. _upgrade-ubuntu:
 
 Upgrade on Ubuntu
@@ -220,72 +225,102 @@ Upgrade on CentOS/Red Hat
 
 .. _upgrade-search-indices:
 
-Upgrade search indices
-----------------------
+Upgrade Elasticsearch and search indexes
+----------------------------------------
 
 .. note::
 
-   Ignore this section if you are planning to run Archivematica without a
-   search index. Instead, follow the instructions on :ref:`how
-   to upgrade Archivematica in indexless mode <upgrade-indexless>`.
+   Ignore this section if you are planning to run Archivematica without search
+   indexes. Instead, follow the instructions on :ref:`how to upgrade
+   Archivematica in indexless mode <upgrade-indexless>`.
 
-To complete these instructions you need to know the paths of your transfer
-backlog and AIP storage locations. Respectively, these usually are:
+Archivematica |release| uses Elasticsearch 6.x as its search engine. If you're
+upgrading from Archivematica 1.8.x or lower, where Elasticsearch 1.x was the
+supported version, it's required to upgrade your Elasticsearch cluster and
+indexes to the new version.
+
+To complete this upgrade it is important to know if you have access to your
+transfer backlog and AIP storage locations in the local filesystem.
+These are usually located in the following paths:
 
 * :file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`
 * :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
 
-You can confirm the paths of your installation in the Location tab of the
+You should confirm the paths of your installation in the Locations tab of the
 Storage Service.
 
-This process has two steps:
+If you have access to those locations, the recommended method for the upgrade is
+to :ref:`recreate the indexes <recreate-indexes>`. Otherwise, you'll need to
+:ref:`reindex from another cluster <cluster-reindex>`.
 
-1. **Rebuild transfer index:**
+.. _recreate-indexes:
 
-   Run the following command passing the path of the transfer backlog location
-   you confirmed above:
+Recreate indexes
+^^^^^^^^^^^^^^^^
 
-   .. code:: bash
+Using this method, the indexes will be recreated with the new mappings and
+settings and will be populated from the files and database information. This
+will allow you to upgrade the Elasticsearch instance to 6.x without having to
+manage the 1.x indexes' data. Run the following commands:
 
-      sudo -u archivematica bash -c " \
-          set -a -e -x
-          source /etc/default/archivematica-dashboard || \
-              source /etc/sysconfig/archivematica-dashboard \
-                  || (echo 'Environment file not found'; exit 1)
-          cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
-              rebuild_transfer_backlog \
-                  --transfer-backlog-dir=/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog
-      ";
+* :ref:`Rebuild AIPs indexes <aip-indexes>`
+* :ref:`Rebuild Transfers indexes <transfer-indexes>`
 
-   This may take a while if you have a large backlog. Once it completes, you
-   should be able to see your Transfer Backlog in the Appraisal tab and in the
-   Backlog tab.
+.. note::
+   Please notice, the execution of this command may take a long time for big
+   AIP and Transfer Backlog storage locations, especially if the AIPs are stored
+   compressed. If that is your case, you may want to try the
+   :ref:`reindex from another cluster method <cluster-reindex>`, below.
 
-   Depending on your browser settings, you may need to clear your browser cache
-   to make the dashboard pages load properly. For example in Firefox or Chrome
-   yo should be able to clear the cache with ``control-shift-R`` or
-   ``command-shift-F5``.
+.. _cluster-reindex:
 
-2. **Rebuild the AIP index:**
+Reindex from another cluster
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Run the following command passing the path of the AIP storage location you
-   confirmed above:
+If you don't have access to the AIP and/or transfer backlog locations, this
+method will allow you to upgrade the existing Elasticsearch indexes to the new
+version. However, it will require you to setup and configure two Elasticsearch
+instances, one using the 1.x version with the existing data and the other
+using the 6.x version to hold the new indexes. Archivematica includes a command
+to perform this reindex process, which requires a few considerations before its
+execution:
 
-   .. code:: bash
+#. The ``archivematica_src_elasticsearch_server`` configuration attribute must
+   be set to the ES 6.x instance URL.
+#. Archivematica must have access to both ES instances:
 
-      sudo -u archivematica bash -c " \
-          set -a -e -x
-          source /etc/default/archivematica-dashboard || \
-              source /etc/sysconfig/archivematica-dashboard \
-                  || (echo 'Environment file not found'; exit 1)
-          cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py \
-              rebuild_elasticsearch_aip_index_from_files \
-                  /var/archivematica/sharedDirectory/www/AIPsStore
-      ";
+   #. External access must be enabled in the ES instances if they are not in the
+      same machine as Archivematica.
+   #. The command accepts basic authentication parameters to connect to the ES 1.x
+      instance.
+   #. The ``archivematica_src_elasticsearch_host`` configuration attribute
+      accepts RFC-1738 formatted URLs (e.g.: ``https://user:secret@host:443``).
 
-   This may take a while if you have many AIPs stored.
+#. The ES 1.x host has to be white-listed in the ES 6.x "elasticsearch.yaml"
+   configuration file (e.g.: reindex.remote.whitelist: "host:9200").
+#. The command requires the ES 1.x instance URL (including protocol and port)
+   as the first argument, two optional parameters for basic authentication and two other
+   optional parameters to set the timeout for both connections and the chunk
+   size for each request.
+
+Execution example:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py reindex_from_remote_cluster \
+               https://192.168.168.196:9200 -u test -p 1234 -t 30 -s 10
+   ";
+
+.. note::
+   For a more detailed instructions about how to run the upgrade with both
+   Elasticsearch instances running in the same machine `visit our Wiki`_.
 
 .. _upgrade-indexless:
 
@@ -367,3 +402,4 @@ set environment variables and restart Archivematica processes.
 :ref:`Back to the top <upgrade>`
 
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
+.. _`visit our Wiki`: https://wiki.archivematica.org/Update_ElasticSearch

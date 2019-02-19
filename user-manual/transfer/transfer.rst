@@ -611,8 +611,8 @@ The microservices that run on the Transfer tab include:
 .. note::
 
   If you are running :ref:`Archivematica without Elasticsearch
-  <install-elasticsearch>`, you may not have the option to send the transfer to
-  the backlog.
+  <install-elasticsearch>` or with limited Elasticsearch functionality, you may
+  not have the option to send the transfer to the backlog.
 
 A transfer that is in the middle of processing will show which microservices
 have been completed (green) and which are in progress (orange). When a

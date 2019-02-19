@@ -276,11 +276,12 @@ The larger a Transfer or AIP is, the longer it will take to create the Index.
 Some users have found that Indexing can fail on very large Transfers or AIPS
 (e.g. with many thousands of files).
 
-Use of Elasticsearch is optional. Installing Archivematica without
-Elasticsearch means reduced consumption of compute resources and lower
-operational complexity. Disabling Elasticsearch means that the Backlog,
-Appraisal, and Archival Storage tabs do not appear and their functionality is
-not available.
+Use of Elasticsearch is optional. Installing `Archivematica without
+Elasticsearch <install-elasticsearch>` or with limited Elasticsearch
+functionality means reduced consumption of compute resources and lower
+operational complexity. Fully or partially disabling Elasticsearch means that
+the Backlog, Appraisal, and Archival Storage tabs may not appear and their
+functionality is not available.
 
 See :ref:`Upgrade in indexless mode <upgrade-indexless>` for more details.
 

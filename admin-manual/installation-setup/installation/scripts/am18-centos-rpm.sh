@@ -13,14 +13,16 @@ sudo setsebool -P httpd_setrlimit 1
 
 sudo yum install -y epel-release
 
-sudo -u root rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
+sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-[elasticsearch-1.7]
-name=Elasticsearch repository for 1.7 packages
-baseurl=https://packages.elastic.co/elasticsearch/1.7/centos
+[elasticsearch-6.x]
+name=Elasticsearch repository for 6.x packages
+baseurl=https://artifacts.elastic.co/packages/6.x/yum
 gpgcheck=1
-gpgkey=https://packages.elastic.co/GPG-KEY-elasticsearch
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=1
+autorefresh=1
+type=rpm-md
 EOF'
 
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo

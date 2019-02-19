@@ -29,15 +29,10 @@ of any other servers or workstations that should be able to access it.
    your AtoM Elasticsearch index. Your AtoM site is more likely to be a public-
    facing IP and therefore this is an important step.
 
-To further enhance your Elasticsearch index's security make the following
-changes in your Elasticsearch ``/etc/elasticsearch/elasticsearch.yml`` file:
-
-.. code:: bash
-
-   discovery.zen.ping.multicast.enabled: false
-   script.disable_dynamic:true
-
-Then, ``/etc/init.d/elasticsearch restart``.
+For more advanced Elasticsearch installations follow `their security
+documentation <elasticsearch-security-external_>`_. The
+``archivematica_src_elasticsearch_host`` configuration attribute accepts
+RFC-1738 formatted URLs (e.g.: ``https://user:secret@host:443``).
 
 .. _mysql-security:
 
@@ -257,3 +252,4 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _shibboleth: https://www.shibboleth.net/
 .. _requests: http://docs.python-requests.org/
 .. _requests-cas: http://docs.python-requests.org/en/master/user/advanced/#ca-certificates
+.. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html

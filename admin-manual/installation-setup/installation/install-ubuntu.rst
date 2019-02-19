@@ -46,16 +46,10 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   Ubuntu 16.04 (Xenial):  
-
    .. code:: bash
 
-      sudo wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-      sudo sh -c 'echo "deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main" >> /etc/apt/sources.list'
-
-   Ubuntu 18.04 (Bionic): 
-
-   Skip this step, the package will be downloaded directly in step 4.
+      sudo wget -O - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+      sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list'
 
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
@@ -70,19 +64,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    .. note:: Skip this step if you are planning to run Archivematica in indexless
       mode (without Elasticsearch).
 
-   Ubuntu 16.04 (Xenial):
-
    .. code:: bash
 
       sudo apt-get install elasticsearch
-
-   Ubuntu 18.04 (Bionic):
-
-   .. code:: bash
-
-      sudo apt-get install -y htop ntp unzip openjdk-8-jre-headless
-      sudo curl -s https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.7.6.deb -o /var/cache/apt/archives/elasticsearch-1.7.6.deb
-      sudo dpkg -i /var/cache/apt/archives/elasticsearch-1.7.6.deb
 
 5. Install the Storage Service package.
 
@@ -162,8 +146,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
     .. code:: bash
 
-       sudo service elasticsearch restart
-       sudo update-rc.d elasticsearch defaults 95 10
+       sudo systemctl daemon-reload
+       sudo systemctl start elasticsearch
+       sudo systemctl enable elasticsearch
 
 12. Start the remaining services
 
@@ -226,7 +211,7 @@ the configuration of your new server.
    only to ports 80 and 8000 for Archivematica usage.
 
 2. The Storage Service has its own set of users. Add at least one
-   administrative user:: 
+   administrative user::
 
     sudo -u archivematica bash -c " \
         set -a -e -x

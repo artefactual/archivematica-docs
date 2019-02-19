@@ -36,10 +36,10 @@ Instructions
 .. important::
 
    If you would like to install :ref:`Archivematica without Elasticsearch
-   <install-elasticsearch>`, you must first change the role variable
-   ``archivematica_src_search_enabled`` to ``false``. For more information about
-   Archivematica's Ansible role, please see the `ansible-archivematica-src`_
-   repo.
+   <install-elasticsearch>` or with limited Elasticsearch functionality, you
+   must first change the role variable ``archivematica_src_search_enabled`` to
+   one of the available values. For more information about Archivematica's
+   Ansible role, please see the `ansible-archivematica-src`_ repo.
 
 1. Install VirtualBox, Vagrant, and Ansible.
 

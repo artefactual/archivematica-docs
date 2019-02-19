@@ -16,7 +16,7 @@ backlogged material in a new Archivematica pipeline.
 
    If you are running :ref:`Archivematica without Elasticsearch
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
-   Backlog tab will not appear in your dashboard.
+   Backlog tab may not appear in your dashboard.
 
 *On this page:*
 

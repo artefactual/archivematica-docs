@@ -13,7 +13,7 @@ Should you run into an error during archival storage, please see
 
    If you are running :ref:`Archivematica without Elasticsearch
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
-   Archival Storage tab will not appear in your dashboard.
+   Archival Storage tab may not appear in your dashboard.
 
 *On this page*
 

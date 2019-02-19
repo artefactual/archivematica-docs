@@ -11,14 +11,10 @@ installation.
 
 * :ref:`Elasticsearch <elasticsearch>`
 
-* :ref:`Programmatic access to indexed AIP data <elasticsearch-access>`
-
-* :ref:`Delete Elasticsearch index <elasticsearch-delete>`
-
-* :ref:`Rebuild AIP or transfer index <elasticsearch-rebuild>`
+  * :ref:`Rebuild the indexes <elasticsearch-indexes>`
+  * :ref:`External access <elasticsearch-external>`
 
 * :ref:`Data backup <data-backup>`
-
 * :ref:`FAQ <admin-faq>`
 
 .. _elasticsearch:
@@ -26,236 +22,115 @@ installation.
 Maintaining Elasticsearch
 -------------------------
 
-Since version 0.9, Archivematica stores AIP file information, such as METS
-data, using Elasticsearch. This data can be searched from the Archival Storage
-area of the dashboard or can be interfaced with programmatically.
-
-.. _elasticsearch-access:
-
-Programmatic access to indexed AIP data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To access indexed AIP data using a custom script or application, find an
-Elasticsearch interface library for the programming language you've chosen to
-use. In Archivematica we use Python with the `pyes`_ library. In our developer
-documentation, we'll outline the use of pyes to access AIP data, but any
-programming language/interface library, such as PHP and `Elastica`_, should
-work.
-
-**Connecting to Elasticsearch**
-
-In this section we'll run through an example of interfacing with Elasticsearch
-data using a Python script that leverages the pyes library.
-
-The first step, when using pyes, is to require the module. The following code
-imports pyes functionality on a system on which Archivematica is installed.
-
-.. code:: bash
-
-   import sys
-   sys.path.append("/home/demo/archivematica/src/archivematicaCommon/lib/externals")
-   from pyes import *
-
-Next you'll want to create a connection to Elasticsearch.
-
-.. code:: bash
-
-   conn = ES('127.0.0.1:9200')
-
-**Full text searching**
-
-Once connected to Elasticsearch, you can perform searches. Below is the code
-needed to do a "wildcard" search for all AIP files indexed by Elasticsearch
-and retrieve the first 20 items. Instead of doing a "wildcard" search you
-could also supply keywords, such as a certain AIP UUID.
-
-.. code:: bash
-
-   start_page     = 1
-   items_per_page = 20
-
-   q = StringQuery('*')
-
-   try:
-     results = conn.search_raw(
-        query=q,
-        indices='aips',
-        type='aip',
-        start=start_page - 1,
-        size=items_per_page
-     )
-   except:
-      print 'Query error.'
-
-**Querying for specific data**
-
-While the "StringQuery" query type is good for broad searches, you may want to
-narrow a search down to a specific field of data to reduce false positives.
-Below is an example of searching documents, using "TermQuery", matching
-criteria within specific data. As, by default, Elasticsearch stores term
-values in lowercase the term value searched for must also be lowercase.
-
-.. code:: bash
-
-   import sys
-   sys.path.append("/usr/lib/archivematica/archivematicaCommon/externals")
-   import pyes
-
-   conn = pyes.ES('127.0.0.1:9200')
-
-   q = pyes.TermQuery("METS.amdSec.ns0:amdSec_list.@ID", "amdsec_8")
-
-   try:
-       results = conn.search_raw(query=q, indices='aips')
-   except:
-     print 'Query failed.'
-
-
-**Displaying search results**
-
-Now that you've performed a couple of searches, you can display some results.
-The below logic cycles through each hit in a results set, representing an AIP
-file, and prints the UUID of the AIP the file belongs in, the Elasticsearch
-document ID corresponding to the indexed file data, and the path of the file
-within the AIP.
-
-.. code:: python
-
-   if results:
-       document_ids = []
-       for item in results.hits.hits:
-           aip = item._source
-           print 'AIP ID: ' + aip['AIPUUID'] + ' / Document ID: ' + item._id
-           print 'Filepath: ' + aip['filePath']
-           print
-           document_ids.append(item._id)
-
-
-**Fetching specific documents**
-
-If you want to get Elasticsearch data for a specific AIP file, you can use the
-Elasticsearch document ID. The above code populates the document_ids array and
-the below code uses this data, retrieving individual documents and extracting
-a specific item of data from each document.
-
-.. code:: python
-
-   for document_id in document_ids:
-       data = conn.get(index_name, type_name, document_id)
-
-       format = data['METS']['amdSec']['ns0:amdSec_list'][0]['ns0:techMD_list'][0]['ns0:mdWrap_list'][0]['ns0:xmlData_list'][0]['ns1:object_list'][0]['ns1:objectCharacteristics_list'][0]['ns1:format_list'][0]['ns1:formatDesignation_list'][0]['ns1:formatName']
-
-       print 'Format for document ID ' + document_id + ' is ' + format
-
-**Augmenting documents**
-
-To add additional data to an Elasticsearch document, you'll need the document
-ID. The following code shows an Elasticsearch query being used to find a
-document and update it with additional data. Note that the name of the data
-field being added, "__public", is prefixed with two underscores. This practice
-prevents the accidental overwriting of system or Archivematica-specific data.
-System data is prefixed with a single underscore.
-
-.. code:: python
-
-   import sys
-   sys.path.append("/usr/lib/archivematica/archivematicaCommon/externals")
-   import pyes
-
-   conn = pyes.ES('127.0.0.1:9200')
-
-   q = pyes.TermQuery("METS.amdSec.ns0:amdSec_list.@ID", "amdsec_8")
-
-   results = conn.search_raw(query=q, indices='aips')
-
-   try:
-     if results:
-       for item in results.hits.hits:
-           print 'Updating ID: ' + item['_id']
-
-           document = item['_source']
-           document['__public'] = 'yes'
-           conn.index(document, 'aips', 'aip', item['_id'])
-   except:
-     print 'Query failed.'
-
-.. _elasticsearch-delete:
-
-Delete the Elasticsearch index through the GUI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To help with Elasticsearch development, Archivematica comes with a plugin for
-Elasticsearch, called `Elasticsearch Head`_, that provides a web application
-for browsing and administering Elasticsearch data. It can be accessed
-at http://your.host.name:9200/_plugin/head/.
-
-Elasticsearch Head will allow you to delete an index, if need be.
-
-
-.. image:: images/Elasticsearch_head_delete.png
-   :align: center
-   :width: 80%
-   :alt: Deleting an Elasticsearch index from Elasticsearch Head.
-
-Delete Elasticsearch index programmatically
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If, for whatever reason, you need to delete an Elasticsearch index
-programmatically, this can be done with pyes using the following code.
-
-.. code:: bash
-
-   import sys
-   sys.path.append("/home/demo/archivematica/src/archivematicaCommon/lib/externals")
-   from pyes import *
-   conn = ES('127.0.0.1:9200')
-
-   try:
-       conn.delete_index('aips')
-   except:
-       print "Error deleting index or index already deleted."
-
-.. _elasticsearch-rebuild:
-
-Rebuilding the AIP index
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-To rebuild the Elasticsearch AIP index enter the following to find the
-location of the rebuilding script:
-
-.. code:: bash
-
-   locate rebuild-elasticsearch-aip-index-from-files
-
-Copy the location of the script then enter the following to perform the
-rebuild (substituting "/your/script/location/rebuild-elasticsearch-aip-index-
-from-files" with the location of the script):
-
-.. code:: bash
-
-   /your/script/location/rebuild-elasticsearch-aip-index-from-files <location of your AIP store>
-
-Rebuilding the transfer index
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Similarly, to rebuild the Elasticsearch transfer data index enter the
-following to find the location of the rebuilding script:
-
-.. code:: bash
-
-   locate rebuild-elasticsearch-transfer-index-from-files
-
-Copy the location of the script then enter the following to perform the
-rebuild (substituting "/your/script/location/rebuild-elasticsearch-transfer-
-index-from-files" with the location of the script):
-
-.. code:: bash
-
-   /your/script/location/rebuild-elasticsearch-transfer-index-from-files <location of your AIP store>
+Since version 0.9, Archivematica uses Elasticsearch as its search engine. Elasticsearch
+stores information about AIPs and Transfers in backlog. This data can be
+searched from the Archival Storage and the Backlog tabs on the Archivematica dashboard.
+
+.. note::
+   As of Archivematica 1.7, this feature can be :ref:`fully or partially
+   disabled <install-elasticsearch>`.
 
 .. seealso::
 
-   `Elasticsearch troubleshooting`_ help from AtoM documentation.
+  `Elasticsearch troubleshooting`_ help from AtoM documentation.
+
+.. _elasticsearch-indexes:
+
+Rebuild the indexes
+^^^^^^^^^^^^^^^^^^^
+
+Archivematica includes two Django commands to regenerate the Elasticsearch
+indexes. These commands require access in the local filesystem to the location
+paths of the AIP and Transfer Backlog storage locations. These
+usually are located in the following paths:
+
+* :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
+* :file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`
+
+You should confirm the paths of your installation in the Locations tab of the
+Storage Service.
+
+.. _aip-indexes:
+
+**AIP indexes**
+
+To recreate the AIP indexes from files run the following command, passing the
+path of the AIP storage location you confirmed above.
+
+.. note::
+   Please note, the execution of this command may take a long time for big
+   AIP storage locations, especially if the AIPs are stored compressed.
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py rebuild_elasticsearch_aip_index_from_files \
+               /var/archivematica/sharedDirectory/www/AIPsStoree --delete-all
+   ";
+
+The command accepts the following parameters:
+
+* `[storage_location_path]` **[REQUIRED]**: Path where the AIP storage location
+  is located in the local filesystem.
+* `--delete-all`: Removes the entire indexes to regenerate the mapping and
+  settings.
+* `--delete`: Removes matching AIP documents to avoid duplicates but keeps the
+  index mappings and settings.
+* `--uuid` [aip_uuid]: Index a single AIP from the storage location.
+
+It can be executed multiple times with different paths to index multiple AIP
+storage locations.
+
+.. _transfer-indexes:
+
+**Transfer indexes**
+
+To regenerate the Transfers indexes, apart from access to the storage location,
+the command checks the transfer and transfer files existence in the Dashboard
+database. The indexes will be fully recreated with the current settings and
+mappings and populated with the Transfers from the location. Execution example:
+
+.. note::
+   Please note, the execution of this command may take a long time for big
+   Transfer Backlog storage locations.
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py rebuild_transfer_backlog
+   ";
+
+The command accepts the following parameters:
+
+* `--transfer-backlog-dir [storage_location_path]`: Path where the Transfer
+  Backlog storage location is located in the local filesystem. *Default:*
+  `/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`.
+* `--no-prompt`: Do not ask for confirmation.
+
+.. _elasticsearch-external:
+
+External access
+^^^^^^^^^^^^^^^
+
+For further interactions with the Elasticsearch indexes, to browse the data or
+to create visualizations, the following tools are recommended:
+
+* `Kibana`_
+* `Dejavu`_
+
+The index names are: `aips`, `aipfiles`, `transfers` and `transferfiles`.
 
 .. _data-backup:
 
@@ -407,9 +282,9 @@ an alternative to using the dashboard.
    more information about installation methods, please see :ref:`installation`.
 
 1. Clone the `archivematica-devtools`_ repository into your Archivematica source
-   repository and follow the installation instructions found within the 
+   repository and follow the installation instructions found within the
    repository. On Ubuntu or CentOS, clone the repository to
-   `/opt/archivematica`. On vagrant, clone the repository to `/vagrant/src/`. 
+   `/opt/archivematica`. On vagrant, clone the repository to `/vagrant/src/`.
    You should be able to access the devtools by running the `am` command.
 
 2. Navigate to the Archivematica MCP Client directory and start the mcp-rpc-cli.
@@ -551,50 +426,49 @@ Transfer won't start
 ^^^^^^^^^^^^^^^^^^^^
     "I try to create a new transfer, but nothing happens. What can I do?"
 
-Sometimes a user may attempt to start a transfer and it will never seem to 
-initiate the Archivematica processes. There are a few issues to look out for 
+Sometimes a user may attempt to start a transfer and it will never seem to
+initiate the Archivematica processes. There are a few issues to look out for
 and investigate if this happens.
 
 1. File permissions
 
-  First, the issue may be related to file permissions in the transfer source 
-  directory. Check the permissions in the directory and on the files to ensure 
+  First, the issue may be related to file permissions in the transfer source
+  directory. Check the permissions in the directory and on the files to ensure
   that all files can be read by Archivematica.
 
 2. System timeouts
 
   If it is a large transfer, it may just be taking a long time to copy the files
-  and initially load them into the system, and the user can wait a bit longer 
-  and see if the processes begin after a bit of time. It is also possible that 
-  it is taking a long time because some of the system timeouts are being 
-  exceeded and the transfer has failed. This can be verified by checking the 
-  Storage Service logs and by checking where the transfer exists on the 
+  and initially load them into the system, and the user can wait a bit longer
+  and see if the processes begin after a bit of time. It is also possible that
+  it is taking a long time because some of the system timeouts are being
+  exceeded and the transfer has failed. This can be verified by checking the
+  Storage Service logs and by checking where the transfer exists on the
   filesystem.
 
-  For inadequate timeouts, check the Storage Service configuration and adjust 
+  For inadequate timeouts, check the Storage Service configuration and adjust
   if necessary.
 
 3. Communication between Dashboard and Gearman
 
   If the transfer has successfully moved to the shared Directory (i.e. it can be
-  found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders), but 
-  is still not showing up in the dashboard, there could have been a problem with 
-  the communication between the dashboard and Gearman. Restarting all of the 
+  found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders), but
+  is still not showing up in the dashboard, there could have been a problem with
+  the communication between the dashboard and Gearman. Restarting all of the
   services can resolve this problem and the transfer will appear.
 
-  Restart services in the follow order: ``gearmand``, 
-  ``archivematica-mcp-server``, ``archivematica-mcp-client``, 
+  Restart services in the follow order: ``gearmand``,
+  ``archivematica-mcp-server``, ``archivematica-mcp-client``,
   and ``archivematica-dashboard``.
 
-  Note that on some installations, ``gearmand`` may be called 
+  Note that on some installations, ``gearmand`` may be called
   ``gearman-job-server``.
 
 :ref:`Back to the top <maintenance>`
 
-.. _`pyes`: https://github.com/aparo/pyes/
-.. _`Elastica`: https://github.com/ruflin/Elastica/
 .. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html
 .. _`Elasticsearch troubleshooting`: https://www.accesstomemory.org/docs/latest/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch
-.. _`Elasticsearch Head`: http://mobz.github.com/elasticsearch-head/
+.. _`Kibana`: https://www.elastic.co/products/kibana
+.. _`Dejavu`: https://github.com/appbaseio/dejavu
 .. _`remove transfers or SIPs`: https://www.archivematica.org/en/docs/archivematica-1.7/user-manual/transfer/transfer/#cleaning-up-the-transfer-dashboard
 .. _`archivematica-devtools`: https://github.com/artefactual/archivematica-devtools

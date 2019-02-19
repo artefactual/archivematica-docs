@@ -49,7 +49,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am18-centos-rpm.sh
       :language: bash
-      :lines: 16-24
+      :lines: 16-26
 
    * Archivematica:
 
@@ -57,7 +57,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am18-centos-rpm.sh
       :language: bash
-      :lines: 26-42
+      :lines: 28-44
 
 
 3. Common services like Elasticsearch, MariaDB and Gearmand should be installed
@@ -68,7 +68,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am18-centos-rpm.sh
       :language: bash
-      :lines: 44-50
+      :lines: 46-52
 
 
 4. Install Archivematica Storage Service
@@ -77,8 +77,8 @@ Installation instructions
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 52
-     
+        :lines: 54
+
      .. warning:: If you are planning to use the `Sword API`_ of the
         Archivematica Storage Service, then (due to a `known issue`_), you must
         instruct Gunicorn to use the ``sync`` worker class:
@@ -93,7 +93,7 @@ Installation instructions
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 54-58
+        :lines: 56-60
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
@@ -101,7 +101,7 @@ Installation instructions
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 74-79
+        :lines: 76-81
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -116,31 +116,31 @@ Installation instructions
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 81
+        :lines: 83
 
    * Create user and mysql database with:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 83-85
+        :lines: 85-87
 
    * And as archivematica user, run migrations:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 87-92
+        :lines: 89-94
 
    * Start and enable services:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 94-97
+        :lines: 96-99
 
    * Restart Nginx in order to load the dashboard config file:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 99
+        :lines: 101
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -152,31 +152,31 @@ Installation instructions
 
        .. literalinclude:: scripts/am18-centos-rpm.sh
           :language: bash
-          :lines: 101
+          :lines: 103
 
      * Forensic tools repo
 
        .. literalinclude:: scripts/am18-centos-rpm.sh
           :language: bash
-          :lines: 102
+          :lines: 104
 
    * Then install the package:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 104
+        :lines: 106
 
    * The MCP Client expects some programs in certain paths, so we put them in place:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 106
+        :lines: 108
 
    * Tweak ClamAV configuration:
 
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 107-108
+        :lines: 109-110
 
    * Indexless mode:
 
@@ -192,10 +192,10 @@ Installation instructions
          sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/sysconfig/archivematica-mcp-client'
 
    * After that, we can enable and start/restart services
-    
+
      .. literalinclude:: scripts/am18-centos-rpm.sh
         :language: bash
-        :lines: 110-117
+        :lines: 112-119
 
 7. Finalizing installation
 
@@ -224,7 +224,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am18-centos-rpm.sh
       :language: bash
-      :lines: 119-121
+      :lines: 121-123
 
 8. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
 

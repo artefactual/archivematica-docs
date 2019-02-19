@@ -543,13 +543,12 @@ Elasticsearch indexing
 ^^^^^^^^^^^^^^^^^^^^^^
 
 As of Archivematica 1.7, Elasticsearch is optional. Installing Archivematica
-without Elasticsearch means reduced consumption of compute resources and lower
-operational complexity. Disabling Elasticsearch means that the Backlog,
-Appraisal, and Archival Storage tabs do not appear and their functionality is
-not available.
+without Elasticsearch or with limited Elasticsearch functionality means reduced
+consumption of compute resources and lower operational complexity. Fully or
+partially disabling Elasticsearch means that the Backlog, Appraisal, and
+Archival Storage tabs may not appear and their functionality is not available.
 
-This section in the General configuration shows if Elasticsearch is enabled or
-disabled.
+This section in the General configuration shows the Elasticsearch configuration.
 
 .. _dashboard-failures:
 
