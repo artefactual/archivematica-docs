@@ -110,7 +110,7 @@ sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
 
 sudo -u root yum install -y archivematica-mcp-client
 
-sudo ln -s /usr/bin/7za /usr/bin/7z
+sudo ln -sf /usr/bin/7za /usr/bin/7z
 sudo -u root sed -i 's/^#TCPSocket/TCPSocket/g' /etc/clamd.d/scan.conf
 sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 

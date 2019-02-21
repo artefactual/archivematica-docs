@@ -29,7 +29,7 @@ sudo apt-get install -y elasticsearch
 sudo apt-get install -y archivematica-storage-service
 
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
+sudo ln -sf /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
 wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python -
 
@@ -37,7 +37,7 @@ sudo apt-get install -y archivematica-mcp-server
 sudo apt-get install -y archivematica-dashboard
 sudo apt-get install -y archivematica-mcp-client
 
-sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
+sudo ln -sf /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
 sudo systemctl daemon-reload
 sudo service elasticsearch restart
