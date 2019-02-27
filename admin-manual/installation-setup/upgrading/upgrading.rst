@@ -47,7 +47,36 @@ If you're upgrading from Archivematica 1.8 or lower to the 1.9 version or
 higher, the Elasticsearch version support changed from 1.x to 6.x and it's
 also recommended to create a backup of your Elasticsearch data, specially if
 you don't have access to the AIP storage locations in the local filesystem. 
-Refer to the `ElasticSearch 1.7 docs <https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html>`_
+
+You can follow the following steps in order to create one:
+
+.. code:: bash
+
+    # Remove and recreate the folder that stores the backup
+    sudo rm -rf /var/lib/elasticsearch/backup-repo/
+    sudo mkdir -p /var/lib/elasticsearch/backup-repo/
+    sudo chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo/
+    # Allow elasticsearch to write files to the backup
+    echo 'path.repo: ["/var/lib/elasticsearch/backup-repo"]' |sudo tee -a /etc/elasticsearch/elasticsearch.yml
+    # Restart ElasticSearch and wait for it to start
+    sudo service elasticsearch restart
+    sleep 60s
+    # Configure the ES backup
+    curl -XPUT "localhost:9200/_snapshot/backup-repo" -H 'Content-Type: application/json' -d \
+    '{
+         "type": "fs",
+         "settings": {
+         "location": "./",
+         "compress": true
+         }
+     }'
+    # Take the actual backup, and copy it to a safe place
+    curl -X PUT "localhost:9200/_snapshot/backup-repo/am_indexes_backup?wait_for_completion=true"
+    cp /var/lib/elasticsearch/backup-repo elasticsearch-backup -rf
+
+
+
+For more info, refer to the `ElasticSearch 1.7 docs <https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html>`_
 
 .. _upgrade-search-indices:
 
@@ -167,8 +196,6 @@ needs to be removed before proceeding with the upgrade. This can be done with:
       sudo service archivematica-mcp-server restart
       sudo service archivematica-mcp-client restart 
       sudo service archivematica-dashboard restart
-      sudo service fits-nailgun restart
-      sudo service clamav-daemon restart
       sudo service nginx restart
 
 9. Depending on your browser settings, you may need to clear your browser cache
@@ -211,6 +238,7 @@ needs to be removed before proceeding with the upgrade. This can be done with:
     autorefresh=1
     type=rpm-md
     EOF'
+    sudo -u root yum install -y elasticsearch
     sudo -u root systemctl enable elasticsearch
     sudo -u root systemctl start elasticsearch
 
@@ -264,8 +292,8 @@ needs to be removed before proceeding with the upgrade. This can be done with:
 
 .. _upgrade-ansible:
 
-Upgrade using Ansible
----------------------
+Upgrade on Vagrant / Ansible
+----------------------------
 
 This upgrade method will work with Vagrant machines, but also
 with cloud based virtual machines, or phisical servers.
@@ -276,19 +304,21 @@ with cloud based virtual machines, or phisical servers.
 
       vagrant ssh # Or ssh <your user>@<host> 
 
-2. Install Ansible
+2. Remove ElasticSearch 1.7 as explained in <TODO: link to previous commands>
+
+3. Install Ansible
 
     .. code:: bash
 
       sudo pip install ansible
 
-3. Checkout the deployment repo:
+4. Checkout the deployment repo:
 
    .. code:: bash
 
       git clone https://github.com/artefactual/deploy-pub.git
 
-3. Go into the appropiate playbook folder, and install the needed roles
+5. Go into the appropiate playbook folder, and install the needed roles
 
    .. _ubuntu-16.04:
 
@@ -317,21 +347,26 @@ with cloud based virtual machines, or phisical servers.
       cd deploy-pub/playbooks/archivematica-centos7
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
-4. Verify that the vars-singlenode.yml has the appropiate contents, or update it
-with your own
+All the following steps should be run from the respective playbook folder
+ for your operating system.
 
-5. Create a hosts file
+6. Verify that the vars-singlenode.yml has the appropiate contents for elasticsearch and
+archivematica, or update it with your own
+
+7. Create a hosts file.
 
     .. code:: bash
     echo 'am-local   ansible_connection=local' > hosts
 
-6. Upgrade Archivematica running
+8. Upgrade Archivematica running
 
     .. code:: bash
     
-    ansible-playbook -i hosts singlenode.yml
+    ansible-playbook -i hosts singlenode.yml --tags=elasticsearch,archivematica-src
 
-    
+9. Reindex your aips using the method you previously choose,  :ref:`recreate the indexes <recreate-indexes>` or
+:ref:`reindex from another cluster <cluster-reindex>`.
+
 .. _recreate-indexes:
 
 Recreate indexes
