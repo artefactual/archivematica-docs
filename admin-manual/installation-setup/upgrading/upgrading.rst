@@ -6,13 +6,12 @@ Upgrade from Archivematica |previous_version|.x to |release|
 
 *On this page:*
 
-* :ref:`Create a backup <create-backup>`
 * :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
 * :ref:`Upgrade search indices <upgrade-search-indices>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
-
+:ref:`recreate the indexes <recreate-indexes>`
 .. note::
 
    While it is possible to upgrade a GitHub-based source install using ansible,
@@ -47,181 +46,8 @@ upgrade again.
 If you're upgrading from Archivematica 1.8 or lower to the 1.9 version or
 higher, the Elasticsearch version support changed from 1.x to 6.x and it's
 also recommended to create a backup of your Elasticsearch data, specially if
-you don't have access to the AIP storage locations in the local filesystem.
-
-.. _upgrade-ubuntu:
-
-Upgrade on Ubuntu
------------------
-
-Before you start: Archivematica 1.7 stopped using ``/usr/share/python`` as the
-home for our Python virtual environments. We did this because it was causing
-Ubuntu Xenial to break when attempting to upgrade a system package called
-``python-minimal``. If you're running Ubuntu Xenial the following commands are
-going to be necessary to continue the upgrade:
-
-.. code:: bash
-
-   sudo rm -rf /usr/share/python/archivematica-dashboard
-   sudo rm -rf /usr/share/python/archivematica-mcp-server
-   sudo rm -rf /usr/share/python/archivematica-mcp-client
-
-1. Update the operating system.
-
-   .. code:: bash
-
-      sudo apt-get update && sudo apt-get upgrade
-
-2. Update package sources.
-
-   In Ubuntu 16.04:
-
-   .. code:: bash
-
-      sudo add-apt-repository --remove ppa:archivematica/externals
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
-
-   Optionally you can remove the lines referencing
-   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
-
-   In Ubuntu 18.04:
-
-   .. code:: bash
-
-      sudo add-apt-repository --remove ppa:archivematica/externals
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu bionic main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
-
-   Optionally you can remove the lines referencing
-   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
-
-3. Update the Storage Service.
-
-   .. code:: bash
-
-      sudo apt-get update
-      sudo apt-get install archivematica-storage-service
-
-4. Update the Application Container. As of Storage Service version 0.10.0, the
-   Storage Service uses Gunicorn as WSGI server. This means that the old uwsgi
-   server needs to be stopped and disabled after performing the upgrade.
-
-   .. code:: bash
-
-      sudo service uwsgi stop
-      sudo update-rc.d uwsgi disable
-
-5. Update Archivematica. During the update process you may be asked about
-   updating configuration files. Choose to accept the maintainers versions. You
-   will also be asked about updating the database - say 'ok' to each of those
-   steps. If you have set a password for the root MySQL database user, enter it
-   when prompted. It is better to update the dashboard before updating the mcp
-   components.
-
-   .. code:: bash
-
-      sudo apt-get upgrade
-
-6. Disable unused services. Archivematica |release| uses Nginx as HTTP server,
-   and Gunicorn as WSGI server. This means that some services used in
-   Archivematica |previous_release| should be stopped and disabled before
-   performing the upgrade.
-
-   .. code:: bash
-
-       sudo service apache2 stop
-       sudo update-rc.d apache2 disable
-
-7. Restart services.
-
-   .. code:: bash
-
-      sudo service nginx restart
-      sudo restart archivematica-storage-service
-      sudo ln -s /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
-      sudo service gearman-job-server restart
-      sudo restart archivematica-mcp-server
-      sudo restart archivematica-mcp-client
-      sudo start archivematica-dashboard
-      sudo restart fits-nailgun
-      sudo freshclam
-      sudo service clamav-daemon restart
-      sudo service nginx restart
-
-   .. note:: Depending on which service manager (init system) you are using
-      (e.g., `systemd <https://freedesktop.org/wiki/Software/systemd/>`_,
-      `Upstart <http://upstart.ubuntu.com/>`_, or init), the above ``start``
-      and ``restart`` commands may not work. Please refer to the documentation
-      for your operating system's service manager for more details.
-
-   .. note:: Depending on how your Ubuntu system is set up, you may have trouble
-      restarting gearman with the command in the block above. If that is the
-      case, try this command instead:
-
-   .. code:: bash
-
-      sudo restart gearman-job-server
-
-8. Remove unused services.
-
-   .. code:: bash
-
-       sudo apt-get remove --purge python-pip apache2 uwsgi
-
-.. _upgrade-centos:
-
-Upgrade on CentOS/Red Hat
--------------------------
-
-1. Upgrade the repositories for |version|:
-
-   .. code:: bash
-
-      sudo sed -i 's/1.7.x/1.8.x/g' /etc/yum.repos.d/archivematica*
-
-2. Upgrade the packages:
-
-   .. code:: bash
-
-      sudo yum update
-
-3. Once the new packages are installed, upgrade the databases for both
-   Archivematica and the Storage Service. This can be done with:
-
-   .. code:: bash
-
-      sudo -u archivematica bash -c " \
-          set -a -e -x
-          source /etc/default/archivematica-dashboard || \
-              source /etc/sysconfig/archivematica-dashboard \
-                  || (echo 'Environment file not found'; exit 1)
-          cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
-      ";
-
-      sudo -u archivematica bash -c " \
-          set -a -e -x
-          source /etc/default/archivematica-storage-service || \
-              source /etc/sysconfig/archivematica-storage-service \
-                  || (echo 'Environment file not found'; exit 1)
-          cd /usr/lib/archivematica/storage-service
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
-      ";
-
-4. Restart the Archivematica related services, and continue using the system:
-
-   .. code:: bash
-
-      sudo systemctl restart archivematica-storage-service
-      sudo systemctl restart archivematica-dashboard
-      sudo systemctl restart archivematica-mcp-client
-      sudo systemctl restart archivematica-mcp-server
-
-5. Depending on your browser settings, you may need to clear your browser cache
-   to make the dashboard pages load properly. For example in Firefox or Chrome
-   you should be able to clear the cache with control-shift-R or
-   command-shift-F5.
+you don't have access to the AIP storage locations in the local filesystem. 
+Refer to the `ElasticSearch 1.7 docs <https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html>`_
 
 .. _upgrade-search-indices:
 
@@ -253,6 +79,259 @@ If you have access to those locations, the recommended method for the upgrade is
 to :ref:`recreate the indexes <recreate-indexes>`. Otherwise, you'll need to
 :ref:`reindex from another cluster <cluster-reindex>`.
 
+
+.. _upgrade-ubuntu:
+
+Upgrade on Ubuntu packages
+--------------------------
+
+1. If you choose the :ref:`recreate the indexes <recreate-indexes>` , ElasticSearch 1.7 
+needs to be removed before proceeding with the upgrade. This can be done with:
+
+.. code:: bash
+
+   sudo apt-get remove --purge elasticsearch
+   sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
+   sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
+
+2. Update the operating system.
+
+   .. code:: bash
+
+      sudo apt-get update && sudo apt-get upgrade
+
+3. Update package sources.
+
+   In Ubuntu 16.04:
+
+   .. code:: bash
+
+      wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+      echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
+
+   Optionally you can remove the lines referencing
+   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
+
+   In Ubuntu 18.04:
+
+   .. code:: bash
+
+      wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+      echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.9.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
+
+   Optionally you can remove the lines referencing
+   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
+
+4. Update the Storage Service.
+
+   .. code:: bash
+
+      sudo apt-get update
+      sudo apt-get install archivematica-storage-service
+
+5. Install ElasticSearch. As of Archivematica 1.9, ElasticSearch 6.x is 
+   required
+
+   .. code:: bash
+
+      sudo apt-get install elasticsearch
+      systemctl enable elasticsearch
+      service elasticsearch start
+
+6. Update Archivematica. During the update process you may be asked about
+   updating configuration files. Choose to accept the maintainers versions. You
+   will also be asked about updating the database - say 'ok' to each of those
+   steps. If you have set a password for the root MySQL database user, enter it
+   when prompted. 
+
+   .. code:: bash
+
+      sudo apt-get install archivematica-dashboard
+      sudo apt-get install archivematica-mcp-server
+      sudo apt-get install archivematica-mcp-client
+
+
+7. Reindex your aips using the method you previously choose,  :ref:`recreate the indexes <recreate-indexes>` or
+:ref:`reindex from another cluster <cluster-reindex>`.
+
+8. Restart services.
+
+   .. code:: bash
+
+      sudo service archivematica-storage-service restart
+      sudo service gearman-job-server restart
+      sudo service archivematica-mcp-server restart
+      sudo service archivematica-mcp-client restart 
+      sudo service archivematica-dashboard restart
+      sudo service fits-nailgun restart
+      sudo service clamav-daemon restart
+      sudo service nginx restart
+
+9. Depending on your browser settings, you may need to clear your browser cache
+   to make the dashboard pages load properly. For example in Firefox or Chrome
+   you should be able to clear the cache with control-shift-R or
+   command-shift-F5.
+
+.. _upgrade-centos:
+
+Upgrade on CentOS/Red Hat packages
+----------------------------------
+
+1. If you choose the :ref:`recreate the indexes <recreate-indexes>` , ElasticSearch 1.7 
+needs to be removed before proceeding with the upgrade. This can be done with:
+
+.. code:: bash
+
+   sudo apt-get remove --purge elasticsearch
+   sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
+   sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
+
+1. Upgrade the repositories for |version|:
+
+   .. code:: bash
+
+    sudo sed -i 's/1.8.x/1.9.x/g' /etc/yum.repos.d/archivematica*
+
+2. Install ElasticSerch 6.x repository and package:
+
+   .. code:: bash
+
+    sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
+    [elasticsearch-6.x]
+    name=Elasticsearch repository for 6.x packages
+    baseurl=https://artifacts.elastic.co/packages/6.x/yum
+    gpgcheck=1
+    gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    enabled=1
+    autorefresh=1
+    type=rpm-md
+    EOF'
+    sudo -u root systemctl enable elasticsearch
+    sudo -u root systemctl start elasticsearch
+
+2. Upgrade Archivematica packages:
+
+   .. code:: bash
+
+      sudo yum update
+
+3. Once the new packages are installed, upgrade the databases for both
+   Archivematica and the Storage Service. This can be done with:
+
+   .. code:: bash
+
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/default/archivematica-dashboard || \
+              source /etc/sysconfig/archivematica-dashboard \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /usr/share/archivematica/dashboard
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
+      ";
+
+      sudo -u archivematica bash -c " \
+          set -a -e -x
+          source /etc/default/archivematica-storage-service || \
+              source /etc/sysconfig/archivematica-storage-service \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /usr/lib/archivematica/storage-service
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
+      ";
+
+
+4. Reindex your aips using the method you previously choose,  :ref:`recreate the indexes <recreate-indexes>` or
+:ref:`reindex from another cluster <cluster-reindex>`.
+
+5. Restart the Archivematica related services, and continue using the system:
+
+   .. code:: bash
+
+      sudo systemctl restart archivematica-storage-service
+      sudo systemctl restart archivematica-dashboard
+      sudo systemctl restart archivematica-mcp-client
+      sudo systemctl restart archivematica-mcp-server
+
+6. Depending on your browser settings, you may need to clear your browser cache
+   to make the dashboard pages load properly. For example in Firefox or Chrome
+   you should be able to clear the cache with control-shift-R or
+   command-shift-F5.
+
+
+.. _upgrade-ansible:
+
+Upgrade using Ansible
+---------------------
+
+This upgrade method will work with Vagrant machines, but also
+with cloud based virtual machines, or phisical servers.
+
+1. Connect to your Vagrant machine or server
+    
+    .. code:: bash
+
+      vagrant ssh # Or ssh <your user>@<host> 
+
+2. Install Ansible
+
+    .. code:: bash
+
+      sudo pip install ansible
+
+3. Checkout the deployment repo:
+
+   .. code:: bash
+
+      git clone https://github.com/artefactual/deploy-pub.git
+
+3. Go into the appropiate playbook folder, and install the needed roles
+
+   .. _ubuntu-16.04:
+
+   Ubuntu 16.04 (Xenial):
+
+   .. code:: bash
+
+      cd deploy-pub/playbooks/archivematica-xenial
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
+   .. _ubuntu-18.04:
+
+   Ubuntu 18.04 (Bionic):
+
+   .. code:: bash
+
+      cd deploy-pub/playbooks/archivematica-bionic
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
+   .. _centos-7:
+
+   Centos 7:
+
+   .. code:: bash
+
+      cd deploy-pub/playbooks/archivematica-centos7
+      ansible-galaxy install -f -p roles/ -r requirements.yml
+
+4. Verify that the vars-singlenode.yml has the appropiate contents, or update it
+with your own
+
+5. Create a hosts file
+
+    .. code:: bash
+    echo 'am-local   ansible_connection=local' > hosts
+
+6. Upgrade Archivematica running
+
+    .. code:: bash
+    
+    ansible-playbook -i hosts singlenode.yml
+
+    
 .. _recreate-indexes:
 
 Recreate indexes
@@ -269,7 +348,7 @@ manage the 1.x indexes' data. Run the following commands:
 .. note::
    Please notice, the execution of this command may take a long time for big
    AIP and Transfer Backlog storage locations, especially if the AIPs are stored
-   compressed. If that is your case, you may want to try the
+   compressed, or using a third party service. If that is your case, you may want to try the
    :ref:`reindex from another cluster method <cluster-reindex>`, below.
 
 .. _cluster-reindex:
@@ -321,6 +400,9 @@ Execution example:
 .. note::
    For a more detailed instructions about how to run the upgrade with both
    Elasticsearch instances running in the same machine `visit our Wiki`_.
+
+   Verify that you hve a working ElasticSearch 1.7 instance with all your data
+   before you start the upgrade!
 
 .. _upgrade-indexless:
 
