@@ -480,7 +480,7 @@ manual.
   more information.
 * **Do not normalize** - the AIP will contain originals only. No preservation or
   access copies are generated and no DIP will be generated.
-* **Normalize service files preservation** - see see :ref:`Transferring material
+* **Normalize service files preservation** - see :ref:`Transferring material
   with service (mezzanine) files <transfer-service-files>` for more
   information.
 * **Normalize for access** - the AIP will contain originals only. No
