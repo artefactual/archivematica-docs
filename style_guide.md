@@ -575,27 +575,27 @@ This guide relied heavily upon work presented in the following resources:
 * [Write the Docs Style Guides][Write the Docs Style Guides]
 * [GNOME Documentation Style Guide][GNOME Documentation Style Guide]
 
-[Archivematica documentation]: (https://github.com/artefactual/archivematica-docs)
-[issue]: (https://github.com/archivematica/Issues/issues)
-[Archivematica Issues repository]: (https://github.com/archivematica/Issues/issues)
-[Inline images]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html#images)
-[Text admonitions]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions)
-[Getting started]: (https://www.archivematica.org/en/docs/archivematica-1.7/#getting-started)
-[Administrator manual]: (https://www.archivematica.org/en/docs/archivematica-1.7/#administrator-manual)
-[User manual]: (https://www.archivematica.org/en/docs/archivematica-1.7/#user-manual)
-[documentation repository]: (https://github.com/artefactual/archivematica-docs)
-[getting-started]: (https://github.com/artefactual/archivematica-docs/tree/1.7/getting-started)
-[admin-manual]: (https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual)
-[user-manual]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual)
-[Transfer]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer)
-[Appraisal]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/appraisal)
-[Translations]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/translations)
-[Installation and setup]: (https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual/installation-setup)
-[reference label]: (http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role)
-[images subdirectory]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer/images)
-[reStructuredText Directives]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html)
-[Installation]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation)
-[_csv]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/_csv)
-[scripts]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/scripts)
+[Archivematica documentation]: https://github.com/artefactual/archivematica-docs
+[issue]: https://github.com/archivematica/Issues/issues
+[Archivematica Issues repository]: https://github.com/archivematica/Issues/issues
+[Inline images]: http://docutils.sourceforge.net/docs/ref/rst/directives.html#images
+[Text admonitions]: http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions
+[Getting started]: https://www.archivematica.org/en/docs/archivematica-1.7/#getting-started
+[Administrator manual]: https://www.archivematica.org/en/docs/archivematica-1.7/#administrator-manual
+[User manual]: https://www.archivematica.org/en/docs/archivematica-1.7/#user-manual
+[documentation repository]: https://github.com/artefactual/archivematica-docs
+[getting-started]: https://github.com/artefactual/archivematica-docs/tree/1.7/getting-started
+[admin-manual]: https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual
+[user-manual]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual
+[Transfer]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer
+[Appraisal]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/appraisal
+[Translations]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/translations
+[Installation and setup]: https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual/installation-setup
+[reference label]: http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role
+[images subdirectory]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer/images
+[reStructuredText Directives]: http://docutils.sourceforge.net/docs/ref/rst/directives.html
+[Installation]: https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation
+[_csv]: https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/_csv
+[scripts]: https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/scripts
 [Write the Docs Style Guides]: http://www.writethedocs.org/guide/writing/style-guides/
-[GNOME Documentation Style Guide]: (https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html)
+[GNOME Documentation Style Guide]: https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html
