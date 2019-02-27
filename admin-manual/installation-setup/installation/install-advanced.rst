@@ -30,12 +30,12 @@ also instructions for installation on a virtual machine using Vagrant in the
 Scaling Archivematica
 ---------------------
 
-There are several approaches to installing and configuring Archivematica 
-to handle large volumes of data and improve system performance. 
+There are several approaches to installing and configuring Archivematica
+to handle large volumes of data and improve system performance.
 
-The :ref:`Scaling Archivematica <scaling-archivematica>` section includes: 
+The :ref:`Scaling Archivematica <scaling-archivematica>` section includes:
 
-* :ref:`Scaling up: optimising on one machine <scaling-up>` 
+* :ref:`Scaling up: optimising on one machine <scaling-up>`
 * :ref:`Scaling out: optimising across multiple machines <scaling-out>`
 * :ref:`Process configuration strategies <config-strategies>`
 
@@ -53,9 +53,8 @@ In order to obtain valid SSL certificates trusted by any browser, you can use
 
 :ref:`Back to the top <install-advanced>`
 
-.. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`Archivematica Docker repo`: https://github.com/artefactual-labs/am/tree/master/compose
 .. _`Ansible & Vagrant installation instructions`: https://wiki.archivematica.org/Getting_started#Installation
-.. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
-.. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/qa/1.7.x/templates/etc/nginx/sites-available/storage-ssl.conf.j2
+.. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
+.. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/storage-ssl.conf.j2
 .. _`Let's Encrypt`: https://letsencrypt.org
