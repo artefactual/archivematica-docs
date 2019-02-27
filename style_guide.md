@@ -1,10 +1,7 @@
 # Archivematica Style Guide
 
-This style guide is used for the [Archivematica
-documentation](https://github.com/artefactual/archivematica-docs). It was
-developed in 2018 and last revised in 2019.
-
-## Table of contents
+This style guide is used for the [Archivematica documentation][Archivematica
+documentation].
 
 1. [Changing the documentation](#changing-the-documentation)
 1. [Audience](#audience)
@@ -21,11 +18,9 @@ developed in 2018 and last revised in 2019.
     * [Admonitions](#admonitions)
 1. [Sources](#sources)
 
-
 ## Changing the documentation
 
-All documentation changes should begin with an
-[issue](https://github.com/archivematica/Issues/issues). The Archivematica
+All documentation changes should begin with an [issue][issue]. The Archivematica
 project follows an issue-first approach to solving problems with or enhancing
 the software, which includes the documentation. Filing an issue allows others to
 provide feedback, advice, and guidance regarding an issue or enhancement idea.
@@ -33,12 +28,11 @@ The issues repository also acts as a master list of bug fix and enhancement
 ideas that any Archivematica community member can address.
 
 To file an issue, you must have a GitHub account. In the [Archivematica Issues
-repository](https://github.com/archivematica/Issues/issues), create a new issue
-and choose the Documentation template.
+repository][Archivematica Issues repository], create a new issue and choose the
+Documentation template.
 
 Note that all issues relating to the Archivematica project in any way should be
-filed in the [Archivematica Issues
-repository](https://github.com/archivematica/Issues/issues).
+filed in the [Archivematica Issues repository][Archivematica Issues repository].
 
 ## Audience
 
@@ -63,15 +57,15 @@ use of Archivematica.
 
 * Write accessibly in clear, simple sentences intended for a global audience.
 * Avoid colloquial language, humour, cultural references, and personal opinion.
-Keep your writing technical.
+  Keep your writing technical.
 * Write from a second-person point of view. Use "you" and "your", not "my",
-"our", or "their".
+  "our", or "their".
 * Avoid jargon and acronyms, if you can. Spell out acronyms at least once per
-page.
+  page.
 * Be consistent. Use the same consistently-formatted word or phrase for a
-concept throughout the documentation.
+  concept throughout the documentation.
 * Do not qualify or prejudge actions. Do not write that something is "easy" or
-"quick" as this is a deterrent if the user is not able to complete the action.
+  "quick" as this is a deterrent if the user is not able to complete the action.
 * Do not reference future development or features that don't yet exist.
 
 ## Style
@@ -79,18 +73,21 @@ concept throughout the documentation.
 ### Golden rules
 
 **Golden rule 1**
+
 * Limit each sentence to less than 25 words.
 
 **Golden rule 2**
+
 * Limit each paragraph to one topic; limit each sentence to one idea; limit each
-procedure step to one action.
+  procedure step to one action.
 
 **Golden rule 3**
-* Use explicit examples to demonstrate how the software works. Provide
-instructions rather than descriptions.
 
-Adapted from the
-[GNOME Documentation Style Guide V1.6, section 1.2](https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html#fundamentals-2).
+* Use explicit examples to demonstrate how the software works. Provide
+  instructions rather than descriptions.
+
+Adapted from the [GNOME Documentation Style Guide][GNOME Documentation Style
+Guide].
 
 ### Formatting and punctuation
 
@@ -99,35 +96,33 @@ Adapted from the
 * Use bulleted lists for most other lists.
 * Truncate lines after 80 characters.
 * Put UI elements in bold. If you're telling a user to click on the Start
-Transfer button, for example, the instruction should be "Click on
-**Start Transfer**."
+  Transfer button, for example, the instruction should be "Click on **Start
+  Transfer**."
 * Use serial (Oxford) commas for clarity (preferred, not enforced).
 * Use standard Canadian spelling and punctuation (preferred, not enforced).
 
-### Images
+### Including images
 
-[Images](http://docutils.sourceforge.net/docs/ref/rst/directives.html#images) in
-the Archivematica documentation usually take the form of screenshots. Images are
-formatted in a particular way in reStructuredText - see the [Images](#images)
-section below for more information.
+[Inline images][Inline images] in the Archivematica documentation usually take
+the form of screenshots. Images are formatted in a particular way in
+reStructuredText - see the [Images](#images) section below for more information.
 
 * Avoid screenshots unless absolutely necessary.
 * Never rely on images as the only way to convey information.
 * Always describe the content of the screenshot in the text of the documentation
-so that the content may be understood independently of the image.
+  so that the content may be understood independently of the image.
 * Provide an alt tag for all images.
 * Provide the highest resolution images possible.
 * Use SVG or PNG images, rather than JPGs.
 
-### Admonitions
+### Including admonitions
 
-[Admonitions](http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions)
-are specially-marked sections of text that programmatically distinguish
-important information for the user. See the [Admonitions](#admonitions) section
-below for more information.
+[Inline images][Text admonitions] are specially-marked sections of text that
+programmatically distinguish important information for the user. See the
+[Admonitions](#admonitions) section below for more information.
 
 * Use red-flag admonitions (such as DANGER or WARNING) only when absolutely
-critical.
+  critical.
 * Use gentler admonitions (such as IMPORTANT or NOTE) sparingly.
 * Aim for no more than one admonition per section to reduce visual clutter.
 
@@ -144,16 +139,16 @@ critical.
 The top level division within the Archivematica documentation is a manual. The
 Archivematica documentation consists of three manuals:
 
-* [Getting started](https://www.archivematica.org/en/docs/archivematica-1.7/#getting-started)
-* [Administrator manual](https://www.archivematica.org/en/docs/archivematica-1.7/#administrator-manual)
-* [User manual](https://www.archivematica.org/en/docs/archivematica-1.7/#user-manual)
+* [Getting started][Getting started]
+* [Administrator manual][Administrator manual]
+* [User manual][User manual]
 
 These manuals correspond to three top-level directories in the
-[documentation repository](https://github.com/artefactual/archivematica-docs):
+[Archivematica documentation][Archivematica documentation]:
 
-* [_getting-started_](https://github.com/artefactual/archivematica-docs/tree/1.7/getting-started)
-* [_admin-manual_](https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual)
-* and [_user-manual_](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual).
+* [getting-started][getting-started]
+* [admin-manual][admin-manual]
+* [user-manual][user-manual]
 
 The manuals are meant to be stable. Changes at this level may also require
 layout changes to the documentation website. New top-level directories should
@@ -163,40 +158,35 @@ change.
 ### Chapters
 
 Each manual contains chapters, which are represented in the repository as
-subdirectories within a manual. For example, the [_User
-manual_](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual)
-has a chapter called
-[_transfer_](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer).
-Within _Transfer_ are individual reStructuredText (reST) files, which represent
-pages, as well as a directory of images that are referenced by the reST files. There may be other reference directories as well.
+subdirectories within a manual. For example, the [User manual][User manual] has
+a chapter called [Transfer][Transfer]. Within Transfer are individual
+reStructuredText (reST) files, which represent pages, as well as a directory of
+images that are referenced by the reST files. There may be other reference
+directories as well.
 
-Chapters generally correspond to tabs in the interface (such as _Transfer_ and
-_Ingest_) or topics that are in some way greater than the interface (such as
-_Metadata_ or _Translations_). Be thoughtful about adding a new chapter. Most
+Chapters generally correspond to tabs in the interface (such as Transfer and
+Ingest) or topics that are in some way greater than the interface (such as
+Metadata or Translations). Be thoughtful about adding a new chapter. Most
 features occur within an already-defined workflow. Here are two examples for
 why a new chapter might be added:
 
 * A new tab is added to the Archivematica dashboard. For example, when the
-Appraisal tab was introduced in Archivematica 1.6, a chapter titled
-[_appraisal_](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/appraisal)
-was added to the User manual as a place to record appraisal workflow
-instructions.
+  Appraisal tab was introduced in Archivematica 1.6, a chapter titled
+  [Appraisal][Appraisal] was added to the User manual as a place to record
+  appraisal workflow instructions.
 * A feature is introduced that has implications outside normal user workflows.
-For example, when internationalization hooks were added to the code, a chapter
-titled
-[_translations_](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/translations)
-was added to the User Manual as a place to put translation instructions.
+  For example, when internationalization hooks were added to the code, a chapter
+  titled [Translations][Translations] was added to the User Manual as a place to
+  put translation instructions.
 
 Though somewhat less strictly enforced than the creation of a new manual, new
 chapters should only be created if there is consensus with Artefactual staff.
 
-Chapters can contain sub-directories if needed. For example, the [_installation
-and
-setup_](https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual/installation-setup)
-chapter in the Administrator Manual includes sub-directories for customization,
-installation, integrations, and upgrading. These sub-directories are not
-required, but can be helpful for organizing a chapter with many pages that
-cover many topics.
+Chapters can contain sub-directories if needed. For example, the [Installation
+and setup][Installation and setup] chapter in the Administrator Manual includes
+sub-directories for customization, installation, integrations, and upgrading.
+These sub-directories are not required, but can be helpful for organizing a
+chapter with many pages that cover many topics.
 
 Chapters do not need to be linked to any toctrees or indexes.
 
@@ -231,7 +221,6 @@ Introductory page text goes here.
 
 The page title is equivalent to an `<h1>` tag. Only one title should appear per
 page.
-
 
 #### Section headings
 
@@ -298,7 +287,10 @@ only be underlined.
 
 #### Table of contents
 
-Include a table of contents after the page's introductory text block, linking to the anchor for each section. In reStructuredText, tables of contents are built by hand. The table of contents should be preceded by the italicized phrase _On this page_.
+Include a table of contents after the page's introductory text block, linking to
+the anchor for each section. In reStructuredText, tables of contents are built
+by hand. The table of contents should be preceded by the italicized phrase _On
+this page_.
 
 Using the section anchors, create bulleted list containing an internal reference
 for each section that you would like to include in the table of contents using
@@ -359,9 +351,9 @@ characters since a mid-line break may cause rendering errors.
 
 ```
 .. code:: bash
-	 sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
-	 sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
-	 sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
+   sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
+   sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
+   sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 ```
 
 #### Back to the top
@@ -369,7 +361,9 @@ characters since a mid-line break may cause rendering errors.
 All pages should have a _Back to the top_ link at the bottom of the page, which
 refers to the page anchor.
 
-		:ref:`Back to the top <my-page>`
+```
+    :ref:`Back to the top <my-page>`
+```
 
 #### External Links
 
@@ -395,15 +389,14 @@ should be below the _Back to the top_ link. This list does not need to adhere to
 the 80-character limit.
 
 ```
-		.. _`reStructuredText Primer`: http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
-		.. _`Sphinx documentation generator`: http://www.sphinx-doc.org/en/master/index.html
+.. _`reStructuredText Primer`: http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
+.. _`Sphinx documentation generator`: http://www.sphinx-doc.org/en/master/index.html
 ```
 
 #### Internal Links
 
 To create a hyperlink to another section of the Archivematica documentation, use
-a [reference label](http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role)
-that points to the anchor of the linked page:
+a [link][reference label] that points to the anchor of the linked page:
 
 ```
 :ref:`Processing configuration <dashboard-processing>`
@@ -430,16 +423,16 @@ several different indexes in the Archivematica documentation, and some contain
 toctrees.
 
 * `archivematica-docs/index.rst` - this is used as the site homepage. Links can
-be added to this page as needed.
+  be added to this page as needed.
 * `archivematica-docs/admin-manual/index.rst` - the index for the Administrator
-Manual, which contains the manual's toctree. All pages within the Administrator
-Manual must be listed in this toctree.
+  Manual, which contains the manual's toctree. All pages within the
+  Administrator Manual must be listed in this toctree.
 * `archivematica-docs/getting-started/index.rst` - the index for the Getting
-Started Manual, which contains the manual's toctree. All pages within the
-Getting Started Manual must be listed in this toctree.
+  Started Manual, which contains the manual's toctree. All pages within the
+  Getting Started Manual must be listed in this toctree.
 * `archivematica-docs/user-manual/index.rst` - the index for the User Manual,
-which contains the manual's toctree. All pages within the User Manual must be
-listed in this toctree.
+  which contains the manual's toctree. All pages within the User Manual must be
+  listed in this toctree.
 
 For example, if you create a new page in the Administrator Manual, the page must
 be added to the toctree in `admin-manual/index.rst`. You may also wish to link
@@ -448,10 +441,9 @@ to the page from the main `index.rst`, but this is not required.
 ### Images
 
 Images should be saved in an `/images` directory within the appropriate chapter.
-For example, in the User Manual's [Transfer](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer)
-chapter, there is an [images](https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer/images)
-subdirectory that contains all images referenced in the pages of the Transfer
-chapter.
+For example, in the User Manual's [Transfer][Transfer] chapter, there is an
+[images subdirectory][images subdirectory] that contains all images referenced
+in the pages of the Transfer chapter.
 
 Images should be saved at the highest resolution possible and in PNG format.
 
@@ -484,30 +476,26 @@ If you would like to include a caption, use the `figure` directive.
    :width: 100%
    :alt: General configuration options in Administration tab of the dashboard
 
-   This is where you put the caption. General configuration options in Administration tab of the dashboard.
+   This is where you put the caption.
 ```
 
 The `figwidth` and `width` options for figures can be set per image. `figwidth`
 sets the width of the figure as a whole (including the caption) while `width`
 sets the width of just the image within the figure. For more information on
-available options, see the [reStructuredText Directives](http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure).
-
+available options, see the [reStructuredText Directives][reStructuredText Directives].
 
 ### Tables
 
 Tables can be useful for organizing complex information. Basic tables can be
 added manually in the documentation using the `.. list-table::` directive. See
-the [reStructuredText Directives](http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure)
-for more information
+the [reStructuredText Directives][reStructuredText Directives] for more information
 
 For more complex tables, it is possible to reference a CSV file instead of
 building the table manually. After creating a table in a program like Excel,
 save the table as a CSV file in a `/csv` directory within the appropriate
-chapter. For example, in the Administrator Manual's [Installation](https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation)
-sub-chapter, there is a
-[_csv](https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/_csv)
-subdirectory that contains tables referenced in the pages of the Installation
-sub-chapter.
+chapter. For example, in the Administrator Manual's [Installation][Installation]
+sub-chapter, there is a [_csv][_csv] subdirectory that contains tables
+referenced in the pages of the Installation sub-chapter.
 
 To include a table on a page, reference the table using the `csv-table`
 directive.
@@ -538,8 +526,8 @@ may wish to reference a script file, rather than inserting the script directly
 into the text.
 
 After creating and saving the script, place it in a `scripts` directory within
-the appropriate chapter. For example, in the Administrator Manual's [Installation](https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation)
-sub-chapter, there is a [scripts](https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/scripts)
+the appropriate chapter. For example, in the Administrator Manual's
+[Installation][Installation] sub-chapter, there is a [scripts][scripts]
 subdirectory that contains scripts referenced in the pages of the Installation
 sub-chapter.
 
@@ -567,19 +555,47 @@ specify one line, as above, or multiple lines:
 ### Admonitions
 
 There are several different admonition directives available in reStructuredText.
-See the [reStructuredText Directives](http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure)
-for a complete list.
+See the [reStructuredText Directives][reStructuredText Directives] for a
+complete list.
 
 Commonly used in the Archivematica documentation are `note`, `important`, and
 `warning`. The chosen admonition will have an impact on how the contents are
 displayed.
 
+```
 .. note::
    Skip this step if you are planning to run :ref:`Archivematica without
    Elasticsearch <install-elasticsearch>`.
+```
 
 ## Sources
+
 This guide relied heavily upon work presented in the following resources:
 
-* http://www.writethedocs.org/guide/writing/style-guides/
-* https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html
+* [Write the Docs Style Guides][Write the Docs Style Guides]
+* [GNOME Documentation Style Guide][GNOME Documentation Style Guide]
+
+[Archivematica documentation]: (https://github.com/artefactual/archivematica-docs)
+[issue]: (https://github.com/archivematica/Issues/issues)
+[Archivematica Issues repository]: (https://github.com/archivematica/Issues/issues)
+[Inline images]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html#images)
+[Text admonitions]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions)
+[Getting started]: (https://www.archivematica.org/en/docs/archivematica-1.7/#getting-started)
+[Administrator manual]: (https://www.archivematica.org/en/docs/archivematica-1.7/#administrator-manual)
+[User manual]: (https://www.archivematica.org/en/docs/archivematica-1.7/#user-manual)
+[documentation repository]: (https://github.com/artefactual/archivematica-docs)
+[getting-started]: (https://github.com/artefactual/archivematica-docs/tree/1.7/getting-started)
+[admin-manual]: (https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual)
+[user-manual]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual)
+[Transfer]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer)
+[Appraisal]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/appraisal)
+[Translations]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/translations)
+[Installation and setup]: (https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual/installation-setup)
+[reference label]: (http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role)
+[images subdirectory]: (https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer/images)
+[reStructuredText Directives]: (http://docutils.sourceforge.net/docs/ref/rst/directives.html)
+[Installation]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation)
+[_csv]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/_csv)
+[scripts]: (https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/scripts)
+[Write the Docs Style Guides]: http://www.writethedocs.org/guide/writing/style-guides/
+[GNOME Documentation Style Guide]: (https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html)
