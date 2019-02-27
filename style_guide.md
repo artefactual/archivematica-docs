@@ -11,7 +11,7 @@ documentation].
     * [Manuals](#manuals)
     * [Chapters](#chapters)
     * [Pages](#pages)
-    * [Indexes](#indexes)
+    * [Indexes and toctrees](#indexes-and-toctrees)
     * [Images](#images)
     * [Tables](#tables)
     * [Scripts](#scripts)
