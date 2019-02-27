@@ -1,4 +1,4 @@
-# Archivematica Style Guide
+# Archivematica Documentation Style Guide
 
 This style guide is used for the [Archivematica documentation][Archivematica
 documentation].
