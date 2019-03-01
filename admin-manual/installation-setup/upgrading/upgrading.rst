@@ -11,7 +11,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Upgrade search indices <upgrade-search-indices>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
-:ref:`recreate the indexes <recreate-indexes>`
+
 .. note::
 
    While it is possible to upgrade a GitHub-based source install using ansible,
@@ -356,13 +356,14 @@ archivematica, or update it with your own
 
 7. Create a hosts file.
 
-    .. code:: bash
+   .. code:: bash
+
     echo 'am-local   ansible_connection=local' > hosts
 
 8. Upgrade Archivematica running
 
-    .. code:: bash
-    
+   .. code:: bash
+
     ansible-playbook -i hosts singlenode.yml --tags=elasticsearch,archivematica-src
 
 9. Reindex your aips using the method you previously choose,  :ref:`recreate the indexes <recreate-indexes>` or
