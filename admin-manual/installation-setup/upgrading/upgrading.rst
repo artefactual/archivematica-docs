@@ -260,7 +260,7 @@ needs to be removed before proceeding with the upgrade. This can be done with:
               source /etc/sysconfig/archivematica-dashboard \
                   || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate --no-input
       ";
 
       sudo -u archivematica bash -c " \
