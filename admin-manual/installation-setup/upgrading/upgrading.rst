@@ -179,6 +179,7 @@ needs to be removed before proceeding with the upgrade. This can be done with:
 
    .. code:: bash
 
+      sudo apt-get install archivematica-common
       sudo apt-get install archivematica-dashboard
       sudo apt-get install archivematica-mcp-server
       sudo apt-get install archivematica-mcp-client
