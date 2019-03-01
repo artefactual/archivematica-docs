@@ -107,7 +107,8 @@ Spin it up
 #. Using your computer's command-line interface, create a new directory and
    open it. The location doesn't matter, but you'll need to return to it later
    - all further command line operations should be run from inside the
-   directory.
+   directory. Also, if you add some folders to it, they will be available under
+   local-transfers.
 
    .. code-block:: bash
 
@@ -140,18 +141,11 @@ Once it's done provisioning, you can log in to your virtual machine::
 
    vagrant ssh
 
-You can also access your Archivematica instance through the web browser:
+You can now access your Archivematica instance through the web browser:
 
-* Archivematica: `<http://10.10.10.20>`_. Username & password configured on
-  installation.
-* Storage Service: `<http://10.10.10.20:8000>`_. Username & password configured
-  on installation.
+* Archivematica: `<http://10.10.10.20>`_. Username: admin, Password archivematica
+* Storage Service: `<http://10.10.10.20:8000>`_. Username: admin, Password: archivematica
 
-To get the Storage Service API key, go to `<http://10.10.10.20:8000>`_ and click
-on the Administration tab. In the left sidebar, click on *Users*, then click on
-*Edit* for the default user. Scrolling down, you will see the API key for the
-default user at the bottom of the screen. Copy this into the API key field when
-prompted during installation.
 
 .. _quick-start-transfer:
 
