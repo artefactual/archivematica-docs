@@ -48,7 +48,7 @@ higher, the Elasticsearch version support changed from 1.x to 6.x and it's
 also recommended to create a backup of your Elasticsearch data, specially if
 you don't have access to the AIP storage locations in the local filesystem. 
 
-You can follow the following steps in order to create one:
+You can follow these steps in order to create a backup of Elasticsearch:
 
 .. code:: bash
 
@@ -91,7 +91,7 @@ Upgrade Elasticsearch and search indexes
 
 Archivematica |release| uses Elasticsearch 6.x as its search engine. If you're
 upgrading from Archivematica 1.8.x or lower, where Elasticsearch 1.x was the
-supported version, it's required to upgrade your Elasticsearch cluster and
+supported version, you are required to upgrade your Elasticsearch cluster and
 indexes to the new version.
 
 To complete this upgrade it is important to know if you have access to your
@@ -101,10 +101,10 @@ These are usually located in the following paths:
 * :file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`
 * :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
 
-You should confirm the paths of your installation in the Locations tab of the
+You should confirm the paths for your installation in the Locations tab of the
 Storage Service.
 
-If you have access to those locations, the recommended method for the upgrade is
+If you have access to these locations, the recommended method for the upgrade is
 to :ref:`recreate the indexes <recreate-indexes>`. Otherwise, you'll need to
 :ref:`reindex from another cluster <cluster-reindex>`.
 
@@ -114,7 +114,7 @@ to :ref:`recreate the indexes <recreate-indexes>`. Otherwise, you'll need to
 Upgrade on Ubuntu packages
 --------------------------
 
-1. If you choose the :ref:`recreate the indexes <recreate-indexes>` , ElasticSearch 1.7 
+1. If you choose the :ref:`recreate the indexes <recreate-indexes>` option, ElasticSearch 1.7 
 needs to be removed before proceeding with the upgrade. This can be done with:
 
 .. code:: bash
@@ -383,9 +383,9 @@ manage the 1.x indexes' data. Run the following commands:
 * :ref:`Rebuild Transfers indexes <transfer-indexes>`
 
 .. note::
-   Please notice, the execution of this command may take a long time for big
+   Please note, the execution of this command may take a long time for big
    AIP and Transfer Backlog storage locations, especially if the AIPs are stored
-   compressed, or using a third party service. If that is your case, you may want to try the
+   compressed, or you are using a third party service. If that is the case, you may want to try the
    :ref:`reindex from another cluster method <cluster-reindex>`, below.
 
 .. _cluster-reindex:
@@ -438,7 +438,7 @@ Execution example:
    For a more detailed instructions about how to run the upgrade with both
    Elasticsearch instances running in the same machine `visit our Wiki`_.
 
-   Verify that you hve a working ElasticSearch 1.7 instance with all your data
+   Verify that you have a working ElasticSearch 1.7 instance with all your data
    before you start the upgrade!
 
 .. _upgrade-indexless:
