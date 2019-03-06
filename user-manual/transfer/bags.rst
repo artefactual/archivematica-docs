@@ -128,7 +128,7 @@ provided via https://tools.ietf.org/html/draft-kunze-bagit-10).
    Bag-Group-Identifier: spengler_yoshimuri
    Bag-Count: 1 of 15
    Internal-Sender-Identifier: /storage/images/yoshimuri
-   Internal-Sender-Description: Uncompressed greyscale TIFFs created from microfilm and are...</pre>
+   Internal-Sender-Description: Uncompressed greyscale TIFFs created from microfilm and are...
 
 When preserved in the resulting AIP's METS XML file, the above information is
 represented like so:
