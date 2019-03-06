@@ -369,12 +369,12 @@ refers to the page anchor.
 
 In the Archivematica documentation we are in the process of converting all
 external links to use hyperlink targets, rather than embedded inline hyperlinks.
-This helps text blocks adhere to the 80-character limit.
+This helps text blocks adhere to the 80-character limit and is generally tidier.
 
 Inline hyperlinks look like this:
 
 ```
-Here is a link to a `reStructuredText Primer <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html`_
+Here is a link to a `reStructuredText Primer <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html`_.
 ```
 
 Instead, style hyperlinks as a target, like so:
@@ -382,6 +382,18 @@ Instead, style hyperlinks as a target, like so:
 ```
 Here is a link to the `reStructuredText Primer`_. You can also refer to
 documentation about the `Sphinx documentation generator`_.
+```
+
+Make the text that you use for a hyperlink target clear, concise, and meaningful
+out of context. Screen readers allow users to pull up a list of all the links on
+a page; clearly identifying the contents of the link will make it easier to
+understand whether or not a user wants to click through. Here are good and bad
+examples of hyperlink target text:
+
+```
+Good: Here is a link to the `reStructuredText Primer`_.
+
+Bad: The link to the reStructuredText Primer is `here`_.
 ```
 
 And at the very bottom of the page, create a list of external links. This list
@@ -412,6 +424,9 @@ with the appropriate tag - `archivematica:`, `storageservice`, or `atom:`.
 :ref:`Administrators Manual <storageservice:administrators>` links to Storage Service documentation
 :ref:`Appraisal <archivematica:appraisal>` links to Archivematica documentation
 ```
+
+As with external links, make sure that the text that you use for the reference
+label is clear, concise, and meaningful out of context.
 
 ### Indexes and toctrees
 
@@ -570,10 +585,11 @@ displayed.
 
 ## Sources
 
-This guide relied heavily upon work presented in the following resources:
+This guide reuses content from the following resources:
 
 * [Write the Docs Style Guides][Write the Docs Style Guides]
 * [GNOME Documentation Style Guide][GNOME Documentation Style Guide]
+* [University of Minnesota Accessible U][University of Minnesota Accessible U]
 
 [Archivematica documentation]: https://github.com/artefactual/archivematica-docs
 [issue]: https://github.com/archivematica/Issues/issues
@@ -599,3 +615,4 @@ This guide relied heavily upon work presented in the following resources:
 [scripts]: https://github.com/artefactual/archivematica-docs/tree/1.8/admin-manual/installation-setup/installation/scripts
 [Write the Docs Style Guides]: http://www.writethedocs.org/guide/writing/style-guides/
 [GNOME Documentation Style Guide]: https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html
+[University of Minnesota Accessible U]: https://accessibility.umn.edu/core-skills/hyperlinks
