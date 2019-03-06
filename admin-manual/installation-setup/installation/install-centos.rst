@@ -57,7 +57,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
-      :lines: 28-49
+      :lines: 28-44
 
 
 3. Common services like Elasticsearch, MariaDB and Gearmand should be installed

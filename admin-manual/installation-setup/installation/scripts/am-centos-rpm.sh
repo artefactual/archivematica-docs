@@ -25,18 +25,13 @@ autorefresh=1
 type=rpm-md
 EOF'
 
-sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematicadev.repo
+sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/1.9.0/centos7/
-gpgcheck=0
+baseurl=https://packages.archivematica.org/1.9.x/centos
+gpgcheck=1
+gpgkey=https://packages.archivematica.org/1.9.x/key.asc
 enabled=1
-[archivematica-ss]
-name=archivematica
-baseurl=http://jenkins-ci.archivematica.org/repos/am-packbuild/0.14.0/centos7/
-gpgcheck=0
-enabled=1
-
 EOF'
 
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
@@ -47,6 +42,11 @@ gpgcheck=1
 gpgkey=https://packages.archivematica.org/1.9.x/key.asc
 enabled=1
 EOF'
+
+
+
+
+
 
 sudo -u root yum install -y java-1.8.0-openjdk-headless elasticsearch mariadb-server gearmand
 sudo -u root systemctl enable elasticsearch
