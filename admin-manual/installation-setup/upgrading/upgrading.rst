@@ -117,11 +117,11 @@ Upgrade on Ubuntu packages
 1. If you choose the :ref:`recreate the indexes <recreate-indexes>` option, ElasticSearch 1.7 
 needs to be removed before proceeding with the upgrade. This can be done with:
 
-.. code:: bash
+   .. code:: bash
 
-   sudo apt-get remove --purge elasticsearch
-   sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
-   sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
+      sudo apt-get remove --purge elasticsearch
+      sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
+      sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
 
 2. Update the operating system.
 
