@@ -69,7 +69,7 @@ locally.
 
 .. note::
 
-  If you are using the sandbox, you can move on to Task #1.
+   If you are using the sandbox, you can move on to Task #1.
 
 .. _installing-on-vm:
 
@@ -135,7 +135,7 @@ an hour. Your computer may be very slow while Archivematica is being
 provisioned - be sure to save any work and be prepared to step away from your
 computer while Archivematica is building.
 
-Once it's done provisioning, you can log in to your virtual machine::
+Once it's done provisioning, you can log in to your virtual machine:
 
 .. code-block:: bash
 
