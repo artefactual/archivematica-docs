@@ -96,10 +96,9 @@ Install Vagrant and VirtualBox
 ++++++++++++++++++++++++++++++
 
 #. Install VirtualBox from https://www.virtualbox.org/ (or use your package
-   manager). VirtualBox 5.1.18 or newer is required.
+   manager). VirtualBox 5.2.18 or newer is required.
 #. Install Vagrant from http://www.vagrantup.com/ (or use your package manager).
-   Vagrant 1.9.3 or newer is required. Be aware that Ubuntu 14.04 installs
-   Vagrant 1.4.3, which does not meet the requirements.
+   Vagrant 2.1.4 or newer is required.
 
 Spin it up
 ++++++++++
@@ -128,7 +127,7 @@ Spin it up
 
 Vagrant will download our custom box and boot it in VirtualBox. The download
 can take anywhere from a few minutes to an hour or more, depending on the
-speed of your connection, as the box is fairly large (approx 3.2 GB in size).
+speed of your connection, as the box is fairly large (approx 3.4 GB in size).
 
 This will take a while. It depends on your computer, but it could take up to
 an hour. Your computer may be very slow while Archivematica is being
@@ -143,7 +142,7 @@ Once it's done provisioning, you can log in to your virtual machine:
 
 You can now access your Archivematica instance through the web browser:
 
-* Archivematica: `<http://10.10.10.20>`_. Username: admin, Password archivematica
+* Archivematica: `<http://10.10.10.20>`_. Username: admin, Password: archivematica
 * Storage Service: `<http://10.10.10.20:8000>`_. Username: admin, Password: archivematica
 
 
