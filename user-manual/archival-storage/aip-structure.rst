@@ -75,6 +75,17 @@ bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:
 
 The following describes the contents of the AIP once extracted:
 
+Bag metadata file
+=================
+
+``bag-info.txt`` contains metadata for the bag.  Archivematica includes the following fields:
+
+* ``Payload-Oxum``: the octet stream sum of the bag payload
+* ``Bagging-Date``: yyyy-mm-dd formatted date on which the bag was created (e.g. 2018-11-01)
+* ``Bag-Size``: human readable file size (e.g. 42kB)
+* ``External-Identifier``: the UUID of the AIP
+
+
 Data directory
 ==============
 
