@@ -9,8 +9,8 @@ Drupal implementation of the TRAC checklist, an auditing tool to assess the
 reliability, commitment and readiness of institutions to assume long-term
 preservation responsibilities.
 
-The review tool was developed by MIT in a project led by Nancy McGovern, Head
-of `Curation and Preservation Services`_ at MIT Libraries. Artefactual has
+The review tool was developed by MIT in a project led by Nancy McGovern,
+Director, Digital Preservation at MIT Libraries. Artefactual has
 permission to host this tool for community use. The copy provided here contains
 data about the TRAC requirements that Archivematica fulfills for the repository.
 
@@ -132,7 +132,6 @@ community consumption here on the Archivematica website.
 
 :ref:`Back to the top <trac>`
 
-.. _`Curation and Preservation Services`: http://libraries.mit.edu/preservation/
 .. _`checklist`: http://public.ccsds.org/publications/archive/652x0m1.pdf
 .. _`matrix`: http://en.wikipedia.org/wiki/Responsibility_assignment_matrix
 .. _`SGDS report`: http://206.191.128.204/trac/sites/default/files/SGDS%202009-9421%20%28D.%20BOUCON%29.pdf
