@@ -181,10 +181,10 @@ FAQ
 
 .. _`Roadmap`: https://www.archivematica.org/wiki/Development_roadmap:_Archivematica
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
-.. _`pull request`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
-.. _`write the code`: http://www.artefactual.com/services/development/
-.. _`OAIS`: http://en.wikipedia.org/wiki/Open_Archival_Information_System
-.. _`maintenance contract`: http://www.artefactual.com/services/maintenance/
+.. _`pull request`: https://github.com/artefactual/archivematica/blob/e0b169aba822481b4038426a59188b0ea6450361/CONTRIBUTING.md
+.. _`write the code`: https://www.artefactual.com/services/software-development/
+.. _`OAIS`: https://en.wikipedia.org/wiki/Open_Archival_Information_System
+.. _`maintenance contract`: https://www.artefactual.com/services/technical-support/
 .. _`API endpoint`: https://wiki.archivematica.org/Storage_Service_API#Check_fixity
 .. _`Fixity`: https://github.com/artefactual/fixity
-.. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure
+.. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.9/user-manual/archival-storage/aip-structure/
