@@ -36,6 +36,7 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Adding metadata to bags <metadata-bags>`
 * :ref:`Importing other types of metadata <other-metadata>`
+* :ref:`Importing structural metadata with mets_structmap.xml <structmap.xml>`
 
 .. seealso::
 
@@ -323,7 +324,6 @@ a directory, for rights.csv files, and for other types of metadata that you wish
 to preserve.
 
 .. note::
-
    Submission documentation can also be added to a bag using the above method.
    The ``submissionDocumentation`` directory should be nested inside the
    metadata directory. See :ref:`Submission documentation <create-submission>`
@@ -351,6 +351,55 @@ file section (``<fileSec>``) alongside any other metadata files, under the file
 group (``fileGrp``) usage heading ``metadata``.
 
 .. literalinclude:: scripts/metadata-filesec.xml
+   :language: xml
+
+.. _structmap.xml:
+
+Importing structural metadata with mets_structmap.xml
+-----------------------------------------------------
+
+The files transferred to Archivematica may have a coherent hierarchical
+or logical structure (e.g. sections of a book or parts of an audio file) that
+has already been described in a METS structural map. Users can import these by
+including a file called ``mets_structmap.xml`` in their transfer's
+``metadata`` directory. The files referenced in this structural map should be
+included in the transfer's ``objects`` directory.
+
+Archivematica will merge this structural map into the archival information
+package's METS file by assigning it a unique structural map ID. It will also
+update the file pointers (``mets:fptr``) to use the UUIDs created by
+Archivematica for the files in its archival information packages.
+
+Note that Archivematica requires that ``CONTENTIDS`` attributes in ``mets:fptr``
+elements must be used with the ``objects/`` prefix to correctly map files to
+IDs.
+
+**Example mets_structmap.xml**
+
+Using a minimal structural map example for an audio file:
+
+.. literalinclude:: scripts/transfer-minimal-structmap.xml
+   :language: xml
+
+The resulting output in the Archivematica AIP METS file will be:
+
+.. literalinclude:: scripts/structmap-in-mets.xml
+   :language: xml
+
+Here is another example of a custom METS structural map for a simple book. The
+transfer's ``objects/`` directory contains all of the digital files used to
+compile the book (e.g. cover.jpg, inside_cover.jpg, page_01.jpg, etc.) The
+transfer's ``metadata/`` directory contains the following ``mets_structmap.xml``
+file to define the structure of the book. Upon import, Archivematica will add a
+unique ID to the ``structMap`` element and update all the ``FILEID`` attributes
+to match the UUID value for these files in the Archivematica AIP.
+
+.. literalinclude:: scripts/book-structmap.xml
+   :language: xml
+
+The resulting output in the Archivematica AIP METS file will be:
+
+.. literalinclude:: scripts/mets-book-structmap.xml
    :language: xml
 
 :ref:`Back to the top <import-metadata>`

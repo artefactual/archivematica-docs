@@ -47,9 +47,12 @@ FAQ
    possible to include :ref:`pre-existing checksums <transfer-checksums>`, which
    Archivematica will also verify.
 
-   To check fixity of AIPs in storage, Artefactual has written a separate
-   command-line app called `Fixity`_ (further user documentation for Fixity is
-   pending).
+   To check fixity of AIPs in storage, Artefactual has created a Fixity
+   `API endpoint`_ in the Storage Service which will perform a bag check and
+   update the Storage Service database with the results of that check.
+   Artefactual has also written a separate command-line helper-application
+   called `Fixity`_ which uses this endpoint to enable batch fixity checking
+   across the AIP store.
 
 #. **Is Archivematica a storage system?**
 
@@ -176,11 +179,12 @@ FAQ
 
 :ref:`Back to the top <faq>`
 
-.. _Roadmap: https://wiki.archivematica.org/Development_roadmap:_Archivematica
-.. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
-.. _pull request: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
-.. _write the code: https://www.artefactual.com/services/software-development/
-.. _OAIS: https://en.wikipedia.org/wiki/Open_Archival_Information_System
-.. _maintenance contract: https://www.artefactual.com/services/technical-support/
-.. _Fixity: https://github.com/artefactual/fixity
-.. _Archivematica AIP: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure
+.. _`Roadmap`: https://www.archivematica.org/wiki/Development_roadmap:_Archivematica
+.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
+.. _`pull request`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
+.. _`write the code`: http://www.artefactual.com/services/development/
+.. _`OAIS`: http://en.wikipedia.org/wiki/Open_Archival_Information_System
+.. _`maintenance contract`: http://www.artefactual.com/services/maintenance/
+.. _`API endpoint`: https://wiki.archivematica.org/Storage_Service_API#Check_fixity
+.. _`Fixity`: https://github.com/artefactual/fixity
+.. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure
