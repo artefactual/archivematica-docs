@@ -63,9 +63,9 @@ The Archivematica AIP consists of Bagit files and a Data directory.
 Bagit documentation
 ^^^^^^^^^^^^^^^^^^^
 
-The AIP is packaged in accordance with the Library of Congress Bagit
-specification (PDF, 84KB) As shown below, the BagIt files are bag-info.txt,
-bagit.txt, manifest-sha256.txt and tagmanifest-md5.txt:
+The AIP is packaged in accordance with the `Bagit specification`_. As shown
+below, the BagIt files are bag-info.txt, bagit.txt, manifest-sha256.txt and
+tagmanifest-md5.txt:
 
 .. image:: images/AIPStructureBagit.*
    :align: center
@@ -236,5 +236,6 @@ The creation of thumbnails is optional and configurable in the
 
 :ref:`Back to the top <aip-structure>`
 
+.. _`Bagit specification`: https://tools.ietf.org/html/rfc8493
 .. _`PREMIS`: https://www.loc.gov/standards/premis/
 .. _`METS file`: https://wiki.archivematica.org/METS
