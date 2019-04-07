@@ -47,9 +47,12 @@ FAQ
    possible to include :ref:`pre-existing checksums <transfer-checksums>`, which
    Archivematica will also verify.
 
-   To check fixity of AIPs in storage, Artefactual has written a separate
-   command-line app called `Fixity`_ (further user documentation for Fixity is
-   pending).
+   To check fixity of AIPs in storage, Artefactual has created a Fixity
+   `API endpoint`_ in the Storage Service which will perform a bag check and
+   update the Storage Service database with the results of that check.
+   Artefactual has also written a separate command-line helper-application
+   called `Fixity`_ which uses this endpoint to enable batch fixity checking
+   across the AIP store.
 
 #. **Is Archivematica a storage system?**
 
@@ -182,5 +185,6 @@ FAQ
 .. _`write the code`: http://www.artefactual.com/services/development/
 .. _`OAIS`: http://en.wikipedia.org/wiki/Open_Archival_Information_System
 .. _`maintenance contract`: http://www.artefactual.com/services/maintenance/
+.. _`API endpoint`: https://wiki.archivematica.org/Storage_Service_API#Check_fixity
 .. _`Fixity`: https://github.com/artefactual/fixity
 .. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure
