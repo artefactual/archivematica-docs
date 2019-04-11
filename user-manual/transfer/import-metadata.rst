@@ -10,8 +10,7 @@ preserve alongside your digital objects. The Process Metadata Directory
 Microservice will perform a number of preservation actions on objects in this
 directory.
 
-Archivematica also supports conventions for importing descriptive metadata
-and rights metadata that will transpose the contents of the metadata files
+Archivematica also supports conventions for importing descriptive, rights and structural metadata that will transpose the contents of the metadata files
 into the METS file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
 
@@ -21,6 +20,7 @@ into the METS file. Metadata in the METS file is searchable in the
     * :ref:`Simple objects <simple-objects>`
     * :ref:`Compound objects <compound-objects>`
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
+* :ref:`Importing structural metadata with mets_structmap.xml <structmap.xml>`
 
 .. seealso::
 
@@ -32,20 +32,20 @@ Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
 Archivematica natively supports the Dublin Core Metadata Elements Set, the basic
-15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can 
-also include non-Dublin Core metadata at the directory level or at the object 
-level. Archivematica is able to pass Dublic Core metadata to AtoM or 
+15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can
+also include non-Dublin Core metadata at the directory level or at the object
+level. Archivematica is able to pass Dublic Core metadata to AtoM or
 ArchivesSpace, but not any non-Dublin Core metadata.
 
-Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as 
-``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate 
-``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available 
+Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as
+``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate
+``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available
 below.
 
 .. important::
 
-   As of version 1.4, both directory and object level metadata is allowed in 
-   the ``metadata.csv``. The CSV can contain only object level, only directory 
+   As of version 1.4, both directory and object level metadata is allowed in
+   the ``metadata.csv``. The CSV can contain only object level, only directory
    level, or a combination of both.
 
 1. Create a transfer that contains a directory called ``metadata``.
@@ -83,7 +83,7 @@ below.
      user.
 
    * Dublin Core terms must contain "dcterms" in the name, e.g.
-     "dcterms:abstract". As above, the Dublin Core is not validated -- this is 
+     "dcterms:abstract". As above, the Dublin Core is not validated -- this is
      up to the user.
 
    * Each subsequent row contains the field values for a single directory or
@@ -96,10 +96,10 @@ below.
    * Empty columns can be deleted, if you prefer.
 
    * The first column in the ``metadata.csv`` file must be a "filename" column.
-     This column should list the filepath and filename (e.g. 
+     This column should list the filepath and filename (e.g.
      "objects/BrocktonOval.jp2") or directory name of each object or
      directory (e.g. "objects/Jan021964"). Note that the filepath or directory
-     path must start with ``objects/``. This is a legacy artifact when all 
+     path must start with ``objects/``. This is a legacy artifact when all
      digital objects in the transfer had to be nested in such a way.
 
    * If you have directory level metadata, fill out the fields on the same line
@@ -118,13 +118,13 @@ below.
 4. At the Generate METS microservice, Archivematica parses the metadata in
    ``metadata.csv`` to the METS file, as follows:
 
-   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each 
+   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each
      directory or file with ``MDTYPE="DC"``
 
    * All non-Dublin Core elements are used to generate a ``<dmdSec>`` for each
      directory or file with ``MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"``
 
-   * The ``<dmdSec>`` are linked to their directories or files in the 
+   * The ``<dmdSec>`` are linked to their directories or files in the
      ``<structMap>`` section of the METS file.
 
 .. _simple-objects:
@@ -132,8 +132,8 @@ below.
 Simple objects
 --------------
 
-This section provides CSV and METS file examples for simple objects -- i.e. 
-individual files that are not pages in a compound object such as a book or a 
+This section provides CSV and METS file examples for simple objects -- i.e.
+individual files that are not pages in a compound object such as a book or a
 newspaper issue.
 
 **Example Simple Objects CSV file:**
@@ -148,11 +148,11 @@ columns.
 
 **Example Simple Objects METS file:**
 
-Below is a snippet of the METS file, containing two descriptive metadata 
-sections (``<dmdSec>``), one for each file. These contain the Dublin Core 
-metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they 
-are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the 
-``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of 
+Below is a snippet of the METS file, containing two descriptive metadata
+sections (``<dmdSec>``), one for each file. These contain the Dublin Core
+metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they
+are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the
+``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of
 "OTHER".
 
 .. code:: xml
@@ -345,8 +345,43 @@ metadata in Archivematica <premis-template>`.
    :file: _csv/rights.csv
    :header-rows: 1
 
-The ``rights.csv`` file is parsed by the job "Load Rights" within the 
-"Characterize and Extract Metadata" microservice run during 
+The ``rights.csv`` file is parsed by the job "Load Rights" within the
+"Characterize and Extract Metadata" microservice run during
 :ref:`transfer <transfer>`.
+
+Importing structural metadata with mets_structmap.xml
+-----------------------------------------------------
+
+The files transferred to Archivematica may have a coherent hierarchical or logical structure (e.g. sections of a book or report) that has already been described in a METS structural map. Users can import these by including a file called ``mets_structmap.xml`` in their transfer's ``\metadata`` directory.
+
+Archivematica will merge this structural map into the archival information package's METS file by assigning it a unique structural map ID. It will also update the file pointers (``mets:fptr``) to use the UUIDs created by Archivematica for the files in its archival information packages.
+
+**Example mets_structmap.xml**
+Using a minimal structural map example:
+
+.. code:: xml
+
+<?xml version="1.0" encoding="utf-8"?>
+  <mets:mets xmlns:mets="http://www.loc.gov/METS/">
+    <mets:structMap TYPE="logical">
+      <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
+        <mets:div TYPE="track" LABEL="Complete documentary">
+          <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3"/>
+        </mets:div>
+     </mets:div>
+    </mets:structMap>
+  </mets:mets>
+
+The resulting output in the Archivematica AIP will be:
+
+.. code:: xml
+
+<mets:structMap TYPE="logical" ID="structMap_2">
+    <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
+      <mets:div TYPE="track" LABEL="Complete documentary">
+        <mets:fptr FILEID="file-a96caae3-d15b-4dcd-851e-0369805b0751"/>
+      </mets:div>
+    </mets:div>
+</mets:structMap>
 
 :ref:`Back to the top <import-metadata>`
