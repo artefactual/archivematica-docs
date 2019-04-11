@@ -357,31 +357,32 @@ The files transferred to Archivematica may have a coherent hierarchical or logic
 Archivematica will merge this structural map into the archival information package's METS file by assigning it a unique structural map ID. It will also update the file pointers (``mets:fptr``) to use the UUIDs created by Archivematica for the files in its archival information packages.
 
 **Example mets_structmap.xml**
+
 Using a minimal structural map example:
 
 .. code:: xml
 
-<?xml version="1.0" encoding="utf-8"?>
-  <mets:mets xmlns:mets="http://www.loc.gov/METS/">
-    <mets:structMap TYPE="logical">
-      <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
-        <mets:div TYPE="track" LABEL="Complete documentary">
-          <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3"/>
+   <?xml version="1.0" encoding="utf-8"?>
+     <mets:mets xmlns:mets="http://www.loc.gov/METS/">
+       <mets:structMap TYPE="logical">
+         <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
+           <mets:div TYPE="track" LABEL="Complete documentary">
+             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3"/>
+           </mets:div>
         </mets:div>
-     </mets:div>
-    </mets:structMap>
-  </mets:mets>
+      </mets:structMap>
+     </mets:mets>
 
-The resulting output in the Archivematica AIP will be:
+The resulting output in the Archivematica AIP would be:
 
 .. code:: xml
 
-<mets:structMap TYPE="logical" ID="structMap_2">
-    <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
-      <mets:div TYPE="track" LABEL="Complete documentary">
-        <mets:fptr FILEID="file-a96caae3-d15b-4dcd-851e-0369805b0751"/>
-      </mets:div>
+   <mets:structMap TYPE="logical" ID="structMap_2">
+     <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
+        <mets:div TYPE="track" LABEL="Complete documentary">
+          <mets:fptr FILEID="file-a96caae3-d15b-4dcd-851e-0369805b0751"/>
+        </mets:div>
     </mets:div>
-</mets:structMap>
+   </mets:structMap>
 
 :ref:`Back to the top <import-metadata>`
