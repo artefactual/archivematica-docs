@@ -350,7 +350,7 @@ The ``rights.csv`` file is parsed by the job "Load Rights" within the
 "Characterize and Extract Metadata" microservice run during
 :ref:`transfer <transfer>`.
 
-.. _structmap.xml::
+.. _structmap.xml:
 
 Importing structural metadata with mets_structmap.xml
 -----------------------------------------------------
