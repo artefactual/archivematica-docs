@@ -10,7 +10,8 @@ preserve alongside your digital objects. The Process Metadata Directory
 Microservice will perform a number of preservation actions on objects in this
 directory.
 
-Archivematica also supports conventions for importing descriptive, rights and structural metadata that will transpose the contents of the metadata files
+Archivematica also supports conventions for importing descriptive, rights and 
+structural metadata that will transpose the contents of the metadata files
 into the METS file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
 
@@ -354,9 +355,16 @@ The ``rights.csv`` file is parsed by the job "Load Rights" within the
 Importing structural metadata with mets_structmap.xml
 -----------------------------------------------------
 
-The files transferred to Archivematica may have a coherent hierarchical or logical structure (e.g. sections of a book or report) that has already been described in a METS structural map. Users can import these by including a file called ``mets_structmap.xml`` in their transfer's ``\metadata`` directory.
+The files transferred to Archivematica may have a coherent hierarchical 
+or logical structure (e.g. sections of a book or report) that has already 
+been described in a METS structural map. Users can import these by 
+including a file called ``mets_structmap.xml`` in their transfer's 
+``\metadata`` directory.
 
-Archivematica will merge this structural map into the archival information package's METS file by assigning it a unique structural map ID. It will also update the file pointers (``mets:fptr``) to use the UUIDs created by Archivematica for the files in its archival information packages.
+Archivematica will merge this structural map into the archival information 
+package's METS file by assigning it a unique structural map ID. It will also 
+update the file pointers (``mets:fptr``) to use the UUIDs created by 
+Archivematica for the files in its archival information packages.
 
 **Example mets_structmap.xml**
 
