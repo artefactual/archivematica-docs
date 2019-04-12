@@ -149,7 +149,7 @@ available to each approach.
 
 :ref:`Back to the top <customization>`
 
-.. _`MCP`: https://www.archivematica.org/wiki/MCP
+.. _`MCP`: https://wiki.archivematica.org/MCP
 .. _`Basic MCP configuration`: https://wiki.archivematica.org/MCPServer#Config_File
-.. _`Development`: https://www.archivematica.org/wiki/Development
+.. _`Development`: https://wiki.archivematica.org/Development
 .. _`MCPClient configuration documentation`: https://github.com/artefactual/archivematica/blob/qa/1.x/src/MCPClient/install/README.md

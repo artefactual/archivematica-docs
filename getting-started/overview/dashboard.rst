@@ -54,11 +54,10 @@ packages using the red "remove" button (see below).
 4. Microservices and Jobs
 -----------------------------
 
-Archivematica's processing is performed through a number of
-:ref:`microservice <microservices>`. Microservices are provided by a
-combination of Archivematica Python scripts and one or more of the free,
-open-source `software tools <https://www.archivematica.org/wiki/External_tools>`_
-bundled in the Archivematica system.
+Archivematica's processing is performed through a number of :ref:`microservice
+<microservices>`. Microservices are provided by a combination of Archivematica
+Python scripts and one or more of the free, open-source
+`external software tools`_ bundled in the Archivematica system.
 
 These microservice are broken down  into a number of jobs, which users can
 see by clicking on the microservice to expand. Clicking on the gear icon within
@@ -89,3 +88,5 @@ running smoothly. Note that removing a package **does not** delete the package o
 any AIPs or DIPs associated with it.
 
 :ref:`Back to the top <web-dashboard>`
+
+.. _external software tools: https://wiki.archivematica.org/External_tools

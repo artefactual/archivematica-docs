@@ -32,20 +32,20 @@ Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
 Archivematica natively supports the Dublin Core Metadata Elements Set, the basic
-15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can 
-also include non-Dublin Core metadata at the directory level or at the object 
-level. Archivematica is able to pass Dublic Core metadata to AtoM or 
+15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can
+also include non-Dublin Core metadata at the directory level or at the object
+level. Archivematica is able to pass Dublic Core metadata to AtoM or
 ArchivesSpace, but not any non-Dublin Core metadata.
 
-Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as 
-``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate 
-``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available 
+Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as
+``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate
+``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available
 below.
 
 .. important::
 
-   As of version 1.4, both directory and object level metadata is allowed in 
-   the ``metadata.csv``. The CSV can contain only object level, only directory 
+   As of version 1.4, both directory and object level metadata is allowed in
+   the ``metadata.csv``. The CSV can contain only object level, only directory
    level, or a combination of both.
 
 1. Create a transfer that contains a directory called ``metadata``.
@@ -83,7 +83,7 @@ below.
      user.
 
    * Dublin Core terms must contain "dcterms" in the name, e.g.
-     "dcterms:abstract". As above, the Dublin Core is not validated -- this is 
+     "dcterms:abstract". As above, the Dublin Core is not validated -- this is
      up to the user.
 
    * Each subsequent row contains the field values for a single directory or
@@ -96,10 +96,10 @@ below.
    * Empty columns can be deleted, if you prefer.
 
    * The first column in the ``metadata.csv`` file must be a "filename" column.
-     This column should list the filepath and filename (e.g. 
+     This column should list the filepath and filename (e.g.
      "objects/BrocktonOval.jp2") or directory name of each object or
      directory (e.g. "objects/Jan021964"). Note that the filepath or directory
-     path must start with ``objects/``. This is a legacy artifact when all 
+     path must start with ``objects/``. This is a legacy artifact when all
      digital objects in the transfer had to be nested in such a way.
 
    * If you have directory level metadata, fill out the fields on the same line
@@ -118,13 +118,13 @@ below.
 4. At the Generate METS microservice, Archivematica parses the metadata in
    ``metadata.csv`` to the METS file, as follows:
 
-   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each 
+   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each
      directory or file with ``MDTYPE="DC"``
 
    * All non-Dublin Core elements are used to generate a ``<dmdSec>`` for each
      directory or file with ``MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"``
 
-   * The ``<dmdSec>`` are linked to their directories or files in the 
+   * The ``<dmdSec>`` are linked to their directories or files in the
      ``<structMap>`` section of the METS file.
 
 .. _simple-objects:
@@ -132,8 +132,8 @@ below.
 Simple objects
 --------------
 
-This section provides CSV and METS file examples for simple objects -- i.e. 
-individual files that are not pages in a compound object such as a book or a 
+This section provides CSV and METS file examples for simple objects -- i.e.
+individual files that are not pages in a compound object such as a book or a
 newspaper issue.
 
 **Example Simple Objects CSV file:**
@@ -148,11 +148,11 @@ columns.
 
 **Example Simple Objects METS file:**
 
-Below is a snippet of the METS file, containing two descriptive metadata 
-sections (``<dmdSec>``), one for each file. These contain the Dublin Core 
-metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they 
-are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the 
-``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of 
+Below is a snippet of the METS file, containing two descriptive metadata
+sections (``<dmdSec>``), one for each file. These contain the Dublin Core
+metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they
+are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the
+``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of
 "OTHER".
 
 .. code:: xml
@@ -252,7 +252,7 @@ i.e. multi-page digital objects such as newspapers and books.
                <repository>
                    Sunshine Coast Museum and Archives
                </repository>
-               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
+               <project_website>https://open.library.ubc.ca/collections/bcnewspapers</project_website>
                <digital_image_format>image/jp2</digital_image_format>
            </xmlData>
        </mdWrap>
@@ -279,7 +279,7 @@ i.e. multi-page digital objects such as newspapers and books.
                <frequency>Weekly</frequency>
                <forms_part_of>British Columbia Historical Newspapers Collection</forms_part_of>
                <repository>Sunshine Coast Museum and Archives</repository>
-               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
+               <project_website>https://open.library.ubc.ca/collections/bcnewspapers</project_website>
                <digital_image_format>image/jp2</digital_image_format>
            </xmlData>
        </mdWrap>
@@ -345,8 +345,8 @@ metadata in Archivematica <premis-template>`.
    :file: _csv/rights.csv
    :header-rows: 1
 
-The ``rights.csv`` file is parsed by the job "Load Rights" within the 
-"Characterize and Extract Metadata" microservice run during 
+The ``rights.csv`` file is parsed by the job "Load Rights" within the
+"Characterize and Extract Metadata" microservice run during
 :ref:`transfer <transfer>`.
 
 :ref:`Back to the top <import-metadata>`

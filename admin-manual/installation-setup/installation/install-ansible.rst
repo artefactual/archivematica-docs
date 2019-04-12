@@ -176,5 +176,5 @@ the configuration of your new server.
 :ref:`Back to the top <install-ansible>`
 
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
-.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/#disable-elasticsearch-use
+.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/tree/60978cfd8ee3dff1e660bbdb41fd724299684863#disable-elasticsearch-use
 .. _`Vagrant website`: https://www.vagrantup.com/downloads.html

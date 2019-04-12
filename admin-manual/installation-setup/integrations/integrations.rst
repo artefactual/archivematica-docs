@@ -126,7 +126,7 @@ For instructions to configure a Dataverse integration, see
 :ref:`Back to the top <integrations>`
 
 .. _`AtoM`: https://www.accesstomemory.org/
-.. _`ArchivesSpace`: http://archivesspace.org/
+.. _`ArchivesSpace`: https://archivesspace.org/
 .. _`DuraCloud`: https://duraspace.org/duracloud/
 .. _`ArchivesDirect`: https://duraspace.org/archivesdirect/
 .. _`Swift`: https://wiki.openstack.org/wiki/Swift

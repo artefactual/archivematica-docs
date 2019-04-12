@@ -386,13 +386,13 @@ to create (and check) than the alternatives (e.g. SHA-256).
 
 :ref:`Back to the top <scaling-archivematica>`
 
-.. _`MCPServer`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPServer/install
-.. _`MCPClient`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPClient
-.. _`MCPClient concurrency` : https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPClient#concurrency
-.. _`systemd` : https://en.wikipedia.org/wiki/Systemd
-.. _`unit file` : https://www.freedesktop.org/software/systemd/man/systemd.unit.html
-.. _`MCPClient unit file` : https://raw.githubusercontent.com/artefactual-labs/am-packbuild/qa/1.x/rpm/archivematica/etc/archivematica-mcp-client.service
-.. _`archivematicaClientModules` : https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPClient/lib/archivematicaClientModules
-.. _`Archivematica user forum` : https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
-.. _`Dashboard`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/dashboard/install
-.. _`benchmarking` : https://www.itforarchivists.com/siegfried/benchmarks
+.. _MCPServer: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPServer/install
+.. _MCPClient: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPClient
+.. _MCPClient concurrency: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPClient#concurrency
+.. _systemd: https://en.wikipedia.org/wiki/Systemd
+.. _unit file: https://www.freedesktop.org/software/systemd/man/systemd.unit.html
+.. _MCPClient unit file: https://raw.githubusercontent.com/artefactual-labs/am-packbuild/qa/1.x/rpm/archivematica/etc/archivematica-mcp-client.service
+.. _archivematicaClientModules: https://github.com/artefactual/archivematica/blob/84661775836cf8037ad3b48feb8e02bb80335f0f/src/MCPClient/lib/archivematicaClientModules
+.. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
+.. _Dashboard: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/dashboard/install
+.. _benchmarking: https://www.itforarchivists.com/siegfried/benchmarks

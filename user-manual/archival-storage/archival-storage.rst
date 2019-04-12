@@ -1,4 +1,4 @@
-.. _archival-storage:
+wiki.. _archival-storage:
 
 ================
 Archival storage
@@ -189,4 +189,4 @@ administrator should contact you.
 
 :ref:`Back to the top <archival-storage>`
 
-.. _`Archivematica METS file (wiki)`: https://www.archivematica.org/wiki/METS
+.. _`Archivematica METS file (wiki)`: https://wiki.archivematica.org/METS
