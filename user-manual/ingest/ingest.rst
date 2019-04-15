@@ -116,7 +116,7 @@ the CSV through the user interface <metadata-csv-ui>`.
 #. While on the Transfer or Ingest tab, click on the metadata template icon to
    the right of the transfer name.
 
-   .. figure:: images/MetadataIcon1.*
+   .. figure:: images/MetadataIcon2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -127,7 +127,7 @@ the CSV through the user interface <metadata-csv-ui>`.
 #. This will take you to the SIP detail page. Under the *Metadata* heading,
    click **Add**.
 
-   .. figure:: images/SIPDetailPanel1.*
+   .. figure:: images/SIPDetailPanel2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -190,7 +190,7 @@ to structure metadata CSV files, see :ref:`Import metadata <import-metadata>`.
 #. While on the Ingest tab, click on the metadata template icon to the right of
    the transfer name.
 
-   .. figure:: images/MetadataIcon1.*
+   .. figure:: images/MetadataIcon2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -201,7 +201,7 @@ to structure metadata CSV files, see :ref:`Import metadata <import-metadata>`.
 #. This will take you to the SIP detail page. Under the *Metadata* heading,
    click **Add metadata files**.
 
-   .. figure:: images/SIPDetailPanel1.*
+   .. figure:: images/SIPDetailPanel2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -244,7 +244,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. While on the Transfer or Ingest tab, click on the metadata template icon to
    the right of the transfer name.
 
-   .. figure:: images/MetadataIcon1.*
+   .. figure:: images/MetadataIcon2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -255,7 +255,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. This will take you to the SIP detail panel. On the left-hand side, under
    *Rights*, click **Add**.
 
-   .. figure:: images/SIPDetailPanel1.*
+   .. figure:: images/SIPDetailPanel2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -360,7 +360,7 @@ options listed above.
    normalization report. Click on the report icon next to the Actions drop-down
    menu.
 
-.. figure:: images/ReportIcon1.*
+.. figure:: images/ReportIcon2.*
    :align: center
    :figwidth: 80%
    :width: 100%
@@ -569,7 +569,7 @@ Actions, click on Re-ingest.
 
 2. Choose the type of re-ingest (metadata, partial or full).
 
-.. image:: images/reingest_type.*
+.. image:: images/reingest_type2.*
    :align: center
    :width: 80%
    :alt: Choose type of reingest and name of processing configuration
@@ -592,7 +592,7 @@ Actions, click on Re-ingest.
 
 4. Proceed to the Transfer or Ingest tab and approve the AIP re-ingest.
 
-.. image:: images/reingest_approve.*
+.. image:: images/reingest_approve2.*
    :align: center
    :width: 80%
    :alt: Approve AIP reingest in Ingest tab.
