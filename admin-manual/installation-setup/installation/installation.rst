@@ -218,7 +218,6 @@ individual user. We have documented some common advanced installation setups.
 
 :ref:`Back to the top <installation>`
 
-.. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
 .. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica

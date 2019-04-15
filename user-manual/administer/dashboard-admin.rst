@@ -780,13 +780,13 @@ This tab displays the version of Archivematica you're using.
 
 :ref:`Back to the top <dashboard-admin>`
 
-.. _AtoM: www.accesstomemory.org
-.. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _AtoM: https://www.accesstomemory.org
+.. _Django authentication framework: https://docs.djangoproject.com/en/1.8/topics/auth/
 .. _automation tools: https://github.com/artefactual/automation-tools
 .. _Fido: http://openpreservation.org/technology/products/fido/
 .. _Siegfried: https://www.itforarchivists.com/siegfried
 .. _bzip2: http://www.bzip.org/
-.. _LZMA: http://www.7-zip.org/sdk.html
-.. _Parallel bzip2 (pbzip2): http://compression.ca/pbzip2/
+.. _LZMA: https://www.7-zip.org/sdk.html
+.. _Parallel bzip2 (pbzip2): https://launchpad.net/pbzip2/
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`Transifex`: https://www.transifex.com/artefactual/archivematica/

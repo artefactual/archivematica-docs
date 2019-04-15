@@ -890,4 +890,4 @@ Remove all completed ingests
 :ref:`Back to the top <ingest>`
 
 .. _`Dublin Core Metadata Element Set`: http://dublincore.org/documents/dces/
-.. _`Tesseract`: https://code.google.com/p/tesseract-ocr/
+.. _`Tesseract`: https://github.com/tesseract-ocr/

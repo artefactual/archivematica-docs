@@ -7,20 +7,18 @@ Archivematica-Duracloud Quick Start Guide
 Introduction
 ------------
 
-`ArchivesDirect <http://www.archivesdirect.org/>`_ is an Archivematica in
-DuraCloud hosting plan offered by Artefactual Systems and DuraSpace. This
-guide can be used by those who wish to install Archivematica and/or DuraCloud
-locally and run the systems themselves and may also be helpful for those using
-the hosted service. This guide assumes that you have already installed
-Archivematica and DuraCloud, or have arranged for a hosted instance through
-Artefactual Systems/DuraSpace. Hosted clients will have steps 1 and 2
-completed for them.
+`ArchivesDirect`_ is an Archivematica in DuraCloud hosting plan offered by
+Artefactual Systems and DuraSpace. This guide can be used by those who wish to
+install Archivematica and/or DuraCloud locally and run the systems themselves
+and may also be helpful for those using the hosted service. This guide assumes
+that you have already installed Archivematica and DuraCloud, or have arranged
+for a hosted instance through Artefactual Systems/DuraSpace. Hosted clients will
+have steps 1 and 2 completed for them.
 
 For installation instructions please see:
 
 * :ref:`Archivematica installation <installation>`
-
-* `DuraCloud documentation <https://wiki.duraspace.org/display/DURACLOUD/DuraCloud>`_
+* `DuraCloud documentation`_
 
 Step 1: Configure DuraCloud
 ---------------------------
@@ -82,17 +80,13 @@ when you installed Archivematica.
 
 3. If using DuraCloud for transfer-source, locations can be configured after    content is synced- see below.
 
-
 Step 3: Download and configure sync tool
 ----------------------------------------
 
 Content can be added to DuraCloud spaces via the sync tool, which can be
-installed from DuraSpace
-`here <https://wiki.duraspace.org/display/DURACLOUD/DuraCloud+Downloads>`_.
-The DuraCloud sync tool can be run through a GUI or the command line; these
-instructions will proceed using the GUI.
-
-
+installed from the `DuraSpace Downloads page`_. The DuraCloud sync tool can be run
+through a GUI or the command line; these instructions will proceed using the
+GUI.
 
 Step 4: Syncing content to DuraCloud
 ------------------------------------
@@ -229,3 +223,7 @@ each top level directory inside the directory or directories you have synced.
    may be caused by a UI bug. You can type the path in instead.
 
 :ref:`Back to the top <duracloud-setup>`
+
+.. _ArchivesDirect: https://duraspace.org/archivesdirect/
+.. _DuraCloud documentation: https://wiki.duraspace.org/display/DURACLOUD/DuraCloud
+.. _DuraSpace Downloads page: https://wiki.duraspace.org/display/DURACLOUD/DuraCloud+Downloads

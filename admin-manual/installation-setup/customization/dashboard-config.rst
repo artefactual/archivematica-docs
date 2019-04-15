@@ -819,19 +819,16 @@ configuration method described in the Post Install Configuration sections:
 Security
 ^^^^^^^^
 
-Archivematica uses `PBKDF2 <http://en.wikipedia.org/wiki/PBKDF2>`_ as the default
-algorithm to store passwords. This should be sufficient for most users: it's
-quite secure, requiring massive amounts of computing time to break. However,
-other algorithms could be used as the following document explains:
-`How Django stores passwords <https://docs.djangoproject.com/en/1.4/topics/auth/#how-django-stores-passwords>`_ .
-
-Our plan is to extend this functionality in the future adding groups and
-granular permissions support.
+Archivematica uses `PBKDF2`_ as the default algorithm to store passwords. This
+should be sufficient for most users: it's quite secure, requiring massive
+amounts of computing time to break. However, other algorithms could be used as
+the following document explains: `How Django stores passwords`_ .
 
 .. _admin-handle-server:
 
 Handle server config
 --------------------
+
 Archivematica can to be configured to make requests to a Handle System HTTP API
 so that files, directories and entire AIPs can be assigned persistent
 identifiers (PIDS) and derived persistent URLs (PURLs).
@@ -856,8 +853,10 @@ This tab displays the version of Archivematica you're using.
 
 :ref:`Back to the top <dashboard-config>`
 
-.. _AtoM: www.accesstomemory.org
-.. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _AtoM: https://www.accesstomemory.org/
+.. _Django authentication framework: https://docs.djangoproject.com/en/1.8/topics/auth/
 .. _automation tools: https://github.com/artefactual/automation-tools
-.. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
-.. _`Transifex`: https://www.transifex.com/artefactual/archivematica/
+.. _Binder: https://binder.readthedocs.io/en/latest/contents.html
+.. _Transifex: https://www.transifex.com/artefactual/archivematica/
+.. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
+.. _How Django stores passwords: https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#how-django-stores-passwords

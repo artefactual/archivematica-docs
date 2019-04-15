@@ -92,7 +92,7 @@ is by providing the slug during the Upload DIP microservice.
 
 2. A dialogue box will appear. Enter the permalink of the description in the
    dialogue box. For example, if the URL of the archival description is
-   http://myAtoM.ca/my-target-description;rad, enter ``my-target-
+   http://myAtoM.ca/my-target-description, enter ``my-target-
    description``. See ``slug`` in the `AtoM glossary`_ for more information.
 
 .. image:: images/atom-dip-upload.*
@@ -117,7 +117,7 @@ grab this value when it reaches the Upload DIP microservice.
 
 1. Create a new transfer. In the ``Access system ID`` box, enter the permalink
    of the description in the dialogue box. For example, if the URL of the
-   archival description is http://myAtoM.ca/my-target-description;rad, enter
+   archival description is http://myAtoM.ca/my-target-description, enter
    ``my-target-description``. See ``slug`` in the `AtoM glossary`_ for more
    information.
 
@@ -413,8 +413,8 @@ to other access systems or DIPs that have been stored.
 :ref:`Back to the top <access>`
 
 .. _`AtoM`: https://www.accesstomemory.org
-.. _`ArchivesSpace`: http://archivesspace.org/
+.. _`ArchivesSpace`: https://archivesspace.org/
 .. _`Archivists' Toolkit`: http://www.archiviststoolkit.org/
-.. _`CONTENTdm`: http://www.oclc.org/en/contentdm.html
+.. _`CONTENTdm`: https://www.oclc.org/en/contentdm.html
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`AtoM glossary`: https://www.accesstomemory.org/docs/latest/user-manual/glossary/glossary/

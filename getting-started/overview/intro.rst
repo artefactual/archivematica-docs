@@ -9,7 +9,6 @@ designed to maintain standards-based, long-term access to collections of
 digital objects. Archivematica is packaged with the web-based content
 management system AtoM for access to your digital objects.
 
-
 .. _intro-oais:
 
 Open source OAIS
@@ -22,13 +21,12 @@ Open source OAIS
 
 Archivematica provides an integrated suite of free and open-source tools that
 allows users to process digital objects from ingest to archival storage and
-access in compliance with the `ISO-OAIS <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`_
+access in compliance with the `Open Archival Information System (OAIS)`_
 functional model and other digital preservation standards and best practices.
-All of the Archivematica code is released under a
-`GNU Affero General Public License <http://www.gnu.org/licenses/agpl-3.0.en.html>`_
-and Archivematica documentation is released under a
-`Creative Commons Attribution-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-sa/4.0/>`_.
 
+All of the Archivematica code is released under a
+`GNU Affero General Public License`_ and Archivematica documentation is released
+under a `Creative Commons Attribution-ShareAlike 4.0 International License`_.
 
 .. _intro-barriers:
 
@@ -48,7 +46,7 @@ requirements are assigned to software tools within the Archivematica system.
 If it is not possible to automate these steps in the current system iteration,
 they are incorporated and documented into a manual procedure to be carried out
 by the end user. This ensures that the entire set of preservation requirements
-is being carried out, even in the early, pre 1.0 system releases. In short,
+is being carried out, even in the early, pre-1.0 system releases. In short,
 the system is conceptualized as an integrated whole of technology, people and
 procedures, not just a set of software tools. For institutions that want
 technical assistance to install and customize Archivematica, optional
@@ -67,3 +65,7 @@ users and professional community as a whole.
 
 
 :ref:`Back to the top <intro>`
+
+.. _Open Archival Information System (OAIS): https://en.wikipedia.org/wiki/Open_Archival_Information_System
+.. _GNU Affero General Public License: http://www.gnu.org/licenses/agpl-3.0.en.html
+.. _Creative Commons Attribution-ShareAlike 4.0 International License: https://creativecommons.org/licenses/by-sa/4.0/

@@ -176,11 +176,11 @@ FAQ
 
 :ref:`Back to the top <faq>`
 
-.. _`Roadmap`: https://www.archivematica.org/wiki/Development_roadmap:_Archivematica
-.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
-.. _`pull request`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
-.. _`write the code`: http://www.artefactual.com/services/development/
-.. _`OAIS`: http://en.wikipedia.org/wiki/Open_Archival_Information_System
-.. _`maintenance contract`: http://www.artefactual.com/services/maintenance/
-.. _`Fixity`: https://github.com/artefactual/fixity
-.. _`Archivematica AIP`: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure
+.. _Roadmap: https://wiki.archivematica.org/Development_roadmap:_Archivematica
+.. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
+.. _pull request: https://github.com/artefactual/archivematica/blob/stable/1.7.x/CONTRIBUTING.md
+.. _write the code: https://www.artefactual.com/services/software-development/
+.. _OAIS: https://en.wikipedia.org/wiki/Open_Archival_Information_System
+.. _maintenance contract: https://www.artefactual.com/services/technical-support/
+.. _Fixity: https://github.com/artefactual/fixity
+.. _Archivematica AIP: https://www.archivematica.org/en/docs/archivematica-1.6/user-manual/archival-storage/aip-structure/#aip-structure

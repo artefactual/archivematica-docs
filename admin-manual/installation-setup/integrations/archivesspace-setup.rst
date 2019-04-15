@@ -54,4 +54,4 @@ See :ref:`Upload DIP to ArchivesSpace <upload-as>` for more information.
 
 :ref:`Back to the top <atom-setup>`
 
-.. _`ArchivesSpace`: http://archivesspace.org/
+.. _`ArchivesSpace`: https://archivesspace.org/
