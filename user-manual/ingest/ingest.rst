@@ -329,7 +329,7 @@ manual.
    a bell icon next to it. Select one of the normalization options from the
    Actions drop-down menu:
 
-.. figure:: images/NormPresAccess1.*
+.. figure:: images/NormPresAccess2.*
    :align: right
    :figwidth: 50%
    :width: 100%
