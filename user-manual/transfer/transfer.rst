@@ -65,12 +65,12 @@ transfer(s). Once this is done, the SIP can be moved into ingest or sent to a
 Create a transfer
 -----------------
 
-Open your Archivematica dashboard and sign in with your
-username and password. Please note that if this is your first time logging in
-to a newly installed instance of Archivematica, you will see a form that
-allows you to register your repository in order to get updates to the format policy
-registry. See the :ref:`User manual - Format Policy Registry (FPR) <fpr>` and the
-:ref:`Administrator manual - Format Policy Registry (FPR) <fpr:index>`.
+Open your Archivematica dashboard and sign in with your username and password.
+Please note that if this is your first time logging in to a newly installed
+instance of Archivematica, you will see a form that allows you to register your
+repository in order to get updates to the format policy registry. See the
+:ref:`Preservation Planning <preservation-planning>` documentation for more
+information.
 
 #. In the transfer tab, select your transfer type in the dropdown menu. Types include Standard, Unzipped Bag, Zipped Bag, DSpace, maildir and Disk Image.
 

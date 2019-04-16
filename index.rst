@@ -210,7 +210,7 @@ transfer and storage locations, DIP upload configurations, and to add and remove
 users, among other things.
 
 * :ref:`Dashboard administration tab <dashboard-admin>`
-* :ref:`Storage service users <storageservice:users>`
+* :ref:`Storage service users <storageservice:administrators>`
 
 
 .. _metadata:
@@ -255,7 +255,7 @@ Installation and setup
 * :ref:`Customization and automation <customization>`
 * :ref:`Setting up integrations <integrations>`
 * :ref:`Storage Service <storageservice:administrators>`
-* :ref:`Format Policy Registry (FPR) <fpr:index>`
+* :ref:`Preservation Planning <preservation-planning>`
 
 
 .. _maintenance:

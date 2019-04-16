@@ -29,7 +29,7 @@ Preservation planning configuration
 The Preservation Planning tab allows editing or addition of commands for
 identification, tools, characterization, event detail, extraction, normalization,
 transcription, validation and verification. Please see the
-:ref:`Format Policy Registry (FPR) documentation <fpr:index>` for instruction.
+:ref:`Preservation Planning <preservation-planning>` for instruction.
 
 .. _antivirus-config:
 
