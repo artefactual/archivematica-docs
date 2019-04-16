@@ -7,9 +7,9 @@ TRAC review tool
 Drupal TRAC review tool
 -----------------------
 
-Developed by MIT in a project led by Nancy McGovern, Head of
-`Curation and Preservation Services <http://libraries.mit.edu/preservation/>`_
-at MIT Libraries. Artefactual has permission to host this tool for community use.
+The review tool was developed by MIT in a project led by Nancy McGovern,
+Director, Digital Preservation at MIT Libraries. Artefactual has
+permission to host this tool for community use.
 The copy provided here contains data about the TRAC requirements that Archivematica
 fulfills for the repository.
 
