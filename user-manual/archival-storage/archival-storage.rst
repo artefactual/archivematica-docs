@@ -1,4 +1,4 @@
-wiki.. _archival-storage:
+.. _archival-storage:
 
 ================
 Archival storage

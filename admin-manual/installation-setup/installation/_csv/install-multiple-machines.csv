@@ -1,0 +1,2 @@
+Spreading Archivematica’s processing load across several machines,,
+Base on your customized setup and network configuration,:ref:`Scaling Archivematica<scaling-archivematica>`,"When installing Archivematica on multiple machines, the various Archivematica processes must be able to reach each other on the relevant ports. Your firewall configuration must allow for this."

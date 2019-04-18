@@ -16,8 +16,7 @@ Installing Archivematica
 Overview
 --------
 
-The following table lists all help topics on installing Archivematica for
-various intended uses and host environments. Further down the page, you will
+The following table lists various ways to install and use Archivematica. Further down the page, you will
 find more detailed information about new installations and advanced installation
 options.
 
@@ -25,7 +24,19 @@ If you need assistance or clarification regarding the installation instructions,
 the `Archivematica user forum`_ is a good place ask questions.
 
 .. csv-table::
-   :file: _csv/install-landing.csv
+   :file: _csv/install-new.csv
+   :header-rows: 1
+
+.. csv-table::
+   :file: _csv/install-testing.csv
+   :header-rows: 1
+
+.. csv-table::
+   :file: _csv/install-development.csv
+   :header-rows: 1
+
+.. csv-table::
+   :file: _csv/install-multiple-machines.csv
    :header-rows: 1
 
 .. _treq:
@@ -189,8 +200,8 @@ supported installation environments:
   <install-ansible>`.
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
 
-:ref:`Manual install of OS packages on Ubuntu (16.04 and 18.04) <install-pkg-ubuntu>`
-is documented but not officially supported.
+Note that :ref:`manual install of OS packages on Ubuntu (16.04 and 18.04)
+<install-pkg-ubuntu>` is documented but not officially supported.
 
 Installing Archivematica using :ref:`Docker <development>` is not officially
 supported for production deployments. However, it is the preferred development
