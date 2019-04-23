@@ -9,9 +9,7 @@ installations on Ubuntu.
 
 It is assumed here that your host operating system is Ubuntu. This can be
 modified for a different Unix based operating system, such as Mac OS X or
-another Linux distribution such as CentOS. These instructions will not
-work if you are using Windows as the host OS. For Windows installations
-you can create a virtual machine and follow the manual install instructions.
+another Linux distribution such as CentOS.
 
 The Ansible roles referenced here can be used in production deployments
 by creating your own Ansible playbook to run them. See the `deploy-pub`_ repo

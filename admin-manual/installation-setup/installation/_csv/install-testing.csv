@@ -1,0 +1,3 @@
+Test-driving the latest release,,
+Archivematica sandbox,:ref:`Using the sandbox <using-the-sandbox>`,"The sandbox will automatically reset daily. Any packages created will not be permanently saved. Additionally, there may be more than one demo user logged in at the same time, so you may see changes made by others while using the software."
+Local virtual machine using Vagrant and VirtualBox,:ref:`Installing on a virtual machine using Vagrant <installing-on-vm>`,This virtual machine is not intended to be used in production.
