@@ -10,7 +10,7 @@ preserve alongside your digital objects. The Process Metadata Directory
 Microservice will perform a number of preservation actions on objects in this
 directory.
 
-Archivematica also supports conventions for importing descriptive, rights and 
+Archivematica also supports conventions for importing descriptive, rights and
 structural metadata that will transpose the contents of the metadata files
 into the METS file. Metadata in the METS file is searchable in the
 :ref:`Archival Storage <archival-storage>` tab.
@@ -355,44 +355,136 @@ The ``rights.csv`` file is parsed by the job "Load Rights" within the
 Importing structural metadata with mets_structmap.xml
 -----------------------------------------------------
 
-The files transferred to Archivematica may have a coherent hierarchical 
-or logical structure (e.g. sections of a book or report) that has already 
-been described in a METS structural map. Users can import these by 
-including a file called ``mets_structmap.xml`` in their transfer's 
-``\metadata`` directory.
+The files transferred to Archivematica may have a coherent hierarchical
+or logical structure (e.g. sections of a book or report) that has already
+been described in a METS structural map. Users can import these by
+including a file called ``mets_structmap.xml`` in their transfer's
+``/metadata`` directory. The files referenced in this structural map should be
+included in the transfer's ``/objects`` directory.
 
-Archivematica will merge this structural map into the archival information 
-package's METS file by assigning it a unique structural map ID. It will also 
-update the file pointers (``mets:fptr``) to use the UUIDs created by 
+Archivematica will merge this structural map into the archival information
+package's METS file by assigning it a unique structural map ID. It will also
+update the file pointers (``mets:fptr``) to use the UUIDs created by
 Archivematica for the files in its archival information packages.
+
+Note that Archivematica requires that ``CONTENTIDS`` attributes must be used
+with the ``objects/`` prefix to correctly map files to IDs.
 
 **Example mets_structmap.xml**
 
-Using a minimal structural map example:
+Using a minimal structural map example for an audio file:
 
 .. code:: xml
 
    <?xml version="1.0" encoding="utf-8"?>
      <mets:mets xmlns:mets="http://www.loc.gov/METS/">
        <mets:structMap TYPE="logical">
-         <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
-           <mets:div TYPE="track" LABEL="Complete documentary">
-             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3"/>
+         <mets:div TYPE="track" LABEL="Complete documentary">
+           <mets:div LABEL="Introduction" ORDER="1">
+             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
+               <mets:area FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:00" END="00:00:17" BETYPE="TIME"/>
+             </mets:fptr>
+           </mets:div>
+           <mets:div LABEL="Outro" ORDER="2">
+             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
+               <mets:area FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:18" END="00:01:13" BETYPE="TIME"/>
+             </mets:fptr>
            </mets:div>
         </mets:div>
-      </mets:structMap>
-     </mets:mets>
+       </mets:structMap>
+      </mets:mets>
 
-The resulting output in the Archivematica AIP would be:
+The resulting output in the Archivematica AIP METS file will be:
 
 .. code:: xml
 
    <mets:structMap TYPE="logical" ID="structMap_2">
-     <mets:div TYPE="Short Listen: Ferdinand, the Misunderstood Bull by With Good Reason" LABEL="documentary">
-        <mets:div TYPE="track" LABEL="Complete documentary">
-          <mets:fptr FILEID="file-a96caae3-d15b-4dcd-851e-0369805b0751"/>
-        </mets:div>
+     <mets:div TYPE="track" LABEL="Complete documentary">
+       <mets:div LABEL="Introduction" ORDER="1">
+         <mets:fptr FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
+           <mets:area FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:00" END="00:00:17" BETYPE="TIME"/>
+         </mets:fptr>
+       </mets:div>
+       <mets:div LABEL="Outro" ORDER="2">
+         <mets:fptr FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
+           <mets:area FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:18" END="00:01:13" BETYPE="TIME"/>
+        </mets:fptr>
+      </mets:div>
     </mets:div>
    </mets:structMap>
+
+Here is another example of a custom METS structural map for a simple book. The
+transfer's ``objects/`` directory contains all of the digital files used to
+compile the book. The transfer's ``metadata/`` directory contains the following
+``mets_structmap.xml`` file to define the structure of the book:
+
+.. code:: xml
+
+   <?xml version="1.0" encoding="utf-8"?>
+     <mets:mets xmlns:mets="http://www.loc.gov/METS/">
+       <mets:structMap TYPE="logical">
+         <mets:div TYPE="book" LABEL="How to create a hierarchical book">
+           <mets:div TYPE="page" LABEL="Cover">
+             <mets:fptr FILEID="cover.jpg" CONTENTIDS="objects/cover.jpg"/>
+           </mets:div>
+           <!-- cover -->
+           <mets:div TYPE="page" LABEL="Inside cover">
+             <mets:fptr FILEID="inside_cover.jpg" CONTENTIDS="objects/inside_cover.jpg"/>
+           </mets:div>
+           <!-- inside cover -->
+           <mets:div TYPE="chapter" LABEL="Chapter 1">
+             <mets:div TYPE="page" LABEL="Page 1">
+               <mets:fptr FILEID="page_01.jpg" CONTENTIDS="objects/page_01.jpg"/>
+             </mets:div>
+             <mets:div TYPE="subchapter" LABEL="Subchapter 1.1">
+               <mets:div TYPE="page" LABEL="Page 2">
+                 <mets:fptr FILEID="page_02.jpg" CONTENTIDS="objects/page_02.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 3">
+                 <mets:fptr FILEID="page_03.jpg" CONTENTIDS="objects/page_03.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 4">
+                 <mets:fptr FILEID="page_04.jpg" CONTENTIDS="objects/page_04.jpg"/>
+               </mets:div>
+               <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
+                 <mets:div TYPE="page" LABEL="Page 5">
+                   <mets:fptr FILEID="page_05.jpg" CONTENTIDS="objects/page_05.jpg"/>
+                 </mets:div>
+                 <mets:div TYPE="page" LABEL="Page 6">
+                   <mets:fptr FILEID="page_06.jpg" CONTENTIDS="objects/page_06.jpg"/>
+                 </mets:div>
+                 <mets:div TYPE="page" LABEL="Page 7">
+                   <mets:fptr FILEID="page_07.jpg" CONTENTIDS="objects/page_07.jpg"/>
+                 </mets:div>
+                </mets:div>
+                <!-- Subchapter 1.2 -->
+              </mets:div>
+              <!-- Subchapter 1.1 -->
+            </mets:div>
+            <!-- Chapter 1 -->
+            <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
+            <mets:div TYPE="afterword" LABEL="Afterword">
+              <mets:div TYPE="page" LABEL="Page 20">
+                <mets:fptr FILEID="page_20.jpg" CONTENTIDS="objects/page_20.jpg"/>
+              </mets:div>
+            </mets:div>
+            <!-- afterword -->
+            <mets:div TYPE="index" LABEL="Index">
+              <mets:div TYPE="page" LABEL="Index, page 1">
+                <mets:fptr FILEID="index_01.jpg" CONTENTIDS="objects/index_01.jpg"/>
+              </mets:div>
+              <mets:div TYPE="page" LABEL="Index, page 2">
+                <mets:fptr FILEID="index_02.jpg" CONTENTIDS="objects/index_02.jpg"/>
+              </mets:div>
+            </mets:div>
+            <!-- index -->
+            <mets:div TYPE="page" LABEL="Back cover">
+              <mets:fptr FILEID="back_cover.jpg" CONTENTIDS="objects/back_cover.jpg"/>
+            </mets:div>
+            <!-- back cover -->
+        </mets:div>
+        <!-- book -->
+  </mets:structMap>
+</mets:mets>
 
 :ref:`Back to the top <import-metadata>`
