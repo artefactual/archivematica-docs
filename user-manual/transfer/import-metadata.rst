@@ -491,4 +491,72 @@ to match the UUID value for these files in the Archivematica AIP.
       </mets:structMap>
    </mets:mets>
 
+   </mets:structMap>
+
+The resulting output in the Archivematica AIP METS file will be:
+
+.. code:: xml
+
+   <mets:structMap TYPE="logical" ID="structMap_2">
+       <mets:div TYPE="book" LABEL="How to create a hierarchical book">
+         <mets:div TYPE="page" LABEL="Cover">
+           <mets:fptr FILEID="file-89dea0eb-663f-4c86-b2e0-4f41a7654fcd" CONTENTIDS="objects/cover.jpg"/>
+         </mets:div>
+         <mets:div TYPE="page" LABEL="Inside cover">
+           <mets:fptr FILEID="file-fd3f32cc-eef2-4d8e-aa1c-a9ad06ac03b4" CONTENTIDS="objects/inside_cover.jpg"/>
+         </mets:div>
+         <mets:div TYPE="chapter" LABEL="Chapter 1">
+           <mets:div TYPE="page" LABEL="Page 1">
+             <mets:fptr FILEID="file-709ff24e-7594-4bae-b5fe-9be1103805fb" CONTENTIDS="objects/page_01.jpg"/>
+           </mets:div>
+           <mets:div TYPE="subchapter" LABEL="Subchapter 1.1">
+             <mets:div TYPE="page" LABEL="Page 2">
+               <mets:fptr FILEID="file-12b79f5e-853e-4767-a1f8-221540e2df63" CONTENTIDS="objects/page_02.jpg"/>
+             </mets:div>
+             <mets:div TYPE="page" LABEL="Page 3">
+               <mets:fptr FILEID="file-a2c1ec4b-e165-4c67-94f1-6d63aa78df1a" CONTENTIDS="objects/page_03.jpg"/>
+             </mets:div>
+             <mets:div TYPE="page" LABEL="Page 4">
+               <mets:fptr FILEID="file-cc4474e7-0640-4824-8c30-fd9309b752ca" CONTENTIDS="objects/page_04.jpg"/>
+             </mets:div>
+             <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
+               <mets:div TYPE="page" LABEL="Page 5">
+                 <mets:fptr FILEID="file-5d19ca92-5f93-46c6-a1bd-65b3c6af8025" CONTENTIDS="objects/page_05.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 6">
+                 <mets:fptr FILEID="file-7f760fdd-173c-4158-a673-b8231ae30d1c" CONTENTIDS="objects/page_06.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 7">
+                 <mets:fptr FILEID="file-3db99d4e-323a-4d75-be45-74772597d560" CONTENTIDS="objects/page_07.jpg"/>
+               </mets:div>
+             </mets:div>
+             <!-- Subchapter 1.2 -->
+           </mets:div>
+           <!-- Subchapter 1.1 -->
+         </mets:div>
+         <!-- Chapter 1 -->
+         <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
+         <mets:div TYPE="afterword" LABEL="Afterword">
+           <mets:div TYPE="page" LABEL="Page 20">
+             <mets:fptr FILEID="file-465bb720-a801-401e-880f-49a1416cb444" CONTENTIDS="objects/page_20.jpg"/>
+           </mets:div>
+         </mets:div>
+         <!-- afterword -->
+         <mets:div TYPE="index" LABEL="Index">
+           <mets:div TYPE="page" LABEL="Index, page 1">
+             <mets:fptr FILEID="file-6a3be87f-a0e1-4d6f-bd39-aef8fe289542" CONTENTIDS="objects/index_01.jpg"/>
+           </mets:div>
+           <mets:div TYPE="page" LABEL="Index, page 2">
+             <mets:fptr FILEID="file-9af8ab15-ff76-4094-8114-0e94d9245093" CONTENTIDS="objects/index_02.jpg"/>
+           </mets:div>
+         </mets:div>
+         <!-- index -->
+         <mets:div TYPE="page" LABEL="Back cover">
+           <mets:fptr FILEID="file-335db20c-752f-4a94-a679-4fde4d2777f5" CONTENTIDS="objects/back_cover.jpg"/>
+         </mets:div>
+         <!-- back cover -->
+       </mets:div>
+       <!-- book -->
+   </mets:structMap>
+
 :ref:`Back to the top <import-metadata>`
