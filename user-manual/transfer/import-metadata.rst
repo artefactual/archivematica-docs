@@ -356,8 +356,8 @@ Importing structural metadata with mets_structmap.xml
 -----------------------------------------------------
 
 The files transferred to Archivematica may have a coherent hierarchical
-or logical structure (e.g. sections of a book or report) that has already
-been described in a METS structural map. Users can import these by
+or logical structure (e.g. sections of a book or parts of an audio file) that
+has already been described in a METS structural map. Users can import these by
 including a file called ``mets_structmap.xml`` in their transfer's
 ``/metadata`` directory. The files referenced in this structural map should be
 included in the transfer's ``/objects`` directory.
@@ -367,8 +367,9 @@ package's METS file by assigning it a unique structural map ID. It will also
 update the file pointers (``mets:fptr``) to use the UUIDs created by
 Archivematica for the files in its archival information packages.
 
-Note that Archivematica requires that ``CONTENTIDS`` attributes must be used
-with the ``objects/`` prefix to correctly map files to IDs.
+Note that Archivematica requires that ``CONTENTIDS`` attributes in ``mets:fptr``
+elements must be used with the ``objects/`` prefix to correctly map files to IDs
+.
 
 **Example mets_structmap.xml**
 
@@ -415,8 +416,11 @@ The resulting output in the Archivematica AIP METS file will be:
 
 Here is another example of a custom METS structural map for a simple book. The
 transfer's ``objects/`` directory contains all of the digital files used to
-compile the book. The transfer's ``metadata/`` directory contains the following
-``mets_structmap.xml`` file to define the structure of the book:
+compile the book (e.g. cover.jpg, inside_cover.jpg, page_01.jpg, etc.) The
+transfer's ``metadata/`` directory contains the following ``mets_structmap.xml``
+file to define the structure of the book. Upon import, Archivematica will add a
+unique ID to the ``structMap`` element and update all the ``FILEID`` attributes
+to match the UUID value for these files in the Archivematica AIP.
 
 .. code:: xml
 
@@ -484,7 +488,7 @@ compile the book. The transfer's ``metadata/`` directory contains the following
             <!-- back cover -->
         </mets:div>
         <!-- book -->
-  </mets:structMap>
-</mets:mets>
+      </mets:structMap>
+   </mets:mets>
 
 :ref:`Back to the top <import-metadata>`
