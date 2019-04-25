@@ -450,20 +450,20 @@ to match the UUID value for these files in the Archivematica AIP.
                <mets:div TYPE="page" LABEL="Page 4">
                  <mets:fptr FILEID="page_04.jpg" CONTENTIDS="objects/page_04.jpg"/>
                </mets:div>
-               <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
-                 <mets:div TYPE="page" LABEL="Page 5">
-                   <mets:fptr FILEID="page_05.jpg" CONTENTIDS="objects/page_05.jpg"/>
-                 </mets:div>
-                 <mets:div TYPE="page" LABEL="Page 6">
-                   <mets:fptr FILEID="page_06.jpg" CONTENTIDS="objects/page_06.jpg"/>
-                 </mets:div>
-                 <mets:div TYPE="page" LABEL="Page 7">
-                   <mets:fptr FILEID="page_07.jpg" CONTENTIDS="objects/page_07.jpg"/>
-                 </mets:div>
-                </mets:div>
-                <!-- Subchapter 1.2 -->
-              </mets:div>
-              <!-- Subchapter 1.1 -->
+             </mets:div>
+             <!-- Subchapter 1.1 -->
+             <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
+               <mets:div TYPE="page" LABEL="Page 5">
+                 <mets:fptr FILEID="page_05.jpg" CONTENTIDS="objects/page_05.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 6">
+                 <mets:fptr FILEID="page_06.jpg" CONTENTIDS="objects/page_06.jpg"/>
+               </mets:div>
+               <mets:div TYPE="page" LABEL="Page 7">
+                 <mets:fptr FILEID="page_07.jpg" CONTENTIDS="objects/page_07.jpg"/>
+               </mets:div>
+             </mets:div>
+             <!-- Subchapter 1.2 -->
             </mets:div>
             <!-- Chapter 1 -->
             <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
@@ -519,20 +519,20 @@ The resulting output in the Archivematica AIP METS file will be:
              <mets:div TYPE="page" LABEL="Page 4">
                <mets:fptr FILEID="file-cc4474e7-0640-4824-8c30-fd9309b752ca" CONTENTIDS="objects/page_04.jpg"/>
              </mets:div>
-             <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
-               <mets:div TYPE="page" LABEL="Page 5">
-                 <mets:fptr FILEID="file-5d19ca92-5f93-46c6-a1bd-65b3c6af8025" CONTENTIDS="objects/page_05.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 6">
-                 <mets:fptr FILEID="file-7f760fdd-173c-4158-a673-b8231ae30d1c" CONTENTIDS="objects/page_06.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 7">
-                 <mets:fptr FILEID="file-3db99d4e-323a-4d75-be45-74772597d560" CONTENTIDS="objects/page_07.jpg"/>
-               </mets:div>
-             </mets:div>
-             <!-- Subchapter 1.2 -->
            </mets:div>
            <!-- Subchapter 1.1 -->
+           <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
+             <mets:div TYPE="page" LABEL="Page 5">
+               <mets:fptr FILEID="file-5d19ca92-5f93-46c6-a1bd-65b3c6af8025" CONTENTIDS="objects/page_05.jpg"/>
+             </mets:div>
+             <mets:div TYPE="page" LABEL="Page 6">
+               <mets:fptr FILEID="file-7f760fdd-173c-4158-a673-b8231ae30d1c" CONTENTIDS="objects/page_06.jpg"/>
+             </mets:div>
+             <mets:div TYPE="page" LABEL="Page 7">
+               <mets:fptr FILEID="file-3db99d4e-323a-4d75-be45-74772597d560" CONTENTIDS="objects/page_07.jpg"/>
+             </mets:div>
+           </mets:div>
+           <!-- Subchapter 1.2 -->
          </mets:div>
          <!-- Chapter 1 -->
          <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
