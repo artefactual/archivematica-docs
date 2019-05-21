@@ -4,130 +4,169 @@
 Forensic disk images
 ====================
 
-Workflow
---------
+Archivematica supports the preservation of forensic disk images. Selecting the
+disk image :ref:`transfer type <transfer-types>` is not required to preserve
+disk images - you can use the standard transfer type or the bag transfer types,
+if your disk image is also bagged. However, the disk image transfer type does
+give you an extra disk image-specific metadata form where you can record
+information about the imaging process.
 
-**Preconfigured workflow choices**
+*On this page*
 
-If you are processing disk images, you will want to adjust the Archivematica
-default configuration options in the Administration tab of the dashboard for
-some decision points in the workflow. Archivematica default is to extract
-content from any packages, which includes forensic image formats as well as
-compressed content like zip files, and to then delete the package itself (though
-the metadata and logs for the package are retained in the metadata and logs). To
-make these decisions in the dashboard processing workflow:
+* :ref:`Workflow configuration options <disk-image-configuration-options>`
 
-* Deselect 'Extract packages' - If you find you are selecting YES or NO most
-  of the time, you can preconfigure this choice accordingly to YES or NO in
-  the administration tab of the dashboard instead.
+* :ref:`Using the disk image transfer type <disk-image-workflow>`
 
-* Deselect 'Examine contents' - If you find you are selecting YES or NO most
-  of the time, you can preconfigure this choice accordingly to YES or NO in
-  the administration tab of the dashboard instead.
+  * :ref:`Compound disk images <compound-disk-images>`
 
-* Deselect 'Delete packages after extraction' - If you find you are selecting
-  YES or NO most of the time, you can preconfigure this choice accordingly to
-  YES or NO in the administration tab of the dashboard instead.
+.. _disk-image-configuration-options:
 
-.. seealso::
+Workflow configuration options
+------------------------------
 
-   :ref:`Processing configuration <dashboard-processing>`
+If you are processing disk images, you may want to adjust Archivematica's
+:ref:`processing configuration <dashboard-processing>` options in the
+Administration tab of the dashboard.
 
+For more information on the processing configuration fields, see
+:ref:`Fields and options <processing-config-fields>`.
 
-Upload image to dashboard
--------------------------
+Extract packages
+++++++++++++++++
 
-1. Select Disk Image type from the drown-down menu on the Transfer tab of the
-   dashboard.
+Archivematica can be configured to extract the contents from a package, which
+includes forensic image formats as well as compressed content like ZIP files.
 
-2. Add metadata from the imaging process if desired by clicking on the report
-   button.
+However, extracting the contents of a forensic disk image can cause major
+performance issues, since disk images often contain many thousands of system
+files that need to be subsequently processed in Archivematica. This can result
+in failures. We recommend not extracting forensic image formats. This can be set
+in the processing configuration by setting the *Extract packages* job to "No".
 
-.. figure:: images/forensic-start.*
-   :align: center
-   :figwidth: 70%
-   :width: 100%
-   :alt: Click on the report button to add metadata
+If you would like to extract forensic image formats anyway, you can set the
+*Extract packages* job to "Yes". However, we recommend testing this at scale to
+ensure that it is a viable workflow for your deployment. One scalability option
+that can help to mitigate the processing load caused by extraction is turning
+off `FITS`_, which is the default characterization tool that will run on every
+extracted file. For more information, see :ref:`Preservation Action Rules
+<disable-fpr-rules>` on the Scalability page.
 
-   Click on the report button to add metadata
+Delete packages after extraction
+++++++++++++++++++++++++++++++++
 
+If you have chosen to extract files, Archivematica can be configured to delete
+the original package (the metadata and logs for the package are retained). This
+can save space in the resulting AIP. The original package can also be retained.
 
-Enter your metadata and click save before navigating back to the Transfer tab.
+To have Archivematica automatically delete forensic image formats once the files
+have been extracted, set the *Delete packages after extraction* job to "Yes". If
+you would prefer to retain the file after extraction, set the job to "No".
 
-.. figure:: images/forensic-metadata-template.*
-   :align: center
-   :figwidth: 70%
-   :width: 100%
-   :alt: Forensic disk image metadata template
+Examine contents
+++++++++++++++++
 
-   Fill in the metadata template and click save. Then navigate back to Transfer
-   to continue.
+The examine contents microservice runs `Bulk Extractor`_, a forensics tool that
+can recognize credit card numbers, social security numbers, and other patterns
+in data. The microservice creates log files that can be inspected later on.
 
-You may begin entering metadata for the next image loading to the dashboard by
-clicking on the Add Next button to the right of Start Transfer.
+Examine contents is another microservice that can result in increased processing
+time, especially if it is running on the contents of an extracted forensic disk
+image. If you are not extracting contents, running Bulk Extractor is
+questionably useful, as the disk image itself is not likely to generate any
+results.
 
-.. figure:: images/forensic-add-next.*
-   :align: center
-   :figwidth: 70%
-   :width: 100%
-   :alt: Add the metadata for the next image by clicking Add Next
+We recommend setting the *Examine contents* job to "No", so that Bulk Extractor
+does not run. If you would like to run Bulk Extractor on the extracted contents
+of a forensic disk image, we strongly recommend testing this workflow at scale
+to ensure that the Archivematica site is properly resourced to handle the
+processing load.
 
-   Add the metadata for the next image by clicking Add Next
+.. _disk-image-workflow:
 
-After an image is loaded, you can add or edit that metadata using the icon
-next to the loaded image below the transfer upload form. If you are loading
-multiple images at once, the Add Next button will apply to the next current
-upload. This metadata is included as another dmdsec in the transfer METS.xml.
+Using the disk image transfer type
+----------------------------------
 
+#. Select *Disk image* from the Transfer type drop-down menu on the Transfer tab
+   of the dashboard. Give your transfer a name.
 
-3. Once all images are loaded to the dashboard and all metadata is added, select
-   Start Transfer.
+#. From the transfer browser, choose your forensic disk image and click **Add**.
+   Note that it must be contained within a directory.
 
-4. Continue though regular Transfer workflow. We recommend selecting FIDO for
-   format identification as some images from Kryoflux and raw disk images can
-   have generic extensions. You can preconfigure Archivematica to choose FIDO
-   for identification in the Administration tab of the dashboard when you are
-   signed in as a administrative user.
+#. If you would like to add metadata about the imaging process by which the disk
+   image was created, click on the metadata icon to the right of the filename.
+   This will open the metadata form in a new tab.
 
-5. At the Extract packages microservice, you can choose YES to extract content
-   objects from the image. You can choose NO if you would like to continue
-   processing the image itself without extract its content for automated
-   analysis. Format policy rules for extraction are set using the Format Policy
-   Registry in the Preservation Planning tab of the dashboard. For BitCurator 
-   integration, only exported RAW files can use the Extract microservice.
+   .. figure:: images/forensic-start.*
+      :align: center
+      :figwidth: 70%
+      :width: 100%
+      :alt: Click on the report button to add metadata
 
-    * If you choose YES, Archivematica will also ask you if you'd like to delete
-      the package itself once extraction of its contents is complete. Here, you
-      can choose YES or NO.
+      Click on the report button to add metadata
 
-During this workflow, some deviations from standard microservice behaviors
-occur:
+#. Enter your metadata and click **Save**, then close the tab.
 
-1. The Characterize and extract metadata microservice runs a tool called fiwalk
-   on digital forensic images.
+   .. figure:: images/forensic-metadata-template.*
+      :align: center
+      :figwidth: 70%
+      :width: 100%
+      :alt: Forensic disk image metadata template
 
-2. The Examine contents microservice allows you to choose whether you would like
-   to run a tool called bulk extractor, which identifies and outputs text
-   reports about PII information contained in the set of objects. These reports
-   can be analyzed later using other tools such as BitCurator. In Archivematica,
-   the reports are contained in the logs folder of the transfer, and later the
-   logs folder for each SIP that all or part of the transfer is contained
-   within.
+      Fill in the metadata template and click save.
+
+   .. important::
+
+      The metadata form opens in a new tab. After clicking save, you **must** close
+      the new tab to go back to your in-progress transfer, rather than clicking on
+      the Transfer tab from the metadata form.
+
+#. If you are planning to start multiple transfers, you can enter metadata for
+   the next image by clicking on **Add Next**, located to the right of **Start
+   Transfer**.
+
+   .. figure:: images/forensic-add-next.*
+      :align: center
+      :figwidth: 70%
+      :width: 100%
+      :alt: Add the metadata for the next image by clicking Add Next
+
+      Add the metadata for the next image by clicking Add Next
+
+#. Once all images are loaded to the dashboard and all metadata is added, select
+   **Start Transfer**.
+
+#. Proceed through the normal :ref:`Transfer <transfer>` and
+   :ref:`Ingest <ingest>` workflows.
 
 .. note::
 
-   This microservice can be run effectively on ALL transfer types, they do not
-   have to be digital forensic disk images.
+   Note that during the *Characterize and extract metadata* microservice,
+   `fiwalk`_ will be used on forensic disk image files.
 
-For simple image transfers, continue directly into the Ingest workflow and
-finish processing using the standard :ref:`Archivematica processing instructions
-<ingest>`.
+.. _compound-disk-images:
 
-For compound images, send each transfer part to the Transfer backlog at the end
-of the transfer workflow. Then, create your SIP from the parts using the
-transfer backlog search functionality combined with the :ref:`SIP arrange
-workflow <arrange-sip>`. Once you've selected your SIP and entered the Ingest
-workflow, finish processing using the standard :ref:`Archivematica processing
-instructions <ingest>`.
+Compound disk images
+++++++++++++++++++++
+
+You can combine multiple parts of a compound disk image into a single AIP, if
+desired, by using the backlog arrangement functionality in Archivematica.
+
+#. Start each part of the compound disk image as a single transfer, as per the
+   instructions above.
+
+#. When you reach the *Create SIP* job, select "Send to backlog". Do this for
+   each transfer.
+
+#. In the :ref:`Appraisal tab <appraisal>`, use the
+   :ref:`Arrangement <arrangement>` pane to combine your transfers into one SIP.
+
+#. Once you're happy with the arrangement, start the SIP by selecting the parent
+   directory and then clicking **Create SIP**.
+
 
 :ref:`Back to the top <forensic>`
+
+
+.. _Bulk Extractor: https://www.forensicswiki.org/wiki/Bulk_extractor
+.. _FITS: https://projects.iq.harvard.edu/fits/home
+.. _fiwalk: https://www.forensicswiki.org/wiki/Fiwalk

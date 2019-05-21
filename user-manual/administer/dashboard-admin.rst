@@ -217,7 +217,7 @@ Options:
 Examine contents
 ++++++++++++++++
 
-Run Bulk Extractor, a forensics tool that can recognize credit card numbers,
+Run `Bulk Extractor`_, a forensics tool that can recognize credit card numbers,
 social security numbers, and other patterns in data. For more information on
 reviewing Bulk Extractor logs, see the :ref:`Analysis pane <analysis_pane>` on
 the Appraisal tab.
@@ -790,3 +790,4 @@ This tab displays the version of Archivematica you're using.
 .. _Parallel bzip2 (pbzip2): https://launchpad.net/pbzip2/
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`Transifex`: https://www.transifex.com/artefactual/archivematica/
+.. _`Bulk Extractor`: https://www.forensicswiki.org/wiki/Bulk_extractor
