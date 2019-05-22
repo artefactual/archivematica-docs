@@ -7,9 +7,9 @@ Forensic disk images
 Archivematica supports the preservation of forensic disk images. Selecting the
 disk image :ref:`transfer type <transfer-types>` is not required to preserve
 disk images - you can use the standard transfer type or the bag transfer types,
-if your disk image is also bagged. However, the disk image transfer type does
-give you an extra disk image-specific metadata form where you can record
-information about the imaging process.
+if your disk image is also bagged. The disk image transfer type gives users an
+extra disk image-specific metadata form where you can record information about
+the imaging process.
 
 *On this page*
 
@@ -44,10 +44,10 @@ in failures. We recommend not extracting forensic image formats. This can be set
 in the processing configuration by setting the *Extract packages* job to "No".
 
 If you would like to extract forensic image formats anyway, you can set the
-*Extract packages* job to "Yes". However, we recommend testing this at scale to
-ensure that it is a viable workflow for your deployment. One scalability option
-that can help to mitigate the processing load caused by extraction is turning
-off `FITS`_, which is the default characterization tool that will run on every
+*Extract packages* job to "Yes". We recommend testing this at scale to ensure
+that it is a viable workflow for your deployment. One scalability option that
+can help to mitigate the processing load caused by extraction is turning off
+`FITS`_, which is the default characterization tool that will run on every
 extracted file. For more information, see :ref:`Preservation Action Rules
 <disable-fpr-rules>` on the Scalability page.
 
@@ -67,13 +67,14 @@ Examine contents
 
 The examine contents microservice runs `Bulk Extractor`_, a forensics tool that
 can recognize credit card numbers, social security numbers, and other patterns
-in data. The microservice creates log files that can be inspected later on.
+in data. Bulk Extractor creates logs that are stored in the AIP. The logs can be
+inspected by sending the transfer to the backlog and using the Examine Contents
+functionality on the :ref:`Analysis pane <analysis_pane>` in the Appraisal tab.
 
 Examine contents is another microservice that can result in increased processing
 time, especially if it is running on the contents of an extracted forensic disk
-image. If you are not extracting contents, running Bulk Extractor is
-questionably useful, as the disk image itself is not likely to generate any
-results.
+image. If you are not extracting contents, the disk image itself is not likely
+to generate any results from Bulk Extractor.
 
 We recommend setting the *Examine contents* job to "No", so that Bulk Extractor
 does not run. If you would like to run Bulk Extractor on the extracted contents
