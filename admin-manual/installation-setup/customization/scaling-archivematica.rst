@@ -24,6 +24,7 @@ implementation details to allow skilled administrators to choose and implement
 the right strategy for their institution.
 
 *On this page:*
+
 * :ref:`Scaling up: optimising on one machine <scaling-up>`
 * :ref:`Scaling out: optimising across multiple machines <scaling-out>`
 * :ref:`Process configuration strategies <config-strategies>`
@@ -350,14 +351,16 @@ performance improvements by not compressing the AIP.
 the resulting AIP is smaller, but compression also takes longer. Lower
 compression levels mean quicker compression, but a larger AIP.
 
-Preservation Action Rules
+.. _disable-fpr-rules:
+
+Preservation action rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Some of the default preservation action rules can take considerable processing
 time and resources. We have found the following rules useful to change in some
 cases.
 
-**Turn off default characterization rule:** FITS is used to characterise files
+**Turn off default characterization rule:** `FITS`_ is used to characterise files
 that don't have a recognised file format. Executing this rule takes processing
 time and adds raw output to the METS file that can be low value for some
 formats. For example, in scientific datasets with large numbers of generic text
@@ -396,3 +399,4 @@ to create (and check) than the alternatives (e.g. SHA-256).
 .. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
 .. _Dashboard: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/dashboard/install
 .. _benchmarking: https://www.itforarchivists.com/siegfried/benchmarks
+.. _FITS: https://projects.iq.harvard.edu/fits/home
