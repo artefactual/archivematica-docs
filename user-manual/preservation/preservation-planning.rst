@@ -836,6 +836,7 @@ Validation tools
 
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
 
+.. _mediaconch:
 
 MediaConch
 ^^^^^^^^^^
