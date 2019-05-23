@@ -207,7 +207,7 @@ Perform policy checks on originals
 
 If you have created policies using :ref:`MediaConch <mediaconch>`, Archivematica
 runs the original transfer materials against the policies to assess
-conformation.
+conformance.
 
 Options:
 
@@ -440,7 +440,7 @@ Options:
 .. note::
 
    If you chose `Uncompressed` or `7z without compression` in the previous step,
-   the compression algorithm will have no effect on your package.
+   the compression level will have no effect on your package.
 
 Store AIP
 +++++++++
@@ -458,7 +458,7 @@ Store AIP location
 ++++++++++++++++++
 
 Once the previous step is approved, the AIP can be automatically sent to a
-specific storage location by setting the preferred location.
+specified storage location by setting the preferred location.
 
 Options:
 
