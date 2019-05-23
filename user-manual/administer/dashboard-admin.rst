@@ -170,8 +170,8 @@ Choose whether or not to identify the format of the files in your transfer.
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Yes** - use the enabled file identification command. See :ref:`Identification
-   <identification>` for more information.*
+#. **Yes** - use the enabled file identification command. See
+   :ref:`Identification <identification>` for more information.
 #. **No** - files will not be identified.
 
 Extract packages
@@ -205,8 +205,9 @@ Options:
 Perform policy checks on originals
 ++++++++++++++++++++++++++++++++++
 
-If you create policies using MediaConch, run the policies against the transfer
-to assess conformation.
+If you have created policies using :ref:`MediaConch <mediaconch>`, Archivematica
+runs the original transfer materials against the policies to assess
+conformance.
 
 Options:
 
@@ -251,13 +252,13 @@ Options:
 Select file format identification command (Ingest)
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Choose a tool to identify the format of files in your SIP.
+Choose to identify the format of files in your SIP.
 
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes** - use the enabled file identification command. See :ref:`Identification
-   <identification>` for more information.
+#. **Yes** - use the enabled file identification command. See
+   :ref:`Identification <identification>` for more information.
 #. **No, use existing data** - re-uses file identification data from the
    transfer tab.*
 
@@ -278,7 +279,7 @@ Options:
    more information.
 #. **Do not normalize** - the AIP will contain originals only. No preservation
    or access copies are generated and no DIP will be generated.
-#. **Normalize service files preservation** - see :ref:`Transferring material
+#. **Normalize service files for access** - see :ref:`Transferring material
    with service (mezzanine) files <transfer-service-files>` for more
    information.
 #. **Normalize for access** - the AIP will contain originals only. No
@@ -396,8 +397,8 @@ metadata files that were included in your transfer.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes** - use the enabled file identification command. See :ref:`Identification
-   <identification>` for more information.*
+#. **Yes** - use the enabled file identification command. See
+   :ref:`Identification <identification>` for more information.*
 #. **No** - files will not be identified.
 
 Select compression algorithm
@@ -412,6 +413,8 @@ Options:
 #. **7z using bzip2** - a 7Zip file is created using the tool `bzip2`_.*
 #. **7z using LZMA** - a 7Zip file is created using the tool `LZMA`_.
 #. **Uncompressed** - the AIP is not compressed.
+#. **7z without compression** - a 7Zip file is created but the contents are not
+   compressed.
 #. **Parallel bzip2** - a 7Zip file is created using the tool
    `Parallel bzip2 (pbzip2)`_.
 
@@ -434,11 +437,17 @@ Options:
 #. **3 - fast compression mode** - a larger AIP that will be compressed quickly.
 #. **1 - fastest mode** - the AIP will be compressed as quickly as possible.
 
+.. note::
+
+   If you chose `Uncompressed` or `7z without compression` in the previous step,
+   the compression level will have no effect on your package.
+
 Store AIP
 +++++++++
 
-Once processing is complete, AIPs can be stored without interrupting the
-workflow in the dashboard.
+Pausing at the Store AIP microservice allows users to review the AIP contents
+prior to storage. If you do not want to manually review AIPs prior to storage,
+this can be set to bypass that review step.
 
 Options:
 
@@ -448,9 +457,8 @@ Options:
 Store AIP location
 ++++++++++++++++++
 
-If the previous step and this step are configured, all AIPs will be sent to the
-selected storage location (unless you have included a custom processing
-configuration with the transfer that defines another location).
+Once the previous step is approved, the AIP can be automatically sent to a
+specified storage location by setting the preferred location.
 
 Options:
 
