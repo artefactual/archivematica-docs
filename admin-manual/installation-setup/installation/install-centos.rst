@@ -79,14 +79,6 @@ Installation instructions
         :language: bash
         :lines: 59
 
-     .. warning:: If you are planning to use the `Sword API`_ of the
-        Archivematica Storage Service, then (due to a `known issue`_), you must
-        instruct Gunicorn to use the ``sync`` worker class:
-
-     .. code:: bash
-
-        sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/sysconfig/archivematica-storage-service'
-
    * After the package is installed, populate the SQLite database, and collect
      some static files used by django.  These tasks must be run as
      “archivematica” user.
