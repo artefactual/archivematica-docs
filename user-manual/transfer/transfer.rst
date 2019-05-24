@@ -285,11 +285,11 @@ See :ref:`Adding metadata to bags <metadata-bags>` for more information.
 Create a transfer with existing checksums
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica can verify MD5, SHA1, and SHA256 checksums that were created
-outside of Archivematica. Creating checksums outside of Archivematica is a good
-idea if you are concerned about loss of data integrity during the move into
-Archivematica. Checksums are checked during the *Verify transfer checksums*
-microservice on the Transfer tab.
+Archivematica can verify MD5, SHA1, SHA256, SHA512, and BLAKE2 checksums that
+were created outside of the system. Creating checksums outside of Archivematica
+is a good idea if you are concerned about loss of data integrity during the
+move into Archivematica. Checksums are checked during the *Verify transfer
+checksums* microservice on the Transfer tab.
 
 Checksums can be added to standard, DSpace, and disk image transfer types. Note
 that checksums are added to both unzipped and zipped transfer types as part of
@@ -297,24 +297,35 @@ the bag requirements.
 
 Checksum files are placed in the ``metadata`` directory. Note that you can also
 place descriptive and rights metadata CSVs in this directory, as per the
-:ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
-section above.
+:ref:`Transfers with descriptive and/or rights metadata
+<transfers-with-metadata>` section above.
 
 .. image:: images/transfer-with-checksums.*
    :align: center
    :width: 50%
-   :alt: A transfer containing a metadata subdirectory, which contains another subdirectory called submissionDocumentation
+   :alt: A transfer containing a metadata subdirectory, which contains another
+         subdirectory called submissionDocumentation
 
-Checksum files should be named ``checksum.md5``, ``checksum.sha1``, or
-``checksum.sha256``. The file itself should contain one line for each checksum,
-beginning with the checksum, followed by a space, followed by the file name::
+Checksum files should be named as follows:
 
-  2121dca88ad7f701d3f3e2d041004a56  beihai.tif
-  7f42199657dea535b6ad1963a6c7a2ac  bird.mp3
-  6dc1519418859ea5c20fd708e89d7254  ocr-image.png
-  4737e4dacfc9510915ea58cf12e51712  View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg
-  75388a532283b988f79206d63f65e9a2  subdirectory/piiTestDataCreditCardNumbers.txt
-  1d7193ea3b2193c79f55ea7e645503a9  subdirectory/piiTestDataSocialSecurityNumbers.txt
+* ``checksum.md5``,
+* ``checksum.sha1``,
+* ``checksum.sha256``,
+* ``checksum.sha512``, or
+* ``checksum.b2``.
+
+The checksum file itself should contain one line for each checksum, beginning
+with the checksum, followed by a space, followed by the file path. The file
+path must include the ``objects/`` directory in the path. It is recommended
+that the checksums are created when the files are sitting in a folder with
+this name to avoid having to manipulate the manifest afterwards::
+
+  2121dca88ad7f701d3f3e2d041004a56  objects/beihai.tif
+  7f42199657dea535b6ad1963a6c7a2ac  objects/bird.mp3
+  6dc1519418859ea5c20fd708e89d7254  objects/ocr-image.png
+  4737e4dacfc9510915ea58cf12e51712  objects/View_from_lookout_over_Queenstown_towards_the_Remarkables_in_spring.jpg
+  75388a532283b988f79206d63f65e9a2  objects/subdirectory/piiTestDataCreditCardNumbers.txt
+  1d7193ea3b2193c79f55ea7e645503a9  objects/subdirectory/piiTestDataSocialSecurityNumbers.txt
 
 If your checksum check fails, the *Verify transfer checksums* microservice will
 show an error and the transfer will fail. Expanding the microservice will show
