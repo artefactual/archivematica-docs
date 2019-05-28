@@ -830,6 +830,10 @@ Validation tools
 
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
 
+<<<<<<< HEAD
+=======
+.. _fpr-mediaconch:
+>>>>>>> 6140e75... Remove SWORD API sync warning (#285)
 
 MediaConch
 ^^^^^^^^^^

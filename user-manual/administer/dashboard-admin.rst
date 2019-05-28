@@ -209,8 +209,9 @@ Options:
 Perform policy checks on originals
 ++++++++++++++++++++++++++++++++++
 
-If you create policies using MediaConch, run the policies against the transfer
-to assess conformation.
+If you have created policies using :ref:`MediaConch <fpr-mediaconch>`,
+Archivematica runs the original transfer materials against the policies to
+assess conformance.
 
 Options:
 

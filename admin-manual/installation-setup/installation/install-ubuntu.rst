@@ -46,6 +46,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
+<<<<<<< HEAD
    Ubuntu 16.04 (Xenial):  
 
    .. code:: bash
@@ -56,6 +57,11 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    Ubuntu 18.04 (Bionic): 
 
    Skip this step, the package will be downloaded directly in step 4.
+=======
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 20-21
+>>>>>>> 6140e75... Remove SWORD API sync warning (#285)
 
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
@@ -65,7 +71,15 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       sudo apt-get update
       sudo apt-get upgrade
 
+<<<<<<< HEAD
 4. Install Elasticsearch (optional)
+=======
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 26
+
+5. Install Elasticsearch (optional)
+>>>>>>> 6140e75... Remove SWORD API sync warning (#285)
 
    .. note:: Skip this step if you are planning to run Archivematica in indexless
       mode (without Elasticsearch).
@@ -97,6 +111,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       sudo rm -f /etc/nginx/sites-enabled/default
       sudo ln -s /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
+<<<<<<< HEAD
    .. warning:: If you are planning to use the `Sword API`_ of the Archivematica
       Storage Service, then (due to a `known issue`_), you must instruct
       Gunicorn to use the ``sync`` worker class:
@@ -106,6 +121,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
 7. Update ``pip``. This is used to install Python dependencies for both the
+=======
+8. Update ``pip``. This is used to install Python dependencies for both the
+>>>>>>> 6140e75... Remove SWORD API sync warning (#285)
    Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
    is still a good idea to get the most recent version of ``pip``.
 
