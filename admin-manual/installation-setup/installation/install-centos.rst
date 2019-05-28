@@ -51,9 +51,7 @@ Installation instructions
       :language: bash
       :lines: 16-26
 
-   * Archivematica:
-
-      Use these commands to install the repositories:
+   * Archivematica - use these commands to install the repositories:
 
    .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
@@ -251,7 +249,7 @@ the configuration of your new server.
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
         ";
 
-  After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**).
+   After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**).
 
 3. To finish the installation, use your web browser to navigate to the
    Archivematica dashboard using the IP address of the machine on which you have
