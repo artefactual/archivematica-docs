@@ -222,6 +222,6 @@ individual user. We have documented some common advanced installation setups.
 .. _`archivematica-tech`: https://groups.google.com/forum/#!forum/archivematica-tech
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
-.. _`Archivematica user forum`: https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
+.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
 .. _`docker`: https://github.com/artefactual-labs/am/tree/master/compose
 .. _`Issue 7246`: https://projects.artefactual.com/issues/7246
