@@ -12,7 +12,7 @@ unzipped bags by using the appropriate :ref:`transfer type <transfer-types>`.
 
 * :ref:`Unzipped bags <unzipped-bags>`
 * :ref:`Zipped bags <zipped-bags>`
-* :ref:`Adding descriptive/rights metadata and submission documentation to bags <adding-metadata-bags>`
+* :ref:`Adding metadata to bags <adding-metadata-bags>`
 * :ref:`Index and search bag metadata <searching-bags>`
 
 .. _unzipped-bags:
@@ -77,26 +77,8 @@ Adding descriptive/rights metadata and submission documentation to bags
 -----------------------------------------------------------------------
 
 Similar to standard transfers, it is possible to add descriptive and rights
-metadata to unzipped and zipped bag transfers. We recommend creating the bag
-first, then adding the ``metadata`` directory and the metadata.csv and/or rights.csv
-file manually. You can also add submission documentation to the bag by adding a
-``submissionDocumentation`` directory inside the ``metadata`` directory.
-
-.. image:: images/bag-with-metadata.*
-   :align: center
-   :width: 80%
-   :alt: Image shows a directory containing a metadata folder with CSV files and submission documentation inside
-
-Even though the ``metadata`` directory, ``submissionDocumentation`` directory,
-and contents are not represented in the BagIt files (i.e. the checksum
-manifests), Archivematica will ignore the metadata directory during **Job:
-Verify bag, and restructure for compliance** so that the bag is verified
-successfully. Archivematica will then parse the metadata as usual. Note that the
-filename paths in the CSV files must reflect the structure of the bag.
-
-For more information about adding metadata and submission documentation to
-transfers in Archivematica, please see :ref:`Preparing digital objects for
-transfer <prepare-transfer>`.
+metadata to unzipped and zipped bag transfers. See :ref:`Adding metadata to bags
+<metadata-bags>` for more information.
 
 .. _searching-bags:
 

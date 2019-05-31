@@ -1,26 +1,41 @@
-.. _import-metadata:
+. _import-metadata:
 
 ===============
 Import metadata
 ===============
 
-You can import metadata by including a directory called ``metadata`` in your
-transfer. The directory can contain any type of metadata that you wish to
-preserve alongside your digital objects. The Process Metadata Directory
-Microservice will perform a number of preservation actions on objects in this
-directory.
+Archivematica can recognize descriptive and/or rights metadata that is included
+with your transfer. You can import metadata by including a directory called
+``metadata`` in your transfer. The directory can contain any type of metadata
+that you wish to preserve alongside your digital objects. The Process Metadata
+Directory Microservice will perform a number of preservation actions on objects
+in this directory.
 
-Archivematica also supports conventions for importing descriptive, rights and
-structural metadata that will transpose the contents of the metadata files
-into the METS file. Metadata in the METS file is searchable in the
-:ref:`Archival Storage <archival-storage>` tab.
+Archivematica supports conventions for importing descriptive metadata and rights
+metadata that will transpose the contents of the metadata files into the METS
+file. If you are using :ref:`AtoM <atom-setup>` or :ref:`ArchivesSpace
+<archivesspace-setup>`, metadata that is transposed to the METS can be passed on
+to these access systems for further use.
+
+Metadata that is not able to be transposed to the METS - for example,
+preservation metadata created by tool like BitCurator prior to ingest into
+Archivematica - will be preserved alongside the materials in the transfer.
+
+Descriptive and/or rights metadata can be added to standard, unzipped, zipped,
+and disk image :ref:`transfer types <transfer-types>`.
+
+Metadata in the METS file is searchable in the :ref:`Archival Storage
+<archival-storage>` tab.
 
 *On this page:*
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
-    * :ref:`Simple objects <simple-objects>`
-    * :ref:`Compound objects <compound-objects>`
+    * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
+    * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
+    * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
+* :ref:`Adding metadata to bags <metadata-bags>`
+* :ref:`Importing other types of metadata <other-metadata>`
 * :ref:`Importing structural metadata with mets_structmap.xml <structmap.xml>`
 
 .. seealso::
@@ -32,323 +47,311 @@ into the METS file. Metadata in the METS file is searchable in the
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
-Archivematica natively supports the Dublin Core Metadata Elements Set, the basic
-15 Dublin Core metadata elements. Using the ``metadata.csv`` method, users can
-also include non-Dublin Core metadata at the directory level or at the object
-level. Archivematica is able to pass Dublic Core metadata to AtoM or
-ArchivesSpace, but not any non-Dublin Core metadata.
+Archivematica natively supports the `Dublin Core Metadata Element Set`_, the
+basic 15 Dublin Core metadata elements. Using the metadata.csv method, users can
+also include :ref:`non-Dublin Core metadata <non-dc-metadata>`. Archivematica is
+able to pass Dublin Core metadata to AtoM or ArchivesSpace, but not non-Dublin
+Core metadata.
 
-Dublin Core metadata is written to the ``<dmdSec>`` of the METS file as
-``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate
-``<dmdSec>`` as ``MDTYPE="OTHER"``. A sample of the METS output is available
-below.
+Descriptive metadata can be applied to individual objects within a transfer, to
+directories within the transfer, or both.
 
-.. important::
+.. _object-metadata:
 
-   As of version 1.4, both directory and object level metadata is allowed in
-   the ``metadata.csv``. The CSV can contain only object level, only directory
-   level, or a combination of both.
+Adding descriptive metadata to individual objects
++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. Create a transfer that contains a directory called ``metadata``.
+Metadata can be applied to individual objects within a transfer. For example,
+you could apply item-level descriptive metadata to an individual image or
+multimedia file. The following steps will take you through the basic workflow
+for creating a metadata.csv file that will apply metadata to individual objects.
 
-2. For simple objects, digital objects should be placed in the top-level
-   directory.
+#. Create a transfer directory containing the digital objects you would like to
+   preserve (for more information on creating a basic transfer for
+   Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,
+   the following directory tree displays a basic transfer called
+   ``metadataTransfer``. One digital object sits within the top-level directory,
+   while another object is nested within a subdirectory.::
 
-.. figure:: images/MdfolderMDimport-10.*
-   :align: center
-   :alt: Metadata folder in transfer directory contains metadata.csv file
+    metadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    └── beihai.tif
 
-   Metadata folder in transfer directory containing metadata.csv file.
+   Note that this transfer does not currently contain any metadata.
 
-2. For compound objects, create one or more subdirectories in the
-   objects directory, each containing the files that form a compound object.
+#. Create a CSV file called metadata.csv. The example below can be used as
+   a template for Dublin Core metadata. The filename column must come first and
+   the filename path must always start with ``objects/``. Note that if you add
+   column headings that are not in the ``dc.element`` format, Archivematica will
+   not indicate that the metadata is Dublin Core.
 
-.. figure:: images/compound-csv-view.*
-   :align: center
-   :alt: Metadata folder in transfer directory with compound objects
+   .. csv-table::
+      :file: _csv/individual-metadata.csv
+      :header-rows: 1
 
-   Compound object file structure.
+   Note that empty columns (i.e. ``dc.contributor``) were left in to demonstrate
+   the full range of possible Dublin Core values. You do not need to keep empty
+   columns.
 
-.. important::
+#. Create a subdirectory called ``metadata`` and place the metadata.csv file
+   inside it.::
 
-   The subdirectory names must not contain spaces or other forbidden characters.
+    metadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    ├── beihai.tif
+    └── metadata
+       └── metadata.csv
 
-3. Add a CSV file to the metadata folder for the transfer called
-   ``metadata.csv``.
+#. :ref:`Process the transfer <process-transfer>` as usual.
 
-   * The first row of the CSV file consists of field names. Field names must not
-     include spaces.
+Any Dublin Core metadata formatted as in the example above will be transposed to
+the METS file. The METS file for the above example includes two descriptive
+metadata sections (``<dmdSec>``), one for each file in the transfer. These
+contain the Dublin Core metadata parsed from the metadata.csv. Note in the
+metadata wrapper (``<mdWrap>``) that they are given an MDTYPE of "DC". If there
+had been non-Dublin Core metadata in the metadata.csv, there would be a separate
+``<mdWrap>`` for the file with an MDTYPE of "OTHER".
 
-   * Dublin Core field names must contain the "dc" element in the name, e.g.
-     "dc.title". Note that the Dublin Core is not validated -- this is up to the
-     user.
+.. literalinclude:: scripts/individual-mets.xml
+   :language: xml
 
-   * Dublin Core terms must contain "dcterms" in the name, e.g.
-     "dcterms:abstract". As above, the Dublin Core is not validated -- this is
-     up to the user.
+.. _directory-metadata:
 
-   * Each subsequent row contains the field values for a single directory or
-     file.
+Adding descriptive metadata to a directory
+++++++++++++++++++++++++++++++++++++++++++
 
-   * For multi-value fields (such as dc.subject), the entire column is repeated
-     and each column contains a single value (i.e. there should be multiple
-     dc.subject columns if there are multiple subject terms).
+Metadata can also be applied to a directory within the transfer. For example,
+you could apply directory-level descriptive metadata to folder containing the
+pages of a book, where the metadata describes the book itself rather than the
+individual pages. The following steps will take you through the basic workflow
+for creating a metadata.csv file that will apply metadata to a directory of
+objects.
 
-   * Empty columns can be deleted, if you prefer.
+Note that the metadata.csv can contain directory-level metadata, individual
+object metadata, or a combination of both.
 
-   * The first column in the ``metadata.csv`` file must be a "filename" column.
-     This column should list the filepath and filename (e.g.
-     "objects/BrocktonOval.jp2") or directory name of each object or
-     directory (e.g. "objects/Jan021964"). Note that the filepath or directory
-     path must start with ``objects/``. This is a legacy artifact when all
-     digital objects in the transfer had to be nested in such a way.
+#. Create a transfer directory containing the digital objects you would like to
+   preserve, organized as required within subdirectories (for more information
+   on creating a basic transfer for Archivematica, see
+   :ref:`Basic transfers <basic-transfers>`.) As an example, the following
+   directory tree displays a basic transfer called ``directoryTransfer``. The
+   transfer contains two subfolders, which each contain two images.::
 
-   * If you have directory level metadata, fill out the fields on the same line
-     as the directory (e.g. objects/).
+    directoryTransfer/
+    ├── CoastNews-1964-01-02
+    │   ├── page-01.jpg
+    │   └── page-02.jpg
+    └── CoastNews-1964-01-09
+        ├── page-01.jpg
+        └── page-02.jpg
 
-   * Note that filenames can be duplicates of filenames in other subdirectories
-     if desired. For example, the name "page01.jp2" can occur in multiple
-     subdirectories.
+   Note that this transfer does not currently contain any metadata.
 
-  .. figure:: images/CsvMDimport-10.*
-     :align: center
-     :alt:  Example csv file contents
+#. Create a CSV file called metadata.csv. The example below can be used as
+   a template for Dublin Core metadata. The filename column must come first and
+   the filename path must always start with ``objects/``. In the example below,
+   the filename column contains the directory path, instead of a filename path.
 
-     Example of metadata.csv file contents
+   .. csv-table::
+      :file: _csv/directory-metadata.csv
+      :header-rows: 1
 
-4. At the Generate METS microservice, Archivematica parses the metadata in
-   ``metadata.csv`` to the METS file, as follows:
+#. Create a subdirectory called ``metadata`` and place the metadata.csv file
+   inside it.::
 
-   * All Dublin Core elements are used to generate a ``<dmdSec>`` for each
-     directory or file with ``MDTYPE="DC"``
+     directoryTransfer/
+     ├── CoastNews-1964-01-02
+     │   ├── page-01.jpg
+     │   └── page-02.jpg
+     ├── CoastNews-1964-01-09
+     │   ├── page-01.jpg
+     │   └── page-02.jpg
+     └── metadata
+         └── metadata.csv
 
-   * All non-Dublin Core elements are used to generate a ``<dmdSec>`` for each
-     directory or file with ``MDTYPE="OTHER" OTHERMDTYPE="CUSTOM"``
+#. :ref:`Process the transfer <process-transfer>` as usual.
 
-   * The ``<dmdSec>`` are linked to their directories or files in the
-     ``<structMap>`` section of the METS file.
+The METS file that results from the above example includes a ``<dmdSec>`` for
+each directory, rather than each individual file. These contain the Dublin Core
+metadata parsed from the metadata.csv.
 
-.. _simple-objects:
+.. literalinclude:: scripts/directory-mets.xml
+   :language: xml
 
-Simple objects
---------------
+.. _non-dc-metadata:
 
-This section provides CSV and METS file examples for simple objects -- i.e.
-individual files that are not pages in a compound object such as a book or a
-newspaper issue.
+Adding non-Dublin Core descriptive metadata
++++++++++++++++++++++++++++++++++++++++++++
 
-**Example Simple Objects CSV file:**
+You may wish to capture metadata elements that are not supported by the Dublin
+Core Metadata Elements Set. As shown in the examples above, Dublin Core metadata
+is written to the ``<dmdSec>`` of the METS file with the metadata type indicated
+as ``MDTYPE="DC"``. Non-Dublin Core metadata will be written into a separate
+``<dmdSec>`` as ``MDTYPE="OTHER"``.
 
-.. csv-table::
-   :file: _csv/simple-objects.csv
-   :header-rows: 1
-
-Note that empty columns (i.e. dc.contributor) were left in to demonstrate the
-full range of possible Dublin Core values. If you prefer, you can delete empty
-columns.
-
-**Example Simple Objects METS file:**
-
-Below is a snippet of the METS file, containing two descriptive metadata
-sections (``<dmdSec>``), one for each file. These contain the Dublin Core
-metadata parsed from the ``metadata.csv``. Note in the ``<mdWrap>`` that they
-are given an MDTYPE of "DC". If there had been non-Dublin Core metadata in the
-``metadata.csv``, there would be a separate ``<mdWrap>`` with an MDTYPE of
-"OTHER".
-
-.. code:: xml
-
-   <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
-    <dmdSec ID="dmdSec_1">
-      <mdWrap MDTYPE="DC">
-        <xmlData>
-          <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
-            <dc:title>Beihai, Guanxi, China, 1988</dc:title>
-            <dc:creator>NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team</dc:creator>
-            <dc:subject>satellite imagery</dc:subject>
-            <dc:subject>China|Beihai</dc:subject>
-            <dc:description>Beihai is a city in the south of Guangxi, Peoples republic of China.</dc:description>
-            <dc:publisher>NASA Jet Propulsion Laboratory</dc:publisher>
-            <dc:contributor></dc:contributor>
-            <dc:date>February 29,2016</dc:date>
-            <dc:type>image</dc:type>
-            <dc:format>image/tif</dc:format>
-            <dc:identifier></dc:identifier>
-            <dc:source>NASA Jet Propulsion Laboratory</dc:source>
-            <dc:language></dc:language>
-            <dc:relation></dc:relation>
-            <dc:coverage></dc:coverage>
-            <dc:rights>Public domain</dc:rights>
-          </dublincore>
-        </xmlData>
-      </mdWrap>
-    </dmdSec>
-    <mets:dmdSec ID="dmdSec_2">
-      <mets:mdWrap MDTYPE="DC">
-        <mets:xmlData>
-          <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
-            <dc:title>14000 Caen, France - Bird in my garden</dc:title>
-            <dc:creator>Nicolas Germain</dc:creator>
-            <dc:subject>field recording</dc:subject>
-            <dc:subject>phonography|soundscape|sound art|soundmap|radio|ephemeral|listening|radio aporee</dc:subject>
-            <dc:description>Bird singing in my garden, Caen, France, Zoom H6</dc:description>
-            <dc:publisher>Radio Aporee</dc:publisher>
-            <dc:contributor></dc:contributor>
-            <dc:date>2017-05-27</dc:date>
-            <dc:type>sound</dc:type>
-            <dc:format>audio/mp3</dc:format>
-            <dc:identifier></dc:identifier>
-            <dc:source>Internet Archive</dc:source>
-            <dc:language></dc:language>
-            <dc:relation></dc:relation>
-            <dc:coverage></dc:coverage>
-            <dc:rights>Public domain</dc:rights>
-          </dcterms:dublincore>
-        </mets:xmlData>
-      </mets:mdWrap>
-    </mets:dmdSec>
-   </mets>
-
-.. _compound-objects:
-
-Compound objects
-----------------
-
-This section provides CSV file and METS file examples for compound objects --
-i.e. multi-page digital objects such as newspapers and books.
-
-**Example Compound objects CSV file:**
+Here is an example of a metadata.csv file containing a mix of Dublin Core and
+non-Dublin Core descriptive metadata.
 
 .. csv-table::
-   :file: _csv/compound-objects.csv
+   :file: _csv/mixed-metadata.csv
    :header-rows: 1
 
+This results in a METS file containing two ``<dmdSec>`` sections for each directory
+- two with ``MDTYPE="DC"`` and two with ``MDTYPE="OTHER"``.
 
-**Example Compound Objects METS file:**
-
-.. code:: xml
-
-   <mets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/version18/mets.xsd">
-   <dmdSec ID="dmdSec_1">
-       <mdWrap MDTYPE="DC">
-           <xmlData>
-               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
-               <title>Coast News, January 02, 1964</title>
-               <subject>Gibsons (B.C.)--Newspapers</subject>
-               <description>Serving the Growing Sunshine Coast</description>
-               <publisher>Fred Cruice</publisher>
-               <date>1964/01/02</date>
-               <language>English</language>
-           </dublincore>
-       </xmlData>
-   </mdWrap>
-   </dmdSec>
-   <dmdSec ID="dmdSec_2">
-       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
-           <xmlData>
-               <alternative_title>Sunshine Coast News</alternative_title>
-               <dates_of_publication>1945-1995</dates_of_publication>
-               <frequency>Weekly</frequency>
-               <forms_part_of>British Columbia Historical Newspapers Collection</forms_part_of>
-               <repository>
-                   Sunshine Coast Museum and Archives
-               </repository>
-               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
-               <digital_image_format>image/jp2</digital_image_format>
-           </xmlData>
-       </mdWrap>
-   </dmdSec>
-   <dmdSec ID="dmdSec_3">
-       <mdWrap MDTYPE="DC">
-           <xmlData>
-               <dublincore xsi:schemaLocation="http://purl.org/dc/elements/1.1 http://dublincore.org/schemas/xmls/qdc/dc.xsd http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/2/11/dcterms.xsd">
-               <title>Coast News, January 09, 1964</title>
-               <subject>Gibsons (B.C.)--Newspapers</subject>
-               <description>Serving the Growing Sunshine Coast</description>
-               <publisher>Fred Cruice</publisher>
-               <date>1964/01/09</date>
-               <language>English</language>
-           </dublincore>
-       </xmlData>
-   </mdWrap>
-   </dmdSec>
-   <dmdSec ID="dmdSec_4">
-       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
-           <xmlData>
-               <alternative_title>Sunshine Coast News</alternative_title>
-               <dates_of_publication>1945-1995</dates_of_publication>
-               <frequency>Weekly</frequency>
-               <forms_part_of>British Columbia Historical Newspapers Collection</forms_part_of>
-               <repository>Sunshine Coast Museum and Archives</repository>
-               <project_website>http://historicalnewspapers.library.ubc.ca</project_website>
-               <digital_image_format>image/jp2</digital_image_format>
-           </xmlData>
-       </mdWrap>
-   </dmdSec>
-   <fileSec>
-       <fileGrp USE="original">
-           <file ID="page01.jp2-31e3ee5c-ff7a-4fb9-818d-e325345a5766" GROUPID="Group-31e3ee5c-ff7a-4fb9-818d-e325345a5766" ADMID="amdSec_1">
-               <FLocat xlink:href="objects/Jan021964/page01.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
-           </file>
-           <file ID="page02.jp2-626bc937-5a6e-4a32-adf4-7db7ab5a3e66" GROUPID="Group-626bc937-5a6e-4a32-adf4-7db7ab5a3e66" ADMID="amdSec_2">
-               <FLocat xlink:href="objects/Jan021964/page02.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
-           </file>
-           <file ID="page01.jp2-38e939e0-74fe-4ace-81ff-da4b89fa3481" GROUPID="Group-38e939e0-74fe-4ace-81ff-da4b89fa3481" ADMID="amdSec_3">
-               <FLocat xlink:href="objects/Jan091964/page01.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
-           </file>
-           <file ID="page02.jp2-f42aaa1b-3816-45ed-9419-193474462481" GROUPID="Group-f42aaa1b-3816-45ed-9419-193474462481" ADMID="amdSec_4">
-               <FLocat xlink:href="objects/Jan091964/page02.jp2" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
-           </file>
-       </fileGrp>
-   </fileSec>
-   <structMap TYPE="physical" LABEL="Archivematica default">
-       <div TYPE="directory" LABEL="Compound-6ef65864-d8ce-46df-b6e7-cd7d75498110">
-           <div TYPE="directory" LABEL="objects">
-               <div TYPE="directory" LABEL="Jan021964" DMDID="dmdSec_1 dmdSec_2">
-                   <div TYPE="item">
-                       <fptr FILEID="page01.jp2-31e3ee5c-ff7a-4fb9-818d-e325345a5766"/>
-                   </div>
-                   <div TYPE="item">
-                       <fptr FILEID="page02.jp2-626bc937-5a6e-4a32-adf4-7db7ab5a3e66"/>
-                   </div>
-               </div>
-               <div TYPE="directory" LABEL="Jan091964" DMDID="dmdSec_3 dmdSec_4">
-                   <div TYPE="item">
-                       <fptr FILEID="page01.jp2-38e939e0-74fe-4ace-81ff-da4b89fa3481"/>
-                   </div>
-                   <div TYPE="item">
-                       <fptr FILEID="page02.jp2-f42aaa1b-3816-45ed-9419-193474462481"/>
-                   </div>
-               </div>
-               <div TYPE="directory" LABEL="submissionDocumentation">
-                   <div TYPE="directory" LABEL="transfer-Compound-03e22333-4ce3-415f-adbf-9d392931bfb6"/>
-               </div>
-           </div>
-       </div>
-   </structMap>
-   </mets>
+.. literalinclude:: scripts/mixed-metadata-mets.xml
+   :language: xml
 
 .. _rights.csv:
 
 Importing rights metadata with rights.csv
 -----------------------------------------
 
-Rights information can be associated to specific files in a transfer by creating
-a ``rights.csv`` file that conforms to the structure below.
+Rights information can be associated with objects or directories in a transfer
+by creating a rights.csv file, similar to the metadata.csv file used for
+descriptive metadata. Archivematica implements :ref:`PREMIS metadata in
+Archivematica <premis-template>`, including PREMIS rights, as used here. Rights
+metadata added using the rights.csv will be transposed to the METS file.
 
-You can enter multiple acts for the same rights basis. Rows for the same object
-with the same rights basis will be treated as separate acts for the basis and
-merged. For example, the first two rows below will be merged, while the third
-row will be separate. You can read more about rights metadata here: :ref:`PREMIS
-metadata in Archivematica <premis-template>`.
+Rights metadata can be applied to individual objects within a transfer, to
+directories within the transfer, or both.
 
-.. csv-table::
-   :file: _csv/rights.csv
-   :header-rows: 1
+#. Create a transfer directory containing the digital objects you would like to
+   preserve. As an example, the following directory tree displays a basic transfer called
+   ``rightsTransfer``. One digital object sits within the top-level directory,
+   while another object is nested within a subdirectory.::
 
-The ``rights.csv`` file is parsed by the job "Load Rights" within the
-"Characterize and Extract Metadata" microservice run during
-:ref:`transfer <transfer>`.
+    rightsTransfer/
+    ├── audio
+    │   └── bird.mp3
+    └── beihai.tif
+
+#. Create a file called rights.csv. The example below can be used as
+   a template for PREMIS rights metadata. The filename column must come first
+   and the filename path must always start with ``objects/``.
+
+   .. csv-table::
+      :file: _csv/rights.csv
+      :header-rows: 1
+
+   Note that to enter multiple rights acts for the same basis, you must create
+   two separate rows, as with rows 1 and 2 in the example above.
+
+#. Create a subdirectory called ``metadata`` and place the rights.csv file
+   inside it.::
+
+    rightsTransfer/
+    ├── audio
+    │   └── bird.mp3
+    ├── beihai.tif
+    └── metadata
+        └── rights.csv
+
+#. :ref:`Process the transfer <process-transfer>` as usual.
+
+Any PREMIS rights metadata formatted as in the example above will be transposed to
+the METS file. The METS file for the above example includes three rights
+metadata sections (``<mets:rightsMD>``).
+
+.. literalinclude:: scripts/rights-mets.xml
+   :language: xml
+
+.. _metadata-bags:
+
+Adding metadata to bags
+-----------------------
+
+Metadata can also be added to transfers packaged in accordance with the Library
+of Congress `BagIt`_ specification (zipped or unzipped). Special care needs to
+be taken in order to ensure that Archivematica can recognize the metadata files
+and process them properly.
+
+#. Create your metadata files. In this example, we will create a metadata.csv to
+   add descriptive metadata to the individual objects in the bag.
+
+   .. csv-table::
+      :file: _csv/bag-metadata.csv
+      :header-rows: 1
+
+   Note that the filename path anticipates the structure of the bag that we will
+   create below by including the payload directory (``data``) in the path. If
+   your transfer includes subdirectories, those should be reflected in the path
+   as well.
+
+#. Assemble your transfer materials. In this example, there are two objects, one
+   of which is contained in a subdirectory, as well as the metadata directory
+   containing a metadata.csv file.::
+
+    to-be-transferred/
+    ├── audio
+    │   └── bird.mp3
+    ├── beihai.tif
+    └── metadata
+        └── metadata.csv
+
+#. Create a bag containing the material that you would like to preserve as well
+   as the metadata. The digital objects and the metadata directory have been
+   added to the payload directory (``data``).::
+
+     bagTest/
+     ├── bag-info.txt
+     ├── bagit.txt
+     ├── data
+     │   ├── audio
+     │   │   └── bird.mp3
+     │   ├── beihai.tif
+     │   └── metadata
+     │       └── metadata.csv
+     ├── manifest-md5.txt
+     └── tagmanifest-md5.txt
+
+   Note that when the metadata.csv was created in step 1, above, this structure
+   had to be anticipated. Material that you add to a bag will always be inside
+   the payload directory, so the filename path must always begin with ``data``.
+
+   The bagging program has also created the required bag files.
+
+#. :ref:`Process the transfer <process-transfer>` using the Unzipped Bag or
+   Zipped Bag transfer type.
+
+The METS file in the resulting AIP will include the metadata in the ``<dmdSec>``
+as in the non-bagged examples above.
+
+The above method can be used for metadata.csv files that apply metadata to
+a directory, for rights.csv files, and for other types of metadata that you wish
+to preserve.
+
+.. note::
+   Submission documentation can also be added to a bag using the above method.
+   The ``submissionDocumentation`` directory should be nested inside the
+   metadata directory. See :ref:`Submission documentation <create-submission>`
+   for more information.
+
+.. _other-metadata:
+
+Importing other types of metadata
+---------------------------------
+
+You can include other types of metadata files in the ``metadata`` directory
+other than the metadata.csv and rights.csv files. For example, you may want to
+preserve the output of a specialized analysis tool alongside the file. You can
+place these files in the metadata directory.::
+
+  rightsTransfer/
+  ├── video.mp4
+  └── metadata
+      ├── qctools.xml.gz
+      └── rights.csv
+
+Archivematica will run various preservation tasks on this file, just as it would
+on the metadata.csv or rights.csv. In the METS, the file will be listed in the
+file section (``<fileSec>``) alongside any other metadata files, under the file
+group (``fileGrp``) usage heading ``metadata``.
+
+.. literalinclude:: scripts/metadata-filesec.xml
+   :language: xml
 
 .. _structmap.xml:
 
@@ -359,8 +362,8 @@ The files transferred to Archivematica may have a coherent hierarchical
 or logical structure (e.g. sections of a book or parts of an audio file) that
 has already been described in a METS structural map. Users can import these by
 including a file called ``mets_structmap.xml`` in their transfer's
-``/metadata`` directory. The files referenced in this structural map should be
-included in the transfer's ``/objects`` directory.
+``metadata`` directory. The files referenced in this structural map should be
+included in the transfer's ``objects`` directory.
 
 Archivematica will merge this structural map into the archival information
 package's METS file by assigning it a unique structural map ID. It will also
@@ -368,51 +371,20 @@ update the file pointers (``mets:fptr``) to use the UUIDs created by
 Archivematica for the files in its archival information packages.
 
 Note that Archivematica requires that ``CONTENTIDS`` attributes in ``mets:fptr``
-elements must be used with the ``objects/`` prefix to correctly map files to IDs
-.
+elements must be used with the ``objects/`` prefix to correctly map files to
+IDs.
 
 **Example mets_structmap.xml**
 
 Using a minimal structural map example for an audio file:
 
-.. code:: xml
-
-   <?xml version="1.0" encoding="utf-8"?>
-     <mets:mets xmlns:mets="http://www.loc.gov/METS/">
-       <mets:structMap TYPE="logical">
-         <mets:div TYPE="track" LABEL="Complete documentary">
-           <mets:div LABEL="Introduction" ORDER="1">
-             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
-               <mets:area FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:00" END="00:00:17" BETYPE="TIME"/>
-             </mets:fptr>
-           </mets:div>
-           <mets:div LABEL="Outro" ORDER="2">
-             <mets:fptr FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
-               <mets:area FILEID="ferdinand_short_2017_01_27.mp3" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:18" END="00:01:13" BETYPE="TIME"/>
-             </mets:fptr>
-           </mets:div>
-        </mets:div>
-       </mets:structMap>
-      </mets:mets>
+.. literalinclude:: scripts/transfer-minimal-structmap.xml
+   :language: xml
 
 The resulting output in the Archivematica AIP METS file will be:
 
-.. code:: xml
-
-   <mets:structMap TYPE="logical" ID="structMap_2">
-     <mets:div TYPE="track" LABEL="Complete documentary">
-       <mets:div LABEL="Introduction" ORDER="1">
-         <mets:fptr FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
-           <mets:area FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:00" END="00:00:17" BETYPE="TIME"/>
-         </mets:fptr>
-       </mets:div>
-       <mets:div LABEL="Outro" ORDER="2">
-         <mets:fptr FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3">
-           <mets:area FILEID="file-a47cee9a-7508-4189-aa21-76ab3d02e2a2" CONTENTIDS="objects/ferdinand_short_2017_01_27.mp3" BEGIN="00:00:18" END="00:01:13" BETYPE="TIME"/>
-        </mets:fptr>
-      </mets:div>
-    </mets:div>
-   </mets:structMap>
+.. literalinclude:: scripts/structmap-in-mets.xml
+   :language: xml
 
 Here is another example of a custom METS structural map for a simple book. The
 transfer's ``objects/`` directory contains all of the digital files used to
@@ -422,141 +394,15 @@ file to define the structure of the book. Upon import, Archivematica will add a
 unique ID to the ``structMap`` element and update all the ``FILEID`` attributes
 to match the UUID value for these files in the Archivematica AIP.
 
-.. code:: xml
-
-   <?xml version="1.0" encoding="utf-8"?>
-     <mets:mets xmlns:mets="http://www.loc.gov/METS/">
-       <mets:structMap TYPE="logical">
-         <mets:div TYPE="book" LABEL="How to create a hierarchical book">
-           <mets:div TYPE="page" LABEL="Cover">
-             <mets:fptr FILEID="cover.jpg" CONTENTIDS="objects/cover.jpg"/>
-           </mets:div>
-           <!-- cover -->
-           <mets:div TYPE="page" LABEL="Inside cover">
-             <mets:fptr FILEID="inside_cover.jpg" CONTENTIDS="objects/inside_cover.jpg"/>
-           </mets:div>
-           <!-- inside cover -->
-           <mets:div TYPE="chapter" LABEL="Chapter 1">
-             <mets:div TYPE="page" LABEL="Page 1">
-               <mets:fptr FILEID="page_01.jpg" CONTENTIDS="objects/page_01.jpg"/>
-             </mets:div>
-             <mets:div TYPE="subchapter" LABEL="Subchapter 1.1">
-               <mets:div TYPE="page" LABEL="Page 2">
-                 <mets:fptr FILEID="page_02.jpg" CONTENTIDS="objects/page_02.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 3">
-                 <mets:fptr FILEID="page_03.jpg" CONTENTIDS="objects/page_03.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 4">
-                 <mets:fptr FILEID="page_04.jpg" CONTENTIDS="objects/page_04.jpg"/>
-               </mets:div>
-             </mets:div>
-             <!-- Subchapter 1.1 -->
-             <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
-               <mets:div TYPE="page" LABEL="Page 5">
-                 <mets:fptr FILEID="page_05.jpg" CONTENTIDS="objects/page_05.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 6">
-                 <mets:fptr FILEID="page_06.jpg" CONTENTIDS="objects/page_06.jpg"/>
-               </mets:div>
-               <mets:div TYPE="page" LABEL="Page 7">
-                 <mets:fptr FILEID="page_07.jpg" CONTENTIDS="objects/page_07.jpg"/>
-               </mets:div>
-             </mets:div>
-             <!-- Subchapter 1.2 -->
-            </mets:div>
-            <!-- Chapter 1 -->
-            <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
-            <mets:div TYPE="afterword" LABEL="Afterword">
-              <mets:div TYPE="page" LABEL="Page 20">
-                <mets:fptr FILEID="page_20.jpg" CONTENTIDS="objects/page_20.jpg"/>
-              </mets:div>
-            </mets:div>
-            <!-- afterword -->
-            <mets:div TYPE="index" LABEL="Index">
-              <mets:div TYPE="page" LABEL="Index, page 1">
-                <mets:fptr FILEID="index_01.jpg" CONTENTIDS="objects/index_01.jpg"/>
-              </mets:div>
-              <mets:div TYPE="page" LABEL="Index, page 2">
-                <mets:fptr FILEID="index_02.jpg" CONTENTIDS="objects/index_02.jpg"/>
-              </mets:div>
-            </mets:div>
-            <!-- index -->
-            <mets:div TYPE="page" LABEL="Back cover">
-              <mets:fptr FILEID="back_cover.jpg" CONTENTIDS="objects/back_cover.jpg"/>
-            </mets:div>
-            <!-- back cover -->
-        </mets:div>
-        <!-- book -->
-      </mets:structMap>
-   </mets:mets>
-
-   </mets:structMap>
+.. literalinclude:: scripts/book-structmap.xml
+   :language: xml
 
 The resulting output in the Archivematica AIP METS file will be:
 
-.. code:: xml
-
-   <mets:structMap TYPE="logical" ID="structMap_2">
-       <mets:div TYPE="book" LABEL="How to create a hierarchical book">
-         <mets:div TYPE="page" LABEL="Cover">
-           <mets:fptr FILEID="file-89dea0eb-663f-4c86-b2e0-4f41a7654fcd" CONTENTIDS="objects/cover.jpg"/>
-         </mets:div>
-         <mets:div TYPE="page" LABEL="Inside cover">
-           <mets:fptr FILEID="file-fd3f32cc-eef2-4d8e-aa1c-a9ad06ac03b4" CONTENTIDS="objects/inside_cover.jpg"/>
-         </mets:div>
-         <mets:div TYPE="chapter" LABEL="Chapter 1">
-           <mets:div TYPE="page" LABEL="Page 1">
-             <mets:fptr FILEID="file-709ff24e-7594-4bae-b5fe-9be1103805fb" CONTENTIDS="objects/page_01.jpg"/>
-           </mets:div>
-           <mets:div TYPE="subchapter" LABEL="Subchapter 1.1">
-             <mets:div TYPE="page" LABEL="Page 2">
-               <mets:fptr FILEID="file-12b79f5e-853e-4767-a1f8-221540e2df63" CONTENTIDS="objects/page_02.jpg"/>
-             </mets:div>
-             <mets:div TYPE="page" LABEL="Page 3">
-               <mets:fptr FILEID="file-a2c1ec4b-e165-4c67-94f1-6d63aa78df1a" CONTENTIDS="objects/page_03.jpg"/>
-             </mets:div>
-             <mets:div TYPE="page" LABEL="Page 4">
-               <mets:fptr FILEID="file-cc4474e7-0640-4824-8c30-fd9309b752ca" CONTENTIDS="objects/page_04.jpg"/>
-             </mets:div>
-           </mets:div>
-           <!-- Subchapter 1.1 -->
-           <mets:div TYPE="subchapter" LABEL="Subchapter 1.2">
-             <mets:div TYPE="page" LABEL="Page 5">
-               <mets:fptr FILEID="file-5d19ca92-5f93-46c6-a1bd-65b3c6af8025" CONTENTIDS="objects/page_05.jpg"/>
-             </mets:div>
-             <mets:div TYPE="page" LABEL="Page 6">
-               <mets:fptr FILEID="file-7f760fdd-173c-4158-a673-b8231ae30d1c" CONTENTIDS="objects/page_06.jpg"/>
-             </mets:div>
-             <mets:div TYPE="page" LABEL="Page 7">
-               <mets:fptr FILEID="file-3db99d4e-323a-4d75-be45-74772597d560" CONTENTIDS="objects/page_07.jpg"/>
-             </mets:div>
-           </mets:div>
-           <!-- Subchapter 1.2 -->
-         </mets:div>
-         <!-- Chapter 1 -->
-         <!-- Chapters 2 and 3, each with their own subchapters as in Chapter 1, omitted from this example. -->
-         <mets:div TYPE="afterword" LABEL="Afterword">
-           <mets:div TYPE="page" LABEL="Page 20">
-             <mets:fptr FILEID="file-465bb720-a801-401e-880f-49a1416cb444" CONTENTIDS="objects/page_20.jpg"/>
-           </mets:div>
-         </mets:div>
-         <!-- afterword -->
-         <mets:div TYPE="index" LABEL="Index">
-           <mets:div TYPE="page" LABEL="Index, page 1">
-             <mets:fptr FILEID="file-6a3be87f-a0e1-4d6f-bd39-aef8fe289542" CONTENTIDS="objects/index_01.jpg"/>
-           </mets:div>
-           <mets:div TYPE="page" LABEL="Index, page 2">
-             <mets:fptr FILEID="file-9af8ab15-ff76-4094-8114-0e94d9245093" CONTENTIDS="objects/index_02.jpg"/>
-           </mets:div>
-         </mets:div>
-         <!-- index -->
-         <mets:div TYPE="page" LABEL="Back cover">
-           <mets:fptr FILEID="file-335db20c-752f-4a94-a679-4fde4d2777f5" CONTENTIDS="objects/back_cover.jpg"/>
-         </mets:div>
-         <!-- back cover -->
-       </mets:div>
-       <!-- book -->
-   </mets:structMap>
+.. literalinclude:: scripts/mets-book-structmap.xml
+   :language: xml
 
 :ref:`Back to the top <import-metadata>`
+
+.. _Dublin Core Metadata Element Set: http://www.dublincore.org/specifications/dublin-core/dces/
+.. _`BagIt`: https://tools.ietf.org/html/rfc8493
