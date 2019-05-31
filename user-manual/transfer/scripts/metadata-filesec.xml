@@ -1,0 +1,10 @@
+<mets:fileSec>
+  <mets:fileGrp USE="metadata">
+    <mets:file GROUPID="Group-0befdb64-c512-4dd2-98c7-16a5a312daeb" ID="file-0befdb64-c512-4dd2-98c7-16a5a312daeb" ADMID="amdSec_3">
+      <mets:FLocat xlink:href="objects/metadata/transfers/other-md-5f6bbf43-64b1-4bed-9296-dcf458f6db0d/qctools.xml.qz" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+    </mets:file>
+    <mets:file GROUPID="Group-6852937b-cd7e-4871-ac6e-564e4e14309e" ID="file-6852937b-cd7e-4871-ac6e-564e4e14309e" ADMID="amdSec_4">
+      <mets:FLocat xlink:href="objects/metadata/transfers/other-md-5f6bbf43-64b1-4bed-9296-dcf458f6db0d/rights.csv" LOCTYPE="OTHER" OTHERLOCTYPE="SYSTEM"/>
+    </mets:file>
+  </mets:fileGrp>
+</mets:fileSec>

@@ -1,0 +1,58 @@
+<mets:dmdSec ID="dmdSec_1">
+  <mets:mdWrap MDTYPE="DC">
+    <mets:xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>Coast News, January 02, 1964 </dc:title>
+        <dc:publisher>Fred Cruice </dc:publisher>
+        <dc:subject>Gibsons (B.C.)–Newspapers </dc:subject>
+        <dc:date>1964/01/02 </dc:date>
+        <dc:description>
+          Scans of the January 2, 1964 issue of the Coast News.
+        </dc:description>
+        <dc:language>English </dc:language>
+        <dc:source>
+          British Columbia Historical Newspapers collection, https://open.library.ubc.ca/collections/bcnewspapers/xcoastnews
+        </dc:source>
+      </dcterms:dublincore>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_2">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+    <mets:xmlData>
+      <alternative_title>Sunshine Coast News </alternative_title>
+      <dates_of_publication>1945-1995 </dates_of_publication>
+      <frequency>Weekly </frequency>
+      <digital_file_format>image/jpg</digital_file_format>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_3">
+  <mets:mdWrap MDTYPE="DC">
+    <mets:xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>Coast News, January 09, 1964 </dc:title>
+        <dc:publisher>Fred Cruice </dc:publisher>
+        <dc:subject>Gibsons (B.C.)–Newspapers </dc:subject>
+        <dc:date>1964/01/09 </dc:date>
+        <dc:description>
+          Scans of the January 9, 1964 issue of the Coast News.
+        </dc:description>
+        <dc:language>English </dc:language>
+        <dc:source>
+          British Columbia Historical Newspapers collection, https://open.library.ubc.ca/collections/bcnewspapers/xcoastnews
+        </dc:source>
+      </dcterms:dublincore>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_4">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="CUSTOM">
+    <mets:xmlData>
+      <alternative_title>Sunshine Coast News </alternative_title>
+      <dates_of_publication>1945-1995 </dates_of_publication>
+      <frequency>Weekly </frequency>
+      <digital_file_format>image/jpg</digital_file_format>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>

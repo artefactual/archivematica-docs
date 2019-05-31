@@ -146,7 +146,6 @@ standard transfer. For more information on how standard transfers can be
 structured, see :ref:`basic transfers <basic-transfers>` and subsequent
 sections below.
 
-
 **Unzipped bags**: Archivematica can recognize and make use of materials that
 have been packaged according to the `BagIt File Packaging Format`_, colloquially
 known as bags. If you are in the practice of making bags before transferring
@@ -230,19 +229,11 @@ achieve specific goals relating to the preservation of the digital objects.
 Transfers with descriptive and/or rights metadata
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica can recognize descriptive and/or rights metadata that is included
-with your transfer. As long as the metadata is in a format that Archivematica
-can understand, Archivematica can parse the metadata to include it in the AIP
-METS file. If you are using AtoM or ArchivesSpace, the metadata can be passed
-on to these access systems for further use.
-
-Descriptive and/or rights metadata can be added to standard, unzipped, zipped,
-and disk image transfer types.
-
-To include descriptive and/or rights metadata with your transfer, you must add a
-subdirectory called ``metadata`` to the top level of the transfer. The metadata
-directory named is a reserved name in Archivematica; it must not be used for
-anything else.
+To include descriptive and/or rights metadata with your transfer, you should add
+a subdirectory called ``metadata`` to the top level of the transfer. The
+metadata directory name is a reserved name in Archivematica; it must not be
+used for anything else. Including the metadata directory ensures that your
+metadata files are appropriately marked as such in the METS file.
 
 .. image:: images/transfer-with-metadata.*
    :align: center
@@ -250,14 +241,13 @@ anything else.
    :alt: A transfer containing a metadata subdirectory, which contains a metadata.csv and rights.csv file
 
 For more information about importing metadata into Archivematica, including how
-to structure the metadata and rights CSV files, see :ref:`Import metadata
-<import-metadata>`.
+to structure the metadata and rights CSV files so that the contents can be
+transposed into the METS, see :ref:`Import metadata <import-metadata>`.
 
 Adding metadata to a bag
 ++++++++++++++++++++++++
 
-See :ref:`Adding descriptive/rights metadata and submission documentation to
-bags <adding-metadata-bags>` for more information.
+See :ref:`Adding metadata to bags <metadata-bags>` for more information.
 
 .. _create-submission:
 
@@ -287,8 +277,7 @@ documentation files.
 Adding submission documentation to a bag
 ++++++++++++++++++++++++++++++++++++++++
 
-See :ref:`Adding descriptive/rights metadata and submission documentation to
-bags <adding-metadata-bags>` for more information.
+See :ref:`Adding metadata to bags <metadata-bags>` for more information.
 
 .. _transfer-checksums:
 
@@ -674,7 +663,7 @@ Remove all completed transfers
 
 :ref:`Back to the top <transfer>`
 
-.. _`BagIt File Packaging Format`: https://tools.ietf.org/html/rfc8493
-.. _`DSpace`: https://duraspace.org/dspace/
-.. _`Dataverse`: https://dataverse.org/
-.. _`Bulk Extractor`: https://www.forensicswiki.org/wiki/Bulk_extractor
+.. _BagIt File Packaging Format: https://tools.ietf.org/html/rfc8493
+.. _DSpace: https://duraspace.org/dspace/
+.. _Dataverse: https://dataverse.org/
+.. _Bulk Extractor: https://www.forensicswiki.org/wiki/Bulk_extractor
