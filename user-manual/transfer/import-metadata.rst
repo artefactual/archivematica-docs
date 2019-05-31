@@ -1,4 +1,4 @@
-.. _import-metadata:
+. _import-metadata:
 
 ===============
 Import metadata
