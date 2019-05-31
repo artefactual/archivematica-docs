@@ -1,0 +1,48 @@
+<dmdSec ID="dmdSec_1">
+  <mdWrap MDTYPE="DC">
+    <xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>Beihai, Guanxi, China, 1988</dc:title>
+        <dc:creator>NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team</dc:creator>
+        <dc:subject>satellite imagery</dc:subject>
+        <dc:subject>China|Beihai</dc:subject>
+        <dc:description>Beihai is a city in the south of Guangxi, Peoples republic of China.</dc:description>
+        <dc:publisher>NASA Jet Propulsion Laboratory</dc:publisher>
+        <dc:contributor></dc:contributor>
+        <dc:date>February 29,2016</dc:date>
+        <dc:type>image</dc:type>
+        <dc:format>image/tif</dc:format>
+        <dc:identifier></dc:identifier>
+        <dc:source>NASA Jet Propulsion Laboratory</dc:source>
+        <dc:language></dc:language>
+        <dc:relation></dc:relation>
+        <dc:coverage></dc:coverage>
+        <dc:rights>Public domain</dc:rights>
+      </dublincore>
+    </xmlData>
+  </mdWrap>
+</dmdSec>
+<mets:dmdSec ID="dmdSec_2">
+  <mets:mdWrap MDTYPE="DC">
+    <mets:xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>14000 Caen, France - Bird in my garden</dc:title>
+        <dc:creator>Nicolas Germain</dc:creator>
+        <dc:subject>field recording</dc:subject>
+        <dc:subject>phonography|soundscape|sound art|soundmap|radio|ephemeral|listening|radio aporee</dc:subject>
+        <dc:description>Bird singing in my garden, Caen, France, Zoom H6</dc:description>
+        <dc:publisher>Radio Aporee</dc:publisher>
+        <dc:contributor></dc:contributor>
+        <dc:date>2017-05-27</dc:date>
+        <dc:type>sound</dc:type>
+        <dc:format>audio/mp3</dc:format>
+        <dc:identifier></dc:identifier>
+        <dc:source>Internet Archive</dc:source>
+        <dc:language></dc:language>
+        <dc:relation></dc:relation>
+        <dc:coverage></dc:coverage>
+        <dc:rights>Public domain</dc:rights>
+      </dcterms:dublincore>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>

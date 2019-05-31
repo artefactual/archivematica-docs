@@ -1,0 +1,119 @@
+<mets:rightsMD ID="rightsMD_1">
+  <mets:mdWrap MDTYPE="PREMIS:RIGHTS">
+    <mets:xmlData>
+      <premis:rightsStatement xmlns:premis="info:lc/xmlns/premis-v2" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-2.xsd">
+        <premis:rightsStatementIdentifier>
+          <premis:rightsStatementIdentifierType>UUID</premis:rightsStatementIdentifierType>
+          <premis:rightsStatementIdentifierValue>acfb8ae7-249e-4ff9-a5da-040c8160a856</premis:rightsStatementIdentifierValue>
+        </premis:rightsStatementIdentifier>
+        <premis:rightsBasis>License</premis:rightsBasis>
+        <premis:licenseInformation>
+          <premis:licenseDocumentationIdentifier>
+            <premis:licenseDocumentationIdentifierType>License documentation identifier type.</premis:licenseDocumentationIdentifierType>
+            <premis:licenseDocumentationIdentifierValue>License documentation identifier value.</premis:licenseDocumentationIdentifierValue>
+            <premis:licenseDocumentationRole>License documentation identifier role.</premis:licenseDocumentationRole>
+          </premis:licenseDocumentationIdentifier>
+          <premis:licenseTerms>Terms of license.</premis:licenseTerms>
+          <premis:licenseNote>migrate</premis:licenseNote>
+          <premis:licenseApplicableDates>
+            <premis:startDate>2000-09-09</premis:startDate>
+            <premis:endDate>2010-09-08</premis:endDate>
+          </premis:licenseApplicableDates>
+        </premis:licenseInformation>
+        <premis:rightsGranted>
+          <premis:act>allow</premis:act>
+          <premis:restriction>Conditional</premis:restriction>
+          <premis:termOfRestriction>
+            <premis:endDate>2000-09-00</premis:endDate>
+          </premis:termOfRestriction>
+          <premis:rightsGrantedNote>Grant note</premis:rightsGrantedNote>
+        </premis:rightsGranted>
+        <premis:linkingObjectIdentifier>
+          <premis:linkingObjectIdentifierType>UUID</premis:linkingObjectIdentifierType>
+          <premis:linkingObjectIdentifierValue>00367530-3d6f-4b9c-8ce7-13c7662a7a87</premis:linkingObjectIdentifierValue>
+        </premis:linkingObjectIdentifier>
+      </premis:rightsStatement>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:rightsMD>
+<mets:rightsMD ID="rightsMD_2">
+  <mets:mdWrap MDTYPE="PREMIS:RIGHTS">
+    <mets:xmlData>
+      <premis:rightsStatement xmlns:premis="info:lc/xmlns/premis-v2" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-2.xsd">
+        <premis:rightsStatementIdentifier>
+          <premis:rightsStatementIdentifierType>UUID</premis:rightsStatementIdentifierType>
+          <premis:rightsStatementIdentifierValue>4ea7a41b-fbff-414b-aad0-c10aa471c147</premis:rightsStatementIdentifierValue>
+        </premis:rightsStatementIdentifier>
+        <premis:rightsBasis>Copyright</premis:rightsBasis>
+        <premis:copyrightInformation>
+          <premis:copyrightStatus>copyrighted</premis:copyrightStatus>
+          <premis:copyrightJurisdiction>ca</premis:copyrightJurisdiction>
+          <premis:copyrightStatusDeterminationDate>2011-01-01</premis:copyrightStatusDeterminationDate>
+          <premis:copyrightNote>Note about copyright.</premis:copyrightNote>
+          <premis:copyrightDocumentationIdentifier>
+            <premis:copyrightDocumentationIdentifierType>Copyright documentation identifier type.</premis:copyrightDocumentationIdentifierType>
+            <premis:copyrightDocumentationIdentifierValue>Copyright documentation identifier value.</premis:copyrightDocumentationIdentifierValue>
+            <premis:copyrightDocumentationRole>Copyright documentation identifier role.</premis:copyrightDocumentationRole>
+          </premis:copyrightDocumentationIdentifier>
+          <premis:copyrightApplicableDates>
+            <premis:startDate>2011-01-01</premis:startDate>
+            <premis:endDate>2013-12-31</premis:endDate>
+          </premis:copyrightApplicableDates>
+        </premis:copyrightInformation>
+        <premis:rightsGranted>
+          <premis:act>disseminate</premis:act>
+          <premis:restriction>Disallow</premis:restriction>
+          <premis:termOfRestriction>
+            <premis:startDate>2011-01-01</premis:startDate>
+            <premis:endDate>2013-12-31</premis:endDate>
+          </premis:termOfRestriction>
+          <premis:rightsGrantedNote>Grant note</premis:rightsGrantedNote>
+        </premis:rightsGranted>
+        <premis:linkingObjectIdentifier>
+          <premis:linkingObjectIdentifierType>UUID</premis:linkingObjectIdentifierType>
+          <premis:linkingObjectIdentifierValue>ef3517aa-8480-4a1f-9b3d-627c25561b12</premis:linkingObjectIdentifierValue>
+        </premis:linkingObjectIdentifier>
+      </premis:rightsStatement>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:rightsMD>
+<mets:rightsMD ID="rightsMD_3">
+  <mets:mdWrap MDTYPE="PREMIS:RIGHTS">
+    <mets:xmlData>
+      <premis:rightsStatement xmlns:premis="info:lc/xmlns/premis-v2" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-2.xsd">
+        <premis:rightsStatementIdentifier>
+          <premis:rightsStatementIdentifierType>UUID</premis:rightsStatementIdentifierType>
+          <premis:rightsStatementIdentifierValue>049f1b41-d547-43a0-9130-087d0d6f9421</premis:rightsStatementIdentifierValue>
+        </premis:rightsStatementIdentifier>
+        <premis:rightsBasis>Copyright</premis:rightsBasis>
+        <premis:copyrightInformation>
+          <premis:copyrightStatus>copyrighted</premis:copyrightStatus>
+          <premis:copyrightJurisdiction>ca</premis:copyrightJurisdiction>
+          <premis:copyrightStatusDeterminationDate>2011-01-01</premis:copyrightStatusDeterminationDate>
+          <premis:copyrightNote>Note about copyright.</premis:copyrightNote>
+          <premis:copyrightDocumentationIdentifier>
+            <premis:copyrightDocumentationIdentifierType>Copyright documentation identifier type.</premis:copyrightDocumentationIdentifierType>
+            <premis:copyrightDocumentationIdentifierValue>Copyright documentation identifier value.</premis:copyrightDocumentationIdentifierValue>
+            <premis:copyrightDocumentationRole>Copyright documentation identifier role.</premis:copyrightDocumentationRole>
+          </premis:copyrightDocumentationIdentifier>
+          <premis:copyrightApplicableDates>
+            <premis:startDate>2011-01-01</premis:startDate>
+            <premis:endDate>2013-12-31</premis:endDate>
+          </premis:copyrightApplicableDates>
+        </premis:copyrightInformation>
+        <premis:rightsGranted>
+          <premis:act>use</premis:act>
+          <premis:restriction>Disallow</premis:restriction>
+          <premis:termOfRestriction>
+            <premis:startDate>2011-01-01</premis:startDate>
+            <premis:endDate>2013-12-31</premis:endDate>
+          </premis:termOfRestriction>
+          <premis:rightsGrantedNote>Grant note</premis:rightsGrantedNote>
+        </premis:rightsGranted>
+        <premis:linkingObjectIdentifier>
+          <premis:linkingObjectIdentifierType>UUID</premis:linkingObjectIdentifierType>
+          <premis:linkingObjectIdentifierValue>ef3517aa-8480-4a1f-9b3d-627c25561b12</premis:linkingObjectIdentifierValue>
+        </premis:linkingObjectIdentifier>
+      </premis:rightsStatement>
+    </mets:xmlData>
+  </mets:mdWrap>
