@@ -836,6 +836,7 @@ Validation tools
 
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
 
+.. _fpr-mediaconch:
 
 MediaConch
 ^^^^^^^^^^
@@ -978,24 +979,24 @@ You do not need to create rules for verification.
 
 :ref:`Back to the top <preservation-planning>`
 
-.. _ISO 16363:2012: http://www.iso.org/iso/catalogue_detail.htm?csnumber=56510
-.. _ExifTool: http://www.sno.phy.queensu.ca/~phil/exiftool/index.html
+.. _ISO 16363:2012: https://www.iso.org/standard/56510.html
+.. _ExifTool: https://www.sno.phy.queensu.ca/~phil/exiftool/index.html
 .. _FFprobe: http://ffmpeg.org/
 .. _FIDO: https://github.com/openpreserve/fido/
 .. _MediaConch: https://mediaarea.net/MediaConch
 .. _MediaInfo: http://mediaarea.net/en/MediaInfo
 .. _PRONOM: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx
-.. _Siegfried: http://www.itforarchivists.com/siegfried
+.. _Siegfried: https://www.itforarchivists.com/siegfried
 .. _Tesseract: https://github.com/tesseract-ocr/tesseract
 .. _fiwalk: https://www.forensicswiki.org/wiki/Fiwalk
-.. _Inkscape: https://inkscape.org/en/
+.. _Inkscape: https://inkscape.org/
 .. _convert: https://imagemagick.org/script/convert.php
 .. _FFmpeg: https://www.ffmpeg.org/
 .. _Ghostscript: https://www.ghostscript.com/
 .. _ps2pdf: https://www.ps2pdf.com/
 .. _Archivematica issues repo: https://github.com/archivematica/Issues
 .. _FITS: https://projects.iq.harvard.edu/fits/home
-.. _JHOVE: http://openpreservation.org/technology/products/jhove/
+.. _JHOVE: https://openpreservation.org/technology/products/jhove/
 .. _MediaConch documentation: https://mediaarea.net/MediaConch/Documentation/HowToUse
 .. _MediaConchOnline: https://mediaarea.net/MediaConchOnline/
 .. _7zip: https://www.7-zip.org/

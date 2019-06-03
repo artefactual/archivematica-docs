@@ -123,7 +123,7 @@ present in the selected files.
 3) Examine Contents
 ===================
 
-If Examine Contents (using the tool Bulk Extractor) was used during transfer,
+If Examine Contents (using the tool `Bulk Extractor`_) was used during transfer,
 the Examine Contents tab provides the reports created during this microservice.
 This tab includes options for listing files that potentially contain personally
 identifiable information (PII) or credit card numbers. Examine Contents also
@@ -200,7 +200,7 @@ record group, etc.). Lower levels of description nested under resources are
 “archival objects” (series, files, items, etc.). Metadata about digital files is
 managed separately as “digital objects” which can be associated with
 resources/archival objects at any level of description. More information on
-ArchivesSpace can be found at http://archivesspace.org/.
+ArchivesSpace can be found at https://archivesspace.org/.
 
 .. _searching-ArchivesSpace-resources:
 
@@ -379,3 +379,5 @@ remain in the Arrange pane until arrangement is complete and they are sent to
 Ingest.
 
 :ref:`Back to the top <appraisal>`
+
+.. _`Bulk Extractor`: https://www.forensicswiki.org/wiki/Bulk_extractor

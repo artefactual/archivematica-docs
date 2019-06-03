@@ -83,10 +83,9 @@ Installing on a virtual machine using Vagrant
    Vagrant. If you want to start using Archivematica in production, please refer
    to the other methods of installations explained under this manual.
 
-This guide will setup a new Oracle `VirtualBox
-<https://www.virtualbox.org/>`__ virtual machine with Archivematica installed on
-your computer. It works on most operating systems, including MacOS X,
-Linux, Windows, FreeBSD and others.
+This guide will set up a new Oracle `VirtualBox`_ virtual machine with
+Archivematica installed on your computer. It works on most operating systems,
+including MacOS X, Linux, Windows, FreeBSD and others.
 
 **Minimum system requirements**: 4GB RAM; 10GB disk space.
 
@@ -97,7 +96,7 @@ Install Vagrant and VirtualBox
 
 #. Install VirtualBox from https://www.virtualbox.org/ (or use your package
    manager). VirtualBox 5.2.18 or newer is required.
-#. Install Vagrant from http://www.vagrantup.com/ (or use your package manager).
+#. Install Vagrant from https://www.vagrantup.com/ (or use your package manager).
    Vagrant 2.1.4 or newer is required.
 
 Spin it up
@@ -411,7 +410,7 @@ Review AIP
    AIP. If you end up on the AIP Details page, click on the ‘download’ button.
 #. Once it's downloaded, open the AIP. You will need to a program capable of
    opening 7zip files installed on your computer. If required, you can download
-   7Zip here: http://www.7-zip.org/download.html
+   7Zip here: https://www.7-zip.org/download.html
 #. Once you have the AIP extracted, navigate through the folders until you find
    the objects directory. This directory contains the original images from your
    transfer as well as the preservation copies. You can compare the file formats
@@ -451,7 +450,7 @@ Review DIP
 #. Once you've identified which file is your DIP, click on "Download".
 #. Once it's downloaded, open the DIP. You will need to a program capable of
    opening tar files installed on your computer. 7Zip, mentioned above, can open
-   TAR files: http://www.7-zip.org/download.html
+   TAR files: https://www.7-zip.org/download.html
 #. Once you have the DIP extracted, open the objects directory. This directory
    contains the access copies derived from your original images. You can compare
    the file formats in the objects directory to the rules in the Preservation
@@ -507,8 +506,9 @@ processing more complex content, see the :ref:`User manual <user-manual>`.
 
 :ref:`Back to the top <quick-start>`
 
-.. _`OAIS Reference Model`: http://www.oclc.org/research/publications/library/2000/lavoie-oais.html
-.. _`Archivematica sandbox`: http://sandbox.archivematica.org/
-.. _`PRONOM`: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
-.. _`fmt/402`: https://www.nationalarchives.gov.uk/PRONOM/fmt/402
-.. _`METS page on the Archivematica wiki`: https://wiki.archivematica.org/METS
+.. _OAIS Reference Model: https://www.oclc.org/research/publications/library/2000/lavoie-oais.html
+.. _Archivematica sandbox: https://sandbox.archivematica.org/
+.. _PRONOM: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
+.. _fmt/402: https://www.nationalarchives.gov.uk/PRONOM/fmt/402
+.. _METS page on the Archivematica wiki: https://wiki.archivematica.org/METS
+.. _VirtualBox: https://www.virtualbox.org/

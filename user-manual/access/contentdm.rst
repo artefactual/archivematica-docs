@@ -186,6 +186,6 @@ downloaded through the web browser.
 
 :ref:`Back to the top <contentdm>`
 
-.. _`CONTENTdm project client`: http://www.contentdm.org/help6/projectclient/index.asp
-.. _`ASCII`: http://en.wikipedia.org/wiki/ASCII
+.. _`CONTENTdm project client`: https://help.oclc.org/Metadata_Services/CONTENTdm/Project_Client
+.. _`ASCII`: https://en.wikipedia.org/wiki/ASCII
 .. _`Issue 8448`: https://projects.artefactual.com/issues/8448

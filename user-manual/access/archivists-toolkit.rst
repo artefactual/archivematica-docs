@@ -271,4 +271,4 @@ PREMIS rightsGrantedNote:
 
 :ref:`Back to the top <archivists-toolkit>`
 
-.. _`PREMIS metadata: rights`: https://www.archivematica.org/wiki/PREMIS_metadata:_rights_-_0.10
+.. _`PREMIS metadata: rights`: https://wiki.archivematica.org/PREMIS_metadata:_rights_-_0.10

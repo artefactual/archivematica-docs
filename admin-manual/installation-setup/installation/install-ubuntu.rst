@@ -46,7 +46,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 20-21
-  
+
 3. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
@@ -59,7 +59,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 26
-  
+
 5. Install Elasticsearch (optional)
 
    .. note:: Skip this step if you are planning to run Archivematica in indexless
@@ -80,14 +80,6 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 31-32
-
-   .. warning:: If you are planning to use the `Sword API`_ of the Archivematica
-      Storage Service, then (due to a `known issue`_), you must instruct
-      Gunicorn to use the ``sync`` worker class:
-
-   .. code:: bash
-
-      sudo sh -c 'echo "SS_GUNICORN_WORKER_CLASS=sync" >> /etc/default/archivematica-storage-service'
 
 8. Update ``pip``. This is used to install Python dependencies for both the
    Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but

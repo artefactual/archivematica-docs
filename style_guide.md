@@ -405,10 +405,19 @@ the 80-character limit.
 .. _`Sphinx documentation generator`: http://www.sphinx-doc.org/en/master/index.html
 ```
 
+Where possible, always use permalinks. For example, when linking to a GitHub
+page, it is possible to link to a specific commit, rather than the pretty URL
+provided on the page - the pretty URL can break if the page is changed or
+moved, but the permalink remains.
+
+For more information about generating GitHub permalinks, see
+[Getting permanent links to files][Getting permanent links to files].
+
 #### Internal Links
 
 To create a hyperlink to another section of the Archivematica documentation, use
-a [link][reference label] that points to the anchor of the linked page:
+a [reference label][reference label] that points to the anchor of the linked
+page:
 
 ```
 :ref:`Processing configuration <dashboard-processing>`
@@ -616,3 +625,4 @@ This guide reuses content from the following resources:
 [Write the Docs Style Guides]: http://www.writethedocs.org/guide/writing/style-guides/
 [GNOME Documentation Style Guide]: https://developer.gnome.org/gdp-style-guide/2.32/gdp-style-guide.html
 [University of Minnesota Accessible U]: https://accessibility.umn.edu/core-skills/hyperlinks
+[Getting permanent links to files]: https://help.github.com/en/articles/getting-permanent-links-to-files

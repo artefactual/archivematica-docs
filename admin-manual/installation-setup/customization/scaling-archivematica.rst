@@ -24,6 +24,7 @@ implementation details to allow skilled administrators to choose and implement
 the right strategy for their institution.
 
 *On this page:*
+
 * :ref:`Scaling up: optimising on one machine <scaling-up>`
 * :ref:`Scaling out: optimising across multiple machines <scaling-out>`
 * :ref:`Process configuration strategies <config-strategies>`
@@ -350,14 +351,16 @@ performance improvements by not compressing the AIP.
 the resulting AIP is smaller, but compression also takes longer. Lower
 compression levels mean quicker compression, but a larger AIP.
 
-Preservation Action Rules
+.. _disable-fpr-rules:
+
+Preservation action rules
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Some of the default preservation action rules can take considerable processing
 time and resources. We have found the following rules useful to change in some
 cases.
 
-**Turn off default characterization rule:** FITS is used to characterise files
+**Turn off default characterization rule:** `FITS`_ is used to characterise files
 that don't have a recognised file format. Executing this rule takes processing
 time and adds raw output to the METS file that can be low value for some
 formats. For example, in scientific datasets with large numbers of generic text
@@ -386,13 +389,14 @@ to create (and check) than the alternatives (e.g. SHA-256).
 
 :ref:`Back to the top <scaling-archivematica>`
 
-.. _`MCPServer`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPServer/install
-.. _`MCPClient`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPClient
-.. _`MCPClient concurrency` : https://github.com/artefactual/archivematica/tree/qa/1.x/src/MCPClient#concurrency
-.. _`systemd` : https://en.wikipedia.org/wiki/Systemd
-.. _`unit file` : https://www.freedesktop.org/software/systemd/man/systemd.unit.html
-.. _`MCPClient unit file` : https://raw.githubusercontent.com/artefactual-labs/am-packbuild/qa/1.x/rpm/archivematica/etc/archivematica-mcp-client.service
-.. _`archivematicaClientModules` : https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPClient/lib/archivematicaClientModules
-.. _`Archivematica user forum` : https://groups.google.com/a/artefactual.com/forum/#!forum/archivematica
-.. _`Dashboard`: https://github.com/artefactual/archivematica/tree/qa/1.x/src/dashboard/install
-.. _`benchmarking` : https://www.itforarchivists.com/siegfried/benchmarks
+.. _MCPServer: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPServer/install
+.. _MCPClient: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPClient
+.. _MCPClient concurrency: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPClient#concurrency
+.. _systemd: https://en.wikipedia.org/wiki/Systemd
+.. _unit file: https://www.freedesktop.org/software/systemd/man/systemd.unit.html
+.. _MCPClient unit file: https://raw.githubusercontent.com/artefactual-labs/am-packbuild/qa/1.x/rpm/archivematica/etc/archivematica-mcp-client.service
+.. _archivematicaClientModules: https://github.com/artefactual/archivematica/blob/84661775836cf8037ad3b48feb8e02bb80335f0f/src/MCPClient/lib/archivematicaClientModules
+.. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
+.. _Dashboard: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/dashboard/install
+.. _benchmarking: https://www.itforarchivists.com/siegfried/benchmarks
+.. _FITS: https://projects.iq.harvard.edu/fits/home

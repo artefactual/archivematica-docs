@@ -34,7 +34,7 @@ The Binder GitHub repository includes `configuration instructions`_ for Binder.
 
 You must also configure Binder within Archivematica by entering the appropriate
 credentials and information on the Administration tab. See :ref:`AtoM/Binder DIP
-upload <admin-dashboard-atom>` for more information. 
+upload <admin-dashboard-atom>` for more information.
 
 .. _user-instructions-binder:
 
@@ -46,7 +46,7 @@ section :ref:`Upload a DIP to Binder <upload-binder>`.
 
 :ref:`Back to the top <binder-setup>`
 
-.. _`Binder documentation`: https://binder.readthedocs.io/en/latest/user-manual/overview/project-status.html
-.. _`Binder GitHub repository`: https://github.com/artefactual/binder
-.. _`installation instructions`: https://github.com/artefactual/binder#installation
-.. _`configuration instructions`: https://github.com/artefactual/binder#configuration
+.. _Binder documentation: https://binder.readthedocs.io/en/latest/user-manual/overview/project-status.html
+.. _Binder GitHub repository: https://github.com/artefactual/binder
+.. _installation instructions: https://github.com/artefactual/binder/tree/a2893fe589c67f147de440a52301c4025ad1cd4e#installation
+.. _configuration instructions: https://github.com/artefactual/binder/tree/a2893fe589c67f147de440a52301c4025ad1cd4e#configuration

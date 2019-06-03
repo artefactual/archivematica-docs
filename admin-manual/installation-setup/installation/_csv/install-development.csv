@@ -1,0 +1,4 @@
+Development environments,,
+"Docker and Linux
+",`Installing Archivematica Using Docker Compose on Linux <https://github.com/artefactual-labs/am/tree/master/compose#docker-and-linux>`_,Docker will provide instructions on how to use it as a non-root user. This may not be desirable for all.
+Docker and Mac,`Installing Archivematica Using Docker Compose on Mac <https://github.com/artefactual-labs/am/tree/master/compose#docker-and-mac>`_ ,Installation of Archivematica on machines running macOS using Docker is possible but still in development and may require some extra steps.

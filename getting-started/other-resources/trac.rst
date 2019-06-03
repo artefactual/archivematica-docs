@@ -65,7 +65,7 @@ Requirements
 In the site, each TRAC requirement has its own page. Sub- and Sub-sub
 requirements are referred to on the relevant high-level requirement page.
 Current compliance with TRAC requirements is assessed on a rating system from
-0 to 4 (see example: `SGDS report`_, page 14):
+0 to 4:
 
 *  4 = fully compliant - the repository can demonstrate that has
    comprehensively addressed the requirement
@@ -132,8 +132,7 @@ community consumption here on the Archivematica website.
 
 :ref:`Back to the top <trac>`
 
-.. _`checklist`: http://public.ccsds.org/publications/archive/652x0m1.pdf
-.. _`matrix`: http://en.wikipedia.org/wiki/Responsibility_assignment_matrix
-.. _`SGDS report`: http://206.191.128.204/trac/sites/default/files/SGDS%202009-9421%20%28D.%20BOUCON%29.pdf
-.. _`public discussion list`: https://groups.google.com/group/archivematica
-.. _`NDSA Standards and Practices Working Group`: http://www.digitalpreservation.gov/ndsa/working_groups/standards.html
+.. _`checklist`: https://public.ccsds.org/pubs/652x0m1.pdf
+.. _`matrix`: https://en.wikipedia.org/wiki/Responsibility_assignment_matrix
+.. _`public discussion list`: https://groups.google.com/forum/#!forum/archivematica
+.. _`NDSA Standards and Practices Working Group`: http://www.digitalpreservation.gov/ndsa/NDSAtoDLF.html
