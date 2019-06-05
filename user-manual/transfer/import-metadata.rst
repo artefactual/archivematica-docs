@@ -30,9 +30,12 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 *On this page:*
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
+
     * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
     * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
     * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
+    * :ref:`Adding metadata using JSON files <metadata-json>`
+
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Adding metadata to bags <metadata-bags>`
 * :ref:`Importing other types of metadata <other-metadata>`
@@ -203,6 +206,51 @@ This results in a METS file containing two ``<dmdSec>`` sections for each direct
 
 .. literalinclude:: scripts/mixed-metadata-mets.xml
    :language: xml
+
+.. _metadata-json:
+
+Adding metadata using JSON files
+++++++++++++++++++++++++++++++++
+
+It is possible to use a JSON file rather than a CSV to import Dublin Core
+metadata. The JSON file is added to the metadata directory as above.
+
+#. Create a transfer directory containing the digital objects you would like to
+   preserve (for more information on creating a basic transfer for
+   Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,
+   the following directory tree displays a basic transfer called
+   ``jsonMetadataTransfer``. One digital object sits within the top-level directory,
+   while another object is nested within a subdirectory.::
+
+    jsonMetadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    └── beihai.tif
+
+   Note that this transfer does not currently contain any metadata.
+
+#. Create a JSON file called metadata.json. The example below can be used as
+   a template for Dublin Core metadata. The filename field must come first and
+   the filename path must always start with ``objects/``. Note that if you add
+   fields that are not in the ``dc.element`` format, Archivematica will not
+   indicate that the metadata is Dublin Core.
+
+   .. literalinclude:: scripts/metadata.json
+      :language: json
+
+#. Create a subdirectory called ``metadata`` and place the metadata.json file
+   inside it.::
+
+    metadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    ├── beihai.tif
+    └── metadata
+       └── metadata.json
+
+#. :ref:`Process the transfer <process-transfer>` as usual.
+
+The METS file will be populated exactly as in the CSV examples above.
 
 .. _rights.csv:
 
