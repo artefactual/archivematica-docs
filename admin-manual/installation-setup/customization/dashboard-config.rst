@@ -24,7 +24,7 @@ dashboard, allow you to configure application components and manage users.
 * :ref:`PREMIS agent <admin-dashboard-premis>`
 * :ref:`REST API <admin-dashboard-rest>`
 * :ref:`Users <admin-dashboard-users>`
-* :ref:`Handle Server config<admin-handle-server>`
+* :ref:`Handle Server config <admin-handlenet>`
 * :ref:`Language <admin-language-choice>`
 * :ref:`Version <admin-version>`
 
@@ -365,10 +365,11 @@ click "Save".
 
 .. NOTE::
 
-   If you are planning to use the *metadata-only DIP upload to AtoM*
-   functionality don't forget to enable the :ref:`the API plugin in AtoM
-   <atom:api-intro>`, generate a API key and update the ``REST API key`` field
-   accordingly. Metadata-only upload is only available since AtoM 2.4.
+   If you are planning to use the :ref:`metadata-only DIP upload to AtoM
+   <upload-metadata-atom>` functionality don't forget to enable the :ref:`API
+   plugin in AtoM <atom:api-intro>`, generate a API key, and update the ``REST
+   API key`` field accordingly. Metadata-only DIP upload is only available if
+   you are using AtoM 2.4 or higher.
 
 AtoM server configuration
 +++++++++++++++++++++++++
@@ -824,14 +825,96 @@ should be sufficient for most users: it's quite secure, requiring massive
 amounts of computing time to break. However, other algorithms could be used as
 the following document explains: `How Django stores passwords`_ .
 
-.. _admin-handle-server:
+Our plan is to extend this functionality in the future adding groups and
+granular permissions support.
+
+.. _admin-handlenet:
 
 Handle server config
 --------------------
 
-Archivematica can to be configured to make requests to a Handle System HTTP API
-so that files, directories and entire AIPs can be assigned persistent
-identifiers (PIDS) and derived persistent URLs (PURLs).
+Archivematica can mint persistent identifiers (PIDs) for digital objects,
+directories, or AIPs by defining the PIDs in a configured `Handle.Net`_
+registry. Handle.Net can then create persistent URLs (PURLs) from the PIDs and
+can reroute requests to the persistent URLs to a target URL that is configured
+in Handle.Net.
+
+.. image:: images/handlenet-config.*
+   :align: right
+   :width: 45%
+   :alt: Handle.Net configuration settings
+
+Fields:
+
+* **Web service endpoint**: The URL for (POST) requests to create and resolve
+  PIDs.
+* **Web service key**: Web service key needed for authentication to make
+  PID-binding requests to the PID web service endpoint.
+* **Naming authority**: Handle naming authority (e.g., 12345)
+* **Resolver URL**: The URL to append generated PIDs to in order to create
+  (potentially qualified) PURLs (persistent URLs) that resolve to the applicable
+  resolve URL. Note the second "r" in "resolver"!
+* **AIP PID source**: The source of the AIP's persistent identifier. The UUID of
+  the AIP is the default since it is virtually guaranteed to be unique. However,
+  the accession number of the transfer may be used, assuming the user can
+  guarantee a 1-to-1 relationship between the transfer and the AIP.
+* **Verify SSL certificates**: Selecting this box will ensure that Archivematica
+  verifies SSL certificates when making requests to bind PIDs.
+* **Archive resolve URL template**: Template (Django or Jinja2) for the URL that
+  a unit's PURL should resolve to. Has access to ``pid`` and
+  ``naming_authority`` variables. Example:
+  ``https://access.myinstitution.org/dip/{{ naming_authority }}/{{ pid }}``
+* **METS resolve URL template**: Template (Django or Jinja2) for the URL that a
+  unit's PURL with the "mets" qualifier should resolve to. Has access to "pid"
+  and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/mets/{{ naming_authority }}/{{ pid }}``
+* **File resolve URL template**: Template (Django or Jinja2) for the URL
+  that a file's PURL should resolve to. Has access to "pid" and
+  "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``
+* **Access derivative resolve URL template**: Template (Django or Jinja2) for
+  the URL that a file's PURL with the "access" qualifier should resolve to. Has
+  access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``
+* **Preservation derivative resolve URL template**: Template (Django or Jinja2)
+  for the URL that a file's PURL with the "preservation" qualifier should
+  resolve to. Has access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/preservation/{{ naming_authority }}/{{ pid }}``
+* **Original file resolve URL template**: Template (Django or Jinja2) for the
+  URL that a file's PURL with the "original" qualifier should resolve to. Has
+  access to "pid" and "naming_authority" variables. Example:
+  ``https://access.myinstitution.org/original/{{ naming_authority }}/{{ pid }}``
+* **PID/handle request request body template**: Template (Django or Jinja2) that
+  constructs the HTTP request body using the rendered URL templates above. Has
+  access to the following variables: "pid", "naming_authority",
+  "base_resolve_url", and "qualified_resolve_urls", the last of which is a list
+  of dicts with "url" and "qualifier" keys. Example::
+
+    <?xml version='1.0' encoding='UTF-8'?>
+    <soapenv:Envelope
+      xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'
+      xmlns:pid='http://pid.myinstitution.org/'>
+      <soapenv:Body>
+        <pid:UpsertPidRequest>
+          <pid:na>{{ naming_authority }}</pid:na>
+          <pid:handle>
+            <pid:pid>{{ naming_authority }}/{{ pid }}</pid:pid>
+            <pid:locAtt>
+              <pid:location weight='1' href='{{ base_resolve_url }}'/>
+              {% for qrurl in qualified_resolve_urls %}
+                <pid:location
+                  weight='0'
+                  href='{{ qrurl.url }}'
+                  view='{{ qrurl.qualifier }}'/>
+              {% endfor %}
+            </pid:locAtt>
+          </pid:handle>
+        </pid:UpsertPidRequest>
+      </soapenv:Body>
+    </soapenv:Envelope>
+
+
+
 
 .. _admin-language-choice:
 
@@ -853,10 +936,11 @@ This tab displays the version of Archivematica you're using.
 
 :ref:`Back to the top <dashboard-config>`
 
-.. _AtoM: https://www.accesstomemory.org/
-.. _Django authentication framework: https://docs.djangoproject.com/en/1.8/topics/auth/
+.. _AtoM: www.accesstomemory.org
+.. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _Handle.Net: https://www.handle.net/index.html
+.. _PBKDF2: http://en.wikipedia.org/wiki/PBKDF2
+.. _How Django stores passwords: https://docs.djangoproject.com/en/1.4/topics/auth/#how-django-stores-passwords
 .. _automation tools: https://github.com/artefactual/automation-tools
 .. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
-.. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
-.. _How Django stores passwords: https://docs.djangoproject.com/en/1.8/topics/auth/passwords/#how-django-stores-passwords

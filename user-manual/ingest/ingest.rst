@@ -21,6 +21,7 @@ Should you run into an error during ingest, please see :ref:`Error handling
 * :ref:`Add descriptive metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
+* :ref:`Bind PIDs <bind-pids>`
 * :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
 * :ref:`Upload DIP <upload-dip>`
@@ -400,6 +401,41 @@ preservation and access format.
 
    :ref:`Manual normalization <manual-norm>`
 
+.. _bind-pids:
+
+Bind PIDs
+---------
+
+Bind PIDs refers to making use of Archivematica's integration with Handle.Net,
+a registry that assigns persistent identifiers, or handles, to information
+resources. If you do not use Handle.Net, consider setting your default
+:ref:`dashboard processing <dashboard-processing>` configuration setting for
+this Microservice to "No".
+
+If you do use Handle.Net, you can configure Archivematica to mint persistent
+identifiers (PIDs) for digital objects, directories, or AIPs by defining the
+PIDs in a configured Handle.Net registry. Handle.Net can then create persistent
+URLs (PURLs) from the PIDs and can reroute requests to the persistent URLs to a
+target URL that is configured in Handle.Net.
+
+To configure Archivematica and Handle.Net, first fill in the
+:ref:`Handle server config <admin-handlenet>` settings in the Administration
+tab.
+
+During processing, selecting *Yes* at the Bind PIDs decision point will send a
+request to the Handle.Net HTTP REST API server to mint a PID. By default, the
+PID is based on the UUID of the object. You may also use the accession number
+if you entered an accession number on the transfer screen.
+
+.. IMPORTANT::
+
+   If you are generating PIDs for the AIP as a whole, only use the accession number
+   as the basis for the PID if you can guarantee that no other AIP will use the
+   same accession number. If you will be creating multiple AIPs with the same
+   accession number, set the AIP PID source to UUID.
+
+   Note that files and directories will always use the UUID of the file or
+   directory as the basis for the PID.
 
 .. _transcribe-contents:
 

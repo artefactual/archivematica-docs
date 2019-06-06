@@ -4,9 +4,6 @@
 Using ArchivesSpace with Archivematica
 ======================================
 
-Archivematica |version| has been tested with and is recommended for use with the
-latest version of ArchivesSpace.
-
 For more information about ArchivesSpace, see the `ArchivesSpace`_ website.
 
 *On this page*
