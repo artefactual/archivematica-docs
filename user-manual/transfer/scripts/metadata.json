@@ -22,10 +22,10 @@
     "dc.creator": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team",
     "dc.description": "Beihai is a city in the south of Guangxi, People's Republic of China.",
     "dc.subject": [
-    "satellite imaging",
-    "photography",
-    "city"
-    ],
+       "satellite imaging",
+       "photography",
+       "city"
+       ],
     "dc.publisher": "NASA Jet Propulsion Laboratory",
     "dc.date": "February 29,2016",
     "dc.source": "NASA Jet Propulsion Laboratory",
