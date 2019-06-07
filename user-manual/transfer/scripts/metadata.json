@@ -3,10 +3,12 @@
     "filename": "objects/audio/bird.mp3",
     "dc.title": "14000 Caen, France - Bird in my garden",
     "dc.creator": "Nicolas Germain",
-    "dc.subject": "field recording",
-    "dc.subject": "soundscapes",
-    "dc.subject": "radio aporee",
     "dc.description": "Bird singing in my garden, Caen, France, Zoom H6",
+    "dc.subject": [
+    "field recording",
+    "soundscapes",
+    "radio aporee"
+    ],
     "dc.publisher": "Radio Aporee",
     "dc.date": "2017-05-27",
     "dc.identifier": "aporee_36644_41997",
@@ -19,6 +21,11 @@
     "dc.title": "Beihai, Guanxi, China, 1988",
     "dc.creator": "NASA/GSFC/METI/ERSDAC/JAROS and U.S./Japan ASTER Science Team",
     "dc.description": "Beihai is a city in the south of Guangxi, People's Republic of China.",
+    "dc.subject": [
+    "satellite imaging",
+    "photography",
+    "city"
+    ],
     "dc.publisher": "NASA Jet Propulsion Laboratory",
     "dc.date": "February 29,2016",
     "dc.source": "NASA Jet Propulsion Laboratory",
