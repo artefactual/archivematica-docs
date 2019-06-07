@@ -19,8 +19,7 @@ operation of Archivematica.
 
 To prevent these kinds of failures from happening, Archivematica implements
 a script that changes file and directory names to conform to the requirements of
-more restrictive tools. Valid characters are defined by `specific code`_ used by
-Archivematica:
+more restrictive tools. Valid characters are defined as the following:
 
 ``-_.()abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789``
 
@@ -87,6 +86,3 @@ PREMIS event.
    Sanitized name: %transferDirectory%objects/Česká republika.ong  ->  %transferDirectory%objects/Ceska_republika.ong
    Sanitized name: %transferDirectory%objects/Ísland.png  ->  %transferDirectory%objects/Island.png
    Sanitized name: %transferDirectory%objects/España.png  ->  %transferDirectory%objects/Espana.png
-
-
-.. _`specific code`: https://github.com/artefactual/archivematica/blob/b6dcfb07a6be5957a5085efd1fecd8462fdc3a91/src/MCPClient/lib/clientScripts/sanitizeNames.py#L34
