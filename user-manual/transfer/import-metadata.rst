@@ -238,6 +238,9 @@ metadata. The JSON file is added to the metadata directory as above.
    .. literalinclude:: scripts/metadata.json
       :language: json
 
+   Repeating fields can be listed in an array, as with ``dc.subject`` in the
+   example above.
+
 #. Create a subdirectory called ``metadata`` and place the metadata.json file
    inside it.::
 
