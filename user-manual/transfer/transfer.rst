@@ -20,6 +20,7 @@ Archivematica.
   * :ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
   * :ref:`Transfers with submission documentation <create-submission>`
   * :ref:`Transfers with existing checksums <transfer-checksums>`
+  * :ref:`Transfers with existing persistent identifiers <transfer-pids>`
   * :ref:`Transferring material with preservation or access derivatives (manual normalization) <transfer-derivatives>`
   * :ref:`Transferring material with access copies only <transfer-access-copies>`
   * :ref:`Transferring material with service (mezzanine) files <transfer-service-files>`
@@ -324,6 +325,40 @@ click on the gear icon for the job.
 
    If you are creating bags, checksum files will be created as part of the
    bagging process. You do not need to create checksums manually.
+
+
+.. _transfer-pids:
+
+Transfers with existing persistent identifiers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica can import persistent identifiers that were created
+outside of Archivematica, such as DOI identifiers or
+identifiers created by your cataloging system. You can bind these to the
+PREMIS objects created by Archivematica for your files by including an
+identifiers.json file in the metadata sub-directory.
+
+.. image:: images/identifiers.json.*
+  :align: center
+  :width: 50%
+  :alt: A transfer containing an identifiers.json file
+
+These persistent identifiers (PID) will be added during the Ingest Bind PIDs
+microservice, regardless of whether the Bind PIDs microservice is enabled or
+not.
+
+.. image:: images/PID_declaration.*
+  :align: center
+  :width: 50%
+  :alt: A persistent identifier (PID) is declared as a link to a PREMIS object
+
+Once Ingest completes, the PID will be linked to the premis:objectIdentifier in
+the AIP METS file.
+
+.. image:: images/PID_linked_to_PREMIS.*
+  :align: center
+  :width: 50%
+  :alt: PIDs linked to PREMIS objects
 
 .. _transfer-derivatives:
 
