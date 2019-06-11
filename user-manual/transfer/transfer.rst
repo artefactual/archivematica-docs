@@ -20,6 +20,7 @@ Archivematica.
   * :ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
   * :ref:`Transfers with submission documentation <create-submission>`
   * :ref:`Transfers with existing checksums <transfer-checksums>`
+  * :ref:`Transfers with existing persistent identifiers <transfer-pids>`
   * :ref:`Transferring material with preservation or access derivatives (manual normalization) <transfer-derivatives>`
   * :ref:`Transferring material with access copies only <transfer-access-copies>`
   * :ref:`Transferring material with service (mezzanine) files <transfer-service-files>`
@@ -328,8 +329,8 @@ click on the gear icon for the job.
 
 .. _transfer-pids:
 
-Create a transfer with existing persistent identifiers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Transfers with existing persistent identifiers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica can import persistent identifiers that were created
 outside of Archivematica. Perhaps your workflow includes DOI identifiers or
