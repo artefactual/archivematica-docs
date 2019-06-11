@@ -333,7 +333,7 @@ Transfers with existing persistent identifiers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica can import persistent identifiers that were created
-outside of Archivematica. Perhaps your workflow includes DOI identifiers or
+outside of Archivematica, such as DOI identifiers or
 identifiers created by your cataloging system. You can bind these to the
 PREMIS objects created by Archivematica for your files by including an
 identifiers.json file in the metadata sub-directory.
