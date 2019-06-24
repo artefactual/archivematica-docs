@@ -26,6 +26,7 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 * :ref:`ArchivesSpace Resources <archivesspace_pane>`
 * :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs <adding_files_archivesspace>`
 * :ref:`Arrangement <arrangement>`
+* :ref:`Arranging a SIP for AtoM <arranging_sip_for_atom>`
 
 .. _backlog_pane:
 
@@ -36,7 +37,7 @@ Transfers that have been sent to the backlog can be found in the Backlog pane of
 the Appraisal tab. Search the backlog by entering search terms and parameters in
 the search box at the top of the page.
 
-.. image:: images/search_backlog.*
+.. image:: images/search_backlog_2.*
    :align: center
    :width: 80%
    :alt: Search box for searching the backlog in the Appraisal tab
@@ -366,17 +367,91 @@ The arrangement pane provides options for appraising and arranging files from
 the backlog for users not using ArchivesSpace.
 
 Files from the Backlog pane can be dragged to the Arrangement pane to arrange
-the files and create SIPs.
+the files and create SIPs. To find files to include in the SIPs, search the
+backlog by entering search terms and parameters in the search box at the top of
+the page. Tick the "Show metadata & logs directory" box to include these in the
+search results.
 
-To create structure within the SIP or to create multiple SIPs, use “Add
-directory.” This button can be used to create separate directories or to create
-directories nested within other directories.
+.. image:: images/search_results_with_logs.*
+   :align: center
+   :width: 80%
+   :alt: Search results with logs and metadata files
+
+Only those objects from the transfer that are eligible for inclusion in the SIP
+will appear without a strikethrough (e.g. "Landing_zone.jpg and MARBLES.TGA")
+
+In the Arrangement pane use the “Add directory” button to create a structure for
+the SIP. Use the same button to create separate SIP directories or to create
+nested sub-directories. Drag and drop the transfer directory(ies) and/or
+object(s) you wish to arrange from the Backlog pane to the Arrangement pane.
+By dragging and dropping, you can create an arrangement structure for your SIP.
+Note that all metadata, submission documentation, and other associated data is
+also copied to the arrange pane with your object(s).
 
 Once all relevant files have been dragged from the Backlog pane to directories
 in Arrangement, select the top-level directory corresponding to the intended
 SIP, and click “Create SIP” to send the SIP to Ingest. Other directories will
 remain in the Arrange pane until arrangement is complete and they are sent to
 Ingest.
+
+Creating SIPs with tags
+=======================
+You can also use tags as a quick way to generate new SIPs. Tags can be added to
+selected files in the Backlog pane by entering a tag name and clicking the “Add
+tag to selected files” button at the top of the Backlog pane.
+
+At the top of the Arrangement pane you can select a tag and press "Create SIP".
+Archivematica will automatically generate a new SIP and send it to Ingest using
+all the files that share this tag and using the tag as the SIP name.
+
+.. image:: images/create_sip_from_tag.*
+   :align: center
+   :width: 80%
+   :alt: Creating a SIP from a tag
+
+
+.. _arranging_sip_for_atom:
+
+Arranging a SIP for AtoM
+------------------------
+
+If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish
+to add levels of description to your directories and/or objects. Archivematica
+will add a logical structMAP to the METS file, which AtoM will use to create
+information objects, applying the chosen levels of description. Note that if you
+do not apply a level of description to a digital object, AtoM will automatically
+assign it the level of "item".
+
+This functionality is supported with AtoM 2.2 and higher.
+
+#. Select a directory or object in the Arrange pane. Click the *Edit metadata*
+   button to choose the level of description.
+
+   .. image:: images/choose_lod.*
+      :align: center
+      :width: 80%
+      :alt: Choosing the AtoM level of description
+
+#. As you add levels of description they will be shown in the arrange pane for
+   you to review before finalizing your SIP.
+
+   .. image:: images/view_arrangement.*
+      :align: center
+      :width: 70%
+      :alt: Viewing levels of description applied to SIP
+
+.. note::
+
+   To have the AtoM levels of description appear you must have entered your AtoM
+   credentials in Administration. See :ref:`Administer, AtoM DIP upload
+   <dashboard-atom>`. Levels of description in AtoM are managed as a taxonomy.
+   To edit, see :ref:`Terms <atom:terms>`.
+
+.. tip::
+
+   If you choose not to assign levels of description to directories in SIP
+   arrange, AtoM will flatten the DIP so that all digital objects are
+   child-level descriptions of the target description.
 
 :ref:`Back to the top <appraisal>`
 
