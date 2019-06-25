@@ -43,10 +43,10 @@ objects.
 
 See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`.
 
-.. avalon-media-system-integration:
+.. _avalon-media-system-integration:
 
 Avalon Media System integration
--------------------------
+-------------------------------
 
 `Avalon Media System`_ is an open source system for managing and providing
 access to large collections of digital audio and video. Integration between the
@@ -154,8 +154,7 @@ For instructions to configure a Dataverse integration, see
 .. _`AtoM`: https://www.accesstomemory.org/
 .. _`ArchivesSpace`: https://archivesspace.org/
 .. _`Avalon Media System`: https://www.avalonmediasystem.org/
-.. _`Avalon Media System Technical Documentation`:
-https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+for+Avalon
+.. _`Avalon Media System Technical Documentation`: https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+for+Avalon
 .. _`Automation-Tools`: https://github.com/artefactual/automation-tools
 .. _`DuraCloud`: https://duraspace.org/duracloud/
 .. _`ArchivesDirect`: https://duraspace.org/archivesdirect/
