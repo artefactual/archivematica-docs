@@ -12,6 +12,7 @@ listed below.
 
 * :ref:`AtoM integration <atom-integration>`
 * :ref:`ArchivesSpace integration <archivesspace-integration>`
+* :ref:`Avalon Media System integration <avalon-media-system-integration>`
 * :ref:`Binder integration <binder-integration>`
 * :ref:`Duracloud integration <duracloud-integration>`
 * :ref:`Swift integration <swift-integration>`
@@ -41,6 +42,17 @@ for managing and providing web access to archives, manuscripts and digital
 objects.
 
 See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`.
+
+.. _avalon-media-system-integration:
+
+Avalon Media System integration
+-------------------------------
+
+`Avalon Media System`_ is an open source system for managing and providing
+access to large collections of digital audio and video. Integration between the
+systems can be found in the `Avalon Media System Technical Documentation`_. This
+workflow includes integration with Archivematica's `validation API endpoint` and
+`Automation-Tools`_ DIP creation script.
 
 .. _binder-integration:
 
@@ -141,6 +153,9 @@ For instructions to configure a Dataverse integration, see
 
 .. _`AtoM`: https://www.accesstomemory.org/
 .. _`ArchivesSpace`: https://archivesspace.org/
+.. _`Avalon Media System`: https://www.avalonmediasystem.org/
+.. _`Avalon Media System Technical Documentation`: https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+for+Avalon
+.. _`Automation-Tools`: https://github.com/artefactual/automation-tools
 .. _`DuraCloud`: https://duraspace.org/duracloud/
 .. _`ArchivesDirect`: https://duraspace.org/archivesdirect/
 .. _`Swift`: https://wiki.openstack.org/wiki/Swift
@@ -149,3 +164,4 @@ For instructions to configure a Dataverse integration, see
 .. _`Handle.Net`: https://www.handle.net/index.html
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`TMS`: https://www.gallerysystems.com/products-and-services/tms-suite/tms/
+.. _`validation API endpoint`: https://wiki.archivematica.org/Archivematica_API#Validate
