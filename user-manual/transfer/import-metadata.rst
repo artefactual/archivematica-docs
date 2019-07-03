@@ -31,10 +31,10 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
 
-    * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
-    * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
-    * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
-    * :ref:`Adding metadata using JSON files <metadata-json>`
+  * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
+  * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
+  * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
+  * :ref:`Adding metadata using JSON files <metadata-json>`
 
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Adding metadata to bags <metadata-bags>`
