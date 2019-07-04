@@ -28,7 +28,6 @@ Should you run into an error during ingest, please see :ref:`Error handling
 * :ref:`Reingest AIP <reingest>`
 * :ref:`Clean up the ingest dashboard <cleanup-ingest>`
 
-
 .. _create-sip:
 
 Create a SIP
@@ -448,57 +447,68 @@ an OCR file will be included in the DIP and stored in the AIP.
 
 .. note::
 
-   This feature is designed to transcribe the text from single images (e.g.
-   individual pages of a book scanned as image files). It does not support
-   transcription of multi-page objects or word processing files, PDF files, etc.
-
+   Tesseract transcribes the text from single images (e.g. individual pages of a
+   book scanned as image files). It does not support transcription of multi-page
+   objects or word processing files, PDF files, etc.
 
 .. _store-aip:
 
 Store AIP
 ---------
 
-1. After normalization is approved, the SIP runs through a number of
-   microservices, including processing of the submission documentation,
-   generation of the METS file, indexing, generation of the DIP and packaging
-   of the AIP.
+After normalization is complete, the SIP runs through a number of microservices,
+including submission documentation and metadata processing, METS file
+generation, indexing, DIP generation, and AIP packaging.
 
-.. figure:: images/StoreAIPUpDIP1.*
+.. figure:: images/StoreAIP.*
    :align: center
    :figwidth: 70%
    :width: 100%
    :alt: Archivematica ready to store AIP and upload DIP
 
-   Archivematica ready to store the AIP and upload the DIP
+   Archivematica ready to store the AIP
 
-2. If desired, review the contents of the AIP in another tab by clicking on
-   Review. You can download the AIP at this stage by clicking on it.
-   You can also view and validate the METS file by clicking on the temporary
-   file that ends in "validatorTester.html". Click on this file will open the
-   METS XML in a new window and allow you to validate the document against the
-   METS specification.
+1. Before storing the AIP, you can review the contents of the AIP by clicking
+   **Review**. A new tab will open where you can browse your AIP. To review the
+   individual objects in the AIP, click on the 7z file to download it. You can
+   also view the METS file (the file with the name ``METS-uuid.xml``) by
+   clicking on it.
 
-   More information on Archivematica's AIP structure and the METS/PREMIS
-   file is available in the Archivematica documentation: see :ref:`AIP structure
-   <aip-structure>`.
+   .. figure:: images/AIP-review.*
+      :align: center
+      :figwidth: 70%
+      :width: 100%
+      :alt: The AIP review page showing an expanded AIP file structure
 
-3. From the Action dropdown menu, select "Store AIP" to move the AIP into
-   archival storage. You can store an AIP in any number of preconfigured
-   directories. For instructions to configure AIP storage locations, see
-   :ref:`Administrator manual - Storage Service
-   <storageService:administrators>`.
+   If you want to validate the METS file, you can click on the
+   temporary file that ends in ``validatorTester.html``. This will open the
+   METS file in a new window where you can validate it against the METS
+   specification using the `PREMIS in METS validator`_.
 
-4. From the Action dropdown menu, select the AIP storage location from the
-   pre-configured set of options.
+   For more information on Archivematica's AIP structure and the METS file, see
+   :ref:`AIP structure <aip-structure>`.
+
+2. Once you are ready to store the AIP, select **Store AIP** from the action
+   dropdown menu. You can also reject the AIP, if needed.
+
+3. Next, select the storage location where you would like to store the AIP.
+   There may be several storage locations configured for your Archivematica
+   pipeline. For instructions to configure AIP storage locations, see the
+   :ref:`Storage Service <storageService:administrators>` documentation.
+
+4. Once your AIP has been stored, you can view and manage it on the
+   :ref:`Archival storage <archival-storage>` tab.
 
 .. note::
 
-   We recommend storing the AIP before uploading the DIP. If there is a problem
-   with the AIP at this point and the DIP has already been uploaded, you will
-   have to delete the DIP from the upload location.
-
-   For information on viewing and managing stored AIPs go to :ref:`Archival
-   storage <archival-storage>`.
+   It is possible to designate one storage location as the default location for
+   AIP storage in the :ref:`Storage Service <storageService:administrators>`.
+   The default location is represented as ``Default location`` in the Store AIP
+   location dropdown menu, but the storage location will also be listed by name
+   alongside any other storage location options. If there is only one AIP
+   storage location, it will automatically be set as the default location, and
+   both ``Default location`` and the storage location itself will appear in the
+   dropdown menu.
 
 .. _upload-dip:
 
@@ -508,6 +518,26 @@ Upload DIP
 Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and
 Archivists' Toolkit. For information about uploading DIPs to your access system,
 see :ref:`Access <access>`.
+
+DIPs can be stored similar to AIPs; however, DIPs can also be generated when
+required by doing a partial :ref:`reingest <reingest>` of the AIP.
+
+.. note::
+
+   We recommend storing the AIP before uploading the DIP. If there is a problem
+   with the AIP during storage and the DIP has already been uploaded, you will
+   have to delete the DIP from the upload location.
+
+.. note::
+
+   It is possible to designate one storage location as the default location for
+   DIP storage in the :ref:`Storage Service <storageService:administrators>`.
+   The default location is represented as ``Default location`` in the Store DIP
+   location dropdown menu, but the storage location will also be listed by name
+   alongside any other storage location options. If there is only one DIP
+   storage location, it will automatically be set as the default location, and
+   both ``Default location`` and the storage location itself will appear in the
+   dropdown menu.
 
 .. _reingest:
 
@@ -791,5 +821,6 @@ Remove all completed ingests
 
 :ref:`Back to the top <ingest>`
 
-.. _`Dublin Core Metadata Element Set`: http://dublincore.org/documents/dces/
-.. _`Tesseract`: https://github.com/tesseract-ocr/
+.. _Dublin Core Metadata Element Set: http://dublincore.org/documents/dces/
+.. _Tesseract: https://github.com/tesseract-ocr/
+.. _PREMIS in METS validator: http://pim.fcla.edu/validate
