@@ -261,7 +261,7 @@ Upgrade on CentOS/Red Hat packages
               source /etc/sysconfig/archivematica-dashboard \
                   || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate --no-input
+          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate --noinput
       ";
 
       sudo -u archivematica bash -c " \
