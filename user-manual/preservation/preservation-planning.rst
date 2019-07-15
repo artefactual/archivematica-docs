@@ -831,10 +831,49 @@ Format validation ensures that files are well-formed and compliant with any
 relevant format specifications. In Archivematica, validation can also be done
 against a custom policy that is applied to the format.
 
-Validation tools
-^^^^^^^^^^^^^^^^
-
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
+
+.. _fpr-jhove:
+
+JHOVE
+^^^^^
+
+JHOVE is the most commonly-used tool to validate file formats in Archivematica.
+It looks at a given file and assesses whether the file is well-formed (meets the
+syntactic requirements for its format) and valid (is well-formed and meets
+additional requirements for its format). For more information on how JHOVE
+works, see the `JHOVE`_ website.
+
+When JHOVE encounters a file that it is able to successfully validate, a simple
+success message is displayed in the standard output:
+
+.. code::
+
+   Running Validate using JHOVE
+   Command "Validate using JHOVE" was successful
+   Creating validation event for /var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/copy-compress-test-31de910f-77dd-425c-97dc-2319ac339954/objects/Landing_zone.jpg (adbef753-318b-47b5-8b5c-27ef51dc6003)
+
+The validation event for the file is written to the METS.xml. The dashboard will
+report that the validation was completed successfully.
+
+In some cases, JHOVE may evaluate a given file as a bytestream, rather than a
+specific format. This is default JHOVE behaviour. In a case where the bytestream
+is valid, JHOVE considers this to be a successful validation. In previous
+versions of Archivematica (1.9.x and earlier), Archivematica reported a
+successful bytestream validation as an error in the dashboard. As of 1.10,
+Archivematica reports a successful bytestream validation as a partial success,
+in order to differentiate it from successful validation based on a format
+specification.
+
+.. code::
+
+   Running Validate using JHOVE
+   Command "Validate using JHOVE" was partially successful
+   Creating validation event for /var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/jhove-test-fbc8e8ca-a459-4219-9a95-c7a4065f7411/objects/sample.aif (d2413c00-4217-4933-ad07-78ba37c244ec)
+
+As with a full success, the validation event for the file is written to the
+METS.xml. The dashboard will report that the validation was completed
+successfully.
 
 .. _fpr-mediaconch:
 
