@@ -285,10 +285,10 @@ See :ref:`Adding metadata to bags <metadata-bags>` for more information.
 Create a transfer with existing checksums
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica can verify MD5, SHA1, SHA256, SHA512, and BLAKE2 checksums that
-were created outside of the system. Creating checksums outside of Archivematica
-is a good idea if you are concerned about loss of data integrity during the
-move into Archivematica. Checksums are checked during the *Verify transfer
+Archivematica can verify MD5, SHA1, SHA256, and SHA512 checksums that were
+created outside of the system. Creating checksums outside of Archivematica is a
+good idea if you are concerned about loss of data integrity during the move
+into Archivematica. Checksums are checked during the *Verify transfer
 checksums* microservice on the Transfer tab.
 
 Checksums can be added to standard, DSpace, and disk image transfer types. Note
@@ -310,9 +310,8 @@ Checksum files should be named as follows:
 
 * ``checksum.md5``,
 * ``checksum.sha1``,
-* ``checksum.sha256``,
-* ``checksum.sha512``, or
-* ``checksum.b2``.
+* ``checksum.sha256``, or
+* ``checksum.sha512``.
 
 The checksum file itself should contain one line for each checksum, beginning
 with the checksum, followed by a space, followed by the file path. The file
