@@ -409,13 +409,14 @@ uncompressed, depending on your storage requirements.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **7z using bzip2** - a 7Zip file is created using the tool `bzip2`_.*
-#. **7z using LZMA** - a 7Zip file is created using the tool `LZMA`_.
-#. **Uncompressed** - the AIP is not compressed.
+#. **7z using bzip2** - a 7Zip file is created using the `bzip2`_ algorithm.*
+#. **7z using LZMA** - a 7Zip file is created using the `LZMA`_ algorithm.
 #. **7z without compression** - a 7Zip file is created but the contents are not
    compressed.
-#. **Parallel bzip2** - a 7Zip file is created using the tool
-   `Parallel bzip2 (pbzip2)`_.
+#. **Gzipped tar** - the AIP is created using the `gzip`_ algorithm.
+#. **Parallel bzip2** - a 7Zip file is created using the
+   `Parallel bzip2 (pbzip2)`_ algorithm.
+#. **Uncompressed** - the AIP is not compressed.
 
 Select compression level
 ++++++++++++++++++++++++
@@ -795,6 +796,7 @@ This tab displays the version of Archivematica you're using.
 .. _bzip2: http://www.bzip.org/
 .. _LZMA: https://www.7-zip.org/sdk.html
 .. _Parallel bzip2 (pbzip2): https://launchpad.net/pbzip2/
+.. _gzip: https://launchpad.net/gzip
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`Transifex`: https://www.transifex.com/artefactual/archivematica/
 .. _`Bulk Extractor`: https://www.forensicswiki.org/wiki/Bulk_extractor
