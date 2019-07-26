@@ -136,21 +136,7 @@ Installation instructions
 
 6. Installing Archivematica MCP client
 
-   * First, add extra repos with the MCP Client dependencies:
-
-     * Nux multimedia repo
-
-       .. literalinclude:: scripts/am-centos-rpm.sh
-          :language: bash
-          :lines: 108
-
-     * Forensic tools repo
-
-       .. literalinclude:: scripts/am-centos-rpm.sh
-          :language: bash
-          :lines: 109
-
-   * Then install the package:
+   * Install the package:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
