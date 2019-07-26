@@ -105,8 +105,8 @@ sudo -u root systemctl start archivematica-dashboard
 
 sudo -u root systemctl restart nginx
 
-sudo rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
+#sudo rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+#sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
 
 sudo -u root yum install -y archivematica-mcp-client
 
