@@ -648,8 +648,8 @@ configuration instructions.
 
 **Levels of description**
 
-You can fetch levels of description from AtoM so that they can be used in
-:ref:`SIP arrange <arrange-sip>`. Click on Levels of Description, then
+You can fetch levels of description from AtoM so that they can be used for
+:ref:`SIP arrangement <arrangement>`. Click on Levels of Description, then
 Fetch from AtoM to get an updated list from the AtoM levels of description
 taxonomy.
 

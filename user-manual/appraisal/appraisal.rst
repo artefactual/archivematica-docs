@@ -26,7 +26,9 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 * :ref:`ArchivesSpace Resources <archivesspace_pane>`
 * :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs <adding_files_archivesspace>`
 * :ref:`Arrangement <arrangement>`
-* :ref:`Arranging a SIP for AtoM <arranging_sip_for_atom>`
+
+  * :ref:`Creating SIPs using tags <creating-sips-tags>`
+  * :ref:`Adding AtoM levels of description <adding-atom-lod>`
 
 .. _backlog_pane:
 
@@ -394,8 +396,10 @@ SIP, and click “Create SIP” to send the SIP to Ingest. Other directories wil
 remain in the Arrange pane until arrangement is complete and they are sent to
 Ingest.
 
-Creating SIPs with tags
-=======================
+.. _creating-sips-tags:
+
+Creating SIPs using tags
+========================
 You can also use tags as a quick way to generate new SIPs. Tags can be added to
 selected files in the Backlog pane by entering a tag name and clicking the “Add
 tag to selected files” button at the top of the Backlog pane.
@@ -409,11 +413,10 @@ all the files that share this tag and using the tag as the SIP name.
    :width: 80%
    :alt: Creating a SIP from a tag
 
+.. _adding-atom-lod:
 
-.. _arranging_sip_for_atom:
-
-Arranging a SIP for AtoM
-------------------------
+Adding AtoM levels of description
+=================================
 
 If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish
 to add levels of description to your directories and/or objects. Archivematica
