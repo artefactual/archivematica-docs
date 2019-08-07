@@ -23,7 +23,6 @@ Skip to:
 * :ref:`Basis: Other <basis-other>`
 * :ref:`Acts granted or restricted <acts-granted>`
 
-
 .. _basis-copyight:
 
 Basis: Copyright
@@ -987,6 +986,5 @@ Grant/restriction note
    <premis:rightsStatement>
       <premis:rightsGranted>
          <premis:rightsGrantedNote>Publication restricted until copyright expires.</premis:rightsGrantedNote>
-
 
 :ref:`Back to the top <premis-template>`
