@@ -23,9 +23,6 @@ image above.
 1. Tabs
 -------
 
-Second-level heading
-++++++++++++++++++++
-
 The Dashboard is divided into a number of tabs, with the grey area indicating
 the tab currently in view. Alerts appear in red circles when there is action
 required by the archivist in a tab. The names of the tabs (Transfer, Ingest,
