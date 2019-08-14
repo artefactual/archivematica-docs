@@ -376,54 +376,21 @@ Transferring material with preservation or access derivatives (manual normalizat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica's main strategy for preserving files is to :ref:`normalize
-<normalize>` them according to :ref:`preservation planning rules
-<preservation-planning>`. However, you may have created - or may want to create -
-preservation or access copies of your digital objects before transferring your
-materials into Archivematica (i.e. during a digitization project). Archivematica
-can recognize manual normalization work and use the preservation and action
-copies instead of creating new derivatives.
+<normalize>` them according to the :ref:`normalization rules <normalization>`
+listed in the Preservation Planning tab. However, you may want to create
+preservation or access copies of your digital objects outside of Archivematica
+(i.e. during a digitization project). Archivematica can recognize manual
+normalization work and use the preservation and action copies instead of
+creating new derivatives.
 
-Preservation or access derivatives can be added to standard transfer types.
-
-In order to have Archivematica recognize manually normalized files, the transfer
-needs to be structured in a specific way. Your top-level directory must contain
-a ``manualNormalization`` directory. Inside the manualNormalization directory,
-a ``preservation`` directory is where you will store preservation derivatives
-and an ``access`` directory is where you will place the access derivatives. You
-can include both of these directories or just one, depending on the kinds of
-derivatives that you have created.
-
-.. image:: images/transfer-with-derivatives.*
-   :align: center
-   :width: 50%
-   :alt: A transfer containing a manualNormalization subdirectory, which contains access and preservation derivatives
-
-In the example shown above, the original files are PNGs (i.e. ``beihai.png``).
-For each file, there is an access copy in the form of a JPG (``beihai.jpg``) and
-a preservation copy in the form of a TIF (``beihai.tif``). Note that the base
-filenames (before the extension) must match in order for Archivematica to
-recognize the links between the original file and the manually normalized
-preservation and access versions.
-
-You do not need to have matches for every original file. If you only have
-manually normalized derivatives for some files, Archivematica can fill in the
-gaps and create any missing access or preservation derivatives during the
-:ref:`normalization <normalize>` microservice.
-
-.. image:: images/transfer-with-some-derivatives.*
-   :align: center
-   :width: 50%
-   :alt: A transfer containing a manualNormalization subdirectory, which contains access and preservation derivates for only some of the originals
-
-.. note::
-
-   You can also add manually normalized files during the :ref:`ingest <ingest>`
-   phase in Archivematica.
+For more information about structuring a transfer with manually normalized
+preservation and access derivatives, see :ref:`Manual normalization
+<manual-norm>`.
 
 .. _transfer-access-copies:
 
-Transferring material with access derivatives
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Transferring material with access derivatives only
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you are only transferring originals plus their access derivatives, there is a
 slightly more streamlined workflow than the :ref:`manual normalization
