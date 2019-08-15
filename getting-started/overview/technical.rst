@@ -35,13 +35,14 @@ For more information, see :ref:`Microservices <microservices>`.
 Web-based dashboard
 -------------------
 
-The web dashboard allow users to process, monitor and control the Archivematica
+The web dashboard allow users to process, monitor, and control the Archivematica
 workflow processes. It is developed using Python-based Django MVC framework. The
 Dashboard provides a multi-user interface that will report on the status of
 system events and make it simpler to control and trigger specific microservices.
 This interface allows users to easily add or edit metadata, coordinate AIP and
-DIP storage and provide preservation planning information. Notifications include
-error reports, monitoring of MCP tasks and manual approvals in the workflow.
+DIP storage, and provide preservation planning information. Notifications
+include error reports, monitoring of MCP tasks, and manual approvals in the
+workflow.
 
 For more information, see :ref:`Web-based dashboard <web-dashboard>`.
 
@@ -51,7 +52,7 @@ For more information, see :ref:`Web-based dashboard <web-dashboard>`.
 Format policies
 ---------------
 
-Archivematica maintains the original format of all ingested files to  support
+Archivematica maintains the original format of all ingested files to support
 migration and emulation strategies. However, the primary preservation strategy
 is to normalize files to preservation and access formats upon ingest.
 Archivematica groups file formats into format policies (e.g. text, audio, video,
@@ -63,10 +64,10 @@ access formats is based largely on the ubiquity of web-based viewers for the
 file format.
 
 Since the 1.0 production release, Archivematica format policies have been moved
-to a structured, online format policy registry (FPR) that brings together format
-identification information with significant characteristic analysis, risk
-assessments and normalization tool information to arrive at default preservation
-format and access format policies for Archivematica.
+to a structured, online format policy registry (FPR). The FPR brings together
+format identification information with significant characteristic analysis, risk
+assessments, and normalization tool information to arrive at default
+preservation format and access format policies for Archivematica.
 
 For more information, see :ref:`Preservation Planning <preservation-planning>`.
 
@@ -77,9 +78,9 @@ From Transfer to SIP to AIP and DIP
 -----------------------------------
 
 The primary function of Archivematica is to process digital transfers
-(accessioned digital objects), turn them into SIPs, apply format policies and
+(accessioned digital objects), turn them into SIPs, apply format policies, and
 create high-quality, repository-independent Archival Information Packages (AIP)
-using `METS`_, `PREMIS`_ and `Bagit`_. Archivematica is bundled with `AtoM`_
+using `METS`_, `PREMIS`_, and `Bagit`_. Archivematica is bundled with `AtoM`_
 but is designed to upload Dissemination Information Packages (DIP), containing
 descriptive metadata and web-ready access copies, to any access system (e.g.
 Dspace, ContentDM, etc.).
@@ -96,7 +97,7 @@ system. This means the entire suite of digital preservation tools is now
 available from one simple installation. Archivematica can also be installed
 directly on dedicated hardware via its own Ubuntu repository. Its client/server
 processing architecture allows it to be deployed in multi-node, distributed
-processing configurations to support large-scale, resource- intensive production
+processing configurations to support large-scale, resource-intensive production
 environments.
 
 :ref:`Back to the top <technical-arch>`
