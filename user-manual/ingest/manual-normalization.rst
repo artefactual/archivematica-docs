@@ -72,7 +72,8 @@ that Archivematica does not replicate the effort.
       └── pepperbox-poppy.tif
 
    In this example, there are three copies of each file - a GIF, a PNG, and a
-   TIFF.
+   TIFF. The PNG files will be used as the original files, the TIFF files as
+   preservation derivatives, and the GIF files as access derivatives.
 
 #. Create a transfer directory and place the original files inside at the top
    level.
@@ -83,8 +84,6 @@ that Archivematica does not replicate the effort.
       ├── hooded-pitcher-plant.png
       ├── ornamental-onion.png
       └── pepperbox-poppy.png
-
-   In the directory structure above, the original objects are PNG files.
 
 #. Create a subdirectory called ``manualNormalization`` (note the capital N).
    Inside of the ``manualNormalization`` directory, create directories called
@@ -108,9 +107,10 @@ that Archivematica does not replicate the effort.
       ├── ornamental-onion.png
       └── pepperbox-poppy.png
 
-   In the example above, each original PNG file has a manually normalized access
-   derivative (in GIF format) and a manually normalized preservation derivative
-   (in TIFF format).
+   In the example above, you can see that the GIF access derivatives have been
+   moved to the ``manualNormalization/access`` directory and the TIFF
+   preservation derivatives have been moved to the
+   ``manualNormalization/preservation`` directory.
 
    Note that the filenames must match in order for Archivematica to recognize the
    links between the original file and its derivatives.
