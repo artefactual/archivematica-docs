@@ -29,7 +29,6 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 
 *On this page:*
 
-
 * :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
 
   * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
