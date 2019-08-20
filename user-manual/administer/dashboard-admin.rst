@@ -27,7 +27,6 @@ integrations and users.
 
   * :ref:`AtoM/Binder DIP upload <dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <dashboard-AS>`
-  * :ref:`Archivists' Toolkit DIP upload <dashboard-AT>`
 
 * :ref:`PREMIS agent <dashboard-premis>`
 * :ref:`REST API <dashboard-rest>`
@@ -479,8 +478,6 @@ Options:
 #. **None** - the user is prompted for a decision.*
 #. **Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload
    documentation.
-#. **Upload DIP to Archivists Toolkit** - see :ref:`Archivists Toolkit
-   <archivists-toolkit>` DIP upload documentation.
 #. **Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload
    documentation.
 #. **Do not upload** - the DIP will not be uploaded to an access system.
@@ -629,8 +626,8 @@ processing locations to make more room on their server.
 DIP upload
 ----------
 
-Archivematica has access integrations with three access platforms: AtoM,
-ArchivesSpace, and Archivists' Toolkit. For more information on Archivematica
+Archivematica has access integrations with three access platforms: AtoM, Binder,
+and ArchivesSpace. For more information on Archivematica
 integrations, please see the :ref:`Integrations <integrations>` page.
 
 .. _dashboard-atom:
@@ -682,31 +679,6 @@ dashboard have been set.
 For more information on configuring the ArchivesSpace DIP upload parameters,
 please see the Admin Manual :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`
 configuration instructions.
-
-.. _dashboard-AT:
-
-Archivists Toolkit DIP upload
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Before ingesting digital objects destined for Archivists' Toolkit, ensure that
-the Achivists' Toolkit DIP upload settings in the administration tab of the
-dashboard have been set.
-
-Should you wish to enable the PREMIS-based restrictions functionality, choose
-*base on PREMIS* under **Restrictions Apply**. To add PREMIS rights, please see
-:ref:`Add PREMIS rights and restrictions <at-premis>`.
-
-For more information on configuring the Archivists' Toolkit DIP upload
-parameters, please see the Admin Manual :ref:`Archivists' Toolkit DIP upload
-<admin-dashboard-AT>` configuration instructions.
-
-.. seealso::
-
-   * :ref:`Archivists Toolkit <archivists-toolkit>`
-
-.. important::
-
-   We no longer actively test DIP uploads to Archivists' Toolkit.
 
 .. _dashboard-premis:
 

@@ -122,8 +122,8 @@ FAQ
 
    We recognize that you may wish to use a different access system than AtoM,
    which is why we have developed workflows with CONTENTdm, Islandora, DSpace,
-   Archivist's Toolkit and ArchivesSpace, for example. Other integrations are
-   possible; see the next question below.
+   ArchivesSpace, for example. Other integrations are possible; see the next
+   question below.
 
 #. **Can I describe content in Archivematica?**
 

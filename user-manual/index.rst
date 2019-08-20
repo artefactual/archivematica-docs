@@ -23,7 +23,6 @@ links to each chapter's main sections.
    archival-storage/aip-structure
    archival-storage/aic
    access/access
-   access/archivists-toolkit
    access/contentdm
    preservation/preservation-planning
    administer/dashboard-admin
