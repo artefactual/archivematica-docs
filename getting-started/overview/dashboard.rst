@@ -25,9 +25,10 @@ image above.
 
 The Dashboard is divided into a number of tabs, with the grey area indicating
 the tab currently in view. Alerts appear in red circles when there is action
-required by the archivist in a tab. The names of the tabs (Transfer, Ingest,
-Archival storage, Preservation planning, Access, Administration) reference both
-the OAIS model, as well as sections of the user documentation.
+required by the archivist in a tab. The names of the tabs (Transfer, Backlog,
+Appraisal, Ingest, Archival storage, Preservation planning, Access,
+Administration) reference both the OAIS model and sections of the user
+documentation.
 
 2. User login
 -------------
@@ -54,12 +55,12 @@ packages using the red "remove" button (see below).
 4. Microservices and Jobs
 -----------------------------
 
-Archivematica's processing is performed through a number of :ref:`this page here
+Archivematica's processing is performed through a number of:ref:`microservices
 <microservices>`. Microservices are provided by a combination of Archivematica
-Python scripts and one or more of the free, open-source
-`external software tools`_ bundled in the Archivematica system.
+Python scripts and one or more of the free, open-source `external software
+tools`_ bundled in the Archivematica system.
 
-These microservice are broken down  into a number of jobs, which users can see
+These microservices are broken down into a number of jobs, which users can see
 by clicking on the microservice to expand. Clicking on the gear icon within a
 job will open a new browser tab showing the tasks performed for that particular
 job.
@@ -67,7 +68,7 @@ job.
 5. Decision
 -----------
 
-Certain microservice result in a decision point for the archivist. The decision
+Certain microservices result in a decision point for the archivist. The decision
 is completed by choosing an available option from a drop-down menu. Many of the
 decision points can be pre-configured if desired in the
 :ref:`Administration tab <dashboard-processing>`.
@@ -84,7 +85,9 @@ The red remove icon removes the package from the Dashboard. The package can be
 removed whether the processing is completed or not. It is best practice to
 remove completed packages periodically as a "cleanup" procedure to keep the web
 browser running smoothly. Note that removing a package **does not** delete the
-package or any AIPs or DIPs associated with it.
+package or any AIPs or DIPs associated with it. If a package was not fully
+processed, it will remain unprocessed at its last decision point, even if
+removed from the Dashboard.
 
 :ref:`Back to the top <web-dashboard>`
 

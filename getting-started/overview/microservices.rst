@@ -20,8 +20,8 @@ These information packages are processed using a series of microservices.
 microservices are provided by a combination of Archivematica Python scripts and
 one or more of the free, open-source `external software tools`_ bundled in the
 Archivematica system. Each microservice results in a success or error state and
-the information package is processed accordingly by the next micro- service.
-There are a variety of mechanisms used to connect the various micro- services
+the information package is processed accordingly by the next microservice.
+There are a variety of mechanisms used to connect the various microservices
 together into complex, custom workflows, resulting in a complete ingest to
 access system.
 
