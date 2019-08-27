@@ -21,7 +21,6 @@ Please see:
 
 * :ref:`AtoM <admin-dashboard-atom>`
 * :ref:`ContentDM <contentdm>`
-* :ref:`Archivist's Toolkit <dashboard-AT>`
 * :ref:`DSpace <dspace>`
 * :ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)
 * Duracloud (coming soon)

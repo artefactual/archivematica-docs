@@ -515,9 +515,9 @@ generation, indexing, DIP generation, and AIP packaging.
 Upload DIP
 ----------
 
-Archivematica supports DIP uploads to AtoM, ArchivesSpace, CONTENTdm and
-Archivists' Toolkit. For information about uploading DIPs to your access system,
-see :ref:`Access <access>`.
+Archivematica supports DIP uploads to AtoM, Binder, ArchivesSpace, and
+CONTENTdm. For information about uploading DIPs to your access system, see
+:ref:`Access <access>`.
 
 DIPs can be stored similar to AIPs; however, DIPs can also be generated when
 required by doing a partial :ref:`reingest <reingest>` of the AIP.

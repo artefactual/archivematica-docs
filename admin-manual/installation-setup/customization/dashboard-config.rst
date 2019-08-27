@@ -19,7 +19,6 @@ dashboard, allow you to configure application components and manage users.
 
   * :ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`
-  * :ref:`Archivists' Toolkit DIP upload <admin-dashboard-AT>`
 
 * :ref:`PREMIS agent <admin-dashboard-premis>`
 * :ref:`REST API <admin-dashboard-rest>`
@@ -285,8 +284,8 @@ processing locations to make more room on their server.
 DIP upload
 ----------
 
-Archivematica has access integrations with three access platforms: AtoM,
-ArchivesSpace, and Archivists' Toolkit.
+Archivematica has access integrations with three access platforms: AtoM, Binder
+and ArchivesSpace.
 
 .. _admin-dashboard-atom:
 
@@ -504,77 +503,6 @@ Fields:
    In order to save changes to the ArchivesSpace DIP upload configuration, you
    must enter the password before clicking save. Note that Archivematica will
    *not* display an error if the password is not entered.
-
-.. _admin-dashboard-AT:
-
-Archivists' Toolkit
-^^^^^^^^^^^^^^^^^^^
-
-Before ingesting digital objects destined for Archivists' Toolkit, ensure that
-the Achivists' Toolkit DIP upload settings in the Administration tab of the
-dashboard have been set.
-
-These settings should be created and saved before digital objects destined for
-upload to Archivists Toolkit are processed. Note that these can be set once and
-used for processing any number of transfers (i.e. they do not need to be re-set
-for each transfer). The screenshots below show the template in the dashboard.
-
-.. important::
-
-   Archivists' Toolkit is a legacy application that is no longer being
-   maintained as of September 2013. DIP upload to Archivists' Toolkit is
-   deprecated and this feature is maintained for historical purposes.
-
-.. image:: images/ATDIPConfig.*
-   :align: right
-   :width: 45%
-   :alt: Archivists Toolkit configuration settings
-
-Fields:
-
-* **Database host**: the URL of the host database. Do not include
-  ``https://`` or ``www.``, e.g. ``atoolkit.test.org``.
-* **Database port**: the port of the database, e.g. ``8089``.
-* **Database name**: the name of the database.
-* **Database user**: a username with administrative access to the database.
-* **Database password**: the password for the above user.
-* **Archivists' Toolkit username**: a username for Archivists' Toolkit.
-* **Restrictions apply**: if you wish to enable the PREMIS-based restrictions
-  functionality, choose *base on PREMIS*. To add PREMIS rights, please see
-  :ref:`Add PREMIS rights and restrictions <at-premis>`.
-* **EAD DAO actuate**: indicates when a digital object should display in
-  Archivists' Toolkit (e.g. whether the link occurs automatically or must be
-  requested by the user). Used in conjunction with EAD DAO Show attribute.
-
-  * *None*: no specific behaviour is passed to the link.
-  * *onLoad*: link is activated when the document loads (used when Show =
-    Embed).
-  * *Other*: no specific behaviour is passed to the link.
-  * *onRequest*: link is activated when the user selects the link.
-
-* **EAD DAO show**: indicate how the link to the digital object, as it appears
-  in Archivists' Toolkit, should operate.
-
-  * *Embed*: the digital object screen is embedded in the current window.
-  * *New*: the digital object screen opens in a new window.
-  * *None*: no specific behaviour is passed to the link.
-  * *Other*: no specific behaviour is passed to the link.
-  * *Replace*: the digital object screen opens in the current window.
-
-* **Object type**: entering a value from Archivists' Toolkit's controlled list
-  of use statements will apply this value to all objects. This field is
-  optional.
-* **Use statement**: entering a value from Archivists' Toolkit's controlled list
-  of use statements will apply this value to all objects. This field is
-  optional.
-* **URL prefix**: the URL of DIP object server as you wish it to appear in
-  Archivists' Toolkit record. Example: ``http://example.com``
-* **Conditions governing access**: entering a value in this field will populate
-  the Conditions governing access note in Archivists' Toolkit for all objects.
-  This field is optional.
-* **Conditions governing use**: entering a value in this field will populate
-  the Conditions governing use note in Archivists' Toolkit for all objects.
-  This field is optional.
 
 .. _admin-dashboard-premis:
 

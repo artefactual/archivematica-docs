@@ -153,7 +153,6 @@ SIP into an AIP or a DIP. This tab also contains the backlog widget.
 * :ref:`Store the AIP <store-aip>`
 * :ref:`Reingest AIP <reingest>`
 * :ref:`Upload DIP to ArchivesSpace <upload-AS>`
-* :ref:`Upload DIP to Archivists Toolkit <upload-AT>`
 * :ref:`Manual normalization <manual-norm>`
 
 
@@ -187,7 +186,6 @@ The Access tab displays DIPs which have been sent to AtoM.
 * :ref:`Store DIP <store-dip>`
 * :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
-* :ref:`Upload DIP metadata to Archivists' Toolkit <archivists-toolkit>`
 * :ref:`Upload DIP to ContentDM <contentdm>`
 
 

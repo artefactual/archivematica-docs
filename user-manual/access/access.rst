@@ -26,7 +26,6 @@ like ArchivesSpace.
 * :ref:`Upload a DIP to AtoM <upload-atom>`
 * :ref:`Upload a DIP to Binder <upload-binder>`
 * :ref:`Upload a DIP to ArchivesSpace <upload-as>`
-* :ref:`Upload a DIP to Archivists' Toolkit <upload-at>`
 * :ref:`Store DIP <store-dip>`
 * :ref:`Review/Download DIP <review-dip>`
 * :ref:`Access tab <access-tab>`
@@ -52,7 +51,7 @@ A content management tool called `AtoM`_  is Archivematica's default access
 system. AtoM is a web-based, open source application for standards-based
 archival description and access in a multilingual, multi- repository
 environment. Access integration workflows also exist for `ArchivesSpace`_,
-`Archivists' Toolkit`_ , `CONTENTdm`_, and `Binder`_.
+`CONTENTdm`_, and `Binder`_.
 
 .. _upload-atom:
 
@@ -324,28 +323,6 @@ ingest tab you will be taken to the Match page and, to check the matches
 created from the CSV file instead of creating new ones, you can click directly
 on `Review matches` and finalize or restart the matching.
 
-.. _upload-at:
-
-Upload a DIP to Archivists' Toolkit
------------------------------------
-
-To upload DIPs to your Archivists' Toolkit instance, you must enter your
-Archivists' Toolkit information and credentials in the Administration tab.
-See :ref:`Archivists' Toolkit dashboard configuration <dashboard-AT>` for more
-information.
-
-Create a SIP using the :ref:`Transfer <transfer>` process as normal. During
-Normalization, choose one of the options that normalizes the package for access.
-During the Upload DIP microservice, select Upload DIP to Archivists' Toolkit.
-The Match page should automatically open.
-
-#. A page will open allowing the user to select the Archivists' Toolkit
-   collection where the objects should be added. This page allows the user to
-   match digital objects to resource components in Archivists' Toolkit.
-
-#. Archivematica will upload the DIP metadata to Archivists' Toolkit.
-
-
 .. _store-dip:
 
 Store DIP
@@ -414,7 +391,6 @@ to other access systems or DIPs that have been stored.
 
 .. _`AtoM`: https://www.accesstomemory.org
 .. _`ArchivesSpace`: https://archivesspace.org/
-.. _`Archivists' Toolkit`: http://www.archiviststoolkit.org/
 .. _`CONTENTdm`: https://www.oclc.org/en/contentdm.html
 .. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`AtoM glossary`: https://www.accesstomemory.org/docs/latest/user-manual/glossary/glossary/
