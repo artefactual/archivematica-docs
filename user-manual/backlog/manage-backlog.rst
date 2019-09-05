@@ -45,7 +45,7 @@ Hide.
    create an arrangement structure for your SIP.
 
 3. If you wish to create one or more SIP(s) from one or more transfer(s), see
-   :ref:`Arrange SIP(s) <arrange-sip>`.
+   :ref:`Arrange SIP(s) <arrangement>`.
 
 4. Click on the directory in the Arrange pane to select, and then click Create
    SIP. Archivematica will confirm that you wish to create a SIP, and then
