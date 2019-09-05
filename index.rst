@@ -146,7 +146,6 @@ SIP into an AIP or a DIP. This tab also contains the backlog widget.
 
 * :ref:`General description <ingest>`
 * :ref:`Create a SIP <create-sip>`
-* :ref:`Arrange a SIP from backlog <arrange-sip>`
 * :ref:`Add metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`

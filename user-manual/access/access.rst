@@ -72,9 +72,8 @@ AtoM 2.x with Archivematica <atom-setup>`.
 
 Digital objects uploaded to AtoM are added as children of the target description
 and are by default given the level of description of ``item``. It is possible to
-arrange your transfer to crate a hierarchy that AtoM will recognize by
-:ref:`arranging materials for AtoM <hierarchical-dip>` on the Appraisal or
-Ingest tab.
+arrange your transfer to crate a hierarchy that AtoM will recognize by arranging
+materials for AtoM on the Appraisal tab.
 
 You can also :ref:`add descriptive metadata <add-metadata>` to your transfer
 using either the metadata form or the metadata CSV file. This descriptive
@@ -156,8 +155,8 @@ display online for copyright or privacy reasons.
    * Descriptive metadata: if descriptive metadata is included by csv or
      entering in the user interface, the metadata will not display in AtoM
      in this workflow.
-   * SIPs with levels of description assigned using the :ref:`arranging for AtoM
-     <hierarchical-dip>` workflow - the levels of description will be ignored in
+   * SIPs with levels of description assigned using the :ref:`arranging for
+     AtoM <arrangement>` workflow - the levels of description will be ignored in
      this workflow.
 
 1. Navigate to Archival Storage and search or browse for the AIP. Click on the

@@ -6,7 +6,7 @@ Using AtoM 2.x with Archivematica
 
 Archivematica |version| has been tested with and is recommended for use with the
 latest version of AtoM. AtoM version 2.2 or higher is required if you wish to
-use the :ref:`hierarchical DIP functionality <hierarchical-dip>`.
+use the hierarchical DIP functionality.
 
 *On this page*
 
