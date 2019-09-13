@@ -113,8 +113,7 @@ backlog and allows users to search, download and delete transfers from the
 backlog location.
 
 * :ref:`General description <backlog>`
-* :ref:`Searching for transfers <backlog-transfer-search>`
-* :ref:`Searching for files <backlog-file-search>`
+* :ref:`Searching for transfers and files <backlog-transfer-search>`
 * :ref:`Downloading transfers or files <backlog-download>`
 * :ref:`Deletion of transfers <backlog-delete>`
 * :ref:`Manage a backlog <manage-backlog>`

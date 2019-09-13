@@ -192,6 +192,6 @@ user enters two dates in ISO date format separated by a colon. For example,
 
 :ref:`Back to the top <bags>`.
 
-.. _`BagIt`: https://tools.ietf.org/html/rfc8493
-.. _`BagIt-python`: https://github.com/LibraryOfCongress/bagit-python
-.. _`Bagger`: https://github.com/LibraryOfCongress/bagger
+.. _BagIt: https://tools.ietf.org/html/rfc8493
+.. _BagIt-python: https://github.com/LibraryOfCongress/bagit-python
+.. _Bagger: https://github.com/LibraryOfCongress/bagger

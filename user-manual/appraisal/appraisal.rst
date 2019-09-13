@@ -4,13 +4,16 @@
 Appraisal
 =========
 
-The Appraisal tab provides a space between Transfer and Ingest for archivists to
-decide which files from transfers should become SIPs and how these files should
-be arranged within the SIP. It includes features for examining the
-characteristics and contents of the files as well as for connecting files to
-finding aids created in ArchivesSpace. The Arrange a SIP from Backlog feature,
-found in previous versions of Archivematica, also has moved to the Appraisal tab
-(see :ref:`Arrangement <arrangement>`).
+The Appraisal tab provides an opportunity for users to appraise and analyze the
+files included in a transfer. The Appraisal tab includes features for examining
+the characteristics and contents of the files, allows users to connect files to
+finding aids created in ArchivesSpace, and lets users decide which files from a
+transfer should be added to a SIP and how these files should be arranged within
+the SIP.
+
+In order to use the Appraisal tab, you must send the transfer to the backlog
+when you reach the end of the :ref:`Transfer tab microservices
+<transfer-tab-microservices>`.
 
 .. note::
 
@@ -20,88 +23,143 @@ found in previous versions of Archivematica, also has moved to the Appraisal tab
 
 *On this page:*
 
-* :ref:`Transfers in the Backlog <backlog_pane>`
+* :ref:`Backlog <backlog_pane>`
+
+  * :ref:`Tagging files <adding-tags>`
+
 * :ref:`Analysis <analysis_pane>`
-* :ref:`File List <File_list_pane>`
-* :ref:`ArchivesSpace Resources <archivesspace_pane>`
-* :ref:`Adding Files to ArchivesSpace Resources and Starting SIPs <adding_files_archivesspace>`
+
+  * :ref:`Objects <analysis-objects>`
+  * :ref:`Tags <analysis-tags>`
+  * :ref:`Examine contents <analysis-examine-contents>`
+  * :ref:`Preview file <analysis-preview-file>`
+
+* :ref:`File list <file_list_pane>`
+* :ref:`ArchivesSpace <archivesspace_pane>`
+
+  * :ref:`Adding files to ArchivesSpace resources and starting a SIP <adding_files_archivesspace>`
+
 * :ref:`Arrangement <arrangement>`
 
+  * :ref:`Arranging a SIP through drag-and-drop <arrangement-drag-drop>`
   * :ref:`Creating SIPs using tags <creating-sips-tags>`
   * :ref:`Adding AtoM levels of description <adding-atom-lod>`
 
 .. _backlog_pane:
 
-Transfers in the backlog
-------------------------
+Backlog
+-------
 
 Transfers that have been sent to the backlog can be found in the Backlog pane of
-the Appraisal tab. Search the backlog by entering search terms and parameters in
-the search box at the top of the page.
+the Appraisal tab. You can see everything in the backlog by doing a blank search
+using the search boxes at the top of the page, or narrow your search by entering
+search terms and parameters.
 
-.. image:: images/search_backlog_2.*
+.. image:: images/backlog-search.*
    :align: center
    :width: 80%
-   :alt: Search box for searching the backlog in the Appraisal tab
+   :alt: A simple search for "abcd", with results shown in the backlog pane.
 
-Adding Tags
-===========
+The Backlog pane will display a list of transfer names. You can expand each one
+by clicking on the yellow folder icon, or by selecting **Expand all**. Click on
+**Collapse all** to collapse all open folders.
 
-Tags can be added to selected files in the backlog by entering a tag name and
-clicking the “Add tag to selected files” button at the top of the Backlog pane.
-
-.. image:: images/tags_backlog.*
+.. image:: images/backlog-search-expand-all.*
    :align: center
    :width: 60%
-   :alt: Adding tags to files in the backlog
+   :alt: The backlog pane with all search result folders expanded to show contents.
 
-Tags that have already been created appear in the Tags drop-down menu. Choosing
-a particular tag filters the files that appear within transfers in the Backlog
-pane by that tag. Filters added in other panes in the Appraisal tab will also
-appear listed under the Tags drop-down menu. Filters can be removed by clicking
-the “x” next to them.
+Tick **Show metadata & logs directory** to the right of the search boxes to
+include metadata and log files in the search results, if you wish.
 
-.. image:: images/adding_filters.*
+.. image:: images/backlog-search-md-logs.*
    :align: center
-   :width: 40%
-   :alt: Filters as they appear below the tags drop-down menu
+   :width: 60%
+   :alt: Search results with logs and metadata files
 
-Tags can also be added from within the File list (see below).
+There are two reasons that files may be shown greyed out and with a
+strikethrough:
+
+* The file is a metadata or log file and therefore cannot be manipulated by the
+  user.
+* The file has already been :ref:`arranged <arrangement>` into a SIP and
+  therefore it no longer exists in the backlog - the entry is being maintained
+  in the backlog pane for context.
+
+.. _adding-tags:
+
+Tagging files
+^^^^^^^^^^^^^
+
+The Backlog pane allows users to add a tag to a file in order to aid in
+appraisal. The tag is not recorded in any way and does not persist beyond the
+Appraisal tab.
+
+#. Select one or more files in the Backlog pane by clicking on the file name. If
+   you would like to add the tag to all of the files in a directory, select the
+   directory name.
+
+   .. image:: images/backlog-select-files.*
+      :align: center
+      :width: 60%
+      :alt: Several files have been selected and are highlighted in blue.
+
+#. Enter the tag name in the text box and select **Add tag to selected files**.
+
+   .. image:: images/backlog-add-tag.*
+      :align: center
+      :width: 60%
+      :alt: The selected files have the tag "keep" next to them.
+
+#. To remove a tag, click on the minus sign next to the tag name.
+
+Once you have created a tag, you can filter your search results to only show
+files that have been tagged by selecting your tag from the **Tags** dropdown
+below the search boxes at the top of the Appraisal page.
+
+.. image:: images/backlog-tag-filter.*
+   :align: center
+   :width: 80%
+   :alt: The backlog pane now only displays files with the "keep" tag.
+
+Tags can also be added in the :ref:`File list pane<file_list_pane>`.
 
 .. _analysis_pane:
 
 Analysis
 --------
 
-The analysis pane allows the user to explore files in transfers sent to the
-backlog. Files selected in the Backlog pane populate the Analysis pane and can
-be analyzed through four tabs: Objects, Tags, Examine Contents, and Preview
-File.
+The Analysis pane allows the user to analyse transfer materials in bulk as well
+as individual files. Files selected in the Backlog pane populate the Analysis
+pane and can be analyzed using four tabs: Objects, Tags, Examine contents, and
+Preview file.
 
-1) Objects
-==========
+.. _analysis-objects:
 
-In the Objects tab, information about selected files can be viewed in the form
-of a report or a visualization. The Report view provides information about the
-files’ format, PUID, group, number of files, and size. Files can also be
-analyzed through visualizations with options for representing the total number
-of files in each format and for representing the total size of files for each
-format represented in the list.
+Objects
+^^^^^^^
 
-.. figure:: images/analysis_report.*
+The Objects tab of the Analysis pane displays format and size information about
+selected files.
+
+The Report view provides a list of information about the format, PRONOM unique
+identifier (PUID), format group, number of files, and size of the selected
+files.
+
+.. figure:: images/analysis-objects-report.*
    :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Report view in the Analysis pane
+   :width: 80%
+   :alt: The left-hand side of the image shows the backlog pane with a number of files selected. The right-hand side of the image shows information about those files, including the file format name, PUID, and size.
 
-   Report showing files selected in the Backlog pane
+   Report showing information about the files that have been selected in the Backlog pane.
 
+The Visualizations view provides two visualization options: the total number of
+files for each format, or the total size of files for each format.
 
-.. figure:: images/analysis_visualization.*
+.. figure:: images/analysis-objects-visualizations.*
    :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: Visualization showing formats by total size of files
+   :width: 80%
+   :alt: The left-hand side of the image shows the backlog pane with a number of files selected. The right-hand side of the image shows a pie chart depicting the number of files for each format.
 
    Visualization showing formats by total size of the selected files
 
@@ -112,80 +170,129 @@ filter is added and only PDF files remain listed in the Analysis pane. Filters
 appear under the Tags drop-down menu and can be removed by clicking the “x”
 beside the name.
 
-2) Tags
-=======
+.. _analysis-tags:
 
-The Tags tab lists any tags that have been added and how many of each tag are
-present in the selected files.
+Tags
+^^^^
 
-.. image:: images/analysis_tags.*
+The Tags tab lists any tags that have been added and how many files with each
+tag are present in the selected files.
+
+.. image:: images/analysis-tags.*
+   :align: center
+   :width: 80%
+   :alt: The left-hand side of the image shows the backlog pane with a number of files selected. The right-hand side of the image shows that 5 files have been given the tag "keep".
+
+.. _analysis-examine-contents:
+
+Examine contents
+^^^^^^^^^^^^^^^^
+
+During the Transfer process, users can choose whether or not to *Examine
+contents*. This is a microservice that runs the tool `Bulk Extractor`_, a
+forensics tool that scans the contents of a file to look for useful information.
+Bulk Extractor looks for many different patterns, such as social security
+numbers, credit card numbers, postal addresses, and email addresses.
+
+On the Examine contents tab of the Analysis pane, users can review transfers to
+see if any of the files contain PII (personally identifying information, or more
+specifically American social security numbers) or credit card numbers.
+
+.. figure:: images/analysis-examine-contents.*
+   :align: center
+   :width: 80%
+   :alt: The left-hand side of the image shows the backlog pane with a transfer directory selected. The right-hand side of the image shows that one of the files in the transfer may contain credit card numbers.
+
+   This transfer contains a file that may include credit card numbers.
+
+Selecting the file name will show a preview of the data.
+
+.. figure:: images/analysis-examine-contents-cc-data.*
    :align: center
    :width: 60%
-   :alt: Tags tab in the analysis pane
+   :alt: A list of credit card numbers is displayed in the Examine contents tab.
 
-3) Examine Contents
-===================
+   The file clearly contains credit card data, with the credit card number shown
+   in the "Content" column and the context for the number shown in the "Context"
+   column.
 
-If Examine Contents (using the tool `Bulk Extractor`_) was used during transfer,
-the Examine Contents tab provides the reports created during this microservice.
-This tab includes options for listing files that potentially contain personally
-identifiable information (PII) or credit card numbers. Examine Contents also
-includes an option for adding tags to these files.
+Clicking on **Preview** will display the file in the Preview file tab, if
+possible (see :ref:`Preview file <analysis-preview-file>`, below).
 
-.. figure:: images/analysis_examine_contents.*
+You can also add tags to files containing sensitive information by selecting the
+checkbox next to the file name, adding a tag to the text box, and clicking **Add
+tag to checked files**. The tag will appear attached to the file in the Backlog
+pane.
+
+.. note::
+
+   More Bulk Extractor data can be reviewed by downloading the transfer
+   from the Backlog tab.
+
+.. _analysis-preview-file:
+
+Preview file
+^^^^^^^^^^^^
+
+The Preview file pane allows users to take a look at a file without having to
+download it to their computer. The preview window only works for files that can
+be rendered in a browser - for example, JPEG images or MP3 audio files.
+
+To preview a file, you must select it from the File list pane.
+
+#. In the Backlog pane, select the file, or directory of files, that you would
+   like to view.
+
+#. Open the Analysis pane and click on the Preview file tab.
+
+#. In the File list pane, select the file that you would like to preview. Image
+   files will be displayed in the window; audio and video files will be
+   displayed in a media player.
+
+.. figure:: images/analysis-preview-file.*
    :align: center
-   :figwidth: 60%
-   :width: 100%
-   :alt: Examine contents tab in the anaysis pane
+   :width: 80%
+   :alt: The left-hand column shows the backlog pane with a transfer directory selected. The right-hand colum shows a list of the files in the transfer. The centre column shows a media player with a file called bird.mp3 playing.
 
-   Examine contents tab showing a selected transfer where no files with PII were
-   found
+   The file *bird.mp3* being played in the Preview file tab.
 
-4) Preview File
-===============
+.. _file_list_pane:
 
-Files selected in the File List pane (see below) can be previewed in the Preview
-File tab.
+File list
+---------
 
-.. _File_list_pane:
+The File list pane is populated by selecting files in the Backlog pane. File
+list provides information about the filenames, sizes, dates files were last
+modified (if available), and any tags that have been added to the selected
+files.
 
-File List
-------------
-The File List pane is also populated by selecting files in the Backlog
-pane. File List provides information about the filenames, sizes, dates files
-were last modified (if available), and any tags that have been added to the
-selected files.
-
-Any filters that have been applied in the Analysis pane or through the Tags
-drop-down menu will affect what files appear in File List. In addition, a date
-range can be added to filter files by the date they were last modified.
-
-This pane also provides an option for adding tags. Files can be selected by
-checking the checkbox next to their filename, creating a tag name, and clicking
-“Add tag to selected files.” Tags can be removed from files by clicking the “-“
-next to the tag name.
-
-.. figure:: images/analysis_file_list.*
+.. figure:: images/file-list.*
    :align: center
    :figwidth: 60%
    :width: 100%
    :alt: File list pane
 
-   File list pane showing options for adding tags and filtering by date range
+Any filters that have been applied in the Analysis pane or through the Tags
+drop-down menu will affect what files appear in File list.
 
+You can sort the file list by clicking on the filename, size, or last modified
+column headers.
 
-Clicking on the name of the file opens a preview in the Analysis pane.
+You can add tags to files on the File list pane by selecting the checkbox
+next to the file name, adding a tag to the text box, and clicking **Add tag to
+selected files**. The tag will appear attached to the file in the Backlog pane
+and in the Tags column on the File list pane. Click on the minus sign next to
+the tag name to remove the tag.
 
+Clicking on the name of the file will allow you to view the file, if possible,
+in the :ref:`Preview file <analysis-preview-file>` tab of the Analysis pane.
 
-.. image:: images/analysis_preview_file.*
-   :align: center
-   :width: 80%
-   :alt: Preview file window in the Analysis pane
+You can also toggle the full file path on and off by clicking on **Show path**.
 
 .. _archivesspace_pane:
 
-ArchivesSpace Resources
------------------------
+ArchivesSpace
+-------------
 
 The ArchivesSpace pane in the Appraisal tab allows for retrieving and adding to
 resources that have been created in an ArchivesSpace repository. Settings for
@@ -195,8 +302,8 @@ In the ArchivesSpace pane, files transferred into Archivematica can be
 associated with resources created in ArchivesSpace and SIPs can be sent to
 Ingest.
 
-ArchivesSpace Terms
-===================
+ArchivesSpace terms
+^^^^^^^^^^^^^^^^^^^
 
 Finding aids in ArchivesSpace are called “resources” (i.e. fonds, collection,
 record group, etc.). Lower levels of description nested under resources are
@@ -207,8 +314,8 @@ ArchivesSpace can be found at https://archivesspace.org/.
 
 .. _searching-ArchivesSpace-resources:
 
-Searching for ArchivesSpace Resources
-=====================================
+Searching for ArchivesSpace resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The search box at the top of the ArchivesSpace panel enables searching for
 resources within an ArchivesSpace repository. A user can search by the title or
@@ -231,8 +338,8 @@ by the parallel lines icon.
    :width: 60%
    :alt: ArchivesSpace pane with an ArchivesSpace resource expanded to show levels of hierarchy
 
-Creating Archival Description
-=============================
+Creating archival descriptions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Options at the top of the ArchivesSpace pane allow for adding to and changing an
 existing ArchivesSpace resource, such as adding new archival objects and digital
@@ -306,7 +413,7 @@ edited or deleted and further acts can be added.
 
 .. _adding_files_archivesspace:
 
-Adding Files to ArchivesSpace Resources and Starting SIPs
+Adding files to ArchivesSpace resources and starting SIPs
 ---------------------------------------------------------
 
 Transfer files in backlog can easily be associated with ArchivesSpace resources
@@ -368,38 +475,50 @@ Arrangement
 The arrangement pane provides options for appraising and arranging files from
 the backlog for users not using ArchivesSpace.
 
+.. _arrangement-drag-drop:
+
+Arranging a SIP through drag-and-drop
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Files from the Backlog pane can be dragged to the Arrangement pane to arrange
 the files and create SIPs. To find files to include in the SIPs, search the
 backlog by entering search terms and parameters in the search box at the top of
-the page. Tick the "Show metadata & logs directory" box to include these in the
-search results.
+the page.
 
-.. image:: images/search_results_with_logs.*
-   :align: center
-   :width: 80%
-   :alt: Search results with logs and metadata files
+Files with a strikethrough cannot be dragged over to the arrangement tab, either
+because the file is a metadata or log file that will be added to the SIP
+automatically or because the file has already been included in another SIP.
 
-Only those objects from the transfer that are eligible for inclusion in the SIP
-will appear without a strikethrough (e.g. "Landing_zone.jpg and MARBLES.TGA")
+#. In the Arrangement pane, click on **Add directory** to create a structure for
+   the SIP. Use the same button to create separate SIP directories or to create
+   nested sub-directories.
 
-In the Arrangement pane use the “Add directory” button to create a structure for
-the SIP. Use the same button to create separate SIP directories or to create
-nested sub-directories. Drag and drop the transfer directory(ies) and/or
-object(s) you wish to arrange from the Backlog pane to the Arrangement pane.
-By dragging and dropping, you can create an arrangement structure for your SIP.
-Note that all metadata, submission documentation, and other associated data is
-also copied to the arrange pane with your object(s).
+#. Drag and drop the transfer directory and/or indiviual object(s) you wish
+   to arrange from the Backlog pane to the Arrangement pane. By dragging and
+   dropping, you can create an arrangement structure for your SIP. Note that all
+   metadata, submission documentation, and other associated data is also copied
+   to the arrange pane with your object(s).
 
-Once all relevant files have been dragged from the Backlog pane to directories
-in Arrangement, select the top-level directory corresponding to the intended
-SIP, and click “Create SIP” to send the SIP to Ingest. Other directories will
-remain in the Arrange pane until arrangement is complete and they are sent to
-Ingest.
+#. Once all relevant files have been dragged from the Backlog pane to
+   directories in the Arrangement pane, select the top-level directory
+   corresponding to the intended SIP, and click **Create SIP** to send the SIP
+   to Ingest. Note that any material that is not selected will remain in the
+   Arrangement pane until arrangement is complete and they are sent to Ingest.
+
+Using the method above, you can combine material from multiple transfers into
+one SIP or, by only dragging and dropping selected files, weed the transfer so
+that the resulting SIP only includes the files that you would like to preserve.
+
+Once your arrangement is complete and the SIP has been turned into an AIP for
+long-term storage, you can delete any files remaining in the transfer that you
+would like to discard by follow the instructions to :ref:`delete transfers
+<backlog-delete>` on the Backlog tab.
 
 .. _creating-sips-tags:
 
-Creating SIPs using tags
-========================
+Creating a SIP using tags
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 You can also use tags as a quick way to generate new SIPs. Tags can be added to
 selected files in the Backlog pane by entering a tag name and clicking the “Add
 tag to selected files” button at the top of the Backlog pane.
@@ -416,7 +535,7 @@ all the files that share this tag and using the tag as the SIP name.
 .. _adding-atom-lod:
 
 Adding AtoM levels of description
-=================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may wish
 to add levels of description to your directories and/or objects. Archivematica
