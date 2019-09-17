@@ -23,19 +23,19 @@ when you reach the end of the :ref:`Transfer tab microservices
 
 *On this page:*
 
-* :ref:`Backlog <backlog_pane>`
+* :ref:`Backlog pane <backlog_pane>`
 
   * :ref:`Tagging files <adding-tags>`
 
-* :ref:`Analysis <analysis_pane>`
+* :ref:`Analysis pane <analysis_pane>`
 
   * :ref:`Objects <analysis-objects>`
   * :ref:`Tags <analysis-tags>`
   * :ref:`Examine contents <analysis-examine-contents>`
   * :ref:`Preview file <analysis-preview-file>`
 
-* :ref:`File list <file_list_pane>`
-* :ref:`ArchivesSpace <archivesspace_pane>`
+* :ref:`File list pane <file_list_pane>`
+* :ref:`ArchivesSpace pane <archivesspace_pane>`
 
   * :ref:`ArchivesSpace terms <archivesspace-terms>`
   * :ref:`Searching for resources <archivesspace-searching>`
@@ -44,7 +44,7 @@ when you reach the end of the :ref:`Transfer tab microservices
   * :ref:`Connecting digital objects to ArchivesSpace resources <archivesspace-digital-objects>`
   * :ref:`Adding files to ArchivesSpace resources and starting a SIP <adding_files_archivesspace>`
 
-* :ref:`Arrangement <arrangement>`
+* :ref:`Arrangement pane <arrangement>`
 
   * :ref:`Arranging a SIP through drag-and-drop <arrangement-drag-drop>`
   * :ref:`Creating SIPs using tags <creating-sips-tags>`
