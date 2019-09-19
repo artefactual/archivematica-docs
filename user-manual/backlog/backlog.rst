@@ -30,7 +30,8 @@ deletion of transfers that have been sent to backlog.
 
 * :ref:`Searching for transfers and files <backlog-transfer-search>`
 * :ref:`Downloading transfers or files <backlog-download>`
-* :ref:`Deleting transfers <backlog-delete>`
+* :ref:`Deleting transfers from the backlog <backlog-delete>`
+* :ref:`Retrieving transfers from the backlog <backlog-retrieve>`
 
 .. _backlog-transfer-search:
 

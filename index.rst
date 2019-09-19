@@ -115,8 +115,8 @@ backlog location.
 * :ref:`General description <backlog>`
 * :ref:`Searching for transfers and files <backlog-transfer-search>`
 * :ref:`Downloading transfers or files <backlog-download>`
-* :ref:`Deletion of transfers <backlog-delete>`
-* :ref:`Manage a backlog <manage-backlog>`
+* :ref:`Deleting transfers from the backlog <backlog-delete>`
+* :ref:`Retrieving transfers from the backlog <backlog-retrieve>`
 
 .. _home-appraisal:
 
@@ -130,7 +130,7 @@ resources in ArchivesSpace.
 * :ref:`General description <appraisal>`
 * :ref:`Backlog pane <backlog_pane>`
 * :ref:`Analysis pane <analysis_pane>`
-* :ref:`File list pane <File_list_pane>`
+* :ref:`File list pane <file_list_pane>`
 * :ref:`ArchivesSpace pane <archivesspace_pane>`
 * :ref:`Arrangement pane <arrangement>`
 
