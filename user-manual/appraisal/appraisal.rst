@@ -166,7 +166,7 @@ files for each format, or the total size of files for each format.
    :width: 80%
    :alt: The left-hand side of the image shows the backlog pane with a number of files selected. The right-hand side of the image shows a pie chart depicting the number of files for each format.
 
-   Visualization showing formats by total size of the selected files
+   Visualization showing total number of each format for the selected files
 
 Files listed in Analysis can also be filtered by Format, PUID, and Group through
 selecting values for these facets in the Report view. For instance, if the user
