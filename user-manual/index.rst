@@ -30,5 +30,4 @@ links to each chapter's main sections.
    metadata/premis
    appraisal/appraisal
    backlog/backlog
-   backlog/manage-backlog
    translations/translations

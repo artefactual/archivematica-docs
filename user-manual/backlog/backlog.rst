@@ -4,13 +4,21 @@
 Backlog
 =======
 
-The backlog tab is used to view, search and request deletion of transfers which
-have been sent to backlog.
+At the end of the :ref:`Transfer tab microservices
+<transfer-tab-microservices>`, users are given the option to place a transfer
+into a backlog storage space. Users may choose to use the backlog in order to do
+more analysis on the materials at a later date, either outside of Archivematica
+or by using the :ref:`Appraisal tab <appraisal>` features, before placing the
+materials in long-term storage.
 
-At this time, transfers stored using Archivematica's backlog functionality can
-only be accessed by using the same pipeline that the transfer was created in. If
-you decommission your pipeline, you will be unable to reindex and repopulate the
-backlogged material in a new Archivematica pipeline.
+Transfers placed in the backlog have undergone basic digital preservation
+microservices - for example, all files have been given UUIDs, checksums have
+been generated, the files have been scanned for viruses, and identification and
+validation information has been captured. The transfer has also been converted
+into `bag`_.
+
+By navigating to the Backlog tab, users can view, search for, and request
+deletion of transfers that have been sent to backlog.
 
 .. note::
 
@@ -20,85 +28,96 @@ backlogged material in a new Archivematica pipeline.
 
 *On this page:*
 
-* :ref:`Searching for transfers <backlog-transfer-search>`
-* :ref:`Searching for files <backlog-file-search>`
+* :ref:`Searching for transfers and files <backlog-transfer-search>`
 * :ref:`Downloading transfers or files <backlog-download>`
-* :ref:`Deletion of transfers <backlog-delete>`
-
+* :ref:`Deleting transfers from the backlog <backlog-delete>`
+* :ref:`Retrieving transfers from the backlog <backlog-retrieve>`
 
 .. _backlog-transfer-search:
 
-Searching for transfers
------------------------
+Searching for transfers and files
+---------------------------------
 
-#. Navigate to the backlog page, where you should see a paginated list of all
-   backlogged transfers.
+#. The backlog tab shows a paginated list of all the transfers that have been
+   sent to the backlog.
 
-   .. image:: images/backlog_tab.*
+   .. figure:: images/backlog-tab.*
       :align: center
       :width: 80%
-      :alt: Archivematica backlog tab showing backlogged transfers
+      :alt: Archivematica backlog tab showing all transfers in the backlog
 
-#. Perform your search using the fields at the top of the screen, adding new
-   boolean operators as desired. Searches can be performed on file name, file
-   extension, accession number, Ingest date or SIP (Transfer) UUID. To search on
-   the name of the transfer, leave the field as "Any". Wildcards (*) are allowed.
+#. The search fields at the top of the page can be used to search the backlog.
+   You can limit your search to the file name, file extension, accession number,
+   Ingest date or SIP (Transfer) UUID. Leaving the search parameter set to "Any"
+   will also display search results from the transfer name. Click on **Add new**
+   to add a second boolean string to your search query.
 
-   .. hint::
-
-      If you're not finding anything in your search results, try switching from "keyword" to "phrase."
-
-   .. image:: images/backlog_transfer_search.*
+   .. figure:: images/backlog-search.*
       :align: center
       :width: 80%
       :alt: Archivematica backlog tab showing a search for transfers.
 
-.. _backlog-file-search:
+      Search results for transfers with transfer names that include "backlog"
+      and a dash AND transfers that include a file with the exact phrase
+      "pepperbox-poppy" in the file name.
 
-Searching for files
--------------------
+#. To view individual files in your search results, click the checkbox next to
+   **Show files?**
 
-File searches can be performed using the same instructions as Searching for transfers, above, by additionally clicking "Show files?". You can also browse all files in backlog by leaving the search blank and clicking "Show files?".
+   .. figure:: images/backlog-search-show-files.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab showing a search for transfers.
 
-File searches/browses will show all files in the transfer, including logs created during transfer.
-
-.. image:: images/backlog_file_search.*
-   :align: center
-   :width: 80%
-   :alt: Archivematica backlog tab showing a search for transfers.
-
+      The same search results as above, with **Show files?** selected.
 
 .. _backlog-download:
 
 Downloading transfers or files
 ------------------------------
 
-Either files or transfers can be downloaded by using the download button on the right-hand side. Transfers when downloaded will be packaged as a tar file.
+Whole transfers or individual files can be downloaded by selecting the
+**Download** button in the Actions column.
 
-.. note::
-
-   In testing, we have had success in downloading transfers/files of up to 1 GB; further development may be required to scale this feature to larger transfers/files.
-
+Transfers are downloaded as tar packages. Individual files are downloaded
+unpackaged.
 
 .. _backlog-delete:
 
-Deletion of transfers
----------------------
+Deleting transfers
+------------------
 
-#. Transfers can be requested for deletion by clicking the red remove icon
-   beside the transfer.
+Similar to :ref:`deleting a stored AIP <delete-aip>`, deleting a backlogged
+transfer is a two-step process. Front-end users can request that a transfer in
+backlog be deleted, but an administrator must log in to the Archivematica
+Storage Service to confirm the deletion.
 
-#. The user will be prompted to provide a reason for deleting the transfer.
+#. To request that a transfer is deleted, click on the red remove icon in the
+   Actions column.
 
-   .. image:: images/backlog_delete.*
+#. You will be prompted to provide a reason for deleting the transfer. Enter
+   the reason and select **Delete**.
+
+   .. figure:: images/backlog-delete.*
       :align: center
       :width: 80%
-      :alt: Screen prompting user to provide a reason for deleting a transfer.
+      :alt: Screen prompting user to provide a reason for deleting a transfer. The user has written "This is a test" in the textbox.
 
-#. To complete the deletion, an administrator must login to the Storage Service
-   and approve the deletion.
+#. Until the deletion is confirmed by a Storage Service administrator, the
+   transfer will remain visible in the backlog tab and will still be available
+   for download.
 
-#. Until the deletion is approved, the transfer will remain visible in the backlog
-   tab and will be available for download from the backlog tab as well.
+.. _backlog-retrieve:
+
+Retrieving transfers from the backlog
+-------------------------------------
+
+Materials in backlog can be analysed, appraised, and arranged by using the
+functionality on the :ref:`Appraisal tab <appraisal>`. Once you are ready to
+move a transfer out of the backlog and process it for long-term storage, follow
+the instructions in the see :ref:`Arranging a SIP through drag-and-drop
+<arrangement-drag-drop>` section of the Appraisal tab documentation.
 
 :ref:`Back to the top <backlog>`
+
+.. _bag: https://tools.ietf.org/html/rfc8493
