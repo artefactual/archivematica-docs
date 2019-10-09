@@ -74,53 +74,13 @@ You can follow these steps in order to create a backup of Elasticsearch:
    curl -X PUT "localhost:9200/_snapshot/backup-repo/am_indexes_backup?wait_for_completion=true"
    cp /var/lib/elasticsearch/backup-repo elasticsearch-backup -rf
 
-For more info, refer to the `ElasticSearch 1.7 docs`_.
-
-.. _upgrade-search-indices:
-
-Upgrade Elasticsearch and search indexes
-----------------------------------------
-
-.. note::
-
-   Ignore this section if you are planning to run Archivematica without search
-   indexes. Instead, follow the instructions on :ref:`how to upgrade
-   Archivematica in indexless mode <upgrade-indexless>`.
-
-Archivematica |release| uses Elasticsearch 6.x as its search engine. If you're
-upgrading from Archivematica 1.8.x or lower, where Elasticsearch 1.x was the
-supported version, you are required to upgrade your Elasticsearch cluster and
-indexes to the new version.
-
-To complete this upgrade it is important to know if you have access to your
-transfer backlog and AIP storage locations in the local filesystem.
-These are usually located in the following paths:
-
-* :file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`
-* :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
-
-You should confirm the paths for your installation in the Locations tab of the
-Storage Service.
-
-If you have access to these locations, the recommended method for the upgrade is
-to :ref:`recreate the indexes <recreate-indexes>`. Otherwise, you'll need to
-:ref:`reindex from another cluster <cluster-reindex>`.
+For more info, refer to the `ElasticSearch 6.8 docs`_.
 
 
 .. _upgrade-ubuntu:
 
 Upgrade on Ubuntu packages
 --------------------------
-
-#. If you choose the :ref:`recreate the indexes <recreate-indexes>` option,
-   ElasticSearch 1.7 needs to be removed before proceeding with the upgrade.
-   This can be done with:
-
-   .. code:: bash
-
-      sudo apt-get remove --purge elasticsearch
-      sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
-      sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
 
 #. Update the operating system.
 
@@ -146,8 +106,6 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-      echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
       echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu bionic main' >> /etc/apt/sources.list
       echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
 
@@ -160,15 +118,6 @@ Upgrade on Ubuntu packages
 
       sudo apt-get update
       sudo apt-get install archivematica-storage-service
-
-#. Install Elasticsearch. As of Archivematica 1.9, Elasticsearch 6.x is
-   required
-
-   .. code:: bash
-
-      sudo apt-get install elasticsearch
-      systemctl enable elasticsearch
-      service elasticsearch start
 
 #. Update Archivematica. During the update process you may be asked about
    updating configuration files. Choose to accept the maintainers versions. You
@@ -183,10 +132,6 @@ Upgrade on Ubuntu packages
       sudo apt-get install archivematica-mcp-server
       sudo apt-get install archivematica-mcp-client
 
-
-#. Reindex your AIPs using the method you previously chose -
-   :ref:`recreate the indexes <recreate-indexes>` or
-   :ref:`reindex from another cluster <cluster-reindex>`.
 
 #. Restart services.
 
@@ -209,40 +154,11 @@ Upgrade on Ubuntu packages
 Upgrade on CentOS/Red Hat packages
 ----------------------------------
 
-#. If you choose the :ref:`recreate the indexes <recreate-indexes>`,
-   Elasticsearch 1.7 needs to be removed before proceeding with the upgrade.
-   This can be done with:
-
-   .. code:: bash
-
-      sudo yum erase elasticsearch
-      sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-1.7.5
-      sudo mv /etc/elasticsearch /etc/elasticsearch-1.7.5
-
 #. Upgrade the repositories for |version|:
 
    .. code:: bash
 
-    sudo sed -i 's/1.8.x/1.9.x/g' /etc/yum.repos.d/archivematica*
-
-#. Install ElasticSerch 6.x repository and package:
-
-   .. code:: bash
-
-    sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-    [elasticsearch-6.x]
-    name=Elasticsearch repository for 6.x packages
-    baseurl=https://artifacts.elastic.co/packages/6.x/yum
-    gpgcheck=1
-    gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    enabled=1
-    autorefresh=1
-    type=rpm-md
-    EOF'
-    sudo -u root yum install -y elasticsearch
-    sudo -u root systemctl enable elasticsearch
-    sudo -u root systemctl start elasticsearch
+    sudo sed -i 's/1.9.x/1.10.x/g' /etc/yum.repos.d/archivematica*
 
 #. Remove the current installed version of ghostscript:
 
@@ -281,10 +197,6 @@ Upgrade on CentOS/Red Hat packages
       ";
 
 
-#. Reindex your aips using the method you previously chose -
-   :ref:`recreate the indexes <recreate-indexes>` or
-   :ref:`reindex from another cluster <cluster-reindex>`.
-
 #. Restart the Archivematica related services, and continue using the system:
 
    .. code:: bash
@@ -312,8 +224,6 @@ with cloud based virtual machines, or phisical servers.
     .. code:: bash
 
       vagrant ssh # Or ssh <your user>@<host>
-
-#. Remove Elasticsearch 1.7 as explained in <TODO: link to previous commands>
 
 #. Install Ansible
 
@@ -373,82 +283,6 @@ with cloud based virtual machines, or phisical servers.
    .. code:: bash
 
     ansible-playbook -i hosts singlenode.yml --tags=elasticsearch,archivematica-src
-
-#. Reindex your aips using the method you previously chose -
-   :ref:`recreate the indexes <recreate-indexes>` or
-   :ref:`reindex from another cluster <cluster-reindex>`.
-
-.. _recreate-indexes:
-
-Recreate indexes
-^^^^^^^^^^^^^^^^
-
-Using this method, the indexes will be recreated with the new mappings and
-settings and will be populated from the files and database information. This
-will allow you to upgrade the Elasticsearch instance to 6.x without having to
-manage the 1.x indexes' data. Run the following commands:
-
-* :ref:`Rebuild AIPs indexes <aip-indexes>`
-* :ref:`Rebuild Transfers indexes <transfer-indexes>`
-
-.. note::
-   Please note, the execution of this command may take a long time for big
-   AIP and Transfer Backlog storage locations, especially if the AIPs are stored
-   compressed, or you are using a third party service. If that is the case, you may want to try the
-   :ref:`reindex from another cluster method <cluster-reindex>`, below.
-
-.. _cluster-reindex:
-
-Reindex from another cluster
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-If you don't have access to the AIP and/or transfer backlog locations, this
-method will allow you to upgrade the existing Elasticsearch indexes to the new
-version. However, it will require you to setup and configure two Elasticsearch
-instances, one using the 1.x version with the existing data and the other
-using the 6.x version to hold the new indexes. Archivematica includes a command
-to perform this reindex process, which requires a few considerations before its
-execution:
-
-#. The ``archivematica_src_elasticsearch_server`` configuration attribute must
-   be set to the ES 6.x instance URL.
-#. Archivematica must have access to both ES instances:
-
-   * External access must be enabled in the ES instances if they are not in the
-     same machine as Archivematica.
-   * The command accepts basic authentication parameters to connect to the ES
-     1.x instance.
-   * The ``archivematica_src_elasticsearch_host`` configuration attribute
-     accepts RFC-1738 formatted URLs (e.g.: ``https://user:secret@host:443``).
-
-#. The ES 1.x host has to be white-listed in the ES 6.x "elasticsearch.yaml"
-   configuration file (e.g.: reindex.remote.whitelist: "host:9200").
-#. The command requires the ES 1.x instance URL (including protocol and port)
-   as the first argument, two optional parameters for basic authentication and two other
-   optional parameters to set the timeout for both connections and the chunk
-   size for each request.
-
-Execution example:
-
-.. code:: bash
-
-   sudo -u archivematica bash -c " \
-       set -a -e -x
-       source /etc/default/archivematica-dashboard || \
-           source /etc/sysconfig/archivematica-dashboard \
-               || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
-           manage.py reindex_from_remote_cluster \
-               https://192.168.168.196:9200 -u test -p 1234 -t 30 -s 10
-   ";
-
-.. note::
-   For a more detailed instructions about how to run the upgrade with both
-   Elasticsearch instances running in the same machine `visit our Wiki`_.
-
-   Verify that you have a working Elasticsearch 1.7 instance with all your data
-   before you start the upgrade!
 
 .. _upgrade-indexless:
 
@@ -530,4 +364,4 @@ set environment variables and restart Archivematica processes.
 
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
 .. _`visit our Wiki`: https://wiki.archivematica.org/Update_ElasticSearch
-.. _`Elasticsearch 1.7 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/1.7/modules-snapshots.html
+.. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
