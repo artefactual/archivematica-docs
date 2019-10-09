@@ -244,6 +244,13 @@ Upgrade on CentOS/Red Hat packages
     sudo -u root systemctl enable elasticsearch
     sudo -u root systemctl start elasticsearch
 
+#. Remove the current installed version of ghostscript:
+
+   .. code:: bash
+
+      sudo rpm -e --nodeps ghostscript ghostscript-x11 \
+                           ghostscript-core ghostscript-fonts
+
 #. Upgrade Archivematica packages:
 
    .. code:: bash
