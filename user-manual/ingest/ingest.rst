@@ -25,7 +25,7 @@ Should you run into an error during ingest, please see :ref:`Error handling
 * :ref:`Transcribe SIP contents <transcribe-contents>`
 * :ref:`Store AIP <store-aip>`
 * :ref:`Upload DIP <upload-dip>`
-* :ref:`Reingest AIP <reingest>`
+* :ref:`Re-ingest AIP <reingest>`
 * :ref:`Clean up the ingest dashboard <cleanup-ingest>`
 
 .. _create-sip:
@@ -519,17 +519,23 @@ Store AIP
 
 After normalization is complete, the SIP runs through a number of microservices,
 including submission documentation and metadata processing, METS file
-generation, indexing, DIP generation, and AIP packaging.
+generation, indexing, DIP generation, and AIP packaging. Once the AIP is
+packaged, it is ready to be stored.
+
+Archivematica can be configured with many AIP storage locations. Users can
+select the appropriate storage location for each AIP using the dropdown menu in
+the Archivematica interface. To configure AIP storage locations, see the
+:ref:`Storage Service documentation <storageservice:administrators>`.
 
 .. figure:: images/StoreAIP.*
    :align: center
-   :figwidth: 70%
+   :figwidth: 80%
    :width: 100%
-   :alt: Archivematica ready to store AIP and upload DIP
+   :alt: The Ingest tab of Archivematica, showing an AIP waiting for user input at the Store AIP decision point.
 
-   Archivematica ready to store the AIP
+   Archivematica ready to store an AIP
 
-1. Before storing the AIP, you can review the contents of the AIP by clicking
+#. Before storing the AIP, you can review the contents of the AIP by clicking
    **Review**. A new tab will open where you can browse your AIP. To review the
    individual objects in the AIP, click on the 7z file to download it. You can
    also view the METS file (the file with the name ``METS-uuid.xml``) by
@@ -537,7 +543,7 @@ generation, indexing, DIP generation, and AIP packaging.
 
    .. figure:: images/AIP-review.*
       :align: center
-      :figwidth: 70%
+      :figwidth: 80%
       :width: 100%
       :alt: The AIP review page showing an expanded AIP file structure
 
@@ -549,15 +555,13 @@ generation, indexing, DIP generation, and AIP packaging.
    For more information on Archivematica's AIP structure and the METS file, see
    :ref:`AIP structure <aip-structure>`.
 
-2. Once you are ready to store the AIP, select **Store AIP** from the action
+#. Once you are ready to store the AIP, select **Store AIP** from the action
    dropdown menu. You can also reject the AIP, if needed.
 
-3. Next, select the storage location where you would like to store the AIP.
-   There may be several storage locations configured for your Archivematica
-   pipeline. For instructions to configure AIP storage locations, see the
-   :ref:`Storage Service <storageService:administrators>` documentation.
+#. When prompted, select the storage location where you would like to store the
+   AIP.
 
-4. Once your AIP has been stored, you can view and manage it on the
+#. Once your AIP has been stored, you can view and manage it on the
    :ref:`Archival storage <archival-storage>` tab.
 
 .. note::
@@ -566,10 +570,11 @@ generation, indexing, DIP generation, and AIP packaging.
    AIP storage in the :ref:`Storage Service <storageService:administrators>`.
    The default location is represented as ``Default location`` in the Store AIP
    location dropdown menu, but the storage location will also be listed by name
-   alongside any other storage location options. If there is only one AIP
-   storage location, it will automatically be set as the default location, and
-   both ``Default location`` and the storage location itself will appear in the
-   dropdown menu.
+   alongside any other storage location options.
+
+   If there is only one AIP storage location, it will automatically be set asthe
+   default location, and both ``Default location`` and the storage location
+   itself will appear in the dropdown menu.
 
 .. _upload-dip:
 
@@ -581,7 +586,7 @@ CONTENTdm. For information about uploading DIPs to your access system, see
 :ref:`Access <access>`.
 
 DIPs can be stored similar to AIPs; however, DIPs can also be generated when
-required by doing a partial :ref:`reingest <reingest>` of the AIP.
+required by doing a partial :ref:`re-ingest <reingest>` of the AIP.
 
 .. note::
 
@@ -664,7 +669,7 @@ How to tell in the METS file if an AIP has been re-ingested
 a ``LASTMODDATE``: ``<mets:metsHdr CREATEDATE="2017-10-17T20:29:21"
 LASTMODDATE="2017-10-17T20:32:36"/>``
 
-2. You can also search for the reingest premis:event
+2. You can also search for the re-ingest premis:event
 ``<premis:eventType>reingestion</premis:eventType>``
 
 3. If you've updated the descriptive or rights metadata you will find an updated
@@ -692,16 +697,16 @@ Actions, click on Re-ingest.
 .. image:: images/storage_reingest.*
    :align: center
    :width: 80%
-   :alt: Click on reingest beside the AIP
+   :alt: Click on re-ingest beside the AIP
 
 2. Choose the type of re-ingest (metadata, partial or full).
 
 .. image:: images/reingest_type2.*
    :align: center
    :width: 80%
-   :alt: Choose type of reingest and name of processing configuration
+   :alt: Choose type of re-ingest and name of processing configuration
 
-3. Click on Re-ingest. Archivematica will tell you that the AIP has been
+3. Click on **Re-ingest**. Archivematica will tell you that the AIP has been
    sent to the pipeline for re-ingest.
 
 .. Note::
@@ -722,7 +727,7 @@ Actions, click on Re-ingest.
 .. image:: images/reingest_approve2.*
    :align: center
    :width: 80%
-   :alt: Approve AIP reingest in Ingest tab.
+   :alt: Approve AIP re-ingest in Ingest tab.
 
 
 5. At the Normalization microservice you will make different choices depending
@@ -818,19 +823,19 @@ Storage Service
 .. image:: images/reingest_ss.*
    :align: center
    :width: 80%
-   :alt: Reingest link in Storage Service Packages tab
+   :alt: Re-ingest link in Storage Service Packages tab
 
-2. The Storage Service will ask you to choose a pipeline, the types of reingest
+2. The Storage Service will ask you to choose a pipeline, the types of re-ingest
    (see above for thorough descriptions of each), and for full re-ingest, the
    name of the processing configuration.
 
 .. image:: images/reingest_ss_2.*
    :align: center
    :width: 80%
-   :alt: Screen to choose pipeline and type of reingest
+   :alt: Screen to choose pipeline and type of re-ingest
 
 3. The Storage Service will confirm that the AIP has been sent to the pipeline
-   for reingest. Proceed to the Transfer or Ingest tab of your pipeline, and
+   for re-ingest. Proceed to the Transfer or Ingest tab of your pipeline, and
    follow steps 3-6 above.
 
 .. _re-ingest-api:

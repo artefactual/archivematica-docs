@@ -4,10 +4,15 @@
 Archival storage
 ================
 
-During archival storage, the AIP is moved into its storage repository.
+The Archival Storage tab in the Archivematica dashboard consists of a table
+listing all of the stored AIPs. At the top of the table is the total size of the
+stored AIPs and the number of indexed files. The table lists the AIP name, the
+size, the UUID, the date that the AIP was stored, its status, and whether or not
+the AIP is encrypted. Use the up and down arrows in the column headers to sort
+by AIP name, size, UUID, or date stored.
 
-Should you run into an error during archival storage, please see
-:ref:`Error handling <error-handling>`.
+From the Archival Storage tab, you can download the AIP, delete it, or initiate
+:ref:`AIP re-ingest <reingest>`.
 
 .. note::
 
@@ -15,64 +20,136 @@ Should you run into an error during archival storage, please see
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
    Archival Storage tab may not appear in your dashboard.
 
+.. image:: images/ArchStorTab1.*
+   :align: center
+   :width: 80%
+   :alt: Archival storage tab showing stored AIPs
+
 *On this page*
 
-* :ref:`Storing an AIP <storing-aip>`
-* :ref:`AIP Encryption <aip-encryption>`
 * :ref:`Searching the AIP store <search-aip>`
-* :ref:`Deleting an AIP <delete-aip>`
+* :ref:`AIP information page <aip-information-page>`
 
-.. _storing-aip:
+  * :ref:`Downloading an AIP <download-aip>`
+  * :ref:`Metadata-only DIP upload <metadata-only-dip-upload>`
+  * :ref:`AIP reingest <reingest-aip>`
+  * :ref:`Deleting an AIP <delete-aip>`
 
-Storing an AIP
---------------
-
-#. Once ingest is complete, selecting a location to "Store AIP" in the Actions
-   drop-down menu compresses and zips the AIP and moves it into Archival storage.
-
-#. In the demo version of Archivematica the AIP storage directory is
-   ``/sharedDirectoryStructure/www/AIPsStore/``. In other environments it can be a
-   remote network mounted directory. If multiple AIP storage locations have been
-   created in the Storage Service, each will appear in the Store AIP location
-   dropdown, including LOCKSS locations.
-
-#. The AIP directories are broken down into UUID quad directories for efficient
-   storage and retrieval.
-
-   .. note::
-
-      Archivematica uses a directory tree structure to store AIPs. The tree is
-      based on AIP UUIDs, which are 16-digit alphanumeric unique universal
-      identifiers. Each UUID is broken down into a manageable 4-character chunk,
-      or "UUID quad". Each quad represents a directory. The first four
-      characters (the first UUID quad) of the AIP UUID will compose a
-      subdirectory of the AIP storage. The second UUID quad will be the name of
-      a sub directory of the first, and so on. The last four characters (the
-      last UUID quad) are used to create the leaf of the AIP store directory
-      tree, and the AIP with that UUID resides in that leaf.
-
-#. The Archival storage tab in the Archivematica dashboard consists of a table
-   with information about the stored AIPs. Use the up and down arrows in the
-   column headers to sort by AIP name, size, UUID, date stored or status. Note
-   that at the top of the table is the total size of the stored AIPs and the
-   number of indexed files.
-
-   .. image:: images/ArchStorTab1.*
-      :align: center
-      :width: 80%
-      :alt: Archival storage tab showing stored AIPs
-
-#. To open a copy of the AIP, click on the AIP name. You can then open or
-   download the zipped AIP.
-
-#. The AIP pointer file can be accessed by clicking on the Pointer file link.
-   The pointer file provides information on the AIP and its relationships to the
-   Archivematica, DIPs, and other AIPs as appropriate.
+* :ref:`AIP encryption <aip-encryption>`
+* :ref:`AIP structure <aip-structure>`
 
 .. seealso::
 
    * :ref:`AIP structure <aip-structure>`
    * `Archivematica METS file (wiki)`_
+
+.. _search-aip:
+
+Searching the AIP store
+-----------------------
+
+Once AIPs have been stored, they can be searched for, downloaded, or deleted
+from the Archival Storage tab.
+
+* File UUID
+* File extension
+* AIP UUID
+* AIP name
+* Identifiers
+* Part of AIC
+* AIC identifier
+* Transfer metadata
+* Transfer metadata (other)
+
+To search the AIP index, use the search bar at the top of the screen on the
+Archival Storage tab.
+
+#. Use the first dropdown menu to select whether to search for the File UUID,
+   File path, File extension, AIP UUID, or AIP name.
+
+#. Use the second dropdown menu to select whether to search by keyword, phrase,
+   or date range.
+
+#. Select **Show files?** to display individual files in the search results. By
+   default, the search result displays the AIP.
+
+#. Select **Show AICs?** to display :ref:`Archival Information Collections
+   <aic>` in your results.
+
+  .. image:: images/SearchArchStor.*
+     :align: center
+     :width: 80%
+     :alt: AIP storage search results
+
+The search index includes AIP names and METS contents. All METS metadata is
+indexed and searchable.
+
+By clicking on **View raw** next to a search result, you can also view the raw
+JSON stream that has been indexed for searching. The JSON contains the METS
+data, the Archivematica version that generated the data, the AIP UUID, the time
+indexing occurred, and the relative file path within the AIP.
+
+.. _aip-information-page:
+
+AIP information page
+--------------------
+
+Clicking on the name of an AIP will open the AIP information page. From this
+page, it is possible to upload an associated DIP, re-ingest the AIP, or delete
+the AIP as well as downloading the AIP or viewing the pointer file. Clicking on
+the name of an image will open the image in the browser.
+
+.. _download-aip:
+
+Downloading an AIP
+^^^^^^^^^^^^^^^^^^
+
+.. _metadata-only-dip-upload:
+
+Metadata-only upload to AtoM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. _reingest-aip:
+
+Re-ingest AIP
+^^^^^^^^^^^^^
+
+
+.. _delete-aip:
+
+Deleting an AIP
+^^^^^^^^^^^^^^^
+
+#. On the AIP information page, naviagate to the **Delete** action tab at the
+   bottom of the page.
+
+   .. image:: images/DeleteButton.*
+      :align: center
+      :width: 80%
+      :alt:  Dashboard request to delete AIP
+
+#. Enter the AIP UUID and a reason for deletion.
+
+   .. image:: images/ReasonDelete.*
+      :align: center
+      :width: 80%
+      :alt: Give a reason for deletion
+
+#. Click delete. When you refresh the Archival Storage tab, the status of your
+   AIP should now read *Deletion requested*.
+
+Choosing to delete an AIP will send a request to the Storage Service
+administrator. If the administrator approves the request, the AIP will be
+deleted from your Archival Storage and the index will be updated. If the
+administrator denies the request, the AIP will remain in storage.
+
+.. important::
+
+   Note that Archivematica tracks the location and existence of AIPs in 2 ways:
+   within the Storage Service and in the Elastic Search index which you can
+   search via the dashboard. Deleting AIPs directly from the file system rather
+   than through the Storage Service will cause inconsistencies in both
+   applications and is not recommended in a production environment.
 
 .. _aip-encryption:
 
@@ -95,97 +172,38 @@ for more information.
 You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted
 AIPs appear as True in the Encrypted column.
 
-   .. image:: images/ArchiStorEncryptedColumn.*
-      :align: center
-      :width: 80%
-      :alt: Archival storage tab showing encrypted AIP
+.. image:: images/ArchiStorEncryptedColumn.*
+   :align: center
+   :width: 80%
+   :alt: Archival storage tab showing encrypted AIP
 
 The AIP pointer file contains a `PREMIS:EVENT` element for the encryption event.
 
 The AIP itself can be downloaded in unencrypted form from the Archival Storage
 tab.
 
-.. _search-aip:
+.. _aip-structure:
 
-Searching the AIP store
------------------------
+AIP structure
+-------------
 
-To search the AIP index, use the search bar at the top of the screen on the
-Archival Storage tab.
+In the storage platform, the AIP is broken down into a directory tree structure
+based on the AIP's UUID, which is the 32-digit alphanumeric unique universal
+identifier assigned to each AIP. Each UUID is broken down into a manageable
+4-character chunk, or "UUID quad", which helps with efficient storage and
+retrieval.
 
-#. Use the first dropdown menu to select whether to search for the File UUID,
-   File path, File extension, AIP UUID, or AIP name.
+.. image:: images/AIP-quad-directories.*
+   :align: center
+   :width: 80%
+   :alt: Screenshot of a file browser showing the AIP quad directories, with the lowest-level directory open to show the AIP package.
 
-#. Use the second dropdown menu to select whether to search by keyword, phrase,
-   or date range.
-
-#. Select *Show files?* to display discrete files in your results.
-
-#. Select *Show AICs?* to display Archival Information Collections (aggregates
-   of multiple AIPs) in your results.
-
-   .. image:: images/SearchArchStor.*
-      :align: center
-      :width: 80%
-      :alt: AIP storage search results
-
-The search index includes AIP names and METS contents. All METS metadata is
-indexed and searchable.
-
-Clicking on the name of an AIP will open the AIP information page. From this
-page, it is possible to upload an associated DIP, re-ingest the AIP, or delete
-the AIP as well as downloading the AIP or viewing the pointer file. Clicking on
-the name of an image will open the image in the browser.
-
-By clicking on "View raw" next to a search result, you can also view the raw
-JSON data that contains the METS data, the Archivematica version that generated
-the data, the AIP UUID, the time indexing occurred, and the relative file path
-within the AIP.
-
-.. _delete-aip:
-
-Deleting an AIP
----------------
-
-#. To request AIP deletion, click on the name of the AIP to open the AIP
-   information page.
-
-#. In the Actions section at the bottom of the page, select *Delete*.
-
-   .. image:: images/DeleteButton.*
-      :align: center
-      :width: 80%
-      :alt:  Dashboard request to delete AIP
-
-#. To delete the AIP, you must enter the UUID. Archivematica will also ask for a
-   reason for deletion.
-
-   .. image:: images/ReasonDelete.*
-      :align: center
-      :width: 80%
-      :alt: Give a reason for deletion
-
-#. Click delete. When you refresh the Archival Storage tab, the status of your
-   AIP should now read *Deletion requested*.
-
-Choosing to delete an AIP will send a request to your Archival Storage Service
-administrator. If the administrator approves the request, your AIP will be
-deleted from your Archival Storage and your index will be updated. If the
-administrator denies the request, the AIP will remain in storage and your
-administrator should contact you.
-
-.. important::
-
-   Note that Archivematica tracks the location and existence
-   of AIPs in 2 ways: within the Storage Service and in the Elastic Search index
-   which you can search via the dashboard. Deleting AIPs directly from the file
-   system rather than through the Storage Service will cause inconsistencies in
-   both applications and is not recommended in a production environment.
-
-.. seealso::
-
-   :ref:`Access <access>`
-
+Each quad represents a directory. The first four characters (the first UUID
+quad) of the AIP UUID are used as the name of the main subdirectory in the AIP
+storage. The second UUID quad will be used as the name of a subdirectory of the
+first, and so on. The last four characters (the last UUID quad) are used to
+create the leaf of the AIP store directory tree, and the AIP with that UUID
+resides in that leaf.
 
 :ref:`Back to the top <archival-storage>`
 
