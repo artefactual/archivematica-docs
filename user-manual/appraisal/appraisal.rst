@@ -42,7 +42,6 @@ when you reach the end of the :ref:`Transfer tab microservices
   * :ref:`Creating and editing archival descriptions <archivesspace-child-objects>`
   * :ref:`Adding rights metadata <archivesspace-rights-metadata>`
   * :ref:`Connecting digital objects to ArchivesSpace resources <archivesspace-digital-objects>`
-  * :ref:`Adding files to ArchivesSpace resources and starting a SIP <adding_files_archivesspace>`
 
 * :ref:`Arrangement pane <arrangement>`
 

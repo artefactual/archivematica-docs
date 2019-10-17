@@ -36,7 +36,7 @@ following spaces:
   purpose.
 
 * transfer-backlog : Space used by Archivematica for material sent to
-  :ref:`backlog <manage-backlog>`.
+  :ref:`backlog <backlog>`.
 
 Note that you can pick and choose what spaces are needed in DuraCloud; for
 example, you may choose to use a local server for transfer source but send

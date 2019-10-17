@@ -238,7 +238,7 @@ Create a SIP
 The final microservice on the Transfer tab is *Create SIP from Transfer*. The
 final job, *Create SIP(s)*, allows you to either proceed directly to the Ingest
 tab or to send the transfer to the backlog. For more information on the backlog,
-check out the :ref:`backlog documentation <manage-backlog>`.
+check out the :ref:`backlog documentation <backlog>`.
 
 **Steps:**
 

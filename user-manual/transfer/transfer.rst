@@ -97,7 +97,7 @@ from bottom to top.
    :alt: Image shows the many microservices that run on a standard transfer in Archivematica 1.8
 
 At the end of the transfer process, the transferred material can be sent to the
-:ref:`backlog <manage-backlog>`, where it can be stored until you are ready to
+:ref:`backlog <backlog>`, where it can be stored until you are ready to
 turn it into an AIP. The backlog also gives users a chance to carry out
 :ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
 transferred material into a SIP and send it along to the :ref:`Ingest <ingest>`
@@ -595,7 +595,7 @@ The microservices that run on the Transfer tab include:
 * **Examine contents**: runs `Bulk Extractor`_.
 
 * **Create SIP from transfer**: gives users the chance to send the transfer to
-  the :ref:`Backlog tab <manage-backlog>`, where it can be stored for processing
+  the :ref:`Backlog tab <backlog>`, where it can be stored for processing
   later. Using the backlog also gives users a chance to carry out
   :ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
   transferred material into a SIP and send it along to the :ref:`Ingest
