@@ -234,7 +234,7 @@ Errors that fail transfers
 
 There are a number of microservice errors that will halt the workflow and cause
 Archivematica to report a 'Failed transfer'. It is important to note that not
-all microservice errors will lead in a failed transfer. Below is a list of
+all microservice errors will lead to a failed transfer. Below is a list of
 common errors that will result in the 'Failed transfer' microservice to run and
 the transfer to be moved to the failed directory.
 
@@ -242,8 +242,8 @@ the transfer to be moved to the failed directory.
    unzipped bag transfer, the first microservice is 'Approve transfer.' If the
    'verify bag, and restructure for complaince' job fails within this
    microservice, the transfer will fail and be moved to the failed directory.
-   This will happen when the bag does not conform to the `BagIt`_ spefication or
-   when one of the components is incorrect.
+   This will happen when the bag does not conform to the `BagIt`_ specification
+   or when one of the components is incorrect.
 
 #. Verify transfer compliance: if a job fails within this microservice, the
    transfer will also fail and will be moved to the fail directory.
