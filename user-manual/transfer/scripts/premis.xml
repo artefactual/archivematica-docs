@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/premis/v3 https://www.loc.gov/standards/premis/premis.xsd" version="3.0">
+  <premis:object xsi:type="premis:file">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>hdl</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>hdl:3847677</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCharacteristics>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>MPEG 1/2 Audio Layer 3</premis:formatName>
+          <premis:formatVersion></premis:formatVersion>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>
+      objects/bird.mp3
+    </premis:originalName>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>NRI Repository Event ID</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>NRI-016</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>NRI Repository Event ID</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>NRI-017</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+  </premis:object>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>NRI Repository Event ID</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>NRI-016</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>ingestion</premis:eventType>
+    <premis:eventDateTime>2019-07-04T22:46:07.773391+00:00</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetail>Acquired via records transfer 002/041</premis:eventDetail>
+    </premis:eventDetailInformation>
+    <premis:eventOutcomeInformation>
+      <premis:eventOutcome/>
+      <premis:eventOutcomeDetail>
+        <premis:eventOutcomeDetailNote/>
+      </premis:eventOutcomeDetail>
+    </premis:eventOutcomeInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>repository code</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NRI</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>NRI Repository Event ID</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>NRI-017</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>virus check</premis:eventType>
+    <premis:eventDateTime>2019-07-04T22:46:07.773391+00:00</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetail>program="ClamAV (clamd)"; version="ClamAV 0.100.3"; virusDefinitions="25500/Thu Jul  4 08:04:41 2019"</premis:eventDetail>
+    </premis:eventDetailInformation>
+    <premis:eventOutcomeInformation>
+      <premis:eventOutcome>Pass</premis:eventOutcome>
+      <premis:eventOutcomeDetail>
+        <premis:eventOutcomeDetailNote/>
+      </premis:eventOutcomeDetail>
+    </premis:eventOutcomeInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>repository code</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NRI</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+  </premis:event>
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>repository code</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>NRI</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>Not a Real Institution</premis:agentName>
+    <premis:agentType>organization</premis:agentType>
+  </premis:agent>
+</premis:premis>
