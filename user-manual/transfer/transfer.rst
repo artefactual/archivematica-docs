@@ -17,7 +17,7 @@ Archivematica.
 
   * :ref:`Transfer types <transfer-types>`
   * :ref:`Basic transfers <basic-transfers>`
-  * :ref:`Transfers with descriptive and/or rights metadata <transfers-with-metadata>`
+  * :ref:`Transfers with descriptive, rights, and/or event metadata <transfers-with-metadata>`
   * :ref:`Transfers with submission documentation <create-submission>`
   * :ref:`Transfers with existing checksums <transfer-checksums>`
   * :ref:`Transfers with existing persistent identifiers <transfer-pids>`
@@ -227,12 +227,12 @@ achieve specific goals relating to the preservation of the digital objects.
 
 .. _transfers-with-metadata:
 
-Transfers with descriptive and/or rights metadata
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Transfers with descriptive, rights, and/or event metadata
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To include descriptive and/or rights metadata with your transfer, you should add
-a subdirectory called ``metadata`` to the top level of the transfer. The
-metadata directory name is a reserved name in Archivematica; it must not be
+To include descriptive, rights, and/or event metadata with your transfer, you
+should add a subdirectory called ``metadata`` to the top level of the transfer.
+The metadata directory name is a reserved name in Archivematica; it must not be
 used for anything else. Including the metadata directory ensures that your
 metadata files are appropriately marked as such in the METS file.
 
@@ -242,8 +242,8 @@ metadata files are appropriately marked as such in the METS file.
    :alt: A transfer containing a metadata subdirectory, which contains a metadata.csv and rights.csv file
 
 For more information about importing metadata into Archivematica, including how
-to structure the metadata and rights CSV files so that the contents can be
-transposed into the METS, see :ref:`Import metadata <import-metadata>`.
+to structure the metadata and rights CSV files or event XML file so that the
+contents can be transposed into the AIP METS, see :ref:`Import metadata <import-metadata>`.
 
 Adding metadata to a bag
 ++++++++++++++++++++++++
