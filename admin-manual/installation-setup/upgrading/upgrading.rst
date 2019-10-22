@@ -8,7 +8,6 @@ Upgrade from Archivematica |previous_version|.x to |release|
 
 * :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
-* :ref:`Upgrade search indices <upgrade-search-indices>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
 
