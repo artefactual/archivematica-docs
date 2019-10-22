@@ -246,17 +246,17 @@ the transfer to be moved to the failed directory.
    the failed directory. The error logs will give details about the issue so
    you can investigate further.
 
+#. Verify transfer checksums: if the checksums in the metadata
+   directory cannot be verified (i.e. if a file is missing or corrupted) this
+   microservice will fail and the transfer will be moved to the failed
+   directory.
+
 #. Approve Transfer (zipped and unzipped bags): When running a zipped or
    unzipped bag transfer, the first microservice is 'Approve transfer.' If the
    'verify bag, and restructure for complaince' job fails within this
    microservice, the transfer will fail and be moved to the failed directory.
    This will happen when the bag does not conform to the `BagIt`_ specification
    or when one of the components is incorrect.
-
-#. Verify transfer checksums: if the checksums in the metadata
-   directory cannot be verified (i.e. if a file is missing or corrupted) this
-   microservice will fail and the transfer will be moved to the failed
-   directory.
 
 #. Verify transfer compliance: if a job fails within this microservice, the
    transfer will also fail and will be moved to the fail directory.
