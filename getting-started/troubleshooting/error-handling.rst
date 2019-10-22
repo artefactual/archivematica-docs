@@ -226,7 +226,6 @@ a mistake was made entering the permalink:
 
    Warning that permalink was incorrect, allows user to retry upload DIP
 
-
 .. _failure-errors:
 
 Errors that fail transfers
@@ -238,21 +237,6 @@ all microservice errors will lead to a failed transfer. Below is a list of
 common errors that will result in the 'Failed transfer' microservice to run and
 the transfer to be moved to the failed directory.
 
-#. Approve Transfer (zipped and unzipped bags): When running a zipped or
-   unzipped bag transfer, the first microservice is 'Approve transfer.' If the
-   'verify bag, and restructure for complaince' job fails within this
-   microservice, the transfer will fail and be moved to the failed directory.
-   This will happen when the bag does not conform to the `BagIt`_ specification
-   or when one of the components is incorrect.
-
-#. Verify transfer compliance: if a job fails within this microservice, the
-   transfer will also fail and will be moved to the fail directory.
-
-#. Verify transfer checksums: if the checksums in the metadata
-   directory cannot be verified (i.e. if a file is missing or corrupted) this
-   microservice will fail and the transfer will be moved to the failed
-   directory.
-
 #. Scan for viruses: if a virus is found in the transfer then the microservice
    will fail and the transfer will be moved to the failed directory.
 
@@ -262,6 +246,20 @@ the transfer to be moved to the failed directory.
    the failed directory. The error logs will give details about the issue so
    you can investigate further.
 
+#. Approve Transfer (zipped and unzipped bags): When running a zipped or
+   unzipped bag transfer, the first microservice is 'Approve transfer.' If the
+   'verify bag, and restructure for complaince' job fails within this
+   microservice, the transfer will fail and be moved to the failed directory.
+   This will happen when the bag does not conform to the `BagIt`_ specification
+   or when one of the components is incorrect.
+
+#. Verify transfer checksums: if the checksums in the metadata
+   directory cannot be verified (i.e. if a file is missing or corrupted) this
+   microservice will fail and the transfer will be moved to the failed
+   directory.
+
+#. Verify transfer compliance: if a job fails within this microservice, the
+   transfer will also fail and will be moved to the fail directory.
 
 .. _common-errors:
 
@@ -294,7 +292,6 @@ workflow). This will move the transfer or SIP to the Rejected directory
 transfer or SIP will still be listed in the dashboard, however. See
 :ref:`Removing a transfer or SIP from the dashboard <removing>`, below, to
 remove it from the dashboard.
-
 
 .. _removing:
 
