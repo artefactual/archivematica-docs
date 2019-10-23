@@ -44,7 +44,7 @@ upgrade again.
 
 If you're upgrading from Archivematica 1.8 or lower to the 1.9 version or
 higher, the Elasticsearch version support changed from 1.x to 6.x and it's
-also recommended to create a backup of your Elasticsearch data, specially if
+also recommended to create a backup of your Elasticsearch data, especially if
 you don't have access to the AIP storage locations in the local filesystem.
 
 You can follow these steps in order to create a backup of Elasticsearch:
@@ -216,7 +216,7 @@ Upgrade on Vagrant / Ansible
 ----------------------------
 
 This upgrade method will work with Vagrant machines, but also
-with cloud based virtual machines, or phisical servers.
+with cloud based virtual machines, or physical servers.
 
 #. Connect to your Vagrant machine or server
 
