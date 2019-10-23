@@ -27,6 +27,7 @@ information and show arguments data for the same error, below.
 * :ref:`Email error report <email-failure>`
 * :ref:`Normalization errors <normalization-errors>`
 * :ref:`DIP upload error <dip-error>`
+* :ref:`Errors that fail transfers <failure-errors>`
 * :ref:`Common error behaviours <common-errors>`
 * :ref:`Rejecting a transfer or SIP <rejecting>`
 * :ref:`Removing a transfer or SIP from the dashboard <removing>`
@@ -37,9 +38,9 @@ information and show arguments data for the same error, below.
 Dashboard error reporting
 -------------------------
 
-When a microservice fails or encounters an error, the workflow will be halted
-and Archivematica will report a 'Failed transfer'. The microservice drop-down
-can be expanded to show the specific task that failed.
+In certain cases, when a microservice fails or encounters an error, the workflow
+will be halted and Archivematica will report a 'Failed transfer'. The
+microservice drop-down can be expanded to show the specific task that failed.
 
 .. figure:: images/PinkChecksumFail.*
    :align: center
@@ -142,10 +143,10 @@ report of the normalization:
 
    Normalization report showing failed normalization attempts
 
-The report shows what has been normalized, what is already in an
-acceptable preservation and access format, and what has failed normalization
-or is not in a recognized preservation or access format. If normalization has
-failed, you can click on "yes" to see a task report of the error in a new tab:
+The report shows what has been normalized, what is already in an acceptable
+preservation and access format, and what has failed normalization or is not in a
+recognized preservation or access format. If normalization has failed, you can
+click on "yes" to see a task report of the error in a new tab:
 
 .. figure:: images/Normreporterrortask-10.*
    :align: center
@@ -192,15 +193,13 @@ based on FITS-DROID results instead.
 Archivematica will send an :ref:`email <email-failure>` when normalization
 errors occur. Information given in the email report:
 
-* UUID of the pipeline
-* Name and UUID of the SIP
-* File name and file UUID, and whether Preservation or Access normalization failed
-* Exit code
+* UUID of the pipeline Name and UUID of the SIP File name and file UUID, and
+* whether Preservation or Access normalization failed Exit code
 
-Exit code 1 indicates that a normalization rule and command exists but failed
-to execute properly (due to a problem in the command, a problem with the file, etc).
-Exit code 2 indicates that a normalization rule/command does not exist for that
-format.
+Exit code 1 indicates that a normalization rule and command exists but failed to
+execute properly (due to a problem in the command, a problem with the file,
+etc). Exit code 2 indicates that a normalization rule/command does not exist for
+that format.
 
 .. figure:: images/NormEmailReport.*
    :align: center
@@ -212,7 +211,7 @@ format.
 
 .. _dip-error:
 
-Dip upload error
+DIP upload error
 ----------------
 
 Archivematica will allow the user to continue to attempt to upload the DIP if
@@ -227,19 +226,48 @@ a mistake was made entering the permalink:
 
    Warning that permalink was incorrect, allows user to retry upload DIP
 
+.. _failure-errors:
+
+Errors that fail transfers
+-----------------------------
+
+There are a number of microservice errors that will halt the workflow and cause
+Archivematica to report a 'Failed transfer'. It is important to note that not
+all microservice errors will lead to a failed transfer. Below is a list of
+common errors that will result in the 'Failed transfer' microservice to run and
+the transfer to be moved to the failed directory.
+
+#. Scan for viruses: if a virus is found in the transfer then the microservice
+   will fail and the transfer will be moved to the failed directory.
+
+#. Generate METS.xml document: if this microservice fails to generate a portion
+   of the METS file when run in either the Transfer Tab or the Ingest Tab, it
+   will fail the transfer or SIP. Either the transfer or SIP will be moved to
+   the failed directory. The error logs will give details about the issue so
+   you can investigate further.
+
+#. Verify transfer checksums: if the checksums in the metadata
+   directory cannot be verified (i.e. if a file is missing or corrupted) this
+   microservice will fail and the transfer will be moved to the failed
+   directory.
+
+#. Approve Transfer (zipped and unzipped bags): When running a zipped or
+   unzipped bag transfer, the first microservice is 'Approve transfer.' If the
+   'verify bag, and restructure for complaince' job fails within this
+   microservice, the transfer will fail and be moved to the failed directory.
+   This will happen when the bag does not conform to the `BagIt`_ specification
+   or when one of the components is incorrect.
+
+#. Verify transfer compliance: if a job fails within this microservice, the
+   transfer will also fail and will be moved to the fail directory.
 
 .. _common-errors:
 
 Other common error behaviours
 -----------------------------
 
-#. Verify metadata directory checksums: if the checksums in the metadata
-   directory cannot be verified (i.e. if a file is missing or corrupted) the
-   microservice will fail and the transfer will be moved in the failed
-   directory.
-
-#. Scan for viruses: if a virus is found the microservice will fail and the
-   transfer will be moved in the failed directory.
+Below is a list of common errors that, like normalization, will produce an
+error report but will not fail the transfer.
 
 #. Characterize and extract metadata: if FITS processing fails, the micro-
    service will fail and the transfer will continue processing. Similarly, if
@@ -265,7 +293,6 @@ transfer or SIP will still be listed in the dashboard, however. See
 :ref:`Removing a transfer or SIP from the dashboard <removing>`, below, to
 remove it from the dashboard.
 
-
 .. _removing:
 
 Removing a transfer or SIP from the dashboard
@@ -283,20 +310,21 @@ in the dashboard:
    Click on the red Remove icon to remove a transfer or SIP from the dashboard,
    then click Confirm.
 
-It is recommended that you clear your dashboard of transfers and SIPs periodically
-to improve browser performance.
+It is recommended that you clear your dashboard of transfers and SIPs
+periodically to improve browser performance.
 
 .. _error-browser:
 
 Browser compatability
 ---------------------
 
-Archivematica has been tested most extensively with Firefox and Chrome. There are
-known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (`Issue 7246`_).  Minimal, but successful,
-testing has been done with Microsoft Edge.
+Archivematica has been tested most extensively with Firefox and Chrome. There
+are known issues with Internet Explorer 11 which result in an inability to start
+transfers in the dashboard (`Issue 7246`_).  Minimal, but successful, testing
+has been done with Microsoft Edge.
 
 :ref:`Back to the top <error-handling>`
 
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
 .. _`Issue 7246`: https://projects.artefactual.com/issues/7246
+.. _`BagIt`: https://tools.ietf.org/html/rfc8493
