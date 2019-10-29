@@ -347,6 +347,9 @@ events using the PREMIS standard in a XML file.
    to the ``objects\bird.mp3`` file. Objects are linked to Events via the
    ``premis:linkingEventIdentifierValue`` property.
 
+#. Note that the ``premis:eventDateTime`` value should be in ISO 8601 format
+   (e.g. 2019-07-04T22:46:07.773391+00:00)
+
 #. :ref:`Process the transfer <process-transfer>` as usual. Check the
    ``Characterize and extract metadata`` microservice on the Transfer tab and
    look at the status of the ``Load PREMIS events from metadata/premis.xml`` job
