@@ -84,7 +84,7 @@ The microservices that run on the Ingest tab include:
 
 * **Process manually normalized files**: processes files that have been
   normalized prior to transfer or allows :ref:`manual normalization
-  <manual-normalization>` during ingest.
+  <manual-norm>` during ingest.
 
 * **Policy checks for derivatives**: checks access and preservation derivatives
   created during normalization against the :ref:`Format Policy Registry <preservation-planning>`.
