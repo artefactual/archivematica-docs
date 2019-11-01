@@ -90,7 +90,7 @@ The microservices that run on the Ingest tab include:
   created during normalization against the :ref:`Format Policy Registry <preservation-planning>`.
 
 * **Add final metadata**: allows the user to :ref:`add metadata
-  <add-descriptive-metadata>` through the UI if desired.
+  <add-metadata>` through the UI if desired.
 
 * **Transcribe SIP contents**: runs :ref:`Tesseract <transcription>` OCR tool
   on JPG or TIFF images in the SIP.
