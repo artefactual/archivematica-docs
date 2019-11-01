@@ -102,7 +102,7 @@ The microservices that run on the Ingest tab include:
   Handle.Net registry to create persistent identifiers.
 
 * **Generate AIP METS**: generates the Archivematica :ref:`AIP METS.xml file
-  <mets-file>`.
+  <aip-structure>`.
 
 * **Prepare DIP**: if normalizing for access, creates a DIP containing access
   copies of the objects, thumbnails, and a copy of the METS.xml file.
