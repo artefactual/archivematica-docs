@@ -65,6 +65,67 @@ Create a SIP
 #. For selecting a normalization option, see :ref:`Normalization <normalize>`,
    below.
 
+The microservices that run on the Ingest tab include:
+
+* **Verify SIP compliance**: verifies that the SIP conforms to the folder
+  structure required by Archivematica for processing.
+
+* **Rename SIP directory with SIP UUID**: associates the SIP with its metadata
+  by appending the SIP UUID to the SIP directory name and checks if SIP is from
+  Maildir transfer type to determine workflow. Both the transfer UUID and the
+  SIP UUID are captured in the final AIP.
+
+* **Normalize**: :ref:` normalization <normalize>` converts ingested digital
+  objects to preferred preservation and/or access formats according to user
+  preference, using rules from :ref:`Preservation planning
+  <preservation-planning>`. Choices about normalization can be made at the time
+  the service is run, or automated in  :ref:`Processing configuration
+  <dashboard-processing>`.
+
+* **Process manually normalized files**: processes files that have been
+  normalized prior to transfer or allows :ref:`manual normalization
+  <manual-norm>` during ingest.
+
+* **Policy checks for derivatives**: checks access and preservation derivatives
+  created during normalization against the :ref:`Format Policy Registry <preservation-planning>`.
+
+* **Add final metadata**: allows the user to :ref:`add metadata
+  <add-metadata>` through the UI if desired.
+
+* **Transcribe SIP contents**: runs :ref:`Tesseract <transcription>` OCR tool
+  on JPG or TIFF images in the SIP.
+
+* **Process submission documentation**: processes any submission documentation
+  included in the SIP and adds it to the ``objects`` directory.
+
+* **Bind PIDs**: this :ref:`microservice <bind-pids>` uses integration with the
+  Handle.Net registry to create persistent identifiers.
+
+* **Generate AIP METS**: generates the Archivematica :ref:`AIP METS.xml file
+  <aip-structure>`.
+
+* **Prepare DIP**: if normalizing for access, creates a DIP containing access
+  copies of the objects, thumbnails, and a copy of the METS.xml file.
+
+* **Prepare AIP**: creates an :ref:`AIP in Bagit format <aip-structure>`;
+  creates the AIP pointer file; indexes the AIP, then losslessly compresses it.
+
+* **Review AIP**: part of the Prepare AIP microservice, allows the user to
+  review the structure and content of the AIP before proceeding.
+
+* **Upload DIP**: when DIP is created, allows the user to :ref:`upload the DIP
+  <upload-dip>` to connected access options if desired. [link]
+
+* **Store DIP**: allows the user to choose to store the DIP in a location
+  pre-configured in the Storage Service.
+
+* **Store AIP**: :ref:`moves the AIP <store-aip>` to
+  ``sharedDirectoryStructure/www/AIPsStore`` or another specified directory.
+  Before the AIP has been stored, a copy of it is extracted to a local temp
+  directory, where it is subjected to standard BagIt checks: verifyvalid,
+  checkpayloadoxum, verifycomplete, verifypayloadmanifests, verifytagmanifests.
+
+
 .. _add-metadata:
 
 Add descriptive metadata
