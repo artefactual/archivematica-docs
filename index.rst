@@ -163,10 +163,11 @@ The Archival Storage tab displays AIPs that have been processed by the
 Archivematica pipeline and related metadata such as size of AIP, UUID and date
 stored.
 
-* :ref:`Storing an AIP <storing-aip>`
+* :ref:`General description <archival-storage>`
 * :ref:`Searching the AIP store <search-aip>`
-* :ref:`Deleting an AIP <delete-aip>`
-* :ref:`AIP structure <aip-structure>`
+* :ref:`AIP information page <aip-information-page>`
+* :ref:`AIP encryption <aip-encryption>`
+* :ref:`Stored AIP structure <stored-aip-structure>`
 * :ref:`AICs - managing multi-part AIPs <aic>`
 
 

@@ -4,15 +4,27 @@
 Archival storage
 ================
 
-The Archival Storage tab in the Archivematica dashboard consists of a table
-listing all of the stored AIPs. At the top of the table is the total size of the
-stored AIPs and the number of indexed files. The table lists the AIP name, the
-size, the UUID, the date that the AIP was stored, its status, and whether or not
-the AIP is encrypted. Use the up and down arrows in the column headers to sort
-by AIP name, size, UUID, or date stored.
+The Archival Storage tab consists of a table showing all of the stored Archival
+Information Packages (AIPs) for the Archivematica instance. There is a search
+interface at the top of the page where you can construct simple or boolean
+queries to find AIPs or individual items in storage. At the top of the table is
+the total size of the stored AIPs and the number of indexed files. The table
+lists the AIP's name, size, UUID, date that the AIP was stored, status, and
+whether or not the AIP is encrypted. Use the up and down arrows in the column
+headers to sort by AIP name, size, or date stored.
 
-From the Archival Storage tab, you can download the AIP, delete it, or initiate
-:ref:`AIP re-ingest <reingest>`.
+.. image:: images/archival-storage-tab.*
+   :align: center
+   :width: 60%
+   :alt: The Archival Storage tab showing a table of five AIPs that have been stored.
+
+From the Archival Storage tab, you can select an individual AIP and download it,
+delete it, or initiate :ref:`AIP re-ingest <reingest>`.
+
+Note that Dissemination Information Packages (DIPs) are not displayed on the
+Archival Storage tab, even if they have been stored. For information on
+accessing stored DIPs, see the :ref:`Storage Service <storageservice:index>`
+documentation.
 
 .. note::
 
@@ -20,14 +32,13 @@ From the Archival Storage tab, you can download the AIP, delete it, or initiate
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
    Archival Storage tab may not appear in your dashboard.
 
-.. image:: images/ArchStorTab1.*
-   :align: center
-   :width: 80%
-   :alt: Archival storage tab showing stored AIPs
-
 *On this page*
 
 * :ref:`Searching the AIP store <search-aip>`
+
+  * :ref:`Conducting a search <conducting-search>`
+  * :ref:`Searching for AICs <search-aics>`
+
 * :ref:`AIP information page <aip-information-page>`
 
   * :ref:`Downloading an AIP <download-aip>`
@@ -36,50 +47,99 @@ From the Archival Storage tab, you can download the AIP, delete it, or initiate
   * :ref:`Deleting an AIP <delete-aip>`
 
 * :ref:`AIP encryption <aip-encryption>`
-* :ref:`AIP structure <aip-structure>`
+* :ref:`Stored AIP structure <stored-aip-structure>`
 
 .. seealso::
 
    * :ref:`AIP structure <aip-structure>`
-   * `Archivematica METS file (wiki)`_
+   * `Archivematica METS file`_
 
 .. _search-aip:
 
 Searching the AIP store
 -----------------------
 
-Once AIPs have been stored, they can be searched for, downloaded, or deleted
-from the Archival Storage tab.
+The Archival Storage tab allows you to search for any AIP that appears in the
+Archivematica instance's index. You can free search over all of the results or
+limit your search using one or more of the search parameters:
 
-* File UUID
-* File extension
-* AIP UUID
-* AIP name
-* Identifiers
-* Part of AIC
-* AIC identifier
-* Transfer metadata
-* Transfer metadata (other)
+* **File UUID**: the UUID of a specific file within an AIP.
+* **File extension**: the format extension of a file within an AIP.
+* **AIP UUID**: the UUID of the AIP.
+* **AIP name**: the name of the AIP.
+* **Identifiers**: the value of the ``<identifier>`` field in a MODS file
+  included as submission documentation or in an Islandora transfer's METS file
+  (using the :ref:`Islandora integration <islandora-integration>`).
+* **Part of AIC**: an :ref:`AIC<aic>` number added to the AIP's descriptive
+  metadata, formatted as ``AIC#`` followed by the value (i.e. ``AIC#GWQ498``).
+  This searches for the individual AIPs that comprise an AIC.
+* **AIC identifier**: the identifier of a created :ref:`AIC<aic>`, formatted as
+  ``AIC#`` followed by the value (i.e. ``AIC#GWQ498``). This search returns AIC
+  packages.
+* **Transfer metadata**: metadata added using the special metadata form for the
+  :ref:`disk image transfer type <disk-image-workflow>`.
+* **Transfer metadata (other)**: the contents of the ``bag.info.txt`` of a bag
+  transfer. Note that if you select this option, a second data entry box will
+  pop up where youcan define a specific ``bag-info.txt`` field you would like
+  to search against - for example, if ``bag-info.txt`` included the line
+  ``Source-Organization: My Org``, you could enter ``Source-Organization`` into
+  the second data entry box to limit searches to that field.
 
-To search the AIP index, use the search bar at the top of the screen on the
-Archival Storage tab.
+You can also define your search string as a keyword, phrase, or date range:
 
-#. Use the first dropdown menu to select whether to search for the File UUID,
-   File path, File extension, AIP UUID, or AIP name.
+* **Keyword**: by default, the Keyword option treats the search string as a
+  Boolean OR search - that is, every word is treated as a separate value connected by OR
+  operators. For example, searching for ``2015-Annual-Report`` actually searches
+  for "2015 OR Annual OR Report", so the results contain anything named with
+  "2015" or "Annual" or "Report". To search for a specific strings, add quotation marks
+  around the string - ``"2015-Annual-Report"``.
+* **Phrase**: the Phrase option allows for more flexibility while searching. You
+  can use the Phrase option to perform fuzzy searches, such as ``council*`` to
+  find AIPs named ``council-minutes``, ``councilminutes``, and
+  ``council-report``.
+* **Date range**: this allows you to search for AIPs that were created by
+  Archivematica between two dates. You can conduct date range searches by
+  entering a date, a colon, and a second date, such as
+  ``2015-01-02:2015-03-15``.
+
+.. _conducting-search:
+
+Conducting a search
+^^^^^^^^^^^^^^^^^^^
+
+#. Enter your search term in the freetext box.
+
+#. If you want to limit your search results to a specific parameter (for
+   example, the AIP name or a file UUID), select the parameter from the dropdown
+   menu. By default the parameter is set to **Any**, which will search across
+   the whole storage index.
 
 #. Use the second dropdown menu to select whether to search by keyword, phrase,
    or date range.
 
-#. Select **Show files?** to display individual files in the search results. By
-   default, the search result displays the AIP.
+#. If you would like to see individual files in the search results, rather than
+   AIPs, select **Show files?**.
 
-#. Select **Show AICs?** to display :ref:`Archival Information Collections
-   <aic>` in your results.
+#. To build a 
 
-  .. image:: images/SearchArchStor.*
-     :align: center
-     :width: 80%
-     :alt: AIP storage search results
+
+
+.. image:: images/SearchArchStor.*
+  :align: center
+  :width: 80%
+  :alt: AIP storage search results
+
+
+.. _search-aics:
+
+Searching for Archival Information Collections
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+#. If you would like to see :ref:`Archival Information Collections <aic>` in
+   the search results, select **Show AICs?**. By default, AICs are
+
+
 
 The search index includes AIP names and METS contents. All METS metadata is
 indexed and searchable.
@@ -182,10 +242,11 @@ The AIP pointer file contains a `PREMIS:EVENT` element for the encryption event.
 The AIP itself can be downloaded in unencrypted form from the Archival Storage
 tab.
 
-.. _aip-structure:
+.. _stored-aip-structure:
 
-AIP structure
--------------
+AIP storage structure
+---------------------
+
 
 In the storage platform, the AIP is broken down into a directory tree structure
 based on the AIP's UUID, which is the 32-digit alphanumeric unique universal
@@ -207,4 +268,4 @@ resides in that leaf.
 
 :ref:`Back to the top <archival-storage>`
 
-.. _`Archivematica METS file (wiki)`: https://wiki.archivematica.org/METS
+.. _`Archivematica METS file`: https://wiki.archivematica.org/METS
