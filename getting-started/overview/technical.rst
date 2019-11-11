@@ -12,6 +12,7 @@ Technical architecture
 
    Archivematica technical overview
 
+
 This page provides a high-level overview of Archivematica's technical
 architecture.
 
