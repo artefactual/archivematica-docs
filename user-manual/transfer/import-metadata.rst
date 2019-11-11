@@ -56,6 +56,12 @@ also include :ref:`non-Dublin Core metadata <non-dc-metadata>`. Archivematica is
 able to pass Dublin Core metadata to AtoM or ArchivesSpace, but not non-Dublin
 Core metadata.
 
+.. note::
+
+   Note: Archivematica can only read CSV files that have been encoded in UTF-8.
+   Metadata saved with a file encoding other than UTF-8 may not map correctly
+   to the METS file, or may cause an error and not be added at all.
+
 Descriptive metadata can be applied to individual objects within a transfer, to
 directories within the transfer, or both.
 
