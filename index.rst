@@ -142,15 +142,16 @@ Ingest
 The Ingest tab displays the microservices and jobs that take place to turn a
 SIP into an AIP or a DIP. This tab also contains the backlog widget.
 
-* :ref:`General description <ingest>`
 * :ref:`Create a SIP <create-sip>`
-* :ref:`Add metadata <add-metadata>`
+* :ref:`Add descriptive metadata <add-metadata>`
 * :ref:`Add PREMIS rights <add-rights>`
 * :ref:`Normalize <normalize>`
-* :ref:`Store the AIP <store-aip>`
+* :ref:`Bind PIDs <bind-pids>`
+* :ref:`Transcribe SIP contents <transcribe-contents>`
+* :ref:`Store AIP <store-aip>`
+* :ref:`Upload DIP <upload-dip>`
 * :ref:`Reingest AIP <reingest>`
-* :ref:`Upload DIP to ArchivesSpace <upload-AS>`
-* :ref:`Manual normalization <manual-norm>`
+* :ref:`Clean up the ingest dashboard <cleanup-ingest>`
 
 
 .. _home-storage:
