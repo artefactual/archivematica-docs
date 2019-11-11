@@ -4,4 +4,4 @@ language: python
 python:
   - "2.7"
 script:
-  - "sphinx-build -n -W -b html -d _build/doctrees . _build/html"
+  - "sphinx-build -n -W --keep-going -b html -d _build/doctrees . _build/html"
