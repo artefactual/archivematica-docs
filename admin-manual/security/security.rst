@@ -50,16 +50,22 @@ the following into the command-line:
       FLUSH PRIVILEGES;"
 
 Once you've done this you can change Archivematica's MySQL database access
-credentials by editing these two files:
+credentials by editing your system files and changing the `CLIENT_USER` and
+`CLIENT_PASSWORD` values for each of the following components.
 
-* ``/etc/archivematica/archivematicaCommon/dbsettings`` (change the ``user`` and
-  ``password`` settings)
+For Ubuntu systems:
 
-* ``/usr/share/archivematica/dashboard/settings/common.py`` (change the ``USER``
-  and ``PASSWORD`` settings in the ``DATABASES`` section)
+* /etc/default/archivematica-dashboard
+* /etc/default/archivematica-mcp-client
+* /etc/default/archivematica-mcp-server
+* /etc/default/archivematica-storage-service
 
-Archivematica does not presently support secured MySQL communication so MySQL
-should be run locally or on a secure, isolated network. See :issue:`1645`.
+For CentOS/Red Hat systems:
+
+* /etc/sysconfig/archivematica-dashboard
+* /etc/sysconfig/archivematica-mcp-client
+* /etc/sysconfig/archivematica-mcp-server
+* /etc/sysconfig/archivematica-storage-service
 
 .. _atom-security:
 
