@@ -8,13 +8,12 @@ Technical architecture
    :align: center
    :figwidth: 40%
    :width: 100%
-   :alt: Diagram of the Archivematica ingest overview
+   :alt: Diagram of the Archivematica technical overview
 
-   Archivematica Ingest infrastructure overview
+   Archivematica technical overview
 
 This page provides a high-level overview of Archivematica's technical
 architecture.
-
 
 .. _technical-microservices:
 
@@ -36,7 +35,7 @@ Web-based dashboard
 -------------------
 
 The web dashboard allow users to process, monitor, and control the Archivematica
-workflow processes. It is developed using Python-based Django MVC framework. The
+workflow processes. It is developed using the Python-based Django MVC framework. The
 Dashboard provides a multi-user interface that will report on the status of
 system events and make it simpler to control and trigger specific microservices.
 This interface allows users to easily add or edit metadata, coordinate AIP and
@@ -45,7 +44,6 @@ include error reports, monitoring of MCP tasks, and manual approvals in the
 workflow.
 
 For more information, see :ref:`Web-based dashboard <web-dashboard>`.
-
 
 .. _technical-fpr:
 
@@ -80,25 +78,24 @@ From Transfer to SIP to AIP and DIP
 The primary function of Archivematica is to process digital transfers
 (accessioned digital objects), turn them into SIPs, apply format policies, and
 create high-quality, repository-independent Archival Information Packages (AIP)
-using `METS`_, `PREMIS`_, and `Bagit`_. Archivematica is bundled with `AtoM`_
+using `METS`_, `PREMIS`_, and `Bagit`_. Archivematica can be bundled with `AtoM`_
 but is designed to upload Dissemination Information Packages (DIP), containing
 descriptive metadata and web-ready access copies, to any access system (e.g.
-Dspace, ContentDM, etc.).
+DSpace, ContentDM, etc.).
 
 .. _technical-install:
 
 Single install
 --------------
 
-Using the latest in virtualization technology, each release of the Archivematica
-system packages a customized Xubuntu environment as a `virtual appliance`_,
-making it possible to run on top of any consumer-grade hardware and operating
-system. This means the entire suite of digital preservation tools is now
-available from one simple installation. Archivematica can also be installed
-directly on dedicated hardware via its own Ubuntu repository. Its client/server
-processing architecture allows it to be deployed in multi-node, distributed
-processing configurations to support large-scale, resource-intensive production
-environments.
+Archivematica can be installed on one or many Linux-based operating systems, on
+a Virtual Machine or on dedicated hardware. The entire suite of digital
+preservation tools is available from one single installation. Archivematica's
+client/server processing architecture allows it to be deployed in multi-node,
+distributed processing configurations to support large-scale, resource-intensive
+production environments.
+
+For more information, see :ref:`Installing Archivematica <installation>`.
 
 :ref:`Back to the top <technical-arch>`
 
@@ -106,4 +103,3 @@ environments.
 .. _PREMIS: http://www.loc.gov/standards/premis/
 .. _Bagit: https://confluence.ucop.edu/download/attachments/16744580/BagItSpec.pdf?version=1
 .. _AtoM: https://www.accesstomemory.org/
-.. _virtual appliance: https://en.wikipedia.org/wiki/Virtual_appliance
