@@ -88,8 +88,6 @@ checksums provided by Dataverse.
    (i.e. .zip or .tar files), Archivematica can extract the contents of these
    files and run preservation microservices on the contents. This occurs during
    *Microservice: Extract packages* on the :ref:`Transfer <transfer>` tab.
-   However, due to a `known bug`_, you must not delete the packages after they
-   have been extracted.
 
 
 .. _dataverse-mets:
