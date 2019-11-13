@@ -165,7 +165,17 @@ stored.
 
 * :ref:`General description <archival-storage>`
 * :ref:`Searching the AIP store <search-aip>`
+
+  * :ref:`Conducting a search <conducting-search>`
+  * :ref:`Searching for AICs <search-for-aics>`
+
 * :ref:`AIP information page <aip-information-page>`
+
+  * :ref:`Downloading an AIP <download-aip>`
+  * :ref:`Metadata-only DIP upload <metadata-only-dip-upload>`
+  * :ref:`AIP reingest <reingest-aip>`
+  * :ref:`Deleting an AIP <delete-aip>`
+
 * :ref:`AIP encryption <aip-encryption>`
 * :ref:`Stored AIP structure <stored-aip-structure>`
 * :ref:`AICs - managing multi-part AIPs <aic>`

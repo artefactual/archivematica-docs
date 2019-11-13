@@ -26,18 +26,12 @@ Archival Storage tab, even if they have been stored. For information on
 accessing stored DIPs, see the :ref:`Storage Service <storageservice:index>`
 documentation.
 
-.. note::
-
-   If you are running :ref:`Archivematica without Elasticsearch
-   <install-elasticsearch>` or with limited Elasticsearch functionality, the
-   Archival Storage tab may not appear in your dashboard.
-
 *On this page*
 
 * :ref:`Searching the AIP store <search-aip>`
 
   * :ref:`Conducting a search <conducting-search>`
-  * :ref:`Searching for AICs <search-aics>`
+  * :ref:`Searching for AICs <search-for-aics>`
 
 * :ref:`AIP information page <aip-information-page>`
 
@@ -49,10 +43,11 @@ documentation.
 * :ref:`AIP encryption <aip-encryption>`
 * :ref:`Stored AIP structure <stored-aip-structure>`
 
-.. seealso::
+.. note::
 
-   * :ref:`AIP structure <aip-structure>`
-   * `Archivematica METS file`_
+   If you are running :ref:`Archivematica without Elasticsearch
+   <install-elasticsearch>` or with limited Elasticsearch functionality, the
+   Archival Storage tab may not appear in your dashboard.
 
 .. _search-aip:
 
@@ -107,47 +102,39 @@ You can also define your search string as a keyword, phrase, or date range:
 Conducting a search
 ^^^^^^^^^^^^^^^^^^^
 
-#. Enter your search term in the freetext box.
-
-#. If you want to limit your search results to a specific parameter (for
-   example, the AIP name or a file UUID), select the parameter from the dropdown
-   menu. By default the parameter is set to **Any**, which will search across
-   the whole storage index.
-
-#. Use the second dropdown menu to select whether to search by keyword, phrase,
-   or date range.
+#. On the Archival Storage tab, enter your search term into the text box at the
+   top of the screen. If you want to limit your search results to a specific
+   parameter (for example, the AIP name or a file UUID), use the first dropdown
+   box to select the parameter. By default the parameter is set to **Any**,
+   which will search across the whole storage index. Use the second dropdown
+   menu to select whether to search by keyword, phrase, or date range.
 
 #. If you would like to see individual files in the search results, rather than
-   AIPs, select **Show files?**.
+   AIPs, select the **Show files?** checkbox.
 
-#. To build a 
+#. To build a Boolean search, click on **Add New**. This will bring up a second
+   text box and set of dropdown menus. You can select *Or*, *And*, or *Not* as
+   your Boolean connectors.
 
-
-
-.. image:: images/SearchArchStor.*
+.. image:: images/search-archival-storage.*
   :align: center
   :width: 80%
-  :alt: AIP storage search results
-
-
-.. _search-aics:
-
-Searching for Archival Information Collections
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-#. If you would like to see :ref:`Archival Information Collections <aic>` in
-   the search results, select **Show AICs?**. By default, AICs are
-
-
-
-The search index includes AIP names and METS contents. All METS metadata is
-indexed and searchable.
+  :alt: The Archival Storage tab showing the results for a specific AIP UUID and the .png file extension. There is one result.
 
 By clicking on **View raw** next to a search result, you can also view the raw
 JSON stream that has been indexed for searching. The JSON contains the METS
 data, the Archivematica version that generated the data, the AIP UUID, the time
 indexing occurred, and the relative file path within the AIP.
+
+.. _search-for-aics:
+
+Searching for Archival Information Collections (AICs)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica includes the ability to break a single collection into multiple
+AIPs that are connected together as an :ref:`Archival Information Collection
+<aic>` (AIC). For more information on searching for AICs, see :ref:`Search for
+AICs <search-aic>`.
 
 .. _aip-information-page:
 
@@ -164,10 +151,23 @@ the name of an image will open the image in the browser.
 Downloading an AIP
 ^^^^^^^^^^^^^^^^^^
 
+To download an AIP, click **Download**. The download will begin in your web
+browser. Note that for very large AIPs, it might take a few minutes for the
+download to start. Downloading a very large AIP can be subject to
+Archivematica's default timeouts - please see the :ref:`Scaling up <scaling-up>`
+documentation for more information on adjusting timeouts.
+
+From this page, you can also view the AIP's pointer file. The pointer file
+provides information on the AIP, how it was packaged for storage, fixity, and
+where the AIP is stored. The pointer file is used by Archivematica primarily to
+retrieve the AIP.
+
 .. _metadata-only-dip-upload:
 
 Metadata-only upload to AtoM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 .. _reingest-aip:
 
@@ -175,12 +175,13 @@ Re-ingest AIP
 ^^^^^^^^^^^^^
 
 
+
 .. _delete-aip:
 
 Deleting an AIP
 ^^^^^^^^^^^^^^^
 
-#. On the AIP information page, naviagate to the **Delete** action tab at the
+#. On the AIP information page, navigate to the **Delete** action tab at the
    bottom of the page.
 
    .. image:: images/DeleteButton.*
@@ -267,5 +268,3 @@ create the leaf of the AIP store directory tree, and the AIP with that UUID
 resides in that leaf.
 
 :ref:`Back to the top <archival-storage>`
-
-.. _`Archivematica METS file`: https://wiki.archivematica.org/METS
