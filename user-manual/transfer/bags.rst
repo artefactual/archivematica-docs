@@ -10,10 +10,25 @@ unzipped bags by using the appropriate :ref:`transfer type <transfer-types>`.
 
 *On this page:*
 
+* :ref:`Bag structure requirements <bag-structure-requirements>`
 * :ref:`Unzipped bags <unzipped-bags>`
 * :ref:`Zipped bags <zipped-bags>`
 * :ref:`Adding metadata to bags <adding-metadata-bags>`
 * :ref:`Index and search bag metadata <searching-bags>`
+
+.. _bag-structure-requirements:
+
+Bag structure requirements
+--------------------------
+
+Bags must adhere to requirements of the `BagIt`_ specification. If not,
+Archivematica will error and files will be cleaned up and removed.
+
+Some issues that can cause bags to inadvertently fail include:
+
+* Invisible files were added to the bag after it has been created.
+* Encoding requirements found in `bagit.txt` do not match the
+  encoding of characters in `bag-info.txt`.
 
 .. _unzipped-bags:
 
