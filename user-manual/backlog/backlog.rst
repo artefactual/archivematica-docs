@@ -48,7 +48,7 @@ Searching for transfers and files
 
 #. The search fields at the top of the page can be used to search the backlog.
    You can limit your search to the file name, file extension, accession number,
-   Ingest date or SIP (Transfer) UUID. Leaving the search parameter set to "Any"
+   Ingest date or Transfer UUID. Leaving the search parameter set to "Any"
    will also display search results from the transfer name. Click on **Add new**
    to add a second boolean string to your search query.
 
