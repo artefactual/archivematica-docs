@@ -22,13 +22,16 @@ Bag structure requirements
 --------------------------
 
 Bags must adhere to requirements of the `BagIt`_ specification. If not,
-Archivematica will error and files will be cleaned up and removed.
+Archivematica will fail and files will be cleaned up and removed.
 
 Some issues that can cause bags to inadvertently fail include:
 
 * Invisible files were added to the bag after it has been created.
 * Encoding requirements found in `bagit.txt` do not match the
   encoding of characters in `bag-info.txt`.
+* Editing a file (e.g. metadata.csv) after the bag has been created.
+* Structural issues. See :ref:`Adding metadata to bags
+  <metadata-bags>` for more information on how to structure bags.
 
 .. _unzipped-bags:
 
