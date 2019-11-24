@@ -75,7 +75,7 @@ The microservices that run on the Ingest tab include:
   Maildir transfer type to determine workflow. Both the transfer UUID and the
   SIP UUID are captured in the final AIP.
 
-* **Normalize**: :ref:` normalization <normalize>` converts ingested digital
+* **Normalize**: :ref:`normalization <normalize>` converts ingested digital
   objects to preferred preservation and/or access formats according to user
   preference, using rules from :ref:`Preservation planning
   <preservation-planning>`. Choices about normalization can be made at the time
