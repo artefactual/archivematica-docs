@@ -153,9 +153,11 @@ Downloading an AIP
 
 To download an AIP, click **Download**. The download will begin in your web
 browser. Note that for very large AIPs, it might take a few minutes for the
-download to start. Downloading a very large AIP can be subject to
-Archivematica's default timeouts - please see the :ref:`Scaling up <scaling-up>`
-documentation for more information on adjusting timeouts.
+download to start. Downloading very large AIPs can result in hitting
+Archivematica's default timeouts, resulting in an AIP that doesn't download -
+please see the :ref:`Scaling up <scaling-up>` documentation for more information
+on adjusting timeouts. If the AIP is too large, you may need to download it
+directly from the storage location.
 
 From this page, you can also view the AIP's pointer file. The pointer file
 provides information on the AIP, how it was packaged for storage, fixity, and
@@ -167,19 +169,30 @@ retrieve the AIP.
 Metadata-only upload to AtoM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
+From the AIP information page, it is possible to send a metadata-only upload to
+a connected :ref:`AtoM <atom:home>` site. See :ref:`Metadata-only upload to AtoM
+<upload-metadata-atom>` for more information.
 
 .. _reingest-aip:
 
 Re-ingest AIP
 ^^^^^^^^^^^^^
 
-
+From the AIP information page, it is possible to reingest an AIP in order to add
+or update metadata, create a DIP on demand, or re-run all microservices. See
+:ref:`Re-ingest AIP <reingest>` for more information.
 
 .. _delete-aip:
 
-Deleting an AIP
-^^^^^^^^^^^^^^^
+Delete AIP
+^^^^^^^^^^
+
+Deleting an AIP in Archivematica is a two-step process. First, the user must
+request that the AIP be deleted. Then, a Storage Service administrator must
+approve the deletion from the Storage Service interface. If the administrator
+approves the request, the AIP will be deleted from your Archival Storage and
+the index will be updated. If the administrator denies the request, the AIP
+will remain in storage.
 
 #. On the AIP information page, navigate to the **Delete** action tab at the
    bottom of the page.
@@ -199,15 +212,10 @@ Deleting an AIP
 #. Click delete. When you refresh the Archival Storage tab, the status of your
    AIP should now read *Deletion requested*.
 
-Choosing to delete an AIP will send a request to the Storage Service
-administrator. If the administrator approves the request, the AIP will be
-deleted from your Archival Storage and the index will be updated. If the
-administrator denies the request, the AIP will remain in storage.
-
 .. important::
 
    Note that Archivematica tracks the location and existence of AIPs in 2 ways:
-   within the Storage Service and in the Elastic Search index which you can
+   within the Storage Service and in the Elasticsearch index which you can
    search via the dashboard. Deleting AIPs directly from the file system rather
    than through the Storage Service will cause inconsistencies in both
    applications and is not recommended in a production environment.
@@ -230,8 +238,8 @@ for more information.
 #. At the Store AIP location job on the Ingest tab, choose your encrypted AIP
    location. You now have an encrypted AIP!
 
-You can tell if your AIP is encrypted on the Archival Storage tab. Encrypted
-AIPs appear as True in the Encrypted column.
+You can tell if your AIP is encrypted by looking at the Encrypted column of the
+table on the Archival Storage tab. Encrypted AIPs are marked as *True*.
 
 .. image:: images/ArchiStorEncryptedColumn.*
    :align: center
@@ -247,7 +255,6 @@ tab.
 
 AIP storage structure
 ---------------------
-
 
 In the storage platform, the AIP is broken down into a directory tree structure
 based on the AIP's UUID, which is the 32-digit alphanumeric unique universal
