@@ -24,6 +24,9 @@ like ArchivesSpace.
 
 * :ref:`Access systems <access-default>`
 * :ref:`Upload a DIP to AtoM <upload-atom>`
+
+  * :ref:`Metadata-only upload to AtoM <upload-metadata-atom>`
+
 * :ref:`Upload a DIP to Binder <upload-binder>`
 * :ref:`Upload a DIP to ArchivesSpace <upload-as>`
 * :ref:`Store DIP <store-dip>`

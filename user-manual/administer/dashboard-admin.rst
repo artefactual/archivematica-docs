@@ -73,7 +73,7 @@ processing configuration are noted in the :ref:`Processing configuration fields
 Note that alternate processing configurations (i.e. anything other than default)
 are used in two ways:
 
-#. When you reingest an AIP, you are given the opportunity to select which
+#. When you re-ingest an AIP, you are given the opportunity to select which
    processing configuration you'd like to use.
 #. You can download the processingMCP.xml file by clicking **Download**. Then,
    rename the file ``processingMCP.xml`` and include it at the top level of your
@@ -489,7 +489,7 @@ Store DIP
 
 If a DIP was created, it can be stored without interrupting the workflow in the
 dashboard. Note that DIP storage is not required, and that DIPs can be created
-on demand by :ref:`reingesting the AIP <reingest>`.
+on demand by :ref:`re-ingesting the AIP <reingest>`.
 
 Options:
 
