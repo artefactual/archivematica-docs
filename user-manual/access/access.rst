@@ -80,6 +80,15 @@ using either the metadata form or the metadata CSV file. This descriptive
 metadata will be passed to AtoM. Note that the AtoM DIP upload integration
 supports Dublin Core descriptive metadata only.
 
+.. note::
+
+  Adding metadata through the form in Archivematica will create an intermediary
+  descripton in AtoM. However, if the transfer is sent to the backlog and AtoM
+  descriptions are applied (see :ref:`Adding AtoM levels of description
+  <adding-atom-lod>`), then any metadata added through the form will not be
+  present in AtoM. There will also be no intermediary description, but the
+  levels of description you applied will be present in AtoM.
+
 There are two ways to provide the target description to Archivematica. The first
 is by providing the slug during the Upload DIP microservice.
 

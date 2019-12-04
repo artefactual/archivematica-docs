@@ -584,6 +584,9 @@ This functionality is supported with AtoM 2.2 and higher.
    arrange, AtoM will flatten the DIP so that all digital objects are
    child-level descriptions of the target description.
 
+   If you add levels of description to the SIP then metadata added through the
+   form in Archivematica will not be included in the DIP.
+
 .. _creating-sips-tags:
 
 Creating a SIP using tags
