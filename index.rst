@@ -37,6 +37,7 @@ Archivematica.
 * :ref:`Web-based dashboard <web-dashboard>`
 * :ref:`Technical architecture <technical-arch>`
 * :ref:`Microservices <microservices>`
+* :ref:`External tools <external-tools>`
 * :ref:`System requirements <system-requirements>`
 
 .. _home-quick-start:
