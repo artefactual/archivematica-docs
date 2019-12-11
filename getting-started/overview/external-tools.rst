@@ -5,11 +5,11 @@ External tools
 ==============
 
 Archivematica is built upon open-source frameworks and services (e.g. Django,
-Gearman below), as well as integrating a suite(s) of free and open-source tools
-that allows users to process digital objects from ingest to access based on the
-ISO-OAIS functional model. In addition to the core software which is released
-under `GNU Affero General Public License (AGPL)`_, the following tools are
-bundled with Archivematica.
+Gearman) and also integrates free and open-source tools that support users to
+process digital objects from ingest to access based on the ISO-OAIS functional
+model. In addition to the core software, which is released under
+`GNU Affero General Public License (AGPL)`_, the following tools are bundled
+with Archivematica.
 
 `BagIt`_
 ^^^^^^^^
