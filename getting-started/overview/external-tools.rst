@@ -4,10 +4,12 @@
 External tools
 ==============
 
-Archivematica integrates a suite of free and open-source tools that allows users to process 
-digital objects from ingest to access based on the ISO-OAIS functional model. In addition 
-to the core software which is released under `GNU Affero General Public License
-(AGPL)`_, the following tools are bundled with Archivematica.
+Archivematica is built upon open-source frameworks and services (e.g. Django,
+Gearman below), as well as integrating a suite(s) of free and open-source tools
+that allows users to process digital objects from ingest to access based on the
+ISO-OAIS functional model. In addition to the core software which is released
+under `GNU Affero General Public License (AGPL)`_, the following tools are
+bundled with Archivematica.
 
 `BagIt`_
 ^^^^^^^^
@@ -82,12 +84,6 @@ machines or processes that are better suited to do the work.
 An interpreter for the PostScript language and for PDF.
 
 **License**: `GNU Affero General Public License (AGPL)`_
-
-`hashdeep/md5deep`_
-^^^^^^^^^^^^^^^^^^^
-Checksum generation and verification scripts.
-
-**License**: `GNU General Public License`_
 
 `Imagemagick`_
 ^^^^^^^^^^^^^^
@@ -191,14 +187,6 @@ and IETF RFC-4122 compliant Universally Unique Identifier (UUID).
 The Unarchiver is an archive unpacker program.
 
 **License**: `GNU General Public License`_
-
-`Zip`_
-^^^^^^
-Utility called by BagIt to create AIP packages.
-
-**License**: Info-Zip license: "Permission is granted to anyone to use this
-software for any purpose, including commercial applications, and to alter it
-and redistribute it freely"
 
 :ref:`Back to the top <external-tools>`
 

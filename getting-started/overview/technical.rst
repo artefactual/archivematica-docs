@@ -35,10 +35,7 @@ For more information, see :ref:`Microservices <microservices>`.
 External tools
 --------------
 
-Archivematica integrates a suite of free and open-source tools that allows users
-to process digital objects from ingest to access based on the ISO-OAIS functional
-model. In addition to the core software which is released under AGPL v3 license,
-many open source tools are bundled with Archivematica.
+Archivematica is built upon additional open-source frameworks and services.
 
 For more information, see :ref:`External tools <external-tools>`.
 
