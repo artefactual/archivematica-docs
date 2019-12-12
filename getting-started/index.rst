@@ -13,6 +13,7 @@ of links to each chapter's main sections.
    overview/dashboard
    overview/technical
    overview/microservices
+   overview/external-tools
    overview/system-requirements
    quick-start/quick-start
    quick-start/configuration

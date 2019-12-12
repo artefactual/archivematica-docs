@@ -30,6 +30,15 @@ include files, checksums, logs, submission documentation, XML metadata, etc.
 
 For more information, see :ref:`Microservices <microservices>`.
 
+.. _technical-external-tools:
+
+External tools
+--------------
+
+Archivematica is built upon additional open-source frameworks and services.
+
+For more information, see :ref:`External tools <external-tools>`.
+
 .. _technical-dashboard:
 
 Web-based dashboard

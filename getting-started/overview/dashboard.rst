@@ -58,7 +58,7 @@ packages using the red "remove" button (see below).
 Archivematica's processing is performed through a number of:ref:`microservices
 <microservices>`. Microservices are provided by a combination of Archivematica
 Python scripts and one or more of the free, open-source `external software
-tools`_ bundled in the Archivematica system.
+tools <external-tools>` bundled in the Archivematica system.
 
 These microservices are broken down into a number of jobs, which users can see
 by clicking on the microservice to expand. Clicking on the gear icon within a
@@ -90,5 +90,3 @@ processed, it will remain unprocessed at its last decision point, even if
 removed from the Dashboard.
 
 :ref:`Back to the top <web-dashboard>`
-
-.. _external software tools: https://wiki.archivematica.org/External_tools
