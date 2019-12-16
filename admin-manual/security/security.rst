@@ -50,8 +50,11 @@ the following into the command-line:
       FLUSH PRIVILEGES;"
 
 Once you've done this you can change Archivematica's MySQL database access
-credentials by editing your system files and changing the `CLIENT_USER` and
-`CLIENT_PASSWORD` values for each of the following components.
+credentials by editing your system files and changing the following values for
+each of the following components.
+
+The components can be found in different locations depending on the Operating
+System.
 
 For Ubuntu systems:
 
@@ -66,6 +69,44 @@ For CentOS/Red Hat systems:
 * /etc/sysconfig/archivematica-mcp-client
 * /etc/sysconfig/archivematica-mcp-server
 * /etc/sysconfig/archivematica-storage-service
+
+The variables are different depending on the component. These are the following
+variables to change per component:
+
+**Dashboard:**  
+
+* ARCHIVEMATICA_DASHBOARD_CLIENT_DATABASE
+* ARCHIVEMATICA_DASHBOARD_CLIENT_HOST
+* ARCHIVEMATICA_DASHBOARD_CLIENT_PASSWORD
+* ARCHIVEMATICA_DASHBOARD_CLIENT_USER
+
+**MCPClient:**  
+
+* ARCHIVEMATICA_MCPCLIENT_CLIENT_DATABASE
+* ARCHIVEMATICA_MCPCLIENT_CLIENT_HOST
+* ARCHIVEMATICA_MCPCLIENT_CLIENT_PASSWORD
+* ARCHIVEMATICA_MCPCLIENT_CLIENT_USER
+
+**MCPServer:**  
+
+* ARCHIVEMATICA_MCPSERVER_CLIENT_DATABASE
+* ARCHIVEMATICA_MCPSERVER_CLIENT_HOST
+* ARCHIVEMATICA_MCPSERVER_CLIENT_PASSWORD
+* ARCHIVEMATICA_MCPSERVER_CLIENT_USER
+
+**Storage Service when using sqlite3:**  
+
+* SS_DB_NAME
+* SS_DB_HOST
+* SS_DB_PASSWORD
+* SS_DB_USER
+
+**Storage Service when using MySQL:**  
+
+* SS_DB_URL
+
+For SS MySQL database see: `SS application-specific-environment-variables`_.
+
 
 .. _atom-security:
 
@@ -259,3 +300,4 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _requests: http://docs.python-requests.org/
 .. _requests-cas: http://docs.python-requests.org/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
+.. _SS application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.15.x/install/README.md#application-specific-environment-variables
