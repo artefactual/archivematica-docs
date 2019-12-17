@@ -350,14 +350,13 @@ identifiers.json file in the metadata sub-directory.
   :width: 50%
   :alt: A transfer containing an identifiers.json file
 
-These persistent identifiers (PID) will be added during the Ingest Bind PIDs
-microservice, regardless of whether the Bind PIDs microservice is enabled or
-not.
+These persistent identifiers (PID) will be added during the Ingest `Process
+metadata directory` microservice.
 
-.. image:: images/PID_declaration.*
+.. image:: images/load-persistent-identifiers.*
   :align: center
   :width: 50%
-  :alt: A persistent identifier (PID) is declared as a link to a PREMIS object
+  :alt: The persistent identifier (PID) from identifiers.json are parsed and loaded during the 'Process metadata directory' microservice
 
 Once Ingest completes, the PID will be linked to the premis:objectIdentifier in
 the AIP METS file.
