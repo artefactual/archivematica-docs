@@ -310,7 +310,7 @@ metadata sections (``<mets:rightsMD>``).
 .. literalinclude:: scripts/rights-mets.xml
    :language: xml
 
-   .. _premis.xml:
+.. _premis.xml:
 
 Importing event metadata with premis.xml
 ----------------------------------------
