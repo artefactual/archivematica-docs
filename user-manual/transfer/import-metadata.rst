@@ -4,16 +4,16 @@
 Import metadata
 ===============
 
-Archivematica can recognize descriptive and/or rights metadata that is included
-with your transfer. You can import metadata by including a directory called
-``metadata`` in your transfer. The directory can contain any type of metadata
-that you wish to preserve alongside your digital objects. The Process Metadata
-Directory Microservice will perform a number of preservation actions on objects
-in this directory.
+Archivematica can recognize descriptive, rights, and/or event metadata that is
+included with your transfer. You can import metadata by including a directory
+called ``metadata`` in your transfer. The directory can contain any type of
+metadata that you wish to preserve alongside your digital objects. The Process
+Metadata Directory Microservice will perform a number of preservation actions on
+objects in this directory.
 
-Archivematica supports conventions for importing descriptive metadata and rights
-metadata that will transpose the contents of the metadata files into the METS
-file. If you are using :ref:`AtoM <atom-setup>` or :ref:`ArchivesSpace
+Archivematica supports conventions for importing descriptive, rights, and event
+metadata that will transpose the contents of the metadata files into the AIP
+METS file. If you are using :ref:`AtoM <atom-setup>` or :ref:`ArchivesSpace
 <archivesspace-setup>`, metadata that is transposed to the METS can be passed on
 to these access systems for further use.
 
@@ -21,8 +21,8 @@ Metadata that is not able to be transposed to the METS - for example,
 preservation metadata created by tool like BitCurator prior to ingest into
 Archivematica - will be preserved alongside the materials in the transfer.
 
-Descriptive and/or rights metadata can be added to standard, unzipped, zipped,
-and disk image :ref:`transfer types <transfer-types>`.
+Descriptive, rights, and/or event metadata can be added to standard, unzipped,
+zipped, and disk image :ref:`transfer types <transfer-types>`.
 
 Metadata in the METS file is searchable in the :ref:`Archival Storage
 <archival-storage>` tab.
@@ -37,6 +37,7 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
   * :ref:`Adding metadata using JSON files <metadata-json>`
 
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
+* :ref:`Importing event metadata with premis.xml <premis.xml>`
 * :ref:`Adding metadata to bags <metadata-bags>`
 * :ref:`Importing other types of metadata <other-metadata>`
 * :ref:`Importing structural metadata with mets_structmap.xml <structmap.xml>`
@@ -207,8 +208,8 @@ non-Dublin Core descriptive metadata.
    :file: _csv/mixed-metadata.csv
    :header-rows: 1
 
-This results in a METS file containing two ``<dmdSec>`` sections for each directory
-- two with ``MDTYPE="DC"`` and two with ``MDTYPE="OTHER"``.
+This results in a METS file containing two ``<dmdSec>`` sections for each
+directory - two with ``MDTYPE="DC"`` and two with ``MDTYPE="OTHER"``.
 
 .. literalinclude:: scripts/mixed-metadata-mets.xml
    :language: xml
@@ -225,8 +226,8 @@ metadata. The JSON file is added to the metadata directory as above.
    preserve (for more information on creating a basic transfer for
    Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,
    the following directory tree displays a basic transfer called
-   ``jsonMetadataTransfer``. One digital object sits within the top-level directory,
-   while another object is nested within a subdirectory.::
+   ``jsonMetadataTransfer``. One digital object sits within the top-level
+   directory, while another object is nested within a subdirectory.::
 
     jsonMetadataTransfer/
     ├── audio
@@ -276,9 +277,9 @@ Rights metadata can be applied to individual objects within a transfer, to
 directories within the transfer, or both.
 
 #. Create a transfer directory containing the digital objects you would like to
-   preserve. As an example, the following directory tree displays a basic transfer called
-   ``rightsTransfer``. One digital object sits within the top-level directory,
-   while another object is nested within a subdirectory.::
+   preserve. As an example, the following directory tree displays a basic
+   transfer called ``rightsTransfer``. One digital object sits within the
+   top-level directory, while another object is nested within a subdirectory.::
 
     rightsTransfer/
     ├── audio
@@ -308,12 +309,57 @@ directories within the transfer, or both.
 
 #. :ref:`Process the transfer <process-transfer>` as usual.
 
-Any PREMIS rights metadata formatted as in the example above will be transposed to
-the METS file. The METS file for the above example includes three rights
+Any PREMIS rights metadata formatted as in the example above will be transposed
+to the METS file. The METS file for the above example includes three rights
 metadata sections (``<mets:rightsMD>``).
 
 .. literalinclude:: scripts/rights-mets.xml
    :language: xml
+
+.. _premis.xml:
+
+Importing event metadata with premis.xml
+----------------------------------------
+
+In some cases, digital preservation events may occur on digital objects
+prior to their transfer into Archivematica. You can log information about these
+events using the PREMIS standard in a XML file.
+
+#. Create a transfer directory containing the digital objects you would like to
+   preserve. As an example, the following directory tree displays a basic
+   transfer called ``eventsTransfer``. One digital object sits within the
+   objects subdirectory, while a premis.xml file sits in the metadata
+   subdirectory.::
+
+    eventsTransfer/
+    ├── objects
+    │   └── bird.mp3
+    └── metadata
+        └── premis.xml
+
+#. To create the premis.xml file containing the event information you can use
+   the example below as a template.
+
+   .. literalinclude:: scripts/premis.xml
+      :language: xml
+
+#. Each premis.xml file should contain one or more ``premis:object``,
+   ``premis:event`` and ``premis:agent`` entity. Each entity should have its own
+   local identifier value for linking within the file. These will be converted
+   to Archivematica UUIDs upon import. One Object can be linked to many Events.
+   Each Event should be linked to one Agent.
+
+#. Note that the ``premis:originalName`` value is what links the ``premis:object``
+   to the ``objects\bird.mp3`` file. Objects are linked to Events via the
+   ``premis:linkingEventIdentifierValue`` property.
+
+#. Note that the ``premis:eventDateTime`` value should be in ISO 8601 format
+   (e.g. 2019-07-04T22:46:07.773391+00:00)
+
+#. :ref:`Process the transfer <process-transfer>` as usual. Check the
+   ``Characterize and extract metadata`` microservice on the Transfer tab and
+   look at the status of the ``Load PREMIS events from metadata/premis.xml`` job
+   to determine whether the import was successful.
 
 .. _metadata-bags:
 
