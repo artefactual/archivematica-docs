@@ -121,17 +121,8 @@ Using the disk image transfer type
       the new tab to go back to your in-progress transfer, rather than clicking on
       the Transfer tab from the metadata form.
 
-#. If you are planning to start multiple transfers, you can enter metadata for
-   the next image by clicking on **Add Next**, located to the right of **Start
-   Transfer**.
-
-   .. figure:: images/forensic-add-next.*
-      :align: center
-      :figwidth: 70%
-      :width: 100%
-      :alt: Add the metadata for the next image by clicking Add Next
-
-      Add the metadata for the next image by clicking Add Next
+#. If you are planning to start multiple transfers, you can follow the above
+   steps for adding metadata to additional transfers.
 
 #. Once all images are loaded to the dashboard and all metadata is added, select
    **Start Transfer**.
