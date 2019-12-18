@@ -12,7 +12,7 @@ Overview
 Archivematica includes a number of features and options to improve scalability
 and performance. The default configuration options are geared towards "typical"
 use cases and for many users won't require any modification. However, some
-users will benefit from optimizing configuration options to meet their
+users will benefit from optimising configuration options to meet their
 specific preservation needs and available computing resources.
 
 This guide describes three broad approaches to scaling and optimization and the
@@ -39,22 +39,33 @@ in computing resources (CPU, memory and disk space). When a deployment uses a
 machine with considerably more (or less) resources than the
 :ref:`recommended minimum production requirements <requirements-production>`,
 there are several different configuration options that may help further
-optimize performance.
+optimise performance.
 
-Limit task threads in MCPServer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Optimising the number of packages processed at a time
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The MCPServer can accept instructions to process work from multiple sources
-(e.g. the Dashboard, API, a watched directory) and will create new threads as
-new instructions are received, up to a defined limit. The limit helps to
-mitigate the risk of concurrency errors (conflicts or contention when the
-machine is trying to do too many things at once).
+MCPServer allows processing of up to a set number of packages concurrently.
+The ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_CONCURRENT_PACKAGES`` parameter defines
+the maximum number of packages that MCPServer will process simultaneously.
+The default value is 0.5 * <cpu count>, rounded up. This number could be
+increased if you are constantly processing transfers, but not seeing full CPU
+utilization. See `MCPServer`_ for more details.
 
-The ``ARCHIVEMATICA_MCPSERVER_PROTOCOL_LIMITTASKTHREADS`` parameter defines the
-maximum number of threads that MCPServer will run simultaneously. The default
-value is 75. This number could be increased on machines with a large number of
-CPUs or decreased on machines with very few (2) CPUs. See `MCPServer`_
-for details.
+
+Optimising the number of MCPServer threads
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MCPServer has two settings for modifying the number of threads run:
+
+* ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_RPC_THREADS`` sets the number of
+  "RPC Server" workers available to respond to status requests from other
+  components (such as the Dashboard). The default value is 4. If you are seeing
+  slow status updates in the Dashboard, increasing this value _may_ help.
+* ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_WORKER_THREADS`` sets the number of
+  threads available to handle MCPServer processing tasks, such as submitting
+  Gearman jobs for processing by MCPClient. The default value is
+  <cpu count> + 1. Increasing this value _may_ help increase CPU utilization.
+
 
 Deploy multiple MCPClients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -95,7 +106,7 @@ To add a unit, create a copy of that unit file with a different name, such as\
 and ask systemd to reload all unit files using `$ systemctl daemon-reload`.
 
 
-Optimize batch size for large files
+Optimise batch size for large files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_BATCH_SIZE`` parameter defines the
@@ -117,6 +128,24 @@ circumstances.
 
 To set the batch size parameter, see `MCPServer`_ Configuration.
 
+Optimising the number of Dashboard workers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Dashboard process can runs multiple worker processes via Gunicorn.
+The ``AM_GUNICORN_WORKERS`` value (default 1) sets the number of workers used.
+Increasing this value _may_ help improve Dashboard responsiveness.
+See `Dashboard`_ for more details.
+
+Optimising the number of Storage Service workers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Storage Service process can run multiple worker processes via Gunicorn.
+The ``SS_GUNICORN_WORKERS`` value (default 1) sets the number of workers used.
+Increasing this value _may_ help improve Storage Service responsiveness.
+
+Note that increasing this value may cause database errors if using SQLite.
+
+
 .. _scaling-out:
 
 Scaling out: optimising across multiple machines
@@ -125,7 +154,7 @@ Scaling out: optimising across multiple machines
 The second general strategy to improve processing speed and capacity is to
 distribute some components in the system across more than one machine. This
 section sets outs which components can be distributed to other machines and
-describes the configuration options available for optimizing performance across
+describes the configuration options available for optimising performance across
 those machines.
 
 Distributing components on multiple machines
@@ -191,7 +220,7 @@ It is possible to deploy the Elasticsearch, Gearman and MySQL components on
 other machines.
 For help, ask on the `Archivematica user forum`_ for more details.
 
-Optimizing settings across machines
+Optimising settings across machines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Optimize batch size for large files
@@ -227,7 +256,7 @@ See `Dashboard`_ Configuration, `MCPClient`_ Configuration, and `MCPServer`_
 Configuration for a list of all timeout parameters, their default settings and
 instructions for modifying them.
 
-Optimizing storage locations
+Optimising storage locations
 ++++++++++++++++++++++++++++
 
 The Storage Service Administrator manual describes the different types of
