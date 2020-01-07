@@ -878,4 +878,4 @@ This tab displays the version of Archivematica you're using.
 .. _automation tools: https://github.com/artefactual/automation-tools
 .. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
-.. _PID webservice being used by IISH:
+.. _PID webservice being used by IISH: https://github.com/IISH/PID-webservice
