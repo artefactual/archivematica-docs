@@ -127,27 +127,6 @@ Options:
 #. **Yes** - UUIDs are assigned.
 #. **No** - UUIDs are not assigned.*
 
-Send transfer to quarantine
-+++++++++++++++++++++++++++
-
-Transfers are sequestered until virus definitions can be updated.
-
-Options:
-
-#. **None** - the user is prompted for a decision.
-#. **Yes** - transfers are automatically quarantined.
-#. **No** - transfers are not sent to quarantine.*
-
-Remove from quarantine after (days)
-+++++++++++++++++++++++++++++++++++
-
-Transfers are automatically removed from quarantine after a defined number of
-days and made available for further processing.
-
-Enter the number of days that transfers should remain in quarantine (i.e. 5).
-
-The default value for this field is 28 days.
-
 Generate transfer structure report
 ++++++++++++++++++++++++++++++++++
 

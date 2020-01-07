@@ -95,21 +95,10 @@ The processingMCP.xml follows a specific XML format:
 
    <processingMCP>
     <preconfiguredChoices>
-        <!-- Send to quarantine? -->
-        <preconfiguredChoice>
-            <appliesTo>755b4177-c587-41a7-8c52-015277568302</appliesTo>
-            <goToChain>d4404ab1-dc7f-4e9e-b1f8-aa861e766b8e</goToChain>
-        </preconfiguredChoice>
         <!-- Display metadata reminder -->
         <preconfiguredChoice>
             <appliesTo>eeb23509-57e2-4529-8857-9d62525db048</appliesTo>
             <goToChain>5727faac-88af-40e8-8c10-268644b0142d</goToChain>
-        </preconfiguredChoice>
-        <!-- Remove from quarantine -->
-        <preconfiguredChoice>
-            <appliesTo>19adb668-b19a-4fcb-8938-f49d7485eaf3</appliesTo>
-            <goToChain>333643b7-122a-4019-8bef-996443f3ecc5</goToChain>
-            <delay unitCtime="yes">2419200.0</delay>
         </preconfiguredChoice>
         <!-- Extract packages -->
         <preconfiguredChoice>
