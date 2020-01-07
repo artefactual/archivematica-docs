@@ -562,10 +562,6 @@ The microservices that run on the Transfer tab include:
   order of the transfer. This METS file is added to any SIPs generated from
   this transfer.
 
-* **Quarantine**: quarantines the transfer for a set duration. Sending the
-  transfer to quarantine can give you a chance to update virus definitions
-  before the transfer is scanned for viruses.
-
 * **Scan for viruses**: scans for viruses and malware. For more information, see
   :ref:`Scan for viruses <scan-for-viruses>`.
 
