@@ -760,7 +760,7 @@ in Handle.Net.
 
    In order to use the Handle.Net configuration, you will need to provide an
    available web service. See the `PID webservice being used by IISH`_ for an
-   example of a compatible webservice.
+   example of a compatible web service.
 
 .. image:: images/handlenet-config.*
    :align: right
