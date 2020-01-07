@@ -767,6 +767,12 @@ registry. Handle.Net can then create persistent URLs (PURLs) from the PIDs and
 can reroute requests to the persistent URLs to a target URL that is configured
 in Handle.Net.
 
+.. note::
+
+   In order to use the Handle.Net configuration, you will need to provide an
+   available web service. See the `PID webservice being used by IISH`_ for an
+   example of a compatible web service.
+
 .. image:: images/handlenet-config.*
    :align: right
    :width: 45%
@@ -872,3 +878,4 @@ This tab displays the version of Archivematica you're using.
 .. _automation tools: https://github.com/artefactual/automation-tools
 .. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
+.. _PID webservice being used by IISH: https://github.com/IISH/PID-webservice
