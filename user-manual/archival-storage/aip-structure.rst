@@ -105,10 +105,10 @@ METS file
 
 ``/data/METS.uuid.xml`` contains the full `PREMIS`_ implementation (see PREMIS
 metadata for original file, PREMIS metadata: normalized files, PREMIS metadata:
-events, and PREMIS metadata: rights). The role of the `METS file`_ is to link
-original objects to their preservation copies and to their descriptions and
-submission documentation, as well as to link PREMIS metadata to the objects in
-the AIP.
+events, and PREMIS metadata: rights). The role of the :ref:`METS file
+<METS_schema>` is to link original objects to their preservation copies and to
+their descriptions and submission documentation, as well as to link PREMIS
+metadata to the objects in the AIP.
 
 METS file structure
 ===================
@@ -238,4 +238,3 @@ The creation of thumbnails is optional and configurable in the
 
 .. _`Bagit specification`: https://tools.ietf.org/html/rfc8493
 .. _`PREMIS`: https://www.loc.gov/standards/premis/
-.. _`METS file`: https://wiki.archivematica.org/METS

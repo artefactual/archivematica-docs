@@ -4,11 +4,232 @@
 PREMIS metadata in Archivematica
 ================================
 
-Archivematica supports the entry of `PREMIS <http://www.loc.gov/standards/premis/>`_
-rights metadata during :ref:`transfer <transfer>` or :ref:`ingest <ingest>`.
-Rights entered via the GUI interface apply to the entirety of the SIP or transfer.
-Rights can also be entered at the object level by describing them in a rights.csv
-file and using the :ref:`Import metadata <import-metadata>` feature.
+Archivematica supports `PREMIS`_ metadata and currently implements `version 3`_.
+It records actions (known as Events) taken on Objects by Agents. It also
+supports the addition of PREMIS Rights metadata. This page discusses how PREMIS
+is implemented in the AIP METS file.
+
+Skip to:
+
+* :ref:`PREMIS Events metadata <premis-events>`
+* :ref:`PREMIS Events list <event-list>`
+* :ref:`PREMIS Agent metadata <premis-agent>`
+* :ref:`PREMIS Rights metadata <premis-rights>`
+
+.. _premis-events:
+
+PREMIS Events metadata
+======================
+
+PREMIS Events will be recorded in separate digiprovMD sectons in the METS (see
+:ref:`METS in Archivematica <METS_schema>` for more information). PREMIS Events
+recorded in the METS will contain metadata for *most* of the following semantic
+units and semantic components (only if applicable):
+
+* eventIdentifier - eventIdentifierType
+* eventIdentifier - eventIdentifierValue
+* eventType
+* eventDateTime
+* eventDetail
+* eventOutcomeInformation - eventOutcome
+* eventOutcomeDetail - eventOutcomeDetailNote
+* linkingAgentIdentifier - linkingAgentIdentifierType
+* linkingAgentIdentifier - linkingAgentIdentifierValue
+
+For more information on semantic units and semantic components in PREMIS, please
+see the `Data Dictionary`_. Below is an example of a PREMIS Event for file
+format identification.
+
+.. literalinclude:: scripts/METS.xml
+   :language: xml
+   :lines: 2551-2581
+
+Note that there will be three Agents per Event listed under the
+``linkingAgentIdentifier`` semantic unit. This means there will also be three
+``linkingAgentIdentifierType`` and three ``linkingAgentIdentifierValue``
+semantic components. Each Agent applied to a PREMIS event will also have its own
+digiprovMD section in the METS (see :ref:`Premis Agent Metadata
+<premis-agent>`).
+
+
+.. _event-list:
+
+PREMIS Events list
+==================
+
+There are PREMIS Events that apply to original files and some that apply to
+normalized files. Both are listed below, followed by a list of Events that occur
+when certain microservices run in Archivematica.
+
+Skip to:
+
+* :ref:`Default events for original files <event-default>`
+* :ref:`Normalized files <event-normalize>`
+* :ref:`Name cleanup <event-cleanup>`
+* :ref:`Format identification <event-identification>`
+* :ref:`Extract packages <event-extract>`
+* :ref:`OCR transcription <event-ocr>`
+* :ref:`AIP reingest <event-reingest>`
+* :ref:`Sending transfers to backlog <event-backlog>`
+
+.. _event-default:
+
+Default events for original files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The following microservices are run for all *original* objects ingested into
+Archivematica, including any submission documentation:
+
+* ingestion
+* message digest calculation
+* virus check
+
+If a bag or a transfer with checksum manifests is ingested, then each file will
+include:
+
+* fixity check
+
+.. _event-normalize:
+
+Normalized files
+^^^^^^^^^^^^^^^^
+
+The following microservices are run for all *normalized* files:
+
+* creation
+* message digest calculation
+* validation (if there is a validation tool available for the identified format)
+
+Note that for *original* files with a normalized derivative, a normalization
+PREMIS Event will be added.
+
+.. literalinclude:: scripts/PREMISevents.xml
+   :language: xml
+   :lines: 107-126
+
+.. _event-cleanup:
+
+Name cleanup
+^^^^^^^^^^^^
+
+If this microservice is run on a file, then it is entered as the following
+PREMIS Event which also records the original filename:
+
+* name cleanup
+
+.. literalinclude:: scripts/PREMISevents.xml
+   :language: xml
+   :lines: 35-53
+
+.. _event-identification:
+
+Format identification
+^^^^^^^^^^^^^^^^^^^^^
+
+When this microservice is run, the following PREMIS Events may be recorded:
+
+* format identification
+* validation (if there is a validation tool available for the identified format)
+
+.. _event-extract:
+
+Extract packages
+^^^^^^^^^^^^^^^^
+
+This PREMIS Event will be recorded on all extracted files:
+
+* unpacking
+
+.. literalinclude:: scripts/PREMISevents.xml
+   :language: xml
+   :lines: 1-13
+
+.. _event-ocr:
+
+OCR transcription
+^^^^^^^^^^^^^^^^^
+
+If OCR is run over a file in the Ingest tab, then the file will include the
+following PREMIS Event:
+
+* transcription
+
+.. _event-reingest:
+
+AIP reingest
+^^^^^^^^^^^^
+
+If an AIP has been partially or fully reingested there will be a PREMIS Event
+for all files in the **objects** directory:
+
+* reingestion
+
+.. _event-backlog:
+
+Sending transfers to backlog
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If a transfer was sent to backlog there will be an PREMIS Event:
+
+* removal from backlog
+
+.. literalinclude:: scripts/PREMISevents.xml
+   :language: xml
+   :lines: 71-81
+
+
+.. _premis-agent:
+
+PREMIS Agent metadata
+=====================
+
+PREMIS Agents that are linked to a PREMIS Event will also be placed in its own
+digiprovMD section. The default semantic units for each agent are:
+
+* agentIdentifier
+* agentName
+* agentType
+
+There are three types of Agents associated with every PREMIS Event. They will be
+listed under ``agentType`` as the following three options (METS XML examples
+included):
+
+Software
+^^^^^^^^^
+
+.. literalinclude:: scripts/METS.xml
+   :language: xml
+   :lines: 2657-2667
+
+Organization
+^^^^^^^^^^^^^
+
+.. literalinclude:: scripts/METS.xml
+   :language: xml
+   :lines: 2671-2681
+
+Archivematica user
+^^^^^^^^^^^^^^^^^^
+
+.. literalinclude:: scripts/METS.xml
+   :language: xml
+   :lines: 2685-2695
+
+
+One of each type of Agent will be included in each amdSec as its own digiprovMD
+in the METS AIP file (See :ref:`METS in Archivematica <METS_schema>`).
+
+
+.. _premis-rights:
+
+PREMIS Rights metadata
+======================
+
+PREMIS rights metadata can be added during :ref:`transfer <transfer>` or
+:ref:`ingest <ingest>`; it can be entered via the GUI interface to be applied to
+the entirety of the SIP or transfer. Rights can also be entered at the object
+level by describing them in a rights.csv file and using the :ref:`Import
+metadata <import-metadata>` feature.
 
 Below, the entry template is described as it appears for each rights basis,
 followed by acts granted/restricted.
@@ -27,19 +248,18 @@ Skip to:
 .. _basis-copyight:
 
 Basis: Copyright
-================
+^^^^^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 PREMIS in METS XML: ``<premis:rightsBasis>Copyright</premis:rightsBasis>``
 
 Copyright status
-----------------
-
-**Template field** Copyright status
+++++++++++++++++
 
 **Rule** "A coded designation of the copyright status of the object at the time
 the rights status is recorded; e.g. copyrighted, publicdomain, unknown."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -49,13 +269,9 @@ the rights status is recorded; e.g. copyrighted, publicdomain, unknown."
 
 
 Copyright jurisdiction
-----------------------
-
-**Template field** Copyright jurisdiction
+++++++++++++++++++++++
 
 **Rule** "The country whose copyright laws apply"
-
-**METS XML**
 
 .. code-block:: none
 
@@ -68,14 +284,10 @@ ISO 3166.
 
 
 Copyright determination date
-----------------------------
-
-**Template field** Copyright determination date
+++++++++++++++++++++++++++++
 
 **Rule** "The date that the copyright status recorded in copyrightStatus was
 determined."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -86,13 +298,10 @@ determined."
 **Notes**  Uses ISO 8061.
 
 Copyright start date
---------------------
+++++++++++++++++++++
 
-**Template field** Copyright start date
-
-**Rule** "Date when the particular copyright applies or is applied to the content."
-
-**METS XML**
+**Rule** "Date when the particular copyright applies or is applied to the
+content."
 
 .. code-block:: none
 
@@ -103,15 +312,11 @@ Copyright start date
 
 **Notes** Uses ISO 8061.
 
-
 Copyright end date
-------------------
+++++++++++++++++++
 
-**Template field** Copyright end date
-
-**Rule** "Date when the particular copyright no longer applies or is applied to the content."
-
-**METS XML**
+**Rule** "Date when the particular copyright no longer applies or is applied to
+the content."
 
 .. code-block:: none
 
@@ -120,27 +325,13 @@ Copyright end date
          <premis:copyrightApplicableDates>
             <premis:endDate>2065-01-01</premis:endDate>
 
-**Notes** Uses ISO 8061.
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:copyrightInformation>
-         <premis:copyrightApplicableDates>
-            <premis:endDate>OPEN</premis:endDate>
-
+**Notes** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 Copyright documentation identifier- Type
-----------------------------------------
-
-**Template field** Copyright documentation identifier- Type
+++++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A designation of the domain within which the copyright documentation
 identifier is unique."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -149,15 +340,10 @@ identifier is unique."
          <premis:copyrightDocumentationIdentifier>
             <premis:copyrightDocumentationIdentifierType> Donor form </premis:copyrightDocumentationIdentifierType>
 
-
 Copyright documentation identifier- Value
------------------------------------------
-
-**Template field** Copyright documentation identifier- Value
++++++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value of the copyrightDocumentationIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -166,16 +352,11 @@ Copyright documentation identifier- Value
          <premis:copyrightDocumentationIdentifier>
             <premis:copyrightDocumentationIdentifierValue>CCA-2009-67</premis:copyrightDocumentationIdentifierValue>
 
-
 Copyright documentation identifier- Role
-----------------------------------------
-
-**Template field** Copyright documentation identifier- Role
+++++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -184,15 +365,10 @@ being identified."
          <premis:copyrightDocumentationIdentifier>
             <premis:copyrightDocumentationIdentifierRole>Copyright holder statement</premis:copyrightDocumentationIdentifierRole>
 
-
 Copyright note
---------------
-
-**Template field** Copyright note
+++++++++++++++
 
 **Rule** "Additional information about the copyright status of the object".
-
-**METS XML**
 
 .. code-block:: none
 
@@ -204,18 +380,14 @@ Copyright note
 .. _basis-statute:
 
 Basis: Statute
-==============
+^^^^^^^^^^^^^^
 
 PREMIS in METS XML: ``<premis:rightsBasis>Statute</premis:rightsBasis>``
 
 Statute jurisdiction
---------------------
-
-**Template field** Statute jurisdiction
+++++++++++++++++++++
 
 **Rule** "The country or other political body enacting the statute."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -228,13 +400,9 @@ ISO 3166.
 
 
 Statute citation
-----------------
-
-**Template field** Statute citation
+++++++++++++++++
 
 **Rule** "An identifying designation for the statute."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -243,15 +411,11 @@ Statute citation
          <premis:statuteCitation>Freedom of Information and Protection of Privacy Act [RBSC 1996] Chapter 165</premis:statuteCitation>
 
 
-Statute information determination date
---------------------------------------
-
-**Template field** Statute determination date
+Statute determination date
++++++++++++++++++++++++++++
 
 **Rule** "The date that the determination was made the the statute authorized
 the permission(s) noted."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -263,13 +427,10 @@ the permission(s) noted."
 
 
 Statute start date
-------------------
+++++++++++++++++++
 
-**Template field** Statute start date
-
-**Rule** "The date when the statute begins to apply or is applied to the content."
-
-**METS XML**
+**Rule** "The date when the statute begins to apply or is applied to the
+content."
 
 .. code-block:: none
 
@@ -281,13 +442,10 @@ Statute start date
 
 
 Statute end date
-----------------
+++++++++++++++++
 
-**Template field** Statute end date
-
-**Rule** "The date when the statute ceases to apply or is applied to the content."
-
-**METS XML**
+**Rule** "The date when the statute ceases to apply or is applied to the
+content."
 
 .. code-block:: none
 
@@ -295,26 +453,14 @@ Statute end date
       <premis:statuteApplicableDates>
          <premis:endDate>2020-01-01</premis:endDate>
 
-**Note** Uses ISO 8061
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:statuteApplicableDates>
-         <premis:endDate>OPEN</premis:endDate>
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 
 Statute documentation identifier- Type
---------------------------------------
-
-**Template field** Statute documentation identifier- Type
+++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A designation of the domain within which the statute documentation
 identifier is unique."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -325,13 +471,9 @@ identifier is unique."
 
 
 Statute documentation identifier- Value
----------------------------------------
-
-**Template field** Statute documentation identifier- Value
++++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value of the statuteDocumentationIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -341,14 +483,10 @@ Statute documentation identifier- Value
 
 
 Statute documentation identifier- Role
---------------------------------------
-
-**Template field** Statute documentation identifier- Role
+++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -357,15 +495,10 @@ being identified."
          <premis:statuteDocumentationIdentifierRole>Law</premis:statuteDocumentationIdentifierRole>
 
 
-
 Statute note
-------------
-
-**Template field** Statute note
+++++++++++++
 
 **Rule** "Additional information about the statute."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -378,18 +511,18 @@ Statute note
 
 
 Basis: License
-==============
+^^^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 PREMIS in METS XML: ``<premis:rightsBasis>License</premis:rightsBasis>``
 
 License terms
--------------
++++++++++++++
 
-**Template field** License terms
-
-**Rule** "Text describing the license or agreement by which permission was granted."
-
-**METS XML**
+**Rule** "Text describing the license or agreement by which permission was
+granted."
 
 .. code-block:: none
 
@@ -399,13 +532,10 @@ License terms
 
 
 License start date
-------------------
+++++++++++++++++++
 
-**Template field** License start date
-
-**Rule** "The date at which the license is first applies or is applied to the content."
-
-**METS XML**
+**Rule** "The date at which the license is first applies or is applied to the
+content."
 
 .. code-block:: none
 
@@ -418,24 +548,10 @@ License start date
 
 
 License end date
-----------------
+++++++++++++++++
 
-**Template field** License end date
-
-**Rule** "The date at which the license no longer applies or is applied to the content."
-
-**METS XML**
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:licenseInformation>
-         <premis:licenseApplicableDates>
-            <premis:endDate>2020-01-01</premis:endDate>
-
-**Note** Uses ISO 8061.
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
+**Rule** "The date at which the license no longer applies or is applied to the
+content."
 
 .. code-block:: none
 
@@ -444,16 +560,14 @@ End date can be left open by clicking "Open End Date." Resulting METS XML:
          <premis:licenseApplicableDates>
             <premis:endDate>OPEN</premis:endDate>
 
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date" as
+ shown above.
 
 License documentation identifier- Type
---------------------------------------
-
-**Template field** License documentation identifier- Type
+++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A designation of the domain within which the license documentation
 identifier is unique."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -464,13 +578,9 @@ identifier is unique."
 
 
 License documentation identifier- Value
----------------------------------------
-
-**Template field** License documentation identifier- Value
++++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value of the licenseDocumentationIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -481,14 +591,10 @@ License documentation identifier- Value
 
 
 License documentation identifier- Role
---------------------------------------
-
-**Template field** License documentation identifier- Role
+++++++++++++++++++++++++++++++++++++++
 
 **Rule** "A value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -499,13 +605,9 @@ being identified."
 
 
 License note
-------------
-
-**Template field** License note
+++++++++++++
 
 **Rule** "Additional information about the license."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -516,7 +618,10 @@ License note
 .. _basis-donor:
 
 Basis: Donor
-============
+^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 .. note::
 
@@ -525,13 +630,9 @@ Basis: Donor
    ``<premis:rightsBasis>Other</premisrightsBasis>``.
 
 Donor agreement start date
---------------------------
-
-**Template field** Donor agreement start date
+++++++++++++++++++++++++++
 
 **Rule** "Date when the other right applies or is applied to the content."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -543,13 +644,10 @@ Donor agreement start date
 **Note** Uses ISO 8061.
 
 Donor agreement end date
-------------------------
+++++++++++++++++++++++++
 
-**Template field** Donor agreement end date
-
-**Rule** "Date when the other right no longer applies or is applied to the content."
-
-**METS XML**
+**Rule** "Date when the other right no longer applies or is applied to the
+content."
 
 .. code-block:: none
 
@@ -558,27 +656,13 @@ Donor agreement end date
         <premis:otherRightsApplicableDates>
            <premis:endDate>2025-01-01</premis:endDate>
 
-**Note** Uses ISO 8061.
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:otherRightsInformation>
-         <premis:otherRightsApplicableDates>
-            <premis:endDate>OPEN</premis:endDate>
-
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 Donor documentation identifier- Type
--------------------------------------
+++++++++++++++++++++++++++++++++++++
 
-**Template field** Donor documentation identifier- Type
-
-**Rule** "A designation of the domain within which the rights statement documentation
-identifier is unique."
-
-**METS XML**
+**Rule** "A designation of the domain within which the rights statement
+documentation identifier is unique."
 
 .. code-block:: none
 
@@ -588,13 +672,9 @@ identifier is unique."
             <premis:otherRightsDocumentationIdentifierType>Donor form number</premis:otherRightsDocumentationIdentifierType>
 
 Donor documentation identifier- Value
--------------------------------------
-
-**Template field** Donor documentation identifier- Value
++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value of the otherRightsDocumentationIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -605,14 +685,10 @@ Donor documentation identifier- Value
 
 
 Donor documentation identifier- Role
-------------------------------------
-
-**Template field** Donor documentation identifier- Role
+++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -622,13 +698,9 @@ being identified."
             <premis:otherRightsDocumentationIdentifierRole>Agreement</premis:otherRightsDocumentationIdentifierRole>
 
 Donor agreement note
---------------------
-
-**Template field** Donor agreement note
++++++++++++++++++++++
 
 **Rule** "Additional information about the rights of the object".
-
-**METS XML**
 
 .. code-block:: none
 
@@ -641,22 +713,21 @@ Donor agreement note
 .. _basis-policy:
 
 Basis: Policy
-=============
+^^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 .. note::
 
    Archivematica provides a template for policy rights, which are translated in
-   PREMIS as "other".  In the METS file, you will find Policy rights in a rightsMD
-   ``<premis:rightsBasis>Other</premisrightsBasis>``.
+   PREMIS as "other".  In the METS file, you will find Policy rights in a
+   rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``.
 
 Policy start date
------------------
-
-**Template field** Policy start date
++++++++++++++++++
 
 **Rule** "Date when the other right applies or is applied to the content."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -668,11 +739,10 @@ Policy start date
 **Note** Uses ISO 8061.
 
 Policy end date
----------------
+++++++++++++++++
 
-**Template field** Policy end date
-
-**Rule** "Date when the other right no longer applies or is applied to the content."
+**Rule** "Date when the other right no longer applies or is applied to the
+content."
 
 **METS XML**
 
@@ -683,26 +753,13 @@ Policy end date
         <premis:otherRightsApplicableDates>
            <premis:endDate>2025-01-01</premis:endDate>
 
-**Note** Uses ISO 8061.
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:otherRightsInformation>
-         <premis:otherRightsApplicableDates>
-            <premis:endDate>OPEN</premis:endDate>
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 Policy documentation identifier- Type
--------------------------------------
++++++++++++++++++++++++++++++++++++++
 
-**Template field** Policy documentation identifier- Type
-
-**Rule** "A designation of the domain within which the rights statement documentation
-identifier is unique."
-
-**METS XML**
+**Rule** "A designation of the domain within which the rights statement
+documentation identifier is unique."
 
 .. code-block:: none
 
@@ -712,13 +769,9 @@ identifier is unique."
             <premis:otherRightsDocumentationIdentifierType>RFA policy number</premis:otherRightsDocumentationIdentifierType>
 
 Policy documentation identifier- Value
---------------------------------------
-
-**Template field** Policy documentation identifier- Value
+++++++++++++++++++++++++++++++++++++++
 
 **Rule** The value of the otherRightsDocumentationIdentifier
-
-**METS XML**
 
 .. code-block:: none
 
@@ -728,14 +781,10 @@ Policy documentation identifier- Value
             <premis:otherRightsDocumentationIdentifierValue>RFA-P-1992/040</premis:otherRightsDocumentationIdentifierValue>
 
 Policy documentation identifier- Role
--------------------------------------
-
-**Template field** Policy documentation identifier- Role
++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -745,13 +794,9 @@ being identified."
             <premis:otherRightsDocumentationIdentifierRole>Policy</premis:otherRightsDocumentationIdentifierRole>
 
 Policy note
------------
-
-**Template field** Policy note
+++++++++++++
 
 **Rule** "Additional information about the rights of the object".
-
-**METS XML**
 
 .. code-block:: none
 
@@ -763,19 +808,18 @@ Policy note
 .. _basis-other:
 
 Basis: Other
-============
+^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 PREMIS in METS XML: ``<premis:rightsBasis>Other</premisrightsBasis>``
 
 Other rights basis
-------------------
-
-**Template field** Other rights basis
+++++++++++++++++++
 
 **Rule** "Designation of the basis for the other right or permission described
 in the rightsStatementIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -785,11 +829,7 @@ in the rightsStatementIdentifier."
 
 
 Other start date
-----------------
-
-**Template field** Other start date
-
-**METS XML**
+++++++++++++++++
 
 .. code-block:: none
 
@@ -801,11 +841,7 @@ Other start date
 **Note** Uses ISO 8061.
 
 Other end date
---------------
-
-**Template field** Other end date
-
-**METS XML**
+++++++++++++++
 
 .. code-block:: none
 
@@ -814,27 +850,13 @@ Other end date
         <premis:otherRightsApplicableDates>
            <premis:endDate>2025-01-01</premis:endDate>
 
-**Note** Uses ISO 8061.
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:otherRightsInformation>
-         <premis:otherRightsApplicableDates>
-            <premis:endDate>OPEN</premis:endDate>
-
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 Other documentation identifier- Type
-------------------------------------
++++++++++++++++++++++++++++++++++++++
 
-**Template field** Other documentation identifier- Type
-
-**Rule** "A designation of the domain within which the rights statement documentation
-identifier is unique."
-
-**METS XML**
+**Rule** "A designation of the domain within which the rights statement
+documentation identifier is unique."
 
 .. code-block:: none
 
@@ -844,13 +866,9 @@ identifier is unique."
             <premis:otherRightsDocumentationIdentifierType>MOU number</premis:otherRightsDocumentationIdentifierType>
 
 Other documentation identifier- Value
--------------------------------------
-
-**Template field** Other documentation identifier- Value
++++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value of the otherRightsDocumentationIdentifier."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -860,14 +878,10 @@ Other documentation identifier- Value
             <premis:otherRightsDocumentationIdentifierValue>MOU-F-89</premis:otherRightsDocumentationIdentifierValue>
 
 Other documentation identifier- Role
-------------------------------------
-
-**Template field** Other documentation identifier- Role
+++++++++++++++++++++++++++++++++++++
 
 **Rule** "The value indicating the purpose or expected use of the documentation
 being identified."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -877,13 +891,9 @@ being identified."
             <premis:otherRightsDocumentationIdentifierRole>Agreement number</premis:otherRightsDocumentationIdentifierRole>
 
 Note
-----
-
-**Template field** Note
++++++
 
 **Rule** "Additional information about the rights of the object".
-
-**METS XML**
 
 .. code-block:: none
 
@@ -895,17 +905,16 @@ Note
 .. _acts-granted:
 
 Acts granted or restricted
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Below is a list of the template fields and the associated rule. The example also
+includes the resulting block of METS XML.
 
 Act
----
+++++
 
-**Template field** Act
-
-**Rule** "The action the preservation repository is allowed to take; e.g. replicate,
-migrate, modify, use, disseminate, delete."
-
-**METS XML**
+**Rule** "The action the preservation repository is allowed to take; e.g.
+replicate, migrate, modify, use, disseminate, delete."
 
 .. code-block:: none
 
@@ -914,13 +923,9 @@ migrate, modify, use, disseminate, delete."
          <premis:act>Delete</premis:act>
 
 Grant/restriction
------------------
-
-**Template field** Grant/restriction
+++++++++++++++++++
 
 **Rule** Drop-down field: choose between Allow, Disallow, Conditional
-
-**METS XML**
 
 .. code-block:: none
 
@@ -929,13 +934,9 @@ Grant/restriction
          <premis:restriction>Disallow</premis:restriction>
 
 Start
------
-
-**Template field** Start
+++++++
 
 **Rule** "Beginning date of the rights or restrictions granted."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -947,13 +948,9 @@ Start
 **Note** Uses ISO 8061.
 
 End
----
-
-**Template field** End
++++
 
 **Rule** "Ending date of the rights or restrictions granted."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -962,25 +959,12 @@ End
          <premis:termofRestriction>
             <premis:endDate>2025-01-01</premis:endDate>
 
-**Note** Uses ISO 8061
-
-End date can be left open by clicking "Open End Date." Resulting METS XML:
-
-.. code-block:: none
-
-   <premis:rightsStatement>
-      <premis:rightsGranted:
-         <premis:termofRestriction>
-            <premis:endDate>OPEN</premis:endDate>
+**Note** Uses ISO 8061. End date can be left open by clicking "Open End Date."
 
 Grant/restriction note
-----------------------
-
-**Template field** Grant/restriction note
+++++++++++++++++++++++
 
 **Rule** "Additional information about the rights granted."
-
-**METS XML**
 
 .. code-block:: none
 
@@ -990,3 +974,7 @@ Grant/restriction note
 
 
 :ref:`Back to the top <premis-template>`
+
+.. _PREMIS: http://www.loc.gov/standards/premis/
+.. _version 3: https://www.loc.gov/standards/premis/v3/index.html
+.. _Data Dictionary: https://www.loc.gov/standards/premis/v3/premis-3-0-final.pdf
