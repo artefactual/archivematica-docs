@@ -1,226 +1,107 @@
 .. _duracloud-setup:
 
-=========================================
-Archivematica-Duracloud Quick Start Guide
-=========================================
+==================================
+Using DuraCloud with Archivematica
+==================================
 
-Introduction
-------------
+DuraCloud is a hosted cloud storage platform from DuraSpace. For more
+information about DuraCloud, please see the `DuraCloud documentation`_.
 
-`ArchivesDirect`_ is an Archivematica in DuraCloud hosting plan offered by
-Artefactual Systems and DuraSpace. This guide can be used by those who wish to
-install Archivematica and/or DuraCloud locally and run the systems themselves
-and may also be helpful for those using the hosted service. This guide assumes
-that you have already installed Archivematica and DuraCloud, or have arranged
-for a hosted instance through Artefactual Systems/DuraSpace. Hosted clients will
-have steps 1 and 2 completed for them.
+Setting up the DuraCloud integration requires configuration of Archivematica's
+Storage Service. It is recommended that you read the :ref:`Storage Service
+documentation <storageservice:administrators>` before configuring DuraCloud.
 
-For installation instructions please see:
+This guide can be used by those who wish to install Archivematica and/or
+DuraCloud locally and run the systems themselves and may also be helpful for
+those who subscribe to a hosted service. `ArchivesDirect`_ is an Archivematica
+in DuraCloud hosting plan offered by Artefactual Systems and DuraSpace.
 
-* :ref:`Archivematica installation <installation>`
-* `DuraCloud documentation`_
+*On this page*
 
-Step 1: Configure DuraCloud
----------------------------
+* :ref:`Configure DuraCloud <duracloud-config>`
+* :ref:`Configure the Archivematica Storage Service <duracloud-storage-service>`
 
-If you plan to use DuraCloud for transfer source, processing and AIP/DIP storage,
-it is recommended that your DuraCloud instance should be configured to have the
-following spaces:
+.. _duracloud-config:
 
-* aip-store : This is the space where completed AIPs will be stored
+Configure DuraCloud
+-------------------
 
-* dip-store : Space where completed DIPs are stored
+Your DuraCloud instance must have at least two users:
 
-* transfer-source : Space to sync digital objects for transfer into
-  Archivematica. You may also create multiple spaces with other names for this
-  purpose.
+* A **Client user** who has *read* permissions for the AIP storage and DIP
+  storage locations.
 
-* transfer-backlog : Space used by Archivematica for material sent to
-  :ref:`backlog <backlog>`.
+* An **Archivematica user** who has *read/write* permissions for the AIP
+  storage, DIP storage, and transfer backlog locations.
 
-Note that you can pick and choose what spaces are needed in DuraCloud; for
-example, you may choose to use a local server for transfer source but send
-your AIPs and DIPs for storage in DuraCloud. You need only create the relevant
-spaces in DuraCloud for your particular configuration.
+DuraCloud can be used as a storage space for the following :ref:`purposes
+<storageservice:location-purposes>` within Archivematica:
 
-Two DuraCloud users should be created:
+* **AIP storage**: A DuraCloud space where completed AIPs are placed for
+  long-term storage.
+* **DIP storage**: A DuraCloud space where DIPs can be stored. Note that it is
+  not necessary to store DIPs if you are sending them directly to an access
+  system.
+* **Transfer backlog**: A DuraCloud space used by Archivematica for material
+  sent to the :ref:`backlog <backlog>` during processing.
 
-* An Client user, who has **read/write** permissions for transfer-source, and
-  **read** permissions for aip-store and dip-store.
+To add a space in DuraCloud, log in with administrator credentials and click on
+**Add Space**. You can give the space whatever name you wish. You do not have to
+create a space for all of these purposes, just those relevant your particular
+configuration. For AIP storage and DIP storage you can create multiple locations
+within DuraCloud.
 
-* An Archivematica user, who has **read/write** permissions for aip-store,
-  dip-store and transfer-backlog, and **read** permission for transfer-source.
+.. _duracloud-storage-service:
 
-Step 2: Configure Archivematica Storage Service
------------------------------------------------
+Configure the Archivematica Storage Service
+-------------------------------------------
 
 The :ref:`Archivematica Storage Service <storageservice:index>` was installed
 when you installed Archivematica.
 
-1. Set up a Storage Service space for each of transfer-source, transfer-backlog,    aip-store and dip-store. Use the following parameters:
+#. In the Storage Service's Spaces tab, click **Create new space** and enter the
+   following information:
 
-  * Access protocol: DuraCloud
+   * **Access protocol**: DuraCloud
+   * **Size**: *This field is optional.*
+   * **Path**: Leave this field blank.
+   * **Staging path**: A location on your local disk where Archivematica can
+     place files for staging purposes, for example
+     ``var/archivematica/storage_service/duracloud_staging``
+   * **Host**: Hostname of the DuraCloud instance, e.g. ``site.duracloud.org``
+   * **Username**: The username for the Archivematica user that you created in
+     DuraCloud.
+   * **Password**: The password for the Archivematica user that you created in
+     DuraCloud.
+   * **Duraspace**: The name of the space in DuraCloud you are creating this
+     Storage Service space for (e.g. transfer-source, aip-store, etc).
 
-  * Size: optional
+#. You must create a space for each storage location that you have created in
+   DuraCloud. For example, if you have AIP storage and DIP storage locations in
+   DuraCloud, you should create two spaces by repeating the instructions in Step
+   1.
 
-  * Path: leave blank
+#. In the Storage Service, navigated to the **Spaces** tab. You should see all
+   of the DuraCloud spaces that you created in Steps 1 and 2.
 
-  * Staging path: for example, ``/var/archivematica/storage_service/``
+#. For each space, click on **Create Location here** to create a storage
+   location. Enter the following information:
 
-  * Host: Hostname of the DuraCloud instance, e.g. trial.duracloud.org
-
-  * Username and Password: Enter Archivematica username and password that you   created for DuraCloud in step 1.
-
-  * Duraspace: the name of the space in DuraCloud you are creating this Storage   Service space for (e.g. transfer-source, aip-store, etc).
-
-.. NOTE::
-  Other possible configurations are possible if you are not using DuraCloud for all Archivematica spaces.
-
-2. Create one location in each space for aip-store, dip-store and transfer-backlog, choosing the appropriate purpose and relative path for each. Be sure to click on the pipeline to enable the location you are creating.
-
-3. If using DuraCloud for transfer-source, locations can be configured after    content is synced- see below.
-
-Step 3: Download and configure sync tool
-----------------------------------------
-
-Content can be added to DuraCloud spaces via the sync tool, which can be
-installed from the `DuraSpace Downloads page`_. The DuraCloud sync tool can be run
-through a GUI or the command line; these instructions will proceed using the
-GUI.
-
-Step 4: Syncing content to DuraCloud
-------------------------------------
-
-These instructions pertain to users who use a DuraCloud space for transfer-
-source. DuraCloud offers its own `documentation <https://wiki.duraspace.org/display/DURACLOUDDOC/DuraCloud+Sync+Tool>`_
-about syncing and configuring the DuraCloud Sync Tool. The following instructions
-are configuration requirements specific to users who have Archivematica
-transfer source locations in DuraCloud.
-
-It is necessary to have a directory structure with a minimum depth of two
-levels inside the synced folder, in order for Archivematica to correctly
-interpret the files in DuraCloud as a potential transfer source. Deciding how
-to sync directories to DuraCloud is an important step for a number of reasons:
-
-* It will help prevent unnecessarily large transfers to Archivematica
-
-* It can create a more efficient workflow for you later in Archivematica
-  processing
-
-Note that one transfer to Archivematica can either become one SIP (and
-therefore, one AIP and one DIP) or, a transfer can be sent to backlog where it
-can be separated and/or combined with other transfers to create one or more
-SIP(s). Two scenarios are outlined below:
-
-**Create a new directory to sync:**
-
-1. Create a top level directory on your local machine or server to sync to    DuraCloud.
-
-2. Create at least 2 levels of directories within that directory before any     digital objects.
-
-Example 1:
-
-.. code:: bash
-
-   /syncFolder
-      /Transfers
-         /Project1
-             Digital objects
-         /Project2
-             Digital objects
-
-In this example, the directory called Transfers will be available in the
-Archivematica dashboard to support the choice of a transfer source. Project1
-and Project2 would each be available as a transfer source. The transfers would
-each contain all of the digital objects in the directory in their respective
-transfers.
-
-Example 2:
-
-.. code:: bash
-
-   /syncFolder
-       /Transfers
-            /Project1
-                 /Photographs
-                      Digital objects
-                 /Videos
-                      Digital objects
-            /Project2
-                 /Text files
-                      Digital objects
-                 /Word files
-                      Digital objects
-
-In this example, the archivist will have more flexibility when deciding which
-directory becomes a transfer in Archivematica. Either Project1 and Project2
-could be transfers, as in the examples above, or the subdirectories within
-could become their own transfers (Photographs, Videos, etc).
-
-**Sync an existing directory**
-
-1. If there are existing directories that you wish to sync but do not wish to    reorganize into a directory structure deep enough to work with Archivematica,    you can instead use the Sync Tool's prefix option:
-
-  * Ensure your sync tool is stopped in the Status tab. Then click on the
-     configuration tab.
-
-  * Under "Other options," create a prefix for your sync folder to create a
-      directory structure at least two levels deep. The prefix must end in a
-      slash (/).
-
-2. Note that the prefix will replace the directory name of the sync folder in
-   DuraCloud.
-
-Example 1:
-
-.. code:: bash
-
-   /syncFolder
-      Digital objects
-
-If the sync directory selected in the sync tool is ``syncFolder``, you could add
-a prefix such as: ``transfers/Project1/``. Archivematica would then recognize
-``transfers`` as a transfer source, and ``Project1`` would be available as a
-transfer. That transfer would contain all of the digital objects in ``syncFolder``.
-
-3. It is also possible to use the prefix option with a sync folder which has
-   subfolders.
-
-Example 2:
-
-.. code:: bash
-
-   /syncFolder
-        /Photographs
-             Digital objects
-        /Videos
-             Digital objects
-
-If the sync directory selected in the sync tool is ``syncFolder``, you could add
-a prefix such as: ``transfers/Project1``. In this example, ``transfers`` will
-still be interpreted by Archivematica as a transfer source, but either
-``Project1``, ``Photographs`` or ``Video`` could be chosen in the dashboard as
-the transfer.
-
-Step 5: Configure transfer sources
-----------------------------------
-
-Assuming that you have configured transfer-source spaces in DuraCloud,
-return to the Archivematica Storage Serice at this point to configure transfer
-sources locations.
-
-Navigate to the transfer-source Storage Service space and create locations for
-each top level directory inside the directory or directories you have synced.
-
-.. tip::
-
-   If you consistently use the same named top-level directory when syncing
-   (e.g. "transfers") you will only need to configure the transfer source
-   once.
-
-.. tip::
-   If you browse for a path and do not see the expected directory listed, this
-   may be caused by a UI bug. You can type the path in instead.
+   * **Purpose**: The purpose of the space (AIP storage, DIP storage, or
+     transfer source.)
+   * **Pipeline**: Click on the pipeline name so that it is highlighted orange.
+   * **Relative path**: the name of the space as it appears in DuraCloud (e.g.
+     ``aip-store``.)
+   * **Description**: A human-readable description of the location. This will be
+     used in the Archivematica interface when you are choosing a AIP or DIP
+     storage location.
+   * **Quota**: *This field is optional.*
+   * **Enabled**: Check this box to make the location available to the
+     Archivematica pipeline.
+   * **Set as global default location for its purpose**: Check this box if you
+     would like this to be the default AIP or DIP storage location.
+   * **Replicators**: The DuraCloud integration has not been tested with
+     replication.
 
 :ref:`Back to the top <duracloud-setup>`
 
