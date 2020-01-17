@@ -47,7 +47,9 @@ connect multiple AIPs into an AIC.
 The method described requires users to enter the AIC identifier manually while
 processing the transfer; however, it is also possible to add the AIC identifier
 using a :ref:`metadata CSV <metadata.csv>` by adding a column to your CSV with
-the heading ``dcterms.isPartOf``.
+the heading ``dcterms.isPartOf``. With this method, you must append your
+preferred identifier with "AIC#". This is automatically done when entering
+data using the metadata form in Archivematica.
 
 .. _aic-step-1:
 
