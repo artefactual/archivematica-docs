@@ -59,22 +59,9 @@ Configure the Archivematica Storage Service
 The :ref:`Archivematica Storage Service <storageservice:index>` was installed
 when you installed Archivematica.
 
-#. In the Storage Service's Spaces tab, click **Create new space** and enter the
-   following information:
-
-   * **Access protocol**: DuraCloud
-   * **Size**: *This field is optional.*
-   * **Path**: Leave this field blank.
-   * **Staging path**: A location on your local disk where Archivematica can
-     place files for staging purposes, for example
-     ``var/archivematica/storage_service/duracloud_staging``
-   * **Host**: Hostname of the DuraCloud instance, e.g. ``site.duracloud.org``
-   * **Username**: The username for the Archivematica user that you created in
-     DuraCloud.
-   * **Password**: The password for the Archivematica user that you created in
-     DuraCloud.
-   * **Duraspace**: The name of the space in DuraCloud you are creating this
-     Storage Service space for (e.g. transfer-source, aip-store, etc).
+#. In the Storage Service's Spaces tab, click **Create new space** and fill out
+   the form in accordance with the instructions in the :ref:`DuraCloud Storage
+   Service documentation <storageservice:duracloud>`.
 
 #. You must create a space for each storage location that you have created in
    DuraCloud. For example, if you have AIP storage and DIP storage locations in
@@ -90,8 +77,8 @@ when you installed Archivematica.
    * **Purpose**: The purpose of the space (AIP storage, DIP storage, or
      transfer source.)
    * **Pipeline**: Click on the pipeline name so that it is highlighted orange.
-   * **Relative path**: the name of the space as it appears in DuraCloud (e.g.
-     ``aip-store``.)
+   * **Relative path**: the name of the space exactly as it appears in DuraCloud
+     (e.g. ``aip-store``.)
    * **Description**: A human-readable description of the location. This will be
      used in the Archivematica interface when you are choosing a AIP or DIP
      storage location.
