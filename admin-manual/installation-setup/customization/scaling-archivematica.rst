@@ -131,7 +131,7 @@ To set the batch size parameter, see `MCPServer`_ Configuration.
 Optimising the number of Dashboard workers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Dashboard process can runs multiple worker processes via Gunicorn.
+The Dashboard process can run multiple worker processes via Gunicorn.
 The ``AM_GUNICORN_WORKERS`` value (default 1) sets the number of workers used.
 Increasing this value _may_ help improve Dashboard responsiveness.
 See `Dashboard`_ for more details.
@@ -143,7 +143,11 @@ The Storage Service process can run multiple worker processes via Gunicorn.
 The ``SS_GUNICORN_WORKERS`` value (default 1) sets the number of workers used.
 Increasing this value _may_ help improve Storage Service responsiveness.
 
-Note that increasing this value may cause database errors if using SQLite.
+.. note::
+
+   Note that increasing this value may cause database errors if using SQLite.
+   Django describes a mitigation path, see `Database is locked`_ for more.
+   Alternatively, use MySQL as the database (using ``SS_DB_URL``).
 
 
 .. _scaling-out:
@@ -429,3 +433,4 @@ to create (and check) than the alternatives (e.g. SHA-256).
 .. _Dashboard: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/dashboard/install
 .. _benchmarking: https://www.itforarchivists.com/siegfried/benchmarks
 .. _FITS: https://projects.iq.harvard.edu/fits/home
+.. _Database is locked: https://docs.djangoproject.com/en/1.8/ref/databases/#database-is-locked-errors
