@@ -60,8 +60,8 @@ The :ref:`Archivematica Storage Service <storageservice:index>` was installed
 when you installed Archivematica.
 
 #. In the Storage Service's Spaces tab, click **Create new space** and fill out
-   the form in accordance with the instructions in the :ref:`DuraCloud Storage
-   Service documentation <storageservice:duracloud>`.
+   the form following the instructions in the :ref:`DuraCloud Storage Service
+   documentation <storageservice:duracloud>`.
 
 #. You must create a space for each storage location that you have created in
    DuraCloud. For example, if you have AIP storage and DIP storage locations in
@@ -71,13 +71,14 @@ when you installed Archivematica.
 #. In the Storage Service, navigated to the **Spaces** tab. You should see all
    of the DuraCloud spaces that you created in Steps 1 and 2.
 
-#. For each space, click on **Create Location here** to create a storage
-   location. Enter the following information:
+#. For each space, you need to create a corresponding :ref:`location
+   <storageservice:locations>`. Click on **Create Location here** to create a
+   storage location and enter the following information:
 
    * **Purpose**: The purpose of the space (AIP storage, DIP storage, or
-     transfer source.)
+     transfer backlog.)
    * **Pipeline**: Click on the pipeline name so that it is highlighted orange.
-   * **Relative path**: the name of the space exactly as it appears in DuraCloud
+   * **Relative path**: The name of the space exactly as it appears in DuraCloud
      (e.g. ``aip-store``.)
    * **Description**: A human-readable description of the location. This will be
      used in the Archivematica interface when you are choosing a AIP or DIP
@@ -89,6 +90,12 @@ when you installed Archivematica.
      would like this to be the default AIP or DIP storage location.
    * **Replicators**: The DuraCloud integration has not been tested with
      replication.
+
+.. important::
+
+   When you are configuring the location, you must enter the name of the space
+   exactly as it appears in the DuraCloud user interface. Please ensure that the
+   relative path does not include a leading slash.
 
 :ref:`Back to the top <duracloud-setup>`
 
