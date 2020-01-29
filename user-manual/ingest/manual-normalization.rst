@@ -383,10 +383,12 @@ Subdirectories used only to distinguish file names:
    file1.tga,manualNormalization/access/subdir1/file1.jpg,manualNormalization/preservation/subdir1/file1.tif
    file1.ppm,manualNormalization/access/subdir2/file1.jpg,manualNormalization/preservation/subdir2/file1.tif
 
-If the file names contain spaces or forbidden characters, Archivematica will
-sanitize the file names by replacing the spaces/characters with underscores. The
-normalization.csv file will still work by using either the original, unsanitized
-file names, or by pre-sanitizing the normalized filenames and the corresponding
-columns in normalization.csv.
+.. note::
+
+   If the filenames contain characters that Archivematica's toolset cannot
+   handle, Archivematica will change the filenames by replacing the character
+   with the nearest equivalent (see :ref:`Filename changes <change-filenames>`
+   for more information.) The normalization.csv file will work with either the
+   original filenames or the changed filenames.
 
 :ref:`Back to the top <manual-norm>`

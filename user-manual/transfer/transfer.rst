@@ -568,9 +568,9 @@ The microservices that run on the Transfer tab include:
 * **Generate transfer structure report**: generates a directory tree of the
   original transfer and places as a text file in the AIP.
 
-* **Clean up names**: removes prohibited characters from folder and filenames,
-  such as ampersands. For more information, see :ref:`Clean up names
-  <clean-up-names>`.
+* **Change transfer filenames**: removes prohibited characters from folder and
+  filenames, such as ampersands. For more information, see :ref:`Change
+  filenames <change-filenames>`.
 
 * **Identify file format**: allows the user to choose whether or not to
   identify file formats. Selecting "Yes" will prompt the enabled file
