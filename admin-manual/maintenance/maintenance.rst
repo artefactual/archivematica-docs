@@ -142,27 +142,171 @@ The index names are: `aips`, `aipfiles`, `transfers` and `transferfiles`.
 
 .. _data-backup:
 
-Data back-up
-------------
+Data backup
+-----------
 
-In Archivematica there are three types of data you'll likely want to back up:
+By default, Archivematica there are three types of data you'll likely want to back up:
 
 * Filesystem (particularly your storage directories)
 
-* MySQL
+* MySQL and SQLite
 
 * Elasticsearch
+
+Archivematica Database backup and restore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MySQL is used to store short-term processing data. You can back up the MySQL
 database by using the following command:
 
 .. code:: bash
 
-   mysqldump -u <your username> -p<your password> -c MCP > <filename of backup>
+   mysqldump -u <your username> -p <your password> -c MCP > <filename of backup>
+
+
+To restore from mysqldump file:
+
+.. code:: bash
+
+   mysql –user yourusername -p <your password> MCP < MCP_backup.sql
+
+Storage Service Database backup and restore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To backup the SQLite database and pointer files created by the storage service run:
+
+.. code:: bash
+
+  rsync -av /var/archivematica/storage_service /backup/location/storage_service
+  rsync -av /var/archivematica/storage-service/storage.db /backup/location/storage.db
+
+Note: The Storage Service must not be actively in use. Make sure the
+Storage Service is not running by stopping the nginx or storage-service
+services or by making the backup at a time that it is not in use.
+
+To restore Storage Service from backup:
+
+.. code:: bash
+
+  service archivematica-storage-service stop
+  rsync -av /backup/location/storage.db /var/archivematica/storage-service/storage.db
+  rsync -av /backup/location/storage_service /var/archivematica/storage_service
+  service archivematica-storage-service start
+
+Elasticsearch
+^^^^^^^^^^^^^
 
 Elasticsearch is used to store long-term data. Instructions and scripts for
 backing up and restoring Elasticsearch are available in the
 `Elasticsearch documentation`_.
+
+**Preconfiguration**
+
+The path.repo and snapshot repository have to be configured. For example, using
+/var/lib/elasticsearch/backup-repo as the repo path:
+
+.. code:: bash
+
+  mkdir /var/lib/elasticsearch/backup-repo
+  chmod 0755 /var/lib/elasticsearch/backup-repo
+  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo
+
+Add this line to the /etc/elasticsearch/elasticsearch.yml file:
+
+.. code:: bash
+
+  path.repo: /var/lib/elasticsearch/backup-repo
+
+Restart elasticsearch: 
+
+.. code:: bash
+
+  service elasticsearch restart
+
+To use a new directory as snapshot repository, create and adjust permissions for one, like so:
+
+.. code:: bash
+
+  mkdir /var/lib/elasticsearch/backup-repo/es_backup_clientname
+  chmod 0755 /var/lib/elasticsearch/backup-repo/es_backup_clientname
+  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo/es_backup_clientname
+
+Before any snapshot or restore operation can be performed, a snapshot repository
+should be registered in Elasticsearch. The repository settings are
+repository-type specific:
+
+.. code:: bash
+
+  curl -XPUT 'http://localhost:9200/_snapshot/es_backup_clientname' -d '{
+      "type": "fs",
+      "settings": {
+          "compress" : true,
+          "location": "/var/lib/elasticsearch/backup-repo/es_backup_clientname"
+      }
+  }'
+
+**Backing up Elasticsearch indexes**
+
+To make a backup (snapshot) for the aips and transfer indexes, a different name
+has to be used every time a snapshot is taken. For example, using the date
+inside the filename:
+
+.. code:: bash
+
+  curl -XPUT "http://localhost:9200/_snapshot/es_backup_clientname/snapshot_aips_20170726?pretty?wait_for_completion=true" -d'
+  {
+    "indices": "aips",  
+    "ignore_unavailable": true,
+    "include_global_state": false
+  }'
+
+  curl -XPUT "http://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726?pretty?wait_for_completion=true" -d'
+  {
+    "indices": "transfers",  
+    "ignore_unavailable": true,
+    "include_global_state": false
+  }'
+
+The snapshot will be saved to the /var/lib/elasticsearch/backup-repo/es_backup_clientname directory. This directory can be backed up, for example, using rsync:
+
+.. code:: bash
+
+  rsync -av /var/lib/elasticsearch/backup-repo/es_backup_clientname /backup/location/elasticsearch
+
+To list all the snapshots:
+
+.. code:: bash
+
+  curl -XGET "https://localhost:9200/_snapshot/es_backup_clientname/_all"
+
+To delete a snapshot:
+
+.. code:: bash
+
+  curl DELETE "https://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726"
+
+For more information about ElasticSearch: https://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
+
+**Restoring Elasticsearch**
+
+Before restoring, the snapshot repo has to be registered in elasticsearch (see preconfiguration). It can be restored in a different server, configuring the repo.path, registering the snapshot repo (different paths and repo names can be used) and copying the files inside the /backup/location/elasticsearch directory.
+
+The index will have to be closed before restoration can occur. To close the index, post to the following _close endpoints, like so:
+
+.. code:: bash
+
+  curl -XPOST 'http://localhost:9200/aips/_close'
+  curl -XPOST 'http://localhost:9200/transfers/_close'
+
+To restore ElasticSearch:
+
+.. code:: bash
+
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname
+  /snapshot_aips_20170726/_restore'
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726/_restore'
+
+
 
 .. _admin-faq:
 
@@ -186,14 +330,12 @@ taken to recover.
 #. Reset MySQL (or MariaDB, on CentOS) database.
 #. Reset Archivematica components in appropriate order (see `restart-services`_
    for details).
-#. Set ElasticSearch back into write mode. The easiest way to do this is to run
+#. Set Elasticsearch back into write mode. The easiest way to do this is to run
    the following command:
 
 .. code:: bash
 
-    curl -XPUT -H "Content-Type: application/json"
-    http://localhost:9200/_all/_settings -d
-    '{"index.blocks.read_only_allow_delete":null}'
+    curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete":null}'
 
 
 .. _restart-services:
