@@ -1,20 +1,20 @@
-.. _clean-up-names:
+.. _change-filenames:
 
-==============
-Clean up names
-==============
+================
+Filename changes
+================
 
-The clean up names microservice runs twice during processing - once on the
+The change filenames microservice runs twice during processing - once on the
 Transfer tab and once on the Ingest tab. The purpose of this microservice is to
 ensure that Archivematica's tools and processes do not fail because of
-characters that appear in file or directory names.
+characters that appear in object and directory names.
 
-Archivematica groups a wide variety of tools, such as :ref:` preservation
+Archivematica groups a wide variety of tools, such as :ref:`preservation
 planning tools <preservation-planning-tools>`, together to create preservation
 workflows. Some of the tools that Archivematica uses have a narrowly-defined
 scope in terms of what the tool considers to be a valid character for a file or
 directory name. Encountering a character that the tool considers to be invalid
-can cause the tool to fail, which can halt processing and interfere with normal
+can cause the tool to fail, which can halt processing and prevent the normal
 operation of Archivematica.
 
 To prevent these kinds of failures from happening, Archivematica implements
@@ -65,15 +65,15 @@ Additional information can be found in the complete PREMIS event:
    </mets:mdWrap>
 
 This strategy for addressing character limitations within the tools bundled by
-Archivematica can result in file and directory names can result in significant
-changes to file and directory names. In order to provide easy access to a record
-of the changes, the Archivematica AIP contains log files that show the original
-name alongside the changed name. There are two log files:
+Archivematica can result in significant changes to file and directory names. In
+order to provide easy access to a record of the changes, the Archivematica AIP
+contains log files that show the original name alongside the changed name. There
+are two log files:
 
-* The log file for name changes that happen during Transfer is located at
-  ``data/logs/transfers/my-transfer-name/logs/filenameCleanup.log``
-* The log file for name changes that happen during Ingest is located at
-  ``data/logs/filenameCleanup.log``
+* The log file for name changes that happen during Transfer is located in the
+  AIP at ``data/logs/transfers/my-transfer-name/logs/filenameCleanup.log``
+* The log file for name changes that happen during Ingest is located in the AIP
+  at ``data/logs/filenameCleanup.log``
 
 These logs contain a plaintext rendering of the information embedded within the
 PREMIS event.
@@ -86,3 +86,5 @@ PREMIS event.
    Sanitized name: %transferDirectory%objects/Česká republika.ong  ->  %transferDirectory%objects/Ceska_republika.ong
    Sanitized name: %transferDirectory%objects/Ísland.png  ->  %transferDirectory%objects/Island.png
    Sanitized name: %transferDirectory%objects/España.png  ->  %transferDirectory%objects/Espana.png
+
+:ref:`Back to the top <change-filenames>`
