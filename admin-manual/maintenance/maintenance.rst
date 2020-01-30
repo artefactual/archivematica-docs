@@ -211,9 +211,11 @@ To backup the SQLite database and pointer files created by the storage service r
   rsync -av /var/archivematica/storage_service /backup/location/storage_service
   rsync -av /var/archivematica/storage-service/storage.db /backup/location/storage.db
 
-Note: The Storage Service must not be actively in use. Make sure the
-Storage Service is not running by stopping the ``nginx`` or ``storage-service``
-services or by making the backup at a time that it is not in use.
+.. note::
+
+  The Storage Service must not be actively in use. Make sure the
+  Storage Service is not running by stopping the ``nginx`` or ``storage-service``
+  services or by making the backup at a time that it is not in use.
 
 To restore Storage Service from backup:
 
