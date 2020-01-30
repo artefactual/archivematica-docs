@@ -162,25 +162,25 @@ Data to back up from an Archivematica instance:
 #. SS database (see below for details)
 #. Elasticsearch index (see below for details)
 #. Pointer files (in the Storage Service internal processing location; the
-   default location is /var/archivematica/storage_service)
-#. AM config in /etc/archivematica
+   default location is ``/var/archivematica/storage_service``)
+#. AM config in ``/etc/archivematica``
 #. defaultProcessingMCP.xml (processing configuration, in 
-   /var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs) 
+   ``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``) 
 
 
 If doing an update or migration of Archivematica to a new server, the following
 may also be important to back up:
 
-#. Archivematica source code (/opt/archivematica ) (to know which version of the
-   software was installed, if there were custom changes, etc.)
-#. Archivematica shared directory (/var/archivematica/sharedDirectory/)
+#. Archivematica source code (``/opt/archivematica``) (to know which version of
+   the software was installed, if there were custom changes, etc.)
+#. Archivematica shared directory (``/var/archivematica/sharedDirectory/``)
 
 If your instance uses automation-tools, that should also be backed up:
 
-#. Source code ( /opt/archivematica/automation-tools)
-#. Scripts (normally in /etc/archivematica/automation-tools)
+#. Source code (``/opt/archivematica/automation-tools``)
+#. Scripts (normally in ``/etc/archivematica/automation-tools``)
 #. Crontab entries for automation-tools 
-#. Automation database (normally in /var/archivematica/automation-tools/)
+#. Automation database (normally in ``/var/archivematica/automation-tools/``)
 #. Any other helper scripts source and databases
 
 
@@ -195,7 +195,7 @@ database by using the following command:
    mysqldump -u <your username> -p <your password> -c MCP > <filename of backup>
 
 
-To restore from mysqldump file:
+To restore from ``mysqldump`` file:
 
 .. code:: bash
 
@@ -212,7 +212,7 @@ To backup the SQLite database and pointer files created by the storage service r
   rsync -av /var/archivematica/storage-service/storage.db /backup/location/storage.db
 
 Note: The Storage Service must not be actively in use. Make sure the
-Storage Service is not running by stopping the nginx or storage-service
+Storage Service is not running by stopping the ``nginx`` or ``storage-service``
 services or by making the backup at a time that it is not in use.
 
 To restore Storage Service from backup:
@@ -234,7 +234,7 @@ backing up and restoring Elasticsearch are available in the
 **Preconfiguration**
 
 The path.repo and snapshot repository have to be configured. For example, using
-/var/lib/elasticsearch/backup-repo as the repo path:
+``/var/lib/elasticsearch/backup-repo`` as the repo path:
 
 .. code:: bash
 
@@ -242,7 +242,7 @@ The path.repo and snapshot repository have to be configured. For example, using
   chmod 0755 /var/lib/elasticsearch/backup-repo
   chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo
 
-Add this line to the /etc/elasticsearch/elasticsearch.yml file:
+Add this line to the ``/etc/elasticsearch/elasticsearch.yml`` file:
 
 .. code:: bash
 
@@ -278,7 +278,7 @@ repository-type specific:
 
 **Backing up Elasticsearch indexes**
 
-To make a backup (snapshot) for the aips and transfer indexes, a different name
+To make a backup (snapshot) for the ``aips`` and ``transfer`` indexes, a different name
 has to be used every time a snapshot is taken. For example, using the date
 inside the filename:
 
@@ -298,7 +298,9 @@ inside the filename:
     "include_global_state": false
   }'
 
-The snapshot will be saved to the /var/lib/elasticsearch/backup-repo/es_backup_clientname directory. This directory can be backed up, for example, using rsync:
+The snapshot will be saved to the
+``/var/lib/elasticsearch/backup-repo/es_backup_clientname`` directory. This
+directory can be backed up, for example, using rsync:
 
 .. code:: bash
 
@@ -316,13 +318,16 @@ To delete a snapshot:
 
   curl DELETE "https://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726"
 
-For more information about ElasticSearch: https://www.elastic.co/guide/en/elasticsearch/reference/1.6/modules-snapshots.html
-
 **Restoring Elasticsearch**
 
-Before restoring, the snapshot repo has to be registered in elasticsearch (see preconfiguration). It can be restored in a different server, configuring the repo.path, registering the snapshot repo (different paths and repo names can be used) and copying the files inside the /backup/location/elasticsearch directory.
+Before restoring, the snapshot repo has to be registered in elasticsearch (see
+preconfiguration). It can be restored in a different server, configuring the
+repo.path, registering the snapshot repo (different paths and repo names can be
+used) and copying the files inside the ``/backup/location/elasticsearch``
+directory.
 
-The index will have to be closed before restoration can occur. To close the index, post to the following _close endpoints, like so:
+The index will have to be closed before restoration can occur. To close the
+index, post to the following _close endpoints, like so:
 
 .. code:: bash
 
@@ -333,10 +338,8 @@ To restore ElasticSearch:
 
 .. code:: bash
 
-  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname
-  /snapshot_aips_20170726/_restore'
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot_aips_20170726/_restore'
   curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726/_restore'
-
 
 
 .. _admin-faq:
@@ -361,7 +364,7 @@ taken to recover.
 **Recovery protocol**
 
 #. Clean up the disk by removing failed or rejected transfers, any excessive
-   /tmp data, or anything else causing the disk to have filled up.
+   ``/tmp`` data, or anything else causing the disk to have filled up.
 #. Reset MySQL (or MariaDB, on CentOS) database.
 #. Reset Archivematica components in appropriate order (see `restart-services`_
    for details).
@@ -414,7 +417,9 @@ component, in this order:
     service archivematica-dashboard restart
     service archivematica-storage-service restart
 
-**Note: Depending on your installation, gearmand might be called gearman-job-server.**
+.. note::
+
+  Depending on your installation, gearmand might be called gearman-job-server.
 
 
 .. _stack-trace:
