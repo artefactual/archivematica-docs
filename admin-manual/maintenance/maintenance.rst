@@ -320,6 +320,10 @@ How to clean up a full disk
     "My Archivematica disk filled up and now Archivematica won't work. How can I
     fix this?"
 
+Archivematica servers have as much storage as they have been commissioned. If
+processing lots of very large files, particularly if working with normalization,
+this will cause the disk to fill up and cause the system to malfunction.
+
 When the disk on an Archivematica instance is full, a number of steps need to be
 taken to recover. 
 
