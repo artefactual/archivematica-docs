@@ -17,6 +17,12 @@ installation.
 * :ref:`Data backup <data-backup>`
 * :ref:`FAQ <admin-faq>`
 
+  * :ref:`Restart Services <restart-services>`
+  * :ref:`Error stack trace <stack-trace>`
+  * :ref:`Resolve hanging decisions <hanging-decisions>`
+  * :ref:`Transfer won't start <transfer-wont-start>`
+
+
 .. _elasticsearch:
 
 Maintaining Elasticsearch
@@ -242,6 +248,8 @@ edit a configuration file from the command line.
 7. Debug or report error
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
+
+.. _hanging-decisions:
 
 Resolve hanging decisions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
