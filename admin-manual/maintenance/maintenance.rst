@@ -166,40 +166,42 @@ FAQ
 How to restart the Archivematica services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Restart all services**
+Archivematica is made up of these four core components:
 
 .. code:: bash
 
-   am services
+    archivematica-mcp-server
+    archivematica-mcp-client
+    archivematica-dashboard
+    archivematica-storage-service
 
-Note that the default action is to restart all services. To see other available
-parameters, type:
+Other services that Archivematica depends on are:
+  * ClamAV
+  * ElasticSearch
+  * Gearman
+  * MySQL (Ubuntu) or MariaDB (CentOS)
+  * Nailgun
+  * Nginx
 
-.. code:: bash
-
-   am services help
-
-**Stopping**
-
-.. code:: bash
-
-   sudo stop archivematica-mcp-server
-   sudo stop archivematica-mcp-client
-   sudo /etc/init.d/apache2 stop
-   sudo /etc/init.d/gearman-job-server stop
-   sudo stop mysql
-   sudo /etc/init.d/elasticsearch stop
-
-**Starting**
+Each service can be started/stopped/restarted with:
 
 .. code:: bash
 
-   sudo /etc/init.d/elasticsearch start
-   sudo start mysql
-   sudo /etc/init.d/gearman-job-server start
-   sudo /etc/init.d/apache2 start
-   sudo start archivematica-mcp-server
-   sudo start archivematica-mcp-client
+    service <name> start|stop|status|restart
+
+To restart all services, restart the Gearman service and each Archivematica
+component, in this order:
+
+.. code:: bash
+
+    service gearmand restart
+    service archivematica-mcp-server restart
+    service archivematica-mcp-client restart
+    service archivematica-dashboard restart
+    service archivematica-storage-service restart
+
+**Note: Depending on your installation, gearmand might be called gearman-job-server.**
+
 
 .. _stack-trace:
 
