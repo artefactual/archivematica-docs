@@ -145,13 +145,44 @@ The index names are: `aips`, `aipfiles`, `transfers` and `transferfiles`.
 Data backup
 -----------
 
-By default, Archivematica there are three types of data you'll likely want to back up:
+By default, there are three types of data that should be backed up:
 
 * Filesystem (particularly your storage directories)
 
 * MySQL and SQLite
 
 * Elasticsearch
+
+In addition to the filesystem, below are some detailed instructions of what to
+back up, where it exists, and how to do it.
+
+Data to back up from an Archivematica instance:
+
+#. MCP database (see below for details)
+#. SS database (see below for details)
+#. Elasticsearch index (see below for details)
+#. Pointer files (in the Storage Service internal processing location; the
+   default location is /var/archivematica/storage_service)
+#. AM config in /etc/archivematica
+#. defaultProcessingMCP.xml (processing configuration, in 
+   /var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs) 
+
+
+If doing an update or migration of Archivematica to a new server, the following
+may also be important to back up:
+
+#. Archivematica source code (/opt/archivematica ) (to know which version of the
+   software was installed, if there were custom changes, etc.)
+#. Archivematica shared directory (/var/archivematica/sharedDirectory/)
+
+If your instance uses automation-tools, that should also be backed up:
+
+#. Source code ( /opt/archivematica/automation-tools)
+#. Scripts (normally in /etc/archivematica/automation-tools)
+#. Crontab entries for automation-tools 
+#. Automation database (normally in /var/archivematica/automation-tools/)
+#. Any other helper scripts source and databases
+
 
 Archivematica Database backup and restore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
