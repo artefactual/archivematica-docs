@@ -9,15 +9,17 @@ installation.
 
 *On this page:*
 
-* :ref:`Elasticsearch <elasticsearch>`
+* :ref:`Maintaining Elasticsearch <elasticsearch>`
 
-  * :ref:`Rebuild the indexes <elasticsearch-indexes>`
-  * :ref:`External access <elasticsearch-external>`
+  * :ref:`Rebuild Elasticsearch indexes <elasticsearch-indexes>`
+  * :ref:`External Elasticsearch access <elasticsearch-external>`
 
 * :ref:`Data backup <data-backup>`
+
 * :ref:`FAQ <admin-faq>`
 
-  * :ref:`Restart Services <restart-services>`
+  * :ref:`How to clean up a full disk <disk-full>`
+  * :ref:`How to restart services <restart-services>`
   * :ref:`Error stack trace <stack-trace>`
   * :ref:`Resolve hanging decisions <hanging-decisions>`
   * :ref:`Transfer won't start <transfer-wont-start>`
@@ -167,10 +169,39 @@ backing up and restoring Elasticsearch are available in the
 FAQ
 ---
 
+.. _disk-full:
+
+How to clean up a full disk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    "My Archivematica disk filled up and now Archivematica won't work. How can I
+    fix this?"
+
+When the disk on an Archivematica instance is full, a number of steps need to be
+taken to recover. 
+
+**Recovery protocol**
+
+#. Clean up the disk by removing failed or rejected transfers, any excessive
+   /tmp data, or anything else causing the disk to have filled up.
+#. Reset MySQL (or MariaDB, on CentOS) database.
+#. Reset Archivematica components in appropriate order (see `restart-services`_
+   for details).
+#. Set ElasticSearch back into write mode. The easiest way to do this is to run
+   the following command:
+
+.. code:: bash
+
+    curl -XPUT -H "Content-Type: application/json"
+    http://localhost:9200/_all/_settings -d
+    '{"index.blocks.read_only_allow_delete":null}'
+
+
 .. _restart-services:
 
-How to restart the Archivematica services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to restart services
+^^^^^^^^^^^^^^^^^^^^^^^
+    "Something is not working right, or I need to stop a hanging transfer. What
+    can I do?"
 
 Archivematica is made up of these four core components:
 
