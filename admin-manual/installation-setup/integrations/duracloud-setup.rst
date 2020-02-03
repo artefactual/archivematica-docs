@@ -45,11 +45,15 @@ DuraCloud can be used as a storage space for the following :ref:`purposes
 * **Transfer backlog**: A DuraCloud space used by Archivematica for material
   sent to the :ref:`backlog <backlog>` during processing.
 
+You can use one DuraCloud space for multiple purposes (e.g. one DuraCloud space
+could be used as both the AIP storage and transfer backlog), but we recommend
+managing these package types separately by creating DuraCloud spaces that are
+dedicated to the space's purpose. You do not have to create a space for all of
+these purposes, just those relevant your particular configuration. For AIP
+storage and DIP storage you can create multiple locations within DuraCloud.
+
 To add a space in DuraCloud, log in with administrator credentials and click on
-**Add Space**. You can give the space whatever name you wish. You do not have to
-create a space for all of these purposes, just those relevant your particular
-configuration. For AIP storage and DIP storage you can create multiple locations
-within DuraCloud.
+**Add Space**. You can give the space whatever name you wish.
 
 .. _duracloud-storage-service:
 
@@ -77,7 +81,7 @@ when you installed Archivematica.
 
    * **Purpose**: The purpose of the space (AIP storage, DIP storage, or
      transfer backlog.)
-   * **Pipeline**: Click on the pipeline name so that it is highlighted orange.
+   * **Pipeline**: Click on the pipeline name so that it is highlighted.
    * **Relative path**: The name of the space exactly as it appears in DuraCloud
      (e.g. ``aip-store``.)
    * **Description**: A human-readable description of the location. This will be
