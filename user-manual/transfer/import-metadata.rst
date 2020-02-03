@@ -52,7 +52,7 @@ Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
 Archivematica natively supports Dublin Core's `DCMI Metadata Terms`_, which
-includes the  basic 15 elements from the `Dublin Core Metadata Element Set`_.
+includes the basic 15 elements from the `Dublin Core Metadata Element Set`_.
 Using the metadata.csv method, users can also include :ref:`non-Dublin Core
 metadata <non-dc-metadata>`. Archivematica is able to pass Dublin Core metadata
 to AtoM or ArchivesSpace, but not non-Dublin Core metadata.

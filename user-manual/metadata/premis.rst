@@ -5,11 +5,12 @@ PREMIS metadata in Archivematica
 ================================
 
 Archivematica supports `PREMIS`_ metadata and currently implements `version 3`_.
-It records actions (known as Events) taken on Objects by Agents. It also
-supports the addition of PREMIS Rights metadata. This page discusses how PREMIS
-is implemented in the AIP METS file.
+It captures extensive technical metadata about Objects and records actions
+(known as Events) taken on Objects by Agents. It also supports the addition of
+PREMIS Rights metadata. This page discusses how PREMIS is implemented in the AIP
+METS file.
 
-Skip to:
+*On this page:*
 
 * :ref:`PREMIS Events metadata <premis-events>`
 * :ref:`PREMIS Events list <event-list>`
@@ -21,7 +22,7 @@ Skip to:
 PREMIS Events metadata
 ======================
 
-PREMIS Events will be recorded in separate digiprovMD sectons in the METS (see
+PREMIS Events will be recorded in separate digiprovMD sections in the METS (see
 :ref:`METS in Archivematica <METS_schema>` for more information). PREMIS Events
 recorded in the METS will contain metadata for *most* of the following semantic
 units and semantic components (only if applicable):
@@ -42,13 +43,13 @@ format identification.
 
 .. literalinclude:: scripts/METS.xml
    :language: xml
-   :lines: 2551-2581
+   :lines: 2272-2302
 
 Note that there will be three Agents per Event listed under the
 ``linkingAgentIdentifier`` semantic unit. This means there will also be three
 ``linkingAgentIdentifierType`` and three ``linkingAgentIdentifierValue``
 semantic components. Each Agent applied to a PREMIS event will also have its own
-digiprovMD section in the METS (see :ref:`Premis Agent Metadata
+digiprovMD section in the METS (see :ref:`PREMIS Agent Metadata
 <premis-agent>`).
 
 
@@ -199,21 +200,21 @@ Software
 
 .. literalinclude:: scripts/METS.xml
    :language: xml
-   :lines: 2657-2667
+   :lines: 2378-2388
 
 Organization
 ^^^^^^^^^^^^^
 
 .. literalinclude:: scripts/METS.xml
    :language: xml
-   :lines: 2671-2681
+   :lines: 2392-2402
 
 Archivematica user
 ^^^^^^^^^^^^^^^^^^
 
 .. literalinclude:: scripts/METS.xml
    :language: xml
-   :lines: 2685-2695
+   :lines: 2406-2416
 
 
 One of each type of Agent will be included in each amdSec as its own digiprovMD

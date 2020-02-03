@@ -106,9 +106,10 @@ METS file
 ``/data/METS.uuid.xml`` contains the full `PREMIS`_ implementation (see PREMIS
 metadata for original file, PREMIS metadata: normalized files, PREMIS metadata:
 events, and PREMIS metadata: rights). The role of the :ref:`METS file
-<METS_schema>` is to link original objects to their preservation copies and to
-their descriptions and submission documentation, as well as to link PREMIS
-metadata to the objects in the AIP.
+<METS_schema>` is to list all of the digital objects in the AIP (originally
+ingested files, preservation masters, license files, ocr text files, submission
+documentation etc.), describe their relationships to each other, and link
+digital objects to their descriptive, technical, provenance and rights metadata.
 
 METS file structure
 ===================
