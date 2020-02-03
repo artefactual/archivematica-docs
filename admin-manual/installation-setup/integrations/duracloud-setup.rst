@@ -68,7 +68,7 @@ when you installed Archivematica.
    DuraCloud, you should create two spaces by repeating the instructions in Step
    1.
 
-#. In the Storage Service, navigated to the **Spaces** tab. You should see all
+#. In the Storage Service, navigate to the **Spaces** tab. You should see all
    of the DuraCloud spaces that you created in Steps 1 and 2.
 
 #. For each space, you need to create a corresponding :ref:`location
