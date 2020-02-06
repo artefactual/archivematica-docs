@@ -197,7 +197,7 @@ The Access tab displays DIPs which have been sent to AtoM.
 * :ref:`Upload a DIP to ArchivesSpace <upload-as>`
 * :ref:`Upload a DIP to ContentDM <contentdm>`
 * :ref:`Store DIP <store-dip>`
-* :ref:`Review and download DIPs<review-dip>`
+* :ref:`Review and download DIPs <review-dip>`
 * :ref:`Access tab <access-tab>`
 
 .. _home-preservation:
