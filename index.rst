@@ -191,13 +191,14 @@ Most of Archivematica's access integrations take place within the Ingest tab.
 The Access tab displays DIPs which have been sent to AtoM.
 
 * :ref:`General description <access>`
-* :ref:`Default access system <access-default>`
-* :ref:`Upload DIP to AtoM <upload-atom>`
+* :ref:`Access systems <access-default>`
+* :ref:`Upload a DIP to AtoM <upload-atom>`
+* :ref:`Upload a DIP to Binder <upload-binder>`
+* :ref:`Upload a DIP to ArchivesSpace <upload-as>`
+* :ref:`Upload a DIP to ContentDM <contentdm>`
 * :ref:`Store DIP <store-dip>`
-* :ref:`Review/Download DIP <review-dip>`
+* :ref:`Review and download DIPs <review-dip>`
 * :ref:`Access tab <access-tab>`
-* :ref:`Upload DIP to ContentDM <contentdm>`
-
 
 .. _home-preservation:
 

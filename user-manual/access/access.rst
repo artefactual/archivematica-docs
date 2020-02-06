@@ -30,7 +30,7 @@ like ArchivesSpace.
 * :ref:`Upload a DIP to Binder <upload-binder>`
 * :ref:`Upload a DIP to ArchivesSpace <upload-as>`
 * :ref:`Store DIP <store-dip>`
-* :ref:`Review/Download DIP <review-dip>`
+* :ref:`Review and download DIPs <review-dip>`
 * :ref:`Access tab <access-tab>`
 
 .. _access-default:
@@ -50,9 +50,9 @@ created through either Archivematica's normalization rules or a manual
 normalization process. The DIP also includes a DIP METS file and, optionally,
 a thumbnail for each digital object.
 
-A content management tool called `AtoM`_  is Archivematica's default access
+A content management tool called `AtoM`_ is Archivematica's default access
 system. AtoM is a web-based, open source application for standards-based
-archival description and access in a multilingual, multi- repository
+archival description and access in a multilingual, multi-repository
 environment. Access integration workflows also exist for `ArchivesSpace`_,
 `CONTENTdm`_, and `Binder`_.
 
@@ -74,9 +74,13 @@ AtoM 2.x with Archivematica <atom-setup>`.
    upload.
 
 Digital objects uploaded to AtoM are added as children of the target description
-and are by default given the level of description of ``item``. It is possible to
-arrange your transfer to crate a hierarchy that AtoM will recognize by arranging
-materials for AtoM on the Appraisal tab.
+and are, by default, given the level of description of ``item``. You can assign
+other levels of description by sending your transfer to backlog and :ref:`adding
+AtoM levels of description <adding-atom-lod>` on the Appraisal tab.
+
+It is possible to arrange your transfer to create a hierarchy that AtoM will
+recognize by :ref:`using the arrangement feature on Appraisal tab
+<arrangement-drag-drop>`.
 
 You can also :ref:`add descriptive metadata <add-metadata>` to your transfer
 using either the metadata form or the metadata CSV file. This descriptive
@@ -381,8 +385,8 @@ downloaded within the browser window.
    :width: 80%
    :alt: Download DIP screen showing a DIP directory expanded.
 
-Your ability to view the objects in the browser will be dependent on your browser
-having plugins for the particular filetypes. However, all files can be
+Your ability to view the objects in the browser will be dependent on your
+browser having plugins for the particular filetypes. However, all files can be
 downloaded locally in this manner.
 
 .. _access-tab:
