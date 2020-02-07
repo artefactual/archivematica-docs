@@ -100,6 +100,10 @@ Guide].
   Transfer**."
 * Use serial (Oxford) commas for clarity (preferred, not enforced).
 * Use standard Canadian spelling and punctuation (preferred, not enforced).
+* When writing numbers, the [Purdue OWL](https://owl.purdue.edu/owl/general_writing/grammar/writing_numbers.html)
+  states that "most people spell out numbers that can be expressed in one
+  or two words [e.g "thirty-one AIPs"] and use figures for numbers
+  that are three or more words long [e.g. "2,274 AIPs"]."
 
 ### Including images
 
@@ -355,6 +359,10 @@ characters since a mid-line break may cause rendering errors.
    sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
    sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 ```
+
+#### Writing conventions
+
+
 
 #### Back to the top
 
