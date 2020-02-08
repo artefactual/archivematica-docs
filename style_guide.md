@@ -101,6 +101,12 @@ Guide].
 * Use serial (Oxford) commas for clarity (preferred, not enforced).
 * Use standard Canadian spelling and punctuation (preferred, not enforced).
 
+### Local style rules
+
+* MCPClient instead of MCP Client.
+* MCPServer instead of MCP Server.
+* Microservice instead of micro-service.
+
 ### Including images
 
 [Inline images][Inline images] in the Archivematica documentation usually take
@@ -108,6 +114,8 @@ the form of screenshots. Images are formatted in a particular way in
 reStructuredText - see the [Images](#images) section below for more information.
 
 * Avoid screenshots unless absolutely necessary.
+* Do not use screenshots to display code or other purely textual information
+  (e.g. a METS file). Use [scripts](#scripts) instead.
 * Never rely on images as the only way to convey information.
 * Always describe the content of the screenshot in the text of the documentation
   so that the content may be understood independently of the image.
@@ -125,12 +133,6 @@ programmatically distinguish important information for the user. See the
   critical.
 * Use gentler admonitions (such as IMPORTANT or NOTE) sparingly.
 * Aim for no more than one admonition per section to reduce visual clutter.
-
-### Local style rules
-
-* MCPClient instead of MCP Client.
-* MCPServer instead of MCP Server.
-* Microservice instead of micro-service.
 
 ## Structure
 
