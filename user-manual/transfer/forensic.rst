@@ -6,10 +6,10 @@ Forensic disk images
 
 Archivematica supports the preservation of forensic disk images. Selecting the
 disk image :ref:`transfer type <transfer-types>` is not required to preserve
-disk images - you can use the standard transfer type or the bag transfer types,
-if your disk image is also bagged. The disk image transfer type gives users an
-extra disk image-specific metadata form where you can record information about
-the imaging process.
+disk images - you can use the standard transfer types or the bag transfer
+types, if your disk image is bagged. The disk image transfer type gives users
+an extra disk image-specific metadata form where you can record information
+about the imaging process.
 
 *On this page*
 

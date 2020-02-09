@@ -133,12 +133,12 @@ Transfer types
 
 Some materials that are transferred into Archivematica require special
 processing. To kick off these specialized workflows, you can select a specific
-*transfer type*. There are six different transfer types available.
+*transfer type*. There are seven different transfer types available.
 
 .. image:: images/transfer-types.*
    :align: center
    :width: 80%
-   :alt: The transfer types dropdown menu on the left-hand side of the Transfer tab shows six different transfer type options
+   :alt: The transfer types drop-down menu on the left-hand side of the Transfer tab shows seven different transfer type options
 
 **Standard**: Standard transfers are the default in Archivematica. All materials
 can be transferred using the standard transfer type. No special processing tasks
@@ -146,6 +146,13 @@ are carried out. If you're unsure which transfer type to choose, start with a
 standard transfer. For more information on how standard transfers can be
 structured, see :ref:`basic transfers <basic-transfers>` and subsequent
 sections below.
+
+**Zipped directory**: Zipped directory transfers are a variant of the default
+transfer type in Archivematica. All materials can be transferred using the
+Zipped directory transfer type; the material just happens to be in a ``.zip``,
+``.tgz``, or ``.tar.gz`` at the outset. When a Zipped directory transfer
+starts the zip will be decompressed and the material then processed using the
+Standard transfer workflow documented above.
 
 **Unzipped bags**: Archivematica can recognize and make use of materials that
 have been packaged according to the `BagIt File Packaging Format`_, colloquially
@@ -182,10 +189,10 @@ item. Archivematica can reuse some of the data in these METS files. For more
 information, see :ref:`DSpace <dspace>`.
 
 **Disk image**: Selecting the disk image transfer type is not required to
-preserve disk images (you can use the standard transfer type or the bag transfer
-types, if your disk image is also bagged); however, it does give you an extra
-disk image-specific metadata form where you can record information about the
-imaging process. For more information, see :ref:`Forensic disk images
+preserve disk images (you can use the standard transfer type or the bag
+transfer types, if your disk image is bagged); however, it does give you an
+extra disk image-specific metadata form where you can record information about
+the imaging process. For more information, see :ref:`Forensic disk images
 <forensic>`.
 
 **Dataverse**: Similar to the DSpace transfer type, materials exported from a
