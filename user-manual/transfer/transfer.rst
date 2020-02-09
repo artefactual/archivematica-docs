@@ -150,9 +150,13 @@ sections below.
 **Zipped directory**: Zipped directory transfers are a variant of the default
 transfer type in Archivematica. All materials can be transferred using the
 Zipped directory transfer type; the material just happens to be in a ``.zip``,
-``.tgz``, or ``.tar.gz`` at the outset. When a Zipped directory transfer
-starts the zip will be decompressed and the material then processed using the
-Standard transfer workflow documented above.
+``.tgz``, or ``.tar.gz`` file at the outset. When a Zipped directory transfer
+starts, the zip will be decompressed and the material then processed using the
+Standard transfer workflow documented above. The internal structure of a zipped
+directory transfer matches that of the standard transfer and so can either be
+a loose collection of files, or more structured, for example, including an
+``objects`` and ``metadata`` directory including Archivematica's special files
+such as metadata.csv, or identifiers.json.
 
 **Unzipped bags**: Archivematica can recognize and make use of materials that
 have been packaged according to the `BagIt File Packaging Format`_, colloquially
