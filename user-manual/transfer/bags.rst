@@ -8,12 +8,16 @@ Archivematica supports the ingest of materials packaged in accordance with the
 Library of Congress `BagIt`_ specification. Users can ingest both zipped and
 unzipped bags by using the appropriate :ref:`transfer type <transfer-types>`.
 
-*On this page:*
+*On this page*
 
 * :ref:`Bag structure requirements <bag-structure-requirements>`
-* :ref:`Unzipped bags <unzipped-bags>`
-* :ref:`Zipped bags <zipped-bags>`
-* :ref:`Adding metadata to bags <adding-metadata-bags>`
+* :ref:`Configuring bags <configure-bags>`
+
+  * :ref:`Unzipped bags <unzipped-bags>`
+  * :ref:`Zipped bags <zipped-bags>`
+  * :ref:`Adding metadata to bags <adding-metadata-bags>`
+  * :ref:`Other ways to configure bags <other-bag-configs>`
+
 * :ref:`Index and search bag metadata <searching-bags>`
 
 .. _bag-structure-requirements:
@@ -33,10 +37,18 @@ Some issues that can cause bags to inadvertently fail include:
 * Structural issues. See :ref:`Adding metadata to bags
   <metadata-bags>` for more information on how to structure bags.
 
+.. _configure-bags:
+
+Configuring bags
+----------------
+
+Bags can be configured in a variety of ways to achieve specific preservation
+goals.
+
 .. _unzipped-bags:
 
 Unzipped bags
--------------
+^^^^^^^^^^^^^
 
 Unzipped bags can be created by hand or by using a BagIt tool like
 `BagIt-python`_ or `Bagger`_. The bag must comply with the `BagIt`_
@@ -64,7 +76,7 @@ For more information on processing your transfer, see :ref:`process transfer
 .. _zipped-bags:
 
 Zipped bags
------------
+^^^^^^^^^^^
 
 Zipped bags can be created by hand or by using a BagIt tool like `BagIt-python`_
 or `Bagger`_. The bag must comply with the `BagIt`_ specification.
@@ -92,11 +104,30 @@ For more information on processing your transfer, see :ref:`process transfer
 .. _adding-metadata-bags:
 
 Adding descriptive/rights metadata and submission documentation to bags
------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Similar to standard transfers, it is possible to add descriptive and rights
 metadata to unzipped and zipped bag transfers. See :ref:`Adding metadata to bags
 <metadata-bags>` for more information.
+
+.. _other-bag-configs:
+
+Other ways to configure bags
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There may be other ways to combine standard transfer configurations with bags,
+such as:
+
+* :ref:`Transfers with submission documentation <create-submission>`
+* :ref:`Persistent identifiers <transfer-pids>`
+* :ref:`Transferring material with preservation or access derivatives (manual normalization) <transfer-derivatives>`
+* :ref:`Transferring material with access copies only <transfer-access-copies>`
+* :ref:`Transferring material with service (mezzanine) files <transfer-service-files>`
+
+However, Artefactual does not test all configurations. It is recommended to
+thoroughly test any unique configuration and review the results before running
+your workflow in production. If you have questions about different ways to set
+up bags for transfer, consider a post to the `Archivematica user forum`_.
 
 .. _searching-bags:
 
@@ -213,3 +244,4 @@ user enters two dates in ISO date format separated by a colon. For example,
 .. _BagIt: https://tools.ietf.org/html/rfc8493
 .. _BagIt-python: https://github.com/LibraryOfCongress/bagit-python
 .. _Bagger: https://github.com/LibraryOfCongress/bagger
+.. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
