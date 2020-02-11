@@ -153,7 +153,7 @@ may be used if the AIP contains the sub-folder (e.g. as the output of
 digitization workflows).
 
 Each fileGrp will have a GROUPID used to relate different versions of files and
-an ID used later as the FILEID to indentify the file in the Structural Map (see
+an ID used later as the FILEID to identify the file in the Structural Map (see
 below).
 
 The GROUPID includes the UUID (from the objectIdentifierValue) of the original
