@@ -20,7 +20,7 @@ METS file.
 .. _premis-events:
 
 PREMIS Events metadata
-======================
+----------------------
 
 PREMIS Events will be recorded in separate digiprovMD sections in the METS (see
 :ref:`METS in Archivematica <METS_schema>` for more information). PREMIS Events
@@ -56,7 +56,7 @@ digiprovMD section in the METS (see :ref:`PREMIS Agent Metadata
 .. _event-list:
 
 PREMIS Events list
-==================
+------------------
 
 There are PREMIS Events that apply to original files and some that apply to
 normalized files. Both are listed below, followed by a list of Events that occur
@@ -182,7 +182,7 @@ If a transfer was sent to backlog there will be an PREMIS Event:
 .. _premis-agent:
 
 PREMIS Agent metadata
-=====================
+----------------------
 
 PREMIS Agents that are linked to a PREMIS Event will also be placed in its own
 digiprovMD section. The default semantic units for each agent are:
@@ -224,7 +224,7 @@ in the METS AIP file (See :ref:`METS in Archivematica <METS_schema>`).
 .. _premis-rights:
 
 PREMIS Rights metadata
-======================
+----------------------
 
 PREMIS rights metadata can be added during :ref:`transfer <transfer>` or
 :ref:`ingest <ingest>`; it can be entered via the GUI interface to be applied to

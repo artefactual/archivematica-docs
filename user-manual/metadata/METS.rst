@@ -147,14 +147,14 @@ more of the following fileGrps:
 * deleted
 
 These are known as USE attributes and must accompany each fileGrp. The fileGrp
-original is required for all METS files. If the AIP includes normalized for
-preservation files then the fileGrp preservation is used. The service fileGrp
+*original* is required for all METS files. If the AIP includes normalized for
+preservation files then the fileGrp *preservation* is used. The *service* fileGrp
 may be used if the AIP contains the sub-folder (e.g. as the output of
 digitization workflows).
 
 Each fileGrp will have a GROUPID used to relate different versions of files and
-an ID used later as the FILEID to identify the file in the Structural Map (see
-below).
+an ID used later as the FILEID to identify the file in the :ref:`Structural Map
+<structMap>`.
 
 The GROUPID includes the UUID (from the objectIdentifierValue) of the original
 file. The ID is the UUID (from the objectIdentifierValue) of the file being
@@ -182,9 +182,10 @@ objects directory as they are laid out on disk.
    :language: xml
    :lines: 6456-6472
 
-If the *document empty directories* microservice runs, then a second structMap
-is created. It is labeled "Normative Directory Structure." At AIP re-ingest this
-new 'logical' structMap will be parsed to re-create the empty directories.
+If you have chosen to run the job *document empty directories* microservice
+runs, then a second structMap is created. It is labeled "Normative Directory
+Structure." At AIP re-ingest this new 'logical' structMap will be parsed to
+re-create the empty directories.
 
 A logical structmap describes a relationship between objects in an Archivematica
 AIP that might not be true to their 'physical' layout on disk, as is here where
