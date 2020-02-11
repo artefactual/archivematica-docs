@@ -1,0 +1,56 @@
+<mets:dmdSec ID="dmdSec_2">
+  <mets:mdWrap MDTYPE="DC">
+    <mets:xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ https://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>14000 Caen, France - Bird in my garden </dc:title>
+        <dcterms:isPartOf>part of a sound collection</dcterms:isPartOf>
+        <dc:creator>Nicolas Germain</dc:creator>
+        <dc:subject>field recording </dc:subject>
+        <dc:subject>soundscapes </dc:subject>
+        <dc:subject>radio aporee </dc:subject>
+        <dc:description>Bird singing in my garden, Caen, France, Zoom H6 </dc:description>
+        <dc:publisher>Radio Aporee </dc:publisher>
+        <dcterms:provenance>Comes from Wikimedia</dcterms:provenance>
+        <dc:contributor>  </dc:contributor>
+        <dc:date>27/05/2017</dc:date>
+        <dc:type>sound </dc:type>
+        <dc:format>audio/mp3 </dc:format>
+        <dc:identifier>  </dc:identifier>
+        <dc:source>Internet Archive </dc:source>
+        <dc:language>  </dc:language>
+        <dc:relation>  </dc:relation>
+        <dc:coverage>  </dc:coverage>
+        <dc:rights>Public domain</dc:rights>
+        <dcterms:accessRights>Unrestricted</dcterms:accessRights>
+      </dcterms:dublincore>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_3">
+  <mets:mdWrap MDTYPE="DC">
+    <mets:xmlData>
+      <dcterms:dublincore xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://purl.org/dc/terms/ https://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd">
+        <dc:title>Beihai, Guanxi, China, 1988 </dc:title>
+        <dcterms:isPartOf>Part of an image collection</dcterms:isPartOf>
+        <dc:creator>NASA/GSFC/METI/ERSDAC/ JAROS and U.S./Japan ASTER Science Team </dc:creator>
+        <dc:subject>China </dc:subject>
+        <dc:subject>Beihai </dc:subject>
+        <dc:subject>  </dc:subject>
+        <dc:description>Beihai is a city in the south of Guangxi, People’s Republic of China. </dc:description>
+        <dc:publisher>NASA Jet Propulsion Laboratory </dc:publisher>
+        <dcterms:provenance>Comes from NASA</dcterms:provenance>
+        <dc:contributor>  </dc:contributor>
+        <dc:date>February 29, 2016 </dc:date>
+        <dc:type>image </dc:type>
+        <dc:format>image.tif </dc:format>
+        <dc:identifier>  </dc:identifier>
+        <dc:source>NASA Jet Propulsion Laboratory </dc:source>
+        <dc:language>  </dc:language>
+        <dc:relation>  </dc:relation>
+        <dc:coverage>  </dc:coverage>
+        <dc:rights>Public domain</dc:rights>
+        <dcterms:accessRights>Unrestricted</dcterms:accessRights>
+      </dcterms:dublincore>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>

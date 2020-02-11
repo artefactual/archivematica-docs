@@ -26,6 +26,7 @@ links to each chapter's main sections.
    access/contentdm
    preservation/preservation-planning
    administer/dashboard-admin
+   metadata/METS
    metadata/dublincore
    metadata/premis
    appraisal/appraisal

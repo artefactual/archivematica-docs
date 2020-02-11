@@ -240,6 +240,7 @@ Archivematica employs several metadata standards. This section describes how
 Archivematica implements and makes use of them.
 
 * :ref:`Import metadata <import-metadata>`
+* :ref:`METS <METS_schema>`
 * :ref:`PREMIS <premis-template>`
 * :ref:`Dublin Core <dublin_core>`
 

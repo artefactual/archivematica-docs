@@ -427,7 +427,8 @@ Review AIP
 The METS.xml file is very long because it contains all of the information about
 your files as well as information about the processes and tools that acted on
 those original files. For more information about the contents and structure of
-the METS file, check out the `METS page on the Archivematica wiki`_.
+the METS file, check out the :ref:`METS page <METS_schema>` in the metadata
+section.
 
 Review DIP
 ==========
@@ -510,5 +511,4 @@ processing more complex content, see the :ref:`User manual <user-manual>`.
 .. _Archivematica sandbox: https://sandbox.archivematica.org/
 .. _PRONOM: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
 .. _fmt/402: https://www.nationalarchives.gov.uk/PRONOM/fmt/402
-.. _METS page on the Archivematica wiki: https://wiki.archivematica.org/METS
 .. _VirtualBox: https://www.virtualbox.org/

@@ -51,11 +51,11 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 Importing descriptive metadata with metadata.csv
 ------------------------------------------------
 
-Archivematica natively supports the `Dublin Core Metadata Element Set`_, the
-basic 15 Dublin Core metadata elements. Using the metadata.csv method, users can
-also include :ref:`non-Dublin Core metadata <non-dc-metadata>`. Archivematica is
-able to pass Dublin Core metadata to AtoM or ArchivesSpace, but not non-Dublin
-Core metadata.
+Archivematica natively supports Dublin Core's `DCMI Metadata Terms`_, which
+includes the basic 15 elements from the `Dublin Core Metadata Element Set`_.
+Using the metadata.csv method, users can also include :ref:`non-Dublin Core
+metadata <non-dc-metadata>`. Archivematica is able to pass Dublin Core metadata
+to AtoM or ArchivesSpace, but not non-Dublin Core metadata.
 
 .. note::
 
@@ -93,15 +93,15 @@ for creating a metadata.csv file that will apply metadata to individual objects.
 #. Create a CSV file called metadata.csv. The example below can be used as
    a template for Dublin Core metadata. The filename column must come first and
    the filename path must always start with ``objects/``. Note that if you add
-   column headings that are not in the ``dc.element`` format, Archivematica will
-   not indicate that the metadata is Dublin Core.
+   column headings that are not in the ``dc.element`` or ``dcterms.element``
+   formats, Archivematica will not indicate that the metadata is Dublin Core.
 
    .. csv-table::
       :file: _csv/individual-metadata.csv
       :header-rows: 1
 
-   Note that empty columns (i.e. ``dc.contributor``) were left in to demonstrate
-   the full range of possible Dublin Core values. You do not need to keep empty
+   Note that empty columns (e.g. ``dc.contributor``) were left in to demonstrate
+   the range of possible basic Dublin Core values. You do not need to keep empty
    columns.
 
 #. Create a subdirectory called ``metadata`` and place the metadata.csv file
@@ -119,9 +119,10 @@ for creating a metadata.csv file that will apply metadata to individual objects.
 Any Dublin Core metadata formatted as in the example above will be transposed to
 the METS file. The METS file for the above example includes two descriptive
 metadata sections (``<dmdSec>``), one for each file in the transfer. These
-contain the Dublin Core metadata parsed from the metadata.csv. Note in the
-metadata wrapper (``<mdWrap>``) that they are given an MDTYPE of "DC". If there
-had been non-Dublin Core metadata in the metadata.csv, there would be a separate
+contain the Dublin Core metadata parsed from the metadata.csv; they include both
+``dc.element`` and ``dcterms.element`` metadata. Note in the metadata wrapper
+(``<mdWrap>``) that they are given an MDTYPE of "DC". If there had been
+non-Dublin Core metadata in the metadata.csv, there would be a separate
 ``<mdWrap>`` for the file with an MDTYPE of "OTHER".
 
 .. literalinclude:: scripts/individual-mets.xml
@@ -239,8 +240,8 @@ metadata. The JSON file is added to the metadata directory as above.
 #. Create a JSON file called metadata.json. The example below can be used as
    a template for Dublin Core metadata. The filename field must come first and
    the filename path must always start with ``objects/``. Note that if you add
-   fields that are not in the ``dc.element`` format, Archivematica will not
-   indicate that the metadata is Dublin Core.
+   fields that are not in the ``dc.element`` or ``dcterms.element`` formats,
+   Archivematica will not indicate that the metadata is Dublin Core.
 
    .. literalinclude:: scripts/metadata.json
       :language: json
@@ -507,5 +508,6 @@ The resulting output in the Archivematica AIP METS file will be:
 
 :ref:`Back to the top <import-metadata>`
 
+.. _DCMI Metadata Terms: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
 .. _Dublin Core Metadata Element Set: http://www.dublincore.org/specifications/dublin-core/dces/
 .. _`BagIt`: https://tools.ietf.org/html/rfc8493
