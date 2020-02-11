@@ -107,7 +107,7 @@ METS file
 metadata for original file, PREMIS metadata: normalized files, PREMIS metadata:
 events, and PREMIS metadata: rights). The role of the :ref:`METS file
 <METS_schema>` is to list all of the digital objects in the AIP (originally
-ingested files, preservation masters, license files, ocr text files, submission
+ingested files, preservation masters, license files, OCR text files, submission
 documentation etc.), describe their relationships to each other, and link
 digital objects to their descriptive, technical, provenance and rights metadata.
 
