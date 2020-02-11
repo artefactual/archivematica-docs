@@ -11,7 +11,7 @@ The use of `Dublin Core`_ descriptive metadata, `DCMI Metadata Terms`_, is
 supported in Archivematica through both import and manual entry.
 
 For instructions on importing metadata with a transfer, please see :ref:`Import
-metadata <import-metadata>`. Importing metadata supports both ``dc.elements``
+metadata <import-metadata>`. Archivematica's metadata import workflow accepts both ``dc.elements``
 and ``dcterms.elements``.
 
 For instructions on adding descriptive metadata through the user interface
