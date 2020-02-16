@@ -216,7 +216,7 @@ OIDC setup
 `OIDC <oidc_>`_ (OpenID Connect) is an identity layer on top of OAuth 2.0, providing
 identity verification, authentication and basic information about the end user. This
 feature allows administrators to deploy both the Archivematica Dashboard and Storage
-Service Django applications with Shibboleth authentication.
+Service Django applications with OIDC authentication.
 
 OIDC backend configuration in Archivematica Dashboard
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
