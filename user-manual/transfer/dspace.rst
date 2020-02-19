@@ -42,7 +42,7 @@ uploaded object plus a license file, a METS file and possibly an OCR text file.
 
 In the example pictured above, the DSpace item includes four files:
 
-* ``bitstream_39691_txt``: the OCR text file.
+* ``bitstream_39691.txt``: the OCR text file.
 * ``bitstream_8272.pdf``: the original object deposited in DSpace.
 * ``bitstream_8273``: the license file.
 * ``mets.xml``: the METS file for the item.
