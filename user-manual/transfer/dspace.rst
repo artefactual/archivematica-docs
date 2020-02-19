@@ -4,95 +4,119 @@
 DSpace exports
 ==============
 
-Archivematica can act to facilitate a "dark archive" for a DSpace repository -
-i.e. providing back-end preservation functionality while DSpace remains the
-user deposit and access system.
+Archivematica can be used to build a "dark archive" for a DSpace repository -
+that is, it can provide back-end preservation functionality while DSpace remains
+the user deposit and access system. Material exported from DSpace must be placed
+in a :ref:`transfer source location <storageService:locations>` that the
+Archivematica pipeline can access.
 
-.. note::
+*On this page*
 
-   Archivematica has been tested using exports from DSpace 1.7.x. Ingest has
-   not been tested on exports from DSpace 1.8.x; however, there were no changes
-   in the DSpace AIP export structure between 1.7.x and 1.8.x so it is
-   anticipated that performance will be identical.
+* :ref:`DSpace version compatibility <dspace-version>`
+* :ref:`DSpace export structure <dspace-export-structure>`
+* :ref:`Processing Dataverse datasets <processing-dspace-exports>`
 
-1. The transfer should be structured similar to the one in Archivematica's sample data at sampledata/SampleTransfers/DSpaceExport. This is a standard DSpace export with one DSpace AIP for the collection-level description and one for each of the deposited objects.
+.. _dspace-version:
 
-.. image:: images/DSpace1g.*
+DSpace version compatibility
+----------------------------
+
+Archivematica has been tested using exports from DSpace 1.7.x. Ingest has not
+been tested on exports from DSpace 1.8.x; however, there were no changes in the
+DSpace AIP export structure between 1.7.x and 1.8.x so it is anticipated that
+performance will be identical.
+
+.. _dspace-export-structure:
+
+DSpace export structure
+-----------------------
+
+Archivematica expects standard DSpace exports, where each DSpace item is
+packaged as a ZIP file. Typically, the DSpace item ZIP file will contain the
+uploaded object plus a license file, a METS file and possibly an OCR text file.
+
+.. image:: images/dspace-item-contents.*
    :align: center
    :width: 80%
-   :alt: A DSpace export with collection and item-level zipped files
+   :alt: An unzipped DSpace export package, showing the four files that comprise the item.
 
-.. note::
+In the example pictured above, the DSpace item includes four files:
 
-   The inclusion of the collection level export (eg aip_1314.zip) is not
-   mandatory.
+* ``bitstream_39691.txt``: the OCR text file.
+* ``bitstream_8272.pdf``: the original object deposited in DSpace.
+* ``bitstream_8273``: the license file.
+* ``mets.xml``: the METS file for the item.
 
+Archivematica will reuse portions of the DSpace METS file to populate the METS
+file that is generated for the AIP.
 
-2. A typical zipped item folder will contain the uploaded object plus a license file, a METS file and possibly an OCR text file. An example is shown below:
+You can either transfer items one-by-one or place them within a directory to
+transfer multiple items at a time. Depending on the setup of your DSpace
+instance and your export parameters, the export may contain multiple individual
+items as well as a collection-level description, as in the example below.
 
-.. image:: images/DSpace2g.*
-   :align: center
-   :width: 80%
-   :alt:  A DSpace item export
+.. _processing-dspace-exports:
 
-* bitstream_39691_txt = the OCR text file
+Processing DSpace exports
+-------------------------
 
-* bitstream_8272.pdf = the object deposited in DSpace
+#. Place your exported material in a :ref:`transfer source location
+   <storageService:locations>` that your Archivematica pipeline can access.
 
-* bitstream_8273 = the license file
+#. On the Transfer tab in Archivematica, use the **Transfer type** dropdown menu to
+   select the DSpace transfer type.
 
-* mets.xml = the METS file for the item
+   .. image:: images/dspace-select-transfer-type.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica transfer tab showing "DSpace" selected as the transfer type.
 
-3. To process, configure the source directory containing the transfer in the Administration tab of the browser. See :ref:`Administrator manual - Transfer source directories <admin-dashboard-transfer-source>`.
+#. Use the **Browse** button to find your DSpace export and select either an
+   individual item or a collection of items. In the screenshot below, a
+   collection of items has been selected. Click **Add**.
 
-4. In the transfer tab, use the dropdown menu to select the DSpace transfer type.
+   .. image:: images/dspace-select-items.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica transfer tab showing a folder called "DSpaceExport", containing many DSpace items, selected for transfer.
 
-.. image:: images/UploadDSpaceTransfer.*
-   :align: center
-   :width: 80%
-   :alt: DSpace transfer type
+#. If you selected a collection of items, enter a name for the transfer in the
+   **Transfer name** box.
 
+   If you selected an individual DSpace item, you do not need to give your
+   transfer a name. The name of the item (e.g. ``ITEM@2429-1521.zip``) will be
+   used as the transfer name.
 
-Then, browse to the appropriate source directory and add your DSpace export.
+#. Click **Start transfer** and process as required.
 
-.. image:: images/AddDSpace.*
-   :align: center
-   :width: 80%
-   :alt: Add DSpace export from source directory
+.. _dspace-mets:
 
+DSpace AIP METS files
+---------------------
 
-5. When the DSpace transfer has loaded to the dashboard, click Start Transfer to begin processing.
+Each object in the AIP has 2 DSpace-specific descriptive metadata sections (dmdSec).
+The first contains Xpointers to descriptive and rights metadata in
+the original mets.xml files exported from DSpace.
 
-.. image:: images/DSpaceTransferMicros.*
-   :align: center
-   :width: 80%
-   :alt: DSpace transfer micro services
+.. literalinclude:: scripts/dspace-mets.xml
+   :language: xml
+   :lines: 19-21
 
-6. At the normalization step, choose "Normalize for preservation".
+The second dmdSec reflects the parent-child relationship between a DSpace object
+and its collection, using the handles as identifiers:
 
-.. image:: images/DSpaceNormForPres.*
-   :align: center
-   :width: 80%
-   :alt: Select Normalize for preservation for DSpace export
+.. literalinclude:: scripts/dspace-mets.xml
+   :language: xml
+   :lines: 22-31
 
-7. The METS file for the AIP will show fileGrps for the different file types: original, submissionDocumentation (the mets.xml files), preservation, license and text/ocr.
+In the file section (``fileSec``) of the AIP METS file, you can find information
+about the different types of DSpace files contained in the AIP. They are sorted
+by file group (``fileGrp``): ``original``, ``submissionDocumentation`` (the
+original DSpace mets.xml files), ``preservation`` (if the material was
+normalized for preservation), ``license``, and ``text/ocr``.
 
-.. image:: images/DSpace3g.*
-   :align: center
-   :width: 80%
-   :alt: An excerpt from a METS file for an Archivematica AIP that has been
-         generated from a DSpace export
-
-Each object in the AIP has 2 dmdSecs. The first contains Xpointers to descriptive and rights metadata in
-the original mets.xml files exported from DSpace. The second reflects the
-parent-child relationship between a DSpace object and its community/collection,
-using the handles as identifiers:
-
-.. image:: images/DSpace_dmd.*
-   :align: center
-   :width: 80%
-   :alt: Excerpt from Archivematica METS file showing dmdSec for DSpace export.
-
-
+.. literalinclude:: scripts/dspace-mets.xml
+   :language: xml
+   :lines: 2707-2731
 
 :ref:`Back to the top <dspace>`
