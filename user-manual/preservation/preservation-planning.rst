@@ -261,7 +261,7 @@ the script is, we recommend testing your script thoroughly before using it in
 a production environment.
 
 Further down on this page, there is information about each section of the
-Preservation Planning ta, which contains specific information regarding the
+Preservation Planning tab, which contains specific information regarding the
 commands for each section.
 
 To add a new command, decide which purpose your command will fulfill (i.e.
