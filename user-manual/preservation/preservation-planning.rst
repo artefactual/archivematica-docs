@@ -39,6 +39,10 @@ default format policy, consider opening an issue in the
 * :ref:`Normalization <normalization>`
 * :ref:`Transcription <transcription>`
 * :ref:`Validation <validation>`
+
+  * :ref:`JHOVE <fpr-jhove>`
+  * :ref:`MediaConch <fpr-mediaconch>`
+
 * :ref:`Verification <verification>`
 
 .. _pres-policies:
@@ -148,7 +152,7 @@ The following format groups come pre-populated in the FPR:
 * Text (Markup)
 * Text (Plain)
 * Text (Source Code)
-* Test (Structured)
+* Text (Structured)
 * Unknown
 * Video
 * Word Processing
@@ -833,6 +837,47 @@ against a custom policy that is applied to the format.
 
 Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_.
 
+Validation commands
+^^^^^^^^^^^^^^^^^^^
+
+There are three default validation commands in Archivematica |version|:
+
+* Validate using JHOVE
+* Validate using MediaConch
+* Check against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch
+
+For more information about writing a command, see :ref:`Writing commands
+<writing-commands>` above.
+
+Validation rules
+^^^^^^^^^^^^^^^^
+
+The default validation rule for most formats in Archivematica is to use JHOVE.
+The exception is Matroska (MKV) files, which are validated by MediaConch as of
+Archivematica 1.7.
+
+If you would like to implement a MediaConch policy command, you must also create
+a rule to invoke the policy checking command for the desired format. For
+example, if you have created a MediaConch policy command to check against JPG
+files, you must also create a rule that connects the format with the command.
+
+Validation rules are called during several microservices:
+
+* During the *Validate* microservice on the Transfer tab, which includes
+  validating formats as well as checking original files against a policy.
+* During the *Normalize* microservice on the Ingest tab, where access and
+  preservation derivatives generated during normalization are validated.
+* During the *Perform policy checks on originals* microservice on the Transfer
+  tab, where original digital objects can be checked against a policy. See
+  :ref:`MediaConch <fpr-mediaconch>` below.
+* During the *Perform policy checks on preservation derivatives* and *Perform
+  policy checks on access derivatives* microservices on the Ingest tab, where
+  preservation and access derivatives can be checked against a policy. See
+  :ref:`MediaConch <fpr-mediaconch>` below.
+
+For more information about creating a rule, see :ref:`Changing rules
+<changing-rules>` above.
+
 .. _fpr-jhove:
 
 JHOVE
@@ -847,7 +892,7 @@ works, see the `JHOVE`_ website.
 When JHOVE encounters a file that it is able to successfully validate, a simple
 success message is displayed in the standard output:
 
-.. code::
+.. code:: bash
 
    Running Validate using JHOVE
    Command "Validate using JHOVE" was successful
@@ -865,7 +910,7 @@ Archivematica reports a successful bytestream validation as a partial success,
 in order to differentiate it from successful validation based on a format
 specification.
 
-.. code::
+.. code:: bash
 
    Running Validate using JHOVE
    Command "Validate using JHOVE" was partially successful
@@ -897,111 +942,124 @@ can include rules such as aspect ratios, bit rate, track information, etc.
 Policy checking is not restricted to mkv files. A policy can be created for any
 format which can be characterized by `MediaInfo`_.
 
-To create a policy within Archivematica:
-
-1. Ensure that the Archivematica processing configuration is set to perform
-policy checks on originals. You can also use these policies to check
-preservation and access derivatives created by Archivematica or through manual
-normalization against a local policy.
-
-2. In the Preservation Planning tab, click on Commands under Validation. You
-should see a sample policy called Check against policy
-PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch. Either replace this command
-or create a new one using it as a template.
-
-Here is a blank command:
-
-.. code-block:: none
-
-  import sys
-  from ammcpc import MediaConchPolicyCheckerCommand
-
-  # Valuate this constant with the text (XML) of the policy.
-  POLICY = """
-  <!-- Add your MediaConch policy here! -->
-  """.strip()
-
-  # Valuate this constant with the name of the policy.
-  POLICY_NAME = 'Add your policy name here'
-
-  if __name__ == '__main__':
-      target = sys.argv[1]
-      policy_checker = MediaConchPolicyCheckerCommand(
-          policy=POLICY,
-          policy_file_name=POLICY_NAME)
-      sys.exit(policy_checker.check(target))
-
-2a. To use your own command, add the MediaConch-created xml between
-`POLICY = """` and `""".strip()` in
-the Command section. As an example, here's a very simple policy to check that a
-file is an mp4:
-
-.. code-block:: none
-
-   <policy type="and" name="Is Mp4?" license="CC-BY-SA-4.0+">
-     <description>New Is Mp4</description>
-     <rule name="Is Mp4?" value="Format" tracktype="General" occurrence="*" operator="=">mp4</rule>
-   </policy>
-
-
-2b. In the command above, update the POLICY_NAME field with the name of your
-policy. This can be anything you like, but it cannot be left blank.
-
-2c. After the policy and policy name fields have been updated, you can save
-your new FPR policy command.
-
-3. Create or replace a rule (in the Rules section under Validation) with the
-purpose "Validation against a Policy" for the format you want to check, using
-the command you just created/edited.
-
-4. Now, when processing a new transfer, there should be a microservice called
-"Policy checks on originals." Clicking on the gear icon associated with
-that microservice will give you details related to your MediaConch policy. Like
-with other microservices in Archivematica, its background will be green when all
-policies pass, and turn pink if one or more policies fail. Likewise, if
-performing policy checks on preservation or access derivatives, this new
-microservice will appear under the Normalization service during Ingest.
-
 For more information about how to create a policy for policy validation, please
 see the "Create a Policy" section of the `MediaConch documentation`_.
 
+Here is an example policy created by MediaConchOnline. It checks that MP3 files
+have a duration.
 
-Validation commands
-^^^^^^^^^^^^^^^^^^^
+.. code-block:: xml
 
-There are three default validation commands in Archivematica |version|:
+   <?xml version="1.0"?>
+   <policy type="and" name="MP3 has duration" license="CC-BY-SA-4.0+">
+     <description>Rudimentary test to check for an MP3 having a duration value.</description>
+     <rule name="Does the audio duration exist?" value="Duration" tracktype="General" occurrence="*" operator="exists">mp3</rule>
+   </policy>
 
-* Validate using JHOVE
-* Validate using MediaConch
-* Check against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch
+To create a validation policy in Archivematica:
 
-For more information about writing a command, see :ref:`Writing commands
-<writing-commands>` above.
+#. In the Preservation Planning tab, click on **Commands** in the left-hand
+   sidebar under Validation. You should see a sample policy called *Check
+   against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch*. Either
+   click on **Replace** to edit this command or create a new one by clicking
+   **Create new command**.
 
-Validation rules
-^^^^^^^^^^^^^^^^
+#. In the form that opens, select *MediaConch* as the related tool and give
+   the command a human-readable description (this will be used as the title). If
+   you are editing the placeholder command, some of the fields will be populated
+   already.
 
-The default validation rule for most formats in Archivematica is to use JHOVE.
-The exception is Matroska files, which use MediaConch by default as of
-Archivematica 1.7.
+#. In the **Command** field of the form, copy and paste the following blank
+   command:
 
-If you would like to implement a MediaConch policy command, you must also create
-a rule to invoke the policy checking command for the desired format. For
-example, if you have created a MediaConch policy command to check against JPG
-files, you must also create a rule that connects the format with the command.
+   .. code-block:: python
 
-Validation rules are called during several microservices:
+     import sys
+     from ammcpc import MediaConchPolicyCheckerCommand
 
-* During the *Validate* microservice on the Transfer tab, which includes
-  validating formats as well as checking original files against a policy.
-* During the *Normalize* microservice on the Ingest tab, where access and
-  preservation derivatives generated during normalization are validated.
-* During the *Policy checks for derivatives* microservice on the Ingest tab,
-  where access derivatives and preservation derivatives can be checked against
-  a policy.
+     # Valuate this constant with the text (XML) of the policy.
+     POLICY = """
+     <!-- Add your MediaConch policy here! -->
+     """.strip()
 
-For more information about creating a rule, see :ref:`Changing rules
-<changing-rules>` above.
+     # Valuate this constant with the name of the policy.
+     POLICY_NAME = 'Add your policy name here'
+
+     if __name__ == '__main__':
+         target = sys.argv[1]
+         policy_checker = MediaConchPolicyCheckerCommand(
+             policy=POLICY,
+             policy_file_name=POLICY_NAME)
+         sys.exit(policy_checker.check(target))
+
+#. Add the XML created by MediaConch between ``POLICY = """`` and
+   ``""".strip()``. Add your policy name to ``POLICY_NAME = 'Add your policy
+   name here'``. In the example below, we have used the policy to check that
+   MP3s have a duration as in the description above.
+
+   .. code-block:: python
+
+     import sys
+     from ammcpc import MediaConchPolicyCheckerCommand
+
+     # Valuate this constant with the text (XML) of the policy.
+     POLICY = """
+     <?xml version="1.0"?>
+     <policy type="and" name="MP3 has duration" license="CC-BY-SA-4.0+">
+       <description>Rudimentary test to check for an MP3 having a duration value.</description>
+       <rule name="Does the audio duration exist?" value="Duration" tracktype="General" occurrence="*" operator="exists">mp3</rule>
+     </policy>
+     """.strip()
+
+     # Valuate this constant with the name of the policy.
+     POLICY_NAME = 'MP3 has duration'
+
+     if __name__ == '__main__':
+         target = sys.argv[1]
+         policy_checker = MediaConchPolicyCheckerCommand(
+             policy=POLICY,
+             policy_file_name=POLICY_NAME)
+         sys.exit(policy_checker.check(target))
+
+#. Fill out the remaining fields as follows:
+
+   * **Script type**: Python script
+   * **The related output format**: Leave blank
+   * **Output location**: Leave blank
+   * **Command usage**: Validation
+   * **The related verification command**: Leave blank
+   * **The related event detail command**: Leave blank
+
+#. Save the command. Once it has saved, check to make sure that it is enabled.
+
+#. Click on **Rules** in the left-hand sidebar under Validation, and then click
+   on **Create new rule**.
+
+#. In the form that opens, select *Validation against a policy* as the
+   **Purpose**.
+
+#. For **The related format**, select the format that you would like to use the
+   policy on. If you are using the MP3 duration example above,
+   you would select *Audio: MPEG 1/2 Audio Layer 3: MPEG 1/2 Audio Layer 3
+   (fmt/134)*.
+
+#. For **Command**, select the command you just created. The dropdown will
+   contain all available validation commands.
+
+#. Ensure that the Archivematica :ref:`Processing configuration
+   <dashboard-processing>` is set to perform policy checks on originals and/or
+   derivatives. The next time you start a transfer, Archivematica will check
+   the files against the policy.
+
+There are thee policy check jobs in Archivematica - *Perform policy checks on
+originals*, *Perform policy checks on preservation derivatives*, and *Perform
+policy checks on access derivatives*. The derivative checks will only run on
+files that have been normalized for preservation or access.
+
+The background of a completed job will be green if all relevant files in the
+transfer passed the policy check, and turn pink if one or more files fail the
+policy check. Clicking on the gear icon to the left of the job name will
+provide more information about job.
 
 .. _verification:
 
