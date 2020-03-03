@@ -1,0 +1,32 @@
+<mets:techMD ID="techMD_4">
+  <mets:mdWrap MDTYPE="PREMIS:OBJECT">
+    <mets:xmlData>
+      <premis:object xmlns:premis="http://www.loc.gov/premis/v3" xsi:type="premis:file" xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/v3/premis.xsd" version="3.0">
+        <premis:objectIdentifier>
+          <premis:objectIdentifierType>UUID</premis:objectIdentifierType>
+          <premis:objectIdentifierValue>2251bc66-85c1-4d64-952e-b0d7ea2db385</premis:objectIdentifierValue>
+        </premis:objectIdentifier>
+        <premis:objectIdentifier>
+          <premis:objectIdentifierType>EXID</premis:objectIdentifierType>
+          <premis:objectIdentifierValue>https://example.com/file/id/2367652602</premis:objectIdentifierValue>
+        </premis:objectIdentifier>
+      </premis:object>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:techMD>
+<mets:techMD ID="techMD_5">
+  <mets:mdWrap MDTYPE="PREMIS:OBJECT">
+    <mets:xmlData>
+      <premis:object xmlns:premis="http://www.loc.gov/premis/v3" xsi:type="premis:file" xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/v3/premis.xsd" version="3.0">
+        <premis:objectIdentifier>
+          <premis:objectIdentifierType>UUID</premis:objectIdentifierType>
+          <premis:objectIdentifierValue>480d31e0-f57f-4254-a5bf-c813ed5734d5</premis:objectIdentifierValue>
+        </premis:objectIdentifier>
+        <premis:objectIdentifier>
+          <premis:objectIdentifierType>ULID</premis:objectIdentifierType>
+          <premis:objectIdentifierValue>01D9T8NGAQ2DBN8M4D23HM5FYN</premis:objectIdentifierValue>
+        </premis:objectIdentifier>
+      </premis:object>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:techMD>

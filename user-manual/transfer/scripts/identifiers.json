@@ -1,0 +1,20 @@
+[
+    {
+        "file": "objects/bird.mp3",
+        "identifiers": [
+            {
+                "identifier": "01D9T8NGAQ2DBN8M4D23HM5FYN",
+                "identifierType": "ULID"
+            }
+        ]
+    },
+    {
+        "file": "objects/beihai.tif",
+        "identifiers": [
+            {
+                "identifier": "https://example.com/file/id/2367652602",
+                "identifierType": "EXID"
+            }
+        ]
+    }
+]

@@ -366,32 +366,33 @@ click on the gear icon for the job.
 Transfers with existing persistent identifiers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica can import persistent identifiers that were created
-outside of Archivematica, such as DOI identifiers or
-identifiers created by your cataloging system. You can bind these to the
-PREMIS objects created by Archivematica for your files by including an
-identifiers.json file in the metadata sub-directory.
+Archivematica can import persistent identifiers that were created outside of
+Archivematica, such as DOI identifiers or identifiers created by your cataloging
+system. You can bind these to the PREMIS objects created by Archivematica for
+your files by including an ``identifiers.json`` file in the transfer's metadata
+directory.
 
-.. image:: images/identifiers.json.*
-  :align: center
-  :width: 50%
-  :alt: A transfer containing an identifiers.json file
+.. literalinclude:: scripts/identifiers.json
+   :language: json
 
-These persistent identifiers (PID) will be added during the Ingest `Process
-metadata directory` microservice.
+The ``identifiers.json`` file is parsed during the *Process metadata directory*
+microservice on the Ingest tab.
 
 .. image:: images/load-persistent-identifiers.*
   :align: center
-  :width: 50%
+  :width: 80%
   :alt: The persistent identifier (PID) from identifiers.json are parsed and loaded during the 'Process metadata directory' microservice
 
-Once Ingest completes, the PID will be linked to the premis:objectIdentifier in
-the AIP METS file.
+Once the AIP has been created, the identifier will be linked as a
+``premis:objectIdentifier`` within the ``techMD`` for each object within the AIP
+METS file.
 
-.. image:: images/PID_linked_to_PREMIS.*
-  :align: center
-  :width: 50%
-  :alt: PIDs linked to PREMIS objects
+.. literalinclude:: scripts/identifier-mets.xml
+   :language: xml
+
+For more information on how metadata elements are encoded used in Archivematica,
+please see :ref:`METS in Archivematica <mets_schema>` and :ref:`PREMIS metadata
+in Archivematica <premis-template>`.
 
 .. _transfer-derivatives:
 
