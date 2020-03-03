@@ -15,6 +15,7 @@ Archivematica.
 
 * :ref:`Preparing digital objects for transfer <prepare-transfer>`
 
+  * :ref:`Transfer permissions <transfer-permissions>`
   * :ref:`Transfer types <transfer-types>`
   * :ref:`Basic transfers <basic-transfers>`
   * :ref:`Transfers with descriptive, rights, and/or event metadata <transfers-with-metadata>`
@@ -125,6 +126,21 @@ very subjective and much of it depends on the specifications of the
 Archivematica instance that you are using. For more information on configuring
 Archivematica to handle large and/or complex transfers, see :ref:`Scaling
 Archivematica <scaling-archivematica>`.
+
+.. _transfer-permissions:
+
+Permissions
+^^^^^^^^^^^
+
+In order for Archivematica to be able to carry out preservation tasks, the
+Archivematica user needs to have execute privileges for directories and read
+permissions for files in the transfer source location.
+
+If the Archivematica user does not have sufficient permissions, you may see that
+a directory or compressed file is not available to add to your transfer (the
+object will be greyed out and the name will have a strikethrough.) Depending on
+the exact permissions setup, you may be able to add the directory to your
+transfer, but the transfer will never start.
 
 .. _transfer-types:
 
