@@ -164,6 +164,9 @@ provides information on the AIP, how it was packaged for storage, fixity, and
 where the AIP is stored. The pointer file is used by Archivematica primarily to
 retrieve the AIP.
 
+For more information about how AIPs are structured, please see :ref:`AIP
+structure <aip-structure>`.
+
 .. _metadata-only-dip-upload:
 
 Metadata-only upload to AtoM
@@ -256,11 +259,10 @@ tab.
 AIP storage structure
 ---------------------
 
-In the storage platform, the AIP is broken down into a directory tree structure
-based on the AIP's UUID, which is the 32-digit alphanumeric unique universal
-identifier assigned to each AIP. Each UUID is broken down into a manageable
-4-character chunk, or "UUID quad", which helps with efficient storage and
-retrieval.
+For efficient storage and retrieval, Archivematica's Storage Service uses a
+directory tree structure based on the AIP's UUID, which is the 32-digit
+alphanumeric unique universal identifier assigned to each AIP. Each UUID is
+broken down into a manageable 4-character chunk, or "UUID quad".
 
 .. image:: images/AIP-quad-directories.*
    :align: center
@@ -273,5 +275,15 @@ storage. The second UUID quad will be used as the name of a subdirectory of the
 first, and so on. The last four characters (the last UUID quad) are used to
 create the leaf of the AIP store directory tree, and the AIP with that UUID
 resides in that leaf.
+
+This folder structure is the same for both compressed and uncompressed AIPs.
+AIPs that have been compressed for storage will be in ``.7z`` format.
+Uncompressed AIPs will be stored as a directory, rather than a zipfile.
+
+The quad directory structure is used for storage only. When you download the
+AIP, you will only get the AIP itself, not the quad directories.
+
+For more information about how AIPs are structured, please see :ref:`AIP
+structure <aip-structure>`.
 
 :ref:`Back to the top <archival-storage>`
