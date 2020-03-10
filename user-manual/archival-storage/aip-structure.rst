@@ -30,12 +30,12 @@ The AIP name is composed of the following:
 1. The name assigned to the transfer. This may come from human input or it may
    be the name of the transfer directory, depending on the transfer type and
    the transfer method.
-2. A UUID assigned during transfer.
+2. A UUID assigned to the AIP during ingest.
 
 For example, looking at the AIP name
-``AncientSturgeon-bbabce6e-OO16-4185-a93e-f2dd71bfbb8c``, ``AncientSturgeon`` is
-the name assigned by the user and ``bbabce6e-OO16-4185-a93e-f2dd71bfbb8c`` is
-the UUID generated during transfer.
+``my-aip-d31cc44f-ce01-4e67-affe-513868d9cf3d``, ``my-aip`` is the name assigned
+by the user and ``d31cc44f-ce01-4e67-affe-513868d9cf3d`` is the UUID generated
+during ingest.
 
 .. _aip-contents:
 
@@ -61,20 +61,20 @@ structure depicts a typical Archivematica AIP:
    [10]    ├── METS.d31cc44f-ce01-4e67-affe-513868d9cf3d.xml
    [11]    └── README.html
 
-* [1] AIP root directory, with an appended UUID.
-* [2] - [5] Standard packaging files produced in accordance with the BagIt
-  specification.
-* [6] data directory - this is also a standard directory specified by the BagIt
-  specification. The data directory contains the AIP Content Information and
-  Preservation Description Information (PDI).
-* [7] logs directory - contains log outputs of some of the tools that
-  Archivematica uses in generating the AIP.
-* [8] objects directory - contains the original digital objects as well as
-  normalized versions.
-* [9] thumbnails directory - contains thumbnails generated from the original
-  object for use in the Archivematica user interface.
-* [10] the Archivematica METS file.
-* [11] the README file.
+* [1] AIP root directory
+* [2 - 5] :ref:`AIP BagIt files <aip-bagit-files>`: standard packaging files
+  produced in accordance with the `IETF Trust BagIt File Packaging Format`_.
+* [6] :ref:`Data directory <aip-data-directory>`: a standard directory
+  required by the BagIt specification. The data directory contains the AIP
+  Content Information and Preservation Description Information (PDI).
+* [7] :ref:`Logs directory <aip-logs>`: contains log outputs of some of the
+  tools that Archivematica uses to generate the AIP.
+* [8] :ref:`Objects directory <aip-objects>`: contains the original digital
+  objects as well as any normalized versions.
+* [9] :ref:`Thumbnails directory <aip-thumbnails>`: contains any thumbnails
+  generated from the original object.
+* [10] :ref:`AIP METS file <aip-mets>`
+* [11] :ref:`README file <aip-readme>`
 
 For more information about each of these components, see the appropriate section
 below.
