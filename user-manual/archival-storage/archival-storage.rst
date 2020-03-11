@@ -73,7 +73,7 @@ limit your search using one or more of the search parameters:
   packages.
 * **Transfer metadata**: metadata added using the special metadata form for the
   :ref:`disk image transfer type <disk-image-workflow>`.
-* **Transfer metadata (other)**: the contents of the ``bag.info.txt`` of a bag
+* **Transfer metadata (other)**: the contents of the ``bag-info.txt`` of a bag
   transfer. Note that if you select this option, a second data entry box will
   pop up where youcan define a specific ``bag-info.txt`` field you would like
   to search against - for example, if ``bag-info.txt`` included the line
