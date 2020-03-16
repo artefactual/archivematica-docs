@@ -178,7 +178,7 @@ stored.
   * :ref:`Deleting an AIP <delete-aip>`
 
 * :ref:`AIP encryption <aip-encryption>`
-* :ref:`Stored AIP structure <stored-aip-structure>`
+* :ref:`AIP structure <aip-structure>`
 * :ref:`AICs - managing multi-part AIPs <aic>`
 
 
