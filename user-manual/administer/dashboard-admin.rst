@@ -731,6 +731,8 @@ Users can be created, modified and deleted from the *Users* section of the
 Administration tab. You can add a new user to the system by clicking **Add
 new**.
 
+Fields:
+
 * **Username**: The name that will be used on the login screen. Required, 255
   characters or fewer. Only ASCII letters, numbers, and ``@``, ``.``, ``+``,
   ``-``, or ``_`` characters may be used.
