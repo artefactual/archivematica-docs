@@ -594,22 +594,15 @@ Processing storage usage
 ------------------------
 
 This section of the Administration page displays the Archivematica instance's
-processing locations. Processing locations are used to hold materials while they
-are being processed, as well as temporary storage directories for certain types
-of content - for example, failed and rejected transfers.
-
-.. important::
-
-   This page calculates usage statistics for Archivematica instances that have
-   been deployed with a shared directory on the same disk as the Archivematica
-   instance. If your Archivematica instance has been configured a different way,
-   the usage statistics may not be displayed.
+currently processing locations. Currently processing locations are used to hold
+materials while they are being processed, as well as temporary storage
+directories for certain types of content - for example, failed and rejected
+transfers.
 
 When you navigate to the page, click **Calculate disk usage** to see how much
-disk space is being used. The calculation will take a few minutes, and may take
-a long time depending on how your Archivematica instance is configured. Keep
-the tab open. You can continue to process materials while the disk usage is
-being calculated.
+disk space is being used. The calculation may take a long time depending on how
+your Archivematica instance is configured and the current disk usage. You can
+continue to process materials while the disk usage is being calculated.
 
 .. image:: images/dashboard-storage-calculate-disk-usage.*
    :align: center
