@@ -595,7 +595,7 @@ Processing storage usage
 
 This section of the Administration page displays the Archivematica instance's
 processing locations. Processing locations are used to hold materials while they
-arebeing processed, as well as temporary storage directories for certain types
+are being processed, as well as temporary storage directories for certain types
 of content - for example, failed and rejected transfers.
 
 .. important::
