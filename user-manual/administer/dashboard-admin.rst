@@ -20,8 +20,7 @@ integrations and users.
 
 * :ref:`General <dashboard-general>`
 * :ref:`Failures <dashboard-failures>`
-* :ref:`Transfer source locations <dashboard-transfer-source>`
-* :ref:`AIP storage locations <dashboard-AIP-stor>`
+* :ref:`Storage locations <dashboard-storage-locations>`
 * :ref:`Processing storage usage <dashboard-usage>`
 * :ref:`DIP upload <dashboard-dip-upload>`
 
@@ -560,46 +559,83 @@ Clicking the date, name or UUID will display a report of the failure:
 
 The failure report can be removed from the Dashboard by clicking Delete.
 
-.. _dashboard-transfer-source:
+.. _dashboard-storage-locations:
 
-Transfer source location
-------------------------
+Storage locations
+-----------------
 
-Archivematica allows you to start transfers using the operating system's file
-browser or via a web interface. Source files for transfers, however, cannot be
-uploaded using the web interface; they must exist on volumes accessible to the
-Archivematica MCP server and configured via the Storage Service.
+This section of the Administration page displays storage locations that have
+been configured for the Archivematica instance. Storage locations are configured
+in the :ref:`Storage Service <storageService:administrators>`. This table
+presents information from the Storage Service.
 
-When starting a transfer you are required to select one or more directories of
-files to add to the transfer.
+.. image:: images/dashboard-storage-locations.*
+   :align: center
+   :width: 80%
+   :alt: Table showing available storage locations configured for the Archivematica pipeline
 
-.. _dashboard-AIP-stor:
+The table on the Storage locations page displays the :ref:`purpose
+<location-purposes>` of the storage location, the location's description, how
+much space has been used, and the path.
 
-AIP storage locations
----------------------
+If a quota has not been set for the storage location, the location's available
+space will be set to *unlimited*. Quotas can be set for some types of locations
+through the :ref:`Storage Service <storageService:locations>`.
 
-AIP storage directories are directories in which completed AIPs are stored.
-Storage directories can be specified in a manner similar to transfer source
-directories using the Storage Service.
+*Used / available* values are not currently calculated for all types of storage
+locations, such as Replicator, Transfer Backlog, and Transfer Source locations.
 
-You can view your transfer source directories in the Administrative tab of the
-dashboard under "AIP storage locations".
+Depending on the configuration of your Archivematica deployment, you may not see
+values for all storage locations.
 
 .. _dashboard-usage:
 
 Processing storage usage
 ------------------------
 
-This section of the Administration page displays various processing locations
-with their current usage of available space.
+This section of the Administration page displays the Archivematica instance's
+processing locations. Processing locations are used to hold materials while they
+arebeing processed, as well as temporary storage directories for certain types
+of content - for example, failed and rejected transfers.
 
-.. image:: images/ProcessingUsage.*
+.. important::
+
+   This page calculates usage statistics for Archivematica instances that have
+   been deployed with a shared directory on the same disk as the Archivematica
+   instance. If your Archivematica instance has been configured a different way,
+   the usage statistics may not be displayed.
+
+When you navigate to the page, click **Calculate disk usage** to see how much
+disk space is being used. The calculation will take a few minutes, and may take
+a long time depending on how your Archivematica instance is configured. Keep
+the tab open. You can continue to process materials while the disk usage is
+being calculated.
+
+.. image:: images/dashboard-storage-calculate-disk-usage.*
    :align: center
    :width: 80%
-   :alt: Processing storage usage area of Administration page
+   :alt: Processing storage usage area of Administration page before calculation
 
-Administrators can use the "clear" buttons to delete the contents of these
-processing locations to make more room on their server.
+Once calculated, there will be a *General information* section that displays the
+location where the disk is mounted on the system and its current usage (if
+calculable). The shared directory path will also be listed along with the
+allocated size and current usage.
+
+The *Clearable directories* section lists a subset directories located in the
+shared directory. The purpose, size, and path for each directory is listed.
+
+.. image:: images/dashboard-storage-calculated.*
+   :align: center
+   :width: 80%
+   :alt: Processing storage usage area of Administration page after calculation, showing a general information section as well as a list of directories and their usage
+
+Users can click on the **Clear** button for a directory to delete the contents
+of the processing location. It is a good idea to regularly clear out processing
+directories to save space on the server.
+
+.. note::
+
+   The size of an empty directory in Linux is 4 KB.
 
 .. _dashboard-dip-upload:
 
