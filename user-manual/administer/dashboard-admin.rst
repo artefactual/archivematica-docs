@@ -70,7 +70,7 @@ pre-sets by clicking on **Reset**. Please note that the pre-sets for the default
 processing configuration are noted in the :ref:`Processing configuration fields
 <processing-config-fields>` section below.
 
-Note that alternate processing configurations (i.e. anything other than default)
+Note that alternate processing configurations (e.g. anything other than default)
 are used in two ways:
 
 #. When you re-ingest an AIP, you are given the opportunity to select which
@@ -98,7 +98,7 @@ processing configuration. The fields are described in the next section.
 Processing configuration fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Many jobs in the Archivematica transfer and ingest tabs have configurable
+Many jobs in the Archivematica Transfer and Ingest tabs have configurable
 decision points. Automating these decisions can make the transfer and ingest
 process substantially quicker, especially if you find yourself selecting the
 same decisions over and over. Below is a list of the processing configuration
@@ -215,10 +215,10 @@ Create a formal SIP out of the transfer or send it to the backlog.
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Send to backlog** - transfer is sent to a backlog storage space for
-   temporary storage or appraisal.
 #. **Create single SIP and continue processing** - transfer becomes a SIP and is
    made available for further processing on the ingest tab.
+#. **Send to backlog** - transfer is sent to a backlog storage space for
+   temporary storage or appraisal.
 
 .. note::
 
@@ -252,16 +252,16 @@ Options:
    the objects plus access copies which will be used to generate the DIP.
 #. **Normalize for preservation** - creates preservation copies only. No access
    copies are created and no DIP will be generated.
+#. **Normalize for access** - the AIP will contain originals only. No
+   preservation copies will be generated. Access copies will be created which
+   will be used to generate the DIP.
+#. **Normalize service files for access** - see :ref:`Transferring material
+   with service (mezzanine) files <transfer-service-files>` for more
+   information.
 #. **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
    more information.
 #. **Do not normalize** - the AIP will contain originals only. No preservation
    or access copies are generated and no DIP will be generated.
-#. **Normalize service files for access** - see :ref:`Transferring material
-   with service (mezzanine) files <transfer-service-files>` for more
-   information.
-#. **Normalize for access** - the AIP will contain originals only. No
-   preservation copies will be generated. Access copies will be created which
-   will be used to generate the DIP.
 
 Approve normalization
 +++++++++++++++++++++
@@ -282,13 +282,13 @@ This gives the option of generating thumbnails for use in the AIP and DIP.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **Yes, without default** - thumbnails will be produced for any format which
-   has a :ref:`normalize for thumbnails <normalization>` rule in the FPR.
-   Formats which do not have a rule will not have a thumbnail generated.
-#. **No** - thumbnails will not be generated.
 #. **Yes** - thumbnails will be generated according to the format rules in the
    FPR. Formats which do not have a rule will have a default thumbnail
    generated (grey document icon).*
+#. **Yes, without default icons** - thumbnails will be produced for any format
+   which has a :ref:`normalize for thumbnails <normalization>` rule in the FPR.
+   Formats which do not have a rule will not have a thumbnail generated.
+#. **No** - thumbnails will not be generated.
 
 Perform policy checks on preservation derivatives
 +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -407,13 +407,13 @@ Lower compression levels mean quicker compression, but a larger AIP.
 Options:
 
 #. **None** - the user is prompted for a decision.
-#. **5 - normal compression mode** - the compression tool will strike a balance
+#. **1 - fastest compression** - the AIP will be compressed as quickly as possible.
+#. **3 - fast compression** - a larger AIP that will be compressed quickly.
+#. **5 - normal compression** - the compression tool will strike a balance
    between speed and compression to make a moderately-sized, moderately-
    compressed AIP.*
 #. **7 - maximum compression** - a smaller AIP that takes longer to compress.
 #. **9 - ultra compression** - the smallest possible AIP.
-#. **3 - fast compression mode** - a larger AIP that will be compressed quickly.
-#. **1 - fastest mode** - the AIP will be compressed as quickly as possible.
 
 .. note::
 
@@ -455,13 +455,13 @@ there is an Archivematica integration.
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload
-   documentation.
 #. **Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload
    documentation.
-#. **Do not upload** - the DIP will not be uploaded to an access system.
 #. **Upload DIP to ArchivesSpace** - see :ref:`ArchivesSpace <upload-as>` DIP
    upload documentation.
+#. **Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload
+   documentation.
+#. **Do not upload** - the DIP will not be uploaded to an access system.
 
 Store DIP
 +++++++++
@@ -473,7 +473,8 @@ on demand by :ref:`re-ingesting the AIP <reingest>`.
 Options:
 
 #. **None** - the user is prompted for a decision.*
-#. **Yes** - the DIP is marked for storage automatically.
+#. **Store DIP** - the DIP is marked for storage automatically.
+#. **Do not store** - the DIP is discarded.
 
 Store DIP location
 ++++++++++++++++++
