@@ -101,13 +101,18 @@ information, see :ref:`Advanced <advanced>`.
 Elasticsearch
 ^^^^^^^^^^^^^
 
-Installing Elasticsearch with a search index is optional as of Archivematica
-1.7. Installing Archivematica without Elasticsearch, or with limited
-Elasticsearch functionality, means reduced consumption of compute resources and
-lower operational complexity. By setting the
-``archivematica_src_search_enabled`` configuration attribute, administrators can
-define how many things Elasticsearch is indexing, if any. This can impact
-searching across several different dashboard pages.
+As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch
+powers the indexes that are used for searching in the :ref:`Backlog <backlog>`,
+:ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage <archival-storage>`.
+Installing Archivematica without Elasticsearch results in reduced consumption of
+compute resources and lower operational complexity. Disabling Elasticsearch
+means that the Backlog, Appraisal, and/or Archival Storage tabs will not appear
+in the user interface and their functionality will not be available.
+
+By setting the ``archivematica_src_search_enabled``
+configuration attribute, administrators can define how many things Elasticsearch
+is indexing, if any. This can impact searching across several different
+dashboard pages.
 
 Possible ``archivematica_src_search_enabled`` configuration attribute values:
 
