@@ -721,22 +721,36 @@ To configure Archivematica to use the REST API for automation, see
 Users
 -----
 
-The dashboard provides a simple cookie-based user authentication system using
-the `Django authentication framework`_. Access to the dashboard is limited only
-to logged-in users and a login page will be shown when the user is not
-recognized. If the application can't find any user in the database, the user
-creation page will be shown instead, allowing the creation of an administrator
-account.
+The Archivematica dashboard provides a simple cookie-based user authentication
+system using the `Django authentication framework`_. Access to the dashboard is
+limited to logged-in users and a login page will be shown when the user is not
+recognized. If there is no user in the database, the user creation page will be
+shown instead so that an administrator user can be created.
 
-Users can be also created, modified and deleted from the Administration tab.
-Only users who are administrators can create and edit user accounts.
+Users can be created, modified and deleted from the *Users* section of the
+Administration tab. You can add a new user to the system by clicking **Add
+new**.
 
-You can add a new user to the system by clicking the "Add new" button on the
-user administration page. By adding a user you provide a way to access
-Archivematica using a username/password combination. Should you need to change
-a user's username or password, you can do so by clicking the "Edit" button,
-corresponding to the user, on the administration page. Should you need to
-revoke a user's access, you can click the corresponding "Delete" button.
+Fields:
+
+* **Username**: The name that will be used on the login screen. Required, 255
+  characters or fewer. Only ASCII letters, numbers, and ``@``, ``.``, ``+``,
+  ``-``, or ``_`` characters may be used.
+* **First name**: The first name of the user. Optional.
+* **Last name**: The first name of the user. Optional.
+* **Email address**: The first name of the user. Optional, but must be
+  filled out if the user would like to receive system emails.
+* **Active**: Designates whether this user should be treated as active. Inactive
+  users will not be able to log in to the Archivematica instance, but their
+  accounts will be preserved.
+* **Administrator**: Check this box to give the user administrative powers.
+  Administrators can create, edit, and delete other users.
+* **Password**: When creating a new user, you will have to set a password for
+  them. The user should change the password the first time they log in.
+* **Password confirmation**: Enter the same password as above, for verification.
+* **Send system emails?**: If checked, this user will receive system emails,
+  such as failure notifications and normalization reports. Note that the
+  Archivematica server must have an associated email server configured.
 
 For more information about user creation, deletion, and security, please see
 the :ref:`Users <admin-dashboard-users>` section in the Admin Manual.
