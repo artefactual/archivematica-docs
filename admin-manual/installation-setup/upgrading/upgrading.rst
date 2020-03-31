@@ -95,8 +95,8 @@ Upgrade on Ubuntu packages
 
       wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
       echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu xenial main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.11.x/ubuntu xenial main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.11.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -105,8 +105,8 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu bionic main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.10.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.11.x/ubuntu bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.11.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -157,7 +157,7 @@ Upgrade on CentOS/Red Hat packages
 
    .. code:: bash
 
-    sudo sed -i 's/1.9.x/1.10.x/g' /etc/yum.repos.d/archivematica*
+    sudo sed -i 's/1.10.x/1.11.x/g' /etc/yum.repos.d/archivematica*
 
 #. Remove the current installed version of ghostscript:
 
