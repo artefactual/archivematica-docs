@@ -28,18 +28,18 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=https://packages.archivematica.org/1.10.x/centos
+baseurl=https://packages.archivematica.org/1.11.x/centos
 gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.10.x/key.asc
+gpgkey=https://packages.archivematica.org/1.11.x/key.asc
 enabled=1
 EOF'
 
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
 [archivematica-extras]
 name=archivematica-extras
-baseurl=https://packages.archivematica.org/1.10.x/centos-extras
+baseurl=https://packages.archivematica.org/1.11.x/centos-extras
 gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.10.x/key.asc
+gpgkey=https://packages.archivematica.org/1.11.x/key.asc
 enabled=1
 EOF'
 
