@@ -16,9 +16,9 @@ Installing Archivematica
 Overview
 --------
 
-The following table lists various ways to install and use Archivematica. Further down the page, you will
-find more detailed information about new installations and advanced installation
-options.
+The following table lists various ways to install and use Archivematica. Further
+down the page, you will find more detailed information about new installations
+and advanced installation options.
 
 If you need assistance or clarification regarding the installation instructions,
 the `Archivematica user forum`_ is a good place ask questions.
@@ -53,10 +53,6 @@ following operating systems:
 * Ubuntu 16.04 64-bit Server Edition
 * Ubuntu 18.04 64-bit Server Edition
 * CentOS 7 64-bit
-
-Archivematica |version| is the first release to be tested on Ubuntu 18.04.
-Support for this OS is still considered beta; installation has been tested but
-production deployments are limited.
 
 Other Linux distributions should work, but will require customization of these
 installation instructions.
