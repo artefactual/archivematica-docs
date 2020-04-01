@@ -143,7 +143,7 @@ This PREMIS Event will be recorded on all extracted files:
 
 .. literalinclude:: scripts/PREMISevents.xml
    :language: xml
-   :lines: 1-13
+   :lines: 1-14
 
 .. _event-ocr:
 

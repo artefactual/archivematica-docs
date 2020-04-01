@@ -1,36 +1,36 @@
-<mets:digiprovMD ID="digiprovMD_85">
+<mets:digiprovMD ID="digiprovMD_54">
   <mets:mdWrap MDTYPE="PREMIS:EVENT">
     <mets:xmlData>
-      <premis:event xmlns:premis="info:lc/xmlns/premis-v2" xsi:schemaLocation="info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-2.xsd" version="2.2">
+      <premis:event xmlns:premis="http://www.loc.gov/premis/v3" xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/v3/premis.xsd" version="3.0">
         <premis:eventIdentifier>
           <premis:eventIdentifierType>UUID</premis:eventIdentifierType>
-          <premis:eventIdentifierValue>242df66e-60d0-421e-ac34-c45252b2f80e</premis:eventIdentifierValue>
+          <premis:eventIdentifierValue>bfeecc68-855c-41ad-a628-37c2a1fb2142</premis:eventIdentifierValue>
         </premis:eventIdentifier>
         <premis:eventType>unpacking</premis:eventType>
-        <premis:eventDateTime>2019-06-06T13:15:20.853431+00:00</premis:eventDateTime>
-        <premis:eventDetail>Unpacked from: %transferDirectory%objects/Project.zip (ab3cba73-16e0-45e9-8028-1785811e9a15)</premis:eventDetail>
+        <premis:eventDateTime>2020-03-05T18:02:26.966342+00:00</premis:eventDateTime>
+        <premis:eventDetailInformation>
+          <premis:eventDetail>Unpacked from: %transferDirectory%objects/Project.zip (63706dd1-6f8f-4460-a5a5-546bac061d91)</premis:eventDetail>
+        </premis:eventDetailInformation>
         <premis:eventOutcomeInformation>
-          <premis:eventOutcome/>
+          <premis:eventOutcome></premis:eventOutcome>
           <premis:eventOutcomeDetail>
-            <premis:eventOutcomeDetailNote/>
+            <premis:eventOutcomeDetailNote></premis:eventOutcomeDetailNote>
           </premis:eventOutcomeDetail>
         </premis:eventOutcomeInformation>
         <premis:linkingAgentIdentifier>
           <premis:linkingAgentIdentifierType>preservation system</premis:linkingAgentIdentifierType>
-          <premis:linkingAgentIdentifierValue>Archivematica-1.9.1</premis:linkingAgentIdentifierValue>
+          <premis:linkingAgentIdentifierValue>Archivematica-1.11</premis:linkingAgentIdentifierValue>
         </premis:linkingAgentIdentifier>
         <premis:linkingAgentIdentifier>
           <premis:linkingAgentIdentifierType>repository code</premis:linkingAgentIdentifierType>
-          <premis:linkingAgentIdentifierValue>12345</premis:linkingAgentIdentifierValue>
+          <premis:linkingAgentIdentifierValue>AM qa/1.x SS qa/0x</premis:linkingAgentIdentifierValue>
         </premis:linkingAgentIdentifier>
         <premis:linkingAgentIdentifier>
           <premis:linkingAgentIdentifierType>Archivematica user pk</premis:linkingAgentIdentifierType>
           <premis:linkingAgentIdentifierValue>1</premis:linkingAgentIdentifierValue>
         </premis:linkingAgentIdentifier>
       </premis:event>
-    </mets:xmlData>
-  </mets:mdWrap>
-</mets:digiprovMD>
+    </mets:xmlData> shortened by a line </mets:mdWrap> shortened by a line </mets:digiprovMD>
 
 <mets:digiprovMD ID="digiprovMD_11">
   <mets:mdWrap MDTYPE="PREMIS:EVENT">
