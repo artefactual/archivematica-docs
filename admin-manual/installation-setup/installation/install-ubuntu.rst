@@ -4,12 +4,19 @@
 Manually Installing Archivematica on Ubuntu
 ===========================================
 
+.. important::
+
+   Packages for Ubuntu 16.04 and 18.04 are not yet available for Archivematica
+   1.11. They will be made available as soon as possible. A post will be added
+   to the `Archivematica user forum`_ once the packages are ready.
+
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
 16.04 and 18.04 are available.
 
 .. note:: Manual installation using packages on Ubuntu is not officially
-   supported. Please see :ref:`Instructions for new installation <instructions>`.
+   supported. Please see :ref:`Instructions for new installation
+   <instructions>`.
 
 *On this page*
 
@@ -19,7 +26,7 @@ place to store packages for multiple operating systems. Packages for both Ubuntu
 .. _ubuntu-instructions:
 
 Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
-=========================================================================
+-------------------------------------------------------------------------
 
 1. Use these commands to install the repositories:
 
@@ -62,8 +69,8 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 5. Install Elasticsearch (optional)
 
-   .. note:: Skip this step if you are planning to run Archivematica in indexless
-      mode (without Elasticsearch).
+   .. note:: Skip this step if you are planning to run Archivematica in
+      indexless mode (without Elasticsearch).
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
@@ -71,9 +78,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 6. Install the Storage Service package.
 
-  .. literalinclude:: scripts/am-bionic-deb.sh
-      :language: bash
-      :lines: 29
+   .. literalinclude:: scripts/am-bionic-deb.sh
+       :language: bash
+       :lines: 29
 
 7. Configure the Storage Service.
 
@@ -114,9 +121,10 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     `Dashboard install README`_, the `MCPClient install README`_, and the
     `MCPServer install README`_.
 
-    .. note:: If you are planning on running Archivematica in indexless mode (i.e.
-       without Elasticsearch), then modify the relevant systemd EnvironmentFile
-       files by adding lines that set the relevant environment variables to ``false``:
+    .. note:: If you are planning on running Archivematica in indexless mode
+       (i.e. without Elasticsearch), then modify the relevant systemd
+       EnvironmentFile files by adding lines that set the relevant environment
+       variables to ``false``:
 
     .. code:: bash
 
@@ -126,9 +134,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
 
 11. Configure the dashboard.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
-      :language: bash
-      :lines: 40
+    .. literalinclude:: scripts/am-bionic-deb.sh
+       :language: bash
+       :lines: 40
 
 12. Start Elasticsearch (optional).
 
@@ -165,9 +173,9 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
     the dashboard and the Storage Service, i.e., 80 and 8000.
 
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
-      :language: bash
-      :lines: 58-61
+    .. literalinclude:: scripts/am-bionic-deb.sh
+       :language: bash
+       :lines: 58-61
 
 
 15. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
@@ -241,10 +249,9 @@ the configuration of your new server.
 
 :ref:`Back to the top <install-pkg-ubuntu>`
 
-.. _`issue #1065`: https://github.com/artefactual/archivematica/issues/1065
-.. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
 .. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.8.x/src/dashboard/install/README.md
 .. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.8.x/src/MCPClient/install/README.md
 .. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.8.x/src/MCPServer/install/README.md
+.. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
