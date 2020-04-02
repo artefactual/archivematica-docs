@@ -93,17 +93,17 @@ Using the disk image transfer type
 #. From the transfer browser, choose your forensic disk image and click **Add**.
    Note that it must be contained within a directory.
 
-#. If you would like to add metadata about the imaging process by which the disk
-   image was created, click on the metadata icon to the right of the filename.
-   This will open the metadata form in a new tab.
+#. If you would like to add metadata about the imaging process, click on the
+   metadata icon to the right of the filename. This will open the metadata form
+   in a new tab. Adding metadata is optional.
 
-   .. figure:: images/forensic-start.*
+   .. figure:: images/start-forensic-transfer.*
       :align: center
       :figwidth: 70%
       :width: 100%
-      :alt: Click on the report button to add metadata
+      :alt: The transfer tab showing a disk image transfer setup, with the metadata icon circled in red.
 
-      Click on the report button to add metadata
+      Click on the metadata icon to add metadata.
 
 #. Enter your metadata and click **Save**, then close the tab.
 
@@ -117,11 +117,11 @@ Using the disk image transfer type
 
    .. important::
 
-      The metadata form opens in a new tab. After clicking save, you **must** close
-      the new tab to go back to your in-progress transfer, rather than clicking on
-      the Transfer tab from the metadata form.
+      The metadata form opens in a new tab. After clicking save, you **must**
+      close the new tab to go back to your in-progress transfer, rather than
+      clicking on the Transfer tab from the metadata form.
 
-#. If you are planning to start multiple transfers, you can follow the above
+#. If you are planning to start multiple transfers, you can repeat the above
    steps for adding metadata to additional transfers.
 
 #. Once all images are loaded to the dashboard and all metadata is added, select
