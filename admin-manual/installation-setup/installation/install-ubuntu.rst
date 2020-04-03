@@ -4,12 +4,6 @@
 Manually Installing Archivematica on Ubuntu
 ===========================================
 
-.. important::
-
-   Packages for Ubuntu 16.04 and 18.04 are not yet available for Archivematica
-   1.11. They will be made available as soon as possible. A post will be added
-   to the `Archivematica user forum`_ once the packages are ready.
-
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
 16.04 and 18.04 are available.
