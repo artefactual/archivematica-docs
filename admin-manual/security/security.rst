@@ -73,39 +73,40 @@ For CentOS/Red Hat systems:
 The variables are different depending on the component. These are the following
 variables to change per component:
 
-**Dashboard:**  
+**Dashboard:**
 
 * ARCHIVEMATICA_DASHBOARD_CLIENT_DATABASE
 * ARCHIVEMATICA_DASHBOARD_CLIENT_HOST
 * ARCHIVEMATICA_DASHBOARD_CLIENT_PASSWORD
 * ARCHIVEMATICA_DASHBOARD_CLIENT_USER
 
-**MCPClient:**  
+**MCPClient:**
 
 * ARCHIVEMATICA_MCPCLIENT_CLIENT_DATABASE
 * ARCHIVEMATICA_MCPCLIENT_CLIENT_HOST
 * ARCHIVEMATICA_MCPCLIENT_CLIENT_PASSWORD
 * ARCHIVEMATICA_MCPCLIENT_CLIENT_USER
 
-**MCPServer:**  
+**MCPServer:**
 
 * ARCHIVEMATICA_MCPSERVER_CLIENT_DATABASE
 * ARCHIVEMATICA_MCPSERVER_CLIENT_HOST
 * ARCHIVEMATICA_MCPSERVER_CLIENT_PASSWORD
 * ARCHIVEMATICA_MCPSERVER_CLIENT_USER
 
-**Storage Service when using sqlite3:**  
+**Storage Service when using sqlite3:**
 
 * SS_DB_NAME
 * SS_DB_HOST
 * SS_DB_PASSWORD
 * SS_DB_USER
 
-**Storage Service when using MySQL:**  
+**Storage Service when using MySQL:**
 
 * SS_DB_URL
 
-For SS MySQL database see: `SS application-specific-environment-variables`_.
+For Storage Service MySQL database see:
+`Storage Service application-specific-environment-variables`_.
 
 
 .. _atom-security:
@@ -297,7 +298,7 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
-.. _requests: http://docs.python-requests.org/
-.. _requests-cas: http://docs.python-requests.org/en/master/user/advanced/#ca-certificates
+.. _requests: https://requests.readthedocs.io/en/master/
+.. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
-.. _SS application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.15.x/install/README.md#application-specific-environment-variables
+.. _Storage Service application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/18b9a77ce1a6789be00159289fb48f4edc46065e/install/README.md#application-specific-environment-variables

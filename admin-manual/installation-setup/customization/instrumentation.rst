@@ -332,6 +332,6 @@ the dashboard as a file and upload it.
 .. _Storage Service: https://github.com/artefactual/archivematica-storage-service/blob/qa/0.x/install/README.md
 .. _download and install Prometheus: https://prometheus.io/docs/prometheus/latest/installation/
 .. _download and install Grafana: https://grafana.com/grafana/download
-.. _add Prometheus as a data source: https://grafana.com/docs/features/datasources/prometheus/#adding-the-data-source-to-grafana
+.. _add Prometheus as a data source: https://grafana.com/docs/grafana/latest/features/datasources/prometheus/#adding-the-data-source-to-grafana
 .. _Docker compose environment: https://github.com/artefactual-labs/am/tree/master/compose
 .. _download the dashboard JSON file: https://github.com/artefactual-labs/am/blob/master/compose/etc/grafana/provisioning/dashboards/Archivematica.json

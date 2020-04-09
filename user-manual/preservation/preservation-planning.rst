@@ -1077,7 +1077,7 @@ You do not need to create rules for verification.
 :ref:`Back to the top <preservation-planning>`
 
 .. _ISO 16363:2012: https://www.iso.org/standard/56510.html
-.. _ExifTool: https://www.sno.phy.queensu.ca/~phil/exiftool/index.html
+.. _ExifTool: https://exiftool.org/index.html
 .. _FFprobe: http://ffmpeg.org/
 .. _FIDO: https://github.com/openpreserve/fido/
 .. _MediaConch: https://mediaarea.net/MediaConch
@@ -1085,7 +1085,7 @@ You do not need to create rules for verification.
 .. _PRONOM: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx
 .. _Siegfried: https://www.itforarchivists.com/siegfried
 .. _Tesseract: https://github.com/tesseract-ocr/tesseract
-.. _fiwalk: https://www.forensicswiki.org/wiki/Fiwalk
+.. _fiwalk: https://forensicswiki.xyz/wiki/index.php?title=Fiwalk
 .. _Inkscape: https://inkscape.org/
 .. _convert: https://imagemagick.org/script/convert.php
 .. _FFmpeg: https://www.ffmpeg.org/
@@ -1093,7 +1093,7 @@ You do not need to create rules for verification.
 .. _ps2pdf: https://www.ps2pdf.com/
 .. _Archivematica issues repo: https://github.com/archivematica/Issues
 .. _FITS: https://projects.iq.harvard.edu/fits/home
-.. _JHOVE: https://openpreservation.org/technology/products/jhove/
+.. _JHOVE: https://openpreservation.org/products/jhove/
 .. _MediaConch documentation: https://mediaarea.net/MediaConch/Documentation/HowToUse
 .. _MediaConchOnline: https://mediaarea.net/MediaConchOnline/
 .. _7zip: https://www.7-zip.org/

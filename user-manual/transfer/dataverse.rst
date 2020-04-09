@@ -145,7 +145,7 @@ For detailed instructions, see the :ref:`Administrators Manual <storageservice:a
 :ref:`Back to the top <dataverse>`
 
 .. _`Dataverse`: https://dataverse.org/
-.. _`DDI standard`: https://www.ddialliance.org/Specification/DDI-Codebook/2.5/
+.. _`DDI standard`: https://ddialliance.org/Specification/DDI-Codebook/2.5/
 .. _`tabular data file bundle`: http://guides.dataverse.org/en/latest/user/tabulardataingest/index.html
 .. _`known bug`: https://github.com/archivematica/Issues/issues/269
 .. _`issues filed in GitHub`: https://github.com/archivematica/Issues/labels/OCUL%3A%20AM-Dataverse

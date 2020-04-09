@@ -509,5 +509,5 @@ The resulting output in the Archivematica AIP METS file will be:
 :ref:`Back to the top <import-metadata>`
 
 .. _DCMI Metadata Terms: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
-.. _Dublin Core Metadata Element Set: http://www.dublincore.org/specifications/dublin-core/dces/
+.. _Dublin Core Metadata Element Set: https://www.dublincore.org/specifications/dublin-core/dces/
 .. _`BagIt`: https://tools.ietf.org/html/rfc8493

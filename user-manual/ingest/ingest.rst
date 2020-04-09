@@ -887,6 +887,6 @@ Remove all completed ingests
 
 :ref:`Back to the top <ingest>`
 
-.. _Dublin Core Metadata Element Set: http://dublincore.org/documents/dces/
+.. _Dublin Core Metadata Element Set: https://dublincore.org/documents/dces/
 .. _Tesseract: https://github.com/tesseract-ocr/
 .. _PREMIS in METS validator: http://pim.fcla.edu/validate
