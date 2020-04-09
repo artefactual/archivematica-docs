@@ -698,4 +698,4 @@ Remove all completed transfers
 .. _BagIt File Packaging Format: https://tools.ietf.org/html/rfc8493
 .. _DSpace: https://duraspace.org/dspace/
 .. _Dataverse: https://dataverse.org/
-.. _Bulk Extractor: https://www.forensicswiki.org/wiki/Bulk_extractor
+.. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki

@@ -159,6 +159,6 @@ desired, by using the backlog arrangement functionality in Archivematica.
 :ref:`Back to the top <forensic>`
 
 
-.. _Bulk Extractor: https://www.forensicswiki.org/wiki/Bulk_extractor
+.. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki
 .. _FITS: https://projects.iq.harvard.edu/fits/home
-.. _fiwalk: https://www.forensicswiki.org/wiki/Fiwalk
+.. _fiwalk: https://forensicswiki.xyz/wiki/index.php?title=Fiwalk

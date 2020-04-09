@@ -874,10 +874,10 @@ This tab displays the version of Archivematica you're using.
 :ref:`Back to the top <dashboard-config>`
 
 .. _AtoM: www.accesstomemory.org
-.. _Django authentication framework: https://docs.djangoproject.com/en/1.4/topics/auth/
+.. _Django authentication framework: https://django.readthedocs.io/en/1.4.X/topics/auth.html
 .. _Handle.Net: https://www.handle.net/index.html
-.. _PBKDF2: http://en.wikipedia.org/wiki/PBKDF2
-.. _How Django stores passwords: https://docs.djangoproject.com/en/1.4/topics/auth/#how-django-stores-passwords
+.. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
+.. _How Django stores passwords: https://django.readthedocs.io/en/1.4.X/topics/auth.html#how-django-stores-passwords
 .. _automation tools: https://github.com/artefactual/automation-tools
 .. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/

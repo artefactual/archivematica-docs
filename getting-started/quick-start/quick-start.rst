@@ -507,7 +507,7 @@ processing more complex content, see the :ref:`User manual <user-manual>`.
 
 :ref:`Back to the top <quick-start>`
 
-.. _OAIS Reference Model: https://www.oclc.org/research/publications/library/2000/lavoie-oais.html
+.. _OAIS Reference Model: https://www.oclc.org/research/publications/2000/lavoie-oais.html
 .. _Archivematica sandbox: https://sandbox.archivematica.org/
 .. _PRONOM: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
 .. _fmt/402: https://www.nationalarchives.gov.uk/PRONOM/fmt/402

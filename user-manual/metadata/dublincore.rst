@@ -37,5 +37,5 @@ results will show the AIP, not individual files.
 
 :ref:`Back to the top <dublin_core>`.
 
-.. _Dublin Core: http://dublincore.org/
+.. _Dublin Core: https://dublincore.org/
 .. _DCMI Metadata Terms: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/

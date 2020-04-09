@@ -43,28 +43,28 @@ Elasticsearch is a search engine based on the Lucene library. It provides a
 distributed, multitenant-capable full-text search engine with an HTTP web
 interface and schema-free JSON documents. Elasticsearch is developed in Java.
 
-**License**: `Apache License, Version 2.0 (the "License")`_
+**License**: `Apache License Version 2.0`_
 
 `ExifTool`_
 ^^^^^^^^^^^
 ExifTool is a platform-independent Perl library plus a command-line application
 for reading, writing and editing meta information in a wide variety of files.
 
-**License**: `GNU General Public License, version 1`_ or `Artistic License`_
+**License**: `GNU General Public License version 1`_ or `Artistic License`_
 
 `FFmpeg`_
 ^^^^^^^^^
 A complete, cross-platform solution to record, convert and stream audio and
 video.
 
-**License**: `GNU Lesser General Public License, version 2.1`_
+**License**: `GNU Lesser General Public License version 2.1`_
 
 `fido`_
 ^^^^^^^
 Format Identification for Digital Objects (FIDO) is a Python command-line tool
 to identify the file formats of digital objects.
 
-**License**: `Apache License, Version 2.0 (the "License")`_
+**License**: `Apache License Version 2.0`_
 
 `File Information Tool Set (FITS)`_
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -97,7 +97,7 @@ image file formats.
 ^^^^^^^^^^^
 Converts vector images to Scalable Vector Graphic (SVG) format.
 
-**License**: `GNU General Public License, version 2`_
+**License**: `GNU General Public License version 2`_
 
 `JHOVE`_
 ^^^^^^^^
@@ -124,7 +124,7 @@ data for video and audio files.
 ^^^^^^^^^^
 A client, protocol, and server for running Java programs from the command line.
 
-**License**: `Apache License, Version 2.0 (the "License")`_
+**License**: `Apache License Version 2.0`_
 
 `NFS-common`_
 ^^^^^^^^^^^^^
@@ -155,7 +155,7 @@ A fast, versatile, remote (and local) file-copying tool.
 ^^^^^^^^^^^^
 File format identification tool.
 
-**License**: `Apache License, Version 2.0 (the "License")`_
+**License**: `Apache License Version 2.0`_
 
 `Sleuthkit`_
 ^^^^^^^^^^^^
@@ -167,7 +167,7 @@ Disk image management and extraction toolkit.
 ^^^^^^^^^^^^
 Optical Character Recognition tool (reads image files and convert to text).
 
-**License**: `Apache License, Version 2.0 (the "License")`_
+**License**: `Apache License Version 2.0`_
 
 `Ubuntu Linux`_
 ^^^^^^^^^^^^^^^
@@ -190,17 +190,17 @@ The Unarchiver is an archive unpacker program.
 
 :ref:`Back to the top <external-tools>`
 
-.. _Apache License, Version 2.0 (the "License"): https://www.apache.org/licenses/LICENSE-2.0
-.. _Artistic License: http://dev.perl.org/licenses/artistic.html
+.. _Apache License Version 2.0: https://www.apache.org/licenses/LICENSE-2.0
+.. _Artistic License: https://dev.perl.org/licenses/artistic.html
 .. _BagIt: https://github.com/LibraryOfCongress/bagit-python
 .. _BSD (2-clause): https://opensource.org/licenses/BSD-2-Clause
 .. _BSD (3-clause): https://opensource.org/licenses/BSD-3-Clause
 .. _bulk_extractor: https://github.com/simsong/bulk_extractor
 .. _ClamAV: http://www.clamav.net/
-.. _`Common Public License`: https://opensource.org/licenses/cpl1.0.php
+.. _Common Public License: https://opensource.org/licenses/cpl1.0.php
 .. _Django: https://www.djangoproject.com/
-.. _ElasticSearch: http://www.elasticsearch.org/
-.. _ExifTool: http://www.sno.phy.queensu.ca/~phil/exiftool/index.html
+.. _ElasticSearch: https://www.elastic.co/
+.. _ExifTool: https://exiftool.org/index.html
 .. _FFmpeg: http://ffmpeg.org/
 .. _fido: https://github.com/openpreserve/fido/
 .. _File Information Tool Set (FITS): https://projects.iq.harvard.edu/fits
@@ -208,14 +208,14 @@ The Unarchiver is an archive unpacker program.
 .. _Ghostscript: https://www.ghostscript.com/
 .. _GNU Affero General Public License (AGPL): https://www.gnu.org/licenses/agpl-3.0.en.html
 .. _GNU General Public License: https://www.gnu.org/licenses/gpl-3.0.en.html
-.. _GNU General Public License, version 1: https://www.gnu.org/licenses/old-licenses/gpl-1.0.html
-.. _GNU General Public License, version 2: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-.. _GNU Lesser General Public License, version 2.1: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+.. _GNU General Public License version 1: https://www.gnu.org/licenses/old-licenses/gpl-1.0.html
+.. _GNU General Public License version 2: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+.. _GNU Lesser General Public License version 2.1: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
 .. _GNU Lesser General Public License: http://www.gnu.org/licenses/lgpl-3.0.html
 .. _hashdeep/md5deep: http://md5deep.sourceforge.net/
 .. _Imagemagick: http://www.imagemagick.org/script/index.php
 .. _Imagemagick license: http://www.imagemagick.org/script/license.php
-.. _Inkscape: http://www.inkscape.org/
+.. _Inkscape: https://www.inkscape.org/
 .. _JHOVE: https://github.com/openpreserve/jhove
 .. _MediaConch: https://mediaarea.net/MediaConch
 .. _MediaInfo: https://mediaarea.net/en/MediaInfo
@@ -226,8 +226,8 @@ The Unarchiver is an archive unpacker program.
 .. _rsync: https://linux.die.net/man/1/rsync
 .. _Siegfried: https://github.com/richardlehane/siegfried
 .. _Sleuthkit: http://www.sleuthkit.org/
-.. _Tesseract: http://code.google.com/p/tesseract-ocr/
+.. _Tesseract: https://github.com/tesseract-ocr/
 .. _Ubuntu Linux: https://ubuntu.com/
 .. _UUID: http://www.ossp.org/pkg/lib/uuid/
-.. _unar: http://unarchiver.c3.cx/commandline
+.. _unar: https://theunarchiver.com/command-line
 .. _Zip: http://manpages.ubuntu.com/manpages/hardy/man1/zip.1.html

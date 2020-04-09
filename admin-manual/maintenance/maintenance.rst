@@ -468,7 +468,7 @@ and investigate if this happens.
 
 .. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html
 .. _`Elasticsearch troubleshooting`: https://www.accesstomemory.org/docs/latest/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch
-.. _`Kibana`: https://www.elastic.co/products/kibana
+.. _`Kibana`: https://www.elastic.co/kibana
 .. _`Dejavu`: https://github.com/appbaseio/dejavu
 .. _`remove transfers or SIPs`: https://www.archivematica.org/en/docs/archivematica-1.7/user-manual/transfer/transfer/#cleaning-up-the-transfer-dashboard
 .. _`archivematica-devtools`: https://github.com/artefactual/archivematica-devtools

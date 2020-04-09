@@ -611,5 +611,5 @@ on adding tags, see :ref:`tagging files <adding-tags>`.
 
 :ref:`Back to the top <appraisal>`
 
-.. _Bulk Extractor: https://www.forensicswiki.org/wiki/Bulk_extractor
+.. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki
 .. _PREMIS rights: http://www.loc.gov/standards/premis/

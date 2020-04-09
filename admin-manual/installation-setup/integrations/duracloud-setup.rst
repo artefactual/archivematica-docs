@@ -104,5 +104,5 @@ when you installed Archivematica.
 :ref:`Back to the top <duracloud-setup>`
 
 .. _ArchivesDirect: https://duraspace.org/archivesdirect/
-.. _DuraCloud documentation: https://wiki.duraspace.org/display/DURACLOUD/DuraCloud
-.. _DuraSpace Downloads page: https://wiki.duraspace.org/display/DURACLOUD/DuraCloud+Downloads
+.. _DuraCloud documentation: https://wiki.lyrasis.org/display/DURACLOUD/DuraCloud
+.. _DuraSpace Downloads page: https://wiki.lyrasis.org/display/DURACLOUD/DuraCloud+Downloads
