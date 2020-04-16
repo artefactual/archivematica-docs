@@ -9,19 +9,17 @@ Our target users are archivists, librarians, and anyone working to preserve
 digital objects.
 
 You are free to copy, modify, and distribute the Archivematica documentation
-with attribution under the terms of the Creative Commons
-Attribution Share Alike 4.0 (CC-BY-SA-4.0) license.
-See the [LICENCE](LICENCE) file for details.
+with attribution under the terms of the Creative Commons Attribution Share Alike
+4.0 (CC-BY-SA-4.0) license. See the [LICENCE](LICENCE) file for details.
 
 ## Contributing
 
-Thank you for considering a contribution to the Archivematica documentation!
-For more information on contributing, please see the [Archivematica docs Github
-wiki](https://github.com/artefactual/archivematica-docs/wiki).
-The wiki describes the change submission process for the Archivematica docs and
-includes a style guide for new contributions.
-Following these guidelines helps us assess your changes faster and makes it
-easier for us to merge your submission.
+Thank you for considering a contribution to the Archivematica documentation! For
+more information on contributing, please see the [Archivematica docs Github
+wiki](https://github.com/artefactual/archivematica-docs/wiki). The wiki
+describes the change submission process for the Archivematica docs and includes
+a style guide for new contributions. Following these guidelines helps us assess
+your changes faster and makes it easier for us to merge your submission.
 
 Note that some documentation lives in separate repositories:
 
@@ -30,3 +28,9 @@ Note that some documentation lives in separate repositories:
 * [archivematica-storage-service-docs](https://github.com/artefactual/archivematica-storage-service-docs):
   Contains documentation for the Storage Service, Archivematica's
   archival storage management system.
+
+### Security
+
+If you have a security concern about Archivematica or any of its companion
+repositories, please see the [SECURITY file in the main Archivematica
+repository](https://github.com/artefactual/archivematica).
