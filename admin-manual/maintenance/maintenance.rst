@@ -160,11 +160,11 @@ Data to back up from an Archivematica instance:
 
 #. MCP database (see below for details)
 #. SS database (see below for details)
-#. Elasticsearch index (see below for details)
+#. Elasticsearch index/indices (see below for details)
 #. Pointer files (in the Storage Service internal processing location; the
    default location is ``/var/archivematica/storage_service``)
 #. AM config in ``/etc/archivematica``
-#. defaultProcessingMCP.xml (processing configuration, in 
+#. Processing configurations (in 
    ``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``) 
 
 
@@ -192,14 +192,14 @@ database by using the following command:
 
 .. code:: bash
 
-   mysqldump -u <your username> -p <your password> -c MCP > <filename of backup>
+   mysqldump -u <your username> -p<your password> -c MCP > <filename of backup>
 
 
 To restore from ``mysqldump`` file:
 
 .. code:: bash
 
-   mysql –user yourusername -p <your password> MCP < MCP_backup.sql
+   mysql -u <your username> -p<your password> MCP < MCP_backup.sql
 
 Storage Service Database backup and restore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -260,9 +260,9 @@ To use a new directory as snapshot repository, create and adjust permissions for
 
 .. code:: bash
 
-  mkdir /var/lib/elasticsearch/backup-repo/es_backup_clientname
-  chmod 0755 /var/lib/elasticsearch/backup-repo/es_backup_clientname
-  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo/es_backup_clientname
+  mkdir /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
+  chmod 0755 /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
+  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
 
 Before any snapshot or restore operation can be performed, a snapshot repository
 should be registered in Elasticsearch. The repository settings are
@@ -270,55 +270,55 @@ repository-type specific:
 
 .. code:: bash
 
-  curl -XPUT 'http://localhost:9200/_snapshot/es_backup_clientname' -d '{
+  curl -XPUT 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME' -d '{
       "type": "fs",
       "settings": {
           "compress" : true,
-          "location": "/var/lib/elasticsearch/backup-repo/es_backup_clientname"
+          "location": "/var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME"
       }
   }'
 
 **Backing up Elasticsearch indexes**
 
-To make a backup (snapshot) for the ``aips`` and ``transfer`` indexes, a different name
-has to be used every time a snapshot is taken. For example, using the date
-inside the filename:
+To make a backup (snapshot) for the ``aips``, ``aipfiles``, ``transfer`` and
+``transferfiles`` indexes, a different name has to be used every time a snapshot
+is taken. For example, using the date inside the filename:
 
 .. code:: bash
 
-  curl -XPUT "http://localhost:9200/_snapshot/es_backup_clientname/snapshot_aips_20170726?pretty?wait_for_completion=true" -d'
+  curl -XPUT "http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot_aips_20170726?wait_for_completion=true" -d'
   {
     "indices": "aips",  
     "ignore_unavailable": true,
     "include_global_state": false
   }'
 
-  curl -XPUT "http://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726?pretty?wait_for_completion=true" -d'
+  curl -XPUT "http://localhost:9200/_snapshot/es_backup_YOUR-NAME/%3Csnapshot-am-%7Bnow%2Fd%7D%3E?wait_for_completion=true" -d'
   {
-    "indices": "transfers",  
+    "indices": "aips,aipfiles,transfers,transferfiles",
     "ignore_unavailable": true,
     "include_global_state": false
   }'
 
 The snapshot will be saved to the
-``/var/lib/elasticsearch/backup-repo/es_backup_clientname`` directory. This
+``/var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME`` directory. This
 directory can be backed up, for example, using rsync:
 
 .. code:: bash
 
-  rsync -av /var/lib/elasticsearch/backup-repo/es_backup_clientname /backup/location/elasticsearch
+  rsync -av /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME /backup/location/elasticsearch
 
 To list all the snapshots:
 
 .. code:: bash
 
-  curl -XGET "https://localhost:9200/_snapshot/es_backup_clientname/_all"
+  curl -XGET "https://localhost:9200/_snapshot/es_backup_YOUR-NAME/_all"
 
 To delete a snapshot:
 
 .. code:: bash
 
-  curl DELETE "https://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726"
+  curl DELETE "https://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD"
 
 **Restoring Elasticsearch**
 
@@ -333,15 +333,16 @@ index, post to the following _close endpoints, like so:
 
 .. code:: bash
 
-  curl -XPOST 'http://localhost:9200/aips/_close'
-  curl -XPOST 'http://localhost:9200/transfers/_close'
+  curl -XPOST "http://localhost:9200/aips,aipfiles,transfers,transferfiles/_close" -d'
+  {
+    "ignore_unavailable": true
+  }'
 
 To restore ElasticSearch:
 
 .. code:: bash
 
-  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot_aips_20170726/_restore'
-  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot_transfers_20170726/_restore'
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot-am-YYYY.MM.DD/_restore'
 
 
 .. _admin-faq:
@@ -691,7 +692,7 @@ and investigate if this happens.
 
 :ref:`Back to the top <maintenance>`
 
-.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html
+.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`Elasticsearch troubleshooting`: https://www.accesstomemory.org/docs/latest/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch
 .. _`Kibana`: https://www.elastic.co/products/kibana
 .. _`Dejavu`: https://github.com/appbaseio/dejavu
