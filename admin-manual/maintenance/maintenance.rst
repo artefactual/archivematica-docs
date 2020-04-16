@@ -160,7 +160,7 @@ Data to back up from an Archivematica instance:
 
 #. MCP database (see below for details)
 #. SS database (see below for details)
-#. Elasticsearch index/indices (see below for details)
+#. Elasticsearch indexes (see below for details)
 #. Pointer files (in the Storage Service internal processing location; the
    default location is ``/var/archivematica/storage_service``)
 #. AM config in ``/etc/archivematica``
@@ -285,13 +285,6 @@ To make a backup (snapshot) for the ``aips``, ``aipfiles``, ``transfer`` and
 is taken. For example, using the date inside the filename:
 
 .. code:: bash
-
-  curl -XPUT "http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot_aips_20170726?wait_for_completion=true" -d'
-  {
-    "indices": "aips",  
-    "ignore_unavailable": true,
-    "include_global_state": false
-  }'
 
   curl -XPUT "http://localhost:9200/_snapshot/es_backup_YOUR-NAME/%3Csnapshot-am-%7Bnow%2Fd%7D%3E?wait_for_completion=true" -d'
   {
