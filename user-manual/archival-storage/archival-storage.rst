@@ -143,8 +143,12 @@ AIP information page
 
 Clicking on the name of an AIP will open the AIP information page. From this
 page, it is possible to upload an associated DIP, re-ingest the AIP, or delete
-the AIP as well as downloading the AIP or viewing the pointer file. Clicking on
-the name of an image will open the image in the browser.
+the AIP as well as downloading the AIP or viewing the METS and pointer files.
+
+.. image:: images/aip-information-page.*
+   :align: center
+   :width: 80%
+   :alt: The information page for an AIP.
 
 .. _download-aip:
 
@@ -159,13 +163,39 @@ please see the :ref:`Scaling up <scaling-up>` documentation for more information
 on adjusting timeouts. If the AIP is too large, you may need to download it
 directly from the storage location.
 
-From this page, you can also view the AIP's pointer file. The pointer file
-provides information on the AIP, how it was packaged for storage, fixity, and
-where the AIP is stored. The pointer file is used by Archivematica primarily to
-retrieve the AIP.
-
 For more information about how AIPs are structured, please see :ref:`AIP
 structure <aip-structure>`.
+
+.. _download-mets:
+
+Downloading the METS file
++++++++++++++++++++++++++
+
+The AIP `METS file`_ lists all of the digital objects in the AIP (original
+files, preservation masters, license files, OCR text files, submission
+documentation, etc.), describes their relationships to each other, and links
+digital objects to their descriptive, technical, provenance, and rights
+metadata.
+
+To look at the METS file without having to download the AIP, you can click on
+**View** next to *METS file*. The METS file will either open in your browser or
+it will automatically start downloading.
+
+For more information about Archivematica's METS implementation, see :ref:`METS
+in Archivematica <METS_schema>`.
+
+.. _download-pointer:
+
+Downloading the pointer file
+++++++++++++++++++++++++++++
+
+The AIP pointer file provides information about how the AIP was packaged for
+storage, its fixity, and where the AIP is stored. The pointer file is used by
+Archivematica primarily to retrieve the AIP.
+
+To download the pointer file, click on **View** next to *Pointer file*. The
+pointer file will either open in your browser or it will automatically start
+downloading.
 
 .. _metadata-only-dip-upload:
 
@@ -287,3 +317,5 @@ For more information about how AIPs are structured, please see :ref:`AIP
 structure <aip-structure>`.
 
 :ref:`Back to the top <archival-storage>`
+
+.. _METS file: http://www.loc.gov/standards/mets/
