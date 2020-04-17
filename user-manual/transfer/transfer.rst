@@ -92,7 +92,7 @@ area. Several :ref:`microservices <microservices>` run on the transferred
 material to prepare it to become a SIP. The list of microservices should be read
 from bottom to top.
 
-.. image:: images/transfer-microservices-1.8.*
+.. image:: images/transfer-microservices-1-11.*
    :align: center
    :width: 80%
    :alt: Image shows the many microservices that run on a standard transfer in Archivematica 1.8
@@ -560,14 +560,14 @@ Archivematica's microservice architecture, please see :ref:`microservices
 
 Some microservices occur with no human intervention, while others will prompt
 the user for a decision. An early example is the *Identify file format*
-microservice, which prompts the user to decide which tool to use to identify
-file formats.
+microservice, which prompts the user to decide if they would like to run a file
+format identification tool on the files in the transfer.
 
-.. figure:: images/select-file-id-tool.*
+.. figure:: images/select-file-id.*
    :align: center
    :figwidth: 60%
    :width: 100%
-   :alt: For the Identify file format microservice, the user is given the option between various file ID tools
+   :alt: A decision dropdown menu is shown at "Job: Do you want to perform file format identification?". The options are "Yes" or "No".
 
 Note that it is possible to automate all decision points in Archivematica. For
 more information, see :ref:`Processing configuration <dashboard-processing>`.

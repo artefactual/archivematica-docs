@@ -49,7 +49,7 @@ Create a SIP
    Archivematica should normalize the SIP. Choose the option most suitable for
    your workflow.
 
-   .. figure:: images/Normalize1.*
+   .. figure:: images/choose-normalize-option.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -177,7 +177,7 @@ the CSV through the user interface <metadata-csv-ui>`.
 #. While on the Transfer or Ingest tab, click on the metadata template icon to
    the right of the transfer name.
 
-   .. figure:: images/MetadataIcon2.*
+   .. figure:: images/metadata-icon.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -188,7 +188,7 @@ the CSV through the user interface <metadata-csv-ui>`.
 #. This will take you to the SIP detail page. Under the *Metadata* heading,
    click **Add**.
 
-   .. figure:: images/SIPDetailPanel2.*
+   .. figure:: images/sip-detail-panel.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -214,7 +214,7 @@ the CSV through the user interface <metadata-csv-ui>`.
    click **Delete**. To add more descriptive metadata, click the **Add** button
    below the list.
 
-   .. figure:: images/Metadatalist1.*
+   .. figure:: images/descriptive-metadata-list.*
       :align: center
       :figwidth: 60%
       :width: 100%
@@ -251,7 +251,7 @@ to structure metadata CSV files, see :ref:`Import metadata <import-metadata>`.
 #. While on the Ingest tab, click on the metadata template icon to the right of
    the transfer name.
 
-   .. figure:: images/MetadataIcon2.*
+   .. figure:: images/metadata-icon.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -262,7 +262,7 @@ to structure metadata CSV files, see :ref:`Import metadata <import-metadata>`.
 #. This will take you to the SIP detail page. Under the *Metadata* heading,
    click **Add metadata files**.
 
-   .. figure:: images/SIPDetailPanel2.*
+   .. figure:: images/sip-detail-panel.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -305,7 +305,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. While on the Transfer or Ingest tab, click on the metadata template icon to
    the right of the transfer name.
 
-   .. figure:: images/MetadataIcon2.*
+   .. figure:: images/metadata-icon.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -316,7 +316,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. This will take you to the SIP detail panel. On the left-hand side, under
    *Rights*, click **Add**.
 
-   .. figure:: images/SIPDetailPanel2.*
+   .. figure:: images/sip-detail-panel.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -328,7 +328,7 @@ this point, it is no longer possible to add metadata to the SIP.
    button at the bottom of the screen, or click **Next** if you are finished and
    ready to move on to the second page of data entry.
 
-   .. figure:: images/CopyrightNext.*
+   .. figure:: images/rights-form-1.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -339,7 +339,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. Enter act information and the associated grants/restrictions and save the
    data by clicking **Save**.
 
-   .. figure:: images/RightsPg2AddAct.*
+   .. figure:: images/rights-form-2.*
       :align: center
       :figwidth: 80%
       :width: 100%
@@ -350,7 +350,7 @@ this point, it is no longer possible to add metadata to the SIP.
 #. When you click **Save** on the acts page, you will be given the option to add
    another act and further grants/restrictions.
 
-   .. figure:: images/Createnewgrant.*
+   .. figure:: images/create-new-grant.*
       :align: center
       :figwidth: 60%
       :width: 100%
@@ -362,7 +362,7 @@ this point, it is no longer possible to add metadata to the SIP.
    entry in the list page. You can add more rights by clicking **Add** again, or
    edit or delete existing rights from this page.
 
-   .. figure:: images/RightsPanelwRights.*
+   .. figure:: images/rights-metadata-list.*
       :align: center
       :figwidth: 75%
       :width: 100%
@@ -390,67 +390,76 @@ manual.
    a bell icon next to it. Select one of the normalization options from the
    Actions drop-down menu:
 
-.. figure:: images/NormPresAccess2.*
-   :align: right
-   :figwidth: 50%
-   :width: 100%
-   :alt: Selecting a normalization option
+   .. figure:: images/choose-normalize-option.*
+      :align: center
+      :figwidth: 50%
+      :width: 100%
+      :alt: Selecting a normalization option
 
-   Selecting a normalization option
+      Selecting a normalization option
 
-* **None** - the user is prompted for a decision.
-* **Normalize for preservation and access** - creates preservation copies of the
-  objects plus access copies which will be used to generate the DIP.
-* **Normalize for preservation** - creates preservation copies only. No access
-  copies are created and no DIP will be generated.
-* **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
-  more information.
-* **Do not normalize** - the AIP will contain originals only. No preservation or
-  access copies are generated and no DIP will be generated.
-* **Normalize service files preservation** - see :ref:`Transferring material
-  with service (mezzanine) files <transfer-service-files>` for more
-  information.
-* **Normalize for access** - the AIP will contain originals only. No
-  preservation copies will be generated. Access copies will be created which
-  will be used to generate the DIP.
+   * **Normalize for preservation and access** - creates preservation copies of the
+     objects plus access copies which will be used to generate the DIP.
+   * **Normalize for preservation** - creates preservation copies only. No access
+     copies are created and no DIP will be generated.
+   * **Normalize for access** - the AIP will contain originals only. No
+     preservation copies will be generated. Access copies will be created which
+     will be used to generate the DIP.
+   * **Normalize service files for access** - see :ref:`Transferring material
+     with service (mezzanine) files <transfer-service-files>` for more
+     information.
+   * **Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for
+     more information.
+   * **Do not normalize** - the AIP will contain originals only. No preservation or
+     access copies are generated and no DIP will be generated.
+   * **Reject SIP** - the ingest will be cancelled.
 
-Note that depending on the setup of your transfer, you may not see all of the
-options listed above.
+   Note that depending on the setup of your transfer, you may not see all of the
+   options listed above.
 
 2. Once normalization is completed you can review the results in the
    normalization report. Click on the report icon next to the Actions drop-down
    menu.
 
-.. figure:: images/ReportIcon2.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Location of the report icon to open the normalization report
+   .. figure:: images/normalization-report-icon.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Location of the report icon to open the normalization report
 
-   Click on the report icon to open the normalization report
+      Click on the report icon to open the normalization report
 
-The report shows what has been normalized and what is already in an acceptable
-preservation and access format.
+   The report provides detailed information about whether normalization was
+   atttempted and for what purpose. Pink shading indicates that a file has not
+   been normalized to an accepted preservation or access format.
 
-.. image:: images/NormReport1.*
-   :align: center
-   :width: 80%
-   :alt: Normalization report
+   .. image:: images/normalization-report.*
+      :align: center
+      :width: 80%
+      :alt: Normalization report
 
 3. You may review the normalization results in a new tab by clicking on Review.
+
+   .. figure:: images/review-normalized-files.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Review normalization results in new tab
+
+      Review normalization results in new tab
+
    If your browser has plug-ins to view a file, you may open it in another tab
    by clicking on it. If you click on a file and your browser cannot open it, it
    will download locally so you can view it using the appropriate software on
    your machine.
 
-.. figure:: images/ReviewNorm1.*
-   :align: center
-   :figwidth: 80%
-   :width: 100%
-   :alt: Review normalization results in new tab
+   .. figure:: images/review-normalization.*
+      :align: center
+      :figwidth: 80%
+      :width: 100%
+      :alt: Review normalization results in new tab
 
-   Review normalization results in new tab
-
+      Review normalization results in new tab
 
 4. Approve normalization in the Actions drop-down menu to continue processing
    the SIP. You may also Reject the SIP or re-do normalization. If you see

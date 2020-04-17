@@ -671,11 +671,11 @@ configuration instructions.
 **Levels of description**
 
 You can fetch levels of description from AtoM so that they can be used for
-:ref:`SIP arrangement <arrangement>`. Click on Levels of Description, then
-Fetch from AtoM to get an updated list from the AtoM levels of description
-taxonomy.
+:ref:`SIP arrangement <arrangement>`. From the AtoM/Binder page in the
+Administration tab, click on *Levels of Description*, then *Fetch from AtoM* to
+get an updated list from the AtoM levels of description taxonomy.
 
-.. image:: images/AtoM_lod.*
+.. image:: images/atom-levels-of-description.*
    :align: center
    :width: 80%
    :alt: Levels of description from AtoM shown in Archivematica administration screen
@@ -711,7 +711,7 @@ PREMIS agent
 
 The PREMIS agent name and code can be set via the administration interface.
 
-.. image:: images/PREMISAdmin.*
+.. image:: images/premis-agent.*
    :align: center
    :width: 80%
    :alt: PREMIS agent settings in Administration tab
