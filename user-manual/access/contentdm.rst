@@ -155,7 +155,7 @@ Create DIP for CONTENTdm
 To review the DIP in the dashboard and download individual DIP objects and/or
 the tab file, click "review":
 
-.. image:: images/ReviewDIP.*
+.. image:: images/review-dip.*
    :align: center
    :width: 80%
    :alt: Click "review" in Upload DIP microservice to access DIP objects and tab file

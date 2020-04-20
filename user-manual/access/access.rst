@@ -362,15 +362,15 @@ To store a DIP:
 
 .. _review-dip:
 
-Review/download DIP
--------------------
+Review and download DIPs
+------------------------
 
 Regardless of the access path chosen (an integrated access system, or storing
 the DIP) the dashboard will present the operator with the option of reviewing
 and downloading the DIP objects. When the Upload DIP microservice is complete,
 a "review" link will appear:
 
-.. image:: images/ReviewDIP.*
+.. image:: images/review-dip.*
    :align: center
    :width: 80%
    :alt: Click on the "review" link in the Upload DIP microservice
@@ -380,7 +380,7 @@ which can then be navigated to locate any DIP in this directory. As shown below,
 when expanded, the DIP objects, thumbnails and METS files can be viewed or
 downloaded within the browser window.
 
-.. image:: images/DownloadDIP.*
+.. image:: images/download-dip.*
    :align: center
    :width: 80%
    :alt: Download DIP screen showing a DIP directory expanded.
