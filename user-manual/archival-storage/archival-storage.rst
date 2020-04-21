@@ -62,9 +62,11 @@ limit your search using one or more of the search parameters:
 * **File extension**: the format extension of a file within an AIP.
 * **AIP UUID**: the UUID of the AIP.
 * **AIP name**: the name of the AIP.
-* **Identifiers**: the value of the ``<identifier>`` field in a MODS file
-  included as submission documentation or in an Islandora transfer's METS file
-  (using the :ref:`Islandora integration <islandora-integration>`).
+* **Identifiers**: an external identifier added to the AIP using an
+  :ref:`identifiers.json <transfer-pids>` file; OR the value of the
+  ``<identifier>`` field in a MODS file included as submission documentation or
+  in an Islandora transfer's METS file (using the
+  :ref:`Islandora integration <islandora-integration>`).
 * **Part of AIC**: an :ref:`AIC<aic>` number added to the AIP's descriptive
   metadata, formatted as ``AIC#`` followed by the value (i.e. ``AIC#GWQ498``).
   This searches for the individual AIPs that comprise an AIC.
