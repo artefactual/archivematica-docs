@@ -270,7 +270,7 @@ repository-type specific:
 
 .. code:: bash
 
-  curl -XPUT 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME' -d '{
+  curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME' -d '{
       "type": "fs",
       "settings": {
           "compress" : true,
@@ -286,7 +286,7 @@ is taken. For example, using the date inside the filename:
 
 .. code:: bash
 
-  curl -XPUT "http://localhost:9200/_snapshot/es_backup_YOUR-NAME/%3Csnapshot-am-%7Bnow%2Fd%7D%3E?wait_for_completion=true" -d'
+  curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/%3Csnapshot-am-%7Bnow%2Fd%7D%3E?wait_for_completion=true' -d'
   {
     "indices": "aips,aipfiles,transfers,transferfiles",
     "ignore_unavailable": true,
@@ -305,13 +305,13 @@ To list all the snapshots:
 
 .. code:: bash
 
-  curl -XGET "https://localhost:9200/_snapshot/es_backup_YOUR-NAME/_all"
+  curl -XGET 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/_all?pretty=true'
 
 To delete a snapshot:
 
 .. code:: bash
 
-  curl DELETE "https://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD"
+  curl -XDELETE 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD'
 
 **Restoring Elasticsearch**
 
@@ -326,7 +326,7 @@ index, post to the following _close endpoints, like so:
 
 .. code:: bash
 
-  curl -XPOST "http://localhost:9200/aips,aipfiles,transfers,transferfiles/_close" -d'
+  curl -XPOST -H 'Content-Type: application/json' 'http://localhost:9200/aips,aipfiles,transfers,transferfiles/_close' -d'
   {
     "ignore_unavailable": true
   }'
@@ -335,7 +335,7 @@ To restore ElasticSearch:
 
 .. code:: bash
 
-  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_clientname/snapshot-am-YYYY.MM.DD/_restore'
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD/_restore'
 
 
 .. _admin-faq:
@@ -369,7 +369,7 @@ taken to recover.
 
 .. code:: bash
 
-    curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete":null}'
+    curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_all/_settings' -d '{"index.blocks.read_only_allow_delete":null}'
 
 
 .. _restart-services:
