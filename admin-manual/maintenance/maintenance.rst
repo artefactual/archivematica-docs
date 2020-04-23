@@ -9,13 +9,21 @@ installation.
 
 *On this page:*
 
-* :ref:`Elasticsearch <elasticsearch>`
+* :ref:`Maintaining Elasticsearch <elasticsearch>`
 
-  * :ref:`Rebuild the indexes <elasticsearch-indexes>`
-  * :ref:`External access <elasticsearch-external>`
+  * :ref:`Rebuild Elasticsearch indexes <elasticsearch-indexes>`
+  * :ref:`External Elasticsearch access <elasticsearch-external>`
 
 * :ref:`Data backup <data-backup>`
+
 * :ref:`FAQ <admin-faq>`
+
+  * :ref:`How to clean up a full disk <disk-full>`
+  * :ref:`How to restart services <restart-services>`
+  * :ref:`Error stack trace <stack-trace>`
+  * :ref:`Resolve hanging decisions <hanging-decisions>`
+  * :ref:`Transfer won't start <transfer-wont-start>`
+
 
 .. _elasticsearch:
 
@@ -134,16 +142,50 @@ The index names are: `aips`, `aipfiles`, `transfers` and `transferfiles`.
 
 .. _data-backup:
 
-Data back-up
-------------
+Data backup
+-----------
 
-In Archivematica there are three types of data you'll likely want to back up:
+By default, there are three types of data that should be backed up:
 
 * Filesystem (particularly your storage directories)
 
-* MySQL
+* MySQL and SQLite
 
 * Elasticsearch
+
+In addition to the filesystem, below are some detailed instructions of what to
+back up, where it exists, and how to do it.
+
+Data to back up from an Archivematica instance:
+
+#. MCP database (see below for details)
+#. SS database (see below for details)
+#. Elasticsearch indexes (see below for details)
+#. Pointer files (in the Storage Service internal processing location; the
+   default location is ``/var/archivematica/storage_service``)
+#. AM config in ``/etc/archivematica``
+#. Processing configurations (in 
+   ``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``) 
+
+
+If doing an update or migration of Archivematica to a new server, the following
+may also be important to back up:
+
+#. Archivematica source code (``/opt/archivematica``) (to know which version of
+   the software was installed, if there were custom changes, etc.)
+#. Archivematica shared directory (``/var/archivematica/sharedDirectory/``)
+
+If your instance uses automation-tools, that should also be backed up:
+
+#. Source code (``/opt/archivematica/automation-tools``)
+#. Scripts (normally in ``/etc/archivematica/automation-tools``)
+#. Crontab entries for automation-tools 
+#. Automation database (normally in ``/var/archivematica/automation-tools/``)
+#. Any other helper scripts source and databases
+
+
+Archivematica Database backup and restore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MySQL is used to store short-term processing data. You can back up the MySQL
 database by using the following command:
@@ -152,54 +194,229 @@ database by using the following command:
 
    mysqldump -u <your username> -p<your password> -c MCP > <filename of backup>
 
+
+To restore from ``mysqldump`` file:
+
+.. code:: bash
+
+   mysql -u <your username> -p<your password> MCP < MCP_backup.sql
+
+Storage Service Database backup and restore
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To backup the SQLite database and pointer files created by the storage service run:
+
+.. code:: bash
+
+  rsync -av /var/archivematica/storage_service /backup/location/storage_service
+  rsync -av /var/archivematica/storage-service/storage.db /backup/location/storage.db
+
+.. note::
+
+  The Storage Service must not be actively in use. Make sure the
+  Storage Service is not running by stopping the ``nginx`` or ``storage-service``
+  services or by making the backup at a time that it is not in use.
+
+To restore Storage Service from backup:
+
+.. code:: bash
+
+  service archivematica-storage-service stop
+  rsync -av /backup/location/storage.db /var/archivematica/storage-service/storage.db
+  rsync -av /backup/location/storage_service /var/archivematica/storage_service
+  service archivematica-storage-service start
+
+Elasticsearch
+^^^^^^^^^^^^^
+
 Elasticsearch is used to store long-term data. Instructions and scripts for
 backing up and restoring Elasticsearch are available in the
 `Elasticsearch documentation`_.
+
+**Preconfiguration**
+
+The path.repo and snapshot repository have to be configured. For example, using
+``/var/lib/elasticsearch/backup-repo`` as the repo path:
+
+.. code:: bash
+
+  mkdir /var/lib/elasticsearch/backup-repo
+  chmod 0755 /var/lib/elasticsearch/backup-repo
+  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo
+
+Add this line to the ``/etc/elasticsearch/elasticsearch.yml`` file:
+
+.. code:: bash
+
+  path.repo: /var/lib/elasticsearch/backup-repo
+
+Restart elasticsearch: 
+
+.. code:: bash
+
+  service elasticsearch restart
+
+To use a new directory as snapshot repository, create and adjust permissions for one, like so:
+
+.. code:: bash
+
+  mkdir /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
+  chmod 0755 /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
+  chown elasticsearch:elasticsearch /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME
+
+Before any snapshot or restore operation can be performed, a snapshot repository
+should be registered in Elasticsearch. The repository settings are
+repository-type specific:
+
+.. code:: bash
+
+  curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME' -d '{
+      "type": "fs",
+      "settings": {
+          "compress" : true,
+          "location": "/var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME"
+      }
+  }'
+
+**Backing up Elasticsearch indexes**
+
+To make a backup (snapshot) for the ``aips``, ``aipfiles``, ``transfer`` and
+``transferfiles`` indexes, a different name has to be used every time a snapshot
+is taken. For example, using the date inside the filename:
+
+.. code:: bash
+
+  curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/%3Csnapshot-am-%7Bnow%2Fd%7D%3E?wait_for_completion=true' -d'
+  {
+    "indices": "aips,aipfiles,transfers,transferfiles",
+    "ignore_unavailable": true,
+    "include_global_state": false
+  }'
+
+The snapshot will be saved to the
+``/var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME`` directory. This
+directory can be backed up, for example, using rsync:
+
+.. code:: bash
+
+  rsync -av /var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME /backup/location/elasticsearch
+
+To list all the snapshots:
+
+.. code:: bash
+
+  curl -XGET 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/_all?pretty=true'
+
+To delete a snapshot:
+
+.. code:: bash
+
+  curl -XDELETE 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD'
+
+**Restoring Elasticsearch**
+
+Before restoring, the snapshot repo has to be registered in elasticsearch (see
+preconfiguration). It can be restored in a different server, configuring the
+repo.path, registering the snapshot repo (different paths and repo names can be
+used) and copying the files inside the ``/backup/location/elasticsearch``
+directory.
+
+The index will have to be closed before restoration can occur. To close the
+index, post to the following _close endpoints, like so:
+
+.. code:: bash
+
+  curl -XPOST -H 'Content-Type: application/json' 'http://localhost:9200/aips,aipfiles,transfers,transferfiles/_close' -d'
+  {
+    "ignore_unavailable": true
+  }'
+
+To restore ElasticSearch:
+
+.. code:: bash
+
+  curl -XPOST 'http://localhost:9200/_snapshot/es_backup_YOUR-NAME/snapshot-am-YYYY.MM.DD/_restore'
+
 
 .. _admin-faq:
 
 FAQ
 ---
 
+.. _disk-full:
+
+How to clean up a full disk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    "My Archivematica disk filled up and now Archivematica won't work. How can I
+    fix this?"
+
+Archivematica servers have as much storage as they have been commissioned. If
+processing lots of very large files, particularly if working with normalization,
+this will cause the disk to fill up and cause the system to malfunction.
+
+When the disk on an Archivematica instance is full, a number of steps need to be
+taken to recover. 
+
+**Recovery protocol**
+
+#. Clean up the disk by removing failed or rejected transfers, any excessive
+   ``/tmp`` data, or anything else causing the disk to have filled up.
+#. Reset MySQL (or MariaDB, on CentOS) database.
+#. Reset Archivematica components in appropriate order (see `restart-services`_
+   for details).
+#. Set Elasticsearch back into write mode. The easiest way to do this is to run
+   the following command:
+
+.. code:: bash
+
+    curl -XPUT -H 'Content-Type: application/json' 'http://localhost:9200/_all/_settings' -d '{"index.blocks.read_only_allow_delete":null}'
+
+
 .. _restart-services:
 
-How to restart the Archivematica services
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to restart services
+^^^^^^^^^^^^^^^^^^^^^^^
+    "Something is not working right, or I need to stop a hanging transfer. What
+    can I do?"
 
-**Restart all services**
-
-.. code:: bash
-
-   am services
-
-Note that the default action is to restart all services. To see other available
-parameters, type:
+Archivematica is made up of these four core components:
 
 .. code:: bash
 
-   am services help
+    archivematica-mcp-server
+    archivematica-mcp-client
+    archivematica-dashboard
+    archivematica-storage-service
 
-**Stopping**
+Other services that Archivematica depends on are:
+  * ClamAV
+  * ElasticSearch
+  * Gearman
+  * MySQL (Ubuntu) or MariaDB (CentOS)
+  * Nailgun
+  * Nginx
+
+Each service can be started/stopped/restarted with:
 
 .. code:: bash
 
-   sudo stop archivematica-mcp-server
-   sudo stop archivematica-mcp-client
-   sudo /etc/init.d/apache2 stop
-   sudo /etc/init.d/gearman-job-server stop
-   sudo stop mysql
-   sudo /etc/init.d/elasticsearch stop
+    service <name> start|stop|status|restart
 
-**Starting**
+To restart all services, restart the Gearman service and each Archivematica
+component, in this order:
 
 .. code:: bash
 
-   sudo /etc/init.d/elasticsearch start
-   sudo start mysql
-   sudo /etc/init.d/gearman-job-server start
-   sudo /etc/init.d/apache2 start
-   sudo start archivematica-mcp-server
-   sudo start archivematica-mcp-client
+    service gearmand restart
+    service archivematica-mcp-server restart
+    service archivematica-mcp-client restart
+    service archivematica-dashboard restart
+    service archivematica-storage-service restart
+
+.. note::
+
+  Depending on your installation, gearmand might be called gearman-job-server.
+
 
 .. _stack-trace:
 
@@ -240,6 +457,8 @@ edit a configuration file from the command line.
 7. Debug or report error
 
 8. Restore DEBUG to False and restart Apache to turn error reporting off again
+
+.. _hanging-decisions:
 
 Resolve hanging decisions
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -466,9 +685,9 @@ and investigate if this happens.
 
 :ref:`Back to the top <maintenance>`
 
-.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html
+.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`Elasticsearch troubleshooting`: https://www.accesstomemory.org/docs/latest/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch
 .. _`Kibana`: https://www.elastic.co/kibana
 .. _`Dejavu`: https://github.com/appbaseio/dejavu
-.. _`remove transfers or SIPs`: https://www.archivematica.org/en/docs/archivematica-1.7/user-manual/transfer/transfer/#cleaning-up-the-transfer-dashboard
+.. _`remove transfers or SIPs`: https://www.archivematica.org/en/docs/latest/user-manual/transfer/transfer/#cleaning-up-the-transfer-dashboard
 .. _`archivematica-devtools`: https://github.com/artefactual/archivematica-devtools
