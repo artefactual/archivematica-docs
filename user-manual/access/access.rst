@@ -365,29 +365,31 @@ To store a DIP:
 Review and download DIPs
 ------------------------
 
-Regardless of the access path chosen (an integrated access system, or storing
-the DIP) the dashboard will present the operator with the option of reviewing
-and downloading the DIP objects. When the Upload DIP microservice is complete,
-a "review" link will appear:
+All DIPs that have been stored are available for download through the
+:ref:`Packages tab in the Storage Service <storageservice:packages-tab>`. This
+is the default method for downloading DIPs.
+
+If you have used the Upload DIP functionality to send your DIP to AtoM/Binder,
+ArchivesSpace, or CONTENTdm, you will have the option to review the DIP from the
+Archivematica user interface. When the Upload DIP microservice is complete, a
+"review" link will appear:
 
 .. image:: images/review-dip.*
    :align: center
    :width: 80%
    :alt: Click on the "review" link in the Upload DIP microservice
 
-This will present the operator with a page displaying the uploadedDIPs directory
-which can then be navigated to locate any DIP in this directory. As shown below,
-when expanded, the DIP objects, thumbnails and METS files can be viewed or
-downloaded within the browser window.
+This will open the `uploadedDIPs` directory in a new tab. You can navigate the
+directory by clicking on the yellow folder icons. Click on the the individual
+DIP object, thumbnail, or METS file to view it.
 
 .. image:: images/download-dip.*
    :align: center
    :width: 80%
    :alt: Download DIP screen showing a DIP directory expanded.
 
-Your ability to view the objects in the browser will be dependent on your
-browser having plugins for the particular filetypes. However, all files can be
-downloaded locally in this manner.
+Depending on the type and size of the file, it may either open in another tab or it may
+be downloaded to your computer.
 
 .. _access-tab:
 
