@@ -35,9 +35,9 @@ To prevent these failures from occuring during an upgrade from Archivematica
 
 1. Confirm that all transfers and ingests are complete.
 
-    Check that there are no transfers or SIPs that are still being processed or
-    awaiting decisions in the Transfer and Ingest tabs. If there are, finish
-    processing the transfers/ingests before proceeding.
+  Check that there are no transfers or SIPs that are still being processed or
+  awaiting decisions in the Transfer and Ingest tabs. If there are, finish
+  processing the transfers/ingests before proceeding.
 
 2. Delete all contents of the completedTransfers watched directory.
 
