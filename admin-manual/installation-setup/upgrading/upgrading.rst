@@ -6,6 +6,8 @@ Upgrade from Archivematica |previous_version|.x to |release|
 
 *On this page:*
 
+* :ref:`Clean up completed transfers watched directory <completed-transfers>`
+* :ref:`Create a backup <create-backup>`
 * :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
@@ -15,6 +17,36 @@ Upgrade from Archivematica |previous_version|.x to |release|
 
    While it is possible to upgrade a GitHub-based source install using ansible,
    these instructions do not cover that scenario.
+
+.. _completed-transfers:
+
+Clean up completed transfers watched directory
+----------------------------------------------
+
+Upgrading from Archivematica 1.10.x or older to Archivematica 1.11.x can result
+in a number of completed transfers appearing as failed in the Archivematica
+dashboard, as well as corresponding failure notification emails being sent.
+These are not actual failures, but are unintentional side effects of changes
+made in Archivematica 1.11 to the workflow and to how metadata files are stored
+and copied into the SIP.
+
+To prevent these failures from occuring during an upgrade from Archivematica
+1.10 or earlier:
+
+1. Confirm that all transfers and ingests are complete.
+
+    Check that there are no transfers or SIPs that are still being processed or
+    awaiting decisions in the Transfer and Ingest tabs. If there are, finish
+    processing the transfers/ingests before proceeding.
+
+2. Delete all contents of the completedTransfers watched directory.
+
+   .. code:: bash
+
+      sudo rm -rf /var/archivematica/sharedDirectory/watchedDirectories/SIPCreation/completedTransfers/*
+
+3. Perform the upgrade as described below.
+
 
 .. _create-backup:
 
