@@ -9,6 +9,7 @@ Installing Archivematica
 * :ref:`Overview <overview>`
 * :ref:`Technical requirements <treq>`
 * :ref:`Instructions for new installations <instructions>`
+* :ref:`Instructions for upgrades <upgrades>`
 * :ref:`Advanced installation options <advanced>`
 
 .. _overview:
@@ -211,6 +212,11 @@ environment for those who work on Archivematica's code.
 For more information about installation environments, please see the
 `ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the
 `Archivematica user forum`_ for more details.
+
+.. _upgrades:
+
+Instructions for upgrades
+-------------------------
 
 If you are upgrading from a previous version of Archivematica, please see the
 :ref:`upgrading instructions <upgrade>`.
