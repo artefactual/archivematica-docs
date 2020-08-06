@@ -208,6 +208,39 @@ Shibboleth backend configuration in Storage Service
 
 #. Restart the Storage Service.
 
+.. _oidc-setup:
+
+OIDC setup
+==========
+
+`OIDC <oidc_>`_ (OpenID Connect) is an identity layer on top of OAuth 2.0, providing
+identity verification, authentication and basic information about the end user. This
+feature allows administrators to deploy both the Archivematica Dashboard and Storage
+Service Django applications with OIDC authentication.
+
+OIDC backend configuration in Archivematica Dashboard
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable the authentication backend using the environment variable
+   ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_OIDC_AUTHENTICATION``. You can find more
+   details about this environment string in the
+   `configuration document <am-dashboard-config_>`_.
+
+#. Customize the ``oidc_auth.py`` settings module as needed.
+
+#. Restart the Archivematica Dashboard.
+
+OIDC backend configuration in Storage Service
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable the authentication backend using the environment variable
+   ``SS_OIDC_AUTHENTICATION``. Assign a string value ``true`` to enable
+   it.
+
+#. Customize the ``base.py`` settings module as needed.
+
+#. Restart the Storage Service.
+
 .. _ca-root-certificates:
 
 CA certificates
@@ -298,6 +331,7 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
+.. _oidc: https://openid.net/connect/
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html

@@ -309,4 +309,5 @@ Security
 * :ref:`User security <user-security>`
 * :ref:`LDAP setup <ldap-setup>`
 * :ref:`Shibboleth setup <shibboleth-setup>`
+* :ref:`OIDC setup <oidc-setup>`
 * :ref:`CA certificates <ca-root-certificates>`
