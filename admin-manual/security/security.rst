@@ -218,6 +218,15 @@ identity verification, authentication and basic information about the end user. 
 feature allows administrators to deploy both the Archivematica Dashboard and Storage
 Service Django applications with OIDC authentication.
 
+It is based on `mozilla-django-oidc <mozilla-django-oidc-docs_>`_. In addition
+to the instructions below, please refer to their documentation for more
+details.
+
+.. important::
+
+   The OIDC backend is an experimental feature that you can turn on to test
+   (see instructions below). Please share your feedback!
+
 OIDC backend configuration in Archivematica Dashboard
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -231,7 +240,7 @@ OIDC backend configuration in Archivematica Dashboard
 #. Restart the Archivematica Dashboard.
 
 OIDC backend configuration in Storage Service
-+++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
 
 #. Enable the authentication backend using the environment variable
    ``SS_OIDC_AUTHENTICATION``. Assign a string value ``true`` to enable
@@ -336,3 +345,4 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
 .. _Storage Service application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/18b9a77ce1a6789be00159289fb48f4edc46065e/install/README.md#application-specific-environment-variables
+.. _mozilla-django-oidc-docs: https://mozilla-django-oidc.readthedocs.io/en/stable/
