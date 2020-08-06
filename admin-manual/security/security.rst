@@ -250,6 +250,39 @@ OIDC backend configuration in Storage Service
 
 #. Restart the Storage Service.
 
+.. _cas-setup:
+
+CAS setup
+=========
+
+`CAS <cas_>`_ (Central Authentication Service) is an enterprise multilingual
+single sign-on solution to authentication for web applications. This feature
+allows administrators to deploy both the Archivematica Dashboard and Storage
+Service Django applications with CAS authentication.
+
+CAS backend configuration in Archivematica Dashboard
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable the authentication backend using the environment variable
+   `ARCHIVEMATICA_DASHBOARD_DASHBOARD_CAS_AUTHENTICATION``. You can find more
+   details about this environment string in the
+   `configuration document <am-dashboard-config_>`_.
+
+#. Customize the ``cas_auth.py`` settings module as needed.
+
+#. Restart the Archivematica Dashboard.
+
+CAS backend configuration in Storage Service
+++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable the authentication backend using the environment variable
+   ``SS_CAS_AUTHENTICATION``. Assign a string value ``true`` to enable
+   it.
+
+#. Customize the ``base.py`` settings module as needed.
+
+#. Restart the Storage Service.
+
 .. _ca-root-certificates:
 
 CA certificates
@@ -341,6 +374,7 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
 .. _oidc: https://openid.net/connect/
+.. _cas: https://www.apereo.org/projects/cas
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
