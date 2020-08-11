@@ -286,14 +286,14 @@ CAS backend configuration in Storage Service
 .. _ca-root-certificates:
 
 CA certificates
-===============
+---------------
 
 Archivematica uses a HTTP library called `Requests <requests_>`_. There are
 `two main approaches <requests-cas_>`_ for dealing with the updates of the root
 CAs sets:
 
 Upgrade the ``certifi`` package frequently
-++++++++++++++++++++++++++++++++++++++++++
+==========================================
 
 There are three virtual environments where Requests is used: MCPClient,
 Dashboard and Storage Service. This is how you can update ``certifi`` across
@@ -315,7 +315,7 @@ using systemd:
    $ sudo systemctl restart archivematica-storage-service
 
 Use the environment string REQUESTS_CA_BUNDLE
-+++++++++++++++++++++++++++++++++++++++++++++
+=============================================
 
 Requests honours the environment string ``REQUESTS_CA_BUNDLE`` so the
 administrator can indicate a custom bundle which could be the system's CA
