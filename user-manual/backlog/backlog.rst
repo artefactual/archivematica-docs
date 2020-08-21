@@ -46,6 +46,43 @@ Searching for transfers and files
       :width: 80%
       :alt: Archivematica backlog tab showing all transfers in the backlog
 
+#. To change the columns that are visible in the tabular list of backlogged
+   transfers, click on the **Select columns** icon at the bottom of the table.
+   This will present a list of the columns that are available for viewing in the
+   table. The blue row indicates that a column is currently visible. A white row
+   indicates that the column is currently not visible.
+
+   .. figure:: images/backlog-select-columns.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab showing select columns options
+
+#. Click on a blue or white row to toggle this value for each column. In the
+   example below, all the available columns are selected. Note that your column
+   selection choices will persist between your user sessions and apply to other
+   users of the same Archivematica instance.
+
+   .. figure:: images/backlog-all-columns.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab showing all columns selected
+
+#. You can click on the column headers to sort in ascending or descending order.
+   An up or down caret (arrow point) will appear. (e.g. see File count below)
+
+   .. figure:: images/backlog-sort-columns.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab sorted on File count column
+
+#. Note that the same column selection ability applies when you enable the
+   “Show files?” option.
+
+   .. figure:: images/backlog-show-files.*
+      :align: center
+      :width: 80%
+      :alt: Archivematica backlog tab with Show Files option
+
 #. The search fields at the top of the page can be used to search the backlog.
    You can limit your search to the file name, file extension, accession number,
    Ingest date or Transfer UUID. Leaving the search parameter set to "Any"
