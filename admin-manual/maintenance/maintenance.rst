@@ -103,7 +103,7 @@ storage locations.
 
 This command uses the Storage Service API to determine which stored AIPs and
 AICs need to be reindexed (based on status and origin pipeline), and then
-reindexes those AIPs and AICs from temporarily downloaded copies of the their
+reindexes those AIPs and AICs from temporarily downloaded copies of their
 METS files. This approach enables reindexing of AIPs/AICs stored in encrypted
 and some remote storage locations. However, this command must be run on the
 same system that Archivematica is installed on, since it uses code from the
