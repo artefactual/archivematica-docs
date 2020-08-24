@@ -47,9 +47,15 @@ searched from the Archival Storage and the Backlog tabs on the Archivematica das
 Rebuild the indexes
 ^^^^^^^^^^^^^^^^^^^
 
-Archivematica includes two Django commands to regenerate the Elasticsearch
-indexes. These commands require access in the local filesystem to the location
-paths of the AIP and Transfer Backlog storage locations. These
+Archivematica includes three Django commands to regenerate the Elasticsearch
+indexes.
+
+.. _aip-indexes-filesystem:
+
+**Rebuild AIP indexes using filesystem**
+
+To recreate the AIP indexes from the filesystem you require access to the
+location paths of the AIP and Transfer Backlog storage locations. These
 usually are located in the following paths:
 
 * :file:`/var/archivematica/sharedDirectory/www/AIPsStore`
@@ -58,12 +64,8 @@ usually are located in the following paths:
 You should confirm the paths of your installation in the Locations tab of the
 Storage Service.
 
-.. _aip-indexes:
-
-**AIP indexes**
-
-To recreate the AIP indexes from files run the following command, passing the
-path of the AIP storage location you confirmed above.
+To recreate AIP indexes from the filesystem, run the following command, passing
+the path of the AIP storage location you confirmed above.
 
 .. note::
    Please note, the execution of this command may take a long time for big
@@ -84,20 +86,64 @@ path of the AIP storage location you confirmed above.
 
 The command accepts the following parameters:
 
-* `[storage_location_path]` **[REQUIRED]**: Path where the AIP storage location
+* ``[storage_location_path]`` **[REQUIRED]**: Path where the AIP storage location
   is located in the local filesystem.
-* `--delete-all`: Removes the entire indexes to regenerate the mapping and
+* ``--delete-all``: Removes the entire indexes to regenerate the mapping and
   settings.
-* `--delete`: Removes matching AIP documents to avoid duplicates but keeps the
+* ``--delete``: Removes matching AIP documents to avoid duplicates but keeps the
   index mappings and settings.
-* `--uuid` [aip_uuid]: Index a single AIP from the storage location.
+* ``--uuid`` [aip_uuid]: Index a single AIP from the storage location.
 
 It can be executed multiple times with different paths to index multiple AIP
 storage locations.
 
+.. _aip-indexes-api:
+
+**Rebuild AIP indexes using Storage Service API**
+
+This command uses the Storage Service API to determine which stored AIPs and
+AICs need to be reindexed (based on status and origin pipeline), and then
+reindexes those AIPs and AICs from temporarily downloaded copies of their
+METS files. This approach enables reindexing of AIPs/AICs stored in encrypted
+and some remote storage locations. However, this command must be run on the
+same system that Archivematica is installed on, since it uses code from the
+Archivematica codebase.
+
+By default, the script will reindex every AIP and AIC in the Storage Service
+that has an origin pipeline that matches where the script is run from, and a
+status other than "DELETED".
+
+.. code:: bash
+
+    sudo -u archivematica bash -c " \
+        set -a -e -x
+        source /etc/default/archivematica-dashboard || \
+            source /etc/sysconfig/archivematica-dashboard \
+                || (echo 'Environment file not found'; exit 1)
+        cd /usr/share/archivematica/dashboard
+        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+            manage.py rebuild_aip_index_from_storage_service --delete-all
+    ";
+
+The command accepts the following parameters:
+
+* ``--pipeline`` may be passed optionally to reindex packages from a different
+  pipeline than the current dashboard.
+* ``-u`` or ``--uuid`` may be passed optionally to only reindex the AIP that has
+  the matching UUID.
+* ``--delete`` will delete any data found in Elasticsearch with a matching
+  UUID before re-indexing. This is useful if only some AIPs are missing from
+  the index, since AIPs that already exist will not have their information
+  duplicated.
+* ``--delete-all`` will delete the entire AIP Elasticsearch index before
+  starting. This is useful if there are AIPs indexed that have been deleted,
+  or if you would like to delete the 'aips' and 'aipfiles' indices entirely
+  and recreate them using the most recent version of the Elasticsearch
+  mappings.
+
 .. _transfer-indexes:
 
-**Transfer indexes**
+**Rebuild Transfer indexes**
 
 To regenerate the Transfers indexes, apart from access to the storage location,
 the command checks the transfer and transfer files existence in the Dashboard
@@ -122,10 +168,14 @@ mappings and populated with the Transfers from the location. Execution example:
 
 The command accepts the following parameters:
 
-* `--transfer-backlog-dir [storage_location_path]`: Path where the Transfer
+* ``--transfer-backlog-dir`` [storage_location_path]: Path where the Transfer
   Backlog storage location is located in the local filesystem. *Default:*
   `/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`.
-* `--no-prompt`: Do not ask for confirmation.
+* ``--no-prompt``: Do not ask for confirmation.
+* ``--from-storage-service``: Uses the Storage Service API to determine which
+  stored transfers need to be re-indexed. Temporarily downloads a copy of each
+  transfer via the API for indexing. This enables reindexing of packages stored
+  in encrypted locations as well as some remote locations.
 
 .. _elasticsearch-external:
 
@@ -164,8 +214,8 @@ Data to back up from an Archivematica instance:
 #. Pointer files (in the Storage Service internal processing location; the
    default location is ``/var/archivematica/storage_service``)
 #. AM config in ``/etc/archivematica``
-#. Processing configurations (in 
-   ``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``) 
+#. Processing configurations (in
+   ``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``)
 
 
 If doing an update or migration of Archivematica to a new server, the following
@@ -179,7 +229,7 @@ If your instance uses automation-tools, that should also be backed up:
 
 #. Source code (``/opt/archivematica/automation-tools``)
 #. Scripts (normally in ``/etc/archivematica/automation-tools``)
-#. Crontab entries for automation-tools 
+#. Crontab entries for automation-tools
 #. Automation database (normally in ``/var/archivematica/automation-tools/``)
 #. Any other helper scripts source and databases
 
@@ -250,7 +300,7 @@ Add this line to the ``/etc/elasticsearch/elasticsearch.yml`` file:
 
   path.repo: /var/lib/elasticsearch/backup-repo
 
-Restart elasticsearch: 
+Restart elasticsearch:
 
 .. code:: bash
 
@@ -355,7 +405,7 @@ processing lots of very large files, particularly if working with normalization,
 this will cause the disk to fill up and cause the system to malfunction.
 
 When the disk on an Archivematica instance is full, a number of steps need to be
-taken to recover. 
+taken to recover.
 
 **Recovery protocol**
 
