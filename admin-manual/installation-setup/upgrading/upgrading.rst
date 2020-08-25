@@ -12,23 +12,29 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
+* :ref:`Update search indices <update-search-indices>`
 
 .. note::
 
    While it is possible to upgrade a GitHub-based source install using ansible,
    these instructions do not cover that scenario.
 
+
 .. _completed-transfers:
 
 Clean up completed transfers watched directory
 ----------------------------------------------
 
-Upgrading from Archivematica 1.10.x or older to Archivematica 1.11.x can result
-in a number of completed transfers appearing as failed in the Archivematica
-dashboard, as well as corresponding failure notification emails being sent.
-These are not actual failures, but are unintentional side effects of changes
-made in Archivematica 1.11 to the workflow and to how metadata files are stored
-and copied into the SIP.
+.. note::
+
+   Ignore this section if you upgrading from Archivematica 1.11.
+
+Upgrading from Archivematica 1.10.x or older to Archivematica |release| can
+result in a number of completed transfers appearing as failed in the
+Archivematica dashboard, as well as corresponding failure notification emails
+being sent. These are not actual failures, but are unintentional side effects
+of changes made in Archivematica 1.11 to the workflow and to how metadata files
+are stored and copied into the SIP.
 
 To prevent these failures from occuring during an upgrade from Archivematica
 1.10 or earlier:
@@ -392,6 +398,112 @@ installation instructions for your deployment method for more details on how to
 set environment variables and restart Archivematica processes.
 
 :ref:`Back to the top <upgrade>`
+
+
+.. _update-search-indices:
+
+Update search indices
+---------------------
+
+.. note::
+
+   Ignore this section if you are planning to run Archivematica without search
+   indices.
+
+Archivematica |release| introduces new fields to the search indices and makes
+some changes to text field types in the Elasticsearch index mappings. To ensure
+that sorting works as expected on columns in the Backlog and Archival Storage
+tabs, it is necessary to update the search indices as the final step of the
+upgrade to Archivematica |release|.
+
+This can be accomplished one of two ways. Minimally, you can
+:ref:`update the Elasticsearch mappings <update-mappings>`. This will ensure
+that sorting works correctly on existing data, but will not populate the new
+fields introduced in Archivematica |release| for transfers and AIPs created
+prior to the upgrade. To fully populate all of the fields available in
+Archivematica 1.12, you'll need to
+:ref:`recreate the indices <recreate-indices>`.
+
+.. _update-mappings:
+
+Update the Elasticsearch mappings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Using this method, the index mappings will be modified in place. This will
+allow you to make the necessary updates quickly and without requiring a full
+reindex.
+
+To perform the update, run the `update_elasticsearch_mappings` management task:
+
+Execution example:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py update_elasticsearch_mappings
+   ";
+
+.. note::
+   Please note, this task will not populate the new fields in introduced in
+   Archivematica |release| for transfers and AIPs created prior to the upgrade.
+   If that is required, you may want to use the
+   :ref:`Recreate the indices <recreate-indices>` approach instead.
+
+.. _recreate-indices:
+
+Recreate the indices
+^^^^^^^^^^^^^^^^^^^^
+
+This method will allow you to delete and rebuild the existing Elasticsearch
+indices so that all the Backlog and Archival Storage column fields are fully
+populated, including for transfers and AIPs ingested prior to the upgrade to
+Archivematica |release|. Run the commands described in
+:ref:`Rebuild the indexes <elasticsearch-indexes>` to fully delete and rebuild
+the indices.
+
+Execution example:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py rebuild_transfer_backlog --from-storage-service --no-prompt
+   ";
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py rebuild_aip_index_from_storage_service --delete-all
+   ";
+
+.. note::
+   Please note, the use of encrypted or remote Transfer Backlog and AIP Store
+   locations may require use of the option to rebuild indices from the Storage
+   Service API rather than from the filesystem. At this time, it is not
+   possible to rebuild the indices for all types of remote locations.
+
+.. note::
+   Please note, the execution of this command may take a long time for big
+   AIP and Transfer Backlog storage locations, especially if the packages are
+   stored compressed or encrypted, or you are using a third party service. If
+   that is the case, you may want to consider using the
+   :ref:`Update the Elasticsearch mappings <update-mappings>` approach instead.
+
 
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
 .. _`visit our Wiki`: https://wiki.archivematica.org/Update_ElasticSearch
