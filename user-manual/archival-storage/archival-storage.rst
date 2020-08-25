@@ -113,7 +113,7 @@ Click on the **Download CSV** link at the top right of the **Browse archival sto
    :width: 80%
    :alt: Download all AIP metadata using CSV download
 
-You will be prompted for a place to store the CSV file. The CSV data will include values for all the columns, regardless of which ones are currently selected. It will also include the metadata for each AIP in archival storage, regardless of which ten are currently being displayed on the Archival Storage tab.
+You will be prompted for a place to store the CSV file. The CSV data will include values for all the columns, regardless of which ones are currently selected. It will also include the metadata for each AIP in archival storage, regardless of which ones are currently being displayed on the Archival Storage tab.
 
 
 .. _search-aip:
