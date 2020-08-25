@@ -104,7 +104,7 @@ Note also that the **AIP** column cells include a hyperlink to the AIP informati
 
 Downloading all AIP metadata in a CSV file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-All the values displayed in all of the columns available on the Browse Archival Storage tab can be downloaded to a CSV file. This CSV file can be used for more detailed analysis and filtering of AIP information, beyond the Search capabilities described below. The CSV data can also be used as input to a reporting or charting tool.
+All the values displayed in all of the columns available on the Browse Archival Storage tab can be downloaded to a CSV (Comma Separated Values) file. This CSV file can be used for more detailed analysis and filtering of AIP information, beyond the Search capabilities described below. The CSV data can also be used as input to a reporting or charting tool.
 
 Click on the **Download CSV** link at the top right of the **Browse archival storage** table.
 
