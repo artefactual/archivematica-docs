@@ -23,6 +23,7 @@ installation.
   * :ref:`Error stack trace <stack-trace>`
   * :ref:`Resolve hanging decisions <hanging-decisions>`
   * :ref:`Transfer won't start <transfer-wont-start>`
+  * :ref:`How to clear user sessions <clear-user-sessions>`
 
 
 .. _elasticsearch:
@@ -732,6 +733,33 @@ and investigate if this happens.
 
   Note that on some installations, ``gearmand`` may be called
   ``gearman-job-server``.
+
+.. _clear-user-sessions:
+
+How to clear user sessions
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Administrators should use the Django ``clearsessions`` command to purge expired
+sessions perodically, e.g. via a cron job. This is how it is executed:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py clearsessions \
+   ";
+
+You can also clear active sessions by emptying the ``django_session`` table in
+the Archivematica database, e.g.::
+
+    mysql -hHOSTNAME -uUSERNAME -e "DELETE FROM MCP.django_session"
+
+Clearing up active sessions forcibly logs out all users.
 
 :ref:`Back to the top <maintenance>`
 
