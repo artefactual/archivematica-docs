@@ -754,6 +754,22 @@ sessions perodically, e.g. via a cron job. This is how it is executed:
            manage.py clearsessions \
    ";
 
+When using CAS authentication, it is additionally recommended to clear expired
+CAS sessions with``./manage.py django_cas_ng_clean_sessions`` immediately
+after running ``clearsessions``. This is how it is executed:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+           manage.py django_cas_ng_clean_sessions \
+   ";
+
 You can also clear active sessions by emptying the ``django_session`` table in
 the Archivematica database, e.g.::
 
