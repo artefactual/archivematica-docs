@@ -8,15 +8,14 @@ The Archival Storage tab consists of a table showing all of the stored Archival
 Information Packages (AIPs) for the Archivematica instance. There is a search
 interface at the top of the page where you can construct simple or boolean
 queries to find AIPs or individual items in storage. At the top of the table is
-the total size of the stored AIPs and the number of indexed files. The table
-lists the AIP's name, size, UUID, date that the AIP was stored, status, and
-whether or not the AIP is encrypted. Use the up and down arrows in the column
-headers to sort by AIP name, size, or date stored.
+the total size of the stored AIPs and the number of indexed files. By default, 
+the table lists the AIP's name, UUID, size on disk, date that the AIP was
+created, it's status, and whether or not the AIP is encrypted.
 
 .. image:: images/archival-storage-tab.*
    :align: center
-   :width: 60%
-   :alt: The Archival Storage tab showing a table of five AIPs that have been stored.
+   :width: 80%
+   :alt: The Archival Storage tab showing stored AIPs
 
 From the Archival Storage tab, you can select an individual AIP and download it,
 delete it, or initiate :ref:`AIP re-ingest <reingest>`.
@@ -27,6 +26,10 @@ accessing stored DIPs, see the :ref:`Storage Service <storageservice:index>`
 documentation.
 
 *On this page*
+
+* :ref:`Browsing the AIP store <browse-aip>`
+
+  * :ref:`Downloading all AIP metadata in a CSV file <csv-download>`
 
 * :ref:`Searching the AIP store <search-aip>`
 
@@ -48,6 +51,92 @@ documentation.
    If you are running :ref:`Archivematica without Elasticsearch
    <install-elasticsearch>` or with limited Elasticsearch functionality, the
    Archival Storage tab may not appear in your dashboard.
+
+.. _browse-aip:
+
+Browsing the AIP store
+-----------------------
+
+At the bottom of the Browse Archival Storage table is the **Select columns** 
+icon. Click on it to select which columns will be visible in the Archival
+Storage table. The blue row indicates that a column is currently visible.
+A white row indicates that the column is currently not visible.
+
+.. image:: images/archival-storage-select-columns.*
+   :align: center
+   :width: 80%
+   :alt: The Select Columns options on the Archival Storage tab
+
+Click on a blue or white row to toggle this value for each column. In the 
+example below, all the available columns are selected. Note that your column
+selection choices will persist between your user sessions and apply to other
+users of the same Archivematica pipeline.
+
+.. image:: images/archival-storage-all-columns.*
+   :align: center
+   :width: 80%
+   :alt: The Archival Storage tab with all columns selected
+
+You can click on the column headers to sort in ascending or descending order. 
+An up or down caret (arrow point) will appear. (e.g. see **File count** below).
+
+.. image:: images/archival-storage-sorted-column.*
+   :align: center
+   :width: 80%
+   :alt: The Archival Storage tab sorted on File Count
+
+When you enable the **Show files?** option at the top of the screen, all of the
+files contained in Archival Storage AIPs are listed in the Browse archival
+storage table.
+
+.. image:: images/archival-storage-show-files.*
+   :align: center
+   :width: 80%
+   :alt: The Archival Storage tab with Show Files selected
+
+The **Select columns** option is also available on the **Show files?** table.
+
+.. image:: images/archival-storage-show-files-columns.*
+   :align: center
+   :width: 80%
+   :alt: Selecting columns for the Show Files view
+
+Column sorting is also available in the **Show files?** table (e.g. see **AIP** 
+column below).
+
+.. image:: images/archival-storage-show-files-sort.*
+   :align: center
+   :width: 80%
+   :alt: Sorting Show Files view by AIP column
+
+Note also that the **AIP** column cells include a hyperlink to the AIP
+information page (e.g. "transfer1"). From that page it is possible to select an
+individual AIP and download it, delete it, or initiate AIP re-ingest.
+
+.. _csv-download:
+
+Downloading all AIP metadata in a CSV file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All the values displayed in all of the columns available on the Browse Archival
+Storage tab can be downloaded to a CSV (Comma Separated Values) file. This CSV
+file can be used for more detailed analysis and filtering of AIP information, 
+beyond the Search capabilities described below. The CSV data can also be used as
+input to a reporting or charting tool.
+
+Click on the **Download CSV** link at the top right of the **Browse archival
+storage** table.
+
+.. image:: images/archival-storage-csv-download.*
+   :align: center
+   :width: 80%
+   :alt: Download all AIP metadata using CSV download
+
+You will be prompted for a place to store the CSV file. The CSV data will
+include values for all the columns, regardless of which ones are currently
+selected. It will also include the metadata for each AIP in archival storage, 
+regardless of which ones are currently being displayed on the Archival Storage
+tab.
+
 
 .. _search-aip:
 
@@ -85,11 +174,11 @@ limit your search using one or more of the search parameters:
 You can also define your search string as a keyword, phrase, or date range:
 
 * **Keyword**: by default, the Keyword option treats the search string as a
-  Boolean OR search - that is, every word is treated as a separate value connected by OR
-  operators. For example, searching for ``2015-Annual-Report`` actually searches
-  for "2015 OR Annual OR Report", so the results contain anything named with
-  "2015" or "Annual" or "Report". To search for a specific strings, add quotation marks
-  around the string - ``"2015-Annual-Report"``.
+  Boolean OR search - that is, every word is treated as a separate value
+  connected by OR operators. For example, searching for ``2015-Annual-Report``
+  actually searches for "2015 OR Annual OR Report", so the results contain 
+  anything named with "2015" or "Annual" or "Report". To search for a specific
+  strings, add quotation marks around the string - ``"2015-Annual-Report"``.
 * **Phrase**: the Phrase option allows for more flexibility while searching. You
   can use the Phrase option to perform fuzzy searches, such as ``council*`` to
   find AIPs named ``council-minutes``, ``councilminutes``, and
@@ -121,7 +210,8 @@ Conducting a search
 .. image:: images/search-archival-storage.*
   :align: center
   :width: 80%
-  :alt: The Archival Storage tab showing the results for a specific AIP UUID and the .png file extension. There is one result.
+  :alt: The Archival Storage tab showing the results for a specific AIP UUID
+        and the .png file extension. There is one result.
 
 By clicking on **View raw** next to a search result, you can also view the raw
 JSON stream that has been indexed for searching. The JSON contains the METS
@@ -299,7 +389,8 @@ broken down into a manageable 4-character chunk, or "UUID quad".
 .. image:: images/AIP-quad-directories.*
    :align: center
    :width: 80%
-   :alt: Screenshot of a file browser showing the AIP quad directories, with the lowest-level directory open to show the AIP package.
+   :alt: Screenshot of a file browser showing the AIP quad directories, with
+         the lowest-level directory open to show the AIP package.
 
 Each quad represents a directory. The first four characters (the first UUID
 quad) of the AIP UUID are used as the name of the main subdirectory in the AIP
