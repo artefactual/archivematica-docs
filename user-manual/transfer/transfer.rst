@@ -82,6 +82,12 @@ checkbox.
 * **Start transfer**: Once you have given your transfer a name and selected
   material from the transfer browser, the Start transfer button kicks off the
   transfer microservices.
+* **Processing configuration**: On the far right of the green **Start Transfer**
+  button is a downward arrow. When clicked, it presents a drop-down menu from
+  which you can choose which processing configuration profile will be used for
+  the transfer. See :ref:`Choose a processing configuration <processing-config>`
+  for more information. If you ignore this dropdown, the default processing
+  configuration will be used.
 * **Approve automatically**: If this box is unchecked, Archivematica will pause
   at the first microservice, *Approve transfer*, and give you a chance to
   confirm that your transfer has been set up properly. If the box is checked,
@@ -532,13 +538,59 @@ Start a transfer
    file, if you are transferring a Zipped Bag) so that it is highlighted and
    click **Add**. To close the browser, click on **Browse** again.
 
-   .. image:: images/browse-and-add.*
+   .. image:: images/transfer-browser.*
       :align: center
       :width: 80%
       :alt: A folder called "Images" has been selected
 
-#. Once you are happy with your transfer preparation, click the **Start
-   transfer** button.
+.. _processing-config:
+
+Choose a processing configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Once you've clicked the **Add** button the **Start transfer** button becomes
+   active.
+
+#. On the far right of the green **Start Transfer** button is a downward arrow.
+   When clicked, it presents a drop-down menu from which you can choose which
+   processing configuration profile will be used for the transfer.
+
+   These profiles are defined on Archivematica's Administration tab. They allow
+   users to configure the job decision points presented by Archivematica during
+   Transfer and Ingest (e.g. whether to generate thumbnails, which AIP storage
+   location to use, etc.). See :ref:`Processing configuration <process-config>`
+   in the Administrator's manual for more information.
+
+#. If you define a new processing configuration profile in the Administration
+   tab, it will be presented as an option in the **Start Transfer** dropdown
+   (e.g. "my_custom_config").
+
+   .. image:: images/choose-processing-config.*
+      :align: center
+      :width: 80%
+      :alt: Choosing a processing configuration
+
+#. If you would like to use this processing configuration profile for your
+   transfer, select it from the drop-down menu and press the **Start Transfer**
+   button.
+
+#. You will be notified by Archivematica that your transfer has started and the
+   processing configuration profile that it is going to use for the decision
+   points encountered during Transfer and Ingest.
+
+   .. image:: images/processing-config-notification.*
+      :align: center
+      :width: 80%
+      :alt: Processing configuration notification
+
+#. If you ignore the drop-down menu and just press the **Start Transfer** menu
+   then the "default" processing configuration will be used.
+
+.. note::
+
+    If you choose to include a **proccessingMCP.xml** file in the root
+    directory of your transfer, its decision points will take precedence
+    over the configuration profile chosen with the **Start Transfer** button.
 
 .. _transfer-tab-microservices:
 
