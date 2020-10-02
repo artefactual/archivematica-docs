@@ -755,7 +755,7 @@ sessions perodically, e.g. via a cron job. This is how it is executed:
    ";
 
 When using CAS authentication, it is additionally recommended to clear expired
-CAS sessions with``./manage.py django_cas_ng_clean_sessions`` immediately
+CAS sessions with ``./manage.py django_cas_ng_clean_sessions`` immediately
 after running ``clearsessions``. This is how it is executed:
 
 .. code:: bash

@@ -272,6 +272,21 @@ CAS backend configuration in Archivematica Dashboard
 
 #. Restart the Archivematica Dashboard.
 
+#. Apply the database migrations with:
+
+   .. code:: bash
+
+    sudo -u archivematica bash -c " \
+        set -a -e -x
+        source /etc/default/archivematica-dashboard || \
+            source /etc/sysconfig/archivematica-dashboard \
+                || (echo 'Environment file not found'; exit 1)
+        cd /usr/share/archivematica/dashboard
+        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+            manage.py migrate \
+    ";
+
+
 CAS backend configuration in Storage Service
 ++++++++++++++++++++++++++++++++++++++++++++
 
@@ -282,6 +297,20 @@ CAS backend configuration in Storage Service
 #. Customize the ``base.py`` settings module as needed.
 
 #. Restart the Storage Service.
+
+#. Apply the database migrations with:
+
+   .. code:: bash
+
+    sudo -u archivematica bash -c " \
+        set -a -e -x
+        source /etc/default/archivematica-storage-service || \
+            source /etc/sysconfig/archivematica-storage-service \
+                || (echo 'Environment file not found'; exit 1)
+        cd /usr/lib/archivematica/storage-service
+        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python \
+            manage.py migrate
+    ";
 
 .. _ca-root-certificates:
 
