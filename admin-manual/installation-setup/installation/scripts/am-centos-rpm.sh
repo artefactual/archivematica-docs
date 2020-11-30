@@ -95,7 +95,7 @@ sudo -u archivematica bash -c " \
 set -a -e -x
 source /etc/sysconfig/archivematica-dashboard
 cd /usr/share/archivematica/dashboard
-/usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate
+/usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py migrate
 ";
 
 sudo -u root systemctl enable archivematica-mcp-server
