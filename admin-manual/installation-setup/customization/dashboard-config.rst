@@ -672,7 +672,7 @@ command-line, issue the following commands:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py createsuperuser
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py createsuperuser
    ";
 
 CLI password resetting
@@ -689,7 +689,7 @@ user, you can change it via the command-line:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py changepassword <username>
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py changepassword <username>
    ";
 
 CLI configuration pipeline and registration on the Storage Service

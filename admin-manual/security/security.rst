@@ -282,7 +282,7 @@ CAS backend configuration in Archivematica Dashboard
             source /etc/sysconfig/archivematica-dashboard \
                 || (echo 'Environment file not found'; exit 1)
         cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+        /usr/share/archivematica/virtualenvs/archivematica/bin/python \
             manage.py migrate \
     ";
 
@@ -324,15 +324,11 @@ CAs sets:
 Upgrade the ``certifi`` package frequently
 ==========================================
 
-There are three virtual environments where Requests is used: MCPClient,
-Dashboard and Storage Service. This is how you can update ``certifi`` across
-the three environments:
+This is how you can update ``certifi`` inside the virtual environment:
 
 .. code:: bash
 
-   $ sudo /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/pip install -U certifi
-   $ sudo /usr/share/archivematica/virtualenvs/archivematica-mcp-client/bin/pip install -U certifi
-   $ sudo /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/pip install -U certifi
+   $ sudo /usr/share/archivematica/virtualenvs/archivematica/bin/pip install -U certifi
 
 The services need to be restarted after the update, for example if you are
 using systemd:

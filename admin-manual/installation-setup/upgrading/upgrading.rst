@@ -221,7 +221,7 @@ Upgrade on CentOS/Red Hat packages
               source /etc/sysconfig/archivematica-dashboard \
                   || (echo 'Environment file not found'; exit 1)
           cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python manage.py migrate --noinput
+          /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py migrate --noinput
       ";
 
       sudo -u archivematica bash -c " \
@@ -445,7 +445,7 @@ Execution example:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py update_elasticsearch_mappings
    ";
 
@@ -477,7 +477,7 @@ Execution example:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py rebuild_transfer_backlog --from-storage-service --no-prompt
    ";
 
@@ -487,7 +487,7 @@ Execution example:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py rebuild_aip_index_from_storage_service --delete-all
    ";
 

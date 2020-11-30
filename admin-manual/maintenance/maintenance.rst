@@ -80,7 +80,7 @@ the path of the AIP storage location you confirmed above.
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py rebuild_elasticsearch_aip_index_from_files \
                /var/archivematica/sharedDirectory/www/AIPsStoree --delete-all
    ";
@@ -122,7 +122,7 @@ status other than "DELETED".
             source /etc/sysconfig/archivematica-dashboard \
                 || (echo 'Environment file not found'; exit 1)
         cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+        /usr/share/archivematica/virtualenvs/archivematica/bin/python \
             manage.py rebuild_aip_index_from_storage_service --delete-all
     ";
 
@@ -163,7 +163,7 @@ mappings and populated with the Transfers from the location. Execution example:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py rebuild_transfer_backlog
    ";
 
@@ -750,7 +750,7 @@ sessions perodically, e.g. via a cron job. This is how it is executed:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py clearsessions \
    ";
 
@@ -766,7 +766,7 @@ after running ``clearsessions``. This is how it is executed:
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
        cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
            manage.py django_cas_ng_clean_sessions \
    ";
 
