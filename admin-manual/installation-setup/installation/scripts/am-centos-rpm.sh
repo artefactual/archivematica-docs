@@ -28,9 +28,9 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=https://packages.archivematica.org/1.12.x/centos
+baseurl=https://packages.archivematica.org/1.13.x/centos
 gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.12.x/key.asc
+gpgkey=https://packages.archivematica.org/1.13.x/key.asc
 enabled=1
 EOF'
 
