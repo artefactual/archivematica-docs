@@ -10,6 +10,7 @@ Archivematica documentation
    /getting-started/index
    /user-manual/index
    /admin-manual/index
+   /dev-manual/index
 
 .. _getting-started-home:
 
@@ -312,3 +313,16 @@ Security
 * :ref:`OIDC setup <oidc-setup>`
 * :ref:`CAS setup <cas-setup>`
 * :ref:`CA certificates <ca-root-certificates>`
+
+.. _dev-manual-home:
+
+Developer manual
+================
+
+Guidelines for developers interested in customizing Archivematica,
+developing new modules, and working with the application’s API.
+
+* :ref:`API overview <api-overview>`
+* :ref:`Archivematica API reference <api-reference-archivematica>`
+* :ref:`Storage Service API reference <api-reference-storage-service>`
+* :ref:`Development environment <development-environment>`
