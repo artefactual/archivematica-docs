@@ -1,0 +1,29 @@
+[
+    {
+        "bfbc21c2-1e3b-11ea-887c-fa163e461c4e": "Collection"
+    },
+    {
+        "bfbc21c3-1e3b-11ea-887c-fa163e461c4e": "File"
+    },
+    {
+        "bfbc21c4-1e3b-11ea-887c-fa163e461c4e": "Fonds"
+    },
+    {
+        "bfbc21c5-1e3b-11ea-887c-fa163e461c4e": "Item"
+    },
+    {
+        "bfbc21c6-1e3b-11ea-887c-fa163e461c4e": "Part"
+    },
+    {
+        "bfbc21c7-1e3b-11ea-887c-fa163e461c4e": "Record group"
+    },
+    {
+        "bfbc21c8-1e3b-11ea-887c-fa163e461c4e": "Series"
+    },
+    {
+        "bfbc21c9-1e3b-11ea-887c-fa163e461c4e": "Sous-fonds"
+    },
+    {
+        "bfbc21ca-1e3b-11ea-887c-fa163e461c4e": "Subseries"
+    }
+]

@@ -1,0 +1,12 @@
+{
+    "status": "COMPLETE",
+    "name": "ab",
+    "microservice": "Check transfer directory for objects",
+    "directory": "ab-89fd478d-c896-461a-baec-5d1faf661020",
+    "path": "/var/archivematica/sharedDirectory/watchedDirectories/SIPCreation/
+    completedTransfers/ab-89fd478d-c896-461a-baec-5d1faf661020/",
+    "message": "Fetched status for 89fd478d-c896-461a-baec-5d1faf661020
+    successfully.",
+    "type": "transfer",
+    "uuid": "89fd478d-c896-461a-baec-5d1faf661020"
+}

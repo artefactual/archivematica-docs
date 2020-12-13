@@ -1,0 +1,11 @@
+curl -X GET \
+  http://mytestinstance.archivematica.net/api/administration/dips/atom/fetch_levels/ \
+  -H 'Accept: */*' \
+  -H 'Authorization: ApiKey admin:oohah5chashie8OwEih6udie4shoolal' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: mytestinstance.archivematica.net' \
+  -H 'Postman-Token: a6a5e394-ff95-46ff-9aca-233386024f20,e40e9ab1-3cb0-4de4-8da8-c6aeea862ea0' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache'

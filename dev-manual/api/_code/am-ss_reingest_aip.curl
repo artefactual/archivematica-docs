@@ -1,0 +1,10 @@
+curl -X POST \
+  http://127.0.0.1:8000/api/v2/file/868a7ecd-c31b-4773-ad6d-d736a35b8a6e/
+  reingest/ \
+  -H 'Authorization: ApiKey analyst:ow7ioGh2reephua8uPaiWee4EiHeev6u' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: 127.0.0.1:8000' \
+  -d '{
+    "pipeline":"85f9db99-b187-47c3-9b5b-fa35470104c4",
+    "reingest_type":"FULL"
+    }'

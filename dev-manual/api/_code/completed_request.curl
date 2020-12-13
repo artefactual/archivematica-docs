@@ -1,0 +1,5 @@
+curl -X GET \
+  http://test.archivematica.org/api/transfer/completed/ \
+  -H 'Accept: */*' \
+  -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]' \
+  

@@ -1,0 +1,11 @@
+curl -X GET \
+  http://mytestinstance.archivematica.net/api/v2beta/task/93c70e84-fe97-4f31-bae0-8aaf7d1e6c6b/ \
+  -H 'Accept: */*' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: mytestinstance.archivematica.net' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'authorization: ApiKey test:oohah5chashie8OwEih6udie4choo3la' \
+  -H 'cookie: csrftoken=sb52U8S35EpdB2T1K4lWXFl5jNnOrXrA' \
+  -b csrftoken=sb52U8S35EpdB2T1K4lWXFl5jNnOrXrA

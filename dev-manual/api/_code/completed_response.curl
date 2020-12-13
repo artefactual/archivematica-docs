@@ -1,0 +1,17 @@
+{
+    "message": "Fetched completed transfers successfully.",
+    "results": [
+        "02ce3b9a-0704-4408-b0c0-2eb74a9f6652",
+        "1557c65e-7e97-42a5-8e11-3d170d7ce435",
+        "6db73922-0cc8-422d-81a6-b0b9bc0ff5f6",
+        "72f7260e-a0aa-42cf-9e4c-fbb00c60d763",
+        "89fd478d-c896-461a-baec-5d1faf661020",
+        "8d961dac-8114-4c74-97e5-58264e34913f",
+        "a58a60b3-9936-4233-b449-ab3620f4cf05",
+        "b9af0b93-734d-41ca-a02d-024d17600d0b",
+        "ce1c8af6-8395-46fb-a81d-6e08b50a58ee",
+        "d2088fc6-7506-4012-ba0e-4f19880a1bfb",
+        "e6efb7fb-eb27-4def-963e-31dfc2d55d61",
+        "f4e12ba4-d2e2-4a4a-973c-7babd1da0cc4"
+    ]
+}

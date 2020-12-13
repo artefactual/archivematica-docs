@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "limit": 20,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total_count": 1
+    },
+    "objects": [
+        {
+            "description": "Archivematica on Test-machine",
+            "remote_name": "127.0.0.1",
+            "resource_uri": "/api/v2/pipeline/a64e061a-5688-49b5-95c1-0b6885c40c04/",
+            "uuid": "a64e061a-5688-49b5-95c1-0b6885c40c04"
+        }
+    ]
+}

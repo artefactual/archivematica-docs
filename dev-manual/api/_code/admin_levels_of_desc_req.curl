@@ -1,0 +1,8 @@
+  curl -X GET \
+  http://mytestinstance.archivematica.net/api/administration/dips/atom/levels/ \
+  -H 'Accept: */*' \
+  -H 'Authorization: ApiKey admin:oohah5chashie8Olkjhl998' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: mytestinstance.archivematica.net'
+ 

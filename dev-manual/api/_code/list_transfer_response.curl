@@ -1,0 +1,15 @@
+{
+    "message": "Fetched unapproved transfers successfully.",
+    "results": [
+        {
+            "directory": "mc-api-test-1",
+            "type": "standard",
+            "uuid": "f1bc64b5-5697-47fc-b3f3-ac92a1d1ebbb"
+        },
+        {
+            "directory": "mc-api-test-2",
+            "type": "standard",
+            "uuid": "3ed192dc-8fa4-4698-ab03-00688a4a2553"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+HTTP/1.1 200
+status: 200
+Server: nginx/1.12.2
+Date: Thu, 15 Aug 2019 06:37:41 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Language, Cookie
+Content-Language: en
+
+{
+    "path": "/var/archivematica/sharedDirectory/watchedDirectories/
+    activeTransfers/standardTransfer/mc_api_transfer_1/",
+    "message": "Copy successful."
+}
