@@ -1,0 +1,4 @@
+curl --location --request GET 'http://test-machine.archivematica.net:8000/
+api/v2/space/218caeb7-fd59-4b7b-99b1-f5771a2dd34f/' \
+--header 'Authorization: ApiKey test-user:ow7ioGh2reephua8uPaiWee6EiHeev9u' \
+--header 'Cookie: csrftoken=sb52U8S35EpdB2T1K4lWXFl5jNnOrXrA'

@@ -1,0 +1,10 @@
+  curl -X GET \
+  'http://mytestinstance.archivematica.net/api/v2beta/jobs/a06ac9b9-0d67-420a-befb-80ea9a562190/?name=Store%20the%20AIP&microservice=Store%20AIP&link uuid=a06ac9b9-0d67-420a-befb-80ea9a562190&link%20uuid=a06ac9b9-0d67-420a-befb-80ea9a562190' \
+  -H 'Accept: */*' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: mytestinstance.archivematica.net' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'authorization: ApiKey analyst:oohah5chashie8OwEih6udie4choo3la' \
+  -H 'cookie: csrftoken=sb52U8S35EpdB2T1K4lWXFl5jNnOrXrA' \
+  -b csrftoken=sb52U8S35EpdB2T1K4lWXFl5jNnOrXrA

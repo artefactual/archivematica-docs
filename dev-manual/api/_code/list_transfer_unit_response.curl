@@ -1,0 +1,15 @@
+[
+    {
+        "status": "COMPLETE",
+        "tasks": [
+            {
+                "uuid": "e37fcdc5-bac9-4790-8df1-bfcc6f7ec18a",
+                "exit_code": 0
+            }
+        ],
+        "uuid": "3e9e152c-340b-4f4d-9172-b1d29a655eae",
+        "link_uuid": "20515483-25ed-4133-b23e-5bb14cab8e22",
+        "microservice": "Store AIP",
+        "name": "Store the AIP"
+    }
+]

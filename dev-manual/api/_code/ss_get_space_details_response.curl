@@ -1,0 +1,12 @@
+{
+    "access_protocol": "FS",
+    "id": 1,
+    "last_verified": null,
+    "path": "/",
+    "resource_uri": "/api/v2/space/218caeb7-fd59-4b7b-99b1-f5771a2dd34f/",
+    "size": null,
+    "space": "218caeb7-fd59-4b7b-99b1-f5771a2dd34f",
+    "used": "186549173",
+    "uuid": "218caeb7-fd59-4b7b-99b1-f5771a2dd34f",
+    "verified": false
+}

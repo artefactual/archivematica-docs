@@ -1,0 +1,8 @@
+curl -X GET \
+  http://mytestinstance.archivematica.net/api/transfer/completed/ \
+  -H 'Accept: */*' \
+  -H 'Authorization: ApiKey analyst:oui87nnmv' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: mytestinstance.archivematica.net' \
+  -H 'cache-control: no-cache'

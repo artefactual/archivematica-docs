@@ -1,0 +1,8 @@
+{
+    "error": false,
+    "message": "Package 868a7ecd-c31b-4773-ad6d-d736a35b8a6e sent to pipeline 
+    Archivematica on test-vm (85f9db99-b187-47c3-9b5b-abc123) 
+    for re-ingest",
+    "reingest_uuid": "affa2d71-3fdb-423f-8fe2-91c8d5ecc324",
+    "status_code": 202
+}

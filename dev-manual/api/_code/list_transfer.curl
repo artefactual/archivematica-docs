@@ -1,0 +1,4 @@
+  curl -X GET \
+  http://my_archivematica_instance.archivematica.org/api/transfer/unapproved/ \
+  -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]' \
+  -H 'Content-Type: application/x-www-form-urlencoded'
