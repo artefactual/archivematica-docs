@@ -410,50 +410,81 @@ Update search indices
    Ignore this section if you are planning to run Archivematica without search
    indices.
 
-Archivematica |release| introduces new fields to the search indices and makes
-some changes to text field types in the Elasticsearch index mappings. To ensure
-that sorting works as expected on columns in the Backlog and Archival Storage
-tabs, it is necessary to update the search indices as the final step of the
-upgrade to Archivematica |release|.
+Archivematica releases may introduce changes that require updating the search
+indices to function properly, e.g. Archivematica v1.12.0 introduced new fields
+to the search indices and made some changes to text field types. Please keep an
+eye on our `release notes`_ before you start the upgrade.
 
-This can be accomplished one of two ways. Minimally, you can
-:ref:`update the Elasticsearch mappings <update-mappings>`. This will ensure
-that sorting works correctly on existing data, but will not populate the new
-fields introduced in Archivematica |release| for transfers and AIPs created
-prior to the upgrade. To fully populate all of the fields available in
-Archivematica 1.12, you'll need to
-:ref:`recreate the indices <recreate-indices>`.
+The update can be accomplished one of two ways. Preferably, you can
+:ref:`reindex the documents <reindex-documents>` which is usually faster because
+the same documents that you already have indexed will be re-ingested. We would
+love to know if this is not working for you, but when that's the case, it is
+possible to :ref:`recreate the indices <recreate-indices>` which will take much
+longer to complete because it accesses the original data, e.g. your AIPs.
 
-.. _update-mappings:
+.. _reindex-documents:
 
-Update the Elasticsearch mappings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Reindex the documents
+^^^^^^^^^^^^^^^^^^^^^
 
-Using this method, the index mappings will be modified in place. This will
-allow you to make the necessary updates quickly and without requiring a full
-reindex.
+In Elasticsearch, it is possible to add new fields to search indices but it is
+not possible to update existing ones. The recommended strategy is to create new
+indices with our desired mapping and reindex our documents. This is based on the
+`Reindex API`_.
 
-To perform the update, run the `update_elasticsearch_mappings` management task:
+.. warning::
+   Before you continue, we recommend backing up your Elasticsearch data. Please
+   read the official docs for instructions.
 
-Execution example:
+Assuming that your Elasticsearch cluster is available via ``127.0.0.1:9200``,
+this is how we can list existing indices:
 
 .. code:: bash
 
-   sudo -u archivematica bash -c " \
-       set -a -e -x
-       source /etc/default/archivematica-dashboard || \
-           source /etc/sysconfig/archivematica-dashboard \
-               || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py update_elasticsearch_mappings
-   ";
+   $ curl -s -X GET 'http://localhost:9200/_cat/indices/%2A?v=&s=index:desc'
+   health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+   yellow open   transfers     lYqkYjwZRy2XG8CP_3S3PQ   5   1          0            0      1.2kb          1.2kb
+   yellow open   transferfiles K5gnDZyOQz2JdIeZ6adJsQ   5   1          0            0      1.2kb          1.2kb
+   yellow open   aips          yAyK_koXThaZcWsBYfzN7w   5   1         17            0    101.4mb        101.4mb
+   yellow open   aipfiles      TVrrX8jkRhWWxGfvK_M6zg   5   1      11987            0      2.9gb          2.9gb
+
+Ensure that the Elasticsearch heap size is big enough to accomodate the size of
+the indices. The current size can be found under ``/etc/default/elasticsearch``
+(Ubuntu) or ``/etc/sysconfig/elasticsearch`` (CentOS):
+
+.. code:: bash
+
+   $ grep ES_JAVA_OPTS= /etc/default/elasticsearch
+   ES_JAVA_OPTS="-Xms2g -Xmx2g"
+
+For our example, it should be greater than 3G. Update ``ES_JAVA_OPTS`` as
+follows and restart the service to apply the changes::
+
+   ES_JAVA_OPTS="-Xms3g -Xmx3g"
+
+Given our four indices (`transfers`, `transferfiles`, `aips` and `aipfiles`),
+our plan is to rename them. Next, we will start the ``archivematica-dashboard``
+service which automatically creates the new indices with the desired mapping.
+At that point, we will usee the `Reindex API`_ to re-ingest all the documents
+into the new indices. Within this process, the new mappings will be
+automatically applied. This can all be done automatically running the following
+script:
+
+.. literalinclude:: scripts/reindex.sh
+   :language: bash
+
+For the example above, this script took 11 minutes to complete. If it failed,
+try checking out the logs (``/var/log/elasticsearch.log``). Most likely, the
+JVM heap size ran out of memory. You can start over by restoring your back up
+or putting back the old indices. The output that we expect to see is similar to
+the following:
+
+.. literalinclude:: scripts/reindex_output.txt
 
 .. note::
-   Please note, this task will not populate the new fields in introduced in
-   Archivematica |release| for transfers and AIPs created prior to the upgrade.
-   If that is required, you may want to use the
-   :ref:`Recreate the indices <recreate-indices>` approach instead.
+   We may implement this script as a Django command in the future for better
+   usability. For the time being, please download the script and tweak as
+   needed.
 
 .. _recreate-indices:
 
@@ -501,10 +532,10 @@ Execution example:
    Please note, the execution of this command may take a long time for big
    AIP and Transfer Backlog storage locations, especially if the packages are
    stored compressed or encrypted, or you are using a third party service. If
-   that is the case, you may want to consider using the
-   :ref:`Update the Elasticsearch mappings <update-mappings>` approach instead.
+   that is the case, you may want to :ref:`reindex the Elasticsearch
+   documents <reindex-documents>` instead.
 
 
-.. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-.. _`visit our Wiki`: https://wiki.archivematica.org/Update_ElasticSearch
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
+.. _`release notes`: https://wiki.archivematica.org/Release_Notes
+.. _`Reindex API`: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html

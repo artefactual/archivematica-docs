@@ -1,0 +1,47 @@
+Index list before reindexing:
+
+health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   transfers     lYqkYjwZRy2XG8CP_3S3PQ   5   1          3            0     11.6kb         11.6kb
+yellow open   transferfiles K5gnDZyOQz2JdIeZ6adJsQ   5   1          0            0      1.2kb          1.2kb
+yellow open   aips          yAyK_koXThaZcWsBYfzN7w   5   1         17            0    101.4mb        101.4mb
+yellow open   aipfiles      TVrrX8jkRhWWxGfvK_M6zg   5   1      12905            0      2.6gb          2.6gb
+
+Reindex aips in aips_new...
+Reindex aipfiles in aipfiles_new...
+Reindex transfers in transfers_new...
+Reindex transferfiles in transferfiles_new...
+
+Index list after tmp indices creation
+
+health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   transfers_new gdFevH8yRdiNTdrPcfo8Lg   5   1          0            0       460b           460b
+yellow open   transfers     lYqkYjwZRy2XG8CP_3S3PQ   5   1          3            0     11.6kb         11.6kb
+yellow open   transferfiles K5gnDZyOQz2JdIeZ6adJsQ   5   1          0            0      1.2kb          1.2kb
+yellow open   aips_new      uJ-ehaYLTfe_1lOSErfu3Q   5   1         17            0     96.8mb         96.8mb
+yellow open   aips          yAyK_koXThaZcWsBYfzN7w   5   1         17            0    101.4mb        101.4mb
+yellow open   aipfiles_new  00Xxu7v2QvWsq92gM247xQ   5   1      12905            0      3.1gb          3.1gb
+yellow open   aipfiles      TVrrX8jkRhWWxGfvK_M6zg   5   1      12905            0      2.6gb          2.6gb
+
+Deleting aips...
+Deleting aipfiles...
+Deleting transfers...
+Deleting transferfiles...
+
+Restarting archivematica-dashboard
+Wait 30 seconds to ensure dashboard has created the empty indices with new mapping
+
+Indexing aips using aips_new ...
+Indexing aipfiles using aipfiles_new ...
+Indexing transfers using transfers_new ...
+
+Deleting aips_new...
+Deleting aipfiles_new...
+Deleting transfers_new...
+
+Reindexing done:
+
+health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   transfers     FC7aSVPmSmmCc_LTv1AQRA   5   1          3            0      1.2kb          1.2kb
+yellow open   transferfiles 5JMAft3FQwmosZQFi7eJNw   5   1          0            0      1.2kb          1.2kb
+yellow open   aips          EtwXG3-4SO2Px-4QMRufXA   5   1         17            0    102.1mb        102.1mb
+yellow open   aipfiles      -PFuzslgTeWJ4CWny8VZoA   5   1      12905            0        3gb            3gb
