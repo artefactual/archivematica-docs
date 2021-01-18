@@ -108,12 +108,10 @@ Ansible
 The defaults for the ClamAV Ansible role can be configured in the default
 `configuration file`_ before proceeding with the Ansible installation process.
 
-Docker-compose
+Docker Compose
 ^^^^^^^^^^^^^^
 
-Before a container is built, the Compose ``.env`` file can be modified to
-reflect new values. For example, in Archivematica 1.7 you would modify this
-`Compose .env file`_.
+As a developer, you can adjust these values tweaking the `Compose .yml file`_.
 
 The container can then be recreated::
 
@@ -159,7 +157,7 @@ environment itself.
 .. _ClamAV: https://www.clamav.net/
 .. _MCPClient environment variables: https://github.com/artefactual/archivematica/blob/3e52494735ebfeb0cabc477d95d692034f4b3142/src/MCPClient/install/README.md#environment-variables
 .. _ClamAV manual pages: https://manpages.debian.org/jessie/clamav-daemon/clamd.conf.5.en.html
-.. _Compose .env file: https://github.com/artefactual-labs/am/blob/stable/1.7.x/compose/.env
+.. _Compose .yml file: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/docker-compose.yml
 .. _configuration file: https://github.com/artefactual-labs/ansible-clamav/blob/master/defaults/main.yml
 .. _Ansible environment variables: https://github.com/artefactual-labs/ansible-archivematica-src/tree/d4474c3dbaef2b561c87e0650c6ee386be6910a7#environment-variables
 .. _Bug 11958: https://bugzilla.clamav.net/show_bug.cgi?id=11958
