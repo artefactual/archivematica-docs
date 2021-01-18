@@ -315,7 +315,7 @@ source`_. After clicking **Save & Test**, you should see a “Data source is
 working” message.
 
 Now you need to import a dashboard. There is a basic Archivematica dashboard
-available in Archivematica's `Docker compose environment`_, or you can `download
+available in Archivematica's `Docker Compose environment`_, or you can `download
 the dashboard JSON file`_ directly from GitHub. In Grafana, under Dashboards ->
 Manage, choose **Import**, then either paste the JSON into the text box or save
 the dashboard as a file and upload it.
@@ -333,5 +333,5 @@ the dashboard as a file and upload it.
 .. _download and install Prometheus: https://prometheus.io/docs/prometheus/latest/installation/
 .. _download and install Grafana: https://grafana.com/grafana/download
 .. _add Prometheus as a data source: https://grafana.com/docs/grafana/latest/features/datasources/prometheus/#adding-the-data-source-to-grafana
-.. _Docker compose environment: https://github.com/artefactual-labs/am/tree/master/compose
-.. _download the dashboard JSON file: https://github.com/artefactual-labs/am/blob/master/compose/etc/grafana/provisioning/dashboards/Archivematica.json
+.. _Docker Compose environment: https://github.com/artefactual/archivematica/tree/qa/1.x/hack
+.. _download the dashboard JSON file: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/etc/grafana/provisioning/dashboards/Archivematica.json

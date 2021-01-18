@@ -36,7 +36,7 @@ output capturing.
 - :ref:`Environment variable configuration for CentOS package-based installations <install-pkg-centos>`
 - :ref:`Environment variable configuration for Ubuntu package-based installations <install-pkg-ubuntu>`
 - :ref:`Environment variable configuration for Ubuntu Ansible-based installations <install-ansible>`
-- `Environment variable configuration for Docker Compose installations <https://github.com/artefactual-labs/am/tree/master/compose>`_
+- `Environment variable configuration for Docker Compose installations <https://github.com/artefactual/archivematica/tree/qa/1.x/hack>`_
 
 Note that when output capturing is disabled the stdout will *never* be captured
 while the *stderr* will only be captured when the preservation task returns a
