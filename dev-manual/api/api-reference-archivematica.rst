@@ -37,7 +37,7 @@ Start transfer
 ^^^^^^^^^^^^^^
 
 ========  ==================================  =================================
-``POST``  **/api/transfer/start_transfer/**   *Initiates a transfer in Archive-
+``POST``  **/api/transfer/start_transfer/**   *Initiates a transfer in Archive
                                               matica.*
 ========  ==================================  =================================
 
