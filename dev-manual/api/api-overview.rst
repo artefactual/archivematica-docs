@@ -69,7 +69,7 @@ When setting GET parameters, the format is::
 
 When passing an API key value as part of the header, the format is::
 
-    Authorizatoin: ApiKey <username>:<api_key>
+    Authorization: ApiKey <username>:<api_key>
 
 The Transport Layer Security (TLS) protocol should be enabled in the web server
 (typically Nginx) to ensure that all data transmitted between clients and the
