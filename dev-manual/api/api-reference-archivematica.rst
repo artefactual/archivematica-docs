@@ -838,15 +838,26 @@ In some cases that might still be ideal.
 Validate
 ^^^^^^^^
 
-======================= ========================================================
-**/api/v2beta/package** *Available in Archivematica 1.10+. This endpoint can be
-                        used to validate CSVs against embedded sets of rules.
-                        Currently works with Avalon Media System Manifest files.*
+==================================== ========================================================
+**/api/v2beta/validate/<validator>** *Available in Archivematica 1.10+. This endpoint can be
+                                     used to validate CSVs against embedded sets of rules.
+                                     Currently works with Avalon Media System Manifest 
+                                     (``avalon``) and rights.csv (``rights``) files.*
 
-                        *In the future, this endpoint can be extended to support
-                        validation for metadata.csv or rights.csv, or other
-                        institutionally-based rules.*
-======================= ========================================================
+                                     *In the future, this endpoint can be extended to support
+                                     validation for metadata.csv or archivesspaceids.csv, or 
+                                     other institutionally-based rules.*
+==================================== ========================================================
+
+Response definitions:
+
+==================   ==========================================================
+
+``valid``            Boolean true or false.
+
+``reason``           Includes validation error.
+
+==================   ==========================================================
 
 Usage example (assuming that avalon.csv exists)::
 
