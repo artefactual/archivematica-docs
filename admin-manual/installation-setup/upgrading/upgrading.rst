@@ -432,54 +432,12 @@ not possible to update existing ones. The recommended strategy is to create new
 indices with our desired mapping and reindex our documents. This is based on the
 `Reindex API`_.
 
+It is a multi-step process that we have automated with a script:
+`es-reindex.sh`_. Please follow the link and read the instructions carefully.
+
 .. warning::
    Before you continue, we recommend backing up your Elasticsearch data. Please
    read the official docs for instructions.
-
-Assuming that your Elasticsearch cluster is available via ``127.0.0.1:9200``,
-this is how we can list existing indices:
-
-.. code:: bash
-
-   $ curl -s -X GET 'http://localhost:9200/_cat/indices/%2A?v=&s=index:desc'
-   health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
-   yellow open   transfers     lYqkYjwZRy2XG8CP_3S3PQ   5   1          0            0      1.2kb          1.2kb
-   yellow open   transferfiles K5gnDZyOQz2JdIeZ6adJsQ   5   1          0            0      1.2kb          1.2kb
-   yellow open   aips          yAyK_koXThaZcWsBYfzN7w   5   1         17            0    101.4mb        101.4mb
-   yellow open   aipfiles      TVrrX8jkRhWWxGfvK_M6zg   5   1      11987            0      2.9gb          2.9gb
-
-Ensure that the Elasticsearch heap size is big enough to accomodate the size of
-the indices. The current size can be found under ``/etc/default/elasticsearch``
-(Ubuntu) or ``/etc/sysconfig/elasticsearch`` (CentOS):
-
-.. code:: bash
-
-   $ grep ES_JAVA_OPTS= /etc/default/elasticsearch
-   ES_JAVA_OPTS="-Xms2g -Xmx2g"
-
-For our example, it should be greater than 3G. Update ``ES_JAVA_OPTS`` as
-follows and restart the service to apply the changes::
-
-   ES_JAVA_OPTS="-Xms3g -Xmx3g"
-
-Given our four indices (`transfers`, `transferfiles`, `aips` and `aipfiles`),
-our plan is to rename them. Next, we will start the ``archivematica-dashboard``
-service which automatically creates the new indices with the desired mapping.
-At that point, we will usee the `Reindex API`_ to re-ingest all the documents
-into the new indices. Within this process, the new mappings will be
-automatically applied. This can all be done automatically running the following
-script:
-
-.. literalinclude:: scripts/reindex.sh
-   :language: bash
-
-For the example above, this script took 11 minutes to complete. If it failed,
-try checking out the logs (``/var/log/elasticsearch.log``). Most likely, the
-JVM heap size ran out of memory. You can start over by restoring your back up
-or putting back the old indices. The output that we expect to see is similar to
-the following:
-
-.. literalinclude:: scripts/reindex_output.txt
 
 .. note::
    We may implement this script as a Django command in the future for better
@@ -539,3 +497,4 @@ Execution example:
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
 .. _`Reindex API`: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
+.. _`es-reindex.sh`: https://github.com/artefactual-labs/ops-helpers/tree/master/es-helpers#es-reindexsh-update-search-indices
