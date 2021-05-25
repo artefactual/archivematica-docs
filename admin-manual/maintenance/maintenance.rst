@@ -9,6 +9,8 @@ installation.
 
 *On this page:*
 
+* :ref:`Management commands <management-commands>`
+
 * :ref:`Maintaining Elasticsearch <elasticsearch>`
 
   * :ref:`Rebuild Elasticsearch indexes <elasticsearch-indexes>`
@@ -24,6 +26,63 @@ installation.
   * :ref:`Resolve hanging decisions <hanging-decisions>`
   * :ref:`Transfer won't start <transfer-wont-start>`
   * :ref:`How to clear user sessions <clear-user-sessions>`
+  * :ref:`How to clear the application database <clear-app-db>`
+
+
+.. _management-commands:
+
+Management commands
+-------------------
+
+Archivematica implements multiple management commands using the command
+interface provided by the Django web framework.
+
+A full list of commands can be retrieved as follows:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+           manage.py help
+   ";
+
+If you want to see the help message of a specific command, try:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+           manage.py help purge_transient_processing_data
+   ";
+
+We've looked up ``purge_transient_processing_data`` in the example above. The
+description should provide enough information and, in some cases, usage
+examples.
+
+Finally, we're showing an example on how to execute a command passing some
+optional arguments:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+           manage.py purge_transient_processing_data --dry-run
+   ";
 
 
 .. _elasticsearch:
@@ -561,29 +620,29 @@ an alternative to using the dashboard.
 
    Ubuntu or CentOS:
 
-      .. code-block:: bash
+   .. code-block:: bash
 
-         sudo -u archivematica bash -c " \
-            set -a -e -x
-              source /etc/default/archivematica-mcp-client || \
-                  source /etc/sysconfig/archivematica-mcp-client \
-                      || (echo 'Environment file not found'; exit 1)
-              cd /opt/archivematica/archivematica-devtools/bin/
-              ./am mcp-rpc-cli
-          ";
+      sudo -u archivematica bash -c " \
+        set -a -e -x
+          source /etc/default/archivematica-mcp-client || \
+              source /etc/sysconfig/archivematica-mcp-client \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /opt/archivematica/archivematica-devtools/bin/
+          ./am mcp-rpc-cli
+      ";
 
    Vagrant:
 
-      .. code-block:: bash
+   .. code-block:: bash
 
-         sudo -u archivematica bash -c " \
-            set -a -e -x
-              source /etc/default/archivematica-mcp-client || \
-                  source /etc/sysconfig/archivematica-mcp-client \
-                      || (echo 'Environment file not found'; exit 1)
-              cd /vagrant/src/archivematica-devtools/bin/
-              ./am mcp-rpc-cli
-          ";
+      sudo -u archivematica bash -c " \
+        set -a -e -x
+          source /etc/default/archivematica-mcp-client || \
+              source /etc/sysconfig/archivematica-mcp-client \
+                  || (echo 'Environment file not found'; exit 1)
+          cd /vagrant/src/archivematica-devtools/bin/
+          ./am mcp-rpc-cli
+      ";
 
 3. You should see an output that looks like the snippet here:
 
@@ -702,37 +761,37 @@ and investigate if this happens.
 
 1. File permissions
 
-  First, the issue may be related to file permissions in the transfer source
-  directory. Check the permissions in the directory and on the files to ensure
-  that all files can be read by Archivematica.
+   First, the issue may be related to file permissions in the transfer source
+   directory. Check the permissions in the directory and on the files to ensure
+   that all files can be read by Archivematica.
 
 2. System timeouts
 
-  If it is a large transfer, it may just be taking a long time to copy the files
-  and initially load them into the system, and the user can wait a bit longer
-  and see if the processes begin after a bit of time. It is also possible that
-  it is taking a long time because some of the system timeouts are being
-  exceeded and the transfer has failed. This can be verified by checking the
-  Storage Service logs and by checking where the transfer exists on the
-  filesystem.
+   If it is a large transfer, it may just be taking a long time to copy the files
+   and initially load them into the system, and the user can wait a bit longer
+   and see if the processes begin after a bit of time. It is also possible that
+   it is taking a long time because some of the system timeouts are being
+   exceeded and the transfer has failed. This can be verified by checking the
+   Storage Service logs and by checking where the transfer exists on the
+   filesystem.
 
-  For inadequate timeouts, check the Storage Service configuration and adjust
-  if necessary.
+   For inadequate timeouts, check the Storage Service configuration and adjust
+   if necessary.
 
 3. Communication between Dashboard and Gearman
 
-  If the transfer has successfully moved to the shared Directory (i.e. it can be
-  found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders), but
-  is still not showing up in the dashboard, there could have been a problem with
-  the communication between the dashboard and Gearman. Restarting all of the
-  services can resolve this problem and the transfer will appear.
+   If the transfer has successfully moved to the shared Directory (i.e. it can be
+   found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders), but
+   is still not showing up in the dashboard, there could have been a problem with
+   the communication between the dashboard and Gearman. Restarting all of the
+   services can resolve this problem and the transfer will appear.
 
-  Restart services in the follow order: ``gearmand``,
-  ``archivematica-mcp-server``, ``archivematica-mcp-client``,
-  and ``archivematica-dashboard``.
+   Restart services in the follow order: ``gearmand``,
+   ``archivematica-mcp-server``, ``archivematica-mcp-client``, and
+   ``archivematica-dashboard``.
 
-  Note that on some installations, ``gearmand`` may be called
-  ``gearman-job-server``.
+   Note that on some installations, ``gearmand`` may be called
+   ``gearman-job-server``.
 
 .. _clear-user-sessions:
 
@@ -776,6 +835,45 @@ the Archivematica database, e.g.::
     mysql -hHOSTNAME -uUSERNAME -e "DELETE FROM MCP.django_session"
 
 Clearing up active sessions forcibly logs out all users.
+
+
+.. _clear-app-db:
+
+How to clear the application database
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Archivematica 1.13 introduces a new management command for this specific
+purpose. It takes into account active packages and can be used to target
+packages of a certain age only. Please read the help message of the command for
+more details.
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+           manage.py help purge_transient_processing_data
+   ";
+
+The example above will destroy all records from the database as well as the
+search documents related to packages that completed more than six hours ago:
+
+.. code:: bash
+
+   sudo -u archivematica bash -c " \
+       set -a -e -x
+       source /etc/default/archivematica-dashboard || \
+           source /etc/sysconfig/archivematica-dashboard \
+               || (echo 'Environment file not found'; exit 1)
+       cd /usr/share/archivematica/dashboard
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+           manage.py purge_transient_processing_data --age='0 00:06:00'
+   ";
+
 
 :ref:`Back to the top <maintenance>`
 
