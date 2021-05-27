@@ -535,37 +535,11 @@ Error stack trace
    "I am getting a white error page in the Dashboard. How can I find out what
    the error is?"
 
-Seeing an full error stack trace for the Dashboard requires knowing how to
-edit a configuration file from the command line.
+All Archivematica services, including the Dashboard, have set up loggers that
+capture relevant events including warnings or errors.
 
-1. SSH to the Archivematica server
-
-2. With your preferred text editor, open the dashboard settings file (vim shown
-   in example; Note that you must use sudo to edit this file):
-
-   .. code:: bash
-
-      sudo vim /usr/share/archivematica/dashboard/settings/common.py
-
-3. Change the "DEBUG" flag from "False" to "True"
-
-   .. code:: bash
-
-      DEBUG = True
-
-4. Save the fileservices
-
-5. Restart Apache
-
-   .. code:: bash
-
-      sudo apache2ctl restart
-
-6. Reload the dashboard page reporting the error in your browse
-
-7. Debug or report error
-
-8. Restore DEBUG to False and restart Apache to turn error reporting off again
+Archivematica logs are stored in ``/var/log/archivematica/`` but the final
+location may change depending on the environment or the logging configuration.
 
 
 .. _transfer-wont-start:
