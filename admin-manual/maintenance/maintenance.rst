@@ -859,7 +859,7 @@ more details.
            manage.py help purge_transient_processing_data
    ";
 
-The example above will destroy all records from the database as well as the
+The example below will destroy all records from the database as well as the
 search documents related to packages that completed more than six hours ago:
 
 .. code:: bash
