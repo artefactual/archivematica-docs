@@ -5,8 +5,8 @@ Manually Installing Archivematica on Ubuntu
 ===========================================
 
 Archivematica packages are hosted at packages.archivematica.org as a central
-place to store packages for multiple operating systems. Packages for both Ubuntu
-16.04 and 18.04 are available.
+place to store packages for multiple operating systems. Packages are available
+for Ubuntu 18.04. We're planning to support Ubuntu 20.04 soon.
 
 .. note:: Manual installation using packages on Ubuntu is not officially
    supported. Please see :ref:`Instructions for new installation
@@ -14,28 +14,19 @@ place to store packages for multiple operating systems. Packages for both Ubuntu
 
 *On this page*
 
-* :ref:`Installation instructions for Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) <ubuntu-instructions>`
+* :ref:`Installation instructions for Ubuntu 18.04 (Bionic) <ubuntu-instructions>`
 * :ref:`Post-installation configuration <ubuntu-post-install-config>`
 
 .. _ubuntu-instructions:
 
-Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
--------------------------------------------------------------------------
+Ubuntu 18.04 (Bionic) installation instructions
+-----------------------------------------------
 
 1. Use these commands to install the repositories:
-
-   Ubuntu 16.04 (Xenial):
-
-   .. literalinclude:: scripts/am-xenial-deb.sh
-      :language: bash
-      :lines: 14-18
-
-   Ubuntu 18.04 (Bionic):
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 14-18
-
 
 2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
@@ -83,9 +74,7 @@ Ubuntu 16.04 (Xenial) and Ubuntu 18.04 (Bionic) installation instructions
       :lines: 31-32
 
 8. Update ``pip``. This is used to install Python dependencies for both the
-   Storage Service and the Dashboard. This step is optional on Ubuntu 16.04, but
-   is still a good idea to get the most recent version of ``pip``.
-
+   Storage Service and the Dashboard.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash

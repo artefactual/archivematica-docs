@@ -63,19 +63,6 @@ Instructions
 
 3. Download the Ansible roles:
 
-   .. _ubuntu-16.04:
-
-   Ubuntu 16.04 (Xenial):
-
-   .. code:: bash
-
-      cd deploy-pub/playbooks/archivematica-xenial
-      ansible-galaxy install -f -p roles/ -r requirements.yml
-
-   .. _ubuntu-18.04:
-
-   Ubuntu 18.04 (Bionic):
-
    .. code:: bash
 
       cd deploy-pub/playbooks/archivematica-bionic
