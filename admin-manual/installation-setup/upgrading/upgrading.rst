@@ -127,20 +127,6 @@ Upgrade on Ubuntu packages
 
 #. Update package sources.
 
-   In Ubuntu 16.04:
-
-   .. code:: bash
-
-      wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-      echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.13.x/ubuntu xenial main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.13.x/ubuntu-externals xenial main' >> /etc/apt/sources.list
-
-   Optionally you can remove the lines referencing
-   packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
-
-   In Ubuntu 18.04:
-
    .. code:: bash
 
       echo 'deb [arch=amd64] http://packages.archivematica.org/1.13.x/ubuntu bionic main' >> /etc/apt/sources.list
@@ -275,15 +261,6 @@ with cloud based virtual machines, or physical servers.
       git clone https://github.com/artefactual/deploy-pub.git
 
 #. Go into the appropiate playbook folder, and install the needed roles
-
-   .. _ubuntu-16.04:
-
-   Ubuntu 16.04 (Xenial):
-
-   .. code:: bash
-
-      cd deploy-pub/playbooks/archivematica-xenial
-      ansible-galaxy install -f -p roles/ -r requirements.yml
 
    .. _ubuntu-18.04:
 

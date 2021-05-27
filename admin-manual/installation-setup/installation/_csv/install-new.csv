@@ -1,5 +1,4 @@
 New installations for production deployment,,
-Ubuntu 16.04 64-bit Server Edition,:ref:`Automated install using Ansible \> Ubuntu 16.04 \(Xenial\)<install-ansible>`,"These instructions will not work if you are using a Windows machine as the host environment. For Windows installations, see the :ref:`manual install instructions <install-pkg-ubuntu>` for production."
-Ubuntu 18.04 64-bit Server Edition,:ref:`Automated install using Ansible \> Ubuntu 18.04 \(Bionic\)<install-ansible>`,"These instructions will not work if you are using a Windows machine as the host environment. For Windows installations, see the :ref:`manual install instructions <install-pkg-ubuntu>` for production."
+Ubuntu 18.04 64-bit Server Edition,:ref:`Automated install using Ansible Ubuntu 18.04 \(Bionic\)<install-ansible>`,"These instructions will not work if you are using a Windows machine as the host environment. For Windows installations, see the :ref:`manual install instructions <install-pkg-ubuntu>` for production."
 CentOS 7 64-bit,:ref:`Installing Archivematica on CentOS/Red Hat<install-pkg-centos>`,Archivematica versions 1.5.1 and higher support installation on CentOS/Red Hat.
 Windows OS,Not supported,

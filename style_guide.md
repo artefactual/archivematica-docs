@@ -536,7 +536,7 @@ directive.
 
 ```
 .. csv-table::
-   :file: _csv/install-landing.csv
+   :file: _csv/install-development.csv
    :header-rows: 1
 ```
 

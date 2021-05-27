@@ -51,7 +51,6 @@ Operating system
 Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
-* Ubuntu 16.04 64-bit Server Edition
 * Ubuntu 18.04 64-bit Server Edition
 * CentOS 7 64-bit
 
@@ -81,14 +80,15 @@ Using additional machines will require additional configuration. For more
 information, see :ref:`Advanced <advanced>`.
 
 .. note::
+
    Archivematica |version| has been tested with MySQL 5.5, including
    the Percona and MariaDB alternatives. Archivematica uses MySQL 5.7 on
-   Ubuntu 16.04 and Ubuntu 18.04.
+   Ubuntu 18.04.
 
    Some of the tools run by Archivematica require Java to be
    installed (primarily Elasticsearch and fits). On Ubuntu 18.04, Open JDK 8
-   is used, but Open JDK 11 is the default. On Ubuntu 16.04, Open JDK 8 is the
-   default. It is possible to use Oracle Java 7 or 8 instead.
+   is used, but Open JDK 11 is the default. It is possible to use Oracle Java
+   7 or 8 instead.
 
    The remaining dependencies should be kept at the versions installed
    by Archivematica.
@@ -198,11 +198,10 @@ CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
 At this time, installation instructions are provided for officially tested and
 supported installation environments:
 
-* :ref:`Automated install on Ubuntu (16.04 and 18.04) using Ansible
-  <install-ansible>`.
+* :ref:`Automated install on Ubuntu 18.04 using Ansible <install-ansible>`.
 * :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
 
-Note that :ref:`manual install of OS packages on Ubuntu (16.04 and 18.04)
+Note that :ref:`manual install of OS packages on Ubuntu 18.04
 <install-pkg-ubuntu>` is documented but not officially supported.
 
 Installing Archivematica using :ref:`Docker <development>` is not officially
