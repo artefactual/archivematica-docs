@@ -282,21 +282,10 @@ Installation and setup
 Maintenance
 -----------
 
+* :ref:`Management commands <management-commands>`
 * :ref:`Maintaining Elasticsearch <elasticsearch>`
-
-  * :ref:`Rebuild Elasticsearch indexes <elasticsearch-indexes>`
-  * :ref:`External Elasticsearch access <elasticsearch-external>`
-
 * :ref:`Data backup <data-backup>`
-
 * :ref:`FAQ <admin-faq>`
-
-  * :ref:`How to clean up a full disk <disk-full>`
-  * :ref:`How to restart services <restart-services>`
-  * :ref:`Error stack trace <stack-trace>`
-  * :ref:`Resolve hanging decisions <hanging-decisions>`
-  * :ref:`Transfer won't start <transfer-wont-start>`
-
 
 .. _home-security:
 
