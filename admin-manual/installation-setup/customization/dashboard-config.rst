@@ -741,12 +741,11 @@ Where:
   example.archivematica.org 127.0.0.1" or "".
 
 This command is most suitable to use on automated installations, for example
-when deploying using ansible. For manual installations, please use the web
+when deploying using Ansible. For manual installations, please use the web
 configuration method described in the Post Install Configuration sections:
 
 * :ref:`Ubuntu Post Install Configuration <ubuntu-post-install-config>`.
 * :ref:`CentOS Post Install Configuration <centos-post-install-config>`.
-* :ref:`Ansible Post Install Configuration <ansible-post-install-config>`.
 
 Security
 ^^^^^^^^

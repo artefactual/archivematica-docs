@@ -18,12 +18,12 @@ for more details.
 *On this page*
 
 * :ref:`Installation instructions <ansible-instructions>`
-* :ref:`Post-installation configuration <ansible-post-install-config>`
+* :ref:`Deploying development branches <ansible-deploy-dev-branches>`
 
 .. _ansible-instructions:
 
-Instructions
-------------
+Installation instructions
+-------------------------
 
 .. note::
 
@@ -46,7 +46,7 @@ Instructions
       sudo apt-get install virtualbox vagrant
       sudo pip install -U ansible
 
-   Vagrant must be at least version 1.5. Check your version with:
+   Vagrant must be at least version 1.9. Check your version with:
 
    .. code:: bash
 
@@ -95,68 +95,53 @@ Instructions
 
    You can also access your Archivematica instance through the web browser:
 
-   * Archivematica: `<http://192.168.168.192>`_. Username & password configured
-     on installation.
-   * Storage Service: `<http://192.168.168.192:8000>`_. Username & password configured
-     on installation.
+   * Archivematica: `<http://192.168.168.198>`_.
+   * Storage Service: `<http://192.168.168.198:8000>`_.
 
-.. _ansible-post-install-config:
+   The credentials can be found in the `vars-singlenode-qa.yml`.
 
-Post-install configuration
---------------------------
 
-After successfully completing a new installation, follow these steps to complete
-the configuration of your new server.
+.. _ansible-deploy-dev-branches:
 
-1. The Storage Service runs as a separate web application from the Archivematica
-   dashboard. The Storage Service is exposed on port 8000 by default for Ansible
-   installs. Use your web browser to navigate to the Storage Service at
-   the IP address of the machine you have been installing on, e.g.,
-   ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or
-   ``http://127.0.0.1:8000`` if this is a local development setup).
+Deploy development branches
+---------------------------
 
-   If you are using an IP address or fully-qualified domain name instead of
-   localhost, you will need to configure your firewall rules and allow access
-   only to ports 80 and 8000 for Archivematica usage.
+The previous section described how to deploy the latest stable Archivematica
+release.
 
-2. The Storage Service has its own set of users. Create a new user with full
-   admin privileges:
-   ::
+Our Ansible role can also be used to deploy development branches, e.g. if you
+want to help us QA our product.
 
-      sudo -u archivematica bash -c " \
-          set -a -e -x
-          source /etc/default/archivematica-storage-service || \
-              source /etc/sysconfig/archivematica-storage-service \
-                  || (echo 'Environment file not found'; exit 1)
-          cd /usr/lib/archivematica/storage-service
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
-        ";
+Using `deploy-pub`_, where we host our reference playbooks, please follow these
+steps:
 
-  After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**).
+1. Download the roles defined in ``requirements-qa.yml``:
 
-3. To finish the installation, use your web browser to navigate to the
-   Archivematica dashboard using the IP address of the machine on which you have
-   been installing, e.g., ``http://<MY-IP-ADDR>:80`` (or ``http://localhost:80``
-   or ``http://127.0.0.1:80`` if this is a local development setup).
+   .. code:: bash
 
-4. At the Welcome page, create an administrative user for the Archivematica
-   pipeline by entering the organization name, the organization identifier,
-   username, email, and password.
+      cd deploy-pub/playbooks/archivematica-bionic
+      ansible-galaxy install -f -p roles/ -r requirements-qa.yml
 
-5. On the next screen, connect your pipeline to the Storage Service by entering
-   the Storage Service URL and username, and by pasting in the API key that you
-   copied in Step (2).
+2. Update ``singlenode.yml`` to load ``vars-singlenode-qa.yml``. Inside the
+   ``pre_tasks`` section, update the task ``include_vars`` as follows:
 
-   - If the Storage Service and the Archivematica dashboard are installed on
-     the same machine, then you should supply ``http://127.0.0.1:8000`` as the
-     Storage Service URL at this screen.
-   - If the Storage Service and the Archivematica dashboard are installed on
-     different nodes (servers), then you should use the IP address or
-     fully-qualified domain name of your Storage Service instance,
-     e.g., ``http://<MY-IP-ADDR>:8000`` *and* you must ensure that any firewall
-     rules (i.e., iptables, ufw, AWS security groups, etc.) are configured to
-     allow requests from your dashboard IP to your Storage Service IP on the
-     appropriate port.
+   .. code:: bash
+
+      - include_vars: "vars-singlenode-qa.yml"
+        tags:
+          - "always"
+
+3. Optionally, if you have a specific branch(es) that you want to deploy or
+   other custom configuration needs, update ``vars-singlenode-qa.yml`` as
+   needed. By default, we will deploy off branches ``qa/1.x`` (Archivematica)
+   and ``qa/0.x`` (Storage Service).
+
+4. Deploy the new configuration. If you're using Vagrant, please run:
+
+   .. code:: bash
+
+      vagrant provision
+
 
 :ref:`Back to the top <install-ansible>`
 
