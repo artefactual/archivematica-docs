@@ -22,13 +22,13 @@ for Ubuntu 18.04. We're planning to support Ubuntu 20.04 soon.
 Ubuntu 18.04 (Bionic) installation instructions
 -----------------------------------------------
 
-1. Use these commands to install the repositories:
+#. Use these commands to install the repositories:
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 14-18
 
-2. Add Elasticsearch package source (optional). Elasticsearch comes from its own
+#. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
 
    .. note::
@@ -39,20 +39,20 @@ Ubuntu 18.04 (Bionic) installation instructions
       :language: bash
       :lines: 20-21
 
-3. Update to the most recent OS release. This step will also fetch a list of
+#. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 23-24
 
-4. Install some needed packages
+#. Install some needed packages
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 26
 
-5. Install Elasticsearch (optional)
+#. Install Elasticsearch (optional)
 
    .. note:: Skip this step if you are planning to run Archivematica in
       indexless mode (without Elasticsearch).
@@ -61,26 +61,19 @@ Ubuntu 18.04 (Bionic) installation instructions
       :language: bash
       :lines: 27
 
-6. Install the Storage Service package.
+#. Install the Storage Service package.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
        :lines: 29
 
-7. Configure the Storage Service.
+#. Configure the Storage Service.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
       :lines: 31-32
 
-8. Update ``pip``. This is used to install Python dependencies for both the
-   Storage Service and the Dashboard.
-
-   .. literalinclude:: scripts/am-bionic-deb.sh
-      :language: bash
-      :lines: 34
-
-9. Install the Archivematica packages. The order of installation is important -
+#. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
    package. While it is possible to install the archivematica-mcp-client package
    on a separate machine, that configuration is not documented in these
@@ -96,9 +89,9 @@ Ubuntu 18.04 (Bionic) installation instructions
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
-      :lines: 36-38
+      :lines: 34-36
 
-10. Configure the Archivematica components (optional). There are a number of
+#.  Configure the Archivematica components (optional). There are a number of
     environment variables that Archivematica recognizes which can be used to
     alter how it is configured. For the full list, see the
     `Dashboard install README`_, the `MCPClient install README`_, and the
@@ -115,26 +108,26 @@ Ubuntu 18.04 (Bionic) installation instructions
       sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
       sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 
-11. Configure the dashboard.
+#. Configure the dashboard.
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 40
+       :lines: 38
 
-12. Start Elasticsearch (optional).
+#. Start Elasticsearch (optional).
 
     .. note:: Skip this step if you are planning to run Archivematica in indexless
        mode (without Elasticsearch).
 
     .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
-      :lines: 42-44
+      :lines: 40-42
 
-13. Start the remaining services
+#. Start the remaining services
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 46-56
+       :lines: 44-54
 
     If you have trouble with the gearman or clamav command try restarting it:
 
@@ -143,7 +136,7 @@ Ubuntu 18.04 (Bionic) installation instructions
        sudo service gearman-job-server restart
        sudo service clamav-daemon restart
 
-14. Configure your firewall (if applicable)
+#. Configure your firewall (if applicable)
 
     On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated
     Firewall). To see the firewall status, enter:
@@ -158,10 +151,10 @@ Ubuntu 18.04 (Bionic) installation instructions
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 58-61
+       :lines: 56-59
 
+#. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
-15. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
 .. _ubuntu-post-install-config:
 

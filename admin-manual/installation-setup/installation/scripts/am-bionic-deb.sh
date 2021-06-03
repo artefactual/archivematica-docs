@@ -31,8 +31,6 @@ sudo apt-get install -y archivematica-storage-service
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo ln -sf /etc/nginx/sites-available/storage /etc/nginx/sites-enabled/storage
 
-wget -O - https://bootstrap.pypa.io/pip/2.7/get-pip.py | sudo python -
-
 sudo apt-get install -y archivematica-mcp-server
 sudo apt-get install -y archivematica-dashboard
 sudo apt-get install -y archivematica-mcp-client
