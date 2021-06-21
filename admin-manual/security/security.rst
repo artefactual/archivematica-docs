@@ -312,6 +312,55 @@ CAS backend configuration in Storage Service
             manage.py migrate
     ";
 
+
+.. _csp-setup:
+
+CSP setup
+=========
+
+`CSP <csp_>`_ (Content Security Policy) is an added layer of security
+that helps to detect and mitigate certain types of attacks, including
+Cross Site Scripting (XSS) and data injection attacks. This feature
+allows administrators to deploy both the Archivematica Dashboard and
+Storage Service Django applications with CSP headers.
+
+It is based on the `django-csp <django-csp-docs_>`_ package. In
+addition to the instructions below, please refer to their
+documentation for more details.
+
+.. important::
+
+   The CSP support is an experimental feature that you can turn on to
+   test (see instructions below). Please share your feedback!
+
+CSP configuration in Archivematica Dashboard
+++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable CSP support using the environment variable
+   ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSP_ENABLED``. You can find
+   more details about this environment string in the `configuration
+   document <am-dashboard-config_>`_.
+
+#. A small set of header policies are loaded from the
+   ``settings.components.csp`` module, but you can provide your own
+   overrides through a Python module and set its path in the
+   ``CSP_SETTINGS_FILE`` Django setting.
+
+#. Restart the Archivematica Dashboard.
+
+CSP backend configuration in Storage Service
+++++++++++++++++++++++++++++++++++++++++++++
+
+#. Enable CSP support using the environment variable
+   ``SS_CSP_ENABLED``. Assign a string value ``true`` to enable it.
+
+#. A small set of header policies are loaded from the
+   ``settings.components.csp`` module, but you can provide your own
+   overrides through a Python module and set its path in the
+   ``CSP_SETTINGS_FILE`` Django setting.
+
+#. Restart the Storage Service.
+
 .. _ca-root-certificates:
 
 CA certificates
@@ -393,15 +442,17 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _django-auth-infra: https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#authentication-backends
 .. _am-gh-issues: https://github.com/artefactual/archivematica/issues
 .. _am-google-groups: https://groups.google.com/forum/#!forum/archivematica
-.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/install/README.md
-.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/src/settings/components/ldap_auth.py
-.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/src/settings/components/shibboleth_auth.py
+.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.13.x/src/dashboard/install/README.md
+.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.13.x/src/dashboard/src/settings/components/ldap_auth.py
+.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.13.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
 .. _oidc: https://openid.net/connect/
 .. _cas: https://www.apereo.org/projects/cas
+.. _csp: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
 .. _Storage Service application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/18b9a77ce1a6789be00159289fb48f4edc46065e/install/README.md#application-specific-environment-variables
 .. _mozilla-django-oidc-docs: https://mozilla-django-oidc.readthedocs.io/en/stable/
+.. _django-csp-docs: https://django-csp.readthedocs.io/en/latest/
