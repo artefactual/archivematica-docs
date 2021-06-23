@@ -252,7 +252,7 @@ with cloud based virtual machines, or physical servers.
 
     .. code:: bash
 
-      sudo pip install ansible
+      sudo pip install ansible==2.9.10 jmespath
 
 #. Checkout the deployment repo:
 

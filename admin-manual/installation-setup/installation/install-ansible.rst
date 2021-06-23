@@ -44,7 +44,7 @@ Installation instructions
    .. code:: bash
 
       sudo apt-get install virtualbox vagrant
-      sudo pip install -U ansible
+      sudo pip install ansible==2.9.10 jmespath
 
    Vagrant must be at least version 1.9. Check your version with:
 
