@@ -82,7 +82,7 @@ the path of the AIP storage location you confirmed above.
        cd /usr/share/archivematica/dashboard
        /usr/share/archivematica/virtualenvs/archivematica-dashboard/bin/python \
            manage.py rebuild_elasticsearch_aip_index_from_files \
-               /var/archivematica/sharedDirectory/www/AIPsStoree --delete-all
+               /var/archivematica/sharedDirectory/www/AIPsStore --delete-all
    ";
 
 The command accepts the following parameters:
