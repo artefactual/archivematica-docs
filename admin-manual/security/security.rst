@@ -106,8 +106,7 @@ variables to change per component:
 * SS_DB_URL
 
 For Storage Service MySQL database see:
-`Storage Service application-specific-environment-variables`_.
-
+`Storage Service application-specific-environment-variables <ss-config_>`_.
 
 .. _atom-security:
 
@@ -128,27 +127,18 @@ Archivematica relies on the German server for queuing work that needs to be
 done. Gearman currently doesn't support secured connections so Gearman should
 be run locally or on a secure, isolated network. See :issue:`1345`.
 
-.. _user-security:
+.. _authentication-security:
 
-User security
--------------
+Authentication backends
+-----------------------
 
-We added support for two authentication backends in Archivematica 1.7: LDAP and
-Shibboleth. Authentication backends provide an extensible system for when a
+Archivematica supports multiple authentication backends: LDAP, Shibboleth, OIDC
+and CAS. Authentication backends provide an extensible system for when a
 ``username`` and ``password`` stored with the user model need to be
 authenticated against a different service than the default.
 
 This feature relies on the `authentication infrastructure <django-auth-infra_>`_
 provided by the Django web framework. Check out their docs for more details!
-
-.. important::
-
-   Please note that this is a new feature as of Archivematica 1.7 that has been
-   minimally tested outside of the development environment. If you experience
-   any problems with the feature, please consider creating a
-   `GitHub issue <am-gh-issues_>`_ or creating a post in the
-   `Archivematica Google Group <am-google-groups_>`_. The configuration
-   mechanism has some rough edges so it is recommended for advanced users only.
 
 .. _ldap-setup:
 
@@ -312,11 +302,47 @@ CAS backend configuration in Storage Service
             manage.py migrate
     ";
 
+.. _password-validation:
 
-.. _csp-setup:
+Password validation
+-------------------
 
-CSP setup
-=========
+A strong password policy can be introduced by enabling the password validation
+layer, which is available in both `Archivematica <am-dashboard-config_>`_ and
+`Storage Service <ss-config_>`_.
+
+Please follow the links above to know more about the different options
+available. E.g. the minimum lenght of your user passwords can be adjusted with
+``ARCHIVEMATICA_DASHBOARD_PASSWORD_MINIMUM_LENGTH`` and
+``SS_AUTH_PASSWORD_MINIMUM_LENGTH`` depending on the component.
+
+.. _cookie-session-security:
+
+Cookie and session security
+---------------------------
+
+When using HTTPS, it is recommended to enable "secure" cookies as well as other
+Django settings that provide additional security. See the `SSL/HTTPS
+<django-https-settings_>`_ section on the Django documentation site for further
+details.
+
+Additionally, it is possible to adjust some Django settings related to `session
+management <django-session-settings_>`_, such as their length or some other
+attributes related to the session cookie, e.g. ``SESSION_COOKIE_SECURE`` marks
+the session cookie as "secure".
+
+.. important::
+
+   The final Django settings module targeting production environments is
+   ``production.py``. In our repositories, they can be found
+   `here <am-prod-settings_>`_ and `here <ss-prod-settings_>`_. There is not
+   current support for additional settings modules but it may be added in the
+   future.
+
+.. _csp-security:
+
+Content Security Policy (CSP)
+-----------------------------
 
 `CSP <csp_>`_ (Content Security Policy) is an added layer of security
 that helps to detect and mitigate certain types of attacks, including
@@ -334,7 +360,7 @@ documentation for more details.
    test (see instructions below). Please share your feedback!
 
 CSP configuration in Archivematica Dashboard
-++++++++++++++++++++++++++++++++++++++++++++
+============================================
 
 #. Enable CSP support using the environment variable
    ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSP_ENABLED``. You can find
@@ -349,7 +375,7 @@ CSP configuration in Archivematica Dashboard
 #. Restart the Archivematica Dashboard.
 
 CSP backend configuration in Storage Service
-++++++++++++++++++++++++++++++++++++++++++++
+============================================
 
 #. Enable CSP support using the environment variable
    ``SS_CSP_ENABLED``. Assign a string value ``true`` to enable it.
@@ -453,6 +479,10 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
-.. _Storage Service application-specific-environment-variables: https://github.com/artefactual/archivematica-storage-service/blob/18b9a77ce1a6789be00159289fb48f4edc46065e/install/README.md#application-specific-environment-variables
+.. _ss-config: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.18.x/install/README.md
 .. _mozilla-django-oidc-docs: https://mozilla-django-oidc.readthedocs.io/en/stable/
 .. _django-csp-docs: https://django-csp.readthedocs.io/en/latest/
+.. _django-https-settings: https://docs.djangoproject.com/en/1.8/topics/security/#ssl-https
+.. _django-session-settings: https://docs.djangoproject.com/en/1.8/topics/http/sessions/#settings
+.. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.13.x/src/dashboard/src/settings/production.py
+.. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.18.x/storage_service/storage_service/settings/production.py

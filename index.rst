@@ -296,11 +296,10 @@ Security
 * :ref:`MySQL <mysql-security>`
 * :ref:`AtoM <atom-security>`
 * :ref:`Gearman <gearman-security>`
-* :ref:`User security <user-security>`
-* :ref:`LDAP setup <ldap-setup>`
-* :ref:`Shibboleth setup <shibboleth-setup>`
-* :ref:`OIDC setup <oidc-setup>`
-* :ref:`CAS setup <cas-setup>`
+* :ref:`Authentication backends <authentication-security>`
+* :ref:`Password validation <password-validation>`
+* :ref:`Cookie and session security <cookie-session-security>`
+* :ref:`Content Security Policy (CSP) <csp-security>`
 * :ref:`CA certificates <ca-root-certificates>`
 
 .. _dev-manual-home:
