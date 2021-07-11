@@ -16,7 +16,7 @@ Archivematica versions 1.5.1 and higher support installation on CentOS/Red Hat.
 Installation instructions
 -------------------------
 
-1. Prerequisites
+#. Prerequisites
 
    Update your system
 
@@ -32,7 +32,7 @@ Installation instructions
       :language: bash
       :lines: 5-12
 
-2. Some extra repositories need to be installed in order to fulfill the
+#. Some extra repositories need to be installed in order to fulfill the
    installation procedure.
 
    * Extra packages for enterprise Linux:
@@ -57,45 +57,49 @@ Installation instructions
       :language: bash
       :lines: 28-44
 
-
-3. Common services like Elasticsearch, MariaDB and Gearmand should be installed
+#. Common services like Elasticsearch, MariaDB and Gearmand should be installed
    and enabled before the Archivematica install.
 
-   .. note:: Do not enable Elasticsearch if you are running Archivematica in
-      indexless mode.
+   .. note::
+
+      Do not enable Elasticsearch if you are running Archivematica in indexless
+      mode.
 
    .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
       :lines: 51-57
 
+#. Now that MariaDB is up and running, create the Archivematica and
+   Storage Service databases and set up the expected credentials.
 
-4. Install Archivematica Storage Service
+   .. literalinclude:: scripts/am-centos-rpm.sh
+      :language: bash
+      :lines: 59-63
+
+#. Install Archivematica Storage Service
 
    * First, install the packages:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 59
+        :lines: 65
 
-   * After the package is installed, populate the SQLite database, and collect
-     some static files used by django.  These tasks must be run as
-     “archivematica” user.
+   * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 61-65
+        :lines: 67-71
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
-
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 81-86
+        :lines: 86-91
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
-5. Installing Archivematica Dashboard and MCP Server
+#. Installing Archivematica Dashboard and MCPServer
 
    There are a number of environment variables that Archivematica recognizes
    which can be used to alter how it is configured. For the full list, see the
@@ -106,53 +110,41 @@ Installation instructions
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 88
+        :lines: 93
 
-   * Create user and mysql database with:
-
-     .. literalinclude:: scripts/am-centos-rpm.sh
-        :language: bash
-        :lines: 90-92
-
-   * And as archivematica user, run migrations:
+   * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 94-99
+        :lines: 95-100
 
    * Start and enable services:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 101-104
+        :lines: 102-105
 
    * Restart Nginx in order to load the dashboard config file:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 106
+        :lines: 107
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
-6. Installing Archivematica MCP client
+#. Installing Archivematica MCPClient
 
    * Install the package:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 111
-
-   * The MCP Client expects some programs in certain paths, so we put them in place:
-
-     .. literalinclude:: scripts/am-centos-rpm.sh
-        :language: bash
-        :lines: 113
+        :lines: 109
 
    * Tweak ClamAV configuration:
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 114-115
+        :lines: 111-112
 
    * Indexless mode:
 
@@ -171,9 +163,9 @@ Installation instructions
 
      .. literalinclude:: scripts/am-centos-rpm.sh
         :language: bash
-        :lines: 117-124
+        :lines: 114-121
 
-7. Finalizing installation
+#. Finalizing installation
 
    **Configuration**
 
@@ -200,9 +192,9 @@ Installation instructions
 
    .. literalinclude:: scripts/am-centos-rpm.sh
       :language: bash
-      :lines: 126-128
+      :lines: 123-125
 
-8. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
+#. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
 
 .. _centos-post-install-config:
 

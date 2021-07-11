@@ -13,6 +13,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
 * :ref:`Update search indices <update-search-indices>`
+* :ref:`Review the processing configuration <review-processing-configuration>`
 
 .. note::
 
@@ -27,7 +28,7 @@ Clean up completed transfers watched directory
 
 .. note::
 
-   Ignore this section if you upgrading from Archivematica 1.11.
+   Ignore this section if you upgrading from Archivematica 1.11 or newer.
 
 Upgrading from Archivematica 1.10.x or older to Archivematica |release| can
 result in a number of completed transfers appearing as failed in the
@@ -155,7 +156,6 @@ Upgrade on Ubuntu packages
       sudo apt-get install archivematica-mcp-server
       sudo apt-get install archivematica-mcp-client
 
-
 #. Restart services.
 
    .. code:: bash
@@ -196,8 +196,7 @@ Upgrade on CentOS/Red Hat packages
 
       sudo yum update
 
-#. Once the new packages are installed, upgrade the databases for both
-   Archivematica and the Storage Service. This can be done with:
+#. Apply the Archivematica database migrations:
 
    .. code:: bash
 
@@ -210,6 +209,22 @@ Upgrade on CentOS/Red Hat packages
           /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py migrate --noinput
       ";
 
+#. Apply the Storage Service database migrations:
+
+   .. warning::
+
+      In Archivematica 1.13 or newer, the new default database backend is MySQL.
+      Please follow our :ref:`migration guide <storageservice:migration-sqlite-mysql>`
+      to move your data to a MySQL database before these migrations are applied.
+
+      If you want to continue using SQLite, please edit the environment
+      configuration found in ``/etc/sysconfig/archivematica-storage-service``.
+      Comment out ``SS_DB_URL`` and indicate the path of the SQLite database
+      with ``SS_DB_NAME``, e.g.:
+      ``SS_DB_NAME=/var/archivematica/storage-service/storage.db``.
+
+   .. code:: bash
+
       sudo -u archivematica bash -c " \
           set -a -e -x
           source /etc/default/archivematica-storage-service || \
@@ -218,7 +233,6 @@ Upgrade on CentOS/Red Hat packages
           cd /usr/lib/archivematica/storage-service
           /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
       ";
-
 
 #. Restart the Archivematica related services, and continue using the system:
 
@@ -413,10 +427,12 @@ It is a multi-step process that we have automated with a script:
 `es-reindex.sh`_. Please follow the link and read the instructions carefully.
 
 .. warning::
+
    Before you continue, we recommend backing up your Elasticsearch data. Please
    read the official docs for instructions.
 
 .. note::
+
    We may implement this script as a Django command in the future for better
    usability. For the time being, please download the script and tweak as
    needed.
@@ -458,17 +474,32 @@ Execution example:
    ";
 
 .. note::
+
    Please note, the use of encrypted or remote Transfer Backlog and AIP Store
    locations may require use of the option to rebuild indices from the Storage
    Service API rather than from the filesystem. At this time, it is not
    possible to rebuild the indices for all types of remote locations.
 
 .. note::
+
    Please note, the execution of this command may take a long time for big
    AIP and Transfer Backlog storage locations, especially if the packages are
    stored compressed or encrypted, or you are using a third party service. If
    that is the case, you may want to :ref:`reindex the Elasticsearch
    documents <reindex-documents>` instead.
+
+.. _review-processing-configuration:
+
+Review the processing configuration
+-----------------------------------
+
+After any Archivematica upgrade, it is recommended to perform a sanity check on
+your :ref:`processing configurations <process-config>`. Look for new decision
+points where you want to establish a default, like the new "Scan for viruses"
+introduced in Archivematica 1.13.
+
+The ``default`` and ``automated`` bundled configurations can be reset to the
+Archivematica defaults.
 
 
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html

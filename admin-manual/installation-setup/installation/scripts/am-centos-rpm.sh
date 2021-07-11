@@ -56,6 +56,12 @@ sudo -u root systemctl start mariadb
 sudo -u root systemctl enable gearmand
 sudo -u root systemctl start gearmand
 
+sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS MCP; CREATE DATABASE MCP CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo -H -u root mysql -hlocalhost -uroot -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
+sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON MCP.* TO 'archivematica'@'localhost';"
+sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
+
 sudo -u root yum install -y python-pip archivematica-storage-service
 
 sudo -u archivematica bash -c " \
@@ -63,7 +69,6 @@ set -a -e -x
 source /etc/sysconfig/archivematica-storage-service
 cd /usr/lib/archivematica/storage-service
 /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate";
-
 
 sudo -u archivematica bash -c " \
     set -a -e -x
@@ -87,10 +92,6 @@ sudo -u root systemctl start rngd
 
 sudo -u root yum install -y archivematica-common archivematica-mcp-server archivematica-dashboard
 
-sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS MCP; CREATE DATABASE MCP CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
-sudo -H -u root mysql -hlocalhost -uroot -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
-sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON MCP.* TO 'archivematica'@'localhost';"
-
 sudo -u archivematica bash -c " \
 set -a -e -x
 source /etc/sysconfig/archivematica-dashboard
@@ -105,12 +106,8 @@ sudo -u root systemctl start archivematica-dashboard
 
 sudo -u root systemctl restart nginx
 
-#sudo rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-#sudo rpm -Uvh https://forensics.cert.org/cert-forensics-tools-release-el7.rpm
-
 sudo -u root yum install -y archivematica-mcp-client
 
-sudo ln -sf /usr/bin/7za /usr/bin/7z
 sudo -u root sed -i 's/^#TCPSocket/TCPSocket/g' /etc/clamd.d/scan.conf
 sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 
