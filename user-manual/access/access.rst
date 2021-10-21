@@ -84,7 +84,9 @@ recognize by :ref:`using the arrangement feature on Appraisal tab
 
 You can also :ref:`add descriptive metadata <add-metadata>` to your transfer
 using either the metadata form or the metadata CSV file. This descriptive
-metadata will be passed to AtoM. Note that the AtoM DIP upload integration supports Dublin Core descriptive metadata only. The following Dublin Core fields are mapped to the ISAD(G) template in AtoM:
+metadata will be passed to AtoM. Note that the AtoM DIP upload integration
+supports Dublin Core descriptive metadata only. The following Dublin Core
+fields are mapped to the ISAD(G) template in AtoM:
 
 ===========  ===========================================
 Dublin Core  ISAD(G)
