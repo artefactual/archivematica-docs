@@ -180,7 +180,7 @@ Shibboleth backend configuration in Archivematica Dashboard
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #. Enable the authentication backend using the environment variable
-   ``SS_SHIBBOLETH_AUTHENTICATION``. You can find more details about this
+   ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SHIBBOLETH_AUTHENTICATION``. You can find more details about this
    environment string in the `configuration document <am-dashboard-config_>`_.
 
 #. Customize the ``shibboleth_auth.py`` settings module as needed.
