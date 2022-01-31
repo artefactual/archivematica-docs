@@ -157,19 +157,21 @@ Search for AICs
 If you need to retrieve the AIC or any of the AIPs that make up the AIC, you
 can do so on the Archival Storage tab.
 
-To see AIC information while browsing the Archival Storage tab, check the
-**Show AICs?** button next to the search button. Search results will now include
-the column ``AIC``, which provides information about whether or not the AIP
-is included in an AIC (or if it is, itself, an AIC).
+To see AIC information while browsing the Archival Storage tab, click on
+**Select columns** underneath the results table and highlight the ``AIC`` row.
+Search results will now include the column ``AIC``, which provides information
+about whether or not the AIP is included in an AIC (or if it is, itself, an
+AIC).
 
 .. image:: images/AIC-show.*
    :align: center
    :width: 80%
    :alt: The AIC column shows the AIC identifier
 
-In the above screenshot, note that four of the AIPs are part of an AIC while the
-last result is the AIC itself. This was a wildcard search, displaying everything
-currently in Archival Storage.
+In the above screenshot, note that the first four AIPs are part of an AIC while
+the fifth result is the AIC itself. The last two results are neither AICs nor
+part of AICs. This was a wildcard search, displaying everything currently in
+Archival Storage.
 
 To search for the AIPs that belong to a specific AIC, enter ``AIC#[identifier]``
 in the search box, replacing ``[identifier]`` with the identifier that you
