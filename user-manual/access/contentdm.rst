@@ -132,7 +132,7 @@ The sort method is based on `ASCII`_ characters (e.g. numbers, capital letters,
 underscores, small case letters).
 
 Other methods of controlling file order could be implemented in future releases.
-Please see `Issue 8448`_.
+Please see :issue:`8448`.
 
 .. _dip-contentdm:
 
@@ -188,4 +188,3 @@ downloaded through the web browser.
 
 .. _`CONTENTdm project client`: https://help.oclc.org/Metadata_Services/CONTENTdm/Project_Client
 .. _`ASCII`: https://en.wikipedia.org/wiki/ASCII
-.. _`Issue 8448`: https://projects.artefactual.com/issues/8448
