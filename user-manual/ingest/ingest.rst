@@ -728,8 +728,7 @@ Actions, click on Re-ingest.
    Archivematica will appear to allow you to extract and then delete packages.
    However, the resulting AIP will still actually contain the packages, and in
    the METS file they will not have re-ingestion events correctly associated
-   with them. This is documented as a bug here:
-   https://projects.artefactual.com/issues/10699
+   with them. This is documented as :issue:`10699`.
 
 4. Proceed to the Transfer or Ingest tab and approve the AIP re-ingest.
 
