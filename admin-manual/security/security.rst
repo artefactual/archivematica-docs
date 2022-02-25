@@ -479,10 +479,10 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
-.. _ss-config: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.18.x/install/README.md
+.. _ss-config: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.19.x/install/README.md
 .. _mozilla-django-oidc-docs: https://mozilla-django-oidc.readthedocs.io/en/stable/
 .. _django-csp-docs: https://django-csp.readthedocs.io/en/latest/
 .. _django-https-settings: https://docs.djangoproject.com/en/1.8/topics/security/#ssl-https
 .. _django-session-settings: https://docs.djangoproject.com/en/1.8/topics/http/sessions/#settings
 .. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.13.x/src/dashboard/src/settings/production.py
-.. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.18.x/storage_service/storage_service/settings/production.py
+.. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.19.x/storage_service/storage_service/settings/production.py
