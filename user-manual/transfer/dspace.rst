@@ -14,7 +14,7 @@ Archivematica pipeline can access.
 
 * :ref:`DSpace version compatibility <dspace-version>`
 * :ref:`DSpace export structure <dspace-export-structure>`
-* :ref:`Processing Dataverse datasets <processing-dspace-exports>`
+* :ref:`Processing DSpace exports <processing-dspace-exports>`
 
 .. _dspace-version:
 
