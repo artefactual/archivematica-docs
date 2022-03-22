@@ -7,7 +7,7 @@ Transfer
 In Archivematica, *transfer* is the process of moving any set of digital objects
 into Archivematica and turning the materials into a Submission Information
 Package (SIP). The Transfer tab prepares your content for preservation in
-Archivematica.
+Archivematica. And here's some more stuff.
 
 *On this page:*
 
