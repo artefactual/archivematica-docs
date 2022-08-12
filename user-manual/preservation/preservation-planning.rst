@@ -852,9 +852,9 @@ For more information about writing a command, see :ref:`Writing commands
 Validation rules
 ^^^^^^^^^^^^^^^^
 
-The default validation rule for most formats in Archivematica is to use JHOVE.
-The exception is Matroska (MKV) files, which are validated by MediaConch as of
-Archivematica 1.7.
+Archivematica contains a default validation rule for several common file
+formats. This default rule uses JHOVE. For Matroska (MKV) files, MediaConch is
+set as the  default validation tool as of Archivematica 1.7.
 
 If you would like to implement a MediaConch policy command, you must also create
 a rule to invoke the policy checking command for the desired format. For

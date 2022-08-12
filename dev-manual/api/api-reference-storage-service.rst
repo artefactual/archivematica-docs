@@ -498,25 +498,18 @@ Example response (JSON):
 Create space
 ^^^^^^^^^^^^
 
-..  note::
-
-    For background, see `Issue 36
-    <https://github.com/archivematica/Issues/issues/36>`_
-
 ============= ==========================  ======================================
 
-``POST``      **/api/v2/pipeline/space**  *Creates a new space.*
+``POST``      **/api/v2/space/**          *Creates a new space.*
 
 ============= ==========================  ======================================
 
 Request body parameters:
 
-Parameters should contain fields for a new space: See the
-`Storage Service \
-<https://www.archivematica.org/en/docs/storage-service-0.16/administrators/#>`_
-documentation or `Space <https://wiki.archivematica.org/Storage_Service#Space>`_
-for fields relevant to each type of space. Basic fields for a local file system
-space are listed below.
+Parameters should contain fields for a new space: See the `Storage Service \
+<https://www.archivematica.org/en/docs/storage-service-0.18/administrators/#access-protocols>`_
+documentation for fields relevant to each type of space. Basic fields for a
+local file system space are listed below.
 
 ===================   ==========================================================
 
@@ -1406,7 +1399,7 @@ Example request::
 
     curl \
         --location \
-        --request POST
+        --request POST \
         --header 'Authorization: ApiKey test:ow7ioGh2reephua8uPaiWee4EiHeev2z' \
         --header 'Content-Type: application/json' \
         --data-raw '{

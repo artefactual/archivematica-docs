@@ -408,7 +408,7 @@ Review AIP
 #. Depending on the version of Archivematica you are using, clicking on the name
    of the AIP will either open the AIP Details page or immediately download the
    AIP. If you end up on the AIP Details page, click on the ‘download’ button.
-#. Once it's downloaded, open the AIP. You will need to a program capable of
+#. Once it's downloaded, open the AIP. You will need to use a program capable of
    opening 7zip files installed on your computer. If required, you can download
    7Zip here: https://www.7-zip.org/download.html
 #. Once you have the AIP extracted, navigate through the folders until you find
@@ -446,10 +446,10 @@ Review DIP
 #. In the Storage Service, click on the Packages tab.
 #. On the far right side of the page there is a search box. Search for your DIP
    by entering the name you gave it in Task #1.
-#. You should see two results. One is your AIP and the other is the DIP, indicated
-   under the "Type" column.
+#. You should see two results. One is your AIP and the other is the DIP,
+   indicated under the "Type" column.
 #. Once you've identified which file is your DIP, click on "Download".
-#. Once it's downloaded, open the DIP. You will need to a program capable of
+#. Once it's downloaded, open the DIP. You will need to use a program capable of
    opening tar files installed on your computer. 7Zip, mentioned above, can open
    TAR files: https://www.7-zip.org/download.html
 #. Once you have the DIP extracted, open the objects directory. This directory
@@ -457,8 +457,8 @@ Review DIP
    the file formats in the objects directory to the rules in the Preservation
    Planning tab.
 #. The DIP also contains a thumbnails directory, which has small JPG versions of
-   your images. If the image could not be converted to a JPG (as is the case with
-   an SVG file), a generic icon is included instead.
+   your images. If the image could not be converted to a JPG (as is the case
+   with an SVG file), a generic icon is included instead.
 
 .. _quick-start-config:
 
