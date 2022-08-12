@@ -40,7 +40,7 @@
           <premis:eventIdentifierType>UUID</premis:eventIdentifierType>
           <premis:eventIdentifierValue>842774e2-7eeb-49a2-99ee-eade80f6bd1f</premis:eventIdentifierValue>
         </premis:eventIdentifier>
-        <premis:eventType>name cleanup</premis:eventType>
+        <premis:eventType>filename change</premis:eventType>
         <premis:eventDateTime>2020-01-06T15:01:52.881142+00:00</premis:eventDateTime>
         <premis:eventDetailInformation>
           <premis:eventDetail>prohibited characters removed: program="sanitize_names"; version="1.10.db4f6aca278e6daf2af160ed40349baf7c6f53af"</premis:eventDetail>
@@ -48,7 +48,7 @@
         <premis:eventOutcomeInformation>
           <premis:eventOutcome></premis:eventOutcome>
           <premis:eventOutcomeDetail>
-            <premis:eventOutcomeDetailNote>Original name="%transferDirectory%objects/(brackets)/@at.txt"; cleaned up name="%transferDirectory%objects/(brackets)/_at.txt"</premis:eventOutcomeDetailNote>
+            <premis:eventOutcomeDetailNote>Original name="%transferDirectory%objects/(brackets)/@at.txt"; new name="%transferDirectory%objects/(brackets)/_at.txt"</premis:eventOutcomeDetailNote>
           </premis:eventOutcomeDetail>
         </premis:eventOutcomeInformation>
         <premis:linkingAgentIdentifier>

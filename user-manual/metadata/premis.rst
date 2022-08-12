@@ -66,7 +66,7 @@ Skip to:
 
 * :ref:`Default events for original files <event-default>`
 * :ref:`Normalized files <event-normalize>`
-* :ref:`Name cleanup <event-cleanup>`
+* :ref:`Filename change <event-filename-change>`
 * :ref:`Format identification <event-identification>`
 * :ref:`Extract packages <event-extract>`
 * :ref:`OCR transcription <event-ocr>`
@@ -108,15 +108,15 @@ PREMIS Event will be added.
    :language: xml
    :lines: 107-126
 
-.. _event-cleanup:
+.. _event-filename-change:
 
-Name cleanup
-^^^^^^^^^^^^
+Filename change
+^^^^^^^^^^^^^^^
 
 If this microservice is run on a file, then it is entered as the following
 PREMIS Event which also records the original filename:
 
-* name cleanup
+* filename change
 
 .. literalinclude:: scripts/PREMISevents.xml
    :language: xml
