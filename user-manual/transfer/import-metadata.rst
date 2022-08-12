@@ -29,16 +29,12 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 
 *On this page:*
 
-* :ref:`Importing descriptive metadata <importing-descriptive-metadata>`
+* :ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`
 
-  * :ref:`Importing descriptive metadata using metadata.csv <metadata.csv>`
-
-    * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
-    * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
-    * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
-
-  * :ref:`Importing descriptive metadata using JSON files <metadata-json>`
-  * :ref:`Importing descriptive metadata using XML files <metadata-xml>`
+  * :ref:`Adding descriptive metadata to individual objects <object-metadata>`
+  * :ref:`Adding descriptive metadata to a directory <directory-metadata>`
+  * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
+  * :ref:`Adding metadata using JSON files <metadata-json>`
 
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Importing event metadata with premis.xml <premis.xml>`
@@ -50,33 +46,16 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
 
    :ref:`Create a transfer with submission documentation <create-submission>`
 
-.. _importing-descriptive-metadata:
-
-Importing descriptive metadata
-------------------------------
-
-Archivematica can recognize and parse metadata that is included in a transfer,
-reflecting both the structure and the contents of the metadata in the AIP METS.
-There are three formats for including metadata so that Archivematica can
-understand it: CSV, JSON, and XML.
-
-Archivematica natively supports Dublin Core's `DCMI Metadata Terms`_, which
-includes the basic 15 elements from the `Dublin Core Metadata Element Set`_.
-
-Archivematica is able to pass Dublin Core metadata that is included via CSV to
-AtoM or ArchivesSpace, but not non-Dublin Core metadata or metadata included
-by any other method.
-
-Implementation of each of these methods is described in the sections below.
-
 .. _metadata.csv:
 
 Importing descriptive metadata with metadata.csv
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
-The CSV method works most effectively for metadata that follows the Dublin Core
-schema. Using the metadata.csv method, users can also include :ref:`non-Dublin
-Core metadata <non-dc-metadata>`.
+Archivematica natively supports Dublin Core's `DCMI Metadata Terms`_, which
+includes the basic 15 elements from the `Dublin Core Metadata Element Set`_.
+Using the metadata.csv method, users can also include :ref:`non-Dublin Core
+metadata <non-dc-metadata>`. Archivematica is able to pass Dublin Core metadata
+to AtoM or ArchivesSpace, but not non-Dublin Core metadata.
 
 .. note::
 
@@ -238,8 +217,8 @@ directory - two with ``MDTYPE="DC"`` and two with ``MDTYPE="OTHER"``.
 
 .. _metadata-json:
 
-Importing descriptive metadata using JSON files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Adding metadata using JSON files
+++++++++++++++++++++++++++++++++
 
 It is possible to use a JSON file rather than a CSV to import Dublin Core
 metadata. The JSON file is added to the metadata directory as above.
@@ -283,18 +262,6 @@ metadata. The JSON file is added to the metadata directory as above.
 #. :ref:`Process the transfer <process-transfer>` as usual.
 
 The METS file will be populated exactly as in the CSV examples above.
-
-.. _metadata-xml:
-
-Importing descriptive metadata using XML files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The XML method for including metadata is
-
-Unlike the CSV and JSON methods, the XML method provides options to update, add,
-and delete metadata from an AIP after it has been created.
-
-Furthermore, the XML method includes 
 
 .. _rights.csv:
 
