@@ -354,6 +354,10 @@ You will also need to make some changes in the AtoM user interface:
 * Enabling Job scheduling (Admin --> Settings --> Job scheduling) in version 2.1
   or lower is also recommended.
 
+* When using a SWORD deposit in a location other than `/tmp`, this location
+  should be set in the global settings (Admin --> Settings --> Global --> SWORD
+  deposit directory).
+
 AtoM DIP upload can use Rsync as a transfer mechanism. Rsync is an open source
 utility for efficiently transferring files. The rsync-target parameter is used
 to specify an Rsync-style target host/directory pairing, ``foobar.com:~/dips/``
@@ -413,6 +417,42 @@ Add the SSH key that we generated before:
    $ chmod 700 /home/archivematica/.ssh/
    $ sudo vim /home/archivematica/.ssh/authorized_keys // Paste here the contents of id_dsa.pub
    $ chown -R archivematica:archivematica /home/archivematica
+
+.. NOTE::
+
+   AtoM 2.7 has added a new feature that deletes the DIP directory from the SWORD
+   deposit after uploading the DIP to AtoM. In order for AtoM to delete this
+   directory, the AtoM user (`www-data` or `nginx` by default) must have write
+   permissions to this directory in order to delete it. The easiest way is to use
+   the setfacl command.
+
+   Install the `acl` package on Ubuntu or CentOS:
+
+   .. code-block:: bash
+
+      sudo apt-get install acl # Ubuntu
+      sudo yum install acl  # CentOS
+
+   Create a new SWORD deposit directory (Use the `nginx` group CentOS instead
+   of `www-data`):
+
+   .. code-block:: bash
+
+      sudo mkdir /home/archivematica/atom_sword_deposit
+      sudo chown archivematica:www-data /home/archivematica/atom_sword_deposit
+      sudo chmod 770 /home/archivematica/atom_sword_deposit
+
+   Set the ACL on new directory (Use the `nginx` user on CentOS instead of
+   `www-data`) :
+
+   .. code-block:: bash
+
+      sudo setfacl -d -m u:www-data:rwX /home/archivematica/atom_sword_deposit
+
+      The ACL sets `rw-` permissions for files and `rwx` permissions for
+      directories for the nginx user and then the `www-data` (or `nginx`) user can
+      delete the temporay DIP directory.
+
 
 In Archivematica, make sure that you update the ``--rsync-target`` accordingly.
 These are the parameters that we are passing to the upload-qubit microservice.
