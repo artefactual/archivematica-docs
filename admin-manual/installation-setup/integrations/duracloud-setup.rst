@@ -13,8 +13,7 @@ documentation <storageservice:administrators>` before configuring DuraCloud.
 
 This guide can be used by those who wish to install Archivematica and/or
 DuraCloud locally and run the systems themselves and may also be helpful for
-those who subscribe to a hosted service. `ArchivesDirect`_ is an Archivematica
-in DuraCloud hosting plan offered by Artefactual Systems and DuraSpace.
+those who subscribe to a hosted service.
 
 *On this page*
 
@@ -103,6 +102,5 @@ when you installed Archivematica.
 
 :ref:`Back to the top <duracloud-setup>`
 
-.. _ArchivesDirect: https://duraspace.org/archivesdirect/
 .. _DuraCloud documentation: https://wiki.lyrasis.org/display/DURACLOUD/DuraCloud
 .. _DuraSpace Downloads page: https://wiki.lyrasis.org/display/DURACLOUD/DuraCloud+Downloads
