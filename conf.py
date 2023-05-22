@@ -50,7 +50,10 @@ inventory = 'https://gist.githubusercontent.com/qubot/3969ebadc9c48574d16a/raw/s
 response = urlopen(inventory)
 extlinks = json.load(response)
 for item in extlinks:
-    extlinks[item] = tuple(extlinks[item])
+    base_url, caption = extlinks[item]
+    # Sphinx 6.0+ expects the caption of the extlink to contain exactly one '%s'
+    # and the extlinks in the gist above don't have one, so we add it here.
+    extlinks[item] = (base_url, r"{}%s".format(caption))
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
