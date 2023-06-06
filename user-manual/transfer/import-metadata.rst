@@ -36,6 +36,7 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
   * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
   * :ref:`Adding metadata using JSON files <metadata-json>`
 
+* :ref:`Importing and validating descriptive metadata with source-metadata.csv <metadata-xml-validation>`
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Importing event metadata with premis.xml <premis.xml>`
 * :ref:`Adding metadata to bags <metadata-bags>`
@@ -262,6 +263,199 @@ metadata. The JSON file is added to the metadata directory as above.
 #. :ref:`Process the transfer <process-transfer>` as usual.
 
 The METS file will be populated exactly as in the CSV examples above.
+
+
+.. _metadata-xml-validation:
+
+Importing and validating descriptive metadata with source-metadata.csv
+----------------------------------------------------------------------
+
+TODO raison d'être paragraph.
+
+Setting up
+++++++++++
+
+This feature is disabled by default. It's still considered experimental and
+its validation rules need to be configured according to the user needs before
+using it.
+
+The `Metadata XML validation variables <https://github.com/artefactual/archivematica/tree/179247f9e5508defd563e4eae3c73ea8e8b674f3/src/MCPClient/install#metadata-xml-validation-variables>`_
+section of the MCPClient installation documentation explains how to enable
+and configure this feature. You can also check the
+`sample configuration files <https://github.com/artefactual/archivematica-sampledata/tree/b01539902198a9e4a15f76add7b6b129eecf6b7b/xml-validation>`_
+used in the Archivematica Automated User Acceptance Tests (AMAUATs).
+
+Adding and validating metadata
+++++++++++++++++++++++++++++++
+
+TODO Intro paragraph.
+
+#. Create a transfer directory containing the digital objects you would like to
+   preserve (for more information on creating a basic transfer for
+   Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,
+   the following directory tree displays a basic transfer called
+   ``metadataTransfer``. One digital object sits within the top-level directory,
+   while another object is nested within a subdirectory.::
+
+    metadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    └── beihai.tif
+
+   Note that this transfer does not currently contain any metadata.
+
+#. Create a CSV file called ``source-metadata.csv``. It must contain three
+   columns in the following order:
+
+   * ``filename``: a relative path of a digital object or a directory in the
+     transfer. It must start with ``objects/``.
+   * ``metadata``: a path of an XML file in the ``metadata`` directory with
+     metadata about the digital object or directory specified in the
+     ``filename`` column. Optionally, this XML file can be validated
+     using an XML schema and its contents are included in the METS file
+     of the AIP.
+   * ``type``: a unique identifier for the metadata content. This identifier
+     is used during metadata reingests to update or delete existing metadata.
+
+   This is the ``source-metadata.csv`` file we are going to use for the
+   ``metadataTransfer`` directory from above.
+
+   .. csv-table::
+      :file: _csv/source-metadata.csv
+      :header-rows: 1
+
+#. Create the two metadata XML files listed in the ``metadata`` column of the
+   ``source-metadata.csv`` file: ``beihai.xml`` and ``bird-dc.xml``.
+
+   The ``beihai.xml`` metadata file contains unstructured text represented
+   as a single top level ``<metadata>`` element with no XML namespace wrapping
+   `character data <https://www.w3.org/TR/REC-xml/#sec-cdata-sect>`_ like
+   this:
+
+   .. literalinclude:: scripts/metadata-xml-unstructured.xml
+      :language: xml
+
+   And the ``bird-dc.xml`` metadata file contains
+   `OAI-PMH <https://www.openarchives.org/pmh/>`_ Dublin Core metadata that
+   could be validated against the
+   `OAI-PMH Version 2.0 specification <https://www.openarchives.org/OAI/openarchivesprotocol.html>`_
+   and it looks like this:
+
+   .. literalinclude:: scripts/metadata-xml-dc.xml
+      :language: xml
+
+#. Create a subdirectory called ``metadata`` and place the ``source-metadata.csv``
+   file and the two metadata XML files inside.::
+
+    metadataTransfer/
+    ├── audio
+    │   └── bird.mp3
+    ├── beihai.tif
+    └── metadata
+        ├── source-metadata.csv
+        ├── beihai.xml
+        └── bird-dc.xml
+
+#. :ref:`Process the transfer <process-transfer>` as usual.
+
+The METS file for the above example includes two descriptive metadata sections
+(``<dmdSec>``), one for each file in the transfer. Both sections are given
+attributes that specify their creation time and their status is set as
+``original``. And the contents of the metadata XML files in the ``metadata``
+directory have been transposed here.
+
+.. literalinclude:: scripts/metadata-xml-dmdsecs.xml
+   :language: xml
+
+Note in the metadata wrapper (``<mdWrap>``) that they are given an MDTYPE of
+"OTHER" and an MDOTHERTYPE with the value of the ``type`` cell from the
+``source-metadata.csv`` file. This is useful for updating or deleting the
+metadata files in the AIP during metadata reingests.
+
+Updating metadata through metadata reingests
+++++++++++++++++++++++++++++++++++++++++++++
+
+You can update the metadata contained in the METS file by reingesting your
+AIP and adding a new ``source-metadata.csv`` file and updated metadata XML
+files from one of your transfer source locations before approving the reingest.
+
+#. This is the new ``source-metadata.csv`` file we are going to use to
+   update the metadata associated with the ``beihai.tif`` digital object
+   in the previous transfer.
+
+   .. csv-table::
+      :file: _csv/source-metadata-update.csv
+      :header-rows: 1
+
+   It's important that in the ``type`` column we reuse the identifier
+   (i.e. ``beihai``) that was set as the  ``OTHERMDTYPE`` attribute of the
+   ``<dmdSec>``.
+
+#. Create the new metadata XML file listed in the ``metadata`` column of the
+   ``source-metadata.csv`` file: ``beihai-v2.xml``.
+
+   The ``beihai-v2.xml`` metadata file contains the same structure as before
+   with a couple of additional sentences:
+
+   .. literalinclude:: scripts/metadata-xml-unstructured-update.xml
+      :language: xml
+
+#. :ref:`Start a metadata reingest <reingest>` for the previous AIP.
+
+#. Before approving the reingest :ref:`upload the new CSV file and metadata XML file through the user interface <metadata-csv-ui>`.
+
+#. Approve and finish the metadata reingest.
+
+The METS file now includes a new descriptive metadata section (``<dmdSec>``)
+for the ``beihai.tif`` digital object. It also contains an attribute that
+specifies its creation time and its status is set as ``update``.
+
+.. literalinclude:: scripts/metadata-xml-dmdsecs-update.xml
+   :language: xml
+
+Note that the initial descriptive metadata section for the object is still
+there but its status has been updated to ``original-superseded``. Also, the
+descriptive metadata section for the other digital object in the AIP has been
+left intact in the process.
+
+Deleting metadata through metadata reingests
+++++++++++++++++++++++++++++++++++++++++++++
+
+You can delete the metadata XML files contained in the AIP and ... in the METS
+file by reingesting your AIP and adding a new ``source-metadata.csv`` file from
+one of your transfer source locations before approving the reingest.
+
+#. This is the new ``source-metadata.csv`` file we are going to use to
+   delete the metadata associated with the ``audio/bird.mp3`` digital object
+   in the previous transfer. Here we assume this is the second metadata reingest
+   of the AIP after the one in the previous section.
+
+   .. csv-table::
+      :file: _csv/source-metadata-delete.csv
+      :header-rows: 1
+
+   It's important that in the ``type`` column we reuse the identifier
+   (i.e. ``bird-dc``) that was set as the  ``OTHERMDTYPE`` attribute of the
+   ``<dmdSec>``. Note that we signal the deletion request by leaving the
+   ``metadata`` value empty.
+
+#. :ref:`Start a metadata reingest <reingest>` for the previous AIP.
+
+#. Before approving the reingest :ref:`upload the new CSV file through the user interface <metadata-csv-ui>`.
+
+#. Approve and finish the metadata reingest.
+
+In the METS file the status attribute of the descriptive metadata section
+(``<dmdSec>``) of the ``audio/bird.mp3`` digital object has been updated
+from ``original`` to ``deleted``.
+
+.. literalinclude:: scripts/metadata-xml-dmdsecs-delete.xml
+   :language: xml
+
+After this the ``bird-dc.xml`` file has been deleted from the
+``objects/metadata`` directory in the AIP. And note that the descriptive
+metadata sections for the other digital object in have been left intact in
+the process.
 
 .. _rights.csv:
 
