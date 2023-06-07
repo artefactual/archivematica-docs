@@ -36,7 +36,7 @@ Metadata in the METS file is searchable in the :ref:`Archival Storage
   * :ref:`Adding non-Dublin Core metadata <non-dc-metadata>`
   * :ref:`Adding metadata using JSON files <metadata-json>`
 
-* :ref:`Importing and validating descriptive metadata with source-metadata.csv <metadata-xml-validation>`
+* :ref:`Importing and validating XML metadata with source-metadata.csv <metadata-xml-validation>`
 * :ref:`Importing rights metadata with rights.csv <rights.csv>`
 * :ref:`Importing event metadata with premis.xml <premis.xml>`
 * :ref:`Adding metadata to bags <metadata-bags>`
@@ -264,13 +264,15 @@ metadata. The JSON file is added to the metadata directory as above.
 
 The METS file will be populated exactly as in the CSV examples above.
 
-
 .. _metadata-xml-validation:
 
-Importing and validating descriptive metadata with source-metadata.csv
-----------------------------------------------------------------------
+Importing and validating XML metadata with source-metadata.csv
+--------------------------------------------------------------
 
-TODO raison d'être paragraph.
+Users can add metadata files in XML format to their transfer, and have that
+metadata related to objects in the transfer and parsed into the METS file in
+the AIP. If formatted correctly, Archivematica can also validate the metadata
+to ensure it conforms with a local or linked standard.
 
 Setting up
 ++++++++++
@@ -287,8 +289,6 @@ used in the Archivematica Automated User Acceptance Tests (AMAUATs).
 
 Adding and validating metadata
 ++++++++++++++++++++++++++++++
-
-TODO Intro paragraph.
 
 #. Create a transfer directory containing the digital objects you would like to
    preserve (for more information on creating a basic transfer for
@@ -388,7 +388,7 @@ files from one of your transfer source locations before approving the reingest.
       :header-rows: 1
 
    It's important that in the ``type`` column we reuse the identifier
-   (i.e. ``beihai``) that was set as the  ``OTHERMDTYPE`` attribute of the
+   (i.e. ``local``) that was set as the  ``OTHERMDTYPE`` attribute of the
    ``<dmdSec>``.
 
 #. Create the new metadata XML file listed in the ``metadata`` column of the
@@ -435,7 +435,7 @@ one of your transfer source locations before approving the reingest.
       :header-rows: 1
 
    It's important that in the ``type`` column we reuse the identifier
-   (i.e. ``bird-dc``) that was set as the  ``OTHERMDTYPE`` attribute of the
+   (i.e. ``dc-xml``) that was set as the  ``OTHERMDTYPE`` attribute of the
    ``<dmdSec>``. Note that we signal the deletion request by leaving the
    ``metadata`` value empty.
 

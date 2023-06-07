@@ -1,5 +1,5 @@
 <mets:dmdSec ID="dmdSec_15" CREATED="2023-06-06T15:59:29" STATUS="update" GROUPID="bfd05690-6e58-4f6c-90c1-e1200b79cbc3">
-  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="beihai">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="local">
     <mets:xmlData>
       <metadata>
         Beihai, Guanxi, China, 1988
@@ -11,7 +11,7 @@
   </mets:mdWrap>
 </mets:dmdSec>
 <mets:dmdSec ID="dmdSec_3" CREATED="2023-06-06T05:43:01" STATUS="original-superseded" GROUPID="bfd05690-6e58-4f6c-90c1-e1200b79cbc3">
-  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="beihai">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="local">
     <mets:xmlData>
       <metadata>
         Beihai, Guanxi, China, 1988
@@ -21,7 +21,7 @@
   </mets:mdWrap>
 </mets:dmdSec>
 <mets:dmdSec ID="dmdSec_4" CREATED="2023-06-06T05:43:01" STATUS="deleted">
-  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="bird-dc">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="dc-xml">
     <mets:xmlData>
       <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
         <dc:title>14000 Caen, France - Bird in my garden </dc:title>
