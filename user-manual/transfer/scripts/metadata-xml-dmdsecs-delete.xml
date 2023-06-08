@@ -1,0 +1,42 @@
+<mets:dmdSec ID="dmdSec_15" CREATED="2023-06-06T15:59:29" STATUS="update" GROUPID="bfd05690-6e58-4f6c-90c1-e1200b79cbc3">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="local">
+    <mets:xmlData>
+      <metadata>
+        Beihai, Guanxi, China, 1988
+        Beihai is a city in the south of Guangxi, People's Republic of China.
+        This image was created by NASA/GSFC/METI/ERSDAC/ JAROS and U.S./Japan ASTER Science Team.
+        This image was published by the NASA Jet Propulsion Laboratory.
+      </metadata>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_3" CREATED="2023-06-06T05:43:01" STATUS="original-superseded" GROUPID="bfd05690-6e58-4f6c-90c1-e1200b79cbc3">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="local">
+    <mets:xmlData>
+      <metadata>
+        Beihai, Guanxi, China, 1988
+        Beihai is a city in the south of Guangxi, People's Republic of China.
+      </metadata>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
+<mets:dmdSec ID="dmdSec_4" CREATED="2023-06-06T05:43:01" STATUS="deleted">
+  <mets:mdWrap MDTYPE="OTHER" OTHERMDTYPE="dc-xml">
+    <mets:xmlData>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>14000 Caen, France - Bird in my garden </dc:title>
+        <dc:creator>Nicolas Germain</dc:creator>
+        <dc:subject>field recording </dc:subject>
+        <dc:subject>soundscapes </dc:subject>
+        <dc:subject>radio aporee </dc:subject>
+        <dc:description>Bird singing in my garden, Caen, France, Zoom H6 </dc:description>
+        <dc:publisher>Radio Aporee </dc:publisher>
+        <dc:date>27/05/2017</dc:date>
+        <dc:type>sound </dc:type>
+        <dc:format>audio/mp3 </dc:format>
+        <dc:source>Internet Archive </dc:source>
+        <dc:rights>Public domain</dc:rights>
+      </oai_dc:dc>
+    </mets:xmlData>
+  </mets:mdWrap>
+</mets:dmdSec>
