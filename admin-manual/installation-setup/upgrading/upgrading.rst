@@ -130,8 +130,8 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.13.x/ubuntu bionic main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.13.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.14.x/ubuntu bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.14.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -181,7 +181,7 @@ Upgrade on CentOS/Red Hat packages
 
    .. code:: bash
 
-    sudo sed -i 's/1.12.x/1.13.x/g' /etc/yum.repos.d/archivematica*
+    sudo sed -i 's/1.13.x/1.14.x/g' /etc/yum.repos.d/archivematica*
 
 #. Remove the current installed version of ghostscript:
 

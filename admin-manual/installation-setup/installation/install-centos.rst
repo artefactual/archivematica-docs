@@ -255,8 +255,8 @@ the configuration of your new server.
 
 :ref:`Back to the top <install-pkg-centos>`
 
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.7.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPServer/install/README.md
 .. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
