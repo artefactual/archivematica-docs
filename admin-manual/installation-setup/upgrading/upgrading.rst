@@ -155,6 +155,7 @@ Upgrade on Ubuntu packages
       sudo apt-get install archivematica-dashboard
       sudo apt-get install archivematica-mcp-server
       sudo apt-get install archivematica-mcp-client
+      sudo apt-get install archivematica
 
 #. Restart services.
 
