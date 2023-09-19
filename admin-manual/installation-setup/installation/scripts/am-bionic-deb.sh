@@ -23,8 +23,12 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 sudo apt-get update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y htop ntp apt-transport-https unzip openjdk-8-jre-headless
+sudo apt-get install -y htop ntp apt-transport-https unzip openjdk-8-jre-headless mysql-server libmysqlclient-dev
 sudo apt-get install -y elasticsearch
+
+sudo -H -u root mysql -hlocalhost -uroot -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo -H -u root mysql -hlocalhost -uroot -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
+sudo -H -u root mysql -hlocalhost -uroot -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
 
 sudo apt-get install -y archivematica-storage-service
 
