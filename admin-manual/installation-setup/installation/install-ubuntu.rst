@@ -61,17 +61,23 @@ Ubuntu 18.04 (Bionic) installation instructions
       :language: bash
       :lines: 27
 
+#. Create the Storage Service database and set up the expected credentials.
+
+   .. literalinclude:: scripts/am-bionic-deb.sh
+      :language: bash
+      :lines: 29-31
+
 #. Install the Storage Service package.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 29
+       :lines: 33
 
 #. Configure the Storage Service.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
-      :lines: 31-32
+      :lines: 35-36
 
 #. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -79,17 +85,13 @@ Ubuntu 18.04 (Bionic) installation instructions
    on a separate machine, that configuration is not documented in these
    instructions.
 
-   The archivematica-mcp-server package will install MySQL and configure the
-   database used by Archivematica. Depending on the version of MySQL that is
-   installed, the interfaces that you see may differ slightly.
-
    When you are prompted to create a password for the archivematica-mcp-server,
    you must use ``demo`` as the password during the install process. The
    password can be changed after the installation is complete.
 
    .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
-      :lines: 34-36
+      :lines: 38-40
 
 #.  Configure the Archivematica components (optional). There are a number of
     environment variables that Archivematica recognizes which can be used to
@@ -112,7 +114,7 @@ Ubuntu 18.04 (Bionic) installation instructions
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 38
+       :lines: 42
 
 #. Start Elasticsearch (optional).
 
@@ -121,13 +123,13 @@ Ubuntu 18.04 (Bionic) installation instructions
 
     .. literalinclude:: scripts/am-bionic-deb.sh
       :language: bash
-      :lines: 40-42
+      :lines: 44-46
 
 #. Start the remaining services
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 44-54
+       :lines: 48-58
 
     If you have trouble with the gearman or clamav command try restarting it:
 
@@ -151,7 +153,7 @@ Ubuntu 18.04 (Bionic) installation instructions
 
     .. literalinclude:: scripts/am-bionic-deb.sh
        :language: bash
-       :lines: 56-59
+       :lines: 60-63
 
 #. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
