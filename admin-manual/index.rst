@@ -11,7 +11,7 @@ set of links to each chapter's main sections.
 
    installation-setup/installation/installation
    installation-setup/installation/install-ubuntu
-   installation-setup/installation/install-centos
+   installation-setup/installation/install-rocky
    installation-setup/installation/install-ansible
    installation-setup/installation/install-advanced
    installation-setup/upgrading/upgrading

@@ -98,8 +98,8 @@ many CPUs.
 
 To deploy another instance of MCPClient on the same machine we recommend
 creating an additional `systemd`_ unit. A second unit can be created by
-creating another `unit file`_ for the MCPClient service. For example, in CentOS
-the existing `MCPClient unit file`_ is located in
+creating another `unit file`_ for the MCPClient service. For example, in Rocky
+Linux the existing `MCPClient unit file`_ is located in
 `/etc/systemd/system/archivematica-mcp-client.service`.
 To add a unit, create a copy of that unit file with a different name, such as\
 `/etc/systemd/system/archivematica-mcp-client-two.service`

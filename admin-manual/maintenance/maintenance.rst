@@ -470,7 +470,7 @@ taken to recover.
 
 #. Clean up the disk by removing failed or rejected transfers, any excessive
    ``/tmp`` data, or anything else causing the disk to have filled up.
-#. Reset MySQL (or MariaDB, on CentOS) database.
+#. Reset MySQL (or MariaDB, on Rocky Linux) database.
 #. Reset Archivematica components in appropriate order (see `restart-services`_
    for details).
 #. Set Elasticsearch back into write mode. The easiest way to do this is to run
@@ -501,7 +501,7 @@ Other services that Archivematica depends on are:
   * ClamAV
   * ElasticSearch
   * Gearman
-  * MySQL (Ubuntu) or MariaDB (CentOS)
+  * MySQL (Ubuntu) or MariaDB (Rocky Linux)
   * Nailgun
   * Nginx
 

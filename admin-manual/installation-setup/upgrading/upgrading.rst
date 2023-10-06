@@ -9,7 +9,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Clean up completed transfers watched directory <completed-transfers>`
 * :ref:`Create a backup <create-backup>`
 * :ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`
-* :ref:`Upgrade CentOS/Red Hat package install <upgrade-centos>`
+* :ref:`Upgrade Rocky Linux/Red Hat package install <upgrade-rocky>`
 * :ref:`Upgrade in indexless mode <upgrade-indexless>`
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
 * :ref:`Update search indices <update-search-indices>`
@@ -130,8 +130,8 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.14.x/ubuntu bionic main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.14.x/ubuntu-externals bionic main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -173,16 +173,16 @@ Upgrade on Ubuntu packages
    you should be able to clear the cache with control-shift-R or
    command-shift-F5.
 
-.. _upgrade-centos:
+.. _upgrade-rocky:
 
-Upgrade on CentOS/Red Hat packages
-----------------------------------
+Upgrade on Rocky Linux/Red Hat packages
+---------------------------------------
 
 #. Upgrade the repositories for |version|:
 
    .. code:: bash
 
-    sudo sed -i 's/1.13.x/1.14.x/g' /etc/yum.repos.d/archivematica*
+    sudo sed -i 's/1.14.x/1.15.x/g' /etc/yum.repos.d/archivematica*
 
 #. Remove the current installed version of ghostscript:
 
@@ -277,22 +277,22 @@ with cloud based virtual machines, or physical servers.
 
 #. Go into the appropiate playbook folder, and install the needed roles
 
-   .. _ubuntu-18.04:
+   .. _ubuntu-22.04:
 
-   Ubuntu 18.04 (Bionic):
+   Ubuntu 22.04 (Jammy):
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-bionic
+      cd deploy-pub/playbooks/archivematica-jammy
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
-   .. _centos-7:
+   .. rocky-9:
 
-   Centos 7:
+   Rocky Linux 9:
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-centos7
+      cd deploy-pub/playbooks/archivematica-rocky9
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
    All the following steps should be run from the respective playbook folder
@@ -340,7 +340,7 @@ searching across several different dashboard pages.
       sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
       sudo sh -c 'echo "ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-client'
 
-   If you are using CentOS, run the following commands.
+   If you are using Rocky Linux, run the following commands.
 
    .. code:: bash
 
@@ -358,7 +358,7 @@ searching across several different dashboard pages.
       sudo service archivematica-mcp-client restart
       sudo service archivematica-mcp-server restart
 
-   If you are using CentOS, run the following commands.
+   If you are using Rocky Linux, run the following commands.
 
    .. code:: bash
 

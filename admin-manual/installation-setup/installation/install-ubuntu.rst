@@ -6,7 +6,7 @@ Manually Installing Archivematica on Ubuntu
 
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages are available
-for Ubuntu 18.04. We're planning to support Ubuntu 20.04 soon.
+for Ubuntu 22.04.
 
 .. note:: Manual installation using packages on Ubuntu is not officially
    supported. Please see :ref:`Instructions for new installation
@@ -14,17 +14,17 @@ for Ubuntu 18.04. We're planning to support Ubuntu 20.04 soon.
 
 *On this page*
 
-* :ref:`Installation instructions for Ubuntu 18.04 (Bionic) <ubuntu-instructions>`
+* :ref:`Installation instructions for Ubuntu 22.04 (Jammy) <ubuntu-instructions>`
 * :ref:`Post-installation configuration <ubuntu-post-install-config>`
 
 .. _ubuntu-instructions:
 
-Ubuntu 18.04 (Bionic) installation instructions
+Ubuntu 22.04 (Jammy) installation instructions
 -----------------------------------------------
 
 #. Use these commands to install the repositories:
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 14-18
 
@@ -35,20 +35,20 @@ Ubuntu 18.04 (Bionic) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 20-21
 
 #. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 23-24
 
 #. Install some needed packages
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 26
 
@@ -57,19 +57,19 @@ Ubuntu 18.04 (Bionic) installation instructions
    .. note:: Skip this step if you are planning to run Archivematica in
       indexless mode (without Elasticsearch).
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 27
 
 #. Install the Storage Service package.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
        :lines: 29
 
 #. Configure the Storage Service.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 31-32
 
@@ -87,7 +87,7 @@ Ubuntu 18.04 (Bionic) installation instructions
    you must use ``demo`` as the password during the install process. The
    password can be changed after the installation is complete.
 
-   .. literalinclude:: scripts/am-bionic-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 34-36
 
@@ -110,7 +110,7 @@ Ubuntu 18.04 (Bionic) installation instructions
 
 #. Configure the dashboard.
 
-    .. literalinclude:: scripts/am-bionic-deb.sh
+    .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
        :lines: 38
 
@@ -119,13 +119,13 @@ Ubuntu 18.04 (Bionic) installation instructions
     .. note:: Skip this step if you are planning to run Archivematica in indexless
        mode (without Elasticsearch).
 
-    .. literalinclude:: scripts/am-bionic-deb.sh
+    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
       :lines: 40-42
 
 #. Start the remaining services
 
-    .. literalinclude:: scripts/am-bionic-deb.sh
+    .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
        :lines: 44-54
 
@@ -149,7 +149,7 @@ Ubuntu 18.04 (Bionic) installation instructions
     the dashboard and the Storage Service, i.e., 80 and 8000.
 
 
-    .. literalinclude:: scripts/am-bionic-deb.sh
+    .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
        :lines: 56-59
 
@@ -227,7 +227,7 @@ the configuration of your new server.
 
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPServer/install/README.md
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica

@@ -33,7 +33,7 @@ depends on the deployment method used. Please consult the relevant
 documentation for your deployment method if you are interested in disabling
 output capturing.
 
-- :ref:`Environment variable configuration for CentOS package-based installations <install-pkg-centos>`
+- :ref:`Environment variable configuration for Rocky Linux package-based installations <install-pkg-rocky>`
 - :ref:`Environment variable configuration for Ubuntu package-based installations <install-pkg-ubuntu>`
 - :ref:`Environment variable configuration for Ubuntu Ansible-based installations <install-ansible>`
 - `Environment variable configuration for Docker Compose installations <https://github.com/artefactual/archivematica/tree/qa/1.x/hack>`_

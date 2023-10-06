@@ -349,7 +349,7 @@ Text blocks should truncated after 80 characters.
 ```
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
-14.04 and 16.04 are available.
+22.04 and Rocky Linux 9 are available.
 ```
 
 Code blocks are an exception to this rule. A line of code can extend beyond 80
@@ -550,9 +550,9 @@ Short, simple scripts can be added as code blocks using the `code` directive.
 ```
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.8.x/key.asc  | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu xenial main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.8.x/ubuntu-externals xenial main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc  | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
 ```
 
 For longer scripts, or scripts that will be referenced on multiple pages, you
@@ -569,7 +569,7 @@ To include a script on a page, reference the script using the `literal-include`
 directive.
 
 ```
-.. literalinclude:: scripts/am18-centos-rpm.sh
+.. literalinclude:: scripts/am-rocky-rpm.sh
    :language: bash
    :lines: 3
 ```
@@ -581,7 +581,7 @@ Setting the `lines` option will display only the specified lines. You may
 specify one line, as above, or multiple lines:
 
 ```
-.. literalinclude:: scripts/am18-centos-rpm.sh
+.. literalinclude:: scripts/am-rocky-rpm.sh
    :language: bash
    :lines: 5-12
 ```

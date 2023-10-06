@@ -9,7 +9,7 @@ installations on Ubuntu.
 
 It is assumed here that your host operating system is Ubuntu. This can be
 modified for a different Unix based operating system, such as Mac OS X or
-another Linux distribution such as CentOS.
+another Linux distribution such as Rocky Linux.
 
 The Ansible roles referenced here can be used in production deployments
 by creating your own Ansible playbook to run them. See the `deploy-pub`_ repo
@@ -65,7 +65,7 @@ Installation instructions
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-bionic
+      cd deploy-pub/playbooks/archivematica-jammy
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
 4. Create the virtual machine and provision it:
@@ -98,7 +98,7 @@ Installation instructions
    * Archivematica: `<http://192.168.168.198>`_.
    * Storage Service: `<http://192.168.168.198:8000>`_.
 
-   The credentials can be found in the `vars-singlenode-qa.yml`.
+   The credentials can be found in the `vars-singlenode-1.15.yml`.
 
 
 .. _ansible-deploy-dev-branches:
@@ -119,7 +119,7 @@ steps:
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-bionic
+      cd deploy-pub/playbooks/archivematica-jammy
       ansible-galaxy install -f -p roles/ -r requirements-qa.yml
 
 2. Update ``singlenode.yml`` to load ``vars-singlenode-qa.yml``. Inside the

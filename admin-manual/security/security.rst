@@ -63,7 +63,7 @@ For Ubuntu systems:
 * /etc/default/archivematica-mcp-server
 * /etc/default/archivematica-storage-service
 
-For CentOS/Red Hat systems:
+For Rocky Linux/Red Hat systems:
 
 * /etc/sysconfig/archivematica-dashboard
 * /etc/sysconfig/archivematica-mcp-client
@@ -423,7 +423,7 @@ bundle.
 
 - The Ubuntu system's CA bundle file is
   :file:`/etc/ssl/certs/ca-certificates.crt`.
-- The CentOS system's CA bundle file is
+- The Rocky Linux system's CA bundle file is
   :file:`/etc/pki/tls/certs/ca-bundle.crt`.
 
 On Ubuntu, add the following line to the :file:`/etc/default/archivematica-*`
@@ -433,7 +433,7 @@ files to use the system's CA bundle:
 
    REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
-On CentOS, add the following line to the :file:`/etc/default/archivematica-*`
+On Rocky Linux, add the following line to the :file:`/etc/default/archivematica-*`
 files to use the system's CA bundle:
 
 .. code:: bash
@@ -445,10 +445,10 @@ Trusting additional CAs
 
 If you are using ``REQUESTS_CA_BUNDLE`` you may want to trust additional CAs.
 
-On CentOS:
+On Rocky Linux:
 
 - Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your
-  CentOS machine.
+  Rocky Linux machine.
 - Run the `update-ca-trust extract` command.
 
 The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that
@@ -465,12 +465,12 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 
 :ref:`Back to the top <security>`
 
-.. _django-auth-infra: https://docs.djangoproject.com/en/2.0/topics/auth/customizing/#authentication-backends
+.. _django-auth-infra: https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#authentication-backends
 .. _am-gh-issues: https://github.com/artefactual/archivematica/issues
 .. _am-google-groups: https://groups.google.com/forum/#!forum/archivematica
-.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/install/README.md
-.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/src/settings/components/ldap_auth.py
-.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/src/settings/components/shibboleth_auth.py
+.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/install/README.md
+.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/src/settings/components/ldap_auth.py
+.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
 .. _oidc: https://openid.net/connect/
@@ -479,10 +479,10 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _requests: https://requests.readthedocs.io/en/master/
 .. _requests-cas: https://requests.readthedocs.io/en/master/user/advanced/#ca-certificates
 .. _elasticsearch-security-external: https://www.elastic.co/guide/en/x-pack/current/elasticsearch-security.html
-.. _ss-config: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.20.x/install/README.md
+.. _ss-config: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.21.x/install/README.md
 .. _mozilla-django-oidc-docs: https://mozilla-django-oidc.readthedocs.io/en/stable/
 .. _django-csp-docs: https://django-csp.readthedocs.io/en/latest/
-.. _django-https-settings: https://docs.djangoproject.com/en/1.8/topics/security/#ssl-https
-.. _django-session-settings: https://docs.djangoproject.com/en/1.8/topics/http/sessions/#settings
-.. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/src/settings/production.py
-.. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.20.x/storage_service/storage_service/settings/production.py
+.. _django-https-settings: https://docs.djangoproject.com/en/3.2/topics/security/#ssl-https
+.. _django-session-settings: https://docs.djangoproject.com/en/3.2/topics/http/sessions/#settings
+.. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/src/settings/production.py
+.. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.21.x/storage_service/storage_service/settings/production.py

@@ -1,17 +1,17 @@
-.. _install-pkg-centos:
+.. _install-pkg-rocky:
 
-==========================================
-Installing Archivematica on CentOS/Red Hat
-==========================================
+=========================================
+Installing Archivematica on Rocky Linux 9
+=========================================
 
-Archivematica versions 1.5.1 and higher support installation on CentOS/Red Hat.
+Archivematica versions 1.15.0 and higher support installation on Rocky Linux 9.
 
 *On this page*
 
-* :ref:`Installation instructions <centos-instructions>`
-* :ref:`Post-installation configuration <centos-post-install-config>`
+* :ref:`Installation instructions <rocky-instructions>`
+* :ref:`Post-installation configuration <rocky-post-install-config>`
 
-.. _centos-instructions:
+.. _rocky-instructions:
 
 Installation instructions
 -------------------------
@@ -20,7 +20,7 @@ Installation instructions
 
    Update your system
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 3
 
@@ -28,7 +28,7 @@ Installation instructions
    following commands. Additional configuration may be required for your local
    setup.
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 5-12
 
@@ -37,7 +37,7 @@ Installation instructions
 
    * Extra packages for enterprise Linux:
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 14
 
@@ -47,13 +47,13 @@ Installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 16-26
 
    * Archivematica - use these commands to install the repositories:
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 28-44
 
@@ -65,14 +65,14 @@ Installation instructions
       Do not enable Elasticsearch if you are running Archivematica in indexless
       mode.
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 51-57
 
 #. Now that MariaDB is up and running, create the Archivematica and
    Storage Service databases and set up the expected credentials.
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 59-63
 
@@ -80,20 +80,20 @@ Installation instructions
 
    * First, install the packages:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 65
 
    * Apply the database migrations using the ``archivematica`` user:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 67-71
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 86-91
 
@@ -108,25 +108,25 @@ Installation instructions
 
    * First, install the packages:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 93
 
    * Apply the database migrations using the ``archivematica`` user:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 95-100
 
    * Start and enable services:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 102-105
 
    * Restart Nginx in order to load the dashboard config file:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 107
 
@@ -136,13 +136,13 @@ Installation instructions
 
    * Install the package:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 109
 
    * Tweak ClamAV configuration:
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 111-112
 
@@ -161,7 +161,7 @@ Installation instructions
 
    * After that, we can enable and start/restart services
 
-     .. literalinclude:: scripts/am-centos-rpm.sh
+     .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
         :lines: 114-121
 
@@ -178,8 +178,8 @@ Installation instructions
    that the listen directives used under /etc/nginx are not using IPv6 addresses
    like [::]:80.
 
-   CentOS will install firewalld which will be running default rules that will
-   likely be blocking ports 81 and 8001. If you are not able to access the
+   Rocky Linux will install firewalld which will be running default rules that
+   will likely be blocking ports 81 and 8001. If you are not able to access the
    dashboard and Storage Service, then use the following command to check if
    firewalld is running:
 
@@ -190,13 +190,13 @@ Installation instructions
    If firewalld is running, you will likely need to modify the firewall rules
    to allow access to ports 81 and 8001 from your location:
 
-   .. literalinclude:: scripts/am-centos-rpm.sh
+   .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
       :lines: 123-125
 
-#. Complete :ref:`Post Install Configuration <centos-post-install-config>`.
+#. Complete :ref:`Post Install Configuration <rocky-post-install-config>`.
 
-.. _centos-post-install-config:
+.. _rocky-post-install-config:
 
 Post-install configuration
 --------------------------
@@ -253,10 +253,10 @@ the configuration of your new server.
      allow requests from your dashboard IP to your Storage Service IP on the
      appropriate port.
 
-:ref:`Back to the top <install-pkg-centos>`
+:ref:`Back to the top <install-pkg-rocky>`
 
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.14.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPServer/install/README.md
 .. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API

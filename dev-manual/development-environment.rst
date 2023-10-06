@@ -13,7 +13,7 @@ for defining and running multi-container Docker applications.
    Docker Compose can be used in production environments, but installing
    Archivematica using Docker is not officially supported for production
    deployments. When installing for production, Archivematica can be installed
-   using packages or Ansible scripts in either CentOS/Red Hat or Ubuntu.
+   using packages or Ansible scripts in either Rocky Linux/Red Hat or Ubuntu.
 
 For the latest information on Archivematica's development workflow based on
 Docker and Docker Compose, visit the `hack directory`_ under the Archivematica

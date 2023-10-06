@@ -426,15 +426,15 @@ Add the SSH key that we generated before:
    permissions to this directory in order to delete it. The easiest way is to use
    the setfacl command.
 
-   Install the `acl` package on Ubuntu or CentOS:
+   Install the `acl` package on Ubuntu or Rocky Linux:
 
    .. code-block:: bash
 
       sudo apt-get install acl # Ubuntu
-      sudo yum install acl  # CentOS
+      sudo yum install acl  # Rocky Linux
 
-   Create a new SWORD deposit directory (Use the `nginx` group CentOS instead
-   of `www-data`):
+   Create a new SWORD deposit directory (Use the `nginx` group on Rocky Linux
+   instead of `www-data`):
 
    .. code-block:: bash
 
@@ -442,7 +442,7 @@ Add the SSH key that we generated before:
       sudo chown archivematica:www-data /home/archivematica/atom_sword_deposit
       sudo chmod 770 /home/archivematica/atom_sword_deposit
 
-   Set the ACL on new directory (Use the `nginx` user on CentOS instead of
+   Set the ACL on new directory (Use the `nginx` user on Rocky Linux instead of
    `www-data`) :
 
    .. code-block:: bash
@@ -785,7 +785,7 @@ when deploying using Ansible. For manual installations, please use the web
 configuration method described in the Post Install Configuration sections:
 
 * :ref:`Ubuntu Post Install Configuration <ubuntu-post-install-config>`.
-* :ref:`CentOS Post Install Configuration <centos-post-install-config>`.
+* :ref:`Rocky Linux Post Install Configuration <rocky-post-install-config>`.
 
 Security
 ^^^^^^^^

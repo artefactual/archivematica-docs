@@ -51,8 +51,8 @@ Operating system
 Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
-* Ubuntu 18.04 64-bit Server Edition
-* CentOS 7 64-bit
+* Ubuntu 22.04 64-bit Server Edition
+* Rocky Linux 9 x86-64
 
 Other Linux distributions should work, but will require customization of these
 installation instructions.
@@ -81,14 +81,13 @@ information, see :ref:`Advanced <advanced>`.
 
 .. note::
 
-   Archivematica |version| has been tested with MySQL 5.5, including
-   the Percona and MariaDB alternatives. Archivematica uses MySQL 5.7 on
-   Ubuntu 18.04.
+   Archivematica |version| has been tested with MySQL 8.0, including
+   the Percona and MariaDB alternatives.
 
    Some of the tools run by Archivematica require Java to be
-   installed (primarily Elasticsearch and fits). On Ubuntu 18.04, Open JDK 8
-   is used, but Open JDK 11 is the default. It is possible to use Oracle Java
-   7 or 8 instead.
+   installed (primarily Elasticsearch and fits). On Ubuntu 22.04, Open JDK 8
+   is used, but Open JDK 11 is the default. It is possible to use Oracle Java 8
+   instead.
 
    The remaining dependencies should be kept at the versions installed
    by Archivematica.
@@ -123,7 +122,7 @@ Possible ``archivematica_src_search_enabled`` configuration attribute values:
   Backlog, Appraisal, and Archival Storage tabs will be non-functional.
 
 When Elasticsearch is used, Archivematica |release| requires version 6.x (tested
-with 6.5.4).
+with 6.8.21).
 
 For more information on disabling Elasticsearch, please see the README for
 Archivematica's ansible role,
@@ -183,10 +182,8 @@ documents.
 Browser compatability
 ^^^^^^^^^^^^^^^^^^^^^
 
-Archivematica has been tested most extensively with Firefox and Chrome. There
-are known issues with Internet Explorer 11 which result in an inability to start
-transfers in the dashboard (:issue:`7246`). Minimal, but successful, testing has
-been done with Microsoft Edge.
+Archivematica has been tested most extensively with Firefox and Chrome. Minimal,
+but successful, testing has been done with Microsoft Edge.
 
 .. _instructions:
 
@@ -194,14 +191,14 @@ Instructions for new installations
 ----------------------------------
 
 Archivematica can be installed using packages or Ansible scripts in either
-CentOS/Red Hat or Ubuntu environments. It can also be installed using Docker.
-At this time, installation instructions are provided for officially tested and
-supported installation environments:
+Rocky Linux/Red Hat or Ubuntu environments. At this time, installation
+instructions are provided for officially tested and supported installation
+environments:
 
-* :ref:`Automated install on Ubuntu 18.04 using Ansible <install-ansible>`.
-* :ref:`Manual install of OS packages on CentOS/Red Hat <install-pkg-centos>`
+* :ref:`Automated install on Ubuntu 22.04 using Ansible <install-ansible>`.
+* :ref:`Manual install of OS packages on Rocky Linux 9/Red Hat <install-pkg-rocky>`
 
-Note that :ref:`manual install of OS packages on Ubuntu 18.04
+Note that :ref:`manual install of OS packages on Ubuntu 22.04
 <install-pkg-ubuntu>` is documented but not officially supported.
 
 Installing Archivematica using :ref:`Docker <development>` is not officially
