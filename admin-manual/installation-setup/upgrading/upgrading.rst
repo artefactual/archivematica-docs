@@ -267,7 +267,7 @@ with cloud based virtual machines, or physical servers.
 
     .. code:: bash
 
-      sudo pip install ansible==2.9.10 jmespath
+      sudo pip install ansible==2.9.10 jmespath jinja2==3.0.3
 
 #. Checkout the deployment repo:
 
