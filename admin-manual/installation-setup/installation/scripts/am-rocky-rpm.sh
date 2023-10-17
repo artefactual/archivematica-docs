@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo yum -y update
+set -euxo pipefail
 
 # Allow Nginx to use ports 81 and 8001
 sudo semanage port -m -t http_port_t -p tcp 81
@@ -11,7 +11,8 @@ sudo setsebool -P httpd_can_network_connect=1
 # Allow Nginx to change system limits
 sudo setsebool -P httpd_setrlimit 1
 
-sudo yum install -y epel-release
+sudo -u root yum install -y epel-release yum-utils
+sudo -u root yum-config-manager --enable crb
 
 sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
@@ -28,18 +29,27 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=https://packages.archivematica.org/1.15.x/rocky
-gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.15.x/key.asc
+baseurl=https://jenkins-ci.archivematica.org/repos/am-packbuild/1.15.0/el9/
+gpgcheck=0
+gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
+enabled=1
+EOF'
+
+sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-ss.repo
+[archivematica-ss]
+name=archivematica-ss
+baseurl=https://jenkins-ci.archivematica.org/repos/am-packbuild/0.21.0/el9/
+gpgcheck=0
+gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
 enabled=1
 EOF'
 
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
 [archivematica-extras]
 name=archivematica-extras
-baseurl=https://packages.archivematica.org/1.15.x/rocky-extras
+baseurl=https://packages.archivematica.org/1.15.x/rocky9-extras
 gpgcheck=1
-gpgkey=https://packages.archivematica.org/1.15.x/key.asc
+gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
 enabled=1
 EOF'
 
@@ -47,8 +57,9 @@ EOF'
 
 
 
-
-sudo -u root yum install -y java-1.8.0-openjdk-headless elasticsearch mariadb-server gearmand
+sudo -u root yum -y update
+sudo -u root yum install -y java-1.8.0-openjdk-headless
+sudo -u root yum install -y elasticsearch mariadb-server gearmand
 sudo -u root systemctl enable elasticsearch
 sudo -u root systemctl start elasticsearch
 sudo -u root systemctl enable mariadb
