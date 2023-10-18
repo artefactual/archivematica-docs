@@ -31,17 +31,8 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=https://jenkins-ci.archivematica.org/repos/am-packbuild/1.15.0/el9/
-gpgcheck=0
-gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
-enabled=1
-EOF'
-
-sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-ss.repo
-[archivematica-ss]
-name=archivematica-ss
-baseurl=https://jenkins-ci.archivematica.org/repos/am-packbuild/0.21.0/el9/
-gpgcheck=0
+baseurl=https://packages.archivematica.org/1.15.x/rocky9/
+gpgcheck=1
 gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
 enabled=1
 EOF'
