@@ -1,21 +1,18 @@
 #!/bin/bash
 
+set -euxo pipefail
+
 export DEBIAN_FRONTEND=noninteractive
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password your_password'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password your_password'
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/dbconfig-install boolean true"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password mcp_password"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password mcp_password"
-
-
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password demo"
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password demo"
 
 sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc | sudo apt-key add -
 
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" >> /etc/apt/sources.list'
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
-
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
@@ -23,8 +20,12 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 sudo apt-get update
 sudo apt-get -y upgrade
 
-sudo apt-get install -y htop ntp apt-transport-https unzip openjdk-8-jre-headless
+sudo apt-get install -y openjdk-8-jre-headless mysql-server
 sudo apt-get install -y elasticsearch
+
+sudo mysql -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo mysql -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
+sudo mysql -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
 
 sudo apt-get install -y archivematica-storage-service
 
@@ -42,7 +43,6 @@ sudo service elasticsearch restart
 sudo systemctl enable elasticsearch
 
 sudo service clamav-freshclam restart
-sleep 120s
 sudo service clamav-daemon start
 sudo service gearman-job-server restart
 sudo service archivematica-mcp-server start
@@ -69,6 +69,5 @@ sudo -u archivematica bash -c " \
           --password=archivematica \
           --email="example@example.com" \
           --api-key="THIS_IS_THE_SS_APIKEY" \
-          --superuser";
-
-
+          --superuser
+";
