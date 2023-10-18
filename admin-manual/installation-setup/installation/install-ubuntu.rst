@@ -26,7 +26,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 14-19
+      :lines: 12-15
 
 #. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
@@ -37,20 +37,20 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 21-22
+      :lines: 17-18
 
 #. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 24-25
+      :lines: 20-21
 
 #. Install some needed packages
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 27
+      :lines: 23
 
 #. Install Elasticsearch (optional)
 
@@ -59,26 +59,26 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 28
+      :lines: 24
 
 #. Now that MySQL is up and running, create the Storage Service database and
    set up the expected credentials.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 30-32
+      :lines: 26-28
 
 #. Install the Storage Service package.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
-       :lines: 34
+       :lines: 30
 
 #. Configure the Storage Service.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 36-37
+      :lines: 32-33
 
 #. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -96,7 +96,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 39-41
+      :lines: 35-37
 
 #.  Configure the Archivematica components (optional). There are a number of
     environment variables that Archivematica recognizes which can be used to
@@ -119,7 +119,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
     .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
-       :lines: 43
+       :lines: 39
 
 #. Start Elasticsearch (optional).
 
@@ -128,13 +128,13 @@ Ubuntu 22.04 (Jammy) installation instructions
 
     .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 45-47
+      :lines: 41-43
 
 #. Start the remaining services
 
     .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
-       :lines: 49-58
+       :lines: 45-54
 
     If you have trouble with the gearman or clamav command try restarting it:
 
@@ -158,7 +158,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
     .. literalinclude:: scripts/am-jammy-deb.sh
        :language: bash
-       :lines: 60-63
+       :lines: 56-59
 
 #. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 

@@ -3,8 +3,6 @@
 set -euxo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password your_password'
-sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password your_password'
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/dbconfig-install boolean true"
@@ -13,10 +11,8 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 
 sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc | sudo apt-key add -
 
-#sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
 sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
-sudo sh -c 'echo "deb [trusted=yes] https://jenkins-ci.archivematica.org/repos/am-packbuild/1.15.0/jammy ./" > /etc/apt/sources.list.d/archivematica-jenkins.list'
-sudo sh -c 'echo "deb [trusted=yes] https://jenkins-ci.archivematica.org/repos/am-packbuild/0.21.0/jammy ./" > /etc/apt/sources.list.d/archivematica-jenkins-ss.list'
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
