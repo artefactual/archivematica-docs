@@ -22,7 +22,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 3
+      :lines: 5
 
    If your environment uses SELinux, at a minimum you will need to run the
    following commands. Additional configuration may be required for your local
@@ -30,7 +30,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 5-12
+      :lines: 7-14
 
 #. Some extra repositories need to be installed in order to fulfill the
    installation procedure.
@@ -39,7 +39,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 14
+      :lines: 16-17
 
    * Elasticsearch (optional):
 
@@ -49,13 +49,13 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 16-26
+      :lines: 19-29
 
    * Archivematica - use these commands to install the repositories:
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 28-44
+      :lines: 31-56
 
 #. Common services like Elasticsearch, MariaDB and Gearmand should be installed
    and enabled before the Archivematica install.
@@ -67,14 +67,14 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 51-57
+      :lines: 58-65
 
 #. Now that MariaDB is up and running, create the Archivematica and
    Storage Service databases and set up the expected credentials.
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 59-63
+      :lines: 67-71
 
 #. Install Archivematica Storage Service
 
@@ -82,20 +82,20 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 65
+        :lines: 73
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 67-71
+        :lines: 75-80
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 86-91
+        :lines: 82-87
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -110,25 +110,25 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 93
+        :lines: 89
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 95-100
+        :lines: 91-96
 
    * Start and enable services:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 102-105
+        :lines: 98-101
 
    * Restart Nginx in order to load the dashboard config file:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 107
+        :lines: 103
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -138,13 +138,13 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 109
+        :lines: 105
 
    * Tweak ClamAV configuration:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 111-112
+        :lines: 107-108
 
    * Indexless mode:
 
@@ -163,7 +163,7 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 114-121
+        :lines: 110-117
 
 #. Finalizing installation
 
@@ -192,7 +192,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 123-125
+      :lines: 119-121
 
 #. Complete :ref:`Post Install Configuration <rocky-post-install-config>`.
 
