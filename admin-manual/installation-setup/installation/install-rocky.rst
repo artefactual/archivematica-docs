@@ -55,7 +55,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 31-56
+      :lines: 31-47
 
 #. Common services like Elasticsearch, MariaDB and Gearmand should be installed
    and enabled before the Archivematica install.
@@ -67,14 +67,14 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 58-65
+      :lines: 49-56
 
 #. Now that MariaDB is up and running, create the Archivematica and
    Storage Service databases and set up the expected credentials.
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 67-71
+      :lines: 58-62
 
 #. Install Archivematica Storage Service
 
@@ -82,20 +82,20 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 73
+        :lines: 64
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 75-80
+        :lines: 66-71
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 82-87
+        :lines: 73-78
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -110,25 +110,25 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 89
+        :lines: 80
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 91-96
+        :lines: 82-87
 
    * Start and enable services:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 98-101
+        :lines: 89-92
 
    * Restart Nginx in order to load the dashboard config file:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 103
+        :lines: 94
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -138,13 +138,13 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 105
+        :lines: 96
 
    * Tweak ClamAV configuration:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 107-108
+        :lines: 98-99
 
    * Indexless mode:
 
@@ -163,7 +163,7 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 110-117
+        :lines: 101-108
 
 #. Finalizing installation
 
@@ -192,7 +192,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 119-121
+      :lines: 110-112
 
 #. Complete :ref:`Post Install Configuration <rocky-post-install-config>`.
 
