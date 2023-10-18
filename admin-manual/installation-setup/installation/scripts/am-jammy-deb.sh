@@ -1,20 +1,26 @@
 #!/bin/bash
 
+set -euxo pipefail
+
+sudo sed -i 's/#$nrconf{restart} = '"'"'i'"'"';/$nrconf{restart} = '"'"'a'"'"';/g' /etc/needrestart/needrestart.conf
+
 export DEBIAN_FRONTEND=noninteractive
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password your_password'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password your_password'
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/dbconfig-install boolean true"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password mcp_password"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password mcp_password"
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password demo"
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password demo"
 
 
 
 sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc | sudo apt-key add -
 
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" >> /etc/apt/sources.list'
-sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
+#sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
+sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
+sudo sh -c 'echo "deb [trusted=yes] https://jenkins-ci.archivematica.org/repos/am-packbuild/1.15.0/jammy ./" > /etc/apt/sources.list.d/archivematica-jenkins.list'
+sudo sh -c 'echo "deb [trusted=yes] https://jenkins-ci.archivematica.org/repos/am-packbuild/0.21.0/jammy ./" > /etc/apt/sources.list.d/archivematica-jenkins-ss.list'
 
 
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -25,6 +31,11 @@ sudo apt-get -y upgrade
 
 sudo apt-get install -y htop ntp apt-transport-https unzip openjdk-8-jre-headless
 sudo apt-get install -y elasticsearch
+sudo apt-get install -y mysql-server
+
+sudo mysql -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo mysql -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
+sudo mysql -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
 
 sudo apt-get install -y archivematica-storage-service
 
