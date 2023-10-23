@@ -86,15 +86,11 @@ generate an API key for any user account in the database.
 
 To generate an API key for an existing user in Archivematica:
 
-1. Navigate to **Admin > Users**, and then you will be redirected to the
-   Users page.
-2. Select the user for whom you would like to generate an API key, and click
-   their username or the **Edit** button. Archivematica will load the user’s
-   Profile page.
-3. Click to enable the **Regenerate API key** box.
-4. Then click **Save**.
-5. In the **Users** page, click the username again to return to that user's
-   profile, and then you will see the regenerated API key.
+1. Navigate to **Admin > Users** to access the Users page.
+2. Select the username of the user for whom you want to generate an API key.
+3. Click on the **Regenerate API key** box.
+4. Click **Save**.
+5. Access the new API key on the user’s profile by clicking on their username.
 
 .. note::
    In the Storage Service, an API key is automatically generated for each new
