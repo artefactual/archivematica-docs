@@ -50,8 +50,9 @@ Request body parameters:
 
 ``name``           Name of transfer
 
-``type``           Type of the new transfer (e.g. standard, unzipped bag,
-                   zipped bag, dspace).
+``type``           Type of the new transfer. Valid values are: standard,
+                   zipfile, unzipped bag, zipped bag, dspace, maildir, TRIM,
+                   dataverse. Default: standard.
 
 ``accession``      Accession number of new transfer.
 
@@ -96,8 +97,10 @@ Response definitions:
                      ``type``                           Transfer type.
 
                                                         One of: standard,
-                                                        unzipped bag, zipped
-                                                        bag, dspace.
+                                                        zipfile, unzipped bag,
+                                                        zipped bag, dspace,
+                                                        maildir, TRIM,
+                                                        dataverse
 
                      ``directory``                      Directory the transfer
                                                         is in currently.
@@ -125,8 +128,9 @@ Request body parameters:
 
 =============  ================================================================
 
-``type``           Type of the transfer (e.g. standard, unzipped bag,
-                   zipped bag, dspace) to approve.
+``type``           Type of the transfer. Valid values are: standard,
+                   zipfile, unzipped bag, zipped bag, dspace, maildir, TRIM,
+                   dataverse. Default: standard.
 
 ``directory``      Directory the transfer is in currently.
 
@@ -766,7 +770,9 @@ Request body parameters (optional):
 
 =====================  =========================================================
 
-``type``               Transfer name.
+``type``               Transfer type. Valid values are: standard, zipfile,
+                       unzipped bag, zipped bag, dspace, maildir, TRIM,
+                       dataverse. Default: standard.
 
 ``processing_config``  Processing configuration, e.g. default, automated,
                        default: default
@@ -841,11 +847,11 @@ Validate
 ==================================== ========================================================
 **/api/v2beta/validate/<validator>** *Available in Archivematica 1.10+. This endpoint can be
                                      used to validate CSVs against embedded sets of rules.
-                                     Currently works with Avalon Media System Manifest 
+                                     Currently works with Avalon Media System Manifest
                                      (``avalon``) and rights.csv (``rights``) files.*
 
                                      *In the future, this endpoint can be extended to support
-                                     validation for metadata.csv or archivesspaceids.csv, or 
+                                     validation for metadata.csv or archivesspaceids.csv, or
                                      other institutionally-based rules.*
 ==================================== ========================================================
 
