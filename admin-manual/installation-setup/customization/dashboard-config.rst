@@ -912,7 +912,7 @@ This tab displays the version of Archivematica you're using.
 
 :ref:`Back to the top <dashboard-config>`
 
-.. _AtoM: www.accesstomemory.org
+.. _AtoM: https://www.accesstomemory.org
 .. _Django authentication framework: https://django.readthedocs.io/en/1.4.X/topics/auth.html
 .. _Handle.Net: https://www.handle.net/index.html
 .. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
