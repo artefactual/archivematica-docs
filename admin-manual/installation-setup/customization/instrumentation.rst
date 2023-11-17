@@ -283,10 +283,10 @@ host, a good starting point is:
      scrape_interval: 5s
      static_configs:
      - targets:
-	     - localhost:7998
-	     - localhost:7999
-	     - localhost:62080
-	     - localhost:62081
+         - localhost:7998
+         - localhost:7999
+         - localhost:62080
+         - localhost:62081
 
 Start Prometheus, passing in the path to the config file: ``./prometheus
 --config.file=prometheus.yml``.
