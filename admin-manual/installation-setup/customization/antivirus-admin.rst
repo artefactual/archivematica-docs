@@ -30,18 +30,18 @@ then it will default to Clamdscan.
 
 .. note::
 
-	It is recommended that you employ Clamdscan for virus checking.
+    It is recommended that you employ Clamdscan for virus checking.
 
-	Clamscan is slower than Clamdscan because the process has to be started
-	and the virus database reloaded for each file that is passed to it.
+    Clamscan is slower than Clamdscan because the process has to be started
+    and the virus database reloaded for each file that is passed to it.
 
-	Clamdscan's utility is due in part to the antivirus definition database
-	only being loaded once when the service is started. Files are passed to the
-	service by stream or by filesystem reference.
+    Clamdscan's utility is due in part to the antivirus definition database
+    only being loaded once when the service is started. Files are passed to the
+    service by stream or by filesystem reference.
 
-	To illustrate the difference in performance, a 1 MB image file can be scanned
-	by Clamdscan in an average of 2 seconds. Using Clamscan the average for the
-	same file will be 1 minute 20 seconds.
+    To illustrate the difference in performance, a 1 MB image file can be scanned
+    by Clamdscan in an average of 2 seconds. Using Clamscan the average for the
+    same file will be 1 minute 20 seconds.
 
 Antivirus settings and their impacts
 ------------------------------------
@@ -61,43 +61,43 @@ be recorded.
 
 From the `ClamAV manual pages`_::
 
-	MaxFileSize SIZE
-		Files  larger than this limit won't be scanned. Affects the input file
-		itself as well as files contained inside it (when the input file is an
-		archive, a document or some other kind of container).
+    MaxFileSize SIZE
+        Files  larger than this limit won't be scanned. Affects the input file
+        itself as well as files contained inside it (when the input file is an
+        archive, a document or some other kind of container).
 
-	MaxScanSize SIZE
-		Sets the maximum amount of data to be scanned for each input file.
-		Archives and other containers are recursively extracted  and  scanned
-		up to this value. The size of an archive plus the sum of the sizes of
-		all files within archive count toward the scan size. For example, a
-		1M uncompressed archive containing a single 1M inner file counts as
-		2M toward the max scan size.
+    MaxScanSize SIZE
+        Sets the maximum amount of data to be scanned for each input file.
+        Archives and other containers are recursively extracted  and  scanned
+        up to this value. The size of an archive plus the sum of the sizes of
+        all files within archive count toward the scan size. For example, a
+        1M uncompressed archive containing a single 1M inner file counts as
+        2M toward the max scan size.
 
-	StreamMaxLength** SIZE
-		Close the STREAM session when the data size limit is exceeded.
-		**Clamdscan Only
+    StreamMaxLength** SIZE
+        Close the STREAM session when the data size limit is exceeded.
+        **Clamdscan Only
 
-	Notes:
-		All options expressing a size are limited to max 2GB. Values in
-		excess will be reset to the maximum.
+    Notes:
+        All options expressing a size are limited to max 2GB. Values in
+        excess will be reset to the maximum.
 
 Configuration of ClamAV values
 ------------------------------
 
 Defaults in Archivematica are set to::
 
-	MaxFileSize=2000M
-	MaxScanSize=2000M
-	StreamMaxLength=2000M
+    MaxFileSize=2000M
+    MaxScanSize=2000M
+    StreamMaxLength=2000M
 
-	Where M is the unit Megabytes
+    Where M is the unit Megabytes
 
 .. note::
 
-	Clamscan defaults cannot be set above 2GB (2000M) as per this link to
-	ClamAV `Bug 11958`_ (note that you must create an account with Bugzilla to
-	view bugs for the ClamAV project).
+    Clamscan defaults cannot be set above 2GB (2000M) as per this link to
+    ClamAV `Bug 11958`_ (note that you must create an account with Bugzilla to
+    view bugs for the ClamAV project).
 
 Configuration is done via environment variable or deployment script, e.g.
 Ansible playbook.
@@ -115,7 +115,7 @@ As a developer, you can adjust these values tweaking the `Compose .yml file`_.
 
 The container can then be recreated::
 
-	docker-compose up -d --force-recreate --no-deps archivematica-mcp-client
+    docker-compose up -d --force-recreate --no-deps archivematica-mcp-client
 
 Impact of various configuration settings
 ----------------------------------------
@@ -135,7 +135,7 @@ An update service called ``freshclam`` is run regularly to update virus
 definitions in Archivematica. To see when the virus database was last updated
 you can review the log at the following location::
 
-	/var/log/clamav/freshclam.log
+    /var/log/clamav/freshclam.log
 
 Troubleshooting
 ---------------
