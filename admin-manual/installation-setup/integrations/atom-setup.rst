@@ -25,7 +25,7 @@ instructions, it is best to download AtoM from the git repository (rather than
 use one of the supplied tarballs).
 
 You must enable the SWORD plugin (``qtSwordPlugin``) and the REST API
-(``arRestApiPlugin``) from the:ref:` AtoM plugins menu <atom:manage-plugins>`.
+(``arRestApiPlugin``) from the :ref:`AtoM plugins menu <atom:manage-plugins>`.
 
 .. _config-dip-upload:
 

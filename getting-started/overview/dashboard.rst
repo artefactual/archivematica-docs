@@ -55,7 +55,7 @@ packages using the red "remove" button (see below).
 4. Microservices and Jobs
 -----------------------------
 
-Archivematica's processing is performed through a number of:ref:`microservices
+Archivematica's processing is performed through a number of :ref:`microservices
 <microservices>`. Microservices are provided by a combination of Archivematica
 Python scripts and one or more of the free, open-source `external software
 tools <external-tools>` bundled in the Archivematica system.
