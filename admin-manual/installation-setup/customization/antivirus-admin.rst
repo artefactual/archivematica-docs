@@ -91,7 +91,7 @@ Defaults in Archivematica are set to::
     MaxScanSize=2000M
     StreamMaxLength=2000M
 
-    Where M is the unit Megabytes
+Where M is the unit Megabytes
 
 .. note::
 
