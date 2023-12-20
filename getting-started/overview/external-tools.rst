@@ -197,7 +197,7 @@ The Unarchiver is an archive unpacker program.
 .. _BSD (3-clause): https://opensource.org/licenses/BSD-3-Clause
 .. _bulk_extractor: https://github.com/simsong/bulk_extractor
 .. _ClamAV: http://www.clamav.net/
-.. _Common Public License: https://opensource.org/licenses/cpl1.0.php
+.. _Common Public License: https://opensource.org/license/cpl1-0-txt/
 .. _Django: https://www.djangoproject.com/
 .. _ElasticSearch: https://www.elastic.co/
 .. _ExifTool: https://exiftool.org/index.html
