@@ -32,3 +32,6 @@ jobs:
       - name: "Run build test"
         run: |
           make test
+      - name: "Linkcheck"
+        run: |
+          make linkcheck
