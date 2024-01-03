@@ -39,7 +39,7 @@ values.
 
 Next, configure the connection between the two systems:
 
-#. Confirm atom-worker is configured on the AtoM server by copying the 
+#. Confirm atom-worker is configured on the AtoM server by copying the
    ``atom-worker.conf`` file from AtoM source to ``/etc/init/``.
 #. Make sure that the SWORD plugin and AtoM REST API are enabled on the
    :ref:`AtoM plugins menu <atom:manage-plugins>`.
