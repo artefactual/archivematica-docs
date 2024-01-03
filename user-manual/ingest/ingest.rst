@@ -556,11 +556,6 @@ the Archivematica interface. To configure AIP storage locations, see the
       :width: 100%
       :alt: The AIP review page showing an expanded AIP file structure
 
-   If you want to validate the METS file, you can click on the
-   temporary file that ends in ``validatorTester.html``. This will open the
-   METS file in a new window where you can validate it against the METS
-   specification using the `PREMIS in METS validator`_.
-
    For more information on Archivematica's AIP structure and the METS file, see
    :ref:`AIP structure <aip-structure>`.
 
@@ -897,4 +892,3 @@ Remove all completed ingests
 
 .. _Dublin Core Metadata Element Set: https://dublincore.org/documents/dces/
 .. _Tesseract: https://github.com/tesseract-ocr/
-.. _PREMIS in METS validator: http://pim.fcla.edu/validate
