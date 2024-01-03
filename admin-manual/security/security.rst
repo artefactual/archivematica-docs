@@ -26,8 +26,8 @@ of any other servers or workstations that should be able to access it.
 .. important::
 
    If you are using AtoM as your access system, remember to perform this task on
-   your AtoM Elasticsearch index. Your AtoM site is more likely to be a public-
-   facing IP and therefore this is an important step.
+   your AtoM Elasticsearch index. Your AtoM site is more likely to be a
+   public-facing IP and therefore this is an important step.
 
 For more advanced Elasticsearch installations follow `their security
 documentation <elasticsearch-security-external_>`_. The
@@ -254,7 +254,7 @@ CAS backend configuration in Archivematica Dashboard
 ++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #. Enable the authentication backend using the environment variable
-   `ARCHIVEMATICA_DASHBOARD_DASHBOARD_CAS_AUTHENTICATION``. You can find more
+   `ARCHIVEMATICA_DASHBOARD_DASHBOARD_CAS_AUTHENTICATION`. You can find more
    details about this environment string in the
    `configuration document <am-dashboard-config_>`_.
 
