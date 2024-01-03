@@ -409,8 +409,8 @@ Options:
 #. **1 - fastest compression** - the AIP will be compressed as quickly as possible.
 #. **3 - fast compression** - a larger AIP that will be compressed quickly.
 #. **5 - normal compression** - the compression tool will strike a balance
-   between speed and compression to make a moderately-sized, moderately-
-   compressed AIP.*
+   between speed and compression to make a moderately-sized,
+   moderately-compressed AIP.*
 #. **7 - maximum compression** - a smaller AIP that takes longer to compress.
 #. **9 - ultra compression** - the smallest possible AIP.
 
