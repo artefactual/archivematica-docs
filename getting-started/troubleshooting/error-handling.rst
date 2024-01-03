@@ -269,10 +269,10 @@ Other common error behaviours
 Below is a list of common errors that, like normalization, will produce an
 error report but will not fail the transfer.
 
-#. Characterize and extract metadata: if FITS processing fails, the micro-
-   service will fail and the transfer will continue processing. Similarly, if
-   a tool within FITS fails, like JHOVE, you will see the pink error bar but
-   be able to continue processing.
+#. Characterize and extract metadata: if FITS processing fails, the
+   micro-service will fail and the transfer will continue processing.
+   Similarly, if a tool within FITS fails, like JHOVE, you will see the pink
+   error bar but be able to continue processing.
 
 #. Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db
    file, the microservice will fail and the SIP will continue processing.
