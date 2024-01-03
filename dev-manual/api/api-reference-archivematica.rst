@@ -165,7 +165,7 @@ Status
 
 Response definitions:
 
-.. list-table:: Response definitions
+.. list-table::
 
     * - ``status``
       - One of FAILED, REJECTED, USER_INPUT, COMPLETE or PROCESSING
@@ -315,7 +315,7 @@ Status
 
 Response definitions:
 
-.. list-table:: Response definitions
+.. list-table::
 
     * - ``status``
       - One of FAILED, REJECTED, USER_INPUT, COMPLETE or PROCESSING.
@@ -324,20 +324,18 @@ Response definitions:
     * - ``microservices``
       - Name of the current microservice
     * - ``directory``
-      - Name of the directory, e.g.
-       "imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c"
+      - Name of the directory,
+        e.g. "imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c"
     * - ``path``
       - Full path to the transfer, e.g.
-      "/var/archivematica/sharedDirectory/
-       currentlyProcessing/imgs-52dd0c01-e803-423a-be5f/b592b5d5d61c/".
+        "/var/archivematica/sharedDirectory/
+        currentlyProcessing/imgs-52dd0c01-e803-423a-be5f/b592b5d5d61c/".
     * - ``message``
       - "Fetched status for <SIP UUID> successfully."
     * - ``type``
       - "SIP"
     * - ``uuid``
       - UUID of the SIP, e.g. "52dd0c01-e803-423a-be5f-b592b5d61c".
-
-==================   ==========================================================
 
 Example request:
 
