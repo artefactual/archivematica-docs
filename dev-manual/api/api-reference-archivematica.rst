@@ -58,8 +58,9 @@ Request body parameters:
 
 ``paths[]``        List of base64-encoded
                    ``<location_uuid>:<relative_path>`` to be copied into the new
-                   transfer. Location UUIDs should be associated with this pipe-
-                   line, and relative path should be relative to the location.
+                   transfer. Location UUIDs should be associated with this
+                   pipeline, and relative path should be relative to the
+                   location.
 
 ``row_ids[]``      ID of the associated TransferMetadataSet for disk image
                    ingest. Can be provided as ``[""]``.
@@ -164,46 +165,39 @@ Status
 
 Response definitions:
 
-=================       ============================     ======================
+.. list-table:: Response definitions
 
-``status``              One of FAILED, REJECTED,         string
-                        USER_INPUT, COMPLETE or
-                        PROCESSING
-
-``name``                Name of the transfer,            string
-                        e.g. "imgs"
-
-``sip_uuid``            If status is COMPLETE,           string
-                        this field will exist
-                        with either the UUID
-                        of the SIP or 'BACKLOG'
-
-``microservice``        Name of the current              string
-                        microservice
-
-``directory``           Name of the directory,           string
-                        e.g. "imgs-52dd0c01-e803-
-                        423a-be5f-b592b5d5d61c"
-
-``path``                Full path to the transfer,       string
-                        e.g. "/var/archivematica/
-                        sharedDirectory/watched
-                        Directories/SIPCreation/
-                        completedTransfers/imgs-
-                        52dd0c01-e803-423a-
-                        be5f-b592b5d5d61c/"
-
-``message``             "Fetched status from             string
-                        <transfer UUID>
-                        successfully."
-
-``type``                "transfer"                       string
-
-``uuid``                UUID of the transfer,            string
-                        e.g. "52dd0c01-e803-423a-
-                        be5f-b592b5d5d61c"
-
-=================       ============================     ======================
+    * - ``status``
+      - One of FAILED, REJECTED, USER_INPUT, COMPLETE or PROCESSING
+      - string
+    * - ``name``
+      - Name of the transfer, e.g. "imgs"
+      - string
+    * - ``sip_uuid``
+      - If status is COMPLETE, this field will exist with either the UUID
+        of the SIP or 'BACKLOG'
+      - string
+    * - ``microservice``
+      - Name of the current microservice
+      - string
+    * - ``directory``
+      - Name of the direcotry, e.g.
+        "imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c"
+      - string
+    * - ``path``
+      - Full path to the transfer, e.g.
+        "/var/archivematica/sharedDirectory/watchedDirectories/SIPCreation/
+        completedTransfers/imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c"
+      - string
+    * - ``message``
+      - "Fetched status from <transfer UUID> successfully."
+      - string
+    * - ``type``
+      - "transfer"
+      - string
+    * - ``uuid``
+      - UUID of the transfer, e.g. "52dd0c01-e803-423a-be5f-b592b5d5d61c"
+      - string
 
 ..  note::
 
