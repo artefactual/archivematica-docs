@@ -807,8 +807,8 @@ Move files to this location
 
 ===========  =================================   ===============================
 
-``POST``     **/api/v2/location/<UUID>/**        *Move files to specified pipe-
-                                                 line location.*
+``POST``     **/api/v2/location/<UUID>/**        *Move files to
+                                                 specified pipeline location.*
 
 ===========  =================================   ===============================
 

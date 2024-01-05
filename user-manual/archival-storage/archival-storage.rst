@@ -8,7 +8,7 @@ The Archival Storage tab consists of a table showing all of the stored Archival
 Information Packages (AIPs) for the Archivematica instance. There is a search
 interface at the top of the page where you can construct simple or boolean
 queries to find AIPs or individual items in storage. At the top of the table is
-the total size of the stored AIPs and the number of indexed files. By default, 
+the total size of the stored AIPs and the number of indexed files. By default,
 the table lists the AIP's name, UUID, size on disk, date that the AIP was
 created, it's status, and whether or not the AIP is encrypted.
 
@@ -57,7 +57,7 @@ documentation.
 Browsing the AIP store
 -----------------------
 
-At the bottom of the Browse Archival Storage table is the **Select columns** 
+At the bottom of the Browse Archival Storage table is the **Select columns**
 icon. Click on it to select which columns will be visible in the Archival
 Storage table. The blue row indicates that a column is currently visible.
 A white row indicates that the column is currently not visible.
@@ -67,7 +67,7 @@ A white row indicates that the column is currently not visible.
    :width: 80%
    :alt: The Select Columns options on the Archival Storage tab
 
-Click on a blue or white row to toggle this value for each column. In the 
+Click on a blue or white row to toggle this value for each column. In the
 example below, all the available columns are selected. Note that your column
 selection choices will persist between your user sessions and apply to other
 users of the same Archivematica pipeline.
@@ -77,7 +77,7 @@ users of the same Archivematica pipeline.
    :width: 80%
    :alt: The Archival Storage tab with all columns selected
 
-You can click on the column headers to sort in ascending or descending order. 
+You can click on the column headers to sort in ascending or descending order.
 An up or down caret (arrow point) will appear. (e.g. see **File count** below).
 
 .. image:: images/archival-storage-sorted-column.*
@@ -101,7 +101,7 @@ The **Select columns** option is also available on the **Show files?** table.
    :width: 80%
    :alt: Selecting columns for the Show Files view
 
-Column sorting is also available in the **Show files?** table (e.g. see **AIP** 
+Column sorting is also available in the **Show files?** table (e.g. see **AIP**
 column below).
 
 .. image:: images/archival-storage-show-files-sort.*
@@ -119,7 +119,7 @@ Downloading all AIP metadata in a CSV file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 All the values displayed in all of the columns available on the Browse Archival
 Storage tab can be downloaded to a CSV (Comma Separated Values) file. This CSV
-file can be used for more detailed analysis and filtering of AIP information, 
+file can be used for more detailed analysis and filtering of AIP information,
 beyond the Search capabilities described below. The CSV data can also be used as
 input to a reporting or charting tool.
 
@@ -133,7 +133,7 @@ storage** table.
 
 You will be prompted for a place to store the CSV file. The CSV data will
 include values for all the columns, regardless of which ones are currently
-selected. It will also include the metadata for each AIP in archival storage, 
+selected. It will also include the metadata for each AIP in archival storage,
 regardless of which ones are currently being displayed on the Archival Storage
 tab.
 
@@ -176,7 +176,7 @@ You can also define your search string as a keyword, phrase, or date range:
 * **Keyword**: by default, the Keyword option treats the search string as a
   Boolean OR search - that is, every word is treated as a separate value
   connected by OR operators. For example, searching for ``2015-Annual-Report``
-  actually searches for "2015 OR Annual OR Report", so the results contain 
+  actually searches for "2015 OR Annual OR Report", so the results contain
   anything named with "2015" or "Annual" or "Report". To search for a specific
   strings, add quotation marks around the string - ``"2015-Annual-Report"``.
 * **Phrase**: the Phrase option allows for more flexibility while searching. You

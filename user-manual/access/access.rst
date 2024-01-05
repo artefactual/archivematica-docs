@@ -91,7 +91,7 @@ fields are mapped to the ISAD(G) template in AtoM:
 ===========  ===========================================
 Dublin Core  ISAD(G)
 ===========  ===========================================
-title        title  
+title        title
 identifier   identifier
 creator      name of creator
 date         date of creation
@@ -126,8 +126,9 @@ is by providing the slug during the Upload DIP microservice.
 
 2. A dialogue box will appear. Enter the permalink of the description in the
    dialogue box. For example, if the URL of the archival description is
-   http://myAtoM.ca/my-target-description, enter ``my-target-
-   description``. See ``slug`` in the `AtoM glossary`_ for more information.
+   http://myAtoM.ca/my-target-description, enter
+   ``my-target-description``. See ``slug`` in the `AtoM glossary`_ for more
+   information.
 
 .. image:: images/atom-dip-upload.*
    :align: center

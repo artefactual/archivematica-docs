@@ -33,12 +33,13 @@ FAQ
 
 #. **What does Archivematica do?**
 
-   The main purpose of Archivematica is to create standards-based, self-
-   documenting and system-independent archival information packages (AIPs). An
-   AIP includes a METS XML file with a robust PREMIS preservation metadata
-   implementation, and is packaged in the Library of Congress BagIt format,
-   which includes file manifests and information about the AIP contents. The
-   physical and logical structure of the AIP is described in the METS structMap.
+   The main purpose of Archivematica is to create standards-based,
+   self-documenting and system-independent archival information packages
+   (AIPs). An AIP includes a METS XML file with a robust PREMIS preservation
+   metadata implementation, and is packaged in the Library of Congress BagIt
+   format, which includes file manifests and information about the AIP
+   contents. The physical and logical structure of the AIP is described
+   in the METS structMap.
 
 #. **Does Archivematica perform fixity checks?**
 
