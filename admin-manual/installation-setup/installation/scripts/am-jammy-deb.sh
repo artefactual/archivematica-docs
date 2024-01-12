@@ -23,7 +23,7 @@ sudo apt-get -y upgrade
 sudo apt-get install -y openjdk-8-jre-headless mysql-server
 sudo apt-get install -y elasticsearch
 
-sudo mysql -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8 COLLATE utf8_unicode_ci;"
+sudo mysql -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
 sudo mysql -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
 sudo mysql -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
 
