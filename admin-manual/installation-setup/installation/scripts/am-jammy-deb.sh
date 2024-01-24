@@ -14,8 +14,8 @@ curl -fsSL https://packages.archivematica.org/1.15.x/key.asc | sudo gpg --dearmo
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.15.x.gpg] http://packages.archivematica.org/1.15.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.15.x.gpg] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
 
-curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/keyrings/elasticsearch-6.x.gpg
+echo "deb [signed-by=/etc/apt/keyrings/elasticsearch-6.x.gpg] https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 
 sudo apt-get update
 sudo apt-get -y upgrade
