@@ -14,6 +14,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`
 * :ref:`Update search indices <update-search-indices>`
 * :ref:`Review the processing configuration <review-processing-configuration>`
+* :ref:`Migrate from MySQL 5.x to 8.x <migrate-mysql>`
 
 .. note::
 
@@ -502,6 +503,62 @@ introduced in Archivematica 1.13.
 The ``default`` and ``automated`` bundled configurations can be reset to the
 Archivematica defaults.
 
+.. _migrate-mysql:
+
+Migrate from MySQL 5.x to 8.x
+-----------------------------
+
+It is recommended the MySQL databases for Archivematica and Storage Service use
+the MySQL 8 ``utf8mb4`` character set and its default collation
+``utf8mb4_0900_ai_ci`` (or ``utf8mb4_general_ci`` in MariaDB).
+
+If you migrate your databases from MySQL 5.x you can check the character set
+and encoding of their tables with:
+
+.. code:: sql
+
+   SELECT
+      t.table_schema, t.table_name, c.character_set_name, t.table_collation
+   FROM
+      information_schema.tables t,
+      information_schema.collation_character_set_applicability c
+   WHERE
+      c.collation_name = t.table_collation
+      AND t.table_type = 'BASE TABLE'
+      AND (t.table_schema = 'MCP' OR t.table_schema = 'SS');
+
+If they use the ``utf8mb3`` character set and collation you should update them
+to avoid potential migration conflicts like this:
+
+.. code:: bash
+
+   Running migrations:
+     Applying admin.0003_logentry_add_action_flag_choices... OK
+     Applying auth.0009_alter_user_last_name_max_length... OK
+     Applying auth.0010_alter_group_name_max_length... OK
+     Applying auth.0011_update_proxy_permissions... OK
+     Applying auth.0012_alter_user_first_name_max_length... OK
+     Applying locations.0031_rclone_space...Traceback (most recent call last):
+     File "/pyenv/data/versions/3.9.18/lib/python3.9/site-packages/django/db/backends/utils.py", line 84, in _execute
+       return self.cursor.execute(sql, params)
+     File "/pyenv/data/versions/3.9.18/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+       return self.cursor.execute(query, args)
+     File "/pyenv/data/versions/3.9.18/lib/python3.9/site-packages/MySQLdb/cursors.py", line 179, in execute
+       res = self._query(mogrified_query)
+     File "/pyenv/data/versions/3.9.18/lib/python3.9/site-packages/MySQLdb/cursors.py", line 330, in _query
+       db.query(q)
+     File "/pyenv/data/versions/3.9.18/lib/python3.9/site-packages/MySQLdb/connections.py", line 255, in query
+       _mysql.connection.query(self, query)
+   MySQLdb.OperationalError: (3780, "Referencing column 'space_id' and referenced column 'uuid' in foreign key constraint 'locations_rclone_space_id_adb7fd1d_fk_locations_space_uuid' are incompatible.")
+
+   django.db.utils.OperationalError: (3780, "Referencing column 'space_id' and referenced column 'uuid' in foreign key constraint 'locations_rclone_space_id_adb7fd1d_fk_locations_space_uuid' are incompatible.")
+
+The following script can be used as a reference to update the character set of
+the databases and their tables.
+
+.. literalinclude:: scripts/mysql-change-encoding-collation.sh
+   :language: bash
+   :lines: 1-104
 
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
