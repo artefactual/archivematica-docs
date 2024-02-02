@@ -568,9 +568,9 @@ Short, simple scripts can be added as code blocks using the `code` directive.
 ```rst
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc  | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu jammy main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.15.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.16.x/key.asc  | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.16.x/ubuntu jammy main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.16.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
 ```
 
 For longer scripts, or scripts that will be referenced on multiple pages, you
