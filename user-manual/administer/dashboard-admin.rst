@@ -48,7 +48,7 @@ and ingest. There are two processing configurations available on installation:
   `automation tools`_, or in any other context where no other processing
   configuration is specified.
 * ``Automated``, which is used for transfers automatically started from some
-  external environments (such as Jisc RDSS) and can also be selected by the 
+  external environments (such as Jisc RDSS) and can also be selected by the
   user in the Transfer tab.
 
 .. image:: images/processing-config.*
