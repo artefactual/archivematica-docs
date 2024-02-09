@@ -47,9 +47,9 @@ and ingest. There are two processing configurations available on installation:
   :ref:`Transfer tab <create-transfer>`, automatically via the
   `automation tools`_, or in any other context where no other processing
   configuration is specified.
-* ``Automated``, which is used for transfers automatically started from Jisc
-  RDSS environments (if you are not a Jisc user, feel free to delete this
-  configuration).
+* ``Automated``, which is used for transfers automatically started from some
+  external environments (such as Jisc RDSS) and can also be selected by the
+  user in the Transfer tab.
 
 .. image:: images/processing-config.*
    :align: center
