@@ -107,6 +107,9 @@ sudo -u root systemctl start clamd@scan
 sudo -u root systemctl restart archivematica-dashboard
 sudo -u root systemctl restart archivematica-mcp-server
 
+sudo -u root yum install -y firewalld
+sudo -u root systemctl start firewalld
+
 sudo firewall-cmd --add-port=81/tcp --permanent
 sudo firewall-cmd --add-port=8001/tcp --permanent
 sudo firewall-cmd --reload

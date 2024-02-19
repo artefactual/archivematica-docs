@@ -192,7 +192,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 110-112
+      :lines: 112-114
 
 #. Complete :ref:`Post Install Configuration <rocky-post-install-config>`.
 
