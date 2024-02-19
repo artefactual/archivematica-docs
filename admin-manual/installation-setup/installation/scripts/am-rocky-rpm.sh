@@ -127,3 +127,22 @@ sudo -u archivematica bash -c " \
           --api-key="THIS_IS_THE_SS_APIKEY" \
           --superuser
 ";
+
+sudo -u archivematica bash -c " \
+    set -a -e -x
+    source /etc/default/archivematica-dashboard || \
+        source /etc/sysconfig/archivematica-dashboard \
+            || (echo 'Environment file not found'; exit 1)
+    cd /usr/share/archivematica/dashboard
+      /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py install \
+          --username="test" \
+          --password="test" \
+          --email="example@example.com" \
+          --org-name="test" \
+          --org-id="test" \
+          --api-key="THIS_IS_THE_SS_APIKEY" \
+          --ss-url="http://localhost4:7500" \
+          --ss-user="test" \
+          --ss-api-key="THIS_IS_THE_SS_APIKEY" \
+          --site-url="http://localhost:81"
+";
