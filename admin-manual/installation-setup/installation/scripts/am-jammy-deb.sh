@@ -43,6 +43,7 @@ sudo service elasticsearch restart
 sudo systemctl enable elasticsearch
 
 sudo service clamav-freshclam restart
+sleep 120s
 sudo service clamav-daemon start
 sudo service gearman-job-server restart
 sudo service archivematica-mcp-server start
@@ -70,4 +71,23 @@ sudo -u archivematica bash -c " \
           --email="example@example.com" \
           --api-key="THIS_IS_THE_SS_APIKEY" \
           --superuser
+";
+
+sudo -u archivematica bash -c " \
+    set -a -e -x
+    source /etc/default/archivematica-dashboard || \
+        source /etc/sysconfig/archivematica-dashboard \
+            || (echo 'Environment file not found'; exit 1)
+    cd /usr/share/archivematica/dashboard
+      /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py install \
+          --username="admin" \
+          --password="archivematica" \
+          --email="example@example.com" \
+          --org-name="test" \
+          --org-id="test" \
+          --api-key="THIS_IS_THE_SS_APIKEY" \
+          --ss-url="http://localhost:8000" \
+          --ss-user="admin" \
+          --ss-api-key="THIS_IS_THE_SS_APIKEY" \
+          --site-url="http://localhost"
 ";
