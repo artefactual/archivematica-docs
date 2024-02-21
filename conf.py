@@ -365,6 +365,6 @@ locale_dirs = ['locale/']
 
 gettext_compact = False
 
-# -- Ooptiosn for linkcheck ------------------------------------
+# -- Options for linkcheck ------------------------------------
 
 linkcheck_ignore = [r'http://localhost:\d+/', r'http://10.10.10.20:\d+/',r'http://192.168.168.198:\d+/',r'https://192.168.168.198:\d+/','http://example.archivematica.org','http://myAtoM.ca',r'((.md)[#][\w-]*)']
