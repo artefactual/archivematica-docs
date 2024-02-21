@@ -364,3 +364,15 @@ language = 'en'
 locale_dirs = ['locale/']
 
 gettext_compact = False
+
+# -- Options for linkcheck ------------------------------------
+
+linkcheck_ignore = [
+    r'([(http:)(https:)]*(\/\/)*(localhost)(:)*[\d]*)',
+    r'([(http:)(https:)]*(\/\/)*(10.10.10.20)(:)*[\d]*)',
+    r'([(http:)(https:)]*(\/\/)*(192.168.168.198)(:)*[\d]*)',
+    r'([(http:)(https:)]*(\/\/)*(192.168.168.192)(:)*[\d]*)',
+    'http://example.archivematica.org',
+    'http://myAtoM.ca',
+    r'([(http:)(https:)]*(\/\/)[\S]*(.)*(github.com)([\s\S])*((.md)[#][\w-]*))',
+]
