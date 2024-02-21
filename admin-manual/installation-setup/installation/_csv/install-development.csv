@@ -1,2 +1,2 @@
 Development environments,,
-"Docker and Linux",`Archivematica development on Docker Compose <https://github.com/artefactual/archivematica/tree/qa/1.x/hack#archivematica-development-on-docker-compose>`_,Docker will provide instructions on how to use it as a non-root user. This may not be desirable for all.
+"Docker and Linux",`Archivematica development on Docker Compose <https://github.com/artefactual/archivematica/blob/qa/1.x/hack/README.md>`_,Docker will provide instructions on how to use it as a non-root user. This may not be desirable for all.
