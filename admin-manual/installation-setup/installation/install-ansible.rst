@@ -146,5 +146,5 @@ steps:
 :ref:`Back to the top <install-ansible>`
 
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
-.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/tree/d4474c3dbaef2b561c87e0650c6ee386be6910a7#disable-elasticsearch-use
+.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/d4474c3dbaef2b561c87e0650c6ee386be6910a7/README.md#disable-elasticsearch-use
 .. _`Vagrant website`: https://www.vagrantup.com/downloads.html
