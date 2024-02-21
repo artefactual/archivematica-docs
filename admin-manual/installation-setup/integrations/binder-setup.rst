@@ -48,5 +48,5 @@ section :ref:`Upload a DIP to Binder <upload-binder>`.
 
 .. _Binder documentation: https://binder.readthedocs.io/en/latest/user-manual/overview/project-status.html
 .. _Binder GitHub repository: https://github.com/artefactual/binder
-.. _installation instructions: https://github.com/artefactual/binder/tree/a2893fe589c67f147de440a52301c4025ad1cd4e#installation
-.. _configuration instructions: https://github.com/artefactual/binder/tree/a2893fe589c67f147de440a52301c4025ad1cd4e#configuration
+.. _installation instructions: https://github.com/artefactual/binder/blob/a2893fe589c67f147de440a52301c4025ad1cd4e/README.md#installation
+.. _configuration instructions: https://github.com/artefactual/binder/blob/a2893fe589c67f147de440a52301c4025ad1cd4e/README.md#configuration
