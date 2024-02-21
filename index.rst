@@ -67,13 +67,6 @@ errors, as well as how to report errors
 * :ref:`Error reporting <error-reporting>`
 * :ref:`FAQ <faq>`
 
-.. _home-other-resources:
-
-Other resources
----------------
-
-* :ref:`TRAC review tool <trac>`
-
 .. _user-manual-home:
 
 User manual

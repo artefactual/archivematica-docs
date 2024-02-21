@@ -20,4 +20,3 @@ of links to each chapter's main sections.
    troubleshooting/error-handling
    troubleshooting/error-reporting
    troubleshooting/faq
-   other-resources/trac
