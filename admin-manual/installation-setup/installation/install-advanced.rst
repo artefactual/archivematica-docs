@@ -47,7 +47,7 @@ In order to obtain valid SSL certificates trusted by any browser, you can use
 
 :ref:`Back to the top <install-advanced>`
 
-.. _`development environment instructions`: https://github.com/artefactual/archivematica/tree/qa/1.x/hack#archivematica-development-on-docker-compose
+.. _`development environment instructions`: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/README.md
 .. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
 .. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/storage-ssl.conf.j2
 .. _`Let's Encrypt`: https://letsencrypt.org

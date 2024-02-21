@@ -159,5 +159,5 @@ environment itself.
 .. _ClamAV manual pages: https://manpages.debian.org/jessie/clamav-daemon/clamd.conf.5.en.html
 .. _Compose .yml file: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/docker-compose.yml
 .. _configuration file: https://github.com/artefactual-labs/ansible-clamav/blob/master/defaults/main.yml
-.. _Ansible environment variables: https://github.com/artefactual-labs/ansible-archivematica-src/blob/stable/1.15.x/README.md#environment-variables
+.. _Ansible environment variables: https://github.com/artefactual-labs/ansible-archivematica-src/blob/d4474c3dbaef2b561c87e0650c6ee386be6910a7/README.md#environment-variables
 .. _Bug 11958: https://bugzilla.clamav.net/show_bug.cgi?id=11958

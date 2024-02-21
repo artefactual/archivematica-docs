@@ -424,7 +424,7 @@ to create (and check) than the alternatives (e.g. SHA-256).
 
 .. _MCPServer: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPServer/install
 .. _MCPClient: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/MCPClient
-.. _MCPClient concurrency: https://github.com/artefactual/archivematica/tree/3e52494735ebfeb0cabc477d95d692034f4b3142/src/MCPClient#concurrency
+.. _MCPClient concurrency: https://github.com/artefactual/archivematica/blob/3e52494735ebfeb0cabc477d95d692034f4b3142/src/MCPClient/README.md#concurrency
 .. _systemd: https://en.wikipedia.org/wiki/Systemd
 .. _unit file: https://www.freedesktop.org/software/systemd/man/systemd.unit.html
 .. _MCPClient unit file: https://raw.githubusercontent.com/artefactual-labs/am-packbuild/qa/1.x/rpms/EL9/archivematica/etc/archivematica-mcp-client.service

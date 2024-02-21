@@ -563,4 +563,4 @@ the databases and their tables.
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
 .. _`Reindex API`: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
-.. _`es-reindex.sh`: https://github.com/artefactual-labs/ops-helpers/tree/master/es-helpers#es-reindexsh-update-search-indices
+.. _`es-reindex.sh`: https://github.com/artefactual-labs/ops-helpers/blob/master/es-helpers/README.md#es-reindexsh-update-search-indices
