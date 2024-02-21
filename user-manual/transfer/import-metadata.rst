@@ -281,7 +281,7 @@ This feature is disabled by default. It's still considered experimental and
 its validation rules need to be configured according to the user needs before
 using it.
 
-The `Metadata XML validation variables <https://github.com/artefactual/archivematica/tree/179247f9e5508defd563e4eae3c73ea8e8b674f3/src/MCPClient/install#metadata-xml-validation-variables>`_
+The `Metadata XML validation variables <https://github.com/artefactual/archivematica/blob/179247f9e5508defd563e4eae3c73ea8e8b674f3/src/MCPClient/install/README.md#metadata-xml-validation-variables>`_
 section of the MCPClient installation documentation explains how to enable
 and configure this feature. You can also check the
 `sample configuration files <https://github.com/artefactual/archivematica-sampledata/tree/b01539902198a9e4a15f76add7b6b129eecf6b7b/xml-validation>`_
