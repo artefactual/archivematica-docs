@@ -154,7 +154,7 @@ For instructions to configure a Dataverse integration, see
 .. _`AtoM`: https://www.accesstomemory.org/
 .. _`ArchivesSpace`: https://archivesspace.org/
 .. _`Avalon Media System`: https://www.avalonmediasystem.org/
-.. _`Avalon Media System Technical Documentation`: https://wiki.dlib.indiana.edu/display/VarVideo/Archivematica+for+Avalon
+.. _`Avalon Media System Technical Documentation`: https://samvera.atlassian.net/wiki/spaces/AVALON/pages/1957954154/Archivematica+for+Avalon
 .. _`Automation-Tools`: https://github.com/artefactual/automation-tools
 .. _`DuraCloud`: https://duraspace.org/duracloud/
 .. _`ArchivesDirect`: https://duraspace.org/archivesdirect/
