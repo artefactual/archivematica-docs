@@ -96,8 +96,7 @@ Where M is the unit Megabytes
 .. note::
 
     Clamscan defaults cannot be set above 2GB (2000M) as per this link to
-    ClamAV `Bug 11958`_ (note that you must create an account with Bugzilla to
-    view bugs for the ClamAV project).
+    ClamAV `Issue 344`_ .
 
 Configuration is done via environment variable or deployment script, e.g.
 Ansible playbook.
@@ -160,4 +159,4 @@ environment itself.
 .. _Compose .yml file: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/docker-compose.yml
 .. _configuration file: https://github.com/artefactual-labs/ansible-clamav/blob/master/defaults/main.yml
 .. _Ansible environment variables: https://github.com/artefactual-labs/ansible-archivematica-src/blob/d4474c3dbaef2b561c87e0650c6ee386be6910a7/README.md#environment-variables
-.. _Bug 11958: https://bugzilla.clamav.net/show_bug.cgi?id=11958
+.. _Issue 344: https://github.com/Cisco-Talos/clamav/issues/344
