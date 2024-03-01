@@ -223,7 +223,7 @@ The Unarchiver is an archive unpacker program.
 .. _NFS-common: https://linux-nfs.org
 .. _p7zip: http://p7zip.sourceforge.net/
 .. _Python-lxml: https://lxml.de/
-.. _rsync: https://linux.die.net/man/1/rsync
+.. _rsync: https://rsync.samba.org/
 .. _Siegfried: https://github.com/richardlehane/siegfried
 .. _Sleuthkit: http://www.sleuthkit.org/
 .. _Tesseract: https://github.com/tesseract-ocr/
