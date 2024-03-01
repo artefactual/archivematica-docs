@@ -220,7 +220,7 @@ The Unarchiver is an archive unpacker program.
 .. _MediaConch: https://mediaarea.net/MediaConch
 .. _MediaInfo: https://mediaarea.net/en/MediaInfo
 .. _Nailgun: https://github.com/facebook/nailgun
-.. _NFS-common: https://pkgs.org/download/nfs-common
+.. _NFS-common: https://linux-nfs.org
 .. _p7zip: http://p7zip.sourceforge.net/
 .. _Python-lxml: https://lxml.de/
 .. _rsync: https://linux.die.net/man/1/rsync
