@@ -374,5 +374,6 @@ linkcheck_ignore = [
     r'([(http:)(https:)]*(\/\/)*(192.168.168.192)(:)*[\d]*)',
     'http://example.archivematica.org',
     'http://myAtoM.ca',
+    'https://www.transifex.com/artefactual/archivematica/',
     r'([(http:)(https:)]*(\/\/)[\S]*(.)*(github.com)([\s\S])*((.md)[#][\w-]*))',
 ]
