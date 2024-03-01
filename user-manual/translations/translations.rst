@@ -1,3 +1,9 @@
+.. note::
+
+	We are not currently working on translations for Archivematica.
+	(March 2024)
+
+
 .. _translations:
 
 ============
