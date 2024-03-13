@@ -484,9 +484,9 @@ Response definitions:
 
 ==================   ==========================================================
 
-``message``          "Approval successful."
+``error``            "false"
 
-``reingest_uuid``    UUID of the reingested transfer.
+``message``          "Metadata files added successfully."
 
 ==================   ==========================================================
 
