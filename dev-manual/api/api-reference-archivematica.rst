@@ -484,7 +484,7 @@ Response definitions:
 
 ==================   ==========================================================
 
-``error``            "false"
+``error``            Boolean true or false.
 
 ``message``          "Metadata files added successfully."
 
