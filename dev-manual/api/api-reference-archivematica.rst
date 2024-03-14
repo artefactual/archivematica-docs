@@ -494,22 +494,23 @@ Response definitions:
 Usage example::
 
   curl -X POST \
-  http://my_archivematica_instance.archivematica.org/api/ingest/copy_metadata_files/ \
-  -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]' \
-  -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d 'sip_uuid=a7f1f36c-55c1-4fb7-a898-76d102e847dc&source_paths%5B%5D='''NmRjYTgxNDAtMDg2NC00MzE5LTg2ZDctNTg0ZjZiZTY4N2EzOi9ob21lL2FyY2hpdmVtYXRpY2EvYXJjaGl2ZW1hdGljYS1zYW1wbGVkYXRhL2lzc3VlX3RlbXBsYXRlLm1k''''
+      http://my_archivematica_instance.archivematica.org/api/ingest/copy_metadata_files/ \
+      -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]' \
+      -H 'Content-Type: application/x-www-form-urlencoded' \
+      -d 'sip_uuid=a7f1f36c-55c1-4fb7-a898-76d102e847dc&source_paths%5B%5D= \
+      'NmRjYTgxNDAtMDg2NC00MzE5LTg2ZDctNTg0ZjZiZTY4N2EzOi9ob21lL2FyY2hpdmVtYXRpY2EvYXJjaGl2ZW1hdGljYS1zYW1wbGVkYXRhL2lzc3VlX3RlbXBsYXRlLm1k''
 
 
 Response examples
 
-200 OK::
+201 Created::
 
     {
       "error": false,
       "message": "Metadata files added successfully."
     }
 
-400 Bad Request ::
+400 Bad Request::
 
     {
       "error": true,
@@ -520,7 +521,7 @@ Response examples
 
     {
       "error": true,
-      "message": "sip_uuid and source_paths[] both required."
+      "message": "Location 6dca8140-0864-4319-86d7-584f6be687a3 is not associated with this pipeline"
     }
 
 .. _admin-resource:
