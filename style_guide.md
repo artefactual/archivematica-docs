@@ -3,20 +3,40 @@
 This style guide is used for the [Archivematica documentation][Archivematica
 documentation].
 
-1. [Changing the documentation](#changing-the-documentation)
-1. [Audience](#audience)
-1. [Tone](#tone)
-1. [Style](#style)
-1. [Structure](#structure)
-    * [Manuals](#manuals)
-    * [Chapters](#chapters)
-    * [Pages](#pages)
-    * [Indexes and toctrees](#indexes-and-toctrees)
-    * [Images](#images)
-    * [Tables](#tables)
-    * [Scripts](#scripts)
-    * [Admonitions](#admonitions)
-1. [Sources](#sources)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Changing the documentation](#changing-the-documentation)
+- [Audience](#audience)
+- [Tone](#tone)
+- [Style](#style)
+  - [Golden rules](#golden-rules)
+    - [Golden rule 1](#golden-rule-1)
+    - [Golden rule 2](#golden-rule-2)
+    - [Golden rule 3](#golden-rule-3)
+  - [Formatting and punctuation](#formatting-and-punctuation)
+  - [Local style rules](#local-style-rules)
+  - [Including images](#including-images)
+  - [Including admonitions](#including-admonitions)
+- [Structure](#structure)
+  - [Manuals](#manuals)
+  - [Chapters](#chapters)
+  - [Pages](#pages)
+    - [Section headings](#section-headings)
+    - [Table of contents](#table-of-contents)
+    - [Text](#text)
+    - [Writing conventions](#writing-conventions)
+    - [Back to the top](#back-to-the-top)
+    - [External Links](#external-links)
+    - [Internal Links](#internal-links)
+  - [Indexes and toctrees](#indexes-and-toctrees)
+  - [Images](#images)
+  - [Tables](#tables)
+  - [Scripts](#scripts)
+  - [Admonitions](#admonitions)
+- [Sources](#sources)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Changing the documentation
 
@@ -55,35 +75,35 @@ use of Archivematica.
 
 ## Tone
 
-* Write accessibly in clear, simple sentences intended for a global audience.
-* Avoid colloquial language, humour, cultural references, and personal opinion.
+- Write accessibly in clear, simple sentences intended for a global audience.
+- Avoid colloquial language, humour, cultural references, and personal opinion.
   Keep your writing technical.
-* Write from a second-person point of view. Use "you" and "your", not "my",
+- Write from a second-person point of view. Use "you" and "your", not "my",
   "our", or "their".
-* Avoid jargon and acronyms, if you can. Spell out acronyms at least once per
+- Avoid jargon and acronyms, if you can. Spell out acronyms at least once per
   page.
-* Be consistent. Use the same consistently-formatted word or phrase for a
+- Be consistent. Use the same consistently-formatted word or phrase for a
   concept throughout the documentation.
-* Do not qualify or prejudge actions. Do not write that something is "easy" or
+- Do not qualify or prejudge actions. Do not write that something is "easy" or
   "quick" as this is a deterrent if the user is not able to complete the action.
-* Do not reference future development or features that don't yet exist.
+- Do not reference future development or features that don't yet exist.
 
 ## Style
 
 ### Golden rules
 
-**Golden rule 1**
+#### Golden rule 1
 
-* Limit each sentence to less than 25 words.
+- Limit each sentence to less than 25 words.
 
-**Golden rule 2**
+#### Golden rule 2
 
-* Limit each paragraph to one topic; limit each sentence to one idea; limit each
+- Limit each paragraph to one topic; limit each sentence to one idea; limit each
   procedure step to one action.
 
-**Golden rule 3**
+#### Golden rule 3
 
-* Use explicit examples to demonstrate how the software works. Provide
+- Use explicit examples to demonstrate how the software works. Provide
   instructions rather than descriptions.
 
 Adapted from the [GNOME Documentation Style Guide][GNOME Documentation Style
@@ -91,25 +111,25 @@ Guide].
 
 ### Formatting and punctuation
 
-* Use sentence case for page titles and section headings.
-* Use numbered lists for actions that happen in sequence.
-* Use bulleted lists for most other lists.
-* Truncate lines after 80 characters.
-* Put UI elements in bold. If you're telling a user to click on the Start
+- Use sentence case for page titles and section headings.
+- Use numbered lists for actions that happen in sequence.
+- Use bulleted lists for most other lists.
+- Truncate lines after 80 characters.
+- Put UI elements in bold. If you're telling a user to click on the Start
   Transfer button, for example, the instruction should be "Click on **Start
   Transfer**."
-* Use serial (Oxford) commas for clarity (preferred, not enforced).
-* Use standard Canadian spelling and punctuation (preferred, not enforced).
-* When writing numbers, the [Purdue OWL](https://owl.purdue.edu/owl/general_writing/grammar/writing_numbers.html)
+- Use serial (Oxford) commas for clarity (preferred, not enforced).
+- Use standard Canadian spelling and punctuation (preferred, not enforced).
+- When writing numbers, the [Purdue OWL](https://owl.purdue.edu/owl/general_writing/grammar/writing_numbers.html)
   states that "most people spell out numbers that can be expressed in one
   or two words [e.g "thirty-one AIPs"] and use figures for numbers
   that are three or more words long [e.g. "2,274 AIPs"]."
 
 ### Local style rules
 
-* MCPClient instead of MCP Client.
-* MCPServer instead of MCP Server.
-* Microservice instead of micro-service.
+- MCPClient instead of MCP Client.
+- MCPServer instead of MCP Server.
+- Microservice instead of micro-service.
 
 ### Including images
 
@@ -117,15 +137,15 @@ Guide].
 the form of screenshots. Images are formatted in a particular way in
 reStructuredText - see the [Images](#images) section below for more information.
 
-* Avoid screenshots unless absolutely necessary.
-* Do not use screenshots to display code or other purely textual information
+- Avoid screenshots unless absolutely necessary.
+- Do not use screenshots to display code or other purely textual information
   (e.g. a METS file). Use [scripts](#scripts) instead.
-* Never rely on images as the only way to convey information.
-* Always describe the content of the screenshot in the text of the documentation
+- Never rely on images as the only way to convey information.
+- Always describe the content of the screenshot in the text of the documentation
   so that the content may be understood independently of the image.
-* Provide an alt tag for all images.
-* Provide the highest resolution images possible.
-* Use SVG or PNG images, rather than JPGs.
+- Provide an alt tag for all images.
+- Provide the highest resolution images possible.
+- Use SVG or PNG images, rather than JPGs.
 
 ### Including admonitions
 
@@ -133,10 +153,10 @@ reStructuredText - see the [Images](#images) section below for more information.
 programmatically distinguish important information for the user. See the
 [Admonitions](#admonitions) section below for more information.
 
-* Use red-flag admonitions (such as DANGER or WARNING) only when absolutely
+- Use red-flag admonitions (such as DANGER or WARNING) only when absolutely
   critical.
-* Use gentler admonitions (such as IMPORTANT or NOTE) sparingly.
-* Aim for no more than one admonition per section to reduce visual clutter.
+- Use gentler admonitions (such as IMPORTANT or NOTE) sparingly.
+- Aim for no more than one admonition per section to reduce visual clutter.
 
 ## Structure
 
@@ -145,16 +165,16 @@ programmatically distinguish important information for the user. See the
 The top level division within the Archivematica documentation is a manual. The
 Archivematica documentation consists of three manuals:
 
-* [Getting started][Getting started]
-* [Administrator manual][Administrator manual]
-* [User manual][User manual]
+- [Getting started][Getting started]
+- [Administrator manual][Administrator manual]
+- [User manual][User manual]
 
 These manuals correspond to three top-level directories in the
 [Archivematica documentation][Archivematica documentation]:
 
-* [getting-started][getting-started]
-* [admin-manual][admin-manual]
-* [user-manual][user-manual]
+- [getting-started][getting-started]
+- [admin-manual][admin-manual]
+- [user-manual][user-manual]
 
 The manuals are meant to be stable. Changes at this level may also require
 layout changes to the documentation website. New top-level directories should
@@ -176,11 +196,11 @@ Metadata or Translations). Be thoughtful about adding a new chapter. Most
 features occur within an already-defined workflow. Here are two examples for
 why a new chapter might be added:
 
-* A new tab is added to the Archivematica dashboard. For example, when the
+- A new tab is added to the Archivematica dashboard. For example, when the
   Appraisal tab was introduced in Archivematica 1.6, a chapter titled
   [Appraisal][Appraisal] was added to the User manual as a place to record
   appraisal workflow instructions.
-* A feature is introduced that has implications outside normal user workflows.
+- A feature is introduced that has implications outside normal user workflows.
   For example, when internationalization hooks were added to the code, a chapter
   titled [Translations][Translations] was added to the User Manual as a place to
   put translation instructions.
@@ -202,8 +222,8 @@ A page is an individual reST file, or reStructuredText file. reST files end with
 the extension `.rst`. All reST files should be nested within chapter
 directories, with the exception of the following:
 
-* contents.rst - the top-level toctree for the documentation
-* index.rst - the main index for the documentation, which acts as the homepage
+- contents.rst - the top-level toctree for the documentation
+- index.rst - the main index for the documentation, which acts as the homepage
 
 All pages should begin with an anchor, which acts as the linking mechanism for
 the page. The anchor should be short and descriptive. Anchors always begin with
@@ -215,7 +235,7 @@ and enclosed top and bottom by equals signs. Note that the equals signs should
 match the length of the title. The title should be followed by introductory text
 about the page.
 
-```
+```rst
 .. _my-page:
 
 =============
@@ -242,7 +262,7 @@ contents](#table-of-contents) and therefore require an anchor. Lower-level
 headings only require an anchor if you would like to include them in the table
 of contents or link to them from anywhere else in the documentation.
 
-```
+```rst
 .. _my-page:
 
 =============
@@ -282,11 +302,11 @@ Archivematica documentation has not been particularly consistent across pages
 with the characters used for adornment in the past, but going forward we will
 try to use the following:
 
-* Title: === (overlined AND underlined)
-* First-level heading: ---
-* Second-level heading: ^^^
-* Third-level heading: +++
-* Fourth-level heading level: ###
+- Title: === (overlined AND underlined)
+- First-level heading: ---
+- Second-level heading: ^^^
+- Third-level heading: +++
+- Fourth-level heading level: ###
 
 Note that the title should be overlined and underlined; section headings should
 only be underlined.
@@ -302,7 +322,7 @@ Using the section anchors, create bulleted list containing an internal reference
 for each section that you would like to include in the table of contents using
 the reStructuredText link format.
 
-```
+```rst
 .. _my-page:
 
 =============
@@ -346,7 +366,7 @@ table of contents or anywhere else in the documentation.
 
 Text blocks should truncated after 80 characters.
 
-```
+```rst
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
 22.04 and Rocky Linux 9 are available.
@@ -355,7 +375,7 @@ place to store packages for multiple operating systems. Packages for both Ubuntu
 Code blocks are an exception to this rule. A line of code can extend beyond 80
 characters since a mid-line break may cause rendering errors.
 
-```
+```rst
 .. code:: bash
    sudo sh -c 'echo "ARCHIVEMATICA_DASHBOARD_DASHBOARD_SEARCH_ENABLED=false" >> /etc/default/archivematica-dashboard'
    sudo sh -c 'echo "ARCHIVEMATICA_MCPSERVER_MCPSERVER_SEARCH_ENABLED=false" >> /etc/default/archivematica-mcp-server'
@@ -364,14 +384,12 @@ characters since a mid-line break may cause rendering errors.
 
 #### Writing conventions
 
-
-
 #### Back to the top
 
 All pages should have a _Back to the top_ link at the bottom of the page, which
 refers to the page anchor.
 
-```
+```rst
     :ref:`Back to the top <my-page>`
 ```
 
@@ -383,13 +401,13 @@ This helps text blocks adhere to the 80-character limit and is generally tidier.
 
 Inline hyperlinks look like this:
 
-```
+```rst
 Here is a link to a `reStructuredText Primer <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html`_.
 ```
 
 Instead, style hyperlinks as a target, like so:
 
-```
+```rst
 Here is a link to the `reStructuredText Primer`_. You can also refer to
 documentation about the `Sphinx documentation generator`_.
 ```
@@ -400,7 +418,7 @@ a page; clearly identifying the contents of the link will make it easier to
 understand whether or not a user wants to click through. Here are good and bad
 examples of hyperlink target text:
 
-```
+```rst
 Good: Here is a link to the `reStructuredText Primer`_.
 
 Bad: The link to the reStructuredText Primer is `here`_.
@@ -410,7 +428,7 @@ And at the very bottom of the page, create a list of external links. This list
 should be below the _Back to the top_ link. This list does not need to adhere to
 the 80-character limit.
 
-```
+```rst
 .. _`reStructuredText Primer`: http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 .. _`Sphinx documentation generator`: http://www.sphinx-doc.org/en/master/index.html
 ```
@@ -429,7 +447,7 @@ To create a hyperlink to another section of the Archivematica documentation, use
 a [reference label][reference label] that points to the anchor of the linked
 page:
 
-```
+```rst
 :ref:`Processing configuration <dashboard-processing>`
 ```
 
@@ -439,7 +457,7 @@ same documentation repo.
 When linking to a page in another documentation repository, precede the anchor
 with the appropriate tag - `archivematica:`, `storageservice`, or `atom:`.
 
-```
+```rst
 :ref:`Administrators Manual <storageservice:administrators>` links to Storage Service documentation
 :ref:`Appraisal <archivematica:appraisal>` links to Archivematica documentation
 ```
@@ -456,15 +474,15 @@ If you create a new page, it must be added to the appropriate toctree. There are
 several different indexes in the Archivematica documentation, and some contain
 toctrees.
 
-* `archivematica-docs/index.rst` - this is used as the site homepage. Links can
+- `archivematica-docs/index.rst` - this is used as the site homepage. Links can
   be added to this page as needed.
-* `archivematica-docs/admin-manual/index.rst` - the index for the Administrator
+- `archivematica-docs/admin-manual/index.rst` - the index for the Administrator
   Manual, which contains the manual's toctree. All pages within the
   Administrator Manual must be listed in this toctree.
-* `archivematica-docs/getting-started/index.rst` - the index for the Getting
+- `archivematica-docs/getting-started/index.rst` - the index for the Getting
   Started Manual, which contains the manual's toctree. All pages within the
   Getting Started Manual must be listed in this toctree.
-* `archivematica-docs/user-manual/index.rst` - the index for the User Manual,
+- `archivematica-docs/user-manual/index.rst` - the index for the User Manual,
   which contains the manual's toctree. All pages within the User Manual must be
   listed in this toctree.
 
@@ -490,7 +508,7 @@ resources available online for writing good alt text.
 
 To include an image on a page, reference the image using the `image` directive.
 
-```
+```rst
 .. image:: images/transfer-tab.png
    :align: center
    :width: 80%
@@ -503,7 +521,7 @@ The `width` option can be adjusted per image as required.
 
 If you would like to include a caption, use the `figure` directive.
 
-```
+```rst
 .. figure:: images/generalConfig.*
    :align: center
    :figwidth: 70%
@@ -534,7 +552,7 @@ referenced in the pages of the Installation sub-chapter.
 To include a table on a page, reference the table using the `csv-table`
 directive.
 
-```
+```rst
 .. csv-table::
    :file: _csv/install-development.csv
    :header-rows: 1
@@ -547,7 +565,7 @@ than the body of the table.
 
 Short, simple scripts can be added as code blocks using the `code` directive.
 
-```
+```rst
 .. code:: bash
 
    sudo wget -O - https://packages.archivematica.org/1.15.x/key.asc  | sudo apt-key add -
@@ -568,7 +586,7 @@ sub-chapter.
 To include a script on a page, reference the script using the `literal-include`
 directive.
 
-```
+```rst
 .. literalinclude:: scripts/am-rocky-rpm.sh
    :language: bash
    :lines: 3
@@ -580,7 +598,7 @@ highlighting.
 Setting the `lines` option will display only the specified lines. You may
 specify one line, as above, or multiple lines:
 
-```
+```rst
 .. literalinclude:: scripts/am-rocky-rpm.sh
    :language: bash
    :lines: 5-12
@@ -596,7 +614,7 @@ Commonly used in the Archivematica documentation are `note`, `important`, and
 `warning`. The chosen admonition will have an impact on how the contents are
 displayed.
 
-```
+```rst
 .. note::
    Skip this step if you are planning to run :ref:`Archivematica without
    Elasticsearch <install-elasticsearch>`.
@@ -606,9 +624,9 @@ displayed.
 
 This guide reuses content from the following resources:
 
-* [Write the Docs Style Guides][Write the Docs Style Guides]
-* [GNOME Documentation Style Guide][GNOME Documentation Style Guide]
-* [University of Minnesota Accessible U][University of Minnesota Accessible U]
+- [Write the Docs Style Guides][Write the Docs Style Guides]
+- [GNOME Documentation Style Guide][GNOME Documentation Style Guide]
+- [University of Minnesota Accessible U][University of Minnesota Accessible U]
 
 [Archivematica documentation]: https://github.com/artefactual/archivematica-docs
 [issue]: https://github.com/archivematica/Issues/issues
@@ -618,7 +636,6 @@ This guide reuses content from the following resources:
 [Getting started]: https://www.archivematica.org/en/docs/archivematica-1.7/#getting-started
 [Administrator manual]: https://www.archivematica.org/en/docs/archivematica-1.7/#administrator-manual
 [User manual]: https://www.archivematica.org/en/docs/archivematica-1.7/#user-manual
-[documentation repository]: https://github.com/artefactual/archivematica-docs
 [getting-started]: https://github.com/artefactual/archivematica-docs/tree/1.7/getting-started
 [admin-manual]: https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual
 [user-manual]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual

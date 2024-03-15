@@ -1,5 +1,25 @@
 repos:
-- repo: https://github.com/sphinx-contrib/sphinx-lint
-  rev: v0.9.1
+- repo: "https://github.com/sphinx-contrib/sphinx-lint"
+  rev: "v0.9.1"
   hooks:
-  - id: sphinx-lint
+  - id: "sphinx-lint"
+- repo: "https://github.com/igorshubovych/markdownlint-cli"
+  rev: "v0.39.0"
+  hooks:
+  - id: "markdownlint"
+    exclude: |
+      (?x)^(
+        issue_template\.md
+      )
+- repo: "https://github.com/adrienverge/yamllint"
+  rev: "v1.34.0"
+  hooks:
+  - id: "yamllint"
+- repo: "https://github.com/thlorenz/doctoc"
+  rev: "v2.2.0"
+  hooks:
+  - id: "doctoc"
+    files: |
+      (?x)^(
+        style_guide\.md
+      )
