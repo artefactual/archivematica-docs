@@ -1,0 +1,4 @@
+curl -X DELETE \
+    http://my_archivematica_instance.archivematica.org/api/transfer/
+    89fd478d-c896-461a-baec-5d1faf661020/delete/ \
+    -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]'
