@@ -31,3 +31,8 @@ repos:
       (?x)^(
         locale/.*
       )
+  - id: "end-of-file-fixer"
+    exclude: |
+      (?x)^(
+        locale/.*
+      )
