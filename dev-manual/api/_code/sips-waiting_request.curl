@@ -2,4 +2,3 @@ curl -X GET \
   http://mytestinstance.archivematica.net/api/ingest/waiting \
   -H 'Authorization: ApiKey admin:ooha0sshie8O' \
   -H 'Host: mytestinstsance.archivematica.net' \
-  

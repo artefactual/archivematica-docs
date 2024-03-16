@@ -5,4 +5,3 @@
   -H 'Cache-Control: no-cache' \
   -H 'Connection: keep-alive' \
   -H 'Host: mytestinstance.archivematica.net'
- 

@@ -3,4 +3,3 @@ curl -X GET \
   status/89fd478d-c896-461a-baec-5d1faf661020/ \
   -H 'Authorization: ApiKey [_your_username_]:[_your_ApiKey_]' \
   -H 'Host: my_archivematica_instance.archivematica.org'
-  
