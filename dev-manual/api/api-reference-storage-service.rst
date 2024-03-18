@@ -544,7 +544,8 @@ Where payload.json contains::
       "endpoint_url": "http://127.0.0.1:12345",
       "access_key_id": "_Cah4cae1_",
       "secret_access_key": "_Thu6Ahqu_",
-      "region": "us-west-2"
+      "region": "us-west-2",
+      "bucket": "bucket_name"
     }
 
 ..  note::
