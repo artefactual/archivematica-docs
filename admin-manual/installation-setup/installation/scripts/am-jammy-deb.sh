@@ -5,9 +5,12 @@ set -euxo pipefail
 export DEBIAN_FRONTEND=noninteractive
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+sudo debconf-set-selections <<< "archivematica-storage-service archivematica-storage-service/dbconfig-install boolean true"
+sudo debconf-set-selections <<< "archivematica-storage-service archivematica-storage-service/mysql/app-pass password demo-ss"
+sudo debconf-set-selections <<< "archivematica-storage-service archivematica-storage-service/app-password-confirm password demo-ss"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/dbconfig-install boolean true"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password demo"
-sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password demo"
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password demo-am"
+sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password demo-am"
 
 curl -fsSL https://packages.archivematica.org/1.16.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.16.x.gpg
 
@@ -22,10 +25,6 @@ sudo apt-get -y upgrade
 
 sudo apt-get install -y openjdk-8-jre-headless mysql-server
 sudo apt-get install -y elasticsearch
-
-sudo mysql -e "DROP DATABASE IF EXISTS SS; CREATE DATABASE SS CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;"
-sudo mysql -e "CREATE USER 'archivematica'@'localhost' IDENTIFIED BY 'demo';"
-sudo mysql -e "GRANT ALL ON SS.* TO 'archivematica'@'localhost';"
 
 sudo apt-get install -y archivematica-storage-service
 
