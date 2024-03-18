@@ -224,14 +224,25 @@ Hide
              delete/**
 ===========  =================================   ==============================
 
+Request body parameters:
+
+=================   =====================
+``transfer_uuid``   UUID of the transfer.
+=================   =====================
+
+Response definitions:
+
+===========   ======================
+``removed``   Boolean true or false.
+===========   ======================
+
 Example request:
 
-.. literalinclude:: _code/hide_request.curl
+.. literalinclude:: _code/hide_request_transfer.curl
 
 Example response:
 
 .. literalinclude:: _code/hide_response.curl
-
 
 Completed
 ^^^^^^^^^
@@ -352,14 +363,24 @@ Hide
 ``DELETE``   **/api/ingest/<SIP UUID>/delete/**  *Hides a SIP.*
 ===========  =================================== ==============================
 
+Request body parameters:
+=============  ================
+``sip_uuid``   UUID of the SIP.
+=============  ================
+
+Response definitions:
+
+===========   ======================
+``removed``   Boolean true or false.
+===========   ======================
+
 Example request:
 
-.. literalinclude:: _code/hide_request.curl
+.. literalinclude:: _code/hide_request_ingest.curl
 
 Example response:
 
 .. literalinclude:: _code/hide_response.curl
-
 
 List SIPS Waiting for User Input
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
