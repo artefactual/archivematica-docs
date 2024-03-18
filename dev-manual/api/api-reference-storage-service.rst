@@ -520,6 +520,10 @@ local file system space are listed below.
 ``size``              (Optional) Maximum size allowed for this space. Set to 0
                       or leave blank for unlimited.
 
+``staging_path``      The absolute path to a staging area. Must be UNIX
+                      filesystem compatible and preferably will be located on
+                      the same filesystem as the path.
+
 ===================   ==========================================================
 
 Example (to create an S3 space)::
