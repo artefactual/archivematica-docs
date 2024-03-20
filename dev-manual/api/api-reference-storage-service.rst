@@ -714,7 +714,7 @@ Request body parameters:
 ``upload_to_tsm``         Boolean true or false. Default is false. will attempt to send the AIP to
                           the Tivoli Storage Manager using command-line client dsmc
 
-``verify_ssl``            Boolean True or False. Default is True.
+``verify_ssl``            Boolean true or false. Default is true.
 
 ======================    =====================================================================================
 
