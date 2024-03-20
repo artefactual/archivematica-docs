@@ -673,7 +673,7 @@ Request body parameters:
 ``metadata_policy``     Use to restrict access to the metadata bitstream. Must be specified as a list of
                         objects in JSON, e.g. ``[{"action":"READ","groupId":"5","rpType":"TYPE_CUSTOM"}]``.
 
-``archive_format``      Select Archive format from dropdown. e.g. ``ZIP or 7z``
+``archive_format``      Archive format, e.g. ``ZIP``, ``7z``.
 
 ===================     =======================================================================================
 
