@@ -494,6 +494,7 @@ Example response (JSON):
 
 .. literalinclude:: _code/ss_browse_space_path_response.curl
 
+.. _create_space:
 
 Create space
 ^^^^^^^^^^^^
@@ -506,10 +507,9 @@ Create space
 
 Request body parameters:
 
-Parameters should contain fields for a new space: See the `Storage Service \
-<https://www.archivematica.org/en/docs/storage-service-0.18/administrators/#access-protocols>`_
-documentation for fields relevant to each type of space. Basic fields for a
-local file system space are listed below.
+Parameters should contain fields for a new space: See
+:ref:`Access protocols <access-protocols>` documentation for fields relevant
+to each type of space. Basic fields for each Access Protocols are listed below.
 
 ===================   ==========================================================
 
@@ -552,6 +552,8 @@ Where payload.json contains::
 
     Endpoint returns all paths base64 encoded.
 
+.. _access-protocols:
+
 Access protocols
 ^^^^^^^^^^^^^^^^
 
@@ -561,8 +563,7 @@ Archipelago
 Archipelago is currently supported for AIP Storage locations.
 Archipelago is built on the content management system Drupal,
 which accepts JSON API calls to create new entities.
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for Archipelago space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -581,8 +582,7 @@ Arkivum
 ^^^^^^^
 
 Archivematica can use Arkivum’s A-Stor as an access protocol in version 0.7 and higher.
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for Arkivum space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -601,9 +601,8 @@ Dataverse
 ^^^^^^^^^
 
 Dataverse Integration is supported with Archivematica v1.8 (and higher) and
-Storage Service v0.13 (and higher). Basic fields for a local file system space
-are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Storage Service v0.13 (and higher). Basic fields for Dataverse space
+are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -631,9 +630,8 @@ DuraCloud
 ^^^^^^^^^
 
 Archivematica can use DuraCloud as an access protocol for the Storage Service in
-version 0.5 and higher. Basic fields for a local file system space are listed
-`above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+version 0.5 and higher. Basic fields for a DuraCloud space are
+listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -654,8 +652,7 @@ DSpace via SWORD2 API
 ^^^^^^^^^^^^^^^^^^^^^
 
 DSpace via SWORD2 locations are currently supported only for AIP Storage locations.
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for a DSpace are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -681,8 +678,7 @@ DSpace via REST API
 ^^^^^^^^^^^^^^^^^^^
 
 DSpace via REST API locations are supported for both AIP and DIP Storage locations.
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for a DSpace via REST API space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -721,8 +717,7 @@ Request body parameters:
 Fedora via SWORD2
 ^^^^^^^^^^^^^^^^^
 
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for a Fedora space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -736,12 +731,33 @@ Request body parameters:
 
 ====================     ==================================================
 
+GPG encryption on Local Filesystem
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Creating a GPG encryption space will allow users to create encrypted AIPs and
+transfers. Basic fields for a local file system space are listed in
+:ref:`Create space <create_space>`
+
+Request body parameters:
+
+==========     ================================================
+
+``key``        The encryption key to be used for the space.
+
+==========     ================================================
+
+Local Filesystem
+^^^^^^^^^^^^^^^^
+
+Local Filesystem spaces handle storage that is available locally on the
+machine running the Storage Service. Basic fields for a local file
+system space are listed in :ref:`Create space <create_space>`
+
 LOCKSS
 ^^^^^^
 
-Archivematica can store AIPs in a `LOCKSS`_ network via LOCKSS-O-Matic. Basic fields for a
-local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Archivematica can store AIPs in a `LOCKSS`_ network via LOCKSS-O-Matic.
+Basic fields for a LOCKSS space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -762,8 +778,8 @@ NFS
 ^^^
 
 NFS spaces are for NFS exports mounted on the Storage Service server and the
-Archivematica pipeline. Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Archivematica pipeline. Basic fields for a NFS space are listed
+in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -783,9 +799,9 @@ Pipeline Local Filesystem
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pipeline Local Filesystems refer to the storage that is local to the
-Archivematica pipeline, but remote to the Storage Service. Basic
-fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Archivematica pipeline, but remote to the Storage Service.
+Basic fields for a Pipeline Local Filesystem space are listed
+in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -805,9 +821,8 @@ RClone
 ^^^^^^
 
 Rclone is a command-line program to manage files in cloud storage, and is
-available as an access protocol in Storage Service 0.20 and higher. Basic
-fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+available as an access protocol in Storage Service 0.20 and higher.
+Basic fields for a Rclone space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -823,8 +838,7 @@ Swift
 ^^^^^^
 
 OpenStack's Swift is available as an access protocol in Storage Service 0.7 and
-higher. Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+higher. Basic fields for a Swift space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
@@ -850,8 +864,7 @@ S3 (Amazon)
 ^^^^^^^^^^^
 
 Amazon S3 is available as an access protocol as of Storage Service version 0.12.
-Basic fields for a local file system space are listed `above \
-<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+Basic fields for a S3(Amazon) space are listed in :ref:`Create space <create_space>`
 
 Request body parameters:
 
