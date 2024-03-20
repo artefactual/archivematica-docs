@@ -711,7 +711,7 @@ Request body parameters:
 
 ``as_archival_object``    Identifier of the default ArchivesSpace archival object.
 
-``upload_to_tsm``         Boolean True or False. Default is False. will attempt to send the AIP to
+``upload_to_tsm``         Boolean true or false. Default is false. will attempt to send the AIP to
                           the Tivoli Storage Manager using command-line client dsmc
 
 ``verify_ssl``            Boolean True or False. Default is True.
