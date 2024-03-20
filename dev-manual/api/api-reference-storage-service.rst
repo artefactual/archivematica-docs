@@ -754,7 +754,7 @@ Request body parameters:
 
 ``external_domain``         Base URL for this server that LOCKSS will be able to access.
 
-``keep_local``              Boolean True or False. Default is True.
+``keep_local``              Boolean true or false. Default is true.
 
 ========================    ===============================================================
 
@@ -775,7 +775,7 @@ Request body parameters:
 
 ``version``             Type of the filesystem, e.g. ``nfs or nfs4``
 
-``manually_mounted``    Boolean True or False. Default is False.
+``manually_mounted``    Boolean true or false. Default is false.
 
 ====================    ================================================
 
@@ -795,7 +795,7 @@ Request body parameters:
 
 ``remote_name``            Name or IP of the remote machine.
 
-``assume_rsync_daemon``    Boolean True or False. Default is False.
+``assume_rsync_daemon``    Boolean true or false. Default is false.
 
 ``rsync_password``         The password for the rsync daemon.
 
