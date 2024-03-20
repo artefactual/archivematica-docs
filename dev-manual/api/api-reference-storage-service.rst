@@ -627,7 +627,7 @@ Request body parameters:
 
 =====================   ===============================================================
 
-Duracloud
+DuraCloud
 ^^^^^^^^^
 
 Archivematica can use DuraCloud as an access protocol for the Storage Service in
