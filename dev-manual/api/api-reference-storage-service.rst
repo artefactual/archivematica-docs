@@ -552,6 +552,322 @@ Where payload.json contains::
 
     Endpoint returns all paths base64 encoded.
 
+Access protocols
+^^^^^^^^^^^^^^^^
+
+Archipelago
+^^^^^^^^^^^
+
+Archipelago is currently supported for AIP Storage locations.
+Archipelago is built on the content management system Drupal,
+which accepts JSON API calls to create new entities.
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+=========================   ==========================================================
+
+``archipelago_url``         The hostname of the Archipelago web instance or IP address
+                            with port, e.g. archipelago.example.com:8443
+
+``archipelago_user``        Archipelago username with write access required.
+
+``archipelago_password``    Archipelago password with write access required.
+
+=========================   ==========================================================
+
+Arkivum
+^^^^^^^
+
+Archivematica can use Arkivum’s A-Stor as an access protocol in version 0.7 and higher.
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+==================   ===============================================================
+
+``host``             The hostname of the Arkivum web instance or IP address
+                     with port, e.g. arkivum.example.com:8443
+
+``remote_user``      Username on the remote machine accessible via passwordless ssh.
+
+``remote_name``      Name or IP of the remote machine.
+
+==================   ===============================================================
+
+Dataverse
+^^^^^^^^^
+
+Dataverse Integration is supported with Archivematica v1.8 (and higher) and
+Storage Service v0.13 (and higher). Basic fields for a local file system space
+are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+=====================   ===============================================================
+
+``host``                The hostname of the Dataverse web instance or IP address
+                        with port, e.g. dataverse.example.com:8443
+
+``api_key``             API key for Dataverse instance.
+
+``agent_name``          A string that will be used in Archivematica METS file to
+                        identify this Dataverse instance as a PREMIS agent,
+                        e.g. My Institution's Dataverse Instance.
+
+``agent_type``          A string that will be used in Archivematica METS file to
+                        identify the type of PREMIS agent named above,
+                        e.g. organization.Name or IP of the remote machine.
+
+``agent_identifier``    A string that will be used as an identifier in the Archivematica
+                        METS file to uniquely identify the PREMIS agent named above.
+
+=====================   ===============================================================
+
+Duracloud
+^^^^^^^^^
+
+Archivematica can use DuraCloud as an access protocol for the Storage Service in
+version 0.5 and higher. Basic fields for a local file system space are listed
+`above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+==================   =======================================================================
+
+``host``             The hostname of the Duracloud web instance or IP address
+                     with port, e.g. duracloud.example.com:8443
+
+``user``             The username for the Archivematica user that you created in DuraCloud.
+
+``password``         The password for the Archivematica user that you created in DuraCloud.
+
+``duraspace``        The name of the space within DuraCloud.
+
+==================   =======================================================================
+
+DSpace via SWORD2 API
+^^^^^^^^^^^^^^^^^^^^^
+
+DSpace via SWORD2 locations are currently supported only for AIP Storage locations.
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+===================     =======================================================================================
+
+``sd_iri``              URL of the service document. E.g. ``http://demo.dspace.org/swordv2/servicedocument,``
+                        where servicedocument is the handle to the community or collection being used
+                        for deposit.
+
+``user``                A username for the DSpace instance with sufficient permissions to permit
+                        authentication.
+
+``password``            The password for the Dspace user that you created.
+
+``metadata_policy``     Use to restrict access to the metadata bitstream. Must be specified as a list of
+                        objects in JSON, e.g. ``[{"action":"READ","groupId":"5","rpType":"TYPE_CUSTOM"}]``.
+
+``archive_format``      Select Archive format from dropdown. e.g. ``ZIP or 7z``
+
+===================     =======================================================================================
+
+DSpace via REST API
+^^^^^^^^^^^^^^^^^^^
+
+DSpace via REST API locations are supported for both AIP and DIP Storage locations.
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+======================    =====================================================================================
+
+``ds_rest_url``           URL to the "REST" webapp. E.g. ``http://localhost:8080/rest/``; for production
+                          systems, this address will be slightly different, such as:
+                          ``https://demo.dspace.org/rest/``.
+
+``ds_user``               A username for the DSpace instance with sufficient permissions to permit
+                          authentication.
+
+``ds_password``           The password for the Dspace user that you created.
+
+``ds_dip_collection``     UUID of default DSpace collection for the DIP to be deposited.
+
+``ds_aip_collection``     UUID of default DSpace collection for the AIP to be deposited.
+
+``as_url``                URL to the ArchiveSpace server. E.g.: ``http://sandbox.archivesspace.org/``.
+
+``as_user``               ArchivesSpace username to authenticate as.
+
+``as_password``           ArchivesSpace password to authenticate with.
+
+``as_repository``         Identifier of the default ArchivesSpace repository.
+
+``as_archival_object``    Identifier of the default ArchivesSpace archival object.
+
+``upload_to_tsm``         Boolean True or False. Default is False. will attempt to send the AIP to
+                          the Tivoli Storage Manager using command-line client dsmc
+
+``verify_ssl``            Boolean True or False. Default is True.
+
+======================    =====================================================================================
+
+Fedora via SWORD2
+^^^^^^^^^^^^^^^^^
+
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+====================     ==================================================
+
+``fedora_user``          Fedora user name (for SWORD functionality).
+
+``fedora_password``      Fedora password (for SWORD functionality).
+
+``fedora_name``          Name or IP of the remote Fedora machine.
+
+====================     ==================================================
+
+LOCKSS
+^^^^^^
+
+Archivematica can store AIPs in a `LOCKSS`_ network via LOCKSS-O-Matic. Basic fields for a
+local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+========================    ===============================================================
+
+``sd_iri``                  The URL of the LOCKSS-o-matic service document IRI,
+                            e.g. ``http://lockssomatic.example.org/api/sword/2.0/sd-iri``.
+
+``content_provider_id``     On-Behalf-Of value when communicating with LOCKSS-o-matic.
+
+``external_domain``         Base URL for this server that LOCKSS will be able to access.
+
+``keep_local``              Boolean True or False. Default is True.
+
+========================    ===============================================================
+
+NFS
+^^^
+
+NFS spaces are for NFS exports mounted on the Storage Service server and the
+Archivematica pipeline. Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+====================    ================================================
+
+``remote_name``         Name of the NFS server.
+
+``remote_path``         Path on the NFS server to the export.
+
+``version``             Type of the filesystem, e.g. ``nfs or nfs4``
+
+``manually_mounted``    Boolean True or False. Default is False.
+
+====================    ================================================
+
+Pipeline Local Filesystem
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Pipeline Local Filesystems refer to the storage that is local to the
+Archivematica pipeline, but remote to the Storage Service. Basic
+fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+========================   ================================================
+
+``remote_user``            The username on the remote host.
+
+``remote_name``            Name or IP of the remote machine.
+
+``assume_rsync_daemon``    Boolean True or False. Default is False.
+
+``rsync_password``         The password for the rsync daemon.
+
+========================   ================================================
+
+RClone
+^^^^^^
+
+Rclone is a command-line program to manage files in cloud storage, and is
+available as an access protocol in Storage Service 0.20 and higher. Basic
+fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+=================   ==================================================================
+
+``remote_name``      Remote name for the rclone configuration to use with this Space.
+
+``container``        Container or bucket name to use in configured remote.
+
+=================   ==================================================================
+
+Swift
+^^^^^^
+
+OpenStack's Swift is available as an access protocol in Storage Service 0.7 and
+higher. Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+=================   ======================================================================
+
+``auth_url``         The URL to authenticate against.
+
+``auth_version``     The OpenStack authentication version. Default is 2.
+
+``username``         Username to authenticate as. E.g. ``http://example.com:5000/v2.0/``
+
+``password``         Password to authenticate with.
+
+``container``        The name of the Swift container.
+
+``tenant``           The tenant/account name.
+
+``region``           The region in Swift. This field is optional.
+
+=================   ======================================================================
+
+S3 (Amazon)
+^^^^^^^^^^^
+
+Amazon S3 is available as an access protocol as of Storage Service version 0.12.
+Basic fields for a local file system space are listed `above \
+<https://www.archivematica.org/en/docs/archivematica-1.15/dev-manual/api/api-reference-storage-service/#create-space>`_
+
+Request body parameters:
+
+======================    ===================================================================
+
+``endpoint_url``            The URL of the S3 endpoint, e.g. ``https://s3.amazonaws.com``.
+
+``access_key_id``           The public key generated by S3.
+
+``secret_access_key``       The secret key generated by S3.
+
+``region``                  The region that the S3 instance uses, e.g. ``us-east-2``.
+
+``bucket``                  The name of the designated S3 Bucket.
+
+======================    ===================================================================
 
 .. _ss-location:
 
