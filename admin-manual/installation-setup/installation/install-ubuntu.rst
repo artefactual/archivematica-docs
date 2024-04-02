@@ -26,7 +26,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 12-15
+      :lines: 15-18
 
 #. Add Elasticsearch package source (optional). Elasticsearch comes from its own
    package repository.
@@ -37,20 +37,20 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 17-18
+      :lines: 20-21
 
 #. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 20-21
+      :lines: 23-24
 
 #. Install some needed packages
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 23
+      :lines: 26
 
 #. Install Elasticsearch (optional)
 
@@ -59,26 +59,21 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 24
+      :lines: 27
 
-#. Now that MySQL is up and running, create the Storage Service database and
-   set up the expected credentials.
+#. Now that MySQL is up and running, install the Storage Service. You will be
+   prompted to create a password for its database. If necessary, the password
+   can be changed after the installation is complete.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 26-28
-
-#. Install the Storage Service package.
-
-   .. literalinclude:: scripts/am-jammy-deb.sh
-       :language: bash
-       :lines: 30
+      :lines: 29
 
 #. Configure the Storage Service.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 32-33
+      :lines: 31-32
 
 #. Install the Archivematica packages. The order of installation is important -
    the archivematica-mcp-server package must be installed before the dashboard
@@ -90,13 +85,12 @@ Ubuntu 22.04 (Jammy) installation instructions
    database used by Archivematica. Depending on the version of MySQL that is
    installed, the interfaces that you see may differ slightly.
 
-   When you are prompted to create a password for the archivematica-mcp-server,
-   you must use ``demo`` as the password during the install process. The
-   password can be changed after the installation is complete.
+   You will be prompted to create a password for the database. If necessary,
+   the password can be changed after the installation is complete.
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 35-37
+      :lines: 34-37
 
 #.  Configure the Archivematica components (optional). There are a number of
     environment variables that Archivematica recognizes which can be used to
@@ -117,48 +111,48 @@ Ubuntu 22.04 (Jammy) installation instructions
 
 #. Configure the dashboard.
 
-    .. literalinclude:: scripts/am-jammy-deb.sh
-       :language: bash
-       :lines: 39
+   .. literalinclude:: scripts/am-jammy-deb.sh
+      :language: bash
+      :lines: 38
 
 #. Start Elasticsearch (optional).
 
-    .. note:: Skip this step if you are planning to run Archivematica in indexless
-       mode (without Elasticsearch).
+   .. note:: Skip this step if you are planning to run Archivematica in indexless
+      mode (without Elasticsearch).
 
-    .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 41-43
+      :lines: 40-42
 
 #. Start the remaining services
 
-    .. literalinclude:: scripts/am-jammy-deb.sh
-       :language: bash
-       :lines: 45-55
+   .. literalinclude:: scripts/am-jammy-deb.sh
+      :language: bash
+      :lines: 44-54
 
-    If you have trouble with the gearman or clamav command try restarting it:
+   If you have trouble with the gearman or clamav command try restarting it:
 
-    .. code:: bash
+   .. code:: bash
 
        sudo service gearman-job-server restart
        sudo service clamav-daemon restart
 
 #. Configure your firewall (if applicable)
 
-    On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated
-    Firewall). To see the firewall status, enter:
+   On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated
+   Firewall). To see the firewall status, enter:
 
-    .. code:: bash
+   .. code:: bash
 
        sudo ufw status
 
-    If ufw is active, you must ensure that it is not blocking the ports used by
-    the dashboard and the Storage Service, i.e., 80 and 8000.
+   If ufw is active, you must ensure that it is not blocking the ports used by
+   the dashboard and the Storage Service, i.e., 80 and 8000.
 
 
-    .. literalinclude:: scripts/am-jammy-deb.sh
-       :language: bash
-       :lines: 57-60
+   .. literalinclude:: scripts/am-jammy-deb.sh
+      :language: bash
+      :lines: 57-59
 
 #. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
@@ -234,7 +228,7 @@ the configuration of your new server.
 
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.15.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.16.x/src/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.16.x/src/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.16.x/src/MCPServer/install/README.md
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
