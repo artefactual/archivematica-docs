@@ -43,13 +43,13 @@ Additional information can be found in the complete PREMIS event:
            <premis:eventIdentifierType>UUID</premis:eventIdentifierType>
            <premis:eventIdentifierValue>ef7ef8b8-c363-4dfe-9b67-4100d1bfa7f2</premis:eventIdentifierValue>
          </premis:eventIdentifier>
-         <premis:eventType>name cleanup</premis:eventType>
+         <premis:eventType>filename change</premis:eventType>
          <premis:eventDateTime>2019-01-17T22:07:17+00:00</premis:eventDateTime>
          <premis:eventDetail>prohibited characters removed:program="sanitize_names"; version="1.10.d0ccb7d7661cf35c769dcc0846d8f087998af713"</premis:eventDetail>
          <premis:eventOutcomeInformation>
            <premis:eventOutcome></premis:eventOutcome>
            <premis:eventOutcomeDetail>
-             <premis:eventOutcomeDetailNote>Original name="%transferDirectory%objects/Росси́я.png"; cleaned up name="%transferDirectory%objects/Rossiia.png"</premis:eventOutcomeDetailNote>
+             <premis:eventOutcomeDetailNote>Original name="%transferDirectory%objects/Росси́я.png"; new name="%transferDirectory%objects/Rossiia.png"</premis:eventOutcomeDetailNote>
            </premis:eventOutcomeDetail>
          </premis:eventOutcomeInformation>
          <premis:linkingAgentIdentifier>
@@ -71,9 +71,9 @@ contains log files that show the original name alongside the changed name. There
 are two log files:
 
 * The log file for name changes that happen during Transfer is located in the
-  AIP at ``data/logs/transfers/my-transfer-name/logs/filenameCleanup.log``
+  AIP at ``data/logs/transfers/my-transfer-name/logs/filenameChanges.log``
 * The log file for name changes that happen during Ingest is located in the AIP
-  at ``data/logs/filenameCleanup.log``
+  at ``data/logs/filenameChanges.log``
 
 These logs contain a plaintext rendering of the information embedded within the
 PREMIS event.
