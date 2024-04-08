@@ -178,16 +178,16 @@ This is an example of the contents of an AIP's logs directory:
        └── logs
            ├── arrange.log
            ├── fileFormatIdentification.log
-           ├── filenameCleanup.log
+           ├── filenameChanges.log
            └── transfers
                ├── first-transfer-abbff451-f077-4f66-a6e0-d83f6ebbeebf
                │   └── logs
                │       ├── fileFormatIdentification.log
-               │       └── filenameCleanup.log
+               │       └── filenameChanges.log
                └── second-transfer-52fd11fa-fca8-4bc7-9214-e6510863759a
                    └── logs
                        ├── fileFormatIdentification.log
-                       └── filenameCleanup.log
+                       └── filenameChanges.log
 
 The top-level logs (``arrange.log``, ``fileFormatIdentification.log``, etc.) are
 outputs for tasks that took place either in the Appraisal tab or on the Ingest
