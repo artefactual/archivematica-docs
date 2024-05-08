@@ -224,6 +224,11 @@ dummy:
 	@echo
 	@echo "Build finished. Dummy builder generates no files."
 
+spelling:
+	$(SPHINXBUILD) -b spelling $(ALLSPHINXOPTS) $(BUILDDIR)/spelling
+	@echo
+	@echo "Build finished. The spelling files are in $(BUILDDIR)/spelling."
+
 .PHONY: test
 test:
 	$(MAKE) html ALLSPHINXOPTS="-W --keep-going -n ."
