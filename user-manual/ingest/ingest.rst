@@ -585,7 +585,7 @@ the Archivematica interface. To configure AIP storage locations, see the
 Upload DIP
 ----------
 
-Archivematica supports DIP uploads to AtoM, Binder, ArchivesSpace, and
+Archivematica supports DIP uploads to AtoM, ArchivesSpace, and
 CONTENTdm. For information about uploading DIPs to your access system, see
 :ref:`Access <access>`.
 

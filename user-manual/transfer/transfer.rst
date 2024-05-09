@@ -62,11 +62,10 @@ checkbox.
   event. It is not used for identifying or searching for the AIP within
   Archivematica. This field is optional.
 * **Access system ID**: Entering an access system ID field when you are setting
-  up your transfer allows you to automate the process of uploading a DIP to AtoM
-  or Binder. Archivematica will automatically grab this value when it reaches
-  the Upload DIP microservice. See :ref:`Upload a DIP to AtoM <upload-atom>` and
-  :ref:`Upload a DIP to Binder <upload-binder>` for more information. This field
-  is optional.
+  up your transfer allows you to automate the process of uploading a DIP to
+  AtoM. Archivematica will automatically grab this value when it reaches
+  the Upload DIP microservice. See :ref:`Upload a DIP to AtoM <upload-atom>`
+  for more information. This field is optional.
 * **Browse**: The Browse button toggles open the transfer browser. This allows
   users to view and browse through the configured transfer source location(s).
   For more information about setting up transfer source locations that

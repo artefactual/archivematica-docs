@@ -17,7 +17,7 @@ dashboard, allow you to configure application components and manage users.
 * :ref:`Processing storage usage <admin-dashboard-usage>`
 * :ref:`DIP upload <admin-dashboard-dip-upload>`
 
-  * :ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`
+  * :ref:`AtoM DIP upload <admin-dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`
 
 * :ref:`PREMIS agent <admin-dashboard-premis>`
@@ -287,41 +287,38 @@ processing locations to make more room on their server.
 DIP upload
 ----------
 
-Archivematica has access integrations with three access platforms: AtoM, Binder
-and ArchivesSpace.
+Archivematica has access integrations with two access platforms: AtoM and
+ArchivesSpace.
 
 .. _admin-dashboard-atom:
 
-AtoM/Binder DIP upload
-^^^^^^^^^^^^^^^^^^^^^^
+AtoM DIP upload
+^^^^^^^^^^^^^^^
 
 Archivematica can upload DIPs directly to an `AtoM`_ website so that the
-contents can be accessed online. Using the same configuration screen, you can
-also configure Archivematica to upload DIPs to `Binder`_, which is built off the
-AtoM framework.
+contents can be accessed online.
 
 The AtoM/Binder DIP upload configuration page is where you specify the details
-of the AtoM or Binder installation you'd like the DIPs uploaded to (and, if
+of the AtoM installation you'd like the DIPs uploaded to (and, if
 using Rsync to transfer the DIP files, Rsync transfer details).
 
-Before setting these details, please ensure that you have a working AtoM or
-Binder site that is properly connected to Archivematica. See :ref:`Using AtoM
-2.x with Archivematica <atom-setup>` or :ref:`Using Binder with Archivematica
-<binder-setup>` for more information.
+Before setting these details, please ensure that you have a working AtoM
+site that is properly connected to Archivematica. See :ref:`Using AtoM
+2.x with Archivematica <atom-setup>` for more information.
 
 .. image:: images/AtoMDIPConfig.*
    :align: center
    :width: 80%
-   :alt: Configuration screen for AtoM or Binder DIP uploads
+   :alt: Configuration screen for AtoM DIP uploads
 
 Fields:
 
-* **Upload URL**: the URL of the destination AtoM or Binder website.
-* **Login email**: the email address used to log in to AtoM or Binder.
-* **Login password**: the password used to log in to AtoM or Binder.
-* **AtoM/Binder version**: the version of the destination AtoM or Binder website.
+* **Upload URL**: the URL of the destination AtoM website.
+* **Login email**: the email address used to log in to AtoM.
+* **Login password**: the password used to log in to AtoM.
+* **AtoM/Binder version**: the version of the destination AtoM website.
 * **Rsync target**: if you'd like to send the DIP with Rsync before it is
-  deposited in AtoM or Binder, enter the destination value for rsync, e.g.
+  deposited in AtoM, enter the destination value for rsync, e.g.
   ``foobar.com:/dips``. This field is optional.
 * **Rsync command**: if you've entered an Rsync target, specify the remote
   shell manually, e.g. ``ssh -p 22222 -l user``. This field is optional.
@@ -468,12 +465,6 @@ Generic parameters:
    --uuid="%SIPUUID%" \
    --rsync-target="archivematica@atom-hostname:/tmp" \
    --debug
-
-Binder DIP upload
-+++++++++++++++++
-
-For more information about configuring Binder, please see the :ref:`Binder
-integrations page <binder-setup>`.
 
 .. _admin-dashboard-AS:
 
@@ -918,6 +909,5 @@ This tab displays the version of Archivematica you're using.
 .. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
 .. _How Django stores passwords: https://django.readthedocs.io/en/1.4.X/topics/auth.html#how-django-stores-passwords
 .. _automation tools: https://github.com/artefactual/automation-tools
-.. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
 .. _PID webservice being used by IISH: https://github.com/IISH/PID-webservice
