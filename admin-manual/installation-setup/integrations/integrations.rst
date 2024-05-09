@@ -13,7 +13,6 @@ listed below.
 * :ref:`AtoM integration <atom-integration>`
 * :ref:`ArchivesSpace integration <archivesspace-integration>`
 * :ref:`Avalon Media System integration <avalon-media-system-integration>`
-* :ref:`Binder integration <binder-integration>`
 * :ref:`Duracloud integration <duracloud-integration>`
 * :ref:`Swift integration <swift-integration>`
 * :ref:`Islandora integration <islandora-integration>`
@@ -53,28 +52,6 @@ access to large collections of digital audio and video. Integration between the
 systems can be found in the `Avalon Media System Technical Documentation`_. This
 workflow includes integration with Archivematica's `validation API endpoint` and
 `Automation-Tools`_ DIP creation script.
-
-.. _binder-integration:
-
-Binder integration
-------------------
-
-`Binder`_ is an open-source web application for supporting the care, management,
-and preservation of complex digital collections such as time-based media and
-born-digital artworks. It provides users with a central interface through which
-they can access, view and manage the rich technical metadata contained in
-Archival Information Packages (AIPs) held by the repository, as well as managing
-and describing the relationships between the components of a collections object,
-its constituent digital objects, and the various external dependencies required
-to preserve and display the collection over the long-term.
-
-See :ref:`Using Binder with Archivematica <binder-setup>`.
-
-.. note::
-
-   Binder is dependent on `TMS`_, a proprietary collections management software
-   primarily used in museum and gallery settings. Binder cannot currently work
-   without TMS.
 
 .. _duracloud-integration:
 
@@ -162,6 +139,5 @@ For instructions to configure a Dataverse integration, see
 .. _`Arkivum`: https://arkivum.com/
 .. _`Arkivum Perpetua`: https://arkivum.com/heritage-higher-education-and-corporate-archives/
 .. _`Handle.Net`: https://www.handle.net/index.html
-.. _`Binder`: https://binder.readthedocs.io/en/latest/contents.html
 .. _`TMS`: https://www.gallerysystems.com/products-and-services/tms-suite/tms/
 .. _`validation API endpoint`: https://wiki.archivematica.org/Archivematica_API#Validate

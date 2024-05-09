@@ -33,7 +33,7 @@ Configure DIP upload
 --------------------
 
 Once you have a working AtoM installation, enter the appropriate credentials and
-information on Archivematica's Administration tab. See :ref:`AtoM/Binder DIP
+information on Archivematica's Administration tab. See :ref:`AtoM DIP
 upload <admin-dashboard-atom>` for more information about the fields and their
 values.
 

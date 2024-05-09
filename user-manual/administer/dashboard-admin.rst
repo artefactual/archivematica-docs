@@ -24,7 +24,7 @@ integrations and users.
 * :ref:`Processing storage usage <dashboard-usage>`
 * :ref:`DIP upload <dashboard-dip-upload>`
 
-  * :ref:`AtoM/Binder DIP upload <dashboard-atom>`
+  * :ref:`AtoM DIP upload <dashboard-atom>`
   * :ref:`ArchivesSpace DIP upload <dashboard-AS>`
 
 * :ref:`PREMIS agent <dashboard-premis>`
@@ -650,22 +650,20 @@ directories to save space on the server.
 DIP upload
 ----------
 
-Archivematica has access integrations with three access platforms: AtoM, Binder,
+Archivematica has access integrations with two access platforms: AtoM
 and ArchivesSpace. For more information on Archivematica
 integrations, please see the :ref:`Integrations <integrations>` page.
 
 .. _dashboard-atom:
 
-AtoM/Binder DIP upload
-^^^^^^^^^^^^^^^^^^^^^^
+AtoM DIP upload
+^^^^^^^^^^^^^^^
 
 Archivematica can upload DIPs directly to an `AtoM`_ website so that the
-contents can be accessed online. Using the same configuration screen, you can
-also configure Archivematica to upload DIPs to `Binder`_, which is built off the
-AtoM framework.
+contents can be accessed online.
 
-For more information on configuring the AtoM/Binder DIP upload parameters and
-the servers, please see the :ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`
+For more information on configuring the AtoM DIP upload parameters and
+the servers, please see the :ref:`AtoM DIP upload <admin-dashboard-atom>`
 configuration instructions.
 
 **Levels of description**
@@ -807,6 +805,5 @@ This tab displays the version of Archivematica you're using.
 .. _LZMA: https://www.7-zip.org/sdk.html
 .. _Parallel bzip2 (pbzip2): https://launchpad.net/pbzip2/
 .. _gzip: https://launchpad.net/gzip
-.. _Binder: https://binder.readthedocs.io/en/latest/contents.html
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
 .. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki

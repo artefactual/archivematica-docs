@@ -194,7 +194,6 @@ The Access tab displays DIPs which have been sent to AtoM.
 * :ref:`General description <access>`
 * :ref:`Access systems <access-default>`
 * :ref:`Upload a DIP to AtoM <upload-atom>`
-* :ref:`Upload a DIP to Binder <upload-binder>`
 * :ref:`Upload a DIP to ArchivesSpace <upload-as>`
 * :ref:`Upload a DIP to ContentDM <contentdm>`
 * :ref:`Store DIP <store-dip>`
