@@ -298,7 +298,7 @@ AtoM DIP upload
 Archivematica can upload DIPs directly to an `AtoM`_ website so that the
 contents can be accessed online.
 
-The AtoM/Binder DIP upload configuration page is where you specify the details
+The AtoM DIP upload configuration page is where you specify the details
 of the AtoM installation you'd like the DIPs uploaded to (and, if
 using Rsync to transfer the DIP files, Rsync transfer details).
 
@@ -316,7 +316,7 @@ Fields:
 * **Upload URL**: the URL of the destination AtoM website.
 * **Login email**: the email address used to log in to AtoM.
 * **Login password**: the password used to log in to AtoM.
-* **AtoM/Binder version**: the version of the destination AtoM website.
+* **AtoM version**: the version of the destination AtoM website.
 * **Rsync target**: if you'd like to send the DIP with Rsync before it is
   deposited in AtoM, enter the destination value for rsync, e.g.
   ``foobar.com:/dips``. This field is optional.

@@ -669,7 +669,7 @@ configuration instructions.
 **Levels of description**
 
 You can fetch levels of description from AtoM so that they can be used for
-:ref:`SIP arrangement <arrangement>`. From the AtoM/Binder page in the
+:ref:`SIP arrangement <arrangement>`. From the AtoM page in the
 Administration tab, click on *Levels of Description*, then *Fetch from AtoM* to
 get an updated list from the AtoM levels of description taxonomy.
 

@@ -120,7 +120,7 @@ is by providing the slug during the Upload DIP microservice.
 
 1. Process your transfer. You must select ``Normalize for preservation and
    access`` or ``Normalize for access`` at the Normalization microservice. When
-   you reach the Upload DIP microservice, select "Upload DIP to AtoM/Binder"
+   you reach the Upload DIP microservice, select "Upload DIP to AtoM"
    from the drop-down menu.
 
 2. A dialogue box will appear. Enter the permalink of the description in the
@@ -162,7 +162,7 @@ grab this value when it reaches the Upload DIP microservice.
 
 2. Process your transfer. You must select ``Normalize for preservation and
    access`` or ``Normalize for access`` at the Normalization microservice. When
-   you reach the Upload DIP microservice, select "Upload DIP to AtoM/Binder"
+   you reach the Upload DIP microservice, select "Upload DIP to AtoM"
    from the drop-down menu (or set this as the preconfigured choice in the
    processing configuration).
 
