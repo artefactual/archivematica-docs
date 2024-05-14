@@ -32,9 +32,23 @@ jobs:
       - name: "Run build test"
         run: |
           make test
-      - name: "Linkcheck"
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v24
+      - name: Run linkcheck on .rst files
         run: |
-          make linkcheck
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            if [ "${file: -4}" == ".rst" ]
+              then
+                var="$var $file"
+            fi
+          done
+          if [ -z "$var" ]
+          then
+                echo "No *.rst changed files to check."
+          else
+                make files="$var" linkcheck-specified-files
+          fi
   lint:
     name: "Linting"
     runs-on: "ubuntu-22.04"
