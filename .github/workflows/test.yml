@@ -32,10 +32,10 @@ jobs:
       - name: "Run build test"
         run: |
           make test
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v24
-      - name: Run linkcheck on .rst files
+      - name: "Get changed files"
+        id: "changed-files"
+        uses: "tj-actions/changed-files@v24"
+      - name: "Run linkcheck on .rst files"
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             if [ "${file: -4}" == ".rst" ]
