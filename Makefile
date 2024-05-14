@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    = -n -q
+SPHINXOPTS    = -n
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
@@ -187,9 +187,9 @@ changes:
 	@echo
 	@echo "The overview file is in $(BUILDDIR)/changes."
 
-.PHONY: linkcheck
-linkcheck:
-	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+.PHONY: linkcheck-specified-files
+linkcheck-specified-files:
+	$(SPHINXBUILD) -q -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR) $(files)
 	@echo
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
