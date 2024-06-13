@@ -632,6 +632,10 @@ Query string parameters (optional):
 
 ``name``             Name of the job.
 
+``detailed``         If the parameter is included in the request, the endpoint
+                     returns all the task properties provided by the
+                     :ref:`task` endpoint.
+
 ================     ===========================================================
 
 Response definitions (from list of dicts):
@@ -664,6 +668,8 @@ Example request:
 Example response (JSON body):
 
 .. literalinclude:: _code/list_transfer_unit_response.curl
+
+.. _task:
 
 Task
 ^^^^
