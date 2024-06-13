@@ -57,11 +57,6 @@ format normalization rules over time as standards and tools evolve.
 We recommend documenting your policies and practices in accordance with the TRAC
 standard for auditing Trusted Digital Repositories (`ISO 16363:2012`_).
 
-.. seealso::
-
-   :ref:`TRAC auditing tool <trac>`
-
-
 .. _preservation-planning-definitions:
 
 Definitions
