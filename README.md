@@ -16,51 +16,63 @@ with attribution under the terms of the Creative Commons Attribution Share Alike
 
 To build a local, offline version of the documentation:
 
-- Decide where the documentation will be stored on your computer.
-- In a Terminal window, use the `cd` command to navigate to this location.
-- Create a local copy of the documentation by running:
-```
+* Decide where the documentation will be stored on your computer.
+* In a Terminal window, use the `cd` command to navigate to this location.
+* Create a local copy of the documentation by running:
+
+```bash
 git clone https://github.com/artefactual/archivematica-docs.git
 ```
 
-- Move to the documentation repository with:
-```
+* Move to the documentation repository with:
+
+```bash
 cd archivematica-docs
 ```
 
-- Create a Python virtual environment to contain all the tools required to build the documentation:
-```
+* Create a Python virtual environment to contain all the required tools:
+
+```bash
 python3 -m venv .env
 ```
 
-- Activate the virtual environment:
-```
+* Activate the virtual environment:
+
+```bash
 source .env/bin/activate
 ```
 
-- Install the requirements:
-```
+* Install the requirements:
+
+```bash
 pip install -r requirements.txt
 ```
 
-- Build the documentation:
-```
+* Build the documentation:
+
+```bash
 sphinx-build -D language=en ./ _build/html/en # for English
 
 sphinx-build -D language=es ./ _build/html/es # for *español* (Spanish)
 
-sphinx-build -D language=fr ./ _build/html/fr # for *français* (French) 
+sphinx-build -D language=fr ./ _build/html/fr # for *français* (French)
 
 sphinx-build -D language=pt_BR ./ _build/html/pt_BR # for *português do Brasil* (Brazilian Portuguese)
 ```
-- Access the documentation:
-```
+
+* Access the documentation:
+
+```bash
 open _build/html/index.html
 ```
 
-The HTML files for the documentation will be in `archivematica-docs/_build/html/`. You can open the files in a browser of your choice, without having any access to the Internet.
+The HTML files for the documentation will be in
+`archivematica-docs/_build/html/`.
+You can open the files in a browser of your choice, without having any access
+to the Internet.
 
-While this offline version will not have the Archivematica web theme, you will gain access to improved search features.
+While this offline version will not have the Archivematica web theme, you will
+gain access to improved search features.
 
 ## Contributing
 
