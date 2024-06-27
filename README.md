@@ -19,22 +19,44 @@ To build a local, offline version of the documentation:
 - Decide where the documentation will be stored on your computer.
 - In a Terminal window, use the `cd` command to navigate to this location.
 - Create a local copy of the documentation by running:
-`git clone https://github.com/artefactual/archivematica-docs.git`
+```
+git clone https://github.com/artefactual/archivematica-docs.git
+```
+
 - Move to the documentation repository with:
-`cd archivematica-docs`
+```
+cd archivematica-docs
+```
+
 - Create a Python virtual environment to contain all the tools required to build the documentation:
-`python3 -m venv .env`
+```
+python3 -m venv .env
+```
+
 - Activate the virtual environment:
-`source .env/bin/activate`
+```
+source .env/bin/activate
+```
+
 - Install the requirements:
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
+
 - Build the documentation:
-`sphinx-build -D language=en ./ _build/html/en` for English
-`sphinx-build -D language=es ./ _build/html/es` for *español* (Spanish)
-`sphinx-build -D language=fr ./ _build/html/fr` for *français* (French) 
-`sphinx-build -D language=pt_BR ./ _build/html/pt_BR` for *português do Brasil* (Brazilian Portuguese)
+```
+sphinx-build -D language=en ./ _build/html/en # for English
+
+sphinx-build -D language=es ./ _build/html/es # for *español* (Spanish)
+
+sphinx-build -D language=fr ./ _build/html/fr # for *français* (French) 
+
+sphinx-build -D language=pt_BR ./ _build/html/pt_BR # for *português do Brasil* (Brazilian Portuguese)
+```
 - Access the documentation:
-`open _build/html/index.html`
+```
+open _build/html/index.html
+```
 
 The HTML files for the documentation will be in `archivematica-docs/_build/html/`. You can open the files in a browser of your choice, without having any access to the Internet.
 
