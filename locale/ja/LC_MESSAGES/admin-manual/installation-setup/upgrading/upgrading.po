@@ -1,0 +1,579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:5
+msgid "Upgrade from Archivematica |previous_version|.x to |release|"
+msgstr "Archivematica |previous_version| .xから |release| へのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:7
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:9
+msgid ""
+":ref:`Clean up completed transfers watched directory <completed-transfers>`"
+msgstr ":ref:`完了した転送監視ディレクトリをクリーンアップ <completed-transfers>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:10
+msgid ":ref:`Create a backup <create-backup>`"
+msgstr ":ref:`バックアップの作成 <create-backup>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:11
+msgid ":ref:`Upgrade Ubuntu package install <upgrade-ubuntu>`"
+msgstr ":ref:`Ubuntuパッケージのアップグレード <upgrade-ubuntu>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:12
+msgid ":ref:`Upgrade Rocky Linux/Red Hat package install <upgrade-rocky>`"
+msgstr ":ref:`Rocky Linuxのアップグレード/Red Hatパッケージのインストール <upgrade-rocky>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:13
+msgid ":ref:`Upgrade in indexless mode <upgrade-indexless>`"
+msgstr ":ref:`インデックスレスモードでのアップグレード <upgrade-indexless>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:14
+msgid ""
+":ref:`Upgrade with output capturing disabled <upgrade-no-output-capture>`"
+msgstr ":ref:`出力キャプチャを無効にしてアップグレード <upgrade-no-output-capture>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:15
+msgid ":ref:`Update search indices <update-search-indices>`"
+msgstr ":ref:`検索インデックスの更新 <update-search-indices>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:16
+msgid ""
+":ref:`Review the processing configuration <review-processing-configuration>`"
+msgstr ":ref:`処理設定の見直し <review-processing-configuration>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:17
+msgid ":ref:`Migrate from MySQL 5.x to 8.x <migrate-mysql>`"
+msgstr ":ref:`MySQL 5.xから8.xへの移行 <migrate-mysql>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:21
+msgid ""
+"While it is possible to upgrade a GitHub-based source install using ansible,"
+" these instructions do not cover that scenario."
+msgstr "ansibleを使ってGitHubベースのソースをアップグレードすることは可能ですが、この説明では、そのシナリオは扱いません。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:28
+msgid "Clean up completed transfers watched directory"
+msgstr "完了した転送監視ディレクトリをクリーンアップ"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:32
+msgid "Ignore this section if you upgrading from Archivematica 1.11 or newer."
+msgstr "Archivematica 1.11以降からアップグレードする場合は、このセクションを読む必要はありません。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:34
+msgid ""
+"Upgrading from Archivematica 1.10.x or older to Archivematica |release| can "
+"result in a number of completed transfers appearing as failed in the "
+"Archivematica dashboard, as well as corresponding failure notification "
+"emails being sent. These are not actual failures, but are unintentional side"
+" effects of changes made in Archivematica 1.11 to the workflow and to how "
+"metadata files are stored and copied into the SIP."
+msgstr ""
+"Archivematica 1.10.x またはそれ以前のバージョンからArchivematica |release| "
+"にアップグレードすると、Archivematicaのダッシュボードで完了した転送が失敗したと表示され、それに対応する失敗通知メールが送信されることがあります。これは実際の失敗ではなく、Archivematica"
+" 1.11でワークフローやメタデータファイルの保存方法、SIPへのコピー方法が変更されたことによる意図しない副反応です。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:41
+msgid ""
+"To prevent these failures from occuring during an upgrade from Archivematica"
+" 1.10 or earlier:"
+msgstr ""
+"Archivematica 1.10以前のバージョンからのアップグレード中に、このようなエラーが発生しないようにするには、以下の手順に従ってください："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:44
+msgid "Confirm that all transfers and ingests are complete."
+msgstr "すべての転送とインジェストが完了したことを確認します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:46
+msgid ""
+"Check that there are no transfers or SIPs that are still being processed or "
+"awaiting decisions in the Transfer and Ingest tabs. If there are, finish "
+"processing the transfers/ingests before proceeding."
+msgstr ""
+"[転送］タブと［インジェスト］タブに、処理中または決定待ちの転送またはSIPがないことを確認します。ある場合は、処理をする前に転送/インジェスト処理を終了します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:50
+msgid "Delete all contents of the completedTransfers watched directory."
+msgstr "completedTransfersウォッチドディレクトリのすべてのコンテンツを削除します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:56
+msgid "Perform the upgrade as described below."
+msgstr "以下の手順に従ってアップグレードを実行します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:62
+msgid "Create a backup"
+msgstr "バックアップの作成"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:64
+msgid ""
+"Before starting any upgrade procedure on a production system, we strongly "
+"recommend backing up your system. If you are using a virtual machine, take a"
+" snapshot of it before making any changes. Alternatively, back up the file "
+"systems being used by your system. Exact procedures for updating will depend"
+" on your local installation. At a minimum you should make backups of:"
+msgstr ""
+"生産システムでアップグレード手順を開始する前に、システムのバックアップを取ることを強くお勧めします。仮想マシンを使用している場合は、変更を加える前にスナップショットを作成してください。あるいは、システムで使用されているファイルシステムをバックアップしてください。アップデートの正確な手順は、ローカルのインストールによって異なります。最低限、以下のバックアップを取る必要があります："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:70
+msgid "The Storage Service SQLite (or MySQL) database"
+msgstr "Storage Service SQLite（またはMySQL）データベース"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:71
+msgid "The dashboard MySQL database"
+msgstr "ダッシュボードのMySQLデータベース"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:73
+msgid "This is a simple example of backing up these two databases:"
+msgstr "これは、これら2つのデータベースをバックアップする簡単な例です："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:80
+msgid ""
+"If you do not have a password set for the root user in MySQL, you can take "
+"out the '-p' portion of that command. If there is a problem during the "
+"upgrade process, you can restore your MySQL database from this backup and "
+"try the upgrade again."
+msgstr ""
+"MySQLのrootユーザーにパスワードを設定していない場合は、このコマンドの「-p」部分を削除できます。アップグレード中に問題が発生した場合は、このバックアップからMySQLデータベースをリストアし、再度アップグレードを試みることができます。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:85
+msgid ""
+"If you're upgrading from Archivematica 1.8 or lower to the 1.9 version or "
+"higher, the Elasticsearch version support changed from 1.x to 6.x and it's "
+"also recommended to create a backup of your Elasticsearch data, especially "
+"if you don't have access to the AIP storage locations in the local "
+"filesystem."
+msgstr ""
+"Archivematica 1.8以下から1.9以上にアップグレードする場合は、Elasticsearchのバージョンサポートが1.xから6.x "
+"に変更されていますので、Elasticsearchデータのバックアップを作成することをお勧めします。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:90
+msgid ""
+"You can follow these steps in order to create a backup of Elasticsearch:"
+msgstr "Elasticsearchのバックアップを作成するには、以下の手順に従ってください："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:116
+msgid "For more info, refer to the `ElasticSearch 6.8 docs`_."
+msgstr "詳細は、 `ElasticSearch 6.8 docs`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:122
+msgid "Upgrade on Ubuntu packages"
+msgstr "Ubuntuパッケージのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:124
+msgid "Update the operating system."
+msgstr "オペレーティングシステムを更新します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:130
+msgid "Update package sources."
+msgstr "パッケージソースを更新します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:137
+msgid ""
+"Optionally you can remove the lines referencing "
+"packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list."
+msgstr ""
+"オプションとして、/etc/apt/sources.listからpackages.archivematica.org/ "
+"|previous_version| .xを参照している行を削除できます。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:140
+msgid "Update the Storage Service."
+msgstr "Storage Serviceを更新します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:147
+msgid ""
+"Update Archivematica. During the update process you may be asked about "
+"updating configuration files. Choose to accept the maintainers versions. You"
+" will also be asked about updating the database - say 'ok' to each of those "
+"steps. If you have set a password for the root MySQL database user, enter it"
+" when prompted."
+msgstr ""
+"Archivematicaをアップデートします。アップデート中に、設定ファイルのアップデートについて尋ねられることがあります。メンテナンス担当者のバージョンに同意してください。データベースの更新についても尋ねられます。MySQLデータベースのrootユーザーにパスワードを設定している場合は、プロンプトが表示されたらパスワードを入力してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:161
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:352
+msgid "Restart services."
+msgstr "サービスを再起動します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:172
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:248
+msgid ""
+"Depending on your browser settings, you may need to clear your browser cache"
+" to make the dashboard pages load properly. For example in Firefox or Chrome"
+" you should be able to clear the cache with control-shift-R or command-"
+"shift-F5."
+msgstr ""
+"ブラウザの設定によっては、ダッシュボードのページを正しく読み込むためにブラウザのキャッシュをクリアする必要があります。例えばFirefoxやChromeの場合、control-"
+"shift-Rまたはcommand-shift-F5でキャッシュをクリアできるはずです。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:180
+msgid "Upgrade on Rocky Linux/Red Hat packages"
+msgstr "Rocky Linux/Red Hatパッケージのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:182
+msgid "Upgrade the repositories for |version|:"
+msgstr "|version| のリポジトリをアップグレードします："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:188
+msgid "Remove the current installed version of ghostscript:"
+msgstr "現在インストールされているバージョンのghostscriptを削除します："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:195
+msgid "Upgrade Archivematica packages:"
+msgstr "Archivematicaパッケージをアップグレードします："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:201
+msgid "Apply the Archivematica database migrations:"
+msgstr "Archivematicaデータベースの移行を適用します："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:214
+msgid "Apply the Storage Service database migrations:"
+msgstr "Storage Serviceデータベース移行を適用します："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:218
+msgid ""
+"In Archivematica 1.13 or newer, the new default database backend is MySQL. "
+"Please follow our :ref:`migration guide <storageservice:migration-sqlite-"
+"mysql>` to move your data to a MySQL database before these migrations are "
+"applied."
+msgstr ""
+"Archivematica 1.13以降では、新しいデフォルトのデータベースバックエンドはMySQLです。これらの移行が適用される前に、 "
+":ref:`移行ガイド <storageservice:migration-sqlite-mysql>` "
+"に従って、MySQLデータベースにデータを移行してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:222
+msgid ""
+"If you want to continue using SQLite, please edit the environment "
+"configuration found in ``/etc/sysconfig/archivematica-storage-service``. "
+"Comment out ``SS_DB_URL`` and indicate the path of the SQLite database with "
+"``SS_DB_NAME``, e.g.: ``SS_DB_NAME=/var/archivematica/storage-"
+"service/storage.db``."
+msgstr ""
+"SQLiteを使い続けたい場合は、 ``/etc/sysconfig/archivematica-storage-service`` "
+"にある環境設定を編集してください。 ``SS_DB_URL`` ``SS_DB_NAME=/var/archivematica/storage-"
+"service/storage.db`` をコメントアウトし、SQLiteデータベースのパスを ``SS_DB_NAME`` で指定してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:239
+msgid ""
+"Restart the Archivematica related services, and continue using the system:"
+msgstr "Archivematica関連サービスを再起動し、システムの使用を続行します："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:256
+msgid "Upgrade on Vagrant / Ansible"
+msgstr "Vagrant/Ansibleのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:258
+msgid ""
+"This upgrade method will work with Vagrant machines, but also with cloud "
+"based virtual machines, or physical servers."
+msgstr "このアップグレード方法は、Vagrantマシンだけでなく、クラウドベースの仮想マシンや物理サーバーでも動作します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:261
+msgid "Connect to your Vagrant machine or server"
+msgstr "Vagrantマシンまたはサーバーに接続"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:267
+msgid "Install Ansible"
+msgstr "Ansibleをインストール"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:273
+msgid "Checkout the deployment repo:"
+msgstr "デプロイレポートをチェックアウトします："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:279
+msgid "Go into the appropiate playbook folder, and install the needed roles"
+msgstr "適切なplaybookフォルダに入り、必要なロールをインストール"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:283
+msgid "Ubuntu 22.04 (Jammy):"
+msgstr "Ubuntu 22.04（Jammy）："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:292
+msgid "Rocky Linux 9:"
+msgstr "Rocky Linux 9："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:299
+msgid ""
+"All the following steps should be run from the respective playbook folder "
+"for your operating system."
+msgstr "以下の手順はすべて、お使いのオペレーティングシステムのそれぞれのplaybookフォルダから実行する必要があります。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:302
+msgid ""
+"Verify that the vars-singlenode.yml has the appropiate contents for "
+"Elasticsearch and Archivematica, or update it with your own"
+msgstr ""
+"vars-"
+"singlenode.ymlがElasticsearchとArchivematicaに適した内容であることを確認するか、独自の内容で更新してください"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:305
+msgid "Create a hosts file."
+msgstr "hostsファイルを作成します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:311
+msgid "Upgrade Archivematica running"
+msgstr "実行中のArchivematicaのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:320
+msgid "Upgrade in indexless mode"
+msgstr "インデックスレスモードでのアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:322
+msgid ""
+"As of Archivematica 1.7, Archivematica can be run in indexless mode; that "
+"is, without Elasticsearch. Installing Archivematica without Elasticsearch, "
+"or with limited Elasticsearch functionality, means reduced consumption of "
+"compute resources and lower operational complexity. By setting the "
+"``archivematica_src_search_enabled`` configuration attribute, administrators"
+" can define how many things Elasticsearch is indexing, if any. This can "
+"impact searching across several different dashboard pages."
+msgstr ""
+"Archivematica "
+"1.7以降、Archivematicaは、Elasticsearchを使用しないインデックスレスモードで実行できます。ArchivematicaをElasticsearchなしで、またはElasticsearchの機能を制限してインストールすることで、コンピュートリソースの消費を抑え、運用の複雑さを軽減できます。管理者は、"
+" ``archivematica_src_search_enabled`` "
+"設定属性を設定することで、Elasticsearchがインデックスを作成する件数を定義できます。これは複数の異なるダッシュボードページの検索に影響を与える可能性があります。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:330
+msgid ""
+"Upgrade your existing Archivematica pipeline following the instructions "
+"above."
+msgstr "上記の手順に従って、既存のArchivematicaパイプラインをアップグレードします。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:333
+msgid ""
+"Modify the relevant systemd EnvironmentFile files by adding lines that set "
+"the relevant environment variables to ``false``."
+msgstr ""
+"関連する環境変数を ``false`` に設定する行を追加して、関連するsystemd EnvironmentFileファイルを修正します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:336
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:354
+msgid "If you are using Ubuntu, run the following commands."
+msgstr "Ubuntuを使用している場合は、以下のコマンドを実行します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:344
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:362
+msgid "If you are using Rocky Linux, run the following commands."
+msgstr "Rocky Linuxを使用している場合は、以下のコマンドを実行します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:370
+msgid ""
+"If you had previously installed and started the Elasticsearch service, you "
+"can turn it off now."
+msgstr "以前Elasticsearchサービスをインストールして起動していた場合は、今すぐオフにできます。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:381
+msgid "Upgrade with output capturing disabled"
+msgstr "出力キャプチャを無効にしてアップグレード"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:383
+msgid ""
+"As of Archivematica 1.7.1, output capturing can be disabled at upgrade or at"
+" any other time. This means the stdout and stderr from preservation tasks "
+"are not captured, which can result in a performane improvement. See the "
+"`Task output capturing configuration <task-output-capturing-admin>` page for"
+" more details. In order to disable output capturing, set the "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` "
+"environment variable to ``false`` and restart the MCP Client process(es). "
+"Consult the installation instructions for your deployment method for more "
+"details on how to set environment variables and restart Archivematica "
+"processes."
+msgstr ""
+"Archivematica "
+"1.7.1では、アップグレード時やその他のタイミングで出力キャプチャを無効にできます。これにより、保存タスクからの標準出力と標準エラー出力がキャプチャされなくなり、パフォーマンスが向上します。詳しくは、"
+" `タスク出力キャプチャ設定<task-output-capturing-admin>` ページを参照してください。出力キャプチャを無効にするには、 "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` 環境変数を "
+"``false`` "
+"に設定し、MCPクライアント・プロセスを再起動します。環境変数を設定し、Archivematicaプロセスを再起動する方法の詳細については、各配備方法のインストール手順を参照してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:393
+msgid ":ref:`Back to the top <upgrade>`"
+msgstr ":ref:`トップに戻る <upgrade>`"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:399
+msgid "Update search indices"
+msgstr "検索インデックスの更新"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:403
+msgid ""
+"Ignore this section if you are planning to run Archivematica without search "
+"indices."
+msgstr "検索インデックスを使用せずにArchivematicaを実行する場合は、この部分を無視してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:406
+msgid ""
+"Archivematica releases may introduce changes that require updating the "
+"search indices to function properly, e.g. Archivematica v1.12.0 introduced "
+"new fields to the search indices and made some changes to text field types. "
+"Please keep an eye on our `release notes`_ before you start the upgrade."
+msgstr ""
+"例えば、Archivematica "
+"v1.12.0では、検索インデックスに新しいフィールドが追加され、テキストフィールドの種類が変更されました。アップグレードを開始する前に、 "
+"`リリースノート`_ をご確認ください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:411
+msgid ""
+"The update can be accomplished one of two ways. Preferably, you can "
+":ref:`reindex the documents <reindex-documents>` which is usually faster "
+"because the same documents that you already have indexed will be re-"
+"ingested. We would love to know if this is not working for you, but when "
+"that's the case, it is possible to :ref:`recreate the indices <recreate-"
+"indices>` which will take much longer to complete because it accesses the "
+"original data, e.g. your AIPs."
+msgstr ""
+"更新は2つの方法があります。好ましくは、 :ref:`文書のインデックスを再作成する <reindex-documents>` "
+"ことです。これは、すでにインデックスを作成した文書と同じ文書が再インデックスされるため、通常より速くなります。これがうまくいっていない場合は、 "
+":ref:`インデックスを再作成する <recreate-indices>` "
+"ことが可能です。これは、元のデータ、例えばAIPにアクセスするため、完了までにかなり時間がかかります。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:421
+msgid "Reindex the documents"
+msgstr "文書のインデックスを付け直す"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:423
+msgid ""
+"In Elasticsearch, it is possible to add new fields to search indices but it "
+"is not possible to update existing ones. The recommended strategy is to "
+"create new indices with our desired mapping and reindex our documents. This "
+"is based on the `Reindex API`_."
+msgstr ""
+"Elasticsearchでは、検索インデックスに新しいフィールドを追加することは可能ですが、既存のフィールドを更新することはできません。推奨される方法は、希望するマッピングで新しいインデックスを作成し、文書のインデックスを再作成することです。これは"
+" `Reindex API`_ に基づいています。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:428
+msgid ""
+"It is a multi-step process that we have automated with a script: `es-"
+"reindex.sh`_. Please follow the link and read the instructions carefully."
+msgstr ""
+"これは、私たちがスクリプト： `es-reindex.sh`_ で自動化したマルチステップのプロセスです。リンクをたどって手順をよく読んでください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:433
+msgid ""
+"Before you continue, we recommend backing up your Elasticsearch data. Please"
+" read the official docs for instructions."
+msgstr "続行する前に、Elasticsearchのデータをバックアップすることをお勧めします。手順については、公式文書をお読みください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:438
+msgid ""
+"We may implement this script as a Django command in the future for better "
+"usability. For the time being, please download the script and tweak as "
+"needed."
+msgstr ""
+"より使いやすくするために、将来このスクリプトをDjangoコマンドとして実装するかもしれません。当面は、スクリプトをダウンロードして、必要に応じて微調整してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:445
+msgid "Recreate the indices"
+msgstr "インデックスの再作成"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:447
+msgid ""
+"This method will allow you to delete and rebuild the existing Elasticsearch "
+"indices so that all the Backlog and Archival Storage column fields are fully"
+" populated, including for transfers and AIPs ingested prior to the upgrade "
+"to Archivematica |release|. Run the commands described in :ref:`Rebuild the "
+"indexes <elasticsearch-indexes>` to fully delete and rebuild the indices."
+msgstr ""
+"この方法では、既存のElasticsearchインデックスを削除・再構築し、BacklogとArchival "
+"Storageのすべての列フィールドに、Archivematica |release| "
+"へのアップグレード前に取り込まれた転送とAIPを含め、完全に入力されるようにします。 :ref:`Rebuild the indexes "
+"<elasticsearch-indexes>` に記載されているコマンドを実行し、インデックスを完全に削除して再構築します。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:454
+msgid "Execution example:"
+msgstr "実行例："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:480
+msgid ""
+"Please note, the use of encrypted or remote Transfer Backlog and AIP Store "
+"locations may require use of the option to rebuild indices from the Storage "
+"Service API rather than from the filesystem. At this time, it is not "
+"possible to rebuild the indices for all types of remote locations."
+msgstr ""
+"暗号化された、またはリモートのTransfer BacklogとAIP "
+"Storeのロケーションを使用する場合、ファイルシステムからではなく、Storage Service "
+"APIからインデックスを再構築するオプションを使用する必要があることに注意してください。現時点では、すべてのタイプのリモートロケーションのインデックスを再構築することはできません。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:487
+msgid ""
+"Please note, the execution of this command may take a long time for big AIP "
+"and Transfer Backlog storage locations, especially if the packages are "
+"stored compressed or encrypted, or you are using a third party service. If "
+"that is the case, you may want to :ref:`reindex the Elasticsearch documents "
+"<reindex-documents>` instead."
+msgstr ""
+"このコマンドの実行は、特にパッケージが圧縮または暗号化されて保存されている場合や、サードパーティのサービスを使用している場合など、大きなAIPやTransfer"
+" Backlogの保存場所では時間がかかる可能性があることに注意してください。そのような場合は、代わりに :ref:`Elasticsearch文書 "
+"<reindex-documents>` のインデックスを再作成してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:496
+msgid "Review the processing configuration"
+msgstr "処理設定の見直し"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:498
+msgid ""
+"After any Archivematica upgrade, it is recommended to perform a sanity check"
+" on your :ref:`processing configurations <process-config>`. Look for new "
+"decision points where you want to establish a default, like the new \"Scan "
+"for viruses\" introduced in Archivematica 1.13."
+msgstr ""
+"Archivematicaをアップグレードした後は、 :ref:`処理設定 <process-config>` "
+"のサニティチェックを行うことをお勧めします。例えば、Archivematica 1.13で新たに導入された\"Scan for "
+"viruses\"のように、デフォルトを設定したい新しい決定ポイントがないか確認してください。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:503
+msgid ""
+"The ``default`` and ``automated`` bundled configurations can be reset to the"
+" Archivematica defaults."
+msgstr "``default`` と ``automated`` のバンドル設定は、Archivematicaのデフォルトにリセットできます。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:509
+msgid "Migrate from MySQL 5.x to 8.x"
+msgstr "MySQL 5.xから8.xへの移行"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:511
+msgid ""
+"It is recommended the MySQL databases for Archivematica and Storage Service "
+"use the MySQL 8 ``utf8mb4`` character set and its default collation "
+"``utf8mb4_0900_ai_ci`` (or ``utf8mb4_general_ci`` in MariaDB)."
+msgstr ""
+"ArchivematicaおよびStorage Service用のMySQLデータベースでは、MySQL 8 ``utf8mb4`` "
+"の文字セットとデフォルトの照合順序 ``utf8mb4_0900_ai_ci`` （MariaDBでは ``utf8mb4_general_ci`` "
+"）を使用することをお勧めします。"
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:515
+msgid ""
+"If you migrate your databases from MySQL 5.x you can check the character set"
+" and encoding of their tables with:"
+msgstr "MySQL 5.xからデータベースを移行する場合、文字セットとテーブルのエンコーディングをチェックできます："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:530
+msgid ""
+"If they use the ``utf8mb3`` character set and collation you should update "
+"them to avoid potential migration conflicts like this:"
+msgstr "``utf8mb3`` の文字セットと照合順序を使用してれば、このような潜在的な移行の衝突を避けるために、それらを更新する必要があります："
+
+#: ../../admin-manual/installation-setup/upgrading/upgrading.rst:556
+msgid ""
+"The following script can be used as a reference to update the character set "
+"of the databases and their tables."
+msgstr "以下のスクリプトは、データベースとそのテーブルの文字セットを更新する際の参考として使用できます。"

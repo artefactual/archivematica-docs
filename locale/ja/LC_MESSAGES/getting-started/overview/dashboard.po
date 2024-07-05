@@ -1,0 +1,187 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/overview/dashboard.rst:5
+msgid "Web-based dashboard"
+msgstr "ウェブベースのダッシュボード"
+
+#: ../../getting-started/overview/dashboard.rst:7
+msgid ""
+"From the end-user perspective, all of Archivematica's functions take place "
+"within a web-based dashboard which can be accessed from anywhere by logging "
+"in through a web browser."
+msgstr ""
+"エンドユーザーの視点に立つと、Archivematicaのすべての機能はWebベースのダッシュボード上で実行され、Webブラウザからログインすることでどこからでもアクセスできます。"
+
+#: ../../getting-started/overview/dashboard.rst:-1
+msgid "Archivematica's web-based dashboard"
+msgstr "Archivematicaのウェブベースのダッシュボード"
+
+#: ../../getting-started/overview/dashboard.rst:16
+msgid ""
+"The Dashboard is akin to a \"processing space\" for digital archives, "
+"allowing archivists to move packages of digital materials through the "
+"Archivematica pipeline before sending packages for storage or dissemination."
+msgstr ""
+"Dashboardは、デジタルアーカイブのための\"処理スペース\"のようなもので、アーキビストが保管や配布のためにパッケージを送信する前に、Archivematicaのパイプラインを通してデジタル素材のパッケージを移動させることができます。"
+
+#: ../../getting-started/overview/dashboard.rst:20
+msgid ""
+"A description of the Dashboard elements follows, with numbers referencing "
+"the image above."
+msgstr "ダッシュボードの各要素の説明は、以下の通りです。番号は、上の画像を参照してください。"
+
+#: ../../getting-started/overview/dashboard.rst:24
+msgid "1. Tabs"
+msgstr "1. タブ"
+
+#: ../../getting-started/overview/dashboard.rst:26
+msgid ""
+"The Dashboard is divided into a number of tabs, with the grey area "
+"indicating the tab currently in view. Alerts appear in red circles when "
+"there is action required by the archivist in a tab. The names of the tabs "
+"(Transfer, Backlog, Appraisal, Ingest, Archival storage, Preservation "
+"planning, Access, Administration) reference both the OAIS model and sections"
+" of the user documentation."
+msgstr ""
+"ダッシュボードは、複数のタブに分かれており、グレーの部分が現在表示されているタブを示しています。タブ内でアーキビストによるアクションが必要な場合、赤丸でアラートが表示されます。タブの名前（転送、バックログ、評価、インジェスト、アーカイブ保存、保存計画、アクセス、管理）は、OAISモデルとユーザーマニュアルのセクションの両方を参照しています。"
+
+#: ../../getting-started/overview/dashboard.rst:34
+msgid "2. User login"
+msgstr "2. ユーザーログイン"
+
+#: ../../getting-started/overview/dashboard.rst:36
+msgid ""
+"The user login name appears beside the tabs, and is where the user logs out "
+"from when processing work is complete."
+msgstr "ユーザーのログイン名は、タブの横に表示され、作業処理が完了した際にはそこからユーザーがログアウトします。"
+
+#: ../../getting-started/overview/dashboard.rst:40
+msgid "3. Packages"
+msgstr "3. パッケージ"
+
+#: ../../getting-started/overview/dashboard.rst:42
+msgid ""
+"At any given time, any number of packages could be present in the Transfer "
+"and Ingest tabs, representing a Transfer of material or a Submission "
+"Information Package (SIP), respectively. A package will either be:"
+msgstr ""
+"特定の時点において、転送タブとインジェストタブには、それぞれ素材転送または提出情報パッケージ（SIP）を表す、任意の数のパッケージが存在する可能性があります。パッケージは以下のいずれかになります。"
+
+#: ../../getting-started/overview/dashboard.rst:46
+msgid "In progress, indicated by green arrows"
+msgstr "進行中。緑の矢印で示されます"
+
+#: ../../getting-started/overview/dashboard.rst:47
+msgid "In need of a decision to be made, indicated by a bell icon"
+msgstr "判断が必要。ベルのアイコンで示されます"
+
+#: ../../getting-started/overview/dashboard.rst:48
+msgid "Completed, indicated by a green checkmark"
+msgstr "完了。緑色のチェックマークで示されます"
+
+#: ../../getting-started/overview/dashboard.rst:49
+msgid "Failed, indicated by a red stop symbol"
+msgstr "失敗。赤色の停止マークで示されます"
+
+#: ../../getting-started/overview/dashboard.rst:50
+msgid "Rejected by the archivist, indicated by a grey stop symbol"
+msgstr "アーキビストにより拒否。灰色の停止記号で示されます"
+
+#: ../../getting-started/overview/dashboard.rst:52
+msgid ""
+"It is a good practice to \"clean up\" the Dashboard periodically by removing"
+" packages using the red \"remove\" button (see below)."
+msgstr "\"\"赤い\"remove\"ボタンを使ってパッケージを削除し、ダッシュボードを定期的にクリーンアップするのは良い習慣です。"
+
+#: ../../getting-started/overview/dashboard.rst:56
+msgid "4. Microservices and Jobs"
+msgstr "4. マイクロサービスとジョブ"
+
+#: ../../getting-started/overview/dashboard.rst:58
+msgid ""
+"Archivematica's processing is performed through a number of "
+":ref:`microservices <microservices>`. Microservices are provided by a "
+"combination of Archivematica Python scripts and one or more of the free, "
+"open-source `external software tools <external-tools>` bundled in the "
+"Archivematica system."
+msgstr ""
+"Archivematicaの処理は、いくつかの :ref:`マイクロサービス <microservices>` "
+"を通じて実行されます。マイクロサービスは、ArchivematicaのPythonスクリプトと、Archivematicaシステムにバンドルされているフリーでオープンソースの"
+" `外部ソフトウェアツール<external-tools>` の1つ以上の組み合わせによって提供されます。"
+
+#: ../../getting-started/overview/dashboard.rst:63
+msgid ""
+"These microservices are broken down into a number of jobs, which users can "
+"see by clicking on the microservice to expand. Clicking on the gear icon "
+"within a job will open a new browser tab showing the tasks performed for "
+"that particular job."
+msgstr ""
+"これらのマイクロサービスは、いくつかのジョブに分かれており、ユーザーは、マイクロサービスをクリックして展開することで参照することができます。ジョブ内の歯車のアイコンをクリックすると、新しいブラウザのタブが開き、その特定のジョブで実行されたタスクが表示されます。"
+
+#: ../../getting-started/overview/dashboard.rst:69
+msgid "5. Decision"
+msgstr "5. 決定"
+
+#: ../../getting-started/overview/dashboard.rst:71
+msgid ""
+"Certain microservices result in a decision point for the archivist. The "
+"decision is completed by choosing an available option from a drop-down menu."
+" Many of the decision points can be pre-configured if desired in the "
+":ref:`Administration tab <dashboard-processing>`."
+msgstr ""
+"特定のマイクロサービスは、アーキビストのための決定ポイントをもたらします。ドロップダウンメニューから利用可能なオプションを選択することで、決定が完了します。デシジョンポイントの多くは、"
+" :ref:`管理タブ <dashboard-processing>` で必要に応じて事前に設定できます。"
+
+#: ../../getting-started/overview/dashboard.rst:77
+msgid "6. Report/remove icons"
+msgstr "6. 報告／削除のアイコン"
+
+#: ../../getting-started/overview/dashboard.rst:79
+msgid ""
+"Report (paper and pencil) icons appear on Transfer and Ingest packages and "
+"link the user to the :ref:`descriptive <add-metadata>` and :ref:`rights "
+"<add-rights>` metadata entry page. (The same icon is used for forensic disk "
+"image transfer metadata entry as well as the :ref:`normalization report "
+"<normalize>`)."
+msgstr ""
+"レポート（紙と鉛筆）アイコンは、転送およびインジェストパッケージに表示され、ユーザーを :ref:`記述的な <add-metadata>` および "
+":ref:`権利 <add-rights>` メタデータ入力ページにリンクします。（同じアイコンは、 :ref:`正規化レポート "
+"<normalize>` と同様に、フォレンジックディスクイメージ転送メタデータ入力にも使用されます）。"
+
+#: ../../getting-started/overview/dashboard.rst:84
+msgid ""
+"The red remove icon removes the package from the Dashboard. The package can "
+"be removed whether the processing is completed or not. It is best practice "
+"to remove completed packages periodically as a \"cleanup\" procedure to keep"
+" the web browser running smoothly. Note that removing a package **does not**"
+" delete the package or any AIPs or DIPs associated with it. If a package was"
+" not fully processed, it will remain unprocessed at its last decision point,"
+" even if removed from the Dashboard."
+msgstr ""
+"赤い削除アイコンは、ダッシュボードからパッケージを削除します。パッケージは、処理が完了してもしなくても削除できます。完了したパッケージは、ウェブブラウザをスムーズに動作させるための\"クリーンアップ\"手順として、定期的に削除するのがベストプラクティスです。パッケージを削除しても、パッケージやそれに関連する"
+" AIP や DIP は削除 **されない** "
+"ことに注意してください。パッケージが完全に処理されていない場合、ダッシュボードから削除しても、そのパッケージは最後の決定ポイントで未処理のままです。"
+
+#: ../../getting-started/overview/dashboard.rst:92
+msgid ":ref:`Back to the top <web-dashboard>`"
+msgstr ":ref:`トップに戻る <web-dashboard>`"

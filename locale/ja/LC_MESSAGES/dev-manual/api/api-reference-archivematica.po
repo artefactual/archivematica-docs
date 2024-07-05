@@ -1,0 +1,1166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:5
+msgid "Archivematica API"
+msgstr "Archivematica API"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:7
+msgid "The Archivematica API provides:"
+msgstr "Archivematica APIが提供："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:9
+msgid "Coverage of some basic workflow functionality."
+msgstr "基本的なワークフロー機能をカバー。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:10
+msgid "Proxy support to the Storage Service."
+msgstr "Storage Serviceへのプロキシサポート。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:11
+msgid "Exposure to unit status or processing configuration details."
+msgstr "ユニットのステータスまたは処理設定の詳細への公開。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:14
+msgid "Resources and endpoints"
+msgstr "リソースとエンドポイント"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:16
+msgid ""
+"Endpoints for the Archivematica API have been organized into the following "
+"resource categories:"
+msgstr "Archivematica APIのエンドポイントは、以下のリソースカテゴリに分類されます："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:19
+msgid ":ref:`transfer-resource`"
+msgstr ":ref:`transfer-resource`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:20
+msgid ":ref:`ingest-resource`"
+msgstr ":ref:`ingest-resource`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:21
+msgid ":ref:`admin-resource`"
+msgstr ":ref:`admin-resource`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:22
+msgid ":ref:`unit-resource`"
+msgstr ":ref:`unit-resource`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:23
+msgid ":ref:`other-resource`"
+msgstr ":ref:`other-resource`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:24
+msgid ":ref:`beta`"
+msgstr ":ref:`ベータ`"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:29
+msgid "Transfer"
+msgstr "転送"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:31
+msgid ""
+"Transfer refers to the process of moving any set of digital objects into "
+"Archivematica and turning the materials into a Submission Information "
+"Package (SIP). The Transfer tab prepares your content for preservation in "
+"Archivematica."
+msgstr ""
+"転送とは、デジタルオブジェクトをArchivematicaに移動し、SIP（Submission Information "
+"Package）に変換するプロセスを指します。Transferタブでは、コンテンツをArchivematicaで保存するための準備を行います。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:37
+msgid "Start transfer"
+msgstr "転送開始"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:40
+#: ../../dev-manual/api/api-reference-archivematica.rst:125
+#: ../../dev-manual/api/api-reference-archivematica.rst:276
+#: ../../dev-manual/api/api-reference-archivematica.rst:423
+#: ../../dev-manual/api/api-reference-archivematica.rst:459
+#: ../../dev-manual/api/api-reference-archivematica.rst:748
+msgid "``POST``"
+msgstr "``POST``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:40
+msgid "**/api/transfer/start_transfer/**"
+msgstr "**/api/transfer/start_transfer/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:40
+msgid "*Initiates a transfer in Archive matica.*"
+msgstr "*Archive maticaで転送を開始します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:44
+#: ../../dev-manual/api/api-reference-archivematica.rst:128
+#: ../../dev-manual/api/api-reference-archivematica.rst:279
+#: ../../dev-manual/api/api-reference-archivematica.rst:426
+#: ../../dev-manual/api/api-reference-archivematica.rst:466
+msgid "Request body parameters:"
+msgstr "リクエストボディのパラメーター："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:46
+msgid ""
+"The parameters in the following table can be submitted as a JSON object with"
+" key-value pairs in the request body."
+msgstr "以下の表のパラメーターは、リクエストボディにキーと値のペアを持つJSONオブジェクトとして送信できます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:51
+#: ../../dev-manual/api/api-reference-archivematica.rst:173
+#: ../../dev-manual/api/api-reference-archivematica.rst:283
+#: ../../dev-manual/api/api-reference-archivematica.rst:322
+#: ../../dev-manual/api/api-reference-archivematica.rst:430
+#: ../../dev-manual/api/api-reference-archivematica.rst:578
+#: ../../dev-manual/api/api-reference-archivematica.rst:588
+#: ../../dev-manual/api/api-reference-archivematica.rst:755
+msgid "``name``"
+msgstr "``name``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:51
+msgid "Name of transfer"
+msgstr "転送の名前"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:53
+#: ../../dev-manual/api/api-reference-archivematica.rst:98
+#: ../../dev-manual/api/api-reference-archivematica.rst:132
+#: ../../dev-manual/api/api-reference-archivematica.rst:195
+#: ../../dev-manual/api/api-reference-archivematica.rst:335
+#: ../../dev-manual/api/api-reference-archivematica.rst:766
+msgid "``type``"
+msgstr "``type``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:53
+msgid ""
+"Type of the new transfer. Valid values are: standard, zipfile, unzipped bag,"
+" zipped bag, dspace, maildir, TRIM, dataverse. Default: standard."
+msgstr ""
+"新しい転送のタイプ。有効な値は、standard、zipfile、unzip bag、zip "
+"bag、dspace、maildir、TRIM、dataverseです。デフォルトでは、standardです。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:57
+#: ../../dev-manual/api/api-reference-archivematica.rst:773
+msgid "``accession``"
+msgstr "``accession``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:57
+msgid "Accession number of new transfer."
+msgstr "新規転送のAccession番号。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:59
+msgid "``paths[]``"
+msgstr "``paths[]``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:59
+msgid ""
+"List of base64-encoded ``<location_uuid>:<relative_path>`` to be copied into"
+" the new transfer. Location UUIDs should be associated with this pipeline, "
+"and relative path should be relative to the location."
+msgstr ""
+"新しい転送にコピーされるbase64エンコードされた ``<location_uuid>:<relative_path>`` "
+"のリスト。場所のUUIDは、このパイプラインに関連付けられている必要があり、相対パスは、場所からの相対パスでなければなりません。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:65
+msgid "``row_ids[]``"
+msgstr "``row_ids[]``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:65
+msgid ""
+"ID of the associated TransferMetadataSet for disk image ingest. Can be "
+"provided as ``[\"\"]``."
+msgstr "ディスクイメージインジェストに関連するTransferMetadataSetのID。 ``[\"\"]`` として指定できます．"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:70
+#: ../../dev-manual/api/api-reference-archivematica.rst:113
+#: ../../dev-manual/api/api-reference-archivematica.rst:140
+#: ../../dev-manual/api/api-reference-archivematica.rst:211
+#: ../../dev-manual/api/api-reference-archivematica.rst:227
+#: ../../dev-manual/api/api-reference-archivematica.rst:254
+#: ../../dev-manual/api/api-reference-archivematica.rst:340
+#: ../../dev-manual/api/api-reference-archivematica.rst:355
+#: ../../dev-manual/api/api-reference-archivematica.rst:396
+#: ../../dev-manual/api/api-reference-archivematica.rst:411
+#: ../../dev-manual/api/api-reference-archivematica.rst:447
+#: ../../dev-manual/api/api-reference-archivematica.rst:515
+#: ../../dev-manual/api/api-reference-archivematica.rst:540
+#: ../../dev-manual/api/api-reference-archivematica.rst:605
+#: ../../dev-manual/api/api-reference-archivematica.rst:642
+#: ../../dev-manual/api/api-reference-archivematica.rst:685
+msgid "Example request:"
+msgstr "リクエスト例："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:74
+#: ../../dev-manual/api/api-reference-archivematica.rst:117
+#: ../../dev-manual/api/api-reference-archivematica.rst:154
+#: ../../dev-manual/api/api-reference-archivematica.rst:215
+#: ../../dev-manual/api/api-reference-archivematica.rst:231
+#: ../../dev-manual/api/api-reference-archivematica.rst:258
+#: ../../dev-manual/api/api-reference-archivematica.rst:359
+msgid "Example response:"
+msgstr "レスポンス例："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:79
+msgid "List unapproved transfer(s)"
+msgstr "未承認転送のリスト"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:83
+#: ../../dev-manual/api/api-reference-archivematica.rst:162
+#: ../../dev-manual/api/api-reference-archivematica.rst:240
+#: ../../dev-manual/api/api-reference-archivematica.rst:313
+#: ../../dev-manual/api/api-reference-archivematica.rst:368
+#: ../../dev-manual/api/api-reference-archivematica.rst:408
+#: ../../dev-manual/api/api-reference-archivematica.rst:508
+#: ../../dev-manual/api/api-reference-archivematica.rst:532
+#: ../../dev-manual/api/api-reference-archivematica.rst:565
+#: ../../dev-manual/api/api-reference-archivematica.rst:617
+#: ../../dev-manual/api/api-reference-archivematica.rst:699
+msgid "``GET``"
+msgstr "``GET``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:83
+msgid "**/api/transfer/unapproved/**"
+msgstr "**/api/transfer/unapproved/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:83
+msgid "*Returns a list of transfers awaiting approval*"
+msgstr "*承認待ちの転送のリストを返す*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:88
+#: ../../dev-manual/api/api-reference-archivematica.rst:144
+#: ../../dev-manual/api/api-reference-archivematica.rst:166
+#: ../../dev-manual/api/api-reference-archivematica.rst:244
+#: ../../dev-manual/api/api-reference-archivematica.rst:290
+#: ../../dev-manual/api/api-reference-archivematica.rst:316
+#: ../../dev-manual/api/api-reference-archivematica.rst:372
+#: ../../dev-manual/api/api-reference-archivematica.rst:437
+#: ../../dev-manual/api/api-reference-archivematica.rst:483
+#: ../../dev-manual/api/api-reference-archivematica.rst:620
+#: ../../dev-manual/api/api-reference-archivematica.rst:787
+#: ../../dev-manual/api/api-reference-archivematica.rst:851
+msgid "Response definitions:"
+msgstr "レスポンスの定義："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:92
+#: ../../dev-manual/api/api-reference-archivematica.rst:148
+#: ../../dev-manual/api/api-reference-archivematica.rst:192
+#: ../../dev-manual/api/api-reference-archivematica.rst:248
+#: ../../dev-manual/api/api-reference-archivematica.rst:294
+#: ../../dev-manual/api/api-reference-archivematica.rst:333
+#: ../../dev-manual/api/api-reference-archivematica.rst:376
+#: ../../dev-manual/api/api-reference-archivematica.rst:441
+#: ../../dev-manual/api/api-reference-archivematica.rst:487
+msgid "``message``"
+msgstr "``message``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:92
+msgid "\"Fetched unapproved transfers successfully.\""
+msgstr "\"未承認の転送のフェッチに成功。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:95
+#: ../../dev-manual/api/api-reference-archivematica.rst:250
+msgid "``results``"
+msgstr "``results``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:95
+msgid "List of dicts with the following keys:"
+msgstr "以下のキーを持つ辞書のリスト："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:106
+#: ../../dev-manual/api/api-reference-archivematica.rst:136
+#: ../../dev-manual/api/api-reference-archivematica.rst:183
+#: ../../dev-manual/api/api-reference-archivematica.rst:326
+msgid "``directory``"
+msgstr "``directory``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:109
+#: ../../dev-manual/api/api-reference-archivematica.rst:150
+#: ../../dev-manual/api/api-reference-archivematica.rst:198
+#: ../../dev-manual/api/api-reference-archivematica.rst:286
+#: ../../dev-manual/api/api-reference-archivematica.rst:337
+#: ../../dev-manual/api/api-reference-archivematica.rst:433
+#: ../../dev-manual/api/api-reference-archivematica.rst:586
+#: ../../dev-manual/api/api-reference-archivematica.rst:599
+#: ../../dev-manual/api/api-reference-archivematica.rst:624
+msgid "``uuid``"
+msgstr "``uuid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:98
+msgid "Transfer type."
+msgstr "転送タイプ。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:100
+msgid ""
+"One of: standard, zipfile, unzipped bag, zipped bag, dspace, maildir, TRIM, "
+"dataverse"
+msgstr ""
+"standard、zipfile、unzip bag、zip bag、dspace、maildir、TRIM、dataverseのいずれか1つ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:106
+#: ../../dev-manual/api/api-reference-archivematica.rst:136
+msgid "Directory the transfer is in currently."
+msgstr "転送が現在存在するディレクトリ。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:109
+msgid "UUID of the transfer."
+msgstr "転送のUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:122
+msgid "Approve transfer(s)"
+msgstr "転送を承認"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:125
+msgid "**/api/transfer/approve/**"
+msgstr "**/api/transfer/approve/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:125
+msgid "*Approves a transfer awaiting initiation.*"
+msgstr "*開始を待っている転送を承認します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:132
+msgid ""
+"Type of the transfer. Valid values are: standard, zipfile, unzipped bag, "
+"zipped bag, dspace, maildir, TRIM, dataverse. Default: standard."
+msgstr ""
+"転送のタイプ。有効な値は、standard、zipfile、unzip bag、zip "
+"bag、dspace、maildir、TRIM、dataverseです。デフォルトではstandardです。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:148
+#: ../../dev-manual/api/api-reference-archivematica.rst:294
+#: ../../dev-manual/api/api-reference-archivematica.rst:441
+#: ../../dev-manual/api/api-reference-archivematica.rst:487
+msgid "\"Approval successful.\""
+msgstr "\"承認に成功。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:150
+msgid "UUID of the approved transfer"
+msgstr "承認された転送のUUID"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:159
+#: ../../dev-manual/api/api-reference-archivematica.rst:310
+msgid "Status"
+msgstr "ステータス"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:162
+msgid "**/api/transfer/status/<transfer UUID>/**"
+msgstr "**/api/transfer/status/<transfer UUID>/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:162
+msgid "*Returns the status of a transfer.*"
+msgstr "*転送のステータスを返す。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:170
+#: ../../dev-manual/api/api-reference-archivematica.rst:320
+#: ../../dev-manual/api/api-reference-archivematica.rst:590
+msgid "``status``"
+msgstr "``status``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:171
+msgid "One of FAILED, REJECTED, USER_INPUT, COMPLETE or PROCESSING"
+msgstr "FAILED、REJECTED、USER_INPUT、COMPLETE、PROCESSINGのいずれか1つ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:172
+#: ../../dev-manual/api/api-reference-archivematica.rst:175
+#: ../../dev-manual/api/api-reference-archivematica.rst:179
+#: ../../dev-manual/api/api-reference-archivematica.rst:182
+#: ../../dev-manual/api/api-reference-archivematica.rst:186
+#: ../../dev-manual/api/api-reference-archivematica.rst:191
+#: ../../dev-manual/api/api-reference-archivematica.rst:194
+#: ../../dev-manual/api/api-reference-archivematica.rst:197
+#: ../../dev-manual/api/api-reference-archivematica.rst:200
+msgid "string"
+msgstr "文字列"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:174
+msgid "Name of the transfer, e.g. \"imgs\""
+msgstr "転送の名前（例：\"imgs\"）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:176
+#: ../../dev-manual/api/api-reference-archivematica.rst:470
+msgid "``sip_uuid``"
+msgstr "``sip_uuid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:177
+msgid ""
+"If status is COMPLETE, this field will exist with either the UUID of the SIP"
+" or 'BACKLOG'"
+msgstr "ステータスが、COMPLETEの場合、このフィールドは、SIPのUUIDまたは「BACKLOG」のいずれかで存在します"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:180
+#: ../../dev-manual/api/api-reference-archivematica.rst:574
+#: ../../dev-manual/api/api-reference-archivematica.rst:592
+msgid "``microservice``"
+msgstr "``microservice``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:181
+#: ../../dev-manual/api/api-reference-archivematica.rst:325
+msgid "Name of the current microservice"
+msgstr "現在のマイクロサービスの名前"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:184
+msgid "Name of the direcotry, e.g. \"imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+msgstr "ディレクトリ名、例：\"imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:187
+#: ../../dev-manual/api/api-reference-archivematica.rst:329
+#: ../../dev-manual/api/api-reference-archivematica.rst:677
+#: ../../dev-manual/api/api-reference-archivematica.rst:757
+msgid "``path``"
+msgstr "``path``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:188
+msgid ""
+"Full path to the transfer, e.g. "
+"\"/var/archivematica/sharedDirectory/watchedDirectories/SIPCreation/ "
+"completedTransfers/imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+msgstr ""
+"転送へのフルパス、例：\"/var/archivematica/sharedD/var/archivematica/sharedDirectory/watchedDirectories/SIPCreation/"
+" completedTransfers/imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:193
+msgid "\"Fetched status from <transfer UUID> successfully.\""
+msgstr "\"<transfer UUID>からステータスの取得に成功。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:196
+msgid "\"transfer\""
+msgstr "\"転送\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:199
+msgid "UUID of the transfer, e.g. \"52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+msgstr "転送の UUID（例：\"52dd0c01-e803-423a-be5f-b592b5d5d61c\"）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:204
+msgid ""
+"For consumers of this endpoint, it is possible for Archivematica to return a"
+" status of COMPLETE without a sip_uuid. Consumers looking to use the UUID of"
+" the AIP that will be created following Ingest should therefore test for "
+"both a status of COMPLETE and the existence of sip_uuid that does not also "
+"equal BACKLOG to ensure that they retrieve it. This might mean an additional"
+" call to the status endpoint while this data becomes available."
+msgstr ""
+"このエンドポイントのコンシューマーは、Archivematicaがsip_uuidなしでCOMPLETEステータスを返す可能性があります。そのため、インジェスト後に作成されるAIPのUUIDを使用したいコンシューマーは、COMPLETEというステータスと、BACKLOGと等しくないsip_uuidの存在をテストし、確実に取得する必要があります。これは、このデータが利用可能になる間に、ステータスエンドポイントへの追加の呼び出しを意味するかもしれません。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:220
+#: ../../dev-manual/api/api-reference-archivematica.rst:349
+msgid "Hide"
+msgstr "非表示"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:223
+#: ../../dev-manual/api/api-reference-archivematica.rst:352
+msgid "``DELETE``"
+msgstr "``DELETE``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:223
+msgid "**/api/transfer/<transfer UUID>/ delete/**"
+msgstr "**/api/transfer/<transfer UUID>/ delete/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:223
+msgid "*Hides a transfer*"
+msgstr "*転送を非表示*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:237
+#: ../../dev-manual/api/api-reference-archivematica.rst:405
+msgid "Completed"
+msgstr "完了"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:240
+msgid "**/api/transfer/completed/**"
+msgstr "**/api/transfer/completed/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:240
+msgid "*Returns list of Transfers that are completed.*"
+msgstr "*完了した転送のリストを返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:248
+msgid "\"Fetched completed transfers successfully.\""
+msgstr "\"完了した転送を正常にフェッチしました。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:250
+msgid "List of UUIDs of completed Transfers."
+msgstr "完了した転送のUUIDのリスト。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:263
+msgid "Start reingest"
+msgstr "再インジェストの開始"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:267
+msgid ""
+"The Start reingest endpoint complements the :ref:`ss-reingest-aip` endpoint "
+"on the Storage Service's end. When a reingest has been initiated, "
+"Archivematica fetches the AIP from storage, extracts and runs fixity on it "
+"to verify its integrity. Then Archivematica will set up the environment as "
+"per the reingest type before the Storage Service endpoint calls the "
+"Archivematica Start reingest endpoint."
+msgstr ""
+"Start reインジェストエンドポイントは、Storage Service側の :ref:`ss-reインジェスト-aip` "
+"エンドポイントを補完します。再インジェストが開始されると、Archivematicaは、ストレージからAIPをフェッチし、抽出し、その完全性を確認するためにfixityを実行します。その後、Archivematicaは再インジェストの種類に応じて環境をセットアップし、Storage"
+" Service側のエンドポイントがArchivematica Start reインジェストエンドポイントを呼び出します。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:276
+msgid "**/api/transfer/reingest**"
+msgstr "**/api/transfer/reingest**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:276
+msgid "*Starts a full reingest.*"
+msgstr "*フル再イインジェストを開始します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:283
+#: ../../dev-manual/api/api-reference-archivematica.rst:430
+#, python-format
+msgid ""
+"Name of the AIP. The AIP should also be found at "
+"``%sharedDirectory%/tmp/<name>``."
+msgstr "AIPの名前。AIPは、 ``%sharedDirectory%/tmp/<name>`` にもあるはずです。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:286
+#: ../../dev-manual/api/api-reference-archivematica.rst:433
+msgid "UUID of the AIP to reingest."
+msgstr "再インジェストするAIPのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:296
+#: ../../dev-manual/api/api-reference-archivematica.rst:443
+#: ../../dev-manual/api/api-reference-archivematica.rst:489
+msgid "``reingest_uuid``"
+msgstr "``reingest_uuid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:296
+#: ../../dev-manual/api/api-reference-archivematica.rst:443
+#: ../../dev-manual/api/api-reference-archivematica.rst:489
+msgid "UUID of the reingested transfer."
+msgstr "再インジェストした転送のUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:303
+msgid "Ingest"
+msgstr "インジェスト"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:305
+msgid ""
+"Ingest refers to the process by which digital objects are packaged into SIPs"
+" and run through microservices that enable normalization, packaging into an "
+"AIP, and generation of a DIP."
+msgstr ""
+"インジェストとは、デジタルオブジェクトがSIPにパッケージ化され、正規化、AIPへのパッケージ化、DIPの生成を可能にするマイクロサービスを通じて実行されるプロセスを指します。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:313
+msgid "**/ingest/status/<unit_UUID>/**"
+msgstr "**/ingest/status/<unit_UUID>/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:313
+msgid "*Returns status of the SIP.*"
+msgstr "*SIP のステータスを返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:321
+msgid "One of FAILED, REJECTED, USER_INPUT, COMPLETE or PROCESSING."
+msgstr "FAILED、REJECTED、USER_INPUT、COMPLETE、PROCESSINGのいずれか1つ。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:323
+msgid "Name of the SIP, e.g. \"imgs\"."
+msgstr "SIPの名前（例：\"imgs\"）。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:324
+msgid "``microservices``"
+msgstr "``microservices``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:327
+msgid "Name of the directory, e.g. \"imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\""
+msgstr "ディレクトリ名（例：\"imgs-52dd0c01-e803-423a-be5f-b592b5d5d61c\"）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:330
+msgid ""
+"Full path to the transfer, e.g. \"/var/archivematica/sharedDirectory/ "
+"currentlyProcessing/imgs-52dd0c01-e803-423a-be5f/b592b5d5d61c/\"."
+msgstr ""
+"転送へのフルパス（例：\"/var/archivematica/sharedDirectory/ "
+"currentlyProcessing/imgs-52dd0c01-e803-423a-be5f/b592b5d5d61c/\"）。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:334
+msgid "\"Fetched status for <SIP UUID> successfully.\""
+msgstr "\"<SIP UUID>のステータス取得に成功。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:336
+msgid "\"SIP\""
+msgstr "\"SIP\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:338
+msgid "UUID of the SIP, e.g. \"52dd0c01-e803-423a-be5f-b592b5d61c\"."
+msgstr "SIPのUUID、例えば\"52dd0c01-e803-423a-be5f-b592b5d61c\"。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:344
+#: ../../dev-manual/api/api-reference-archivematica.rst:400
+#: ../../dev-manual/api/api-reference-archivematica.rst:415
+#: ../../dev-manual/api/api-reference-archivematica.rst:451
+#: ../../dev-manual/api/api-reference-archivematica.rst:519
+#: ../../dev-manual/api/api-reference-archivematica.rst:544
+#: ../../dev-manual/api/api-reference-archivematica.rst:646
+#: ../../dev-manual/api/api-reference-archivematica.rst:689
+msgid "Example response (JSON):"
+msgstr "レスポンス例（JSON）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:352
+msgid "**/api/ingest/<SIP UUID>/delete/**"
+msgstr "**/api/ingest/<SIP UUID>/delete/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:352
+msgid "*Hides a SIP.*"
+msgstr "*SIPを非表示にします。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:365
+msgid "List SIPS Waiting for User Input"
+msgstr "ユーザー入力待ちのSIPSをリストアップ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:368
+msgid "**/api/ingest/waiting**"
+msgstr "**/api/ingest/waiting**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:368
+msgid "*Returns a list of SIPs waiting for user input.*"
+msgstr "*ユーザー入力を待っているSIPのリストを返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:376
+msgid "\"Fetched units successfully.\""
+msgstr "\"ユニットの取得に成功。\""
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:378
+msgid "``results:``"
+msgstr "``results:``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:378
+#: ../../dev-manual/api/api-reference-archivematica.rst:626
+msgid "List of dicts with keys:"
+msgstr "キーを持つ辞書のリスト："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:380
+msgid "``sip_directory``: Directory the SIP is in currently."
+msgstr "``sip_directory`` ：SIPが現在あるディレクトリ。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:382
+msgid "``sip_uuid``: UUID OF THE SIP."
+msgstr "``sip_uuid`` ：SIPのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:384
+msgid "``sip_name``: Name of the SIP."
+msgstr "``sip_name`` ：SIPの名前。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:386
+msgid "``microservice``: Name of the current microservice."
+msgstr "``microservice`` ：現在のマイクロサービスの名前。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:392
+msgid ""
+"Despite the URL, this currently returns both SIPs & transfers that are "
+"waiting for user input. In the future, a separate **/api/transfer/ waiting**"
+" should be added for transfers."
+msgstr ""
+"URLとは裏腹に、これは現在、ユーザー入力待ちのSIPと転送（forward）の両方を返します。将来的には、転送（transfer）に "
+"**/api/transfer/ waiting** が追加されるはずです。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:408
+msgid "**/api/ingest/completed/**"
+msgstr "**/api/ingest/completed/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:408
+msgid "*Returns a list of completed SIPs.*"
+msgstr "*完了したSIPのリストを返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:420
+msgid "Reingest"
+msgstr "再インジェスト"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:423
+msgid "**/api/ingest/reingest**"
+msgstr "**/api/ingest/reingest**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:423
+msgid "*Starts a partial or metadata-only reingest.*"
+msgstr "*部分的またはメタデータのみの再インジェストを開始します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:456
+msgid "Copy metadata"
+msgstr "メタデータをコピー"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:459
+msgid "**/api/ingest/copy_metadata_files/**"
+msgstr "**/api/ingest/copy_metadata_files/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:459
+msgid "*Adds metadata files to a SIP.*"
+msgstr "*SIPにメタデータファイルを追加します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:470
+msgid "UUID of the SIP to put files in."
+msgstr "ファイルを配置するSIPのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:472
+msgid "``source_paths[]``"
+msgstr "``source_paths[]``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:472
+msgid ""
+"List of files to be copied, base64 encoded, in the format "
+"'source_location_uuid:full_path'"
+msgstr ""
+"コピーされるファイルのリスト。base64エンコードされ、フォーマットは、「source_location_uuid：full_path」です"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:497
+msgid "Administration"
+msgstr "管理"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:499
+msgid ""
+"Administration enables you to configure various parts of the application and"
+" manage integrations and users."
+msgstr "管理では、アプリケーションの様々な部分を設定し、統合やユーザーを管理できます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:504
+msgid "Levels of description"
+msgstr "記述のレベル"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:508
+msgid "**/api/administration/dips/atom /levels/**"
+msgstr "**/api/administration/dips/atom /levels/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:508
+msgid "*Returns a JSON-encoded set of the configured levels of description.*"
+msgstr "*設定された記述レベルのセットをJSONエンコードして返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:521
+msgid ""
+"The following response includes a list of AtoM Levels of description with "
+"key 'UUID' and value 'name of level of description'."
+msgstr ""
+"以下のレスポンスは、キー「UUID」と値「name of level of description」を持つAtoM記述レベルのリストを含みます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:528
+msgid "Fetch levels of description"
+msgstr "説明のレベルを取得"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:532
+msgid "**/api/administration/dips/atom/fetch_levels/**"
+msgstr "**/api/administration/dips/atom/fetch_levels/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:532
+msgid ""
+"*Fetches all levels of description from an AtoM database, replacing any "
+"previously existing.*"
+msgstr "*AtoMデータベースからすべてのレベルの記述を取得し、既存の記述を置き換えます。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:546
+msgid ""
+"The following response includes an updated list of AtoM Levels of "
+"description with key 'UUID' and value 'name of level of description'."
+msgstr ""
+"以下のレスポンスには、キー「UUID」と値「name of level of "
+"description」を持つ、更新されたAtoM記述レベルのリストを含みます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:555
+msgid "Unit"
+msgstr "ユニット"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:557
+msgid ""
+"Unit refers to \"a type of Package Description that is specialized to "
+"provide information about an Archival Information Unit for use by Access "
+"Aids.\" (OAIS, p.1-13, Section 1.7.2)"
+msgstr ""
+"ユニットとは\"、アクセス補助が使用するアーカイブ情報ユニットに関する情報を提供するために特化されたパッケージ記述の一種を指します。\"（OAIS、p.1-13、セクション1.7.2）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:562
+msgid "List jobs"
+msgstr "ジョブ一覧"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:565
+msgid "**/api/v2beta/jobs/<unit UUID>/**"
+msgstr "**/api/v2beta/jobs/<unit UUID>/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:565
+msgid "*Returns a list of jobs for the passed unit (transfer or ingest).*"
+msgstr "*渡されたユニット（転送またはインジェスト）のジョブのリストを返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:570
+msgid "Query string parameters (optional):"
+msgstr "クエリ文字列パラメーター（オプション）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:574
+msgid "Name of the microservice the jobs belong to."
+msgstr "ジョブが属するマイクロサービスの名前。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:576
+#: ../../dev-manual/api/api-reference-archivematica.rst:594
+msgid "``link_uuid``"
+msgstr "``link_uuid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:576
+#: ../../dev-manual/api/api-reference-archivematica.rst:594
+msgid "UUID of the job chain link."
+msgstr "ジョブチェーンリンクのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:578
+#: ../../dev-manual/api/api-reference-archivematica.rst:588
+msgid "Name of the job."
+msgstr "ジョブ名。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:582
+msgid "Response definitions (from list of dicts):"
+msgstr "応答定義（ディクションのリストから）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:586
+msgid "UUID of the job."
+msgstr "ジョブのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:590
+msgid "One of USER_INPUT, PROCESSING, COMPLETE, FAILED or UNKNOWN."
+msgstr "USER_INPUT、PROCESSING、COMPLETE、FAILED、UNKNOWN のいずれか1つ。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:592
+msgid "Microservice to which the job belongs."
+msgstr "ジョブが属するマイクロサービス。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:596
+msgid "``tasks``"
+msgstr "``tasks``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:596
+msgid "List of dicts with information about the microservice's tasks."
+msgstr "マイクロサービスのタスクに関する情報を持つ辞書のリスト。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:599
+#: ../../dev-manual/api/api-reference-archivematica.rst:624
+msgid "UUID of the task."
+msgstr "タスクのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:601
+#: ../../dev-manual/api/api-reference-archivematica.rst:626
+msgid "``exit_code``"
+msgstr "``exit_code``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:601
+#: ../../dev-manual/api/api-reference-archivematica.rst:628
+msgid "Exit code of the task."
+msgstr "タスクの終了コード。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:609
+msgid "Example response (JSON body):"
+msgstr "レスポンスの例（JSONボディ）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:614
+msgid "Task"
+msgstr "タスク"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:617
+msgid "**/api/v2beta/task/<task UUID>/**"
+msgstr "**/api/v2beta/task/<task UUID>/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:617
+msgid "*Returns information about a task.*"
+msgstr "*タスクに関する情報を返します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:628
+msgid "``file_uuid``"
+msgstr "``file_uuid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:630
+msgid "``file_name``"
+msgstr "``file_name``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:630
+msgid "UUID of the file used for the task."
+msgstr "タスクに使用されるファイルのUUID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:632
+msgid "``time_created``"
+msgstr "``time_created``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:632
+msgid "File used for the task."
+msgstr "タスクに使用されるファイル。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:634
+msgid "``time_started``"
+msgstr "``time_started``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:634
+msgid "String (YYYY-MM-DD HH:MM:SS) representing when the task was created."
+msgstr "タスクがいつ作成されたかを表す文字列（YYYY-MM-DD HH：MM：SS）。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:637
+msgid "``duration``"
+msgstr "``duration``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:637
+msgid ""
+"Task duration in seconds (integer). If the duration is less than a second, "
+"this will be a < 1 string."
+msgstr "タスクの継続時間（秒）（整数）。秒未満の場合は< 1の文字列となります。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:653
+msgid "Other"
+msgstr "その他"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:655
+msgid ""
+"Other is a generic resource category that includes path metadata associated "
+"with level of description, and it also includes name associated with any "
+"customized processing configuration."
+msgstr "その他は、記述レベルに関連するパスメタデータを含む一般的なリソースカテゴリであり、カスタマイズされた処理設定に関連する名前も含みます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:660
+msgid "Path metadata"
+msgstr "パスのメタデータ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:663
+msgid "``GET, POST``"
+msgstr "``GET, POST``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:663
+msgid "**/api/filesystem/metadata/**"
+msgstr "**/api/filesystem/metadata/**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:663
+msgid ""
+"*Fetches (GET) or update (POST) metadata for a path (currently only level of"
+" description).*"
+msgstr "*パス（現在は説明レベルのみ）のメタデータを取得（GET）または更新（POST）します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:669
+msgid "Query string parameters or request body parameters:"
+msgstr "クエリ文字列パラメーターまたはリクエストボディパラメーター："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:671
+msgid ""
+"The following parameter can be submitted as query string parameter with GET "
+"or as a JSON object with a key-value pair in the request body with POST."
+msgstr ""
+"以下のパラメーターは、GETの場合はクエリー文字列パラメーターとして、POSTの場合はリクエストボディにキーと値のペアを持つJSONオブジェクトとして送信できます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:677
+msgid "Arranged path on which to get metadata."
+msgstr "メタデータを取得するために配列されたパス。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:681
+msgid "Response: the processing config file as a stream"
+msgstr "レスポンス：ストリームとしての処理設定ファイル"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:683
+#: ../../dev-manual/api/api-reference-archivematica.rst:735
+msgid "Content type: text/xml"
+msgstr "コンテンツタイプ：text/xml"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:695
+msgid "Processing configuration"
+msgstr "処理設定"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:699
+msgid "**/api/processing-configuration/<name>**"
+msgstr "**/api/processing-configuration/<name>**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:699
+msgid "*Returns processing onfiguration with <name>*"
+msgstr "*<name>* を持つ処理設定を返します"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:704
+msgid "Example request::"
+msgstr "リクエスト例::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:713
+msgid "Example response::"
+msgstr "レスポンス例::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:740
+msgid "Beta"
+msgstr "ベータ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:742
+msgid "API endpoints that are still in-flux and could potentially change."
+msgstr "まだ流動的で、変更の可能性があるAPIエンドポイント。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:745
+msgid "Package"
+msgstr "パッケージ"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:748
+msgid "**/api/v2beta/package**"
+msgstr "**/api/v2beta/package**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:748
+msgid "*Starts a new transfer type.*"
+msgstr "*新しい転送タイプを開始します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:751
+msgid "Request body parameters (mandatory):"
+msgstr "リクエストボディパラメーター（必須）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:755
+msgid "Transfer name."
+msgstr "転送名。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:757
+msgid "Path relative, or absolute to a storage service transfer source."
+msgstr "Storage Service転送元に対する相対パス、または絶対パス。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:762
+msgid "Request body parameters (optional):"
+msgstr "リクエストボディパラメーター（オプション）："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:766
+msgid ""
+"Transfer type. Valid values are: standard, zipfile, unzipped bag, zipped "
+"bag, dspace, maildir, TRIM, dataverse. Default: standard."
+msgstr ""
+"転送タイプ。有効な値は、standard、zipfile、unzip bag、zip "
+"bag、dspace、maildir、TRIM、dataverseです。デフォルト：standard。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:770
+msgid "``processing_config``"
+msgstr "``processing_config``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:770
+msgid "Processing configuration, e.g. default, automated, default: default"
+msgstr "処理設定（例：デフォルト、自動化、デフォルト：デフォルト）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:773
+msgid "Accession ID."
+msgstr "Accession ID。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:775
+msgid "``access_system_id``"
+msgstr "``access_system_id``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:775
+msgid "Access system ID (see `Docs <https://bit.ly/3c4yWt6>`_)."
+msgstr "アクセスシステムID（ `Docs <https://bit.ly/3c4yWt6>`_ を参照）。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:777
+msgid "``metadata_set_id``"
+msgstr "``metadata_set_id``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:777
+msgid ""
+"Used to link to metadata sets added via the user interface. It's safe to "
+"ignore this for now since metadata can't be associated to transfer via the "
+"API at the moment."
+msgstr ""
+"ユーザーインターフェース経由で追加されたメタデータセットへのリンクに使用されます。メタデータは、今のところ "
+"API経由で転送に関連付けることができないので、当面これは無視しても大丈夫です。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:782
+msgid "``auto_approve``"
+msgstr "``auto_approve``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:782
+msgid ""
+"Boolean true or false to set the transfer to auto-approve, default: true."
+msgstr "ブール値trueまたはfalseで、転送を自動承認に設定します。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:791
+msgid "``id``"
+msgstr "``id``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:791
+msgid ""
+"Transfer UUID (Note: as the package endpoint allows the caller to interact "
+"with Archivematica asynchronously it does not guarantee a transfer has "
+"started. The caller must use the UUID in the response to verify it has begun"
+" or any errors that were encountered initiating one.)"
+msgstr ""
+"転送UUID（注意：パッケージエンドポイントは、呼び出し元がArchivematicaと非同期でやり取りできるようにするものであり、転送が開始されたことを保証するものではありません。呼び出し側はレスポンスのUUIDを使用して、転送が開始されたこと、または転送を開始する際にエラーが発生したことを確認する必要があります）"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:799
+msgid "Examples:"
+msgstr "例："
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:801
+msgid ""
+"Only a subset of these options might be needed for most use-cases. A "
+"fundamental difference between the package endpoint and others from which a "
+"transfer can be initiated is that a storage service transfer location UUID "
+"isnt always required. In some cases that might still be ideal."
+msgstr ""
+"ほとんどのユースケースでは、これらのオプションのサブセットのみが必要になる場合があります。パッケージエンドポイントと、転送を開始できる他のエンドポイントとの基本的な違いは、Storage"
+" Serviceの転送場所 UUID が必ずしも必要ではないことです。場合によっては、それが依然として理想的な場合もあります。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:806
+msgid "*Starting a transfer using an absolute path*::"
+msgstr "*絶対パスを用いた転送の開始* ::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:821
+msgid ""
+"*Starting a transfer using an relative path with a transfer source UUID*::"
+msgstr "*転送元 UUID による相対パスを用いた転送の開始* ::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:838
+msgid "Validate"
+msgstr "妥当性確認"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:841
+msgid "**/api/v2beta/validate/<validator>**"
+msgstr "**/api/v2beta/validate/<validator>**"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:841
+msgid ""
+"*Available in Archivematica 1.10+. This endpoint can be used to validate "
+"CSVs against embedded sets of rules. Currently works with Avalon Media "
+"System Manifest (``avalon``) and rights.csv (``rights``) files.*"
+msgstr ""
+"*Archivematica "
+"1.10+で利用可能です。このエンドポイントを使用して、埋め込まれたルールセットに対してCSVを妥当性確認できます。現在、Avalon Media "
+"System Manifest（ ``avalon`` ）およびrights.csv（ ``rights`` ）ファイルで動作します。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:846
+msgid ""
+"*In the future, this endpoint can be extended to support validation for "
+"metadata.csv or archivesspaceids.csv, or other institutionally-based rules.*"
+msgstr ""
+"*将来的には、このエンドポイントを拡張して、metadata.csvやarchivesspaceids.csv、あるいはその他の機関ベースのルールに対する妥当性確認をサポートできます。*"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:855
+msgid "``valid``"
+msgstr "``valid``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:855
+msgid "Boolean true or false."
+msgstr "ブール値のtrueまたはfalse。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:857
+msgid "``reason``"
+msgstr "``reason``"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:857
+msgid "Includes validation error."
+msgstr "妥当性確認エラーを含みます。"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:861
+msgid "Usage example (assuming that avalon.csv exists)::"
+msgstr "使用例（avalon.csv が存在する場合）::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:869
+msgid "Response examples"
+msgstr "レスポンス例"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:871
+msgid "200 OK::"
+msgstr "200 OK::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:877
+msgid ""
+"400 Bad Request (expect reason to include different validation errors)::"
+msgstr "400 Bad Request（異なる妥当性確認エラーが含まれることを想定）::"
+
+#: ../../dev-manual/api/api-reference-archivematica.rst:884
+msgid "404 Not Found::"
+msgstr "404見つかりません::"

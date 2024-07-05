@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:5
+msgid "Error reporting"
+msgstr "エラーレポート"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:9
+msgid ""
+"If you find a security vulnerability, do NOT open an issue. Email "
+"info@artefactual.com instead."
+msgstr ""
+"セキュリティの脆弱性を見つけた場合は、issueを開かないでください。代わりにinfo@artefactual.comにメールを送ってください。"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:12
+msgid ""
+"When an error or bug is encountered, we request that Archivematica users:"
+msgstr "エラーやバグが発生した場合、Archivematicaユーザーの皆様にお願いがあります："
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:14
+msgid ""
+"Search the `User Forum "
+"<https://groups.google.com/forum/#!forum/archivematica>`_ for similar "
+"problems and post a new thread if necessary."
+msgstr ""
+"`ユーザーフォーラム <https://groups.google.com/forum/#!forum/archivematica>`_ "
+"で同様の問題を検索し、必要に応じて新しいスレッドを投稿してください。"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:17
+msgid ""
+"Search and/or report in our issue tracker. We use a GitHub repository to "
+"track issues for Archivematica: https://github.com/archivematica/Issues/"
+msgstr ""
+"当社の問題追跡ツールで検索・報告してください。Archivematicaでは、GitHubリポジトリを使用して課題を追跡しています：https://github.com/archivematica/Issues/"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:20
+msgid ""
+"You will need a `GitHub account <https://github.com/join?source=experiment-"
+"header-dropdowns-home>`_ to file a new issue or comment on an existing one. "
+"Optionally, you can also join the Archivematica Issues-Committers team to "
+"add labels to issues and edit the Issues Wiki. Please see the `Issues wiki "
+"<https://github.com/archivematica/Issues/wiki>`_ for more details."
+msgstr ""
+"新しい課題を提出したり、既存の課題にコメントしたりするには、 `GitHubアカウント "
+"<https://github.com/join?source=experiment-header-dropdowns-home>`_ "
+"が必要です。オプションで、Archivematica Issues-Committersチームに参加し、issueにラベルを追加したり、issue "
+"Wikiを編集したりもできます。詳しくは、 `Issues wiki "
+"<https://github.com/archivematica/Issues/wiki>`_ を参照してください。"
+
+#: ../../getting-started/troubleshooting/error-reporting.rst:27
+msgid ":ref:`Back to the top <error-reporting>`"
+msgstr ":ref:`トップに戻る <error-reporting>`"

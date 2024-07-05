@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/overview/system-requirements.rst:4
+msgid "System requirements"
+msgstr "システム要件"
+
+#: ../../getting-started/overview/system-requirements.rst:7
+msgid "Browser compatibility"
+msgstr "ブラウザの互換性"
+
+#: ../../getting-started/overview/system-requirements.rst:9
+msgid ""
+"Archivematica is tested most extensively in Firefox and Chrome. There have "
+"been known issues in testing with Internet Explorer (see :issue:`7246`). "
+"Minimal, but successful, testing has been done with Microsoft Edge."
+msgstr ""
+"Archivematicaは、FirefoxとChromeで最も広範囲にテストされています。Internet "
+"Explorerでのテストでは、既知の問題があります（issue： `7246` 参照）。Microsoft "
+"Edgeでのテストは、最小限ですが、成功しています。"
+
+#: ../../getting-started/overview/system-requirements.rst:14
+msgid "Resource allocation"
+msgstr "リソース配分"
+
+#: ../../getting-started/overview/system-requirements.rst:16
+msgid "For recommended resource allocation, please see:"
+msgstr "推奨されるリソース配分については、こちらを参照してください："
+
+#: ../../getting-started/overview/system-requirements.rst:18
+msgid ""
+":ref:`Recommended Minimum Requirements for small-scale testing "
+"<requirements-small>`"
+msgstr ":ref:`小規模試験のための推奨最低要件 <requirements-small>`"
+
+#: ../../getting-started/overview/system-requirements.rst:19
+msgid ""
+":ref:`Recommended Minimum Requirements for production processing "
+"<requirements-production>`"
+msgstr ":ref:`生産工程における推奨最低要件 <requirements-production>`"
+
+#: ../../getting-started/overview/system-requirements.rst:21
+msgid ":ref:`Back to the top <system-requirements>`"
+msgstr ":ref:`トップに戻る <system-requirements>`"

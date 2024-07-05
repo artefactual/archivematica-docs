@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/backlog/backlog.rst:5
+msgid "Backlog"
+msgstr "Backlog"
+
+#: ../../user-manual/backlog/backlog.rst:7
+msgid ""
+"At the end of the :ref:`Transfer tab microservices <transfer-tab-"
+"microservices>`, users are given the option to place a transfer into a "
+"backlog storage space. Users may choose to use the backlog in order to do "
+"more analysis on the materials at a later date, either outside of "
+"Archivematica or by using the :ref:`Appraisal tab <appraisal>` features, "
+"before placing the materials in long-term storage."
+msgstr ""
+":ref:`Transferタブのマイクロサービス <transfer-tab-microservices>` "
+"の最後に、ユーザーには転送をバックログ保存スペースに置くオプションが与えられます。このバックログは、後日Archivematicaの外部や、 "
+":ref:`[鑑定]タブ <appraisal>` の機能を使って、長期保存する前に素材の分析を行うために使用できます。"
+
+#: ../../user-manual/backlog/backlog.rst:14
+msgid ""
+"Transfers placed in the backlog have undergone basic digital preservation "
+"microservices - for example, all files have been given UUIDs, checksums have"
+" been generated, the files have been scanned for viruses, and identification"
+" and validation information has been captured. The transfer has also been "
+"converted into `bag`_."
+msgstr ""
+"バックログに置かれた転送は、基本的なデジタル保存マイクロサービスを受けています。たとえば、すべてのファイルに UUID "
+"が割り当てられ、チェックサムが生成され、ファイルのウイルススキャンが行われ、識別情報と妥当性確認情報がキャプチャされています。転送も `バッグ`_ "
+"に変換されました。"
+
+#: ../../user-manual/backlog/backlog.rst:20
+msgid ""
+"By navigating to the Backlog tab, users can view, search for, and request "
+"deletion of transfers that have been sent to backlog."
+msgstr "バックログタブに移動すると、ユーザーは、バックログに送られた転送の表示、検索、削除を要求できます。"
+
+#: ../../user-manual/backlog/backlog.rst:25
+msgid ""
+"If you are running :ref:`Archivematica without Elasticsearch <install-"
+"elasticsearch>` or with limited Elasticsearch functionality, the Backlog tab"
+" may not appear in your dashboard."
+msgstr ""
+":ref:`Elasticsearch を使用せずに Archivematica <install-elasticsearch>` "
+"を実行している場合、または Elasticsearch の機能が制限されている場合、ダッシュボードに [バックログ] タブが表示されないことがあります。"
+
+#: ../../user-manual/backlog/backlog.rst:29
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/backlog/backlog.rst:31
+msgid ":ref:`Searching for transfers and files <backlog-transfer-search>`"
+msgstr ":ref:`転送とファイルの検索 <backlog-transfer-search>`"
+
+#: ../../user-manual/backlog/backlog.rst:32
+msgid ":ref:`Downloading transfers or files <backlog-download>`"
+msgstr ":ref:`転送またはファイルのダウンロード <backlog-download>`"
+
+#: ../../user-manual/backlog/backlog.rst:33
+msgid ":ref:`Deleting transfers from the backlog <backlog-delete>`"
+msgstr ":ref:`バックログから転送を削除 <backlog-delete>`"
+
+#: ../../user-manual/backlog/backlog.rst:34
+msgid ":ref:`Retrieving transfers from the backlog <backlog-retrieve>`"
+msgstr ":ref:`バックログからの転送の検索 <backlog-retrieve>`"
+
+#: ../../user-manual/backlog/backlog.rst:39
+msgid "Searching for transfers and files"
+msgstr "転送とファイルの検索"
+
+#: ../../user-manual/backlog/backlog.rst:41
+msgid ""
+"The backlog tab shows a paginated list of all the transfers that have been "
+"sent to the backlog."
+msgstr "バックログタブには、バックログに送られたすべての転送のページ付きリストが表示されます。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab showing all transfers in the backlog"
+msgstr "Archivematica のバックログタブに、バックログ内のすべての転送が表示されます"
+
+#: ../../user-manual/backlog/backlog.rst:49
+msgid ""
+"To change the columns that are visible in the tabular list of backlogged "
+"transfers, click on the **Select columns** icon at the bottom of the table. "
+"This will present a list of the columns that are available for viewing in "
+"the table. The blue row indicates that a column is currently visible. A "
+"white row indicates that the column is currently not visible."
+msgstr ""
+"バックログ転送の表形式リストで表示される列を変更するには、表の下部にある **Select columns** "
+"アイコンをクリックします。これにより、表で表示可能な列のリストが表示されます。青い行は、列が現在表示されていることを示します。白い行は、その列が現在表示されていないことを示します。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab showing select columns options"
+msgstr "列の選択オプションを示す Archivematica バックログタブ"
+
+#: ../../user-manual/backlog/backlog.rst:60
+msgid ""
+"Click on a blue or white row to toggle this value for each column. In the "
+"example below, all the available columns are selected. Note that your column"
+" selection choices will persist between your user sessions and apply to "
+"other users of the same Archivematica instance."
+msgstr ""
+"青または白の行をクリックして、列ごとにこの値を切り替えます。以下の例では、使用可能なすべての列が選択されています。列の選択内容は、ユーザー "
+"セッション間で保持され、同じ Archivematica インスタンスの他のユーザーに適用されることに注意してください。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab showing all columns selected"
+msgstr "選択されたすべての列を示す Archivematicaバックログタブ"
+
+#: ../../user-manual/backlog/backlog.rst:70
+msgid ""
+"You can click on the column headers to sort in ascending or descending "
+"order. An up or down caret (arrow point) will appear. (e.g. see File count "
+"below)"
+msgstr ""
+"列のヘッダーをクリックすると、昇順または降順に並べ替えることができます。上下のキャレット（矢印）が表示されます。（例：下記のファイル数を参照）"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab sorted on File count column"
+msgstr "ファイル数列でソートされたArchivematicaバックログタブ"
+
+#: ../../user-manual/backlog/backlog.rst:78
+msgid ""
+"Note that the same column selection ability applies when you enable the "
+"“Show files?” option."
+msgstr "なお、「ファイルを表示しますか？」オプションを有効にした場合も、同じように列を選択できます。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab with Show Files option"
+msgstr "「ファイルを表示」 オプションを備えた 「Archivematica バックログ」 タブ"
+
+#: ../../user-manual/backlog/backlog.rst:86
+msgid ""
+"The search fields at the top of the page can be used to search the backlog. "
+"You can limit your search to the file name, file extension, accession "
+"number, Ingest date or Transfer UUID. Leaving the search parameter set to "
+"\"Any\" will also display search results from the transfer name. Click on "
+"**Add new** to add a second boolean string to your search query."
+msgstr ""
+"ページ上部の検索フィールドを使用して、バックログを検索できます。ファイル名、ファイル拡張子、アクセッション番号、インジェスト date、Transfer"
+" UUIDのいずれかに限定して検索できます。検索パラメーターを\"任意\"に設定したままにしておくと、転送名から検索結果を表示もできます。 **Add "
+"new** をクリックすると、検索クエリに2つ目のブーリアン文字列を追加できます。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid "Archivematica backlog tab showing a search for transfers."
+msgstr "転送の検索を表示する Archivematica バックログタブ。"
+
+#: ../../user-manual/backlog/backlog.rst:97
+msgid ""
+"Search results for transfers with transfer names that include \"backlog\" "
+"and a dash AND transfers that include a file with the exact phrase "
+"\"pepperbox-poppy\" in the file name."
+msgstr ""
+"\"バックログ\"を含む転送名を持つ転送の検索結果とファイル名に \"pepperbox-poppy\" "
+"というフレーズが完全に含まれるファイルが含まれる ダッシュAND転送。"
+
+#: ../../user-manual/backlog/backlog.rst:101
+msgid ""
+"To view individual files in your search results, click the checkbox next to "
+"**Show files?**"
+msgstr "検索結果で個々のファイルを表示するには、 **ファイルを表示しますか?** の横にあるチェックボックスをクリックします"
+
+#: ../../user-manual/backlog/backlog.rst:109
+msgid "The same search results as above, with **Show files?** selected."
+msgstr "**ファイルを表示しますか?** が選択され、上記と同じ検索結果が表示されます。"
+
+#: ../../user-manual/backlog/backlog.rst:114
+msgid "Downloading transfers or files"
+msgstr "転送またはファイルのダウンロード"
+
+#: ../../user-manual/backlog/backlog.rst:116
+msgid ""
+"Whole transfers or individual files can be downloaded by selecting the "
+"**Download** button in the Actions column."
+msgstr "[アクション] 列の **ダウンロード** ボタンを選択すると、転送全体または個々のファイルをダウンロードできます。"
+
+#: ../../user-manual/backlog/backlog.rst:119
+msgid ""
+"Transfers are downloaded as tar packages. Individual files are downloaded "
+"unpackaged."
+msgstr "転送は、tarパッケージとしてダウンロードされます。個々のファイルはパッケージ化されずにダウンロードされます。"
+
+#: ../../user-manual/backlog/backlog.rst:125
+msgid "Deleting transfers"
+msgstr "転送の削除"
+
+#: ../../user-manual/backlog/backlog.rst:127
+msgid ""
+"Similar to :ref:`deleting a stored AIP <delete-aip>`, deleting a backlogged "
+"transfer is a two-step process. Front-end users can request that a transfer "
+"in backlog be deleted, but an administrator must log in to the Archivematica"
+" Storage Service to confirm the deletion."
+msgstr ""
+":ref:`保存されたAIPの削除 <delete-aip>` "
+"と同様に、バックログの転送の削除は、2段階のプロセスで行われます。フロントエンドユーザーは、バックログにある転送の削除をリクエストできますが、管理者は、Archivematica"
+" Storage Serviceにログインして削除を確認する必要があります。"
+
+#: ../../user-manual/backlog/backlog.rst:132
+msgid ""
+"To request that a transfer is deleted, click on the red remove icon in the "
+"Actions column."
+msgstr "転送の削除を依頼するには、「アクション」列の赤い削除アイコンをクリックします。"
+
+#: ../../user-manual/backlog/backlog.rst:135
+msgid ""
+"You will be prompted to provide a reason for deleting the transfer. Enter "
+"the reason and select **Delete**."
+msgstr "転送を削除する理由を入力するプロンプトが表示されます。理由を入力し、 **Delete** を選択します。"
+
+#: ../../user-manual/backlog/backlog.rst
+msgid ""
+"Screen prompting user to provide a reason for deleting a transfer. The user "
+"has written \"This is a test\" in the textbox."
+msgstr "転送を削除する理由を入力するようユーザーに求める画面。ユーザーはテキストボックスに\"と書き込みました。これはテキストボックスのテスト\"です。"
+
+#: ../../user-manual/backlog/backlog.rst:143
+msgid ""
+"Until the deletion is confirmed by a Storage Service administrator, the "
+"transfer will remain visible in the backlog tab and will still be available "
+"for download."
+msgstr "Storage Service管理者によって削除が確認されるまでは、転送はバックログタブに表示されたままとなり、まだダウンロード可能です。"
+
+#: ../../user-manual/backlog/backlog.rst:150
+msgid "Retrieving transfers from the backlog"
+msgstr "バックログからの転送の検索"
+
+#: ../../user-manual/backlog/backlog.rst:152
+msgid ""
+"Materials in backlog can be analysed, appraised, and arranged by using the "
+"functionality on the :ref:`Appraisal tab <appraisal>`. Once you are ready to"
+" move a transfer out of the backlog and process it for long-term storage, "
+"follow the instructions in the see :ref:`Arranging a SIP through drag-and-"
+"drop <arrangement-drag-drop>` section of the Appraisal tab documentation."
+msgstr ""
+"バックログにある素材は、 :ref:`「鑑定」タブ <appraisal>` "
+"の機能を使用して、分析、鑑定、整理できます。バックログから転送し、長期保管のために処理する準備ができたら、「鑑定」タブ文書の "
+":ref:`「ドラッグ＆ドロップでSIPを配列」 <arrangement-drag-drop>` セクションの指示に従ってください。"
+
+#: ../../user-manual/backlog/backlog.rst:158
+msgid ":ref:`Back to the top <backlog>`"
+msgstr ":ref:`トップに戻る <backlog>`"

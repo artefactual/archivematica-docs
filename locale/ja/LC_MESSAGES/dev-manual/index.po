@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../dev-manual/index.rst:5
+msgid "Developer's manual"
+msgstr "開発者マニュアル"
+
+#: ../../dev-manual/index.rst:7
+msgid ""
+"Guidelines for developers interested in customizing Archivematica, "
+"developing new modules, and working with the application’s API."
+msgstr "Archivematicaのカスタマイズ、新しいモジュールの開発、アプリケーションのAPIを使用する開発者向けのガイドラインです。"
+
+#: ../../dev-manual/index.rst:17
+msgid ":ref:`Back to top <dev-manual-index>`"
+msgstr ":ref:`トップに戻る <dev-manual-index>`"

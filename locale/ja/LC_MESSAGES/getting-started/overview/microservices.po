@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/overview/microservices.rst:5
+msgid "Microservices"
+msgstr "マイクロサービス"
+
+#: ../../getting-started/overview/microservices.rst:7
+msgid ""
+"Archivematica implements a microservice approach to digital preservation. "
+"The Archivematica microservices are granular system tasks which operate on a"
+" conceptual entity that is equivalent to an OAIS information package: "
+"Submission Information Package (SIP), Archival Information Package (AIP), "
+"Dissemination Information Package (DIP). The physical structure of an "
+"information package will include files, checksums, logs, submission "
+"documentation, XML metadata, etc."
+msgstr ""
+"Archivematicaは、デジタル保存のためのマイクロサービス・アプローチを実装しています。Archivematicaのマイクロサービスは、OAISの情報パッケージに相当する概念的なエンティティ上で動作する粒度の細かいシステムタスク：投稿情報パッケージ（SIP）、アーカイブ情報パッケージ（AIP）、普及情報パッケージ（DIP）です。情報パッケージの物理的な構造には、ファイル、チェックサム、ログ、提出文書、XMLメタデータなどが含まれます。"
+
+#: ../../getting-started/overview/microservices.rst:-1
+msgid "Diagram showing general microservice workflow."
+msgstr "一般的なマイクロサービスのワークフローを示す図。"
+
+#: ../../getting-started/overview/microservices.rst:19
+msgid ""
+"These information packages are processed using a series of microservices. "
+"microservices are provided by a combination of Archivematica Python scripts "
+"and one or more of the free, open-source :ref:`external tools <external-"
+"tools>` bundled in the Archivematica system. Each microservice results in a "
+"success or error state and the information package is processed accordingly "
+"by the next microservice."
+msgstr ""
+"これらの情報パッケージは、一連のマイクロサービスを使用して処理されます。マイクロサービスは、Archivematica "
+"Pythonスクリプトと、Archivematicaシステムにバンドルされている無料のオープンソース :ref:`外部ツール <external-"
+"tools>` "
+"の1つまたは複数の組み合わせによって提供されます。各マイクロサービスは、成功またはエラーの状態をもたらし、情報パッケージは、次のマイクロサービスによって適宜処理されます。"
+
+#: ../../getting-started/overview/microservices.rst:26
+msgid ""
+"There are a variety of mechanisms used to connect the various microservices "
+"together into complex, custom workflows, resulting in a complete ingest to "
+"access system."
+msgstr ""
+"さまざまなマイクロサービスを複雑なカスタムワークフローに接続するために多様なメカニズムが使用されており、その結果、システムにアクセスするための完全なインジェストが実現されます。"
+
+#: ../../getting-started/overview/microservices.rst:30
+msgid ""
+"Archivematica implements a default ingest to access workflow that is "
+"compliant with the ISO-OAIS functional model. Microservices can be "
+"distributed to processing clusters for highly scalable configurations."
+msgstr ""
+"Archivematicaは、ISO-"
+"OAIS機能モデルに準拠したデフォルトのインジェストからアクセスまでのワークフローを実装しています。マイクロサービスを処理クラスタに分散することで、拡張性の高い構成を実現できます。"
+
+#: ../../getting-started/overview/microservices.rst:34
+msgid ":ref:`Back to the top <microservices>`"
+msgstr ":ref:`トップに戻る <microservices>`"

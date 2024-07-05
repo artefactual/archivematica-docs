@@ -1,0 +1,1588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/import-metadata.rst:5
+msgid "Import metadata"
+msgstr "メタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:7
+msgid ""
+"Archivematica can recognize descriptive, rights, and/or event metadata that "
+"is included with your transfer. You can import metadata by including a "
+"directory called ``metadata`` in your transfer. The directory can contain "
+"any type of metadata that you wish to preserve alongside your digital "
+"objects. The Process Metadata Directory Microservice will perform a number "
+"of preservation actions on objects in this directory."
+msgstr ""
+"Archivematica は、転送に含まれる記述、権利、イベントのメタデータを認識できます。 ``metadata`` "
+"というディレクトリを転送に含めることで、メタデータをインポートできます。このディレクトリには、デジタルオブジェクトと一緒に保存したいあらゆるタイプのメタデータを含めることができます。Process"
+" Metadata Directory Microserviceは、このディレクトリ内のオブジェクトに対して多くの保存アクションを実行します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:14
+msgid ""
+"Archivematica supports conventions for importing descriptive, rights, and "
+"event metadata that will transpose the contents of the metadata files into "
+"the AIP METS file. If you are using :ref:`AtoM <atom-setup>` or "
+":ref:`ArchivesSpace <archivesspace-setup>`, metadata that is transposed to "
+"the METS can be passed on to these access systems for further use."
+msgstr ""
+"Archivematica は、説明メタデータ、権利メタデータ、イベントメタデータをインポートするための規約をサ "
+"ポートしており、メタデータファイルの内容を AIP METS ファイルに転置します。 :ref:`AtoM <atom-setup>` または "
+":ref:`ArchivesSpace <archivesspace-setup>` を使用している場合、METS "
+"にトランスポーズされたメタデータは、これらのアクセスシステムで使用できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:20
+msgid ""
+"Metadata that is not able to be transposed to the METS - for example, "
+"preservation metadata created by tool like BitCurator prior to ingest into "
+"Archivematica - will be preserved alongside the materials in the transfer."
+msgstr ""
+"METS に転置できないメタデータ。たとえば、Archivematica にインジェストする前に BitCurator "
+"などのツールによって作成された保存メタデータは、転送中の素材と一緒に保存されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:24
+msgid ""
+"Descriptive, rights, and/or event metadata can be added to standard, "
+"unzipped, zipped, and disk image :ref:`transfer types <transfer-types>`."
+msgstr ""
+"記述、権利、イベントのメタデータは、標準、解凍、圧縮、ディスクイメージの :ref:`転送タイプ <transfer-types>` に追加できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:27
+msgid ""
+"Metadata in the METS file is searchable in the :ref:`Archival Storage "
+"<archival-storage>` tab."
+msgstr "METS ファイル内のメタデータは、 :ref:`アーカイブストレージ <archival-storage>` タブで検索できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:30
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/transfer/import-metadata.rst:32
+msgid ":ref:`Importing descriptive metadata with metadata.csv <metadata.csv>`"
+msgstr ":ref:`metadata.csv を使用した説明メタデータのインポート <metadata.csv>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:34
+msgid ""
+":ref:`Adding descriptive metadata to individual objects <object-metadata>`"
+msgstr ":ref:`個々のオブジェクトへの説明メタデータの追加 <object-metadata>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:35
+msgid ":ref:`Adding descriptive metadata to a directory <directory-metadata>`"
+msgstr ":ref:`ディレクトリへの説明メタデータの追加 <directory-metadata>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:36
+msgid ":ref:`Adding non-Dublin Core metadata <non-dc-metadata>`"
+msgstr ":ref:`ダブリンコア以外のメタデータの追加 <non-dc-metadata>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:37
+msgid ":ref:`Adding metadata using JSON files <metadata-json>`"
+msgstr ":ref:`JSON ファイルを使ったメタデータの追加 <metadata-json>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:39
+msgid ""
+":ref:`Importing and validating XML metadata with source-metadata.csv "
+"<metadata-xml-validation>`"
+msgstr ""
+":ref:`source-metadata.csv による XML メタデータのインポートと妥当性確認 <metadata-xml-"
+"validation>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:40
+msgid ":ref:`Importing rights metadata with rights.csv <rights.csv>`"
+msgstr ":ref:`rights.csvを使った権利メタデータのインポート <rights.csv>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:41
+msgid ":ref:`Importing event metadata with premis.xml <premis.xml>`"
+msgstr ":ref:`premis.xml によるイベントメタデータのインポート <premis.xml>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:42
+msgid ":ref:`Adding metadata to bags <metadata-bags>`"
+msgstr ":ref:`バッグにメタデータを追加 <metadata-bags>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:43
+msgid ":ref:`Importing other types of metadata <other-metadata>`"
+msgstr ":ref:`他のタイプのメタデータのインポート <other-metadata>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:44
+msgid ""
+":ref:`Importing structural metadata with mets_structmap.xml <structmap.xml>`"
+msgstr ":ref:`mets_structmap.xml を使った構造メタデータのインポート <structmap.xml>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:48
+msgid ""
+":ref:`Create a transfer with submission documentation <create-submission>`"
+msgstr ":ref:`提出書類による転送を作成 <create-submission>`"
+
+#: ../../user-manual/transfer/import-metadata.rst:53
+msgid "Importing descriptive metadata with metadata.csv"
+msgstr "metadata.csv を使用した説明メタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:55
+msgid ""
+"Archivematica natively supports Dublin Core's `DCMI Metadata Terms`_, which "
+"includes the basic 15 elements from the `Dublin Core Metadata Element Set`_."
+" Using the metadata.csv method, users can also include :ref:`non-Dublin Core"
+" metadata <non-dc-metadata>`. Archivematica is able to pass Dublin Core "
+"metadata to AtoM or ArchivesSpace, but not non-Dublin Core metadata."
+msgstr ""
+"Archivematica は、Dublin Core の `DCMI メタデータ条件`_ をネイティブにサポートしています。これには、 `Dublin"
+" Core メタデータ要素セット`_ の基本的な 15 要素が含まれています。ユーザーは、metadata.csv メソッドを使用して、 "
+":ref:`Dublin Core 以外のメタデータ <non-dc-metadata>` を含めることもできます。Archivematica "
+"は、Dublin Core メタデータを AtoM または ArchivesSpace に渡すことができますが、Dublin Core "
+"以外のメタデータは渡すことができません。"
+
+#: ../../user-manual/transfer/import-metadata.rst:63
+msgid ""
+"Note: Archivematica can only read CSV files that have been encoded in UTF-8."
+" Metadata saved with a file encoding other than UTF-8 may not map correctly "
+"to the METS file, or may cause an error and not be added at all."
+msgstr ""
+"注意：Archivematica は、UTF-8 でエンコードされた CSV ファイルのみを読み取ることができます。UTF-8 "
+"以外のファイルエンコーディングで保存されたメタデータは、METS "
+"ファイルに正しくマッピングされないか、エラーが発生してまったく追加されない可能性があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:67
+msgid ""
+"Descriptive metadata can be applied to individual objects within a transfer,"
+" to directories within the transfer, or both."
+msgstr "説明メタデータは、転送内の個々のオブジェクト、転送内のディレクトリ、またはその両方に適用できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:73
+msgid "Adding descriptive metadata to individual objects"
+msgstr "個々のオブジェクトへの説明メタデータの追加"
+
+#: ../../user-manual/transfer/import-metadata.rst:75
+msgid ""
+"Metadata can be applied to individual objects within a transfer. For "
+"example, you could apply item-level descriptive metadata to an individual "
+"image or multimedia file. The following steps will take you through the "
+"basic workflow for creating a metadata.csv file that will apply metadata to "
+"individual objects."
+msgstr ""
+"メタデータは、転送内の個々のオブジェクトに適用できます。たとえば、個々の画像やマルチメディアファイルにアイテムレベルの説明メタデータを適用できます。次のステップでは、個々のオブジェクトにメタデータを適用するmetadata.csvファイルを作成する基本的なワークフローを説明します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:80
+#: ../../user-manual/transfer/import-metadata.rst:293
+msgid ""
+"Create a transfer directory containing the digital objects you would like to"
+" preserve (for more information on creating a basic transfer for "
+"Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,"
+" the following directory tree displays a basic transfer called "
+"``metadataTransfer``. One digital object sits within the top-level "
+"directory, while another object is nested within a subdirectory.::"
+msgstr ""
+"保存したいデジタルオブジェクトを含む転送ディレクトリを作成します（Archivematica の基本的な転送の作成方法については、 "
+":ref:`基本的な転送 <basic-transfers>` を参照してください）。例として、次のディレクトリツリーは、 "
+"``metadataTransfer`` "
+"という基本的な転送を表示しています。あるデジタルオブジェクトはトップレベルのディレクトリにあり、別のオブジェクトはサブディレクトリにネストされています。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:92
+#: ../../user-manual/transfer/import-metadata.rst:162
+#: ../../user-manual/transfer/import-metadata.rst:239
+#: ../../user-manual/transfer/import-metadata.rst:305
+msgid "Note that this transfer does not currently contain any metadata."
+msgstr "なお、この転送には現在メタデータは含まれていません。"
+
+#: ../../user-manual/transfer/import-metadata.rst:94
+msgid ""
+"Create a CSV file called metadata.csv. The example below can be used as a "
+"template for Dublin Core metadata. The filename column must come first and "
+"the filename path must always start with ``objects/``. Note that if you add "
+"column headings that are not in the ``dc.element`` or ``dcterms.element`` "
+"formats, Archivematica will not indicate that the metadata is Dublin Core."
+msgstr ""
+"metadata.csvというCSVファイルを作成します。以下の例はダブリンコアのメタデータのテンプレートとして使用できます。ファイル名の列が最初に来るようにし、ファイル名のパスは常に"
+" ``objects/`` で始まるようにします。 ``dc.element`` または ``dcterms.element`` "
+"フォーマット以外の列見出しを追加した場合、Archivematica はそのメタデータが Dublin Core "
+"であることを示しませんのでご注意ください。"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-delete.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "filename"
+msgstr "filename"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.title"
+msgstr "dc.title"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.creator"
+msgstr "dc.creator"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.subject"
+msgstr "dc.subject"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.description"
+msgstr "dc.description"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.publisher"
+msgstr "dc.publisher"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.contributor"
+msgstr "dc.contributor"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.date"
+msgstr "dc.date"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.type"
+msgstr "dc.type"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.format"
+msgstr "dc.format"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.identifier"
+msgstr "dc.identifier"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.source"
+msgstr "dc.source"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dc.language"
+msgstr "dc.language"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.relation"
+msgstr "dc.relation"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.coverage"
+msgstr "dc.coverage"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "dc.rights"
+msgstr "dc.rights"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/rights.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "objects/beihai.tif"
+msgstr "objects/beihai.tif"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Beihai, Guanxi, China, 1988"
+msgstr "Beihai, Guanxi, China, 1988"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "NASA/GSFC/METI/ERSDAC/ JAROS and U.S./Japan ASTER Science Team"
+msgstr "NASA/GSFC/METI/ERSDAC/ JAROS and U.S./Japan ASTER Science Team"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "China"
+msgstr "中国"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Beihai"
+msgstr "北海"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Beihai is a city in the south of Guangxi, People’s Republic of China."
+msgstr "北海は、中華人民共和国広西チワン族自治区南部の都市です。"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "NASA Jet Propulsion Laboratory"
+msgstr "NASAジェット推進研究所"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "February 29, 2016"
+msgstr "2016年2月29日"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "image"
+msgstr "画像"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "image.tif"
+msgstr "image.tif"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Public domain"
+msgstr "パブリックドメイン"
+
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+#: ../../user-manual/transfer/_csv/rights.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-delete.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "objects/audio/bird.mp3"
+msgstr "objects/audio/bird.mp3"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "14000 Caen, France - Bird in my garden"
+msgstr "14000 Caen, France - Bird in my garden"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Nicolas Germain"
+msgstr "Nicolas Germain"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "field recording"
+msgstr "field recording"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "soundscapes"
+msgstr "soundscapes"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "radio aporee"
+msgstr "radio aporee"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Bird singing in my garden, Caen, France, Zoom H6"
+msgstr "庭でさえずる鳥、フランス、カーン、ズームH6"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Radio Aporee"
+msgstr "Radio Aporee"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "2017-05-27"
+msgstr "2017-05-27"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "sound"
+msgstr "sound"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "audio/mp3"
+msgstr "audio/mp3"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+#: ../../user-manual/transfer/_csv/individual-metadata.csv:1
+msgid "Internet Archive"
+msgstr "インターネットアーカイブ"
+
+#: ../../user-manual/transfer/import-metadata.rst:104
+msgid ""
+"Note that empty columns (e.g. ``dc.contributor``) were left in to "
+"demonstrate the range of possible basic Dublin Core values. You do not need "
+"to keep empty columns."
+msgstr ""
+"可能な基本的な Dublin Core 値の範囲を示すために、空の列（例： ``dc.contributor`` "
+"）が残されていることに注意してください。空の列を保持する必要はありません。"
+
+#: ../../user-manual/transfer/import-metadata.rst:108
+#: ../../user-manual/transfer/import-metadata.rst:173
+msgid ""
+"Create a subdirectory called ``metadata`` and place the metadata.csv file "
+"inside it.::"
+msgstr "``metadata`` というサブディレクトリを作成し、その中に metadata.csv ファイルを配列します。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:118
+#: ../../user-manual/transfer/import-metadata.rst:186
+#: ../../user-manual/transfer/import-metadata.rst:263
+#: ../../user-manual/transfer/import-metadata.rst:359
+#: ../../user-manual/transfer/import-metadata.rst:505
+msgid ":ref:`Process the transfer <process-transfer>` as usual."
+msgstr "通常どおり、 :ref:`転送を処理 <process-transfer>` します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:120
+msgid ""
+"Any Dublin Core metadata formatted as in the example above will be "
+"transposed to the METS file. The METS file for the above example includes "
+"two descriptive metadata sections (``<dmdSec>``), one for each file in the "
+"transfer. These contain the Dublin Core metadata parsed from the "
+"metadata.csv; they include both ``dc.element`` and ``dcterms.element`` "
+"metadata. Note in the metadata wrapper (``<mdWrap>``) that they are given an"
+" MDTYPE of \"DC\". If there had been non-Dublin Core metadata in the "
+"metadata.csv, there would be a separate ``<mdWrap>`` for the file with an "
+"MDTYPE of \"OTHER\"."
+msgstr ""
+"上記の例のようにフォーマットされたDublin "
+"Coreメタデータはすべて、METSファイルに転置されます。上記の例のMETSファイルには、2つの説明メタデータセクション（ ``<dmdSec>`` "
+"）があり、転送の各ファイルに1つずつあります。これらには、metadata.csvから解析されたDublin "
+"Coreメタデータが含まれます。これらには、 ``dc.element`` と ``dcterms.element`` "
+"の両方のメタデータが含まれます。メタデータラッパー（ ``<mdWrap>`` ）では、\"DC\" "
+"のMDTYPEが与えられていることに注意してください。もしmetadata.csvにダブリンコア以外のメタデータがあれば、\"OTHER\" "
+"というMDTYPEを持つ ``<mdWrap>`` ファイルが別に存在することになります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:135
+msgid "Adding descriptive metadata to a directory"
+msgstr "ディレクトリへの説明メタデータの追加"
+
+#: ../../user-manual/transfer/import-metadata.rst:137
+msgid ""
+"Metadata can also be applied to a directory within the transfer. For "
+"example, you could apply directory-level descriptive metadata to folder "
+"containing the pages of a book, where the metadata describes the book itself"
+" rather than the individual pages. The following steps will take you through"
+" the basic workflow for creating a metadata.csv file that will apply "
+"metadata to a directory of objects."
+msgstr ""
+"メタデータは、転送内のディレクトリに適用もできます。たとえば、本のページを含むフォルダにディレクトリレベルの説明メタデータを適用でき、この場合、メタデータは個々のページではなく本自体を記述します。次の手順では、オブジェクトのディレクトリにメタデータを適用するmetadata.csvファイルを作成する基本的なワークフローを説明します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:144
+msgid ""
+"Note that the metadata.csv can contain directory-level metadata, individual "
+"object metadata, or a combination of both."
+msgstr ""
+"metadata.csv "
+"には、ディレクトリレベルのメタデータ、個々のオブジェクトのメタデータ、またはその両方の組み合わせを含めることができることに注意してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:147
+msgid ""
+"Create a transfer directory containing the digital objects you would like to"
+" preserve, organized as required within subdirectories (for more information"
+" on creating a basic transfer for Archivematica, see :ref:`Basic transfers "
+"<basic-transfers>`.) As an example, the following directory tree displays a "
+"basic transfer called ``directoryTransfer``. The transfer contains two "
+"subfolders, which each contain two images.::"
+msgstr ""
+"保存したいデジタルオブジェクトを含む転送ディレクトリを作成し、必要に応じてサブディレクトリ内に整理します（Archivematica "
+"の基本転送の作成の詳細については、 :ref:`基本転送 <basic-transfers>` "
+"を参照してください）。例として、次のディレクトリツリーには、 ``directoryTransfer`` という基本的な転送が表示されます。転送には 2"
+" つのサブフォルダーが含まれており、それぞれのサブフォルダーに 2 つの画像が含まれています。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:164
+msgid ""
+"Create a CSV file called metadata.csv. The example below can be used as a "
+"template for Dublin Core metadata. The filename column must come first and "
+"the filename path must always start with ``objects/``. In the example below,"
+" the filename column contains the directory path, instead of a filename "
+"path."
+msgstr ""
+"metadata.csvというCSVファイルを作成します。以下の例は、ダブリンコアのメタデータのテンプレートとして使用できます。ファイル名の列は必ず最初に来るようにし、ファイル名のパスは必ず"
+" ``objects/`` で始まるようにします。以下の例では、ファイル名の列にはファイル名のパスの代わりにディレクトリパスが含まれています。"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "objects/CoastNews-1964-01-02"
+msgstr "objects/CoastNews-1964-01-02"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Coast News, January 02, 1964"
+msgstr "Coast News, 1964年1月2日"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Fred Cruice"
+msgstr "Fred Cruice"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Gibsons (B.C.)–Newspapers"
+msgstr "ギブソンズ （B.C.） - 新聞"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "1964/01/02"
+msgstr "1964/01/02"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Scans of the January 2, 1964 issue of the Coast News."
+msgstr "Coast News 1964年1月2日号のスキャン。"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "English"
+msgstr "英語"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid ""
+"British Columbia Historical Newspapers collection, "
+"https://open.library.ubc.ca/collections/bcnewspapers/xcoastnews"
+msgstr ""
+"British Columbia Historical Newspapers "
+"コレクション、https://open.library.ubc.ca/collections/bcnewspapers/xcoastnews"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "objects/CoastNews-1964-01-09"
+msgstr "objects/CoastNews-1964-01-09"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Coast News, January 09, 1964"
+msgstr "Coast News, 1964年1月9日"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "1964/01/09"
+msgstr "1964/01/09"
+
+#: ../../user-manual/transfer/_csv/directory-metadata.csv:1
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Scans of the January 9, 1964 issue of the Coast News."
+msgstr "Coast News 1964年1月9日号のスキャン。"
+
+#: ../../user-manual/transfer/import-metadata.rst:188
+msgid ""
+"The METS file that results from the above example includes a ``<dmdSec>`` "
+"for each directory, rather than each individual file. These contain the "
+"Dublin Core metadata parsed from the metadata.csv."
+msgstr ""
+"上記の例の結果として得られる METS ファイルには、個々のファイルではなく、ディレクトリごとに ``<dmdSec>`` "
+"が含まれています。これらには、metadata.csv から解析された Dublin Core メタデータが含まれています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:198
+msgid "Adding non-Dublin Core descriptive metadata"
+msgstr "Dublin Core 以外の説明メタデータの追加"
+
+#: ../../user-manual/transfer/import-metadata.rst:200
+msgid ""
+"You may wish to capture metadata elements that are not supported by the "
+"Dublin Core Metadata Elements Set. As shown in the examples above, Dublin "
+"Core metadata is written to the ``<dmdSec>`` of the METS file with the "
+"metadata type indicated as ``MDTYPE=\"DC\"``. Non-Dublin Core metadata will "
+"be written into a separate ``<dmdSec>`` as ``MDTYPE=\"OTHER\"``."
+msgstr ""
+"Dublin Core Metadata Elements "
+"Setでサポートされていないメタデータ要素をインジェストたい場合もあります。上記の例に示すように、ダブリンコアのメタデータは、メタデータタイプが "
+"``MDTYPE=\"DC\"`` と示された METS ファイルの ``<dmdSec>`` に書き込まれます。ダブリンコア以外のメタデータは、 "
+"``<dmdSec>`` に ``MDTYPE=\"OTHER\"`` として書き込まれます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:206
+msgid ""
+"Here is an example of a metadata.csv file containing a mix of Dublin Core "
+"and non-Dublin Core descriptive metadata."
+msgstr "以下は、ダブリンコアと非ダブリンコアの説明メタデータが混在するmetadata.csvファイルの例です。"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "alternative_title"
+msgstr "alternative_title"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "dates_of_publication"
+msgstr "dates_of_publication"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "frequency"
+msgstr "頻度"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "digital_file_format"
+msgstr "digital_file_format"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Sunshine Coast News"
+msgstr "Sunshine Coast News"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "1945-1995"
+msgstr "1945-1995"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "Weekly"
+msgstr "毎週"
+
+#: ../../user-manual/transfer/_csv/mixed-metadata.csv:1
+msgid "jpg"
+msgstr "jpg"
+
+#: ../../user-manual/transfer/import-metadata.rst:213
+msgid ""
+"This results in a METS file containing two ``<dmdSec>`` sections for each "
+"directory - two with ``MDTYPE=\"DC\"`` and two with ``MDTYPE=\"OTHER\"``."
+msgstr ""
+"この結果、各ディレクトリに2つの ``<dmdSec>`` セクション（ ``MDTYPE=\"DC\"`` と "
+"``MDTYPE=\"OTHER\"`` ）を含むMETSファイルが作成されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:222
+msgid "Adding metadata using JSON files"
+msgstr "JSON ファイルを使ったメタデータの追加"
+
+#: ../../user-manual/transfer/import-metadata.rst:224
+msgid ""
+"It is possible to use a JSON file rather than a CSV to import Dublin Core "
+"metadata. The JSON file is added to the metadata directory as above."
+msgstr ""
+"CSV ではなく JSON ファイルを使用して Dublin Core メタデータをインポートすることができます。上記のように、JSON "
+"ファイルがメタデータ ディレクトリに追加されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:227
+msgid ""
+"Create a transfer directory containing the digital objects you would like to"
+" preserve (for more information on creating a basic transfer for "
+"Archivematica, see :ref:`Basic transfers <basic-transfers>`.) As an example,"
+" the following directory tree displays a basic transfer called "
+"``jsonMetadataTransfer``. One digital object sits within the top-level "
+"directory, while another object is nested within a subdirectory.::"
+msgstr ""
+"保存したいデジタルオブジェクトを含む転送ディレクトリを作成します（Archivematica の基本的な転送の作成方法については、 "
+":ref:`基本的な転送 <basic-transfers>` を参照してください）。例として、次のディレクトリツリーは、 "
+"``jsonMetadataTransfer`` "
+"という基本的な転送を表示しています。あるデジタルオブジェクトはトップレベルのディレクトリにあり、別のオブジェクトはサブディレクトリにネストされています。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:241
+msgid ""
+"Create a JSON file called metadata.json. The example below can be used as a "
+"template for Dublin Core metadata. The filename field must come first and "
+"the filename path must always start with ``objects/``. Note that if you add "
+"fields that are not in the ``dc.element`` or ``dcterms.element`` formats, "
+"Archivematica will not indicate that the metadata is Dublin Core."
+msgstr ""
+"metadata.jsonというJSONファイルを作成します。以下の例は、ダブリンコアのメタデータのテンプレートとして使用できます。ファイル名のフィールドが最初に来るようにし、ファイル名のパスは常に"
+" ``objects/`` で始まるようにします。 ``dc.element`` または ``dcterms.element`` "
+"フォーマット以外のフィールドを追加した場合、Archivematica はそのメタデータが Dublin Core "
+"であることを示しませんのでご注意ください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:250
+msgid ""
+"Repeating fields can be listed in an array, as with ``dc.subject`` in the "
+"example above."
+msgstr "上の例の ``dc.subject`` のように、繰り返しフィールドを配列で列挙できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:253
+msgid ""
+"Create a subdirectory called ``metadata`` and place the metadata.json file "
+"inside it.::"
+msgstr "``metadata`` というサブディレクトリを作成し、その中に metadata.json ファイルを配列します。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:265
+msgid "The METS file will be populated exactly as in the CSV examples above."
+msgstr "METS ファイルには、上記の CSV の例とまったく同じようにデータが入力されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:270
+msgid "Importing and validating XML metadata with source-metadata.csv"
+msgstr "source-metadata.csv による XML メタデータのインポートと妥当性確認"
+
+#: ../../user-manual/transfer/import-metadata.rst:272
+msgid ""
+"Users can add metadata files in XML format to their transfer, and have that "
+"metadata related to objects in the transfer and parsed into the METS file in"
+" the AIP. If formatted correctly, Archivematica can also validate the "
+"metadata to ensure it conforms with a local or linked standard."
+msgstr ""
+"ユーザーは、XML形式のメタデータファイルを転送に追加でき、転送内のオブジェクトに関連するメタデータをAIPのMETSファイルに解析させることができます。正しくフォーマットされていれば、Archivematica"
+" は、メタデータを妥当性確認し、ローカルまたはリンクされた標準に準拠していることを確認もできます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:278
+msgid "Setting up"
+msgstr "設定"
+
+#: ../../user-manual/transfer/import-metadata.rst:280
+msgid ""
+"This feature is disabled by default. It's still considered experimental and "
+"its validation rules need to be configured according to the user needs "
+"before using it."
+msgstr ""
+"この機能はデフォルトでは無効になっています。この機能はまだ実験的なものであり、使用する前にユーザーのニーズに応じて妥当性確認ルールを設定する必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:284
+msgid ""
+"The `Metadata XML validation variables "
+"<https://github.com/artefactual/archivematica/tree/179247f9e5508defd563e4eae3c73ea8e8b674f3/src/MCPClient/install#metadata-"
+"xml-validation-variables>`_ section of the MCPClient installation "
+"documentation explains how to enable and configure this feature. You can "
+"also check the `sample configuration files "
+"<https://github.com/artefactual/archivematica-"
+"sampledata/tree/b01539902198a9e4a15f76add7b6b129eecf6b7b/xml-validation>`_ "
+"used in the Archivematica Automated User Acceptance Tests (AMAUATs)."
+msgstr ""
+"MCPClient インストール文書の `Metadata XML validation variables "
+"<https://github.com/artefactual/archivematica/tree/179247f9e5508defd563e4eae3c73ea8e8b674f3/src/MCPClient/install#metadata-"
+"xml-validation-variables>`_ "
+"セクションでは、この機能を有効にして設定する方法を説明しています。また、Archivematica Automated User Acceptance "
+"Tests （AMAUATs） で使用されている `サンプル設定ファイル "
+"<https://github.com/artefactual/archivematica-"
+"sampledata/tree/b01539902198a9e4a15f76add7b6b129eecf6b7b/xml-validation>`_ "
+"を確認もできます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:291
+msgid "Adding and validating metadata"
+msgstr "メタデータの追加と妥当性確認"
+
+#: ../../user-manual/transfer/import-metadata.rst:307
+msgid ""
+"Create a CSV file called ``source-metadata.csv``. It must contain three "
+"columns in the following order:"
+msgstr ""
+"``source-metadata.csv`` というCSVファイルを作成します。このファイルには、以下の順序で3つの列が含まれていなければなりません："
+
+#: ../../user-manual/transfer/import-metadata.rst:310
+msgid ""
+"``filename``: a relative path of a digital object or a directory in the "
+"transfer. It must start with ``objects/``."
+msgstr "``filename`` ：転送内のデジタルオブジェクトまたはディレクトリの相対パス。 ``objects/`` で始まる必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:312
+msgid ""
+"``metadata``: a path of an XML file in the ``metadata`` directory with "
+"metadata about the digital object or directory specified in the ``filename``"
+" column. Optionally, this XML file can be validated using an XML schema and "
+"its contents are included in the METS file of the AIP."
+msgstr ""
+"``metadata`` ： ``filename`` 列で指定されたデジタルオブジェクトまたはディレクトリに関す るメタデータを含む "
+"``metadata`` ディレクトリ内の XML ファイルのパス。オプションとして、この XML ファイルは XML "
+"スキーマを用いて妥当性確認でき、その内容は AIP の METS ファイルに含まれます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:317
+msgid ""
+"``type``: a unique identifier for the metadata content. This identifier is "
+"used during metadata reingests to update or delete existing metadata."
+msgstr ""
+"``type`` "
+"メタデータのコンテンツに対する一意な識別子。この識別子は、メタデータの再インジェスト時に、既存のメタデータを更新または削除するために使用されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:320
+msgid ""
+"This is the ``source-metadata.csv`` file we are going to use for the "
+"``metadataTransfer`` directory from above."
+msgstr "これは、 ``metadataTransfer`` ディレクトリに使用する ``source-metadata.csv`` ファイルです。"
+
+#: ../../user-manual/transfer/_csv/source-metadata-delete.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "metadata"
+msgstr "メタデータ"
+
+#: ../../user-manual/transfer/_csv/source-metadata-delete.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "type"
+msgstr "タイプ"
+
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "beihai.xml"
+msgstr "beihai.xml"
+
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "local"
+msgstr "ローカル"
+
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "bird-dc.xml"
+msgstr "bird-dc.xml"
+
+#: ../../user-manual/transfer/_csv/source-metadata-delete.csv:1
+#: ../../user-manual/transfer/_csv/source-metadata.csv:1
+msgid "dc-xml"
+msgstr "dc-xml"
+
+#: ../../user-manual/transfer/import-metadata.rst:327
+msgid ""
+"Create the two metadata XML files listed in the ``metadata`` column of the "
+"``source-metadata.csv`` file: ``beihai.xml`` and ``bird-dc.xml``."
+msgstr ""
+"``source-metadata.csv`` ファイルの ``metadata`` 列に記載されている2つのメタデータXMLファイル、 "
+"``beihai.xml`` と ``bird-dc.xml`` を作成します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:330
+msgid ""
+"The ``beihai.xml`` metadata file contains unstructured text represented as a"
+" single top level ``<metadata>`` element with no XML namespace wrapping "
+"`character data <https://www.w3.org/TR/REC-xml/#sec-cdata-sect>`_ like this:"
+msgstr ""
+"``beihai.xml`` メタデータファイルには、構造化されていないテキストが含まれ、単一のトップレベル ``<metadata>`` "
+"要素として表現されます。このようなXML名前空間は、 `文字データ <https://www.w3.org/TR/REC-xml/#sec-cdata-"
+"sect>`_ をラップしていません："
+
+#: ../../user-manual/transfer/import-metadata.rst:338
+msgid ""
+"And the ``bird-dc.xml`` metadata file contains `OAI-PMH "
+"<https://www.openarchives.org/pmh/>`_ Dublin Core metadata that could be "
+"validated against the `OAI-PMH Version 2.0 specification "
+"<https://www.openarchives.org/OAI/openarchivesprotocol.html>`_ and it looks "
+"like this:"
+msgstr ""
+"さらに、 ``bird-dc.xml`` メタデータファイルには、 `OAI-PMH "
+"<https://www.openarchives.org/pmh/>`_ Dublin Coreメタデータが含まれており、 `OAI-PMH "
+"Version 2.0仕様 <https://www.openarchives.org/OAI/openarchivesprotocol.html>`_"
+" と照らし合わせて妥当性確認できます："
+
+#: ../../user-manual/transfer/import-metadata.rst:347
+msgid ""
+"Create a subdirectory called ``metadata`` and place the ``source-"
+"metadata.csv`` file and the two metadata XML files inside.::"
+msgstr ""
+"``metadata`` というサブディレクトリを作成し、 ``source-metadata.csv`` ファイルと 2 つのメタデータ XML "
+"ファイルをその中に配列します。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:361
+msgid ""
+"The METS file for the above example includes two descriptive metadata "
+"sections (``<dmdSec>``), one for each file in the transfer. Both sections "
+"are given attributes that specify their creation time and their status is "
+"set as ``original``. And the contents of the metadata XML files in the "
+"``metadata`` directory have been transposed here."
+msgstr ""
+"上記の例のMETSファイルには、2つの説明メタデータセクション（ ``<dmdSec>`` "
+"）が含まれており、転送の各ファイルに対して1つずつあります。どちらのセクションにも、作成時刻を指定する属性が与えられ、ステータスは、 "
+"``original`` に設定されています。そして、 ``metadata`` ディレクトリにあるメタデータ XML "
+"ファイルの内容がここに転置されています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:370
+msgid ""
+"Note in the metadata wrapper (``<mdWrap>``) that they are given an MDTYPE of"
+" \"OTHER\" and an MDOTHERTYPE with the value of the ``type`` cell from the "
+"``source-metadata.csv`` file. This is useful for updating or deleting the "
+"metadata files in the AIP during metadata reingests."
+msgstr ""
+"メタデータラッパー（ ``<mdWrap>`` ）では、\"OTHER\" のMDTYPEと、 ``source-metadata.csv`` "
+"ファイルの ``type`` "
+"セルの値を持つMDOTHERTYPEが与えられていることに注意してください。これは、メタデータの再インジェストの際に、AIPのメタデータファイルを更新または削除するのに便利です。"
+
+#: ../../user-manual/transfer/import-metadata.rst:376
+msgid "Updating metadata through metadata reingests"
+msgstr "メタデータの再インジェストによるメタデータの更新"
+
+#: ../../user-manual/transfer/import-metadata.rst:378
+msgid ""
+"You can update the metadata contained in the METS file by reingesting your "
+"AIP and adding a new ``source-metadata.csv`` file and updated metadata XML "
+"files from one of your transfer source locations before approving the "
+"reingest."
+msgstr ""
+"再インジェストを承認する前に、AIP を再インジェストし、新しい ``source-metadata.csv`` ファイルと更新されたメタデータ XML"
+" ファイルを転送元の場所の 1 つから追加することで、METS ファイルに含まれるメタデータを更新できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:382
+msgid ""
+"This is the new ``source-metadata.csv`` file we are going to use to update "
+"the metadata associated with the ``beihai.tif`` digital object in the "
+"previous transfer."
+msgstr ""
+"これは、前回の転送で ``beihai.tif`` デジタルオブジェクトに関連付けられたメタデータを更新するために使用する新しい ``source-"
+"metadata.csv`` ファイルです。"
+
+#: ../../user-manual/transfer/_csv/source-metadata-update.csv:1
+msgid "beihai-v2.xml"
+msgstr "beihai-v2.xml"
+
+#: ../../user-manual/transfer/import-metadata.rst:390
+msgid ""
+"It's important that in the ``type`` column we reuse the identifier (i.e. "
+"``local``) that was set as the  ``OTHERMDTYPE`` attribute of the "
+"``<dmdSec>``."
+msgstr ""
+"重要なのは、 ``type`` 列で、 ``<dmdSec>`` の ``OTHERMDTYPE`` 属性として設定された識別子（すなわち "
+"``local`` ）を再利用することです。"
+
+#: ../../user-manual/transfer/import-metadata.rst:394
+msgid ""
+"Create the new metadata XML file listed in the ``metadata`` column of the "
+"``source-metadata.csv`` file: ``beihai-v2.xml``."
+msgstr ""
+"``source-metadata.csv`` ファイルの ``metadata`` 列に新しいメタデータ XML ファイル、 "
+"``beihai-v2.xml`` を作成します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:397
+msgid ""
+"The ``beihai-v2.xml`` metadata file contains the same structure as before "
+"with a couple of additional sentences:"
+msgstr "``beihai-v2.xml`` メタデータファイルには、以前と同じ構造といくつかの追加文が含まれています："
+
+#: ../../user-manual/transfer/import-metadata.rst:403
+#: ../../user-manual/transfer/import-metadata.rst:442
+msgid ":ref:`Start a metadata reingest <reingest>` for the previous AIP."
+msgstr ":ref:`前のAIPのメタデータ再インジェスト <reingest>` を開始します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:405
+msgid ""
+"Before approving the reingest :ref:`upload the new CSV file and metadata XML"
+" file through the user interface <metadata-csv-ui>`."
+msgstr ""
+"再インジェスト :ref:`を承認する前に、ユーザーインターフェース <metadata-csv-ui>` から新しい CSV ファイルとメタデータ "
+"XML ファイルをアップロードします。"
+
+#: ../../user-manual/transfer/import-metadata.rst:407
+#: ../../user-manual/transfer/import-metadata.rst:446
+msgid "Approve and finish the metadata reingest."
+msgstr "メタデータの再インジェストを承認し、終了します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:409
+msgid ""
+"The METS file now includes a new descriptive metadata section (``<dmdSec>``)"
+" for the ``beihai.tif`` digital object. It also contains an attribute that "
+"specifies its creation time and its status is set as ``update``."
+msgstr ""
+"METSファイルには、 ``beihai.tif`` デジタルオブジェクトの新しい説明メタデータセクション（ ``<dmdSec>`` "
+"）が含まれるようになりました。また、作成時刻を指定する属性も含まれ、ステータスは ``update`` に設定されています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:416
+msgid ""
+"Note that the initial descriptive metadata section for the object is still "
+"there but its status has been updated to ``original-superseded``. Also, the "
+"descriptive metadata section for the other digital object in the AIP has "
+"been left intact in the process."
+msgstr ""
+"オブジェクトの最初の説明メタデータセクションはまだ存在しますが、ステータスが ``original-superseded`` "
+"に更新されていることに注意してください。また、AIP 内の他のデジタルオブジェクトの説明メタデータセクションは、プロセス中にそのまま残されています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:422
+msgid "Deleting metadata through metadata reingests"
+msgstr "メタデータの再インジェストによるメタデータの削除"
+
+#: ../../user-manual/transfer/import-metadata.rst:424
+msgid ""
+"You can delete the metadata XML files contained in the AIP and ... in the "
+"METS file by reingesting your AIP and adding a new ``source-metadata.csv`` "
+"file from one of your transfer source locations before approving the "
+"reingest."
+msgstr ""
+"AIP を再試行し、再インジェストを承認する前に、転送元の 1 つから新しい ``source-metadata.csv`` "
+"ファイルを追加することで、AIP および ... METS ファイルに含まれるメタデータ XML ファイルを削除できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:428
+msgid ""
+"This is the new ``source-metadata.csv`` file we are going to use to delete "
+"the metadata associated with the ``audio/bird.mp3`` digital object in the "
+"previous transfer. Here we assume this is the second metadata reingest of "
+"the AIP after the one in the previous section."
+msgstr ""
+"これは、前の転送で ``audio/bird.mp3`` デジタルオブジェクトに関連付けられたメタデータを削除するために使用する新しい "
+"``source-metadata.csv`` "
+"ファイルです。ここでは、これが前節のメタデータの再インジェストに続く、AIPの2番目のメタデータの再インジェストであると仮定します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:437
+msgid ""
+"It's important that in the ``type`` column we reuse the identifier (i.e. "
+"``dc-xml``) that was set as the  ``OTHERMDTYPE`` attribute of the "
+"``<dmdSec>``. Note that we signal the deletion request by leaving the "
+"``metadata`` value empty."
+msgstr ""
+"重要なのは、 ``type`` 列で、 ``<dmdSec>`` の ``OTHERMDTYPE`` 属性として設定された識別子（すなわち、 ``dc-"
+"xml`` ）を再利用することです。 ``metadata`` 値を空にすることで、削除リクエストのシグナルを送ることに注意してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:444
+msgid ""
+"Before approving the reingest :ref:`upload the new CSV file through the user"
+" interface <metadata-csv-ui>`."
+msgstr ""
+"再インジェストを承認する前に、 :ref:`ユーザーインターフェースから新しい CSV ファイルをアップロードします <metadata-csv-"
+"ui>` 。"
+
+#: ../../user-manual/transfer/import-metadata.rst:448
+msgid ""
+"In the METS file the status attribute of the descriptive metadata section "
+"(``<dmdSec>``) of the ``audio/bird.mp3`` digital object has been updated "
+"from ``original`` to ``deleted``."
+msgstr ""
+"METS ファイルでは、 ``audio/bird.mp3`` デジタルオブジェクトの説明メタデータセクション ( ``<dmdSec>`` ) "
+"のステータス属性が ``original`` から ``deleted`` に更新されました。"
+
+#: ../../user-manual/transfer/import-metadata.rst:455
+msgid ""
+"After this the ``bird-dc.xml`` file has been deleted from the "
+"``objects/metadata`` directory in the AIP. And note that the descriptive "
+"metadata sections for the other digital object in have been left intact in "
+"the process."
+msgstr ""
+"この後、 ``bird-dc.xml`` ファイルは、AIPの ``objects/metadata`` "
+"ディレクトリから削除されました。その際、他のデジタルオブジェクトの説明メタデータセクションはそのまま残されていることに注意してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:463
+msgid "Importing rights metadata with rights.csv"
+msgstr "rights.csvを使った権利メタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:465
+msgid ""
+"Rights information can be associated with objects or directories in a "
+"transfer by creating a rights.csv file, similar to the metadata.csv file "
+"used for descriptive metadata. Archivematica implements :ref:`PREMIS "
+"metadata in Archivematica <premis-template>`, including PREMIS rights, as "
+"used here. Rights metadata added using the rights.csv will be transposed to "
+"the METS file."
+msgstr ""
+"権利情報は、説明メタデータに使用される metadata.csv ファイルと同様に、rights.csv "
+"ファイルを作成することで、転送中のオブジェクトやディレクトリに関連付けることができます。Archivematica は、ここで使用されているような "
+"PREMIS の権利情報を含む、 :ref:`PREMIS メタデータを Archivematica <premis-template>` "
+"で実装しています。rights.csv を使って追加された権利メタデータは、METS ファイルに転置されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:471
+msgid ""
+"Rights metadata can be applied to individual objects within a transfer, to "
+"directories within the transfer, or both."
+msgstr "権利メタデータは、転送内の個々のオブジェクト、転送内のディレクトリ、またはその両方に適用できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:474
+msgid ""
+"Create a transfer directory containing the digital objects you would like to"
+" preserve. As an example, the following directory tree displays a basic "
+"transfer called ``rightsTransfer``. One digital object sits within the top-"
+"level directory, while another object is nested within a subdirectory.::"
+msgstr ""
+"保存したいデジタルオブジェクトを含む転送ディレクトリを作成します。例として、次のディレクトリツリーには、 ``rightsTransfer`` "
+"という基本的な転送が表示されます。1 "
+"つのデジタルオブジェクトは最上位のディレクトリ内にあり、別のオブジェクトがサブディレクトリ内にネストされています。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:484
+msgid ""
+"Create a file called rights.csv. The example below can be used as a template"
+" for PREMIS rights metadata. The filename column must come first and the "
+"filename path must always start with ``objects/``."
+msgstr ""
+"rights.csv "
+"というファイルを作成します。以下の例は、PREMISの権利メタデータのテンプレートとして使用できます。ファイル名の列が最初に来るようにし、ファイル名のパスは必ず"
+" ``objects/`` で始まるようにします。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "file"
+msgstr "ファイル"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "basis"
+msgstr "根拠"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "status"
+msgstr "ステータス"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "determination_date"
+msgstr "determination_date"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "jurisdiction"
+msgstr "管轄"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "start_date"
+msgstr "start_date"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "end_date"
+msgstr "end_date"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "terms"
+msgstr "条件"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "citation"
+msgstr "引用"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "note"
+msgstr "注意"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "grant_act"
+msgstr "grant_act"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "grant_restriction"
+msgstr "grant_restriction"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "grant_start_date"
+msgstr "grant_start_date"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "grant_end_date"
+msgstr "grant_end_date"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "grant_note"
+msgstr "grant_note"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "doc_id_type"
+msgstr "doc_id_type"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "doc_id_value"
+msgstr "doc_id_value"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "doc_id_role"
+msgstr "doc_id_role"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "copyright"
+msgstr "著作権"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "copyrighted"
+msgstr "copyrighted"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "01/01/2011"
+msgstr "01/01/2011"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "ca"
+msgstr "ca"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "31/12/2013"
+msgstr "31/12/2013"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Terms of copyright."
+msgstr "著作権の条件。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Note about copyright."
+msgstr "著作権について。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "disseminate"
+msgstr "普及"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Disallow"
+msgstr "不許可"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Grant note"
+msgstr "付与メモ"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Copyright documentation identifier type."
+msgstr "著作権文書の識別子タイプ。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Copyright documentation identifier value."
+msgstr "著作権文書の識別子値。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Copyright documentation identifier role."
+msgstr "著作権文書識別子の役割。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "use"
+msgstr "使用"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "license"
+msgstr "ライセンス"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "09/09/2000"
+msgstr "09/09/2000"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "08/09/2010"
+msgstr "08/09/2010"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Terms of license."
+msgstr "ライセンスの条件。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "migrate"
+msgstr "マイグレート"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "allow"
+msgstr "許可"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Conditional"
+msgstr "条件付き"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "2000-09-00"
+msgstr "2000-09-00"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "License documentation identifier type."
+msgstr "ライセンス文書の識別子タイプ。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "License documentation identifier value."
+msgstr "ライセンス文書の識別子値。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "License documentation identifier role."
+msgstr "ライセンス文書の識別子の役割。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "statute"
+msgstr "法令"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "01/01/2003"
+msgstr "01/01/2003"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Act 2003 no. 12 part 3 s14"
+msgstr "2003 年法第 1 号 12 パート 3 s14"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "note about statute"
+msgstr "法令に関する注意"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "01/01/2050"
+msgstr "01/01/2050"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Statute documentation identifier type."
+msgstr "法令文書の識別子タイプ。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Statute documentation identifier value."
+msgstr "法令文書の識別子値。"
+
+#: ../../user-manual/transfer/_csv/rights.csv:1
+msgid "Statute documentation identifier role"
+msgstr "法令文書の識別子の役割"
+
+#: ../../user-manual/transfer/import-metadata.rst:492
+msgid ""
+"Note that to enter multiple rights acts for the same basis, you must create "
+"two separate rows, as with rows 1 and 2 in the example above."
+msgstr ""
+"同じ根拠に基づく複数の権利行為を入力するには、上記の例の行 1 と行 2 のように、2 つの別々の行を作成する必要があることに注意してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:495
+msgid ""
+"Create a subdirectory called ``metadata`` and place the rights.csv file "
+"inside it.::"
+msgstr "``metadata`` というサブディレクトリを作成し、その中に right.csv ファイルを配列します。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:507
+msgid ""
+"Any PREMIS rights metadata formatted as in the example above will be "
+"transposed to the METS file. The METS file for the above example includes "
+"three rights metadata sections (``<mets:rightsMD>``)."
+msgstr ""
+"上記の例のようにフォーマットされたPREMISの権利メタデータは、すべてMETSファイルに転置されます。上記の例のMETSファイルには、3つのライツメタデータセクション（"
+" ``<mets:rightsMD>`` ）が含まれています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:517
+msgid "Importing event metadata with premis.xml"
+msgstr "premis.xml によるイベントメタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:519
+msgid ""
+"In some cases, digital preservation events may occur on digital objects "
+"prior to their transfer into Archivematica. You can log information about "
+"these events using the PREMIS standard in a XML file."
+msgstr ""
+"場合によっては、Archivematicaに転送される前のデジタルオブジェクトにデジタル保存イベントが発生することがあります。このようなイベントに関する情報は、PREMIS標準を使用してXMLファイルに記録できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:523
+msgid ""
+"Create a transfer directory containing the digital objects you would like to"
+" preserve. As an example, the following directory tree displays a basic "
+"transfer called ``eventsTransfer``. One digital object sits within the "
+"objects subdirectory, while a premis.xml file sits in the metadata "
+"subdirectory.::"
+msgstr ""
+"保存したいデジタルオブジェクトを含む転送ディレクトリを作成します。例として、次のディレクトリツリーには、 ``eventsTransfer`` "
+"という基本的な転送が表示されます。1つのデジタルオブジェクトは、オブジェクトサブディレクトリ内にあり、premis.xml "
+"ファイルは、メタデータサブディレクトリ内にあります。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:535
+msgid ""
+"To create the premis.xml file containing the event information you can use "
+"the example below as a template."
+msgstr "イベント情報を含むpremis.xmlファイルを作成するには、以下の例をテンプレートとして使用できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:541
+msgid ""
+"Each premis.xml file should contain one or more ``premis:object``, "
+"``premis:event`` and ``premis:agent`` entity. Each entity should have its "
+"own local identifier value for linking within the file. These will be "
+"converted to Archivematica UUIDs upon import. One Object can be linked to "
+"many Events. Each Event should be linked to one Agent."
+msgstr ""
+"各 premis.xml ファイルは、1 つ以上の ``premis:object`` 、 ``premis:event`` 、 "
+"``premis:agent`` "
+"エンティティを含んでいなければなりません。各エンティティは、ファイル内でリンクするための独自のローカル識別子値を持つ必要があります。これらはインポート時に"
+" Archivematica の UUID に変換されます。1つのオブジェクトは、多くのイベントにリンクできます。各イベントは、1 "
+"つのエージェントにリンクする必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:547
+msgid ""
+"Note that the ``premis:originalName`` value is what links the "
+"``premis:object`` to the ``objects\\bird.mp3`` file. Objects are linked to "
+"Events via the ``premis:linkingEventIdentifierValue`` property."
+msgstr ""
+"``premis:originalName`` 値は、 ``premis:object`` を ``objects\\bird.mp3`` "
+"ファイルにリンクするものであることに注意してください。オブジェクトは、 ``premis:linkingEventIdentifierValue`` "
+"プロパティを介してイベントにリンクされます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:551
+msgid ""
+"Note that the ``premis:eventDateTime`` value should be in ISO 8601 format "
+"(e.g. 2019-07-04T22:46:07.773391+00:00)"
+msgstr ""
+"なお、 ``premis:eventDateTime`` の値は ISO 8601 "
+"形式でなければなりません（例：2019-07-04T22：46：07.773391+00：00）"
+
+#: ../../user-manual/transfer/import-metadata.rst:554
+msgid ""
+":ref:`Process the transfer <process-transfer>` as usual. Check the "
+"``Characterize and extract metadata`` microservice on the Transfer tab and "
+"look at the status of the ``Load PREMIS events from metadata/premis.xml`` "
+"job to determine whether the import was successful."
+msgstr ""
+"通常どおり、 :ref:`転送を処理します <process-transfer>` 。[転送] タブで ``Characterize and "
+"extract metadata`` マイクロサービスを確認し、 ``Load PREMIS events from "
+"metadata/premis.xml`` ジョブのステータスを確認して、インポートが成功したかどうかを判断します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:562
+msgid "Adding metadata to bags"
+msgstr "バッグにメタデータを追加"
+
+#: ../../user-manual/transfer/import-metadata.rst:564
+msgid ""
+"Metadata can also be added to transfers packaged in accordance with the "
+"Library of Congress `BagIt`_ specification (zipped or unzipped). Special "
+"care needs to be taken in order to ensure that Archivematica can recognize "
+"the metadata files and process them properly."
+msgstr ""
+"米国議会図書館の `BagIt`_ 仕様に従ってパッケージ化された転送 (圧縮または解凍) "
+"にメタデータを追加することもできます。Archivematica がメタデータ "
+"ファイルを認識して適切に処理できるようにするには、特別な注意を払う必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:569
+msgid ""
+"Create your metadata files. In this example, we will create a metadata.csv "
+"to add descriptive metadata to the individual objects in the bag."
+msgstr ""
+"メタデータファイルを作成します。この例では、バッグ内の個々のオブジェクトに説明メタデータを追加するために、metadata.csvを作成します。"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+msgid "data/beihai.tif"
+msgstr "data/beihai.tif"
+
+#: ../../user-manual/transfer/_csv/bag-metadata.csv:1
+msgid "data/audio/bird.mp3"
+msgstr "data/audio/bird.mp3"
+
+#: ../../user-manual/transfer/import-metadata.rst:576
+msgid ""
+"Note that the filename path anticipates the structure of the bag that we "
+"will create below by including the payload directory (``data``) in the path."
+" If your transfer includes subdirectories, those should be reflected in the "
+"path as well."
+msgstr ""
+"ファイル名パスは、ペイロードディレクトリ（ ``data`` "
+"）をパスに含めることで、以下で作成するバッグの構造を予期していることに注意してください。お使いの転送にサブディレクトリが含まれていれば、それらもパスに反映されるべきです。"
+
+#: ../../user-manual/transfer/import-metadata.rst:581
+msgid ""
+"Assemble your transfer materials. In this example, there are two objects, "
+"one of which is contained in a subdirectory, as well as the metadata "
+"directory containing a metadata.csv file.::"
+msgstr ""
+"転送素材を組み立てます。この例では、metadata.csvファイルを含むmetadataディレクトリと同様に、サブディレクトリに含まれる2つのオブジェクトがあります。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:592
+msgid ""
+"Create a bag containing the material that you would like to preserve as well"
+" as the metadata. The digital objects and the metadata directory have been "
+"added to the payload directory (``data``).::"
+msgstr ""
+"保存したい素材とメタデータを入れたバッグを作成します。デジタルオブジェクトとメタデータディレクトリがペイロードディレクトリ（ ``data`` "
+"）に追加されました。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:608
+msgid ""
+"Note that when the metadata.csv was created in step 1, above, this structure"
+" had to be anticipated. Material that you add to a bag will always be inside"
+" the payload directory, so the filename path must always begin with "
+"``data``."
+msgstr ""
+"上記の手順 1 で metadata.csv "
+"を作成したときに、この構造を予期する必要があることに注意してください。バッグに追加する素材は常にペイロードディレクトリ内にあるため、ファイル名のパスは常に"
+" ``data`` で始まる必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:612
+msgid "The bagging program has also created the required bag files."
+msgstr "バギングプログラムは、必要なバッグファイルも作成しています。"
+
+#: ../../user-manual/transfer/import-metadata.rst:614
+msgid ""
+":ref:`Process the transfer <process-transfer>` using the Unzipped Bag or "
+"Zipped Bag transfer type."
+msgstr ":ref:`圧縮バッグまたは解凍バッグ転送タイプを使用して転送を処理します <process-transfer>` 。"
+
+#: ../../user-manual/transfer/import-metadata.rst:617
+msgid ""
+"The METS file in the resulting AIP will include the metadata in the "
+"``<dmdSec>`` as in the non-bagged examples above."
+msgstr ""
+"結果として得られる AIP 内の METS ファイルは、上記の非バッグ化された例と同様に、 ``<dmdSec>`` 内のメタデータを含みます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:620
+msgid ""
+"The above method can be used for metadata.csv files that apply metadata to a"
+" directory, for rights.csv files, and for other types of metadata that you "
+"wish to preserve."
+msgstr ""
+"上記の方法は、メタデータをディレクトリに適用するmetadata.csv ファイル、rights.csv "
+"ファイル、および保存したいその他の種類のメタデータに使用できます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:625
+msgid ""
+"Submission documentation can also be added to a bag using the above method. "
+"The ``submissionDocumentation`` directory should be nested inside the "
+"metadata directory. See :ref:`Submission documentation <create-submission>` "
+"for more information."
+msgstr ""
+"サブミッション・文書は、上記の方法でバッグに追加もできます。 ``submissionDocumentation`` ディレクトリは、metadata "
+"ディレクトリの中に入れ子にする必要があります。詳しくは、 :ref:`Submission documentation <create-"
+"submission>` を参照してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:633
+msgid "Importing other types of metadata"
+msgstr "他のタイプのメタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:635
+msgid ""
+"You can include other types of metadata files in the ``metadata`` directory "
+"other than the metadata.csv and rights.csv files. For example, you may want "
+"to preserve the output of a specialized analysis tool alongside the file. "
+"You can place these files in the metadata directory.::"
+msgstr ""
+"``metadata`` ディレクトリには、metadata.csv ファイルと rights.csv "
+"ファイル以外の他のタイプのメタデータファイルを含めることができます。たとえば、専用の分析ツールの出力をファイルと一緒に保存したい場合があります。これらのファイルはメタデータディレクトリに配列できます。::"
+
+#: ../../user-manual/transfer/import-metadata.rst:646
+msgid ""
+"Archivematica will run various preservation tasks on this file, just as it "
+"would on the metadata.csv or rights.csv. In the METS, the file will be "
+"listed in the file section (``<fileSec>``) alongside any other metadata "
+"files, under the file group (``fileGrp``) usage heading ``metadata``."
+msgstr ""
+"Archivematica は、このファイルに対して、metadata.csv や rights.csv "
+"と同様に様々な保存タスクを実行します。METSでは、このファイルは他のメタデータファイルと共にファイルセクション（ ``<fileSec>`` "
+"）のファイルグループ（ ``fileGrp`` ）の使用見出し（ ``metadata`` ）にリスト表示されます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:657
+msgid "Importing structural metadata with mets_structmap.xml"
+msgstr "mets_structmap.xml を使った構造メタデータのインポート"
+
+#: ../../user-manual/transfer/import-metadata.rst:659
+msgid ""
+"The files transferred to Archivematica may have a coherent hierarchical or "
+"logical structure (e.g. sections of a book or parts of an audio file) that "
+"has already been described in a METS structural map. Users can import these "
+"by including a file called ``mets_structmap.xml`` in their transfer's "
+"``metadata`` directory. The files referenced in this structural map should "
+"be included in the transfer's ``objects`` directory."
+msgstr ""
+"Archivematica に転送されるファイルは、METS "
+"構造マップに記述された一貫性のある階層構造や論理構造（書籍の一部やオーディオファイルの一部など）を持っている場合があります。ユーザーは、転送の "
+"``metadata`` ディレクトリに ``mets_structmap.xml`` "
+"というファイルを含めることで、これらをインポートできます。この構造マップで参照されるファイルは、転送の ``objects`` "
+"ディレクトリに含める必要があります。"
+
+#: ../../user-manual/transfer/import-metadata.rst:666
+msgid ""
+"Archivematica will merge this structural map into the archival information "
+"package's METS file by assigning it a unique structural map ID. It will also"
+" update the file pointers (``mets:fptr``) to use the UUIDs created by "
+"Archivematica for the files in its archival information packages."
+msgstr ""
+"Archivematica は、この構造マップに一意の構造マップ ID を割り当て、アーカイブ情報パッケージの METS "
+"ファイルにマージします。また、アーカイブ情報パッケージのファイルに対して、Archivematicaが作成したUUIDを使用するようにファイルポインタ（"
+" ``mets:fptr`` ）を更新します。"
+
+#: ../../user-manual/transfer/import-metadata.rst:671
+msgid ""
+"Note that Archivematica requires that ``CONTENTIDS`` attributes in "
+"``mets:fptr`` elements must be used with the ``objects/`` prefix to "
+"correctly map files to IDs."
+msgstr ""
+"Archivematicaでは、ファイルをIDに正しくマッピングするために、 ``mets:fptr`` 要素の ``CONTENTIDS`` 属性を、"
+" ``objects/`` 接頭辞とともに使用する必要があることに注意してください。"
+
+#: ../../user-manual/transfer/import-metadata.rst:675
+msgid "**Example mets_structmap.xml**"
+msgstr "**mets_structmap.xml の例**"
+
+#: ../../user-manual/transfer/import-metadata.rst:677
+msgid "Using a minimal structural map example for an audio file:"
+msgstr "オーディオファイルには、最小限の構造マップの例を使用します："
+
+#: ../../user-manual/transfer/import-metadata.rst:682
+#: ../../user-manual/transfer/import-metadata.rst:698
+msgid "The resulting output in the Archivematica AIP METS file will be:"
+msgstr "Archivematica AIP METS ファイルの出力は、次のようになります："
+
+#: ../../user-manual/transfer/import-metadata.rst:687
+msgid ""
+"Here is another example of a custom METS structural map for a simple book. "
+"The transfer's ``objects/`` directory contains all of the digital files used"
+" to compile the book (e.g. cover.jpg, inside_cover.jpg, page_01.jpg, etc.) "
+"The transfer's ``metadata/`` directory contains the following "
+"``mets_structmap.xml`` file to define the structure of the book. Upon "
+"import, Archivematica will add a unique ID to the ``structMap`` element and "
+"update all the ``FILEID`` attributes to match the UUID value for these files"
+" in the Archivematica AIP."
+msgstr ""
+"これは、単純な書籍のカスタム METS 構造マップの別の例です。転送の ``objects/`` "
+"ディレクトリには、書籍の編集に使用されるすべてのデジタルファイル（例：cover.jpg、inside_cover.jpg、page_01.jpg "
+"など）が含まれています。転送の ``metadata/`` ディレクトリには、書籍の構造を定義する次の ``mets_structmap.xml`` "
+"ファイルが含まれています。インポート時に、Archivematica は、一意の ID を ``structMap`` 要素に追加し、すべての "
+"``FILEID`` 属性を更新して、Archivematica AIP 内のこれらのファイルの UUID 値と一致させます。"
+
+#: ../../user-manual/transfer/import-metadata.rst:703
+msgid ":ref:`Back to the top <import-metadata>`"
+msgstr ":ref:`トップに戻る <import-metadata>`"

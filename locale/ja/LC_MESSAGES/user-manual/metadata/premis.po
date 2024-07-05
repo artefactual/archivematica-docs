@@ -1,0 +1,970 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/metadata/premis.rst:5
+msgid "PREMIS metadata in Archivematica"
+msgstr "Archivematica のPREMISメタデータ"
+
+#: ../../user-manual/metadata/premis.rst:7
+msgid ""
+"Archivematica supports `PREMIS`_ metadata and currently implements `version "
+"3`_. It captures extensive technical metadata about Objects and records "
+"actions (known as Events) taken on Objects by Agents. It also supports the "
+"addition of PREMIS Rights metadata. This page discusses how PREMIS is "
+"implemented in the AIP METS file."
+msgstr ""
+"Archivematica は、 `PREMIS`_ メタデータをサポートしており、現在は `バージョン 3`_ "
+"を実装しています。オブジェクトに関する広範な技術メタデータをキャプチャし、エージェントがオブジェクトに対して実行したアクション (イベントと呼ばれる) "
+"を記録します。PREMIS Rights メタデータの追加もサポートします。このページでは、PREMIS が AIP METS "
+"ファイルにどのように実装されるかについて説明します。"
+
+#: ../../user-manual/metadata/premis.rst:13
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/metadata/premis.rst:15
+msgid ":ref:`PREMIS Events metadata <premis-events>`"
+msgstr ":ref:`PREMISイベントメタデータ <premis-events>`"
+
+#: ../../user-manual/metadata/premis.rst:16
+msgid ":ref:`PREMIS Events list <event-list>`"
+msgstr ":ref:`PREMISイベントリスト <event-list>`"
+
+#: ../../user-manual/metadata/premis.rst:17
+msgid ":ref:`PREMIS Agent metadata <premis-agent>`"
+msgstr ":ref:`PREMISエージェントのメタデータ <premis-agent>`"
+
+#: ../../user-manual/metadata/premis.rst:18
+msgid ":ref:`PREMIS Rights metadata <premis-rights>`"
+msgstr ":ref:`PREMIS権利メタデータ <premis-rights>`"
+
+#: ../../user-manual/metadata/premis.rst:23
+msgid "PREMIS Events metadata"
+msgstr "PREMISイベントメタデータ"
+
+#: ../../user-manual/metadata/premis.rst:25
+msgid ""
+"PREMIS Events will be recorded in separate digiprovMD sections in the METS "
+"(see :ref:`METS in Archivematica <METS_schema>` for more information). "
+"PREMIS Events recorded in the METS will contain metadata for *most* of the "
+"following semantic units and semantic components (only if applicable):"
+msgstr ""
+"PREMIS イベントは、METS の個別の digiprovMD セクションに記録されます。(詳細については、 :ref:`Archivematica"
+" の METS <METS_schema>` を参照してください)。METS に記録される PREMIS "
+"イベントには、次のセマンティックユニットおよびセマンティックコンポーネントの *ほとんど* のメタデータが含まれます (該当する場合のみ)："
+
+#: ../../user-manual/metadata/premis.rst:30
+msgid "eventIdentifier - eventIdentifierType"
+msgstr "eventIdentifier - eventIdentifierType"
+
+#: ../../user-manual/metadata/premis.rst:31
+msgid "eventIdentifier - eventIdentifierValue"
+msgstr "eventIdentifier - eventIdentifierValue"
+
+#: ../../user-manual/metadata/premis.rst:32
+msgid "eventType"
+msgstr "eventType"
+
+#: ../../user-manual/metadata/premis.rst:33
+msgid "eventDateTime"
+msgstr "eventDateTime"
+
+#: ../../user-manual/metadata/premis.rst:34
+msgid "eventDetail"
+msgstr "eventDetail"
+
+#: ../../user-manual/metadata/premis.rst:35
+msgid "eventOutcomeInformation - eventOutcome"
+msgstr "eventOutcomeInformation - eventOutcome"
+
+#: ../../user-manual/metadata/premis.rst:36
+msgid "eventOutcomeDetail - eventOutcomeDetailNote"
+msgstr "eventOutcomeDetail - eventOutcomeDetailNote"
+
+#: ../../user-manual/metadata/premis.rst:37
+msgid "linkingAgentIdentifier - linkingAgentIdentifierType"
+msgstr "linkingAgentIdentifier - linkingAgentIdentifierType"
+
+#: ../../user-manual/metadata/premis.rst:38
+msgid "linkingAgentIdentifier - linkingAgentIdentifierValue"
+msgstr "linkingAgentIdentifier - linkingAgentIdentifierValue"
+
+#: ../../user-manual/metadata/premis.rst:40
+msgid ""
+"For more information on semantic units and semantic components in PREMIS, "
+"please see the `Data Dictionary`_. Below is an example of a PREMIS Event for"
+" file format identification."
+msgstr ""
+"PREMIS のセマンティックユニットとセマンティックコンポーネントの詳細については、 `Data Dictionary`_ "
+"を参照してください。以下は、ファイルフォーマット識別のための PREMIS イベントの例です。"
+
+#: ../../user-manual/metadata/premis.rst:48
+msgid ""
+"Note that there will be three Agents per Event listed under the "
+"``linkingAgentIdentifier`` semantic unit. This means there will also be "
+"three ``linkingAgentIdentifierType`` and three "
+"``linkingAgentIdentifierValue`` semantic components. Each Agent applied to a"
+" PREMIS event will also have its own digiprovMD section in the METS (see "
+":ref:`PREMIS Agent Metadata <premis-agent>`)."
+msgstr ""
+"``linkingAgentIdentifier`` セマンティックユニットの下にリストアップされた [イベント] ごとに、3つの [エージェント] "
+"があることに注意してください。これは、3 つの ``linkingAgentIdentifierType`` と 3 つの "
+"``linkingAgentIdentifierValue`` セマンティックコンポーネントも存在することを意味します。PREMIS "
+"イベントに適用される各エージェントには、METS 内に独自の digiprovMD セクションもあります ( :ref:`PREMIS "
+"エージェントメタデータ <premis-agent>` を参照)。"
+
+#: ../../user-manual/metadata/premis.rst:59
+msgid "PREMIS Events list"
+msgstr "PREMISイベントリスト"
+
+#: ../../user-manual/metadata/premis.rst:61
+msgid ""
+"There are PREMIS Events that apply to original files and some that apply to "
+"normalized files. Both are listed below, followed by a list of Events that "
+"occur when certain microservices run in Archivematica."
+msgstr ""
+"PREMISイベントには、オリジナルファイルに適用されるものと、正規化ファイルに適用されるものがあります。以下はそのリストであり、Archivematica"
+" で特定のマイクロサービスが実行されたときに発生するイベントのリストが続きます。"
+
+#: ../../user-manual/metadata/premis.rst:65
+#: ../../user-manual/metadata/premis.rst:238
+msgid "Skip to:"
+msgstr "次にスキップ："
+
+#: ../../user-manual/metadata/premis.rst:67
+msgid ":ref:`Default events for original files <event-default>`"
+msgstr ":ref:`オリジナルファイルのデフォルトイベント <event-default>`"
+
+#: ../../user-manual/metadata/premis.rst:68
+msgid ":ref:`Normalized files <event-normalize>`"
+msgstr ":ref:`正規化ファイル <event-normalize>`"
+
+#: ../../user-manual/metadata/premis.rst:69
+msgid ":ref:`Filename change <event-filename-change>`"
+msgstr ":ref:`ファイル名の変更 <event-filename-change>`"
+
+#: ../../user-manual/metadata/premis.rst:70
+msgid ":ref:`Format identification <event-identification>`"
+msgstr ":ref:`フォーマットの識別 <event-identification>`"
+
+#: ../../user-manual/metadata/premis.rst:71
+msgid ":ref:`Extract packages <event-extract>`"
+msgstr ":ref:`パッケージの抽出 <event-extract>`"
+
+#: ../../user-manual/metadata/premis.rst:72
+msgid ":ref:`OCR transcription <event-ocr>`"
+msgstr ":ref:`OCRテキスト変換 <event-ocr>`"
+
+#: ../../user-manual/metadata/premis.rst:73
+msgid ":ref:`AIP reingest <event-reingest>`"
+msgstr ":ref:`AIPの再インジェスト <event-reingest>`"
+
+#: ../../user-manual/metadata/premis.rst:74
+msgid ":ref:`Sending transfers to backlog <event-backlog>`"
+msgstr ":ref:`バックログへの転送の送信 <event-backlog>`"
+
+#: ../../user-manual/metadata/premis.rst:79
+msgid "Default events for original files"
+msgstr "オリジナルファイルのデフォルトイベント"
+
+#: ../../user-manual/metadata/premis.rst:81
+msgid ""
+"The following microservices are run for all *original* objects ingested into"
+" Archivematica, including any submission documentation:"
+msgstr ""
+"以下のマイクロサービスは、Archivematicaにインジェストされたすべての *オリジナル* オブジェクト（投稿文書を含む）に対して実行されます："
+
+#: ../../user-manual/metadata/premis.rst:84
+msgid "ingestion"
+msgstr "インジェスト"
+
+#: ../../user-manual/metadata/premis.rst:85
+#: ../../user-manual/metadata/premis.rst:101
+msgid "message digest calculation"
+msgstr "メッセージダイジェスト計算"
+
+#: ../../user-manual/metadata/premis.rst:86
+msgid "virus check"
+msgstr "ウイルスチェック"
+
+#: ../../user-manual/metadata/premis.rst:88
+msgid ""
+"If a bag or a transfer with checksum manifests is ingested, then each file "
+"will include:"
+msgstr "チェックサムマニフェストを持つバッグまたは転送がインジェストされる場合、各ファイルは以下を含みます："
+
+#: ../../user-manual/metadata/premis.rst:91
+msgid "fixity check"
+msgstr "fixity チェック"
+
+#: ../../user-manual/metadata/premis.rst:96
+msgid "Normalized files"
+msgstr "正規化ファイル"
+
+#: ../../user-manual/metadata/premis.rst:98
+msgid "The following microservices are run for all *normalized* files:"
+msgstr "以下のマイクロサービスは、すべての *正規化* ファイルに対して実行されます："
+
+#: ../../user-manual/metadata/premis.rst:100
+msgid "creation"
+msgstr "作成"
+
+#: ../../user-manual/metadata/premis.rst:102
+#: ../../user-manual/metadata/premis.rst:133
+msgid ""
+"validation (if there is a validation tool available for the identified "
+"format)"
+msgstr "妥当性確認（識別されたフォーマットに利用可能な妥当性確認ツールがある場合）"
+
+#: ../../user-manual/metadata/premis.rst:104
+msgid ""
+"Note that for *original* files with a normalized derivative, a normalization"
+" PREMIS Event will be added."
+msgstr "正規化された派生物を含む *オリジナル* ファイルの場合、正規化 PREMIS イベントが追加されることに注意してください。"
+
+#: ../../user-manual/metadata/premis.rst:114
+msgid "Filename change"
+msgstr "ファイル名の変更"
+
+#: ../../user-manual/metadata/premis.rst:116
+msgid ""
+"If this microservice is run on a file, then it is entered as the following "
+"PREMIS Event which also records the original filename:"
+msgstr "このマイクロサービスがファイル上で実行される場合、次の PREMIS イベントとして入力され、オリジナルのファイル名も記録されます："
+
+#: ../../user-manual/metadata/premis.rst:119
+msgid "filename change"
+msgstr "ファイル名の変更"
+
+#: ../../user-manual/metadata/premis.rst:128
+msgid "Format identification"
+msgstr "フォーマットの識別"
+
+#: ../../user-manual/metadata/premis.rst:130
+msgid ""
+"When this microservice is run, the following PREMIS Events may be recorded:"
+msgstr "このマイクロサービスが実行されると、以下のPREMISイベントが記録されることがあります："
+
+#: ../../user-manual/metadata/premis.rst:132
+msgid "format identification"
+msgstr "フォーマットの識別"
+
+#: ../../user-manual/metadata/premis.rst:138
+msgid "Extract packages"
+msgstr "パッケージの抽出"
+
+#: ../../user-manual/metadata/premis.rst:140
+msgid "This PREMIS Event will be recorded on all extracted files:"
+msgstr "このPREMISイベントは、抽出されたすべてのファイルに記録されます："
+
+#: ../../user-manual/metadata/premis.rst:142
+msgid "unpacking"
+msgstr "開梱"
+
+#: ../../user-manual/metadata/premis.rst:151
+msgid "OCR transcription"
+msgstr "OCRテキスト変換"
+
+#: ../../user-manual/metadata/premis.rst:153
+msgid ""
+"If OCR is run over a file in the Ingest tab, then the file will include the "
+"following PREMIS Event:"
+msgstr "[インジェスト] タブでOCRが実行された場合、そのファイルには以下のPREMISイベントが含まれます："
+
+#: ../../user-manual/metadata/premis.rst:156
+msgid "transcription"
+msgstr "テキスト変換"
+
+#: ../../user-manual/metadata/premis.rst:161
+msgid "AIP reingest"
+msgstr "AIPの再インジェスト"
+
+#: ../../user-manual/metadata/premis.rst:163
+msgid ""
+"If an AIP has been partially or fully reingested there will be a PREMIS "
+"Event for all files in the **objects** directory:"
+msgstr ""
+"AIPの一部または全部が再インジェストされた場合、 **objects** ディレクトリのすべてのファイルに対してPREMISイベントが発生します："
+
+#: ../../user-manual/metadata/premis.rst:166
+msgid "reingestion"
+msgstr "再インジェスト"
+
+#: ../../user-manual/metadata/premis.rst:171
+msgid "Sending transfers to backlog"
+msgstr "バックログへの転送の送信"
+
+#: ../../user-manual/metadata/premis.rst:173
+msgid "If a transfer was sent to backlog there will be an PREMIS Event:"
+msgstr "転送がバックログに送られた場合、PREMIS イベントが発生します："
+
+#: ../../user-manual/metadata/premis.rst:175
+msgid "removal from backlog"
+msgstr "バックログからの削除"
+
+#: ../../user-manual/metadata/premis.rst:185
+msgid "PREMIS Agent metadata"
+msgstr "PREMISエージェントのメタデータ"
+
+#: ../../user-manual/metadata/premis.rst:187
+msgid ""
+"PREMIS Agents that are linked to a PREMIS Event will also be placed in its "
+"own digiprovMD section. The default semantic units for each agent are:"
+msgstr ""
+"PREMIS イベントにリンクされている PREMIS エージェントも、独自の digiprovMD "
+"セクションに配列されます。各エージェントのデフォルトのセマンティック単位は次のとおりです："
+
+#: ../../user-manual/metadata/premis.rst:190
+msgid "agentIdentifier"
+msgstr "agentIdentifier"
+
+#: ../../user-manual/metadata/premis.rst:191
+msgid "agentName"
+msgstr "agentName"
+
+#: ../../user-manual/metadata/premis.rst:192
+msgid "agentType"
+msgstr "agentType"
+
+#: ../../user-manual/metadata/premis.rst:194
+msgid ""
+"There are three types of Agents associated with every PREMIS Event. They "
+"will be listed under ``agentType`` as the following three options (METS XML "
+"examples included):"
+msgstr ""
+"すべての PREMIS イベントには、3 種類のエージェントが関連付けられています。これらは ``agentType`` "
+"の下に以下の3つのオプションとしてリストされます（METS XML の例を含む）："
+
+#: ../../user-manual/metadata/premis.rst:199
+msgid "Software"
+msgstr "ソフトウェア"
+
+#: ../../user-manual/metadata/premis.rst:206
+msgid "Organization"
+msgstr "組織"
+
+#: ../../user-manual/metadata/premis.rst:213
+msgid "Archivematica user"
+msgstr "Archivematicaユーザー"
+
+#: ../../user-manual/metadata/premis.rst:220
+msgid ""
+"One of each type of Agent will be included in each amdSec as its own "
+"digiprovMD in the METS AIP file (See :ref:`METS in Archivematica "
+"<METS_schema>`)."
+msgstr ""
+"各タイプのAgentは、METS "
+"AIPファイルのdigiprovMDとして各amdSecに1つずつ含まれます（Archivematica<METS_schema>` "
+"の:ref:`METSを参照）。"
+
+#: ../../user-manual/metadata/premis.rst:227
+msgid "PREMIS Rights metadata"
+msgstr "PREMIS権利メタデータ"
+
+#: ../../user-manual/metadata/premis.rst:229
+msgid ""
+"PREMIS rights metadata can be added during :ref:`transfer <transfer>` or "
+":ref:`ingest <ingest>`; it can be entered via the GUI interface to be "
+"applied to the entirety of the SIP or transfer. Rights can also be entered "
+"at the object level by describing them in a rights.csv file and using the "
+":ref:`Import metadata <import-metadata>` feature."
+msgstr ""
+"PREMISの権利メタデータは、 :ref:`転送 <transfer>` または :ref:`インジェスト <ingest>` "
+"に追加できます。GUIインターフェースから入力し、SIPまたは転送全体に適用できます。また、rights.csvファイルに記述し、 "
+":ref:`Import metadata <import-metadata>` 機能を使用することで、オブジェクトレベルで権利を入力もできます。"
+
+#: ../../user-manual/metadata/premis.rst:235
+msgid ""
+"Below, the entry template is described as it appears for each rights basis, "
+"followed by acts granted/restricted."
+msgstr "以下では、各権利ベースで表示されるエントリーテンプレートと、その後に付与／制限される行為について説明します。"
+
+#: ../../user-manual/metadata/premis.rst:240
+msgid ":ref:`Basis: Copyight <basis-copyight>`"
+msgstr ":ref:`根拠：著作権 <basis-copyight>`"
+
+#: ../../user-manual/metadata/premis.rst:241
+msgid ":ref:`Basis: Statute <basis-statute>`"
+msgstr ":ref:`根拠：法令 <basis-statute>`"
+
+#: ../../user-manual/metadata/premis.rst:242
+msgid ":ref:`Basis: License <basis-license>`"
+msgstr ":ref:`根拠：ライセンス <basis-license>`"
+
+#: ../../user-manual/metadata/premis.rst:243
+msgid ":ref:`Basis: Donor <basis-donor>`"
+msgstr ":ref:`根拠：ドナー <basis-donor>`"
+
+#: ../../user-manual/metadata/premis.rst:244
+msgid ":ref:`Basis: Policy <basis-policy>`"
+msgstr ":ref:`根拠：ポリシー <basis-policy>`"
+
+#: ../../user-manual/metadata/premis.rst:245
+msgid ":ref:`Basis: Other <basis-other>`"
+msgstr ":ref:`根拠：その他 <basis-other>`"
+
+#: ../../user-manual/metadata/premis.rst:246
+msgid ":ref:`Acts granted or restricted <acts-granted>`"
+msgstr ":ref:`許可または制限される行為 <acts-granted>`"
+
+#: ../../user-manual/metadata/premis.rst:252
+msgid "Basis: Copyright"
+msgstr "根拠：著作権"
+
+#: ../../user-manual/metadata/premis.rst:254
+#: ../../user-manual/metadata/premis.rst:517
+#: ../../user-manual/metadata/premis.rst:624
+#: ../../user-manual/metadata/premis.rst:719
+#: ../../user-manual/metadata/premis.rst:814
+#: ../../user-manual/metadata/premis.rst:911
+msgid ""
+"Below is a list of the template fields and the associated rule. The example "
+"also includes the resulting block of METS XML."
+msgstr "以下は、テンプレートフィールドと関連するルールのリストです。この例には、結果として得られる METS XMLのブロックも含まれています。"
+
+#: ../../user-manual/metadata/premis.rst:257
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>Copyright</premis:rightsBasis>``"
+msgstr ""
+"PREMIS in METS XML： ``<premis:rightsBasis>Copyright</premis:rightsBasis>``"
+
+#: ../../user-manual/metadata/premis.rst:260
+msgid "Copyright status"
+msgstr "著作権の状況"
+
+#: ../../user-manual/metadata/premis.rst:262
+msgid ""
+"**Rule** \"A coded designation of the copyright status of the object at the "
+"time the rights status is recorded; e.g. copyrighted, publicdomain, "
+"unknown.\""
+msgstr ""
+"**ルール** \"権利ステータスが記録される時点でのオブジェクトの著作権ステータスのコード化された指定。例えば、 "
+"著作権で保護されており、パブリックドメインであり、不明です。\""
+
+#: ../../user-manual/metadata/premis.rst:273
+msgid "Copyright jurisdiction"
+msgstr "著作権の管轄"
+
+#: ../../user-manual/metadata/premis.rst:275
+msgid "**Rule** \"The country whose copyright laws apply\""
+msgstr "**ルール** \"著作権法が適用される国\""
+
+#: ../../user-manual/metadata/premis.rst:283
+msgid ""
+"**Notes** Values should be taken from a controlled vocabulary. Recommended: "
+"ISO 3166."
+msgstr "**注意** 値は、管理された語彙から取られるべきです。推奨：ISO 3166。"
+
+#: ../../user-manual/metadata/premis.rst:288
+msgid "Copyright determination date"
+msgstr "著作権確定日"
+
+#: ../../user-manual/metadata/premis.rst:290
+msgid ""
+"**Rule** \"The date that the copyright status recorded in copyrightStatus "
+"was determined.\""
+msgstr "**ルール** \"copyrightStatusに記録された著作権ステータスが決定された日付。\""
+
+#: ../../user-manual/metadata/premis.rst:299
+msgid "**Notes**  Uses ISO 8061."
+msgstr "**注意** ISO 8061を使用。"
+
+#: ../../user-manual/metadata/premis.rst:302
+msgid "Copyright start date"
+msgstr "著作権開始日"
+
+#: ../../user-manual/metadata/premis.rst:304
+msgid ""
+"**Rule** \"Date when the particular copyright applies or is applied to the "
+"content.\""
+msgstr "**ルール** \"特定の著作権がコンテンツに適用される、またはコンテンツに適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:314
+msgid "**Notes** Uses ISO 8061."
+msgstr "**注意** ISO 8061を使用します。"
+
+#: ../../user-manual/metadata/premis.rst:317
+msgid "Copyright end date"
+msgstr "著作権終了日"
+
+#: ../../user-manual/metadata/premis.rst:319
+msgid ""
+"**Rule** \"Date when the particular copyright no longer applies or is "
+"applied to the content.\""
+msgstr "**ルール** \"特定の著作権がコンテンツに適用されなくなった、または適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:329
+msgid ""
+"**Notes** Uses ISO 8061. End date can be left open by clicking \"Open End "
+"Date.\""
+msgstr "**注意** ISO 8061 を使用します。\"終了日を開く\" をクリックすると、終了日を開いたままにすることができます。"
+
+#: ../../user-manual/metadata/premis.rst:332
+msgid "Copyright documentation identifier- Type"
+msgstr "著作権文書識別子 - タイプ"
+
+#: ../../user-manual/metadata/premis.rst:334
+msgid ""
+"**Rule** \"A designation of the domain within which the copyright "
+"documentation identifier is unique.\""
+msgstr "**規則** \"著作権文書識別子が一意であるドメインの指定。\""
+
+#: ../../user-manual/metadata/premis.rst:345
+msgid "Copyright documentation identifier- Value"
+msgstr "著作権文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:347
+msgid "**Rule** \"The value of the copyrightDocumentationIdentifier.\""
+msgstr "**ルール** \"copyrightDocumentationIdentifierの値。\""
+
+#: ../../user-manual/metadata/premis.rst:357
+msgid "Copyright documentation identifier- Role"
+msgstr "著作権文書識別子 - 役割"
+
+#: ../../user-manual/metadata/premis.rst:359
+#: ../../user-manual/metadata/premis.rst:489
+#: ../../user-manual/metadata/premis.rst:597
+msgid ""
+"**Rule** \"A value indicating the purpose or expected use of the "
+"documentation being identified.\""
+msgstr "**ルール** \"識別される文書の目的または予想される用途を示す値。\""
+
+#: ../../user-manual/metadata/premis.rst:370
+msgid "Copyright note"
+msgstr "著作権に関する注意事項"
+
+#: ../../user-manual/metadata/premis.rst:372
+msgid ""
+"**Rule** \"Additional information about the copyright status of the "
+"object\"."
+msgstr "**ルール** \"オブジェクトの著作権状態に関する追加情報\"."
+
+#: ../../user-manual/metadata/premis.rst:384
+msgid "Basis: Statute"
+msgstr "根拠：法令"
+
+#: ../../user-manual/metadata/premis.rst:386
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>Statute</premis:rightsBasis>``"
+msgstr ""
+"PREMIS in METS XML： ``<premis:rightsBasis>Statute</premis:rightsBasis>``"
+
+#: ../../user-manual/metadata/premis.rst:389
+msgid "Statute jurisdiction"
+msgstr "法令の管轄"
+
+#: ../../user-manual/metadata/premis.rst:391
+msgid "**Rule** \"The country or other political body enacting the statute.\""
+msgstr "**ルール** \"法令を制定した国またはその他の政治団体。\""
+
+#: ../../user-manual/metadata/premis.rst:399
+msgid ""
+"**Notes** Values should be taken from a controlled vocabulary. Recommended: "
+"ISO ISO 3166."
+msgstr "**注意** 値は管理された語彙から取られるべきです。推奨：ISO ISO 3166。"
+
+#: ../../user-manual/metadata/premis.rst:404
+msgid "Statute citation"
+msgstr "法令引用"
+
+#: ../../user-manual/metadata/premis.rst:406
+msgid "**Rule** \"An identifying designation for the statute.\""
+msgstr "**ルール** \"法令を識別するための名称。\""
+
+#: ../../user-manual/metadata/premis.rst:416
+msgid "Statute determination date"
+msgstr "法令確定日"
+
+#: ../../user-manual/metadata/premis.rst:418
+msgid ""
+"**Rule** \"The date that the determination was made the the statute "
+"authorized the permission(s) noted.\""
+msgstr "**ルール** \"決定が下された日付、法律による認可、記載された許可事項。\""
+
+#: ../../user-manual/metadata/premis.rst:427
+#: ../../user-manual/metadata/premis.rst:442
+msgid "**Note** Uses ISO 8061"
+msgstr "**注意** ISO 8061 を採用"
+
+#: ../../user-manual/metadata/premis.rst:431
+msgid "Statute start date"
+msgstr "法令の開始日"
+
+#: ../../user-manual/metadata/premis.rst:433
+msgid ""
+"**Rule** \"The date when the statute begins to apply or is applied to the "
+"content.\""
+msgstr "**ルール** \"法令の施行日、または内容に適用される日。\""
+
+#: ../../user-manual/metadata/premis.rst:446
+msgid "Statute end date"
+msgstr "法令終了日"
+
+#: ../../user-manual/metadata/premis.rst:448
+msgid ""
+"**Rule** \"The date when the statute ceases to apply or is applied to the "
+"content.\""
+msgstr "**ルール** \"法令が適用されなくなる日、または内容に適用される日。\""
+
+#: ../../user-manual/metadata/premis.rst:457
+#: ../../user-manual/metadata/premis.rst:660
+#: ../../user-manual/metadata/premis.rst:757
+#: ../../user-manual/metadata/premis.rst:854
+#: ../../user-manual/metadata/premis.rst:963
+msgid ""
+"**Note** Uses ISO 8061. End date can be left open by clicking \"Open End "
+"Date.\""
+msgstr "**注** ISO 8061を使用しています。\"Open End Date\"をクリックすることで、終了日を開いたままにできます。"
+
+#: ../../user-manual/metadata/premis.rst:461
+msgid "Statute documentation identifier- Type"
+msgstr "法令文書識別子 - タイプ"
+
+#: ../../user-manual/metadata/premis.rst:463
+msgid ""
+"**Rule** \"A designation of the domain within which the statute "
+"documentation identifier is unique.\""
+msgstr "**ルール** \"制定文書識別子が一意であるドメインの指定。\""
+
+#: ../../user-manual/metadata/premis.rst:475
+msgid "Statute documentation identifier- Value"
+msgstr "法令文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:477
+msgid "**Rule** \"The value of the statuteDocumentationIdentifier.\""
+msgstr "**ルール** \"statuteDocumentationIdentifier の値。\""
+
+#: ../../user-manual/metadata/premis.rst:487
+msgid "Statute documentation identifier- Role"
+msgstr "法令文書識別子- 役割"
+
+#: ../../user-manual/metadata/premis.rst:500
+msgid "Statute note"
+msgstr "法令に関する注意事項"
+
+#: ../../user-manual/metadata/premis.rst:502
+msgid "**Rule** \"Additional information about the statute.\""
+msgstr "**ルール** \"法令に関する追加情報。\""
+
+#: ../../user-manual/metadata/premis.rst:515
+msgid "Basis: License"
+msgstr "根拠：ライセンス"
+
+#: ../../user-manual/metadata/premis.rst:520
+msgid ""
+"PREMIS in METS XML: ``<premis:rightsBasis>License</premis:rightsBasis>``"
+msgstr ""
+"PREMIS in METS XML： ``<premis:rightsBasis>License</premis:rightsBasis>``"
+
+#: ../../user-manual/metadata/premis.rst:523
+msgid "License terms"
+msgstr "ライセンス条項"
+
+#: ../../user-manual/metadata/premis.rst:525
+msgid ""
+"**Rule** \"Text describing the license or agreement by which permission was "
+"granted.\""
+msgstr "**ルール** \"許可が付与されたライセンスまたは契約を説明するテキスト。\""
+
+#: ../../user-manual/metadata/premis.rst:536
+msgid "License start date"
+msgstr "ライセンス開始日"
+
+#: ../../user-manual/metadata/premis.rst:538
+msgid ""
+"**Rule** \"The date at which the license is first applies or is applied to "
+"the content.\""
+msgstr "**ルール** \"ライセンスが最初に適用される日付、またはコンテンツに適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:548
+#: ../../user-manual/metadata/premis.rst:645
+#: ../../user-manual/metadata/premis.rst:740
+#: ../../user-manual/metadata/premis.rst:842
+#: ../../user-manual/metadata/premis.rst:949
+msgid "**Note** Uses ISO 8061."
+msgstr "**注意** ISO 8061を使用。"
+
+#: ../../user-manual/metadata/premis.rst:552
+msgid "License end date"
+msgstr "ライセンス終了日"
+
+#: ../../user-manual/metadata/premis.rst:554
+msgid ""
+"**Rule** \"The date at which the license no longer applies or is applied to "
+"the content.\""
+msgstr "**ルール** \"ライセンスが内容に適用されなくなる、または適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:565
+msgid ""
+"**Note** Uses ISO 8061. End date can be left open by clicking \"Open End "
+"Date\" as"
+msgstr "**注意** ISO 8061を使用します。\"終了日を開く\" をクリックすると、終了日を開いたままにすることができます"
+
+#: ../../user-manual/metadata/premis.rst:565
+msgid "shown above."
+msgstr "上に示します。"
+
+#: ../../user-manual/metadata/premis.rst:568
+msgid "License documentation identifier- Type"
+msgstr "ライセンス文書識別子 - タイプ"
+
+#: ../../user-manual/metadata/premis.rst:570
+msgid ""
+"**Rule** \"A designation of the domain within which the license "
+"documentation identifier is unique.\""
+msgstr "**ルール** \"ライセンス文書識別子が固有であるドメインの指定。\""
+
+#: ../../user-manual/metadata/premis.rst:582
+msgid "License documentation identifier- Value"
+msgstr "ライセンス文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:584
+msgid "**Rule** \"The value of the licenseDocumentationIdentifier.\""
+msgstr "**ルール** \"licenseDocumentationIdentifier の値。\""
+
+#: ../../user-manual/metadata/premis.rst:595
+msgid "License documentation identifier- Role"
+msgstr "ライセンス文書識別子 - 役割"
+
+#: ../../user-manual/metadata/premis.rst:609
+msgid "License note"
+msgstr "ライセンスに関する注意事項"
+
+#: ../../user-manual/metadata/premis.rst:611
+msgid "**Rule** \"Additional information about the license.\""
+msgstr "**ルール** \"ライセンスに関する追加情報。\""
+
+#: ../../user-manual/metadata/premis.rst:622
+msgid "Basis: Donor"
+msgstr "根拠：ドナー"
+
+#: ../../user-manual/metadata/premis.rst:629
+msgid ""
+"Archivematica provides a template for donor rights, which are translated in "
+"PREMIS as \"other\".  In the METS file, you will find Donor rights in a "
+"rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
+msgstr ""
+"Archivematicaは、寄贈者の権利のテンプレートを提供しており、PREMIS では\"その他\" として翻訳されています。 "
+"METSファイルでは、rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>`` "
+"の中にDonor rightsがあります。"
+
+#: ../../user-manual/metadata/premis.rst:634
+msgid "Donor agreement start date"
+msgstr "ドナー契約開始日"
+
+#: ../../user-manual/metadata/premis.rst:636
+#: ../../user-manual/metadata/premis.rst:731
+msgid ""
+"**Rule** \"Date when the other right applies or is applied to the content.\""
+msgstr "**ルール** \"他方の権利がコンテンツに適用される、または適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:648
+msgid "Donor agreement end date"
+msgstr "ドナー契約終了日"
+
+#: ../../user-manual/metadata/premis.rst:650
+#: ../../user-manual/metadata/premis.rst:745
+msgid ""
+"**Rule** \"Date when the other right no longer applies or is applied to the "
+"content.\""
+msgstr "**ルール** \"他の権利が適用されなくなった、またはコンテンツに適用される日付。\""
+
+#: ../../user-manual/metadata/premis.rst:663
+msgid "Donor documentation identifier- Type"
+msgstr "ドナー文書識別子 -タイプ"
+
+#: ../../user-manual/metadata/premis.rst:665
+#: ../../user-manual/metadata/premis.rst:762
+#: ../../user-manual/metadata/premis.rst:859
+msgid ""
+"**Rule** \"A designation of the domain within which the rights statement "
+"documentation identifier is unique.\""
+msgstr "**ルール** \"権利説明文書識別子が一意であるドメインの指定。\""
+
+#: ../../user-manual/metadata/premis.rst:676
+msgid "Donor documentation identifier- Value"
+msgstr "ドナー文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:678
+#: ../../user-manual/metadata/premis.rst:872
+msgid "**Rule** \"The value of the otherRightsDocumentationIdentifier.\""
+msgstr "**ルール** \"otherRightsDocumentationIdentifier の値。\""
+
+#: ../../user-manual/metadata/premis.rst:689
+msgid "Donor documentation identifier- Role"
+msgstr "ドナー文書識別子 - 役割"
+
+#: ../../user-manual/metadata/premis.rst:691
+#: ../../user-manual/metadata/premis.rst:787
+#: ../../user-manual/metadata/premis.rst:884
+msgid ""
+"**Rule** \"The value indicating the purpose or expected use of the "
+"documentation being identified.\""
+msgstr "**ルール** \"識別される文書の目的または予想される用途を示す値。\""
+
+#: ../../user-manual/metadata/premis.rst:702
+msgid "Donor agreement note"
+msgstr "ドナー同意書に関する注意事項"
+
+#: ../../user-manual/metadata/premis.rst:704
+#: ../../user-manual/metadata/premis.rst:800
+#: ../../user-manual/metadata/premis.rst:897
+msgid "**Rule** \"Additional information about the rights of the object\"."
+msgstr "**ルール** \"オブジェクトの権利に関する追加情報\"."
+
+#: ../../user-manual/metadata/premis.rst:717
+msgid "Basis: Policy"
+msgstr "根拠：ポリシー"
+
+#: ../../user-manual/metadata/premis.rst:724
+msgid ""
+"Archivematica provides a template for policy rights, which are translated in"
+" PREMIS as \"other\".  In the METS file, you will find Policy rights in a "
+"rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>``."
+msgstr ""
+"Archivematica は、ポリシー権限のテンプレートを提供します。これは、PREMIS では\"その他\"として変換されます。METS "
+"ファイルでは、ポリシー権限が、rightsMD ``<premis:rightsBasis>Other</premisrightsBasis>`` "
+"にあります。"
+
+#: ../../user-manual/metadata/premis.rst:729
+msgid "Policy start date"
+msgstr "ポリシーの開始日"
+
+#: ../../user-manual/metadata/premis.rst:743
+msgid "Policy end date"
+msgstr "ポリシーの終了日"
+
+#: ../../user-manual/metadata/premis.rst:748
+msgid "**METS XML**"
+msgstr "**METS XML**"
+
+#: ../../user-manual/metadata/premis.rst:760
+msgid "Policy documentation identifier- Type"
+msgstr "ポリシー文書識別子 -タイプ"
+
+#: ../../user-manual/metadata/premis.rst:773
+msgid "Policy documentation identifier- Value"
+msgstr "ポリシー文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:775
+msgid "**Rule** The value of the otherRightsDocumentationIdentifier"
+msgstr "**ルール** otherRightsDocumentationIdentifier の値"
+
+#: ../../user-manual/metadata/premis.rst:785
+msgid "Policy documentation identifier- Role"
+msgstr "ポリシー文書の識別子 - 役割"
+
+#: ../../user-manual/metadata/premis.rst:798
+msgid "Policy note"
+msgstr "ポリシーに関する注意事項メモ"
+
+#: ../../user-manual/metadata/premis.rst:812
+msgid "Basis: Other"
+msgstr "根拠：その他"
+
+#: ../../user-manual/metadata/premis.rst:817
+msgid "PREMIS in METS XML: ``<premis:rightsBasis>Other</premisrightsBasis>``"
+msgstr "PREMIS in METS XML： ``<premis:rightsBasis>Other</premisrightsBasis>``"
+
+#: ../../user-manual/metadata/premis.rst:820
+msgid "Other rights basis"
+msgstr "その他の権利の根拠"
+
+#: ../../user-manual/metadata/premis.rst:822
+msgid ""
+"**Rule** \"Designation of the basis for the other right or permission "
+"described in the rightsStatementIdentifier.\""
+msgstr "**ルール** \"rightsStatementIdentifier に記述されている他の権利または許可の根拠の指定。\""
+
+#: ../../user-manual/metadata/premis.rst:833
+msgid "Other start date"
+msgstr "その他の開始日"
+
+#: ../../user-manual/metadata/premis.rst:845
+msgid "Other end date"
+msgstr "その他の終了日"
+
+#: ../../user-manual/metadata/premis.rst:857
+msgid "Other documentation identifier- Type"
+msgstr "その他の文書識別子 -タイプ"
+
+#: ../../user-manual/metadata/premis.rst:870
+msgid "Other documentation identifier- Value"
+msgstr "その他の文書識別子 - 値"
+
+#: ../../user-manual/metadata/premis.rst:882
+msgid "Other documentation identifier- Role"
+msgstr "その他の文書識別子 -役割"
+
+#: ../../user-manual/metadata/premis.rst:895
+msgid "Note"
+msgstr "注意"
+
+#: ../../user-manual/metadata/premis.rst:909
+msgid "Acts granted or restricted"
+msgstr "許可または制限される行為"
+
+#: ../../user-manual/metadata/premis.rst:915
+msgid "Act"
+msgstr "行為"
+
+#: ../../user-manual/metadata/premis.rst:917
+msgid ""
+"**Rule** \"The action the preservation repository is allowed to take; e.g. "
+"replicate, migrate, modify, use, disseminate, delete.\""
+msgstr "**ルール** \"保存リポジトリが取ることを許されたアクション。例えば、複製、移行、修正、使用、普及、削除など。\""
+
+#: ../../user-manual/metadata/premis.rst:927
+msgid "Grant/restriction"
+msgstr "付与/制限"
+
+#: ../../user-manual/metadata/premis.rst:929
+msgid "**Rule** Drop-down field: choose between Allow, Disallow, Conditional"
+msgstr "**ルール** ドロップダウンフィールド：許可、不許可、条件付きから選択"
+
+#: ../../user-manual/metadata/premis.rst:938
+msgid "Start"
+msgstr "開始"
+
+#: ../../user-manual/metadata/premis.rst:940
+msgid "**Rule** \"Beginning date of the rights or restrictions granted.\""
+msgstr "**ルール** \"付与された権利または制限の開始日。\""
+
+#: ../../user-manual/metadata/premis.rst:952
+msgid "End"
+msgstr "終了"
+
+#: ../../user-manual/metadata/premis.rst:954
+msgid "**Rule** \"Ending date of the rights or restrictions granted.\""
+msgstr "**ルール** \"付与された権利または制限の終了日。\""
+
+#: ../../user-manual/metadata/premis.rst:966
+msgid "Grant/restriction note"
+msgstr "付与／制限の注意事項"
+
+#: ../../user-manual/metadata/premis.rst:968
+msgid "**Rule** \"Additional information about the rights granted.\""
+msgstr "**ルール** \"与えられた権利に関する追加情報。\""
+
+#: ../../user-manual/metadata/premis.rst:977
+msgid ":ref:`Back to the top <premis-template>`"
+msgstr ":ref:`トップに戻る <premis-template>`"

@@ -1,0 +1,879 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/maintenance/maintenance.rst:5
+msgid "Maintenance"
+msgstr "メンテナンス"
+
+#: ../../admin-manual/maintenance/maintenance.rst:7
+msgid ""
+"This page contains information relevant to maintaining your Archivematica "
+"installation."
+msgstr "このページでは、Archivematicaのメンテナンスに関する情報を提供します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:10
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../admin-manual/maintenance/maintenance.rst:12
+msgid ":ref:`Management commands <management-commands>`"
+msgstr ":ref:`管理コマンド <management-commands>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:14
+msgid ":ref:`Maintaining Elasticsearch <elasticsearch>`"
+msgstr ":ref:`Elasticsearchのメンテナンス <elasticsearch>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:16
+msgid ":ref:`Rebuild Elasticsearch indexes <elasticsearch-indexes>`"
+msgstr ":ref:`Elasticsearchインデックスの再構築 <elasticsearch-indexes>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:17
+msgid ":ref:`External Elasticsearch access <elasticsearch-external>`"
+msgstr ":ref:`外部Elasticsearchのアクセス <elasticsearch-external>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:19
+msgid ":ref:`Data backup <data-backup>`"
+msgstr ":ref:`データバックアップ <data-backup>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:21
+msgid ":ref:`FAQ <admin-faq>`"
+msgstr ":ref:`よくあるご質問 <admin-faq>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:23
+msgid ":ref:`How to clean up a full disk <disk-full>`"
+msgstr ":ref:`フルディスクのクリーンアップ方法 <disk-full>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:24
+msgid ":ref:`How to restart services <restart-services>`"
+msgstr ":ref:`サービスの再起動方法 <restart-services>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:25
+msgid ":ref:`Error stack trace <stack-trace>`"
+msgstr ":ref:`エラースタックトレース <stack-trace>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:26
+msgid ":ref:`Transfer won't start <transfer-wont-start>`"
+msgstr ":ref:`転送が始まらない <transfer-wont-start>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:27
+msgid ":ref:`How to clear user sessions <clear-user-sessions>`"
+msgstr ":ref:`ユーザーセッションをクリアする方法 <clear-user-sessions>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:28
+msgid ":ref:`How to clear the application database <clear-app-db>`"
+msgstr ":ref:`アプリケーションデータベースのクリア方法 <clear-app-db>`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:34
+msgid "Management commands"
+msgstr "管理コマンド"
+
+#: ../../admin-manual/maintenance/maintenance.rst:36
+msgid ""
+"Archivematica implements multiple management commands using the command "
+"interface provided by the Django web framework."
+msgstr ""
+"Archivematicaは、Django Webフレームワークが提供するコマンドインターフェースを使用して、複数の管理コマンドを実装しています。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:39
+msgid "A full list of commands can be retrieved as follows:"
+msgstr "コマンドの完全なリストは、次のように取得できます："
+
+#: ../../admin-manual/maintenance/maintenance.rst:53
+msgid "If you want to see the help message of a specific command, try:"
+msgstr "特定のコマンドのヘルプメッセージを見たい場合は、次のように操作してください："
+
+#: ../../admin-manual/maintenance/maintenance.rst:67
+msgid ""
+"We've looked up ``purge_transient_processing_data`` in the example above. "
+"The description should provide enough information and, in some cases, usage "
+"examples."
+msgstr ""
+"上記の例では、 ``purge_transient_processing_data`` "
+"について見ています。説明には十分な情報と、場合によっては使用例が必要です。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:71
+msgid ""
+"Finally, we're showing an example on how to execute a command passing some "
+"optional arguments:"
+msgstr "最後に、オプションの引数を渡してコマンドを実行する例を紹介します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:90
+msgid "Maintaining Elasticsearch"
+msgstr "Elasticsearchのメンテナンス"
+
+#: ../../admin-manual/maintenance/maintenance.rst:92
+msgid ""
+"Since version 0.9, Archivematica uses Elasticsearch as its search engine. "
+"Elasticsearch stores information about AIPs and Transfers in backlog. This "
+"data can be searched from the Archival Storage and the Backlog tabs on the "
+"Archivematica dashboard."
+msgstr ""
+"バージョン0.9以降、Archivematicaは、検索エンジンとしてElasticsearchを使用しています。Elasticsearchは、AIPとTransferに関する情報をbacklogに保存します。このデータは、ArchivematicaダッシュボードのArchival"
+" StorageやBacklogタブから検索できます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:97
+msgid ""
+"As of Archivematica 1.7, this feature can be :ref:`fully or partially "
+"disabled <install-elasticsearch>`."
+msgstr ""
+"<install-elasticsearch>`Archivematica 1.7では、この機能を:ref:`完全または部分的に無効にできます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:102
+msgid "`Elasticsearch troubleshooting`_ help from AtoM documentation."
+msgstr "AtoM文書からの `Elasticsearchトラブルシューティング`_ のヘルプ。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:107
+msgid "Rebuild the indexes"
+msgstr "インデックスの再構築"
+
+#: ../../admin-manual/maintenance/maintenance.rst:109
+msgid ""
+"Archivematica includes three Django commands to regenerate the Elasticsearch"
+" indexes."
+msgstr "Archivematicaには、Elasticsearchインデックスを再生成するための3つのDjangoコマンドが含まれています。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:114
+msgid "**Rebuild AIP indexes using filesystem**"
+msgstr "**ファイルシステムを使用して AIPインデックスを再構築**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:116
+msgid ""
+"To recreate the AIP indexes from the filesystem you require access to the "
+"location paths of the AIP and Transfer Backlog storage locations. These "
+"usually are located in the following paths:"
+msgstr ""
+"ファイルシステムからAIPインデックスを再作成するには、AIPと転送Backlogの保存場所のパスにアクセスする必要があります。これらは通常以下のパスにあります："
+
+#: ../../admin-manual/maintenance/maintenance.rst:120
+msgid ":file:`/var/archivematica/sharedDirectory/www/AIPsStore`"
+msgstr ":file: `/var/archivematica/sharedDirectory/www/AIPsStore`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:121
+msgid ""
+":file:`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`"
+msgstr ""
+":file: `/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`"
+
+#: ../../admin-manual/maintenance/maintenance.rst:123
+msgid ""
+"You should confirm the paths of your installation in the Locations tab of "
+"the Storage Service."
+msgstr "Storage Serviceの Locations タブでインストールパスを確認してください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:126
+msgid ""
+"To recreate AIP indexes from the filesystem, run the following command, "
+"passing the path of the AIP storage location you confirmed above."
+msgstr "ファイルシステムからAIPインデックスを再作成するには、上記で確認した AIP保存場所のパスを指定して、以下のコマンドを実行します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:130
+msgid ""
+"Please note, the execution of this command may take a long time for big AIP "
+"storage locations, especially if the AIPs are stored compressed."
+msgstr "このコマンドの実行は、特にAIPが圧縮されて保存されている場合、大きなAIP保存場所では時間がかかることに注意してください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:146
+#: ../../admin-manual/maintenance/maintenance.rst:187
+#: ../../admin-manual/maintenance/maintenance.rst:228
+msgid "The command accepts the following parameters:"
+msgstr "コマンドは、以下のパラメーターを受け付けます："
+
+#: ../../admin-manual/maintenance/maintenance.rst:148
+msgid ""
+"``[storage_location_path]`` **[REQUIRED]**: Path where the AIP storage "
+"location is located in the local filesystem."
+msgstr "``[storage_location_path]`` **[必須]** ：AIPの保存場所がローカルファイルシステムにあるパス。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:150
+msgid ""
+"``--delete-all``: Removes the entire indexes to regenerate the mapping and "
+"settings."
+msgstr "``--delete-all`` ：インデックス全体を削除し、マッピングと設定を再生成します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:152
+msgid ""
+"``--delete``: Removes matching AIP documents to avoid duplicates but keeps "
+"the index mappings and settings."
+msgstr "``--delete`` ：重複を避けるために一致するAIP文書を削除しますが、インデックスのマッピングと設定は保持します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:154
+msgid "``--uuid`` [aip_uuid]: Index a single AIP from the storage location."
+msgstr "``--uuid`` [aip_uuid]：保存場所から単一のAIPをインデックスします。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:156
+msgid ""
+"It can be executed multiple times with different paths to index multiple AIP"
+" storage locations."
+msgstr "複数のAIPストレージにインデックスを付けるために、異なるパスで複数回実行できます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:161
+msgid "**Rebuild AIP indexes using Storage Service API**"
+msgstr "**Storage Service APIを使用してAIPインデックスを再構築**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:163
+msgid ""
+"This command uses the Storage Service API to determine which stored AIPs and"
+" AICs need to be reindexed (based on status and origin pipeline), and then "
+"reindexes those AIPs and AICs from temporarily downloaded copies of their "
+"METS files. This approach enables reindexing of AIPs/AICs stored in "
+"encrypted and some remote storage locations. However, this command must be "
+"run on the same system that Archivematica is installed on, since it uses "
+"code from the Archivematica codebase."
+msgstr ""
+"このコマンドは、Storage "
+"ServiceAPIを使用して、（ステータスとオリジンパイプラインに基づいて）保存されたどのAIPとAICのインデックスを再作成する必要があるかを決定し、次にそれらのAIPとAICのMETSファイルの一時的にダウンロードされたコピーからインデックスを再作成します。この方法により、暗号化された場所や一部のリモート・ストレージに保存されたAIP/AICのインデックスを再作成できます。ただし、このコマンドはArchivematicaのコードベースのコードを使用するため、Archivematicaがインストールされている同じシステムで実行する必要があります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:171
+msgid ""
+"By default, the script will reindex every AIP and AIC in the Storage Service"
+" that has an origin pipeline that matches where the script is run from, and "
+"a status other than \"DELETED\"."
+msgstr ""
+"デフォルトでは、スクリプトは、スクリプトの実行元と一致するオリジンパイプラインを持ち、\"DELETED\"以外のステータスを持つ、Storage "
+"Service内のすべてのAIPとAICのインデックスを再作成します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:189
+msgid ""
+"``--pipeline`` may be passed optionally to reindex packages from a different"
+" pipeline than the current dashboard."
+msgstr ""
+"``--pipeline`` "
+"は、現在のダッシュボードとは異なるパイプラインからパッケージのインデックスを再作成するためにオプションで渡すことができます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:191
+msgid ""
+"``-u`` or ``--uuid`` may be passed optionally to only reindex the AIP that "
+"has the matching UUID."
+msgstr "``-u`` または ``--uuid`` をオプションで渡して、一致するUUIDを持つAIPのインデックスだけを再作成もできます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:193
+msgid ""
+"``--delete`` will delete any data found in Elasticsearch with a matching "
+"UUID before re-indexing. This is useful if only some AIPs are missing from "
+"the index, since AIPs that already exist will not have their information "
+"duplicated."
+msgstr ""
+"``--delete`` "
+"は、インデックスを再作成する前に、Elasticsearchで見つかったUUIDに一致するデータを削除します。すでに存在するAIPは情報が重複しないので、インデックスから一部のAIPだけが欠落している場合に便利です。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:197
+msgid ""
+"``--delete-all`` will delete the entire AIP Elasticsearch index before "
+"starting. This is useful if there are AIPs indexed that have been deleted, "
+"or if you would like to delete the 'aips' and 'aipfiles' indices entirely "
+"and recreate them using the most recent version of the Elasticsearch "
+"mappings."
+msgstr ""
+"``--delete-all`` を実行すると、開始前にAIP "
+"Elasticsearchインデックス全体を削除します。これは、削除されたAIPがインデックスされている場合や、「aips」と「aipfiles」インデックスを完全に削除して最新バージョンのElasticsearchマッピングを使用して再作成したい場合に便利です。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:205
+msgid "**Rebuild Transfer indexes**"
+msgstr "**転送インデックスの再構築**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:207
+msgid ""
+"To regenerate the Transfers indexes, apart from access to the storage "
+"location, the command checks the transfer and transfer files existence in "
+"the Dashboard database. The indexes will be fully recreated with the current"
+" settings and mappings and populated with the Transfers from the location. "
+"Execution example:"
+msgstr ""
+"転送インデックスを再生成するために、保存場所へのアクセスとは別に、コマンドがダッシュボードデータベース内の転送と転送ファイルの存在をチェックします。インデックスは、現在の設定とマッピングで完全に再作成され、その場所から転送が入力されます。実行例："
+
+#: ../../admin-manual/maintenance/maintenance.rst:213
+msgid ""
+"Please note, the execution of this command may take a long time for big "
+"Transfer Backlog storage locations."
+msgstr "このコマンドの実行は、Transfer Backlogの保存場所が大きい場合、時間がかかることがありますのでご注意ください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:230
+msgid ""
+"``--transfer-backlog-dir`` [storage_location_path]: Path where the Transfer "
+"Backlog storage location is located in the local filesystem. *Default:* "
+"`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog`."
+msgstr ""
+"``--transfer-backlog-dir`` [storage_location_path]：Transfer "
+"Backlogの保存場所がローカルファイルシステム内にあるパス。 *デフォルト：* "
+"`/var/archivematica/sharedDirectory/www/AIPsStore/transferBacklog` 。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:233
+msgid "``--no-prompt``: Do not ask for confirmation."
+msgstr "``--no-prompt`` ：確認を求めないでください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:234
+msgid ""
+"``--from-storage-service``: Uses the Storage Service API to determine which "
+"stored transfers need to be re-indexed. Temporarily downloads a copy of each"
+" transfer via the API for indexing. This enables reindexing of packages "
+"stored in encrypted locations as well as some remote locations."
+msgstr ""
+"``--from-storage-service`` ：Storage "
+"ServiceAPIを使用して、再インデックスが必要な保存された転送を決定します。インデックス作成のために、API経由で各転送のコピーを一時的にダウンロードします。これにより、暗号化された場所に保存されたパッケージや、一部のリモートロケーションのインデックスを再作成できます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:242
+msgid "External access"
+msgstr "外部アクセス"
+
+#: ../../admin-manual/maintenance/maintenance.rst:244
+msgid ""
+"For further interactions with the Elasticsearch indexes, to browse the data "
+"or to create visualizations, the following tools are recommended:"
+msgstr ""
+"Elasticsearchインデックスとのさらなるインタラクション、データのブラウズ、ビジュアライゼーションの作成には、以下のツールをお勧めします："
+
+#: ../../admin-manual/maintenance/maintenance.rst:247
+msgid "`Kibana`_"
+msgstr "`Kibana`_"
+
+#: ../../admin-manual/maintenance/maintenance.rst:248
+msgid "`Dejavu`_"
+msgstr "`Dejavu`_"
+
+#: ../../admin-manual/maintenance/maintenance.rst:250
+msgid ""
+"The index names are: `aips`, `aipfiles`, `transfers` and `transferfiles`."
+msgstr "インデックス名は以下の通り： `aips` 、 `aipfiles` 、 `transfers` 、 `transferfiles` 。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:255
+msgid "Data backup"
+msgstr "データバックアップ"
+
+#: ../../admin-manual/maintenance/maintenance.rst:257
+msgid "By default, there are three types of data that should be backed up:"
+msgstr "デフォルトでは、バックアップすべきデータは3種類あります："
+
+#: ../../admin-manual/maintenance/maintenance.rst:259
+msgid "Filesystem (particularly your storage directories)"
+msgstr "ファイルシステム（特に自らのストレージディレクトリ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:261
+msgid "MySQL and SQLite"
+msgstr "MySQLとSQLite"
+
+#: ../../admin-manual/maintenance/maintenance.rst:263
+#: ../../admin-manual/maintenance/maintenance.rst:339
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: ../../admin-manual/maintenance/maintenance.rst:265
+msgid ""
+"In addition to the filesystem, below are some detailed instructions of what "
+"to back up, where it exists, and how to do it."
+msgstr "ファイルシステムに加えて、何をバックアップするか、どこに存在するか、どのようにバックアップするかについての詳細な手順を以下に示します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:268
+msgid "Data to back up from an Archivematica instance:"
+msgstr "Archivematicaインスタンスからバックアップするデータ："
+
+#: ../../admin-manual/maintenance/maintenance.rst:270
+msgid "MCP database (see below for details)"
+msgstr "MCPデータベース（詳細は下記参照）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:271
+msgid "SS database (see below for details)"
+msgstr "SSデータベース（詳細は下記参照）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:272
+msgid "Elasticsearch indexes (see below for details)"
+msgstr "Elasticsearchインデックス（詳細は下記参照）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:273
+msgid ""
+"Pointer files (in the Storage Service internal processing location; the "
+"default location is ``/var/archivematica/storage_service``)"
+msgstr ""
+"ポインターファイル（Storage Service内部の処理場所。デフォルトの場所は "
+"``/var/archivematica/storage_service`` ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:275
+msgid "AM config in ``/etc/archivematica``"
+msgstr "``/etc/archivematica`` のAM設定"
+
+#: ../../admin-manual/maintenance/maintenance.rst:276
+msgid ""
+"Processing configurations (in "
+"``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``)"
+msgstr ""
+"処理設定（ "
+"``/var/archivematica/sharedDirectory/sharedMicroServiceTasksConfigs/processingMCPConfigs``"
+" ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:280
+msgid ""
+"If doing an update or migration of Archivematica to a new server, the "
+"following may also be important to back up:"
+msgstr "Archivematicaを新しいサーバに更新または移行する場合は、以下のバックアップも重要です："
+
+#: ../../admin-manual/maintenance/maintenance.rst:283
+msgid ""
+"Archivematica source code (``/opt/archivematica``) (to know which version of"
+" the software was installed, if there were custom changes, etc.)"
+msgstr ""
+"Archivematicaソースコード（ ``/opt/archivematica`` "
+"）（どのバージョンのソフトウェアがインストールされたか、カスタムの変更があったかなどを知ることができます。）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:285
+msgid ""
+"Archivematica shared directory (``/var/archivematica/sharedDirectory/``)"
+msgstr "Archivematica共有ディレクトリ（ ``/var/archivematica/sharedDirectory/`` ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:287
+msgid "If your instance uses automation-tools, that should also be backed up:"
+msgstr "インスタンスが自動化ツールを使用している場合は、それもバックアップしておく必要があります："
+
+#: ../../admin-manual/maintenance/maintenance.rst:289
+msgid "Source code (``/opt/archivematica/automation-tools``)"
+msgstr "ソースコード（ ``/opt/archivematica/automation-tools`` ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:290
+msgid "Scripts (normally in ``/etc/archivematica/automation-tools``)"
+msgstr "スクリプト（通常は ``/etc/archivematica/automation-tools`` ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:291
+msgid "Crontab entries for automation-tools"
+msgstr "automation-toolsのCrontabエントリ"
+
+#: ../../admin-manual/maintenance/maintenance.rst:292
+msgid ""
+"Automation database (normally in ``/var/archivematica/automation-tools/``)"
+msgstr "オートメーションデータベース（通常は ``/var/archivematica/automation-tools/`` ）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:293
+msgid "Any other helper scripts source and databases"
+msgstr "その他のヘルパースクリプトのソースとデータベース"
+
+#: ../../admin-manual/maintenance/maintenance.rst:297
+msgid "Archivematica Database backup and restore"
+msgstr "Archivematicaデータベースのバックアップとリストア"
+
+#: ../../admin-manual/maintenance/maintenance.rst:299
+msgid ""
+"MySQL is used to store short-term processing data. You can back up the MySQL"
+" database by using the following command:"
+msgstr "MySQLは、短期処理データの保存に使用されます。MySQLデータベースのバックアップは、以下により行うことができます："
+
+#: ../../admin-manual/maintenance/maintenance.rst:307
+msgid "To restore from ``mysqldump`` file:"
+msgstr "``mysqldump`` ファイルから復元するには："
+
+#: ../../admin-manual/maintenance/maintenance.rst:314
+msgid "Storage Service Database backup and restore"
+msgstr "Storage Serviceデータベースのバックアップと復元"
+
+#: ../../admin-manual/maintenance/maintenance.rst:316
+msgid ""
+"To backup the SQLite database and pointer files created by the storage "
+"service run:"
+msgstr "SQLiteデータベースとStorage Serviceによって作成されたポインターファイルをバックアップするには、以下を実行します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:325
+msgid ""
+"The Storage Service must not be actively in use. Make sure the Storage "
+"Service is not running by stopping the ``nginx`` or ``storage-service`` "
+"services or by making the backup at a time that it is not in use."
+msgstr ""
+"Storage Serviceはアクティブに使用されていないこと。 ``nginx`` 、 ``storage-service`` "
+"サービスを停止するか、使用されていない時間にバックアップを作成することで、Storage Serviceが実行されていないことを確認します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:329
+msgid "To restore Storage Service from backup:"
+msgstr "Storage Serviceをバックアップから復元します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:341
+msgid ""
+"Elasticsearch is used to store long-term data. Instructions and scripts for "
+"backing up and restoring Elasticsearch are available in the `Elasticsearch "
+"documentation`_."
+msgstr ""
+"Elasticsearchは、長期データの保存に使用されます。Elasticsearchのバックアップとリストアに関する説明とスクリプトは、 "
+"`Elasticsearch文書`_ にあります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:345
+msgid "**Preconfiguration**"
+msgstr "**事前設定**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:347
+msgid ""
+"The path.repo and snapshot repository have to be configured. For example, "
+"using ``/var/lib/elasticsearch/backup-repo`` as the repo path:"
+msgstr ""
+"path.repoとスナップショットリポジトリを設定する必要があります。例えば、 ``/var/lib/elasticsearch/backup-"
+"repo`` をリポジトリパスとして使用します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:356
+msgid "Add this line to the ``/etc/elasticsearch/elasticsearch.yml`` file:"
+msgstr "次の行を ``/etc/elasticsearch/elasticsearch.yml`` ファイルに追加します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:362
+msgid "Restart elasticsearch:"
+msgstr "elasticsearchを再起動します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:368
+msgid ""
+"To use a new directory as snapshot repository, create and adjust permissions"
+" for one, like so:"
+msgstr "新しいディレクトリをスナップショットリポジトリとして使用するには、以下のように新しいディレクトリを作成し、権限を調整します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:376
+msgid ""
+"Before any snapshot or restore operation can be performed, a snapshot "
+"repository should be registered in Elasticsearch. The repository settings "
+"are repository-type specific:"
+msgstr ""
+"スナップショットや復元操作を行う前に、Elasticsearchにスナップショットリポジトリを登録する必要があります。リポジトリの設定は、リポジトリタイプに特有のものです："
+
+#: ../../admin-manual/maintenance/maintenance.rst:390
+msgid "**Backing up Elasticsearch indexes**"
+msgstr "**Elasticsearchインデックスのバックアップ**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:392
+msgid ""
+"To make a backup (snapshot) for the ``aips``, ``aipfiles``, ``transfer`` and"
+" ``transferfiles`` indexes, a different name has to be used every time a "
+"snapshot is taken. For example, using the date inside the filename:"
+msgstr ""
+"``aips`` 、 ``aipfiles`` 、 ``transfer`` 、 ``transferfiles`` "
+"インデックスのバックアップ（スナップショット）を作成するには、スナップショットを取得するたびに異なる名前を使用する必要があります。例えば、ファイル名の中に日付を使用します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:405
+msgid ""
+"The snapshot will be saved to the ``/var/lib/elasticsearch/backup-"
+"repo/es_backup_YOUR-NAME`` directory. This directory can be backed up, for "
+"example, using rsync:"
+msgstr ""
+"スナップショットは、 ``/var/lib/elasticsearch/backup-repo/es_backup_YOUR-NAME`` "
+"ディレクトリに保存されます。このディレクトリはrsyncなどでバックアップできます："
+
+#: ../../admin-manual/maintenance/maintenance.rst:413
+msgid "To list all the snapshots:"
+msgstr "すべてのスナップショットをリストアップします："
+
+#: ../../admin-manual/maintenance/maintenance.rst:419
+msgid "To delete a snapshot:"
+msgstr "スナップショットを削除するには："
+
+#: ../../admin-manual/maintenance/maintenance.rst:425
+msgid "**Restoring Elasticsearch**"
+msgstr "**Elasticsearchのリストア**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:427
+msgid ""
+"Before restoring, the snapshot repo has to be registered in elasticsearch "
+"(see preconfiguration). It can be restored in a different server, "
+"configuring the repo.path, registering the snapshot repo (different paths "
+"and repo names can be used) and copying the files inside the "
+"``/backup/location/elasticsearch`` directory."
+msgstr ""
+"リストアする前に、スナップショットレポをelasticsearchに登録する必要があります（事前設定を参照）。repo.pathを設定し、スナップショットレポを登録し（異なるパスやレポ名を使用できます）、"
+" ``/backup/location/elasticsearch`` ディレクトリ内のファイルをコピーすることで、別のサーバーにリストアできます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:433
+msgid ""
+"The index will have to be closed before restoration can occur. To close the "
+"index, post to the following _close endpoints, like so:"
+msgstr ""
+"復元を行う前にインデックスをクローズする必要があります。インデックスを閉じるには、following _close endpointsにポストします："
+
+#: ../../admin-manual/maintenance/maintenance.rst:443
+msgid "To restore ElasticSearch:"
+msgstr "ElasticSearchを復元するには："
+
+#: ../../admin-manual/maintenance/maintenance.rst:453
+msgid "FAQ"
+msgstr "よくあるご質問"
+
+#: ../../admin-manual/maintenance/maintenance.rst:458
+msgid "How to clean up a full disk"
+msgstr "フルディスクのクリーンアップ方法"
+
+#: ../../admin-manual/maintenance/maintenance.rst:459
+msgid ""
+"\"My Archivematica disk filled up and now Archivematica won't work. How can "
+"I fix this?\""
+msgstr "\"Archivematicaのディスクがいっぱいになり、Archivematicaが使えません。どうすれば直りますか？\""
+
+#: ../../admin-manual/maintenance/maintenance.rst:462
+msgid ""
+"Archivematica servers have as much storage as they have been commissioned. "
+"If processing lots of very large files, particularly if working with "
+"normalization, this will cause the disk to fill up and cause the system to "
+"malfunction."
+msgstr ""
+"Archivematicaサーバには、委託されただけのストレージがあります。非常に大きなファイルを大量に処理する場合、特に正規化処理を行う場合、ディスクがいっぱいになり、システムが誤動作する原因となります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:466
+msgid ""
+"When the disk on an Archivematica instance is full, a number of steps need "
+"to be taken to recover."
+msgstr "Archivematicaインスタンスのディスクが一杯になった場合、復旧のためにいくつかのステップを踏む必要があります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:469
+msgid "**Recovery protocol**"
+msgstr "**復旧プロトコル**"
+
+#: ../../admin-manual/maintenance/maintenance.rst:471
+msgid ""
+"Clean up the disk by removing failed or rejected transfers, any excessive "
+"``/tmp`` data, or anything else causing the disk to have filled up."
+msgstr ""
+"失敗した転送や拒否された転送、過剰な ``/tmp`` "
+"データ、その他ディスクが一杯になった原因となっているものを取り除き、ディスクをクリーンアップします。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:473
+msgid "Reset MySQL (or MariaDB, on Rocky Linux) database."
+msgstr "MySQL（Rocky Linuxの場合はMariaDB）データベースをリセットします。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:474
+msgid ""
+"Reset Archivematica components in appropriate order (see `restart-services`_"
+" for details)."
+msgstr ""
+"Archivematicaのコンポーネントを適切な順序でリセットします（詳細は、 `restart-services`_ を参照してください）。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:476
+msgid ""
+"Set Elasticsearch back into write mode. The easiest way to do this is to run"
+" the following command:"
+msgstr "Elasticsearch を書き込みモードに戻してください。最も簡単な方法は、以下のコマンドを実行することです："
+
+#: ../../admin-manual/maintenance/maintenance.rst:487
+msgid "How to restart services"
+msgstr "サービスの再起動方法"
+
+#: ../../admin-manual/maintenance/maintenance.rst:488
+msgid ""
+"\"Something is not working right, or I need to stop a hanging transfer. What"
+" can I do?\""
+msgstr "\"何かが正常に機能していません。または処理が停止した転送を停止する必要があります。どうすればいいですか？\""
+
+#: ../../admin-manual/maintenance/maintenance.rst:491
+msgid "Archivematica is made up of these four core components:"
+msgstr "Archivematicaは、以下の4つのコアコンポーネントで構成されています："
+
+#: ../../admin-manual/maintenance/maintenance.rst:506
+msgid "Other services that Archivematica depends on are:"
+msgstr "Archivematicaが依存しているその他のサービスは、次のとおりです："
+
+#: ../../admin-manual/maintenance/maintenance.rst:501
+msgid "ClamAV"
+msgstr "ClamAV"
+
+#: ../../admin-manual/maintenance/maintenance.rst:502
+msgid "ElasticSearch"
+msgstr "ElasticSearch"
+
+#: ../../admin-manual/maintenance/maintenance.rst:503
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/maintenance/maintenance.rst:504
+msgid "MySQL (Ubuntu) or MariaDB (Rocky Linux)"
+msgstr "MySQL（Ubuntu）またはMariaDB（Rocky Linux）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:505
+msgid "Nailgun"
+msgstr "Nailgun"
+
+#: ../../admin-manual/maintenance/maintenance.rst:506
+msgid "Nginx"
+msgstr "Nginx"
+
+#: ../../admin-manual/maintenance/maintenance.rst:508
+msgid "Each service can be started/stopped/restarted with:"
+msgstr "各サービスは、以下を使って起動/停止/再起動が可能です："
+
+#: ../../admin-manual/maintenance/maintenance.rst:514
+msgid ""
+"To restart all services, restart the Gearman service and each Archivematica "
+"component, in this order:"
+msgstr "すべてのサービスを再起動するには、Gearmanサービス、Archivematicaの各コンポーネントの順に再起動します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:527
+msgid ""
+"Depending on your installation, gearmand might be called gearman-job-server."
+msgstr "インストールによっては、gearmandをgearman-job-serverと呼ぶこともあります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:533
+msgid "Error stack trace"
+msgstr "エラースタックトレース"
+
+#: ../../admin-manual/maintenance/maintenance.rst:535
+msgid ""
+"\"I am getting a white error page in the Dashboard. How can I find out what "
+"the error is?\""
+msgstr "\"ダッシュボードに白いエラーページが表示されます。どのようなエラーなのでしょうか？\""
+
+#: ../../admin-manual/maintenance/maintenance.rst:538
+msgid ""
+"All Archivematica services, including the Dashboard, have set up loggers "
+"that capture relevant events including warnings or errors."
+msgstr ""
+"Dashboardを含むすべてのArchivematicaサービスには、警告やエラーを含む関連事象をキャプチャするロガーが設定されています。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:541
+msgid ""
+"Archivematica logs are stored in ``/var/log/archivematica/`` but the final "
+"location may change depending on the environment or the logging "
+"configuration."
+msgstr ""
+"Archivematicaのログは ``/var/log/archivematica/`` "
+"に保存されますが、最終的な保存場所は環境やログの設定によって変更される場合があります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:548
+msgid "Transfer won't start"
+msgstr "転送が始まらない"
+
+#: ../../admin-manual/maintenance/maintenance.rst:549
+msgid "\"I try to create a new transfer, but nothing happens. What can I do?\""
+msgstr "\"新しい転送を作成しようとしても、何も起こりません。どうしたらいいですか？\""
+
+#: ../../admin-manual/maintenance/maintenance.rst:551
+msgid ""
+"Sometimes a user may attempt to start a transfer and it will never seem to "
+"initiate the Archivematica processes. There are a few issues to look out for"
+" and investigate if this happens."
+msgstr ""
+"転送を開始しようとしても、Archivematicaのプロセスが開始されないことがあります。このような場合、いくつかの問題に注意して調査する必要があります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:555
+msgid "File permissions"
+msgstr "ファイルの許可"
+
+#: ../../admin-manual/maintenance/maintenance.rst:557
+msgid ""
+"First, the issue may be related to file permissions in the transfer source "
+"directory. Check the permissions in the directory and on the files to ensure"
+" that all files can be read by Archivematica."
+msgstr ""
+"まず、この問題は転送元ディレクトリのファイルパーミッションに関連している可能性があります。ディレクトリとファイルのアクセス権限をチェックして、すべてのファイルがArchivematicaによって読み取り可能であることを確認してください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:561
+msgid "System timeouts"
+msgstr "システムのタイムアウト"
+
+#: ../../admin-manual/maintenance/maintenance.rst:563
+msgid ""
+"If it is a large transfer, it may just be taking a long time to copy the "
+"files and initially load them into the system, and the user can wait a bit "
+"longer and see if the processes begin after a bit of time. It is also "
+"possible that it is taking a long time because some of the system timeouts "
+"are being exceeded and the transfer has failed. This can be verified by "
+"checking the Storage Service logs and by checking where the transfer exists "
+"on the filesystem."
+msgstr ""
+"大規模な転送の場合は、ファイルをコピーして最初にシステムにロードするのに時間がかかるだけの可能性があり、ユーザーはもう少し待って、少し時間が経ってからプロセスが開始されるかどうかを確認できます。一部のシステムタイムアウトを超過し、転送が失敗したために時間がかかっている可能性もあります。これは、Storage"
+" Serviceのログを確認し、ファイルシステム上の転送が存在する場所をチェックすることで確認できます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:571
+msgid ""
+"For inadequate timeouts, check the Storage Service configuration and adjust "
+"if necessary."
+msgstr "タイムアウトが不十分な場合は、Storage Service設定を確認し、必要に応じて調整します。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:574
+msgid "Communication between Dashboard and Gearman"
+msgstr "DashboardとGearman間の通信"
+
+#: ../../admin-manual/maintenance/maintenance.rst:576
+msgid ""
+"If the transfer has successfully moved to the shared Directory (i.e. it can "
+"be found in ``sharedDirectory/watchedDirectories/activeTransfer/`` folders),"
+" but is still not showing up in the dashboard, there could have been a "
+"problem with the communication between the dashboard and Gearman. Restarting"
+" all of the services can resolve this problem and the transfer will appear."
+msgstr ""
+"転送が共有ディレクトリに正常に移動している（つまり、 "
+"``sharedDirectory/watchedDirectories/activeTransfer/`` "
+"フォルダで見つけることができる）にもかかわらず、ダッシュボードに表示されない場合は、ダッシュボードとGearman間の通信に問題がある可能性があります。すべてのサービスを再起動すると、この問題が解決され、転送が表示されるようになります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:582
+msgid ""
+"Restart services in the follow order: ``gearmand``, ``archivematica-mcp-"
+"server``, ``archivematica-mcp-client``, and ``archivematica-dashboard``."
+msgstr ""
+"以下の順番でサービスを再起動します： ``gearmand`` 、 ``archivematica-mcp-server`` 、 "
+"``archivematica-mcp-client`` 、 ``archivematica-dashboard`` 。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:586
+msgid ""
+"Note that on some installations, ``gearmand`` may be called ``gearman-job-"
+"server``."
+msgstr "インストレーションによっては、 ``gearmand`` が ``gearman-job-server`` と呼ばれることもあります。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:592
+msgid "How to clear user sessions"
+msgstr "ユーザーセッションをクリアする方法"
+
+#: ../../admin-manual/maintenance/maintenance.rst:594
+msgid ""
+"Administrators should use the Django ``clearsessions`` command to purge "
+"expired sessions perodically, e.g. via a cron job. This is how it is "
+"executed:"
+msgstr ""
+"管理者はDjango ``clearsessions`` "
+"コマンドを使って、cronジョブなどで、期限切れのセッションを定期的にパージしてください。これがその実行方法です："
+
+#: ../../admin-manual/maintenance/maintenance.rst:609
+msgid ""
+"When using CAS authentication, it is additionally recommended to clear "
+"expired CAS sessions with ``./manage.py django_cas_ng_clean_sessions`` "
+"immediately after running ``clearsessions``. This is how it is executed:"
+msgstr ""
+"CAS認証を使用する場合、 ``clearsessions`` を実行した直後に、 ``./manage.py "
+"django_cas_ng_clean_sessions`` "
+"を使用して期限切れのCASセッションをクリアすることが推奨されます。これは、このように実行されます："
+
+#: ../../admin-manual/maintenance/maintenance.rst:625
+msgid ""
+"You can also clear active sessions by emptying the ``django_session`` table "
+"in the Archivematica database, e.g.::"
+msgstr ""
+"Archivematicaデータベースの ``django_session`` テーブルを空にして、アクティブなセッションをクリアもできます（例：::）"
+
+#: ../../admin-manual/maintenance/maintenance.rst:630
+msgid "Clearing up active sessions forcibly logs out all users."
+msgstr "アクティブなセッションを消去すると、すべてのユーザーが強制的にログアウトされます。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:636
+msgid "How to clear the application database"
+msgstr "アプリケーションデータベースのクリア方法"
+
+#: ../../admin-manual/maintenance/maintenance.rst:638
+msgid ""
+"Archivematica 1.13 introduces a new management command for this specific "
+"purpose. It takes into account active packages and can be used to target "
+"packages of a certain age only. Please read the help message of the command "
+"for more details."
+msgstr ""
+"Archivematica "
+"1.13では、この特別な目的のために新しい管理コマンドを導入しました。このコマンドは、アクティブなパッケージを考慮し、特定の年齢のパッケージのみを対象とするために使用できます。詳細はコマンドのヘルプを参照してください。"
+
+#: ../../admin-manual/maintenance/maintenance.rst:655
+msgid ""
+"The example below will destroy all records from the database as well as the "
+"search documents related to packages that completed more than six hours ago:"
+msgstr "以下の例では、データベースのすべてのレコードと、6時間以上前に完了したパッケージに関連する検索文書を破棄します："
+
+#: ../../admin-manual/maintenance/maintenance.rst:671
+msgid ":ref:`Back to the top <maintenance>`"
+msgstr ":ref:`トップに戻る <maintenance>`"

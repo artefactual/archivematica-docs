@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/change-filenames.rst:5
+msgid "Filename changes"
+msgstr "ファイル名の変更"
+
+#: ../../user-manual/transfer/change-filenames.rst:7
+msgid ""
+"The change filenames microservice runs twice during processing - once on the"
+" Transfer tab and once on the Ingest tab. The purpose of this microservice "
+"is to ensure that Archivematica's tools and processes do not fail because of"
+" characters that appear in object and directory names."
+msgstr ""
+"ファイル名の変更マイクロサービスは、処理中に転送タブとインジェストタブの2回実行されます。このマイクロサービスの目的は、Archivematica "
+"のツールやプロセスがオブジェクト名やディレクトリ名に含まれる文字のために失敗しないようにすることです。"
+
+#: ../../user-manual/transfer/change-filenames.rst:12
+msgid ""
+"Archivematica groups a wide variety of tools, such as :ref:`preservation "
+"planning tools <preservation-planning-tools>`, together to create "
+"preservation workflows. Some of the tools that Archivematica uses have a "
+"narrowly-defined scope in terms of what the tool considers to be a valid "
+"character for a file or directory name. Encountering a character that the "
+"tool considers to be invalid can cause the tool to fail, which can halt "
+"processing and prevent the normal operation of Archivematica."
+msgstr ""
+"Archivematica は、 :ref:`保存計画ツール <preservation-planning-tools>` "
+"などのさまざまなツールをグループ化し、保存ワークフローを作成します。Archivematica "
+"が使用するツールの中には、ツールがファイル名またはディレクトリ名として有効な文字とみなす範囲が狭く定義されているものがあります。ツールが無効とみなす文字が見つかると、ツールが失敗し、処理が停止し、Archivematica"
+" が正常に動作しなくなる可能性があります。"
+
+#: ../../user-manual/transfer/change-filenames.rst:20
+msgid ""
+"To prevent these kinds of failures from happening, Archivematica implements "
+"a script that changes file and directory names to conform to the "
+"requirements of more restrictive tools. Valid characters are defined as the "
+"following:"
+msgstr ""
+"このようなエラーが発生しないように、Archivematica "
+"は、より制限の厳しいツールの要件に適合するようにファイル名やディレクトリ名を変更するスクリプトを実装しています。有効な文字は次のように定義されます："
+
+#: ../../user-manual/transfer/change-filenames.rst:24
+msgid ""
+"``-_.()abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789``"
+msgstr ""
+"``-_.()abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789``"
+
+#: ../../user-manual/transfer/change-filenames.rst:26
+msgid ""
+"The script tries to replace any character that is not included in the above "
+"list with its nearest equivalent - for example, the character ``Č`` is "
+"replaced by ``C``. Where the script cannot find a close equivalent, the "
+"character is replaced by an underscore. The change is documented in the METS"
+" file."
+msgstr ""
+"スクリプトは、上記のリストに含まれていない文字を、最も同等の文字に置き換えようとします。たとえば、 ``Č`` という文字は、 ``C`` "
+"に置き換えられます。スクリプトが同等の文字を見つけられない場合、その文字はアンダースコアに置き換えられます。この変更はMETSファイルに記録されます。"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Original name"
+msgstr "オリジナル名"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Edited name"
+msgstr "編集名"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "METS output"
+msgstr "METS出力"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "i & tem"
+msgstr "i & tem"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "i___tem"
+msgstr "i___tem"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+#, python-format
+msgid ""
+"Original name=\"%transferDirectory%objects/i &amp; tem.png\"; cleaned up "
+"name=\"%transferDirectory%objects/i___tem.png\""
+msgstr ""
+"オリジナル名=\"%transferDirectory%objects/i &amp; tem.png\"; クリーンアップ "
+"name=\"%transferDirectory%objects/i___tem.png\""
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Česká republika.png"
+msgstr "Česká republika.png"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Ceska_republika.png"
+msgstr "Ceska_republika.png"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+#, python-format
+msgid ""
+"Original name=\"%transferDirectory%objects/Česká republika.png\"; cleaned up"
+" name=\"%transferDirectory%objects/Ceska_republika.png\""
+msgstr ""
+"オリジナル名=\"%transferDirectory%objects/Česká republika.png\"; "
+"クリーンアップ名=\"%transferDirectory%objects/Ceska_republika.png\""
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Éireann"
+msgstr "Éireann"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Eireann"
+msgstr "Eireann"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+#, python-format
+msgid ""
+"Original name=\"%transferDirectory%objects/Éireann.png\"; cleaned up "
+"name=\"%transferDirectory%objects/Eireann.png\""
+msgstr ""
+"オリジナル名=\"%transferDirectory%objects/Éireann.png\"; "
+"クリーンアップ名=\"%transferDirectory%objects/Eireann.png\""
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "España"
+msgstr "España"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Espana"
+msgstr "エスパーニャ"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+#, python-format
+msgid ""
+"Original name=\"%transferDirectory%objects/España.png\"; cleaned up "
+"name=\"%transferDirectory%objects/Espana.png\""
+msgstr ""
+"オリジナル名=\"%transferDirectory%objects/España.png\"; "
+"クリーンアップ名=\"%transferDirectory%objects/Espana.png\""
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Росси́я"
+msgstr "Росси́я"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+msgid "Rossiia"
+msgstr "ロシア"
+
+#: ../../user-manual/transfer/_csv/file-name-edits.csv:1
+#, python-format
+msgid ""
+"Original name=\"%transferDirectory%objects/Росси́я.png\"; cleaned up "
+"name=\"%transferDirectory%objects/Rossiia.png\""
+msgstr ""
+"オリジナル名=\"%transferDirectory%objects/Росси́я.png\"; "
+"クリーンアップ名=\"%transferDirectory%objects/Rossiia.png\""
+
+#: ../../user-manual/transfer/change-filenames.rst:35
+msgid "Additional information can be found in the complete PREMIS event:"
+msgstr "その他の情報は、PREMISのイベント全文を参照してください："
+
+#: ../../user-manual/transfer/change-filenames.rst:67
+msgid ""
+"This strategy for addressing character limitations within the tools bundled "
+"by Archivematica can result in significant changes to file and directory "
+"names. In order to provide easy access to a record of the changes, the "
+"Archivematica AIP contains log files that show the original name alongside "
+"the changed name. There are two log files:"
+msgstr ""
+"Archivematica "
+"にバンドルされているツール内の文字制限に対処するためのこの戦略により、ファイル名とディレクトリ名が大幅に変更される可能性があります。変更記録に簡単にアクセスできるようにするために、Archivematica"
+" AIP には、オリジナルの名前と変更後の名前を示すログ ファイルが含まれています。次の 2 つのログ ファイルがあります："
+
+#: ../../user-manual/transfer/change-filenames.rst:73
+msgid ""
+"The log file for name changes that happen during Transfer is located in the "
+"AIP at ``data/logs/transfers/my-transfer-name/logs/filenameCleanup.log``"
+msgstr ""
+"転送中に発生した名前変更のログ ファイルは、AIP の ``data/logs/transfers/my-transfer-"
+"name/logs/filenameCleanup.log`` にあります"
+
+#: ../../user-manual/transfer/change-filenames.rst:75
+msgid ""
+"The log file for name changes that happen during Ingest is located in the "
+"AIP at ``data/logs/filenameCleanup.log``"
+msgstr ""
+"インジェスト中に発生した名前変更のログ ファイルは、AIP の ``data/logs/filenameCleanup.log`` にあります"
+
+#: ../../user-manual/transfer/change-filenames.rst:78
+msgid ""
+"These logs contain a plaintext rendering of the information embedded within "
+"the PREMIS event."
+msgstr "これらのログには、PREMIS イベント内に埋め込まれた情報の平文レンダリングが含まれています。"
+
+#: ../../user-manual/transfer/change-filenames.rst:90
+msgid ":ref:`Back to the top <change-filenames>`"
+msgstr ":ref:`トップに戻る <change-filenames>`"

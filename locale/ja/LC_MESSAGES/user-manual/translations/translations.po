@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/translations/translations.rst:5
+msgid "Translations"
+msgstr "翻訳"
+
+#: ../../user-manual/translations/translations.rst:7
+msgid ""
+"Thank you for your interest in translating Archivematica! Community "
+"translators are vital for internationalizing Archivematica for use around "
+"the world. We appreciate the efforts of all volunteer translators on the "
+"Archivematica project!"
+msgstr ""
+"Archivematica の翻訳にご興味をお持ちいただきありがとうございます。コミュニティの翻訳者は、Archivematica "
+"を国際化して世界中で使用できるようにするために不可欠です。Archivematica "
+"プロジェクトにおけるボランティア翻訳者の皆様のご尽力に感謝いたします！"
+
+#: ../../user-manual/translations/translations.rst:12
+msgid ""
+"We use Transifex to support the publication of translations. Transifex "
+"allows multiple users to contribute translated strings, makes the harvesting"
+" process faster and easier, and enables Artefactual to publish translations "
+"more often. There are multiple Archivematica projects to translate: the "
+"documentation, the interface, the website, and the Storage Service."
+msgstr ""
+"翻訳の公開をサポートするためにTransifexを使用しています。Transifex "
+"を使用することで、複数のユーザが翻訳された文字列を投稿できるようになり、ハーベスティングプロセスが迅速かつ容易になり、Artefactual "
+"は、より頻繁に翻訳を公開できるようになりました。Archivematica には、文書、インターフェース、ウェブサイト、Storage "
+"Serviceなど、翻訳すべきプロジェクトが複数あります。"
+
+#: ../../user-manual/translations/translations.rst:18
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/translations/translations.rst:20
+msgid ":ref:`Join the Archivematica project <transifex-project>`"
+msgstr ":ref:`Archivematica プロジェクトに参加 <transifex-project>`"
+
+#: ../../user-manual/translations/translations.rst:21
+msgid ":ref:`Start translating <start-translating>`"
+msgstr ":ref:`翻訳開始 <start-translating>`"
+
+#: ../../user-manual/translations/translations.rst:22
+msgid ":ref:`Finding the context of a string <string-context>`"
+msgstr ":ref:`文字列のコンテキストを見つける <string-context>`"
+
+#: ../../user-manual/translations/translations.rst:23
+msgid ":ref:`Editing translated strings <editing-strings>`"
+msgstr ":ref:`翻訳された文字列の編集 <editing-strings>`"
+
+#: ../../user-manual/translations/translations.rst:28
+msgid "Join the Archivematica project"
+msgstr "Archivematica プロジェクトに参加"
+
+#: ../../user-manual/translations/translations.rst:30
+msgid ""
+"Go to `Transifex`_ and log in or create an account if you don't already have"
+" one."
+msgstr "`Transifex`_ にアクセスし、ログインするか、アカウントをお持ちでない場合は作成してください。"
+
+#: ../../user-manual/translations/translations.rst:33
+msgid ""
+"Once you have created an account, you will be redirected to a configuration "
+"page. Fill in your name and preferences."
+msgstr "アカウントを作成すると、設定ページにリダイレクトされます。名前と設定を入力してください。"
+
+#: ../../user-manual/translations/translations.rst:36
+msgid ""
+"On the second configuration page, you will be given the option to start your"
+" own project or to join an existing one. Select **Join an existing "
+"project**."
+msgstr ""
+"2つ目の設定ページでは、独自のプロジェクトを開始するか、既存のプロジェクトに参加するかを選択できます。 **既存のプロジェクトに参加** を選択します。"
+
+#: ../../user-manual/translations/translations.rst:39
+msgid ""
+"The last configuration page will ask you to identify languages that you "
+"speak. Select as many as are applicable and click on **Get started**."
+msgstr "最後の設定ページでは、使用する言語を尋ねられます。該当するものをいくつでも選択し、 **スタート** をクリックしてください。"
+
+#: ../../user-manual/translations/translations.rst:42
+msgid ""
+"A pop-up window will appear. After you click on **Find a project to "
+"translate**, type *archivematica* into the search bar and then click on the "
+"Archivematica project when it appears below. You will be redirected to the "
+"Archivematica project homepage."
+msgstr ""
+"ポップアップウィンドウが表示されます。 **翻訳するプロジェクトを探す** をクリックすると、検索バーに *archivematica* "
+"と入力し、下に表示される Archivematica プロジェクトをクリックします。Archivematica "
+"プロジェクトのホームページにリダイレクトされます。"
+
+#: ../../user-manual/translations/translations.rst:47
+msgid "In the top right corner of the page, select **Join team**."
+msgstr "ページ右上で、 **Join team** を選択します。"
+
+#: ../../user-manual/translations/translations.rst:49
+msgid ""
+"A pop-up will appear with a list of the available languages. Select your "
+"chosen translation language from the list. When you've found it, click the "
+"Submit button (if you wish to translate Archviematica into multiple "
+"languages, you can repeat this process again later)."
+msgstr ""
+"ポップアップに利用可能な言語のリストが表示されます。選択した翻訳言語をリストから選択します。見つかったら、[送信] ボタンをクリックします "
+"(Archviematica を複数の言語に翻訳したい場合は、後でこのプロセスをもう一度繰り返すことができます)。"
+
+#: ../../user-manual/translations/translations.rst:54
+msgid ""
+"You will see a confirmation message informing you that your request has been"
+" submitted. One of the Artefactual project maintainers will review the "
+"request and approve your account."
+msgstr ""
+"リクエストが送信されたことを知らせる確認メッセージが表示されます。Artefactual "
+"プロジェクトの管理者の一人がリクエストを確認し、アカウントを承認します。"
+
+#: ../../user-manual/translations/translations.rst:61
+msgid "Start translating"
+msgstr "翻訳開始"
+
+#: ../../user-manual/translations/translations.rst:63
+msgid ""
+"Once your account is approved by the Archivematica project maintainers, you "
+"will receive an email notification from Transifex. Once you've received this"
+" email, return to the `Archivematica Project homepage`_ in Transifex."
+msgstr ""
+"ご自身のアカウントが Archivematica プロジェクトの管理者によって承認されると、Transifex "
+"から電子メール通知が届きます。このメールを受信したら、Transifex の `Archivematica プロジェクトのホームページ`_ "
+"に戻ってください。"
+
+#: ../../user-manual/translations/translations.rst:67
+msgid ""
+"Select the project that you would like to translate - the Archivematica "
+"interface, the documentation, Storage Service, or website - and click on the"
+" blue Translate button to start translating."
+msgstr ""
+"翻訳したいプロジェクト（Archivematica インターフェース、文書、Storage "
+"Service、ウェブサイト）を選択し、青い［翻訳］ボタンをクリックして翻訳を開始します。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Select the translate button to start translating."
+msgstr "翻訳ボタンを選択し、翻訳を開始します。"
+
+#: ../../user-manual/translations/translations.rst:77
+msgid "Select the Translate button"
+msgstr "翻訳ボタンを選択"
+
+#: ../../user-manual/translations/translations.rst:79
+msgid ""
+"Follow the on-screen prompts to select your language from the dropdown."
+msgstr "画面の指示に従って、ドロップダウンから言語を選択してください。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Select a language"
+msgstr "言語選択"
+
+#: ../../user-manual/translations/translations.rst:87
+msgid "Select a language."
+msgstr "言語を選択します。"
+
+#: ../../user-manual/translations/translations.rst:89
+msgid ""
+"You will be taken to a page listing the available resources for for your "
+"chosen language. A resource is a component of the project, such as a page of"
+" the documentation."
+msgstr "選択した言語で利用可能なリソースの一覧ページに移動します。リソースとは、文書のページのような、プロジェクトの構成要素のことです。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Select a resource"
+msgstr "リソースの選択"
+
+#: ../../user-manual/translations/translations.rst:99
+msgid "Select a resource."
+msgstr "リソースを選択します。"
+
+#: ../../user-manual/translations/translations.rst:101
+msgid ""
+"Once you have selected a resource, you will be taken to the Translations "
+"Editor. From this page, you can select strings (paragraphs) of text to "
+"translate. Note strings that have already been translated will have a green "
+"checkmark on the far left. Select a string that has not been translated - it"
+" will have a grey circle to the far left."
+msgstr ""
+"リソースを選択すると、翻訳エディターに移動します。このページから、翻訳するテキストの文字列（段落）を選択できます。すでに翻訳されている文字列には、左端に緑色のチェックマークが付いています。翻訳されていない文字列を選択すると、左端に灰色の丸が表示されます。"
+
+#: ../../user-manual/translations/translations.rst:107
+msgid ""
+"To translate the string, enter your translation in the middle column. "
+"Remember to click **Save translations** when you're done!"
+msgstr "文字列を翻訳するには、中央の列に翻訳を入力します。完了したら、必ず **翻訳を保存** をクリックしてください！"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Translate a string"
+msgstr "文字列の翻訳"
+
+#: ../../user-manual/translations/translations.rst:116
+msgid "Translate a string of text."
+msgstr "文字列を翻訳します。"
+
+#: ../../user-manual/translations/translations.rst:121
+msgid "Finding the context of a string"
+msgstr "文字列のコンテキストを見つける"
+
+#: ../../user-manual/translations/translations.rst:123
+msgid ""
+"It can be difficult to discern the meaning of a string without looking at "
+"the context in which it appears. It is possible to look at the string as it "
+"appears in the project by following these steps."
+msgstr ""
+"その文字列が現れる文脈を見なければ、その文字列の意味を見極めることは難しいかもしれません。以下のステップを踏めば、プロジェクトに登場する文字列を見ることができます。"
+
+#: ../../user-manual/translations/translations.rst:128
+msgid "Archivematica documentation"
+msgstr "Archivematica文書"
+
+#: ../../user-manual/translations/translations.rst:130
+msgid ""
+"In the Translations Editor, look for the section called **More info** (you "
+"may need to click on **Context**, depending on how your browser is sized). "
+"Under this, there is a subsection called *Occurrences*."
+msgstr ""
+"翻訳エディタで、 **詳細情報** というセクションを探します (ブラウザのサイズによっては、 **コンテキスト** "
+"をクリックする必要がある場合があります)。この下には、 *Occurrences* というサブセクションがあります。"
+
+#: ../../user-manual/translations/translations.rst:134
+msgid ""
+"*Occurrences* contains the URL slug where the string occurs in the "
+"documentation. Copy the part of the slug that is located between ``..`` and "
+"``.rst``. For example, if the slug is ``../../admin-"
+"manual/installation/customization.rst:5``, copy ``/admin-"
+"manual/installation/customization``."
+msgstr ""
+"*出現頻度* には、その文字列が文書に出現する URLスラッグが含まれています。 ``..`` と ``.rst`` "
+"の間にあるスラッグの部分をコピーしてください。例えば、スラッグが ``../../admin-"
+"manual/installation/customization.rst:5`` の場合、 ``/admin-"
+"manual/installation/customization`` をコピーします。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "The context of the string is listed under More Info."
+msgstr "文字列のコンテキストは、「詳細情報」に記載されています。"
+
+#: ../../user-manual/translations/translations.rst:146
+msgid "Copy the slug that points to where the string comes from."
+msgstr "文字列がどこから来たかを示すスラッグをコピーします。"
+
+#: ../../user-manual/translations/translations.rst:148
+msgid ""
+"Go to ``https://www.archivematica.org/docs/archivematica-1.6`` (or whatever "
+"version of the documentation you are translating, i.e. archivematica-1.7, "
+"1.8, etc)."
+msgstr ""
+"``https://www.archivematica.org/docs/archivematica-1.6`` "
+"（または翻訳する文書のバージョン、archivematica-1.7、1.8など）にアクセスします。"
+
+#: ../../user-manual/translations/translations.rst:152
+msgid ""
+"Append the copied slug to the above link. Using the above example, the URL "
+"would now read ``https://www.archivematica.org/docs/archivematica-1.6/admin-"
+"manual/installation/customization``. Press enter to go to this URL."
+msgstr ""
+"コピーしたスラッグを上記のリンクに追加します。上記の例では、URLは "
+"``https://www.archivematica.org/docs/archivematica-1.6/admin-"
+"manual/installation/customization`` となります。エンターキーを押して、このURLに移動します。"
+
+#: ../../user-manual/translations/translations.rst:156
+msgid ""
+"The page you are now on contains the string that you are translating. Search"
+" for the string on the page by hitting control+f (or command+f) and typing "
+"in the first few words of the string."
+msgstr ""
+"現在表示しているページには、翻訳中の文字列が含まれています。Ctrl+F (または command+F) "
+"を押して、文字列の最初の数単語を入力して、ページに記載されている文字列を検索します。"
+
+#: ../../user-manual/translations/translations.rst
+msgid ""
+"Search for the string on the page of the documentation where it occurs."
+msgstr "その文字列が出現する文書のページを検索します。"
+
+#: ../../user-manual/translations/translations.rst:166
+msgid ""
+"The string is highlighted in orange. Note that this example uses Google "
+"Chrome; other browsers may look different."
+msgstr "文字列は、オレンジ色でハイライトされています。この例ではGoogle Chromeを使用していることに注意してください。"
+
+#: ../../user-manual/translations/translations.rst:172
+msgid "Editing translated strings"
+msgstr "翻訳された文字列の編集"
+
+#: ../../user-manual/translations/translations.rst:174
+msgid ""
+"If you have a better translation or want to fix a typo, it is possible to "
+"edit or recommend edits for strings that have already been translated by "
+"other users."
+msgstr "より良い翻訳がある場合、または誤字を修正したい場合、他のユーザーによってすでに翻訳された文字列を編集したり、編集を推奨したりできます。"
+
+#: ../../user-manual/translations/translations.rst:177
+msgid ""
+"Click on a string that has already been translated. Make your edits in the "
+"Translation Editor and click **Save translation**."
+msgstr "すでに翻訳されている文字列をクリックします。翻訳エディタで編集を行い、 **翻訳の保存** をクリックします。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Edit a translated string."
+msgstr "翻訳された文字列を編集します。"
+
+#: ../../user-manual/translations/translations.rst:186
+msgid "Make edits in the centre column."
+msgstr "中央の欄で編集を行います。"
+
+#: ../../user-manual/translations/translations.rst:188
+msgid ""
+"To make a suggestion, rather than a direct edit, click on Suggestions in the"
+" right-hand column. Click on **Add suggestion** and input your "
+"recommendations. A project maintainer will be notified of the suggestion."
+msgstr ""
+"直接編集するのではなく、提案を行うには、右側の列の「提案」をクリックします。 **提案を追加** "
+"をクリックして、推奨事項を入力します。プロジェクトの管理者に提案が通知されます。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "Suggest an improvement to a string."
+msgstr "文字列の改良を提案します。"
+
+#: ../../user-manual/translations/translations.rst:198
+msgid "Make suggestions in the right-hand column."
+msgstr "右側の欄に提案します。"
+
+#: ../../user-manual/translations/translations.rst:200
+msgid "The edit history of a string is available in the right-hand column."
+msgstr "文字列の編集履歴は、右側の列で見ることができます。"
+
+#: ../../user-manual/translations/translations.rst
+msgid "View the edit history."
+msgstr "編集履歴を表示します。"
+
+#: ../../user-manual/translations/translations.rst:208
+msgid "View past edits as well as their authors."
+msgstr "過去の編集とその作者を見ることができます。"
+
+#: ../../user-manual/translations/translations.rst:210
+msgid ":ref:`Back to the top <translations>`"
+msgstr ":ref:`トップに戻る <translations>`"

@@ -1,0 +1,573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:5
+msgid "Installing Archivematica"
+msgstr "Archivematicaのインストール"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:7
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:9
+msgid ":ref:`Overview <overview>`"
+msgstr ":ref:`概要 <overview>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:10
+msgid ":ref:`Technical requirements <treq>`"
+msgstr ":ref:`技術的要件 <treq>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:11
+msgid ":ref:`Instructions for new installations <instructions>`"
+msgstr ":ref:`新規設置の手順 <instructions>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:12
+msgid ":ref:`Instructions for upgrades <upgrades>`"
+msgstr ":ref:`アップグレードの手順 <upgrades>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:13
+msgid ":ref:`Advanced installation options <advanced>`"
+msgstr ":ref:`高度なインストールオプション <advanced>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:18
+msgid "Overview"
+msgstr "概要"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:20
+msgid ""
+"The following table lists various ways to install and use Archivematica. "
+"Further down the page, you will find more detailed information about new "
+"installations and advanced installation options."
+msgstr ""
+"以下の表は、Archivematicaのインストール方法と使用方法の一覧です。さらにページ下部には、新規インストールや高度なインストールオプションに関する詳細情報が記載されています。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:24
+msgid ""
+"If you need assistance or clarification regarding the installation "
+"instructions, the `Archivematica user forum`_ is a good place ask questions."
+msgstr "インストール手順に関してサポートや説明が必要な場合は、 `Archivematicaユーザーフォーラム`_ をご利用ください。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid "New installations for production deployment"
+msgstr "生産デプロイのための新規インストール"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+#: ../../admin-manual/installation-setup/installation/installation.rst:54
+msgid "Ubuntu 22.04 64-bit Server Edition"
+msgstr "Ubuntu 22.04 64ビットサーバーエディション"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid ""
+":ref:`Automated install using Ansible Ubuntu 22.04 \\(Jammy\\)<install-"
+"ansible>`"
+msgstr ":ref:`Ansible Ubuntu 22.04 \\(Jammy\\) を使用した自動インストール <install-ansible>`"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid ""
+"These instructions will not work if you are using a Windows machine as the "
+"host environment."
+msgstr "Windowsマシンをホスト環境として使用している場合、これらの手順は機能しません。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+#: ../../admin-manual/installation-setup/installation/installation.rst:55
+msgid "Rocky Linux 9 x86-64"
+msgstr "Rocky Linux 9 x86-64"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid ""
+":ref:`Installing Archivematica on Rocky Linux 9 \\(Blue Onyx\\)<install-pkg-"
+"rocky>`"
+msgstr ""
+":ref:`Rocky Linux 9 \\（Blue Onyx\\）にArchivematicaをインストール <install-pkg-"
+"rocky>`"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid ""
+"Archivematica versions 1.15.0 and higher support installation on Rocky Linux"
+" 9."
+msgstr "Archivematicaバージョン1.15.0以降は、Rocky Linux 9へのインストールをサポートしています。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid "Windows OS"
+msgstr "Windows OS"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-new.csv:1
+msgid "Not supported"
+msgstr "非対応"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid "Test-driving the latest release"
+msgstr "最新リリースの試運転"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid "Archivematica sandbox"
+msgstr "Archivematicaのサンドボックス"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid ":ref:`Using the sandbox <using-the-sandbox>`"
+msgstr ":ref:`サンドボックスの使用 <using-the-sandbox>`"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid ""
+"The sandbox will automatically reset daily. Any packages created will not be"
+" permanently saved. Additionally, there may be more than one demo user "
+"logged in at the same time, so you may see changes made by others while "
+"using the software."
+msgstr ""
+"サンドボックスは、毎日自動的にリセットされます。作成されたパッケージは永久に保存されません。さらに、同時に複数のデモユーザーがログインしている可能性があり、ソフトウェアを使用している間に他のユーザーが行った変更が見える可能性があります。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid "Local virtual machine using Vagrant and VirtualBox"
+msgstr "VagrantとVirtualBoxを使ったローカル仮想マシン"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid ""
+":ref:`Installing on a virtual machine using Vagrant <installing-on-vm>`"
+msgstr ":ref:`Vagrantを使って仮想マシンにインストール <installing-on-vm>`"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-testing.csv:1
+msgid "This virtual machine is not intended to be used in production."
+msgstr "この仮想マシンは、生産環境で使用することを意図していません。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-development.csv:1
+msgid "Development environments"
+msgstr "開発環境"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-development.csv:1
+msgid "Docker and Linux"
+msgstr "DockerとLinux"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-development.csv:1
+msgid ""
+"`Archivematica development on Docker Compose "
+"<https://github.com/artefactual/archivematica/tree/qa/1.x/hack#archivematica-"
+"development-on-docker-compose>`_"
+msgstr ""
+"`Docker Compose上でのArchivematicaの開発 "
+"<https://github.com/artefactual/archivematica/tree/qa/1.x/hack#archivematica-"
+"development-on-docker-compose>`_"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-development.csv:1
+msgid ""
+"Docker will provide instructions on how to use it as a non-root user. This "
+"may not be desirable for all."
+msgstr "Dockerは、non-rootユーザーとして使用する方法を説明します。これは、全ての人にとって望ましいことではないかもしません。"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-multiple-machines.csv:1
+msgid "Spreading Archivematica’s processing load across several machines"
+msgstr "Archivematicaの処理負荷を複数のマシンに分散"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-multiple-machines.csv:1
+msgid "Base on your customized setup and network configuration"
+msgstr "カスタマイズされたセットアップとネットワーク構成に基づく"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-multiple-machines.csv:1
+msgid ":ref:`Scaling Archivematica<scaling-archivematica>`"
+msgstr ":ref:`Archivematicaのスケーリング <scaling-archivematica>`"
+
+#: ../../admin-manual/installation-setup/installation/_csv/install-multiple-machines.csv:1
+msgid ""
+"When installing Archivematica on multiple machines, the various "
+"Archivematica processes must be able to reach each other on the relevant "
+"ports. Your firewall configuration must allow for this."
+msgstr ""
+"Archivematicaを複数のマシンにインストールする場合、Archivematicaの各プロセスが関連するポートで相互にアクセスできるようにする必要があります。ファイアウォールの設定でこれを許可しなければなりません。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:46
+msgid "Technical requirements"
+msgstr "技術的要件"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:49
+msgid "Operating system"
+msgstr "オペレーティングシステム"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:51
+msgid ""
+"Archivematica |release| installation instructions are provided here for the "
+"following operating systems:"
+msgstr "Archivematica |release| ここでは、次のオペレーティングシステムのインストール手順が示されています："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:57
+msgid ""
+"Other Linux distributions should work, but will require customization of "
+"these installation instructions."
+msgstr "他の Linuxディストリビューションも動作するはずですが、これらのインストール手順をカスタマイズする必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:60
+msgid ""
+"Support for macOS is possibly in theory, but is not being tested, and would "
+"require more significant deviation from these instructions."
+msgstr "macOSへの対応は理論的には可能です。ただし、テストされていないため、これらの指示からより大幅に逸脱する必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:63
+msgid ""
+"Archivematica is unlikely to ever run directly in a Windows environment. "
+"Consider the use of a virtualization platform to run Linux VMs."
+msgstr ""
+"ArchivematicaをWindows環境で直接実行することはまずありません。仮想化プラットフォームを使用してLinux "
+"VMを実行することを検討してください。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:67
+msgid "Dependencies"
+msgstr "依存関係"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:69
+msgid ""
+"Archivematica has a long list of software it depends on. All of these "
+"dependencies are installed when following the instructions below."
+msgstr ""
+"Archivematicaには、依存するソフトウェアの長いリストがあります。以下の指示に従うと、これらの依存関係がすべてインストールされます。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:72
+msgid ""
+"Note that it is possible to install some of the components on separate "
+"machines in order to improve performance, such as:"
+msgstr "パフォーマンスを向上させるために、次のような一部のコンポーネントを別のマシンにインストールできることに注意してください："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:75
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:76
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:77
+msgid "Elasticsearch (optional as of Archivematica 1.7, see below)"
+msgstr "Elasticsearch（Archivematica 1.7ではオプション。以下を参照してください）"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:79
+msgid ""
+"Using additional machines will require additional configuration. For more "
+"information, see :ref:`Advanced <advanced>`."
+msgstr "追加のマシンを使用するには、追加の設定が必要です。詳しくは、 :ref:`Advanced <advanced>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:84
+msgid ""
+"Archivematica |version| has been tested with MySQL 8.0, including the "
+"Percona and MariaDB alternatives."
+msgstr "Archivematica |version| は、PerconaとMariaDBの代替を含むMySQL 8.0でテストされています。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:87
+msgid ""
+"Some of the tools run by Archivematica require Java to be installed "
+"(primarily Elasticsearch and fits). On Ubuntu 22.04, Open JDK 8 is used, but"
+" Open JDK 11 is the default. It is possible to use Oracle Java 8 instead."
+msgstr ""
+"Archivematicaが実行するツールの中には、Javaのインストールを必要とするものがあります（主にElasticsearchとfits）。Ubuntu"
+" 22.04ではOpen JDK 8が使用されていますが、Open JDK 11がデフォルトです。代わりにOracle Java "
+"8を使用することも可能です。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:92
+msgid ""
+"The remaining dependencies should be kept at the versions installed by "
+"Archivematica."
+msgstr "残りの依存関係は、Archivematica がインストールしたバージョンのままにしておく必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:98
+msgid "Elasticsearch"
+msgstr "Elasticsearch"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:100
+msgid ""
+"As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch"
+" powers the indexes that are used for searching in the :ref:`Backlog "
+"<backlog>`, :ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage "
+"<archival-storage>`. Installing Archivematica without Elasticsearch results "
+"in reduced consumption of compute resources and lower operational "
+"complexity. Disabling Elasticsearch means that the Backlog, Appraisal, "
+"and/or Archival Storage tabs will not appear in the user interface and their"
+" functionality will not be available."
+msgstr ""
+"Archivematica 1.7では、Elasticsearchのインストールはオプションです。Elasticsearchは、 "
+":ref:`Backlog <backlog>` 、 :ref:`Appraisal <appraisal>` 、 :ref:`Archival "
+"Storage <archival-storage>` "
+"の検索に使用されるインデックスを生成します。Elasticsearchを使用せずにArchivematicaをインストールすると、コンピューティングリソースの消費量が削減され、運用の複雑さが軽減されます。Elasticsearchを無効にすると、ユーザーインターフェースにBacklog、Appraisal、Archival"
+" Storageのタブが表示されなくなり、これらの機能が利用できなくなります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:108
+msgid ""
+"By setting the ``archivematica_src_search_enabled`` configuration attribute,"
+" administrators can define how many things Elasticsearch is indexing, if "
+"any. This can impact searching across several different dashboard pages."
+msgstr ""
+"``archivematica_src_search_enabled`` "
+"設定属性を設定することで、管理者は、Elasticsearchがインデックスを作成する件数を定義できます。これにより、複数の異なるダッシュボードページにわたる検索に影響を与えることができます。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:113
+msgid ""
+"Possible ``archivematica_src_search_enabled`` configuration attribute "
+"values:"
+msgstr "``archivematica_src_search_enabled`` コンフィギュレーション属性の可能な値："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:115
+msgid ""
+"``transfers``: Only transfers are indexed. Search is enabled on the Backlog "
+"and Appraisal tabs, but not the Archival Storage tab."
+msgstr ""
+"``transfers`` ：転送のみインデックスされます。検索は、[Backlog]タブと[Appraisal]タブで有効ですが、[Archival "
+"Storage]タブでは有効ではありません。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:117
+msgid ""
+"``aips``: Only AIPs are indexed. Search is enabled on the Archival Storage "
+"tab, but not the Backlog or Appraisal tabs."
+msgstr ""
+"``aips`` ：AIPのみがインデックスされます。検索は、[Archival "
+"Storage]タブでは有効ですが、[Backlog]タブや[Appraisal]タブでは有効ではありません。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:119
+msgid ""
+"``aips,transfers``, or ``true``: Both AIPs and transfers are indexed. Search"
+" works on the Backlog, Appraisal, and Archival Storage tabs."
+msgstr ""
+"``aips,transfers`` または ``true`` "
+"：AIPと転送の両方がインデックス化されています。Backlog、Appraisal、Archival Storageタブで作品を検索します。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:121
+msgid ""
+"``false``: Indexless mode. Neither AIPs nor transfers are indexed. The "
+"Backlog, Appraisal, and Archival Storage tabs will be non-functional."
+msgstr ""
+"``false`` ：インデックスレスモード。AIPも転送もインデックスされません。Backlog、Appraisal、Archival "
+"Storageタブは機能しません。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:124
+msgid ""
+"When Elasticsearch is used, Archivematica |release| requires version 6.x "
+"(tested with 6.8.21)."
+msgstr ""
+"Elasticsearchを使用する場合、Archivematica |release| にはバージョン6.xが必要です（6.8.21でテスト済み）。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:127
+msgid ""
+"For more information on disabling Elasticsearch, please see the README for "
+"Archivematica's ansible role,"
+msgstr "Elasticsearchを無効化する詳細については、ArchivematicaのansibleロールのREADMEを参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:131
+msgid "Hardware"
+msgstr "ハードウェア"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:133
+msgid ""
+"Archivematica is capable of running on almost any hardware supported by "
+"Linux; however, processing large collections will require better hardware."
+msgstr ""
+"Archivematicaは、Linuxがサポートするほとんどのハードウェアで動作可能ですが、大規模なコレクションを処理するには、より優れたハードウェアが必要になります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:139
+msgid "Minimum hardware requirements"
+msgstr "最小ハードウェア要件"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:141
+msgid ""
+"For small-scale functionality testing using small collections (transfers "
+"with 100 files or less, total file size 1 GB or smaller), we recommend the "
+"following minimum hardware requirements:"
+msgstr ""
+"小規模なコレクション（100 ファイル以下の転送、合計ファイルサイズ "
+"1GB以下）を使用した小規模な機能テストでは、以下の最小ハードウェア要件を推奨します："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:145
+#: ../../admin-manual/installation-setup/installation/installation.rst:159
+msgid "Processor: 2 CPU cores"
+msgstr "プロセッサー：2 CPUコア"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:146
+msgid "Memory: 2GB+"
+msgstr "メモリー：2GB以上"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:147
+msgid ""
+"Disk space (processing): 7GB plus two to three times the disk space required"
+" for the collection being processed (e.g., 3GB to process a 1GB transfer)"
+msgstr "ディスク容量（処理）：7GB＋処理されるコレクションに必要なディスク容量の2～3倍（例：1GBの転送を処理する場合は3GB）"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:153
+msgid "Recommended minimum production requirements"
+msgstr "推奨される最低製造要件"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:155
+msgid ""
+"For production processing, the hardware requirements depend almost entirely "
+"on the size and number of files being processed. These recommendations "
+"should be considered the minimum for a viable production system:"
+msgstr ""
+"生産環境での処理におけるハードウェア要件は、処理されるファイルのサイズと数にほぼ完全に異なります。これらの推奨事項は、実用的な生産システムの最低限と考えるべきです："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:160
+msgid "Memory: 4GB"
+msgstr "メモリ：4GB"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:161
+msgid "Disk space (processing): 200GB"
+msgstr "ディスク容量（処理）200GB"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:163
+msgid "More commonly, we deploy the following:"
+msgstr "より一般的には、以下のようにディプロイします："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:165
+msgid "Processor: 8 CPU cores"
+msgstr "プロセッサー：8 CPUコア"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:166
+msgid "Memory: 16GB"
+msgstr "メモリー：16GB"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:168
+msgid ""
+"For processing disk space, we recommend allocating 20GB plus four times the "
+"disk space required for the largest transfer that you expect to process. If "
+"your largest transfer is 50GB, allocation at least 220GBs of disk space."
+msgstr ""
+"処理用ディスクスペースについては、20GBに加え、処理することが予想される最大の転送に必要なディスクスペースの4倍を割り当てることをお勧めします。最大の転送が50GBの場合、少なくとも220GBのディスク容量を割り当てます。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:172
+msgid ""
+"The amount of transfer source disk space needed is subjective, and depends "
+"on individual workflows."
+msgstr "必要な転送元ディスク容量は主観的なものであり、個々のワークフローにより異なります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:175
+msgid ""
+"The amount of storage disk space needed will depend on how much material you"
+" intend to store, as well as how it is stored (compressed or uncompressed)."
+msgstr "必要なストレージディスク容量は、保存する素材の量や保存方法（圧縮または非圧縮）によって異なります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:178
+msgid ""
+"These requirements may not be suitable for certain types of material - for "
+"example, audio-visual material requires more processing power than images or"
+" documents."
+msgstr ""
+"これらの要件は、特定の種類の素材には適さない場合があります。たとえば、オーディオビジュアル素材は、画像や文書よりも多くの処理能力を必要とします。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:183
+msgid "Browser compatability"
+msgstr "ブラウザの互換性"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:185
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"Minimal, but successful, testing has been done with Microsoft Edge."
+msgstr ""
+"Archivematicaは、FirefoxとChromeで最も広範囲にテストされています。Microsoft "
+"Edgeでのテストは最小限ですが、成功しています。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:191
+msgid "Instructions for new installations"
+msgstr "新規設置の手順"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:193
+msgid ""
+"Archivematica can be installed using packages or Ansible scripts in either "
+"Rocky Linux/Red Hat or Ubuntu environments. At this time, installation "
+"instructions are provided for officially tested and supported installation "
+"environments:"
+msgstr ""
+"Archivematicaは、Rocky Linux/Red "
+"HatまたはUbuntu環境で、パッケージまたはAnsibleスクリプトを使用してインストールできます。現時点では、公式にテストされ、サポートされているインストール環境でのインストール手順が提供されています："
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:198
+msgid ""
+":ref:`Automated install on Ubuntu 22.04 using Ansible <install-ansible>`."
+msgstr ":ref:`Ansible <install-ansible>` を使ってUbuntu 22.04に自動インストールします。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:199
+msgid ""
+":ref:`Manual install of OS packages on Rocky Linux 9/Red Hat <install-pkg-"
+"rocky>`"
+msgstr ":ref:`Rocky Linux 9/Red HatへのOSパッケージの手動インストール <install-pkg-rocky>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:201
+msgid ""
+"Note that :ref:`manual install of OS packages on Ubuntu 22.04 <install-pkg-"
+"ubuntu>` is documented but not officially supported."
+msgstr ""
+":ref:`Ubuntu 22.04 <install-pkg-ubuntu>` "
+"、OSパッケージの手動インストールは、文書化されていますが、公式にはサポートされていません。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:204
+msgid ""
+"Installing Archivematica using :ref:`Docker <development>` is not officially"
+" supported for production deployments. However, it is the preferred "
+"development environment for those who work on Archivematica's code."
+msgstr ""
+":ref:`Docker <development>` "
+"を使用してArchivematicaをインストールすることは、生産環境でのデプロイメントでは公式にはサポートされていません。しかし、Archivematicaのコードに携わる人にとっては、好ましい開発環境となります。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:208
+msgid ""
+"For more information about installation environments, please see the "
+"`ansible-archivematica-src`_ repo, the `deploy-pub`_ repo, and ask on the "
+"`Archivematica user forum`_ for more details."
+msgstr ""
+"インストール環境の詳細については、 `ansible-archivematica-src`_ repo、 `deploy-pub`_ repo、 "
+"`Archivematica user forum`_ でお尋ねください。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:215
+msgid "Instructions for upgrades"
+msgstr "アップグレードの手順"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:217
+msgid ""
+"If you are upgrading from a previous version of Archivematica, please see "
+"the :ref:`upgrading instructions <upgrade>`."
+msgstr ""
+"Archivematicaの旧バージョンからアップグレードする場合は、 :ref:`アップグレード手順 <upgrade>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:223
+msgid "Advanced installation options"
+msgstr "高度なインストールオプション"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:225
+msgid ""
+"There are many ways to install Archivematica, depending on the needs of the "
+"individual user. We have documented some common advanced installation "
+"setups."
+msgstr ""
+"Archivematicaをインストールするには、ユーザーのニーズに応じて様々な方法があります。ここでは、一般的な高度なインストール方法について説明します。"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:228
+msgid ":ref:`Installing for development <development>`"
+msgstr ":ref:`開発のためのインストール <development>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:229
+msgid ":ref:`Configure Archivematica with SSL <SSL-support>`"
+msgstr ":ref:`SSLでArchivematicaを設定 <SSL-support>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:230
+msgid ""
+":ref:`Configure Archivematica with task output capturing disabled <task-"
+"output-capturing-admin>`"
+msgstr ""
+":ref:`タスクの出力キャプチャを無効にしてArchivematicaを構成 <task-output-capturing-admin>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:231
+msgid ":ref:`Scaling Archivematica <scaling-archivematica>`"
+msgstr ":ref:`Archivematicaのスケーリング <scaling-archivematica>`"
+
+#: ../../admin-manual/installation-setup/installation/installation.rst:233
+msgid ":ref:`Back to the top <installation>`"
+msgstr ":ref:`トップに戻る <installation>`"

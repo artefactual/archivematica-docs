@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:5
+msgid "Task output capturing configuration"
+msgstr "タスク出力キャプチャ設定"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:7
+msgid ""
+"Archivematica allows users to configure their MCP client(s) in order to "
+"control whether or not output streams (stdout and stderr) from the client "
+"scripts are captured and then passed from the task workers to the task "
+"manager (the MCP server)."
+msgstr ""
+"Archivematicaでは、クライアントスクリプトからの出力ストリーム（stdoutとstderr）をキャプチャして、タスクワーカーからタスクマネージャ（MCPサーバ）に渡すかどうかを制御するために、MCPクライアントを設定できます。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:12
+msgid ""
+"In the default configuration, these output streams *are* captured. In this "
+"state, when a user clicks on the gear icon of a microservice in order to "
+"view the tasks that have run, each task representation will contain a "
+"section entitled ``Standard streams`` which will contain a sub-section "
+"entitled ``Standard output (stdout)`` containing the stdout from the client "
+"script and another entitled ``Standard error (stderr)`` containing the "
+"stderr."
+msgstr ""
+"デフォルトの構成では、これらの出力ストリーム *が* "
+"キャプチャされます。この状態で、ユーザーがマイクロサービスの歯車アイコンをクリックして実行されたタスクを表示すると、各タスクの表現には "
+"``Standard streams`` というセクションが含まれ、 ``Standard output (stdout)`` "
+"というサブセクションにはクライアントスクリプトからのstdoutが含まれ、 ``Standard error (stderr)`` "
+"というサブセクションにはstderrが含まれます。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:19
+#, python-format
+msgid ""
+"However, in some cases, serializing these output streams and moving them "
+"around (*capturing* them) can have a non-trivial performance cost. (We have "
+"measured a 6% reduction in processing time for some transfers when output "
+"capturing is disabled.) Archivematica can be configured to avoid paying this"
+" cost by disabling the capturing of these output streams. The trade-off for "
+"doing this is that the stdout and stderr that documents the running of a "
+"preservation task will no longer be stored in the database and it will no "
+"longer be displayed in the tasks interface."
+msgstr ""
+"しかし、場合によっては、これらの出力ストリームを直列化し、移動させる（ *capturing* "
+"）ことで、自明でないパフォーマンス・コストが発生することがあります（出力キャプチャを無効にすると、一部の転送で処理時間が6%短縮されることが確認されています）。Archivematicaは、出力ストリームのキャプチャを無効にすることで、このコストを回避するように設定できます。このトレードオフは、保存タスクの実行を記録する標準出力と標準エラーがデータベースに保存されなくなり、タスクインターフェースに表示されなくなることです。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:28
+msgid ""
+"In order to configure Archivematica to stop capturing output streams, one "
+"must set the "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` "
+"environment variable to ``false`` before starting (or re-starting) the MCP "
+"client process. The way that Archivematica environment variables are set "
+"depends on the deployment method used. Please consult the relevant "
+"documentation for your deployment method if you are interested in disabling "
+"output capturing."
+msgstr ""
+"Archivematicaが出力ストリームのキャプチャを停止するように設定するには、MCPクライアントプロセスを起動（または再スタート）する前に、環境変数"
+" ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_CAPTURE_CLIENT_SCRIPT_OUTPUT`` を "
+"``false`` "
+"に設定する必要があります。Archivematica環境変数の設定方法は、使用するデプロイ方法によって異なります。出力キャプチャを無効にしたい場合は、使用するデプロイ方法の関連文書を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:36
+msgid ""
+":ref:`Environment variable configuration for Rocky Linux package-based "
+"installations <install-pkg-rocky>`"
+msgstr ":ref:`Rocky Linuxパッケージ・ベースのインストールにおける環境変数の設定 <install-pkg-rocky>`"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:37
+msgid ""
+":ref:`Environment variable configuration for Ubuntu package-based "
+"installations <install-pkg-ubuntu>`"
+msgstr ":ref:`Ubuntuパッケージベースのインストールにおける環境変数の設定 <install-pkg-ubuntu>`"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:38
+msgid ""
+":ref:`Environment variable configuration for Ubuntu Ansible-based "
+"installations <install-ansible>`"
+msgstr ":ref:`Ubuntu Ansibleベースのインストールにおける環境変数の設定 <install-ansible>`"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:39
+msgid ""
+"`Environment variable configuration for Docker Compose installations "
+"<https://github.com/artefactual/archivematica/tree/qa/1.x/hack>`_"
+msgstr ""
+"`Docker Composeインストール用の環境変数設定 "
+"<https://github.com/artefactual/archivematica/tree/qa/1.x/hack>`_"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:41
+msgid ""
+"Note that when output capturing is disabled the stdout will *never* be "
+"captured while the *stderr* will only be captured when the preservation task"
+" returns a non-zero exit code (i.e., when it fails). This allows the user to"
+" get the performance benefits while still having useful debugging "
+"information in the case where a task fails."
+msgstr ""
+"出力キャプチャを無効にすると、stdoutは *決して* キャプチャされませんが、 *stderr* "
+"は、保存タスクがゼロ以外の終了コードを返したとき（つまり失敗したとき）だけキャプチャされることに注意してください。これにより、ユーザーは、タスクが失敗した場合に有用なデバッグ情報を得ながら、パフォーマンス上の利点を得ることができます。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:49
+msgid ""
+"It is also possible to tweak the configuration of your database server in "
+"order to push the existing limits further. This can be a good solution for "
+"users familiar with the MySQL storage engine. In particular we have had some"
+" success increasing the InnoDB log file size (``innodb_log_file_size``). See"
+" `Should MySQL update the default innodb_log_file_size?`_ for more. In the "
+"long term, we expect to find better ways to store task results - if you are "
+"interested, please see `issue #314`_."
+msgstr ""
+"また、既存の限界をさらに押し広げるために、データベースサーバーの設定を微調整することも可能です。これは、MySQLストレージエンジンに精通しているユーザーにとっては良い解決策となります。特に、InnoDBのログファイルサイズ（"
+" ``innodb_log_file_size`` ）を増やすことに成功しています。 "
+"`MySQLがデフォルトのinnodb_log_file_sizeを更新すべきかは、`_ "
+"を参照してください。長期的には、タスクの結果を保存するためのより良い方法が見つかると期待しています。もし興味があれば、 `issue #314`_ "
+"を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/task-config.rst:57
+msgid ":ref:`Back to the top <task-output-capturing-admin>`"
+msgstr ":ref:`トップに戻る <task-output-capturing-admin>`"

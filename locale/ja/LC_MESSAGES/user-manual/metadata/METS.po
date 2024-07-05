@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/metadata/METS.rst:5
+msgid "METS in Archivematica"
+msgstr "ArchivematicaのMETS"
+
+#: ../../user-manual/metadata/METS.rst:8
+msgid "General description"
+msgstr "概要"
+
+#: ../../user-manual/metadata/METS.rst:10
+msgid ""
+"The Metadata Encoding & Transmission Standard, or `METS`_, is a schema for "
+"encoding various metadata, expressed in XML. It essentially acts a wrapper "
+"around other metadata standards, such as PREMIS and Dublin Core that are "
+"used in Archivematica."
+msgstr ""
+"Metadata Encoding & Transmission Standard、 `METS`_ "
+"は、XMLで表現された様々なメタデータをエンコードするためのスキーマです。Archivematicaで使用されているPREMISやDublin "
+"Coreなどのメタデータ標準のラッパーとして機能します。"
+
+#: ../../user-manual/metadata/METS.rst:15
+msgid ""
+"The METS file in Archivematica will have a basic generic structure that is "
+"comprised of the following sections:"
+msgstr "Archivematica の METS ファイルは、次のセクションで構成される基本的な汎用構造を持ちます："
+
+#: ../../user-manual/metadata/METS.rst:18
+msgid "metsHdr (METS header) (one only)"
+msgstr "metsHdr（METSヘッダ）（1つのみ）"
+
+#: ../../user-manual/metadata/METS.rst:19
+msgid "dmdSec (descriptive metadata section) (one or more)"
+msgstr "dmdSec（説明メタデータセクション）（1つ以上）"
+
+#: ../../user-manual/metadata/METS.rst:20
+msgid "amdSec (administrative metadata section) (one or more)"
+msgstr "amdSec（管理メタデータセクション）（1つ以上）"
+
+#: ../../user-manual/metadata/METS.rst:21
+msgid "fileSec (file section) (one only)"
+msgstr "fileSec（ファイルセクション）（1つのみ）"
+
+#: ../../user-manual/metadata/METS.rst:22
+msgid "structMap (structural map) (one or more)"
+msgstr "structMap（構造マップ）（1つのみ）"
+
+#: ../../user-manual/metadata/METS.rst:28
+msgid ""
+"Below is a more detailed outline of the above sections present in AIPs "
+"created in Archivematica."
+msgstr "以下は、Archivematica で作成された AIP に存在する上記のセクションのより詳細な概要です。"
+
+#: ../../user-manual/metadata/METS.rst:31
+msgid "Skip to:"
+msgstr "次にスキップ："
+
+#: ../../user-manual/metadata/METS.rst:33
+msgid ":ref:`<metsHdr> <metshdr>`"
+msgstr ":ref:`<metsHdr> <metshdr>`"
+
+#: ../../user-manual/metadata/METS.rst:34
+msgid ":ref:`<dmdSec> <dmdsec>`"
+msgstr ":ref:`<dmdSec> <dmdsec>`"
+
+#: ../../user-manual/metadata/METS.rst:35
+msgid ":ref:`<amdSec> <amdsec>`"
+msgstr ":ref:`<amdSec> <amdsec>`"
+
+#: ../../user-manual/metadata/METS.rst:36
+msgid ":ref:`<fileSec> <filesec>`"
+msgstr ":ref:`<fileSec> <filesec>`"
+
+#: ../../user-manual/metadata/METS.rst:37
+msgid ":ref:`<structMap> <structmap>`"
+msgstr ":ref:`<structMap> <structmap>`"
+
+#: ../../user-manual/metadata/METS.rst:43
+msgid "<metsHdr>"
+msgstr "<metsHdr>"
+
+#: ../../user-manual/metadata/METS.rst:45
+msgid ""
+"There will be one METS header section for each METS file. It will contain a "
+"CREATEDATE attribute."
+msgstr "METS ファイルごとに 1 つの METS ヘッダー セクションがあります。これには CREATEDATE 属性が含まれます。"
+
+#: ../../user-manual/metadata/METS.rst:52
+msgid ""
+"If the AIP has been reingested, the metsHder section will also contain a "
+"LASTMODDATE."
+msgstr "AIPが再インジェストされた場合、metsHderセクションにはLASTMODDATEも含まれます。"
+
+#: ../../user-manual/metadata/METS.rst:63
+msgid "<dmdSec>"
+msgstr "<dmdSec>"
+
+#: ../../user-manual/metadata/METS.rst:65
+msgid ""
+"There will be one dmdSec for the whole AIP, which contains PREMIS "
+"Intellectual Entity information."
+msgstr "AIP全体に対して1つのdmdSecが存在し、そこにはPREMIS Intellectual Entity 情報が含まれます。"
+
+#: ../../user-manual/metadata/METS.rst:72
+msgid ""
+"There may also be one or more dmdSecs for descriptive metadata. The dmdSecs "
+"are numbered dmdSec_1, dmdSec_2, etc. and contain Dublin Core metadata as a "
+"default."
+msgstr ""
+"説明メタデータ用に 1 つ以上の dmdSecs が存在する場合もあります。dmdSec には dmdSec_1、dmdSec_2 "
+"などの番号が付けられ、デフォルトで Dublin Core メタデータが含まれています。"
+
+#: ../../user-manual/metadata/METS.rst:79
+msgid ""
+"MDTYPE will be **DC** for Dublin Core metadata; if another metadata standard"
+" is included then the MDTYPE will be **OTHER**."
+msgstr ""
+"Dublin Core メタデータの場合、MDTYPE は、 **DC** になります。別のメタデータ規格が含まれている場合、MDTYPE は、 "
+"**その他** になります。"
+
+#: ../../user-manual/metadata/METS.rst:82
+msgid ""
+"If the user does not enter any DC metadata during transfer/ingest and no DC "
+"metadata was included with the transfer (e.g. as a metadata.csv file, see "
+":ref:`Import metadata <import-metadata>`), there will be no additional "
+"dmdSecs."
+msgstr ""
+"転送/インジェスト中にユーザーがDCメタデータを入力せず、DCメタデータが転送に 含まれていない場合（例：metadata.csvファイル、 "
+":ref:`メタデータのインポート <import-metadata>` を参照）、dmdSecsは追加されません。"
+
+#: ../../user-manual/metadata/METS.rst:90
+msgid "<amdSec>"
+msgstr "<amdSec>"
+
+#: ../../user-manual/metadata/METS.rst:92
+msgid ""
+"There is one amdSec for each original object and preservation object. The "
+"amdSec wraps PREMIS entities as follows:"
+msgstr ""
+"オリジナルのオブジェクトと保存オブジェクトごとに 1 つの amdSec があります。amdSec は、PREMIS "
+"エンティティを次のようにラップします："
+
+#: ../../user-manual/metadata/METS.rst:95
+msgid "PREMIS Object: techMD (tehnical metadata)"
+msgstr "PREMISオブジェクト：techMD（技術メタデータ）"
+
+#: ../../user-manual/metadata/METS.rst:96
+msgid "PREMIS Event: digiprovMD (digital provenance metadata)"
+msgstr "PREMISイベント：digiprovMD（デジタル実証メタデータ）"
+
+#: ../../user-manual/metadata/METS.rst:97
+msgid "PREMIS Agent: digiprovMD (digital provenance metadata)"
+msgstr "PREMISエージェント：digiprovMD（デジタル実証メタデータ）"
+
+#: ../../user-manual/metadata/METS.rst:98
+msgid "PREMIS Rights: rightsMD (rights metadata)"
+msgstr "PREMISライツ：rightsMD（権利タデータ）"
+
+#: ../../user-manual/metadata/METS.rst:100
+msgid ""
+"Each amdSec will include one techMD. The techMD is used to wrap PREMIS "
+"Object semantic units, such as objectIdentifier, objectCharacteristics and "
+"originalName. See the example techMD below:"
+msgstr ""
+"各 amdSec には 1 つの techMD "
+"が含まれます。techMDは、objectIdentifier、objectCharacteristics、originalName などの "
+"PREMIS オブジェクトの意味単位をラップするために使用されます。以下の techMD の例を参照してください："
+
+#: ../../user-manual/metadata/METS.rst:108
+msgid ""
+"Each amdsec will include multiple digiprovMDs for PREMIS events related to "
+"the PREMIS Object. Below is an example of a PREMIS event for a fixity check:"
+msgstr ""
+"各 amdsec には、PREMIS オブジェクトに関連する PREMIS イベント用の複数の digiprovMD が含まれます。以下は、 "
+"fixity チェックの PREMIS イベントの例です："
+
+#: ../../user-manual/metadata/METS.rst:115
+msgid ""
+"An amdSec for an original object may also contain one or more rightsMDs. The"
+" rightsMD may contain a reference to metadata in another file, such as "
+"rights.csv uploaded with a transfer. Below is an example of a PREMIS Rights "
+"statement in rightsMD section of the AIP METS file:"
+msgstr ""
+"オリジナルオブジェクトのamdSecは、1つ以上のrightsMDを含むこともあります。rightsMDは、転送とともにアップロードされたrights.csvのような別のファイルのメタデータへの参照を含むことがあります。以下は、AIP"
+" METSファイルのrightsMDセクションにあるPREMIS Rightsステートメントの例です："
+
+#: ../../user-manual/metadata/METS.rst:124
+msgid ""
+"An amdSec will also have zero or more source metadata, or sourceMD, "
+"sections. This is the only non-PREMIS section in an amdSec and no XML schema"
+" is used for the contents. SourceMD is created from the contents of the bag-"
+"info.txt whenever a zipped or unzipped bag transfer type is used. It is also"
+" created for a disk image transfer if the user entered meteadata about the "
+"disk image in the Transfer tab."
+msgstr ""
+"amdSec には、0 個以上のソース メタデータまたは sourceMD、セクションもあります。これは、amdSec 内の唯一の non-PREMIS"
+" セクションであり、コンテンツには XML スキーマは使用されません。SourceMD "
+"は、圧縮または解凍されたバッグ転送タイプが使用されるたびに、bag-info.txt の内容から作成されます。ユーザーが [転送] "
+"タブでディスクイメージに関するメタデータを入力した場合、ディスクイメージ転送用にも作成されます。"
+
+#: ../../user-manual/metadata/METS.rst:135
+msgid "<fileSec>"
+msgstr "<fileSec>"
+
+#: ../../user-manual/metadata/METS.rst:137
+msgid ""
+"There is one fileSec listing all files. The fileSec is organized into two or"
+" more of the following fileGrps:"
+msgstr ""
+"すべてのファイルをリストする fileSec が 1 つあります。fileSec は、次の 2 つ以上の fileGrps で構成されます："
+
+#: ../../user-manual/metadata/METS.rst:140
+msgid "original"
+msgstr "オリジナル"
+
+#: ../../user-manual/metadata/METS.rst:141
+msgid "preservation"
+msgstr "保存"
+
+#: ../../user-manual/metadata/METS.rst:142
+msgid "service"
+msgstr "サービス"
+
+#: ../../user-manual/metadata/METS.rst:143
+msgid "submissionDocumentation"
+msgstr "提出書類"
+
+#: ../../user-manual/metadata/METS.rst:144
+msgid "metadata"
+msgstr "メタデータ"
+
+#: ../../user-manual/metadata/METS.rst:145
+msgid "license"
+msgstr "ライセンス"
+
+#: ../../user-manual/metadata/METS.rst:146
+msgid "text/ocr"
+msgstr "テキスト"
+
+#: ../../user-manual/metadata/METS.rst:147
+msgid "deleted"
+msgstr "削除"
+
+#: ../../user-manual/metadata/METS.rst:149
+msgid ""
+"These are known as USE attributes and must accompany each fileGrp. The "
+"fileGrp *original* is required for all METS files. If the AIP includes "
+"normalized for preservation files then the fileGrp *preservation* is used. "
+"The *service* fileGrp may be used if the AIP contains the sub-folder (e.g. "
+"as the output of digitization workflows)."
+msgstr ""
+"これらは USE アトリビュートと呼ばれ、各 fileGrp に付随しなければなりません。fileGrp *original* は、すべての METS "
+"ファイルに必要です。AIPが保存ファイル用に正規化されたものを含む場合、fileGrp *preservation* が使用されます。 "
+"*service* fileGrp は、AIP にサブフォルダが含まれる場合（デジタル化ワークフローの出力など）に使用できます。"
+
+#: ../../user-manual/metadata/METS.rst:155
+msgid ""
+"Each fileGrp will have a GROUPID used to relate different versions of files "
+"and an ID used later as the FILEID to identify the file in the "
+":ref:`Structural Map <structMap>`."
+msgstr ""
+"各 fileGrp は、異なるバージョンのファイルを関連付けるために使用される GROUPID と、 :ref:`構造マップ <structMap>` "
+"でファイルを識別するための FILEID として後で使用される ID を持ちます。"
+
+#: ../../user-manual/metadata/METS.rst:159
+msgid ""
+"The GROUPID includes the UUID (from the objectIdentifierValue) of the "
+"original file. The ID is the UUID (from the objectIdentifierValue) of the "
+"file being described. This means original files will have the same GROUPID "
+"and ID. However, related files (such as those normalized for preservation) "
+"will have the same GROUPID as the original file but a different ID."
+msgstr ""
+"GROUPID には、オリジナルのファイルの UUID (objectIdentifierValue から) が含まれます。ID "
+"は、記述されているファイルの (objectIdentifierValue からの) UUID です。これは、オリジナルのファイルが同じ GROUPID"
+" と ID を持つことを意味します。ただし、関連ファイル (保存用に正規化されたファイルなど) は、オリジナルのファイルと同じ GROUPID "
+"を持ちますが、ID は異なります。"
+
+#: ../../user-manual/metadata/METS.rst:165
+msgid ""
+"Below is an example of the original fileGrp section in the AIP METS file:"
+msgstr "以下は、AIP METS ファイルのオリジナル fileGrp セクションの例です："
+
+#: ../../user-manual/metadata/METS.rst:175
+msgid "<structMap>"
+msgstr "<structMap>"
+
+#: ../../user-manual/metadata/METS.rst:177
+msgid ""
+"There will be at least one physical Structural Map, or structMap, in the "
+"METS. It is labeled \"Archivematica Default\" and lists the directories and "
+"files in the objects directory as they are laid out on disk."
+msgstr ""
+"METS には少なくとも 1 つの物理構造マップ、または structMap が存在します。これには、\"Archivematica Default\""
+" というラベルが付けられており、ディスク上に配列されたオブジェクトディレクトリ内のディレクトリとファイルがリストアップされます。"
+
+#: ../../user-manual/metadata/METS.rst:185
+msgid ""
+"If you have chosen to run the job *document empty directories* microservice "
+"runs, then a second structMap is created. It is labeled \"Normative "
+"Directory Structure.\" At AIP re-ingest this new 'logical' structMap will be"
+" parsed to re-create the empty directories."
+msgstr ""
+"ジョブ *文書空のディレクトリ* マイクロサービスの実行を選択した場合、2 番目の structMap "
+"が作成されます。このstructMapには、\"Normative Directory Structureというラベルが付けられます。\" "
+"AIPの再インジェストでは、この新しい「論理」structMapが解析されて、空のディレクトリが再作成されます。"
+
+#: ../../user-manual/metadata/METS.rst:190
+msgid ""
+"A logical structmap describes a relationship between objects in an "
+"Archivematica AIP that might not be true to their 'physical' layout on disk,"
+" as is here where empty directories have previously been removed but are "
+"still recorded so as to be recreated in the future."
+msgstr ""
+
+#: ../../user-manual/metadata/METS.rst:195
+msgid ""
+"If a user includes a :ref:`custom structMap <structmap.xml>` in the "
+"transfer, then this will also be included in the METS file."
+msgstr ""
+"ユーザーが転送に :ref:`カスタム structMap <structmap.xml>` を含めた場合、これも METS ファイルに含まれます。"
+
+#: ../../user-manual/metadata/METS.rst:199
+msgid ":ref:`Back to the top <METS_schema>`"
+msgstr ":ref:`トップに戻る <METS_schema>`"

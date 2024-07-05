@@ -1,0 +1,1446 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/ingest/ingest.rst:5
+msgid "Ingest"
+msgstr "インジェスト"
+
+#: ../../user-manual/ingest/ingest.rst:7
+msgid ""
+"During ingest, digital objects are packaged into SIPs and run through "
+"several microservices, including normalization, packaging into an AIP and "
+"generation of a DIP."
+msgstr ""
+"インジェスト中、デジタルオブジェクトは、SIPにパッケージ化され、正規化、AIPへのパッケージ化、DIPの生成など、いくつかのマイクロサービスを介して実行されます。"
+
+#: ../../user-manual/ingest/ingest.rst:11
+msgid ""
+"If you would like to skip some of the default decision points or make "
+"preconfigured choices for your desired workflow, see :ref:`User "
+"administration - Processing configuration <dashboard-processing>`."
+msgstr ""
+"デフォルトの決定ポイントのいくつかをスキップしたり、希望するワークフローに対して事前に設定された選択を行いたい場合は、 :ref:`ユーザー管理 - "
+"処理設定 <dashboard-processing>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:15
+msgid ""
+"Should you run into an error during ingest, please see :ref:`Error handling "
+"<error-handling>`."
+msgstr "インジェスト中にエラーが発生した場合は、 :ref:`エラー処理 <error-handling>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:18
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/ingest/ingest.rst:20
+msgid ":ref:`Create a SIP <create-sip>`"
+msgstr ":ref:`SIPの作成 <create-sip>`"
+
+#: ../../user-manual/ingest/ingest.rst:21
+msgid ":ref:`Add descriptive metadata <add-metadata>`"
+msgstr ":ref:`説明メタデータを追加 <add-metadata>`"
+
+#: ../../user-manual/ingest/ingest.rst:22
+msgid ":ref:`Add PREMIS rights <add-rights>`"
+msgstr ":ref:`PREMISの権利を追加 <add-rights>`"
+
+#: ../../user-manual/ingest/ingest.rst:23
+msgid ":ref:`Normalize <normalize>`"
+msgstr ":ref:`正規化 <normalize>`"
+
+#: ../../user-manual/ingest/ingest.rst:24
+msgid ":ref:`Bind PIDs <bind-pids>`"
+msgstr ":ref:`Bind PID <bind-pids>`"
+
+#: ../../user-manual/ingest/ingest.rst:25
+msgid ":ref:`Transcribe SIP contents <transcribe-contents>`"
+msgstr ":ref:`SIPコンテンツのテキスト変換 <transcribe-contents>`"
+
+#: ../../user-manual/ingest/ingest.rst:26
+msgid ":ref:`Store AIP <store-aip>`"
+msgstr ":ref:`AIPの保存 <store-aip>`"
+
+#: ../../user-manual/ingest/ingest.rst:27
+msgid ":ref:`Upload DIP <upload-dip>`"
+msgstr ":ref:`DIPのアップロード <upload-dip>`"
+
+#: ../../user-manual/ingest/ingest.rst:28
+msgid ":ref:`Re-ingest AIP <reingest>`"
+msgstr ":ref:`AIPの再インジェスト <reingest>`"
+
+#: ../../user-manual/ingest/ingest.rst:29
+msgid ":ref:`Clean up the ingest dashboard <cleanup-ingest>`"
+msgstr ":ref:`インジェストダッシュボードのクリーンアップ <cleanup-ingest>`"
+
+#: ../../user-manual/ingest/ingest.rst:34
+msgid "Create a SIP"
+msgstr "SIPの作成"
+
+#: ../../user-manual/ingest/ingest.rst:36
+msgid ""
+"Process transfers as described in :ref:`Transfers <transfer>`. If you "
+"selected \"Create single SIP and continue processing\" on the Transfer tab, "
+"your SIP has been created and Archivematica will begin running Ingest tasks."
+" Click on the Ingest tab to continue working with your SIP."
+msgstr ""
+":ref:`転送 <transfer>` の説明に従って転送を処理します。[転送] タブで\"単一の SIP を作成して処理を続ける\" "
+"を選択した場合、SIP が作成され、Archivematica は インジェスト タスクの実行を開始します。[インジェスト] タブをクリックして、SIP"
+" の処理を続けます。"
+
+#: ../../user-manual/ingest/ingest.rst:41
+msgid ""
+"The single SIP will move through a number of microservices. If you have "
+"preconfigured Archivematica to do so, processing will stop at a decision "
+"point that allows you to run file identification again or to use the "
+"existing file identification information captured during transfer. "
+"Archivematica's default is to use existing data. For more about this option,"
+" see :ref:`Processing configuration <dashboard-processing>`."
+msgstr ""
+"単一の SIP は、多数のマイクロサービスを介して移動します。そのように Archivematica "
+"を事前設定している場合、処理は決定ポイントで停止し、ファイル識別を再度実行するか、転送中に取得された既存のファイル識別情報を使用することができます。Archivematica"
+" のデフォルトでは、既存のデータが使用されます。このオプションの詳細については、 :ref:`構成の処理 <dashboard-processing>`"
+" を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:48
+msgid ""
+"Once the SIP reaches \"Normalize\", you will be given several options for "
+"how Archivematica should normalize the SIP. Choose the option most suitable "
+"for your workflow."
+msgstr ""
+"SIP が\"正規化\" に達すると、Archivematica が SIP "
+"をどのように正規化するか、いくつかのオプションが表示されます。ワークフローに最も適したオプションを選択してください。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "Archivematica Normalization microservice"
+msgstr "Archivematica正規化マイクロサービス"
+
+#: ../../user-manual/ingest/ingest.rst:58
+msgid "Normalization microservice"
+msgstr "正規化マイクロサービス"
+
+#: ../../user-manual/ingest/ingest.rst:60
+msgid ""
+"To add descriptive metadata, see :ref:`Add metadata <add-metadata>`, below."
+msgstr "説明メタデータを追加するには、 :ref:`メタデータを追加 <add-metadata>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:62
+msgid ""
+"To add PREMIS rights information, see :ref:`Add PREMIS rights <add-rights>`,"
+" below."
+msgstr "PREMIS権利情報を追加するには、下記の :ref:`PREMIS権利の追加 <add-rights>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:65
+msgid ""
+"For selecting a normalization option, see :ref:`Normalization <normalize>`, "
+"below."
+msgstr "正規化オプションの選択については、下記の :ref:`正規化 <normalize>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:68
+msgid "The microservices that run on the Ingest tab include:"
+msgstr "[インジェスト]タブで実行されるマイクロサービスには、次のものが含まれます："
+
+#: ../../user-manual/ingest/ingest.rst:70
+msgid ""
+"**Verify SIP compliance**: verifies that the SIP conforms to the folder "
+"structure required by Archivematica for processing."
+msgstr ""
+"**Verify SIP compliance** ：SIP が Archivematica の処理に必要なフォルダ構造に適合していることを確認します。"
+
+#: ../../user-manual/ingest/ingest.rst:73
+msgid ""
+"**Rename SIP directory with SIP UUID**: associates the SIP with its metadata"
+" by appending the SIP UUID to the SIP directory name and checks if SIP is "
+"from Maildir transfer type to determine workflow. Both the transfer UUID and"
+" the SIP UUID are captured in the final AIP."
+msgstr ""
+"**SIP UUIDでSIPディレクトリ名を変更** ：SIPディレクトリ名にSIP "
+"UUIDを付加することで、SIPとそのメタデータを関連付け、SIPがMaildir転送タイプであるかどうかをチェックし、ワークフローを決定します。転送（transfer）UUIDとSIP"
+" UUIDの両方が最終的なAIPに取り込まれます。"
+
+#: ../../user-manual/ingest/ingest.rst:78
+msgid ""
+"**Normalize**: :ref:`normalization <normalize>` converts ingested digital "
+"objects to preferred preservation and/or access formats according to user "
+"preference, using rules from :ref:`Preservation planning <preservation-"
+"planning>`. Choices about normalization can be made at the time the service "
+"is run, or automated in  :ref:`Processing configuration <dashboard-"
+"processing>`."
+msgstr ""
+"**Normalize** ： :ref:`正規化 <normalize>` :ref:` 保存計画 <preservation-planning>` "
+"のルールを使用して、インジェストされたデジタルオブジェクトを、ユーザーの好みに応じて、望ましい保存形式および/またはアクセス形式に変換します。正規化に関する選択は、サービス実行時に行うことも、"
+" :ref:`処理設定 <dashboard-processing>` で自動化もできます。"
+
+#: ../../user-manual/ingest/ingest.rst:85
+msgid ""
+"**Process manually normalized files**: processes files that have been "
+"normalized prior to transfer or allows :ref:`manual normalization <manual-"
+"norm>` during ingest."
+msgstr ""
+"**手動で正規化されたファイルを処理** ：転送前に正規化されたファイルを処理するか、 :ref:`インジェスト中に手動で正規化 <manual-"
+"norm>` を許可します。"
+
+#: ../../user-manual/ingest/ingest.rst:89
+msgid ""
+"**Policy checks for derivatives**: checks access and preservation "
+"derivatives created during normalization against the :ref:`Format Policy "
+"Registry <preservation-planning>`."
+msgstr ""
+"**派生物のポリシーチェック** ：正規化中に作成された派生物へのアクセスと保存を、 :ref:`フォーマットポリシーレジストリ "
+"<preservation-planning>` と照らし合わせてチェックします。"
+
+#: ../../user-manual/ingest/ingest.rst:92
+msgid ""
+"**Add final metadata**: allows the user to :ref:`add metadata <add-"
+"metadata>` through the UI if desired."
+msgstr ""
+"**Add final metadata** ：必要に応じて、ユーザーがUIを通じて :ref:`メタデータ <add-metadata>` "
+"を追加できるようにします。"
+
+#: ../../user-manual/ingest/ingest.rst:95
+msgid ""
+"**Transcribe SIP contents**: runs :ref:`Tesseract <transcription>` OCR tool "
+"on JPG or TIFF images in the SIP."
+msgstr ""
+"**SIPの内容を書き写す** ： :ref:`Tesseract <transcription>` "
+"OCRツールをSIPのJPGまたはTIFF画像上で実行します。"
+
+#: ../../user-manual/ingest/ingest.rst:98
+msgid ""
+"**Process submission documentation**: processes any submission documentation"
+" included in the SIP and adds it to the ``objects`` directory."
+msgstr "**提出書類の処理** ：SIPに含まれる提出書類を処理し、 ``objects`` ディレクトリに追加します。"
+
+#: ../../user-manual/ingest/ingest.rst:101
+msgid ""
+"**Bind PIDs**: this :ref:`microservice <bind-pids>` uses integration with "
+"the Handle.Net registry to create persistent identifiers."
+msgstr ""
+"**Bind PIDs** ：この :ref:`マイクロサービス <bind-pids>` "
+"は、永続的な識別子を作成するためにHandle.Netレジストリとの統合を使用します。"
+
+#: ../../user-manual/ingest/ingest.rst:104
+msgid ""
+"**Generate AIP METS**: generates the Archivematica :ref:`AIP METS.xml file "
+"<aip-structure>`."
+msgstr ""
+"**AIP METS の生成** ：Archivematica :ref:`AIP METS.xml ファイル <aip-structure>` "
+"を生成します。"
+
+#: ../../user-manual/ingest/ingest.rst:107
+msgid ""
+"**Prepare DIP**: if normalizing for access, creates a DIP containing access "
+"copies of the objects, thumbnails, and a copy of the METS.xml file."
+msgstr ""
+"**Prepare DIP** "
+"：アクセス用に正規化する場合、オブジェクトのアクセスコピー、サムネイル、METS.xmlファイルのコピーを含むDIPを作成します。"
+
+#: ../../user-manual/ingest/ingest.rst:110
+msgid ""
+"**Prepare AIP**: creates an :ref:`AIP in Bagit format <aip-structure>`; "
+"creates the AIP pointer file; indexes the AIP, then losslessly compresses "
+"it."
+msgstr ""
+"**Prepare AIP** ： :ref:`AIPをBagitフォーマットで作成 <aip-structure>` ; "
+"AIPポインターファイルを作成 ; AIPにインデックスを付け、可逆圧縮します。"
+
+#: ../../user-manual/ingest/ingest.rst:113
+msgid ""
+"**Review AIP**: part of the Prepare AIP microservice, allows the user to "
+"review the structure and content of the AIP before proceeding."
+msgstr ""
+"**Review AIP** ：Prepare AIP microserviceの一部で、AIPを進める前にAIPの構造と内容を確認できます。"
+
+#: ../../user-manual/ingest/ingest.rst:116
+msgid ""
+"**Upload DIP**: when DIP is created, allows the user to :ref:`upload the DIP"
+" <upload-dip>` to connected access options if desired. [link]"
+msgstr ""
+"**DIP のアップロード** ：DIP が作成されると、ユーザーは、 必要に応じて、接続されたアクセスオプションに :ref:`DIP "
+"をアップロードできます <upload-dip>` 。[リンク］"
+
+#: ../../user-manual/ingest/ingest.rst:119
+msgid ""
+"**Store DIP**: allows the user to choose to store the DIP in a location pre-"
+"configured in the Storage Service."
+msgstr "**Store DIP** ：Storage Serviceにあらかじめ設定された場所にDIPを保存することを選択できます。"
+
+#: ../../user-manual/ingest/ingest.rst:122
+msgid ""
+"**Store AIP**: :ref:`moves the AIP <store-aip>` to "
+"``sharedDirectoryStructure/www/AIPsStore`` or another specified directory. "
+"Before the AIP has been stored, a copy of it is extracted to a local temp "
+"directory, where it is subjected to standard BagIt checks: verifyvalid, "
+"checkpayloadoxum, verifycomplete, verifypayloadmanifests, "
+"verifytagmanifests."
+msgstr ""
+"**Store AIP** ： :ref:`AIP <store-aip>` を "
+"``sharedDirectoryStructure/www/AIPsStore`` "
+"または他の指定されたディレクトリに移動します。AIPが格納される前に、そのコピーがローカルのtempディレクトリに展開され、そこでBagItの標準的なチェックが行われます：verifyvalid、checkpayloadoxum、verifycomplete、verifypayloadmanifests、verifytagmanifests。"
+
+#: ../../user-manual/ingest/ingest.rst:132
+msgid "Add descriptive metadata"
+msgstr "説明メタデータを追加"
+
+#: ../../user-manual/ingest/ingest.rst:134
+msgid ""
+"Archivematica can accept descriptive metadata about your digital objects. "
+"For information on including descriptive metadata prior to starting your "
+"transfer, see :ref:`Transfers with descriptive and/or rights metadata "
+"<transfers-with-metadata>`. This section will describe how to add "
+"descriptive metadata to your materials once processing has begun in "
+"Archivematica."
+msgstr ""
+"Archivematicaは、デジタルオブジェクトに関する説明メタデータを受け入れることができます。転送を開始する前に説明メタデータを含める方法については、"
+" :ref:`説明メタデータや権利メタデータを含む転送 <transfers-with-metadata>` "
+"を参照してください。このセクションでは、Archivematica で処理を開始した後に、素材に説明メタデータを追加する方法について説明します。"
+
+#: ../../user-manual/ingest/ingest.rst:140
+#: ../../user-manual/ingest/ingest.rst:293
+msgid ""
+"Archivematica can be configured to prompt you with a reminder to add "
+"metadata by setting the :ref:`processing configuration <dashboard-"
+"processing>` field ``Reminder: add metadata if desired`` to ``None``. This "
+"reminder occurs at the last moment that it is possible to add metadata; once"
+" the ingest proceeds past this point, it is no longer possible to add "
+"metadata to the SIP."
+msgstr ""
+"Archivematicaは、 :ref:`処理設定 <dashboard-processing>` フィールド ``Reminder: add "
+"metadata if desired`` を ``None`` "
+"に設定することで、メタデータを追加するリマインダを表示するように設定できます。このリマインダは、メタデータを追加できる最後の瞬間に表示されます。インジェストがこのポイントを過ぎると、SIPにメタデータを追加することはできなくなります。"
+
+#: ../../user-manual/ingest/ingest.rst:146
+msgid ""
+"There are two methods for adding metadata while materials are being "
+"processed: by :ref:`entering it into a form <metadata-form-ui>` or by "
+":ref:`uploading a CSV file <metadata-csv-ui>`."
+msgstr ""
+"素材の処理中にメタデータを追加するには、 :ref:`フォーム <metadata-form-ui>` に入力するか、 :ref:`CSV "
+"ファイルをアップロード <metadata-csv-ui>` の2つの方法があります。"
+
+#: ../../user-manual/ingest/ingest.rst:150
+msgid ""
+"If you are planning to pass descriptive metadata to AtoM, see :ref:`AtoM "
+"Dublin Core <atom:dc-template>` for information about the Dublin Core "
+"elements available."
+msgstr ""
+"説明メタデータを AtoM に渡す予定の場合、利用可能なDublin Core要素については、 :ref:`AtoM Dublin Core "
+"<atom:dc-template>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:157
+msgid "Adding metadata using the user interface form"
+msgstr "ユーザーインターフェイスフォームを使用したメタデータの追加"
+
+#: ../../user-manual/ingest/ingest.rst:159
+msgid ""
+"This method is best for users who are creating transfer-level metadata at "
+"the time of processing, or who don't wish to do the extra work to prepare a "
+"CSV to upload metadata to Archivematica. The metadata form implements the "
+"`Dublin Core Metadata Element Set`_."
+msgstr ""
+"この方法は、転送レベルのメタデータを処理時に作成するユーザーや、メタデータを Archivematica "
+"にアップロードするためにCSVを準備する余分な作業をしたくないユーザーに最適です。メタデータフォームは、 `Dublin Core Metadata "
+"Element Set`_ を実装しています。"
+
+#: ../../user-manual/ingest/ingest.rst:164
+msgid ""
+"Note that this method only allows you to add descriptive metadata to the "
+"transfer as a whole. To add metadata on a per-item basis, you must "
+":ref:`import metadata using a CSV file <import-metadata>` and either "
+":ref:`include the CSV with your transfer <transfers-with-metadata>` before "
+"transfer or :ref:`upload the CSV through the user interface <metadata-csv-"
+"ui>`."
+msgstr ""
+"この方法では、転送全体に説明メタデータを追加することしかできないことに注意してください。項目ごとにメタデータを追加するには、 :ref:`CSV "
+"ファイルを使用してメタデータをインポート <import-metadata>` し、転送前に :ref:`転送に CSV を含める "
+"<transfers-with-metadata>` か、 :ref:`ユーザー インターフェースから CSV をアップロード <metadata-"
+"csv-ui>` します。"
+
+#: ../../user-manual/ingest/ingest.rst:172
+msgid ""
+"You must carry out the following steps **before** the microservice "
+"``Reminder: add metadata if desired`` is completed. After this point, any "
+"metadata that is entered will not be properly attached to the SIP or entered"
+" into the METS."
+msgstr ""
+"** マイクロサービス ``Reminder: add metadata if desired`` が完了する前に、以下のステップ** "
+"を実行する必要があります。この時点以降では、入力されたメタデータは、SIPに正しく添付されないか、METSに入力されません。"
+
+#: ../../user-manual/ingest/ingest.rst:177
+#: ../../user-manual/ingest/ingest.rst:305
+msgid ""
+"While on the Transfer or Ingest tab, click on the metadata template icon to "
+"the right of the transfer name."
+msgstr "転送またはインジェストタブで、転送名の右側にあるメタデータテンプレートのアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "Location of the template icon"
+msgstr "テンプレートアイコンの位置"
+
+#: ../../user-manual/ingest/ingest.rst:186
+#: ../../user-manual/ingest/ingest.rst:260
+msgid "To add metadata, click on the template icon"
+msgstr "メタデータを追加するには、テンプレートのアイコンをクリックします"
+
+#: ../../user-manual/ingest/ingest.rst:188
+msgid ""
+"This will take you to the SIP detail page. Under the *Metadata* heading, "
+"click **Add**."
+msgstr "これでSIP詳細ページに移動します。 *メタデータ* の見出しの下で、 **追加** をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:197
+#: ../../user-manual/ingest/ingest.rst:271
+msgid "SIP information page"
+msgstr "SIP情報ページ"
+
+#: ../../user-manual/ingest/ingest.rst:199
+msgid ""
+"Add metadata as desired and save it by clicking **Create** at the bottom of "
+"the screen. Clicking and hovering over a field will show a tooltip that "
+"defines element and provide a link to the `Dublin Core Metadata Element "
+"Set`_."
+msgstr ""
+"必要に応じてメタデータを追加し、画面下部の **作成** "
+"をクリックして保存します。フィールドをクリックしてカーソルを合わせると、要素を定義するツールチップが表示され、 `Dublin Core "
+"Metadata Element Set`_ へのリンクが表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:210
+msgid "Metadata entry form"
+msgstr "メタデータ入力フォーム"
+
+#: ../../user-manual/ingest/ingest.rst:212
+msgid ""
+"When you click **Create**, you will see the metadata entry in the list page."
+" To edit it further, click **Edit** on the right-hand side. To delete it, "
+"click **Delete**. To add more descriptive metadata, click the **Add** button"
+" below the list."
+msgstr ""
+"**作成** をクリックすると、リストページにメタデータエントリーが表示されます。さらに編集するには、右側の **編集** "
+"をクリックします。削除するには、 **削除** をクリックします。さらに説明メタデータを追加するには、リストの下にある **追加** "
+"ボタンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:223
+msgid "SIP metadata list"
+msgstr "SIPメタデータリスト"
+
+#: ../../user-manual/ingest/ingest.rst:225
+#: ../../user-manual/ingest/ingest.rst:373
+msgid "Return to the Transfer or Ingest tab to continue processing the SIP."
+msgstr "[転送] または [インジェスト] タブに戻り、SIPの処理を続けます。"
+
+#: ../../user-manual/ingest/ingest.rst:230
+msgid "Uploading metadata CSV files through the user interface"
+msgstr "ユーザーインターフェースによるメタデータCSVファイルのアップロード"
+
+#: ../../user-manual/ingest/ingest.rst:232
+msgid ""
+"Descriptive metadata CSV files are ideal if you are creating hierarchical "
+"metadata, want to apply metadata to individual objects, or if you want to "
+"use metadata fields other than those available in the Dublin Core Metadata "
+"Element Set."
+msgstr ""
+"説明メタデータのCSVファイルは、階層的メタデータを作成する場合、個々のオブジェクトにメタデータを適用する場合、または Dublin Core "
+"Metadata Element Set で利用可能なフィールド以外のメタデータフィールドを使用する場合に最適です。"
+
+#: ../../user-manual/ingest/ingest.rst:237
+msgid ""
+"In order to upload a CSV file, it must be available in a transfer source "
+"location connected to Archivematica, the same way that digital objects are "
+"made available. For more information about transfer source locations, see "
+":ref:`Transfer source locations <admin-dashboard-transfer-source>`."
+msgstr ""
+"CSVファイルをアップロードするには、デジタルオブジェクトと同じように、Archivematicaに接続された転送元ロケーションで利用可能である必要があります。転送元ロケーションの詳細については、"
+" :ref:`転送元ロケーション <admin-dashboard-transfer-source>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:242
+msgid ""
+"For more information about importing metadata into Archivematica, including "
+"how to structure metadata CSV files, see :ref:`Import metadata <import-"
+"metadata>`."
+msgstr ""
+"メタデータ CSV ファイルの構成方法など、Archivematicaへのメタデータのインポートに関する詳細については、 "
+":ref:`メタデータのインポート <import-metadata>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:247
+msgid ""
+"You must carry out the following steps **before** the microservice "
+"``Reminder: add metadata if desired``. After this point, any metadata that "
+"is entered will not be properly attached to the SIP or entered into the "
+"METS."
+msgstr ""
+"マイクロサービス ``Reminder: add metadata if desired`` を実行する **前** "
+"に、次の手順を実行する必要があります。この時点を過ぎると、入力されたメタデータは SIP に適切に添付されなくなり、METS に入力されなくなります。"
+
+#: ../../user-manual/ingest/ingest.rst:251
+msgid ""
+"While on the Ingest tab, click on the metadata template icon to the right of"
+" the transfer name."
+msgstr "[インジェスト] タブで、転送名の右側にあるメタデータテンプレートのアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:262
+msgid ""
+"This will take you to the SIP detail page. Under the *Metadata* heading, "
+"click **Add metadata files**."
+msgstr "これにより、SIP の詳細ページが表示されます。 *メタデータ* 見出しの下で、 **メタデータ ファイルを追加** をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:273
+msgid ""
+"Select a transfer source location and click **Browse**. Navigate through the"
+" folders to find your CSV file. Once you have located the CSV file, click "
+"**Add** to the right of the file name. Repeat as needed."
+msgstr ""
+"転送元の場所を選択し、 **ブラウズ** をクリックします。フォルダを移動してCSVファイルを見つけます。CSV "
+"ファイルを見つけたら、ファイル名の右側にある **追加** をクリックして、必要に応じて繰り返します。"
+
+#: ../../user-manual/ingest/ingest.rst:277
+msgid ""
+"Once you've added all of your files, click **Add files**. A spinning wheel "
+"will indicate that the file is being uploaded. Once it disappears, return to"
+" the Ingest tab to continue processing the SIP."
+msgstr ""
+"すべてのファイルを追加したら、 **ファイルを追加** "
+"をクリックします。回転するホイールが、ファイルがアップロード中であることを示します。それが消えたら、[インジェスト] "
+"タブに戻り、SIPの処理を続けます。"
+
+#: ../../user-manual/ingest/ingest.rst:284
+msgid "Add PREMIS rights"
+msgstr "PREMISの権利を追加"
+
+#: ../../user-manual/ingest/ingest.rst:286
+msgid ""
+"Archivematica can accept PREMIS rights metadata about your digital objects "
+"and parse this information into the METS file. For information on including "
+"rights metadata prior to starting your transfer, see :ref:`Transfers with "
+"descriptive and/or rights metadata <transfers-with-metadata>`. This section "
+"will describe how to add rights metadata to your materials once processing "
+"has begun in Archivematica."
+msgstr ""
+"Archivematica は、デジタルオブジェクトに関するPREMIS 権利メタデータを受け入れ、この情報を解析して METS "
+"ファイルに書き込むことができます。転送を開始する前にメタデータを含める方法については、 :ref:`説明メタデータや権利メタデータを含む転送 "
+"<transfers-with-metadata>` を参照してください。このセクションでは、Archivematica "
+"で処理を開始した後に、素材に権利メタデータを追加する方法について説明します。"
+
+#: ../../user-manual/ingest/ingest.rst:301
+msgid ""
+"The rights form consists of two pages: one for the rights basis, and another"
+" for acts. For more information about Archivematica's PREMIS rights "
+"implementation, see :ref:`PREMIS template <premis-template>`."
+msgstr ""
+"権利フォームは 2 ページで構成されており、1 つは権利の根拠に関するページ、もう 1 つは行為に関するページです。Archivematica の "
+"PREMIS 権利の実装の詳細については、 :ref:`PREMIS テンプレート <premis-template>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:314
+msgid "To add rights, click on the template icon."
+msgstr "権利を追加するには、テンプレートのアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:316
+msgid ""
+"This will take you to the SIP detail panel. On the left-hand side, under "
+"*Rights*, click **Add**."
+msgstr "これでSIP詳細パネルが表示されます。左側で、 *権利* の下にある、 **追加** をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:325
+msgid "SIP detail panel"
+msgstr "SIP詳細パネル"
+
+#: ../../user-manual/ingest/ingest.rst:327
+msgid ""
+"Add the rights basis information and save the data by clicking the **Save** "
+"button at the bottom of the screen, or click **Next** if you are finished "
+"and ready to move on to the second page of data entry."
+msgstr ""
+"権利根拠情報を追加し、画面下部の **保存** ボタンをクリックしてデータを保存するか、データ入力が終了して2ページ目に進む準備ができた場合は "
+"**次へ** をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:337
+msgid "SIP rights template- first page"
+msgstr "SIP権利テンプレート - 最初のページ"
+
+#: ../../user-manual/ingest/ingest.rst:339
+msgid ""
+"Enter act information and the associated grants/restrictions and save the "
+"data by clicking **Save**."
+msgstr "行為の情報と関連する許可/制限を入力し、 **保存** をクリックしてデータを保存します。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:348
+msgid "SIP rights template- second page"
+msgstr "SIP権利テンプレート - 2ページ目"
+
+#: ../../user-manual/ingest/ingest.rst:350
+msgid ""
+"When you click **Save** on the acts page, you will be given the option to "
+"add another act and further grants/restrictions."
+msgstr "行為のページで **保存** をクリックすると、別の行為を追加し、さらに許可／制限を追加するオプションが表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "Button to repeat acts in rights template"
+msgstr "権利テンプレートで行為を繰り返すボタン"
+
+#: ../../user-manual/ingest/ingest.rst:359
+msgid "Repeatable acts in rights template"
+msgstr "権利テンプレートで繰り返し可能な行為"
+
+#: ../../user-manual/ingest/ingest.rst:361
+msgid ""
+"Once you have finished adding acts, click **Done**. You will see the rights "
+"entry in the list page. You can add more rights by clicking **Add** again, "
+"or edit or delete existing rights from this page."
+msgstr ""
+"アクトの追加が完了したら、 **Done** をクリックします。リストページに権利エントリが表示されます。 **「追加」** "
+"を再度クリックして権利を追加したり、このページから既存の権利を編集または削除したりできます。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:371
+msgid "SIP detail panel with rights"
+msgstr "権限のある SIP 詳細パネル"
+
+#: ../../user-manual/ingest/ingest.rst:379
+msgid "Normalize"
+msgstr "正規化"
+
+#: ../../user-manual/ingest/ingest.rst:381
+msgid ""
+"Normalization is the process of converting an ingested digital object to a "
+"preferred preservation and/or access format."
+msgstr "正規化とは、インジェストされたデジタルオブジェクトを、好ましい保存形式および/またはアクセス形式に変換するプロセスです。"
+
+#: ../../user-manual/ingest/ingest.rst:384
+msgid ""
+"Note that the original objects are always kept along with their normalized "
+"versions. For more information about Archivematica's preservation strategy, "
+"go to the :ref:`Preservation Planning <preservation-planning>` section of "
+"the manual."
+msgstr ""
+"オリジナルのオブジェクトは、常に正規化されたバージョンと共に保存されます。Archivematicaの保存戦略の詳細については、マニュアルの "
+":ref:`保存計画 <preservation-planning>` セクションを参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:389
+msgid ""
+"At the normalization microservice, the SIP will appear in the dashboard with"
+" a bell icon next to it. Select one of the normalization options from the "
+"Actions drop-down menu:"
+msgstr ""
+"正規化マイクロサービスでは、SIPがダッシュボードに表示され、その横にベルのアイコンが表示されます。[アクション] "
+"ドロップダウンメニューから正規化オプションを1つ選択します："
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:399
+msgid "Selecting a normalization option"
+msgstr "正規化オプションの選択"
+
+#: ../../user-manual/ingest/ingest.rst:401
+msgid ""
+"**Normalize for preservation and access** - creates preservation copies of "
+"the objects plus access copies which will be used to generate the DIP."
+msgstr "**保存とアクセスのために正規化** - オブジェクトの保存コピーと、DIPの生成に使用されるアクセスコピーを作成します。"
+
+#: ../../user-manual/ingest/ingest.rst:403
+msgid ""
+"**Normalize for preservation** - creates preservation copies only. No access"
+" copies are created and no DIP will be generated."
+msgstr "**保存のために正規化** - 保存用コピーのみを作成します。アクセスコピーは作成されず、DIPも生成されません。"
+
+#: ../../user-manual/ingest/ingest.rst:405
+msgid ""
+"**Normalize for access** - the AIP will contain originals only. No "
+"preservation copies will be generated. Access copies will be created which "
+"will be used to generate the DIP."
+msgstr ""
+"**アクセス用に正規化** - AIPは、オリジナルのみを含みます。保存コピーは作成されません。DIPの生成に使用されるアクセスコピーが作成されます。"
+
+#: ../../user-manual/ingest/ingest.rst:408
+msgid ""
+"**Normalize service files for access** - see :ref:`Transferring material "
+"with service (mezzanine) files <transfer-service-files>` for more "
+"information."
+msgstr ""
+"**アクセス用のサービスファイルを正規化** - 詳細は、 :ref:`サービス（メザニン）ファイルで素材を転送 <transfer-service-"
+"files>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:411
+msgid ""
+"**Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for "
+"more information."
+msgstr "**手動で正規化** - 詳細は、 :ref:`手動正規化 <manual-norm>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:413
+msgid ""
+"**Do not normalize** - the AIP will contain originals only. No preservation "
+"or access copies are generated and no DIP will be generated."
+msgstr "**** を正規化しないでください。AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
+
+#: ../../user-manual/ingest/ingest.rst:415
+msgid "**Reject SIP** - the ingest will be cancelled."
+msgstr "**Reject SIP** - インジェストはキャンセルされます。"
+
+#: ../../user-manual/ingest/ingest.rst:417
+msgid ""
+"Note that depending on the setup of your transfer, you may not see all of "
+"the options listed above."
+msgstr "転送の設定によっては、上記のオプションがすべて表示されない場合があります。"
+
+#: ../../user-manual/ingest/ingest.rst:420
+msgid ""
+"Once normalization is completed you can review the results in the "
+"normalization report. Click on the report icon next to the Actions drop-down"
+" menu."
+msgstr "正規化が完了したら、正規化レポートで結果を確認できます。[アクション]ドロップダウンメニューの横にあるレポートアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "Location of the report icon to open the normalization report"
+msgstr "正規化レポートを開くレポートアイコンの場所"
+
+#: ../../user-manual/ingest/ingest.rst:430
+msgid "Click on the report icon to open the normalization report"
+msgstr "正規化レポートを開くには、レポートアイコンをクリックします"
+
+#: ../../user-manual/ingest/ingest.rst:432
+msgid ""
+"The report provides detailed information about whether normalization was "
+"atttempted and for what purpose. Pink shading indicates that a file has not "
+"been normalized to an accepted preservation or access format."
+msgstr ""
+"このレポートには、正規化が試みられたかどうか、どのような目的で行われたかについての詳細情報が記載されています。ピンク色の網掛けは、ファイルが保存またはアクセスに適したフォーマットに正規化されていないことを示します。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "Normalization report"
+msgstr "正規化レポート"
+
+#: ../../user-manual/ingest/ingest.rst:441
+msgid ""
+"You may review the normalization results in a new tab by clicking on Review."
+msgstr "[見直し] をクリックすると、新しいタブで正規化結果を確認できます。"
+
+#: ../../user-manual/ingest/ingest.rst ../../user-manual/ingest/ingest.rst:449
+#: ../../user-manual/ingest/ingest.rst:462
+msgid "Review normalization results in new tab"
+msgstr "新しいタブで正規化結果を確認"
+
+#: ../../user-manual/ingest/ingest.rst:451
+msgid ""
+"If your browser has plug-ins to view a file, you may open it in another tab "
+"by clicking on it. If you click on a file and your browser cannot open it, "
+"it will download locally so you can view it using the appropriate software "
+"on your machine."
+msgstr ""
+"ブラウザにファイルを表示するためのプラグインがある場合は、クリックすると別のタブで開くことができます。ファイルをクリックしてもブラウザで開けない場合は、ファイルがローカルにダウンロードされるため、お使いのマシン上の適切なソフトウェアを使用して表示できます。"
+
+#: ../../user-manual/ingest/ingest.rst:464
+msgid ""
+"Approve normalization in the Actions drop-down menu to continue processing "
+"the SIP. You may also Reject the SIP or re-do normalization. If you see "
+"errors in normalization, follow the instructions in Error handling to learn "
+"more about the problem."
+msgstr ""
+"SIP の処理を続けるには、[アクション] ドロップダウンメニューで正規化を承認します。SIP "
+"を拒否したり、正規化をやり直したりすることもできます。正規化でエラーが発生した場合は、「エラー処理」の手順に従って問題の詳細を確認してください。"
+
+#: ../../user-manual/ingest/ingest.rst:471
+msgid ":ref:`Manual normalization <manual-norm>`"
+msgstr ":ref:`マニュアル正規化 <manual-norm>`"
+
+#: ../../user-manual/ingest/ingest.rst:476
+msgid "Bind PIDs"
+msgstr "Bind PID"
+
+#: ../../user-manual/ingest/ingest.rst:478
+msgid ""
+"Bind PIDs refers to making use of Archivematica's integration with "
+"Handle.Net, a registry that assigns persistent identifiers, or handles, to "
+"information resources. If you do not use Handle.Net, consider setting your "
+"default :ref:`dashboard processing <dashboard-processing>` configuration "
+"setting for this Microservice to \"No\"."
+msgstr ""
+"PID のバインドとは、情報リソースに永続的な識別子またはハンドルを割り当てるレジストリである Handle.Net と Archivematica "
+"の統合を利用することを指します。Handle.Net を使用しない場合は、このマイクロサービスのデフォルトの :ref:`ダッシュボード処理 "
+"<dashboard-processing>` 構成設定を \"いいえ\" に設定することを検討してください。"
+
+#: ../../user-manual/ingest/ingest.rst:484
+msgid ""
+"If you do use Handle.Net, you can configure Archivematica to mint persistent"
+" identifiers (PIDs) for digital objects, directories, or AIPs by defining "
+"the PIDs in a configured Handle.Net registry. Handle.Net can then create "
+"persistent URLs (PURLs) from the PIDs and can reroute requests to the "
+"persistent URLs to a target URL that is configured in Handle.Net."
+msgstr ""
+"Handle.Netを使用する場合、設定されたHandle.NetレジストリにPIDを定義することで、デジタルオブジェクト、ディレクトリ、またはAIPの永続識別子（PID）を作成するようにArchivematicaを設定できます。Handle.Netは、PIDから永続URL（PURL）を作成し、永続URLへのリクエストをHandle.Netで設定されたターゲットURLにリルートできます。"
+
+#: ../../user-manual/ingest/ingest.rst:490
+msgid ""
+"To configure Archivematica and Handle.Net, first fill in the :ref:`Handle "
+"server config <admin-handlenet>` settings in the Administration tab."
+msgstr ""
+"ArchivematicaとHandle.Netを設定するには、まず [管理] タブの :ref:`サーバー設定の処理 <admin-"
+"handlenet>` の設定を入力します。"
+
+#: ../../user-manual/ingest/ingest.rst:494
+msgid ""
+"During processing, selecting *Yes* at the Bind PIDs decision point will send"
+" a request to the Handle.Net HTTP REST API server to mint a PID. By default,"
+" the PID is based on the UUID of the object. You may also use the accession "
+"number if you entered an accession number on the transfer screen."
+msgstr ""
+"処理中、Bind PID決定ポイントで *はい* を選択すると、Handle.Net HTTP REST "
+"APIサーバーにPIDをミントする要求が送信されます。デフォルトでは、PIDはオブジェクトのUUIDに基づいています。転送画面でアクセッション番号を入力した場合は、アクセッション番号を使用することもできます。"
+
+#: ../../user-manual/ingest/ingest.rst:501
+msgid ""
+"If you are generating PIDs for the AIP as a whole, only use the accession "
+"number as the basis for the PID if you can guarantee that no other AIP will "
+"use the same accession number. If you will be creating multiple AIPs with "
+"the same accession number, set the AIP PID source to UUID."
+msgstr ""
+"AIP 全体の PID を生成する場合、他の AIP が同じアクセッション番号を使用しないことが保証できる場合にのみ、PID "
+"のベースとしてアクセッション番号を使用してください。同じアクセッション番号を持つ複数の AIP を作成する場合は、AIP PID ソースを UUID "
+"に設定します。"
+
+#: ../../user-manual/ingest/ingest.rst:506
+msgid ""
+"Note that files and directories will always use the UUID of the file or "
+"directory as the basis for the PID."
+msgstr "ファイルやディレクトリは、常にそのファイルやディレクトリの UUID を PID の基礎として使用することに注意してください。"
+
+#: ../../user-manual/ingest/ingest.rst:512
+msgid "Transcribe SIP contents"
+msgstr "SIPコンテンツのテキスト変換"
+
+#: ../../user-manual/ingest/ingest.rst:514
+msgid ""
+"Archivematica gives users the option to Transcribe SIP contents using "
+"`Tesseract`_ OCR tool. If Yes is selected by the user during this "
+"microservice, an OCR file will be included in the DIP and stored in the AIP."
+msgstr ""
+"Archivematica では、 `Tesseract`_ OCR ツールを使用して SIP "
+"コンテンツをテキスト変換するオプションがユーザーに提供されます。このマイクロサービス中にユーザーが [はい] を選択すると、OCR ファイルが DIP "
+"に含まれ、AIP に保存されます。"
+
+#: ../../user-manual/ingest/ingest.rst:520
+msgid ""
+"Tesseract transcribes the text from single images (e.g. individual pages of "
+"a book scanned as image files). It does not support transcription of multi-"
+"page objects or word processing files, PDF files, etc."
+msgstr ""
+"Tesseract "
+"は、単一の画像（例えば、画像ファイルとしてスキャンされた書籍の個々のページ）からテキスト変換します。複数ページのオブジェクトやワープロファイル、PDF "
+"ファイルなどのテキスト変換には対応していません。"
+
+#: ../../user-manual/ingest/ingest.rst:527
+msgid "Store AIP"
+msgstr "AIPの保存"
+
+#: ../../user-manual/ingest/ingest.rst:529
+msgid ""
+"After normalization is complete, the SIP runs through a number of "
+"microservices, including submission documentation and metadata processing, "
+"METS file generation, indexing, DIP generation, and AIP packaging. Once the "
+"AIP is packaged, it is ready to be stored."
+msgstr ""
+"正規化が完了した後、SIPは、提出ドキュメンテーションとメタデータ処理、METSファイル生成、インデックス作成、DIP生成、AIPパッケージングを含む多くのマイクロサービスを介して実行されます。AIP"
+" がパッケージングされると、それを保存する準備ができます。"
+
+#: ../../user-manual/ingest/ingest.rst:534
+msgid ""
+"Archivematica can be configured with many AIP storage locations. Users can "
+"select the appropriate storage location for each AIP using the dropdown menu"
+" in the Archivematica interface. To configure AIP storage locations, see the"
+" :ref:`Storage Service documentation <storageservice:administrators>`."
+msgstr ""
+"Archivematica は多くのAIP保存場所を設定できます。ユーザーは、Archivematica "
+"インターフェイスのドロップダウンメニューを使用して、各 AIP に適切な保存場所を選択できます。AIP 保存場所を設定するには、 "
+":ref:`Storage Service 文書 <storageservice:administrators>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:545
+msgid ""
+"The Ingest tab of Archivematica, showing an AIP waiting for user input at "
+"the Store AIP decision point."
+msgstr "Archivematica の [インジェスト] タブ。[AIPの保存]決定ポイントでユーザー入力を待機している AIP を表示します。"
+
+#: ../../user-manual/ingest/ingest.rst:545
+msgid "Archivematica ready to store an AIP"
+msgstr "Archivematicaは、AIPを保存する準備ができています"
+
+#: ../../user-manual/ingest/ingest.rst:547
+msgid ""
+"Before storing the AIP, you can review the contents of the AIP by clicking "
+"**Review**. A new tab will open where you can browse your AIP. To review the"
+" individual objects in the AIP, click on the 7z file to download it. You can"
+" also view the METS file (the file with the name ``METS-uuid.xml``) by "
+"clicking on it."
+msgstr ""
+"AIPを保存する前に、 **Review** "
+"をクリックして、AIPの内容を確認できます。（ここで、AIPをを閲できる新タブ開きます。AIPの個々のオブジェクトを確認するには、7zファイルをクリックしてダウンロードします。METSファイル（"
+" ``METS-uuid.xml`` という名前のファイル）をクリックして表示もできます。"
+
+#: ../../user-manual/ingest/ingest.rst
+msgid "The AIP review page showing an expanded AIP file structure"
+msgstr "拡張された AIP ファイル構造を示す AIP レビューページ"
+
+#: ../../user-manual/ingest/ingest.rst:559
+msgid ""
+"For more information on Archivematica's AIP structure and the METS file, see"
+" :ref:`AIP structure <aip-structure>`."
+msgstr ""
+"Archivematica の AIP 構造と METS ファイルの詳細については、 :ref:`AIP 構造 <aip-structure>` "
+"を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:562
+msgid ""
+"Once you are ready to store the AIP, select **Store AIP** from the action "
+"dropdown menu. You can also reject the AIP, if needed."
+msgstr ""
+"AIPを保存する準備ができたら、アクションドロップダウンメニューから **AIPの保存** を選択します。必要であれば、AIPを拒否もできます。"
+
+#: ../../user-manual/ingest/ingest.rst:565
+msgid ""
+"When prompted, select the storage location where you would like to store the"
+" AIP."
+msgstr "プロンプトが表示されたら、AIP を保存する保存場所を選択します。"
+
+#: ../../user-manual/ingest/ingest.rst:568
+msgid ""
+"Once your AIP has been stored, you can view and manage it on the "
+":ref:`Archival storage <archival-storage>` tab."
+msgstr "AIP が保存されると、 :ref:`アーカイブストレージ <archival-storage>` タブで表示および管理できます。"
+
+#: ../../user-manual/ingest/ingest.rst:573
+msgid ""
+"It is possible to designate one storage location as the default location for"
+" AIP storage in the :ref:`Storage Service <storageService:administrators>`. "
+"The default location is represented as ``Default location`` in the Store AIP"
+" location dropdown menu, but the storage location will also be listed by "
+"name alongside any other storage location options."
+msgstr ""
+":ref:`Storage Service <storageService:administrators>` "
+"において、1つのストレージ場所をAIPストレージのデフォルトの場所として指定することが可能です。デフォルトの保存場所は、AIP保存場所ドロップダウンメニューで"
+" ``Default location`` と表示されますが、保存場所は、他の保存場所オプションと一緒に名前でも表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst:579
+msgid ""
+"If there is only one AIP storage location, it will automatically be set "
+"asthe default location, and both ``Default location`` and the storage "
+"location itself will appear in the dropdown menu."
+msgstr ""
+"AIPの保存場所が1つしかない場合は、自動的にデフォルトの場所に設定され、 ``Default location`` "
+"と保存場所自体がドロップダウンメニューに表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst:586
+msgid "Upload DIP"
+msgstr "DIPのアップロード"
+
+#: ../../user-manual/ingest/ingest.rst:588
+msgid ""
+"Archivematica supports DIP uploads to AtoM, Binder, ArchivesSpace, and "
+"CONTENTdm. For information about uploading DIPs to your access system, see "
+":ref:`Access <access>`."
+msgstr ""
+"Archivematica は、AtoM、Binder、ArchivesSpace、CONTENTdm への DIP "
+"アップロードをサポートしています。アクセスシステムへのDIPのアップロードについては、 :ref:`アクセス <access>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:592
+msgid ""
+"DIPs can be stored similar to AIPs; however, DIPs can also be generated when"
+" required by doing a partial :ref:`re-ingest <reingest>` of the AIP."
+msgstr ""
+"DIPは、AIPと同様に保存できますが、AIPの部分的な :ref:`再インジェスト <reingest>` "
+"実行により、必要なときにDIPを生成もできます。"
+
+#: ../../user-manual/ingest/ingest.rst:597
+msgid ""
+"We recommend storing the AIP before uploading the DIP. If there is a problem"
+" with the AIP during storage and the DIP has already been uploaded, you will"
+" have to delete the DIP from the upload location."
+msgstr ""
+"DIPをアップロードする前にAIPを保管することをお勧めします。保存中にAIPに問題が発生し、DIPがすでにアップロードされている場合は、アップロード場所からDIPを削除する必要があります。"
+
+#: ../../user-manual/ingest/ingest.rst:603
+msgid ""
+"It is possible to designate one storage location as the default location for"
+" DIP storage in the :ref:`Storage Service <storageService:administrators>`. "
+"The default location is represented as ``Default location`` in the Store DIP"
+" location dropdown menu, but the storage location will also be listed by "
+"name alongside any other storage location options. If there is only one DIP "
+"storage location, it will automatically be set as the default location, and "
+"both ``Default location`` and the storage location itself will appear in the"
+" dropdown menu."
+msgstr ""
+":ref:`Storage Service <storageService:administrators>` "
+"で、1つの保存場所をDIP保管のデフォルトの場所として指定することが可能です。デフォルトの場所は、「Store DIP "
+"location（DIP保存場所）」ドロップダウンメニューで「 ``Default location`` "
+"」と表示されますが、保存場所は、他の保存場所オプションと一緒に名前でも表示されます。DIP保存場所が1つしかない場合、その場所は、自動的にデフォルトの場所として設定され、"
+" ``Default location`` と保存場所自体の両方がドロップダウンメニューに表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst:615
+msgid "Re-ingest AIP"
+msgstr "AIPの再インジェスト"
+
+#: ../../user-manual/ingest/ingest.rst:617
+msgid "There are three different types of AIP re-ingest:"
+msgstr "AIPの再インジェストには3種類あります："
+
+#: ../../user-manual/ingest/ingest.rst:620
+msgid "1. Metadata only"
+msgstr "1. メタデータのみ"
+
+#: ../../user-manual/ingest/ingest.rst:622
+msgid ""
+"This method is for adding or updating descriptive and/or rights metadata. "
+"Doing so will update the dmdSec of the AIP's METS file.  Note that the "
+"original metadata will still be present but if you scroll down you'll also "
+"see another dmdSec that says STATUS=\"updated\", like so:"
+msgstr ""
+"このメソッドは、説明メタデータおよび/または権利メタデータを追加または更新するためのものです。そうすることで、AIPのMETSファイルのdmdSecが更新されます。"
+" オリジナルのメタデータはまだ存在しますが、下にスクロールすると、STATUS=\"更新\" のような別の dmdSec "
+"も表示されることに注意してください："
+
+#: ../../user-manual/ingest/ingest.rst:627
+msgid ""
+"``<mets:dmdSec ID=\"dmdSec_792149\" CREATED=\"2017-10-17T20:32:36\" "
+"STATUS=\"updated\">``"
+msgstr ""
+"``<mets:dmdSec ID=\"dmdSec_792149\" CREATED=\"2017-10-17T20:32:36\" "
+"STATUS=\"updated\">``"
+
+#: ../../user-manual/ingest/ingest.rst:629
+msgid ""
+"Choosing metadata only AIP re-ingest will take you back to the Ingest tab."
+msgstr "メタデータのみのAIP再インジェストを選択すると、インジェストタブに戻ります。"
+
+#: ../../user-manual/ingest/ingest.rst:632
+msgid "2. Partial re-ingest"
+msgstr "2. 部分再インジェスト"
+
+#: ../../user-manual/ingest/ingest.rst:634
+msgid ""
+"This method is typically used by institutions who want to create a DIP "
+"sometime after they've made an AIP.  They can then send their DIP to their "
+"access system or store it."
+msgstr "この方法は通常、AIPを作成した後にDIPを作成したい機関が使用します。その後、DIPをアクセスシステムに送信するか、保存できます。"
+
+#: ../../user-manual/ingest/ingest.rst:638
+msgid "Choosing partial re-ingest will take you back to the Ingest tab."
+msgstr "部分的な再インジェストを選択すると、インジェストタブに戻ります。"
+
+#: ../../user-manual/ingest/ingest.rst:641
+msgid "3. Full re-ingest"
+msgstr "3. 完全再インジェスト"
+
+#: ../../user-manual/ingest/ingest.rst:643
+msgid ""
+"This method is for institutions who want to be able to run all the major "
+"microservices (including re-normalization for preservation if desired). A "
+"possible use case for full re-ingest might be that after a time new file "
+"characterization or validation tools have been developed and integrated with"
+" a future version of Archivematica. Running the microservices with these "
+"updated tools will result in a updated and better AIP."
+msgstr ""
+"この方法は、すべての主要なマイクロサービス（必要に応じて保存のための再正規化を含む）を実行できるようにしたい機関向けの方法です。完全な再インジェストのユースケースとして考えられるのは、新しいファイルの特性化や妥当性確認ツールが開発され、Archivematicaの将来のバージョンに統合された場合です。これらの更新されたツールでマイクロサービスを実行すると、更新されたより良いAIPになります。"
+
+#: ../../user-manual/ingest/ingest.rst:650
+msgid ""
+"Full re-ingest can also be used to update the metadata, and re-normalize for"
+" access."
+msgstr "完全な再インジェストを使用してメタデータを更新し、アクセスのために再正規化することもできます。"
+
+#: ../../user-manual/ingest/ingest.rst:653
+msgid ""
+"When performing full re-ingest, you will need to enter the name of the "
+"processing configuration you wish to use. To add new processing "
+"configurations, see :ref:`Processing configuration <dashboard-processing>`."
+msgstr ""
+"完全な再インジェストを行う場合、使用したい処理設定の名前を入力する必要があります。新しい処理設定を追加するには、 :ref:`処理設定 "
+"<dashboard-processing>` を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:659
+msgid "The following workflows are **not** supported in full AIP re-ingest:"
+msgstr "次のワークフローは、完全な AIP 再インジェストではサポート **されません** ："
+
+#: ../../user-manual/ingest/ingest.rst:661
+msgid "Examine contents if not performed on first ingest"
+msgstr "初回インジェスト時に実施しなかった場合は、内容検査します"
+
+#: ../../user-manual/ingest/ingest.rst:662
+msgid "Transfer structure report if not performed on first ingest"
+msgstr "最初のインジェストで実行されなかった場合、構造レポートを転送します"
+
+#: ../../user-manual/ingest/ingest.rst:663
+msgid "Extract packages in the AIP and then delete them"
+msgstr "AIP内のパッケージを抽出し、削除します"
+
+#: ../../user-manual/ingest/ingest.rst:664
+msgid "Send AIP to backlog for re-arrangement during re-ingest"
+msgstr "再インジェスト中に再配列するために AIP をバックログに送信します"
+
+#: ../../user-manual/ingest/ingest.rst:667
+msgid "Choosing full re-ingest will take you back to the Transfer tab."
+msgstr "完全な再インジェストを選択すると、[転送] タブに戻ります。"
+
+#: ../../user-manual/ingest/ingest.rst:670
+msgid "How to tell in the METS file if an AIP has been re-ingested"
+msgstr "AIP が再インジェストされたかどうかを METS ファイルで確認する方法"
+
+#: ../../user-manual/ingest/ingest.rst:672
+msgid ""
+"1. Look at the Header of the METS file, which will display a ``CREATEDATE`` "
+"and a ``LASTMODDATE``: ``<mets:metsHdr CREATEDATE=\"2017-10-17T20:29:21\" "
+"LASTMODDATE=\"2017-10-17T20:32:36\"/>``"
+msgstr ""
+"1. METSファイルのヘッダーを見てください。 ``CREATEDATE`` と ``LASTMODDATE`` が表示されます： "
+"``<mets:metsHdr CREATEDATE=\"2017-10-17T20:29:21\" "
+"LASTMODDATE=\"2017-10-17T20:32:36\"/>``"
+
+#: ../../user-manual/ingest/ingest.rst:676
+msgid ""
+"2. You can also search for the re-ingest premis:event "
+"``<premis:eventType>reingestion</premis:eventType>``"
+msgstr ""
+"2. また、再インジェストPREMISイベントを検索もできます "
+"``<premis:eventType>reingestion</premis:eventType>``"
+
+#: ../../user-manual/ingest/ingest.rst:679
+msgid ""
+"3. If you've updated the descriptive or rights metadata you will find an "
+"updated dmdSec: ``<mets:dmdSec ID=\"dmdSec_792149\" "
+"CREATED=\"2017-10-17T20:32:36\" STATUS=\"updated\">``"
+msgstr ""
+"3. 説明メタデータまたは権利メタデータを更新した場合は、更新されたdmdSecがあります： ``<mets:dmdSec "
+"ID=\"dmdSec_792149\" CREATED=\"2017-10-17T20:32:36\" STATUS=\"updated\">``"
+
+#: ../../user-manual/ingest/ingest.rst:687
+msgid "Where to start the re-ingest process"
+msgstr "再インジェストプロセスはどこから始めるべきか"
+
+#: ../../user-manual/ingest/ingest.rst:689
+msgid ""
+"You can start the re-ingest process through the Archival Storage tab on the "
+"Dashboard, the Storage Service, or the API."
+msgstr "ダッシュボードのArchival Storageタブ、Storage Service、またはAPIから再インジェスト処理を開始できます。"
+
+#: ../../user-manual/ingest/ingest.rst:693
+msgid "Archival Storage tab on the Dashboard"
+msgstr "ダッシュボードのアーカイブストレージタブ"
+
+#: ../../user-manual/ingest/ingest.rst:695
+msgid ""
+"Go to the Archival Storage tab and find the AIP you wish to re-ingest by "
+"searching or browsing."
+msgstr "[アーカイブストレージ] タブに移動し、検索または参照して再インジェストしたい AIP を見つけます。"
+
+#: ../../user-manual/ingest/ingest.rst:698
+msgid ""
+"1. Click on the name of the AIP or View to open that AIP's view page. Under "
+"Actions, click on Re-ingest."
+msgstr ""
+"1. AIP またはビューの名前をクリックして、その AIP のビューページを開きます。[アクション] で、[再インジェスト] をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:-1
+msgid "Click on re-ingest beside the AIP"
+msgstr "AIP の横にある [再インジェスト] をクリックします"
+
+#: ../../user-manual/ingest/ingest.rst:706
+msgid "Choose the type of re-ingest (metadata, partial or full)."
+msgstr "再インジェストのタイプ（メタデータ、部分的または完全）を選択します。"
+
+#: ../../user-manual/ingest/ingest.rst:-1
+msgid "Choose type of re-ingest and name of processing configuration"
+msgstr "再インジェストの種類と処理設定名を選択します"
+
+#: ../../user-manual/ingest/ingest.rst:713
+msgid ""
+"Click on **Re-ingest**. Archivematica will tell you that the AIP has been "
+"sent to the pipeline for re-ingest."
+msgstr "**再インジェスト** をクリックします。Archivematicaは、AIPが再試験のためにパイプラインに送信されたことを通知します。"
+
+#: ../../user-manual/ingest/ingest.rst:718
+msgid ""
+"If you attempt to re-ingest an AIP which is already in the process of being "
+"re-ingested in the pipeline, Archivematica will alert you with an error."
+msgstr "パイプラインで既に再インジェストされているAIPを再インジェストしようとすると、Archivematicaはエラーで警告します。"
+
+#: ../../user-manual/ingest/ingest.rst:723
+msgid ""
+"Archivematica will appear to allow you to extract and then delete packages. "
+"However, the resulting AIP will still actually contain the packages, and in "
+"the METS file they will not have re-ingestion events correctly associated "
+"with them. This is documented as :issue:`10699`."
+msgstr ""
+"Archivematica はパッケージを抽出して削除できるように見えます。しかし、でき上がった AIP にはまだパッケージが含まれており、METS "
+"ファイルでは再インジェストイベントが正しく関連付けられていません。これは:issue: `10699` として文書化されています。"
+
+#: ../../user-manual/ingest/ingest.rst:728
+msgid "Proceed to the Transfer or Ingest tab and approve the AIP re-ingest."
+msgstr "転送またはインジェストタブに進み、AIPの再インジェストを承認します。"
+
+#: ../../user-manual/ingest/ingest.rst:-1
+msgid "Approve AIP re-ingest in Ingest tab."
+msgstr "インジェストタブでAIPの再インジェストを承認します。"
+
+#: ../../user-manual/ingest/ingest.rst:736
+msgid ""
+"At the Normalization microservice you will make different choices depending "
+"on the type of AIP re-ingest you've selected."
+msgstr "正規化マイクロサービスでは、選択した AIP 再インジェストの種類に応じてさまざまな選択を行います。"
+
+#: ../../user-manual/ingest/ingest.rst:739
+msgid "**Metadata-only re-ingest**"
+msgstr "**メタデータのみの再インジェスト**"
+
+#: ../../user-manual/ingest/ingest.rst:741
+msgid ""
+"Add or update your metadata *before* you approve Normalization to ensure the"
+" metadata is written to the database, which means it will be written to the "
+"AIP METS file. There are two ways to add or update metadata:"
+msgstr ""
+"正規化を承認する *前* にメタデータを追加または更新して、メタデータがデータベースに確実に書き込まれるようにします。つまり、メタデータは、AIP "
+"METS ファイルに書き込まれます。メタデータを追加または更新するには、次の 2 つの方法があります："
+
+#: ../../user-manual/ingest/ingest.rst:745
+msgid "Add metadata directly into Archivematica"
+msgstr "Archivematica に直接メタデータを追加"
+
+#: ../../user-manual/ingest/ingest.rst:747
+msgid ""
+"Click on the paper and pencil icon on the same line as the name of the SIP "
+"to take you to the \"Add metadata\" page."
+msgstr "SIP の名前と同じ行にある紙と鉛筆のアイコンをクリックすると、\"メタデータの追加\" ページが表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst:750
+msgid "Click \"Add\" under \"Rights\" if you have rights-related metadata to add."
+msgstr "追加する権利関連のメタデータがある場合は、\"権利\" の下にある\"追加\" をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:753
+msgid "Click on \"Add\" under \"Metadata\" if you have descriptive metadata to add."
+msgstr "追加する設定メタデータがある場合は、\"メタデータ\" の下にある\"追加\" をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:756
+msgid "Enter your metadata."
+msgstr "メタデータを入力します。"
+
+#: ../../user-manual/ingest/ingest.rst:758
+msgid ""
+"Click on \"Ingest\" (top left corner) to go back to the Ingest tab when "
+"you're done."
+msgstr "\"インジェスト\" （左上隅）をクリックすると、[インジェスト] タブに戻ります。"
+
+#: ../../user-manual/ingest/ingest.rst:761
+msgid "Add metadata files"
+msgstr "メタデータファイルの追加"
+
+#: ../../user-manual/ingest/ingest.rst:763
+msgid ""
+"Click on the metadata report icon on the same line as the name of the SIP to"
+" take you to the \"Add metadata\" page."
+msgstr "SIPの名前と同じ行のメタデータレポートアイコンをクリックすると、\"メタデータの追加\"ページが表示されます。"
+
+#: ../../user-manual/ingest/ingest.rst:766
+msgid "Click on \"Add metadata files\" under \"Metadata\""
+msgstr "\"メタデータ\" の下にある \"メタデータファイルを追加\" をクリックします"
+
+#: ../../user-manual/ingest/ingest.rst:768
+msgid "Click on \"Browse\""
+msgstr "\"ブラウズ\"をクリックします"
+
+#: ../../user-manual/ingest/ingest.rst:770
+msgid ""
+"Select a ``metadata.csv`` file.  Note name of the file must be exactly "
+"``metadata.csv`` and the file must follow the structure outlined in "
+":ref:`Import metadata <import-metadata>`.  The file must also be staged in "
+"the same Transfer Source location that you stage your objects for transfer "
+"to Archivematica."
+msgstr ""
+"``metadata.csv`` ファイルを選択します。ファイル名は正確に ``metadata.csv`` である必要があり、ファイルは "
+":ref:`メタデータのインポート <import-metadata>` "
+"で説明されている構造に従っている必要があることに注意してください。また、ファイルは、Archivematica "
+"に転送するオブジェクトをステージングするのと同じ転送元の場所にステージングする必要があります。"
+
+#: ../../user-manual/ingest/ingest.rst:776
+msgid "Select \"Do not normalize\" when you have finished adding your metadata."
+msgstr "メタデータの追加が完了したら、\"正規化しない\" を選択します。"
+
+#: ../../user-manual/ingest/ingest.rst:778
+#: ../../user-manual/ingest/ingest.rst:792
+#: ../../user-manual/ingest/ingest.rst:801
+msgid "Continue processing the SIP as normal."
+msgstr "通常通りSIPの処理を続けます。"
+
+#: ../../user-manual/ingest/ingest.rst:782
+msgid ""
+"When performing a metadata-only re-ingest, there will be no objects in your "
+"AIP in the review stage- Archivematica replaces the METS file in the "
+"existing AIP upon storage."
+msgstr ""
+"メタデータのみの再インジェストを行う場合、レビュー段階ではAIP内にオブジェクトはありません。Archivematicaは、保存時に既存のAIPのMETSファイルを置き換えます。"
+
+#: ../../user-manual/ingest/ingest.rst:786
+msgid "**Partial re-ingest**"
+msgstr "**部分再インジェスト**"
+
+#: ../../user-manual/ingest/ingest.rst:788
+msgid ""
+"Add metadata if desired. See **Metadata-only re-ingest** for instructions"
+msgstr "必要であればメタデータを追加します。手順については、 **メタデータのみの再インジェスト** を参照してください"
+
+#: ../../user-manual/ingest/ingest.rst:790
+msgid "Select \"Normalize for access\"."
+msgstr "\"アクセス用に正規化\" を選択します。"
+
+#: ../../user-manual/ingest/ingest.rst:795
+msgid "**Full re-ingest**"
+msgstr "**フル再インジェスト**"
+
+#: ../../user-manual/ingest/ingest.rst:797
+msgid ""
+"Add metadata if desired. See **Metadata-only re-ingest** for instructions."
+msgstr "必要であればメタデータを追加します。手順については、 **メタデータのみの再インジェスト** を参照してください。"
+
+#: ../../user-manual/ingest/ingest.rst:799
+msgid "Select the normalization path of your choosing."
+msgstr "希望の正規化パスを選択します。"
+
+#: ../../user-manual/ingest/ingest.rst:806
+msgid ""
+"All normalization options will appear as for any SIP being normalized, but "
+"when performing metadata only or partial re-ingest, **only** the "
+"normalization paths noted above are supported."
+msgstr ""
+"すべての正規化オプションは、正規化されるすべてのSIPと同様に表示されますが、メタデータのみ、または部分的な再インジェストを実行する場合 **のみ** "
+"、上記の正規化パスがサポートされます。"
+
+#: ../../user-manual/ingest/ingest.rst:812
+msgid ""
+"You can add or update the metadata either before or after Normalization, but"
+" to ensure the metadata is written to the database before the AIP METS is "
+"prepared, it is recommended practice to add the metadata before "
+"Normalization, or set the metadata reminder to unchecked in Processing "
+"Configuration."
+msgstr ""
+"メタデータの追加や更新は、正規化の前でも後でも可能ですが、AIP "
+"METSが準備される前にメタデータがデータベースに書き込まれるようにするには、正規化の前にメタデータを追加するか、処理設定でメタデータのリマインダーをチェックなしに設定することをお勧めします。"
+
+#: ../../user-manual/ingest/ingest.rst:821
+msgid "Storage Service"
+msgstr "Storage Service"
+
+#: ../../user-manual/ingest/ingest.rst:823
+msgid ""
+"From the Packages tab in the Storage Service, click on Re-ingest beside the "
+"AIP you wish to reingest."
+msgstr "ストレージサービスの [Packages] タブで、再インストールしたいAIPの横の [再インジェスト] をクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:-1
+msgid "Re-ingest link in Storage Service Packages tab"
+msgstr "ストレージサービスパッケージタブの再インジェストリンク"
+
+#: ../../user-manual/ingest/ingest.rst:831
+msgid ""
+"The Storage Service will ask you to choose a pipeline, the types of re-"
+"ingest (see above for thorough descriptions of each), and for full re-"
+"ingest, the name of the processing configuration."
+msgstr ""
+"Storage "
+"Serviceは、パイプライン、再インジェストのタイプ（それぞれの詳細な説明は上記を参照）、完全再インジェストの場合は処理設定名を選択するよう求めます。"
+
+#: ../../user-manual/ingest/ingest.rst:-1
+msgid "Screen to choose pipeline and type of re-ingest"
+msgstr "再インジェストのパイプラインとタイプを選択する画面"
+
+#: ../../user-manual/ingest/ingest.rst:840
+msgid ""
+"The Storage Service will confirm that the AIP has been sent to the pipeline "
+"for re-ingest. Proceed to the Transfer or Ingest tab of your pipeline, and "
+"follow steps 3-6 above."
+msgstr ""
+"Storage "
+"Serviceは、AIPが再インジェストのためにパイプラインに送信されたことを確認します。パイプラインの[転送]または[インジェスト]タブに進み、上記のステップ3～6に従います。"
+
+#: ../../user-manual/ingest/ingest.rst:847
+msgid "API"
+msgstr "API"
+
+#: ../../user-manual/ingest/ingest.rst:849
+msgid "Documentation to come."
+msgstr "文書は後ほど。"
+
+#: ../../user-manual/ingest/ingest.rst:854
+msgid "Clean up the ingest dashboard"
+msgstr "インジェストダッシュボードのクリーンアップ"
+
+#: ../../user-manual/ingest/ingest.rst:856
+msgid ""
+"The dashboard in the Ingest tab should be cleaned up from time to time. As "
+"the list of SIPs grows, it takes Archivematica longer and longer to parse "
+"this information which can create browser timeout issues."
+msgstr ""
+"[インジェスト] "
+"タブのダッシュボードは、時々クリーンアップする必要があります。SIPのリストが増えるにつれて、Archivematicaがこれらの情報を解析するのに時間がかかり、ブラウザのタイムアウト問題が発生する可能性があります。"
+
+#: ../../user-manual/ingest/ingest.rst:861
+msgid ""
+"This does not delete the SIP or related entities. It merely removes them "
+"from the dashboard."
+msgstr "これは、SIPまたは関連するエンティティを削除しません。単にダッシュボードからそれらを削除するだけです。"
+
+#: ../../user-manual/ingest/ingest.rst:865
+msgid "Remove a single ingest"
+msgstr "単一のインジェストを削除"
+
+#: ../../user-manual/ingest/ingest.rst:867
+msgid ""
+"Ensure that the SIP you want to remove doesn't require any user input. You "
+"must complete all user inputs and either complete the SIP (i.e. AIPs/DIPs "
+"are created and stored/uploaded) or reject the SIP before it can be removed "
+"from the dashboard."
+msgstr ""
+"削除するSIPがユーザー入力を必要としないことを確認します。ダッシュボードからSIPを削除する前に、すべてのユーザー入力を完了し、SIPを完了するか（つまり、AIP/DIPが作成され、保存/アップロードされる）、SIPを拒否する必要があります。"
+
+#: ../../user-manual/ingest/ingest.rst:872
+msgid ""
+"When you are ready to remove a SIP from the dashboard, click the red circle "
+"icon found next to the add metadata icon, to the right of the SIP name."
+msgstr "ダッシュボードからSIPを削除する準備ができたら、SIP名の右にあるメタデータ追加アイコンの隣にある赤い丸のアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:875
+msgid "Click the Confirm button to remove the SIP from the dashboard."
+msgstr "ダッシュボードからSIPを削除するには、［確認］ボタンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:879
+msgid "Remove all completed ingests"
+msgstr "完了したインジェストをすべて削除"
+
+#: ../../user-manual/ingest/ingest.rst:881
+msgid ""
+"Ensure that the SIPs you want to remove are complete (i.e. AIPs/DIPs are "
+"created and stored/uploaded). Note that this feature only works on completed"
+" SIPs; rejected SIPs will have to be removed one at a time."
+msgstr ""
+"削除したいSIPが完了していることを確認します（例：AIP/DIPが作成され、保存/アップロードされる）。この機能は完了したSIPに対してのみ機能します。拒否されたSIPは1つずつ削除する必要があることに注意してください。"
+
+#: ../../user-manual/ingest/ingest.rst:885
+msgid ""
+"When you are ready to remove all completed SIPs, click the red circle icon "
+"in the table header of the list of SIPs."
+msgstr "完了したSIPをすべて削除する準備ができたら、SIPリストのテーブルヘッダーにある赤丸のアイコンをクリックします。"
+
+#: ../../user-manual/ingest/ingest.rst:888
+msgid ""
+"Click the Confirm button to remove all completed SIPs from the dashboard."
+msgstr "[確認］ボタンをクリックして、完了したすべてのSIPをダッシュボードから削除します。"
+
+#: ../../user-manual/ingest/ingest.rst:891
+msgid ":ref:`Back to the top <ingest>`"
+msgstr ":ref:`トップに戻る <ingest>`"
