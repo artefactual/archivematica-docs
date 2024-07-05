@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:5
+msgid "Manually Installing Archivematica on Ubuntu"
+msgstr "UbuntuへのArchivematicaの手動インストール"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:7
+msgid ""
+"Archivematica packages are hosted at packages.archivematica.org as a central"
+" place to store packages for multiple operating systems. Packages are "
+"available for Ubuntu 22.04."
+msgstr ""
+"Archivematicaのパッケージは、packages.archivematica.orgでホストされており、複数のオペレーティングシステム用のパッケージを格納する中心的な場所となっています。パッケージは、Ubuntu"
+" 22.04で利用可能です。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:11
+msgid ""
+"Manual installation using packages on Ubuntu is not officially supported. "
+"Please see :ref:`Instructions for new installation <instructions>`."
+msgstr ""
+"Ubuntuのパッケージを使用した手動インストールは、公式にはサポートされていません。 :ref:`新規インストールの手順 "
+"<instructions>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:15
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:17
+msgid ""
+":ref:`Installation instructions for Ubuntu 22.04 (Jammy) <ubuntu-"
+"instructions>`"
+msgstr ":ref:`Ubuntu 22.04（Jammy）のインストール手順 <ubuntu-instructions>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:18
+msgid ":ref:`Post-installation configuration <ubuntu-post-install-config>`"
+msgstr ":ref:`インストール後の設定 <ubuntu-post-install-config>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:23
+msgid "Ubuntu 22.04 (Jammy) installation instructions"
+msgstr "Ubuntu 22.04（Jammy）のインストール手順"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:25
+msgid "Use these commands to install the repositories:"
+msgstr "以下のコマンドを使ってリポジトリをインストールします："
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:31
+msgid ""
+"Add Elasticsearch package source (optional). Elasticsearch comes from its "
+"own package repository."
+msgstr ""
+"Elasticsearchのパッケージソースを追加します（オプション）。Elasticsearchは、独自のパッケージリポジトリから提供されています。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:35
+msgid ""
+"Skip this step if you are planning to run :ref:`Archivematica without "
+"Elasticsearch <install-elasticsearch>`."
+msgstr ""
+"Elasticsearch<install-"
+"elasticsearch>`を使用せずに:ref:`Archivematicaを実行する場合は、この手順をスキップしてください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:42
+msgid ""
+"Update to the most recent OS release. This step will also fetch a list of "
+"the software from the package repositories you just added to your system."
+msgstr "最新のOSリリースにアップデートします。このステップでは、システムに追加したパッケージ・リポジトリからソフトウェアのリストも取得します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:49
+msgid "Install some needed packages"
+msgstr "必要なパッケージをインストール"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:55
+msgid "Install Elasticsearch (optional)"
+msgstr "Elasticsearchのインストール（オプション）"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:57
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:126
+msgid ""
+"Skip this step if you are planning to run Archivematica in indexless mode "
+"(without Elasticsearch)."
+msgstr "Archivematicaをインデックスレスモード（Elasticsearchなし）で実行する場合は、この手順をスキップしてください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:64
+msgid ""
+"Now that MySQL is up and running, create the Storage Service database and "
+"set up the expected credentials."
+msgstr "ここで、MySQLが稼働しているので、Storage Serviceデータベースを作成し、期待される認証情報を設定します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:71
+msgid "Install the Storage Service package."
+msgstr "Storage Serviceパッケージをインストールします。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:77
+msgid "Configure the Storage Service."
+msgstr "Storage Serviceを設定します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:83
+msgid ""
+"Install the Archivematica packages. The order of installation is important -"
+" the archivematica-mcp-server package must be installed before the dashboard"
+" package. While it is possible to install the archivematica-mcp-client "
+"package on a separate machine, that configuration is not documented in these"
+" instructions."
+msgstr ""
+"Archivematicaパッケージをインストールします。インストールの順序は重要で、archivematica-mcp-"
+"serverパッケージをdashboardパッケージの前にインストールする必要があります。archivematica-mcp-"
+"clientパッケージを別のマシンにインストールすることも可能ですが、この手順では、その構成は説明しません。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:89
+msgid ""
+"The archivematica-mcp-server package will install MySQL and configure the "
+"database used by Archivematica. Depending on the version of MySQL that is "
+"installed, the interfaces that you see may differ slightly."
+msgstr ""
+"archivematica-mcp-"
+"serverパッケージは、MySQLをインストールし、Archivematicaが使用するデータベースを設定します。インストールされるMySQLのバージョンによって、表示されるインターフェイスが若干異なる場合があります。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:93
+msgid ""
+"When you are prompted to create a password for the archivematica-mcp-server,"
+" you must use ``demo`` as the password during the install process. The "
+"password can be changed after the installation is complete."
+msgstr ""
+"archivematica-mcp-serverのパスワードを作成するプロンプトが表示されたら、インストールプロセス中のパスワードとして "
+"``demo`` を使用する必要があります。パスワードはインストール完了後に変更できます。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:101
+msgid ""
+"Configure the Archivematica components (optional). There are a number of "
+"environment variables that Archivematica recognizes which can be used to "
+"alter how it is configured. For the full list, see the `Dashboard install "
+"README`_, the `MCPClient install README`_, and the `MCPServer install "
+"README`_."
+msgstr ""
+"Archivematicaコンポーネントを設定します（オプション）。Archivematicaが認識する多くの環境変数があり、これを使用して設定方法を変更できます。全リストは、"
+" `Dashboard install README`_ 、 `MCPClient install README`_ 、 `MCPServer "
+"install README`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:107
+msgid ""
+"If you are planning on running Archivematica in indexless mode (i.e. without"
+" Elasticsearch), then modify the relevant systemd EnvironmentFile files by "
+"adding lines that set the relevant environment variables to ``false``:"
+msgstr ""
+"Archivematicaをインデックスレスモード（Elasticsearchなし）で実行する場合は、関連する環境変数を ``false`` "
+"に設定する行を追加して、関連するsystemd EnvironmentFileファイルを変更してください："
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:118
+msgid "Configure the dashboard."
+msgstr "ダッシュボードを設定します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:124
+msgid "Start Elasticsearch (optional)."
+msgstr "Elasticsearchを起動します（オプション）。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:133
+msgid "Start the remaining services"
+msgstr "残りのサービスを開始"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:139
+msgid ""
+"If you have trouble with the gearman or clamav command try restarting it:"
+msgstr "gearmanやclamavコマンドに問題がある場合は、再起動してみてください："
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:146
+msgid "Configure your firewall (if applicable)"
+msgstr "ファイアウォールの設定（該当する場合）"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:148
+msgid ""
+"On Ubuntu, the default firewall configuration tool is ufw (Uncomplicated "
+"Firewall). To see the firewall status, enter:"
+msgstr ""
+"Ubuntuでは、デフォルトのファイアウォール設定ツールはufw（Uncomplicated "
+"Firewall）です。ファイアウォールの状態を見るには、次のように入力します："
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:155
+msgid ""
+"If ufw is active, you must ensure that it is not blocking the ports used by "
+"the dashboard and the Storage Service, i.e., 80 and 8000."
+msgstr ""
+"ufwがアクティブな場合は、ダッシュボードとStorage "
+"Serviceが使用するポート、つまり80と8000をブロックしていないことを確認する必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:163
+msgid ""
+"Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`."
+msgstr ":ref:`インストール後の設定 <ubuntu-post-install-config>` を完了します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:169
+msgid "Post-install configuration"
+msgstr "インストール後の設定"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:171
+msgid ""
+"After successfully completing a new installation, follow these steps to "
+"complete the configuration of your new server."
+msgstr "新規インストールが正常に完了したら、以下の手順に従って新しいサーバーの設定を完了します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:174
+msgid ""
+"The Storage Service runs as a separate web application from the "
+"Archivematica dashboard. The Storage Service is exposed on port 8000 by "
+"default for Ubuntu package installs. Use your web browser to navigate to the"
+" Storage Service at the IP address of the machine you have been installing "
+"on, e.g., ``http://<MY-IP-ADDR>:8000`` (or ``http://localhost:8000`` or "
+"``http://127.0.0.1:8000`` if this is a local development setup)."
+msgstr ""
+"Storage "
+"Serviceは、Archivematicaダッシュボードとは別のウェブアプリケーションとして実行されます。Ubuntuパッケージをインストールした場合、Storage"
+" Serviceはデフォルトではポート8000で公開されます。ウェブブラウザを使用して、インストールしたマシンのIPアドレス（例： "
+"``http://<MY-IP-ADDR>:8000`` （ローカル開発セットアップの場合は、 ``http://localhost:8000`` "
+"または ``http://127.0.0.1:8000`` ）からStorage Serviceに移動します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:181
+msgid ""
+"If you are using an IP address or fully-qualified domain name instead of "
+"localhost, you will need to configure your firewall rules and allow access "
+"only to ports 80 and 8000 for Archivematica usage."
+msgstr ""
+"localhostの代わりにIPアドレスまたは完全修飾ドメイン名を使用している場合は、ファイアウォールのルールを設定し、Archivematicaを使用するポート80と8000のみにアクセスを許可する必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:185
+msgid ""
+"The Storage Service has its own set of users. Add at least one "
+"administrative user::"
+msgstr "Storage Serviceには独自のユーザーセットがあります。少なくとも1人の管理ユーザーを追加します::"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:197
+msgid ""
+"After you have created this user an API key will be generated that will "
+"connect the Archivematica pipeline to the Storage Service API. Click edit to"
+" see the new user's details. The API key will be found at the bottom of the "
+"page. Copy this to your clipboard as it will be used later on in the post-"
+"installation configuration."
+msgstr ""
+"このユーザーを作成すると、ArchivematicaパイプラインをStorage Service "
+"APIに接続するためのAPIキーが生成されます。editをクリックすると、新しいユーザーの詳細が表示されます。APIキーはページの一番下にあります。後でインストール後の設定で使用するので、これをクリップボードにコピーします。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:204
+msgid ""
+"It is recommended that you also modify the test user and change the default "
+"password. This will also result in a new API key for the test user but that "
+"does not need to be copied to the clipboard in this instance."
+msgstr ""
+"テストユーザーを変更し、デフォルトのパスワードを変更することを推奨します。これにより、テストユーザー用の新しいAPIキーも生成されますが、この場合は、クリップボードにコピーする必要はありません。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:209
+msgid ""
+"To finish the installation, use your web browser to navigate to the "
+"Archivematica dashboard using the IP address of the machine on which you "
+"have been installing, e.g., ``http://<MY-IP-ADDR>:80`` (or "
+"``http://localhost:80`` or ``http://127.0.0.1:80`` if this is a local "
+"development setup)."
+msgstr ""
+"インストールを完了するには、Webブラウザを使用してArchivematicaのダッシュボードに移動し、インストールを行ったマシンのIPアドレス（例： "
+"``http://<MY-IP-ADDR>:80`` （ローカルで開発セットアップを行う場合は、 ``http://localhost:80`` または"
+" ``http://127.0.0.1:80`` ））を使用します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:214
+msgid ""
+"At the Welcome page, create an administrative user for the Archivematica "
+"pipeline by entering the organization name, the organization identifier, "
+"username, email, and password."
+msgstr ""
+"「ようこそ」ページで、組織名、組織識別子、ユーザー名、メールアドレス、パスワードを入力し、Archivematicaパイプラインの管理ユーザーを作成します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:218
+msgid ""
+"On the next screen, connect your pipeline to the Storage Service by entering"
+" the Storage Service URL and username, and by pasting in the API key that "
+"you copied in Step (2)."
+msgstr ""
+"次の画面で、Storage ServiceのURLとユーザー名を入力し、ステップ（2）でコピーしたAPIキーを貼り付けて、パイプラインをStorage "
+"Serviceに接続します。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:222
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on the "
+"same machine, then you should supply ``http://127.0.0.1:8000`` as the "
+"Storage Service URL at this screen."
+msgstr ""
+"Storage ServiceとArchivematicaダッシュボードが同じマシンにインストールされている場合は、この画面でStorage "
+"ServiceのURLとして ``http://127.0.0.1:8000`` を与える必要があります。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:225
+msgid ""
+"If the Storage Service and the Archivematica dashboard are installed on "
+"different nodes (servers), then you should use the IP address or fully-"
+"qualified domain name of your Storage Service instance, e.g., ``http://<MY-"
+"IP-ADDR>:8000`` *and* you must ensure that any firewall rules (i.e., "
+"iptables, ufw, AWS security groups, etc.) are configured to allow requests "
+"from your dashboard IP to your Storage Service IP on the appropriate port."
+msgstr ""
+"ストレージサービスと Archivematica ダッシュボードが異なるノード（サーバ）にインストールされている場合は、ストレージサービスインスタンスの"
+" IP アドレスまたは完全修飾ドメイン名（例： ``http://<MY-IP-ADDR>:8000`` * "
+"）を使用する必要があります。ファイアウォールのルール（例：iptables、ufw、AWS セキュリティグループ）が、ダッシュボードの IP "
+"から適切なポートの ストレージサービスIP へのリクエストを許可するように設定されていることを確認しなければなりません。"
+
+#: ../../admin-manual/installation-setup/installation/install-ubuntu.rst:233
+msgid ":ref:`Back to the top <install-pkg-ubuntu>`"
+msgstr ":ref:`トップに戻る <install-pkg-ubuntu>`"

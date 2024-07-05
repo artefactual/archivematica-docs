@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:5
+msgid "Using Handle System with Archivematica"
+msgstr "Archivematicaでハンドルシステムを使用"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:7
+msgid ""
+"For more information about Handle System, see the `Handle.Net`_ website."
+msgstr "ハンドルシステムの詳細については、 `Handle.Net`_ ウェブサイトを参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:9
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:11
+msgid ":ref:`Connecting Archivematica and Handle.Net <config-handlenet>`"
+msgstr ":ref:`ArchivematicaとHandle.Netの接続 <config-handlenet>`"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:12
+msgid ":ref:`Binding PIDs to a Handle.Net registry <using-handlenet>`"
+msgstr ":ref:`Handle.NetレジストリへのPIDのバインド <using-handlenet>`"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:17
+msgid "Connecting Archivematica and Handle.Net"
+msgstr "ArchivematicaとHandle.Netの接続"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:19
+msgid ""
+"Before Archivematica can mint persistent identifiers (PIDs) via requests a "
+"Handle.Net server, you must fill in the Handle server settings in the "
+"Administration tab."
+msgstr ""
+"ArchivematicaがHandle.Netサーバへのリクエストを通じて永続識別子（PID）を作成する前に、管理タブでHandleサーバの設定を行う必要があります。"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:23
+msgid ""
+"See :ref:`Handle server config <admin-handlenet>` for more information."
+msgstr "詳しくは :ref:`Handle server config <admin-handlenet>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:28
+msgid "Binding PIDs to a Handle.Net registry"
+msgstr "Handle.NetレジストリへのPIDのバインド"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:30
+msgid ""
+"For more information on how to use Archivematica in conjunction with "
+"Handle.Net, see :ref:`Bind PIDs <bind-pids>` in the User Manual."
+msgstr ""
+"ArchivematicaとHandle.Netの併用方法については、ユーザーマニュアルの :ref:`Bind PIDs <bind-pids>` "
+"を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/handlenet-setup.rst:33
+msgid ":ref:`Back to the top <atom-setup>`"
+msgstr ":ref:`トップに戻る <atom-setup>`"

@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/forensic.rst:5
+msgid "Forensic disk images"
+msgstr "フォレンジックディスクイメージ"
+
+#: ../../user-manual/transfer/forensic.rst:7
+msgid ""
+"Archivematica supports the preservation of forensic disk images. Selecting "
+"the disk image :ref:`transfer type <transfer-types>` is not required to "
+"preserve disk images - you can use the standard transfer types or the bag "
+"transfer types, if your disk image is bagged. The disk image transfer type "
+"gives users an extra disk image-specific metadata form where you can record "
+"information about the imaging process."
+msgstr ""
+"Archivematica は、フォレンジックディスクイメージの保存をサポートしています。ディスクイメージの保存には、ディスクイメージ転送タイプ（ "
+":ref:`） <transfer-types>` "
+"を選択する必要はありません。ディスクイメージがバッグされている場合は、標準転送タイプまたはバッグ転送タイプを使用できます。ディスクイメージ転送タイプでは、ディスクイメージ固有のメタデータフォームが追加され、イ"
+" メージングプロセスに関する情報を記録できます。"
+
+#: ../../user-manual/transfer/forensic.rst:14
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/transfer/forensic.rst:16
+msgid ""
+":ref:`Workflow configuration options <disk-image-configuration-options>`"
+msgstr ":ref:`ワークフロー設定オプション <disk-image-configuration-options>`"
+
+#: ../../user-manual/transfer/forensic.rst:18
+msgid ":ref:`Using the disk image transfer type <disk-image-workflow>`"
+msgstr ":ref:`ディスクイメージ転送タイプの使用 <disk-image-workflow>`"
+
+#: ../../user-manual/transfer/forensic.rst:20
+msgid ":ref:`Compound disk images <compound-disk-images>`"
+msgstr ":ref:`複合ディスクイメージ <compound-disk-images>`"
+
+#: ../../user-manual/transfer/forensic.rst:25
+msgid "Workflow configuration options"
+msgstr "ワークフロー設定オプション"
+
+#: ../../user-manual/transfer/forensic.rst:27
+msgid ""
+"If you are processing disk images, you may want to adjust Archivematica's "
+":ref:`processing configuration <dashboard-processing>` options in the "
+"Administration tab of the dashboard."
+msgstr ""
+"ディスクイメージを処理する場合、ダッシュボードの管理タブにある Archivematica の :ref:`処理設定 <dashboard-"
+"processing>` オプションを調整するとよいでしょう。"
+
+#: ../../user-manual/transfer/forensic.rst:31
+msgid ""
+"For more information on the processing configuration fields, see "
+":ref:`Fields and options <processing-config-fields>`."
+msgstr ""
+"処理設定フィールドの詳細については、 :ref:`フィールドとオプション <processing-config-fields>` を参照してください。"
+
+#: ../../user-manual/transfer/forensic.rst:35
+msgid "Extract packages"
+msgstr "パッケージの抽出"
+
+#: ../../user-manual/transfer/forensic.rst:37
+msgid ""
+"Archivematica can be configured to extract the contents from a package, "
+"which includes forensic image formats as well as compressed content like ZIP"
+" files."
+msgstr ""
+"Archivematica "
+"は、フォレンジック画像形式やZIPファイルのような圧縮されたコンテンツを含むパッケージからコンテンツを抽出するように設定できます。"
+
+#: ../../user-manual/transfer/forensic.rst:40
+msgid ""
+"However, extracting the contents of a forensic disk image can cause major "
+"performance issues, since disk images often contain many thousands of system"
+" files that need to be subsequently processed in Archivematica. This can "
+"result in failures. We recommend not extracting forensic image formats. This"
+" can be set in the processing configuration by setting the *Extract "
+"packages* job to \"No\"."
+msgstr ""
+"しかし、ディスクイメージには何千ものシステムファイルが含まれていることが多く、Archivematica "
+"で処理する必要があるため、フォレンジックディスクイメージの内容を抽出すると、パフォーマンスに大きな問題が生じる可能性があります。その結果、エラーが発生する可能性があります。フォレンジックイメージのフォーマットを抽出しないことをお勧めします。これは、"
+" *Extract packages* ジョブを\"いいえ\" に設定することで、処理設定で設定できます。"
+
+#: ../../user-manual/transfer/forensic.rst:46
+msgid ""
+"If you would like to extract forensic image formats anyway, you can set the "
+"*Extract packages* job to \"Yes\". We recommend testing this at scale to "
+"ensure that it is a viable workflow for your deployment. One scalability "
+"option that can help to mitigate the processing load caused by extraction is"
+" turning off `FITS`_, which is the default characterization tool that will "
+"run on every extracted file. For more information, see :ref:`Preservation "
+"Action Rules <disable-fpr-rules>` on the Scalability page."
+msgstr ""
+"とにかくフォレンジックイメージフォーマットを抽出したい場合は、 *パッケージの抽出* ジョブを \"はい\" "
+"に設定します。これを大規模にテストして、デプロイメントで実行可能なワークフローであることを確認することをお勧めします。抽出による処理負荷の軽減に役立つスケーラビリティオプションの"
+" 1 つは、抽出されたすべてのファイルに対して実行されるデフォルトの特性化ツールである `FITS`_ "
+"をオフにすることです。詳細については、[スケーラビリティ] のページにある :ref:`保存アクションルール <disable-fpr-rules>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/forensic.rst:55
+msgid "Delete packages after extraction"
+msgstr "抽出後にパッケージを削除します"
+
+#: ../../user-manual/transfer/forensic.rst:57
+msgid ""
+"If you have chosen to extract files, Archivematica can be configured to "
+"delete the original package (the metadata and logs for the package are "
+"retained). This can save space in the resulting AIP. The original package "
+"can also be retained."
+msgstr ""
+"ファイルを抽出する場合、Archivematica "
+"は、元のパッケージを削除するように設定できます（パッケージのメタデータとログは保持されます）。これにより、作成されるAIPのスペースを節約することができます。元のパッケージを保持することもできます。"
+
+#: ../../user-manual/transfer/forensic.rst:61
+msgid ""
+"To have Archivematica automatically delete forensic image formats once the "
+"files have been extracted, set the *Delete packages after extraction* job to"
+" \"Yes\". If you would prefer to retain the file after extraction, set the "
+"job to \"No\"."
+msgstr ""
+"Archivematicaがフォレンジックイメージフォーマットを自動的に削除するには、 *Delete packages after "
+"extraction* ジョブを\"はい\" に設定します。抽出後もファイルを保持したい場合は、ジョブを\"いいえ\" に設定します。"
+
+#: ../../user-manual/transfer/forensic.rst:66
+msgid "Examine contents"
+msgstr "内容検査"
+
+#: ../../user-manual/transfer/forensic.rst:68
+msgid ""
+"The examine contents microservice runs `Bulk Extractor`_, a forensics tool "
+"that can recognize credit card numbers, social security numbers, and other "
+"patterns in data. Bulk Extractor creates logs that are stored in the AIP. "
+"The logs can be inspected by sending the transfer to the backlog and using "
+"the Examine Contents functionality on the :ref:`Analysis pane "
+"<analysis_pane>` in the Appraisal tab."
+msgstr ""
+"内容検査マイクロサービスは、 `Bulk Extractor`_ "
+"を実行します。これは、クレジットカード番号、社会保障番号、およびデータ内のその他のパターンを認識できるフォレンジックツールです。Bulk "
+"Extractorは、AIPに保存されるログを作成します。このログは、転送をバックログに送信し、 :ref:`[分析]ペイン "
+"<analysis_pane>` [鑑定]タブの[コンテンツの検査]機能を使用することで検査できます。"
+
+#: ../../user-manual/transfer/forensic.rst:74
+msgid ""
+"Examine contents is another microservice that can result in increased "
+"processing time, especially if it is running on the contents of an extracted"
+" forensic disk image. If you are not extracting contents, the disk image "
+"itself is not likely to generate any results from Bulk Extractor."
+msgstr ""
+"内容検査は、特に抽出されたフォレンジックディスクイメージのコンテンツに対して実行される場合、処理時間の増加につながる可能性があるもう 1 "
+"つのマイクロサービスです。コンテンツを抽出していない場合、ディスクイメージ自体は、Bulk Extractor から結果を生成しない可能性があります。"
+
+#: ../../user-manual/transfer/forensic.rst:79
+msgid ""
+"We recommend setting the *Examine contents* job to \"No\", so that Bulk "
+"Extractor does not run. If you would like to run Bulk Extractor on the "
+"extracted contents of a forensic disk image, we strongly recommend testing "
+"this workflow at scale to ensure that the Archivematica site is properly "
+"resourced to handle the processing load."
+msgstr ""
+"Bulk Extractor が実行されないように、 *内容検査* ジョブを \"いいえ\" "
+"に設定することをお勧めします。フォレンジックディスクイメージから抽出されたコンテンツに対して Bulk Extractor "
+"を実行する場合は、このワークフローを大規模にテストして、Archivematica "
+"サイトに処理負荷を扱うための適切なリソースが確保されていることを強くお勧めします。"
+
+#: ../../user-manual/transfer/forensic.rst:88
+msgid "Using the disk image transfer type"
+msgstr "ディスクイメージ転送タイプの使用"
+
+#: ../../user-manual/transfer/forensic.rst:90
+msgid ""
+"Select *Disk image* from the Transfer type drop-down menu on the Transfer "
+"tab of the dashboard. Give your transfer a name."
+msgstr ""
+"ダッシュボードの [転送] タブにある [転送タイプ] ドロップダウンメニューから *ディスクイメージ* を選択します。転送に名前を付けます。"
+
+#: ../../user-manual/transfer/forensic.rst:93
+msgid ""
+"From the transfer browser, choose your forensic disk image and click "
+"**Add**. Note that it must be contained within a directory."
+msgstr ""
+"転送ブラウザからフォレンジックディスクイメージを選択し、 **追加** をクリックします。ディレクトリ内に含める必要があることに注意してください。"
+
+#: ../../user-manual/transfer/forensic.rst:96
+msgid ""
+"If you would like to add metadata about the imaging process, click on the "
+"metadata icon to the right of the filename. This will open the metadata form"
+" in a new tab. Adding metadata is optional."
+msgstr ""
+"画像処理に関するメタデータを追加する場合は、ファイル名の右側にあるメタデータアイコンをクリックします。これにより、メタデータフォームが新しいタブで開きます。メタデータの追加はオプションです。"
+
+#: ../../user-manual/transfer/forensic.rst
+msgid ""
+"The transfer tab showing a disk image transfer setup, with the metadata icon"
+" circled in red."
+msgstr "メタデータのアイコンが赤丸で囲まれて、ディスクイメージ転送の設定を示す転送タブ。"
+
+#: ../../user-manual/transfer/forensic.rst:106
+msgid "Click on the metadata icon to add metadata."
+msgstr "メタデータを追加するには、メタデータのアイコンをクリックします。"
+
+#: ../../user-manual/transfer/forensic.rst:108
+msgid "Enter your metadata and click **Save**, then close the tab."
+msgstr "メタデータを入力し、 **保存** をクリックし、タブを閉じます。"
+
+#: ../../user-manual/transfer/forensic.rst
+msgid "Forensic disk image metadata template"
+msgstr "フォレンジックディスクイメージのメタデータテンプレート"
+
+#: ../../user-manual/transfer/forensic.rst:116
+msgid "Fill in the metadata template and click save."
+msgstr "メタデータ・テンプレートを入力し、保存をクリックします。"
+
+#: ../../user-manual/transfer/forensic.rst:120
+msgid ""
+"The metadata form opens in a new tab. After clicking save, you **must** "
+"close the new tab to go back to your in-progress transfer, rather than "
+"clicking on the Transfer tab from the metadata form."
+msgstr ""
+"メタデータフォームが新しいタブで開きます。[保存] をクリックしたら、メタデータフォームから [転送] "
+"タブをクリックするのではなく、新しいタブを閉じて進行中の転送に戻る **必要があります** 。"
+
+#: ../../user-manual/transfer/forensic.rst:124
+msgid ""
+"If you are planning to start multiple transfers, you can repeat the above "
+"steps for adding metadata to additional transfers."
+msgstr "複数の転送を開始する予定がある場合は、上記の手順を繰り返して、追加の転送にメタデータを追加できます。"
+
+#: ../../user-manual/transfer/forensic.rst:127
+msgid ""
+"Once all images are loaded to the dashboard and all metadata is added, "
+"select **Start Transfer**."
+msgstr "すべての画像がダッシュボードに読み込まれ、すべてのメタデータが追加されたら、 **転送の開始** を選択します。"
+
+#: ../../user-manual/transfer/forensic.rst:130
+msgid ""
+"Proceed through the normal :ref:`Transfer <transfer>` and :ref:`Ingest "
+"<ingest>` workflows."
+msgstr "通常の :ref:`転送 <transfer>` と :ref:`インジェスト <ingest>` のワークフローを進めます。"
+
+#: ../../user-manual/transfer/forensic.rst:135
+msgid ""
+"Note that during the *Characterize and extract metadata* microservice, "
+"`fiwalk`_ will be used on forensic disk image files."
+msgstr ""
+"*メタデータの特性化と抽出* マイクロサービス中に、フォレンジックディスクイメージ ファイルに対して `fiwalk`_ "
+"が使用されることに注意してください。"
+
+#: ../../user-manual/transfer/forensic.rst:141
+msgid "Compound disk images"
+msgstr "複合ディスクイメージ"
+
+#: ../../user-manual/transfer/forensic.rst:143
+msgid ""
+"You can combine multiple parts of a compound disk image into a single AIP, "
+"if desired, by using the backlog arrangement functionality in Archivematica."
+msgstr ""
+"必要であれば、Archivematica のバックログ配列機能を使用して、複合ディスクイメージの複数の部分を1つのAIPにまとめることができます。"
+
+#: ../../user-manual/transfer/forensic.rst:146
+msgid ""
+"Start each part of the compound disk image as a single transfer, as per the "
+"instructions above."
+msgstr "上記の指示に従って、複合ディスクイメージの各パートを単一の転送として開始します。"
+
+#: ../../user-manual/transfer/forensic.rst:149
+msgid ""
+"When you reach the *Create SIP* job, select \"Send to backlog\". Do this for"
+" each transfer."
+msgstr "*Create SIP* ジョブに到達したら、\"Send to backlog\" を選択します。各転送についてこれを実行します。"
+
+#: ../../user-manual/transfer/forensic.rst:152
+msgid ""
+"In the :ref:`Appraisal tab <appraisal>`, use the :ref:`Arrangement "
+"<arrangement>` pane to combine your transfers into one SIP."
+msgstr ""
+":ref:`[評価] タブ <appraisal>` で、 :ref:`[配列] <arrangement>` ペインを使用して、転送を 1 つの "
+"SIP に結合します。"
+
+#: ../../user-manual/transfer/forensic.rst:155
+msgid ""
+"Once you're happy with the arrangement, start the SIP by selecting the "
+"parent directory and then clicking **Create SIP**."
+msgstr "配列に満足したら、親ディレクトリを選択し、 **SIP の作成** をクリックしてSIPを開始します。"
+
+#: ../../user-manual/transfer/forensic.rst:159
+msgid ":ref:`Back to the top <forensic>`"
+msgstr ":ref:`トップに戻る <forensic>`"

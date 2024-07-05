@@ -1,0 +1,650 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../index.rst:5
+msgid "Archivematica documentation"
+msgstr "Archivematica文書"
+
+#: ../../index.rst:18
+msgid "Getting started"
+msgstr "はじめに"
+
+#: ../../index.rst:20
+msgid ""
+"The getting started manual is intended for users who are considering "
+"implementing Archivematica as a digital preservation solution. This manual "
+"includes information on the Archivematica project as well as a quick-start "
+"guide to help new users test it out. For information about installing and "
+"using Archivematica in a production environment, see the user or "
+"administrator manuals below."
+msgstr ""
+"本マニュアルは、Archivematicaをデジタル・プリザベーション・ソリューションとして導入することを検討しているユーザーを対象としています。本マニュアルには、Archivematicaプロジェクトに関する情報や、新規ユーザーが試用するためのクイックスタートガイドが含まれています。生産環境でのArchivematicaのインストールや使用方法については、以下のユーザーマニュアルまたは管理者マニュアルを参照してください。"
+
+#: ../../index.rst:30
+msgid "Overview"
+msgstr "概要"
+
+#: ../../index.rst:32
+msgid ""
+"The overview section provides a definition of Archivematica and a "
+"description of the OAIS model on which it is based, its technical "
+"architecture, the microservices framework, and information about system "
+"requirements for deploying Archivematica."
+msgstr ""
+"概要では、Archivematicaの定義、ベースとなっているOAISモデル、テクニカルアーキテクチャ、マイクロサービスのフレームワーク、Archivematicaを導入するためのシステム要件について説明します。"
+
+#: ../../index.rst:37
+msgid ":ref:`What is Archivematica? <intro>`"
+msgstr ":ref:`Archivematicaとは？ <intro>`"
+
+#: ../../index.rst:38
+msgid ":ref:`Web-based dashboard <web-dashboard>`"
+msgstr ":ref:`ウェブベースのダッシュボード <web-dashboard>`"
+
+#: ../../index.rst:39
+msgid ":ref:`Technical architecture <technical-arch>`"
+msgstr ":ref:`技術アーキテクチャ <technical-arch>`"
+
+#: ../../index.rst:40
+msgid ":ref:`Microservices <microservices>`"
+msgstr ":ref:`マイクロサービス <microservices>`"
+
+#: ../../index.rst:41
+msgid ":ref:`External tools <external-tools>`"
+msgstr ":ref:`外部ツール <external-tools>`"
+
+#: ../../index.rst:42
+msgid ":ref:`System requirements <system-requirements>`"
+msgstr ":ref:`システム要件 <system-requirements>`"
+
+#: ../../index.rst:47
+msgid "Quick-start guide"
+msgstr "クイックスタートガイド"
+
+#: ../../index.rst:49
+msgid ""
+"This section is intended to introduce prospective users to Archivematica for"
+" testing purposes, using either the Archivematica sandbox or a local virtual"
+" machine. This is not a guide to installing Archivematica for development or"
+" production - please see the :ref:`Administrator manual <admin-manual-home>`"
+" for full installation instructions."
+msgstr ""
+"このセクションでは、Archivematicaをテストするために、Archivematica "
+"Sandboxまたはローカルの仮想マシンを使用して、Archivematicaをインストールする方法を説明します。完全なインストール手順については、 "
+":ref:`Administratorマニュアル <admin-manual-home>` を参照してください。"
+
+#: ../../index.rst:55
+msgid ":ref:`Archivematica quick-start guide <quick-start>`"
+msgstr ":ref:`Archivematicaクイックスタートガイド <quick-start>`"
+
+#: ../../index.rst:56
+msgid ":ref:`Configuration <configuration>`"
+msgstr ":ref:`設定 <configuration>`"
+
+#: ../../index.rst:61
+msgid "Troubleshooting"
+msgstr "トラブルシューティング"
+
+#: ../../index.rst:63
+msgid ""
+"The troubleshooting section contains information on how Archivematica "
+"handles errors, as well as how to report errors"
+msgstr "トラブルシューティングセクションには、Archivematicaのエラー処理方法とエラーの報告方法が記載されています"
+
+#: ../../index.rst:66
+msgid ":ref:`Error handling <error-handling>`"
+msgstr ":ref:`エラー処理 <error-handling>`"
+
+#: ../../index.rst:67
+msgid ":ref:`Error reporting <error-reporting>`"
+msgstr ":ref:`エラーレポート <error-reporting>`"
+
+#: ../../index.rst:68
+msgid ":ref:`FAQ <faq>`"
+msgstr ":ref:`よくあるご質問 <faq>`"
+
+#: ../../index.rst:73
+msgid "Other resources"
+msgstr "その他のリソース"
+
+#: ../../index.rst:75
+msgid ":ref:`TRAC review tool <trac>`"
+msgstr ":ref:`TRACレビューツール <trac>`"
+
+#: ../../index.rst:80
+msgid "User manual"
+msgstr "ユーザーマニュアル"
+
+#: ../../index.rst:82
+msgid ""
+"The user manual is intended for archivists, librarians, and other users who "
+"interact with Archivematica through the web-based user interface. The user "
+"manual is organized based on the tabs in the Archivematica UI."
+msgstr ""
+"このユーザーマニュアルは、アーキビストや図書館員など、ArchivematicaをWebベースのユーザーインターフェースから操作するユーザーを対象としています。ユーザーマニュアルは、Archivematica"
+" UIのタブに基づいて構成されています。"
+
+#: ../../index.rst:89
+msgid "Transfer"
+msgstr "転送"
+
+#: ../../index.rst:91
+msgid ""
+"The Transfer tab is the place where an Archivematica transfer begins. Along "
+"with the transfer widget, this tab displays microservices and jobs that act "
+"upon content to prepare your transfer to become a SIP (submission "
+"information package)."
+msgstr ""
+"転送タブは、Archivematicaの転送を開始する場所です。このタブには、転送をSIP（送信情報パッケージ）にする準備をするためにコンテンツに作用するマイクロサービスとジョブが表示されます。"
+
+#: ../../index.rst:96
+msgid ":ref:`General description <transfer>`"
+msgstr ":ref:`概要 <transfer>`"
+
+#: ../../index.rst:97
+msgid ":ref:`Preparing digital objects for transfer <prepare-transfer>`"
+msgstr ":ref:`デジタルオブジェクトの転送準備 <prepare-transfer>`"
+
+#: ../../index.rst:98
+msgid ":ref:`Processing a transfer <process-transfer>`"
+msgstr ":ref:`転送処理 <process-transfer>`"
+
+#: ../../index.rst:99
+msgid ":ref:`Cleaning up the Transfer tab <cleanup>`"
+msgstr ":ref:`転送タブのクリーンアップ <cleanup>`"
+
+#: ../../index.rst:100 ../../index.rst:243
+msgid ":ref:`Import metadata <import-metadata>`"
+msgstr ":ref:`メタデータのインポート <import-metadata>`"
+
+#: ../../index.rst:101
+msgid ":ref:`Bags (Library of Congress Bagit format) <bags>`"
+msgstr ":ref:`バッグ（国会図書館バギットフォーマット） <bags>`"
+
+#: ../../index.rst:102
+msgid ":ref:`Forensic disk images <forensic>`"
+msgstr ":ref:`フォレンジックディスクイメージ <forensic>`"
+
+#: ../../index.rst:103
+msgid ":ref:`DSpace exports <dspace>`"
+msgstr ":ref:`DSpaceエクスポート <dspace>`"
+
+#: ../../index.rst:104
+msgid ":ref:`Dataverse transfers <dataverse-transfers>`"
+msgstr ":ref:`Dataverse転送 <dataverse-transfers>`"
+
+#: ../../index.rst:105
+msgid ":ref:`ContentDM (transfer and ingest) <contentdm>`"
+msgstr ":ref:`ContentDM（転送とインジェスト） <contentdm>`"
+
+#: ../../index.rst:106
+msgid ":ref:`Scan for viruses <scan-for-viruses>`"
+msgstr ":ref:`ウイルスのスキャン <scan-for-viruses>`"
+
+#: ../../index.rst:111
+msgid "Backlog"
+msgstr "Backlog"
+
+#: ../../index.rst:113
+msgid ""
+"The Backlog tab displays content that has been added to the Archivematica "
+"backlog and allows users to search, download and delete transfers from the "
+"backlog location."
+msgstr ""
+"Backlogタブには、Archivematicaのバックログに追加されたコンテンツが表示され、ユーザーは、バックログの場所から転送を検索、ダウンロード、削除できます。"
+
+#: ../../index.rst:117
+msgid ":ref:`General description <backlog>`"
+msgstr ":ref:`概要 <backlog>`"
+
+#: ../../index.rst:118
+msgid ":ref:`Searching for transfers and files <backlog-transfer-search>`"
+msgstr ":ref:`転送とファイルの検索 <backlog-transfer-search>`"
+
+#: ../../index.rst:119
+msgid ":ref:`Downloading transfers or files <backlog-download>`"
+msgstr ":ref:`転送またはファイルのダウンロード <backlog-download>`"
+
+#: ../../index.rst:120
+msgid ":ref:`Deleting transfers from the backlog <backlog-delete>`"
+msgstr ":ref:`バックログから転送を削除 <backlog-delete>`"
+
+#: ../../index.rst:121
+msgid ":ref:`Retrieving transfers from the backlog <backlog-retrieve>`"
+msgstr ":ref:`バックログからの転送の検索 <backlog-retrieve>`"
+
+#: ../../index.rst:126
+msgid "Appraisal"
+msgstr "評価"
+
+#: ../../index.rst:128
+msgid ""
+"The Appraisal and Arrangement tab is used to analyze and arrange material "
+"which has been placed in backlog. It can also be used to arrange materials "
+"directly to resources in ArchivesSpace."
+msgstr ""
+"[鑑定と評価］タブは、バックログに保存されている素材を分析・整理するために使用します。また、ArchivesSpaceのリソースに直接素材を配列もできます。"
+
+#: ../../index.rst:132
+msgid ":ref:`General description <appraisal>`"
+msgstr ":ref:`概要 <appraisal>`"
+
+#: ../../index.rst:133
+msgid ":ref:`Backlog pane <backlog_pane>`"
+msgstr ":ref:`バックログペイン <backlog_pane>`"
+
+#: ../../index.rst:134
+msgid ":ref:`Analysis pane <analysis_pane>`"
+msgstr ":ref:`分析ペイン <analysis_pane>`"
+
+#: ../../index.rst:135
+msgid ":ref:`File list pane <file_list_pane>`"
+msgstr ":ref:`ファイルリストペイン <file_list_pane>`"
+
+#: ../../index.rst:136
+msgid ":ref:`ArchivesSpace pane <archivesspace_pane>`"
+msgstr ":ref:`アーカイブスペースペイン <archivesspace_pane>`"
+
+#: ../../index.rst:137
+msgid ":ref:`Arrangement pane <arrangement>`"
+msgstr ":ref:`配列ペイン <arrangement>`"
+
+#: ../../index.rst:142
+msgid "Ingest"
+msgstr "インジェスト"
+
+#: ../../index.rst:144
+msgid ""
+"The Ingest tab displays the microservices and jobs that take place to turn a"
+" SIP into an AIP or a DIP. This tab also contains the backlog widget."
+msgstr ""
+"インジェストタブには、SIPをAIPまたはDIPに変換するために実行されるマイクロサービスとジョブが表示されます。このタブにはバックログ "
+"ウィジェットも含まれています。"
+
+#: ../../index.rst:147
+msgid ":ref:`Create a SIP <create-sip>`"
+msgstr ":ref:`SIPの作成 <create-sip>`"
+
+#: ../../index.rst:148
+msgid ":ref:`Add descriptive metadata <add-metadata>`"
+msgstr ":ref:`説明メタデータを追加 <add-metadata>`"
+
+#: ../../index.rst:149
+msgid ":ref:`Add PREMIS rights <add-rights>`"
+msgstr ":ref:`PREMISの権利を追加 <add-rights>`"
+
+#: ../../index.rst:150
+msgid ":ref:`Normalize <normalize>`"
+msgstr ":ref:`正規化 <normalize>`"
+
+#: ../../index.rst:151
+msgid ":ref:`Bind PIDs <bind-pids>`"
+msgstr ":ref:`Bind PID <bind-pids>`"
+
+#: ../../index.rst:152
+msgid ":ref:`Transcribe SIP contents <transcribe-contents>`"
+msgstr ":ref:`SIPコンテンツのテキスト変換 <transcribe-contents>`"
+
+#: ../../index.rst:153
+msgid ":ref:`Store AIP <store-aip>`"
+msgstr ":ref:`AIPの保存 <store-aip>`"
+
+#: ../../index.rst:154
+msgid ":ref:`Upload DIP <upload-dip>`"
+msgstr ":ref:`DIPのアップロード <upload-dip>`"
+
+#: ../../index.rst:155
+msgid ":ref:`Reingest AIP <reingest>`"
+msgstr ":ref:`AIPの再インジェスト <reingest>`"
+
+#: ../../index.rst:156
+msgid ":ref:`Clean up the ingest dashboard <cleanup-ingest>`"
+msgstr ":ref:`インジェストダッシュボードのクリーンアップ <cleanup-ingest>`"
+
+#: ../../index.rst:162
+msgid "Archival Storage"
+msgstr "Archival Storage"
+
+#: ../../index.rst:164
+msgid ""
+"The Archival Storage tab displays AIPs that have been processed by the "
+"Archivematica pipeline and related metadata such as size of AIP, UUID and "
+"date stored."
+msgstr ""
+"Archival "
+"Storageタブには、Archivematicaパイプラインによって処理されたAIPとAIPのサイズ、UUID、保存された日付などの関連メタデータが表示されます。"
+
+#: ../../index.rst:168
+msgid ":ref:`General description <archival-storage>`"
+msgstr ":ref:`概要 <archival-storage>`"
+
+#: ../../index.rst:169
+msgid ":ref:`Searching the AIP store <search-aip>`"
+msgstr ":ref:`AIPストアの検索 <search-aip>`"
+
+#: ../../index.rst:171
+msgid ":ref:`Conducting a search <conducting-search>`"
+msgstr ":ref:`検索の実施 <conducting-search>`"
+
+#: ../../index.rst:172
+msgid ":ref:`Searching for AICs <search-for-aics>`"
+msgstr ":ref:`AICの検索 <search-for-aics>`"
+
+#: ../../index.rst:174
+msgid ":ref:`AIP information page <aip-information-page>`"
+msgstr ":ref:`AIP情報ページ <aip-information-page>`"
+
+#: ../../index.rst:176
+msgid ":ref:`Downloading an AIP <download-aip>`"
+msgstr ":ref:`AIPのダウンロード <download-aip>`"
+
+#: ../../index.rst:177
+msgid ":ref:`Metadata-only DIP upload <metadata-only-dip-upload>`"
+msgstr ":ref:`メタデータのみのDIPアップロード <metadata-only-dip-upload>`"
+
+#: ../../index.rst:178
+msgid ":ref:`AIP reingest <reingest-aip>`"
+msgstr ":ref:`AIPの再インジェスト <reingest-aip>`"
+
+#: ../../index.rst:179
+msgid ":ref:`Deleting an AIP <delete-aip>`"
+msgstr ":ref:`AIPの削除 <delete-aip>`"
+
+#: ../../index.rst:181
+msgid ":ref:`AIP encryption <aip-encryption>`"
+msgstr ":ref:`AIP暗号化 <aip-encryption>`"
+
+#: ../../index.rst:182
+msgid ":ref:`AIP structure <aip-structure>`"
+msgstr ":ref:`AIPの構造 <aip-structure>`"
+
+#: ../../index.rst:183
+msgid ":ref:`AICs - managing multi-part AIPs <aic>`"
+msgstr ":ref:`AIC - マルチパートAIPの管理 <aic>`"
+
+#: ../../index.rst:189
+msgid "Access"
+msgstr "アクセス"
+
+#: ../../index.rst:191
+msgid ""
+"Most of Archivematica's access integrations take place within the Ingest "
+"tab. The Access tab displays DIPs which have been sent to AtoM."
+msgstr ""
+"Archivematicaのほとんどのアクセス統合は、インジェストタブで行われます。Accessタブには、AtoMに送信されたDIPが表示されます。"
+
+#: ../../index.rst:194
+msgid ":ref:`General description <access>`"
+msgstr ":ref:`概要 <access>`"
+
+#: ../../index.rst:195
+msgid ":ref:`Access systems <access-default>`"
+msgstr ":ref:`アクセスシステム <access-default>`"
+
+#: ../../index.rst:196
+msgid ":ref:`Upload a DIP to AtoM <upload-atom>`"
+msgstr ":ref:`AtoMにDIPをアップロード <upload-atom>`"
+
+#: ../../index.rst:197
+msgid ":ref:`Upload a DIP to Binder <upload-binder>`"
+msgstr ":ref:`BinderにDIPをアップロード <upload-binder>`"
+
+#: ../../index.rst:198
+msgid ":ref:`Upload a DIP to ArchivesSpace <upload-as>`"
+msgstr ":ref:`ArchivesSpaceにDIPをアップロード <upload-as>`"
+
+#: ../../index.rst:199
+msgid ":ref:`Upload a DIP to ContentDM <contentdm>`"
+msgstr ":ref:`ContentDMにDIPをアップロード <contentdm>`"
+
+#: ../../index.rst:200
+msgid ":ref:`Store DIP <store-dip>`"
+msgstr ":ref:`DIPの保管 <store-dip>`"
+
+#: ../../index.rst:201
+msgid ":ref:`Review and download DIPs <review-dip>`"
+msgstr ":ref:`DIPのレビューとダウンロード <review-dip>`"
+
+#: ../../index.rst:202
+msgid ":ref:`Access tab <access-tab>`"
+msgstr ":ref:`アクセスタブ <access-tab>`"
+
+#: ../../index.rst:207
+msgid "Preservation planning"
+msgstr "保存計画"
+
+#: ../../index.rst:209
+msgid ""
+"The Preservation Planning tab is the de facto user interface for the Format "
+"Policy Registry (FPR), the extensive format database that controls how "
+"Archivematica handles file formats. The Preservation Planning tab allows "
+"users to add or edit format policies for normalization, characterization, "
+"validation, and other tools and workflows that act upon content preserved "
+"through Archivematica."
+msgstr ""
+"Preservation "
+"Planningタブは、Archivematicaがファイルフォーマットをどのように扱うかを制御する広範なフォーマットデータベースであるFormat "
+"Policy Registry （FPR）の事実上のユーザーインターフェイスです。Preservation "
+"Planningタブでは、Archivematicaで保存されたコンテンツに適用される正規化、特性化、妥当性確認、その他のツールやワークフローのフォーマットポリシーを追加または編集できます。"
+
+#: ../../index.rst:216
+msgid ":ref:`General description <preservation-planning>`"
+msgstr ":ref:`概要 <preservation-planning>`"
+
+#: ../../index.rst:217
+msgid ":ref:`Definitions <preservation-planning-definitions>`"
+msgstr ":ref:`定義 <preservation-planning-definitions>`"
+
+#: ../../index.rst:218
+msgid ":ref:`Preservation policies <pres-policies>`"
+msgstr ":ref:`保護ポリシー <pres-policies>`"
+
+#: ../../index.rst:219
+msgid ":ref:`Altering rules and commands <altering-commands-rules>`"
+msgstr ":ref:`ルールとコマンドの変更 <altering-commands-rules>`"
+
+#: ../../index.rst:225
+msgid "Administration"
+msgstr "管理"
+
+#: ../../index.rst:227
+msgid ""
+"The Administration tab allows administrative users to set processing "
+"configurations, transfer and storage locations, DIP upload configurations, "
+"and to add and remove users, among other things."
+msgstr "管理タブでは、管理ユーザーが処理設定、転送および保存場所、DIPアップロード設定、ユーザーの追加と削除などを設定できます。"
+
+#: ../../index.rst:231
+msgid ":ref:`Dashboard administration tab <dashboard-admin>`"
+msgstr ":ref:`ダッシュボード管理タブ <dashboard-admin>`"
+
+#: ../../index.rst:232
+msgid ":ref:`Storage service documentation <storageservice:index>`"
+msgstr ":ref:`ストレージサービス文書 <storageservice:index>`"
+
+#: ../../index.rst:238
+msgid "Metadata"
+msgstr "メタデータ"
+
+#: ../../index.rst:240
+msgid ""
+"Archivematica employs several metadata standards. This section describes how"
+" Archivematica implements and makes use of them."
+msgstr ""
+"Archivematicaは、いくつかのメタデータの標準を採用しています。このセクションでは、Archivematicaがどのようにこれらを実装し、利用しているかについて説明します。"
+
+#: ../../index.rst:244
+msgid ":ref:`METS <METS_schema>`"
+msgstr ":ref:`METS <METS_schema>`"
+
+#: ../../index.rst:245
+msgid ":ref:`PREMIS <premis-template>`"
+msgstr ":ref:`PREMIS <premis-template>`"
+
+#: ../../index.rst:246
+msgid ":ref:`Dublin Core <dublin_core>`"
+msgstr ":ref:`Dublin Core <dublin_core>`"
+
+#: ../../index.rst:250
+msgid "Translations"
+msgstr "翻訳"
+
+#: ../../index.rst:252
+msgid ""
+"Beginning with Archivematica 1.6.1, the community has been able to support "
+"the project by volunteering their time and effort to translate the "
+"Archivematica documentation, the interface, and the Storage Service into "
+"other languages."
+msgstr ""
+"Archivematica 1.6.1以降、Archivematicaの文書、インターフェイス、Storage "
+"Serviceを他の言語に翻訳するために、コミュニティがボランティアで時間と労力を提供し、プロジェクトをサポートしています。"
+
+#: ../../index.rst:256
+msgid ""
+":ref:`Contributing translations to the Archivematica project <translations>`"
+msgstr ":ref:`Archivematicaプロジェクトへの翻訳の寄与 <translations>`"
+
+#: ../../index.rst:261
+msgid "Administrator manual"
+msgstr "管理者マニュアル"
+
+#: ../../index.rst:263
+msgid ""
+"The administrator manual is intended for systems administrators who are "
+"responsible for installing, configuring, setting up, and maintaining "
+"Archivematica and related systems."
+msgstr "本マニュアルは、Archivematicaおよび関連システムのインストール、設定、保守を担当するシステム管理者を対象としています。"
+
+#: ../../index.rst:271
+msgid "Installation and setup"
+msgstr "インストールとセットアップ"
+
+#: ../../index.rst:273
+msgid ":ref:`Installing Archivematica <installation>`"
+msgstr ":ref:`Archivematicaのインストール <installation>`"
+
+#: ../../index.rst:274
+msgid ":ref:`Upgrading Archivematica <upgrade>`"
+msgstr ":ref:`Archivematicaのアップグレード <upgrade>`"
+
+#: ../../index.rst:275
+msgid ":ref:`Customization and automation <customization>`"
+msgstr ":ref:`カスタマイズと自動化 <customization>`"
+
+#: ../../index.rst:276
+msgid ":ref:`Setting up integrations <integrations>`"
+msgstr ":ref:`統合の設定 <integrations>`"
+
+#: ../../index.rst:277
+msgid ""
+":ref:`Administering the Storage Service <storageservice:administrators>`"
+msgstr ":ref:`Storage Serviceの管理 <storageservice:administrators>`"
+
+#: ../../index.rst:278
+msgid ":ref:`Preservation planning <preservation-planning>`"
+msgstr ":ref:`保存計画 <preservation-planning>`"
+
+#: ../../index.rst:283
+msgid "Maintenance"
+msgstr "メンテナンス"
+
+#: ../../index.rst:285
+msgid ":ref:`Management commands <management-commands>`"
+msgstr ":ref:`管理コマンド <management-commands>`"
+
+#: ../../index.rst:286
+msgid ":ref:`Maintaining Elasticsearch <elasticsearch>`"
+msgstr ":ref:`Elasticsearchのメンテナンス <elasticsearch>`"
+
+#: ../../index.rst:287
+msgid ":ref:`Data backup <data-backup>`"
+msgstr ":ref:`データバックアップ <data-backup>`"
+
+#: ../../index.rst:288
+msgid ":ref:`FAQ <admin-faq>`"
+msgstr ":ref:`よくあるご質問 <admin-faq>`"
+
+#: ../../index.rst:293
+msgid "Security"
+msgstr "セキュリティ"
+
+#: ../../index.rst:295
+msgid ":ref:`Elasticsearch <elasticsearch-security>`"
+msgstr ":ref:`Elasticsearch <elasticsearch-security>`"
+
+#: ../../index.rst:296
+msgid ":ref:`MySQL <mysql-security>`"
+msgstr ":ref:`MySQL <mysql-security>`"
+
+#: ../../index.rst:297
+msgid ":ref:`AtoM <atom-security>`"
+msgstr ":ref:`AtoM <atom-security>`"
+
+#: ../../index.rst:298
+msgid ":ref:`Gearman <gearman-security>`"
+msgstr ":ref:`Gearman <gearman-security>`"
+
+#: ../../index.rst:299
+msgid ":ref:`Authentication backends <authentication-security>`"
+msgstr ":ref:`認証バックエンド <authentication-security>`"
+
+#: ../../index.rst:300
+msgid ":ref:`Password validation <password-validation>`"
+msgstr ":ref:`パスワード認証 <password-validation>`"
+
+#: ../../index.rst:301
+msgid ":ref:`Cookie and session security <cookie-session-security>`"
+msgstr ":ref:`クッキーとセッションのセキュリティ <cookie-session-security>`"
+
+#: ../../index.rst:302
+msgid ":ref:`Content Security Policy (CSP) <csp-security>`"
+msgstr ":ref:`コンテンツセキュリティポリシー（CSP） <csp-security>`"
+
+#: ../../index.rst:303
+msgid ":ref:`CA certificates <ca-root-certificates>`"
+msgstr ":ref:`CA証明書 <ca-root-certificates>`"
+
+#: ../../index.rst:308
+msgid "Developer manual"
+msgstr "開発者マニュアル"
+
+#: ../../index.rst:310
+msgid ""
+"Guidelines for developers interested in customizing Archivematica, "
+"developing new modules, and working with the application’s API."
+msgstr "Archivematicaのカスタマイズ、新しいモジュールの開発、アプリケーションのAPIを使用する開発者向けのガイドラインです。"
+
+#: ../../index.rst:313
+msgid ":ref:`API overview <api-overview>`"
+msgstr ":ref:`APIの概要 <api-overview>`"
+
+#: ../../index.rst:314
+msgid ":ref:`Archivematica API reference <api-reference-archivematica>`"
+msgstr ":ref:`Archivematica APIリファレンス <api-reference-archivematica>`"
+
+#: ../../index.rst:315
+msgid ":ref:`Storage Service API reference <api-reference-storage-service>`"
+msgstr ":ref:`Storage Service APIリファレンス <api-reference-storage-service>`"
+
+#: ../../index.rst:316
+msgid ":ref:`Development environment <development-environment>`"
+msgstr ":ref:`開発環境 <development-environment>`"

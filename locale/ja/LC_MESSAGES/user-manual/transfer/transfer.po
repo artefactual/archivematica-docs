@@ -1,0 +1,1364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/transfer.rst:5
+msgid "Transfer"
+msgstr "転送"
+
+#: ../../user-manual/transfer/transfer.rst:7
+msgid ""
+"In Archivematica, *transfer* is the process of moving any set of digital "
+"objects into Archivematica and turning the materials into a Submission "
+"Information Package (SIP). The Transfer tab prepares your content for "
+"preservation in Archivematica."
+msgstr ""
+"Archivematica では、 *転送* は、デジタルオブジェクトのセットを Archivematica に移動し、素材を提出情報パッケージ "
+"(SIP) に変換するプロセスを指します。[転送] タブでは、Archivematica に保存するためのコンテンツを準備します。"
+
+#: ../../user-manual/transfer/transfer.rst:12
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/transfer/transfer.rst:14
+msgid ":ref:`The Transfer tab <transfer-tab>`"
+msgstr ":ref:`転送タブ <transfer-tab>`"
+
+#: ../../user-manual/transfer/transfer.rst:16
+msgid ":ref:`Preparing digital objects for transfer <prepare-transfer>`"
+msgstr ":ref:`デジタルオブジェクトの転送準備 <prepare-transfer>`"
+
+#: ../../user-manual/transfer/transfer.rst:18
+msgid ":ref:`Transfer permissions <transfer-permissions>`"
+msgstr ":ref:`転送許可 <transfer-permissions>`"
+
+#: ../../user-manual/transfer/transfer.rst:19
+msgid ":ref:`Transfer types <transfer-types>`"
+msgstr ":ref:`転送の種類 <transfer-types>`"
+
+#: ../../user-manual/transfer/transfer.rst:20
+msgid ":ref:`Basic transfers <basic-transfers>`"
+msgstr ":ref:`基本的な転送 <basic-transfers>`"
+
+#: ../../user-manual/transfer/transfer.rst:21
+msgid ""
+":ref:`Transfers with descriptive, rights, and/or event metadata <transfers-"
+"with-metadata>`"
+msgstr ":ref:`説明、権利、および/またはイベントメタデータを伴う転送 <transfers-with-metadata>`"
+
+#: ../../user-manual/transfer/transfer.rst:22
+msgid ":ref:`Transfers with submission documentation <create-submission>`"
+msgstr ":ref:`提出書類を伴う転送 <create-submission>`"
+
+#: ../../user-manual/transfer/transfer.rst:23
+msgid ":ref:`Transfers with existing checksums <transfer-checksums>`"
+msgstr ":ref:`既存のチェックサムによる転送 <transfer-checksums>`"
+
+#: ../../user-manual/transfer/transfer.rst:24
+msgid ":ref:`Transfers with existing persistent identifiers <transfer-pids>`"
+msgstr ":ref:`既存の永続的識別子による転送 <transfer-pids>`"
+
+#: ../../user-manual/transfer/transfer.rst:25
+msgid ""
+":ref:`Transferring material with preservation or access derivatives (manual "
+"normalization) <transfer-derivatives>`"
+msgstr ":ref:`保存またはアクセス派生物を含む素材の転送 (手動正規化) <transfer-derivatives>`"
+
+#: ../../user-manual/transfer/transfer.rst:26
+msgid ""
+":ref:`Transferring material with access copies only <transfer-access-"
+"copies>`"
+msgstr ":ref:`アクセスコピーのみで素材の転送 <transfer-access-copies>`"
+
+#: ../../user-manual/transfer/transfer.rst:27
+msgid ""
+":ref:`Transferring material with service (mezzanine) files <transfer-"
+"service-files>`"
+msgstr ":ref:`サービス (メザニン) ファイルで素材を転送 <transfer-service-files>`"
+
+#: ../../user-manual/transfer/transfer.rst:29
+msgid ":ref:`Processing a transfer <process-transfer>`"
+msgstr ":ref:`転送処理 <process-transfer>`"
+
+#: ../../user-manual/transfer/transfer.rst:31
+msgid ":ref:`Start a transfer <create-transfer>`"
+msgstr ":ref:`転送を開始 <create-transfer>`"
+
+#: ../../user-manual/transfer/transfer.rst:32
+msgid ":ref:`Transfer tab microservices <transfer-tab-microservices>`"
+msgstr ":ref:`転送タブマイクロサービス <transfer-tab-microservices>`"
+
+#: ../../user-manual/transfer/transfer.rst:34
+msgid ":ref:`Cleaning up the Transfer tab <cleanup>`"
+msgstr ":ref:`転送タブのクリーンアップ <cleanup>`"
+
+#: ../../user-manual/transfer/transfer.rst:39
+msgid "The Transfer tab"
+msgstr "転送タブ"
+
+#: ../../user-manual/transfer/transfer.rst:41
+msgid ""
+"The Transfer tab is where many users begin the process of turning their "
+"digital objects into Archival Information Packages (AIPs). On the Transfer "
+"tab, users select the material to be preserved, name the transfer, and kick "
+"off the transfer process."
+msgstr ""
+"[転送] タブは、多くのユーザーがデジタルオブジェクトをアーカイブ情報パッケージ (AIP) に変換するプロセスを開始する場所です。[転送] "
+"タブで、ユーザーは保存する素材を選択し、転送に名前を付けて、転送プロセスを開始します。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid "The Transfer tab is where transfers into Archivematica begin."
+msgstr "転送タブは、Archivematica への転送を開始する場所です。"
+
+#: ../../user-manual/transfer/transfer.rst:51
+msgid ""
+"The section at the top of the Transfer tab is where you will find materials "
+"for transfer into Archivematica. There are four fields to fill out, as well "
+"as the ``Browse`` and ``Start transfer`` buttons and the ``Approve "
+"automatically`` checkbox."
+msgstr ""
+"[転送] タブの上部にあるセクションには、Archivematica に転送するための素材が表示されます。 ``Browse`` と ``Start "
+"transfer`` ボタン、および ``Approve automatically`` チェックボックスに加えて、入力するフィールドが 4 "
+"つあります。"
+
+#: ../../user-manual/transfer/transfer.rst:56
+msgid ""
+"**Transfer type**: The kind of material being transferred. See "
+":ref:`Transfer types <transfer-types>` for more information."
+msgstr "**転送タイプ** ：転送される素材の種類。詳細は、 :ref:`転送タイプ <transfer-types>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:58
+msgid ""
+"**Transfer name**: A name for your transfer. This will become the name of "
+"the resulting Archival Information Package (AIP). This is a required field."
+msgstr "**転送名** ：転送の名前。これは、結果のアーカイブ情報パッケージ（AIP）の名前になります。これは必須項目です。"
+
+#: ../../user-manual/transfer/transfer.rst:60
+msgid ""
+"**Accession no.**: Entering an accession number for your transfer will "
+"result in the accession number being copied into the AIP METS file as a "
+"registration event. It is not used for identifying or searching for the AIP "
+"within Archivematica. This field is optional."
+msgstr ""
+"**Accession no.** ：転送のためにアクセッション番号を入力すると、登録イベントとしてアクセッション番号がAIP "
+"METSファイルにコピーされます。Archivematica 内での AIP の識別や検索には使用されません。このフィールドはオプションです。"
+
+#: ../../user-manual/transfer/transfer.rst:64
+msgid ""
+"**Access system ID**: Entering an access system ID field when you are "
+"setting up your transfer allows you to automate the process of uploading a "
+"DIP to AtoM or Binder. Archivematica will automatically grab this value when"
+" it reaches the Upload DIP microservice. See :ref:`Upload a DIP to AtoM "
+"<upload-atom>` and :ref:`Upload a DIP to Binder <upload-binder>` for more "
+"information. This field is optional."
+msgstr ""
+"**アクセスシステムID** "
+"：転送の設定時にアクセスシステムIDフィールドを入力すると、AtoMまたはBinderへのDIPアップロードのプロセスを自動化できます。Upload "
+"DIPマイクロサービスに到達すると、Archivematicaは、自動的にこの値を取得します。詳細については、 :ref:`Upload a DIP "
+"to AtoM <upload-atom>` および :ref:`Upload a DIP to Binder <upload-binder>` "
+"を参照してください。このフィールドはオプションです。"
+
+#: ../../user-manual/transfer/transfer.rst:70
+msgid ""
+"**Browse**: The Browse button toggles open the transfer browser. This allows"
+" users to view and browse through the configured transfer source "
+"location(s). For more information about setting up transfer source locations"
+" that Archivematica can access, see :ref:`Administrator manual - Storage "
+"Service <storageService:administrators>`. Selecting a directory and clicking"
+" **Add** adds the directory of materials to the transfer."
+msgstr ""
+"**ブラウズ** ：[ブラウズ] "
+"ボタンを押すと、転送ブラウザが開きます。これにより、ユーザーは設定された転送元の場所を表示およびブラウズできるようになります。Archivematica"
+" がアクセスできる転送元の場所の設定の詳細については、 :ref:`管理者マニュアル - ストレージサービス "
+"<storageService:administrators>` を参照してください。ディレクトリを選択して **追加** "
+"をクリックすると、素材のディレクトリが転送に追加されます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"Clicking on the Browse button opens the transfer browser, a list of "
+"directories and files available for transfer into Archivematica"
+msgstr ""
+"[ブラウズ] ボタンをクリックすると、転送ブラウザが開き、Archivematica に転送できるディレクトリとファイルのリストが表示されます"
+
+#: ../../user-manual/transfer/transfer.rst:82
+msgid ""
+"**Start transfer**: Once you have given your transfer a name and selected "
+"material from the transfer browser, the Start transfer button kicks off the "
+"transfer microservices."
+msgstr ""
+"**転送の開始** ：転送に名前を付け、転送ブラウザから素材を選択したら、[Start "
+"transfer]ボタンで転送マイクロサービスをキックオフします。"
+
+#: ../../user-manual/transfer/transfer.rst:85
+msgid ""
+"**Processing configuration**: On the far right of the green **Start "
+"Transfer** button is a downward arrow. When clicked, it presents a drop-down"
+" menu from which you can choose which processing configuration profile will "
+"be used for the transfer. See :ref:`Choose a processing configuration "
+"<processing-config>` for more information. If you ignore this dropdown, the "
+"default processing configuration will be used."
+msgstr ""
+"**処理設定** ：緑色の **Start Transfer** "
+"ボタンの右端に下向きの矢印があります。クリックすると、ドロップダウンメニューが表示され、転送に使用する処理設定プロファイルを選択できます。詳しくは、 "
+":ref:`Choose a processing configuration <processing-config>` "
+"を参照してください。このドロップダウンを無視すると、デフォルトの処理設定が使用されます。"
+
+#: ../../user-manual/transfer/transfer.rst:91
+msgid ""
+"**Approve automatically**: If this box is unchecked, Archivematica will "
+"pause at the first microservice, *Approve transfer*, and give you a chance "
+"to confirm that your transfer has been set up properly. If the box is "
+"checked, Archivematica will not pause at this step."
+msgstr ""
+"**自動的に承認する** ：このボックスチェックを外すと、Archivematica は最初のマイクロサービスである *転送の承認* "
+"で一時停止し、転送が適切に設定されていることを確認する機会が与えられます。ボックスがチェックされている場合、Archivematica "
+"はこのステップで一時停止しません。"
+
+#: ../../user-manual/transfer/transfer.rst:96
+msgid ""
+"Once a transfer has been started, it appears below the transfer preparation "
+"area. Several :ref:`microservices <microservices>` run on the transferred "
+"material to prepare it to become a SIP. The list of microservices should be "
+"read from bottom to top."
+msgstr ""
+"転送が開始されると、転送準備エリアの下に表示されます。 :ref:`いくつかのマイクロサービス <microservices>` "
+"が転送された素材上で実行され、SIPになる準備をします。マイクロサービスのリストは下から上に読んでください。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"Image shows the many microservices that run on a standard transfer in "
+"Archivematica 1.8"
+msgstr "画像は、Archivematica 1.8 の標準転送で実行される多くのマイクロサービスを示しています"
+
+#: ../../user-manual/transfer/transfer.rst:106
+msgid ""
+"At the end of the transfer process, the transferred material can be sent to "
+"the :ref:`backlog <backlog>`, where it can be stored until you are ready to "
+"turn it into an AIP. The backlog also gives users a chance to carry out "
+":ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the "
+"transferred material into a SIP and send it along to the :ref:`Ingest "
+"<ingest>` tab."
+msgstr ""
+"転送プロセスの最後に、転送された素材は、 :ref:`バックログ <backlog>` に送信され、AIP "
+"に変換する準備が整うまで保存されます。バックログにより、ユーザーは、 :ref:`評価 <appraisal>` "
+"タスクを実行する機会も得られます。あるいは、ユーザーは転送されたマテリアルを SIP に変換し、それを :ref:`インジェスト <ingest>` "
+"タブに送信することもできます。"
+
+#: ../../user-manual/transfer/transfer.rst:113
+msgid ""
+"You can clean up the Transfer tab by removing completed or rejected "
+"transfers. For more information, see :ref:`Cleaning up the Transfer tab "
+"<cleanup>` below."
+msgstr ""
+"完了または拒否された転送を削除することで、「転送」タブをクリーンアップできます。詳しくは、 :ref:`Transfer タブのクリーンアップ "
+"<cleanup>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:119
+msgid "Preparing digital objects for transfer"
+msgstr "デジタルオブジェクトの転送準備"
+
+#: ../../user-manual/transfer/transfer.rst:121
+msgid ""
+"Archivematica is format-agnostic, meaning that it can accept any file that "
+"you pass to the system for processing. A single transfer can be homogenous "
+"or it can be a mix of many different formats. However, the way that your "
+"material is structured for transfer into Archivematica can have big impacts "
+"on how it is processed. Below, there are details about structuring your "
+"transfer to accomplish specific digital preservation-related goals with the "
+"materials."
+msgstr ""
+"Archivematica "
+"は、形式にとらわれず、どのようなファイルでも受け入れて処理できます。つまり、どのようなファイルでも受け入れて処理できます。しかし、Archivematica"
+" "
+"に転送する際に、どのような構造で素材を転送するかによって、転送されたファイルの処理に大きな影響を与えます。以下に、デジタル保存に関連する特定の目標を達成するための転送の構造について詳しく説明します。"
+
+#: ../../user-manual/transfer/transfer.rst:128
+msgid ""
+"How quickly Archivematica can process a transfer depends on two things: the "
+"size of the transfer (both the individual objects and the transfer as a "
+"whole) and the transfer's complexity. Speed and efficiency of an "
+"Archivematica pipeline is very subjective and much of it depends on the "
+"specifications of the Archivematica instance that you are using. For more "
+"information on configuring Archivematica to handle large and/or complex "
+"transfers, see :ref:`Scaling Archivematica <scaling-archivematica>`."
+msgstr ""
+"Archivematica が転送をどれだけ早く処理できるかは、転送のサイズ (個々のオブジェクトと全体としての転送の両方) と転送の複雑さの 2 "
+"つの要素によって決まります。Archivematica パイプラインの速度と効率は非常に主観的なものであり、その多くは使用している "
+"Archivematica インスタンスの仕様により異なります。大規模な転送や複雑な転送を処理するように Archivematica "
+"を設定する方法の詳細については、 :ref:`Archivematica のスケーリング <scaling-archivematica>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:139
+msgid "Permissions"
+msgstr "許可"
+
+#: ../../user-manual/transfer/transfer.rst:141
+msgid ""
+"In order for Archivematica to be able to carry out preservation tasks, the "
+"Archivematica user needs to have execute privileges for directories and read"
+" permissions for files in the transfer source location."
+msgstr ""
+"Archivematica が保存タスクを実行できるようにするには、Archivematica "
+"ユーザーは、転送元の場所にあるディレクトリに対する実行権限とファイルに対する読み取り権限を持っている必要があります。"
+
+#: ../../user-manual/transfer/transfer.rst:145
+msgid ""
+"If the Archivematica user does not have sufficient permissions, you may see "
+"that a directory or compressed file is not available to add to your transfer"
+" (the object will be greyed out and the name will have a strikethrough.) "
+"Depending on the exact permissions setup, you may be able to add the "
+"directory to your transfer, but the transfer will never start."
+msgstr ""
+"Archivematica ユーザーに十分な権限がない場合、転送に追加できるディレクトリまたは圧縮ファイルが利用できないことが表示されることがあります "
+"(オブジェクトは、グレー表示され、名前には取り消し線が付きます)。正確な権限設定によっては、転送にディレクトリを追加できる場合がありますが、転送は開始されません。"
+
+#: ../../user-manual/transfer/transfer.rst:154
+msgid "Transfer types"
+msgstr "転送の種類"
+
+#: ../../user-manual/transfer/transfer.rst:156
+msgid ""
+"Some materials that are transferred into Archivematica require special "
+"processing. To kick off these specialized workflows, you can select a "
+"specific *transfer type*. There are seven different transfer types "
+"available."
+msgstr ""
+"Archivematica に転送される一部の素材には特別な処理が必要です。これらの特殊なワークフローを開始するには、特定の *転送タイプ* "
+"を選択します。7 種類の転送タイプが利用可能です。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"The transfer types drop-down menu on the left-hand side of the Transfer tab "
+"shows seven different transfer type options"
+msgstr "[転送] タブの左側にある転送タイプのドロップダウンメニューには、7 つの異なる転送タイプオプションが表示されます"
+
+#: ../../user-manual/transfer/transfer.rst:165
+msgid ""
+"**Standard**: Standard transfers are the default in Archivematica. All "
+"materials can be transferred using the standard transfer type. No special "
+"processing tasks are carried out. If you're unsure which transfer type to "
+"choose, start with a standard transfer. For more information on how standard"
+" transfers can be structured, see :ref:`basic transfers <basic-transfers>` "
+"and subsequent sections below."
+msgstr ""
+"**標準** ：標準転送が、Archivematica "
+"ではデフォルト設定されています。標準転写タイプであらゆる素材の転写が可能です。特別な処理タスクは実行されません。どの転送タイプを選択すればよいかわからない場合は、標準の転送から始めてください。標準転送の構成方法の詳細については、以下の"
+" :ref:`基本転送 <basic-transfers>` と後続のセクションを参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:172
+msgid ""
+"**Zipped directory**: Zipped directory transfers are a variant of the "
+"default transfer type in Archivematica. All materials can be transferred "
+"using the Zipped directory transfer type; the material just happens to be in"
+" a ``.zip``, ``.tgz``, or ``.tar.gz`` file at the outset. When a Zipped "
+"directory transfer starts, the zip will be decompressed and the material "
+"then processed using the Standard transfer workflow documented above. The "
+"internal structure of a zipped directory transfer matches that of the "
+"standard transfer and so can either be a loose collection of files, or more "
+"structured, for example, including an ``objects`` and ``metadata`` directory"
+" including Archivematica's special files such as metadata.csv, or "
+"identifiers.json."
+msgstr ""
+"**圧縮ディレクトリ** "
+"：Zip圧縮されたディレクトリの転送は、Archivematicaのデフォルトの転送タイプの一種です。すべての素材は、Zip圧縮されたディレクトリ転送タイプを使って転送できます。素材は、最初に"
+" ``.zip`` 、 ``.tgz`` 、 ``.tar.gz`` ファイルに格納されます。Zip 形式のディレクトリ転送が開始されると、Zip "
+"は解凍され、上記の標準転送ワークフローを使用して処理されます。ZIP圧縮されたディレクトリ転送の内部構造は、標準転送と同じで、ファイルの緩やかなコレクションにすることも、より構造化されたものにもできます。例えば、"
+" ``objects`` や ``metadata`` "
+"ディレクトリにmetadata.csvやidentifiers.jsonなどのArchivematicaの特別なファイルを含めることもできます。"
+
+#: ../../user-manual/transfer/transfer.rst:183
+msgid ""
+"**Unzipped bags**: Archivematica can recognize and make use of materials "
+"that have been packaged according to the `BagIt File Packaging Format`_, "
+"colloquially known as bags. If you are in the practice of making bags before"
+" transferring material into Archivematica, you can continue to do so. "
+"Archivematica will verify the bag early on in the transfer process, looking "
+"at manifest information created during the bagging process such as checksums"
+" and the payload oxum. The Unzipped bags transfer type can be used for bags "
+"that are not saved in a compressed format. For more information about how "
+"Archivematica implements bags, see :ref:`Bags <bags>`."
+msgstr ""
+"**解凍されたバッグ** ：Archivematica は、 `BagIt File Packaging Format`_ "
+"に従ってパッケージ化された素材を認識し、利用できます。Archivematicaに素材を転送する前にバッグを作成する習慣がある場合は、その習慣を継続できます。Archivematica"
+" "
+"は転送プロセスの初期段階で、チェックサムやペイロードのオキサムなど、バッグ作成プロセスで作成されたマニフェスト情報を参照し、バッグを妥当性確認します。Unzipped"
+" bags転送タイプは、圧縮形式で保存されていないバッグに使用できます。Archivematica によるバッグの実装方法の詳細については、 "
+":ref:`バッグ <bags>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:193
+msgid ""
+"This screenshot shows the layout of a bagged transfer. The bagging process "
+"moves the digital objects to be preserved to a ``data`` directory and "
+"creates various metadata files required by the BagIt specification (i.e. "
+"``bag-info.txt``, ``manifest-md5.txt``)."
+msgstr ""
+"このスクリーンショットは、バギングされた転送のレイアウトを示しています。バギングプロセスは、保存するデジタルオブジェクトを ``data`` "
+"ディレクトリに移動し、BagIt 仕様で必要とされる様々なメタデータファイルを作成します（すなわち、 ``bag-info.txt`` 、 "
+"``manifest-md5.txt`` ）。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid "A bagged transfer containing digital objects and bag metadata"
+msgstr "デジタルオブジェクトとバッグメタデータを含むバッグ転送"
+
+#: ../../user-manual/transfer/transfer.rst:203
+msgid ""
+"**Zipped bags**: Similar to Unzipped bags, the Zipped bags transfer type can"
+" br used for materials that have been packaged according to the `BagIt File "
+"Packaging Format`_. The Zipped bags transfer type should be used for bags "
+"that have been saved in a compressed (or zipped) format. Archivematica "
+"accepts ``.zip``, ``.tgz``, or ``.tar.gz`` formats. When you switch the "
+"transfer type to Zipped bags, only files saved as .zip, .tgz, and .tar.gz "
+"will be available to be selected in the transfer browser. For more "
+"information about how Archivematica implements bags, see :ref:`Bags <bags>`."
+msgstr ""
+"**ジップされたバッグ** ：アンジップされたバッグと同様に、ジップバッグ転送タイプは、 `BagIt File Packaging Format`_ "
+"に従ってパッケージされた素材に使用できます。Zip バッグ転送タイプは、圧縮（または "
+"Zip）形式で保存されたバッグに使用します。Archivematica では、 ``.zip`` 、 ``.tgz`` 、 ``.tar.gz`` "
+"の形式を使用できます。転送タイプをZipped "
+"bagsに切り替えると、.zip、.tgz、.tar.gzとして保存されたファイルのみが転送ブラウザで選択できるようになります。Archivematica"
+" がどのようにバッグを実装しているかについては、 :ref:`バッグ <bags>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:212
+msgid ""
+"**DSpace**: When you export materials from a `DSpace`_ repository, the "
+"export is packaged with a METS file for the export as a whole as well as "
+"each individual item. Archivematica can reuse some of the data in these METS"
+" files. For more information, see :ref:`DSpace <dspace>`."
+msgstr ""
+"**DSpace** ： `DSpace`_ リポジトリから素材をエクスポートすると、エクスポート全体と個々の素材の METS "
+"ファイルがパッケージ化されます。Archivematica は、これらの METS ファイル内のデータの一部を再利用できます。詳しくは、 "
+":ref:`DSpace <dspace>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:217
+msgid ""
+"**Disk image**: Selecting the disk image transfer type is not required to "
+"preserve disk images (you can use the standard transfer type or the bag "
+"transfer types, if your disk image is bagged); however, it does give you an "
+"extra disk image-specific metadata form where you can record information "
+"about the imaging process. For more information, see :ref:`Forensic disk "
+"images <forensic>`."
+msgstr ""
+"**ディスクイメージ** ：ディスクイメージを保存するためにディスクイメージ転送タイプを選択する必要はありません "
+"(ディスクイメージがバッグ化されている場合は、標準転送タイプまたはバッグ転送タイプを使用できます)。ただし、イメージングプロセスに関する情報を記録できる追加のディスクイメージ固有のメタデータフォームが提供されます。詳細については、"
+" :ref:`フォレンジックディスクイメージ <forensic>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:224
+msgid ""
+"**Dataverse**: Similar to the DSpace transfer type, materials exported from "
+"a `Dataverse`_ repository contain metadata that Archivematica can reuse. For"
+" more information, see :ref:`Dataverse <dataverse>`."
+msgstr ""
+"**Dataverse** ：DSpace 転送タイプと同様に、 `Dataverse`_ "
+"リポジトリからエクスポートされた素材には、Archivematica が再利用できるメタデータが含まれています。詳しくは、 "
+":ref:`Dataverse <dataverse>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:231
+msgid "Basic transfers"
+msgstr "基本的な転送"
+
+#: ../../user-manual/transfer/transfer.rst:233
+msgid ""
+"This section describes the basic setup for a standard transfer. If you are "
+"planning to use any other transfer type, please see the :ref:`Transfer types"
+" <transfer-types>` section above for more information about your transfer "
+"type."
+msgstr ""
+"このセクションでは、標準転送の基本セットアップについて説明します。他の転送タイプを使用する予定がある場合は、転送タイプの詳細について、上記の "
+":ref:`転送タイプ <transfer-types>` セクションを参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:237
+msgid ""
+"With the exception of zipped bag transfers, Archivematica requires that all "
+"of the materials in the transfer are contained within a top-level directory."
+" The directory structure of the transfer can be simple (i.e. all files "
+"located in the same directory) or it can be nested and hierarchical."
+msgstr ""
+"Archivematicaでは、zip圧縮されたバッグの転送を除き、転送されるすべての素材がトップレベルのディレクトリに含まれている必要があります。転送のディレクトリ構造は、単純なもの（つまり、すべてのファイルが同じディレクトリにある）でも、ネストされた階層構造でもかまいません。"
+
+#: ../../user-manual/transfer/transfer.rst:242
+msgid ""
+"The following screenshot shows a basic transfer called ``basicTransfer``. "
+"Four digital objects sit within the top-level directory, while two more "
+"objects are nested within a subdirectory."
+msgstr ""
+"次のスクリーンショットは、 ``basicTransfer`` "
+"という基本的な転送を示しています。トップレベルのディレクトリに4つのデジタルオブジェクトがあり、さらに2つのオブジェクトがサブディレクトリにネストされています。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A folder called basicTransfer, which contains four top-level digital objects"
+" as well as a folder called \"subdirectory\" containing two more objects"
+msgstr ""
+"BasicTransfer というフォルダには、4 つの最上位のデジタルオブジェクトと、さらに 2 "
+"つのオブジェクトを含む\"サブディレクトリ\"というフォルダが含まれています"
+
+#: ../../user-manual/transfer/transfer.rst:251
+msgid ""
+"The transfer can have as many subdirectories as you wish, though this may "
+"impact processing time. The digital objects can be in any format, though "
+"what exactly Archivematica can do with a given file format varies widely. "
+"For more information on how Archivematica carries out file format "
+"preservation, see :ref:`Preservation planning <preservation-planning>`."
+msgstr ""
+"転送には、いくつでもサブディレクトリを持つことができますが、処理時間に影響する場合があります。デジタルオブジェクトのフォーマットは問いませんが、Archivematica"
+" がどのようなファイルフォーマットで保存できるかは様々です。Archivematica がどのようにファイルフォーマットの保存を行うかについては、 "
+":ref:`保存計画 <preservation-planning>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:257
+msgid ""
+"This is the basic structure of a transfer in Archivematica; however, there "
+"are many variations. The following sections build on the basic standard "
+"transfer to achieve specific goals relating to the preservation of the "
+"digital objects."
+msgstr ""
+"これは、Archivematica "
+"における転送の基本構造です。ただし、さまざまなバリエーションがあります。以下のセクションでは、デジタルオブジェクトの保存に関する特定の目標を達成するための基本的な標準転送に基づいて説明します。"
+
+#: ../../user-manual/transfer/transfer.rst:264
+msgid "Transfers with descriptive, rights, and/or event metadata"
+msgstr "説明、権利、および/またはイベントメタデータを伴う転送"
+
+#: ../../user-manual/transfer/transfer.rst:266
+msgid ""
+"To include descriptive, rights, and/or event metadata with your transfer, "
+"you should add a subdirectory called ``metadata`` to the top level of the "
+"transfer. The metadata directory name is a reserved name in Archivematica; "
+"it must not be used for anything else. Including the metadata directory "
+"ensures that your metadata files are appropriately marked as such in the "
+"METS file."
+msgstr ""
+"説明、権利、イベントのメタデータを転送に含めるには、 ``metadata`` "
+"というサブディレクトリを転送の最上位に追加する必要があります。metadataディレクトリ名はArchivematicaの予約名です。メタデータディレクトリを含めることで、メタデータファイルがMETSファイルで適切にマークされるようになります。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer containing a metadata subdirectory, which contains a metadata.csv"
+" and rights.csv file"
+msgstr ""
+"メタデータ サブディレクトリを含む転送であり、メタデータ サブディレクトリには、metadata.csv および right.csv "
+"ファイルが含まれます"
+
+#: ../../user-manual/transfer/transfer.rst:277
+msgid ""
+"For more information about importing metadata into Archivematica, including "
+"how to structure the metadata and rights CSV files or event XML file so that"
+" the contents can be transposed into the AIP METS, see :ref:`Import metadata"
+" <import-metadata>`."
+msgstr ""
+"コンテンツを AIP METS に転置できるようにメタデータと権利 CSV ファイルまたはイベント XML "
+"ファイルを構造化する方法など、Archivematica へのメタデータのインポートの詳細については、 :ref:`メタデータのインポート "
+"<import-metadata>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:282
+msgid "Adding metadata to a bag"
+msgstr "バッグにメタデータを追加"
+
+#: ../../user-manual/transfer/transfer.rst:284
+#: ../../user-manual/transfer/transfer.rst:314
+msgid ""
+"See :ref:`Adding metadata to bags <metadata-bags>` for more information."
+msgstr "詳細については、 :ref:`バッグへのメタデータの追加 <metadata-bags>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:289
+msgid "Transfers with submission documentation"
+msgstr "提出書類を伴う転送"
+
+#: ../../user-manual/transfer/transfer.rst:291
+msgid ""
+"Submission documentation is a concept in Archivematica that accounts for "
+"materials that are related to the digital objects being preserved, but "
+"aren't strictly part of the collection - for example, donor agreements, "
+"correspondence about the materials, conservation reports, etc. If "
+"Archivematica sees that a transfer includes submission documentation, it can"
+" include descriptions of this material in the AIP METS file."
+msgstr ""
+"提出文書は、保存されているデジタルオブジェクトに関連するが、厳密にはコレクションの一部ではないマテリアルを説明する Archivematica "
+"の概念です。たとえば、ドナーとの契約、素材に関する通信、保存報告書などがあります。Archivematicaは、転送に提出文書が含まれていることを確認した場合、AIP"
+" METSファイルにこの文書の説明を含めることができます。"
+
+#: ../../user-manual/transfer/transfer.rst:298
+msgid ""
+"Submission documentation can be added to standard, unzipped, zipped, and "
+"disk image transfer types."
+msgstr "提出文書は、標準、アンジップ、ジップ、ディスクイメージの転送タイプに追加できます。"
+
+#: ../../user-manual/transfer/transfer.rst:301
+msgid ""
+"To create a transfer that includes submission documentation, your top-level "
+"directory must contain a ``metadata`` directory. Inside the metadata "
+"directory, a nested directory called ``submissionDocumentation`` contains "
+"the submission documentation files."
+msgstr ""
+"投稿文書を含む転送を作成するには、トップレベルのディレクトリに ``metadata`` "
+"ディレクトリが含まれていなければなりません。metadataディレクトリの中に、 ``submissionDocumentation`` "
+"という入れ子になったディレクトリがあり、その中に投稿文書ファイルが含まれています。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer containing a metadata subdirectory, which contains another "
+"subdirectory called submissionDocumentation"
+msgstr ""
+"メタデータサブディレクトリを含む転送。このサブディレクトリには、submissionDocumentation という別のサブディレクトリが含まれます"
+
+#: ../../user-manual/transfer/transfer.rst:312
+msgid "Adding submission documentation to a bag"
+msgstr "バッグに提出書類を追加"
+
+#: ../../user-manual/transfer/transfer.rst:319
+msgid "Create a transfer with existing checksums"
+msgstr "既存のチェックサムを使用して転送を作成"
+
+#: ../../user-manual/transfer/transfer.rst:321
+msgid ""
+"Archivematica can verify MD5, SHA1, SHA256, and SHA512 checksums that were "
+"created outside of the system. Creating checksums outside of Archivematica "
+"is a good idea if you are concerned about loss of data integrity during the "
+"move into Archivematica. Checksums are checked during the *Verify transfer "
+"checksums* microservice on the Transfer tab."
+msgstr ""
+"Archivematica は、システム外で作成された MD5、SHA1、SHA256、SHA512 "
+"チェックサムを妥当性確認できます。Archivematica への移行時にデータの整合性が失われることが懸念される場合は、Archivematica "
+"の外部でチェックサムを作成することをお勧めします。チェックサムは、 *Verify transfer checksums* "
+"マイクロサービスの転送タブでチェックされます。"
+
+#: ../../user-manual/transfer/transfer.rst:327
+msgid ""
+"Checksums can be added to standard, DSpace, and disk image transfer types. "
+"Note that checksums are added to both unzipped and zipped transfer types as "
+"part of the bag requirements."
+msgstr ""
+"チェックサムは、標準、DSpace、およびディスクイメージ転送タイプに追加できます。チェックサムは、バッグの要件の一部として、解凍された転送タイプと圧縮された転送タイプの両方に追加されることに注意してください。"
+
+#: ../../user-manual/transfer/transfer.rst:331
+msgid ""
+"Checksum files are placed in the ``metadata`` directory. Note that you can "
+"also place descriptive and rights metadata CSVs in this directory, as per "
+"the :ref:`Transfers with descriptive and/or rights metadata <transfers-with-"
+"metadata>` section above."
+msgstr ""
+"チェックサムファイルは ``metadata`` ディレクトリに配置されます。上記の :ref:`説明メタデータや権利メタデータを伴う転送 "
+"<transfers-with-metadata>` セクションに従って、このディレクトリに説明メタデータと権利メタデータの CSV "
+"を配置することもできます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer containing a metadata subdirectory, which contains another\n"
+"subdirectory called submissionDocumentation"
+msgstr ""
+"メタデータサブディレクトリを含む転送。このサブディレクトリには、submissionDocumentation という別のサブディレクトリが含まれます"
+
+#: ../../user-manual/transfer/transfer.rst:342
+msgid "Checksum files should be named as follows:"
+msgstr "チェックサムファイルには、次のような名前を付ける必要があります："
+
+#: ../../user-manual/transfer/transfer.rst:344
+msgid "``checksum.md5``,"
+msgstr "``checksum.md5`` 、"
+
+#: ../../user-manual/transfer/transfer.rst:345
+msgid "``checksum.sha1``,"
+msgstr "``checksum.sha1`` 、"
+
+#: ../../user-manual/transfer/transfer.rst:346
+msgid "``checksum.sha256``, or"
+msgstr "``checksum.sha256`` または"
+
+#: ../../user-manual/transfer/transfer.rst:347
+msgid "``checksum.sha512``."
+msgstr "``checksum.sha512`` 。"
+
+#: ../../user-manual/transfer/transfer.rst:349
+msgid ""
+"The checksum file itself should contain one line for each checksum, "
+"beginning with the checksum, followed by two spaces, followed by the file "
+"path::"
+msgstr ""
+"チェックサムファイル自体には、チェックサムごとに 1 行が含まれている必要があります。チェックサムで始まり、その後に 2 "
+"つのスペース、その後にファイルパスが続きます::"
+
+#: ../../user-manual/transfer/transfer.rst:359
+msgid ""
+"If your checksum check fails, the *Verify transfer checksums* microservice "
+"will show an error and the transfer will fail. Expanding the microservice "
+"will show that the job *Verify metadata directory checksums* is red. To "
+"review the error, click on the gear icon for the job."
+msgstr ""
+"チェックサムチェックが失敗すると、 *転送チェックサムの確認* "
+"マイクロサービスでエラーが表示され、転送は失敗します。マイクロサービスを展開すると、ジョブ *メタデータディレクトリのチェックサムを妥当性確認する* "
+"が赤色であることがわかります。エラーを確認するには、ジョブの歯車アイコンをクリックします。"
+
+#: ../../user-manual/transfer/transfer.rst:366
+msgid ""
+"If you are creating bags, checksum files will be created as part of the "
+"bagging process. You do not need to create checksums manually."
+msgstr "バッグを作成する場合、チェックサムファイルは、バッグ作成プロセスの一部として作成されます。チェックサムを手動で作成する必要はありません。"
+
+#: ../../user-manual/transfer/transfer.rst:373
+msgid "Transfers with existing persistent identifiers"
+msgstr "既存の永続的識別子による転送"
+
+#: ../../user-manual/transfer/transfer.rst:375
+msgid ""
+"Archivematica can import persistent identifiers that were created outside of"
+" Archivematica, such as DOI identifiers or identifiers created by your "
+"cataloging system. You can bind these to the PREMIS objects created by "
+"Archivematica for your files by including an ``identifiers.json`` file in "
+"the transfer's metadata directory."
+msgstr ""
+"Archivematicaは、DOI識別子やカタログシステムで作成された識別子など、Archivematicaの外部で作成された永続的な識別子をインポートできます。転送のメタデータディレクトリに"
+" ``identifiers.json`` ファイルを含めることで、Archivematica がファイルに対して作成した PREMIS "
+"オブジェクトにバインドできます。"
+
+#: ../../user-manual/transfer/transfer.rst:384
+msgid ""
+"The ``identifiers.json`` file is parsed during the *Process metadata "
+"directory* microservice on the Ingest tab."
+msgstr ""
+"``identifiers.json`` ファイルは、 *インジェスト タブの Process metadata directory* "
+"マイクロサービス中に解析されます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"The persistent identifier (PID) from identifiers.json are parsed and loaded "
+"during the 'Process metadata directory' microservice"
+msgstr ""
+"identifiers.jsonの永続識別子（PID）は、「Process metadata "
+"directory」マイクロサービス中に解析され、ロードされます"
+
+#: ../../user-manual/transfer/transfer.rst:392
+msgid ""
+"Once the AIP has been created, the identifier will be linked as a "
+"``premis:objectIdentifier`` within the ``techMD`` for each object within the"
+" AIP METS file."
+msgstr ""
+"AIP が作成されると、識別子は、AIP METS ファイル内の各オブジェクト ``techMD`` 内の "
+"``premis:objectIdentifier`` としてリンクされます。"
+
+#: ../../user-manual/transfer/transfer.rst:399
+msgid ""
+"For more information on how metadata elements are encoded used in "
+"Archivematica, please see :ref:`METS in Archivematica <mets_schema>` and "
+":ref:`PREMIS metadata in Archivematica <premis-template>`."
+msgstr ""
+"Archivematica で使用されるメタデータ要素がどのようにエンコードされるかについて詳しくは、 :ref:`Archivematica の "
+"METS <mets_schema>` と :ref:`Archivematica の PREMIS メタデータ <premis-template>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:406
+msgid ""
+"Transferring material with preservation or access derivatives (manual "
+"normalization)"
+msgstr "保存またはアクセス派生物を含む素材の転送 （手動正規化）"
+
+#: ../../user-manual/transfer/transfer.rst:408
+msgid ""
+"Archivematica's main strategy for preserving files is to :ref:`normalize "
+"<normalize>` them according to the :ref:`normalization rules "
+"<normalization>` listed in the Preservation Planning tab. However, you may "
+"want to create preservation or access copies of your digital objects outside"
+" of Archivematica (i.e. during a digitization project). Archivematica can "
+"recognize manual normalization work and use the preservation and action "
+"copies instead of creating new derivatives."
+msgstr ""
+":ref:`Archivematica の主なファイル保存方法は、「保存計画」タブの:ref:`正規化ルール <normalization>` "
+"に従って<normalize>` 正規化することです。しかし、Archivematica "
+"以外（デジタル化プロジェクトなど）でデジタルオブジェクトの保存用コピーやアクセス用コピーを作成したい場合もあります。Archivematicaは、手作業による正規化作業を認識し、新しい派生物を作成する代わりに、保存コピーやアクションコピーを使用できます。"
+
+#: ../../user-manual/transfer/transfer.rst:416
+msgid ""
+"For more information about structuring a transfer with manually normalized "
+"preservation and access derivatives, see :ref:`Manual normalization <manual-"
+"norm>`."
+msgstr ""
+"手動で正規化された保存デリバティブとアクセスデリバティブを用いた転送の仕組みの詳細については、 :ref:`手動正規化 <manual-norm>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:423
+msgid "Transferring material with access derivatives only"
+msgstr "アクセス派生物のみを使用した素材の転送"
+
+#: ../../user-manual/transfer/transfer.rst:425
+msgid ""
+"If you are only transferring originals plus their access derivatives, there "
+"is a slightly more streamlined workflow than the :ref:`manual normalization "
+"<transfer-derivatives>` option described above."
+msgstr ""
+"オリジナルとそのアクセス派生物のみを転送する場合は、上記の :ref:`手動正規化 <transfer-derivatives>` "
+"オプションよりも多少合理化されたワークフローがあります。"
+
+#: ../../user-manual/transfer/transfer.rst:429
+msgid "Access derivatives can be added to standard transfer types."
+msgstr "アクセスデリバティブは、標準的な転送タイプに追加できます。"
+
+#: ../../user-manual/transfer/transfer.rst:431
+msgid ""
+"Inside your top-level directory, create an ``access`` subdirectory and place"
+" the access copies of your originals inside this file."
+msgstr "最上位ディレクトリ内に ``access`` サブディレクトリを作成し、このファイル内にオリジナルのアクセスコピーを配置します。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer containing an access subdirectory, which contains access "
+"derivatives only"
+msgstr "アクセス派生物のみを含むアクセスサブディレクトリを含む転送"
+
+#: ../../user-manual/transfer/transfer.rst:439
+msgid ""
+"In the example shown above, the original files are PNGs (i.e. "
+"``beihai.png``). For each file, there is an access copy in the form of a JPG"
+" (``beihai.jpg``). Note that the base filenames (before the extension) must "
+"match in order for Archivematica to recognize the links between the original"
+" file and access copy."
+msgstr ""
+"上に示した例では、元のファイルはPNGです（すなわち ``beihai.png`` ）。各ファイルには、JPG （ ``beihai.jpg`` ） "
+"形式のアクセスコピーがあります。Archivematicaがオリジナルファイルとアクセスコピーのリンクを認識するためには、ベースファイル名（拡張子の前）が一致している必要があります。"
+
+#: ../../user-manual/transfer/transfer.rst:444
+msgid ""
+"When you process this transfer, Archivematica will automatically recognize "
+"the existence of the access copies. At the :ref:`normalization <normalize>` "
+"microservice on the :ref:`Ingest tab <ingest>`, fewer normalization options "
+"will appear because Archivematica will always make a Dissemination "
+"Information Package (DIP) from the provided access copies."
+msgstr ""
+"この転送を処理すると、Archivematica は、アクセスコピーの存在を自動的に認識します。 :ref:`[インジェスト] タブ <ingest>`"
+" の :ref:`正規化 <normalize>` マイクロサービスでは、Archivematica "
+"が、提供されたアクセスコピーから常に普及情報パッケージ (DIP) を作成するため、表示される正規化オプションが少なくなります。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"The normalization microservice in Archivematica only provides three options "
+"- Normalize for preservation, Reject SIP, and Do not normalize - if an "
+"access directory is detected"
+msgstr ""
+"Archivematica の正規化マイクロサービスは、アクセス ディレクトリが検出された場合に、保存のために正規化する、SIP "
+"を拒否する、および正規化しないという 3 つのオプションのみを提供します"
+
+#: ../../user-manual/transfer/transfer.rst:458
+msgid "Transferring material with service (mezzanine) files"
+msgstr "サービス（メザニン）ファイルで素材を転送"
+
+#: ../../user-manual/transfer/transfer.rst:460
+msgid ""
+"Somewhat similar to the :ref:`manual normalization <transfer-derivatives>` "
+"and :ref:`manual normalization <transfer-access-copies>` options described "
+"above, Archivematica can also recognize the presence of service (or "
+"mezzanine) files. Service files are high-quality derivatives created from "
+"the original file, which are then used to create every other derivative. For"
+" example, during a digitization project you may scan an image as a very "
+"high-quality TIFF, then generate a high-quality JP2000 from the TIFF. "
+"Instead of accessing the TIFF every time a new access derivative is "
+"required, you would then use the JP2000 to make new copies of the file."
+msgstr ""
+"上記の :ref:`manual normalization <transfer-derivatives>` と :ref:`manual "
+"normalization <transfer-access-copies>` オプションと似ていますが、Archivematica "
+"は、サービス（またはメザニン）ファイルの存在を認識もできます。サービスファイルは、オリジナルファイルから作成された高品質の派生ファイルで、他の派生ファイルを作成するために使用されます。例えば、デジタル化プロジェクトにおいて、画像を高画質のTIFFとしてスキャンし、そのTIFFから高画質のJP2000を生成するとします。新しいアクセス派生物が必要になるたびに、TIFFにアクセスする代わりに、JP2000を使用してファイルの新しいコピーを作成します。"
+
+#: ../../user-manual/transfer/transfer.rst:470
+msgid "Service (or mezzanine) files can be added to standard transfer types."
+msgstr "サービス（またはメザニン）ファイルは、標準的な転送タイプに追加できます。"
+
+#: ../../user-manual/transfer/transfer.rst:472
+msgid ""
+"Inside your top-level directory, create a ``service`` subdirectory and place"
+" the service copies of your originals inside this file."
+msgstr ""
+"トップレベルディレクトリの中に、 ``service`` サブディレクトリを作成し、オリジナルのサービスコピーをこのファイルの中に置きます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer containing a service subdirectory, which contains service or "
+"mezzanine copies of the originals"
+msgstr "サービスサブディレクトリを含む転送。これには、オリジナルのサービスコピーまたはメザニンコピーが含まれます"
+
+#: ../../user-manual/transfer/transfer.rst:480
+msgid ""
+"In the example shown above, the original files are TIFFs (i.e. "
+"``beihai.tif``). For each file, there is a service copy in the form of a "
+"JP2000 (``beihai.jp2``). Note that the base filenames (before the extension)"
+" must match in order for Archivematica to recognize the links between the "
+"original file and the service copy."
+msgstr ""
+"上に示した例では、元のファイルはTIFFです（つまり ``beihai.tif`` ）。各ファイルには、JP2000 （ ``beihai.jp2`` "
+"） "
+"形式のサービスコピーがあります。Archivematicaがオリジナルファイルとサービスコピーのリンクを認識するには、ベースファイル名（拡張子の前）が一致している必要があります。"
+
+#: ../../user-manual/transfer/transfer.rst:486
+msgid ""
+"When you process this transfer, Archivematica will automatically recognize "
+"the existence of the service copies. At the :ref:`normalization <normalize>`"
+" microservice on the :ref:`Ingest tab <ingest>`, you will be given the "
+"option to use the service copies to generate access derivatives, rather than"
+" the original files."
+msgstr ""
+"この転送処理を行うと、Archivematicaは、自動的にサービスコピーの存在を認識します。 :ref:`正規化 <normalize>` "
+"マイクロサービスの :ref:`インジェストタブ <ingest>` "
+"では、オリジナルファイルではなく、アクセス派生物を生成するためにサービスコピーを使用するオプションが与えられます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"The normalization microservice in Archivematica provides an extra option - "
+"Normalize service files for access - if a service directory is detected"
+msgstr ""
+"Archivematica の正規化マイクロサービスは、サービスディレクトリが検出された場合に追加のオプション "
+"(アクセス用にサービスファイルを正規化する) を提供します"
+
+#: ../../user-manual/transfer/transfer.rst:499
+msgid ""
+"If you want to create access copies from your service files, select "
+"*Normalize service files for access* at the Normalize microservice. If you "
+"have included access copies as per the instructions in :ref:`Transferring "
+"material with access derivatives <transfer-access-copies>` above, select *Do"
+" not normalize* at the Normalize microservice - the DIP will be "
+"automatically created because Archivematica has detected the access "
+"directory."
+msgstr ""
+"サービスファイルからアクセスコピーを作成する場合は、正規化サービスで *アクセス用にサービスファイルを正規化* を選択します。上記の "
+":ref:`アクセス派生物を使用した素材の転送 <transfer-access-copies>` "
+"の手順に従ってアクセスコピーを含めた場合は、正規化マイクロサービスで *正規化しない* を選択します。Archivematica "
+"がアクセスディレクトリを検出したため、DIP は、自動的に作成されます。"
+
+#: ../../user-manual/transfer/transfer.rst:509
+msgid "Processing a transfer"
+msgstr "転送処理"
+
+#: ../../user-manual/transfer/transfer.rst:511
+msgid ""
+"Once your material is packaged for Archivematica, you can begin the transfer"
+" process."
+msgstr "素材が Archivematica 用にパッケージ化されたら、転送プロセスを開始できます。"
+
+#: ../../user-manual/transfer/transfer.rst:517
+msgid "Start a transfer"
+msgstr "転送を開始"
+
+#: ../../user-manual/transfer/transfer.rst:519
+msgid ""
+"Sign in to Archivematica and navigate to the Transfer tab by clicking on "
+"``Transfer`` or the Archivematica logo."
+msgstr ""
+"Archivematica にサインインし、 ``Transfer`` または Archivematica ロゴをクリックして、[転送] "
+"タブに移動します。"
+
+#: ../../user-manual/transfer/transfer.rst:522
+msgid ""
+"Select your :ref:`transfer type <transfer-types>` from the Transfer types "
+"dropdown menu."
+msgstr "[転送] タイプのプルダウン メニューから :ref:`転送タイプ <transfer-types>` を選択します。"
+
+#: ../../user-manual/transfer/transfer.rst:525
+msgid ""
+"Name your transfer. The transfer name will become the name of your AIP, so "
+"make sure that the name is meaningful."
+msgstr "転送先に名前をつけます。転送名はAIPの名前になりますので、意味のある名前にしてください。"
+
+#: ../../user-manual/transfer/transfer.rst:528
+msgid ""
+"If needed, also add an accession number and/or access system ID, and check "
+"or uncheck the ``Approve transfer`` checkbox."
+msgstr ""
+"必要に応じて、アクセッション番号やアクセスシステム ID も追加し、 ``Approve transfer`` "
+"チェックボックスをオンまたはオフにします。"
+
+#: ../../user-manual/transfer/transfer.rst:531
+msgid ""
+"Click **Browse** to open the transfer browser, where you can select a the "
+"digital object(s) you want to preserve. You can toggle between transfer "
+"source locations by clicking on the top bar of the transfer browser (called "
+"``archivematica-sampledata`` in the screenshot below)."
+msgstr ""
+"**参照** をクリックして転送ブラウザを開き、保存するデジタルオブジェクトを選択します。転送ブラウザの上部バー (以下のスクリーンショットでは "
+"``archivematica-sampledata`` と呼ばれる) をクリックすると、転送元の場所を切り替えることができます。"
+
+#: ../../user-manual/transfer/transfer.rst:536
+msgid ""
+"Click on the yellow folder icon to explore nested directories. To select the"
+" material that you want to preserve, click on the name of the folder (or "
+".zip file, if you are transferring a Zipped Bag) so that it is highlighted "
+"and click **Add**. To close the browser, click on **Browse** again."
+msgstr ""
+"黄色のフォルダーアイコンをクリックして、ネストされたディレクトリを探索します。保存する素材を選択するには、フォルダーの名前 "
+"(または、圧縮バッグを転送する場合は .zip ファイル) をクリックして強調表示し、 **追加** をクリックします。ブラウザを閉じるには、もう一度 "
+"**ブラウズ** ] をクリックします。"
+
+#: ../../user-manual/transfer/transfer.rst
+msgid "A folder called \"Images\" has been selected"
+msgstr "\"Images\" というフォルダが選択されています"
+
+#: ../../user-manual/transfer/transfer.rst:549
+msgid "Choose a processing configuration"
+msgstr "処理設定を選択"
+
+#: ../../user-manual/transfer/transfer.rst:551
+msgid ""
+"Once you've clicked the **Add** button the **Start transfer** button becomes"
+" active."
+msgstr "**追加** ボタンをクリックすると、 **転送開始** ボタンがアクティブになります。"
+
+#: ../../user-manual/transfer/transfer.rst:554
+msgid ""
+"On the far right of the green **Start Transfer** button is a downward arrow."
+" When clicked, it presents a drop-down menu from which you can choose which "
+"processing configuration profile will be used for the transfer."
+msgstr ""
+"緑色の **Start Transfer** "
+"ボタンの右端に下向きの矢印があります。クリックするとドロップダウンメニューが表示され、転送に使用する処理設定プロファイルを選択できます。"
+
+#: ../../user-manual/transfer/transfer.rst:558
+msgid ""
+"These profiles are defined on Archivematica's Administration tab. They allow"
+" users to configure the job decision points presented by Archivematica "
+"during Transfer and Ingest (e.g. whether to generate thumbnails, which AIP "
+"storage location to use, etc.). See :ref:`Processing configuration <process-"
+"config>` in the Administrator's manual for more information."
+msgstr ""
+"これらのプロファイルは、ArchivematicaのAdministrationタブで定義します。これらのプロファイルを使用することで、Archivematicaが転送やインジェストの際に提示するジョブの決定ポイント（サムネイルを生成するかどうか、どのAIP保存場所を使用するかなど）を設定できます。詳細については、管理者マニュアルの"
+" :ref:`Processing configuration <process-config>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:564
+msgid ""
+"If you define a new processing configuration profile in the Administration "
+"tab, it will be presented as an option in the **Start Transfer** dropdown "
+"(e.g. \"my_custom_config\")."
+msgstr ""
+"[管理]タブで新しい処理設定プロファイルを定義すると、 **[転送開始]** "
+"ドロップダウンのオプションとして表示されます（例：\"my_custom_config\" ）。"
+
+#: ../../user-manual/transfer/transfer.rst
+msgid "Choosing a processing configuration"
+msgstr "処理設定の選択"
+
+#: ../../user-manual/transfer/transfer.rst:573
+msgid ""
+"If you would like to use this processing configuration profile for your "
+"transfer, select it from the drop-down menu and press the **Start Transfer**"
+" button."
+msgstr ""
+"この処理設定プロファイルを転送に使用したい場合は、ドロップダウンメニューから選択し、 **Start Transfer** "
+"（転送開始）ボタンを押してください。"
+
+#: ../../user-manual/transfer/transfer.rst:577
+msgid ""
+"You will be notified by Archivematica that your transfer has started and the"
+" processing configuration profile that it is going to use for the decision "
+"points encountered during Transfer and Ingest."
+msgstr ""
+"Archivematica から転送が開始された旨と、転送とインジェスト中に発生する決定ポイントで使用する処理設定プロファイルが通知されます。"
+
+#: ../../user-manual/transfer/transfer.rst
+msgid "Processing configuration notification"
+msgstr "設定通知の処理"
+
+#: ../../user-manual/transfer/transfer.rst:586
+msgid ""
+"If you ignore the drop-down menu and just press the **Start Transfer** menu "
+"then the \"default\" processing configuration will be used."
+msgstr "ドロップダウンメニューを無視して **転送開始** メニューを押すだけの場合は、\"デフォルト\"の処理設定が使われます。"
+
+#: ../../user-manual/transfer/transfer.rst:591
+msgid ""
+"If you choose to include a **proccessingMCP.xml** file in the root directory"
+" of your transfer, its decision points will take precedence over the "
+"configuration profile chosen with the **Start Transfer** button."
+msgstr ""
+"転送のルートディレクトリに **proccessingMCP.xml** ファイルを含めることを選択した場合、その決定ポイントは、 **転送開始** "
+"ボタンで選択された設定プロファイルよりも優先されます。"
+
+#: ../../user-manual/transfer/transfer.rst:598
+msgid "Transfer tab microservices"
+msgstr "転送タブマイクロサービス"
+
+#: ../../user-manual/transfer/transfer.rst:600
+msgid ""
+"Once you click on **Start transfer**, the transfer should appear below the "
+"transfer preparation area. This should only take a few seconds, though there"
+" might be a longer delay if the transfer is very large. If the transfer "
+"never appears, do not try to start another transfer - instead, contact your "
+"systems administrator as it is possible that you have run out of processing "
+"space and starting another new transfer will only compound the issue."
+msgstr ""
+"**転送開始** "
+"をクリックすると、転送準備領域の下に転送が表示されます。これには数秒しかかかりませんが、転送が非常に大きい場合は遅延する可能性があります。転送が表示されない場合は、別の転送を開始しないでください。処理スペースが不足している可能性があり、別の新しい転送を開始すると問題がさらに悪化するだけなので、代わりにシステム管理者に問い合わせてください。"
+
+#: ../../user-manual/transfer/transfer.rst:607
+msgid ""
+"Each microservice in the Transfer tab is carrying out some step towards "
+"preparing your material to become a Submission Information Package (SIP) and"
+" then an Archival Information Package (AIP). For more information about "
+"Archivematica's microservice architecture, please see :ref:`microservices "
+"<microservices>`."
+msgstr ""
+"転送タブの各マイクロサービスは、お客様の素材をSIP（Submission Information Package）、そしてAIP（Archival "
+"Information Package）にするための準備を行います。Archivematica のマイクロサービスアーキテクチャの詳細については、 "
+":ref:`マイクロサービス <microservices>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:613
+msgid ""
+"Some microservices occur with no human intervention, while others will "
+"prompt the user for a decision. An early example is the *Identify file "
+"format* microservice, which prompts the user to decide if they would like to"
+" run a file format identification tool on the files in the transfer."
+msgstr ""
+"マイクロサービスの中には、人の介入なしに実行されるものもあれば、ユーザーに決定を促すものもあります。初期の例としては、 *Identify file "
+"format* マイクロサービスがあり、転送中のファイルに対してファイルフォーマット識別ツールを実行するかどうかの判断をユーザーに求めます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A decision dropdown menu is shown at \"Job: Do you want to perform file "
+"format identification?\". The options are \"Yes\" or \"No\"."
+msgstr "決定ドロップダウンメニューが \"ジョブ：ファイル形式の識別を実行しますか?\"に表示されます。オプションは \"はい\" または \"いいえ\" があります。"
+
+#: ../../user-manual/transfer/transfer.rst:624
+msgid ""
+"Note that it is possible to automate all decision points in Archivematica. "
+"For more information, see :ref:`Processing configuration <dashboard-"
+"processing>`."
+msgstr ""
+"Archivematica では、すべての決定ポイントを自動化することが可能です。詳しくは、 :ref:`処理設定 <dashboard-"
+"processing>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:627
+msgid "The microservices that run on the Transfer tab include:"
+msgstr "[転送] タブで実行されるマイクロサービスには、次のものがあります："
+
+#: ../../user-manual/transfer/transfer.rst:629
+msgid ""
+"**Verify transfer compliance**: verifies that the transfer is properly "
+"structured according to the requirements of the transfer type."
+msgstr ""
+"**Verify transfer compliance** ：転送が転送タイプの要件に従って適切に構造化されていることを妥当性確認します。"
+
+#: ../../user-manual/transfer/transfer.rst:632
+msgid ""
+"**Rename with transfer UUID**: assigns a unique universal identifier for the"
+" transfer as a whole."
+msgstr "**Rename with transfer UUID** ：転送全体に一意のユニバーサル識別子を割り当てます。"
+
+#: ../../user-manual/transfer/transfer.rst:635
+msgid ""
+"**Assign file UUIDs and checksums to objects**: assigns a unique universal "
+"identifier and checksums to each digital object."
+msgstr ""
+"**ファイルのUUIDとチェックサムをオブジェクトに割り当て** ：各デジタルオブジェクトに一意のユニバーサル識別子とチェックサムを割り当てます。"
+
+#: ../../user-manual/transfer/transfer.rst:638
+msgid ""
+"**Verify transfer checksums**: verifies any :ref:`checksums included with "
+"the transfer <transfer-checksums>`."
+msgstr ""
+"**Verify transfer checksums** ：転送に含まれる :ref:`チェックサムを妥当性確認 <transfer-"
+"checksums>` ."
+
+#: ../../user-manual/transfer/transfer.rst:641
+msgid ""
+"**Generate METS.xml document**: creates a METS file capturing the original "
+"order of the transfer. This METS file is added to any SIPs generated from "
+"this transfer."
+msgstr ""
+"**METS.xml文書を生成** "
+"：転送のオリジナルオーダーをキャプチャするMETSファイルを作成します。このMETSファイルは、この転送（transfer）から "
+"生成されるすべてのSIPに追加されます。"
+
+#: ../../user-manual/transfer/transfer.rst:645
+msgid ""
+"**Scan for viruses**: scans for viruses and malware. For more information, "
+"see :ref:`Scan for viruses <scan-for-viruses>`."
+msgstr ""
+"**ウィルスのスキャン** ：ウィルスとマルウェアをスキャンします。詳しくは、 :ref:`ウイルスのスキャン <scan-for-viruses>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:648
+msgid ""
+"**Generate transfer structure report**: generates a directory tree of the "
+"original transfer and places as a text file in the AIP."
+msgstr ""
+"**Generate transfer structure report** "
+"：オリジナル転送のディレクトリツリーを生成し、AIPにテキストファイルとして配置します。"
+
+#: ../../user-manual/transfer/transfer.rst:651
+msgid ""
+"**Change transfer filenames**: removes prohibited characters from folder and"
+" filenames, such as ampersands. For more information, see :ref:`Change "
+"filenames <change-filenames>`."
+msgstr ""
+"**Change transfer filenames** ：フォルダー名やファイル名から、アンパサンドなどの禁止文字を削除します。詳細については、 "
+":ref:`ファイル名の変更 <change-filenames>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:655
+msgid ""
+"**Identify file format**: allows the user to choose whether or not to "
+"identify file formats. Selecting \"Yes\" will prompt the enabled file "
+"identification command to run. See :ref:`Identification <identification>` "
+"for more information."
+msgstr ""
+"**Identify file format** ：ファイル形式を識別するかどうかを選択できます。\"はい\" "
+"を選択すると、有効なファイル識別コマンドの実行が促されます。詳細については、 :ref:`識別 <identification>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:660
+msgid ""
+"**Extract packages**: extracts contents from zipped or otherwise packaged "
+"files. See :ref:`Extraction <extraction>` for more information."
+msgstr ""
+"**Extract packages** ：ZIP圧縮されたファイルやその他のパッケージ化されたファイルからコンテンツを抽出します。詳しくは "
+":ref:`展開 <extraction>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:663
+msgid ""
+"**Characterize and extract metadata**: extracts technical metadata embedded "
+"in the files. See :ref:`Characterization <characterization>` for more "
+"information."
+msgstr ""
+"**Characterize and extract metadata** ：ファイルに埋め込まれた技術的なメタデータを抽出します。詳しくは、 "
+":ref:`特性化 <characterization>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:667
+msgid ""
+"**Validation**: validates file formats against the format's specification. "
+"See :ref:`Validation <validation>` for more information."
+msgstr ""
+"**Validation** ：ファイルフォーマットをフォーマットの仕様に照らして妥当性確認します。詳細は、 :ref:`妥当性確認 "
+"<validation>` を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:670
+msgid "**Examine contents**: runs `Bulk Extractor`_."
+msgstr "**内容検査** ： `Bulk Extractor`_ を実行します。"
+
+#: ../../user-manual/transfer/transfer.rst:672
+msgid ""
+"**Create SIP from transfer**: gives users the chance to send the transfer to"
+" the :ref:`Backlog tab <backlog>`, where it can be stored for processing "
+"later. Using the backlog also gives users a chance to carry out "
+":ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the "
+"transferred material into a SIP and send it along to the :ref:`Ingest "
+"<ingest>` tab. The transfer can also be rejected at this point."
+msgstr ""
+"**Create SIP from transfer** ：ユーザーは、転送を :ref:`Backlogタブ <backlog>` "
+"に送ることができます。バックログを使用することで、ユーザーは、 :ref:`評価 <appraisal>` "
+"タスクを実行もできます。あるいは、ユーザーは、転送された素材をSIPに変換し、 :ref:`インジェスト <ingest>` "
+"できます。この時点で転送を拒否もできます。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid ""
+"A transfer that is ready to be packaged into a SIP or stored in backlog"
+msgstr "SIPにパッケージされるか、バックログに保存される準備が整った転送"
+
+#: ../../user-manual/transfer/transfer.rst:686
+msgid ""
+"If you are running :ref:`Archivematica without Elasticsearch <install-"
+"elasticsearch>` or with limited Elasticsearch functionality, you may not "
+"have the option to send the transfer to the backlog."
+msgstr ""
+":ref:`エラスティックサーチを使用せずに Archivematica <install-elasticsearch>` を実行している場合、または "
+"エラスティックサーチの機能が制限されている場合は、転送をバックログに送信するオプションがない場合があります。"
+
+#: ../../user-manual/transfer/transfer.rst:690
+msgid ""
+"A transfer that is in the middle of processing will show which microservices"
+" have been completed (green) and which are in progress (orange). When a "
+"microservice fails or encounters an error, the microservice background turns"
+" from green to pink and a \"failed\" icon appears next to the transfer or "
+"SIP name. See :ref:`Error handling <error-handling>` for more information "
+"about how to handle an error."
+msgstr ""
+"処理中の転送には、どのマイクロサービスが完了したのか (緑色)、どのマイクロサービスが進行中なのか (オレンジ色) "
+"が表示されます。マイクロサービスが失敗するかエラーが発生すると、マイクロサービスの背景が緑からピンクに変わり、転送名または SIP "
+"名の横に\"失敗\"アイコンが表示されます。エラーの処理方法の詳細については、 :ref:`エラー処理 <error-handling>` "
+"を参照してください。"
+
+#: ../../user-manual/transfer/transfer.rst:700
+msgid "Cleaning up the transfer dashboard"
+msgstr "転送ダッシュボードのクリーンアップ"
+
+#: ../../user-manual/transfer/transfer.rst:702
+msgid ""
+"The dashboard in the Transfer tab should be cleaned up from time to time. As"
+" the list of transfers grows, it takes Archivematica longer and longer to "
+"parse this information which can create browser timeout issues."
+msgstr ""
+"[転送] タブのダッシュボードは、時々クリーンアップする必要があります。転送のリストが増えると、Archivematica "
+"がこの情報を解析するのにかかる時間が長くなり、ブラウザーのタイムアウトの問題が発生する可能性があります。"
+
+#: ../../user-manual/transfer/transfer.rst:707
+msgid "Remove a single transfer"
+msgstr "単一転送の削除"
+
+#: ../../user-manual/transfer/transfer.rst:709
+msgid ""
+"Ensure that the transfer you want to remove doesn't require any user input. "
+"You must complete all user inputs and either complete the transfer (i.e. "
+"send to backlog or create a SIP) or reject the transfer before it can be "
+"removed from the dashboard."
+msgstr ""
+"削除する転送にユーザー入力が必要ないことを確認してください。ダッシュボードから転送を削除する前に、すべてのユーザー入力を完了し、転送を完了する "
+"(つまり、バックログに送信するか SIP を作成する) か、転送を拒否する必要があります。"
+
+#: ../../user-manual/transfer/transfer.rst:714
+msgid ""
+"When you are ready to remove a transfer from the dashboard, click the red "
+"circle icon to the right of the transfer name."
+msgstr "ダッシュボードから転送を削除する準備ができたら、転送名の右側にある赤い丸のアイコンをクリックします。"
+
+#: ../../user-manual/transfer/transfer.rst:717
+msgid "Click the Confirm button to remove the transfer from the dashboard."
+msgstr "[確認] ボタンをクリックして、ダッシュボードから転送を削除します。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid "Remove a single transfer from the dashboard"
+msgstr "ダッシュボードから単一転送を削除"
+
+#: ../../user-manual/transfer/transfer.rst:726
+msgid ""
+"This does not delete the transfer or related entities, including the source "
+"directory. It merely removes them from view on the dashboard."
+msgstr ""
+"これにより、転送元ディレクトリなどの転送エンティティや関連エンティティは削除されません。ダッシュボード上の表示からそれらを削除するだけです。"
+
+#: ../../user-manual/transfer/transfer.rst:730
+msgid "Remove all completed transfers"
+msgstr "完了した転送をすべて削除"
+
+#: ../../user-manual/transfer/transfer.rst:732
+msgid ""
+"Ensure that the transfers you want to remove are complete (i.e. sent to "
+"backlog or ingest). Note that this feature only works on completed "
+"transfers; rejected transfers will have to be removed one at a time."
+msgstr ""
+"削除したい転送が完了していることを確認してください（例：バックログまたはインジェストに送信）。この機能は、完了した転送に対してのみ機能しますので、拒否された転送は、1つずつ削除する必要があることに注意してください。"
+
+#: ../../user-manual/transfer/transfer.rst:736
+msgid ""
+"When you are ready to remove all completed transfers, click the red circle "
+"icon in the table header of the list of transfers."
+msgstr "完了したすべての転送を削除する準備ができたら、転送リストの表ヘッダーにある赤丸のアイコンをクリックします。"
+
+#: ../../user-manual/transfer/transfer.rst:739
+msgid ""
+"Click the Confirm button to remove all completed transfers from the "
+"dashboard."
+msgstr "[確認] ボタンをクリックして、完了した転送をすべてダッシュボードから削除します。"
+
+#: ../../user-manual/transfer/transfer.rst:-1
+msgid "Remove all transfers from the dashboard."
+msgstr "ダッシュボードからすべての転送を削除します。"
+
+#: ../../user-manual/transfer/transfer.rst:748
+msgid ":ref:`Back to the top <transfer>`"
+msgstr ":ref:`トップに戻る <transfer>`"

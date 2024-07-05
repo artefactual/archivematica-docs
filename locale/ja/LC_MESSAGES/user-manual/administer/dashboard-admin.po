@@ -1,0 +1,1456 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/administer/dashboard-admin.rst:5
+msgid "Dashboard administration tab"
+msgstr "ダッシュボード管理タブ"
+
+#: ../../user-manual/administer/dashboard-admin.rst:7
+msgid ""
+"This page describes dashboard user administration in Archivematica via the "
+"dashboard. For higher level, technical administrative documentation, please "
+"see :ref:`Administrator manual <home>`."
+msgstr ""
+"このページでは、Archivematicaのダッシュボードによるユーザー管理について説明します。より高度で技術的な管理文書については、 "
+":ref:`管理者マニュアル <home>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:11
+msgid ""
+"The Archivematica administration pages, under the Administration tab of the "
+"dashboard, allows you to configure various parts of the application and "
+"manage integrations and users."
+msgstr ""
+"ダッシュボードの「管理」タブにあるArchivematicaの管理ページでは、アプリケーションの様々な部分を設定し、統合やユーザーを管理できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:15
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:17
+msgid ":ref:`Processing configuration <dashboard-processing>`"
+msgstr ":ref:`処理設定 <dashboard-processing>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:19
+msgid ":ref:`Fields and options <processing-config-fields>`"
+msgstr ":ref:`フィールドとオプション <processing-config-fields>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:21
+msgid ":ref:`General <dashboard-general>`"
+msgstr ":ref:`一般 <dashboard-general>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:22
+msgid ":ref:`Failures <dashboard-failures>`"
+msgstr ":ref:`障害 <dashboard-failures>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:23
+msgid ":ref:`Storage locations <dashboard-storage-locations>`"
+msgstr ":ref:`保存場所 <dashboard-storage-locations>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:24
+msgid ":ref:`Processing storage usage <dashboard-usage>`"
+msgstr ":ref:`処理ストレージ使用状況 <dashboard-usage>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:25
+msgid ":ref:`DIP upload <dashboard-dip-upload>`"
+msgstr ":ref:`DIPアップロード <dashboard-dip-upload>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:27
+msgid ":ref:`AtoM/Binder DIP upload <dashboard-atom>`"
+msgstr ":ref:`AtoM/Binder DIPアップロード <dashboard-atom>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:28
+msgid ":ref:`ArchivesSpace DIP upload <dashboard-AS>`"
+msgstr ":ref:`ArchivesSpace DIPアップロード <dashboard-AS>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:30
+msgid ":ref:`PREMIS agent <dashboard-premis>`"
+msgstr ":ref:`PREMISエージェント <dashboard-premis>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:31
+msgid ":ref:`REST API <dashboard-rest>`"
+msgstr ":ref:`REST API <dashboard-rest>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:32
+msgid ":ref:`Users <dashboard-users>`"
+msgstr ":ref:`ユーザー <dashboard-users>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:33
+msgid ":ref:`Handle server config <handle-server>`"
+msgstr ":ref:`サーバー設定の処理 <handle-server>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:34
+msgid ":ref:`Language <language-choice>`"
+msgstr ":ref:`言語 <language-choice>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:35
+msgid ":ref:`Version <version>`"
+msgstr ":ref:`バージョン <version>`"
+
+#: ../../user-manual/administer/dashboard-admin.rst:40
+msgid "Processing configuration"
+msgstr "処理設定"
+
+#: ../../user-manual/administer/dashboard-admin.rst:42
+msgid ""
+"The processing configuration administration page of the dashboard allows "
+"users to configure the job decision points presented by Archivematica during"
+" transfer and ingest. There are two processing configurations available on "
+"installation:"
+msgstr ""
+"ダッシュボードの処理設定管理ページでは、転送やインジェスト時にArchivematicaが提示するジョブの決定ポイントを設定できます。インストール時に2つの処理設定が利用可能です："
+
+#: ../../user-manual/administer/dashboard-admin.rst:46
+msgid ""
+"``Default``, which is used for any transfer started manually from the "
+":ref:`Transfer tab <create-transfer>`, automatically via the `automation "
+"tools`_, or in any other context where no other processing configuration is "
+"specified."
+msgstr ""
+"``Default`` は、 :ref:`転送タブ <create-transfer>` から手動で開始される転送、 `自動化ツール`_ "
+"から自動的に開始される転送、または他の処理設定が指定されていないその他のコンテキストで使用されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:50
+msgid ""
+"``Automated``, which is used for transfers automatically started from some "
+"external environments (such as Jisc RDSS) and can also be selected by the "
+"user in the Transfer tab."
+msgstr ""
+"``Automated`` は、一部の外部環境（Jisc RDSSなど）から自動的に開始される転送に使用され、転送タブでユーザーが選択もできます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid ""
+"Processing configuration screen, showing two configurations: default and "
+"automated"
+msgstr "デフォルトと自動の2つの設定を表す処理設定画面"
+
+#: ../../user-manual/administer/dashboard-admin.rst:59
+msgid ""
+"To edit an existing processing configuration file, click on the **Edit** "
+"button to the right of the processing configuration name."
+msgstr "既存の処理設定ファイルを編集するには、処理設定名の右にある **Edit** ボタンをクリックします。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:62
+msgid ""
+"Multiple processing configurations can be created using the **Add** button "
+"on the Processing Configuration screen. Often, users create multiple "
+"configurations for different types of content - one for audio-visual "
+"material, one for images, one for textual records, etc."
+msgstr ""
+"複数の処理コンフィギュレーションを作成するには、処理コンフィギュレーション画面の **追加** "
+"ボタンを使用します。オーディオビジュアル素材用、画像用、テキスト記録用など、異なるタイプのコンテンツ用に複数のコンフィギュレーションを作成することがよくあります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:67
+msgid ""
+"You can also revert the default and automated processing configurations to "
+"their pre-sets by clicking on **Reset**. Please note that the pre-sets for "
+"the default processing configuration are noted in the :ref:`Processing "
+"configuration fields <processing-config-fields>` section below."
+msgstr ""
+"また、 **Reset** をクリックすることで、デフォルトおよび自動処理設定をプリセットに戻すことができます。デフォルト処理設定のプリセットは、以下の"
+" :ref:`処理設定フィールド <processing-config-fields>` セクションに記載されていることに注意してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:72
+msgid ""
+"Note that alternate processing configurations (e.g. anything other than "
+"default) are used in two ways:"
+msgstr "代わりの処理設定（例：デフォルト以外）は、2つの方法で使用されることに注意してください："
+
+#: ../../user-manual/administer/dashboard-admin.rst:75
+msgid ""
+"When you re-ingest an AIP, you are given the opportunity to select which "
+"processing configuration you'd like to use."
+msgstr "AIPを再インジェストする際、どの処理設定を使用するかを選択する機会が与えられます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:77
+msgid ""
+"You can download the processingMCP.xml file by clicking **Download**. Then, "
+"rename the file ``processingMCP.xml`` and include it at the top level of "
+"your transfer. Archivematica will then use this to automate your transfer "
+"selections, rather than the default configuration. For more information on "
+"the processingMCP.xml file, see :ref:`Creating a custom config with "
+"processingMCP.xml <processingmcp-file>`."
+msgstr ""
+"**Download** をクリックして、processingMCP.xmlファイルをダウンロードできます。次に、ファイル名を "
+"``processingMCP.xml`` "
+"に変更し、転送のトップレベルに含めます。Archivematicaは、デフォルトの設定ではなく、このファイルを使用して転送の選択を自動化します。processingMCP.xmlファイルの詳細については、"
+" :ref:`Creating a custom config with processingMCP.xml <processingmcp-file>`"
+" を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:84
+msgid "All other transfers will use the default processing configuration."
+msgstr "他のすべての転送では、デフォルトの処理設定を使用します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:86
+msgid ""
+"In order to edit any of the selections, select a choice from the drop-down "
+"menu to the right of the job name. Once you've made all of your selections, "
+"save the processing configuration. The fields are described in the next "
+"section."
+msgstr ""
+"選択項目を編集するには、ジョブ名の右側にあるドロップダウンメニューから選択します。すべての選択を終えたら、処理設定を保存してください。フィールドについては、次のセクションで説明します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid "Processing configuration screen in the dashboard"
+msgstr "ダッシュボードの処理設定画面"
+
+#: ../../user-manual/administer/dashboard-admin.rst:98
+msgid "Processing configuration fields"
+msgstr "設定フィールドの処理"
+
+#: ../../user-manual/administer/dashboard-admin.rst:100
+msgid ""
+"Many jobs in the Archivematica Transfer and Ingest tabs have configurable "
+"decision points. Automating these decisions can make the transfer and ingest"
+" process substantially quicker, especially if you find yourself selecting "
+"the same decisions over and over. Below is a list of the processing "
+"configuration form fields with a short description about how they work and "
+"the drop-down options for each."
+msgstr ""
+"[Archivematica 転送] と [インジェスト] "
+"タブにある多くのジョブには、設定可能な決定ポイントがあります。これらの決定を自動化することで、特に同じ決定を何度も選択している場合、転送とインジェストのプロセスを大幅に短縮することができます。以下は、処理設定フォーム"
+" フィールドのリストと、それらの機能と各フィールドのドロップダウンオプションに関する簡単な説明です。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:107
+msgid ""
+"The option marked by an asterisk is the pre-set value for the default "
+"processing configuration. If you change the default configuration, you can "
+"click on **Reset** to revert all changes back to the installation pre-sets."
+msgstr ""
+"アスタリスクでマークされたオプションは、デフォルト処理設定の事前設定値です。デフォルト設定を変更した場合は、 **リセット** "
+"をクリックして、すべての変更をインストール前の設定に戻すことができます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:112
+msgid "Name"
+msgstr "名前"
+
+#: ../../user-manual/administer/dashboard-admin.rst:114
+msgid "The name of the processingMCP.xml that you are editing."
+msgstr "編集するprocessingMCP.xmlの名前。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:117
+msgid "Assign UUIDs to directories"
+msgstr "ディレクトリにUUIDを割り当てる"
+
+#: ../../user-manual/administer/dashboard-admin.rst:119
+msgid ""
+"Directories are given an entry in the fileSec and assigned a unique "
+"universal identifier (UUID). Note that the digital objects in the transfer "
+"are always assigned a UUID."
+msgstr ""
+"ディレクトリにはfileSecのエントリが与えられ、一意のユニバーサル識別子（UUID）が割り当てられます。転送中のデジタルオブジェクトには常にUUIDが割り当てられることに注意してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:123
+#: ../../user-manual/administer/dashboard-admin.rst:135
+#: ../../user-manual/administer/dashboard-admin.rst:146
+#: ../../user-manual/administer/dashboard-admin.rst:158
+#: ../../user-manual/administer/dashboard-admin.rst:170
+#: ../../user-manual/administer/dashboard-admin.rst:188
+#: ../../user-manual/administer/dashboard-admin.rst:214
+#: ../../user-manual/administer/dashboard-admin.rst:233
+#: ../../user-manual/administer/dashboard-admin.rst:247
+#: ../../user-manual/administer/dashboard-admin.rst:271
+#: ../../user-manual/administer/dashboard-admin.rst:281
+#: ../../user-manual/administer/dashboard-admin.rst:298
+#: ../../user-manual/administer/dashboard-admin.rst:310
+#: ../../user-manual/administer/dashboard-admin.rst:322
+#: ../../user-manual/administer/dashboard-admin.rst:335
+#: ../../user-manual/administer/dashboard-admin.rst:349
+#: ../../user-manual/administer/dashboard-admin.rst:361
+#: ../../user-manual/administer/dashboard-admin.rst:373
+#: ../../user-manual/administer/dashboard-admin.rst:386
+#: ../../user-manual/administer/dashboard-admin.rst:406
+#: ../../user-manual/administer/dashboard-admin.rst:429
+#: ../../user-manual/administer/dashboard-admin.rst:440
+#: ../../user-manual/administer/dashboard-admin.rst:454
+#: ../../user-manual/administer/dashboard-admin.rst:472
+#: ../../user-manual/administer/dashboard-admin.rst:485
+msgid "Options:"
+msgstr "オプション："
+
+#: ../../user-manual/administer/dashboard-admin.rst:125
+#: ../../user-manual/administer/dashboard-admin.rst:137
+#: ../../user-manual/administer/dashboard-admin.rst:190
+#: ../../user-manual/administer/dashboard-admin.rst:235
+#: ../../user-manual/administer/dashboard-admin.rst:283
+#: ../../user-manual/administer/dashboard-admin.rst:300
+#: ../../user-manual/administer/dashboard-admin.rst:312
+#: ../../user-manual/administer/dashboard-admin.rst:324
+#: ../../user-manual/administer/dashboard-admin.rst:337
+#: ../../user-manual/administer/dashboard-admin.rst:375
+#: ../../user-manual/administer/dashboard-admin.rst:388
+#: ../../user-manual/administer/dashboard-admin.rst:408
+msgid "**None** - the user is prompted for a decision."
+msgstr "**なし** - ユーザーに決定を促します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:126
+msgid "**Yes** - UUIDs are assigned."
+msgstr "**はい** - UUID が割り当てられます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:127
+msgid "**No** - UUIDs are not assigned.*"
+msgstr "**** - UUID は割り当てられません。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:130
+msgid "Generate transfer structure report"
+msgstr "転送構造レポートの作成"
+
+#: ../../user-manual/administer/dashboard-admin.rst:132
+msgid ""
+"A text file is generated showing a directory tree of the original transfer "
+"structure."
+msgstr "オリジナルの転送構造のディレクトリツリーを示すテキストファイルが生成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:138
+msgid "**Yes** - structure report is created.*"
+msgstr "**はい** - 構造レポートが作成されます。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:139
+msgid "**No** - structure report is not created."
+msgstr "**いいえ** - 構造レポートは作成されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:142
+msgid "Perform file identification (Transfer)"
+msgstr "ファイル識別の実行（転送）"
+
+#: ../../user-manual/administer/dashboard-admin.rst:144
+msgid ""
+"Choose whether or not to identify the format of the files in your transfer."
+msgstr "転送するファイルのフォーマットを識別するかどうかを選択します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:148
+#: ../../user-manual/administer/dashboard-admin.rst:160
+#: ../../user-manual/administer/dashboard-admin.rst:172
+#: ../../user-manual/administer/dashboard-admin.rst:204
+#: ../../user-manual/administer/dashboard-admin.rst:216
+#: ../../user-manual/administer/dashboard-admin.rst:249
+#: ../../user-manual/administer/dashboard-admin.rst:363
+#: ../../user-manual/administer/dashboard-admin.rst:431
+#: ../../user-manual/administer/dashboard-admin.rst:442
+#: ../../user-manual/administer/dashboard-admin.rst:456
+#: ../../user-manual/administer/dashboard-admin.rst:474
+#: ../../user-manual/administer/dashboard-admin.rst:487
+msgid "**None** - the user is prompted for a decision.*"
+msgstr "**なし** - ユーザーに決定を促します。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:149
+#: ../../user-manual/administer/dashboard-admin.rst:236
+msgid ""
+"**Yes** - use the enabled file identification command. See "
+":ref:`Identification <identification>` for more information."
+msgstr ""
+"**はい** - 有効なファイル識別コマンドを使用します。詳細は、 :ref:`識別 <identification>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:151
+#: ../../user-manual/administer/dashboard-admin.rst:378
+msgid "**No** - files will not be identified."
+msgstr "**いいえ** - ファイルは特定されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:154
+msgid "Extract packages"
+msgstr "パッケージの抽出"
+
+#: ../../user-manual/administer/dashboard-admin.rst:156
+msgid ""
+"Packages (such as .zip files) are unzipped and extracted into a directory."
+msgstr "パッケージ（.zipファイルなど）は解凍され、ディレクトリに展開されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:161
+msgid "**Yes** - the contents of the package are extracted."
+msgstr "**はい** - パッケージの中身が抽出されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:162
+msgid "**No** - package is left as-is."
+msgstr "**いいえ** - パッケージは現状のままです。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:165
+msgid "Delete packages after extraction"
+msgstr "抽出後にパッケージを削除します"
+
+#: ../../user-manual/administer/dashboard-admin.rst:167
+msgid ""
+"Packages that have been extracted in the previous step can be deleted after "
+"extraction."
+msgstr "前のステップで抽出されたパッケージは、抽出後に削除できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:173
+msgid "**Yes** - the package is deleted."
+msgstr "**はい** - パッケージは削除されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:174
+msgid "**No** - the package is preserved along with the extracted content."
+msgstr "**いいえ** - パッケージは、抽出されたコンテンツとともに保存されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:178
+msgid ""
+"If you are processing a :ref:`Dataverse <dataverse>` transfer, you must "
+"select \"No\". The Dataverse transfer will fail if packages are deleted."
+msgstr ""
+":ref:`Dataverse <dataverse>` "
+"転送を処理する場合は、\"いいえ\"を選択する必要があります。パッケージが削除されると、Dataverse転送は失敗します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:182
+msgid "Perform policy checks on originals"
+msgstr "オリジナルのポリシーチェックを実行"
+
+#: ../../user-manual/administer/dashboard-admin.rst:184
+msgid ""
+"If you have created policies using :ref:`MediaConch <fpr-mediaconch>`, "
+"Archivematica runs the original transfer materials against the policies to "
+"assess conformance."
+msgstr ""
+":ref:`MediaConch <fpr-mediaconch>` "
+"を使用してポリシーを作成した場合、Archivematicaは、元の転送素材をポリシーに照らして実行し、適合性を評価します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:191
+msgid "**Yes** - the transfer is checked against any policies."
+msgstr "**はい** - 転送はあらゆるポリシーと照合されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:192
+#: ../../user-manual/administer/dashboard-admin.rst:302
+#: ../../user-manual/administer/dashboard-admin.rst:314
+msgid "**No** - policies are ignored.*"
+msgstr "**いいえ** - ポリシーは無視されます。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:195
+msgid "Examine contents"
+msgstr "内容検査"
+
+#: ../../user-manual/administer/dashboard-admin.rst:197
+msgid ""
+"Run `Bulk Extractor`_, a forensics tool that can recognize credit card "
+"numbers, social security numbers, and other patterns in data. For more "
+"information on reviewing Bulk Extractor logs, see the :ref:`Analysis pane "
+"<analysis_pane>` on the Appraisal tab."
+msgstr ""
+"`Bulk Extractor`_ "
+"を実行します。これは、クレジットカード番号、社会保障番号、およびデータ内のその他のパターンを認識できるフォレンジックツールです。Bulk "
+"Extractorログのレビューの詳細については、[評価] タブの :ref:`分析ペイン（ <analysis_pane>` ）を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:202
+msgid "**Options:**"
+msgstr "**オプション：**"
+
+#: ../../user-manual/administer/dashboard-admin.rst:205
+msgid "**Skip examine contents** - Bulk Extractor does not run."
+msgstr "**Skip examine contents** - Bulk Extractorが実行されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:206
+msgid ""
+"**Yes** - Bulk Extractor scans content and creates log outputs of recognized"
+" patterns for review."
+msgstr "**はい** - Bulk Extractorは、コンテンツをスキャンし、認識されたパターンのログ出力を作成してレビューします。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:210
+msgid "Create SIP(s)"
+msgstr "SIPの作成"
+
+#: ../../user-manual/administer/dashboard-admin.rst:212
+msgid "Create a formal SIP out of the transfer or send it to the backlog."
+msgstr "転送から正式のSIPを作成するか、バックログに送ります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:217
+msgid ""
+"**Create single SIP and continue processing** - transfer becomes a SIP and "
+"is made available for further processing on the ingest tab."
+msgstr "**単一のSIPを作成し、処理を続行** - 転送は、SIPとなり、インジェストタブでさらに処理できるようになります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:219
+msgid ""
+"**Send to backlog** - transfer is sent to a backlog storage space for "
+"temporary storage or appraisal."
+msgstr "**バックログに送信** - 転送は、一時保管または評価のためにバックログ保管スペースに送られます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:224
+msgid ""
+"If you are running Archivematica in indexless mode (without Elasticsearch), "
+"the backlog will be unavailable and the **Send to backlog** option will not "
+"be present in this dropdown."
+msgstr ""
+"Archivematicaをインデックスレスモード（Elasticsearchを使用しない）で実行している場合、バックログは、使用できなくなり、このドロップダウンに"
+" **Send to backlog** オプションは表示されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:229
+msgid "Select file format identification command (Ingest)"
+msgstr "ファイルフォーマット識別コマンドの選択（インジェスト）"
+
+#: ../../user-manual/administer/dashboard-admin.rst:231
+msgid "Choose to identify the format of files in your SIP."
+msgstr "SIP内のファイルのフォーマットを識別するために選択します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:238
+msgid ""
+"**No, use existing data** - re-uses file identification data from the "
+"transfer tab.*"
+msgstr "**いいえ、既存のデータを使用します** - 転送タブからファイル識別データを再利用します。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:242
+msgid "Normalize"
+msgstr "正規化"
+
+#: ../../user-manual/administer/dashboard-admin.rst:244
+msgid ""
+"Convert ingested digital objects to preservation and/or access formats. See "
+":ref:`Normalize <normalize>` for more information."
+msgstr ""
+"インジェストされたデジタルオブジェクトを、保存形式および/またはアクセス形式に変換します。詳しくは、 :ref:`正規化 <normalize>` "
+"を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:250
+msgid ""
+"**Normalize for preservation and access** - creates preservation copies of "
+"the objects plus access copies which will be used to generate the DIP."
+msgstr "**保存とアクセスのために正規化** - オブジェクトの保存コピーと、DIPの生成に使用されるアクセスコピーを作成します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:252
+msgid ""
+"**Normalize for preservation** - creates preservation copies only. No access"
+" copies are created and no DIP will be generated."
+msgstr "**保存のために正規化** - 保存用コピーのみを作成します。アクセスコピーは作成されず、DIPも生成されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:254
+msgid ""
+"**Normalize for access** - the AIP will contain originals only. No "
+"preservation copies will be generated. Access copies will be created which "
+"will be used to generate the DIP."
+msgstr ""
+"**アクセス用に正規化** - AIPは、オリジナルのみを含みます。保存コピーは作成されません。DIPの生成に使用されるアクセスコピーが作成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:257
+msgid ""
+"**Normalize service files for access** - see :ref:`Transferring material "
+"with service (mezzanine) files <transfer-service-files>` for more "
+"information."
+msgstr ""
+"**アクセス用のサービスファイルを正規化** - 詳細は、 :ref:`サービス（メザニン）ファイルで素材を転送 <transfer-service-"
+"files>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:260
+msgid ""
+"**Normalize manually** - see :ref:`Manual Normalization <manual-norm>` for "
+"more information."
+msgstr "**手動で正規化** - 詳細は、 :ref:`手動正規化 <manual-norm>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:262
+msgid ""
+"**Do not normalize** - the AIP will contain originals only. No preservation "
+"or access copies are generated and no DIP will be generated."
+msgstr "**** を正規化しないでください。AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:266
+msgid "Approve normalization"
+msgstr "正規化を承認"
+
+#: ../../user-manual/administer/dashboard-admin.rst:268
+msgid ""
+"The dashboard allows users to review the normalization output and the "
+"normalization report."
+msgstr "ダッシュボードでは、正規化出力と正規化レポートを確認できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:273
+msgid "**None** - the user has a chance to review and approve normalization.*"
+msgstr "**なし** - ユーザーは、正規化をレビューし、承認する機会があります。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:274
+msgid "**Yes** - skip the review step and automatically continue processing."
+msgstr "**はい** - レビューステップをスキップし、自動的に処理を続けます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:277
+msgid "Generate thumbnails"
+msgstr "サムネイルの生成"
+
+#: ../../user-manual/administer/dashboard-admin.rst:279
+msgid ""
+"This gives the option of generating thumbnails for use in the AIP and DIP."
+msgstr "これにより、AIPおよびDIPで使用するサムネイルを生成するオプションが提供されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:284
+msgid ""
+"**Yes** - thumbnails will be generated according to the format rules in the "
+"FPR. Formats which do not have a rule will have a default thumbnail "
+"generated (grey document icon).*"
+msgstr ""
+"**はい** - "
+"サムネイルは、FPRのフォーマット規則に従って生成されます。ルールのない書式では、デフォルトのサムネイルが生成されます（灰色の文書アイコン）。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:287
+msgid ""
+"**Yes, without default icons** - thumbnails will be produced for any format "
+"which has a :ref:`normalize for thumbnails <normalization>` rule in the FPR."
+" Formats which do not have a rule will not have a thumbnail generated."
+msgstr ""
+"**はい、デフォルトアイコンなし** - サムネイルは、FPRに :ref:`normalize for thumbnails "
+"<normalization>` ルールがあるフォーマットに対して生成されます。ルールがないフォーマットでは、サムネイルは生成されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:290
+msgid "**No** - thumbnails will not be generated."
+msgstr "**いいえ** - サムネイルは生成されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:293
+msgid "Perform policy checks on preservation derivatives"
+msgstr "保存派生物のポリシーチェックを実行"
+
+#: ../../user-manual/administer/dashboard-admin.rst:295
+#: ../../user-manual/administer/dashboard-admin.rst:307
+msgid ""
+"If you create policies using MediaConch, run the policies against the newly-"
+"created preservation derivatives to ensure conformation."
+msgstr "MediaConchを使用してポリシーを作成する場合は、新しく作成された保存派生物に対してポリシーを実行して、適合性を確認します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:301
+#: ../../user-manual/administer/dashboard-admin.rst:313
+msgid "**Yes** - the normalized files are checked against any policies."
+msgstr "**はい** - 正規化されたファイルは、あらゆるポリシーに対して確認されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:305
+msgid "Perform policy checks on access derivatives"
+msgstr "アクセス派生物のポリシーチェックを実行"
+
+#: ../../user-manual/administer/dashboard-admin.rst:317
+msgid "Bind PIDs"
+msgstr "Bind PID"
+
+#: ../../user-manual/administer/dashboard-admin.rst:319
+msgid ""
+"Assign persistent identifiers and send the information to a Handle.Net "
+"server. See :ref:`Bind PIDs <bind-pids>` for more information."
+msgstr ""
+"永続的な識別子を割り当て、情報をHandle.Netサーバーに送信します。詳細は、 :ref:`Bind PIDs <bind-pids>` "
+"を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:325
+msgid ""
+"**Yes** - PIDs are created and a API call posts the PIDs to the Handle "
+"Server."
+msgstr "**はい** - PIDが作成され、APIコールがPIDをハンドルサーバーにポストします。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:327
+msgid "**No** - PIDs are not created.*"
+msgstr "**** - PIDは作成されません。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:330
+msgid "Document empty directories"
+msgstr "空のディレクトリを文書化"
+
+#: ../../user-manual/administer/dashboard-admin.rst:332
+msgid ""
+"By default, Archivematica removes empty directories and does not document "
+"that they existed."
+msgstr "デフォルトでは、Archivematicaは、空のディレクトリを削除し、それらが存在したことを文書化しません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:338
+msgid "**Yes** - an entry for the directory is created in the structmap."
+msgstr "**はい** - ディレクトリのエントリがstructmapに作成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:339
+msgid "**No** - the directory is not documented.*"
+msgstr "**いいえ** - ディレクトリは文書化されません。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:342
+msgid "Reminder: add metadata if desired"
+msgstr "備考：必要に応じてメタデータを追加します"
+
+#: ../../user-manual/administer/dashboard-admin.rst:344
+msgid ""
+"Archivematica allows users to see :ref:`add metadata <add-metadata>` to a "
+"SIP through the user interface. This reminder occurs at the last moment that"
+" it is possible to add metadata; once the ingest proceeds past this point, "
+"it is no longer possible to add metadata to the SIP."
+msgstr ""
+"Archivematicaでは、ユーザーインターフェースを通じて、 :ref:`、SIPにメタデータ <add-metadata>` "
+"を追加できます。このリマインダーは、メタデータを追加できる最後の瞬間に表示されます。インジェストがこのポイントを過ぎると、SIPにメタデータを追加することはできなくなります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:351
+msgid "**None** - the user has a chance to add metadata.*"
+msgstr "**なし** - ユーザーがメタデータを追加する機会があります。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:352
+msgid ""
+"**Continue** - skip the reminder and automatically continue processing."
+msgstr "**続ける** - リマインダーをスキップし、自動的に処理を続けます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:355
+msgid "Transcribe files (OCR)"
+msgstr "ファイルのテキスト変換（OCR）"
+
+#: ../../user-manual/administer/dashboard-admin.rst:357
+msgid ""
+"Users can elect to run Tesseract, an OCR tool that is included in "
+"Archivematica, to produce text files containing file transcripts. For more "
+"information, see (see :ref:`Transcribe SIP contents <transcribe-contents>`)."
+msgstr ""
+"ユーザーは、Archivematicaに含まれるOCRツールであるTesseractを実行して、ファイルのトランスクライブを含むテキストファイルを作成できます。詳細については、（"
+" :ref:`Transcribe SIP contents <transcribe-contents>` ）を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:364
+msgid "**Yes** - Tesseract runs on all OCR-able files."
+msgstr "**はい** - Tesseractは、OCR可能な全てのファイルで動作します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:365
+msgid "**No** - Tesseract does not run."
+msgstr "**いいえ** - Tesseractが動作しません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:368
+msgid ""
+"Select file format identification command (Submission documentation & "
+"metadata)"
+msgstr "ファイル形式識別コマンドの選択（提出文書とメタデータ）"
+
+#: ../../user-manual/administer/dashboard-admin.rst:370
+msgid ""
+"Choose a tool to identify the format of any submission documentation and/or "
+"metadata files that were included in your transfer."
+msgstr "転送に含まれる提出書類および/またはメタデータファイルの形式を特定するツールを選択します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:376
+msgid ""
+"**Yes** - use the enabled file identification command. See "
+":ref:`Identification <identification>` for more information.*"
+msgstr ""
+"**はい** - 有効なファイル識別コマンドを使用します。詳細は、 :ref:`識別 <identification>` を参照してください。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:381
+msgid "Select compression algorithm"
+msgstr "圧縮アルゴリズムの選択"
+
+#: ../../user-manual/administer/dashboard-admin.rst:383
+msgid ""
+"AIPs created by Archivematica can be stored as compressed packages or "
+"uncompressed, depending on your storage requirements."
+msgstr "Archivematicaで作成されたAIPは、お客様のストレージ要件に応じて、圧縮パッケージまたは非圧縮パッケージとして保存できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:389
+msgid ""
+"**7z using bzip2** - a 7Zip file is created using the `bzip2`_ algorithm.*"
+msgstr "**7z using bzip2** - 7Zipファイルは、 `bzip2`_ アルゴリズムを使用して作成されます。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:390
+msgid ""
+"**7z using LZMA** - a 7Zip file is created using the `LZMA`_ algorithm."
+msgstr "**7z using LZMA** - 7Zipファイルは、 `LZMA`_ アルゴリズムを使用して作成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:391
+msgid ""
+"**7z without compression** - a 7Zip file is created but the contents are not"
+" compressed."
+msgstr "**7z without compression** - 7Zip ファイルは作成されますが、内容は圧縮されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:393
+msgid "**Gzipped tar** - the AIP is created using the `gzip`_ algorithm."
+msgstr "**Gzipped tar** - AIPは、 `gzip`_ アルゴリズムで作成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:394
+msgid ""
+"**Parallel bzip2** - a 7Zip file is created using the `Parallel bzip2 "
+"(pbzip2)`_ algorithm."
+msgstr ""
+"**Parallel bzip2** - 7Zipファイルは、 `Parallel bzip2（pbzip2）`_ アルゴリズムを使用して作成されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:396
+msgid "**Uncompressed** - the AIP is not compressed."
+msgstr "**非圧縮** - AIPは圧縮されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:399
+msgid "Select compression level"
+msgstr "圧縮レベルを選択"
+
+#: ../../user-manual/administer/dashboard-admin.rst:401
+msgid ""
+"If you selected a compression choice in the step above, you can determine "
+"how compressed you would like your AIP to be. Selecting a higher compression"
+" level means that the resulting AIP is smaller, but compression also takes "
+"longer. Lower compression levels mean quicker compression, but a larger AIP."
+msgstr ""
+"上記のステップで圧縮を選択した場合、AIPをどの程度圧縮するかを決定できます。高い圧縮レベルを選択すると、結果のAIPは小さくなりますが、圧縮にも時間がかかります。圧縮レベルが低いと、圧縮は早くなりますが、AIPは大きくなります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:409
+msgid ""
+"**1 - fastest compression** - the AIP will be compressed as quickly as "
+"possible."
+msgstr "**1 - 最速圧縮** - AIPは、できるだけ早く圧縮されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:410
+msgid ""
+"**3 - fast compression** - a larger AIP that will be compressed quickly."
+msgstr "**3 - 高速圧縮** - 速く圧縮されるより大きなAIP。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:411
+msgid ""
+"**5 - normal compression** - the compression tool will strike a balance "
+"between speed and compression to make a moderately-sized, moderately-"
+"compressed AIP.*"
+msgstr "**5 - 通常の圧縮** - 圧縮ツールは、スピードと圧縮のバランスをとり、適度な大きさで適度に圧縮されたAIPを作ります。*"
+
+#: ../../user-manual/administer/dashboard-admin.rst:414
+msgid ""
+"**7 - maximum compression** - a smaller AIP that takes longer to compress."
+msgstr "**7 - 最大圧縮** - AIPが小さくなり、圧縮に時間がかかります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:415
+msgid "**9 - ultra compression** - the smallest possible AIP."
+msgstr "**9 - 超圧縮** - 可能な限り小さなAIP。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:419
+msgid ""
+"If you chose `Uncompressed` or `7z without compression` in the previous "
+"step, the compression level will have no effect on your package."
+msgstr "前のステップで `非圧縮` または `7z圧縮なし` を選択した場合、圧縮レベルは、パッケージに影響しません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:423
+msgid "Store AIP"
+msgstr "AIPの保存"
+
+#: ../../user-manual/administer/dashboard-admin.rst:425
+msgid ""
+"Pausing at the Store AIP microservice allows users to review the AIP "
+"contents prior to storage. If you do not want to manually review AIPs prior "
+"to storage, this can be set to bypass that review step."
+msgstr ""
+"[AIPの保存]マイクロサービスで一時停止すると、ユーザーは、保存前にAIPの内容を確認できます。保存前にAIPを手動でレビューしたくない場合は、このレビューステップをバイパスするように設定できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:432
+msgid "**Yes** - the AIP is marked for storage automatically."
+msgstr "**はい** - AIPは、自動的に保存用にマークされます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:435
+msgid "Store AIP location"
+msgstr "[AIPの保存]の場所"
+
+#: ../../user-manual/administer/dashboard-admin.rst:437
+msgid ""
+"Once the previous step is approved, the AIP can be automatically sent to a "
+"specified storage location by setting the preferred location."
+msgstr "前のステップが承認されると、優先場所を設定することにより、AIPを指定された保存場所に自動的に送ることができます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:443
+msgid ""
+"**Default location** - the AIP is stored in the AIP storage location that "
+"has been defined as the default in the Storage Service."
+msgstr "**デフォルトの場所** - AIPは、ストレージサービス でデフォルトとして定義されたAIP保存場所に保存されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:445
+msgid ""
+"**[Other storage locations]** - any other AIP storage locations that are "
+"available will also appear on this list."
+msgstr "**[その他の保存場所]** - 利用可能なその他のAIP保存場所もこのリストに表示されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:449
+msgid "Upload DIP"
+msgstr "DIPのアップロード"
+
+#: ../../user-manual/administer/dashboard-admin.rst:451
+msgid ""
+"If a DIP was created, it can be automatically sent to an access system for "
+"which there is an Archivematica integration."
+msgstr "DIPが作成されると、Archivematicaと統合されているアクセスシステムに自動的に送信されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:457
+msgid ""
+"**Upload DIP to AtoM** - see :ref:`AtoM <upload-atom>` DIP upload "
+"documentation."
+msgstr ""
+"**DIPをAtoMにアップロード** - :ref:`AtoM <upload-atom>` DIPアップロードの文書を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:459
+msgid ""
+"**Upload DIP to ArchivesSpace** - see :ref:`ArchivesSpace <upload-as>` DIP "
+"upload documentation."
+msgstr ""
+"**DIPをArchivesSpaceにアップロード** - :ref:`ArchivesSpace <upload-as>` "
+"DIPアップロードの文書を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:461
+msgid ""
+"**Upload DIP to CONTENTdm** - see :ref:`CONTENTdm <contentdm>` DIP upload "
+"documentation."
+msgstr ""
+"**DIPをCONTENTdmにアップロード** - :ref:`CONTENTdm <contentdm>` "
+"DIPアップロードの文書を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:463
+msgid "**Do not upload** - the DIP will not be uploaded to an access system."
+msgstr "**アップロードしない** - DIPは、アクセスシステムにアップロードされません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:466
+msgid "Store DIP"
+msgstr "DIPの保管"
+
+#: ../../user-manual/administer/dashboard-admin.rst:468
+msgid ""
+"If a DIP was created, it can be stored without interrupting the workflow in "
+"the dashboard. Note that DIP storage is not required, and that DIPs can be "
+"created on demand by :ref:`re-ingesting the AIP <reingest>`."
+msgstr ""
+"DIPが作成された場合、ダッシュボードのワークフローを中断することなく、DIPを保存できます。DIPの保存は、必須ではなく、 :ref:`AIP "
+"<reingest>` を再インジェストすることで、DIPをオンデマンドで作成できることに注意してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:475
+msgid "**Store DIP** - the DIP is marked for storage automatically."
+msgstr "**DIPの保存** - DIPは、自動的に保存用にマークされます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:476
+msgid "**Do not store** - the DIP is discarded."
+msgstr "**保存しない** - DIPは廃棄されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:479
+msgid "Store DIP location"
+msgstr "DIPの保存の場所"
+
+#: ../../user-manual/administer/dashboard-admin.rst:481
+msgid ""
+"If the previous step and this step are configured, all DIPs will be sent to "
+"the selected storage location (unless you have included a custom processing "
+"configuration with the transfer that defines another location)."
+msgstr ""
+"前のステップとこのステップが構成されている場合、すべてのDIPは、選択された保存場所に送信されます（別の場所を定義するカスタム処理設定が転送に含まれている場合を除く）。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:488
+msgid ""
+"**Default location** - the DIP is stored in the DIP storage location that "
+"has been defined as the default in the Storage Service."
+msgstr ""
+"**デフォルトの場所** - DIPは、Storage Serviceでデフォルトとして定義されているDIPストレージの場所に保存されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:490
+msgid ""
+"**[Other storage locations]** - any other DIP storage locations that are "
+"available will also appear on this list."
+msgstr "**[その他の保存場所]** - 利用可能なその他のDIP保存場所もこのリストに表示されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:496
+msgid "General"
+msgstr "一般"
+
+#: ../../user-manual/administer/dashboard-admin.rst:498
+msgid ""
+"In this section, you can configure the following for your Archivematica "
+"client:"
+msgstr "このセクションでは、Archivematicaクライアントの以下の設定を行います："
+
+#: ../../user-manual/administer/dashboard-admin.rst:500
+#: ../../user-manual/administer/dashboard-admin.rst:513
+msgid "Storage Service options"
+msgstr "Storage Serviceオプション"
+
+#: ../../user-manual/administer/dashboard-admin.rst:501
+#: ../../user-manual/administer/dashboard-admin.rst:520
+msgid "Checksum algorithm"
+msgstr "チェックサムアルゴリズム"
+
+#: ../../user-manual/administer/dashboard-admin.rst:502
+#: ../../user-manual/administer/dashboard-admin.rst:527
+msgid "Elasticsearch indexing"
+msgstr "Elasticsearchインデックス作成"
+
+#: ../../user-manual/administer/dashboard-admin.rst:510
+msgid "General configuration options in Administration tab of the dashboard"
+msgstr "ダッシュボードの「管理」タブにある一般設定オプション"
+
+#: ../../user-manual/administer/dashboard-admin.rst:515
+msgid ""
+"This is where you'll find the complete URL for the Storage Service, along "
+"with a username and API key. See the Storage Service documentation for more "
+"information about this feature."
+msgstr ""
+"ここには、ユーザー名とAPIキーとともに、Storage Serviceの完全なURLがあります。この機能の詳細については、Storage "
+"Serviceの文書を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:522
+msgid ""
+"You can select which checksum algorithm Archivematica will use during the "
+"*Assign UUIDs and checksums* microservice in Transfer. Choose between MD5, "
+"SHA-1, SHA-256 and SHA-512."
+msgstr ""
+"転送における *Assign UUIDs and checksums* "
+"マイクロサービスで、Archivematicaがどのチェックサムアルゴリズムを使用するかを選択できます。MD5、SHA-1、SHA-256、SHA-512から選択します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:529
+msgid ""
+"As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch"
+" powers the indexes that are used for searching in the :ref:`Backlog "
+"<backlog>`, :ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage "
+"<archival-storage>`. Installing Archivematica without Elasticsearch results "
+"in reduced consumption of compute resources and lower operational "
+"complexity. Disabling Elasticsearch means that the Backlog, Appraisal, "
+"and/or Archival Storage tabs will not appear in the user interface and their"
+" functionality will not be available."
+msgstr ""
+"Archivematica 1.7では、Elasticsearchのインストールはオプションです。Elasticsearchは、 "
+":ref:`Backlog <backlog>` 、 :ref:`Appraisal <appraisal>` 、 :ref:`Archival "
+"Storage <archival-storage>` "
+"の検索に使用されるインデックスを生成します。Elasticsearchを使用せずにArchivematicaをインストールすると、コンピューティングリソースの消費量が削減され、運用の複雑さが軽減されます。Elasticsearchを無効にすると、ユーザーインターフェースにBacklog、Appraisal、Archival"
+" Storageのタブが表示されなくなり、これらの機能が利用できなくなります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:537
+msgid ""
+"This section in the General configuration shows if Elasticsearch is enabled "
+"or disabled."
+msgstr "一般設定のこのセクションは、Elasticsearchが有効か無効かを示します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:545
+msgid ""
+"The Elasticsearch indexing section reading \"Transfers related indexes "
+"enabled\", \"AIPs related indexes enabled\"."
+msgstr "Elasticsearchインデックス作成セクションの読み取り\"転送関連のインデックスが有効で\"、\"AIPs関連のインデックスが有効です\"。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:545
+msgid "In this example, indexing is enabled for both transfers and AIPs."
+msgstr "この例では、転送とAIPの両方でインデックスが有効です。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:547
+msgid ""
+"It is possible to disable indexing for transfers (the Backlog and Appraisal "
+"tabs), for AIPs (the Archival Storage tab), or for both. For more "
+"information on disabling Elasticsearch, please see :ref:`Elasticsearch "
+"<install-elasticsearch>` in the Administrator Manual."
+msgstr ""
+"転送（「Backlog」と「Appraisal」タブ）、AIP（「Archival "
+"Storage」タブ）、またはその両方のインデックス作成を無効にすることが可能です。Elasticsearchの無効化に関する詳細は、管理者マニュアルの"
+" :ref:`Elasticsearch <install-elasticsearch>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:555
+msgid "Failures"
+msgstr "障害"
+
+#: ../../user-manual/administer/dashboard-admin.rst:557
+msgid "This page displays packages that failed during processing."
+msgstr "このページは、処理中に障害が発生したパッケージを表示します。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:565
+msgid "Failures report in the dashboard"
+msgstr "ダッシュボードの障害レポート"
+
+#: ../../user-manual/administer/dashboard-admin.rst:568
+msgid "Clicking the date, name or UUID will display a report of the failure:"
+msgstr "日付、名前、またはUUIDをクリックすると、障害レポートが表示されます："
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid "Failure report for a failed transfer"
+msgstr "転送に失敗した場合の障害レポート"
+
+#: ../../user-manual/administer/dashboard-admin.rst:575
+msgid ""
+"The failure report can be removed from the Dashboard by clicking Delete."
+msgstr "障害レポートは、削除をクリックすることでダッシュボードから削除できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:580
+msgid "Storage locations"
+msgstr "保存場所"
+
+#: ../../user-manual/administer/dashboard-admin.rst:582
+msgid ""
+"This section of the Administration page displays storage locations that have"
+" been configured for the Archivematica instance. Storage locations are "
+"configured in the :ref:`Storage Service <storageService:administrators>`. "
+"This table presents information from the Storage Service."
+msgstr ""
+"[管理]ページのこのセクションには、Archivematicaインスタンスに設定されている保存場所が表示されます。保存場所は、 "
+":ref:`Storage Service <storageService:administrators>` で設定します。この表は、Storage "
+"Serviceの情報を示しています。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid ""
+"Table showing available storage locations configured for the Archivematica "
+"pipeline"
+msgstr "Archivematicaパイプラインで設定可能なストレージの場所を示す表"
+
+#: ../../user-manual/administer/dashboard-admin.rst:592
+msgid ""
+"The table on the Storage locations page displays the :ref:`purpose "
+"<location-purposes>` of the storage location, the location's description, "
+"how much space has been used, and the path."
+msgstr ""
+"保存場所ページの表には、保存場所の :ref:`目的 <location-purposes>` 、場所の説明、使用済み容量、パスが表示されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:596
+msgid ""
+"If a quota has not been set for the storage location, the location's "
+"available space will be set to *unlimited*. Quotas can be set for some types"
+" of locations through the :ref:`Storage Service <storageService:locations>`."
+msgstr ""
+"保存場所にクォータが設定されていない場合、その場所の利用可能容量は、 *無制限* に設定されます。クォータは、 :ref:`ストレージサービス "
+"<storageService:locations>` を通じて、いくつかのタイプのロケーションに設定できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:600
+msgid ""
+"*Used / available* values are not currently calculated for all types of "
+"storage locations, such as Replicator, Transfer Backlog, and Transfer Source"
+" locations."
+msgstr ""
+"*使用済み/使用可能* 値は、現在、レプリケーター、転送バックログ、転送ソースロケーションなど、すべてのタイプの保存場所では計算されません。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:603
+msgid ""
+"Depending on the configuration of your Archivematica deployment, you may not"
+" see values for all storage locations."
+msgstr "Archivematicaデプロイの構成によっては、すべての保存場所の値が表示されない場合があります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:609
+msgid "Processing storage usage"
+msgstr "処理ストレージ使用状況"
+
+#: ../../user-manual/administer/dashboard-admin.rst:611
+msgid ""
+"This section of the Administration page displays the Archivematica "
+"instance's currently processing locations. Currently processing locations "
+"are used to hold materials while they are being processed, as well as "
+"temporary storage directories for certain types of content - for example, "
+"failed and rejected transfers."
+msgstr ""
+"管理画面のこのセクションには、Archivematicaインスタンスの現在処理中のロケーションが表示されます。現在処理中のロケーションは、処理中の素材を保管するために使用されます。また、失敗した転送や拒否された転送など、特定のタイプのコンテンツの一時的な保管ディレクトリとしても使用されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:617
+msgid ""
+"When you navigate to the page, click **Calculate disk usage** to see how "
+"much disk space is being used. The calculation may take a long time "
+"depending on how your Archivematica instance is configured and the current "
+"disk usage. You can continue to process materials while the disk usage is "
+"being calculated."
+msgstr ""
+"ページに移動したら、 **Calculate disk usage** "
+"をクリックし、ディスク使用量を確認します。Archivematicaインスタンスの構成や現在のディスク使用状況によっては、計算に時間がかかる場合があります。ディスク使用量の計算中は、素材の処理を続けることができます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid ""
+"Processing storage usage area of Administration page before calculation"
+msgstr "計算前の管理ページの処理ストレージ使用状況"
+
+#: ../../user-manual/administer/dashboard-admin.rst:627
+msgid ""
+"Once calculated, there will be a *General information* section that displays"
+" the location where the disk is mounted on the system and its current usage "
+"(if calculable). The shared directory path will also be listed along with "
+"the allocated size and current usage."
+msgstr ""
+"計算されると、 *一般情報* "
+"セクションで、ディスクがシステムにマウントされている場所と現在の使用量（計算可能な場合）が表示されます。共有ディレクトリのパスも、割り当てサイズと現在の使用量とともに表示されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:632
+msgid ""
+"The *Clearable directories* section lists a subset directories located in "
+"the shared directory. The purpose, size, and path for each directory is "
+"listed."
+msgstr ""
+"*クリア可能なディレクトリ* "
+"セクションには、共有ディレクトリにあるサブセットのディレクトリが列挙されます。各ディレクトリの目的、サイズ、パスが記載されています。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid ""
+"Processing storage usage area of Administration page after calculation, "
+"showing a general information section as well as a list of directories and "
+"their usage"
+msgstr "一般的な情報セクションと、ディレクトリとその使用量のリストを表示する、計算後の管理ページの処理ストレージ使用状況エリア"
+
+#: ../../user-manual/administer/dashboard-admin.rst:640
+msgid ""
+"Users can click on the **Clear** button for a directory to delete the "
+"contents of the processing location. It is a good idea to regularly clear "
+"out processing directories to save space on the server."
+msgstr ""
+"ユーザーは、ディレクトリの **Clear** "
+"ボタンをクリックして、処理場所のコンテンツを削除できます。サーバーのスペースを節約するために、処理ディレクトリを定期的にクリアするのは良いアイデアです。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:646
+msgid "The size of an empty directory in Linux is 4 KB."
+msgstr "Linuxの空のディレクトリのサイズは4 KBです。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:651
+msgid "DIP upload"
+msgstr "DIPアップロード"
+
+#: ../../user-manual/administer/dashboard-admin.rst:653
+msgid ""
+"Archivematica has access integrations with three access platforms: AtoM, "
+"Binder, and ArchivesSpace. For more information on Archivematica "
+"integrations, please see the :ref:`Integrations <integrations>` page."
+msgstr ""
+"Archivematicaは、3つのアクセスプラットフォームと統合しています：AtoM、Binder、ArchivesSpaceです。Archivematicaインテグレーションの詳細については、"
+" :ref:`Integrations <integrations>` ページを参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:660
+msgid "AtoM/Binder DIP upload"
+msgstr "AtoM/Binder DIPアップロード"
+
+#: ../../user-manual/administer/dashboard-admin.rst:662
+msgid ""
+"Archivematica can upload DIPs directly to an `AtoM`_ website so that the "
+"contents can be accessed online. Using the same configuration screen, you "
+"can also configure Archivematica to upload DIPs to `Binder`_, which is built"
+" off the AtoM framework."
+msgstr ""
+"Archivematicaは、DIPを `AtoM`_ "
+"ウェブサイトに直接アップロードでき、コンテンツにオンラインでアクセスできます。同じ設定画面を使って、ArchivematicaがDIPを "
+"`Binder`_ にアップロードするようにも設定できます。これはAtoMフレームワークで構築されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:667
+msgid ""
+"For more information on configuring the AtoM/Binder DIP upload parameters "
+"and the servers, please see the :ref:`AtoM/Binder DIP upload <admin-"
+"dashboard-atom>` configuration instructions."
+msgstr ""
+"AtoM/Binder DIPアップロードパラメーターとサーバーの設定に関する詳細は、 :ref:`AtoM/Binder DIPアップロード "
+"<admin-dashboard-atom>` 設定手順を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:671
+msgid "**Levels of description**"
+msgstr "**記述のレベル**"
+
+#: ../../user-manual/administer/dashboard-admin.rst:673
+msgid ""
+"You can fetch levels of description from AtoM so that they can be used for "
+":ref:`SIP arrangement <arrangement>`. From the AtoM/Binder page in the "
+"Administration tab, click on *Levels of Description*, then *Fetch from AtoM*"
+" to get an updated list from the AtoM levels of description taxonomy."
+msgstr ""
+":ref:`SIP配列 <arrangement>` "
+"に使用できるように、AtoMから記述レベルをフェッチできます。管理タブのAtoM/Binderページから、 *Levels of "
+"Description* をクリックし、 *Fetch from AtoM* をクリックすると、AtoMのLevels of "
+"Descriptionタクソノミーから最新のリストを取得できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid ""
+"Levels of description from AtoM shown in Archivematica administration screen"
+msgstr "Archivematicaの管理画面に表示されるAtoMからの説明のレベル"
+
+#: ../../user-manual/administer/dashboard-admin.rst:683
+msgid ""
+"If there are levels of description in the AtoM taxonomy that you prefer not "
+"to use in Archivematica SIP arrange, you can remove them using the red "
+"delete button. You can change the order that they appear in SIP arrange by "
+"using the up/down arrows in this screen."
+msgstr ""
+"AtoMタクソノミーの中にArchivematica SIP "
+"arrangeで使用したくない記述レベルがある場合、赤い削除ボタンで削除できます。この画面の上下矢印で、SIP "
+"arrangeに表示する順番を変更できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:690
+msgid ""
+"You may need an administrator to configure AtoM for DIP uploads from "
+"Archivematica. For administrator instructions, see :ref:`AtoM DIP upload "
+"<admin-dashboard-atom>` in the Administrator manual"
+msgstr ""
+"ArchivematicaからのDIPアップロード用にAtoMを設定するには、管理者が必要な場合があります。管理者の手順については、管理者マニュアルの "
+":ref:`AtoM DIPアップロード <admin-dashboard-atom>` を参照してください"
+
+#: ../../user-manual/administer/dashboard-admin.rst:697
+msgid "ArchivesSpace DIP upload"
+msgstr "ArchivesSpace DIPアップロード"
+
+#: ../../user-manual/administer/dashboard-admin.rst:699
+msgid ""
+"Before ingesting digital objects destined for ArchivesSpace, ensure that the"
+" ArchivesSpace DIP upload settings in the administration tab of the "
+"dashboard have been set."
+msgstr ""
+"ArchivesSpaceにデジタルオブジェクトをインジェストする前に、ダッシュボードの管理タブにあるArchivesSpace "
+"DIPアップロード設定が設定されていることを確認してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:703
+msgid ""
+"For more information on configuring the ArchivesSpace DIP upload parameters,"
+" please see the Admin Manual :ref:`ArchivesSpace DIP upload <admin-"
+"dashboard-AS>` configuration instructions."
+msgstr ""
+"ArchivesSpace DIPアップロードパラメーターの設定については、管理者マニュアル :ref:`ArchivesSpace DIPアップロード"
+" <admin-dashboard-AS>` の設定手順を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:710
+msgid "PREMIS agent"
+msgstr "PREMISエージェント"
+
+#: ../../user-manual/administer/dashboard-admin.rst:712
+msgid ""
+"The PREMIS agent name and code can be set via the administration interface."
+msgstr "PREMISエージェント名とコードは、管理インターフェイスで設定できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:-1
+msgid "PREMIS agent settings in Administration tab"
+msgstr "管理タブでのPREMISエージェント設定"
+
+#: ../../user-manual/administer/dashboard-admin.rst:719
+msgid ""
+"The PREMIS agent information is used in the METS files created by "
+"Archivematica to identify the agency performing the digital preservation "
+"events."
+msgstr ""
+"PREMISエージェント情報は、Archivematicaが作成するMETSファイルで、デジタル保存イベントを実行するエージェンシーを特定するために使用されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:725
+msgid "REST API"
+msgstr "REST API"
+
+#: ../../user-manual/administer/dashboard-admin.rst:727
+msgid ""
+"Archivematica includes a REST API for automating transfer approval. "
+"Artefactual recommends that a technical administrator configure the options "
+"for this feature."
+msgstr ""
+"Archivematicaには、転送承認を自動化するためのREST "
+"APIが含まれています。Artefactualでは、技術管理者がこの機能のオプションを設定することを推奨しています。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:731
+msgid ""
+"To configure Archivematica to use the REST API for automation, see "
+":ref:`Administrator manual - REST API <admin-dashboard-rest>`."
+msgstr ""
+"自動化にREST APIを使用するようにArchivematicaを設定するには、 :ref:`管理者マニュアル - REST API <admin-"
+"dashboard-rest>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:737
+msgid "Users"
+msgstr "ユーザー"
+
+#: ../../user-manual/administer/dashboard-admin.rst:739
+msgid ""
+"The Archivematica dashboard provides a simple cookie-based user "
+"authentication system using the `Django authentication framework`_. Access "
+"to the dashboard is limited to logged-in users and a login page will be "
+"shown when the user is not recognized. If there is no user in the database, "
+"the user creation page will be shown instead so that an administrator user "
+"can be created."
+msgstr ""
+"Archivematicaダッシュボードでは、 `Django認証フレームワーク`_ "
+"を使用したシンプルなクッキーベースのユーザ認証システムを提供しています。ダッシュボードへのアクセスは、ログインしたユーザーに限定され、ユーザーが認識されない場合は、ログインページが表示されます。データベースにユーザーがない場合、代わりにユーザー作成ページが表示され、管理者ユーザーを作成できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:745
+msgid ""
+"Users can be created, modified and deleted from the *Users* section of the "
+"Administration tab. You can add a new user to the system by clicking **Add "
+"new**."
+msgstr ""
+"ユーザーは、[管理]タブの[ *ユーザー]* セクションから作成、変更、削除できます。新規ユーザーをシステムに追加するには、 **新規追加** "
+"をクリックします。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:749
+msgid "Fields:"
+msgstr "フィールド："
+
+#: ../../user-manual/administer/dashboard-admin.rst:751
+msgid ""
+"**Username**: The name that will be used on the login screen. Required, 255 "
+"characters or fewer. Only ASCII letters, numbers, and ``@``, ``.``, ``+``, "
+"``-``, or ``_`` characters may be used."
+msgstr ""
+"**ユーザー名** ：ログイン画面で使用される名前。必須、255文字以下。ASCII文字、数字、 ``@`` 、 ``.`` 、 ``+`` 、 "
+"``-`` 、 ``_`` 文字のみ使用できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:754
+msgid "**First name**: The first name of the user. Optional."
+msgstr "**名前** ：ユーザーのファーストネーム。オプション。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:755
+msgid "**Last name**: The first name of the user. Optional."
+msgstr "**姓** ：ユーザーのファーストネーム。オプション。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:756
+msgid ""
+"**Email address**: The first name of the user. Optional, but must be filled "
+"out if the user would like to receive system emails."
+msgstr "**メールアドレス** ：ユーザーの名前。省略可能ですが、ユーザーがシステムからの電子メールを受信したい場合は入力する必要があります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:758
+msgid ""
+"**Active**: Designates whether this user should be treated as active. "
+"Inactive users will not be able to log in to the Archivematica instance, but"
+" their accounts will be preserved."
+msgstr ""
+"**アクティブ** "
+"：このユーザーをアクティブとして扱うかどうかを指定します。非アクティブユーザーは、Archivematicaインスタンスにログインできませんが、アカウントは保持されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:761
+msgid ""
+"**Administrator**: Check this box to give the user administrative powers. "
+"Administrators can create, edit, and delete other users."
+msgstr "**管理者** ：ユーザーに管理者権限を与えるには、このボックスにチェックを入れます。管理者は、他のユーザーを作成、編集、削除できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:763
+msgid ""
+"**Password**: When creating a new user, you will have to set a password for "
+"them. The user should change the password the first time they log in."
+msgstr ""
+"**パスワード** ：新規ユーザーを作成する際、パスワードを設定する必要があります。ユーザーは、初回ログイン時にパスワードを変更する必要があります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:765
+msgid ""
+"**Password confirmation**: Enter the same password as above, for "
+"verification."
+msgstr "**パスワード確認** ：確認のため、上記と同じパスワードを入力してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:766
+msgid ""
+"**Send system emails?**: If checked, this user will receive system emails, "
+"such as failure notifications and normalization reports. Note that the "
+"Archivematica server must have an associated email server configured."
+msgstr ""
+"**システムメールを送信しますか？** "
+"：チェックを入れると、このユーザーは、障害通知や正規化レポートなどのシステムメールを受信します。Archivematicaサーバーに関連するメールサーバーが設定されている必要があります。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:770
+msgid ""
+"For more information about user creation, deletion, and security, please see"
+" the :ref:`Users <admin-dashboard-users>` section in the Admin Manual."
+msgstr ""
+"ユーザーの作成、削除、セキュリティの詳細については、管理者マニュアルの :ref:`ユーザー <admin-dashboard-users>` "
+"セクションを参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:776
+msgid "Handle Server config"
+msgstr "サーバー設定の処理"
+
+#: ../../user-manual/administer/dashboard-admin.rst:777
+msgid ""
+"Archivematica can to be configured to make requests to a Handle System HTTP "
+"API so that files, directories and entire AIPs can be assigned persistent "
+"identifiers (PIDS) and derived persistent URLs (PURLs)."
+msgstr ""
+"Archivematicaは、ファイル、ディレクトリ、AIP全体に永続識別子（PIDS）と派生永続URL（PURL）を割り当てることができるように、Handle"
+" System HTTP APIへのリクエストを行うように設定できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:784
+msgid "Language"
+msgstr "言語"
+
+#: ../../user-manual/administer/dashboard-admin.rst:786
+msgid "The language menu allows you to choose from select languages."
+msgstr "言語メニューでは、選択した言語から選択できます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:788
+msgid ""
+"Archivematica is translated by volunteers through `Transifex`_. The "
+"completeness of a language is dependent on how many strings have been "
+"translated in Transifex. For information about contributing translations to "
+"the Archivematica project, see :ref:`Translations <translations>`."
+msgstr ""
+"Archivematicaは、 `Transifex`_ "
+"を通じてボランティアによって翻訳されています。言語の完全性は、Transifexで翻訳された文字列の数により異なります。Archivematicaプロジェクトへの翻訳の貢献については、"
+" :ref:`翻訳 <translations>` を参照してください。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:796
+msgid "Version"
+msgstr "バージョン"
+
+#: ../../user-manual/administer/dashboard-admin.rst:797
+msgid "This tab displays the version of Archivematica you're using."
+msgstr "このタブには、使用しているArchivematicaのバージョンが表示されます。"
+
+#: ../../user-manual/administer/dashboard-admin.rst:799
+msgid ":ref:`Back to the top <dashboard-admin>`"
+msgstr ":ref:`トップに戻る <dashboard-admin>`"

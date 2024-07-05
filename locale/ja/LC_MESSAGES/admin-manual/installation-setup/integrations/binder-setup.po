@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:5
+msgid "Using Binder with Archivematica"
+msgstr "ArchivematicaでBinderを使用"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:7
+msgid ""
+"Archivematica |version| has been tested with and is recommended for use with"
+" the latest version of Binder."
+msgstr "Archivematica |version| は、最新バージョンのBinderでテストされており、その使用が推奨されています。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:10
+msgid ""
+"Binder is still very much an experimental application. There are very few "
+"production installations in use today. For more information about the status"
+" of the Binder project, please see the `Binder documentation`_ and the "
+"`Binder GitHub repository`_."
+msgstr ""
+"Binderは、まだ非常に実験的なアプリケーションです。現在使われている生産環境はほとんどありません。Binderプロジェクトの状況については、 "
+"`Binder documentation`_ および `Binder GitHub repository`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:15
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:17
+msgid ":ref:`Install Binder <install-binder>`"
+msgstr ":ref:`Binderのインストール <install-binder>`"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:18
+msgid ":ref:`Configure DIP upload to Binder <config-dip-upload-binder>`"
+msgstr ":ref:`BinderへのDIPアップロードの設定 <config-dip-upload-binder>`"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:19
+msgid ":ref:`User instructions <user-instructions-binder>`"
+msgstr ":ref:`ユーザーへの指示 <user-instructions-binder>`"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:24
+msgid "Install Binder"
+msgstr "Binderのインストール"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:26
+msgid ""
+"The Binder GitHub repository includes `installation instructions`_ for "
+"Binder."
+msgstr "BinderのGitHubリポジトリには、Binderの `インストール手順`_ が含まれています。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:31
+msgid "Configure DIP upload to Binder"
+msgstr "BinderへのDIPアップロードの設定"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:33
+msgid ""
+"The Binder GitHub repository includes `configuration instructions`_ for "
+"Binder."
+msgstr "BinderのGitHubリポジトリには、Binderの `設定手順`_ が含まれています。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:35
+msgid ""
+"You must also configure Binder within Archivematica by entering the "
+"appropriate credentials and information on the Administration tab. See "
+":ref:`AtoM/Binder DIP upload <admin-dashboard-atom>` for more information."
+msgstr ""
+"また、Archivematicaの[管理]タブで適切な認証情報と情報を入力し、Binderを設定する必要があります。詳細は、 "
+":ref:`AtoM/Binder DIPアップロード <admin-dashboard-atom>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:42
+msgid "User instructions"
+msgstr "ユーザーへの指示"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:44
+msgid ""
+"Instructions on how to upload a DIP to Binder can be found in the User "
+"Manual section :ref:`Upload a DIP to Binder <upload-binder>`."
+msgstr ""
+"DIPをBinderにアップロードする方法については、ユーザーマニュアルのセクション「 :ref:`DIPをBinderにアップロード <upload-"
+"binder>` 」を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/binder-setup.rst:47
+msgid ":ref:`Back to the top <binder-setup>`"
+msgstr ":ref:`トップに戻る <binder-setup>`"

@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/metadata/dublincore.rst:5
+msgid "Dublin Core in Archivematica"
+msgstr "Archivematicaのダブリンコア"
+
+#: ../../user-manual/metadata/dublincore.rst:8
+msgid "General description"
+msgstr "概要"
+
+#: ../../user-manual/metadata/dublincore.rst:10
+msgid ""
+"The use of `Dublin Core`_ descriptive metadata, `DCMI Metadata Terms`_, is "
+"supported in Archivematica through both import and manual entry."
+msgstr ""
+"Archivematicaでは、 `Dublin Core`_ 説明メタデータ、 `DCMI Metadata Terms`_ "
+"の使用を、インポートと手入力の両方でサポートしています。"
+
+#: ../../user-manual/metadata/dublincore.rst:13
+msgid ""
+"For instructions on importing metadata with a transfer, please see "
+":ref:`Import metadata <import-metadata>`. Archivematica's metadata import "
+"workflow accepts both ``dc.elements`` and ``dcterms.elements``."
+msgstr ""
+"転送でメタデータをインポートする手順については、 :ref:`メタデータのインポート <import-metadata>` "
+"を参照してください。Archivematica のメタデータインポートワークフローは、 ``dc.elements`` と "
+"``dcterms.elements`` の両方を受け入れます。"
+
+#: ../../user-manual/metadata/dublincore.rst:17
+msgid ""
+"For instructions on adding descriptive metadata through the user interface "
+"during ingest, please see :ref:`Add metadata <add-metadata>`."
+msgstr ""
+"インジェスト中にユーザーインターフェイスを通じて説明メタデータを追加する手順については、 :ref:`Add metadata <add-"
+"metadata>` を参照してください。"
+
+#: ../../user-manual/metadata/dublincore.rst:22
+msgid "Metadata handling"
+msgstr "メタデータの取り扱い"
+
+#: ../../user-manual/metadata/dublincore.rst:24
+msgid ""
+"When descriptive metadata is added through either of the methods described "
+"above, Archivematica handles this metadata by parsing it to the METS file. "
+"For example:"
+msgstr ""
+"上記のいずれかの方法で説明メタデータが追加されると、Archivematica は、このメタデータをMETSファイルにパースして処理します。例えば："
+
+#: ../../user-manual/metadata/dublincore.rst:33
+msgid ""
+"When a DIP is sent to :ref:`AtoM <upload-atom>`, Dublin Core metadata is "
+"parsed into the appropriate fields in the AtoM descriptive template. "
+"Descriptive metadata is also indexed in the Archival Storage tab in "
+"Archivematica; search results will show the AIP, not individual files."
+msgstr ""
+"DIP が :ref:`AtoM <upload-atom>` に送信されると、Dublin Core メタデータは AtoM "
+"説明テンプレートの適切なフィールドに解析されます。説明メタデータは Archivematica の Archival Storage "
+"タブでもインデックス化され、検索結果には個々のファイルではなくAIPが表示されます。"
+
+#: ../../user-manual/metadata/dublincore.rst:38
+msgid ":ref:`Back to the top <dublin_core>`."
+msgstr ":ref:`トップに戻る <dublin_core>` 。"

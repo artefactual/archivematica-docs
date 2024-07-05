@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/dataverse.rst:5
+msgid "Dataverse Integration"
+msgstr "Dataverseの統合"
+
+#: ../../user-manual/transfer/dataverse.rst:10
+msgid "Overview"
+msgstr "概要"
+
+#: ../../user-manual/transfer/dataverse.rst:12
+msgid ""
+"`Dataverse`_ is an open source repository for research data. Archivematica "
+"can be configured to use a Dataverse Repository as a Transfer Source "
+"Location. Dataverse Transfer Source Locations can be configured to display "
+"all available datasets or a subset of them."
+msgstr ""
+"`Dataverse`_ は、研究データのオープンソースリポジトリです。Archivematica は、Dataverse "
+"リポジトリを転送元ロケーションとして使用するように設定できます。Dataverse "
+"転送元ロケーションは、利用可能なすべてのデータセットまたはそのサブセットを表示するように設定できます。"
+
+#: ../../user-manual/transfer/dataverse.rst:17
+msgid ""
+"Datasets are retrieved directly using the Dataverse API and processed using "
+"the Dataverse :ref:`transfer type <transfer-types>`, which enables some "
+"additional processing steps as described below."
+msgstr ""
+"データセットは、Dataverse APIを使って直接取得され、Dataverse :ref:`転送タイプ <transfer-types>` "
+"を使って処理されます。これにより、以下で説明するように、いくつかの追加の処理ステップが可能になります。"
+
+#: ../../user-manual/transfer/dataverse.rst:21
+msgid ""
+"Dataverse integration is supported in Archivematica 1.8 and above, and has "
+"been developed and tested using Dataverse version 4.8.6."
+msgstr ""
+"Dataverse の統合は、Archivematica 1.8 以降でサポートされており、Dataverse バージョン 4.8.6 "
+"を使用して開発およびテストされています。"
+
+#: ../../user-manual/transfer/dataverse.rst:26
+msgid ""
+"There are a number of other enhancements/improvements to the workflow that "
+"could be supported in a future release along with these two issues. Please "
+"see `issues filed in GitHub`_."
+msgstr ""
+"この2つの課題とともに、将来のリリースでサポートされる可能性のあるワークフローの機能強化/改善が他にも多数あります。GitHub`_ "
+"に提出された`issue を参照してください。"
+
+#: ../../user-manual/transfer/dataverse.rst:30
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/transfer/dataverse.rst:32
+msgid ":ref:`Selecting Datasets for preservation <selecting-datasets>`"
+msgstr ":ref:`保存するデータセットの選択 <selecting-datasets>`"
+
+#: ../../user-manual/transfer/dataverse.rst:33
+msgid ":ref:`Dataset contents <dataset-contents>`"
+msgstr ":ref:`データセットの内容 <dataset-contents>`"
+
+#: ../../user-manual/transfer/dataverse.rst:34
+msgid ":ref:`Processing Dataverse datasets <processing-datasets>`"
+msgstr ":ref:`Dataverseのデータセットを処理 <processing-datasets>`"
+
+#: ../../user-manual/transfer/dataverse.rst:35
+msgid ":ref:`Dataverse METS file <dataverse-mets>`"
+msgstr ":ref:`Dataverse METSファイル <dataverse-mets>`"
+
+#: ../../user-manual/transfer/dataverse.rst:36
+msgid ":ref:`AIP METS file <dataverse-aip-mets>`"
+msgstr ":ref:`AIP METSファイル <dataverse-aip-mets>`"
+
+#: ../../user-manual/transfer/dataverse.rst:37
+msgid ":ref:`Configuration <dataverse-configuration>`"
+msgstr ":ref:`設定 <dataverse-configuration>`"
+
+#: ../../user-manual/transfer/dataverse.rst:42
+msgid "Selecting Datasets for preservation"
+msgstr "保存するデータセットの選択"
+
+#: ../../user-manual/transfer/dataverse.rst:44
+msgid ""
+"When a Dataverse Transfer Source Location is selected in the Transfer tab of"
+" the Dashboard, users can browse a list of available datasets. Selecting a "
+"directory icon will expand the view to display the list of files included in"
+" the dataset. Individual files can’t be selected for Transfer."
+msgstr ""
+"ダッシュボードのTransferタブでDataverse Transfer Source "
+"Locationを選択すると、利用可能なデータセットのリストを閲覧できます。ディレクトリアイコンを選択すると、そのデータセットに含まれるファイルのリストが表示されます。個々のファイルを選択して転送することはできません。"
+
+#: ../../user-manual/transfer/dataverse.rst:49
+msgid ""
+"When a Dataverse dataset is selected, the transfer type ‘Dataverse’ must "
+"also be selected."
+msgstr "Dataverseデータセットが選択されている場合、転送タイプ'Dataverse'も選択されていなければなりません。"
+
+#: ../../user-manual/transfer/dataverse.rst:55
+msgid "Dataset contents"
+msgstr "データセットの内容"
+
+#: ../../user-manual/transfer/dataverse.rst:57
+msgid ""
+"Dataverse provides a metadata file called ``dataset.json`` that lists all of"
+" the files included in the dataset as well as other descriptive metadata."
+msgstr ""
+"Dataverseは、 ``dataset.json`` "
+"というメタデータファイルを提供します。このファイルには、データセットに含まれるすべてのファイルと、その他の説明メタデータが含まれています。"
+
+#: ../../user-manual/transfer/dataverse.rst:60
+msgid ""
+"When a dataset includes tabular data files, Dataverse creates derivative "
+"formats and additional metadata files. See the Dataverse guide describing "
+"how a `tabular data file bundle`_ works."
+msgstr ""
+"データセットに表フォーマットのデータファイルが含まれている場合、Dataverseは派生フォーマットと追加のメタデータファイルを作成します。 "
+"`表フォーマットデータファイルバンドル`_ の動作については、Dataverseガイドを参照してください。"
+
+#: ../../user-manual/transfer/dataverse.rst:64
+msgid ""
+"Archivematica detects tabular data file bundles and retrieves all derivative"
+" files and metadata files."
+msgstr "Archivematica は、表形式のデータファイルバンドルを検出し、すべての派生ファイルとメタデータファイルを取得します。"
+
+#: ../../user-manual/transfer/dataverse.rst:70
+msgid "Processing Dataverse datasets"
+msgstr "Dataverseのデータセットを処理"
+
+#: ../../user-manual/transfer/dataverse.rst:72
+msgid ""
+"Archivematica creates a Dataverse METS file to describe the contents and "
+"structure of the dataset as retrieved from Dataverse. Archivematica also "
+"creates an agents.json file, that includes details of the Dataverse instance"
+" configured in the Storage Service. This information is used to populate the"
+" Dataverse PREMIS agent details in the AIP METS."
+msgstr ""
+"Archivematica は、Dataverse から取得したデータセットの内容と構造を記述する Dataverse METS "
+"ファイルを作成します。Archivematica は、Storage Service で構成された Dataverse インスタンスの詳細を含む "
+"Agents.json ファイルも作成します。この情報は、AIP METS に Dataverse PREMIS "
+"エージェントの詳細を入力するために使用されます。"
+
+#: ../../user-manual/transfer/dataverse.rst:78
+msgid ""
+"Fixity checks are conducted using any checksums provided by Dataverse. Other"
+" microservices are carried out as normal (and as configured in the "
+"processing configuration). The final AIP will contain descriptive metadata "
+"provided by Dataverse, attributes to indicate any derivatives generated by "
+"Dataverse, and attributes to indicate the outcome of fixity checks conducted"
+" using checksums provided by Dataverse."
+msgstr ""
+"修正チェックは、Dataverseが提供するチェックサムを使用して行われる。その他のマイクロサービスは通常通り実行されます（処理設定で設定された通りです）。最終的なAIPには、Dataverseによって提供された説明メタデータ、Dataverseによって生成された派生物を示す属性、Dataverseによって提供されたチェックサムを使用して実施されたフィキシティチェックの結果を示す属性が含まれます。"
+
+#: ../../user-manual/transfer/dataverse.rst:87
+msgid ""
+"When you are processing a Dataverse dataset that includes packaged material "
+"(i.e. .zip or .tar files), Archivematica can extract the contents of these "
+"files and run preservation microservices on the contents. This occurs during"
+" *Microservice: Extract packages* on the :ref:`Transfer <transfer>` tab."
+msgstr ""
+"Archivematicaは、パッケージ化された素材（.zipファイルや.tarファイルなど）を含むDataverseデータセットを処理する際に、これらのファイルの内容を抽出し、その内容に対して保存マイクロサービスを実行できます。これは"
+" *マイクロサービス中に発生します：パッケージの抽出* :ref:` 転送 <transfer>` タブにあります。"
+
+#: ../../user-manual/transfer/dataverse.rst:96
+msgid "Dataverse METS file"
+msgstr "Dataverse METSファイル"
+
+#: ../../user-manual/transfer/dataverse.rst:98
+msgid ""
+"Archivematica generates a Dataverse METS file that describes the contents of"
+" the dataset as retrieved from Dataverse. The Dataverse METS includes:"
+msgstr ""
+"Archivematica は、Dataverse から取得したデータセットの内容を記述する Dataverse METS "
+"ファイルを生成します。データバース METS には以下が含まれます："
+
+#: ../../user-manual/transfer/dataverse.rst:101
+msgid "descriptive metadata about the dataset, mapped to the `DDI standard`_"
+msgstr "`DDI 標準`_ にマッピングされた、データセットに関する説明メタデータ"
+
+#: ../../user-manual/transfer/dataverse.rst:103
+msgid ""
+"a ``<mets:fileSec>`` section that lists all files provided, grouped by type "
+"(original, metadata or derivative)"
+msgstr ""
+"提供されたすべてのファイルを一覧表示した ``<mets:fileSec>`` "
+"セクションであり、タイプごとにグループ化（オリジナル、メタデータ、または派生物）"
+
+#: ../../user-manual/transfer/dataverse.rst:106
+msgid ""
+"a ``<mets:structMap>`` section that describes the structure of the files as "
+"provided by Dataverse. This is particularly helpful for understanding which "
+"files were provided in a `tabular data file bundle`_."
+msgstr ""
+"Dataverse によって提供されるファイルの構造を説明する ``<mets:structMap>`` セクション。これは、どのファイルが "
+"`表形式のデータファイルバンドル`_ で提供されているかを理解するのに特に役立ちます。"
+
+#: ../../user-manual/transfer/dataverse.rst:110
+msgid ""
+"The Dataverse METS is found in the final AIP in this location: ``<AIP "
+"Name>/data/objects/metadata/transfers/<transfer name>/METS.xml`` (This is "
+"also where you will find the dataset.json metadata file provided by "
+"Dataverse, and the agents.json metadata file created by Archivematica)."
+msgstr ""
+"Dataverse METS は、次の場所の最終 AIP にあります。 ``<AIP "
+"Name>/data/objects/metadata/transfers/<transfer name>/METS.xml`` "
+"（ここには、Dataverse によって提供される dataset.json メタデータ ファイルと、Archivematica によって作成された "
+"agents.json メタデータ ファイルもあります）。"
+
+#: ../../user-manual/transfer/dataverse.rst:118
+msgid "AIP METS file"
+msgstr "AIP METSファイル"
+
+#: ../../user-manual/transfer/dataverse.rst:120
+msgid ""
+"The Archival Information Package (AIP) METS file follows the basic structure"
+" for a standard Archivematica AIP METS file. Derivatives generated by "
+"Dataverse are indicated using the METS fileGrp attribute (where ``USE "
+"=“derivative”``)."
+msgstr ""
+"Archival Information Package （AIP） METS ファイルは、標準的な Archivematica AIP METS "
+"ファイルの基本構造に従っています。Dataverseによって生成された派生物は、METS fileGrp属性（ここで ``USE "
+"=“derivative”`` ）を使用して示されます。"
+
+#: ../../user-manual/transfer/dataverse.rst:124
+msgid ""
+"The descriptive metadata (dmdSecs) in the Dataverse METS file are copied "
+"over to the AIP METS file."
+msgstr "Dataverse METSファイルの説明メタデータ（dmdSecs）は、AIP METSファイルにコピーされます。"
+
+#: ../../user-manual/transfer/dataverse.rst:127
+msgid ""
+"In the PREMIS Object entity, relationships between original and derivative "
+"tabular format files from Dataverse are described using PREMIS semantic "
+"units. A PREMIS derivation event indicates the derivative file was generated"
+" from the original file, and a Dataverse Agent indicates the Event was "
+"carried out by Dataverse prior to ingest, rather than by Archivematica."
+msgstr ""
+"PREMIS Object エンティティでは、Dataverse からの派生表形式ファイルとオリジナルファイル間の関係は、PREMIS "
+"セマンティックユニットを使用して記述されます。PREMIS派生イベントは、派生ファイルがオリジナルファイルから生成されたことを示し、Dataverseエージェントは、イベントがArchivematicaではなくDataverseによってインジェスト前に実行されたことを示します。"
+
+#: ../../user-manual/transfer/dataverse.rst:133
+msgid ""
+"Fixity checks that use checksums provided by Dataverse are recorded as "
+"PREMIS events using the eventOutcomeDetailNote attribute to indicate the "
+"source of the checksum."
+msgstr ""
+"Dataverse によって提供されるチェックサムを使用する修正性チェックは、eventOutcomeDetailNote "
+"属性を使用してチェックサムのソースを示す PREMIS イベントとして記録されます。"
+
+#: ../../user-manual/transfer/dataverse.rst:140
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../user-manual/transfer/dataverse.rst:142
+msgid ""
+"Integration with a Dataverse repository is configured in the Storage "
+"Service. For detailed instructions, see the :ref:`Administrators Manual "
+"<storageservice:administrators>`."
+msgstr ""
+"Dataverseリポジトリとの統合は、Storage Serviceで設定します。詳細な手順については、 :ref:`管理者マニュアル "
+"<storageservice:administrators>` を参照してください。"
+
+#: ../../user-manual/transfer/dataverse.rst:145
+msgid ":ref:`Back to the top <dataverse>`"
+msgstr ":ref:`トップに戻る <dataverse>`"

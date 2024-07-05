@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:5
+msgid "Advanced installation options"
+msgstr "高度なインストールオプション"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:7
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:9
+msgid ":ref:`Installing for development <development>`"
+msgstr ":ref:`開発のためのインストール <development>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:10
+msgid ":ref:`Scaling Archivematica <installation-scaling>`"
+msgstr ":ref:`Archivematicaのスケーリング <installation-scaling>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:11
+msgid ":ref:`Configuring Archivematica with SSL <SSL-support>`"
+msgstr ":ref:`SSLを使用したArchivematicaの設定 <SSL-support>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:16
+msgid "Install for development"
+msgstr "開発に向けたインストール"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:18
+msgid ""
+"The recommended way to install Archivematica for development is with Docker."
+" For instructions on how to deploy Archivematica in Docker containers, see "
+"the `development environment instructions`_."
+msgstr ""
+"開発用にArchivematicaをインストールするには、Dockerを使用することをお勧めします。DockerコンテナにArchivematicaをデプロイする方法については、"
+" `開発環境の説明`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:25
+msgid "Scaling Archivematica"
+msgstr "Archivematicaのスケーリング"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:27
+msgid ""
+"There are several approaches to installing and configuring Archivematica to "
+"handle large volumes of data and improve system performance."
+msgstr ""
+"大量のデータを処理し、システムのパフォーマンスを向上させるために Archivematica "
+"をインストールし、設定するにはいくつかのアプローチがあります。"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:30
+msgid ""
+"The :ref:`Scaling Archivematica <scaling-archivematica>` section includes:"
+msgstr ":ref:`Archivematicaのスケーリング <scaling-archivematica>` セクションの内容："
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:32
+msgid ":ref:`Scaling up: optimising on one machine <scaling-up>`"
+msgstr ":ref:`スケールアップ：1台のマシンでの最適化 <scaling-up>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:33
+msgid ":ref:`Scaling out: optimising across multiple machines <scaling-out>`"
+msgstr ":ref:`スケールアウト：複数のマシンでの最適化 <scaling-out>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:34
+msgid ":ref:`Process configuration strategies <config-strategies>`"
+msgstr ":ref:`プロセス構成戦略 <config-strategies>`"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:39
+msgid "Configure Archivematica with SSL"
+msgstr "SSLでArchivematicaを設定"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:41
+msgid ""
+"Archivematica can be configured for HTTPS following the `sample "
+"configurations for the dashboard`_ and `sample configurations for the "
+"Storage Service`_."
+msgstr ""
+"Archivematicaは、 `ダッシュボードのサンプル設定`_ および `Storage Serviceのサンプル設定`_ "
+"に従ってHTTPSを設定できます。"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:45
+msgid ""
+"In order to obtain valid SSL certificates trusted by any browser, you can "
+"use `Let's Encrypt`_."
+msgstr "どのブラウザでも信頼できる有効なSSL証明書を取得するには、 `Let's Encrypt`_ をご利用ください。"
+
+#: ../../admin-manual/installation-setup/installation/install-advanced.rst:48
+msgid ":ref:`Back to the top <install-advanced>`"
+msgstr ":ref:`トップに戻る <install-advanced>`"

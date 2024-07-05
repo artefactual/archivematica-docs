@@ -1,0 +1,1434 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:5
+msgid "Dashboard Administration tab"
+msgstr "ダッシュボード管理タブ"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:7
+msgid ""
+"The Archivematica administration pages, under the Administration tab of the "
+"dashboard, allow you to configure application components and manage users."
+msgstr ""
+"ダッシュボードの「管理」タブにあるArchivematicaの管理ページでは、アプリケーションコンポーネントの設定やユーザーの管理を行うことができます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:10
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:12
+msgid ":ref:`Processing configuration <process-config>`"
+msgstr ":ref:`処理設定 <process-config>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:13
+msgid ":ref:`General <admin-dashboard-general>`"
+msgstr ":ref:`一般 <admin-dashboard-general>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:14
+msgid ":ref:`Failures <admin-dashboard-failures>`"
+msgstr ":ref:`障害 <admin-dashboard-failures>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:15
+msgid ":ref:`Transfer source locations <admin-dashboard-transfer-source>`"
+msgstr ":ref:`転送元の場所 <admin-dashboard-transfer-source>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:16
+msgid ":ref:`AIP storage locations <admin-dashboard-AIP-stor>`"
+msgstr ":ref:`AIPの保存場所 <admin-dashboard-AIP-stor>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:17
+msgid ":ref:`Processing storage usage <admin-dashboard-usage>`"
+msgstr ":ref:`処理ストレージ使用状況 <admin-dashboard-usage>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:18
+msgid ":ref:`DIP upload <admin-dashboard-dip-upload>`"
+msgstr ":ref:`DIPアップロード <admin-dashboard-dip-upload>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:20
+msgid ":ref:`AtoM/Binder DIP upload <admin-dashboard-atom>`"
+msgstr ":ref:`AtoM/Binder DIPアップロード <admin-dashboard-atom>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:21
+msgid ":ref:`ArchivesSpace DIP upload <admin-dashboard-AS>`"
+msgstr ":ref:`ArchivesSpace DIPアップロード <admin-dashboard-AS>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:23
+msgid ":ref:`PREMIS agent <admin-dashboard-premis>`"
+msgstr ":ref:`PREMISエージェント <admin-dashboard-premis>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:24
+msgid ":ref:`REST API <admin-dashboard-rest>`"
+msgstr ":ref:`REST API <admin-dashboard-rest>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:25
+msgid ":ref:`Users <admin-dashboard-users>`"
+msgstr ":ref:`ユーザー <admin-dashboard-users>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:26
+msgid ":ref:`Handle Server config <admin-handlenet>`"
+msgstr ":ref:`サーバー設定の処理 <admin-handlenet>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:27
+msgid ":ref:`Language <admin-language-choice>`"
+msgstr ":ref:`言語 <admin-language-choice>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:28
+msgid ":ref:`Version <admin-version>`"
+msgstr ":ref:`バージョン <admin-version>`"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:33
+msgid "Processing configuration"
+msgstr "処理設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:35
+msgid ""
+"The processing configuration administration page of the dashboard allows "
+"users to configure the job decision points presented by Archivematica during"
+" transfer and ingest. When you install Archivematica, there are two default "
+"processing configurations:"
+msgstr ""
+"ダッシュボードの処理設定管理ページでは、転送やインジェストの際にArchivematicaが提示するジョブの決定ポイントを設定できます。Archivematicaをインストールした場合、2つのデフォルトの処理設定があります："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:40
+msgid ""
+"``Default``, which is used for any transfer started manually from the "
+":ref:`Transfer tab <create-transfer>`, automatically via the `automation "
+"tools`_, or in any other context where no other processing configuration is "
+"specified."
+msgstr ""
+"``Default`` は、 :ref:`転送タブ <create-transfer>` から手動で開始される転送、 `自動化ツール`_ "
+"から自動的に開始される転送、または他の処理設定が指定されていないその他のコンテキストで使用されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:43
+msgid ""
+"``Automated``, which is used for transfers automatically started from Jisc "
+"RDSS environments (if you are not a Jisc user, feel free to delete this "
+"configuration)."
+msgstr ""
+"``Automated`` は、Jisc RDSS環境から自動的に開始される転送に使用されます（Jiscユーザーでない場合は、この設定を削除できます）。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Image showing the processing configuration page in the dashboard"
+msgstr "ダッシュボードに処理設定ページを示す画像"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:52
+msgid ""
+"By clicking **Edit**, you will be taken to a form where you can configure "
+"the default processingMCP.xml that governs these decisions. Clicking on "
+"**Add** will allow you to create a new processing configuration. When you "
+"change the options using the web interface the necessary XML will be written"
+" behind the scenes."
+msgstr ""
+"**編集** をクリックすると、これらの決定を管理するデフォルトのprocessingMCP.xmlを設定できるフォームが表示されます。 **追加** "
+"をクリックすると、新しい処理設定を作成できます。ウェブ・インターフェースを使用してオプションを変更すると、必要なXMLが裏で書き込まれます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Image showing the processing configuration edit page in the dashboard"
+msgstr "ダッシュボードに処理設定編集ページを示す画像"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:62
+msgid ""
+"For more information about configuring processing decisions in the "
+"Archivematica dashboard, see :ref:`Processing configuration <dashboard-"
+"processing>` page in the User Manual. The Processing configuration page "
+"contains a list of all of the decision points and their options."
+msgstr ""
+"Archivematicaダッシュボードでの処理決定の設定については、ユーザーマニュアルの :ref:`処理設定 <dashboard-"
+"processing>` ページを参照してください。処理設定ページには、すべての決定ポイントとそのオプションのリストがあります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:67
+msgid ""
+"You can also revert the default and automated processing configurations to "
+"their pre-sets by clicking on **Reset**. Please note that the pre-sets for "
+"the default processing configuration are noted on the :ref:`Processing "
+"configuration <dashboard-processing>` in the User Manual."
+msgstr ""
+"**リセット** "
+"をクリックすることで、デフォルトおよび自動処理設定をプリセットに戻すこともできます。デフォルト処理設定のプリセットは、ユーザーマニュアルの "
+":ref:`処理設定 <dashboard-processing>` に記載されています。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:72
+msgid ""
+"Changes to this form are written to a file called ``processingMCP.xml``. "
+"When you start a transfer in the Archivematica dashboard, it automatically "
+"uses the default processingMCP.xml."
+msgstr ""
+"このフォームへの変更は、 ``processingMCP.xml`` "
+"と名前のファイルに書き込まれます。Archivematicaダッシュボードで転送を開始すると、自動的にデフォルトのprocessingMCP.xmlが使用されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:79
+msgid "Using a custom processing configuration file"
+msgstr "カスタム処理設定ファイルの使用"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:81
+msgid ""
+"For more advanced workflows, you may wants to create multiple processing "
+"configurations - for example, along with the default config, users might "
+"want to have a configuration specific to video files. You can add a new "
+"processing configuration through the user interface by clicking on the "
+"**Add** button."
+msgstr ""
+"より高度なワークフローで、複数の処理コンフィギュレーションを作成したい場合は、例えば、デフォルトのコンフィギュレーションに加えて、ビデオファイルに特化したコンフィギュレーションを作成したい場合があります。ユーザーインターフェイスから、"
+" **追加** ボタンをクリックして、新しい処理設定を追加できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:86
+msgid ""
+"Once you have created a custom processing configuration, you can download "
+"the XML file by clicking on **Download**. Rename this file "
+"``processingMCP.xml``. Then place this file in the root directory of the "
+"transfer. Archivematica will now use the included file to make processing "
+"decisions, rather than the default configuration."
+msgstr ""
+"カスタム処理設定を作成したら、 **ダウンロード** をクリックしてXMLファイルをダウンロードできます。このファイルの名前を "
+"``processingMCP.xml`` "
+"に変更します。このファイルを転送のルートディレクトリに置きます。Archivematicaは、デフォルトの設定ではなく、このファイルを使用して処理を決定します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:92
+msgid "The processingMCP.xml follows a specific XML format:"
+msgstr "processingMCP.xmlは、特定のXMLフォーマットに従っています："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:131
+msgid ""
+"Note that ``appliesTo`` is the UUID associated with the microservice job "
+"presented in the dashboard and ``goToChain`` is the UUID of the desired "
+"selection."
+msgstr ""
+"``appliesTo`` は、ダッシュボードに表示されるマイクロサービスのジョブに関連するUUIDです。 ``goToChain`` "
+"は、希望する選択のUUIDであることに注意してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:138
+msgid "General"
+msgstr "一般"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:140
+msgid ""
+"The General configuration page allows you to connect your Archivematica "
+"instance to the Storage Service and set the default checksum algorithm used "
+"in processing."
+msgstr ""
+"一般設定ページでは、ArchivematicaインスタンスをStorage "
+"Serviceに接続し、処理で使用するデフォルトのチェックサムアルゴリズムを設定します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:150
+msgid "General configuration options in Administration tab of the dashboard"
+msgstr "ダッシュボードの「管理」タブにある一般設定オプション"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:153
+msgid "General configuration"
+msgstr "一般設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:155
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:173
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:317
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:497
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:823
+msgid "Fields:"
+msgstr "フィールド："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:157
+msgid ""
+"**Site URL**: This is the public URL of your Archivematica dashboard. This "
+"field is optional."
+msgstr "**サイトURL** ：Archivematicaダッシュボードの公開URLです。このフィールドはオプションです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:161
+msgid ""
+"Archivematica will try to register itself with the Storage Service. If you "
+"have installed Archivematica with a static URL or IP address, you may not "
+"need to set the Site URL here. However, if you expect the URL or IP address "
+"to change you should use a URL that will not change over time."
+msgstr ""
+"Archivematicaは、Storage "
+"Serviceに登録しようとします。Archivematicaを固定URLまたはIPアドレスでインストールした場合は、ここでサイトURLを設定する必要はありません。ただし、URLまたはIPアドレスが変更されることが予想される場合は、時間が経っても変更されないURLを使用する必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:167
+msgid "Storage Service options"
+msgstr "Storage Serviceオプション"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:169
+msgid ""
+"Archivematica's storage spaces and locations are controlled by a back-end "
+"application called the Storage Service. For more information about the "
+"Storage Service, see the :ref:`Storage Service documentation "
+"<storageservice:index>`."
+msgstr ""
+"Archivematicaのストレージスペースとロケーションは、Storage "
+"Serviceと呼ばれるバックエンドアプリケーションによって制御されます。Storage Serviceの詳細については、 :ref:`Storage "
+"Service文書 <storageservice:index>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:175
+msgid ""
+"**Storage Service URL**: Full URL of the storage service. E.g. "
+"https://192.168.168.192:8000"
+msgstr ""
+"**Storage Service URL** ：Storage "
+"Serviceの完全なURL。例https://192.168.168.192:8000"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:177
+msgid ""
+"**Storage Service User**: User in the Storage Service to authenticate as. "
+"Obtain Storage Service credentials from the Administration tab of the "
+"Storage Service."
+msgstr ""
+"**Storage Serviceユーザー** ：認証するStorage Serviceのユーザー。Storage "
+"Serviceの認証情報をStorage Serviceの管理タブから取得します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:180
+msgid ""
+"**API key**: API key of the storage service user. Obtain Storage Service "
+"credentials from the Administration tab of the Storage Service."
+msgstr ""
+"**APIキー** ：Storage ServiceユーザーのAPIキー。Storage Serviceの管理タブからStorage "
+"Serviceの認証情報を取得します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:182
+msgid ""
+"**Use default configuration**: Check this box if you have deployed the "
+"Storage Service using the default space and location configurations. If you "
+"have set up custom configurations, uncheck it."
+msgstr ""
+"**デフォルト構成を使用** ：デフォルトのスペースと場所の構成を使用してStorage "
+"Serviceをデプロイした場合は、このボックスにチェックを入れます。カスタム構成を設定した場合は、チェックを外します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:187
+msgid "Checksum algorithm"
+msgstr "チェックサムアルゴリズム"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:189
+msgid ""
+"You can select which checksum algorithm Archivematica will use during the "
+"*Assign UUIDs and checksums* microservice in Transfer. Choose between MD5, "
+"SHA-1, SHA-256 and SHA-512."
+msgstr ""
+"転送における *Assign UUIDs and checksums* "
+"マイクロサービスで、Archivematicaがどのチェックサムアルゴリズムを使用するかを選択できます。MD5、SHA-1、SHA-256、SHA-512から選択します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:194
+msgid "Elasticsearch indexing"
+msgstr "Elasticsearchインデックス作成"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:196
+msgid ""
+"As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch"
+" powers the indexes that are used for searching in the :ref:`Backlog "
+"<backlog>`, :ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage "
+"<archival-storage>`. Installing Archivematica without Elasticsearch results "
+"in reduced consumption of compute resources and lower operational "
+"complexity. Disabling Elasticsearch means that the Backlog, Appraisal, "
+"and/or Archival Storage tabs will not appear in the user interface and their"
+" functionality will not be available."
+msgstr ""
+"Archivematica 1.7では、Elasticsearchのインストールはオプションです。Elasticsearchは、 "
+":ref:`Backlog <backlog>` 、 :ref:`Appraisal <appraisal>` 、 :ref:`Archival "
+"Storage <archival-storage>` "
+"の検索に使用されるインデックスを生成します。Elasticsearchを使用せずにArchivematicaをインストールすると、コンピューティングリソースの消費量が削減され、運用の複雑さが軽減されます。Elasticsearchを無効にすると、ユーザーインターフェースにBacklog、Appraisal、Archival"
+" Storageのタブが表示されなくなり、これらの機能が利用できなくなります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:204
+msgid ""
+"This section in the General configuration shows if Elasticsearch is enabled "
+"or disabled."
+msgstr "一般設定のこのセクションは、Elasticsearchが有効か無効かを示します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:212
+msgid ""
+"The Elasticsearch indexing section reading \"Transfers related indexes "
+"enabled\", \"AIPs related indexes enabled\"."
+msgstr "Elasticsearchインデックス作成セクションの読み取り\"転送関連のインデックスが有効で\"、\"AIPs関連のインデックスが有効です\"。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:212
+msgid "In this example, indexing is enabled for both transfers and AIPs."
+msgstr "この例では、転送とAIPの両方でインデックスが有効です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:214
+msgid ""
+"It is possible to disable indexing for transfers (the Backlog and Appraisal "
+"tabs), for AIPs (the Archival Storage tab), or for both. For more "
+"information on disabling Elasticsearch, please see :ref:`Elasticsearch "
+"<install-elasticsearch>` in the Administrator Manual."
+msgstr ""
+"転送（「Backlog」と「Appraisal」タブ）、AIP（「Archival "
+"Storage」タブ）、またはその両方のインデックス作成を無効にすることが可能です。Elasticsearchの無効化に関する詳細は、管理者マニュアルの"
+" :ref:`Elasticsearch <install-elasticsearch>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:222
+msgid "Failures"
+msgstr "障害"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:224
+msgid "This page displays packages that failed during processing."
+msgstr "このページは、処理中に障害が発生したパッケージを表示します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:232
+msgid "Failures report in the dashboard"
+msgstr "ダッシュボードの障害レポート"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:235
+msgid "Clicking the date, name or UUID will display a report of the failure:"
+msgstr "日付、名前、またはUUIDをクリックすると、障害レポートが表示されます："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Failure report for a failed transfer"
+msgstr "転送に失敗した場合の障害レポート"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:242
+msgid ""
+"The failure report can be removed from the Dashboard by clicking Delete."
+msgstr "障害レポートは、削除をクリックすることでダッシュボードから削除できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:247
+msgid "Transfer source location"
+msgstr "転送元の場所"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:249
+msgid ""
+"Archivematica allows you to start transfers using the operating system's "
+"file browser or via a web interface. Source files for transfers, however, "
+"cannot be uploaded using the web interface; they must exist on volumes "
+"accessible to the Archivematica MCP server and configured via the Storage "
+"Service."
+msgstr ""
+"Archivematicaでは、オペレーティングシステムのファイルブラウザまたはWebインターフェイスを使用して転送を開始できます。ただし、ウェブインターフェースを使用してアップロードすることはできません。これらは、Archivematica"
+" MCPサーバーにアクセス可能なボリューム上に存在し、Storage Serviceを介して設定されなければなりません。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:254
+msgid ""
+"When starting a transfer you are required to select one or more directories "
+"of files to add to the transfer."
+msgstr "転送を開始するときは、転送に追加するファイルの1つまたは複数のディレクトリを選択する必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:260
+msgid "AIP storage locations"
+msgstr "AIPの保存場所"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:262
+msgid ""
+"AIP storage directories are directories in which completed AIPs are stored. "
+"Storage directories can be specified in a manner similar to transfer source "
+"directories using the Storage Service."
+msgstr ""
+"AIP保管ディレクトリは、完成したAIPが保管されるディレクトリです。ストレージディレクトリは、Storage "
+"Serviceを使用して、転送元ディレクトリと同様の方法で指定できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:266
+msgid ""
+"You can view your transfer source directories in the Administrative tab of "
+"the dashboard under \"AIP storage locations\"."
+msgstr "\"AIPストレージ場所\"の下にあるダッシュボードの管理タブで、転送元ディレクトリを表示できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:272
+msgid "Processing storage usage"
+msgstr "処理ストレージ使用状況"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:274
+msgid ""
+"This section of the Administration page displays various processing "
+"locations with their current usage of available space."
+msgstr "この管理ページのセクションは、利用可能なスペースの現在の使用状況とともに、様々な処理場所を表示します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Processing storage usage area of Administration page"
+msgstr "管理ページの処理ストレージ使用状況"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:282
+msgid ""
+"Administrators can use the \"clear\" buttons to delete the contents of these"
+" processing locations to make more room on their server."
+msgstr "管理者は、\"clear\"ボタンを使用して、これらの処理場所のコンテンツを削除し、サーバーの空き容量を増やすことができます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:288
+msgid "DIP upload"
+msgstr "DIPアップロード"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:290
+msgid ""
+"Archivematica has access integrations with three access platforms: AtoM, "
+"Binder and ArchivesSpace."
+msgstr ""
+"Archivematicaは、3つのアクセスプラットフォームと統合しています。具体的には、AtoM、Binder、ArchivesSpaceです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:296
+msgid "AtoM/Binder DIP upload"
+msgstr "AtoM/Binder DIPアップロード"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:298
+msgid ""
+"Archivematica can upload DIPs directly to an `AtoM`_ website so that the "
+"contents can be accessed online. Using the same configuration screen, you "
+"can also configure Archivematica to upload DIPs to `Binder`_, which is built"
+" off the AtoM framework."
+msgstr ""
+"Archivematicaは、DIPを `AtoM`_ "
+"ウェブサイトに直接アップロードでき、コンテンツにオンラインでアクセスできます。同じ設定画面を使って、ArchivematicaがDIPを "
+"`Binder`_ にアップロードするようにも設定できます。これはAtoMフレームワークで構築されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:303
+msgid ""
+"The AtoM/Binder DIP upload configuration page is where you specify the "
+"details of the AtoM or Binder installation you'd like the DIPs uploaded to "
+"(and, if using Rsync to transfer the DIP files, Rsync transfer details)."
+msgstr ""
+"AtoM/Binder "
+"DIPアップロード設定ページでは、DIPをアップロードするAtoMまたはBinderの詳細を指定します（DIPファイルの転送にRsyncを使用する場合は、Rsync転送の詳細も指定します）。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:307
+msgid ""
+"Before setting these details, please ensure that you have a working AtoM or "
+"Binder site that is properly connected to Archivematica. See :ref:`Using "
+"AtoM 2.x with Archivematica <atom-setup>` or :ref:`Using Binder with "
+"Archivematica <binder-setup>` for more information."
+msgstr ""
+"これらの詳細を設定する前に、Archivematicaに正しく接続されたAtoMまたはBinderサイトが動作していることを確認してください。詳しくは、"
+" :ref:`Using AtoM 2.x with Archivematica <atom-setup>` または :ref:`Using "
+"Binder with Archivematica <binder-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Configuration screen for AtoM or Binder DIP uploads"
+msgstr "AtoMまたはBinder DIPアップロードの設定画面"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:319
+msgid "**Upload URL**: the URL of the destination AtoM or Binder website."
+msgstr "**URLをアップロード** ：アップロード先のAtoMまたはBinderウェブサイトのURL。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:320
+msgid "**Login email**: the email address used to log in to AtoM or Binder."
+msgstr "**ログインメール** ：AtoMまたはBinderにログインする際に使用するメールアドレス。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:321
+msgid "**Login password**: the password used to log in to AtoM or Binder."
+msgstr "**ログインパスワード** ：AtoMまたはBinderにログインするためのパスワード。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:322
+msgid ""
+"**AtoM/Binder version**: the version of the destination AtoM or Binder "
+"website."
+msgstr "**AtoM/Binderバージョン** ：インストール先のAtoMまたはBinderウェブサイトのバージョン。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:323
+msgid ""
+"**Rsync target**: if you'd like to send the DIP with Rsync before it is "
+"deposited in AtoM or Binder, enter the destination value for rsync, e.g. "
+"``foobar.com:/dips``. This field is optional."
+msgstr ""
+"**Rsyncターゲット** ：DIPをAtoMまたはBinderに預ける前にRsyncで送信したい場合は、rsyncの宛先値を入力します（例： "
+"``foobar.com:/dips`` ）。このフィールドはオプションです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:326
+msgid ""
+"**Rsync command**: if you've entered an Rsync target, specify the remote "
+"shell manually, e.g. ``ssh -p 22222 -l user``. This field is optional."
+msgstr ""
+"**Rsyncコマンド** ：Rsyncターゲットを入力した場合に、リモート・シェルを手動で指定します（例： ``ssh -p 22222 -l "
+"user`` ）。このフィールドはオプションです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:328
+msgid ""
+"**Debug mode**: if you would like to have additional details in failure "
+"reports, also enable debug mode by choosing \"Yes\"."
+msgstr "**デバッグモード** ：障害レポートに詳細を追加したい場合は、\"はい\"を選択して、デバッグモードも有効にします。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:332
+msgid "AtoM DIP upload"
+msgstr "AtoM DIPアップロード"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:334
+msgid ""
+"If AtoM is installed on a remote server, Archivematica uses SSH and rsync to"
+" copy the DIP to a temporary directory on the AtoM server. If Archivematica "
+"and AtoM share a common filesystem (e.g. a shared network directory) this "
+"step is unnecessary."
+msgstr ""
+"AtoMがリモートサーバーにインストールされている場合、Archivematicaは、SSHとrsyncを使用してDIPをAtoMサーバーの一時ディレクトリにコピーします。ArchivematicaとAtoMが共通のファイルシステム（共有ネットワークディレクトリなど）を共有している場合、このステップは不要です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:339
+msgid ""
+"Archivematica sends a REST request to AtoM to tell AtoM which archival "
+"description is the target of the DIP. The DIP target description is "
+"identified by the description's \"slug\".  The actual upload of the DIP "
+"contents to AtoM is done via a background job, and may take some time to "
+"process if a large DIP is uploaded."
+msgstr ""
+"Archivematicaは、RESTリクエストをAtoMに送信し、DIPのターゲットとなるアーカイブ記述をAtoMに伝えます。DIPターゲットの記述は、記述の\"スラッグ\"によって識別されます。AtoMへのDIPコンテンツの実際のアップロードは、バックグラウンドジョブを介して行われ、大規模なDIPがアップロードされる場合、処理に時間がかかることがあります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:345
+msgid ""
+"An AtoM background worker uploads the DIP metadata (METS file) and digital "
+"objects from the temporary directory to AtoM, links them to the target "
+"description, then deletes the temporary files."
+msgstr ""
+"AtoMのバックグラウンドワーカーは、一時ディレクトリからDIPメタデータ（METSファイル）とデジタルオブジェクトをAtoMにアップロードし、それらをターゲット記述にリンクした後、一時ファイルを削除します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:349
+msgid "You will also need to make some changes in the AtoM user interface:"
+msgstr "また、AtoMのユーザーインターフェイスにも変更を加える必要があります："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:351
+msgid ""
+"The SWORD plugin (Admin --> Plugins --> qtSwordPlugin) must be enabled in "
+"order for AtoM to receive uploaded DIPs."
+msgstr ""
+"AtoMがアップロードされたDIPを受信するには、SWORDプラグイン（Admin --> Plugins --> "
+"qtSwordPlugin）を有効にする必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:354
+msgid ""
+"Enabling Job scheduling (Admin --> Settings --> Job scheduling) in version "
+"2.1 or lower is also recommended."
+msgstr ""
+"バージョン2.1以下では、ジョブスケジューリング（Admin --> Settings -->ジョブスケジューリング）を有効にすることも推奨されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:357
+msgid ""
+"When using a SWORD deposit in a location other than `/tmp`, this location "
+"should be set in the global settings (Admin --> Settings --> Global --> "
+"SWORD deposit directory)."
+msgstr ""
+"`/tmp` 以外の場所にSWORDデポジットを使用する場合、この場所はグローバル設定（Admin --> Settings --> Global "
+"--> SWORDデポジットディレクトリ）で設定する必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:361
+msgid ""
+"AtoM DIP upload can use Rsync as a transfer mechanism. Rsync is an open "
+"source utility for efficiently transferring files. The rsync-target "
+"parameter is used to specify an Rsync-style target host/directory pairing, "
+"``foobar.com:~/dips/`` for example. The rsync-command parameter is used to "
+"specify rsync connection options, ``ssh -p 22222 -l user`` for example. If "
+"you are using the rsync option, please see AtoM server configuration below."
+msgstr ""
+"AtoM "
+"DIPアップロードは、転送メカニズムとしてRsyncを使用できます。Rsyncは、ファイルを効率的に転送するためのオープンソースユーティリティです。rsync-"
+"targetパラメーターは、Rsyncスタイルのターゲットホスト/ディレクトリのペアを指定するために使用します（例えば、 "
+"``foobar.com:~/dips/`` ）。rsync-commandパラメーターは、rsync接続オプションを指定するために使用します（例えば、"
+" ``ssh -p 22222 -l user`` ）。rsyncオプションを使用する場合は、以下のAtoMサーバー設定を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:368
+msgid ""
+"To set any parameters for AtoM DIP upload change the values, preserving the "
+"existing format they're specified in, in the ``Command arguments`` field "
+"then click \"Save\"."
+msgstr ""
+"AtoM DIPアップロードのパラメーターを設定するには、 ``Command arguments`` "
+"フィールドで、指定されている既存の形式を保持したまま値を変更し、\"保存\"をクリックします。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:374
+msgid ""
+"If you are planning to use the :ref:`metadata-only DIP upload to AtoM "
+"<upload-metadata-atom>` functionality don't forget to enable the :ref:`API "
+"plugin in AtoM <atom:api-intro>`, generate a API key, and update the ``REST "
+"API key`` field accordingly. Metadata-only DIP upload is only available if "
+"you are using AtoM 2.4 or higher."
+msgstr ""
+":ref:`メタデータのみのDIPアップロードをAtoM <upload-metadata-atom>` "
+"機能に使用する場合は、AtoM<atom:api-intro>`で:ref:`APIプラグインを有効にし、APIキーを生成し、それに応じて ``REST"
+" API key`` フィールドを更新することを忘れないでください。メタデータのみのDIPアップロードは、AtoM "
+"2.4以上を使用している場合のみ利用可能です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:381
+msgid "AtoM server configuration"
+msgstr "AtoMサーバーの設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:383
+msgid ""
+"This server configuration step is necessary to allow Archivematica to log in"
+" to the AtoM server without passwords, and only when the user is deploying "
+"the rsync option described above in the AtoM DIP upload section."
+msgstr ""
+"このサーバー設定手順は、ArchivematicaがパスワードなしでAtoMサーバーにログインできるようにするために必要であり、ユーザーが上記のAtoM"
+" DIPアップロードセクションで説明したrsyncオプションを展開している場合にのみ必要です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:387
+msgid "To enable sending DIPs from Archivematica to the AtoM server:"
+msgstr "ArchivematicaからAtoMサーバーへのDIP送信を有効にします："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:389
+msgid ""
+"Generate SSH keys for the Archivematica user. Leave the passphrase field "
+"blank."
+msgstr "ArchivematicaユーザーのSSHキーを生成します。パスフレーズ欄は空白のままにします。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:397
+msgid ""
+"Copy the contents of ``/var/lib/archivematica/.ssh/id_rsa.pub`` somewhere "
+"handy, you will need it later."
+msgstr ""
+"``/var/lib/archivematica/.ssh/id_rsa.pub`` の内容を手近な場所にコピーしておいてください。後で必要になります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:400
+msgid ""
+"Now, it's time to configure the AtoM server so Archivematica can send the "
+"DIPs using SSH/rsync. For that purpose, you will create a user called "
+"``archivematica`` and we are going to assign that user a restricted shell "
+"with access only to rsync:"
+msgstr ""
+"次に、ArchivematicaがSSH/rsyncを使用してDIPを送信できるようにAtoMサーバーを設定します。そのために、 "
+"``archivematica`` というユーザーを作成し、そのユーザーにrsyncのみにアクセスできる制限付きシェルを割り当てます："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:412
+msgid "Add the SSH key that we generated before:"
+msgstr "先ほど生成したSSHキーを追加します："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:423
+msgid ""
+"AtoM 2.7 has added a new feature that deletes the DIP directory from the "
+"SWORD deposit after uploading the DIP to AtoM. In order for AtoM to delete "
+"this directory, the AtoM user (`www-data` or `nginx` by default) must have "
+"write permissions to this directory in order to delete it. The easiest way "
+"is to use the setfacl command."
+msgstr ""
+"AtoM "
+"2.7では、DIPをAtoMにアップロードした後にSWORDデポジットからDIPディレクトリを削除する新機能が追加されました。AtoMがこのディレクトリを削除するには、AtoMユーザー（デフォルトでは"
+" `www-data` または `nginx` "
+"）がこのディレクトリへの書き込み権限を持っている必要があります。最も簡単な方法は、setfaclコマンドを使用することです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:429
+msgid "Install the `acl` package on Ubuntu or Rocky Linux:"
+msgstr "UbuntuまたはRocky Linuxに `acl` パッケージをインストールします："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:436
+msgid ""
+"Create a new SWORD deposit directory (Use the `nginx` group on Rocky Linux "
+"instead of `www-data`):"
+msgstr ""
+"新しいSWORDデポジット・ディレクトリを作成します（Rocky Linuxでは、 `www-data` の代わりに、 `nginx` "
+"グループを使用します）："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:445
+msgid ""
+"Set the ACL on new directory (Use the `nginx` user on Rocky Linux instead of"
+" `www-data`) :"
+msgstr ""
+"新しいディレクトリにACLを設定します（Rocky Linuxでは、 `www-data` の代わりに、 `nginx` ユーザーを使用します）："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:457
+msgid ""
+"In Archivematica, make sure that you update the ``--rsync-target`` "
+"accordingly. These are the parameters that we are passing to the upload-"
+"qubit microservice. Go to the Administration > Upload DIP page in the "
+"dashboard."
+msgstr ""
+"Archivematicaで、 ``--rsync-target`` を適宜更新してください。これらは、upload-"
+"qubitマイクロサービスに渡すパラメーターです。ダッシュボードでAdministration > Upload DIPページに移動します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:461
+msgid "Generic parameters:"
+msgstr "一般的なパラメーター："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:473
+msgid "Binder DIP upload"
+msgstr "Binder DIPアップロード"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:475
+msgid ""
+"For more information about configuring Binder, please see the :ref:`Binder "
+"integrations page <binder-setup>`."
+msgstr "Binderの設定の詳細については、 :ref:`Binder統合ページ <binder-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:481
+msgid "ArchivesSpace DIP upload"
+msgstr "ArchivesSpace DIPアップロード"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:483
+msgid ""
+"Before ingesting digital objects destined for ArchivesSpace, ensure that the"
+" ArchivesSpace DIP upload settings in the Administration tab of the "
+"dashboard have been set."
+msgstr ""
+"ArchivesSpaceにデジタルオブジェクトをインジェストする前に、ダッシュボードの管理タブにあるArchivesSpace "
+"DIPアップロード設定が設定されていることを確認してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:487
+msgid ""
+"These settings should be created and saved before digital objects destined "
+"for upload to ArchivesSpace are processed. Note that these can be set once "
+"and used for processing any number of transfers (i.e. they do not need to be"
+" re-set for each transfer)."
+msgstr ""
+"これらの設定は、ArchivesSpaceにアップロードするデジタルオブジェクトを処理する前に作成し、保存する必要があります。これらの設定は一度設定すれば、何度でも転送処理に使用できることに注意してください（つまり、転送ごとに再設定する必要はありません）。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "ArchivesSpace configuration settings"
+msgstr "ArchivesSpaceの構成設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:499
+msgid ""
+"**ArchivesSpace host**: the URL of the host database. Do not include "
+"``https://`` or ``www.``, e.g. ``aspace.test.org``."
+msgstr ""
+"**ArchivesSpaceホスト** ：ホストデータベースのURL。 ``https://`` や ``www.`` を含めないでください "
+"``aspace.test.org`` 。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:501
+msgid ""
+"**ArchivesSpace backend port**: the port of the database, e.g. ``8089``."
+msgstr "**ArchivesSpaceバックエンドポート** ：データベースのポート（例： ``8089`` ）。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:502
+msgid ""
+"**ArchivesSpace administrative user**: the username of a user with "
+"administrative permissions in ArchivesSpace."
+msgstr "**ArchivesSpace管理ユーザー** ：ArchivesSpaceの管理者権限を持つユーザーのユーザー名。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:504
+msgid ""
+"**ArchivesSpace administrative user password**: the password for user set "
+"above. If you make changes to this configuration, you will need to re-enter "
+"the password."
+msgstr ""
+"**ArchivesSpace管理ユーザーパスワード** "
+"：上記で設定したユーザーのパスワード。この設定を変更した場合は、パスワードを再入力する必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:507
+msgid ""
+"**Restrictions Apply**: Selecting *Yes* will apply a blanket access "
+"restriction to all content uploaded from Archivematica to ArchivesSpace. "
+"Selecting *No* will send all content to ArchivesSpace without restrictions. "
+"Should you wish to enable the PREMIS-based restrictions functionality, "
+"choose *Base on PREMIS*."
+msgstr ""
+"**制限の適用** ： *はい* を選択すると、ArchivesSpaceにアップロードされたすべてのコンテンツにアクセス制限が適用されます。 "
+"*いいえ* "
+"を選択すると、すべてのコンテンツが制限なしでAchievemeticaからArchivesSpaceに送信されます。PREMISベースの制限機能を有効にするには、"
+" *Base on PREMIS* を選択します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:512
+msgid ""
+"**XLink Show**: indicate how the link to the digital object, as it appears "
+"in ArchivesSpace, should operate."
+msgstr "**XLink表示** ：ArchivesSpaceに表示されるデジタルオブジェクトへのリンクの動作を指定します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:515
+msgid "*Embed*: the digital object screen is embedded in the current window."
+msgstr "*埋め込み* ：デジタルオブジェクト画面が現在のウィンドウに埋め込まれます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:516
+msgid "*New*: the digital object screen opens in a new window."
+msgstr "*新規* ：デジタルオブジェクトの画面が新しいウィンドウで開きます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:517
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:525
+msgid "*None*: no specific behaviour is passed to the link."
+msgstr "*なし* ：特定の振る舞いはリンクに渡されません。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:518
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:528
+msgid "*Other*: no specific behaviour is passed to the link."
+msgstr "*その他* ：特定の振る舞いはリンクに渡されません。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:519
+msgid "*Replace*: the digital object screen opens in the current window."
+msgstr "*置き換え* ：デジタルオブジェクト画面が現在のウィンドウで開きます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:521
+msgid ""
+"**XLink Actuate**: indicates when a digital object should display in "
+"ArchivesSpace (e.g. whether the link occurs automatically or must be "
+"requested by the user). Used in conjunction with XLink Show attribute."
+msgstr ""
+"**XLinkアクチュエート** "
+"：デジタルオブジェクトがArchivesSpaceに表示されるタイミングを示します（例：リンクが自動的に行われるか、ユーザーが要求しなければならないか）。XLink"
+" Show属性と組み合わせて使用します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:526
+msgid ""
+"*onLoad*: link is activated when the document loads (used when Show = "
+"Embed)."
+msgstr "*onLoad* ：文書が読み込まれたときにリンクがアクティブになります（Show = Embedのときに使用します）。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:529
+msgid "*onRequest*: link is activated when the user selects the link."
+msgstr "*onRequest* ：ユーザーがリンクを選択すると、リンクがアクティブになります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:531
+msgid ""
+"**Object Type**: entering a value from ArchivesSpace's controlled list of "
+"object types will apply this value to all objects. This field is optional."
+msgstr ""
+"**オブジェクトタイプ** "
+"：ArchivesSpaceが管理するオブジェクトタイプのリストから値を入力すると、この値がすべてのオブジェクトに適用されます。このフィールドはオプションです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:533
+msgid ""
+"**Use statement**: entering a value from ArchivesSpace's controlled list of "
+"use statements will apply this value to all objects. This field is optional."
+msgstr ""
+"**使用ステートメント** "
+"：ArchivesSpaceの使用ステートメントの管理リストから値を入力すると、この値がすべてのオブジェクトに適用されます。このフィールドはオプションです。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:535
+msgid ""
+"**URL prefix**: the URL of DIP object server as you wish it to appear in "
+"ArchivesSpace record. Example: ``http://example.com``"
+msgstr ""
+"**URL prefix** ：ArchivesSpaceレコードに表示したいDIPオブジェクトサーバーのURL。（例： "
+"``http://example.com`` ）"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:537
+msgid ""
+"**Conditions governing access**: entering a value in this field will "
+"populate the Conditions governing access note in ArchivesSpace for all "
+"objects."
+msgstr ""
+"**アクセスを管理する条件** "
+"：このフィールドに値を入力すると、ArchivesSpaceのアクセスを管理する条件メモにすべてのオブジェクトの値が入力されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:539
+msgid ""
+"**Conditions governing use**: entering a value in this field will populate "
+"the Conditions governing use note in ArchivesSpace for all objects."
+msgstr ""
+"**ユーザーを管理する条件** "
+"：このフィールドに値を入力すると、ArchivesSpaceのすべてのオブジェクトのユーザーを管理する条件メモに入力されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:541
+msgid ""
+"**ArchivesSpace repository number**: the identifier for the ArchivesSpace "
+"repository where you are uploading DIPs. Note that the default identifier "
+"for a single-repository ArchivesSpace instance is *2*."
+msgstr ""
+"**ArchivesSpaceリポジトリ番号** "
+"：DIPをアップロードするArchivesSpaceリポジトリの識別子。単一リポジトリArchivesSpaceインスタンスのデフォルト識別子は *2*"
+" です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:546
+msgid ""
+"In order to save changes to the ArchivesSpace DIP upload configuration, you "
+"must enter the password before clicking save. Note that Archivematica will "
+"*not* display an error if the password is not entered."
+msgstr ""
+"ArchivesSpace "
+"DIPアップロード設定の変更を保存するには、保存をクリックする前にパスワードを入力する必要があります。パスワードが入力されていない場合、Archivematicaは、エラーを表示"
+" *しません* のでご注意ください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:553
+msgid "PREMIS agent"
+msgstr "PREMISエージェント"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:555
+msgid ""
+"The PREMIS agent name and code can be set here via the administration "
+"interface."
+msgstr "PREMISエージェント名とコードは、管理インターフェイスを通じてここで設定できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "PREMIS agent settings in Administration tab"
+msgstr "管理タブでのPREMISエージェント設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:562
+msgid ""
+"The PREMIS agent information is used in the METS files created by "
+"Archivematica to identify the agency performing the digital preservation "
+"events."
+msgstr ""
+"PREMISエージェント情報は、Archivematicaが作成するMETSファイルで、デジタル保存イベントを実行するエージェンシーを特定するために使用されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:568
+msgid "Rest API"
+msgstr "Rest API"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:570
+msgid ""
+"In addition to automation using the ``processingMCP.xml`` file, "
+"Archivematica includes a REST API for automating transfer approval. Using "
+"this API, you can create a custom script that copies a transfer to the "
+"appropriate directory then uses the curl command, or some other means, to "
+"let Archivematica know that the copy is complete."
+msgstr ""
+"``processingMCP.xml`` ファイルを使用した自動化に加え、Archivematicaには転送承認を自動化するためのREST "
+"APIが用意されています。このAPIを使用すると、転送を適切なディレクトリにコピーするカスタムスクリプトを作成し、curlコマンドなどを使用して、Archivematicaにコピーの完了を知らせることができます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:577
+msgid "API keys"
+msgstr "APIキー"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:579
+msgid ""
+"Use of the REST API requires the use of API keys. An API key is associated "
+"with a specific user. To generate an API key for a user:"
+msgstr ""
+"REST APIを使用するには、APIキーの使用が必要です。APIキーは特定のユーザーに関連付けられています。ユーザーのAPIキーを生成するには："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:582
+msgid "Browse to /administration/accounts/list/"
+msgstr "administration/accounts/list/にアクセスしてください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:584
+msgid ""
+"Click the \"Edit\" button for the user you'd like to generate an API key for"
+msgstr "APIキーを生成したいユーザーの\"編集\"ボタンをクリック"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:586
+msgid "Click the \"Regenerate API key\" checkbox"
+msgstr "\"API keyの再生成\"チェックボックスをクリック"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:588
+msgid "Click \"Save\""
+msgstr "\"保存\"をクリック"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:590
+msgid ""
+"After generating an API key, you can click the \"Edit\" button for the user "
+"and you should see the API key."
+msgstr "APIキーを生成した後、そのユーザーの\"編集\"ボタンをクリックすると、APIキーが表示されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:594
+msgid "IP whitelist"
+msgstr "IPホワイトリスト"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:596
+msgid ""
+"The API key is always required but in some cases the administrator may want "
+"to add an additional security measurement. IP whitelisting allows you to "
+"create a list of trusted IP addresses from which you can access to the API."
+msgstr ""
+"APIキーは常に必要ですが、管理者がさらにセキュリティ対策を追加したい場合もあります。IPホワイトリストを使用すると、APIにアクセスできる信頼できるIPアドレスのリストを作成できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:600
+msgid ""
+"The IP whitelist can be edited in the administration interface at "
+"``/administration/api/``. If the whitelist is empty all requests will be "
+"allowed."
+msgstr ""
+"IPホワイトリストは、管理インターフェイスの ``/administration/api/`` "
+"で編集できます。ホワイトリストが空の場合、すべてのリクエストが許可されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:605
+msgid "Approving a transfer"
+msgstr "転送の承認"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:607
+msgid ""
+"The REST API can be used to approve a transfer. The transfer must first be "
+"copied into the appropriate watch directory. To determine the location of "
+"the appropriate watch directory, first figure out where the shared directory"
+" is from the watchDirectoryPath value of "
+"``/etc/archivematica/MCPServer/serverConfig.conf``. Within that directory is"
+" a subdirectory activeTransfers. In this subdirectory are watch directories "
+"for the various transfer types."
+msgstr ""
+"REST "
+"APIを使用して転送を承認できます。転送はまず、適切なウォッチディレクトリにコピーされなければなりません。適切なウォッチディレクトリの場所を特定するには、まず"
+" ``/etc/archivematica/MCPServer/serverConfig.conf`` "
+"のwatchDirectoryPath値から共有ディレクトリの場所を特定します。そのディレクトリ内には、サブディレクトリactiveTransfersがあります。このサブディレクトリには、様々な転送タイプのウォッチディレクトリがあります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:615
+msgid ""
+"When using the REST API to approve a transfer, if a transfer type isn't "
+"specified, the transfer will be deemed a standard transfer."
+msgstr "REST APIを使用して転送を承認する際に、転送タイプが指定されていなければ、転送は標準転送とみなされます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:618
+msgid "**HTTP Method**: POST"
+msgstr "**HTTPメソッド** ：POST"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:620
+msgid "**URL**: /api/transfer/approve"
+msgstr "**URL** ：/api/transfer/approve"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:622
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:654
+msgid "**Parameters**:"
+msgstr "**パラメーター** ："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:624
+msgid "``directory``: directory name of the transfer"
+msgstr "``directory`` ：転送先のディレクトリ名"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:626
+msgid ""
+"``type`` (optional): transfer type [standard|dspace|unzipped bag|zipped bag]"
+msgstr "``type`` （オプション）：転送タイプ[標準 | dspace | アンジップしたバッグ | ジップしたバッグ]"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:628
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:656
+msgid "``api_key``: an API key"
+msgstr "``api_key`` ：API キー"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:630
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:658
+msgid "``username``: the username associated with the API key"
+msgstr "``username`` ：APIキーに関連付けられたユーザー名"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:632
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:660
+msgid "Example curl command:"
+msgstr "curlコマンドの例："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:638
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:666
+msgid "Example result:"
+msgstr "結果の例："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:645
+msgid "Listing unapproved transfers"
+msgstr "未承認転送のリストアップ"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:647
+msgid ""
+"The REST API can be used to get a list of unapproved transfers. Each "
+"transfer's directory name and type is returned."
+msgstr "REST APIを使用すると、未承認転送のリストを取得できます。各転送のディレクトリ名とタイプが返されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:650
+msgid "**Method**: ``GET``"
+msgstr "**メソッド** ： ``GET``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:652
+msgid "**URL**: ``/api/transfer/unapproved``"
+msgstr "**URL** ： ``/api/transfer/unapproved``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:682
+msgid "Users"
+msgstr "ユーザー"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:684
+msgid ""
+"The dashboard provides a simple cookie-based user authentication system "
+"using the `Django authentication framework`_. Access to the dashboard is "
+"limited only to logged-in users and a login page will be shown when the user"
+" is not recognized. If the application can't find any user in the database, "
+"the user creation page will be shown instead, allowing the creation of an "
+"administrator account."
+msgstr ""
+"ダッシュボードは、 `Django認証フレームワーク`_ "
+"を使った、シンプルなクッキーベースのユーザー認証システムを提供します。ダッシュボードへのアクセスはログインユーザーのみに制限され、ユーザーが認識されない場合はログインページが表示されます。アプリケーションがデータベースでユーザーを見つけられない場合は、代わりにユーザー作成ページが表示され、管理者アカウントを作成できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:691
+msgid ""
+"Users can be also created, modified and deleted from the Administration tab."
+" Only users who are administrators can create and edit user accounts."
+msgstr "「管理」タブからユーザーを作成、変更、削除することも可能です。管理者であるユーザーのみがユーザーアカウントを作成および編集できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:694
+msgid ""
+"You can add a new user to the system by clicking the \"Add new\" button on "
+"the user administration page. By adding a user you provide a way to access "
+"Archivematica using a username/password combination. Should you need to "
+"change a user's username or password, you can do so by clicking the \"Edit\""
+" button, corresponding to the user, on the administration page. Should you "
+"need to revoke a user's access, you can click the corresponding \"Delete\" "
+"button."
+msgstr ""
+"ユーザー管理ページの\"新規追加\"ボタンをクリックすると、新しいユーザーを追加できます。ユーザーを追加することで、ユーザー名とパスワードの組み合わせでArchivematicaにアクセスできるようになります。ユーザーのユーザー名またはパスワードを変更する必要がある場合は、管理ページで該当するユーザーの\"編集\"ボタンをクリックします。ユーザーのアクセス権を取り消す必要がある場合は、対応する\"削除\"ボタンをクリックします。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:702
+msgid "CLI creation of administrative users"
+msgstr "CLIによる管理ユーザーの作成"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:704
+msgid ""
+"If you need an additional administrator user one can be created via the "
+"command-line, issue the following commands:"
+msgstr "追加の管理者ユーザーが必要な場合は、コマンドラインで以下のコマンドを実行してください："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:719
+msgid "CLI password resetting"
+msgstr "CLIパスワードのリセット"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:721
+msgid ""
+"If you've forgotten the password for your administrator user, or any other "
+"user, you can change it via the command-line:"
+msgstr "管理者ユーザーやその他のユーザーのパスワードを忘れてしまった場合は、コマンドラインから変更できます："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:736
+msgid "CLI configuration pipeline and registration on the Storage Service"
+msgstr "CLI設定パイプラインとStorage Serviceへの登録"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:738
+msgid ""
+"On new installations, the superuser can be configured and the pipeline "
+"registered on the Storage Service using the command-line instead of the GUI."
+" These commands configure the pipeline and register it on the Storage "
+"Service exactly like the GUI for the initial configuration screen:"
+msgstr ""
+"新規インストールでは、GUIの代わりにコマンドラインを使用して、スーパーユーザーを設定し、Storage "
+"Serviceにパイプラインを登録できます。これらのコマンドは、初期設定画面のGUIとまったく同じように、パイプラインを設定し、Storage "
+"Serviceに登録します："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:764
+msgid "Where:"
+msgstr "ここでは："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:766
+msgid ""
+"``api-key``: API key that will be added to the username <username>. For "
+"example: \"test\", \"4e5f32ab2aefd3577e1b19a2de5d4dd65f90101a\"."
+msgstr ""
+"``api-key`` "
+"：ユーザー名<username>に追加されるAPIキー。例：\"test\",\"4e5f32ab2aefd3577e1b19a2de5d4dd65f90101a\"."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:769
+msgid ""
+"``ss-url``: Archivematica Storage Service URL. For example: "
+"http://example.archivematica.org:8000."
+msgstr ""
+"``ss-url`` ：Archivematica Storage "
+"ServiceのURL。例：http://example.archivematica.org:8000."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:772
+msgid ""
+"``ss-user``: The Storage Service username that will be used to register the "
+"pipeline. This username must already exist in the Storage Service."
+msgstr ""
+"``ss-user`` ：パイプラインの登録に使用するStorage Serviceのユーザー名。このユーザー名はすでにStorage "
+"Serviceに存在している必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:775
+msgid ""
+"``ss-api-key``: The <ss-username> API key. This key must already exist in "
+"the Storage Service for the user <ss-username>."
+msgstr ""
+"``ss-api-key`` ：<ss-username>APIキー。このキーは、ユーザー<ss-username>のStorage "
+"Serviceに既に存在していなければなりません。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:778
+msgid ""
+"``whitelist``: Whitespace-separated list of IP addresses or hostnames "
+"allowed to use the API. If the whitelist is left empty, all IP addresses and"
+" hostnames will be allowed. For example: \"192.168.1.3 "
+"example.archivematica.org 127.0.0.1\" or \"\"."
+msgstr ""
+"``whitelist`` "
+"：APIの使用を許可するIPアドレスまたはホスト名の空白区切りリスト。ホワイトリストを空にすると、すべてのIPアドレスとホスト名が許可されます。例：\"192.168.1.3"
+" example.archivematica.org 127.0.0.1\"または\"\"."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:783
+msgid ""
+"This command is most suitable to use on automated installations, for example"
+" when deploying using Ansible. For manual installations, please use the web "
+"configuration method described in the Post Install Configuration sections:"
+msgstr ""
+"このコマンドは、Ansibleを使用してデプロイする場合など、自動化されたインストールで使用するのに最も適しています。手動でインストールする場合は、インストール後の設定のセクションで説明されているウェブ設定を使用してください："
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:787
+msgid ":ref:`Ubuntu Post Install Configuration <ubuntu-post-install-config>`."
+msgstr ":ref:`Ubuntuインストール後の設定 <ubuntu-post-install-config>` ."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:788
+msgid ""
+":ref:`Rocky Linux Post Install Configuration <rocky-post-install-config>`."
+msgstr ":ref:`Rocky Linuxインストール後の設定 <rocky-post-install-config>` ."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:791
+msgid "Security"
+msgstr "セキュリティ"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:793
+msgid ""
+"Archivematica uses `PBKDF2`_ as the default algorithm to store passwords. "
+"This should be sufficient for most users: it's quite secure, requiring "
+"massive amounts of computing time to break. However, other algorithms could "
+"be used as the following document explains: `How Django stores passwords`_ ."
+msgstr ""
+"Archivematicaは、 `PBKDF2`_ "
+"をデフォルトのアルゴリズムとしてパスワードを保存します。ほとんどのユーザーにとってはこれで十分でしょう。このアルゴリズムは非常に安全で、破るには膨大な計算時間が必要となります。しかし、以下の文書が説明しているように、他のアルゴリズムも使えます："
+" `Djangoがパスワードを保存する方法`_ ."
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:798
+msgid ""
+"Our plan is to extend this functionality in the future adding groups and "
+"granular permissions support."
+msgstr "私たちの計画では、将来的にこの機能を拡張し、グループときめ細かなパーミッションのサポートを追加する予定です。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:804
+msgid "Handle server config"
+msgstr "サーバー設定の処理"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:806
+msgid ""
+"Archivematica can mint persistent identifiers (PIDs) for digital objects, "
+"directories, or AIPs by defining the PIDs in a configured `Handle.Net`_ "
+"registry. Handle.Net can then create persistent URLs (PURLs) from the PIDs "
+"and can reroute requests to the persistent URLs to a target URL that is "
+"configured in Handle.Net."
+msgstr ""
+"Archivematicaは、設定された `Handle.Net`_ "
+"レジストリにPIDを定義することで、デジタルオブジェクト、ディレクトリ、またはAIPの永続識別子（PID）を作成できます。Handle.Netは、PIDから永続URL（PURL）を作成し、永続URLへのリクエストをHandle.Netで設定されたターゲットURLにリルートできます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:814
+msgid ""
+"In order to use the Handle.Net configuration, you will need to provide an "
+"available web service. See the `PID webservice being used by IISH`_ for an "
+"example of a compatible web service."
+msgstr ""
+"Handle.Net設定を使用するには、利用可能なウェブサービスを提供する必要があります。互換性のあるウェブサービスの例として、IISH`_で使用されている`PIDウェブサービスを参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:-1
+msgid "Handle.Net configuration settings"
+msgstr "Handle.Netコンフィギュレーション設定"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:825
+msgid ""
+"**Web service endpoint**: The URL for (POST) requests to create and resolve "
+"PIDs."
+msgstr "**ウェブサービスのエンドポイント** ：PIDの作成と解決のための（POST）リクエスト用URL。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:827
+msgid ""
+"**Web service key**: Web service key needed for authentication to make PID-"
+"binding requests to the PID web service endpoint."
+msgstr "**Webサービスキー** ：PIDウェブサービスエンドポイントへのPIDバインディングリクエストの認証に必要なウェブサービスキー。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:829
+msgid "**Naming authority**: Handle naming authority (e.g., 12345)"
+msgstr "**命名権** ：ハンドル命名権（例：12345）"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:830
+msgid ""
+"**Resolver URL**: The URL to append generated PIDs to in order to create "
+"(potentially qualified) PURLs (persistent URLs) that resolve to the "
+"applicable resolve URL. Note the second \"r\" in \"resolver\"!"
+msgstr ""
+"**リゾルバURL** ：該当するresolve "
+"URLに解決する（潜在的に修飾された）PURL（永続的なURL）を作成するために、生成されたPIDを付加するURL。\"リゾルバ\"の2番目の\"r\"に注意！"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:833
+msgid ""
+"**AIP PID source**: The source of the AIP's persistent identifier. The UUID "
+"of the AIP is the default since it is virtually guaranteed to be unique. "
+"However, the accession number of the transfer may be used, assuming the user"
+" can guarantee a 1-to-1 relationship between the transfer and the AIP."
+msgstr ""
+"**AIP PIDソース** "
+"：AIPの永続的識別子のソース。事実上一意であることが保証されているため、AIPのUUIDがデフォルトです。ただし、ユーザーが転送とAIPの間の1対1の関係を保証できるのであれば、転送のアクセッション番号を使用できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:837
+msgid ""
+"**Verify SSL certificates**: Selecting this box will ensure that "
+"Archivematica verifies SSL certificates when making requests to bind PIDs."
+msgstr ""
+"**SSL証明書の妥当性確認** "
+"：このボックスを選択すると、ArchivematicaがPIDをバインドするリクエストの際にSSL証明書を妥当性確認します。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:839
+msgid ""
+"**Archive resolve URL template**: Template (Django or Jinja2) for the URL "
+"that a unit's PURL should resolve to. Has access to ``pid`` and "
+"``naming_authority`` variables. Example: "
+"``https://access.myinstitution.org/dip/{{ naming_authority }}/{{ pid }}``"
+msgstr ""
+"**Archive解決URLテンプレート** ：ユニットのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。 ``pid`` "
+"と ``naming_authority`` 変数にアクセスできます。例： "
+"``https://access.myinstitution.org/dip/{{ naming_authority }}/{{ pid }}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:843
+msgid ""
+"**METS resolve URL template**: Template (Django or Jinja2) for the URL that "
+"a unit's PURL with the \"mets\" qualifier should resolve to. Has access to "
+"\"pid\" and \"naming_authority\" variables. Example: "
+"``https://access.myinstitution.org/mets/{{ naming_authority }}/{{ pid }}``"
+msgstr ""
+"**METS解決URLテンプレート** "
+"：\"mets\"修飾子を持つユニットのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。\"pid\"と\"naming_authority\"変数にアクセスできます。例："
+" ``https://access.myinstitution.org/mets/{{ naming_authority }}/{{ pid }}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:847
+msgid ""
+"**File resolve URL template**: Template (Django or Jinja2) for the URL that "
+"a file's PURL should resolve to. Has access to \"pid\" and "
+"\"naming_authority\" variables. Example: "
+"``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``"
+msgstr ""
+"**ファイル解決URLテンプレート** "
+"：ファイルのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。\"pid\"と\"naming_authority\"変数にアクセスできます。例："
+" ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid "
+"}}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:851
+msgid ""
+"**Access derivative resolve URL template**: Template (Django or Jinja2) for "
+"the URL that a file's PURL with the \"access\" qualifier should resolve to. "
+"Has access to \"pid\" and \"naming_authority\" variables. Example: "
+"``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid }}``"
+msgstr ""
+"**アクセス派生解決URLテンプレート** "
+"：\"access\"修飾子を持つファイルのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。\"pid\"と\"naming_authority\"変数にアクセスできます。例："
+" ``https://access.myinstitution.org/access/{{ naming_authority }}/{{ pid "
+"}}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:855
+msgid ""
+"**Preservation derivative resolve URL template**: Template (Django or "
+"Jinja2) for the URL that a file's PURL with the \"preservation\" qualifier "
+"should resolve to. Has access to \"pid\" and \"naming_authority\" variables."
+" Example: ``https://access.myinstitution.org/preservation/{{ "
+"naming_authority }}/{{ pid }}``"
+msgstr ""
+"**保存派生解決URLテンプレート** "
+"：\"保存\"修飾子を持つファイルのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。\"pid\"と\"naming_authority\"変数にアクセスできます。例："
+" ``https://access.myinstitution.org/preservation/{{ naming_authority }}/{{ "
+"pid }}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:859
+msgid ""
+"**Original file resolve URL template**: Template (Django or Jinja2) for the "
+"URL that a file's PURL with the \"original\" qualifier should resolve to. "
+"Has access to \"pid\" and \"naming_authority\" variables. Example: "
+"``https://access.myinstitution.org/original/{{ naming_authority }}/{{ pid "
+"}}``"
+msgstr ""
+"**オリジナルファイル解決URLテンプレート** "
+"：\"オリジナル\"修飾子を持つファイルのPURLが解決すべきURLのテンプレート（DjangoまたはJinja2）。\"pid\"と\"naming_authority\"変数にアクセスできます。例："
+" ``https://access.myinstitution.org/original/{{ naming_authority }}/{{ pid "
+"}}``"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:863
+msgid ""
+"**PID/handle request request body template**: Template (Django or Jinja2) "
+"that constructs the HTTP request body using the rendered URL templates "
+"above. Has access to the following variables: \"pid\", \"naming_authority\","
+" \"base_resolve_url\", and \"qualified_resolve_urls\", the last of which is "
+"a list of dicts with \"url\" and \"qualifier\" keys. Example::"
+msgstr ""
+"**PID/handleリクエストボディテンプレート** "
+"：上記のレンダリングされたURLテンプレートを使ってHTTPリクエストボディを構築するテンプレート（DjangoまたはJinja2）。以下の変数にアクセスできます。\"pid\",\"naming_authority\"、\"base_resolve_url\"、\"qualified_resolve_urls\"。最後は、\"url\"と\"qualifier\"をキーとするdictsのリストです。例::"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:898
+msgid "Language"
+msgstr "言語"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:900
+msgid "The language menu allows you to choose from select languages."
+msgstr "言語メニューでは、選択した言語から選択できます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:902
+msgid ""
+"Archivematica is translated by volunteers through `Transifex`_. The "
+"completeness of a language is dependent on how many strings have been "
+"translated in Transifex. For information about contributing translations to "
+"the Archivematica project, see :ref:`Translations <translations>`."
+msgstr ""
+"Archivematicaは、 `Transifex`_ "
+"を通じてボランティアによって翻訳されています。言語の完全性は、Transifexで翻訳された文字列の数により異なります。Archivematicaプロジェクトへの翻訳の貢献については、"
+" :ref:`翻訳 <translations>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:910
+msgid "Version"
+msgstr "バージョン"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:911
+msgid "This tab displays the version of Archivematica you're using."
+msgstr "このタブには、使用しているArchivematicaのバージョンが表示されます。"
+
+#: ../../admin-manual/installation-setup/customization/dashboard-config.rst:913
+msgid ":ref:`Back to the top <dashboard-config>`"
+msgstr ":ref:`トップに戻る <dashboard-config>`"

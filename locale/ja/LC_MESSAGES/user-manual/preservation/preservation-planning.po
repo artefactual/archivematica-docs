@@ -1,0 +1,2229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/preservation/preservation-planning.rst:5
+msgid "Preservation Planning"
+msgstr "保存計画"
+
+#: ../../user-manual/preservation/preservation-planning.rst:7
+msgid ""
+"The Format Policy Registry (FPR) is a database which allows Archivematica "
+"users to define which actions Archivematica should take on a particular file"
+" format - for example, how Archivematica should normalize a JPEG file for "
+"long-term preservation. This is called a format policy, and it defines the "
+"tools, rules, and commands that Archivematica will use to complete the "
+"desired preservation action."
+msgstr ""
+"フォーマットポリシーレジストリ（FPR）は、Archivematicaユーザが特定のファイルフォーマットに対してArchivematicaが行うべきアクションを定義するためのデータベースです。例えば、Archivematica"
+" が JPEG ファイルを長期保存するためにどのように正規化するかを指定します。これはフォーマットポリシーと呼ばれ、Archivematica "
+"が目的の保存アクションを実行するために使用するツール、ルール、コマンドを定義します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:14
+msgid ""
+"Preservation actions such as normalization, package extraction, "
+"characterization, validation, identification, verification, and "
+"transcription are managed in Archivematica's Preservation Planning tab."
+msgstr ""
+"正規化、パッケージ抽出、特性化、妥当性確認、識別、確認、テキスト変換などの保存アクションは、Archivematica の保存計画タブで管理されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:18
+msgid ""
+"When you install Archivematica, default formats, rules and commands are "
+"installed and accessed through the Preservation Planning tab. When you "
+"upgrade to a new release of Archivematica, new formats, rules and commands "
+"may be added (check the release notes for the specific release to find out)."
+" In addition, you can maintain local rules to add new formats or customize "
+"the behaviour of Archivematica. Your local changes are maintained if you "
+"upgrade your Archivematica pipeline to a new version. Archivematica's "
+"default format policies are maintained by Artefactual. Format policies will "
+"change as community standards, practices and tools evolve. If you would like"
+" to suggest a different default format policy, consider opening an issue in "
+"the `Archivematica issues repo`_."
+msgstr ""
+
+#: ../../user-manual/preservation/preservation-planning.rst:30
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/preservation/preservation-planning.rst:32
+msgid ":ref:`Preservation Planning policies <pres-policies>`"
+msgstr ":ref:`保存計画ポリシー <pres-policies>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:33
+msgid ":ref:`Definitions <preservation-planning-definitions>`"
+msgstr ":ref:`定義 <preservation-planning-definitions>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:34
+msgid ":ref:`Altering commands and rules <altering-commands-rules>`"
+msgstr ":ref:`コマンドとルールの変更 <altering-commands-rules>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:35
+msgid ":ref:`Identification <identification>`"
+msgstr ":ref:`識別 <identification>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:36
+msgid ":ref:`Characterization <characterization>`"
+msgstr ":ref:`特性化 <characterization>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:37
+msgid ":ref:`Event Detail <event-detail>`"
+msgstr ":ref:`イベント詳細 <event-detail>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:38
+msgid ":ref:`Extraction <extraction>`"
+msgstr ":ref:`抽出 <extraction>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:39
+msgid ":ref:`Normalization <normalization>`"
+msgstr ":ref:`正規化 <normalization>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:40
+msgid ":ref:`Transcription <transcription>`"
+msgstr ":ref:`テキスト変換 <transcription>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:41
+msgid ":ref:`Validation <validation>`"
+msgstr ":ref:`妥当性確認 <validation>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:43
+msgid ":ref:`JHOVE <fpr-jhove>`"
+msgstr ":ref:`JHOVE <fpr-jhove>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:44
+msgid ":ref:`MediaConch <fpr-mediaconch>`"
+msgstr ":ref:`MediaConch <fpr-mediaconch>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:46
+msgid ":ref:`Verification <verification>`"
+msgstr ":ref:`妥当性確認 <verification>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:51
+msgid "Preservation Planning policies"
+msgstr "保存計画ポリシー"
+
+#: ../../user-manual/preservation/preservation-planning.rst:53
+msgid ""
+"It is important for institutions to establish local policies and practices "
+"that include monitoring the digital preservation environment to help inform "
+"format normalization rules over time as standards and tools evolve."
+msgstr ""
+"標準やツールの進化に合わせて、時間の経過とともにフォーマットの正規化ルールを知らせるために、デジタル保存環境の監視を含む地域のポリシーや慣行を確立することが機関にとって重要です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:57
+msgid ""
+"We recommend documenting your policies and practices in accordance with the "
+"TRAC standard for auditing Trusted Digital Repositories (`ISO 16363:2012`_)."
+msgstr ""
+"信頼されるデジタルリポジトリを監査するためのTRAC規格（ `ISO 16363：2012`_ "
+"）に従って、ポリシーとプラクティスを文書化することをお勧めします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:62
+msgid ":ref:`TRAC auditing tool <trac>`"
+msgstr ":ref:`TRAC監査ツール <trac>`"
+
+#: ../../user-manual/preservation/preservation-planning.rst:68
+msgid "Definitions"
+msgstr "定義"
+
+#: ../../user-manual/preservation/preservation-planning.rst:73
+msgid "Format"
+msgstr "フォーマット"
+
+#: ../../user-manual/preservation/preservation-planning.rst:75
+msgid ""
+"A format is a standardized way that information is encoded for for storage "
+"on a digital storage medium. Archivematica recognizes hundreds of file "
+"formats by extracting format information from `PRONOM`_, a technical "
+"registry of file formats maintained by the National Archives of the UK."
+msgstr ""
+"フォーマットとは、デジタルストレージメディアに保存するために情報をエンコードする標準化された方法です。Archivematica "
+"は、英国国立公文書館が管理するファイルフォーマットの技術レジストリである `PRONOM`_ "
+"からフォーマット情報を抽出することにより、数百のファイルフォーマットを認識します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:80
+msgid ""
+"Selecting **Formats** at the top of the left-hand sidebar in the "
+"Preservation Planning tab will take you to the formats view page, which "
+"displays a list of all the formats that Archivematica currently knows about."
+" Each entry in this table is a record representing one or more related "
+"format versions. Each format version is also a record. For example, the "
+"format record for *Graphics Interchange Format* is comprised of format "
+"version records for various versions of the GIF format: GIF 1987a, 1989a, "
+"and Generic gif."
+msgstr ""
+"[保存計画] タブの左側のサイドバーの上部にある **フォーマット** を選択すると、フォーマット表示ページが表示され、Archivematica "
+"が現在認識しているすべてのフォーマットのリストが表示されます。このテーブルの各エントリは、1 つ以上の関連フォーマット "
+"バージョンを表すレコードです。各フォーマットのバージョンも記録となります。たとえば、 *Graphics Interchange Format* "
+"のフォーマットレコードは、GIF フォーマットのさまざまなバージョン (GIF 1987a、1989a、および Generic gif) "
+"のフォーマットバージョンレコードで構成されています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:88
+msgid ""
+"You can add new formats to the FPR at any time by selecting **Create new "
+"format** on the Formats view page. Note that new formats do not need to be "
+"present in PRONOM; if you are dealing with extremely rare or one-off "
+"formats, you can create a completely local format record here."
+msgstr ""
+"Formatsビューページで **Create new format** "
+"を選択すれば、いつでもFPRに新しいフォーマットを追加できます。新しい書式はPRONOMに存在する必要はないことに注意してください。極めて稀な書式や一度しか使わない書式を扱う場合は、ここで完全にローカルな書式レコードを作成できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:93
+#: ../../user-manual/preservation/preservation-planning.rst:101
+#: ../../user-manual/preservation/preservation-planning.rst:272
+#: ../../user-manual/preservation/preservation-planning.rst:302
+msgid "Fields:"
+msgstr "フィールド："
+
+#: ../../user-manual/preservation/preservation-planning.rst:95
+msgid "**Group**: see Format Group, below."
+msgstr "**グループ** ：以下のフォーマットグループを参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:96
+msgid "**Description**: the name of the format."
+msgstr "**説明** ：フォーマットの名前。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:98
+msgid ""
+"Once you have created a format, you can add a format version to record more "
+"precise details about the format."
+msgstr "フォーマットを作成したら、フォーマットのバージョンを追加して、フォーマットのより詳細な情報を記録できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:103
+msgid ""
+"**Description**: the name of the format version. This text will be used to "
+"specify the format type in the METS file. This field is required."
+msgstr ""
+"**説明** "
+"：フォーマットバージョンの名前。このテキストは、METSファイルのフォーマットタイプを指定するために使用されます。このフィールドは必須です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:105
+msgid ""
+"**Version**: the version number for this specific format version. For "
+"example, for Adobe Illustrator 14 files, you could enter *14*. This field is"
+" required."
+msgstr ""
+"**バージョン** ：この特定のフォーマットのバージョンのバージョン番号。たとえば、Adobe Illustrator 14 ファイルの場合は、 "
+"*14* と入力します。このフィールドは必須です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:107
+msgid ""
+"**Pronom id**: the specific format version's unique identifier in PRONOM, if"
+" it exists. This field is optional."
+msgstr "**Pronom id** ：存在すれば、PRONOMにおける特定のフォーマットのバージョンの一意識別子。このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:109
+msgid ""
+"**Access format**: checking this box indicates that this format version is "
+"an acceptable access format for end users. This field is optional."
+msgstr ""
+"**アクセスフォーマット** "
+"：このボックスにチェックを入れると、このフォーマットのバージョンがエンドユーザーにとって許容できるアクセスフォーマットであることを示します。このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:111
+msgid ""
+"**Preservation format**: checking this box indicates that this format "
+"version is an acceptable preservation format for long-term storage. This "
+"field is optional."
+msgstr ""
+"**保存フォーマット** "
+"：このボックスにチェックを入れると、このフォーマットのバージョンが長期保存に適した保存フォーマットであることを示します。このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:118
+msgid "Format group"
+msgstr "フォーマットグループ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:120
+msgid ""
+"A format group is a convenient grouping of related file formats which share "
+"common properties. For instance, the FPR includes an \"Image (raster)\" "
+"group which contains format records for GIF, JPEG, and PNG. Each format can "
+"belong to one format group."
+msgstr ""
+"フォーマットグループは、共通のプロパティを共有する関連ファイルフォーマットの便利なグループ化です。たとえば、FPR には\"Image "
+"（raster）\" グループがあり、GIF、JPEG、PNG "
+"のフォーマットレコードが含まれています。各フォーマットは1つのフォーマットグループに属します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:125
+msgid ""
+"Selecting **Groups** near the top of the left-hand sidebar in the "
+"Preservation Planning tab will take you to the Format groups view page, "
+"which displays a list of the format groups that Archivematica uses to "
+"categorize formats. Clicking on a format name will display all of the "
+"formats belonging to that group."
+msgstr ""
+"[保存計画] タブの左側のサイドバーの上部近くにある **グループ** を選択すると、[フォーマットグループ] "
+"表示ページが表示されます。ここには、Archivematica "
+"がフォーマットを分類するために使用するフォーマットグループのリストが表示されます。フォーマット名をクリックすると、そのグループに属するすべてのフォーマットが表示されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:130
+msgid "The following format groups come pre-populated in the FPR:"
+msgstr "以下のフォーマットグループは、FPRにあらかじめ入力されています："
+
+#: ../../user-manual/preservation/preservation-planning.rst:132
+msgid "Audio"
+msgstr "オーディオ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:133
+msgid "Binary (Data)"
+msgstr "バイナリ（データ）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:134
+msgid "Binary (Executable)"
+msgstr "バイナリ（実行可能）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:135
+msgid "CAD"
+msgstr "CAD"
+
+#: ../../user-manual/preservation/preservation-planning.rst:136
+msgid "Data Visualization"
+msgstr "データの可視化"
+
+#: ../../user-manual/preservation/preservation-planning.rst:137
+msgid "Database"
+msgstr "データベース"
+
+#: ../../user-manual/preservation/preservation-planning.rst:138
+msgid "Dataset"
+msgstr "データセット"
+
+#: ../../user-manual/preservation/preservation-planning.rst:139
+msgid "Desktop Publishing"
+msgstr "デスクトップパブリッシング"
+
+#: ../../user-manual/preservation/preservation-planning.rst:140
+msgid "Disk Image"
+msgstr "ディスクイメージ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:141
+msgid "Email"
+msgstr "電子メール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:142
+msgid "Flash"
+msgstr "フラッシュ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:143
+msgid "Font"
+msgstr "フォント"
+
+#: ../../user-manual/preservation/preservation-planning.rst:144
+msgid "GIS"
+msgstr "地理情報システム"
+
+#: ../../user-manual/preservation/preservation-planning.rst:145
+msgid "Image (Raster)"
+msgstr "画像（ラスター）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:146
+msgid "Image (Vector)"
+msgstr "画像（ベクター）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:147
+msgid "Package"
+msgstr "パッケージ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:148
+msgid "Portable Document Format"
+msgstr "ポータブル文書フォーマット"
+
+#: ../../user-manual/preservation/preservation-planning.rst:149
+msgid "Presentation"
+msgstr "プレゼンテーション"
+
+#: ../../user-manual/preservation/preservation-planning.rst:150
+msgid "Spreadsheet"
+msgstr "スプレッドシート"
+
+#: ../../user-manual/preservation/preservation-planning.rst:151
+msgid "Statistics"
+msgstr "統計"
+
+#: ../../user-manual/preservation/preservation-planning.rst:152
+msgid "Text (Markup)"
+msgstr "テキスト（マークアップ）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:153
+msgid "Text (Plain)"
+msgstr "テキスト（プレーン）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:154
+msgid "Text (Source Code)"
+msgstr "テキスト（ソースコード）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:155
+msgid "Text (Structured)"
+msgstr "テキスト（構造化）"
+
+#: ../../user-manual/preservation/preservation-planning.rst:156
+msgid "Unknown"
+msgstr "不明"
+
+#: ../../user-manual/preservation/preservation-planning.rst:157
+msgid "Video"
+msgstr "動画"
+
+#: ../../user-manual/preservation/preservation-planning.rst:158
+msgid "Word Processing"
+msgstr "ワープロ"
+
+#: ../../user-manual/preservation/preservation-planning.rst:160
+msgid ""
+"Please note that a format group is manually assigned each time new data is "
+"imported into Archivematica from PRONOM. If you think that a format has been"
+" miscategorized, you can change it by editing the format. If you think that "
+"the change is relevant to other users, consider opening an issue in the "
+"`Archivematica issues repo`_."
+msgstr ""
+"フォーマットグループは、新しいデータがPRONOMからArchivematicaにインポートされるたびに手動で割り当てられます。フォーマットが誤って分類されていると思われる場合は、フォーマットを編集することで変更できます。その変更が他のユーザーにも関係すると思われる場合は、"
+" `Archivematica issues repo`_ にissueを開くことを検討してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:169
+msgid "Purpose"
+msgstr "目的"
+
+#: ../../user-manual/preservation/preservation-planning.rst:171
+msgid ""
+"Purpose refers to the function that a given tool, rule, or command fulfils "
+"within an Archivematica workflow. This is dependent on the context in which "
+"the tool, rule, or command is deployed. For example, a rule to normalize a "
+"JPG file to TIFF using the tool convert might have the purpose "
+"*Preservation*, implying that the purpose of this rule is to create the TIFF"
+" for long-term preservation."
+msgstr ""
+"「目的」 とは、特定のツール、ルール、またはコマンドが Archivematica "
+"ワークフロー内で果たす機能を指します。これは、ツール、ルール、またはコマンドがデプロイされるコンテキストによって異なります。たとえば、変換ツールを使用して"
+" JPG ファイルを TIFF に正規化するルールには、 *保存* という目的がある場合があります。これは、このルールの目的が長期保存用の TIFF "
+"を作成することであることを意味します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:177
+msgid ""
+"The term Purpose is used in various places within the Preservation Planning "
+"tab. Occasionally a similar term, like *Command usage*, is used instead."
+msgstr ""
+"「目的」という用語は、[保存計画] タブ内のさまざまな場所で使用されます。場合によっては、 *コマンドの使用法* "
+"などの同様の用語が代わりに使用されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:183
+msgid "Tools"
+msgstr "ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:185
+msgid ""
+"Archivematica acts as a wrapper for many open source tools used to carry out"
+" preservation actions. These include digital preservation specific tools "
+"like `FITS`_, used for extracting technical metadata from files, as well as "
+"tools for handling different file formats like `Inkscape`_, which is a "
+"design program used to handle vector images."
+msgstr ""
+"Archivematica は、保存処理に使用される多くのオープンソースツールのラッパーとして機能します。これらのツールには、 `FITS`_ "
+"のようなデジタル保存に特化したツールや、 `Inkscape`_ のような異なるファイルフォーマットを扱うツールなどがあります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:191
+msgid ""
+"The full list of tools can be accessed in the left-hand sidebar by selecting"
+" **Tools** under the *Format policy registry* heading."
+msgstr ""
+"左側のサイドバーで、 *ポリシー レジストリのフォーマット* 見出しの下にある **ツール** を選択すると、ツールの完全なリストにアクセスできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:194
+msgid "Tools are called by commands, and act on formats."
+msgstr "ツールはコマンドによって呼び出され、フォーマットに基づいて動作します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:199
+msgid "Commands"
+msgstr "コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:201
+msgid ""
+"Format policy commands are scripts or command line statements which control "
+"how a tool runs. A command is created for a particular purpose, such as file"
+" identification. For example, during :ref:`Transfer <transfer>` you might "
+"tell Archivematica to identify the format of your files. This tells "
+"Archivematica to run the file identification command - in a default "
+"Archivematica instance, this would be \"Identify using `Siegfried`_\", which"
+" runs the file identification tool Siegfried the files included in the "
+"transfer. This command will be run once on every file in the transfer."
+msgstr ""
+"フォーマットポリシーコマンドは、ツールの実行方法を制御するスクリプトまたはコマンドラインステートメントです。コマンドは、ファイルの識別などの特定の目的のために作成されます。たとえば、"
+" :ref:`転送 <transfer>` 中に、Archivematica "
+"にファイルのフォーマットを識別するように指示できます。これは、Archivematica にファイル識別コマンドを実行するように指示します。デフォルトの"
+" Archivematica インスタンスでは、これは \" `Siegfried`_ を使用して識別する\" となり、転送に含まれるファイル識別ツール"
+" Siegfried を実行します。このコマンドは、転送中のファイルごとに 1 回実行されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:210
+msgid ""
+"To see the current commands for a particular purpose, find the purpose in "
+"the left-hand sidebar (i.e. **Identification**) and select the sub-menu-item"
+" **Commands**."
+msgstr ""
+"特定の目的に対する現在のコマンドを見るには、左側のサイドバーでその目的を見つけ（すなわち、 **識別** ）、サブメニュー項目 **コマンド** "
+"を選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:-1
+msgid "The list of identification commands in Archivematica 1.9"
+msgstr "Archivematica 1.9 の識別コマンドのリスト"
+
+#: ../../user-manual/preservation/preservation-planning.rst:219
+msgid ""
+"Archivematica contains default commands for many different tools. You can "
+"disable or replace these commands at any time."
+msgstr ""
+"Archivematica には、様々なツールのデフォルトコマンドが含まれています。これらのコマンドは、いつでも無効にしたり、置き換えたりできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:225
+msgid "Rules"
+msgstr "ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:227
+msgid ""
+"Format policy rules associate commands to file formats. Like commands, rules"
+" are created for a particular purpose, such as file normalization. For "
+"example, if you are normalizing files for preservation, you can tell "
+"Archivematica to use the command *Transcoding to jpg with convert* for all "
+"JPG files, while SVG files are converted to PDFs using the command "
+"*Transcoding to pdf with inkscape*. In this way, tools, rules, and commands "
+"all work together to implement preservation policies."
+msgstr ""
+"フォーマット ポリシー ルールは、コマンドをファイル "
+"フォーマットに関連付けます。コマンドと同様に、ルールもファイルの正規化など特定の目的のために作成されます。例えば、保存のためにファイルを正規化する場合、Archivematica"
+" に、すべての JPG ファイルに対して *Transcoding to jpg with convert* "
+"というコマンドを使うように指示できます。一方、SVG ファイルは、 *Transcoding to pdf with inkscape* "
+"というコマンドを使って PDF に変換されます。このように、ツール、ルール、コマンドはすべて、保存ポリシーを実行するために連携します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:235
+#: ../../user-manual/preservation/preservation-planning.rst:321
+msgid ""
+"To see the current rules for a particular purpose, find the purpose in the "
+"left-hand sidebar (i.e. **Normalization**) and select the sub-menu-item "
+"**Rules**."
+msgstr ""
+"特定の目的に対する現在のルールを見るには、左側のサイドバーでその目的を見つけ（すなわち、 **正規化** ）、サブメニュー項目 **ルール** "
+"を選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:-1
+msgid "The list of normalization rules in Archivematica 1.7.2"
+msgstr "Archivematica 1.7.2 の正規化ルールのリスト"
+
+#: ../../user-manual/preservation/preservation-planning.rst:244
+msgid ""
+"Archivematica contains default rules for many different commands. You can "
+"disable or replace these rules at any time."
+msgstr ""
+"Archivematica には、様々なコマンドのデフォルトルールが含まれています。これらのルールはいつでも無効にしたり、置き換えたりできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:250
+msgid "Altering commands and rules"
+msgstr "コマンドとルールの変更"
+
+#: ../../user-manual/preservation/preservation-planning.rst:255
+msgid "Writing commands"
+msgstr "コマンドを書く"
+
+#: ../../user-manual/preservation/preservation-planning.rst:257
+msgid ""
+"Writing a command for Archivematica to use can vary widely, from adding one "
+"line of bash to a few lines of Python to a full Unix script. As a result, "
+"the expertise needed will vary depending on the context. Regardless of how "
+"complex the script is, we recommend testing your script thoroughly before "
+"using it in a production environment."
+msgstr ""
+"Archivematica "
+"が使用するコマンドの書き方は、bashの1行を追加するものから、Pythonの数行を追加するもの、完全なUnixスクリプトを作成するものまで、多岐にわたります。そのため、必要な専門知識は、コンテキストによって異なります。スクリプトの複雑さにかかわらず、生産環境で使用する前にスクリプトを十分にテストすることをお勧めします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:263
+msgid ""
+"Further down on this page, there is information about each section of the "
+"Preservation Planning tab, which contains specific information regarding the"
+" commands for each section."
+msgstr ""
+"このページのさらに下には、[保存計画] タブの各セクションに関する情報があり、各セクションのコマンドに関する具体的な情報が記載されています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:267
+msgid ""
+"To add a new command, decide which purpose your command will fulfill (i.e. "
+"Identification or Characterization). Then find the purpose in the left-hand "
+"sidebar (i.e. **Characterization**) and select the sub-menu item "
+"**Commands**. Once the Commands page is open, click on **Create new "
+"command**."
+msgstr ""
+"新しいコマンドを追加するには、コマンドの目的を決めます（例：識別または特性化）。次に、左側のサイドバーで目的を見つけ（例： **特性化** "
+"）、サブメニュー項目 **コマンド** を選択します。[コマンド] ページが開いたら、 **新しいコマンドを作成する** をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:274
+#: ../../user-manual/preservation/preservation-planning.rst:304
+msgid "**The related tool**: the tool that this command will call."
+msgstr "**関連ツール** ：このコマンドが呼び出すツール。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:275
+#: ../../user-manual/preservation/preservation-planning.rst:305
+msgid ""
+"**Description**: a human-readable identifier for the command. This will be "
+"displayed to the user through the decision point drop down menu while "
+"processing material."
+msgstr "**説明** ：コマンドの人間が読める識別子。素材の処理中に、決定ポイントのドロップダウンメニューを通じてユーザーに表示されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:278
+msgid ""
+"**Command**: the script's source or the command line statement to execute."
+msgstr "**コマンド** ：スクリプトのソース、または実行するコマンドライン文。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:279
+msgid ""
+"**Script type**: options are \"Bash Script\", \"Python Script\", \"Command "
+"Line\", and \"No shebang\". The first two options will have the appropriate "
+"shebang added as the first line before being executed directly. \"No "
+"shebang\" allows you to write a script in any language as long as the "
+"shebang is included as the first line."
+msgstr ""
+"**スクリプトタイプ** ：オプションは、\"Bash Script\"、\"Python Script\"、\"Command "
+"Line\"、および\"No "
+"shebang\"です。最初の2つのオプションは、直接実行される前に、適切なshebangが最初の行として追加されます。\"No shebang\" "
+"では、shebangが最初の行に含まれていれば、どの言語でもスクリプトを書くことができます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:284
+msgid ""
+"**The related output format**: the format that the command outputs. For "
+"example, if you are writing a command to normalize audio to MP3 using "
+"ffmpeg, select the appropriate MP3 format version from the dropdown. This "
+"field is optional."
+msgstr ""
+"**関連する出力フォーマット** "
+"：コマンドが出力するフォーマット。例えば、ffmpegを使って音声をMP3に正規化するコマンドを書く場合、ドロップダウンから適切なMP3フォーマットのバージョンを選択します。このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:288
+msgid ""
+"**Output location**: The path the normalized file will be written to. This "
+"field is optional."
+msgstr "**出力先** ：正規化されたファイルが書き込まれるパス。このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:290
+msgid ""
+"**Command usage**: the purpose of the command. This will be used by "
+"Archivematica to decide whether a command is appropriate to run in different"
+" circumstances."
+msgstr ""
+"**Command usage** ：コマンドの目的。Archivematica は、この情報をもとに、コマンドの実行が適切かどうかを判断します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:293
+msgid ""
+"**The related verification command**: the command you would like to use to "
+"ensure that the output was created. This field is optional."
+msgstr "**関連する妥当性確認コマンド** ：出力が作成されたことを確認するために使用するコマンド。 このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:295
+msgid ""
+"**The related event detail command**: a related command that provides more "
+"information about the software running this command. This will be written to"
+" the METS file as the \"event detail\" property. This field is optional."
+msgstr ""
+"**関連イベント詳細コマンド** ：このコマンドを実行しているソフトウェアに関する詳細情報を提供する関連コマンド。 "
+"これは、\"イベントの詳細\"プロパティとして METS ファイルに書き込まれます。 このフィールドはオプションです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:299
+msgid ""
+"Commands created for the purpose of identification have slightly different "
+"field options from other commands."
+msgstr "識別の目的で作成されたコマンドには、他のコマンドとは多少異なるフィールドオプションがあります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:308
+msgid "**Configuration** (Identification commands only):"
+msgstr "**設定** （識別コマンドのみ）："
+
+#: ../../user-manual/preservation/preservation-planning.rst:309
+msgid ""
+"**Script type**: options are \"Bash Script\", \"Python Script\", \"Command "
+"Line\", and \"No shebang needed\". The first two options will have the "
+"appropriate shebang added as the first line before being executed directly. "
+"\"No shebang needed\" allows you to write a script in any language as long "
+"as the shebang is included as the first line."
+msgstr ""
+"**スクリプトタイプ** ：オプションには、\"Bash スクリプト\"、\"Python スクリプト\"、\"コマンドライン\"、および "
+"\"シバン不要\"があります。最初の 2 "
+"つのオプションには、直接実行される前に最初の行として適切なシバンが追加されます。\"シバン不要\"では、最初の行にシバンが含まれている限り、任意の言語でスクリプトを作成できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:314
+msgid "**Script**: the script to be executed."
+msgstr "**スクリプト** ：実行されるスクリプト。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:319
+msgid "Changing rules"
+msgstr "ルールの変更"
+
+#: ../../user-manual/preservation/preservation-planning.rst:325
+msgid ""
+"Archivematica contains default rules for many different formats. You can "
+"disable or replace these rules at any time. Note that the format and the "
+"command that you wish to create the rule for must exist before you can "
+"create the rule."
+msgstr ""
+"Archivematica "
+"には、多くの異なるフォーマットに対するデフォルトのルールが含まれています。これらのルールはいつでも無効にしたり、置き換えたりできます。ルールを作成する前に、ルールを作成したいフォーマットとコマンドが存在しなければならないことに注意してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:329
+msgid ""
+"When creating a format policy rule, the following mandatory fields must be "
+"filled out:"
+msgstr "フォーマットポリシールールを作成する場合、以下の必須フィールドを入力する必要があります："
+
+#: ../../user-manual/preservation/preservation-planning.rst:332
+msgid ""
+"**Purpose**: the function of the rule within Archivematica. More information"
+" about the various purpose options can be found below."
+msgstr "**目的** ：Archivematica におけるルールの機能。目的オプションの詳細については、以下を参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:334
+msgid "**Format**: the file format that this rule will act on."
+msgstr "**フォーマット** ：このルールが作用するファイルフォーマット。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:335
+msgid "**Command**: the specific command to call when this rule is used."
+msgstr "**コマンド** ：このルールが使用されたときに呼び出される特定のコマンド。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:337
+msgid ""
+"You can also replace an existing rule by clicking on \"Replace\" beside the "
+"rule. The revision history is tracked and can be viewed by clicking "
+"\"View,\" and then \"Revision history.\""
+msgstr ""
+"ルールの横にある \"置換\" "
+"をクリックして、既存のルールを置き換えることもできます。改訂履歴は追跡され、\"表示\"、次に\"改訂履歴\"の順にクリックすると表示されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:344
+msgid "Identification"
+msgstr "識別"
+
+#: ../../user-manual/preservation/preservation-planning.rst:346
+msgid ""
+"Identification is the process of analyzing given information about a file to"
+" derive its format. Archivematica can do this by using tools that either "
+"look at the file extension of the file or by analyzing the file's signature,"
+" depending on which tool is selected to perform the action. Archivematica "
+"can also be configured to skip file identification, if required."
+msgstr ""
+"識別とは、ファイルに関する与えられた情報を分析し、そのフォーマットを導き出すプロセスです。Archivematica "
+"は、ファイルの拡張子を調べるツールや、ファイルの署名を分析するツールを使って、この作業を行うことができます。Archivematica "
+"は、必要に応じてファイルの識別をスキップするように設定もできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:353
+msgid "Identification tools"
+msgstr "識別ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:355
+msgid "In Archivematica |version|, there are three file identification tools:"
+msgstr "Archivematica |version| には、3つのファイル識別ツールがあります："
+
+#: ../../user-manual/preservation/preservation-planning.rst:357
+msgid ""
+"File Extension, a simple script which identifies files by their file "
+"extension."
+msgstr "ファイル拡張子。ファイル拡張子によってファイルを識別する単純なスクリプトです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:359
+msgid ""
+"`FIDO`_, developed and maintained by the Open Preservation Foundation, which"
+" identifies files by their signature and connects this to a PRONOM ID."
+msgstr ""
+"`FIDO`_ 。Open Preservation Foundation によって開発および維持されており、署名によってファイルを識別し、これを "
+"PRONOM ID に関連付けます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:361
+msgid ""
+"`Siegfried`_, developed and maintained by Richard Lehane, which also "
+"identifies files by their signature and connects this to a PRONOM ID. "
+"Siegfried is the default tool for file identification in Archivematica."
+msgstr ""
+"`Siegfried`_ Richard Lehane 氏が開発・保守しているこのツールは、署名によってファイルを識別し、これを PRONOM ID "
+"に結びつけます。SiegfriedはArchivematicaのデフォルトのファイル識別ツールです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:365
+msgid ""
+"From the Preservation Planning tab you can customize the behaviour of the "
+"existing tools or you can add new file identification tools."
+msgstr "[保存計画]タブでは、既存のツールの振る舞いをカスタマイズしたり、新しいファイル識別ツールを追加したりできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:-1
+msgid "The list of file identification tools in Archivematica 1.9"
+msgstr "Archivematica 1.9のファイル識別ツールのリスト"
+
+#: ../../user-manual/preservation/preservation-planning.rst:374
+msgid "Identification commands"
+msgstr "識別コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:376
+msgid ""
+"Identification commands contain the actual code that a tool will run when "
+"identifying a file. This command will be run on every file in a transfer."
+msgstr ""
+"識別コマンドには、ファイルを識別するときにツールが実行する実際のコードが含まれています。このコマンドは、転送中のすべてのファイルに対して実行されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:379
+msgid ""
+"The default command in Archivematica is to run `Siegfried`_. Only one "
+"command can be enabled at a time - Archivematica will automatically disable "
+"a command if a new one is enabled."
+msgstr ""
+"Archivematica のデフォルトコマンドは、 `Siegfried`_ です。新しいコマンドが有効になると、Archivematica "
+"は、自動的にコマンドを無効にします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:383
+msgid ""
+"When coding a command, you should expect your script to take the path to the"
+" file to be identifed as the first command line argument. When returning an "
+"identification, the tool should print a single line containing only the "
+"identifier, and should exit 0. Any informative, diagnostic, and error "
+"message can be printed to stderr, where it will be visible to Archivematica "
+"users monitoring tool results. On failure, the tool should exit non-zero."
+msgstr ""
+"コマンドをコーディングするときは、スクリプトが最初のコマンドライン引数として識別されるファイルへのパスを取得することを期待する必要があります。ID "
+"を返すとき、ツールは識別子のみを含む 1 行を出力し、0 "
+"で終了する必要があります。情報メッセージ、診断メッセージ、およびエラーメッセージはすべて標準エラー出力に出力でき、ツールの結果を監視している "
+"Archivematica ユーザーに表示されます。失敗すると、ツールはゼロ以外で終了するはずです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:390
+msgid "Identification commands require some familiarity with Unix scripting."
+msgstr "識別コマンドには、Unix スクリプトの知識が必要です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:392
+msgid ""
+"An identification command runs once for every file in a transfer. It will be"
+" passed a single argument (the path to the file to identify), and no "
+"switches."
+msgstr "識別コマンドは、転送中のファイルごとに 1 回実行されます。単一の引数 (識別するファイルへのパス) が渡され、スイッチは渡されません。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:395
+msgid "On success, a command should:"
+msgstr "成功すると、コマンドは次のことを行います："
+
+#: ../../user-manual/preservation/preservation-planning.rst:397
+msgid "Print the identifier to stdout"
+msgstr "識別子を stdout に出力します"
+
+#: ../../user-manual/preservation/preservation-planning.rst:398
+msgid "Exit 0"
+msgstr "終了 0"
+
+#: ../../user-manual/preservation/preservation-planning.rst:400
+msgid "On failure, a command should:"
+msgstr "失敗した場合、コマンドは次のことを行います："
+
+#: ../../user-manual/preservation/preservation-planning.rst:402
+msgid "Print nothing to stdout"
+msgstr "stdout に何も表示しない"
+
+#: ../../user-manual/preservation/preservation-planning.rst:403
+msgid "Exit non-zero"
+msgstr "ゼロ以外で終了"
+
+#: ../../user-manual/preservation/preservation-planning.rst:405
+msgid ""
+"Archivematica does not assign special significance to non-zero exit codes."
+msgstr "Archivematica は、ゼロ以外の終了コードに特別な意味を割り当てません。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:407
+msgid ""
+"A command can print anything to stderr on success or error, but this is "
+"purely informational - Archivematica won't do anything special with it. "
+"Anything printed to stderr by the command will be shown to the user in the "
+"Archivematica dashboard's detailed tool output page. You should print any "
+"useful error output to stderr if identification fails, but you can also "
+"print any useful extra information to stderr if identification succeeds."
+msgstr ""
+"コマンドは、成功時またはエラー時に stderr に何かを出力することができますが、これは単なる情報であり、Archivematica "
+"は、特別な処理を行いません。コマンドによって stderr に出力されたものはすべて、Archivematica "
+"ダッシュボードのツール出力詳細ページに表示されます。識別に失敗した場合は、有用なエラー出力を stderr "
+"に出力する必要がありますが、識別に成功した場合は、有用な追加情報を stderr に出力することもできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:414
+msgid "Here's a Python script that identifies files by their file extension:"
+msgstr "拡張子によってファイルを識別する Python スクリプトです："
+
+#: ../../user-manual/preservation/preservation-planning.rst:425
+msgid ""
+"Here's a more complex Python example, which uses `ExifTool`_ XML output to "
+"return the MIME type of a file:"
+msgstr ""
+"次に、より複雑な Python の例を示します。これは、 `ExifTool`_ XML 出力を使ってファイルの MIME タイプを返します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:444
+msgid ""
+"Once you've written an identification command, you can register it in the "
+"FPR using the following steps:"
+msgstr "識別コマンドを書いたら、以下の手順でFPRに登録できます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:447
+#: ../../user-manual/preservation/preservation-planning.rst:714
+msgid ""
+"Navigate to the \"Preservation Planning\" tab in the Archivematica "
+"dashboard."
+msgstr "Archivematica ダッシュボードの\"保存計画\" タブに移動します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:448
+#: ../../user-manual/preservation/preservation-planning.rst:715
+msgid "Navigate to the \"Identification Tools\" page, and click \"Create New Tool\"."
+msgstr "\"識別ツール\" ページに移動し、\"新しいツールの作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:449
+#: ../../user-manual/preservation/preservation-planning.rst:716
+msgid ""
+"Fill out the name of the tool and the version number of the tool in use. In "
+"our example, this would be \"exiftool\" and \"9.37\"."
+msgstr "ツールの名前と、使用しているツールのバージョン番号を記入します。この例では、\"exiftool\" と\"9.37\" となります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:451
+#: ../../user-manual/preservation/preservation-planning.rst:474
+#: ../../user-manual/preservation/preservation-planning.rst:718
+msgid "Click \"Create\"."
+msgstr "\"作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:453
+msgid "Next, create a record for the command itself:"
+msgstr "次に、コマンド自体のレコードを作成します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:455
+msgid "Click \"Create New Command\"."
+msgstr "\"新しいコマンドの作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:456
+msgid "Select your tool from the \"Tool\" dropdown box."
+msgstr "\"ツール\" ドロップダウンボックスからツールを選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:457
+msgid ""
+"Fill out the Identifier with text to describe to a user what this tool does."
+" For instance, we might choose \"Identify MIME-type using Exiftool\"."
+msgstr ""
+"このツールの機能をユーザーに説明するテキストを識別子に入力します。たとえば、\"Exiftool を使用して MIME タイプを識別する\" "
+"を選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:459
+#: ../../user-manual/preservation/preservation-planning.rst:726
+msgid "Select the appropriate script type - in this case, \"Python Script\"."
+msgstr "適切なスクリプトの種類を選択します - この場合は、\"Python Script\"です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:460
+msgid "Enter the source code for your script in the \"Command\" box."
+msgstr "\"コマンド\" ボックスにスクリプトのソースコードを入力します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:461
+msgid "Click \"Create Command\"."
+msgstr "\"コマンドの作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:463
+msgid ""
+"Finally, you must create rules which associate the possible outputs of your "
+"tool with the FPR's format records. This needs to be done once for every "
+"supported format; we'll show it with MP3, as an example."
+msgstr ""
+"最後に、ツールの可能な出力を FPR のフォーマットレコードに関連付けるルールを作成する必要があります。これは、サポートされているフォーマットごとに 1"
+" 回行う必要があります。例として MP3 で示します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:467
+msgid "Navigate to the \"Identification Rules\" page, and click \"Create New Rule\"."
+msgstr "\"識別ルール\" ページに移動し、\"新しいツールのルール\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:468
+msgid ""
+"Choose the appropriate format from the Format dropdown - in our case, "
+"\"Audio: MPEG Audio: MPEG 1/2 Audio Layer 3\"."
+msgstr ""
+"フォーマットのドロップダウンから適切なフォーマットを選択します。この例では、\"Audio：MPEG Audio：MPEG 1/2 Audio "
+"Layer 3\"です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:470
+msgid "Choose your command from the Command dropdown."
+msgstr "コマンドのドロップダウンからコマンドを選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:471
+msgid ""
+"Enter the text your command will output when it identifies this format. For "
+"example, when our Exiftool command identifies an MP3 file, it will output "
+"\"audio/mpeg\"."
+msgstr ""
+"このフォーマットを識別したときにコマンドが出力するテキストを入力します。たとえば、Exiftool コマンドが MP3 "
+"ファイルを識別すると、\"audio/mpeg\" が出力されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:476
+msgid ""
+"Once this is complete, any new transfers you create will be able to use your"
+" new tool in the identification step."
+msgstr "これが完了すると、作成した新しい転送で識別ステップで新しいツールを使用できるようになります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:479
+#: ../../user-manual/preservation/preservation-planning.rst:541
+#: ../../user-manual/preservation/preservation-planning.rst:577
+#: ../../user-manual/preservation/preservation-planning.rst:624
+#: ../../user-manual/preservation/preservation-planning.rst:747
+#: ../../user-manual/preservation/preservation-planning.rst:817
+#: ../../user-manual/preservation/preservation-planning.rst:849
+msgid ""
+"For more information about writing a command, see :ref:`Writing commands "
+"<writing-commands>` above."
+msgstr "コマンドの書き方については、上記の :ref:`コマンドの書き方 <writing-commands>` を参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:483
+msgid "Identification rules"
+msgstr "識別ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:485
+msgid ""
+"Identification rules allow you to define the relationship between the output"
+" created by an identification tool, and one of the formats which exists in "
+"the FPR. **Only create identification rules for formats being identified by "
+"extension.** Both Fido and Siegfried identify files using their PUID. "
+"Because PUIDs are universal, Archivematica will always look these up for you"
+" without requiring any rules to be created, regardless of what tool is being"
+" used."
+msgstr ""
+"識別ルールを使用すると、識別ツールによって作成された出力と FPR に存在するフォーマットの 1 つとの間の関係を定義できます。 "
+"**拡張子によって識別されるフォーマットの識別ルールのみを作成します。** Fido と Siegfried は両方とも、PUID "
+"を使用してファイルを識別します。PUID は汎用的であるため、どのツールが使用されているかに関係なく、Archivematica "
+"はルールの作成を求めないで常にこれらを検索します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:492
+#: ../../user-manual/preservation/preservation-planning.rst:551
+#: ../../user-manual/preservation/preservation-planning.rst:633
+#: ../../user-manual/preservation/preservation-planning.rst:778
+#: ../../user-manual/preservation/preservation-planning.rst:826
+#: ../../user-manual/preservation/preservation-planning.rst:878
+msgid ""
+"For more information about creating a rule, see :ref:`Changing rules "
+"<changing-rules>` above."
+msgstr "ルール作成の詳細については、上記の :ref:`ルールの変更 <changing-rules>` を参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:498
+msgid "Characterization"
+msgstr "特性化"
+
+#: ../../user-manual/preservation/preservation-planning.rst:500
+msgid ""
+"Characterization is the process of producing technical metadata for an "
+"object. Archivematica's characterization aims both to document the object's "
+"significant properties and to extract technical metadata contained within "
+"the object."
+msgstr ""
+"特性化は、オブジェクトの技術的なメタデータを作成するプロセスです。Archivematica "
+"の特性化は、オブジェクトの重要なプロパティを文書化することと、オブジェクト内に含まれる技術的なメタデータを抽出することの両方を目的としています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:505
+msgid "Characterization tools"
+msgstr "特性化"
+
+#: ../../user-manual/preservation/preservation-planning.rst:507
+msgid ""
+"Archivematica has four characterization tools available upon installation. "
+"Which tool will run on a given file depends on the type of file, as "
+"determined by the identification tool."
+msgstr ""
+"Archivematica には、インストール時に使用できる 4 "
+"つの特性化ツールがあります。特定のファイルに対してどのツールが実行されるかは、識別ツールによって決定されるファイルの種類によって異なります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:511
+msgid ""
+"The default characterization tool is FITS; it will be used if no specific "
+"characterization rule exists for the file being scanned. It is possible to "
+"create new default characterization commands, which can either replace FITS "
+"or run alongside it on every file."
+msgstr ""
+"デフォルトの特性化ツールはFITSであり、スキャンされるファイルに特定の特性化ルールが存在しない場合、FITSが使用されます。新しいデフォルトの特性化コマンドを作成でき、FITSを置き換えたり、すべてのファイルに対してFITSと並行して実行したりできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:516
+msgid ""
+"Depending on the type of the file being scanned, one or more of these tools "
+"may be called instead of FITS."
+msgstr "スキャンされるファイルの種類に応じて、FITS の代わりにこれらのツールが 1 つ以上呼び出される場合があります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:519
+msgid ""
+"`FFprobe <FFprobe_>`_, a characterization tool built on top of the same core"
+" as FFmpeg, the normalization software used by Archivematica."
+msgstr ""
+"`FFprobe <FFprobe_>`_ 。Archivematica で使用される正規化ソフトウェアである FFmpeg "
+"と同じコア上に構築された特性化ツールです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:522
+msgid ""
+"`MediaInfo <MediaInfo_>`_, a characterization tool oriented towards audio "
+"and video data."
+msgstr "`MediaInfo <MediaInfo_>`_ 。オーディオおよびビデオデータ向けの特性化ツールです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:525
+msgid ""
+"`ExifTool <ExifTool_>`_, a characterization tool oriented towards still "
+"image data and extraction of embedded metadata."
+msgstr "`ExifTool <ExifTool_>`_ 。静止画像データと埋め込みメタデータの抽出を対象とした特性化ツールです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:528
+msgid "`fiwalk`_, a batch forensics analysis tool that is part of Sleuthkit.s"
+msgstr "`fiwalk`_ 。Sleuthkit.s の一部であるバッチフォレンジック分析ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:531
+msgid "Characterization commands"
+msgstr "特性化コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:533
+msgid ""
+"Like an identification command, a characterization command is designed to "
+"run a tool and produce output to standard out. Output from characterization "
+"commands is expected to be valid XML, and will be included in the AIP's METS"
+" document within the file's ``<objectCharacteristicsExtension>`` element."
+msgstr ""
+"識別コマンドと同様に、特性化コマンドは、ツールを実行して標準出力に出力を生成するように設計されています。 特性評価コマンドからの出力は有効な XML "
+"であることが期待されており、ファイルの ``<objectCharacteristicsExtension>`` 要素内の AIP の METS "
+"ドキュメントに含まれます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:538
+msgid ""
+"When creating a characterization command, the ``output format`` should be "
+"set to ``XML 1.0``."
+msgstr "特性化コマンドを作成する際には、 ``output format`` を ``XML 1.0`` に設定する必要があります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:545
+msgid "Characterization rules"
+msgstr "特性化ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:547
+msgid ""
+"A characterization rule must be created to connect a characterizatio command"
+" to a particular format. Note that formats that do not have a rule will be "
+"characterized by FITS by default."
+msgstr ""
+"特性化コマンドを特定のフォーマットに接続するには、特性化ルールを作成する必要があります。ルールのないフォーマットは、デフォルトでFITSによって特性化されることに注意してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:557
+msgid "Event Detail"
+msgstr "イベント詳細"
+
+#: ../../user-manual/preservation/preservation-planning.rst:559
+msgid ""
+"Event detail ensures that information about the software running a command "
+"is written to the METS file as the \"event detail\" property."
+msgstr ""
+"イベントの詳細により、コマンドを実行しているソフトウェアに関する情報が、\"イベントの詳細\"プロパティとして METS ファイルに書き込まれます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:563
+msgid "Event detail tools"
+msgstr "イベント詳細ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:565
+msgid ""
+"Several different tools are used to write the event detail to the METS file,"
+" depending on which event is taking place. For example, if FFmpeg is being "
+"used to characterize a file, FFmpeg can write the event detail to the METS. "
+"In other situations, the command line command `echo` is used to perform this"
+" function."
+msgstr ""
+"発生するイベントに応じて、イベントの詳細を METS ファイルに書き込むために、いくつかの異なるツールが使用されます。たとえば、ファイルの特性化に "
+"FFmpeg が使用されている場合、FFmpeg はイベントの詳細を METS "
+"に書き込むことができます。他の状況では、この機能を実行するためにコマンドラインコマンド `echo` が使われます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:571
+msgid "Event detail commands"
+msgstr "イベント詳細コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:573
+msgid ""
+"The commands describe the event detail output written to the METS file when "
+"using various FPR commands; typically, the name and version of the tool "
+"being used."
+msgstr ""
+"コマンドは、各種FPRコマンド使用時にMETSファイルに書き込まれるイベント詳細出力を記述するものであり、通常は、使用するツールの名前とバージョンを記述します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:581
+msgid "Event detail rules"
+msgstr "イベント詳細ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:583
+msgid "Rules are not required for event detail, only commands."
+msgstr "ルールは、イベントの詳細には必要なく、コマンドのみに必要です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:588
+msgid "Extraction"
+msgstr "抽出"
+
+#: ../../user-manual/preservation/preservation-planning.rst:590
+msgid ""
+"During the transfer phase, Archivematica can extract the contents of a "
+"package such as a ZIP file or a disk image. Archivematica comes with several"
+" predefined rules to extract packages, which are fully customizeable by "
+"Archivematica administrators."
+msgstr ""
+"Archivematicaは、転送フェーズにおいて、ZIPファイルやディスクイメージのようなパッケージのコンテンツを抽出できます。Archivematica"
+" には、パッケージを抽出するための事前定義されたルールがいくつか用意されており、Archivematica の管理者が自由にカスタマイズできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:596
+msgid "Extraction tools"
+msgstr "抽出ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:598
+msgid "Archivematica comes with three extraction tools:"
+msgstr "Archivematicaには、3つの抽出ツールが付属しています："
+
+#: ../../user-manual/preservation/preservation-planning.rst:600
+msgid "`7zip`_, used for most 7zip compatible formats"
+msgstr "`7zip`_ 。ほとんどの 7zip 互換フォーマットに使用"
+
+#: ../../user-manual/preservation/preservation-planning.rst:601
+msgid "unrar-free, used for RAR formats"
+msgstr "unrar-free：RAR形式に使用"
+
+#: ../../user-manual/preservation/preservation-planning.rst:602
+msgid "`Sleuthkit`_, used for many disk image formats"
+msgstr "`Sleuthkit`_ 。多くのディスクイメージフォーマットに使用"
+
+#: ../../user-manual/preservation/preservation-planning.rst:605
+msgid "Extraction commands"
+msgstr "抽出コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:607
+msgid ""
+"An extraction command is passed two arguments: the file to extract, and the "
+"path to which the package should be extracted. Similar to normalization "
+"commands, these arguments will be interpolated directly into ``bashScript`` "
+"and ``command`` scripts, and passed as positional arguments to "
+"``pythonScript`` and ``asIs`` scripts."
+msgstr ""
+"抽出コマンドには、抽出するファイルとパッケージの抽出先のパスという 2 つの引数が渡されます。正規化コマンドと同様に、これらの引数は、 "
+"``bashScript`` および ``command`` スクリプトに直接挿入され、位置引数として ``pythonScript`` と "
+"``asIs`` スクリプトに渡されます。"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "Name (bashScript and command)"
+msgstr "名前 (bashScript とコマンド)"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "Commandline position (pythonScript and asIs)"
+msgstr "コマンドラインの位置（pythonScriptとasIs）"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "Description"
+msgstr "説明"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "Sample value"
+msgstr "サンプル値"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%outputDirectory%"
+msgstr "%outputDirectory%"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "First"
+msgstr "最初"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid ""
+"The full path to the directory in which the package’s contents should be "
+"extracted"
+msgstr "パッケージの内容を展開するディレクトリへのフルパス"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "/path/to/filename-uuid/"
+msgstr "/path/to/filename-uuid/"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%inputFile%"
+msgstr "%inputFile%"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "Second"
+msgstr "2番目"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "The full path to the package file"
+msgstr "パッケージファイルへのフルパス"
+
+#: ../../user-manual/preservation/_csv/extraction-command.csv:1
+msgid "/path/to/filename"
+msgstr "/path/to/filename"
+
+#: ../../user-manual/preservation/preservation-planning.rst:617
+msgid ""
+"Here's a simple example of how to call an existing tool (7-zip) without any "
+"extra logic:"
+msgstr "追加のロジックを使用せずに既存のツール (7-zip) を呼び出す方法の簡単な例を次に示します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:628
+msgid "Extraction rules"
+msgstr "抽出ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:630
+msgid ""
+"An extraction rule must be created to associate an extraction command with a"
+" package format."
+msgstr "抽出コマンドとパッケージフォーマットを関連付けるには、抽出ルールを作成する必要があります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:639
+msgid "Normalization"
+msgstr "正規化"
+
+#: ../../user-manual/preservation/preservation-planning.rst:641
+msgid ""
+"Normalization is the process of taking a file of a given format and "
+"transforming it into another format for a stated purpose, such as access or "
+"preservation - for example, Archivematica could contain rules to convert a "
+"PNG file to a JPG for  access and a TIFF for preservation."
+msgstr ""
+"正規化とは、アクセスや保存など、指定された目的のために、特定の形式のファイルを別の形式に変換するプロセスです。たとえば、Archivematica "
+"には、アクセス用に PNG ファイルを JPG に変換し、保存用に TIFF に変換するルールを含めることがあります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:646
+msgid ""
+"Normalization is Archivematica's primary format preservation strategy. The "
+"preservation copies are added to the AIP and the access copies are used to "
+"generate a DIP for upload to the access system. Note that the original files"
+" are always kept, to allow for different preservation actions in the future,"
+" such as normalization to different archival formats or emulation."
+msgstr ""
+"正規化は、Archivematicaの主要なフォーマット保存戦略です。保存コピーはAIPに追加され、アクセスコピーはアクセスシステムにアップロードするためのDIPを生成するために使用されます。将来、異なるアーカイブフォーマットへの正規化やエミュレーションなど、さまざまな保存操作を可能にするため、オリジナルファイルは、常に保存されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:653
+msgid "Normalization tools"
+msgstr "正規化ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:655
+msgid ""
+"Several different tools are used to complete normalization tasks within "
+"Archivematica, depending on the format of the file. For image files, "
+"ImageMagick `convert`_ and `Inkscape`_ are commonly used; `ffmpeg`_ acts on "
+"audio-visual files; `Ghostscript`_ and `ps2pdf`_ are used to transform "
+"materials to PDF. One notable tool is an Archivematica-specific script that "
+"can transcode a maildir to mbox format, used for emails."
+msgstr ""
+"Archivematica "
+"では、ファイルの形式に応じて、いくつかの異なるツールを使用して正規化タスクを実行します。画像ファイルの場合、ImageMagick `convert`_"
+" と `Inkscape`_ が一般的に使用されます。 `ffmpeg`_ はオーディオビジュアルファイルに作用します。 `Ghostscript`_ "
+"と `ps2pdf`_ は素材をPDFに変換するために使用されます。注目すべきツールのひとつに、Archivematica "
+"固有のスクリプトがあり、maildir を電子メールに使われる mbox フォーマットにトランスコードできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:663
+msgid "Normalization commands"
+msgstr "正規化コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:665
+msgid ""
+"Normalization commands are slightly more complicated than other kinds of "
+"commands in the Preservation Planning tab because they take extra "
+"parameters. The goal of a normalization command is to take an input file and"
+" make a copy of the file in a new format. For instance, Archivematica "
+"provides commands to transform video content into FFV1 for preservation, and"
+" into H.264 for access."
+msgstr ""
+"正規化コマンドは追加のパラメーターを必要とするため、[保存計画] "
+"タブの他の種類のコマンドよりも多少複雑になります。正規化コマンドの目的は、入力ファイルを取得し、そのファイルのコピーを新しいフォーマットで作成することです。たとえば、Archivematica"
+" は、ビデオコンテンツを保存用に FFV1 に変換し、アクセス用に H.264 に変換するコマンドを提供します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:671
+msgid ""
+"Archivematica provides several parameters specifying input and output "
+"filenames and other useful information. Several of the most common are shown"
+" in the examples below."
+msgstr ""
+"Archivematica "
+"には、入出力ファイル名やその他の有用な情報を指定するパラメーターがいくつか用意されています。最も一般的なものを以下の例に示します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:675
+msgid ""
+"When writing a bash script or a command line command, you can reference the "
+"variables directly in your code, like this:"
+msgstr "bashスクリプトやコマンドラインコマンドを書くときは、次のようにコードの中で変数を直接参照できます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:682
+msgid ""
+"When writing a script in Python or other languages, the values will be "
+"passed to your script as command line options, which you will need to parse."
+" The following script provides an example using the argparse module that "
+"comes with Python:"
+msgstr ""
+"Pythonや他の言語でスクリプトを書く場合、値はコマンドラインオプションとしてスクリプトに渡され、それを解析する必要があります。以下のスクリプトは、Pythonに付属している"
+" argparse モジュールを使った例です："
+
+#: ../../user-manual/preservation/preservation-planning.rst:708
+msgid ""
+"Once you've created a command, the process of registering it is similar to "
+"creating a new identification tool. The following examples will use the "
+"Python normalization script above."
+msgstr ""
+"コマンドを作成したら、それを登録するプロセスは、新しい識別ツールを作成するのと似ています。以下の例では、上記の Python "
+"正規化スクリプトを使用します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:712
+msgid "First, create a new tool record:"
+msgstr "まず、新しいツールレコードを作成します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:720
+msgid "Next, create a record for your new command:"
+msgstr "次に、新しいコマンドのレコードを作成します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:722
+msgid "Click \"Create New Tool Command\"."
+msgstr "\"新しいツールコマンドの作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:723
+msgid ""
+"Fill out the Description with text to describe to a user what this tool "
+"does. For instance, we might choose \"Normalize to mkv using ffmpeg\"."
+msgstr ""
+"このツールの機能をユーザーに説明するテキストを [説明] に入力します。たとえば、\"ffmpeg を使用して mkv "
+"に正規化\"を選択することもできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:725
+msgid "Enter the source for your command in the Command textbox."
+msgstr "[コマンド] テキストボックスにコマンドのソースを入力します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:727
+msgid ""
+"Select the appropriate output format from the dropdown. This indicates to "
+"Archivematica what kind of file this command will produce. In this case, "
+"choose \"Video: Matroska: Generic MKV\"."
+msgstr ""
+"ドロップダウンから適切な出力フォーマットを選択します。これは、Archivematicaに対して、このコマンドがどのようなファイルを出力するかを示します。この場合、\"Videoを選択します：Matroska：Generic"
+" MKV\"."
+
+#: ../../user-manual/preservation/preservation-planning.rst:730
+#, python-format
+msgid ""
+"Enter the location the video will be saved to, using the script variables. "
+"You can usually use the ``%outputFileName%`` variable, and add the file "
+"extension - in this case ``%outputFileName%.mkv``"
+msgstr ""
+"スクリプト変数を使用して、ビデオを保存する場所を入力します。通常は、 ``%outputFileName%`` "
+"変数を使用し、ファイル拡張子を追加できます。この場合は ``%outputFileName%.mkv`` です"
+
+#: ../../user-manual/preservation/preservation-planning.rst:733
+msgid ""
+"Select a verification command. Archivematica will try to use this tool to "
+"ensure that the file your command created works. Archivematica ships with "
+"two simple tools, which test whether the file exists and whether it's larger"
+" than 0 bytes, but you can create new commands that perform more complicated"
+" verifications."
+msgstr ""
+"妥当性確認コマンドを選択します。Archivematica "
+"は、このツールを使って、コマンドが作成したファイルが動作することを確認しようとします。Archivematica "
+"には、ファイルが存在するかどうか、サイズが0バイトより大きいかどうかをテストする2つのシンプルなツールが同梱されていますが、より複雑な妥当性確認を行う新しいコマンドを作成もできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:738
+msgid ""
+"Finally, choose a command to produce the \"Event detail\" text that will be "
+"written in the section of the METS file covering the normalization event. "
+"Archivematica already includes a suitable command for ffmpeg, but you can "
+"also create a custom command."
+msgstr ""
+"最後に、正規化イベントをカバーする METS ファイルのセクションに書き込まれる\"イベント詳細\" "
+"テキストを作成するコマンドを選択します。Archivematica にはすでに ffmpeg "
+"に適したコマンドが含まれていますが、カスタムコマンドの作成もできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:742
+msgid "Click \"Create command\"."
+msgstr "\"コマンドの作成\" をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:744
+msgid ""
+"Finally, you must create rules which will associate your command with the "
+"formats it should run on."
+msgstr "最後に、コマンドを実行すべきフォーマットと関連付けるルールを作成しなければなりません。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:751
+msgid "Normalization command variables and arguments"
+msgstr "正規化コマンドの変数と引数"
+
+#: ../../user-manual/preservation/preservation-planning.rst:753
+msgid ""
+"The following variables and arguments control the behaviour of format policy"
+" command scripts."
+msgstr "以下の変数と引数は、フォーマットポリシーコマンドスクリプトの振る舞いを制御します。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "Command line option (pythonScript and asIs)"
+msgstr "コマンドラインオプション （pythonScript と asIs）"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "%SIPUUID%"
+msgstr "%SIPUUID%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sipuuid="
+msgstr "–sipuuid="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The UUID of the SIP or transfer being processed."
+msgstr "処理中のSIPまたは転送（transfer）のUUID。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+msgstr "4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%sipName%"
+msgstr "%sipName%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sip-name="
+msgstr "–sip-name="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The name of the SIP or transfer being processed, parsed from its path."
+msgstr "処理されるSIPまたは転送の名前（パスから解析される）。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "this-is-a-sip"
+msgstr "this-is-a-sip"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "%SIPDirectory%"
+msgstr "%SIPDirectory%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sip-directory="
+msgstr "–sip-directory="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The full path of the SIP or transfer."
+msgstr "SIPまたは転送のフルパス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/dir/this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+msgstr "/dir/this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "%SIPDirectoryBasename%"
+msgstr "%SIPDirectoryBasename%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sip-directory-basename="
+msgstr "–sip-directory-basename="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The basename of the SIP or transfer."
+msgstr "SIPまたは転送のベースネーム。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+msgstr "this-is-a-sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "%SIPLogsDirectory%"
+msgstr "%SIPLogsDirectory%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sip-logs-directory="
+msgstr "–sip-logs-directory="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The full path of the SIP or transfer’s logs directory."
+msgstr "SIPまたは転送のログディレクトリのフルパス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/logs"
+msgstr "/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/logs"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "%SIPObjectsDirectory%"
+msgstr "%SIPObjectsDirectory%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–sip-objects-directory="
+msgstr "–sip-objects-directory="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The full path of the SIP or transfer’s objects directory."
+msgstr "SIPまたは転送（forward）のオブジェクトディレクトリのフルパス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects"
+msgstr "/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileUUID%"
+msgstr "%fileUUID%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-uuid="
+msgstr "–file-uuid="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The UUID of the file being processed."
+msgstr "処理中のファイルのUUID。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "baa67175-f04d-4df6-8615-d05d0651eae2"
+msgstr "baa67175-f04d-4df6-8615-d05d0651eae2"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%originalLocation%"
+msgstr "%originalLocation%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–original-location="
+msgstr "–original-location="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ""
+"The original path of the file, as first recorded by Archivematica. Note that"
+" the filename component of this path is unsanitized, so it is possible for "
+"this string to contain data in arbitrary text encodings, including mixed "
+"encodings."
+msgstr ""
+"Archivematica "
+"によって最初に記録されたファイルのオリジナルのパス。このパスのファイル名コンポーネントはサニタイズされていないため、この文字列には、混合エンコーディングを含む任意のテキスト"
+" エンコーディングのデータが含まれる可能性があることに注意してください。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ""
+"/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects/ …/file name "
+"unsanitized.jpeg"
+msgstr ""
+"/dir/sip-4941c1e7-722b-41dc-900a-a17f7cfd32a9/objects/ …/file name "
+"unsanitized.jpeg"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileName%"
+msgstr "%fileName%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–input-file="
+msgstr "–input-file="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ""
+"The filename of the file to process. This variable holds the file’s "
+"basename, not the whole path."
+msgstr "処理するファイルのファイル名。この変数は、パス全体ではなく、ファイルのベース名を保持します。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "video.mov"
+msgstr "video.mov"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileDirectory%"
+msgstr "%fileDirectory%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-directory="
+msgstr "–file-directory="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The directory containing the input file."
+msgstr "入力ファイルのあるディレクトリ。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/path/to"
+msgstr "/path/to"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-name="
+msgstr "–file-name="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The fully-qualified path to the file to process."
+msgstr "処理するファイルへの完全修飾パス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/path/to/video.mov"
+msgstr "/path/to/video.mov"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileExtension%"
+msgstr "%fileExtension%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-extension="
+msgstr "–file-extension="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The file extension of the input file."
+msgstr "入力ファイルのファイル拡張子。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "mov"
+msgstr "mov"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileExtensionWithDot%"
+msgstr "%fileExtensionWithDot%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-extension-with-dot="
+msgstr "–file-extension-with-dot="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "As above, without stripping the period."
+msgstr "上記と同様に、ピリオドを削除しません。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ".mov"
+msgstr ".mov"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%outputFileUUID%"
+msgstr "%outputFileUUID%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–output-file-uuid="
+msgstr "–output-file-uuid="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The unique identifier assigned by Archivematica to the output file."
+msgstr "Archivematica によって出力ファイルに割り当てられる一意の識別子。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "1abedf3e-3a4b-46d7-97da-bd9ae13859f5"
+msgstr "1abedf3e-3a4b-46d7-97da-bd9ae13859f5"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–output-directory="
+msgstr "–output-directory="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ""
+"The fully-qualified path to the directory where the new file should be "
+"written."
+msgstr "新しいファイルを書き込むディレクトリへの完全修飾パス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/var/archivematica/sharedDirectory/www/AIPsStore/uuid"
+msgstr "/var/archivematica/sharedDirectory/www/AIPsStore/uuid"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%outputFileName%"
+msgstr "%outputFileName%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–output-file-name="
+msgstr "–output-file-name="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "The fully-qualified path to the output file, minus the file extension."
+msgstr "ファイル拡張子を除いた、出力ファイルへの完全修飾パス。"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "/path/to/access/copies/video-uuid"
+msgstr "/path/to/access/copies/video-uuid"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+#, python-format
+msgid "%fileGrpUse%"
+msgstr "%fileGrpUse%"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "–file-grp-use="
+msgstr "–file-grp-use="
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid ""
+"The file grouping for this file. Possible values are: * original * "
+"submissionDocumentation * preservation * access * service * license * "
+"text/ocr * metadata"
+msgstr ""
+"このファイルのファイルグループ。指定可能な値： * original * submissionDocumentation * preservation "
+"* access * service * license * text/ocr * メタデータ"
+
+#: ../../user-manual/preservation/_csv/normalization-command.csv:1
+msgid "original"
+msgstr "オリジナル"
+
+#: ../../user-manual/preservation/preservation-planning.rst:761
+msgid "Normalization rules"
+msgstr "正規化ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:763
+msgid ""
+"A normalization rule must be created to associate a normalization command "
+"with a particular format. Normalization rules have three purposes: Access, "
+"for use in the DIP, Preservation, for use in the AIP, and Thumbnail, for use"
+" in both the AIP and DIP. You may only have one normalization rule per "
+"format per purpose - for example, if you have a rule that states that PNGs "
+"are normalized to TIFF for the purpose of preservation, you cannot have a "
+"second rule that states that PNGs are normalized to GIF for the purpose of "
+"preservation."
+msgstr ""
+"正規化コマンドを特定のフォーマットに関連付けるためには、正規化ルールを作成しなければなりません。正規化ルールには3つの目的があります：DIPで使用する「Access」、AIPで使用する「Preservation」、AIPとDIPの両方で使用する「Thumbnail」です。例えば、保存の目的でPNGをTIFFに正規化するというルールがある場合、保存の目的でPNGをGIFに正規化するという2つ目のルールを持つことはできません。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:771
+msgid ""
+"You can decide whether or not normalization for thumbnails occurs for the "
+"entire pipeline, rather than on a format-by-format basis, by altering the "
+":ref:`processing configuration <dashboard-processing>`."
+msgstr ""
+":ref:`処理設定 <dashboard-processing>` "
+"を変更することで、サムネイルの正規化をフォーマットごとではなく、パイプライン全体で行うかどうかを決めることができます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:775
+msgid ""
+"The success rate of each normalization rule is show in the \"Success\" "
+"column on the normalization rules page."
+msgstr "各正規化ルールの成功率は、正規化ルールページの \"成功\" 列に表示されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:784
+msgid "Transcription"
+msgstr "テキスト変換"
+
+#: ../../user-manual/preservation/preservation-planning.rst:786
+msgid ""
+"Transcription runs `Tesseract`_ or other transcription tools on image files "
+"to analyze whether or not they contain text. If they do contain text, the "
+"text can be read and output to a text file."
+msgstr ""
+"テキスト変換は、 `Tesseract`_ "
+"、またはその他のTranscriptionツールを画像ファイルに対して実行し、テキストが含まれているかどうかを分析します。テキストが含まれている場合、テキストを読み込んでテキストファイルに出力できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:791
+msgid "Transcription tools"
+msgstr "テキスト変換ツール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:793
+msgid ""
+"By default, Archivematica supports one transcription tool: `Tesseract`_, an "
+"open source OCR tool."
+msgstr ""
+"デフォルトでは、Archivematica は、オープンソース OCR ツールである `Tesseract`_ "
+"というテキスト変換ツールに対応しています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:797
+msgid "Transcription commands"
+msgstr "テキスト変換コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:799
+msgid ""
+"By default, Archivematica supports one transcription command, which uses the"
+" OCR tool `Tesseract <Tesseract_>`_."
+msgstr ""
+"デフォルトでは、Archivematica は、OCR ツール `Tesseract <Tesseract_>`_ を使用する 1 "
+"つのテキスト変換コマンドに対応しています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:802
+msgid ""
+"Transcription commands are expected to write their data to disk inside the "
+"SIP. For commands which perform OCR, metadata can be placed inside the "
+"``metadata/OCRfiles`` directory inside the SIP; other kinds of transcription"
+" should produce files within the ``metadata`` directory."
+msgstr ""
+"テキスト変換コマンドは、それらのデータをSIP内のディスクに書き込むこ とが期待されます。OCRを実行するコマンドのために、メタデータは、SIPの "
+"``metadata/OCRfiles`` ディレクトリの中に置くことができます。他の種類のテキスト変換は、 ``metadata`` "
+"ディレクトリの中にファイルを生成するべきです。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:807
+msgid ""
+"For example, the following bash script is used by Archivematica to "
+"transcribe images using Tesseract:"
+msgstr ""
+"たとえば、次の bash スクリプトは、Tesseract を使用してイメージをテキスト変換するために Archivematica "
+"によって使用されます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:821
+msgid "Transcription rules"
+msgstr "テキスト変換ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:823
+msgid ""
+"A transcription rule must be created to associate a transcription command "
+"with a particular format."
+msgstr "転記コマンドを特定のフォーマットに関連付けるには、転記ルールを作成する必要があります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:832
+msgid "Validation"
+msgstr "妥当性確認"
+
+#: ../../user-manual/preservation/preservation-planning.rst:834
+msgid ""
+"Format validation ensures that files are well-formed and compliant with any "
+"relevant format specifications. In Archivematica, validation can also be "
+"done against a custom policy that is applied to the format."
+msgstr ""
+"フォーマット妥当性確認により、ファイルが適切な形式であり、関連するフォーマット仕様に準拠していることが保証されます。Archivematica "
+"では、フォーマットに適用されるカスタムポリシーに対して妥当性確認を行うこともできます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:838
+msgid ""
+"Archivematica includes two validation tools: `JHOVE`_ and `MediaConch`_."
+msgstr "Archivematica には 2 つの妥当性確認ツールがあります： `JHOVE`_ と `MediaConch`_ です。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:841
+msgid "Validation commands"
+msgstr "妥当性確認コマンド"
+
+#: ../../user-manual/preservation/preservation-planning.rst:843
+msgid ""
+"There are three default validation commands in Archivematica |version|:"
+msgstr "Archivematica |version| のデフォルトの妥当性確認コマンドは3つあります："
+
+#: ../../user-manual/preservation/preservation-planning.rst:845
+msgid "Validate using JHOVE"
+msgstr "JHOVE を使った妥当性確認"
+
+#: ../../user-manual/preservation/preservation-planning.rst:846
+msgid "Validate using MediaConch"
+msgstr "MediaConch を使った妥当性確認"
+
+#: ../../user-manual/preservation/preservation-planning.rst:847
+msgid "Check against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch"
+msgstr "MediaConchを使用してポリシーPLACEHOLDER_FOR_POLICY_FILE_NAMEと照合します"
+
+#: ../../user-manual/preservation/preservation-planning.rst:853
+msgid "Validation rules"
+msgstr "妥当性確認ルール"
+
+#: ../../user-manual/preservation/preservation-planning.rst:855
+msgid ""
+"Archivematica contains a default validation rule for several common file "
+"formats. This default rule uses JHOVE. For Matroska (MKV) files, MediaConch "
+"is set as the  default validation tool as of Archivematica 1.7."
+msgstr ""
+"Archivematica "
+"には、いくつかの一般的なファイルフォーマットに対するデフォルトの妥当性確認ルールがあります。このデフォルトルールはJHOVEを使用します。Matroska（MKV）ファイルについては、Archivematica"
+" 1.7以降、MediaConchがデフォルトの妥当性確認ツールとして設定されています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:859
+msgid ""
+"If you would like to implement a MediaConch policy command, you must also "
+"create a rule to invoke the policy checking command for the desired format. "
+"For example, if you have created a MediaConch policy command to check "
+"against JPG files, you must also create a rule that connects the format with"
+" the command."
+msgstr ""
+"MediaConch ポリシー コマンドを実装する場合、目的のフォーマットに対してポリシー チェック "
+"コマンドを呼び出すルールも作成する必要があります。たとえば、JPG ファイルをチェックする MediaConch "
+"ポリシーコマンドを作成した場合、フォーマットとコマンドを結び付けるルールも作成する必要があります。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:864
+msgid "Validation rules are called during several microservices:"
+msgstr "妥当性確認ルールは、いくつかのマイクロサービス中に呼び出されます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:866
+msgid ""
+"During the *Validate* microservice on the Transfer tab, which includes "
+"validating formats as well as checking original files against a policy."
+msgstr ""
+"*妥当性確認* マイクロサービスでは、転送タブで、ポリ シーに対するオリジナルファイルのチェックだけでなく、 フォーマットの妥当性確認も行います。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:868
+msgid ""
+"During the *Normalize* microservice on the Ingest tab, where access and "
+"preservation derivatives generated during normalization are validated."
+msgstr "[インジェスト] タブの *正規化* ] マイクロサービス中に、正規化中に生成されたアクセスと保存の派生物が妥当性確認されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:870
+msgid ""
+"During the *Perform policy checks on originals* microservice on the Transfer"
+" tab, where original digital objects can be checked against a policy. See "
+":ref:`MediaConch <fpr-mediaconch>` below."
+msgstr ""
+"[転送] タブの *オリジナルのポリシー チェックを実行する* "
+"サービス中に、ここでは、オリジナルのデジタルオブジェクトをポリシーと照合してチェックできます。以下の :ref:`MediaConch <fpr-"
+"mediaconch>` を参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:873
+msgid ""
+"During the *Perform policy checks on preservation derivatives* and *Perform "
+"policy checks on access derivatives* microservices on the Ingest tab, where "
+"preservation and access derivatives can be checked against a policy. See "
+":ref:`MediaConch <fpr-mediaconch>` below."
+msgstr ""
+"[インジェスト] タブの *保存派生物のポリシーチェックを実行* と *アクセス派生物のポリシーチェックを実行* "
+"のマイクロサービス中、ここでは、保存派生物とアクセス派生物をポリシーに対してチェックできます。 以下の :ref:`MediaConch <fpr-"
+"mediaconch>` を参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:884
+msgid "JHOVE"
+msgstr "JHOVE"
+
+#: ../../user-manual/preservation/preservation-planning.rst:886
+msgid ""
+"JHOVE is the most commonly-used tool to validate file formats in "
+"Archivematica. It looks at a given file and assesses whether the file is "
+"well-formed (meets the syntactic requirements for its format) and valid (is "
+"well-formed and meets additional requirements for its format). For more "
+"information on how JHOVE works, see the `JHOVE`_ website."
+msgstr ""
+"JHOVE は、Archivematica "
+"でファイルフォーマットを妥当性確認するために最もよく使用されるツールです。JHOVEは、指定されたファイルを見て、そのファイルが整フォーマット（フォーマットの構文要件を満たしている）かどうか、有効（整フォーマットであり、フォーマットの追加要件を満たしている）かどうかを評価します。JHOVE"
+" の動作の詳細については、 `JHOVE`_ ウェブサイトを参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:892
+msgid ""
+"When JHOVE encounters a file that it is able to successfully validate, a "
+"simple success message is displayed in the standard output:"
+msgstr "JHOVE が正常に妥当性確認できるファイルを検出すると、単純な成功メッセージが標準出力に表示されます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:901
+msgid ""
+"The validation event for the file is written to the METS.xml. The dashboard "
+"will report that the validation was completed successfully."
+msgstr "ファイルの妥当性確認イベントは METS.xml に書き込まれます。ダッシュボードには、妥当性確認が正常に完了したことが報告されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:904
+msgid ""
+"In some cases, JHOVE may evaluate a given file as a bytestream, rather than "
+"a specific format. This is default JHOVE behaviour. In a case where the "
+"bytestream is valid, JHOVE considers this to be a successful validation. In "
+"previous versions of Archivematica (1.9.x and earlier), Archivematica "
+"reported a successful bytestream validation as an error in the dashboard. As"
+" of 1.10, Archivematica reports a successful bytestream validation as a "
+"partial success, in order to differentiate it from successful validation "
+"based on a format specification."
+msgstr ""
+"場合によっては、JHOVEは、指定されたファイルを特定のフォーマットではなく、バイトストリームとして評価することがあります。これは、JHOVEのデフォルトの振る舞いです。バイトストリームが有効な場合、JHOVE"
+" は、これを妥当性確認に成功したとみなします。Archivematica の以前のバージョン（1.9.x "
+"以前）では、バイトストリームの妥当性確認が成功した場合、ダッシュボードでエラーとして報告されていました。1.10以降、Archivematicaは、バイトストリームの妥当性確認に成功した場合、フォーマット指定に基づく妥当性確認の成功と区別するため、部分的な成功として報告します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:919
+msgid ""
+"As with a full success, the validation event for the file is written to the "
+"METS.xml. The dashboard will report that the validation was completed "
+"successfully."
+msgstr ""
+"完全に成功した場合と同様に、ファイルの妥当性確認イベントは METS.xml "
+"に書き込まれます。ダッシュボードには、妥当性確認が正常に完了したことが報告されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:926
+msgid "MediaConch"
+msgstr "MediaConch"
+
+#: ../../user-manual/preservation/preservation-planning.rst:928
+msgid ""
+"MediaConch was introduced in Archivematica 1.7 as a validation tool "
+"specifically for files utilizing the Matroska (MKV) container format, the "
+"FFV1 video codec format, and the LPCM audio codec format. This is the file "
+"format used and recommended by Archivematica when performing normalization "
+"on audiovisual files. For more information about normalization rules, see "
+"the :ref:`Normalization <normalization>` section below."
+msgstr ""
+"MediaConch は、Matroska （MKV） コンテナフォーマット、FFV1 ビデオコーデックフォーマット、LPCM "
+"オーディオコーデックフォーマットを使用したファイル専用の妥当性確認ツールとして、Archivematica 1.7 "
+"で導入されました。これは、Archivematica "
+"がオーディオビジュアルファイルの正規化を行う際に使用し、推奨するファイル形式です。正規化ルールの詳細については、以下の :ref:`正規化 "
+"<normalization>` セクションを参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:935
+msgid ""
+"In addition to validating files against their format specification, "
+"MediaConch can also be used to validate file formats against an internal "
+"policy created by any institution."
+msgstr ""
+"MediaConch "
+"は、フォーマット仕様に対してファイルを妥当性確認するだけでなく、あらゆる機関が作成した内部ポリシーに対してファイルフォーマットを妥当性確認するためにも使用できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:939
+msgid ""
+"Users can use `MediaConchOnline`_ or a local installation of MediaConch to "
+"create a policy to check against files being ingested in Archivematica. "
+"Policies can include rules such as aspect ratios, bit rate, track "
+"information, etc. Policy checking is not restricted to mkv files. A policy "
+"can be created for any format which can be characterized by `MediaInfo`_."
+msgstr ""
+"ユーザーは、 `MediaConchOnline`_ "
+"、またはローカルにインストールしたMediaConchを使用して、Archivematicaにインジェストされるファイルに対してチェックするポリシーを作成できます。ポリシーには、アスペクト比、ビットレート、トラック情報などのルールを含めることができます。ポリシーのチェックは、mkvファイルに限定されません。ポリシーは、"
+" `MediaInfo`_ によって特性化される、あらゆるフォーマットに対して作成できます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:945
+msgid ""
+"For more information about how to create a policy for policy validation, "
+"please see the \"Create a Policy\" section of the `MediaConch "
+"documentation`_."
+msgstr ""
+"ポリシー妥当性確認のためのポリシーの作成方法の詳細については、 `MediaConch 文書`_ の\"ポリシーの作成\" "
+"セクションを参照してください。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:948
+msgid ""
+"Here is an example policy created by MediaConchOnline. It checks that MP3 "
+"files have a duration."
+msgstr ""
+"以下は、MediaConchOnline によって作成されたポリシーの例です。これは、MP3 ファイルに継続時間があるかどうかをチェックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:959
+msgid "To create a validation policy in Archivematica:"
+msgstr "Archivematica で妥当性確認ポリシーを作成するには："
+
+#: ../../user-manual/preservation/preservation-planning.rst:961
+msgid ""
+"In the Preservation Planning tab, click on **Commands** in the left-hand "
+"sidebar under Validation. You should see a sample policy called *Check "
+"against policy PLACEHOLDER_FOR_POLICY_FILE_NAME using MediaConch*. Either "
+"click on **Replace** to edit this command or create a new one by clicking "
+"**Create new command**."
+msgstr ""
+"[保存計画] タブで、左側のサイドバーの [妥当性確認] の下にある **コマンド** をクリックします。 *MediaConch を使用してポリシー "
+"PLACEHOLDER_FOR_POLICY_FILE_NAME をチェックする* というサンプルポリシーが表示されます。 **置換** "
+"をクリックしてこのコマンドを編集するか、 **新しいコマンドを作成** をクリックして新しいコマンドを作成します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:967
+msgid ""
+"In the form that opens, select *MediaConch* as the related tool and give the"
+" command a human-readable description (this will be used as the title). If "
+"you are editing the placeholder command, some of the fields will be "
+"populated already."
+msgstr ""
+"開いたフォームで、関連ツールとして *MediaConch* を選択し、コマンドに人が読める説明を付けます "
+"(これはタイトルとして使用されます)。プレースホルダーコマンドを編集している場合、一部のフィールドにはすでに値が設定されています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:972
+msgid ""
+"In the **Command** field of the form, copy and paste the following blank "
+"command:"
+msgstr "フォームの **コマンド** フィールドに、次の空のコマンドをコピーして貼り付けます："
+
+#: ../../user-manual/preservation/preservation-planning.rst:995
+msgid ""
+"Add the XML created by MediaConch between ``POLICY = \"\"\"`` and "
+"``\"\"\".strip()``. Add your policy name to ``POLICY_NAME = 'Add your policy"
+" name here'``. In the example below, we have used the policy to check that "
+"MP3s have a duration as in the description above."
+msgstr ""
+"MediaConch で作成した XML を ``POLICY = \"\"\"`` と ``\"\"\".strip()`` "
+"の間に追加します。ポリシー名を ``POLICY_NAME = 'Add your policy name here'`` "
+"に追加します。以下の例では、ポリシーを使って、上記の説明のように MP3 に持続時間が設定されているかどうかを確認しています。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1024
+msgid "Fill out the remaining fields as follows:"
+msgstr "残りの欄は、以下のように記入します："
+
+#: ../../user-manual/preservation/preservation-planning.rst:1026
+msgid "**Script type**: Python script"
+msgstr "**スクリプトタイプ** ：Python スクリプト"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1027
+msgid "**The related output format**: Leave blank"
+msgstr "**関連する出力フォーマット** ：空白のまま"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1028
+msgid "**Output location**: Leave blank"
+msgstr "**出力場所** ：空白のまま"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1029
+msgid "**Command usage**: Validation"
+msgstr "**コマンド使用法** ：妥当性確認"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1030
+msgid "**The related verification command**: Leave blank"
+msgstr "**関連する妥当性確認コマンド** ：空白のまま"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1031
+msgid "**The related event detail command**: Leave blank"
+msgstr "**関連イベント詳細コマンド** ：空白のまま"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1033
+msgid ""
+"Save the command. Once it has saved, check to make sure that it is enabled."
+msgstr "コマンドを保存します。保存したら、有効になっていることを確認します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1035
+msgid ""
+"Click on **Rules** in the left-hand sidebar under Validation, and then click"
+" on **Create new rule**."
+msgstr "左側のサイドバーにある「妥当性確認」の「 **ルール」** をクリックし、「 **新しいルールを作成」** をクリックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1038
+msgid ""
+"In the form that opens, select *Validation against a policy* as the "
+"**Purpose**."
+msgstr "開いたフォームで、 **目的** として *ポリシーに対する妥当性確認* を選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1041
+msgid ""
+"For **The related format**, select the format that you would like to use the"
+" policy on. If you are using the MP3 duration example above, you would "
+"select *Audio: MPEG 1/2 Audio Layer 3: MPEG 1/2 Audio Layer 3 (fmt/134)*."
+msgstr ""
+"**関連するフォーマット** の場合、ポリシーを使用するフォーマットを選択します。上記の MP3 デュレーションの例を使用する場合は、 *Audio "
+"を選択します：MPEG 1/2 Audio Layer 3：MPEG 1/2 Audio Layer 3 （fmt/134）* を選択します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1046
+msgid ""
+"For **Command**, select the command you just created. The dropdown will "
+"contain all available validation commands."
+msgstr "**コマンド** の場合、作成したばかりのコマンドを選択します。ドロップダウンには、使用可能なすべての妥当性確認コマンドが含まれます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1049
+msgid ""
+"Ensure that the Archivematica :ref:`Processing configuration <dashboard-"
+"processing>` is set to perform policy checks on originals and/or "
+"derivatives. The next time you start a transfer, Archivematica will check "
+"the files against the policy."
+msgstr ""
+"Archivematica :ref:`処理設定 <dashboard-processing>` "
+"が、オリジナルや派生物に対してポリシーチェックを実行するように設定されていることを確認します。次回に転送を開始すると、Archivematica "
+"は、ポリシーに照らし合わせてファイルをチェックします。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1054
+msgid ""
+"There are thee policy check jobs in Archivematica - *Perform policy checks "
+"on originals*, *Perform policy checks on preservation derivatives*, and "
+"*Perform policy checks on access derivatives*. The derivative checks will "
+"only run on files that have been normalized for preservation or access."
+msgstr ""
+"Archivematica には、 *オリジナルに対してポリシーチェックを実行する* 、 *保存派生物に対してポリシーチェックを実行する* 、 "
+"*アクセス派生物に対してポリシーチェックを実行する* の3 つのポリシー "
+"チェックジョブがあります。派生物チェックは、保存またはアクセスのために正規化されたファイルに対してのみ実行されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1059
+msgid ""
+"The background of a completed job will be green if all relevant files in the"
+" transfer passed the policy check, and turn pink if one or more files fail "
+"the policy check. Clicking on the gear icon to the left of the job name will"
+" provide more information about job."
+msgstr ""
+"完了したジョブの背景は、転送内のすべての関連ファイルがポリシー チェックに合格した場合は緑色になり、1 つ以上のファイルがポリシー "
+"チェックに合格しなかった場合はピンク色に変わります。ジョブ名の左側にある歯車アイコンをクリックすると、ジョブに関する詳細情報が表示されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1067
+msgid "Verification"
+msgstr "妥当性確認"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1069
+msgid ""
+"Verification is automatically run after a normalization command. "
+"Archivematica will run two commands: one checks if a file exists, and the "
+"other checks if the file exists and is greater than 0 bytes in size."
+msgstr ""
+"妥当性確認は、正規化コマンドの後に自動的に実行されます。Archivematica は 2 つのコマンドを実行します。1 "
+"つはファイルが存在するかどうかを確認し、もう 1 つはファイルが存在し、サイズが 0 バイトより大きいかどうかを確認します。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1073
+msgid ""
+"Verification is run on the output of normalization, not on the original "
+"file."
+msgstr "妥当性確認は、オリジナルファイルではなく、正規化の出力に対して実行されます。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1075
+msgid "You do not need to create rules for verification."
+msgstr "妥当性確認のためのルールを作成する必要はありません。"
+
+#: ../../user-manual/preservation/preservation-planning.rst:1077
+msgid ":ref:`Back to the top <preservation-planning>`"
+msgstr ":ref:`トップに戻る <preservation-planning>`"

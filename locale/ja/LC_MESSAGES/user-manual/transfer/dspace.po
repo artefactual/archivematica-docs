@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/dspace.rst:5
+msgid "DSpace exports"
+msgstr "DSpaceエクスポート"
+
+#: ../../user-manual/transfer/dspace.rst:7
+msgid ""
+"Archivematica can be used to build a \"dark archive\" for a DSpace "
+"repository - that is, it can provide back-end preservation functionality "
+"while DSpace remains the user deposit and access system. Material exported "
+"from DSpace must be placed in a :ref:`transfer source location "
+"<storageService:locations>` that the Archivematica pipeline can access."
+msgstr ""
+"Archivematica を使用すると、DSpace リポジトリの\"ダークアーカイブ\"を構築できます。つまり、DSpace "
+"がユーザーのデポジットおよびアクセスシステムのままである一方で、バックエンド保存機能を提供できます。DSpace "
+"からエクスポートされた素材は、Archivematica パイプラインがアクセスできる :ref:`転送元の場所 "
+"<storageService:locations>` に配列する必要があります。"
+
+#: ../../user-manual/transfer/dspace.rst:13
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/transfer/dspace.rst:15
+msgid ":ref:`DSpace version compatibility <dspace-version>`"
+msgstr ":ref:`DSpaceバージョンの互換性 <dspace-version>`"
+
+#: ../../user-manual/transfer/dspace.rst:16
+msgid ":ref:`DSpace export structure <dspace-export-structure>`"
+msgstr ":ref:`DSpaceエクスポート構造 <dspace-export-structure>`"
+
+#: ../../user-manual/transfer/dspace.rst:17
+msgid ":ref:`Processing DSpace exports <processing-dspace-exports>`"
+msgstr ":ref:`DSpaceエクスポートの処理 <processing-dspace-exports>`"
+
+#: ../../user-manual/transfer/dspace.rst:22
+msgid "DSpace version compatibility"
+msgstr "DSpaceバージョンの互換性"
+
+#: ../../user-manual/transfer/dspace.rst:24
+msgid ""
+"Archivematica has been tested using exports from DSpace 1.7.x. Ingest has "
+"not been tested on exports from DSpace 1.8.x; however, there were no changes"
+" in the DSpace AIP export structure between 1.7.x and 1.8.x so it is "
+"anticipated that performance will be identical."
+msgstr ""
+"Archivematica は、DSpace 1.7.x からのエクスポートを使用してテストされます。インジェストは、DSpace 1.8.x "
+"からのエクスポートではテストされません。ただし、1.7.x と 1.8.x の間で DSpace AIP "
+"エクスポート構造に変更はありませんでした。したがって、パフォーマンスは同一であることが予想されます。"
+
+#: ../../user-manual/transfer/dspace.rst:32
+msgid "DSpace export structure"
+msgstr "DSpaceエクスポート構造"
+
+#: ../../user-manual/transfer/dspace.rst:34
+msgid ""
+"Archivematica expects standard DSpace exports, where each DSpace item is "
+"packaged as a ZIP file. Typically, the DSpace item ZIP file will contain the"
+" uploaded object plus a license file, a METS file and possibly an OCR text "
+"file."
+msgstr ""
+"Archivematica は、各 DSpace アイテムが ZIP ファイルとしてパッケージ化される標準の DSpace "
+"エクスポートを想定しています。通常、DSpace アイテムの ZIP ファイルには、アップロードされたオブジェクトに加えて、ライセンスファイル、METS"
+" ファイル、および場合によっては OCR テキストファイルが含まれます。"
+
+#: ../../user-manual/transfer/dspace.rst:-1
+msgid ""
+"An unzipped DSpace export package, showing the four files that comprise the "
+"item."
+msgstr "解凍された DSpace エクスポートパッケージであり、アイテムを構成する 4 つのファイルが表示されます。"
+
+#: ../../user-manual/transfer/dspace.rst:43
+msgid "In the example pictured above, the DSpace item includes four files:"
+msgstr "上の写真の例では、DSpace アイテムは4つのファイルを含んでいます："
+
+#: ../../user-manual/transfer/dspace.rst:45
+msgid "``bitstream_39691.txt``: the OCR text file."
+msgstr "``bitstream_39691.txt`` OCR テキストファイル。"
+
+#: ../../user-manual/transfer/dspace.rst:46
+msgid "``bitstream_8272.pdf``: the original object deposited in DSpace."
+msgstr "``bitstream_8272.pdf`` ：DSpaceに寄託されたオリジナルのオブジェクト。"
+
+#: ../../user-manual/transfer/dspace.rst:47
+msgid "``bitstream_8273``: the license file."
+msgstr "``bitstream_8273`` ：ライセンスファイル。"
+
+#: ../../user-manual/transfer/dspace.rst:48
+msgid "``mets.xml``: the METS file for the item."
+msgstr "``mets.xml`` ：アイテムの METS ファイル。"
+
+#: ../../user-manual/transfer/dspace.rst:50
+msgid ""
+"Archivematica will reuse portions of the DSpace METS file to populate the "
+"METS file that is generated for the AIP."
+msgstr ""
+"Archivematica は、DSpace METS ファイルの一部を再利用して、AIP 用に生成された METS ファイルを設定します。"
+
+#: ../../user-manual/transfer/dspace.rst:53
+msgid ""
+"You can either transfer items one-by-one or place them within a directory to"
+" transfer multiple items at a time. Depending on the setup of your DSpace "
+"instance and your export parameters, the export may contain multiple "
+"individual items as well as a collection-level description, as in the "
+"example below."
+msgstr ""
+"アイテムを1つずつ転送するか、ディレクトリ内に配列して一度に複数のアイテムを転送できます。DSpaceインスタンスのセットアップとエクスポートパラメーターによって、エクスポートは以下の例のように、コレクションレベルの説明だけでなく、複数の個々のアイテムを含めることができます。"
+
+#: ../../user-manual/transfer/dspace.rst:61
+msgid "Processing DSpace exports"
+msgstr "DSpaceエクスポートの処理"
+
+#: ../../user-manual/transfer/dspace.rst:63
+msgid ""
+"Place your exported material in a :ref:`transfer source location "
+"<storageService:locations>` that your Archivematica pipeline can access."
+msgstr ""
+"エクスポートした素材を、Archivematica パイプラインがアクセスできる :ref:`転送元の場所 "
+"<storageService:locations>` に配列します。"
+
+#: ../../user-manual/transfer/dspace.rst:66
+msgid ""
+"On the Transfer tab in Archivematica, use the **Transfer type** dropdown "
+"menu to select the DSpace transfer type."
+msgstr ""
+"Archivematica の [転送] タブで、 **転送タイプ** ドロップダウンメニューにより DSpace 転送タイプを選択します。"
+
+#: ../../user-manual/transfer/dspace.rst
+msgid ""
+"Archivematica transfer tab showing \"DSpace\" selected as the transfer type."
+msgstr "Archivematica の転送タブで、転送タイプとして\"DSpace\" が選択されています。"
+
+#: ../../user-manual/transfer/dspace.rst:74
+msgid ""
+"Use the **Browse** button to find your DSpace export and select either an "
+"individual item or a collection of items. In the screenshot below, a "
+"collection of items has been selected. Click **Add**."
+msgstr ""
+"**ブラウズ** ボタンを使用して DSpace "
+"エクスポートを見つけ、個々のアイテムまたはアイテムのコレクションを選択します。以下のスクリーンショットでは、アイテムのコレクションが選択されています。 "
+"**追加** をクリックします。"
+
+#: ../../user-manual/transfer/dspace.rst
+msgid ""
+"Archivematica transfer tab showing a folder called \"DSpaceExport\", "
+"containing many DSpace items, selected for transfer."
+msgstr ""
+"\"DSpaceExport\" というフォルダーが表示されている Archivematica の転送タブであり、転送用に選択された多くの DSpace"
+" アイテムが含まれています。"
+
+#: ../../user-manual/transfer/dspace.rst:83
+msgid ""
+"If you selected a collection of items, enter a name for the transfer in the "
+"**Transfer name** box."
+msgstr "アイテムのコレクションを選択した場合は、 **転送名** ボックスに転送名を入力します。"
+
+#: ../../user-manual/transfer/dspace.rst:86
+msgid ""
+"If you selected an individual DSpace item, you do not need to give your "
+"transfer a name. The name of the item (e.g. ``ITEM@2429-1521.zip``) will be "
+"used as the transfer name."
+msgstr ""
+"個々の DSpace アイテムを選択した場合は、転送名は必要ありません。アイテム名 (例： ``ITEM@2429-1521.zip`` ) "
+"が転送名として使用されます。"
+
+#: ../../user-manual/transfer/dspace.rst:90
+msgid "Click **Start transfer** and process as required."
+msgstr "**転送開始** をクリックし、必要に応じて処理します。"
+
+#: ../../user-manual/transfer/dspace.rst:95
+msgid "DSpace AIP METS files"
+msgstr "DSpace AIP METSファイル"
+
+#: ../../user-manual/transfer/dspace.rst:97
+msgid ""
+"Each object in the AIP has 2 DSpace-specific descriptive metadata sections "
+"(dmdSec). The first contains Xpointers to descriptive and rights metadata in"
+" the original mets.xml files exported from DSpace."
+msgstr ""
+"AIPの各オブジェクトには、2つのDSpace固有の説明メタデータセクション（dmdSec）があります。最初のセクションは、DSpaceからエクスポートされたオリジナルのmets.xmlファイルの説明メタデータと権利メタデータへのXポインタを含んでいます。"
+
+#: ../../user-manual/transfer/dspace.rst:105
+msgid ""
+"The second dmdSec reflects the parent-child relationship between a DSpace "
+"object and its collection, using the handles as identifiers:"
+msgstr "2 番目の dmdSec は、ハンドルを識別子として使用して、DSpace オブジェクトとそのコレクションの間の親子関係を反映します："
+
+#: ../../user-manual/transfer/dspace.rst:112
+msgid ""
+"In the file section (``fileSec``) of the AIP METS file, you can find "
+"information about the different types of DSpace files contained in the AIP. "
+"They are sorted by file group (``fileGrp``): ``original``, "
+"``submissionDocumentation`` (the original DSpace mets.xml files), "
+"``preservation`` (if the material was normalized for preservation), "
+"``license``, and ``text/ocr``."
+msgstr ""
+"AIP METSファイルのファイルセクション（ ``fileSec`` "
+"）では、AIPに含まれる様々な種類のDSpaceファイルに関する情報を見ることができます。それらはファイルグループ（ ``fileGrp`` "
+"）でソートされています： ``original`` ``submissionDocumentation`` （オリジナルのDSpace "
+"mets.xmlファイル）、 ``preservation`` （保存のために素材が正規化された場合）、 ``license`` 、 "
+"``text/ocr`` 。"
+
+#: ../../user-manual/transfer/dspace.rst:122
+msgid ":ref:`Back to the top <dspace>`"
+msgstr ":ref:`トップに戻る <dspace>`"

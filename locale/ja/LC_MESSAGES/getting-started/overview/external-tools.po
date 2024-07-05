@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/overview/external-tools.rst:5
+msgid "External tools"
+msgstr "外部ツール"
+
+#: ../../getting-started/overview/external-tools.rst:7
+msgid ""
+"Archivematica is built upon open-source frameworks and services (e.g. "
+"Django, Gearman) and also integrates free and open-source tools that support"
+" users to process digital objects from ingest to access based on the ISO-"
+"OAIS functional model. In addition to the core software, which is released "
+"under `GNU Affero General Public License (AGPL)`_, the following tools are "
+"bundled with Archivematica."
+msgstr ""
+"Archivematicaは、オープンソースのフレームワークやサービス（DjangoやGearmanなど）をベースに構築されており、ISO-OAIS "
+"機能モデルに基づき、デジタルオブジェクトのインジェストからアクセスまでの処理をサポートするフリーでオープンソースのツールも統合されています。Archivematicaには、"
+" `GNU Affero General Public License（AGPL）`_ "
+"でリリースされているコアソフトウェアに加え、以下のツールがバンドルされています。"
+
+#: ../../getting-started/overview/external-tools.rst:15
+msgid "`BagIt`_"
+msgstr "`BagIt`_"
+
+#: ../../getting-started/overview/external-tools.rst:16
+msgid ""
+"Standard and script to package digital objects and metadata for archival "
+"storage. Archivematica uses the bagit-python library."
+msgstr ""
+"デジタルオブジェクトとメタデータをアーカイブ保存用にパッケージ化するための標準とスクリプトです。Archivematicaは、bagit-"
+"pythonライブラリを使用しています。"
+
+#: ../../getting-started/overview/external-tools.rst:19
+#: ../../getting-started/overview/external-tools.rst:25
+msgid "**License**: Public domain"
+msgstr "**ライセンス** ：パブリックドメイン"
+
+#: ../../getting-started/overview/external-tools.rst:22
+msgid "`bulk_extractor`_"
+msgstr "`bulk_extractor`_"
+
+#: ../../getting-started/overview/external-tools.rst:23
+msgid "Disk image and file contents analysis tool."
+msgstr "ディスクイメージとファイルコンテンツ分析ツール。"
+
+#: ../../getting-started/overview/external-tools.rst:28
+msgid "`ClamAV`_"
+msgstr "`ClamAV`_"
+
+#: ../../getting-started/overview/external-tools.rst:29
+msgid "Anti-virus toolkit for UNIX."
+msgstr "UNIX用アンチウイルスツールキット。"
+
+#: ../../getting-started/overview/external-tools.rst:31
+#: ../../getting-started/overview/external-tools.rst:133
+#: ../../getting-started/overview/external-tools.rst:139
+#: ../../getting-started/overview/external-tools.rst:145
+#: ../../getting-started/overview/external-tools.rst:151
+#: ../../getting-started/overview/external-tools.rst:176
+#: ../../getting-started/overview/external-tools.rst:183
+#: ../../getting-started/overview/external-tools.rst:189
+msgid "**License**: `GNU General Public License`_"
+msgstr "**ライセンス** ： `GNU一般公衆ライセンス`_"
+
+#: ../../getting-started/overview/external-tools.rst:34
+msgid "`Django`_"
+msgstr "`Django`_"
+
+#: ../../getting-started/overview/external-tools.rst:35
+msgid ""
+"Django is a high-level Python Web framework that encourages rapid "
+"development and clean, pragmatic design."
+msgstr "Djangoは、高水準のPython Webフレームワークであり、迅速な開発とクリーンで実用的な設計を奨励します。"
+
+#: ../../getting-started/overview/external-tools.rst:38
+msgid "**License**: `BSD (3-clause)`_"
+msgstr "**ライセンス** ： `BSD（3-clause）`_"
+
+#: ../../getting-started/overview/external-tools.rst:41
+msgid "`ElasticSearch`_"
+msgstr "`ElasticSearch`_"
+
+#: ../../getting-started/overview/external-tools.rst:42
+msgid ""
+"Elasticsearch is a search engine based on the Lucene library. It provides a "
+"distributed, multitenant-capable full-text search engine with an HTTP web "
+"interface and schema-free JSON documents. Elasticsearch is developed in "
+"Java."
+msgstr ""
+"Elasticsearchは、Luceneライブラリに基づく検索エンジンです。HTTP "
+"WebインターフェイスとスキーマフリーのJSON文書を備えた、マルチテナント対応の分散型全文検索エンジンを提供します。ElasticsearchはJavaで開発されています。"
+
+#: ../../getting-started/overview/external-tools.rst:46
+#: ../../getting-started/overview/external-tools.rst:67
+#: ../../getting-started/overview/external-tools.rst:127
+#: ../../getting-started/overview/external-tools.rst:158
+#: ../../getting-started/overview/external-tools.rst:170
+msgid "**License**: `Apache License Version 2.0`_"
+msgstr "**ライセンス** ： `Apacheライセンスバージョン2.0`_"
+
+#: ../../getting-started/overview/external-tools.rst:49
+msgid "`ExifTool`_"
+msgstr "`ExifTool`_"
+
+#: ../../getting-started/overview/external-tools.rst:50
+msgid ""
+"ExifTool is a platform-independent Perl library plus a command-line "
+"application for reading, writing and editing meta information in a wide "
+"variety of files."
+msgstr ""
+"ExifToolは、プラットフォームに依存しないPerlライブラリと、様々なファイルのメタ情報を読み取り、書き込み、編集を行うためのコマンドラインアプリケーションです。"
+
+#: ../../getting-started/overview/external-tools.rst:53
+msgid ""
+"**License**: `GNU General Public License version 1`_ or `Artistic License`_"
+msgstr "**ライセンス** ： `GNU一般公衆ライセンスバージョン1`_ または `芸術的ライセンス`_"
+
+#: ../../getting-started/overview/external-tools.rst:56
+msgid "`FFmpeg`_"
+msgstr "`FFmpeg`_"
+
+#: ../../getting-started/overview/external-tools.rst:57
+msgid ""
+"A complete, cross-platform solution to record, convert and stream audio and "
+"video."
+msgstr "オーディオとビデオを録音、変換、ストリーミングするための完全なクロスプラットフォームソリューションです。"
+
+#: ../../getting-started/overview/external-tools.rst:60
+msgid "**License**: `GNU Lesser General Public License version 2.1`_"
+msgstr "**ライセンス** ： `GNU劣等一般公衆ライセンスバージョン2.1`_"
+
+#: ../../getting-started/overview/external-tools.rst:63
+msgid "`fido`_"
+msgstr "`fido`_"
+
+#: ../../getting-started/overview/external-tools.rst:64
+msgid ""
+"Format Identification for Digital Objects (FIDO) is a Python command-line "
+"tool to identify the file formats of digital objects."
+msgstr ""
+"Format Identification for Digital Objects "
+"（FIDO）は、デジタルオブジェクトのファイルフォーマットを識別するためのPythonコマンドラインツールです。"
+
+#: ../../getting-started/overview/external-tools.rst:70
+msgid "`File Information Tool Set (FITS)`_"
+msgstr "`File Information Tool Set（FITS）`_"
+
+#: ../../getting-started/overview/external-tools.rst:71
+msgid "File format identification and validation software integration tool."
+msgstr "ファイルフォーマットの識別と妥当性確認ソフトウェアの統合ツールです。"
+
+#: ../../getting-started/overview/external-tools.rst:73
+#: ../../getting-started/overview/external-tools.rst:106
+msgid "**License**: `GNU Lesser General Public License`_"
+msgstr "**ライセンス** ： `GNU劣等一般公衆ライセンス`_"
+
+#: ../../getting-started/overview/external-tools.rst:76
+msgid "`Gearman`_"
+msgstr "`Gearman`_"
+
+#: ../../getting-started/overview/external-tools.rst:77
+msgid ""
+"Gearman provides a generic application framework to farm out work to other "
+"machines or processes that are better suited to do the work."
+msgstr "Gearmanは、作業をより適した他のマシンやプロセスにファームアウトするための汎用アプリケーションフレームワークを提供します。"
+
+#: ../../getting-started/overview/external-tools.rst:80
+msgid "**License**: BSD License"
+msgstr "**ライセンス** ：BSDライセンス"
+
+#: ../../getting-started/overview/external-tools.rst:83
+msgid "`Ghostscript`_"
+msgstr "`Ghostscript`_"
+
+#: ../../getting-started/overview/external-tools.rst:84
+msgid "An interpreter for the PostScript language and for PDF."
+msgstr "PostScript言語と PDF のインタプリタです。"
+
+#: ../../getting-started/overview/external-tools.rst:86
+msgid "**License**: `GNU Affero General Public License (AGPL)`_"
+msgstr "**ライセンス** ： `GNUアフェロ一般公衆ライセンス（AGPL）`_"
+
+#: ../../getting-started/overview/external-tools.rst:89
+msgid "`Imagemagick`_"
+msgstr "`Imagemagick`_"
+
+#: ../../getting-started/overview/external-tools.rst:90
+msgid ""
+"ImageMagick is a free and open-source software suite for displaying, "
+"converting, and editing raster image and vector image files. It can read and"
+" write over 200 image file formats."
+msgstr ""
+"ImageMagickは、ラスター画像やベクター画像ファイルを表示、変換、編集するための無料のオープンソースのソフトウェアスイートです。200以上の画像ファイル形式を読み取り、書き込みができます。"
+
+#: ../../getting-started/overview/external-tools.rst:94
+msgid "**License**: `Imagemagick license`_ (GPL compatible)"
+msgstr "**ライセンス** ： `Imagemagickライセンス`_ （GPL互換）"
+
+#: ../../getting-started/overview/external-tools.rst:97
+msgid "`Inkscape`_"
+msgstr "`Inkscape`_"
+
+#: ../../getting-started/overview/external-tools.rst:98
+msgid "Converts vector images to Scalable Vector Graphic (SVG) format."
+msgstr "ベクトル画像をScalable Vector Graphic（SVG）形式に変換します。"
+
+#: ../../getting-started/overview/external-tools.rst:100
+msgid "**License**: `GNU General Public License version 2`_"
+msgstr "**ライセンス** ： `GNU一般公衆ライセンスバージョン2`_"
+
+#: ../../getting-started/overview/external-tools.rst:103
+msgid "`JHOVE`_"
+msgstr "`JHOVE`_"
+
+#: ../../getting-started/overview/external-tools.rst:104
+msgid "File format validation tool."
+msgstr "ファイルフォーマット妥当性確認ツール。"
+
+#: ../../getting-started/overview/external-tools.rst:109
+msgid "`MediaConch`_"
+msgstr "`MediaConch`_"
+
+#: ../../getting-started/overview/external-tools.rst:110
+msgid ""
+"MediaConch is an extensible, open source software project consisting of an "
+"implementation checker, policy checker, reporter, and fixer that targets "
+"preservation-level audiovisual files."
+msgstr ""
+"MediaConchは、保存レベルのオーディオビジュアルファイルを対象とした、実装チェッカー、ポリシーチェッカー、レポーター、フィクサーで構成される、拡張可能なオープンソースソフトウェアプロジェクトです。"
+
+#: ../../getting-started/overview/external-tools.rst:114
+#: ../../getting-started/overview/external-tools.rst:121
+msgid "**License**: `BSD (2-clause)`_"
+msgstr "**ライセンス** ： `BSD（2-clause）`_"
+
+#: ../../getting-started/overview/external-tools.rst:117
+msgid "`MediaInfo`_"
+msgstr "`MediaInfo`_"
+
+#: ../../getting-started/overview/external-tools.rst:118
+msgid ""
+"MediaInfo is a convenient unified display of the most relevant technical and"
+" tag data for video and audio files."
+msgstr "MediaInfoは、ビデオおよびオーディオファイルに最も関連性の高い技術データとタグデータを統合して表示する便利な機能です。"
+
+#: ../../getting-started/overview/external-tools.rst:124
+msgid "`Nailgun`_"
+msgstr "`Nailgun`_"
+
+#: ../../getting-started/overview/external-tools.rst:125
+msgid ""
+"A client, protocol, and server for running Java programs from the command "
+"line."
+msgstr "コマンドラインから Javaプログラムを実行するためのクライアント、プロトコル、サーバー。"
+
+#: ../../getting-started/overview/external-tools.rst:130
+msgid "`NFS-common`_"
+msgstr "`NFS-common`_"
+
+#: ../../getting-started/overview/external-tools.rst:131
+msgid ""
+"Network File System Access - allows access to files on network storage "
+"devices."
+msgstr "ネットワークファイルシステムアクセス - ネットワークストレージデバイス上のファイルへのアクセスを許可します。"
+
+#: ../../getting-started/overview/external-tools.rst:136
+msgid "`p7zip`_"
+msgstr "`p7zip`_"
+
+#: ../../getting-started/overview/external-tools.rst:137
+msgid "7-Zip is a file archiver with a high compression ratio."
+msgstr "7-Zip は、高圧縮率のファイルアーカイバーです。"
+
+#: ../../getting-started/overview/external-tools.rst:142
+msgid "`Python-lxml`_"
+msgstr "`Python-lxml`_"
+
+#: ../../getting-started/overview/external-tools.rst:143
+msgid "Python binding for libxml2 and libxslt."
+msgstr "libxml2とlibxsltのPythonバインディング。"
+
+#: ../../getting-started/overview/external-tools.rst:148
+msgid "`rsync`_"
+msgstr "`rsync`_"
+
+#: ../../getting-started/overview/external-tools.rst:149
+msgid "A fast, versatile, remote (and local) file-copying tool."
+msgstr "高速で多機能なリモート（およびローカル）ファイルコピーツール。"
+
+#: ../../getting-started/overview/external-tools.rst:155
+msgid "`Siegfried`_"
+msgstr "`Siegfried`_"
+
+#: ../../getting-started/overview/external-tools.rst:156
+msgid "File format identification tool."
+msgstr "ファイルフォーマット識別ツール。"
+
+#: ../../getting-started/overview/external-tools.rst:161
+msgid "`Sleuthkit`_"
+msgstr "`Sleuthkit`_"
+
+#: ../../getting-started/overview/external-tools.rst:162
+msgid "Disk image management and extraction toolkit."
+msgstr "ディスクイメージ管理・抽出ツールキット。"
+
+#: ../../getting-started/overview/external-tools.rst:164
+msgid "**License**: `Common Public License`_"
+msgstr "**ライセンス** ： `共通パブリックライセンス`_"
+
+#: ../../getting-started/overview/external-tools.rst:167
+msgid "`Tesseract`_"
+msgstr "`Tesseract`_"
+
+#: ../../getting-started/overview/external-tools.rst:168
+msgid ""
+"Optical Character Recognition tool (reads image files and convert to text)."
+msgstr "光学式文字認識ツール（画像ファイルを読み取り、テキストに変換）。"
+
+#: ../../getting-started/overview/external-tools.rst:173
+msgid "`Ubuntu Linux`_"
+msgstr "`Ubuntu Linux`_"
+
+#: ../../getting-started/overview/external-tools.rst:174
+msgid "Interface with computing hardware. Ubuntu Linux server edition."
+msgstr "コンピューティングハードウェアとのインターフェース。Ubuntu Linux サーバーエディション。"
+
+#: ../../getting-started/overview/external-tools.rst:179
+msgid "`UUID`_"
+msgstr "`UUID`_"
+
+#: ../../getting-started/overview/external-tools.rst:180
+msgid ""
+"Command line interface (CLI) for the generation of DCE 1.1, ISO/IEC "
+"11578:1996 and IETF RFC-4122 compliant Universally Unique Identifier (UUID)."
+msgstr ""
+"DCE 1.1、ISO/IEC 11578：1996、IETF RFC-4122準拠のUniversally Unique Identifier "
+"（UUID）を生成するためのコマンドラインインターフェイス（CLI）。"
+
+#: ../../getting-started/overview/external-tools.rst:186
+msgid "`unar`_"
+msgstr "`unar`_"
+
+#: ../../getting-started/overview/external-tools.rst:187
+msgid "The Unarchiver is an archive unpacker program."
+msgstr "Unarchiverは、アーカイブ解凍プログラムです。"
+
+#: ../../getting-started/overview/external-tools.rst:191
+msgid ":ref:`Back to the top <external-tools>`"
+msgstr ":ref:`トップに戻る <external-tools>`"

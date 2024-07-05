@@ -1,0 +1,810 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/access/access.rst:5
+msgid "Access"
+msgstr "アクセス"
+
+#: ../../user-manual/access/access.rst:7
+msgid ""
+"During ingest, Archivematica can generate access copies of digital objects "
+"and package them into a Dissemination Information Package (DIP). DIPs can be"
+" uploaded to an access system or stored for future use. As a general rule, "
+"we recommend only creating DIPs when you need them to save on storage space "
+"- you can create DIPs on demand by :ref:`re-ingesting your AIP <reingest>` "
+"at a later date."
+msgstr ""
+"インジェストの際、Archivematicaは、デジタルオブジェクトのアクセスコピーを生成し、DIP（Dissemination Information"
+" "
+"Package）にパッケージ化できます。DIPは、アクセスシステムにアップロードしたり、将来の使用のために保存したりできます。一般的なルールとして、保管スペースを節約するために、必要なときだけDIPを作成することをお勧めします。"
+" :ref:`AIP <reingest>` を後日再インジェストすることで、オンデマンドでDIPを作成できます。"
+
+#: ../../user-manual/access/access.rst:14
+msgid ""
+"After a DIP has been uploaded and/or stored it is moved to the uploadedDIPs "
+"directory. If this data is no longer needed, the uploadedDIPs directory can "
+"be cleared out. See :ref:`Processing storage usage <dashboard-usage>` for "
+"more information."
+msgstr ""
+"DIPがアップロードおよび/または保存されると、uploadedDIPsディレクトリに移動します。このデータが不要になった場合、uploadedDIPsディレクトリを消去できます。詳細については、"
+" :ref:`処理ストレージ使用状況 <dashboard-usage>` を参照してください。"
+
+#: ../../user-manual/access/access.rst:19
+msgid ""
+"Archivematica's Access tab displays DIPs that have been uploaded to AtoM or "
+"Binder. It does not display DIPs that have been sent to other access "
+"systems, like ArchivesSpace."
+msgstr ""
+"ArchivematicaのAccessタブには、AtoMまたはBinderにアップロードされたDIPが表示されます。ArchivesSpaceのような他のアクセスシステムに送信されたDIPは、表示されません。"
+
+#: ../../user-manual/access/access.rst:23
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/access/access.rst:25
+msgid ":ref:`Access systems <access-default>`"
+msgstr ":ref:`アクセスシステム <access-default>`"
+
+#: ../../user-manual/access/access.rst:26
+msgid ":ref:`Upload a DIP to AtoM <upload-atom>`"
+msgstr ":ref:`AtoMにDIPをアップロード <upload-atom>`"
+
+#: ../../user-manual/access/access.rst:28
+msgid ":ref:`Metadata-only upload to AtoM <upload-metadata-atom>`"
+msgstr ":ref:`AtoMへのメタデータのみのアップロード <upload-metadata-atom>`"
+
+#: ../../user-manual/access/access.rst:30
+msgid ":ref:`Upload a DIP to Binder <upload-binder>`"
+msgstr ":ref:`BinderにDIPをアップロード <upload-binder>`"
+
+#: ../../user-manual/access/access.rst:31
+msgid ":ref:`Upload a DIP to ArchivesSpace <upload-as>`"
+msgstr ":ref:`ArchivesSpaceにDIPをアップロード <upload-as>`"
+
+#: ../../user-manual/access/access.rst:32
+msgid ":ref:`Store DIP <store-dip>`"
+msgstr ":ref:`DIPの保管 <store-dip>`"
+
+#: ../../user-manual/access/access.rst:33
+msgid ":ref:`Review and download DIPs <review-dip>`"
+msgstr ":ref:`DIPのレビューとダウンロード <review-dip>`"
+
+#: ../../user-manual/access/access.rst:34
+msgid ":ref:`Access tab <access-tab>`"
+msgstr ":ref:`アクセスタブ <access-tab>`"
+
+#: ../../user-manual/access/access.rst:39
+msgid "Access systems"
+msgstr "アクセスシステム"
+
+#: ../../user-manual/access/access.rst:41
+msgid ""
+"If you have chosen to create a Dissemination Information Package (DIP) by "
+"selecting either ``Normalize for preservation and access`` or ``Normalize "
+"for access`` at the Normalization microservice, you can upload it to a "
+"content management tool as a way of providing access to your archival "
+"material. For more information on normalization options in Archivematica, "
+"please see :ref:`Normalize <normalize>`."
+msgstr ""
+"正規化マイクロサービスで ``Normalize for preservation and access`` または ``Normalize for "
+"access`` "
+"のいずれかを選択して普及情報パッケージ（DIP）を作成した場合、アーカイブ素材へのアクセスを提供する方法として、コンテンツ管理ツールにアップロードできます。Archivematicaの正規化オプションの詳細については、"
+" :ref:`正規化 <normalize>` を参照してください。"
+
+#: ../../user-manual/access/access.rst:48
+msgid ""
+"The DIP includes access copies of the original digital objects in the "
+"transfer, created through either Archivematica's normalization rules or a "
+"manual normalization process. The DIP also includes a DIP METS file and, "
+"optionally, a thumbnail for each digital object."
+msgstr ""
+"DIPには、Archivematicaの正規化ルールまたは手動正規化プロセスによって作成された、転送元のデジタルオブジェクトのアクセスコピーが含まれます。DIPには、DIP"
+" METSファイルと、オプションで各デジタルオブジェクトのサムネイルも含まれます。"
+
+#: ../../user-manual/access/access.rst:53
+msgid ""
+"A content management tool called `AtoM`_ is Archivematica's default access "
+"system. AtoM is a web-based, open source application for standards-based "
+"archival description and access in a multilingual, multi-repository "
+"environment. Access integration workflows also exist for `ArchivesSpace`_, "
+"`CONTENTdm`_, and `Binder`_."
+msgstr ""
+"`AtoM`_ "
+"と呼ばれるコンテンツ管理ツールは、Archivematicaのデフォルトのアクセスシステムです。AtoMは、Webベースのオープンソースアプリケーションであり、多言語、マルチリポジトリ環境における標準ベースのアーカイブ記述とアクセスを実現します。アクセス統合ワークフローは、"
+" `ArchivesSpace`_ 、 `CONTENTdm`_ 、 `Binder`_ にも存在します。"
+
+#: ../../user-manual/access/access.rst:62
+msgid "Upload a DIP to AtoM"
+msgstr "AtoMにDIPをアップロード"
+
+#: ../../user-manual/access/access.rst:64
+msgid ""
+"To upload DIPs to AtoM, you must first have a working AtoM instance. An "
+"administrator will need to configure the AtoM instance to talk to "
+"Archivematica. For more information about setting up an integration with "
+"AtoM, see :ref:`Using AtoM 2.x with Archivematica <atom-setup>`."
+msgstr ""
+"DIPをAtoMにアップロードするには、まずAtoMインスタンスが動作している必要があります。管理者は、AtoMインスタンスをArchivematicaと通信できるように設定する必要があります。AtoMとの統合の設定については、"
+" :ref:`Using AtoM 2.x with Archivematica <atom-setup>` を参照してください。"
+
+#: ../../user-manual/access/access.rst:71
+msgid ""
+"You must create the target description in AtoM **before** uploading the DIP."
+" You will need to indicate part of the description's URL or a target "
+"collection in order to send the DIP to the appropriate place during DIP "
+"upload."
+msgstr ""
+"**DIPをアップロードする前に、AtoM** "
+"でターゲット記述を作成する必要があります。DIPのアップロード中にDIPを適切な場所に送信するため、説明のURLの一部またはターゲットコレクションを指定する必要があります。"
+
+#: ../../user-manual/access/access.rst:76
+msgid ""
+"Digital objects uploaded to AtoM are added as children of the target "
+"description and are, by default, given the level of description of ``item``."
+" You can assign other levels of description by sending your transfer to "
+"backlog and :ref:`adding AtoM levels of description <adding-atom-lod>` on "
+"the Appraisal tab."
+msgstr ""
+"AtoMにアップロードされたデジタルオブジェクトは、ターゲット記述の子として追加され、デフォルトでは、 ``item`` "
+"の記述レベルが与えられます。他の記述レベルを割り当てるには、転送をバックログに送信し、 :ref:`鑑定タブでAtoM記述レベル <adding-"
+"atom-lod>` を追加します。"
+
+#: ../../user-manual/access/access.rst:81
+msgid ""
+"It is possible to arrange your transfer to create a hierarchy that AtoM will"
+" recognize by :ref:`using the arrangement feature on Appraisal tab "
+"<arrangement-drag-drop>`."
+msgstr ""
+"「鑑定」タブ<arrangement-drag-"
+"drop>`の配列機能を:ref:`使用して、AtoMが認識できる階層を作成し、転送を配列することが可能です。"
+
+#: ../../user-manual/access/access.rst:85
+msgid ""
+"You can also :ref:`add descriptive metadata <add-metadata>` to your transfer"
+" using either the metadata form or the metadata CSV file. This descriptive "
+"metadata will be passed to AtoM. Note that the AtoM DIP upload integration "
+"supports Dublin Core descriptive metadata only. The following Dublin Core "
+"fields are mapped to the ISAD(G) template in AtoM:"
+msgstr ""
+"また、 :ref:`メタデータフォームまたはメタデータCSVファイルのいずれかを使用して、説明メタデータ <add-metadata>` "
+"を転送に追加できます。この説明メタデータは、AtoMに渡されます。AtoM "
+"DIPアップロード統合は、ダブリンコアの説明メタデータのみをサポートしていることに注意してください。以下のDublin "
+"Coreフィールドは、AtoMのISAD（G）テンプレートにマッピングされています："
+
+#: ../../user-manual/access/access.rst:92
+msgid "Dublin Core"
+msgstr "Dublin Core"
+
+#: ../../user-manual/access/access.rst:92
+msgid "ISAD(G)"
+msgstr "ISAD（G）"
+
+#: ../../user-manual/access/access.rst:94
+msgid "title"
+msgstr "タイトル"
+
+#: ../../user-manual/access/access.rst:95
+msgid "identifier"
+msgstr "識別子"
+
+#: ../../user-manual/access/access.rst:96
+msgid "creator"
+msgstr "作成者"
+
+#: ../../user-manual/access/access.rst:96
+msgid "name of creator"
+msgstr "作成者名"
+
+#: ../../user-manual/access/access.rst:97
+msgid "date"
+msgstr "日付"
+
+#: ../../user-manual/access/access.rst:97
+msgid "date of creation"
+msgstr "作成日"
+
+#: ../../user-manual/access/access.rst:98
+msgid "type"
+msgstr "タイプ"
+
+#: ../../user-manual/access/access.rst:98
+#: ../../user-manual/access/access.rst:107
+msgid "subject access point"
+msgstr "サブジェクトアクセスポイント"
+
+#: ../../user-manual/access/access.rst:99
+msgid "provenance"
+msgstr "来歴"
+
+#: ../../user-manual/access/access.rst:99
+msgid "immediate source of acquisition or transfer"
+msgstr "直接の取得または転送元"
+
+#: ../../user-manual/access/access.rst:100
+msgid "description"
+msgstr "説明"
+
+#: ../../user-manual/access/access.rst:100
+msgid "scope and content"
+msgstr "範囲と内容"
+
+#: ../../user-manual/access/access.rst:101
+msgid "extent"
+msgstr "範囲"
+
+#: ../../user-manual/access/access.rst:101
+#: ../../user-manual/access/access.rst:102
+msgid "extent and medium"
+msgstr "範囲と媒体"
+
+#: ../../user-manual/access/access.rst:102
+msgid "format"
+msgstr "フォーマット"
+
+#: ../../user-manual/access/access.rst:103
+msgid "source"
+msgstr "ソース"
+
+#: ../../user-manual/access/access.rst:103
+msgid "location of originals"
+msgstr "オリジナルの所在"
+
+#: ../../user-manual/access/access.rst:104
+msgid "language"
+msgstr "言語"
+
+#: ../../user-manual/access/access.rst:104
+msgid "language of material"
+msgstr "素材の言語"
+
+#: ../../user-manual/access/access.rst:105
+msgid "rights"
+msgstr "権利"
+
+#: ../../user-manual/access/access.rst:105
+msgid "conditions governing access"
+msgstr "アクセスを管理する条件"
+
+#: ../../user-manual/access/access.rst:106
+msgid "coverage"
+msgstr "カバレッジ"
+
+#: ../../user-manual/access/access.rst:106
+msgid "place access point"
+msgstr "アクセスポイントを設置"
+
+#: ../../user-manual/access/access.rst:107
+msgid "subject"
+msgstr "件名"
+
+#: ../../user-manual/access/access.rst:112
+msgid ""
+"Adding metadata through the form in Archivematica will create an "
+"intermediary descripton in AtoM. However, if the transfer is sent to the "
+"backlog and AtoM descriptions are applied (see :ref:`Adding AtoM levels of "
+"description <adding-atom-lod>`), then any metadata added through the form "
+"will not be present in AtoM. There will also be no intermediary description,"
+" but the levels of description you applied will be present in AtoM."
+msgstr ""
+"Archivematicaのフォームからメタデータを追加すると、AtoMに中間ディスクリプションが作成されます。ただし、転送がバックログに送信され、AtoM記述が適用された場合（"
+" :ref:`AtoMの記述レベルを追加 <adding-atom-lod>` "
+"を参照）、フォームを通して追加されたメタデータは、AtoMに存在しません。また、中間記述も存在しませんが、適用した記述レベルは、AtoMに存在します。"
+
+#: ../../user-manual/access/access.rst:119
+msgid ""
+"There are two ways to provide the target description to Archivematica. The "
+"first is by providing the slug during the Upload DIP microservice."
+msgstr ""
+"ターゲットの説明をArchivematicaに提供する方法は2つあります。1つ目は、DIPアップロードでマイクロサービス中にスラッグを提供する方法です。"
+
+#: ../../user-manual/access/access.rst:122
+#: ../../user-manual/access/access.rst:254
+msgid ""
+"Process your transfer. You must select ``Normalize for preservation and "
+"access`` or ``Normalize for access`` at the Normalization microservice. When"
+" you reach the Upload DIP microservice, select \"Upload DIP to AtoM/Binder\""
+" from the drop-down menu."
+msgstr ""
+"転送を処理します。正規化マイクロサービスで、 ``Normalize for preservation and access`` または "
+"``Normalize for access`` を選択する必要があります。Upload "
+"DIPマイクロサービスに到達したら、ドロップダウンメニューから\"Upload DIP to AtoM/Binder\"を選択します。"
+
+#: ../../user-manual/access/access.rst:127
+msgid ""
+"A dialogue box will appear. Enter the permalink of the description in the "
+"dialogue box. For example, if the URL of the archival description is "
+"http://myAtoM.ca/my-target-description, enter ``my-target-description``. See"
+" ``slug`` in the `AtoM glossary`_ for more information."
+msgstr ""
+"ダイアログボックスが表示されます。ダイアログボックスに説明のパーマリンクを入力します。例えば、アーカイブの説明のURLがhttp://myAtoM.ca/my-"
+"target-descriptionの場合、 ``my-target-description`` と入力します。詳しくは、 `AtoM用語集`_ の "
+"``slug`` を参照してください。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid ""
+"Image shows a popup window where a user can enter the slug for an AtoM "
+"description"
+msgstr "画像は、ユーザーがAtoMの説明のためのスラッグを入力できるポップアップウィンドウを示します"
+
+#: ../../user-manual/access/access.rst:138
+msgid ""
+"Click the blue \"Upload\" button. Digital objects will be uploaded as child "
+"items within the target description."
+msgstr "青い\"アップロード\"ボタンをクリックします。デジタルオブジェクトは、ターゲット記述内の子項目としてアップロードされます。"
+
+#: ../../user-manual/access/access.rst:141
+msgid ""
+"When the DIP has finished uploading, open the Access tab in the dashboard. "
+"This tab shows the AIP and the uploaded DIP. Note that due to a known issue,"
+" if you want to navigate to the uploaded DIP using the link provided, you "
+"must manually edit the URL to remove ``/sword/deposit``."
+msgstr ""
+"DIPのアップロードが完了したら、ダッシュボードの「アクセス」タブを開きます。このタブには、AIPとアップロードされたDIPが表示されます。既知の問題のため、提供されたリンクを使用してアップロードされたDIPに移動する場合は、手動でURLを編集して、"
+" ``/sword/deposit`` を削除する必要があります。"
+
+#: ../../user-manual/access/access.rst:146
+#: ../../user-manual/access/access.rst:170
+#: ../../user-manual/access/access.rst:293
+msgid ""
+"Check the target description in AtoM. The digital object(s) should be "
+"displayed as child objects of the record."
+msgstr "AtoMのターゲット記述を確認してください。デジタルオブジェクトは、レコードの子オブジェクトとして表示されるはずです。"
+
+#: ../../user-manual/access/access.rst:149
+msgid ""
+"In a more automated environment, you can add the slug to the **Access system"
+" ID** box when you are setting up your transfer. Archivematica will "
+"automatically grab this value when it reaches the Upload DIP microservice."
+msgstr ""
+"より自動化された環境では、転送を設定する際に、 **Access system ID** ボックスにスラッグを追加できます。Upload "
+"DIPマイクロサービスに到達すると、Archivematicaは、自動的にこの値を取得します。"
+
+#: ../../user-manual/access/access.rst:153
+msgid ""
+"Create a new transfer. In the ``Access system ID`` box, enter the permalink "
+"of the description in the dialogue box. For example, if the URL of the "
+"archival description is http://myAtoM.ca/my-target-description, enter ``my-"
+"target-description``. See ``slug`` in the `AtoM glossary`_ for more "
+"information."
+msgstr ""
+"新しい転送を作成します。 ``Access system ID`` "
+"ボックスに、ダイアログボックスの説明のパーマリンクを入力します。例えば、アーカイブ記述のURLがhttp://myAtoM.ca/my-target-"
+"descriptionの場合、 ``my-target-description`` と入力します。詳しくは `AtoM用語集`_ の ``slug`` "
+"を参照してください。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid ""
+"Image shows new transfer with an AtoM slug defined as the access system "
+"identifier"
+msgstr "画像は、アクセスシステム識別子として定義されたAtoMスラッグを持つ新しい転送を示します"
+
+#: ../../user-manual/access/access.rst:164
+#: ../../user-manual/access/access.rst:287
+msgid ""
+"Process your transfer. You must select ``Normalize for preservation and "
+"access`` or ``Normalize for access`` at the Normalization microservice. When"
+" you reach the Upload DIP microservice, select \"Upload DIP to AtoM/Binder\""
+" from the drop-down menu (or set this as the preconfigured choice in the "
+"processing configuration)."
+msgstr ""
+"転送を処理します。正規化マイクロサービスで、 ``Normalize for preservation and access`` または "
+"``Normalize for access`` を選択する必要があります。Upload "
+"DIPマイクロサービスに到達したら、ドロップダウンメニューから、\"Upload DIP to "
+"AtoM/Binder\"を選択します（または、処理設定でこれを事前構成された選択肢として設定します）。"
+
+#: ../../user-manual/access/access.rst:176
+msgid "Metadata-only upload to AtoM"
+msgstr "AtoMへのメタデータのみのアップロード"
+
+#: ../../user-manual/access/access.rst:178
+msgid ""
+"In Archivematica 1.6 and higher, you can send AIP object metadata to AtoM "
+"without uploading access copies of the files. This may be a helpful workflow"
+" if you have digital objects which you wish to make discoverable but you "
+"can't display online for copyright or privacy reasons."
+msgstr ""
+"Archivematica "
+"1.6以降では、ファイルのアクセスコピーをアップロードすることなく、AIPオブジェクトのメタデータをAtoMに送信できます。これは、発見可能にしたいが、著作権やプライバシーの理由でオンラインに表示できないデジタルオブジェクトがある場合に便利なワークフローです。"
+
+#: ../../user-manual/access/access.rst:185
+msgid "AtoM 2.4 or higher is required to use this workflow."
+msgstr "このワークフローを使用するには、AtoM 2.4以上が必要です。"
+
+#: ../../user-manual/access/access.rst:189
+msgid ""
+"The following AtoM-Archivematica workflows are not currently supported with "
+"this workflow:"
+msgstr "以下のAtoM-Archivematicaワークフローは、現在このワークフローではサポートされていません："
+
+#: ../../user-manual/access/access.rst:192
+msgid ""
+"Descriptive metadata: if descriptive metadata is included by csv or entering"
+" in the user interface, the metadata will not display in AtoM in this "
+"workflow."
+msgstr ""
+"説明メタデータ：説明メタデータがCSVまたはユーザーインターフェイスへの入力によって含まれている場合、メタデータは、このワークフローのAtoMには表示されません。"
+
+#: ../../user-manual/access/access.rst:195
+msgid ""
+"SIPs with levels of description assigned using the :ref:`arranging for AtoM "
+"<arrangement>` workflow - the levels of description will be ignored in this "
+"workflow."
+msgstr ""
+":ref:`arranging for AtoM <arrangement>` ワークフローを使用して、記述レベルが割り当てられたSIP - "
+"このワークフローでは、記述レベルは無視されます。"
+
+#: ../../user-manual/access/access.rst:199
+msgid ""
+"Navigate to Archival Storage and search or browse for the AIP. Click on the "
+"name of the AIP, or \"View\"."
+msgstr "Archival Storageに移動し、AIPを検索または閲覧します。AIPの名前をクリックするか、\"View\"します。"
+
+#: ../../user-manual/access/access.rst:202
+msgid ""
+"Under \"Actions,\" in the Upload DIP tab enter the slug of the AtoM "
+"description you wish to upload to."
+msgstr "\"Actionsの下、\"Upload DIPタブにアップロードしたいAtoMの説明のスラッグを入力します。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid "Entering the slug of the AtoM description to upload metadata to"
+msgstr "メタデータをアップロードするAtoM記述のスラッグを入力"
+
+#: ../../user-manual/access/access.rst:210
+msgid ""
+"Upon successful upload, AtoM will have created a File level description for "
+"the AIP and an Item level description for each object."
+msgstr "アップロードに成功すると、AtoMは、AIPのファイルレベルの記述と各オブジェクトのアイテムレベルの記述を作成します。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid "AtoM description showing uploaded content"
+msgstr "アップロードされたコンテンツを示すAtoMの記述"
+
+#: ../../user-manual/access/access.rst:218
+msgid ""
+"Each item will have a generic thumbnail associated with it and digital "
+"object metadata about the original object, including filename, filesize, "
+"date uploaded, object and AIP UUIDs, format name, format version, format "
+"registry and key."
+msgstr ""
+"各アイテムには、それに関連付けられた一般的なサムネイルと、オリジナルのオブジェクトに関するデジタルオブジェクトメタデータがあり、ファイル名、ファイルサイズ、アップロード日、オブジェクトおよびAIP"
+" UUID、フォーマット名、フォーマットのバージョン、フォーマットのレジストリおよびキーが含まれます。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid "AtoM description showing uploaded item with digital object metadata"
+msgstr "デジタルオブジェクトメタデータとともにアップロードされたアイテムを示すAtoMの記述"
+
+#: ../../user-manual/access/access.rst:230
+msgid "Upload a DIP to Binder"
+msgstr "BinderにDIPをアップロード"
+
+#: ../../user-manual/access/access.rst:232
+msgid ""
+"To upload DIPs to your Binder instance, you must enter your Binder "
+"information and credentials in the Administration tab. See :ref:`AtoM/Binder"
+" DIP upload <admin-dashboard-atom>` for more information."
+msgstr ""
+"BinderインスタンスにDIPをアップロードするには、[管理]タブでBinder情報と認証情報を入力する必要があります。詳細は、 "
+":ref:`AtoM/Binder DIPアップロード <admin-dashboard-atom>` を参照してください。"
+
+#: ../../user-manual/access/access.rst:238
+msgid ""
+"You must create the target resource in Binder **before** uploading the DIP. "
+"You will need to indicate the resource's identifier in order to send the DIP"
+" to the appropriate place during DIP upload."
+msgstr ""
+"**DIPをアップロードする前に、Binder** "
+"でターゲットリソースを作成する必要があります。DIPアップロード中にDIPを適切な場所に送信するため、リソースの識別子を示す必要があります。"
+
+#: ../../user-manual/access/access.rst:242
+msgid ""
+"For artwork records, the access system identifier is listed as the ``Object "
+"ID`` in the TMS metadata. For a supporting technology record, the access "
+"system identifier is the ``ID`` value that is automatically generated by "
+"Binder, not the Dublin Core metadata identifier that you can add when you "
+"create the record."
+msgstr ""
+"アートワークレコードの場合、アクセスシステム識別子は、TMSメタデータの ``Object ID`` "
+"としてリスト表示されます。サポーティングテクノロジーレコードの場合、アクセスシステム識別子は、レコード作成時に追加できるダブリンコアメタデータ識別子ではなく、Binderが自動的に生成する"
+" ``ID`` 値です。"
+
+#: ../../user-manual/access/access.rst:248
+msgid ""
+"DIPs can be uploaded to an artwork record or a supporting technology record "
+"in Binder."
+msgstr "DIPは、Binderのアートワークレコードまたはサポート技術レコードにアップロードできます。"
+
+#: ../../user-manual/access/access.rst:251
+msgid ""
+"There are two ways to provide the target resource to Archivematica. The "
+"first is by providing the identifier during the Upload DIP microservice."
+msgstr ""
+"Archivematicaにターゲットリソースを提供するには、2つの方法があります。1つ目は、Upload "
+"DIPマイクロサービス中に識別子を提供する方法です。"
+
+#: ../../user-manual/access/access.rst:259
+msgid ""
+"A dialogue box will appear. Enter the identifier for the resource in the "
+"dialogue box, preceded by either ``ar:`` for an artwork record or ``tr:`` "
+"for a supporting technology record. For example, if the identifier for an "
+"artwork record is \"2\", enter ``ar:2``. If the identifier for a supporting "
+"technology record is \"5779\", enter ``tr:5779``."
+msgstr ""
+"ダイアログボックスが表示されます。ダイアログボックスにリソースの識別子を入力します。その前に、アートワークレコードの場合は、 ``ar:`` "
+"を、サポート技術レコードの場合は、 ``tr:`` を付けます。例えば、アートワークレコードの識別子が\"2\"の場合、 ``ar:2`` "
+"と入力してください。サポーティングテクノロジーレコードの識別子が\"5779\"の場合は、 ``tr:5779`` と入力してください。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid ""
+"Image shows a popup window where a user can enter identifier for the "
+"resource in Binder"
+msgstr "画像は、ユーザーがBinderにリソースの識別子を入力できるポップアップウィンドウを示しています"
+
+#: ../../user-manual/access/access.rst:270
+msgid ""
+"Click the blue \"Upload\" button. The DIP will be uploaded to Binder and "
+"connected to the appropriate resource."
+msgstr "青い\"Upload\"ボタンをクリックします。DIPがBinderにアップロードされ、適切なリソースに接続されます。"
+
+#: ../../user-manual/access/access.rst:273
+msgid ""
+"In a more automated environment, you can add the identifier to the **Access "
+"system ID** box when you are setting up your transfer. Archivematica will "
+"automatically grab this value when it reaches the Upload DIP microservice."
+msgstr ""
+"より自動化された環境では、転送を設定する際に、 **Access system ID** ボックスに識別子を追加できます。Upload "
+"DIPマイクロサービスに到達すると、Archivematicaは自動的にこの値を取得します。"
+
+#: ../../user-manual/access/access.rst:277
+msgid ""
+"Create a new transfer. In the ``Access system ID`` box, enter the identifier"
+" for the resource, preceded by either ``ar:`` for an artwork record or "
+"``tr:`` for a supporting technology record. For example, if the identifier "
+"for an artwork record is \"2\", enter ``ar:2``."
+msgstr ""
+"新規転送を作成します。 ``Access system ID`` ボックスに、リソースの識別子を入力します。その前に、アートワークレコードの場合は "
+"``ar:`` を、サポート技術レコードの場合は ``tr:`` を入力します。たとえば、アートワークレコードの識別子が\"2\"の場合、 "
+"``ar:2`` と入力します。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid ""
+"Image shows new transfer with a Binder identifier defined as the access "
+"system ID"
+msgstr "画像は、アクセスシステムIDとして定義されたBinder識別子を持つ新規転送を示します"
+
+#: ../../user-manual/access/access.rst:299
+msgid "Upload a DIP to ArchivesSpace"
+msgstr "ArchivesSpaceにDIPをアップロード"
+
+#: ../../user-manual/access/access.rst:301
+msgid ""
+"To upload DIPs to your ArchivesSpace instance, you must enter your "
+"ArchivesSpace information and credentials in the Administration tab. See "
+":ref:`ArchivesSpace dashboard configuration <dashboard-AS>` for more "
+"information."
+msgstr ""
+"ArchivesSpaceインスタンスにDIPをアップロードするには、[管理]タブでArchivesSpaceの情報と資格情報を入力する必要があります。詳細については、"
+" :ref:`ArchivesSpaceダッシュボードの設定 <dashboard-AS>` を参照してください。"
+
+#: ../../user-manual/access/access.rst:306
+msgid ""
+"Create a SIP using the :ref:`Transfer <transfer>` process as normal. During "
+"Normalization, choose one of the options that normalizes the package for "
+"access. During the Upload DIP microservice, select Upload DIP to Archives "
+"Space. The Match page should automatically open."
+msgstr ""
+"通常通り、 :ref:`Transfer <transfer>` "
+"手順を使ってSIPを作成します。[正規化]で、アクセス用にパッケージを正規化するオプションのいずれかを選択します。DIPのアップロード]マイクロサービスで、[アーカイブスペースにDIPをアップロード]を選択します。[Match］ページが自動的に開きます。"
+
+#: ../../user-manual/access/access.rst:311
+msgid ""
+"Find the ArchivesSpace collection to which you would like to upload the DIP."
+" By clicking on the name of the resource, you can drill down into the "
+"collection to upload the DIP at a lower level of description."
+msgstr ""
+"DIP "
+"をアップロードするArchivesSpaceコレクションを見つけます。リソース名をクリックすると、コレクションをドリルダウンして、より低いレベルの記述でDIPをアップロードできます。"
+
+#: ../../user-manual/access/access.rst:315
+msgid ""
+"When you have navigated to the level of description where you want to store "
+"the DIP, select *Assign DIP objects to this resource*."
+msgstr "DIPを保存する記述のレベルに移動したら、 *Assign DIP objects to this resource* を選択します。"
+
+#: ../../user-manual/access/access.rst:318
+msgid ""
+"On the Assign Objects screen, select which objects you would like to assign "
+"to which resources. Using the filter boxes in the top right allow you to "
+"search for specific objects or resources by name."
+msgstr ""
+"Assign "
+"Objects画面で、どのオブジェクトをどのリソースに割り当てるかを選択します。右上のフィルターボックスを使うと、特定のオブジェクトやリソースを名前で検索できます。"
+
+#: ../../user-manual/access/access.rst:322
+msgid ""
+"Once you have selected the objects and the resource you would like to pair "
+"them with, click *Pair* in the top right corner. Repeat steps 2-4 as needed."
+msgstr "オブジェクトとペアにしたいリソースを選択したら、右上の「 *Pair* 」をクリックします。必要に応じてステップ2～4を繰り返します。"
+
+#: ../../user-manual/access/access.rst:325
+msgid ""
+"When you are done pairing objects and resources, click on *Review matches.*"
+msgstr "オブジェクトとリソースのペアリングが終わったら、 *Review matches* をクリックします。"
+
+#: ../../user-manual/access/access.rst:327
+msgid "To remove all pairs and restart, click on *Restart matching*."
+msgstr "すべてのペアを削除して再起動するには、 *Restart matching* をクリックします。"
+
+#: ../../user-manual/access/access.rst:329
+msgid "If everything is correct, click on *Finish matching*."
+msgstr "すべてが正しければ、 *Finish matching* をクリックします。"
+
+#: ../../user-manual/access/access.rst:331
+msgid ""
+"This will take you back to the Ingest tab, where you can finish ingesting "
+"the AIP."
+msgstr "これでインジェストタブに戻り、AIPのインジェストを終了できます。"
+
+#: ../../user-manual/access/access.rst:334
+msgid ""
+"Alternatively, you can manually create the matches and place them in the "
+"metadata folder of the transfer in a file named `archivesspaceids.csv`. For "
+"example, given the following transfer tree::"
+msgstr ""
+"あるいは、マッチを手動で作成し、転送のメタデータフォルダに、 `archivesspaceids.csv` "
+"というファイル名で置くこともできます。たとえば、次のような転送ツリー::があるとします"
+
+#: ../../user-manual/access/access.rst:346
+msgid ""
+"The CSV file needs two columns, one with a relative path to the original "
+"file in the transfer directory and the other with the `Ref ID` from the "
+"ArchivesSpace Archival Object, which can be obtained from the \"Basic "
+"information\" section in the Archival Object view page. E.g.::"
+msgstr ""
+"CSVファイルには2つのカラムが必要です。1つは転送ディレクトリ内のオリジナルファイルへの相対パス、もう1つはArchivesSpace "
+"Archival Objectの `Ref ID` です。Ref IDは、Archival Objectビューページの\"Basic "
+"information\"セクションから取得できます。例::"
+
+#: ../../user-manual/access/access.rst:355
+msgid ""
+"If the `Upload DIP to ArchivesSpace` option is selected in the working "
+"processing configuration, the CSV file will be used to create the matches in"
+" the upload. Otherwise, after selecting `Upload DIP to ArchivesSpace` in the"
+" ingest tab you will be taken to the Match page and, to check the matches "
+"created from the CSV file instead of creating new ones, you can click "
+"directly on `Review matches` and finalize or restart the matching."
+msgstr ""
+"作業処理設定で、 `Upload DIP to ArchivesSpace` "
+"オプションが選択されている場合、CSVファイルは、アップロードのマッチ作成に使用されます。そうでない場合は、インジェストタブで、 `Upload DIP"
+" to ArchivesSpace` "
+"を選択すると、Matchページに移動します。新しいマッチを作成する代わりに、CSVファイルから作成されたマッチを確認するには、 `Review "
+"matches` を直接クリックして、マッチングを確定または再開します。"
+
+#: ../../user-manual/access/access.rst:365
+msgid "Store DIP"
+msgstr "DIPの保管"
+
+#: ../../user-manual/access/access.rst:367
+msgid ""
+"Archivematica also provides the option to store the DIP to a location that "
+"you have configured via the :ref:`Storage Service <storageservice:index>`. "
+"This can be configured to be a local server, NFS-mounted or another storage "
+"protocol such as DuraCloud."
+msgstr ""
+"Archivematicaでは、 :ref:`Storage Service <storageservice:index>` "
+"で設定した場所にDIPを保管するオプションも提供しています。これは、ローカルサーバー、NFSマウント、またはDuraCloudなどの他のストレージプロトコルに設定できます。"
+
+#: ../../user-manual/access/access.rst:372
+msgid "To store a DIP:"
+msgstr "DIPの保管："
+
+#: ../../user-manual/access/access.rst:374
+msgid ""
+"Ensure that at least one DIP storage location has been configured in the "
+":ref:`Storage Service <storageservice:index>`."
+msgstr ""
+":ref:`Storage Service <storageservice:index>` "
+"で、少なくとも1つのDIP保存場所が構成されていることを確認します。"
+
+#: ../../user-manual/access/access.rst:377
+msgid ""
+"At the Store DIP job at the Upload DIP microservice on the Archival Storage "
+"tab, choose Store DIP."
+msgstr "[Archival保存]タブの[DIPアップロード]マイクロサービスの[DIP保存]ジョブで、[DIP保存]を選択します。"
+
+#: ../../user-manual/access/access.rst:380
+msgid ""
+"At Store DIP location, select the DIP storage location from the configured "
+"options."
+msgstr "DIP保管のロケーションで、設定されたオプションからDIPの保存場所を選択します。"
+
+#: ../../user-manual/access/access.rst:387
+msgid "Review and download DIPs"
+msgstr "DIPのレビューとダウンロード"
+
+#: ../../user-manual/access/access.rst:389
+msgid ""
+"All DIPs that have been stored are available for download through the "
+":ref:`Packages tab in the Storage Service <storageservice:packages-tab>`. "
+"This is the default method for downloading DIPs."
+msgstr ""
+"保存されているすべてのDIPは、Storage Service（<storageservice:packages-"
+"tab>`）の「:ref:`Packages」タブからダウンロードできます。これは、DIPをダウンロードするためのデフォルトの方法です。"
+
+#: ../../user-manual/access/access.rst:393
+msgid ""
+"If you have used the Upload DIP functionality to send your DIP to "
+"AtoM/Binder, ArchivesSpace, or CONTENTdm, you will have the option to review"
+" the DIP from the Archivematica user interface. When the Upload DIP "
+"microservice is complete, a \"review\" link will appear:"
+msgstr ""
+"Upload "
+"DIP機能を使用して、DIPをAtoM/Binder、ArchivesSpace、またはCONTENTdmに送信した場合、ArchivematicaユーザーインターフェースからDIPをレビューするオプションがあります。Upload"
+" DIPマイクロサービスが完了すると、\"review\"リンクが表示されます："
+
+#: ../../user-manual/access/access.rst:-1
+msgid "Click on the \"review\" link in the Upload DIP microservice"
+msgstr "Upload DIPマイクロサービスの\"review\"リンクをクリックします"
+
+#: ../../user-manual/access/access.rst:403
+msgid ""
+"This will open the `uploadedDIPs` directory in a new tab. You can navigate "
+"the directory by clicking on the yellow folder icons. Click on the the "
+"individual DIP object, thumbnail, or METS file to view it."
+msgstr ""
+"これにより、 `uploadedDIPs` "
+"ディレクトリが新しいタブで開きます。黄色のフォルダアイコンをクリックしてディレクトリを移動できます。個々のDIPオブジェクト、サムネイル、またはMETSファイルをクリックして表示します。"
+
+#: ../../user-manual/access/access.rst:-1
+msgid "Download DIP screen showing a DIP directory expanded."
+msgstr "DIPディレクトリが展開された状態を示すDIP画面をダウンロードします。"
+
+#: ../../user-manual/access/access.rst:412
+msgid ""
+"Depending on the type and size of the file, it may either open in another "
+"tab or it may be downloaded to your computer."
+msgstr "ファイルの種類とサイズによっては、別のタブで開くか、コンピューターにダウンロードされます。"
+
+#: ../../user-manual/access/access.rst:418
+msgid "Access tab"
+msgstr "アクセスタブ"
+
+#: ../../user-manual/access/access.rst:420
+msgid ""
+"By clicking the Access tab in the Dashboard, you can see a table showing all"
+" DIPs upload to AtoM or Binder including the URL, the associated AIP, the "
+"upload date and status, and the option to delete from the Access tab. Note "
+"that this link will delete the record of the DIP in the Access tab, not the "
+"actual DIP."
+msgstr ""
+"ダッシュボードの[アクセス]タブをクリックすると、AtoMまたはBinderにアップロードされたすべてのDIPの表が表示され、URL、関連するAIP、アップロード日とステータス、[アクセス]タブからの削除オプションが表示されます。このリンクは、実際のDIPではなく、アクセスタブ内のDIPの記録を削除することに注意してください。"
+
+#: ../../user-manual/access/access.rst:425
+msgid ""
+"At this time, the Access tab only provides links to DIPs uploaded to AtoM, "
+"not to other access systems or DIPs that have been stored."
+msgstr ""
+"現時点では、[アクセス] タブには、AtoMにアップロードされた "
+"DIPへのリンクのみが提供され、他のアクセスシステムや保存されているDIPへのリンクは提供されません。"
+
+#: ../../user-manual/access/access.rst:428
+msgid ":ref:`Back to the top <access>`"
+msgstr ":ref:`トップに戻る <access>`"

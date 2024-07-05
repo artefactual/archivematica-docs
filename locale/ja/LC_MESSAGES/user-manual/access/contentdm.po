@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/access/contentdm.rst:5
+msgid "CONTENTdm"
+msgstr "CONTENTdm"
+
+#: ../../user-manual/access/contentdm.rst:7
+msgid ""
+"Archivematica can prepare DIPS for upload to CONTENTdm. As of Archivematica "
+"version 1.4, no configuration with your CONTENTdm installation is necessary."
+" Rather, Archivematica will prepare the DIP and allow you to download via "
+"the Dashboard or by SFTP to the server Archivematica is installed on."
+msgstr ""
+"Archivematicaは、CONTENTdmにアップロードするDIPSを準備できます。Archivematicaバージョン1.4では、CONTENTdmのインストール時の設定は不要です。ArchivematicaがDIPを作成し、DashboardまたはSFTPでArchivematicaがインストールされているサーバーにダウンロードできます。"
+
+#: ../../user-manual/access/contentdm.rst:12
+msgid ""
+"In Archivematica version 1.4, direct upload to CONTENTdm is no longer "
+"available. The process described below assumes the user will use `CONTENTdm "
+"Project Client`_ to upload DIPs to CONTENTdm."
+msgstr ""
+"Archivematicaバージョン1.4では、CONTENTdmへの直接アップロードができなくなりました。以下のプロセスは、 `CONTENTdm "
+"Project Client`_ を使用してDIPをCONTENTdmにアップロードすることを前提としています。"
+
+#: ../../user-manual/access/contentdm.rst:16
+msgid ""
+"Should you run into an error during this process, please see :ref:`Error "
+"handling <error-handling>`."
+msgstr "この処理中にエラーが発生した場合は、 :ref:`エラー処理 <error-handling>` を参照してください。"
+
+#: ../../user-manual/access/contentdm.rst:19
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/access/contentdm.rst:21
+msgid ":ref:`Preparing a transfer for CONTENTdm <transfer-contentdm>`"
+msgstr ":ref:`CONTENTdmへの転送準備 <transfer-contentdm>`"
+
+#: ../../user-manual/access/contentdm.rst:23
+msgid ":ref:`Controlling the file order <contentdm-order>`"
+msgstr ":ref:`ファイルの順序の制御 <contentdm-order>`"
+
+#: ../../user-manual/access/contentdm.rst:25
+msgid ":ref:`Create DIP for CONTENTdm <dip-contentdm>`"
+msgstr ":ref:`CONTENTdmのDIPを作成 <dip-contentdm>`"
+
+#: ../../user-manual/access/contentdm.rst:30
+msgid "Preparing a transfer for CONTENTdm"
+msgstr "CONTENTdmへの転送準備"
+
+#: ../../user-manual/access/contentdm.rst:34
+msgid ":ref:`Manual normalization <manual-norm>`"
+msgstr ":ref:`マニュアル正規化 <manual-norm>`"
+
+#: ../../user-manual/access/contentdm.rst:36
+msgid ":ref:`Import metadata <import-metadata>`"
+msgstr ":ref:`メタデータのインポート <import-metadata>`"
+
+#: ../../user-manual/access/contentdm.rst:38
+msgid ""
+"Note that it is possible to follow these instructions for either a single "
+"simple or compound object, or multiple simple or compound objects."
+msgstr ""
+"単一のシンプルオブジェクトまたは複合オブジェクト、または複数のシンプルオブジェクトまたは複合オブジェクトのいずれに対しても、これらの手順に従うことができることに注意してください。"
+
+#: ../../user-manual/access/contentdm.rst:41
+msgid "**Preparing the transfer**"
+msgstr "**転送の準備**"
+
+#: ../../user-manual/access/contentdm.rst:43
+msgid "For a transfer of simple objects:"
+msgstr "シンプルなオブジェクトの転送の場合："
+
+#: ../../user-manual/access/contentdm.rst:45
+#: ../../user-manual/access/contentdm.rst:68
+msgid ""
+"Inside the directory you wish to use as a transfer, create two "
+"subdirectories: ``metadata``, and ``objects``."
+msgstr "転送に使いたいディレクトリの中に、2つのサブディレクトリ： ``metadata`` と ``objects`` を作ります。"
+
+#: ../../user-manual/access/contentdm.rst:48
+msgid "Inside ``objects``, place the digital objects you wish to transfer."
+msgstr "``objects`` 内に、転送したいデジタルオブジェクトを置きます。"
+
+#: ../../user-manual/access/contentdm.rst:50
+msgid ""
+"Inside ``metadata``, place a file called ``metadata.csv``. See preparation "
+"instructions below."
+msgstr "``metadata`` の中に、 ``metadata.csv`` というファイルを置きます。以下の準備手順を参照してください。"
+
+#: ../../user-manual/access/contentdm.rst:53
+#: ../../user-manual/access/contentdm.rst:77
+msgid "Example:"
+msgstr "例："
+
+#: ../../user-manual/access/contentdm.rst:66
+msgid "For a transfer of compound objects:"
+msgstr "複合オブジェクトの転送の場合："
+
+#: ../../user-manual/access/contentdm.rst:71
+msgid ""
+"Inside ``objects``, create or place directories, one corrsponding to each "
+"compound object. Place the digital objects inside those directories."
+msgstr ""
+"``objects`` "
+"内に、各複合オブジェクトに対応するディレクトリを作成または配列します。これらのディレクトリの中にデジタルオブジェクトを配列します。"
+
+#: ../../user-manual/access/contentdm.rst:74
+msgid ""
+"Inside metadata, place a file called ``metadata.csv``. See preparation "
+"instructions below."
+msgstr "メタデータの中に、 ``metadata.csv`` というファイルを置きます。以下の準備手順を参照してください。"
+
+#: ../../user-manual/access/contentdm.rst:95
+msgid "**Preparing the metadata.csv**"
+msgstr "**metadata.csvの準備**"
+
+#: ../../user-manual/access/contentdm.rst:97
+msgid ""
+"The first column in the metadata.csv must be called filename. The contents "
+"will be the path to the object and/or the directory. For a simple transfer:"
+msgstr ""
+"metadata.csvの最初のカラムは、filenameでなければなりません。内容は、オブジェクトへのパスかディレクトリになります。単純な転送の場合："
+
+#: ../../user-manual/access/contentdm.rst:100
+msgid "``objects/filename.tif``"
+msgstr "``objects/filename.tif``"
+
+#: ../../user-manual/access/contentdm.rst:102
+msgid "For a compound transfer:"
+msgstr "複合転送の場合："
+
+#: ../../user-manual/access/contentdm.rst:104
+msgid "``objects/directoryName``"
+msgstr "``objects/directoryName``"
+
+#: ../../user-manual/access/contentdm.rst:106
+msgid "Or, for a compound transfer with object-level metadata"
+msgstr "または、オブジェクトレベルのメタデータを含む複合転送の場合"
+
+#: ../../user-manual/access/contentdm.rst:108
+msgid "``objects/directoryName/filename.tif``"
+msgstr "``objects/directoryName/filename.tif``"
+
+#: ../../user-manual/access/contentdm.rst:110
+msgid ""
+"If there are both Dublin Core and non-Dublin Core fields in metadata.csv, "
+"Archivematica will look for \"custom\" (non-Dublin Core) field names in the "
+"metadata.csv file file and create a tab delimited file based on those "
+"fields. This allows the operator to use the field names as they appear "
+"exactly as they do in the CONTENTdm collection, which eases the field "
+"matching in Project Client. It is also recommended that you enter the non-"
+"Dublin Core fields in the same order as in your CONTENTdm collection. "
+"However, if metadata.csv contains *only* Dublin Core namespaced fields, "
+"Archivematica will create the tab delimited file using those fieldnames, "
+"stripping out the dc namespace. For example,``dc.title`` will become "
+"``title``."
+msgstr ""
+"metadata.csvにDublin Coreフィールドと非Dublin "
+"Coreフィールドの両方がある場合、Archivematicaはmetadata.csvファイル内の\"custom\" （non-Dublin "
+"Core）フィールド名を検索し、それらのフィールドに基づいてタブ区切りファイルを作成します。これにより、オペレータは、CONTENTdmコレクションに表示されているフィールド名をそのまま使用でき、Project"
+" Clientでのフィールドマッチングが容易になります。また、Dublin "
+"Core以外のフィールドは、CONTENTdmコレクションと同じ順序で入力することが推奨されます。ただし、metadata.csvに *のみ* "
+"Dublin "
+"Coreネームスペースのフィールドが含まれている場合、Archivematicaはこれらのフィールド名を使用して、dcネームスペースを取り除いたタブ区切りファイルを作成します。例えば、"
+" ``dc.title`` は、 ``title`` になります。"
+
+#: ../../user-manual/access/contentdm.rst:121
+msgid ""
+"For more information regarding the creation and transfer of a metadata.csv "
+"file, see :ref:`Import metadata <import-metadata>`."
+msgstr ""
+"metadata.csvファイルの作成と転送に関する詳細は、 :ref:`メタデータのインポート <import-metadata>` "
+"を参照してください。"
+
+#: ../../user-manual/access/contentdm.rst:127
+msgid "Controlling the file order"
+msgstr "ファイルの順序の制御"
+
+#: ../../user-manual/access/contentdm.rst:129
+msgid ""
+"Currently, the only method of controlling the order of files and directories"
+" as listed in the tab delimited file is to ensure they are in alphabetical "
+"order. The sort method is based on `ASCII`_ characters (e.g. numbers, "
+"capital letters, underscores, small case letters)."
+msgstr ""
+"現在、タブ区切りファイルにリストされたファイルやディレクトリの順序を制御する唯一の方法は、それらがアルファベット順であることを確認することです。ソート方法は、"
+" `ASCII`_ 文字（数字、大文字、アンダースコア、小文字など）に基づいています。"
+
+#: ../../user-manual/access/contentdm.rst:134
+msgid ""
+"Other methods of controlling file order could be implemented in future "
+"releases. Please see :issue:`8448`."
+msgstr "ファイル順序を制御する他の方法は、将来のリリースで実装される可能性があります。issue： `8448` を参照してください。"
+
+#: ../../user-manual/access/contentdm.rst:140
+msgid "Create DIP for CONTENTdm"
+msgstr "CONTENTdmのDIPを作成"
+
+#: ../../user-manual/access/contentdm.rst:144
+msgid ""
+"Ensure that your CONTENTdm target collection has a field called \"AIP UUID "
+"and a field called \"File UUID\". The tab file produced by Archivematica "
+"will populate these two fields."
+msgstr ""
+"CONTENTdmターゲットコレクションに\"AIP UUIDというフィールドと\"File "
+"UUID\"というフィールドがあることを確認してください。Archivematicaが作成するタブファイルには、この2つのフィールドが入力されます。"
+
+#: ../../user-manual/access/contentdm.rst:148
+msgid ""
+"In the Archivematica dashboard at “Upload DIP”, choose the action “Upload "
+"DIP to CONTENTdm” from the drop-down menu."
+msgstr ""
+"Archivematicaダッシュボードの「Upload DIP」で、ドロップダウンメニューから「Upload DIP to "
+"CONTENTdm」というアクションを選択します。"
+
+#: ../../user-manual/access/contentdm.rst:151
+msgid ""
+"Archivematica will create a DIP consisting of normalized or :ref:`manually "
+"normalized <manual-norm>` access objects and a tab delimited file for use in"
+" Project Client."
+msgstr ""
+"Archivematicaは、正規化または :ref:`手動で正規化した <manual-norm>` アクセスオブジェクトと、Project "
+"Clientで使用するタブ区切りファイルで構成されるDIPを作成します。"
+
+#: ../../user-manual/access/contentdm.rst:155
+msgid ""
+"To review the DIP in the dashboard and download individual DIP objects "
+"and/or the tab file, click \"review\":"
+msgstr "ダッシュボードでDIPをレビューし、個々のDIPオブジェクトやタブファイルをダウンロードするには、\"review\"をクリックします："
+
+#: ../../user-manual/access/contentdm.rst:-1
+msgid ""
+"Click \"review\" in Upload DIP microservice to access DIP objects and tab "
+"file"
+msgstr "アップロードDIPマイクロサービスの\"レビュー\"をクリックして、DIPオブジェクトとタブファイルにアクセスします"
+
+#: ../../user-manual/access/contentdm.rst:163
+msgid ""
+"The next screen will display the uploadedDIPs directory, which operators can"
+" navigate to locate the required DIP objects. The CONTENTdm tab file will be"
+" in the same directory as the DIP objects."
+msgstr ""
+"次の画面では、アップロードされたDIPディレクトリが表示され、オペレータは、必要なDIPオブジェクトを検索できます。CONTENTdmタブファイルは、DIPオブジェクトと同じディレクトリにあります。"
+
+#: ../../user-manual/access/contentdm.rst:-1
+msgid "Download DIP screen showing CONTENTdm tab file in objects directory"
+msgstr "オブジェクトディレクトリ内の CONTENTdmタブファイルを示すDIP画面をダウンロード します"
+
+#: ../../user-manual/access/contentdm.rst:173
+msgid ""
+"By default, the DIP will be stored in "
+"``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/``. It "
+"can be retrieved from this location via SFTP client, or individual objects "
+"downloaded through the web browser."
+msgstr ""
+"デフォルトでは、DIPは "
+"``/var/archivematica/sharedDirectory/watchedDirectories/uploadedDIPs/`` "
+"に保存されます。この場所からSFTPクライアント経由で取得することも、ウェブブラウザ経由で個々のオブジェクトをダウンロードすることもできます。"
+
+#: ../../user-manual/access/contentdm.rst:180
+msgid ""
+"Once your work in CONTENTdm Project Client is complete, and your digital "
+"objects are uploaded, you may wish to \"clean up\" your uploadedDIPs "
+"directory to save space on your service and keep the Download DIP page "
+"manageable. This can be done through the :ref:`Administration tab, "
+"Processing storage usage <dashboard-usage>`."
+msgstr ""
+"CONTENTdm Project "
+"Clientでの作業が完了し、デジタルオブジェクトがアップロードされたら、\"\"uploadedDIPsディレクトリをクリーンアップして、サービス上のスペースを節約し、ダウンロードDIPページを管理しやすくできます。これは、"
+" :ref:`[管理]タブの[処理ストレージ使用状況] <dashboard-usage>` から実行できます。"
+
+#: ../../user-manual/access/contentdm.rst:187
+msgid ":ref:`Back to the top <contentdm>`"
+msgstr ":ref:`トップに戻る <contentdm>`"
