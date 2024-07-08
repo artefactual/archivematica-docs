@@ -12,6 +12,73 @@ You are free to copy, modify, and distribute the Archivematica documentation
 with attribution under the terms of the Creative Commons Attribution Share Alike
 4.0 (CC-BY-SA-4.0) license. See the [LICENCE](LICENCE) file for details.
 
+## Building the documentation locally
+
+To build a local, offline version of the documentation:
+
+* Decide where the documentation will be stored on your computer.
+* In a Terminal window, use the `cd` command to navigate to this location.
+* Create a local copy of the documentation by running:
+
+```bash
+git clone https://github.com/artefactual/archivematica-docs.git
+```
+
+* Move to the documentation repository with:
+
+```bash
+cd archivematica-docs
+```
+
+* Create a Python virtual environment to contain all the required tools:
+
+```bash
+python3 -m venv .env
+```
+
+* Activate the virtual environment:
+
+```bash
+source .env/bin/activate
+```
+
+* Install the requirements:
+
+```bash
+pip install -r requirements.txt
+```
+
+* Build the documentation:
+
+```bash
+sphinx-build -D language=en ./ _build/html/en # for English
+
+sphinx-build -D language=es ./ _build/html/es # for *español* (Spanish)
+
+sphinx-build -D language=fr ./ _build/html/fr # for *français* (French)
+
+sphinx-build -D language=pt_BR ./ _build/html/pt_BR # for *português do Brasil* (Brazilian Portuguese)
+```
+
+* Access the documentation:
+
+```bash
+open _build/html/index.html
+```
+
+The HTML files for the documentation will be in
+`archivematica-docs/_build/html/`.
+You can open the files in a browser of your choice, without having any access
+to the Internet.
+
+While this offline version will not have the Archivematica web theme, you will
+gain access to improved search features.
+
+This local version will contain only the Archivematica documentation; notably
+the Archivematica Storage Service docs will be missing. Instructions on how to
+build a local, offline version of the Archivematica Storage Service is
+available on its [GitHub repo](https://github.com/artefactual/archivematica-storage-service-docs).
+
 ## Contributing
 
 Thank you for considering a contribution to the Archivematica documentation! For
