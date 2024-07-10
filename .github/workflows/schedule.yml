@@ -1,0 +1,14 @@
+---
+name: "Monthly linkcheck"
+on:
+  schedule:
+    - cron: "0 0 11 * *"
+  workflow_dispatch:
+jobs:
+  test:
+    name: "Monthly linkcheck"
+    runs-on: "ubuntu-22.04"
+    steps:
+      - name: "Linkcheck"
+        run: |
+          make linkcheck
