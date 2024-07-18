@@ -63,7 +63,7 @@ sphinx-build -D language=pt_BR ./ _build/html/pt_BR # for *português do Brasil*
 * Access the documentation:
 
 ```bash
-python3 -m http.server --d _build/html
+python3 -m http.server -d _build/html
 ```
 
 The HTML files for the documentation will be in
