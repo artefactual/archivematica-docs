@@ -11,6 +11,7 @@ Archivematica documentation
    /user-manual/index
    /admin-manual/index
    /dev-manual/index
+   releasenotes.rst
 
 .. _getting-started-home:
 
