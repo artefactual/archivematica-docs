@@ -1040,19 +1040,13 @@ For development purposes, most of our developers prefer to use Docker
 containers. These and all above environments are linked from the
 installation instructions above.
 
-.. raw:: html
+.. note::
 
-   <div style="padding: 10px 10px; border: 1px solid black; background-color: #F79086;">
-
-Note: if you are upgrading from Archivematica 1.10.x or earlier, please
-be sure to clean up the completed transfers watched directory before
-upgrading. Instructions can be found on the
-`Upgrading <https://www.archivematica.org/en/docs/archivematica-1.12/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
-page in the documentation.
-
-.. raw:: html
-
-   </div>
+  If you are upgrading from Archivematica 1.10.x or earlier, please
+  be sure to clean up the completed transfers watched directory before
+  upgrading. Instructions can be found on the
+  `Upgrading <https://www.archivematica.org/en/docs/archivematica-1.12/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
+  page in the documentation.
 
 .. _added_4:
 
@@ -1221,19 +1215,13 @@ This release introduces two bug fixes and one minor security fix. For
 installation instructions, please see the `Installation
 documentation <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/installation/installation/#installation>`__.
 
-.. raw:: html
+.. note::
 
-   <div style="padding: 10px 10px; border: 1px solid black; background-color: #F79086;">
-
-Note: if you are upgrading from Archivematica 1.10.x or earlier, please
-be sure to clean up the completed transfers watched directory before
-upgrading. Instructions can be found on the
-`Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
-page in the documentation.
-
-.. raw:: html
-
-   </div>
+  If you are upgrading from Archivematica 1.10.x or earlier, please
+  be sure to clean up the completed transfers watched directory before
+  upgrading. Instructions can be found on the
+  `Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
+  page in the documentation.
 
 .. _fixed_10:
 
@@ -1331,19 +1319,13 @@ API keys:
 -  Change the password for AtoM/Binder DIP upload.
 -  Review the PREMIS agent information to ensure that it is correct.
 
-.. raw:: html
+.. note::
 
-   <div style="padding: 10px 10px; border: 1px solid black; background-color: #F79086;">
-
-Note: if you are upgrading from Archivematica 1.10.x or earlier, please
-be sure to clean up the completed transfers watched directory before
-upgrading. Instructions can be found on the
-`Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
-page in the documentation.
-
-.. raw:: html
-
-   </div>
+  If you are upgrading from Archivematica 1.10.x or earlier, please
+  be sure to clean up the completed transfers watched directory before
+  upgrading. Instructions can be found on the
+  `Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
+  page in the documentation.
 
 .. _fixed_11:
 
@@ -1379,19 +1361,13 @@ For development purposes, most of our developers prefer to use Docker
 containers. These and all above environments are linked from the
 installation instructions above.
 
-.. raw:: html
+.. note::
 
-   <div style="padding: 10px 10px; border: 1px solid black; background-color: #F79086;">
-
-Note: if you are upgrading from Archivematica 1.10.x or earlier, please
-be sure to clean up the completed transfers watched directory before
-upgrading. Instructions can be found on the
-`Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
-page in the documentation.
-
-.. raw:: html
-
-   </div>
+  If you are upgrading from Archivematica 1.10.x or earlier, please
+  be sure to clean up the completed transfers watched directory before
+  upgrading. Instructions can be found on the
+  `Upgrading <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/upgrading/upgrading/#upgrade>`__
+  page in the documentation.
 
 .. _added_5:
 
