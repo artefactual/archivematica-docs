@@ -10,11 +10,6 @@ Features, enhancements, and bug fixes were often sponsored by members of the Arc
 
 Questions about a release or the release notes? Ask on the `Archivematica User Group <https://groups.google.com/g/archivematica>`__!
 
-.. toctree::
-   :maxdepth: 2
-
-   releasenotes.rst
-
 (Current Release) Archivematica 1.16.0 and Storage Service 0.22.0
 =================================================================
 
@@ -23,7 +18,7 @@ Questions about a release or the release notes? Ask on the `Archivematica User G
 `Original release notes <https://wiki.archivematica.org/Archivematica_1.16.0_and_Storage_Service_0.22.0_release_notes>`__.
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.16/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -39,12 +34,12 @@ containers. These and all above environments are linked from the
 installation instructions above.
 
 Added
-=====
+-----
 
 .. _list_jobs_api_endpoint_returns_detailed_output:
 
 List jobs API endpoint returns detailed output
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1641
 
@@ -56,12 +51,12 @@ will return all the task properties returned by the
 endpoint.
 
 Changed
-=======
+-------
 
 .. _pronom_v.116:
 
 PRONOM v.116
-------------
+^^^^^^^^^^^^
 
 As of this Archivematica release, we are up to date to PRONOM v. 116.
 
@@ -71,7 +66,7 @@ As of this Archivematica release, we are up to date to PRONOM v. 116.
 .. _python_versions:
 
 Python versions
----------------
+^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1632
 
@@ -82,19 +77,19 @@ versions <https://devguide.python.org/versions/#supported-versions>`__:
 .. _django_4.2:
 
 Django 4.2
-----------
+^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1624
 
 Archivematica 1.16 dropped support for Django 3.2.
 
 Fixed
-=====
+-----
 
 .. _update_mcpclient_forking_model:
 
 Update MCPClient forking model
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1482
 
@@ -127,14 +122,14 @@ page.
 .. _dips_are_cleaned_from_watched_directories:
 
 DIPs are cleaned from watched directories
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1665
 
 .. _duracloud_spaces_retry_chunk_downloads:
 
 Duracloud spaces retry chunk downloads
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1607
 
@@ -144,14 +139,14 @@ contributing this fix!
 .. _partial_reingest_works_with_non_core_dc_properties:
 
 Partial reingest works with non-core DC properties
---------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1620
 
 .. _improve_paths_handling_in_the_storage_service:
 
 Improve paths handling in the Storage Service
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1622
 
@@ -172,7 +167,7 @@ Archivematica 1.15.1 and Storage Service 0.21.1
 .. _environments_1:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.15/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -190,12 +185,12 @@ installation instructions above.
 .. _changed_1:
 
 Changed
-=======
+-------
 
 .. _security_upgrades:
 
 Security upgrades
------------------
+^^^^^^^^^^^^^^^^^
 
 We have performed upgrades to the follow Python libraries to patch
 reported security issues in earlier versions:
@@ -222,12 +217,12 @@ We have also upgraded the following JavaScript front-end dependencies:
 .. _fixed_1:
 
 Fixed
-=====
+-----
 
 .. _api_endpoint_for_listing_unapproved_transfers_returns_error:
 
 API endpoint for listing unapproved transfers returns error
------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1635
 
@@ -237,7 +232,7 @@ Transfers** and **List SIPS Waiting for User Input** API endpoints.
 .. _transfers_cannot_be_moved_to_the_rejected_directory:
 
 Transfers cannot be moved to the rejected directory
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1636
 
@@ -263,7 +258,7 @@ Archivematica 1.15.0 and Storage Service 0.21.0
 .. _environments_2:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.15/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -281,12 +276,12 @@ installation instructions above.
 .. _changed_2:
 
 Changed
-=======
+-------
 
 .. _support_for_ubuntu_22.04_and_rocky_linux_9:
 
 Support for Ubuntu 22.04 and Rocky Linux 9
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1590
 
@@ -295,7 +290,7 @@ Archivematica 1.15 dropped support for Ubuntu 18.04 and CentOS 7.
 .. _mysql_8.0:
 
 MySQL 8.0
----------
+^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1618
 
@@ -304,7 +299,7 @@ Archivematica 1.15 dropped support for MySQL 5.x.
 .. _python_3.9:
 
 Python 3.9
-----------
+^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1612
 
@@ -313,7 +308,7 @@ Archivematica 1.15 dropped support for Python 3.6.
 .. _django_3.2:
 
 Django 3.2
-----------
+^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1279
 
@@ -322,12 +317,12 @@ Archivematica 1.15 dropped support for Django 1.11.
 .. _fixed_2:
 
 Fixed
-=====
+-----
 
 .. _mets_schema_validation_when_loc.gov_urls_are_unreachable:
 
 METS schema validation when loc.gov URLs are unreachable
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1266
 
@@ -338,7 +333,7 @@ contacting the loc.gov URLs.
 .. _storage_service_ldap_configuration:
 
 Storage Service LDAP configuration
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1629
 
@@ -356,7 +351,7 @@ Archivematica 1.14.1 and Storage Service 0.20.1
 .. _environments_3:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.14/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -377,7 +372,7 @@ installation instructions above.
 .. _fixed_3:
 
 Fixed
-=====
+-----
 
 Please see the 1.14.1 milestone in GitHub for all issues addressed in
 this release:
@@ -393,7 +388,7 @@ Archivematica 1.14.0 and Storage Service 0.20.0
 .. _environments_4:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.14/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -414,12 +409,12 @@ installation instructions above.
 .. _added_1:
 
 Added
-=====
+-----
 
 .. _metadata_import_reingest_and_validation_in_xml:
 
 Metadata import, reingest and validation in XML
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is a new set of features that allows users to include metadata
 files in XML and have them parsed into the AIP METS file. Optionally,
@@ -441,7 +436,7 @@ Dresden. Thank you!
 .. _rclone_spaces_in_the_storage_service:
 
 Rclone spaces in the Storage Service
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The `Rclone <https://rclone.org/>`__ space allows for use of over 40
 cloud providers with Archivematica as Transfer Source, AIP Store, DIP
@@ -455,12 +450,12 @@ Store, and Replicator locations.
 .. _changed_3:
 
 Changed
-=======
+-------
 
 .. _pronom_v.109:
 
 PRONOM v.109
-------------
+^^^^^^^^^^^^
 
 As of this Archivematica release, we are up to date to PRONOM v. 109.
 
@@ -470,7 +465,7 @@ As of this Archivematica release, we are up to date to PRONOM v. 109.
 .. _other_changes:
 
 Other changes
--------------
+^^^^^^^^^^^^^
 
 -  Python 2.7 removed `GitHub issue
    1506 <https://github.com/archivematica/Issues/issues/1506>`__
@@ -481,7 +476,7 @@ Other changes
 .. _fixed_4:
 
 Fixed
-=====
+-----
 
 Please see the 1.14 milestone in GitHub for all issues addressed in this
 release: https://github.com/archivematica/Issues/milestone/20?closed=1.
@@ -498,7 +493,7 @@ This release adds a new feature to the Storage Service
 .. _environments_5:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/latest/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -517,7 +512,7 @@ containers. These and all above environments are linked from the
 installation instructions above.
 
 Upgrading
-=========
+---------
 
 -  With the new permission module (see `pull request
    #625 <https://github.com/artefactual/archivematica-storage-service/pull/625>`__
@@ -534,12 +529,12 @@ Upgrading
 .. _added_2:
 
 Added
-=====
+-----
 
 .. _user_roles:
 
 User roles
-----------
+^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1486
 
@@ -560,7 +555,7 @@ in the Storage Service documentation for more information.
 .. _fixed_5:
 
 Fixed
-=====
+-----
 
 -  Storage Service 0.18.x doesn't follow symlinks:
    https://github.com/archivematica/Issues/issues/1515
@@ -589,7 +584,7 @@ https://github.com/artefactual/archivematica/security/policy.
 .. _upgrading_1:
 
 Upgrading
-=========
+---------
 
 The fix can be easily installed since this issue only affects the
 dashboard.
@@ -656,7 +651,7 @@ Archivematica 1.13.1 and Storage Service 0.18.1
 .. _environments_6:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.13/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -678,7 +673,7 @@ installation instructions above.
 .. _fixed_6:
 
 Fixed
-=====
+------
 
 Please see the 1.13.1 milestone in GitHub for all issues addressed in
 this release:
@@ -694,7 +689,7 @@ Archivematica 1.13.0 and Storage Service 0.18.0
 .. _environments_7:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.13/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -716,12 +711,12 @@ installation instructions above.
 .. _added_3:
 
 Added
-=====
+-----
 
 .. _disableable_virus_scanning:
 
 Disableable virus scanning
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/869
 
@@ -732,7 +727,7 @@ This change was **contributed** by Bodleian Library. Thank you!
 .. _purge_management_command:
 
 Purge management command
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1239
 
@@ -744,7 +739,7 @@ the system filling up the application database and search indices.
 .. _strong_password_validation:
 
 Strong password validation
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1332
 
@@ -758,7 +753,7 @@ you!
 .. _audit_logging_capability:
 
 Audit logging capability
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1341
 
@@ -775,7 +770,7 @@ you!
 .. _customized_workflow_file:
 
 Customized workflow file
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1441
 
@@ -788,12 +783,12 @@ pending.
 .. _changed_4:
 
 Changed
-=======
+-------
 
 .. _python_3:
 
 Python 3
---------
+^^^^^^^^
 
 -  Issues:
    https://github.com/archivematica/Issues/issues?q=is%3Aopen+is%3Aissue+milestone%3A1.13.0+label%3A%22%3Asnake%3A%C2%B3+Python+3%22
@@ -803,7 +798,7 @@ All Archivematica components are now running on Python 3.6.
 .. _archivematica_storage_service_now_uses_mysql_by_default:
 
 Archivematica Storage Service now uses MySQL by default
--------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/952
 
@@ -815,7 +810,7 @@ MySQL <https://www.archivematica.org/en/docs/storage-service-0.18/migration-sqli
 .. _allow_replicated_aips_to_be_packaged_in_a_different_format_from_the_original:
 
 Allow replicated AIPs to be packaged in a different format from the original
-----------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1440
 
@@ -828,7 +823,7 @@ This change was **sponsored** by Norwegian Health Archives. Thank you!
 .. _tasks_will_open_in_one_tab_only:
 
 Tasks will open in one tab only
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/85
 
@@ -840,7 +835,7 @@ This change was **contributed** by Bodleian Library. Thank you!
 .. _dev_tools_deprecated_hiding_active_packages:
 
 Dev tools deprecated / Hiding active packages
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Issue: https://github.com/archivematica/Issues/issues/68
 
@@ -857,7 +852,7 @@ have made that command available within Archivematica
 .. _dip_storage_locations_now_allowed_in_s3_spaces:
 
 DIP storage locations now allowed in S3 spaces
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1442
 
@@ -867,7 +862,7 @@ you!
 .. _other_changes_1:
 
 Other changes
--------------
+^^^^^^^^^^^^^
 
 -  Archivematica now records granular time stamps for original files,
    Issue 1427: https://github.com/archivematica/Issues/issues/1427
@@ -889,7 +884,7 @@ Other changes
 .. _fixed_7:
 
 Fixed
-=====
+-----
 
 Please see the 1.13 milestone in GitHub for all issues addressed in this
 release: https://github.com/archivematica/Issues/milestone/17.
@@ -917,7 +912,7 @@ https://github.com/artefactual/archivematica/security/policy.
 .. _upgrading_2:
 
 Upgrading
-=========
+---------
 
 The fix can be easily installed since this issue only affects the
 dashboard.
@@ -988,7 +983,7 @@ experienced after the 1.12.0 release.
 .. _supported_environments:
 
 Supported environments
-======================
+----------------------
 
 Installation instructions:
 https://www.archivematica.org/en/docs/archivematica-1.12/admin-manual/installation-setup/installation/installation/#installation
@@ -1002,7 +997,7 @@ https://wiki.archivematica.org/Update_mapping_and_reindex_Elasticsearch_indices
 .. _fixed_8:
 
 Fixed
-=====
+-----
 
 List bugfixes with a link to the Github issue.
 
@@ -1030,7 +1025,7 @@ Archivematica 1.12.0 and Storage Service 0.17.0
 .. _environments_8:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.12/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -1062,12 +1057,12 @@ page in the documentation.
 .. _added_4:
 
 Added
-=====
+-----
 
 .. _processing_configuration_selector:
 
 Processing configuration selector
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature allows the user to choose a processing configuration at the
 time of transfer by way of a drop down in the "Start transfer" button.
@@ -1082,7 +1077,7 @@ Thank you!
 .. _column_selectors_for_the_backlog_and_archival_storage_tab:
 
 Column selectors for the Backlog and Archival Storage tab
----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users can now choose the columns displayed while browsing the Backlog
 and Archival Storage tabs so they can see the information most relevant
@@ -1103,7 +1098,7 @@ Thank you!
 .. _aip_location_column_on_archival_storage_tab:
 
 AIP location column on Archival Storage tab
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1214
 -  Documentation:
@@ -1114,7 +1109,7 @@ This feature has been sponsored by Picturae. Thank you!
 .. _downloadable_csv_from_archival_storage_search:
 
 Downloadable CSV from Archival Storage search
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users can now download a CSV containing all entries in Archival Storage,
 containing these columns: AIP name, Size, UUID, Number of files, Date
@@ -1129,7 +1124,7 @@ This feature has been sponsored by Picturae. Thank you!
 .. _central_authentication_service_cas_for_archivematica_and_storage_service:
 
 Central Authentication Service (CAS) for Archivematica and Storage Service
---------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1211
 -  Documentation:
@@ -1141,7 +1136,7 @@ Thank you!
 .. _openid_connect_oidc_support_for_archivematica_and_storage_service:
 
 OpenID Connect (OIDC) support for Archivematica and Storage Service
--------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Experimental! Please share your feedback.**
 
@@ -1155,12 +1150,12 @@ you!
 .. _changed_5:
 
 Changed
-=======
+-------
 
 .. _django_1.12_support:
 
 Django 1.12 support
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/artefactual/archivematica/issues/1016
 
@@ -1188,7 +1183,7 @@ upgrade in this respect:
 .. _replace_whitelist_with_allowlist:
 
 Replace whitelist with allowlist
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Issue: https://github.com/archivematica/Issues/issues/1226
 
@@ -1198,7 +1193,7 @@ inclusive language throughout Archivematica's code.
 .. _fixed_9:
 
 Fixed
-=====
+-----
 
 -  Status doesn't revert to "Stored" after deletion requests are
    rejected: https://github.com/archivematica/Issues/issues/1273
@@ -1243,7 +1238,7 @@ page in the documentation.
 .. _fixed_10:
 
 Fixed
-=====
+-----
 
 List bugfixes with a link to the Github issue.
 
@@ -1279,7 +1274,7 @@ https://github.com/artefactual/archivematica/security/policy.
 .. _upgrading_3:
 
 Upgrading
-=========
+---------
 
 The fix can be easily installed since this issue only affects the
 dashboard.
@@ -1353,22 +1348,22 @@ page in the documentation.
 .. _fixed_11:
 
 Fixed
-=====
+-----
 
 -  `1.11.1
    milestone <https://github.com/archivematica/Issues/milestone/14>`__
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.11 and Storage Service 0.16
+Archivematica 1.11 and Storage Service 0.16
+===========================================
 
-https://wiki.archivematica.org/Archivematica_1.11_and_Storage_Service_0.16_release_notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.11_and_Storage_Service_0.16_release_notes>`__.
 
 **April 1, 2020**
 
 .. _environments_9:
 
 Environments
-============
+------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.11/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -1401,12 +1396,12 @@ page in the documentation.
 .. _added_5:
 
 Added
-=====
+-----
 
 .. _premis_event_import:
 
 PREMIS Event import
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 This feature allows the import of PREMIS events which took place prior
 to processing in Archivematica. The PREMIS events are written in an xml
@@ -1424,7 +1419,7 @@ you!
 .. _s3_as_a_transfer_source:
 
 S3 as a transfer source
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This allows an Amazon S3 space to be used as a transfer source location.
 This feature is a community PR from Wellcome Collection. Thank you!
@@ -1435,7 +1430,7 @@ This feature is a community PR from Wellcome Collection. Thank you!
 .. _easier_access_to_aip_mets:
 
 Easier access to AIP METS
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature add a "View METS" button in the user interface when viewing
 an AIP in Archival Storage. The METS file is then downloaded to your
@@ -1447,7 +1442,7 @@ desktop for your viewing pleasure.
 .. _zipped_transfers:
 
 Zipped transfers
-----------------
+^^^^^^^^^^^^^^^^
 
 This is a new transfer type that enables a zipped (non-bagged) package
 to be a transfer. Similar to the zipped bag transfer, the name of the
@@ -1460,7 +1455,7 @@ by Wellcome Collection. Thank you!
 .. _add_package_name_as_configurable_value_to_call_backs:
 
 Add package name as configurable value to call backs
-----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When using AIP, AIC, and DIP store callbacks, the package_name is now a
 configurable value. This is a community contribution from Concordia
@@ -1473,12 +1468,12 @@ Archivematica workflow. Thank you!
 .. _changed_6:
 
 Changed
-=======
+-------
 
 .. _performance_and_monitoring_improvements:
 
 Performance and monitoring improvements
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is a collection of issues fixed that improve performance for
 processing at scale, and also enable performance monitoring through
@@ -1508,7 +1503,7 @@ Archives. Thank you!
 .. _improvements_for_full_disks:
 
 Improvements for full disks
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Managing workflows when various spaces on the disk fill up is a
 recognized pain point for Archivematica users. This project makes three
@@ -1527,7 +1522,7 @@ Storage Service in an effort to mitigate these issues:
 .. _changes_to_default_normalization_for_videosimages:
 
 Changes to default normalization for videos/images
---------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica's default FPR normalization rules were creating in some
 cases very large video files for arguably no sound preservation reason.
@@ -1546,7 +1541,7 @@ in the issue ticket.
 .. _allow_users_to_choose_whether_to_receive_fail_report_emails:
 
 Allow users to choose whether to receive fail report emails
------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Users can now be configured to either receive fail report emails or not
 (previously all users received the emails). This is a community
@@ -1559,7 +1554,7 @@ you!
 .. _change_name_of_sanitize_names_micro_service:
 
 Change name of sanitize names micro-service
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Following reading a paper by `Elvia
 Arroyo-Ramirez <https://medium.com/on-archivy/invisible-defaults-and-perceived-limitations-processing-the-juan-gelman-files-4187fdd36759>`__
@@ -1573,7 +1568,7 @@ the Transfer and Ingest tabs respectively.
 .. _drop_down_menu_orders:
 
 Drop-down menu orders
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 In short, the order of options in drop down menus were all over the
 place and it was driving us nuts so we finally tried to put them in more
@@ -1582,10 +1577,10 @@ logical orders.
 -  Issue: https://github.com/artefactual/archivematica/issues/891
 
 Removed
-=======
+-------
 
 Quarantine
-----------
+^^^^^^^^^^
 
 As `discussed on the community
 forum <https://groups.google.com/d/msg/archivematica/rGMsO8htF38/Pl-eLimwAgAJ>`__
@@ -1599,7 +1594,7 @@ release.
 .. _add_next_disk_image_transfer_button:
 
 "Add next" disk image transfer button
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This button seemed redundant to the workflow so it's been removed.
 
@@ -1608,7 +1603,7 @@ This button seemed redundant to the workflow so it's been removed.
 .. _fixed_12:
 
 Fixed
-=====
+-----
 
 -  Non-Dublin Core columns cause metadata re-ingest to fail
    (**Sponsored** by Piql/NHA- thank you!):
@@ -1708,7 +1703,7 @@ full list of issues addresses in the 1.11 release.
 .. _upgraded_tools_and_dependencies:
 
 Upgraded tools and dependencies
-===============================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Update to PRONOM v.96
    https://github.com/archivematica/Issues/issues/791
@@ -1716,7 +1711,7 @@ Upgraded tools and dependencies
 .. _known_issues:
 
 Known issues
-============
+^^^^^^^^^^^^
 
 Please note that due to `Issue
 1149 <https://github.com/archivematica/Issues/issues/1149>`__ the
@@ -1727,7 +1722,7 @@ release.
 .. _end_of_life_dependencies:
 
 End of life dependencies
-========================
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Python 2 has reached end of life. The Archivematica delivery team and a
 number of community contributors have been working on upgrading this
@@ -1750,6 +1745,7 @@ which have been upgraded and/or tested using Python 3 include:
 We will continue to work toward full Python 3 use in upcoming releases.
 
 Archivematica 1.10.2
+====================
 
 `Original release notes <https://wiki.archivematica.org/Archivematica_1.10.2>`__.
 
@@ -1772,7 +1768,7 @@ https://github.com/artefactual/archivematica/security/policy.
 .. _upgrading_4:
 
 Upgrading
-=========
+---------
 
 The fix can be easily installed since this issue only affects the
 dashboard.
@@ -1832,7 +1828,7 @@ API keys:
 .. _fixed_13:
 
 Fixed
-=====
+-----
 
 -  `1.11.1
    milestone <https://github.com/archivematica/Issues/milestone/14>`__
@@ -1847,7 +1843,7 @@ Archivematica 1.10.1 and Storage Service 0.15.1 release notes
 .. _fixed_14:
 
 Fixed
-=====
+-----
 
 -  Job output isn't captured when task errors : `Issue
    873 <https://github.com/archivematica/Issues/issues/873>`__
@@ -1868,7 +1864,7 @@ Archivematica 1.10 and Storage Service 0.15
 .. _supported_environments_1:
 
 Supported environments
-======================
+----------------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.10/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -1887,12 +1883,12 @@ the installation instructions above.
 .. _added_6:
 
 Added
-=====
+-----
 
 .. _information_packaging_backlog_workflow_enhancements:
 
 Information Packaging (Backlog) Workflow Enhancements
------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Simon Fraser University has sponsored a development project to improve
 the ability to store Transfers for a long period of time. The goal is to
@@ -1915,7 +1911,7 @@ project:
 .. _vintage_aip_handling:
 
 "Vintage" AIP handling
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 AIPS created in Archivematica prior to version 1.0 can’t currently be
 re-ingested in more recent versions (due to namespace collisions with
@@ -1929,7 +1925,7 @@ Archivematica. This work is sponsored by the City of Vancouver Archives.
 .. _ldap_support_for_storage_service:
 
 LDAP support for Storage Service
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Archivematica Storage Service now supports LDAP integration. This
 was sponsored by Piql for the Norwegian Health Archives.
@@ -1939,7 +1935,7 @@ was sponsored by Piql for the Norwegian Health Archives.
 .. _external_pid_declaration:
 
 External PID declaration
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature, sponsored by the International Institute of Social
 History, allows users to include identifiers minted outside of
@@ -1954,7 +1950,7 @@ included in the transfer.
 .. _avalon_integration:
 
 Avalon Integration
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Archivematica 1.10 has added the ability to integrate with `Avalon Media
 System <https://www.avalonmediasystem.org/>`__ through the automation
@@ -1970,7 +1966,7 @@ automation tools send it to Avalon for ingest into that system.
 .. _include_aip_uuid_in_bag_info.txt:
 
 Include AIP UUID in bag-info.txt
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This change adds the UUID of the AIP to the External-Identifier field of
 the bag-info.txt file. This change is a **community contribution** by
@@ -1983,7 +1979,7 @@ Helen Sherwood-Taylor (Wellcome Collection)- thank you!
 .. _allow_designation_of_archivesspace_repository_using_dspace_rest_location:
 
 Allow designation of ArchivesSpace repository using DSpace REST location
-------------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature allows designation of more than one ArchivesSpace
 repository by enabling it via the DSpace REST location rather than
@@ -1997,12 +1993,12 @@ contribution** by Hrafn Malmquist (University of Edinburgh)- thank you!
 .. _changed_7:
 
 Changed
-=======
+-------
 
 .. _aip_mets_in_premis_3:
 
 AIP METS in PREMIS 3
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 As a result of the vintage AIP work described above, we have upgraded
 the AIP METS file to use PREMIS 3 exclusively. In previous versions it
@@ -2013,7 +2009,7 @@ had a mix of versions 2 and 3.
 .. _api_endpoint_for_manifest_validation_beta:
 
 API endpoint for manifest validation (beta)
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As part of the Avalon integration described above, we added an endpoint
 that can be called to validate a manifest. While this is currently only
@@ -2027,7 +2023,7 @@ the future for metadata.csv validation and similar.
 .. _extended_service_callbacks:
 
 Extended service callbacks
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This change allows the creation of callbacks for AIP, AIC, and DIP
 storage events. This was done in service to integration with SCOPE, a
@@ -2039,7 +2035,7 @@ is widely applicable to other use cases.
 .. _storage_service_packages_tab_tidy_up:
 
 Storage Service packages tab tidy-up
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This change was the result of a reported bug for the Storage Service
 packages tab timing out- we addressed that issue but also tidied up the
@@ -2053,7 +2049,7 @@ changes.
 .. _code_formatting_to_be_handled_by_black:
 
 Code formatting to be handled by black
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The developer team has decided to use a code formatting tool (black) to
 make formatting more consistent. Pull requests to Archivematica are now
@@ -2064,7 +2060,7 @@ checked with a linter to ensure consistency with black.
 .. _additions_and_improvements_to_the_amauats:
 
 Additions and improvements to the AMAUATs
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The AMAUATs are the Archivematica Automated User Acceptance Tests.
 Thanks to **sponsorship by Wellcome Collection** we have greatly
@@ -2080,7 +2076,7 @@ https://github.com/artefactual-labs/archivematica-acceptance-tests
 .. _fixed_15:
 
 Fixed
-=====
+-----
 
 -  A number of fixes related to custom structMap import have been
    **sponsored** in this release by International Institute of Social
@@ -2164,7 +2160,7 @@ https://github.com/archivematica/Issues/milestone/6
 .. _upgraded_tools_and_dependencies_1:
 
 Upgraded tools and dependencies
-===============================
+-------------------------------
 
 -  Ghostscript upgraded to 9.2.x across all platforms:
    https://github.com/archivematica/Issues/issues/714
@@ -2172,7 +2168,7 @@ Upgraded tools and dependencies
    https://github.com/archivematica/Issues/issues/521
 
 Deprecated
-==========
+----------
 
 `Issue 174 <https://github.com/archivematica/Issues/issues/174>`__ As of
 Archivematica 1.10, Archivist's Toolkit integration has been removed.
@@ -2204,7 +2200,7 @@ https://github.com/artefactual/archivematica/security/policy.
 .. _upgrading_5:
 
 Upgrading
-=========
+---------
 
 The fix can be easily installed since this issue only affects the
 dashboard.
@@ -2264,7 +2260,7 @@ API keys:
 .. _fixed_16:
 
 Fixed
-=====
+-----
 
 -  `1.11.1
    milestone <https://github.com/archivematica/Issues/milestone/14>`__
@@ -2283,7 +2279,7 @@ notes for `Archivematica
 .. _upgrading_6:
 
 Upgrading
-=========
+---------
 
 If you are upgrading from 1.9.0 to 1.9.2, please ensure that you run the
 following command:
@@ -2303,7 +2299,7 @@ in the documentation.
 .. _fixed_17:
 
 Fixed
-=====
+-----
 
 -  Index AIP errors due to asynchronous processing: `Issue
    425 <https://github.com/archivematica/Issues/issues/425>`__
@@ -2324,7 +2320,7 @@ notes for `Archivematica
 .. _upgrading_7:
 
 Upgrading
-=========
+---------
 
 If you are upgrading from 1.9.0 to 1.9.1, please ensure that you run the
 following command:
@@ -2342,7 +2338,7 @@ in the documentation.
 .. _fixed_18:
 
 Fixed
-=====
+-----
 
 -  Error in rebuilding elasticsearch AIP index: `Issue
    595 <https://github.com/archivematica/Issues/issues/595>`__
@@ -2377,7 +2373,7 @@ Release date: **March 6, 2019**
 .. _supported_environments_2:
 
 Supported environments
-======================
+----------------------
 
 Please see the `installation
 instructions <https://www.archivematica.org/en/docs/archivematica-1.9/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -2396,12 +2392,12 @@ the installation instructions above.
 .. _added_7:
 
 Added
-=====
+-----
 
 .. _aip_migration:
 
 AIP Migration
--------------
+^^^^^^^^^^^^^
 
 This feature creates a new endpoint for the storage service API. It will
 allow a client to make a request to the API to move an AIP from one
@@ -2417,7 +2413,7 @@ This work was sponsored by the Museum of Modern Art. Thank you!
 .. _stored_dip_deletion:
 
 Stored DIP deletion
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 This enhancement adds a new option to delete a DIP to the storage
 service user interface.
@@ -2435,12 +2431,12 @@ This work was sponsored by Simon Fraser University Archives. Thank you!
 .. _changed_8:
 
 Changed
-=======
+-------
 
 .. _increased_internationalization:
 
 Increased internationalization
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica 1.7 included user interface translation support (see `PR
 506 <https://github.com/artefactual/archivematica/pull/506>`__). This
@@ -2468,7 +2464,7 @@ Thank you!
 .. _backend_fpr_changes:
 
 Backend FPR changes
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 The Django app for the FPR was difficult to maintain so it has been
 moved to the dashboard.
@@ -2480,7 +2476,7 @@ Issues: `Issue
 .. _file_identification_changes:
 
 File identification changes
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To address an issue with `file
 identification <https://github.com/archivematica/Issues/issues/485>`__
@@ -2504,7 +2500,7 @@ it will default to "None" after upgrade.
 .. _fixed_19:
 
 Fixed
-=====
+-----
 
 -  Dataverse- Can't answer 'yes' to 'Delete Packages After Extraction':
    `Issue 269 <https://github.com/archivematica/Issues/issues/269>`__
@@ -2552,7 +2548,7 @@ for a complete list of fixes in this release.
 .. _upgraded_tools_and_dependencies_2:
 
 Upgraded tools and dependencies
-===============================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Elasticsearch has been upgraded from version 1.x to version 6.x. This
    should improve performance and ease security concerns with the
@@ -2576,7 +2572,7 @@ uses RPMs.
 .. _supported_environments_3:
 
 Supported environments
-======================
+^^^^^^^^^^^^^^^^^^^^^^
 
 There are no changes to supported environments in this release.
 
@@ -2586,7 +2582,7 @@ Please continue to follow the installation instructions
 .. _fixed_20:
 
 Fixed
-=====
+-----
 
 -  Transfers can't be started in AM18 RPM upgrades:
    https://github.com/archivematica/Issues/issues/360
@@ -2603,7 +2599,7 @@ Archivematica 1.8 and Storage Service 0.13
 .. _supported_environments_4:
 
 Supported environments
-======================
+----------------------
 
 Please see installation instructions `link
 here <https://www.archivematica.org/en/docs/archivematica-1.8/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -2622,12 +2618,12 @@ the installation instructions above.
 .. _added_8:
 
 Added
-=====
+-----
 
 .. _dataverse_integration:
 
 Dataverse integration
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica can now be configured to use a
 `Dataverse <https://dataverse.org/>`__ research data repository as a
@@ -2665,7 +2661,7 @@ Council of University Libraries (OCUL). Thank you!
 .. _public_url:
 
 Public URL
-----------
+^^^^^^^^^^
 
 Archivematica now has a concept of a public URL in the general
 configuration. Archivematica usually registers itself with the Storage
@@ -2685,7 +2681,7 @@ This work was sponsored by Jisc. Thank you!
 .. _package_storage_in_dspace_via_its_rest_api:
 
 Package storage in DSpace via its REST API
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Since Archivematica 1.6 it's been possible to store AIPs in DSpace, but
 they have been stored via SWORD. Some users have the need/desire to
@@ -2703,14 +2699,14 @@ with assistance from developers at Artefactual Systems. Thank you!
 .. _changed_9:
 
 Changed
-=======
+-------
 
 Enhancements or major fixes.
 
 .. _automatic_approval_of_transfers:
 
 Automatic approval of transfers
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is no longer necessary to approve transfers started in the user
 interface. By default, a checkbox is ticked for the transfer to
@@ -2727,7 +2723,7 @@ This enhancement was sponsored by Jisc. Thank you!
 .. _streamline_checksum_verification:
 
 Streamline checksum verification
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This enhancement de-duplicates checksum verification in Archivematica,
 which helps to improve the performance of Archivematica in processing
@@ -2758,7 +2754,7 @@ This work was sponsored by Columbia University Library. Thank you!
 .. _indexing_can_be_enableddisabled_for_transfers_andor_archival_storage:
 
 Indexing can be enabled/disabled for Transfers and/or Archival Storage
-----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Previously, the ElasticSearch index feature could be disabled globally
 as a scalability measure since indexing consumes a lot of resources.
@@ -2776,7 +2772,7 @@ Storage (Backlog and Appraisal disabled), for both indexes, or for none.
 .. _configure_email_settings:
 
 Configure email settings
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 This change improves the ways that the email client in Archivematica can
 be configured, including allowing an administrator to set the sender
@@ -2793,7 +2789,7 @@ This work was sponsored by Jisc. Thank you!
 .. _download_processing_configuration_and_reset_to_default:
 
 Download processing configuration and reset to default
-------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Previous versions of Archivematica introduced the ability to add custom
 processing configurations, but users had to retrieve the custom
@@ -2823,7 +2819,7 @@ This work was sponsored by Jisc. Thank you!
 .. _mcp_batching_for_scalability_performance:
 
 MCP batching for scalability & performance
-------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature refactors how tasks are scheduled, executed & managed
 within Archivematica, by grouping tasks into batches. It introduces
@@ -2844,7 +2840,7 @@ This work was sponsored by Jisc. Thank you!
 .. _binder_integration_improvements:
 
 Binder integration improvements
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica has had an integration with
 `Binder <https://binder.readthedocs.io/en/latest/user-manual/overview/intro.html>`__
@@ -2878,7 +2874,7 @@ This work was sponsored by Tate. Thank you!
 -  Issues: `23 <https://github.com/archivematica/Issues/issues/23>`__
 
 Translations
-------------
+^^^^^^^^^^^^
 
 First added in 1.7, translations in Archivematica are growing! In this
 release, we've pulled in translations for Archivematica.org, the
@@ -2907,7 +2903,7 @@ you!
 .. _file_format_identification_updates:
 
 File format identification updates
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica 1.8 is now up to date with PRONOM v.94! For more
 information on new data added to PRONOM, check the `PRONOM release
@@ -2918,7 +2914,7 @@ This work was sponsored by the Denver Art Museum. Thank you!
 .. _thumbnail_normalization_changes:
 
 Thumbnail normalization changes
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is now easier to configure whether or not, and how, thumbnails are
 created. In the processing configuration, users can choose between yes,
@@ -2936,7 +2932,7 @@ This work was sponsored by Columbia University Library. Thank you!
 .. _fixed_21:
 
 Fixed
-=====
+-----
 
 -  `Validate preservation derivatives
    hangs <https://github.com/archivematica/Issues/issues/44>`__
@@ -3038,7 +3034,7 @@ Fixed
 .. _upgraded_tools_and_dependencies_3:
 
 Upgraded tools and dependencies
-===============================
+-------------------------------
 
 -  Fido has been upgraded to version 1.3.12
 -  Siegfried has been upgraded to version 1.7.10
@@ -3048,12 +3044,12 @@ Upgraded tools and dependencies
 .. _end_of_life_dependencies_1:
 
 End of life dependencies
-========================
+------------------------
 
 .. _archivists_toolkit_integration:
 
 Archivists' Toolkit integration
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivists' Toolkit has been deprecated since 2013. The Archivists'
 Toolkit DIP upload feature has not had active development or testing
@@ -3066,7 +3062,7 @@ response is welcome via a comment on the issue in GitHub.
 .. _known_issues_1:
 
 Known issues
-============
+------------
 
 -  There is a
    `bug <https://github.com/archivematica/Issues/issues/333>`__
@@ -3081,7 +3077,7 @@ https://wiki.archivematica.org/Archivematica_1.7.2_release_notes
 Released September 12, 2018.
 
 New
-===
+---
 
 `Support for Ubuntu 18.04 - Issue
 119 <https://github.com/archivematica/Issues/issues/119>`__
@@ -3095,7 +3091,7 @@ We anticipate it being fully supported in version 1.8.
 .. _fixed_22:
 
 Fixed
-=====
+-----
 
 -  `Upload DIP task restarts when mcp-server is restarted - Issue
    112 <https://github.com/archivematica/Issues/issues/112>`__
@@ -3123,12 +3119,12 @@ Released September 12, 2018.
 .. _new_1:
 
 New
-===
+---
 
 .. _asynchronous_processing:
 
 Asynchronous processing
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 **Sponsored** by Jisc
 
@@ -3141,7 +3137,7 @@ timeouts by moving packages asynchronously.
 .. _support_for_s3_storage:
 
 Support for S3 Storage
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Sponsored** by Jisc
 
@@ -3153,12 +3149,12 @@ Amazon S3 storage is now supported for AIP storage location.
 .. _changed_10:
 
 Changed
-=======
+-------
 
 .. _move_files_directly:
 
 Move files directly
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 **Sponsored** by Columbia University Library
 
@@ -3172,7 +3168,7 @@ Service always moved files in two moves.
 .. _fixed_23:
 
 Fixed
-=====
+-----
 
 -  Cannot store compressed AIP in non-local file systems `Issue
    145 <https://github.com/archivematica/Issues/issues/145>`__
@@ -3193,7 +3189,7 @@ Fixed
 https://wiki.archivematica.org/Archivematica_1.7.1_release_notes
 
 Changes
-=======
+-------
 
 This point release incorporates performance improvement development work
 sponsored by Columbia University Library.
@@ -3201,7 +3197,7 @@ sponsored by Columbia University Library.
 .. _changes_to_mcpclient_and_mcpserver:
 
 Changes to MCPClient and MCPServer
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to improve Archivematica's performance (processing time),
 MCPClient can now be configured to stop sending tool output through the
@@ -3255,7 +3251,7 @@ documentation <https://www.archivematica.org/docs/archivematica-1.7/>`__.
 .. _supported_environments_5:
 
 Supported environments
-======================
+----------------------
 
 Installation instructions are available
 `here <https://www.archivematica.org/en/docs/archivematica-1.7/admin-manual/installation-setup/installation/installation/#installation>`__.
@@ -3287,10 +3283,10 @@ instructions <https://www.archivematica.org/en/docs/archivematica-1.7/admin-manu
 .. _added_9:
 
 Added
-=====
+-----
 
 Internationalization/localization
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Translation hooks have been added to the Archivematica user interface,
 the Storage Service, the documentation, and the Archivematica website.
@@ -3321,7 +3317,7 @@ the Settings menu.
 .. _aip_encryption:
 
 AIP encryption
---------------
+^^^^^^^^^^^^^^
 
 This feature allows users to connect their Archivematica pipeline to
 GPG-encrypted AIP Storage and Transfer Backlog spaces. AIPs and
@@ -3362,7 +3358,7 @@ with storing uncompressed AIPs encrypted.
 .. _shibboleth_and_ldap_integration:
 
 Shibboleth and LDAP integration
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Archivematica and the Storage Service can now be deployed to use LDAP or
 Shibboleth authentication.
@@ -3385,7 +3381,7 @@ Thank you!
 .. _mediaconch_integration:
 
 MediaConch integration
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 This integration allows users to use MediaConch to check the conformance
 of .mkv files (originals and derivatives) against the Matroska
@@ -3423,7 +3419,7 @@ Project <http://www.preforma-project.eu/>`__. Thank you!
 .. _handle_server_integration:
 
 Handle Server integration
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Using this feature, Archivematica can be configured to make requests to
 a Handle System HTTP API so that files, directories and entire AIPs can
@@ -3443,7 +3439,7 @@ Institute of Social History <https://socialhistory.org/>`__. Thank you!
 .. _assign_uuids_to_directories_and_empty_directories:
 
 Assign UUIDs to directories and empty directories
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Related to Handle Server Integration, above, this feature gives users
 the options of assigning UUIDs to directories and/or empty directories
@@ -3468,7 +3464,7 @@ History <https://socialhistory.org/>`__. Thank you!
 .. _indexless_archivematica:
 
 Indexless Archivematica
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature supports deployment of Archivematica in indexless mode,
 disabling ElasticSearch. This means that users that don't require
@@ -3490,7 +3486,7 @@ Libraries <http://library.columbia.edu/>`__. Thank you!
 .. _readme_file:
 
 README file
------------
+^^^^^^^^^^^
 
 A README file in html format has been added to the AIP containing a
 brief explanation of what the AIP is, how it was created and how it is
@@ -3507,7 +3503,7 @@ Museum <https://denverartmuseum.org/>`__. Thank you!
 .. _file_modification_dates:
 
 File modification dates
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 This feature adds a Store file modification job to the Characterize and
 Extract metadata microservice and adds the metadata to the Elasticsearch
@@ -3524,12 +3520,12 @@ you!
 .. _changed_11:
 
 Changed
-=======
+-------
 
 .. _anti_virus_changes:
 
 Anti-virus changes
-------------------
+^^^^^^^^^^^^^^^^^^
 
 **What has changed:**
 
@@ -3568,7 +3564,7 @@ include:
 .. _archivematica_decoupled_from_the_fpr_server:
 
 Archivematica decoupled from the FPR server
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The FPR was originally created to manage preservation plans, i.e.
 business rules and tool commands for format-based preservation events.
@@ -3601,7 +3597,7 @@ Pull requests: `PR
 .. _dip_upload_and_storage_workflow_improvements:
 
 DIP upload and storage workflow improvements
---------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This work clarifies the sequence of the Upload DIP and Store DIP jobs on
 the Ingest tab. The processing configuration settings have also been
@@ -3620,7 +3616,7 @@ York <https://www.york.ac.uk/library/>`__. Thank you!
 .. _dashboard_api_whitelist_mechanism:
 
 Dashboard API whitelist mechanism
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Two changes have been made to the API whitelist functionality:
 
@@ -3632,7 +3628,7 @@ Two changes have been made to the API whitelist functionality:
 .. _default_processing_configuration:
 
 Default processing configuration
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As a result of several features in this release, the processing
 configuration options have changed substantially, growing from 19
@@ -3670,7 +3666,7 @@ your local configuration during an upgrade or migration.
 .. _miscellaneous_changes:
 
 Miscellaneous changes
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 -  Storage Service timeouts increased from 5 seconds to 120 seconds
    (https://github.com/artefactual/archivematica/commit/c24183fd)
@@ -3678,7 +3674,7 @@ Miscellaneous changes
 .. _fixed_25:
 
 Fixed
-=====
+-----
 
 -  Problem: editing notes in appraisal tab can delete data from
    ArchivesSpace -
@@ -3697,7 +3693,7 @@ Fixed
 .. _upgraded_tools_and_dependencies_4:
 
 Upgraded tools and dependencies
-===============================
+-------------------------------
 
 -  PRONOM updated to version 92
 -  METS updated to version 1.11
@@ -3712,7 +3708,7 @@ Upgraded tools and dependencies
 .. _end_of_life_dependencies_2:
 
 End of life dependencies
-========================
+------------------------
 
 Several dependencies in Archivematica have reached end of life and
 resources did not allow for updates in 1.7. In future releases we will
@@ -3728,10 +3724,10 @@ consider:
 -  Installing Archivematica behind a firewall
 -  Using Archivematica without Elasticsearch (turn indexing off)
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.6.1 release notes
+Archivematica 1.6.1 release notes
+=================================
 
-https://wiki.archivematica.org/Archivematica_1.6.1_release_notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.6.1_release_notes>`__.
 
 Primarily a bugfix release - August 1st, 2017.
 
@@ -3808,10 +3804,10 @@ Archivematica Storage Service 0.10.1
 -  Update Bagit-python to version 1.5.4
    `PR207 <https://github.com/artefactual/archivematica-storage-service/pull/207>`__
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.6 release notes
+Archivematica 1.6 release notes
+===============================
 
-https://wiki.archivematica.org/Archivematica_1.6_release_notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.6_release_notes>`__.
 
 We are dedicating the Archivematica 1.6 release to the memory of Nancy
 Deromedi. Many of our users will know that a major defining feature of
@@ -3835,12 +3831,12 @@ archives.”
 .. _archivematica_1.6:
 
 Archivematica 1.6
-=================
+-----------------
 
 .. _new_featuresenhancements:
 
 New features/enhancements
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  **Sponsored** (Bentley Historical Library University of Michigan)
    `Appraisal/Arrangement tab <Appraisal_Arrangement_tab>`__ -
@@ -3913,7 +3909,7 @@ New features/enhancements
 .. _new_and_upgraded_toolsdependencies:
 
 New and upgraded tools/dependencies
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  **Sponsored** (Bentley Historical Library) Bootstrap upgrade which
    has changed the transfer browser and SIP arrange interfaces
@@ -3921,7 +3917,7 @@ New and upgraded tools/dependencies
 .. _storage_service_0.10.0:
 
 Storage Service 0.10.0
-======================
+----------------------
 
 -  **Sponsored** (Simon Fraser University Archives) Fixity checking and
    reporting
@@ -3937,7 +3933,7 @@ Storage Service 0.10.0
 .. _new_and_upgraded_toolsdependencies_1:
 
 New and upgraded tools/dependencies
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  Siegfried: updated to 1.6.7
 -  Fido: updated to 1.3.5
@@ -3958,15 +3954,15 @@ New and upgraded tools/dependencies
 .. _bug_fixes:
 
 Bug fixes
----------
+^^^^^^^^^
 
 Please see bug fixes
 `here <https://projects.artefactual.com/projects/archivematica/issues?query_id=79>`__
 
-`Main Page <Main_Page>`__ > `Release Notes <Release_Notes>`__ >
 Archivematica 1.5.1 Release Notes
+=================================
 
-https://wiki.archivematica.org/Archivematica_1.5.1_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.5.1_Release_Notes>`__.
 
 Packaging and bug fix release - September 6, 2016
 
@@ -4000,9 +3996,9 @@ Storage Service 0.9.0
 .. _archivematica_1.5.0:
 
 Archivematica 1.5.0
--------------------
+===================
 
-https://wiki.archivematica.org/Archivematica_1.5_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.5_Release_Notes>`__.
 
 -  **Sponsored** (Rockefeller Archive Center) ArchivesSpace integration
 
@@ -4052,17 +4048,17 @@ Storage Service 0.8.0
    38 <https://github.com/artefactual/archivematica-storage-service/pull/48>`__
 -  Update Django to version 1.8
 
-`Main Page <Main_Page>`__ > `Release Notes <Release_Notes>`__ >
 Archivematica 1.4.1 Release Notes
+=================================
 
-https://wiki.archivematica.org/Archivematica_1.4.1_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.4.1_Release_Notes>`__.
 
 Bug fix release, June 24, 2015
 
 .. _archivematica_1.4.1:
 
 Archivematica 1.4.1
-===================
+-------------------
 
 -  Requesting AIP deletion causes 500 error (#8533)
 -  Show Archivematica active template instead of Apache error page for
@@ -4071,20 +4067,20 @@ Archivematica 1.4.1
 .. _storage_service_0.7.1:
 
 Storage Service 0.7.1
-=====================
+---------------------
 
 -  Permissions error copying to start of transfer (#8540)
 -  Cannot browse CIFS transfer source (#8514)
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.4 Release Notes
+Archivematica 1.4 Release Notes
+===============================
 
-https://wiki.archivematica.org/Archivematica_1.4_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.4_Release_Notes>`__.
 
 .. _archivematica_1.4:
 
 Archivematica 1.4
-=================
+-----------------
 
 Released May 27, 2015
 
@@ -4095,7 +4091,7 @@ well as bug fixes and other small usability improvements.
 .. _new_features:
 
 New features
-------------
+^^^^^^^^^^^^
 
 -  **Sponsored** (University of Saskatchewan Library) Fedora/Islandora
    Integration
@@ -4117,7 +4113,7 @@ New features
 .. _bug_fixes_1:
 
 Bug fixes
----------
+^^^^^^^^^
 
 -  Manual normalization fixes (#6870, PR97, PR186)
 -  Improvements to metadata.csv handling (#7901, #8007, PR210)
@@ -4135,7 +4131,7 @@ Bug fixes
 .. _new_and_upgraded_tools:
 
 New and upgraded tools
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 -  Elasticsearch Updated to version 1.3
 -  FITS Updated to version 0.8.4
@@ -4146,12 +4142,12 @@ New and upgraded tools
 .. _storage_service_0.7:
 
 Storage Service 0.7
-===================
+-------------------
 
 .. _new_features_1:
 
 New features
-------------
+^^^^^^^^^^^^
 
 -  **Sponsored** (Museum of Modern Art) AIP Recovery (SS PR 47)
 -  **Sponsored** (University of Saskatchewan Library) Fedora/Islandora
@@ -4160,7 +4156,7 @@ New features
 .. _bug_fixes_2:
 
 Bug fixes
----------
+^^^^^^^^^
 
 -  SIP Arrange results handling (#7714)
 -  Default Location Handling (#7416, SS PR40)
@@ -4168,15 +4164,15 @@ Bug fixes
 -  Duracloud related fixes (#7643, #7554, #7549, #7481, #7583,)
 -  Misc. Testing Improvements (back-end) (SS PR47, SS PR69)
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.3.2 Release Notes
+Archivematica 1.3.2 Release Notes
+=================================
 
-https://wiki.archivematica.org/Archivematica_1.3.2_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.3.2_Release_Notes>`__.
 
 .. _archivematica_1.3.2:
 
 Archivematica 1.3.2
-===================
+-------------------
 
 **Security and bug fix release**
 
@@ -4188,7 +4184,7 @@ Released March 18, 2015
 .. _storage_service_0.6.1:
 
 Storage Service 0.6.1
-=====================
+---------------------
 
 **Security and bug fix release**
 
@@ -4200,15 +4196,15 @@ Released March 18, 2015
 -  Fixity checks for uncompressed AIPs #7777
 -  Original timestamps retained when transfer started #8024
 
-`Home <Main_Page>`__ > `Release Notes <Release_Notes>`__ > Archivematica
-1.3.1 Release Notes
+Archivematica 1.3.1 Release Notes
+=================================
 
-https://wiki.archivematica.org/Archivematica_1.3.1_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_1.3.1_Release_Notes>`__.
 
 .. _archivematica_1.3.1:
 
 Archivematica 1.3.1
-===================
+-------------------
 
 Released February 5, 2015
 
@@ -4221,14 +4217,14 @@ Released February 5, 2015
 .. _storage_service_0.6.0:
 
 Storage Service 0.6.0
-=====================
+---------------------
 
 Released February 5, 2015
 
 .. _new_features_2:
 
 New features
-------------
+^^^^^^^^^^^^
 
 -  Improve logging #7683
 -  Add exception handling, duplicate locations #7416
@@ -4242,7 +4238,7 @@ New features
 .. _bug_fixes_3:
 
 Bug fixes
----------
+^^^^^^^^^
 
 -  DuraCloud: Encoding fixes `Pull Request
    50 <https://github.com/artefactual/archivematica-storage-service/pull/50>`__
@@ -4301,7 +4297,7 @@ New features
 .. _storage_service_0.5.0:
 
 Storage Service 0.5.0
-=====================
+---------------------
 
 Released October 24, 2014
 
@@ -4312,7 +4308,7 @@ Released October 24, 2014
 .. _new_archivematica_dev_tools_0.0.1:
 
 New: Archivematica Dev Tools 0.0.1
-==================================
+----------------------------------
 
 Released October 24, 2014
 
@@ -4326,7 +4322,7 @@ Released October 24, 2014
 Archivematica 1.2.0
 ===================
 
-https://wiki.archivematica.org/Archivematica_1.2_Release_Notes
+`Original releas notes <https://wiki.archivematica.org/Archivematica_1.2_Release_Notes>`__.
 
 Released September 2014
 
@@ -4405,7 +4401,7 @@ updated:
 .. _storage_service_0.4.0:
 
 Storage Service 0.4.0
-=====================
+---------------------
 
 This release allows integration with LOCKSS storage, adds a fixity
 checking app to the backend, and includes several developer features as
@@ -4415,7 +4411,7 @@ dashboard.
 .. _new_features_5:
 
 New features
-------------
+^^^^^^^^^^^^
 
 -  Sponsored (SFU Library) LOCKSS available as an AIP storage location
    using PLN Manager "LOCKSS-o-MATIC" (AIP storage / API plugin) #5425
@@ -4428,7 +4424,7 @@ New features
 -  View pointer files from Archival Storage and SS #5716 PR5
 
 Enhancements
-------------
+^^^^^^^^^^^^
 
 -  Optimizations in moving files between Locations #6248 PR4
 -  Streamlined creation of new endpoints with decorators PR14
@@ -4436,7 +4432,7 @@ Enhancements
    with multiple Extensions (e.g., aip.tar.gz) #6764 PR15
 
 Bugfixes
---------
+^^^^^^^^
 
 -  Setting Location path from the user interface #5608 PR10
 -  Allow email address to be used as username #6674 PR12
@@ -4472,7 +4468,7 @@ user facing changes
 Archivematica 1.1
 =================
 
-https://wiki.archivematica.org/Archivematica_1.1_Release_Notes
+`Original releas notes <https://wiki.archivematica.org/Archivematica_1.1_Release_Notes>`__.
 
 Released May 2, 2014
 
@@ -4529,7 +4525,7 @@ Archivematica 1.0 Release Notes
 .. _archivematica_1.0:
 
 Archivematica 1.0
-=================
+-----------------
 
 https://wiki.archivematica.org/Archivematica_1.0_Release_Notes
 
@@ -4540,7 +4536,7 @@ Package release: January 2014
 .. _new_features_7:
 
 New features
-------------
+^^^^^^^^^^^^
 
 -  Format Policy Registry (FPR) improvements including
 
@@ -4570,7 +4566,7 @@ New features
 .. _bug_fixes_and_enhancements_1:
 
 Bug fixes and enhancements
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  `bug fixes <https://projects.artefactual.com/versions/31>`__
 
@@ -4579,7 +4575,7 @@ Bug fixes and enhancements
 Archivematica 0.10 Release Notes
 ================================
 
-https://wiki.archivematica.org/Archivematica_0.10-beta_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_0.10-beta_Release_Notes>`__.
 
 Release: April 29, 2013 \| `Download <Install-0.9-beta>`__ \|
 `Screencast <https://www.youtube.com/watch?v=GWmNfuO1ofw&feature=player_embedded>`__
@@ -4588,7 +4584,7 @@ Release: April 29, 2013 \| `Download <Install-0.9-beta>`__ \|
 .. _new_features_8:
 
 New features
-============
+------------
 
 -  Format Policy Registry (FPR)\ `Format Policy Registry
    (FPR) <Format_policy_registry_requirements>`__ including ability to
@@ -4619,7 +4615,7 @@ New features
 .. _bug_fixes_and_enhancements_2:
 
 Bug fixes and enhancements
-==========================
+--------------------------
 
 -  #585 Eliminate dialogs, open task reports in seperate tab
 -  #1593 Upload original filename to ICA-AtoM instead of cleaned up
@@ -4649,7 +4645,7 @@ Bug fixes and enhancements
 Archivematica 0.9 Release Notes
 ===============================
 
-https://wiki.archivematica.org/Archivematica_0.9_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_0.9_Release_Notes>`__.
 
 Release: August 29, 2012 \| `Download <Install-0.9-beta>`__ \|
 `Screencast <https://www.youtube.com/watch?v=GWmNfuO1ofw&feature=player_embedded>`__
@@ -4658,7 +4654,7 @@ Release: August 29, 2012 \| `Download <Install-0.9-beta>`__ \|
 .. _new_features_9:
 
 New features
-============
+------------
 
 -  Update to ubuntu 12.04 LTS as the base operating system
 -  Web browser dashboard interface replacing most of the file browser
@@ -4679,7 +4675,7 @@ New features
 .. _bug_fixes_and_enhancements_3:
 
 Bug fixes and enhancements
-==========================
+--------------------------
 
 -  Issue 185 Merge multiple layers in image files into single jpeg
    access copies
@@ -4784,14 +4780,14 @@ Bug fixes and enhancements
 Archivematica 0.8 Release Notes
 ===============================
 
-https://wiki.archivematica.org/Archivematica_0.8_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_0.8_Release_Notes>`__.
 
 Released: February 3, 2012 (`Download <Install-0.8-alpha>`__)
 
 .. _new_features_10:
 
 New features
-============
+------------
 
 -  Complete standards-compliant PREMIS in METS implementation
 -  Transfer functionality:
@@ -4822,7 +4818,7 @@ New features
 .. _bug_fixes_and_enhancements_4:
 
 Bug fixes and enhancements
-==========================
+--------------------------
 
 -  Issue 249 Verify Namespaces in the mets xml document are correct
 -  Issue 305 Add functional tests to Archivematica wiki
@@ -4992,14 +4988,14 @@ Bug fixes and enhancements
 Archivematica 0.7.1 Release Notes
 =================================
 
-https://wiki.archivematica.org/Archivematica_0.7.1_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_0.7.1_Release_Notes>`__.
 
 Released: June 24, 2011 (`Download <Install-0.7.1-alpha>`__)
 
 .. _new_features_11:
 
 New features
-============
+------------
 
 -  Enhancements to the dashboard:
 
@@ -5031,7 +5027,7 @@ New features
 .. _bug_fixes_and_enhancements_5:
 
 Bug fixes and enhancements
-==========================
+--------------------------
 
 -  Issue 63 - During ingest run script to remove Thumbs.db files
 -  Issue 175 - Bagit fails to create zip file when out of disk space
@@ -5180,14 +5176,14 @@ Bug fixes and enhancements
 Archivematica 0.7 Release Notes
 ===============================
 
-https://wiki.archivematica.org/Archivematica_0.7_Release_Notes
+`Original release notes <https://wiki.archivematica.org/Archivematica_0.7_Release_Notes>`__.
 
 Released: February 18, 2011 (`Download <Install-0.7-alpha>`__)
 
 .. _new_features_12:
 
 New features
-============
+------------
 
 -  A web-based `dashboard <dashboard>`__ to track the processing of SIPs
 -  A fully redesigned architecture (`MCP <MCP>`__) for distributed
@@ -5199,7 +5195,7 @@ New features
 .. _bug_fixes_4:
 
 Bug fixes
-=========
+---------
 
 -  Issue 292 - ClamAV engine version out of date
 -  Issue 294 - Status when approving a job - Should be processing, not
@@ -5320,13 +5316,10 @@ Archivematica 0.6 Release Notes
 
 `Original release notes <https://wiki.archivematica.org/Archivematica_0.6_Release_Notes>`__.
 
-Archivematica 0.6 Release Notes
-===============================
-
 .. _release_0.6.2_alpha:
 
 Release 0.6.2-alpha
-===================
+-------------------
 
 -  **Release date: December 21 2010**
 -  Release: `0.6.2-alpha (SVN
@@ -5339,7 +5332,7 @@ Release 0.6.2-alpha
 .. _changes_overview:
 
 Changes overview
-----------------
+^^^^^^^^^^^^^^^^
 
 -  Distributed system `MCP <MCP>`__ which manages multiple tasks as
    discrete micro-services
@@ -5352,7 +5345,7 @@ Changes overview
 .. _release_0.6_alpha:
 
 Release 0.6-alpha
-=================
+-----------------
 
 **Release date: May 2010**
 
@@ -5366,6 +5359,6 @@ Release 0.6-alpha
 .. _changes_overview_1:
 
 Changes overview
-----------------
+^^^^^^^^^^^^^^^^
 
 -  Added normalize.py
