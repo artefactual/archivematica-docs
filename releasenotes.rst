@@ -2548,7 +2548,7 @@ uses RPMs.
 .. _supported_environments_3:
 
 Supported environments
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 There are no changes to supported environments in this release.
 
