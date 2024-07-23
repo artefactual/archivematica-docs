@@ -1014,8 +1014,8 @@ List bugfixes with a link to the Github issue.
    https://github.com/archivematica/Issues/issues/1300
 -  Clicking on metadata icon in transfer tab causes internal server
    error: https://github.com/archivematica/Issues/issues/1324
--  Transfer name doesn't always show up (**Sponsored** by Picturae-
-   thank you!): https://github.com/archivematica/Issues/issues/1250
+-  Transfer name doesn't always show up (**Sponsored** by Picturae
+   -thank you!): https://github.com/archivematica/Issues/issues/1250
 -  Interval setting for updated UI being ignored (**Sponsored** by
    Picturae- thank you!):
    https://github.com/archivematica/Issues/issues/1017
@@ -1634,8 +1634,8 @@ Fixed
 -  "Remove bagged files" reports failure when thumbnails aren't created:
    https://github.com/archivematica/Issues/issues/651
 -  Directories are greyed out while they still contain files available
-   for arrangement (**Sponsored** by Simon Fraser University Archives-
-   thank you!): https://github.com/archivematica/Issues/issues/822
+   for arrangement (**Sponsored** by Simon Fraser University Archives
+   -thank you!): https://github.com/archivematica/Issues/issues/822
 -  Dublin Core dmdSec not created if filename has diacritics:
    https://github.com/archivematica/Issues/issues/1073
 -  Cannot add metadata files through the UI (**Sponsored** by Piql/NHA-
@@ -2150,8 +2150,8 @@ Fixed
 -  Archivematica attempts to delete files from transfer source:
    https://github.com/archivematica/Issues/issues/646
 -  Double replications being creation from first replication, not
-   original (**Sponsored** by Piql for the Norwegian Health Archive-
-   thank you!):
+   original (**Sponsored** by Piql for the Norwegian Health Archive
+   -thank you!):
    https://github.com/artefactual/archivematica-storage-service/issues/270
 -  AtoM DIP upload link in Access tab is wrong:
    https://github.com/archivematica/Issues/issues/411
@@ -2329,7 +2329,9 @@ Upgrading
 If you are upgrading from 1.9.0 to 1.9.1, please ensure that you run the
 following command:
 
-``curl -XPUT '``\ ```http://localhost:9200/aips,aipfiles,transfers,transferfiles/_settings`` <http://localhost:9200/aips,aipfiles,transfers,transferfiles/_settings>`__\ ``' -H "Content-Type: application/json" -d '{"index.mapping.total_fields.limit": 10000, "index.mapping.depth.limit": 1000 }'``
+```bash
+curl -XPUT 'http://localhost:9200/aips,aipfiles,transfers,transferfiles/_settings' -H "Content-Type: application/json" -d '{"index.mapping.total_fields.limit": 10000, "index.mapping.depth.limit": 1000 }'
+```
 
 This is not required for upgrading from 1.8.x to 1.9.1.
 
