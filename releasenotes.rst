@@ -8,7 +8,12 @@ Release notes are prepared by Artefactual for each release of Archivematica. Mos
 
 Features, enhancements, and bug fixes were often sponsored by members of the Archivematica community who are dedicated to funding Archivematica's ongoing development and maintenance. Code contributors are individuals who write Archivematica code and `contribute it back to the project <https://github.com/artefactual/archivematica/blob/qa/1.x/CONTRIBUTING.md>`__. Archivematica couldn't continue to grow without sponsors and contributors - thank you!
 
-Questions about a release or the release notes? Ask on the `Archivematica User Group <https://groups.google.com/g/archivematica>`__! 
+Questions about a release or the release notes? Ask on the `Archivematica User Group <https://groups.google.com/g/archivematica>`__!
+
+.. toctree::
+   :maxdepth: 2
+
+   releasenotes.rst
 
 (Current Release) Archivematica 1.16.0 and Storage Service 0.22.0
 =================================================================
@@ -5362,10 +5367,3 @@ Changes overview
 ----------------
 
 -  Added normalize.py
-
-\__NOTOC_\_
-
-`Category:Releases <Category:Releases>`__
-`Category:Releases <Category:Releases>`__
-
-
