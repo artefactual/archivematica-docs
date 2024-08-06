@@ -174,16 +174,11 @@ FAQ
     to integrate the two systems. If practical, we would gladly accept the code
     into the Archivematica code base via a `pull request`_ .
 
-  * Contract Artefactual Systems to `write the code`_. We will work with you to
-    identify requirements and include the new integration code in the next
-    software release, for the entire community's benefit.
-
 :ref:`Back to the top <faq>`
 
 .. _`Roadmap`: https://trello.com/b/aB72IgiX/archivematica-roadmap
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
 .. _`pull request`: https://github.com/artefactual/archivematica/blob/e0b169aba822481b4038426a59188b0ea6450361/CONTRIBUTING.md
-.. _`write the code`: https://www.artefactual.com/services/software-development/
 .. _`OAIS`: https://en.wikipedia.org/wiki/Open_Archival_Information_System
 .. _`maintenance contract`: https://www.artefactual.com/services/technical-support/
 .. _`API endpoint`: https://wiki.archivematica.org/Storage_Service_API#Check_fixity
