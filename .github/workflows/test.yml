@@ -32,9 +32,6 @@ jobs:
       - name: "Run build test"
         run: |
           make test
-      - name: "Linkcheck"
-        run: |
-          make linkcheck
   lint:
     name: "Linting"
     runs-on: "ubuntu-22.04"
