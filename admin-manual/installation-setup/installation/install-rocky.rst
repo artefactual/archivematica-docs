@@ -170,7 +170,7 @@ Installation instructions
    **Configuration**
 
    Each service has a configuration file in
-   /etc/sysconfig/archivematica-packagename
+   `/etc/sysconfig/archivematica-packagename`
 
    **Troubleshooting**
 
