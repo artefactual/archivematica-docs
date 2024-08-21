@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:5
+msgid "Integrations"
+msgstr "統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:7
+msgid ""
+"Archivematica is built to integrate widely with a number of external "
+"systems, including dedicated storage and access systems. The current "
+"integrations are listed below."
+msgstr ""
+"Archivematicaは、専用のストレージやアクセスシステムなど、多くの外部システムと幅広く統合できるように構築されています。現在の統合機能を以下に示します。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:11
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:13
+msgid ":ref:`AtoM integration <atom-integration>`"
+msgstr ":ref:`AtoMの統合 <atom-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:14
+msgid ":ref:`ArchivesSpace integration <archivesspace-integration>`"
+msgstr ":ref:`ArchivesSpaceの統合 <archivesspace-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:15
+msgid ""
+":ref:`Avalon Media System integration <avalon-media-system-integration>`"
+msgstr ":ref:`Avalon Media Systemの統合 <avalon-media-system-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:16
+msgid ":ref:`Binder integration <binder-integration>`"
+msgstr ":ref:`Binderの統合 <binder-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:17
+msgid ":ref:`Duracloud integration <duracloud-integration>`"
+msgstr ":ref:`Duracloudの統合 <duracloud-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:18
+msgid ":ref:`Swift integration <swift-integration>`"
+msgstr ":ref:`Swiftの統合 <swift-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:19
+msgid ":ref:`Islandora integration <islandora-integration>`"
+msgstr ":ref:`Islandoraの統合 <islandora-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:20
+msgid ":ref:`Arkivum integration <arkivum-integration>`"
+msgstr ":ref:`Arkivumの統合 <arkivum-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:21
+msgid ":ref:`Handle.Net integration <handlenet-integration>`"
+msgstr ":ref:`Handle.Netの統合 <handlenet-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:22
+msgid ":ref:`Dataverse integration <dataverse-integration>`"
+msgstr ":ref:`Dataverseの統合 <dataverse-integration>`"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:27
+msgid "AtoM integration"
+msgstr "AtoMの統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:29
+msgid ""
+"`AtoM`_ (Access to Memory) is a web-based, open source application for "
+"standards-based archival description and access in multilingual, multi-"
+"repository environment."
+msgstr ""
+"`AtoM`_ （Access to "
+"Memory）は、多言語、マルチリポジトリ環境における標準ベースのアーカイブ記述とアクセスのためのウェブベースのオープンソースアプリケーションです。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:33
+msgid "See :ref:`Using AtoM 2.x with Archivematica <atom-setup>`."
+msgstr ":ref:`Using AtoM 2.x with Archivematica <atom-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:38
+msgid "ArchivesSpace integration"
+msgstr "ArchivesSpaceの統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:40
+msgid ""
+"`ArchivesSpace`_ is an open source archives information management "
+"application for managing and providing web access to archives, manuscripts "
+"and digital objects."
+msgstr ""
+"`ArchivesSpace`_ "
+"は、アーカイブ、原稿、デジタルオブジェクトを管理し、ウェブアクセスを提供するオープンソースのアーカイブ情報管理アプリケーションです。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:44
+msgid ""
+"See :ref:`Using ArchivesSpace with Archivematica <archivesspace-setup>`."
+msgstr ""
+":ref:`ArchivematicaでArchivesSpaceを使用 <archivesspace-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:49
+msgid "Avalon Media System integration"
+msgstr "Avalon Media Systemの統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:51
+msgid ""
+"`Avalon Media System`_ is an open source system for managing and providing "
+"access to large collections of digital audio and video. Integration between "
+"the systems can be found in the `Avalon Media System Technical "
+"Documentation`_. This workflow includes integration with Archivematica's "
+"`validation API endpoint` and `Automation-Tools`_ DIP creation script."
+msgstr ""
+"`Avalon Media System`_ "
+"は、デジタルオーディオとビデオの大規模なコレクションを管理し、アクセスを提供するためのオープンソースシステムです。システム間の統合については、 "
+"`Avalon Media System Technical Documentation`_ "
+"を参照してください。このワークフローには、Archivematicaの `妥当性確認APIエンドポイント `および` Automation-"
+"Tools`_ DIP作成スクリプトとの統合が含まれています。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:60
+msgid "Binder integration"
+msgstr "Binderの統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:62
+msgid ""
+"`Binder`_ is an open-source web application for supporting the care, "
+"management, and preservation of complex digital collections such as time-"
+"based media and born-digital artworks. It provides users with a central "
+"interface through which they can access, view and manage the rich technical "
+"metadata contained in Archival Information Packages (AIPs) held by the "
+"repository, as well as managing and describing the relationships between the"
+" components of a collections object, its constituent digital objects, and "
+"the various external dependencies required to preserve and display the "
+"collection over the long-term."
+msgstr ""
+"`Binder`_ "
+"は、タイムベースメディアやボーンデジタルアート作品などの複雑なデジタルコレクションのケア、管理、保存をサポートするオープンソースのウェブアプリケーションです。リポジトリが保持するアーカイブ情報パッケージ（AIP）に含まれる豊富な技術的メタデータにアクセス、閲覧、管理できる中央インターフェイスをユーザーに提供し、コレクションオブジェクトの構成要素、その構成要素であるデジタルオブジェクト、および長期にわたってコレクションを保存・表示するために必要なさまざまな外部依存関係を管理・記述します。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:71
+msgid "See :ref:`Using Binder with Archivematica <binder-setup>`."
+msgstr ":ref:`Using Binder with Archivematica <binder-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:75
+msgid ""
+"Binder is dependent on `TMS`_, a proprietary collections management software"
+" primarily used in museum and gallery settings. Binder cannot currently work"
+" without TMS."
+msgstr ""
+"Binderは、主に博物館やギャラリーで使用されている独自のコレクション管理ソフトウェアであり、 `TMS`_ "
+"に依存しています。Binderは、現在TMSなしでは動作しません。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:82
+msgid "Duracloud"
+msgstr "Duracloud"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:84
+msgid ""
+"`DuraCloud`_ is a hosted archival cloud storage and preservation service "
+"from DuraSpace that makes it easy for organizations and end users to use "
+"cloud services. Archivematica can automatically transfer AIP packages to "
+"DuraCloud for long-term secure archival storage. DuraCloud is used as the "
+"storage layer for `ArchivesDirect`_ clients."
+msgstr ""
+"`DuraCloud`_ "
+"は、DuraSpaceが提供するホスト型アーカイブクラウドストレージおよび保存サービスであり、組織やエンドユーザーがクラウドサービスを簡単に利用できるようにします。Archivematicaは、AIPパッケージをDuraCloudに自動的に転送し、長期的に安全なアーカイブ保存を実現します。DuraCloudは、"
+" `ArchivesDirect`_ クライアントのストレージレイヤーとして使用されます。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:90
+msgid ""
+"See :ref:`Archivematica DuraCloud quick start guide <duracloud-setup>`."
+msgstr ""
+":ref:`Archivematica DuraCloudクイックスタートガイド <duracloud-setup>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:95
+msgid "Swift"
+msgstr "Swift"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:97
+msgid ""
+"`Swift`_ is a simple API developed by OpenStack that offers cloud storage "
+"and retrieval intended to work at scale. Swift is optimized for durability, "
+"availability, and concurrency across the entire data set. Archivematica "
+"integrates with Swift through the Storage Service."
+msgstr ""
+"`Swift`_ "
+"は、OpenStackによって開発されたシンプルなAPIであり、クラウドのストレージと検索を提供します。Swiftは、データセット全体の耐久性、可用性、同時性を最適化します。Archivematicaは、Storage"
+" Serviceを通してSwiftと統合します。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:102
+msgid ""
+"See :ref:`Swift Storage Service integration documentation "
+"<storageservice:swift>`."
+msgstr ":ref:`Swift Storage Service統合文書 <storageservice:swift>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:107
+msgid "Islandora"
+msgstr "Islandora"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:109
+msgid ""
+"`Islandora`_ is an open-source software framework designed to help "
+"institutions and organizations and their audiences collaboratively manage, "
+"and discover digital assets. Archivematica integrates with Islandora through"
+" the Storage Service, which connects to Islandora's underlying Fedora "
+"repository."
+msgstr ""
+"`Islandora`_ "
+"は、オープンソースのソフトウェアフレームワークであり、機関や組織とそのオーディエンスが共同でデジタルアセットを管理、発見できるように設計されています。Archivematicaは、Islandoraの基盤となるFedoraリポジトリに接続するStorage"
+" Serviceを通じてIslandoraと統合します。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:114
+msgid ""
+"See :ref:`Fedora Storage Service integration documentation "
+"<storageservice:fedora>`."
+msgstr ""
+":ref:`Fedora Storage Service integration documentation "
+"<storageservice:fedora>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:119
+msgid "Arkivum"
+msgstr "Arkivum"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:121
+msgid ""
+"`Arkivum`_ is an archival storage back-end for Archivematica packages that "
+"provides both cloud- and tape-based storage. Arkivum is used as the storage "
+"layer for `Arkivum Perpetua`_ clients."
+msgstr ""
+"`Arkivum`_ "
+"は、Archivematicaパッケージのアーカイブストレージバックエンドであり、クラウドベースとテープベースの両方のストレージを提供します。Arkivumは、"
+" `Arkivum Perpetua`_ クライアントのストレージレイヤーとして使用されます。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:125
+msgid ""
+"See :ref:`Arkivum Storage Service integration documentation "
+"<storageservice:arkivum>`."
+msgstr ""
+":ref:`Arkivum Storage Service統合文書 <storageservice:arkivum>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:130
+msgid "Handle.Net integration"
+msgstr "Handle.Netの統合"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:132
+msgid ""
+"`Handle.Net`_ (also called Handle System) is a registry that assigns "
+"persistent identifiers, or handles, to information resources. Archivematica "
+"can mint persistent identifiers (PIDs) for digital objects, directories, or "
+"AIPs by defining the PIDs in a configured Handle.Net registry. Handle.Net "
+"can then create persistent URLs (PURLs) from the PIDs and can reroute "
+"requests to the persistent URLs to a target URL that is configured in "
+"Handle.Net."
+msgstr ""
+"`Handle.Net`_ （Handle "
+"Systemとも呼ばれる）は、情報リソースに永続識別子（ハンドル）を割り当てるレジストリです。Archivematicaは、設定されたHandle.NetレジストリでPIDを定義することにより、デジタルオブジェクト、ディレクトリ、AIPの永続識別子（PID）を作成できます。Handle.Netは、PIDから永続URL（PURL）を作成し、永続URLへのリクエストをHandle.Netで設定されたターゲットURLにリルートできます。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:139
+msgid "See :ref:`Handle.Net integration documentation <handlesystem-setup>`"
+msgstr ":ref:`Handle.Net統合文書 <handlesystem-setup>` を参照してください"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:144
+msgid "Dataverse"
+msgstr "Dataverse"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:146
+msgid ""
+"See :ref:`Dataverse integration <dataverse-transfers>` for an overview of "
+"how Dataverse datasets are preserved. For instructions to configure a "
+"Dataverse integration, see :ref:`Storage Service docs "
+"<storageservice:administrators>`."
+msgstr ""
+"Dataverseデータセットの保存方法の概要については、 :ref:`Dataverseの統合 <dataverse-transfers>` "
+"を参照してください。Dataverseの統合を設定する手順については、 :ref:`Storage Service文書 "
+"<storageservice:administrators>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/integrations.rst:152
+msgid ":ref:`Back to the top <integrations>`"
+msgstr ":ref:`トップに戻る <integrations>`"

@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:5
+msgid "Automated installation using Ansible"
+msgstr "Ansibleを使った自動インストール"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:7
+msgid ""
+"Installing from source using Ansible is the preferred method for new "
+"installations on Ubuntu."
+msgstr "Ansible を使ったソースからのインストールは、Ubuntuへの新規インストールに適した方法です。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:10
+msgid ""
+"It is assumed here that your host operating system is Ubuntu. This can be "
+"modified for a different Unix based operating system, such as Mac OS X or "
+"another Linux distribution such as Rocky Linux."
+msgstr ""
+"ここでは、ホスト・オペレーティング・システムがUbuntuであると仮定しています。これは、Mac OS XやRocky "
+"Linuxのような他のLinuxディストリビューションのような、異なるUnixベースのオペレーティングシステム用に変更できます。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:14
+msgid ""
+"The Ansible roles referenced here can be used in production deployments by "
+"creating your own Ansible playbook to run them. See the `deploy-pub`_ repo "
+"for more details."
+msgstr ""
+"ここで参照しているAnsibleロールは、独自のAnsibleプレイブックを作成して実行することで、生産環境でのデプロイで使用できます。詳細は、 "
+"`deploy-pub`_ repoを参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:18
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:20
+msgid ":ref:`Installation instructions <ansible-instructions>`"
+msgstr ":ref:`インストール方法 <ansible-instructions>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:21
+msgid ":ref:`Deploying development branches <ansible-deploy-dev-branches>`"
+msgstr ":ref:`開発ブランチのデプロイ <ansible-deploy-dev-branches>`"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:26
+msgid "Installation instructions"
+msgstr "インストール方法"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:30
+msgid ""
+"These instructions assume that you have a Python package manager, such as "
+"pip, installed on your system. From pip, you should be able to install a "
+"released version of Ansible."
+msgstr ""
+"これらの手順は、pipのようなPythonパッケージマネージャーがシステムにインストールされていることを前提としています。pipから、リリースされたバージョンのAnsibleをインストールできるはずです。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:36
+msgid ""
+"If you would like to install :ref:`Archivematica without Elasticsearch "
+"<install-elasticsearch>` or with limited Elasticsearch functionality, you "
+"must first change the role variable ``archivematica_src_search_enabled`` to "
+"one of the available values. For more information about Archivematica's "
+"Ansible role, please see the `ansible-archivematica-src`_ repo."
+msgstr ""
+":ref:`ArchivematicaをElasticsearchなしでインストールしたい場合、 <install-elasticsearch>` "
+"またはElasticsearchの機能を制限してインストールしたい場合は、まずロール変数 "
+"``archivematica_src_search_enabled`` "
+"を利用可能な値のいずれかに変更する必要があります。ArchivematicaのAnsibleロールの詳細については、 `ansible-"
+"archivematica-src`_ repoを参照してください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:42
+msgid "Install VirtualBox, Vagrant, and Ansible."
+msgstr "VirtualBox、Vagrant、Ansibleをインストールします。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:49
+msgid "Vagrant must be at least version 1.9. Check your version with:"
+msgstr "Vagrantのバージョンは1.9以上でなければなりません。バージョンを確認してください："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:55
+msgid ""
+"If it is not up to date, you can download the newest version from the "
+"`Vagrant website`_ ."
+msgstr "最新版でない場合は、 `Vagrantウェブサイト`_ からダウンロードできます。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:58
+msgid "Checkout the deployment repo:"
+msgstr "デプロイレポートをチェックアウトします："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:64
+msgid "Download the Ansible roles:"
+msgstr "Ansibleのロールをダウンロードします："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:71
+msgid "Create the virtual machine and provision it:"
+msgstr "仮想マシンを作成し、プロビジョニングします："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:79
+msgid ""
+"This will take a while. It depends on your computer, but it could take up to"
+" an hour. Your computer may be very slow while Archivematica is being "
+"provisioned - be sure to save any work and be prepared to step away from "
+"your computer while Archivematica is building."
+msgstr ""
+"これにはしばらく時間がかかります。お使いのコンピュータにもよりますが、1時間程度かかる場合もあります。Archivematicaのプロビジョニング中は、コンピュータの動作が非常に遅くなる可能性があります。Archivematicaのビルド中は、作業を保存し、コンピュータから離れるようにしてください。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:84
+msgid "If there are any errors, reprovisioning the VM often fixes the issue."
+msgstr "エラーがある場合、VMを再プロビジョニングすることで問題がよく解決されます。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:90
+msgid "Once it's done provisioning, you can log in to your virtual machine:"
+msgstr "プロビジョニングが完了したら、仮想マシンにログインできます："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:96
+msgid ""
+"You can also access your Archivematica instance through the web browser:"
+msgstr "また、WebブラウザからもArchivematicaインスタンスにアクセスできます："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:98
+msgid "Archivematica: `<http://192.168.168.198>`_."
+msgstr "Archivematica： ` <http://192.168.168.198>`_ ."
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:99
+msgid "Storage Service: `<http://192.168.168.198:8000>`_."
+msgstr "Storage Service： ` <http://192.168.168.198:8000>`_ ."
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:101
+msgid "The credentials can be found in the `vars-singlenode-1.15.yml`."
+msgstr "認証情報は、 `vars-singlenode-1.15.yml` にあります。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:107
+msgid "Deploy development branches"
+msgstr "開発ブランチをデプロイ"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:109
+msgid ""
+"The previous section described how to deploy the latest stable Archivematica"
+" release."
+msgstr "前のセクションでは、Archivematicaの最新の安定版リリースをデプロイする方法を説明しました。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:112
+msgid ""
+"Our Ansible role can also be used to deploy development branches, e.g. if "
+"you want to help us QA our product."
+msgstr "当社のAnsibleロールは、開発ブランチのデプロイにも使用できます。例えば、製品の品質保証(QA)を手伝っていただける場合です。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:115
+msgid ""
+"Using `deploy-pub`_, where we host our reference playbooks, please follow "
+"these steps:"
+msgstr "`deploy-pub`_ を使って、リファレンス・プレイブックをホストしています。次の手順に従ってください："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:118
+msgid "Download the roles defined in ``requirements-qa.yml``:"
+msgstr "``requirements-qa.yml`` で定義されているロールをダウンローします："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:125
+msgid ""
+"Update ``singlenode.yml`` to load ``vars-singlenode-qa.yml``. Inside the "
+"``pre_tasks`` section, update the task ``include_vars`` as follows:"
+msgstr ""
+"``singlenode.yml`` を更新して ``vars-singlenode-qa.yml`` をロードします。 ``pre_tasks`` "
+"セクションで、タスク ``include_vars`` を以下のように更新します："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:134
+msgid ""
+"Optionally, if you have a specific branch(es) that you want to deploy or "
+"other custom configuration needs, update ``vars-singlenode-qa.yml`` as "
+"needed. By default, we will deploy off branches ``qa/1.x`` (Archivematica) "
+"and ``qa/0.x`` (Storage Service)."
+msgstr ""
+"デプロイするブランチが決まっている場合や、その他のカスタム設定が必要な場合は、必要に応じて ``vars-singlenode-qa.yml`` "
+"を更新してください。デフォルトでは、 ``qa/1.x`` （Archivematica）と ``qa/0.x`` （Storage "
+"Service）のブランチからデプロイします。"
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:139
+msgid "Deploy the new configuration. If you're using Vagrant, please run:"
+msgstr "新しい設定をデプロイします。Vagrantを使っている場合は、次のように実行してください："
+
+#: ../../admin-manual/installation-setup/installation/install-ansible.rst:146
+msgid ":ref:`Back to the top <install-ansible>`"
+msgstr ":ref:`トップに戻る <install-ansible>`"

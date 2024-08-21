@@ -1,0 +1,501 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:5
+msgid "Error handling"
+msgstr "エラー処理"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:7
+msgid ""
+"Archivematica anticipates that a number of different types of errors can "
+"occur during processing. Some of them will result in processing being halted"
+" and the transfer or SIP being moved to the failed directory in the file "
+"browser. For others, processing can continue: for example, a normalization "
+"failure is reported and the user is given the opportunity to continue "
+"processing the SIP."
+msgstr ""
+"Archivematicaでは、処理中にさまざまな種類のエラーが発生することを想定しています。その中には、処理が停止され、転送やSIPがファイルブラウザの失敗したディレクトリに移動されるものもあります。例えば、正規化の失敗が報告され、ユーザーにSIPの処理を続行する機会が与えられます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:13
+msgid ""
+"If you don't find an answer here or elsewhere in the user manual, please try"
+" searching the `Archivematica user forum`_. Someone may have had the same "
+"problem before and been offered a solution. If you do not find the answer "
+"there, feel free to ask us a question. The best questions to the list "
+"include as much information as possible about the error. This means offering"
+" us information about the system(s) you're using, the content of your "
+"transfer(s), and copying the task information (click on the cog icon on the "
+"same line as the microservice job where the error occurred) and show "
+"arguments data output. See task information and show arguments data for the "
+"same error, below."
+msgstr ""
+"ここやユーザーマニュアルに答えが見つからない場合は、 `Archivematicaユーザーフォーラム`_ "
+"を検索してみてください。以前にも同じ問題が発生し、解決策を提示された方がいらっしゃるかもしれません。そこで答えが見つからない場合は、お気軽にご質問ください。リストへの質問には、エラーに関するできるだけ多くの情報を含めるのがベストです。つまり、使用しているシステム、転送の内容、タスク情報（エラーが発生したマイクロサービスのジョブと同じ行の歯車のアイコンをクリック）、show"
+" arguments dataの出力をコピーしてください。同じエラーのタスク情報と引数表示データは以下を参照してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:23
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:25
+msgid ":ref:`Dashboard error reporting <error-dashboard>`"
+msgstr ":ref:`ダッシュボードのエラーレポート <error-dashboard>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:26
+msgid ":ref:`Failure reports in Administration tab <failure-reports>`"
+msgstr ":ref:`管理タブの障害レポート <failure-reports>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:27
+msgid ":ref:`Email error report <email-failure>`"
+msgstr ":ref:`メールエラーレポート <email-failure>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:28
+msgid ":ref:`Normalization errors <normalization-errors>`"
+msgstr ":ref:`正規化エラー <normalization-errors>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:29
+msgid ":ref:`DIP upload error <dip-error>`"
+msgstr ":ref:`DIPアップロードエラー <dip-error>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:30
+msgid ":ref:`Errors that fail transfers <failure-errors>`"
+msgstr ":ref:`転送に失敗するエラー <failure-errors>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:31
+msgid ":ref:`Common error behaviours <common-errors>`"
+msgstr ":ref:`よくあるエラー動作 <common-errors>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:32
+msgid ":ref:`Rejecting a transfer or SIP <rejecting>`"
+msgstr ":ref:`転送またはSIPの拒否 <rejecting>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:33
+msgid ":ref:`Removing a transfer or SIP from the dashboard <removing>`"
+msgstr ":ref:`ダッシュボードから転送またはSIPを削除 <removing>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:34
+msgid ":ref:`Browser compatability <error-browser>`"
+msgstr ":ref:`ブラウザの互換性 <error-browser>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:39
+msgid "Dashboard error reporting"
+msgstr "ダッシュボードのエラーレポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:41
+msgid ""
+"In certain cases, when a microservice fails or encounters an error, the "
+"workflow will be halted and Archivematica will report a 'Failed transfer'. "
+"The microservice drop-down can be expanded to show the specific task that "
+"failed."
+msgstr ""
+"マイクロサービスに障害が発生したり、エラーが発生した場合、ワークフローは停止し、Archivematicaは「転送に失敗しました」と報告します。マイクロサービスのドロップダウンを展開すると、失敗した特定のタスクを表示できます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:51
+msgid "The dashboard showing a transfer has failed"
+msgstr "転送が失敗したことを示すダッシュボード"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:51
+msgid ""
+"The dashboard showing a transfer has failed at the Verify transfer checksums"
+" microservice"
+msgstr "転送チェックサムの妥当性確認マイクロサービスで転送が失敗したことを示すダッシュボード"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:54
+msgid ""
+"Note that the transfer has been moved to the failed directory and processing"
+" has been halted."
+msgstr "転送が失敗したディレクトリに移動し、処理が停止したことに注意してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:63
+msgid "Microservice expanded to show the failed job"
+msgstr "失敗したジョブを表示するために拡張されたマイクロサービス"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:63
+msgid "The expanded detail on 'Failed transfer'"
+msgstr "「転送の失敗」についての詳細"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:65
+msgid ""
+"Click the tasks icon (the gear icon on the right-hand side) to open up an "
+"error report:"
+msgstr "タスクアイコン（右側の歯車アイコン）をクリックして、エラーレポートを開きます："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:74
+msgid "An error report showing that a virus has been found in a file"
+msgstr "ファイルにウイルスが検出されたことを示すエラーレポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:74
+msgid "An error report showing that a file has failed checksum validation"
+msgstr "ファイルがチェックサム妥当性確認に失敗したことを示すエラーレポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:76
+msgid ""
+"These reports are generally standard and predictable for certain types of "
+"errors and are useful for trouble-shooting. Note that the failed file(s) "
+"will always appear at the top of the report."
+msgstr ""
+"これらのレポートは、一般的に標準的であり、特定の種類のエラーについて予測可能であり、トラブルシューティングに役立ちます。失敗したファイルは常にレポートの先頭に表示されることに注意してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:84
+msgid "Failure reports in Administration tab"
+msgstr "管理タブの障害レポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:86
+msgid ""
+"You can view failure reports in the Administration tab of the dashboard. See"
+" :ref:`Dashboard administration tab- Failures <dashboard-failures>` for more"
+" information."
+msgstr ""
+"障害レポートは、ダッシュボードの管理タブで表示できます。詳細については、 :ref:`ダッシュボードの管理タブ-障害 <dashboard-"
+"failures>` を参照してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:94
+msgid "Email error report"
+msgstr "メールエラーレポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:96
+msgid "Archivematica will send email reports for two kinds of failures:"
+msgstr "Archivematicaは、2種類の障害に対してEメールレポートを送信します："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:98
+msgid ""
+"Normalization reports are sent when the normalization process has resulted "
+"in at least one error."
+msgstr "正規化レポートは、正規化プロセスで少なくとも1つのエラーが発生した場合に送信されます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:100
+msgid "Failure reports are sent when the workflow fails unexpectedly."
+msgstr "ワークフローが予期せず失敗した場合、失敗レポートが送信されます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:108
+msgid "An emailed failure report showing an error at Verify bag microservice"
+msgstr "Verify Bagマイクロサービスでのエラーを示す電子メールで送信された障害レポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:110
+msgid ""
+"An e-mail is generated if the transfer or ingest cannot be completed, not if"
+" an error occurs which does not halt processing. Please note that the server"
+" must have mail delivery enabled in order to receive error emails without "
+"additional configuration."
+msgstr ""
+"電子メールは、処理を停止しないエラーが発生した場合ではなく、転送またはインジェストを完了できない場合に生成されます。追加の設定を行わずにエラー電子メールを受信するには、サーバーでメール配信が有効になっている必要があることに注意してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:115
+msgid ""
+"For more information about email reports, please see :ref:`Email "
+"notification configuration <email-config>`"
+msgstr "電子メールレポートの詳細については、 :ref:`電子メール通知の設定を参照してください <email-config>`"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:121
+msgid "Normalization errors"
+msgstr "正規化エラー"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:123
+msgid "The dashboard will report normalization errors when:"
+msgstr "ダッシュボードは、以下の場合に正規化エラーを報告します："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:125
+msgid "Normalization is attempted but fails"
+msgstr "正規化を試みたが失敗"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:127
+msgid ""
+"No normalization is attempted and the file is not in a recognized "
+"preservation or access format"
+msgstr "正規化が試みられず、ファイルが認識された保存フォーマットまたはアクセスフォーマットでありません"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:130
+msgid ""
+"When normalization fails, the SIP continues processing until it reaches the "
+"normalization approval step. At this point, the user has two options:"
+msgstr "正規化が失敗した場合、SIPは、正規化承認ステップに到達するまで処理を継続します。この時点で、ユーザーには2つの選択肢があります："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:133
+msgid "**Option 1**"
+msgstr "**オプション1**"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:135
+msgid ""
+"Click on the report icon next to the Actions drop-down menu to see a summary"
+" report of the normalization:"
+msgstr "アクションドロップダウンメニューの横にあるレポートアイコンをクリックすると、正規化のサマリーレポートが表示されます："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:144
+msgid "Normalization report showing failed normalization attempts"
+msgstr "失敗した正規化試行を示す正規化レポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:146
+msgid ""
+"The report shows what has been normalized, what is already in an acceptable "
+"preservation and access format, and what has failed normalization or is not "
+"in a recognized preservation or access format. If normalization has failed, "
+"you can click on \"yes\" to see a task report of the error in a new tab:"
+msgstr ""
+"このレポートには、正規化されたもの、すでに保存・アクセス可能なフォーマットになっているもの、正規化に失敗したもの、保存・アクセス可能なフォーマットになっていないものが表示されます。正規化に失敗した場合、\"yes\"をクリックすると、新しいタブでエラーのタスクレポートを見ることができます："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:157
+msgid "Task output for failed normalization job"
+msgstr "失敗した正規化ジョブのタスク出力"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:160
+msgid "**Option 2**"
+msgstr "**オプション2**"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:162
+msgid ""
+"Click Review in parentheses next to the microservice to view the "
+"normalization results in a directory structure in a new browser tab:"
+msgstr "マイクロサービスの横にある括弧内のレビューをクリックして、新しいブラウザータブのディレクトリ構造で正規化の結果を表示します："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:171
+msgid "Review normalization results in a new tab"
+msgstr "新しいタブで正規化結果を確認"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:173
+msgid ""
+"The review allows the user to either open the objects in the browser when "
+"there is an appropriate plug-in or download the objects and open them using "
+"a local application."
+msgstr ""
+"このレビューにより、ユーザーは、適切なプラグインがある場合にブラウザーでオブジェクトを開くことも、オブジェクトをダウンロードしてローカルアプリケーションを使用して開くこともできます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:177
+msgid ""
+"The user may choose to continue processing the SIP despite any normalization"
+" errors."
+msgstr "ユーザーは、正規化エラーがあってもSIPの処理を続行することを選択できます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:180
+msgid ""
+"The user may choose to redo normalization, as well. For instance, if the "
+"user chose to normalize based on FITS-JHOVE results and experienced "
+"failures, the user may wish to redo normalization and choose to normalize "
+"based on FITS-DROID results instead."
+msgstr ""
+"ユーザーは、正規化をやり直すこともできます。例えば、FITS-"
+"JHOVEの結果に基づいて正規化を行い、失敗が発生した場合、ユーザーは正規化をやり直し、代わりにFITS-"
+"DROIDの結果に基づいて正規化を行うことを選択できます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:191
+msgid ""
+"Redo normalization option in drop-down menu of Approve normalization job"
+msgstr "正規化ジョブの承認のドロップダウンメニューの正規化をやり直すオプション"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:193
+msgid ""
+"Archivematica will send an :ref:`email <email-failure>` when normalization "
+"errors occur. Information given in the email report:"
+msgstr ""
+"Archivematicaは、正規化エラーが発生すると :ref:`<email-failure>` にメールを送信します。Eメールに記載される情報："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:196
+msgid ""
+"UUID of the pipeline Name and UUID of the SIP File name and file UUID, and"
+msgstr "パイプラインのUUID SIPの名前とUUIDファイル名とファイルUUID、および"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:197
+msgid "whether Preservation or Access normalization failed Exit code"
+msgstr "保存またはアクセスの正規化に失敗したかどうかの終了コード"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:199
+msgid ""
+"Exit code 1 indicates that a normalization rule and command exists but "
+"failed to execute properly (due to a problem in the command, a problem with "
+"the file, etc). Exit code 2 indicates that a normalization rule/command does"
+" not exist for that format."
+msgstr ""
+"終了コード1は、正規化ルールとコマンドは存在するが、正しく実行できなかったことを示します（コマンドの問題、ファイルの問題など）。終了コード2は、そのフォーマット用の正規化ルール/コマンドが存在しないことを示します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:210
+msgid "Normalization error report sent by email"
+msgstr "メールで送信される正規化エラーレポート"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:210
+msgid "Emailed normalization error report"
+msgstr "正規化エラーレポートをメールで送信"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:215
+msgid "DIP upload error"
+msgstr "DIPアップロードエラー"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:217
+msgid ""
+"Archivematica will allow the user to continue to attempt to upload the DIP "
+"if a mistake was made entering the permalink:"
+msgstr "パーマリンクの入力を間違えた場合、Archivematicaは引き続きDIPのアップロードを試みます："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:227
+msgid "Warning that permalink was incorrect, allows user to retry upload DIP"
+msgstr "パーマリンクが正しくないという警告が表示され、アップロードを再試行できるDIP"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:232
+msgid "Errors that fail transfers"
+msgstr "転送に失敗するエラー"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:234
+msgid ""
+"There are a number of microservice errors that will halt the workflow and "
+"cause Archivematica to report a 'Failed transfer'. It is important to note "
+"that not all microservice errors will lead to a failed transfer. Below is a "
+"list of common errors that will result in the 'Failed transfer' microservice"
+" to run and the transfer to be moved to the failed directory."
+msgstr ""
+"ワークフローを停止させ、Archivematicaが「転送失敗」を報告する原因となるマイクロサービスエラーにはいくつかあります。すべてのマイクロサービスエラーで転送が失敗するわけではないことに注意してください。以下は、「転送失敗」マイクロサービスが実行され、転送が失敗したディレクトリに移動される一般的なエラーのリストです。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:240
+msgid ""
+"Scan for viruses: if a virus is found in the transfer then the microservice "
+"will fail and the transfer will be moved to the failed directory."
+msgstr "ウイルスのスキャン：転送中にウイルスが見つかった場合、マイクロサービスは失敗し、転送は失敗したディレクトリに移動されます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:243
+msgid ""
+"Generate METS.xml document: if this microservice fails to generate a portion"
+" of the METS file when run in either the Transfer Tab or the Ingest Tab, it "
+"will fail the transfer or SIP. Either the transfer or SIP will be moved to "
+"the failed directory. The error logs will give details about the issue so "
+"you can investigate further."
+msgstr ""
+"METS.xml文書の生成：転送タブまたはインジェストタブのいずれかで実行されたときに、このマイクロサービスがMETSファイルの一部の生成に失敗すると、転送またはSIPが失敗します。転送またはSIPは失敗したディレクトリに移動します。エラーログには問題の詳細が表示されるので、さらに調査できます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:249
+msgid ""
+"Verify transfer checksums: if the checksums in the metadata directory cannot"
+" be verified (i.e. if a file is missing or corrupted) this microservice will"
+" fail and the transfer will be moved to the failed directory."
+msgstr ""
+"転送チェックサムの妥当性確認：メタデータ・ディレクトリのチェックサムが妥当性確認できない場合（ファイルが見つからないか破損している場合など）、このマイクロサービスは失敗し、転送は失敗したディレクトリに移動します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:254
+msgid ""
+"Approve Transfer (zipped and unzipped bags): When running a zipped or "
+"unzipped bag transfer, the first microservice is 'Approve transfer.' If the "
+"'verify bag, and restructure for complaince' job fails within this "
+"microservice, the transfer will fail and be moved to the failed directory. "
+"This will happen when the bag does not conform to the `BagIt`_ specification"
+" or when one of the components is incorrect."
+msgstr ""
+"転送を承認します（zipまたはunzipされたバッグ）：このマイクロサービス内で「verify bag, and restructure for "
+"complaince」ジョブが失敗すると、転送は失敗し、失敗したディレクトリに移動されます。これは、バッグが `BagIt`_ "
+"の仕様に適合していない場合や、コンポーネントの1つが正しくない場合に発生します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:261
+msgid ""
+"Verify transfer compliance: if a job fails within this microservice, the "
+"transfer will also fail and will be moved to the fail directory."
+msgstr "転送のコンプライアンスを妥当性確認します：このマイクロサービス内でジョブが失敗すると、転送も失敗し、失敗ディレクトリに移動します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:267
+msgid "Other common error behaviours"
+msgstr "その他の一般的なエラー動作"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:269
+msgid ""
+"Below is a list of common errors that, like normalization, will produce an "
+"error report but will not fail the transfer."
+msgstr "以下は、一般的なエラーのリストで、正規化と同様、エラーレポートは作成されますが、転送が失敗することはありません。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:272
+msgid ""
+"Characterize and extract metadata: if FITS processing fails, the micro-"
+"service will fail and the transfer will continue processing. Similarly, if a"
+" tool within FITS fails, like JHOVE, you will see the pink error bar but be "
+"able to continue processing."
+msgstr ""
+"メタデータの特性化と抽出：FITS 処理が失敗した場合、マイクロサービスは失敗し、転送は処理を続けます。同様に、JHOVE のように FITS "
+"内のツールに障害が発生した場合、ピンク色のエラーバーが表示されますが、処理は続けられます。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:277
+msgid ""
+"Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db "
+"file, the microservice will fail and the SIP will continue processing."
+msgstr ""
+"thumbs.dbファイルの削除：Archivematicaがthumbs.dbファイルを削除できない場合、マイクロサービスは失敗し、SIPは処理を続行します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:280
+msgid ""
+"Normalize submission documentation to preservation format: if normalization "
+"fails, the microservice will fail and the SIP will continue processing."
+msgstr "提出文書を保存フォーマットに正規化します。正規化に失敗した場合、マイクロサービスは失敗し、SIP は処理を継続します。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:286
+msgid "Rejecting a transfer or SIP"
+msgstr "転送またはSIPの拒否"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:288
+msgid ""
+"At any of the workflow approval points the user can choose to reject a "
+"transfer, SIP, AIP or DIP (depending on where the information object is in "
+"the workflow). This will move the transfer or SIP to the Rejected directory "
+"(accessible from the file browser) and will stop all processing on it. The "
+"transfer or SIP will still be listed in the dashboard, however. See "
+":ref:`Removing a transfer or SIP from the dashboard <removing>`, below, to "
+"remove it from the dashboard."
+msgstr ""
+"ワークフローの承認ポイントにおいて、ユーザーは、転送、SIP、AIP、またはDIP（情報オブジェクトがワークフローのどこにあるかによる）を拒否することを選択できます。これにより、転送またはSIPはRejectedディレクトリ（ファイルブラウザからアクセス可能）に移動され、すべての処理が停止されます。ただし、転送またはSIPはダッシュボードに表示されます。ダッシュボードから転送またはSIPを削除するには、"
+" :ref:`ダッシュボードから転送またはSIPを削除する <removing>` を参照してください。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:299
+msgid "Removing a transfer or SIP from the dashboard"
+msgstr "ダッシュボードから転送またはSIPを削除"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:301
+msgid ""
+"To remove a transfer or SIP from the dashboard, click on the red \"Remove\" "
+"icon in the dashboard:"
+msgstr "ダッシュボードから転送またはSIPを削除するには、ダッシュボードの赤い\"Remove\"アイコンをクリックします："
+
+#: ../../getting-started/troubleshooting/error-handling.rst:310
+msgid ""
+"Click on the red Remove icon to remove a transfer or SIP from the dashboard"
+msgstr "赤い削除アイコンをクリックして、ダッシュボードから転送またはSIPを削除します"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:310
+msgid ""
+"Click on the red Remove icon to remove a transfer or SIP from the dashboard,"
+" then click Confirm."
+msgstr "ダッシュボードから転送またはSIPを削除するには、赤い「削除」アイコンをクリックし、「確認」をクリックします。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:313
+msgid ""
+"It is recommended that you clear your dashboard of transfers and SIPs "
+"periodically to improve browser performance."
+msgstr "ブラウザのパフォーマンスを向上させるため、定期的にダッシュボードの転送とSIPを消去することをお勧めします。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:319
+msgid "Browser compatability"
+msgstr "ブラウザの互換性"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:321
+msgid ""
+"Archivematica has been tested most extensively with Firefox and Chrome. "
+"There are known issues with Internet Explorer 11 which result in an "
+"inability to start transfers in the dashboard (:issue:`7246`).  Minimal, but"
+" successful, testing has been done with Microsoft Edge."
+msgstr ""
+"Archivematicaは、FirefoxとChromeで最も広範囲にテストされています。Internet Explorer "
+"11では、ダッシュボードで転送を開始できない既知の問題があります（issue： `7246` ）。Microsoft "
+"Edgeでは、最小限のテストが行われましたが、成功しました。"
+
+#: ../../getting-started/troubleshooting/error-handling.rst:326
+msgid ":ref:`Back to the top <error-handling>`"
+msgstr ":ref:`トップに戻る <error-handling>`"

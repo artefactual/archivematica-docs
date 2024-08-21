@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:5
+msgid "Using DuraCloud with Archivematica"
+msgstr "ArchivematicaでDuraCloudを使用"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:7
+msgid ""
+"DuraCloud is a hosted cloud storage platform from DuraSpace. For more "
+"information about DuraCloud, please see the `DuraCloud documentation`_."
+msgstr ""
+"DuraCloudは、DuraSpaceが提供するホスト型クラウドストレージプラットフォームです。DuraCloudの詳細については、 "
+"`DuraCloudの文書`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:10
+msgid ""
+"Setting up the DuraCloud integration requires configuration of "
+"Archivematica's Storage Service. It is recommended that you read the "
+":ref:`Storage Service documentation <storageservice:administrators>` before "
+"configuring DuraCloud."
+msgstr ""
+"DuraCloudとの統合を設定するには、ArchivematicaのStorage "
+"Serviceを設定する必要があります。DuraCloudを設定する前に、 :ref:`Storage Service文書 "
+"<storageservice:administrators>` をお読みになることをお勧めします。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:14
+msgid ""
+"This guide can be used by those who wish to install Archivematica and/or "
+"DuraCloud locally and run the systems themselves and may also be helpful for"
+" those who subscribe to a hosted service."
+msgstr ""
+"本ガイドは、ArchivematicaやDuraCloudをローカルにインストールし、ご自身でシステムを運用されたい方や、ホスティングサービスをご利用の方に役立ちます。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:18
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:20
+msgid ":ref:`Configure DuraCloud <duracloud-config>`"
+msgstr ":ref:`Duracloudの設定 <duracloud-config>`"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:21
+msgid ""
+":ref:`Configure the Archivematica Storage Service <duracloud-storage-"
+"service>`"
+msgstr ":ref:`Archivematica Storage Serviceの設定 <duracloud-storage-service>`"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:26
+msgid "Configure DuraCloud"
+msgstr "DuraCloudの設定"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:28
+msgid "Your DuraCloud instance must have at least two users:"
+msgstr "DuraCloudインスタンスには少なくとも2人のユーザーが必要です："
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:30
+msgid ""
+"A **Client user** who has *read* permissions for the AIP storage and DIP "
+"storage locations."
+msgstr "AIPストレージとDIPストレージの場所に対する *読み取り* 権限を持つ **クライアントユーザー** 。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:33
+msgid ""
+"An **Archivematica user** who has *read/write* permissions for the AIP "
+"storage, DIP storage, and transfer backlog locations."
+msgstr ""
+"AIPストレージ、DIPストレージ、転送バックログロケーションの *読み取り/書き込み* 権限を持つ **Archivematicaユーザー** 。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:36
+msgid ""
+"DuraCloud can be used as a storage space for the following :ref:`purposes "
+"<storageservice:location-purposes>` within Archivematica:"
+msgstr ""
+"DuraCloudは、Archivematicaののストレージスペースとして使用できます :ref:`<storageservice:location-"
+"purposes>` ："
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:39
+msgid ""
+"**AIP storage**: A DuraCloud space where completed AIPs are placed for long-"
+"term storage."
+msgstr "**AIPストレージ** ：完成したAIPを長期保管するためのDuraCloudスペース。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:41
+msgid ""
+"**DIP storage**: A DuraCloud space where DIPs can be stored. Note that it is"
+" not necessary to store DIPs if you are sending them directly to an access "
+"system."
+msgstr ""
+"**DIPストレージ** "
+"：DIPを保存できるDuraCloudスペース。DIPをアクセスシステムに直接送信する場合は、DIPを保存する必要はありません。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:44
+msgid ""
+"**Transfer backlog**: A DuraCloud space used by Archivematica for material "
+"sent to the :ref:`backlog <backlog>` during processing."
+msgstr ""
+"**転送バックログ** ：処理中に :ref:`バックログ <backlog>` "
+"に送られた素材のためにArchivematicaが使用するDuraCloudスペース。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:47
+msgid ""
+"You can use one DuraCloud space for multiple purposes (e.g. one DuraCloud "
+"space could be used as both the AIP storage and transfer backlog), but we "
+"recommend managing these package types separately by creating DuraCloud "
+"spaces that are dedicated to the space's purpose. You do not have to create "
+"a space for all of these purposes, just those relevant your particular "
+"configuration. For AIP storage and DIP storage you can create multiple "
+"locations within DuraCloud."
+msgstr ""
+"1つのDuraCloudスペースを複数の目的で使用することはできますが（例えば、1つのDuraCloudスペースをAIPストレージと転送バックログの両方として使用できます）、スペースの目的専用のDuraCloudスペースを作成することで、これらのパッケージタイプを別々に管理することをお勧めします。これらのすべての目的のためにスペースを作成する必要はありません。AIPストレージとDIPストレージについては、DuraCloud内に複数のロケーションを作成できます。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:54
+msgid ""
+"To add a space in DuraCloud, log in with administrator credentials and click"
+" on **Add Space**. You can give the space whatever name you wish."
+msgstr ""
+"DuraCloudにスペースを追加するには、管理者認証情報でログインし、 **Add Space** "
+"をクリックしてください。スペースには好きな名前を付けることができます。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:60
+msgid "Configure the Archivematica Storage Service"
+msgstr "Archivematica Storage Serviceの設定"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:62
+msgid ""
+"The :ref:`Archivematica Storage Service <storageservice:index>` was "
+"installed when you installed Archivematica."
+msgstr ""
+"Archivematicaのインストール時に、 :ref:`Archivematica Storage Service "
+"<storageservice:index>` がインストールされています。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:65
+msgid ""
+"In the Storage Service's Spaces tab, click **Create new space** and fill out"
+" the form following the instructions in the :ref:`DuraCloud Storage Service "
+"documentation <storageservice:duracloud>`."
+msgstr ""
+"Storage Serviceの［スペース］タブで、 **［新しいスペースの作成］** をクリックし、 :ref:`DuraCloud Storage "
+"Service文書 <storageservice:duracloud>` の説明に従ってフォームに記入します。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:69
+msgid ""
+"You must create a space for each storage location that you have created in "
+"DuraCloud. For example, if you have AIP storage and DIP storage locations in"
+" DuraCloud, you should create two spaces by repeating the instructions in "
+"Step 1."
+msgstr ""
+"DuraCloudで作成した保存場所ごとにスペースを作成する必要があります。例えば、DuraCloudにAIPストレージとDIP保存場所がある場合、ステップ1の手順を繰り返して2つのスペースを作成する必要があります。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:74
+msgid ""
+"In the Storage Service, navigate to the **Spaces** tab. You should see all "
+"of the DuraCloud spaces that you created in Steps 1 and 2."
+msgstr ""
+"Storage Serviceで、 **Spaces** に移動します。ステップ1と2で作成したすべてのDuraCloudスペースが表示されるはずです。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:77
+msgid ""
+"For each space, you need to create a corresponding :ref:`location "
+"<storageservice:locations>`. Click on **Create Location here** to create a "
+"storage location and enter the following information:"
+msgstr ""
+"各スペースについて、対応する :ref:`場所 <storageservice:locations>` を作成する必要があります。 **Create "
+"Location here** をクリックして、保存場所を作成し、以下の情報を入力してください："
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:81
+msgid ""
+"**Purpose**: The purpose of the space (AIP storage, DIP storage, or transfer"
+" backlog.)"
+msgstr "**目的** ：スペースの目的（AIPストレージ、DIPストレージ、または転送バックログ）"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:83
+msgid "**Pipeline**: Click on the pipeline name so that it is highlighted."
+msgstr "**パイプライン** ：パイプライン名が強調表示されるようにクリックします。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:84
+msgid ""
+"**Relative path**: The name of the space exactly as it appears in DuraCloud "
+"(e.g. ``aip-store``.)"
+msgstr "**相対パス** ：DuraCloudに表示されるスペース名（例： ``aip-store`` .）"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:86
+msgid ""
+"**Description**: A human-readable description of the location. This will be "
+"used in the Archivematica interface when you are choosing a AIP or DIP "
+"storage location."
+msgstr "**説明** ：保存場所の説明。AIPやDIPの保存場所を選択する際に、Archivematicaのインターフェイスで使用されます。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:89
+msgid "**Quota**: *This field is optional.*"
+msgstr "**クォータ** ： *このフィールドはオプションです。*"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:90
+msgid ""
+"**Enabled**: Check this box to make the location available to the "
+"Archivematica pipeline."
+msgstr "**有効** ：このボックスにチェックを入れると、Archivematicaパイプラインでこの場所を利用できるようになります。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:92
+msgid ""
+"**Set as global default location for its purpose**: Check this box if you "
+"would like this to be the default AIP or DIP storage location."
+msgstr ""
+"**目的に応じてグローバルなデフォルトの場所に設定** "
+"：この場所をデフォルトのAIPまたはDIPの保存場所にしたい場合は、このボックスにチェックを入れます。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:94
+msgid ""
+"**Replicators**: The DuraCloud integration has not been tested with "
+"replication."
+msgstr "**レプリケーター** ：DuraCloudの統合は、レプリケーションではテストされていません。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:99
+msgid ""
+"When you are configuring the location, you must enter the name of the space "
+"exactly as it appears in the DuraCloud user interface. Please ensure that "
+"the relative path does not include a leading slash."
+msgstr ""
+"場所を設定する場合は、DuraCloudユーザーインターフェースに表示されるスペース名を正確に入力する必要があります。相対パスに先頭のスラッシュが含まれていないことを確認してください。"
+
+#: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:103
+msgid ":ref:`Back to the top <duracloud-setup>`"
+msgstr ":ref:`トップに戻る <duracloud-setup>`"

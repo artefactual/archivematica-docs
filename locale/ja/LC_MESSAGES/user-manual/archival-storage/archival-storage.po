@@ -1,0 +1,730 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:5
+msgid "Archival storage"
+msgstr "アーカイブストレージ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:7
+msgid ""
+"The Archival Storage tab consists of a table showing all of the stored "
+"Archival Information Packages (AIPs) for the Archivematica instance. There "
+"is a search interface at the top of the page where you can construct simple "
+"or boolean queries to find AIPs or individual items in storage. At the top "
+"of the table is the total size of the stored AIPs and the number of indexed "
+"files. By default, the table lists the AIP's name, UUID, size on disk, date "
+"that the AIP was created, it's status, and whether or not the AIP is "
+"encrypted."
+msgstr ""
+"Archival Storageタブには、Archivematicaインスタンスに保存されているArchival Information "
+"Packages "
+"（AIP）がすべて表示されます。ページの上部には検索インターフェイスがあり、簡単なクエリやブーリアンクエリを作成して、保存されているAIPや個々のアイテムを検索できます。テーブルの上部には、保存されている"
+" AIP "
+"の合計サイズとインデックス付けされたファイルの数が表示されます。デフォルトでは、テーブルにはAIPの名前、UUID、ディスク上のサイズ、AIPが作成された日付、ステータス、AIPが暗号化されているかどうかが表示されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The Archival Storage tab showing stored AIPs"
+msgstr "保存された AIP を表示する [アーカイブストレージ] タブ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:20
+msgid ""
+"From the Archival Storage tab, you can select an individual AIP and download"
+" it, delete it, or initiate :ref:`AIP re-ingest <reingest>`."
+msgstr ""
+"Archival Storageタブでは、個々のAIPを選択してダウンロードしたり、削除したり、 :ref:`AIPの再インジェスト "
+"<reingest>` したりできます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:23
+msgid ""
+"Note that Dissemination Information Packages (DIPs) are not displayed on the"
+" Archival Storage tab, even if they have been stored. For information on "
+"accessing stored DIPs, see the :ref:`Storage Service <storageservice:index>`"
+" documentation."
+msgstr ""
+"普及情報パッケージ（Dissemination Information "
+"Packages：DIP）は、保存されていても「アーカイバルストレージ」タブには表示されないことに注意してください。保存されたDIPへのアクセスについては、"
+" :ref:`Storage Service <storageservice:index>` の文書を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:28
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:30
+msgid ":ref:`Browsing the AIP store <browse-aip>`"
+msgstr ":ref:`AIPストアの閲覧 <browse-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:32
+msgid ":ref:`Downloading all AIP metadata in a CSV file <csv-download>`"
+msgstr ":ref:`すべてのAIPメタデータをCSVファイルでダウンロード <csv-download>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:34
+msgid ":ref:`Searching the AIP store <search-aip>`"
+msgstr ":ref:`AIPストアの検索 <search-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:36
+msgid ":ref:`Conducting a search <conducting-search>`"
+msgstr ":ref:`検索の実施 <conducting-search>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:37
+msgid ":ref:`Searching for AICs <search-for-aics>`"
+msgstr ":ref:`AICの検索 <search-for-aics>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:39
+msgid ":ref:`AIP information page <aip-information-page>`"
+msgstr ":ref:`AIP情報ページ <aip-information-page>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:41
+msgid ":ref:`Downloading an AIP <download-aip>`"
+msgstr ":ref:`AIPのダウンロード <download-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:42
+msgid ":ref:`Metadata-only DIP upload <metadata-only-dip-upload>`"
+msgstr ":ref:`メタデータのみのDIPアップロード <metadata-only-dip-upload>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:43
+msgid ":ref:`AIP reingest <reingest-aip>`"
+msgstr ":ref:`AIPの再インジェスト <reingest-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:44
+msgid ":ref:`Deleting an AIP <delete-aip>`"
+msgstr ":ref:`AIPの削除 <delete-aip>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:46
+msgid ":ref:`AIP encryption <aip-encryption>`"
+msgstr ":ref:`AIP暗号化 <aip-encryption>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:47
+msgid ":ref:`Stored AIP structure <stored-aip-structure>`"
+msgstr ":ref:`保存されたAIP構造 <stored-aip-structure>`"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:51
+msgid ""
+"If you are running :ref:`Archivematica without Elasticsearch <install-"
+"elasticsearch>` or with limited Elasticsearch functionality, the Archival "
+"Storage tab may not appear in your dashboard."
+msgstr ""
+":ref:`Elasticsearch を使用せずに Archivematica <install-elasticsearch>` "
+"を実行している場合、または Elasticsearch の機能が制限されている場合、ダッシュボードに [アーカイブストレージ] "
+"タブが表示されないことがあります。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:58
+msgid "Browsing the AIP store"
+msgstr "AIPストアの閲覧"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:60
+msgid ""
+"At the bottom of the Browse Archival Storage table is the **Select columns**"
+" icon. Click on it to select which columns will be visible in the Archival "
+"Storage table. The blue row indicates that a column is currently visible. A "
+"white row indicates that the column is currently not visible."
+msgstr ""
+"[アーカイブストレージをブラウズ] テーブルの下部には、 **列選択** アイコンがあります。これをクリックして、[アーカイブストレージ] "
+"テーブルで表示する列を選択します。青い行は、列が現在表示されていることを示します。白い行は、その列が現在表示されていないことを示します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The Select Columns options on the Archival Storage tab"
+msgstr "[アーカイブストレージ] タブの [列選択] オプション"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:70
+msgid ""
+"Click on a blue or white row to toggle this value for each column. In the "
+"example below, all the available columns are selected. Note that your column"
+" selection choices will persist between your user sessions and apply to "
+"other users of the same Archivematica pipeline."
+msgstr ""
+"青または白の行をクリックすると、各列のこの値が切り替わります。以下の例では、利用可能なすべての列が選択されています。選択したカラムは、ユーザーセッション間でも保持され、同じArchivematicaパイプラインの他のユーザーにも適用されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The Archival Storage tab with all columns selected"
+msgstr ""
+
+#: ../../user-manual/archival-storage/archival-storage.rst:80
+msgid ""
+"You can click on the column headers to sort in ascending or descending "
+"order. An up or down caret (arrow point) will appear. (e.g. see **File "
+"count** below)."
+msgstr ""
+"列のヘッダーをクリックすると、昇順または降順に並べ替えることができます。上下のキャレット（矢印）が表示されます。（例： **ファイル数：** "
+"以下参照）。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The Archival Storage tab sorted on File Count"
+msgstr "ファイル数に基づいて並べ替えられた[アーカイブストレージ] タブ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:88
+msgid ""
+"When you enable the **Show files?** option at the top of the screen, all of "
+"the files contained in Archival Storage AIPs are listed in the Browse "
+"archival storage table."
+msgstr ""
+"画面上部の **ファイル表示** オプションを有効にすると、アーカイブストレージ AIPに含まれるすべてのファイルが "
+"[アーカイブストレージテーブルをブラウズ] に一覧表示されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The Archival Storage tab with Show Files selected"
+msgstr "[ファイルの表示] が選択された [アーカイブ ストレージ] タブ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:97
+msgid ""
+"The **Select columns** option is also available on the **Show files?** "
+"table."
+msgstr "**列を選択** オプションは、 **ファイルを表示** テーブルでも利用できます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "Selecting columns for the Show Files view"
+msgstr "[ファイルの表示] ビューで列を選択"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:104
+msgid ""
+"Column sorting is also available in the **Show files?** table (e.g. see "
+"**AIP** column below)."
+msgstr "列の並べ替えは、 **ファイル表示** テーブルでも可能です（例： **AIP** 以下の列を参照してください）。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "Sorting Show Files view by AIP column"
+msgstr "[ファイル表示] ビューを AIP 列ごとに並べ替え"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:112
+msgid ""
+"Note also that the **AIP** column cells include a hyperlink to the AIP "
+"information page (e.g. \"transfer1\"). From that page it is possible to "
+"select an individual AIP and download it, delete it, or initiate AIP re-"
+"ingest."
+msgstr ""
+"また、 **AIP** の列セルには、AIP情報ページへのハイパーリンクが含まれていることに注意してください（例：\"transfer1\" "
+"）。そのページから、個々のAIPを選択してダウンロードしたり、削除したり、AIPの再インジェストを開始したりできます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:119
+msgid "Downloading all AIP metadata in a CSV file"
+msgstr "すべてのAIPメタデータをCSVファイルでダウンロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:120
+msgid ""
+"All the values displayed in all of the columns available on the Browse "
+"Archival Storage tab can be downloaded to a CSV (Comma Separated Values) "
+"file. This CSV file can be used for more detailed analysis and filtering of "
+"AIP information, beyond the Search capabilities described below. The CSV "
+"data can also be used as input to a reporting or charting tool."
+msgstr ""
+"[アーカイブ ストレージの参照] タブで使用できるすべての列に表示されるすべての値は、CSV (カンマ区切り) ファイルにダウンロードできます。この "
+"CSV ファイルは、以下で説明する検索機能を超えて、AIP 情報のより詳細な分析とフィルタリングに使用できます。CSV "
+"データは、レポート作成ツールやグラフ作成ツールへの入力データとして使用することもできます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:126
+msgid ""
+"Click on the **Download CSV** link at the top right of the **Browse archival"
+" storage** table."
+msgstr "**アーカイブストレージをブラウズ** テーブルの右上にある **CSV をダウンロード** リンクをクリックします。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "Download all AIP metadata using CSV download"
+msgstr "CSV ダウンロードを使用して、すべてのAIPメタデータをダウンロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:134
+msgid ""
+"You will be prompted for a place to store the CSV file. The CSV data will "
+"include values for all the columns, regardless of which ones are currently "
+"selected. It will also include the metadata for each AIP in archival "
+"storage, regardless of which ones are currently being displayed on the "
+"Archival Storage tab."
+msgstr ""
+"CSV ファイルを保存する場所を指定するプロンプトが表示されます。CSV "
+"データには、現在どの列が選択されているかにかかわらず、すべての列の値が含まれます。また、[アーカイブストレージ] タブに現在どの AIP "
+"が表示されているかに関係なく、アーカイブストレージ内の各 AIP のメタデータも含みます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:144
+msgid "Searching the AIP store"
+msgstr "AIPストアの検索"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:146
+msgid ""
+"The Archival Storage tab allows you to search for any AIP that appears in "
+"the Archivematica instance's index. You can free search over all of the "
+"results or limit your search using one or more of the search parameters:"
+msgstr ""
+"Archival "
+"Storageタブでは、Archivematicaインスタンスのインデックスに表示されているAIPを検索できます。すべての検索結果を自由に検索することも、1つ以上の検索パラメーターを使用して検索を制限することもできます："
+
+#: ../../user-manual/archival-storage/archival-storage.rst:150
+msgid "**File UUID**: the UUID of a specific file within an AIP."
+msgstr "**File UUID** ：AIP内の特定のファイルのUUID。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:151
+msgid "**File extension**: the format extension of a file within an AIP."
+msgstr "**ファイル拡張子** ：AIP内のファイルのフォーマット拡張子。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:152
+msgid "**AIP UUID**: the UUID of the AIP."
+msgstr "**AIP UUID** ：AIPのUUID。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:153
+msgid "**AIP name**: the name of the AIP."
+msgstr "**AIP名** ：AIPの名前。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:154
+msgid ""
+"**Identifiers**: an external identifier added to the AIP using an "
+":ref:`identifiers.json <transfer-pids>` file; OR the value of the "
+"``<identifier>`` field in a MODS file included as submission documentation "
+"or in an Islandora transfer's METS file (using the :ref:`Islandora "
+"integration <islandora-integration>`)."
+msgstr ""
+"**Identifiers** ： :ref:`identifiers.json <transfer-pids>` ファイルを使用して AIP "
+"に追加された外部識別子；または、提出文書として含まれる MODS ファイルまたは Islandora 転送の METS ファイル（ "
+":ref:`Islandora 統合 <islandora-integration>` を使用）の ``<identifier>`` フィールドの値。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:159
+msgid ""
+"**Part of AIC**: an :ref:`AIC<aic>` number added to the AIP's descriptive "
+"metadata, formatted as ``AIC#`` followed by the value (i.e. ``AIC#GWQ498``)."
+" This searches for the individual AIPs that comprise an AIC."
+msgstr ""
+"**AIC の一部** ：AIPの説明メタデータに追加された :ref:`AIC <aic>` 番号。 ``AIC#`` の後に値（すなわち "
+"``AIC#GWQ498`` ）が続く形式。これはAICを構成する個々のAIPを検索します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:162
+msgid ""
+"**AIC identifier**: the identifier of a created :ref:`AIC<aic>`, formatted "
+"as ``AIC#`` followed by the value (i.e. ``AIC#GWQ498``). This search returns"
+" AIC packages."
+msgstr ""
+"**AIC identifier** ：作成された :ref:`AIC <aic>` の識別子。 ``AIC#`` の後に値（例： "
+"``AIC#GWQ498`` ）が続く形式。この検索はAICパッケージを返します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:165
+msgid ""
+"**Transfer metadata**: metadata added using the special metadata form for "
+"the :ref:`disk image transfer type <disk-image-workflow>`."
+msgstr ""
+"**転送メタデータ** ： :ref:`ディスクイメージ転送タイプ用の特別なメタデータフォームを使用して追加されたメタデータ <disk-image-"
+"workflow>` ."
+
+#: ../../user-manual/archival-storage/archival-storage.rst:167
+msgid ""
+"**Transfer metadata (other)**: the contents of the ``bag-info.txt`` of a bag"
+" transfer. Note that if you select this option, a second data entry box will"
+" pop up where youcan define a specific ``bag-info.txt`` field you would like"
+" to search against - for example, if ``bag-info.txt`` included the line "
+"``Source-Organization: My Org``, you could enter ``Source-Organization`` "
+"into the second data entry box to limit searches to that field."
+msgstr ""
+"**Transfer metadata （other）** ：バッグ転送の ``bag-info.txt`` "
+"の内容。このオプションを選択すると、2つ目のデータ入力ボックスがポップアップ表示され、検索したい特定の ``bag-info.txt`` "
+"フィールドを定義できます。たとえば、 ``bag-info.txt`` に ``Source-Organization: My Org`` "
+"という行が含まれている場合、2つ目のデータ入力ボックスに ``Source-Organization`` "
+"と入力すると、検索対象をそのフィールドに限定できます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:174
+msgid ""
+"You can also define your search string as a keyword, phrase, or date range:"
+msgstr "また、検索文字列をキーワード、フレーズ、または日付範囲として定義もできます："
+
+#: ../../user-manual/archival-storage/archival-storage.rst:176
+msgid ""
+"**Keyword**: by default, the Keyword option treats the search string as a "
+"Boolean OR search - that is, every word is treated as a separate value "
+"connected by OR operators. For example, searching for ``2015-Annual-Report``"
+" actually searches for \"2015 OR Annual OR Report\", so the results contain "
+"anything named with \"2015\" or \"Annual\" or \"Report\". To search for a "
+"specific strings, add quotation marks around the string - ``\"2015-Annual-"
+"Report\"``."
+msgstr ""
+"**Keyword** ：デフォルトでは、Keywordオプションは検索文字列をブーリアンOR検索として扱います。例えば、 ``2015-Annual-"
+"Report`` を検索すると、実際には\"2015 OR Annual OR Report\" が検索されるため、\"2015\" "
+"または\"Annual\" または\"Report\" "
+"という名前のものが検索結果に含まれます。特定の文字列を検索するには、文字列の周りに引用符を追加します - ``\"2015-Annual-"
+"Report\"`` 。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:182
+msgid ""
+"**Phrase**: the Phrase option allows for more flexibility while searching. "
+"You can use the Phrase option to perform fuzzy searches, such as "
+"``council*`` to find AIPs named ``council-minutes``, ``councilminutes``, and"
+" ``council-report``."
+msgstr ""
+"**Phrase** ：フレーズ・オプションは検索をより柔軟にします。 ``council-minutes`` 、 ``councilminutes``"
+" 、 ``council-report`` という名前のAIPを見つけるために ``council*`` "
+"のようなあいまい検索を行うためにPhraseオプションを使うことができます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:186
+msgid ""
+"**Date range**: this allows you to search for AIPs that were created by "
+"Archivematica between two dates. You can conduct date range searches by "
+"entering a date, a colon, and a second date, such as "
+"``2015-01-02:2015-03-15``."
+msgstr ""
+"**日付範囲** ：2つの日付の間にArchivematicaで作成されたAIPを検索できます。 ``2015-01-02:2015-03-15`` "
+"のように、日付、コロン、2 番目の日付を入力すると、日付範囲を検索できます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:194
+msgid "Conducting a search"
+msgstr "検索の実施"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:196
+msgid ""
+"On the Archival Storage tab, enter your search term into the text box at the"
+" top of the screen. If you want to limit your search results to a specific "
+"parameter (for example, the AIP name or a file UUID), use the first dropdown"
+" box to select the parameter. By default the parameter is set to **Any**, "
+"which will search across the whole storage index. Use the second dropdown "
+"menu to select whether to search by keyword, phrase, or date range."
+msgstr ""
+"[Archival "
+"Storage］タブで、画面上部のテキストボックスに検索語を入力します。検索結果を特定のパラメーター（AIP名やファイルUUIDなど）に限定したい場合は、最初のドロップダウンボックスを使用してパラメーターを選択します。デフォルトでは、パラメーターが"
+" **Any** "
+"に設定されており、ストレージインデックス全体を検索します。2番目のドロップダウンメニューを使用して、キーワード、フレーズ、日付範囲のいずれで検索するかを選択します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:203
+msgid ""
+"If you would like to see individual files in the search results, rather than"
+" AIPs, select the **Show files?** checkbox."
+msgstr "AIP ではなく、個々のファイルを検索結果に表示したい場合は、 **ファイルを表示** のチェックボックスを選択します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:206
+msgid ""
+"To build a Boolean search, click on **Add New**. This will bring up a second"
+" text box and set of dropdown menus. You can select *Or*, *And*, or *Not* as"
+" your Boolean connectors."
+msgstr ""
+"ブール検索を構築するには、 **新規追加** をクリックします。2つ目のテキストボックスとドロップダウンメニューが表示されます。 *Or* 、 "
+"*And* 、または *Not* をブールコネクターとして選択できます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid ""
+"The Archival Storage tab showing the results for a specific AIP UUID\n"
+"and the .png file extension. There is one result."
+msgstr "特定の AIP UUID の結果を示す [アーカイブストレージ タブ] と拡張子.png の結果を表示します。結果は1つになります。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:216
+msgid ""
+"By clicking on **View raw** next to a search result, you can also view the "
+"raw JSON stream that has been indexed for searching. The JSON contains the "
+"METS data, the Archivematica version that generated the data, the AIP UUID, "
+"the time indexing occurred, and the relative file path within the AIP."
+msgstr ""
+"検索結果の横にある **View raw** をクリックすると、検索用にインデックス化された生の JSON "
+"ストリームを表示もできます。JSONにはMETSデータ、データを生成したArchivematicaのバージョン、AIPのUUID、インデックスが作成された時間、AIP内の相対ファイルパスが含まれています。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:224
+msgid "Searching for Archival Information Collections (AICs)"
+msgstr "アーカイブ情報コレクション（AIC）の検索"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:226
+msgid ""
+"Archivematica includes the ability to break a single collection into "
+"multiple AIPs that are connected together as an :ref:`Archival Information "
+"Collection <aic>` (AIC). For more information on searching for AICs, see "
+":ref:`Search for AICs <search-aic>`."
+msgstr ""
+"Archivematica には、1つのコレクションを複数のAIPに分割し、 :ref:`Archival Information Collection"
+" <aic>` （AIC） として連結する機能があります。AICの検索については、 :ref:`AICの検索 <search-aic>` "
+"を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:234
+msgid "AIP information page"
+msgstr "AIP情報ページ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:236
+msgid ""
+"Clicking on the name of an AIP will open the AIP information page. From this"
+" page, it is possible to upload an associated DIP, re-ingest the AIP, or "
+"delete the AIP as well as downloading the AIP or viewing the METS and "
+"pointer files."
+msgstr ""
+"AIPの名前をクリックすると、AIP情報ページが開きます。このページから、関連するDIPのアップロード、AIPの再インジェスト、AIPの削除、AIPのダウンロード、METSおよびポインターファイルの閲覧が可能です。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "The information page for an AIP."
+msgstr "AIPの情報ページ。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:248
+msgid "Downloading an AIP"
+msgstr "AIPのダウンロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:250
+msgid ""
+"To download an AIP, click **Download**. The download will begin in your web "
+"browser. Note that for very large AIPs, it might take a few minutes for the "
+"download to start. Downloading very large AIPs can result in hitting "
+"Archivematica's default timeouts, resulting in an AIP that doesn't download "
+"- please see the :ref:`Scaling up <scaling-up>` documentation for more "
+"information on adjusting timeouts. If the AIP is too large, you may need to "
+"download it directly from the storage location."
+msgstr ""
+"AIPをダウンロードするには、 **Download** "
+"をクリックします。ウェブブラウザでダウンロードが始まります。非常に大きなAIPの場合、ダウンロードが開始されるまでに数分かかることがあります。非常に大きなAIPをダウンロードする場合、Archivematicaのデフォルトのタイムアウトにかかり、AIPがダウンロードされないことがあります。タイムアウトの調整については、"
+" :ref:`Scaling up <scaling-up>` "
+"文書を参照してください。AIPのサイズが大きすぎる場合は、ストレージから直接ダウンロードする必要があります。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:258
+#: ../../user-manual/archival-storage/archival-storage.rst:409
+msgid ""
+"For more information about how AIPs are structured, please see :ref:`AIP "
+"structure <aip-structure>`."
+msgstr "AIP の仕組みの詳細については、 :ref:`AIPの構造 <aip-structure>` を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:264
+msgid "Downloading the METS file"
+msgstr "METSファイルのダウンロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:266
+msgid ""
+"The AIP `METS file`_ lists all of the digital objects in the AIP (original "
+"files, preservation masters, license files, OCR text files, submission "
+"documentation, etc.), describes their relationships to each other, and links"
+" digital objects to their descriptive, technical, provenance, and rights "
+"metadata."
+msgstr ""
+"AIP `METS ファイル`_ は、AIP "
+"内のすべてのデジタルオブジェクト（オリジナルファイル、保存マスター、ライセンスファイル、OCRテキストファイル、提出文書など）をリストアップし、相互の関係を記述し、デジタルオブジェクトをその記述的、技術的、出所、および権利メタデータにリンクします。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:272
+msgid ""
+"To look at the METS file without having to download the AIP, you can click "
+"on **View** next to *METS file*. The METS file will either open in your "
+"browser or it will automatically start downloading."
+msgstr ""
+"AIP をダウンロードせずに METS ファイルを見るには、 *METSファイル* の隣にある **View** をクリックします。METS "
+"ファイルは、ブラウザで開くか、自動的にダウンロードが開始されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:276
+msgid ""
+"For more information about Archivematica's METS implementation, see "
+":ref:`METS in Archivematica <METS_schema>`."
+msgstr ""
+"ArchivematicaのMETS実装の詳細については、 :ref:`ArchivematicaにおけるMETS <METS_schema>` "
+"を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:282
+msgid "Downloading the pointer file"
+msgstr "ポインターファイルのダウンロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:284
+msgid ""
+"The AIP pointer file provides information about how the AIP was packaged for"
+" storage, its fixity, and where the AIP is stored. The pointer file is used "
+"by Archivematica primarily to retrieve the AIP."
+msgstr ""
+"AIPポインターファイルは、AIP がどのように保存用にパッケージされたか、その固定性、AIP "
+"の保存場所に関する情報を提供します。ポインターファイルは主に Archivematica が AIP を取得するために使用します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:288
+msgid ""
+"To download the pointer file, click on **View** next to *Pointer file*. The "
+"pointer file will either open in your browser or it will automatically start"
+" downloading."
+msgstr ""
+"ポインターファイルをダウンロードするには、 *ポインターファイル* の隣にある **表示** "
+"をクリックしてください。ポインターファイルはブラウザで開くか、自動的にダウンロードが開始されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:295
+msgid "Metadata-only upload to AtoM"
+msgstr "AtoMへのメタデータのみのアップロード"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:297
+msgid ""
+"From the AIP information page, it is possible to send a metadata-only upload"
+" to a connected :ref:`AtoM <atom:home>` site. See :ref:`Metadata-only upload"
+" to AtoM <upload-metadata-atom>` for more information."
+msgstr ""
+"AIP情報ページから、接続されている :ref:`AtoM <atom:home>` "
+"サイトにメタデータのみのアップロードを送信することが可能です。詳しくは、 :ref:`AtoMへのメタデータのみのアップロード <upload-"
+"metadata-atom>` を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:304
+msgid "Re-ingest AIP"
+msgstr "AIPの再インジェスト"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:306
+msgid ""
+"From the AIP information page, it is possible to reingest an AIP in order to"
+" add or update metadata, create a DIP on demand, or re-run all "
+"microservices. See :ref:`Re-ingest AIP <reingest>` for more information."
+msgstr ""
+"AIP情報ページから、メタデータの追加や更新、DIPのオンデマンド作成、すべてのマイクロサービスの再実行などのために、AIPを再インジェストすることが可能です。詳細は、"
+" :ref:`再インジェスト AIP <reingest>` を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:313
+msgid "Delete AIP"
+msgstr "AIPの削除"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:315
+msgid ""
+"Deleting an AIP in Archivematica is a two-step process. First, the user must"
+" request that the AIP be deleted. Then, a Storage Service administrator must"
+" approve the deletion from the Storage Service interface. If the "
+"administrator approves the request, the AIP will be deleted from your "
+"Archival Storage and the index will be updated. If the administrator denies "
+"the request, the AIP will remain in storage."
+msgstr ""
+"ArchivematicaでAIPを削除するには、2つのステップがあります。まず、ユーザがAIPの削除を要求します。次に、Storage "
+"Serviceの管理者がStorage "
+"Serviceのインターフェイスから削除を承認する必要があります。管理者がリクエストを承認すると、Archival "
+"StorageからAIPが削除され、インデックスが更新されます。管理者が要求を拒否した場合、AIPはストレージに残ります。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:322
+msgid ""
+"On the AIP information page, navigate to the **Delete** action tab at the "
+"bottom of the page."
+msgstr "AIP 情報ページで、ページ下部の **削除** アクションタブに移動します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst
+msgid "Dashboard request to delete AIP"
+msgstr "AIPを削除するためのダッシュボードリクエスト"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:330
+msgid "Enter the AIP UUID and a reason for deletion."
+msgstr "AIP UUIDと削除理由を入力します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst
+msgid "Give a reason for deletion"
+msgstr "削除理由"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:337
+msgid ""
+"Click delete. When you refresh the Archival Storage tab, the status of your "
+"AIP should now read *Deletion requested*."
+msgstr ""
+"[削除] をクリックします。[アーカイブストレージ] タブを更新すると、AIP のステータスが *Deletion requested* "
+"と表示されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:342
+msgid ""
+"Note that Archivematica tracks the location and existence of AIPs in 2 ways:"
+" within the Storage Service and in the Elasticsearch index which you can "
+"search via the dashboard. Deleting AIPs directly from the file system rather"
+" than through the Storage Service will cause inconsistencies in both "
+"applications and is not recommended in a production environment."
+msgstr ""
+"Archivematica は、Storage Service 内と、ダッシュボードから検索できる Elasticsearch インデックスの 2 "
+"つの方法で AIP の場所と存在を追跡します。Storage Serviceではなくファイルシステムから直接 AIP "
+"を削除すると、両方のアプリケーションで不整合が発生するため、生産環境ではお勧めできません。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:351
+msgid "AIP encryption"
+msgstr "AIP暗号化"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:353
+msgid ""
+"Beginning in the 1.7 version of Archivematica, institutions are able to "
+"encrypt their AIPs for secure storage. This feature is particularly useful "
+"when an institution stores its AIPs off-site."
+msgstr ""
+"Archivematica "
+"1.7からは、AIPを暗号化して安全に保管できるようになりました。この機能は、機関がAIPをオフサイトで保管する場合に特に便利です。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:357
+msgid ""
+"To create an encrypted AIP, Archivematica needs an encrypted space and "
+"location set up in the Storage Service. Please see :ref:`Encryption "
+"<storageservice:gpg>` for more information."
+msgstr ""
+"暗号化されたAIPを作成するには、Archivematicaがストレージサービスで暗号化されたスペースと場所を設定する必要があります。詳しくは、 "
+":ref:`暗号化 <storageservice:gpg>` を参照してください。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:361
+msgid "Run your transfer through the regular microservices."
+msgstr "通常のマイクロサービスを介して転送を実行します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:363
+msgid ""
+"At the Store AIP location job on the Ingest tab, choose your encrypted AIP "
+"location. You now have an encrypted AIP!"
+msgstr ""
+"[インジェスト] タブの「Store AIP location job」で、暗号化されたAIPの場所を選択します。これで暗号化されたAIPができました！"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:366
+msgid ""
+"You can tell if your AIP is encrypted by looking at the Encrypted column of "
+"the table on the Archival Storage tab. Encrypted AIPs are marked as *True*."
+msgstr ""
+"AIPが暗号化されているかどうかは、[Archival Storage] タブの表の 「暗号化」列を見ればわかります。暗号化されたAIPは、 "
+"*True* と表示されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid "Archival storage tab showing encrypted AIP"
+msgstr "暗号化された AIP を表示する [アーカイブストレージ] タブ"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:374
+msgid ""
+"The AIP pointer file contains a `PREMIS:EVENT` element for the encryption "
+"event."
+msgstr "AIPポインターファイルは、暗号化イベントのための `PREMIS：EVENT` エレメントを含みます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:376
+msgid ""
+"The AIP itself can be downloaded in unencrypted form from the Archival "
+"Storage tab."
+msgstr "AIP自体は、[Archival Storage] タブから暗号化されていない形でダウンロードできます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:382
+msgid "AIP storage structure"
+msgstr "AIPストレージ構造"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:384
+msgid ""
+"For efficient storage and retrieval, Archivematica's Storage Service uses a "
+"directory tree structure based on the AIP's UUID, which is the 32-digit "
+"alphanumeric unique universal identifier assigned to each AIP. Each UUID is "
+"broken down into a manageable 4-character chunk, or \"UUID quad\"."
+msgstr ""
+"ArchivematicaのStorage "
+"Serviceは、効率的な保存と検索のために、AIPのUUID（各AIPに割り当てられた32桁の英数字からなる一意の汎用識別子）に基づいたディレクトリツリー構造を採用しています。各UUIDは、管理しやすい4文字のチャンク（\"UUID"
+" quad\" ）に分割されます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:-1
+msgid ""
+"Screenshot of a file browser showing the AIP quad directories, with\n"
+"the lowest-level directory open to show the AIP package."
+msgstr ""
+"AIP クアッドディレクトリを表示するファイルブラウザのスクリーンショット。最下位レベルのディレクトリを開いて AIP パッケージを表示します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:395
+msgid ""
+"Each quad represents a directory. The first four characters (the first UUID "
+"quad) of the AIP UUID are used as the name of the main subdirectory in the "
+"AIP storage. The second UUID quad will be used as the name of a subdirectory"
+" of the first, and so on. The last four characters (the last UUID quad) are "
+"used to create the leaf of the AIP store directory tree, and the AIP with "
+"that UUID resides in that leaf."
+msgstr ""
+"各四角形は、ディレクトリを表します。AIPのUUIDの最初の4文字（最初のUUIDの四角形）は、AIPストレージのメインサブディレクトリの名前として使われます。2番目のUUIDの四角は最初のサブディレクトリの名前として使われ、以下同様です。最後の4文字（最後のUUIDの四角形）は、AIPストアのディレクトリツリーのリーフを作成するために使われ、そのUUIDを持つAIPはそのリーフに存在します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:402
+msgid ""
+"This folder structure is the same for both compressed and uncompressed AIPs."
+" AIPs that have been compressed for storage will be in ``.7z`` format. "
+"Uncompressed AIPs will be stored as a directory, rather than a zipfile."
+msgstr ""
+"このフォルダ構造は、圧縮されたAIPも圧縮されていないAIPも同じです。保存のために圧縮されたAIPは ``.7z`` "
+"です。非圧縮AIPは、zipファイルではなく、ディレクトリとして保存します。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:406
+msgid ""
+"The quad directory structure is used for storage only. When you download the"
+" AIP, you will only get the AIP itself, not the quad directories."
+msgstr ""
+"クワッドディレクトリ構造は、保存のためだけに使用されます。AIPをダウンロードすると、クワッドディレクトリではなく、AIPそのものが得られます。"
+
+#: ../../user-manual/archival-storage/archival-storage.rst:412
+msgid ":ref:`Back to the top <archival-storage>`"
+msgstr ":ref:`トップに戻る <archival-storage>`"
