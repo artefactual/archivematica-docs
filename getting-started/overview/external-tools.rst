@@ -66,12 +66,6 @@ to identify the file formats of digital objects.
 
 **License**: `Apache License Version 2.0`_
 
-`File Information Tool Set (FITS)`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-File format identification and validation software integration tool.
-
-**License**: `GNU Lesser General Public License`_
-
 `Gearman`_
 ^^^^^^^^^^
 Gearman provides a generic application framework to farm out work to other
@@ -119,12 +113,6 @@ MediaInfo is a convenient unified display of the most relevant technical and tag
 data for video and audio files.
 
 **License**: `BSD (2-clause)`_
-
-`Nailgun`_
-^^^^^^^^^^
-A client, protocol, and server for running Java programs from the command line.
-
-**License**: `Apache License Version 2.0`_
 
 `NFS-common`_
 ^^^^^^^^^^^^^
@@ -203,7 +191,6 @@ The Unarchiver is an archive unpacker program.
 .. _ExifTool: https://exiftool.org/index.html
 .. _FFmpeg: http://ffmpeg.org/
 .. _fido: https://github.com/openpreserve/fido/
-.. _File Information Tool Set (FITS): https://projects.iq.harvard.edu/fits
 .. _Gearman: http://gearman.org/
 .. _Ghostscript: https://www.ghostscript.com/
 .. _GNU Affero General Public License (AGPL): https://www.gnu.org/licenses/agpl-3.0.en.html
@@ -219,7 +206,6 @@ The Unarchiver is an archive unpacker program.
 .. _JHOVE: https://github.com/openpreserve/jhove
 .. _MediaConch: https://mediaarea.net/MediaConch
 .. _MediaInfo: https://mediaarea.net/en/MediaInfo
-.. _Nailgun: https://github.com/facebook/nailgun
 .. _NFS-common: https://linux-nfs.org
 .. _p7zip: http://p7zip.sourceforge.net/
 .. _Python-lxml: https://lxml.de/

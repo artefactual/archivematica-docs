@@ -178,9 +178,9 @@ The user may choose to continue processing the SIP despite any normalization
 errors.
 
 The user may choose to redo normalization, as well. For instance, if
-the user chose to normalize based on FITS-JHOVE results and experienced
+the user chose to normalize based on one tool results and experienced
 failures, the user may wish to redo normalization and choose to normalize
-based on FITS-DROID results instead.
+based on another tool results instead.
 
 .. figure:: images/Normdropdown-10.*
    :align: center
@@ -269,10 +269,9 @@ Other common error behaviours
 Below is a list of common errors that, like normalization, will produce an
 error report but will not fail the transfer.
 
-#. Characterize and extract metadata: if FITS processing fails, the
+#. Characterize and extract metadata: if the characterization tool fails, the
    micro-service will fail and the transfer will continue processing.
-   Similarly, if a tool within FITS fails, like JHOVE, you will see the pink
-   error bar but be able to continue processing.
+   You will see the pink error bar but be able to continue processing.
 
 #. Remove thumbs.db file: if Archivematica is unable to remove a thumbs.db
    file, the microservice will fail and the SIP will continue processing.

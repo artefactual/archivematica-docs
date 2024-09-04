@@ -393,13 +393,6 @@ Some of the default preservation action rules can take considerable processing
 time and resources. We have found the following rules useful to change in some
 cases.
 
-**Turn off default characterization rule:** `FITS`_ is used to characterise files
-that don't have a recognised file format. Executing this rule takes processing
-time and adds raw output to the METS file that can be low value for some
-formats. For example, in scientific datasets with large numbers of generic text
-files, or binary files created by instruments in scientific experiments, the
-output can be verbose without being useful.
-
 **Reduce number of image characterization rules:** Archivematica has rules
 defined for all image and audio-visual formats to use ExifTool, Mediainfo and
 ffprobe for characterisation. Using multiple tools ensures as much
@@ -432,5 +425,4 @@ to create (and check) than the alternatives (e.g. SHA-256).
 .. _Archivematica user forum: https://groups.google.com/forum/#!forum/archivematica
 .. _Dashboard: https://github.com/artefactual/archivematica/tree/6ead2083f7bdd8b10ca76d41a7bff9c5aee23eb3/src/dashboard/install
 .. _benchmarking: https://www.itforarchivists.com/siegfried/benchmarks
-.. _FITS: https://projects.iq.harvard.edu/fits/home
 .. _Database is locked: https://docs.djangoproject.com/en/1.8/ref/databases/#database-is-locked-errors

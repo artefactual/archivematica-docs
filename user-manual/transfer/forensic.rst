@@ -45,11 +45,8 @@ in the processing configuration by setting the *Extract packages* job to "No".
 
 If you would like to extract forensic image formats anyway, you can set the
 *Extract packages* job to "Yes". We recommend testing this at scale to ensure
-that it is a viable workflow for your deployment. One scalability option that
-can help to mitigate the processing load caused by extraction is turning off
-`FITS`_, which is the default characterization tool that will run on every
-extracted file. For more information, see :ref:`Preservation Action Rules
-<disable-fpr-rules>` on the Scalability page.
+that it is a viable workflow for your deployment. For more information, see
+:ref:`Preservation Action Rules <disable-fpr-rules>` on the Scalability page.
 
 Delete packages after extraction
 ++++++++++++++++++++++++++++++++
@@ -160,5 +157,4 @@ desired, by using the backlog arrangement functionality in Archivematica.
 
 
 .. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki
-.. _FITS: https://projects.iq.harvard.edu/fits/home
 .. _fiwalk: https://forensicswiki.xyz/wiki/index.php?title=Fiwalk
