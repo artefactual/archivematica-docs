@@ -196,7 +196,7 @@ return to Archivematica to proceed.
 #. Using an SFTP file browser or SSH in your command line, go to your
    pipeline's Processing Location and find the approveNormalization watched
    directory. The default location is
-   ``/var/archivematica/sharedDirectory/watchedDirectories/approveNormalization/preservation/``,
+   ``/var/archivematica/sharedDirectory/watchedDirectories/approveNormalization/``,
    which will contain your transfer directory. You may need to look at your
    :ref:`Storage Service <storageservice:index>` configuration to confirm the
    Processing Location defined for your pipeline.
