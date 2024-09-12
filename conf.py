@@ -36,7 +36,17 @@ needs_sphinx = '1.4'
 extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.intersphinx',
+     'sphinxcontrib.spelling',
 ]
+
+# Spellchecking
+
+spelling_lang="en_CA"
+tokenizer_lang="en_CA"
+
+spelling_word_list_filename = ['spelling_wordlist.txt']
+
+spelling_show_suggestions=True
 
 # Obtain intersphinx_mapping
 inventory = 'https://gist.githubusercontent.com/qubot/2dd2f7f96e51121061d4/raw/sphinxdoc-inventory.json'
