@@ -178,9 +178,9 @@ The user may choose to continue processing the SIP despite any normalization
 errors.
 
 The user may choose to redo normalization, as well. For instance, if
-the user chose to normalize based on one tool results and experienced
+the user chose to normalize based on one tool's results and experienced
 failures, the user may wish to redo normalization and choose to normalize
-based on another tool results instead.
+based on another tool's results instead.
 
 .. figure:: images/Normdropdown-10.*
    :align: center

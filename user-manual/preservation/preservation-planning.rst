@@ -178,9 +178,9 @@ Tools
 ^^^^^
 
 Archivematica acts as a wrapper for many open source tools used to carry out
-preservation actions. These include digital preservation specific tools as well
-as tools for handling different file formats like `Inkscape`_, which is a design
-program used to handle vector images.
+preservation actions. These include digital preservation specific tools (such as
+those to carry out file format identification and characterization) as well as
+generalist tools used for actions such as normalization.
 
 The full list of tools can be accessed in the left-hand sidebar by selecting
 **Tools** under the *Format policy registry* heading.
