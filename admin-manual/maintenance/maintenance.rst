@@ -502,7 +502,6 @@ Other services that Archivematica depends on are:
   * ElasticSearch
   * Gearman
   * MySQL (Ubuntu) or MariaDB (Rocky Linux)
-  * Nailgun
   * Nginx
 
 Each service can be started/stopped/restarted with:

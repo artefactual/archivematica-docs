@@ -100,8 +100,6 @@ sudo -u root sed -i 's/^Example//g' /etc/clamd.d/scan.conf
 
 sudo -u root systemctl enable archivematica-mcp-client
 sudo -u root systemctl start archivematica-mcp-client
-sudo -u root systemctl enable fits-nailgun
-sudo -u root systemctl start fits-nailgun
 sudo -u root systemctl enable clamd@scan
 sudo -u root systemctl start clamd@scan
 sudo -u root systemctl restart archivematica-dashboard

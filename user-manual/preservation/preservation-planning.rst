@@ -178,10 +178,9 @@ Tools
 ^^^^^
 
 Archivematica acts as a wrapper for many open source tools used to carry out
-preservation actions. These include digital preservation specific tools like
-`FITS`_, used for extracting technical metadata from files, as well as tools for
-handling different file formats like `Inkscape`_, which is a design program used
-to handle vector images.
+preservation actions. These include digital preservation specific tools (such as
+those to carry out file format identification and characterization) as well as
+generalist tools used for actions such as normalization.
 
 The full list of tools can be accessed in the left-hand sidebar by selecting
 **Tools** under the *Format policy registry* heading.
@@ -503,13 +502,11 @@ Archivematica has four characterization tools available upon installation. Which
 tool will run on a given file depends on the type of file, as determined by
 the identification tool.
 
-The default characterization tool is FITS; it will be used if no specific
-characterization rule exists for the file being scanned. It is possible to
-create new default characterization commands, which can either replace FITS or
-run alongside it on every file.
+It is possible to create new default characterization commands, which can run
+on every file.
 
 Depending on the type of the file being scanned, one or more of these tools may
-be called instead of FITS.
+be called.
 
 * `FFprobe <FFprobe_>`_, a characterization tool built on top of the same core as
   FFmpeg, the normalization software used by Archivematica.
@@ -539,9 +536,8 @@ For more information about writing a command, see :ref:`Writing commands
 Characterization rules
 ^^^^^^^^^^^^^^^^^^^^^^
 
-A characterization rule must be created to connect a characterizatio command to
-a particular format. Note that formats that do not have a rule will be
-characterized by FITS by default.
+A characterization rule must be created to connect a characterization command to
+a particular format.
 
 For more information about creating a rule, see :ref:`Changing rules
 <changing-rules>` above.
@@ -1087,7 +1083,6 @@ You do not need to create rules for verification.
 .. _Ghostscript: https://www.ghostscript.com/
 .. _ps2pdf: https://www.ps2pdf.com/
 .. _Archivematica issues repo: https://github.com/archivematica/Issues
-.. _FITS: https://projects.iq.harvard.edu/fits/home
 .. _JHOVE: https://openpreservation.org/products/jhove/
 .. _MediaConch documentation: https://mediaarea.net/MediaConch/Documentation/HowToUse
 .. _MediaConchOnline: https://mediaarea.net/MediaConchOnline/
