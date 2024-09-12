@@ -85,7 +85,7 @@ information, see :ref:`Advanced <advanced>`.
    the Percona and MariaDB alternatives.
 
    Some of the tools run by Archivematica require Java to be
-   installed (primarily Elasticsearch and fits). On Ubuntu 22.04, Open JDK 8
+   installed (primarily Elasticsearch). On Ubuntu 22.04, Open JDK 8
    is used, but Open JDK 11 is the default. It is possible to use Oracle Java 8
    instead.
 

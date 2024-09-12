@@ -50,8 +50,6 @@ sudo service archivematica-mcp-client restart
 sudo service archivematica-storage-service start
 sudo service archivematica-dashboard restart
 sudo service nginx restart
-sudo systemctl enable fits-nailgun
-sudo service fits-nailgun start
 
 sudo ufw allow 22/tcp
 sudo ufw allow 80/tcp
