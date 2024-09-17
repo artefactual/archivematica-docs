@@ -15,6 +15,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Update search indices <update-search-indices>`
 * :ref:`Review the processing configuration <review-processing-configuration>`
 * :ref:`Migrate from MySQL 5.x to 8.x <migrate-mysql>`
+* :ref:`Uninstall FITS <uninstall-fits>`
 
 .. note::
 
@@ -560,7 +561,63 @@ the databases and their tables.
    :language: bash
    :lines: 1-104
 
+.. _uninstall-fits:
+
+Uninstall FITS
+--------------
+
+`FITS`_ has been removed in Archivematica 1.17.0 to mitigate potential
+vulnerabilities identified by various security scanners.
+
+You can uninstall `FITS` using the following commands:
+
+Ubuntu
+^^^^^^
+
+#. Upgrade your existing Archivematica pipeline to 1.17.0 or higher following
+   the instructions above.
+
+#. Stop and disable the `fits-nailgun` service
+
+   .. code:: bash
+
+      sudo systemctl stop fits-nailgun
+      sudo systemctl disable fits-nailgun
+
+#. Remove the `fits` and `nailgun` packages.
+
+   .. code:: bash
+
+      sudo apt-get purge fits nailgun
+
+Rocky Linux/Red Hat
+^^^^^^^^^^^^^^^^^^^
+
+#. Upgrade your existing Archivematica pipeline to 1.17.0 or higher following
+   the instructions above.
+
+#. Stop and disable the `fits-nailgun` service.
+
+   .. code:: bash
+
+      sudo systemctl stop fits-nailgun
+      sudo systemctl disable fits-nailgun
+
+#. Remove the `fits` and `nailgun` packages.
+
+   .. code:: bash
+
+      sudo yum remove fits nailgun
+
+Ansible
+^^^^^^^
+
+The `stable/1.17.x` branch of the `ansible-archivematica-src`_ repository
+disables and uninstalls the `fits` and `nailgun` packages automatically.
+
 .. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
 .. _`Reindex API`: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
 .. _`es-reindex.sh`: https://github.com/artefactual-labs/ops-helpers/blob/master/es-helpers/README.md#es-reindexsh-update-search-indices
+.. _FITS: https://harvard-lts.github.io/fits/about
+.. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src
