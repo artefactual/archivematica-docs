@@ -861,8 +861,11 @@ Examples:
 
 Only a subset of these options might be needed for most use-cases. A fundamental
 difference between the package endpoint and others from which a transfer can be
-initiated is that a storage service transfer location UUID isnt always required.
-In some cases that might still be ideal.
+initiated is that a storage service transfer source location's UUID isn't always
+required and the default transfer source location is used automatically.
+
+When working with multiple transfer source locations, to start a transfer from a
+non-default location, you need to specify the location's UUID.
 
 *Starting a transfer using an absolute path*::
 
