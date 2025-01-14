@@ -98,7 +98,7 @@ Installation instructions
    * Archivematica: `<http://192.168.168.198>`_.
    * Storage Service: `<http://192.168.168.198:8000>`_.
 
-   The credentials can be found in the `vars-singlenode-1.15.yml`.
+   The credentials can be found in the vars-singlenode-|version|.yml file.
 
 
 .. _ansible-deploy-dev-branches:
