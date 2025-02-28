@@ -778,8 +778,8 @@ msgid ""
 "recognize manual normalization work and use the preservation and action "
 "copies instead of creating new derivatives."
 msgstr ""
-":ref:`Archivematica の主なファイル保存方法は、「保存計画」タブの:ref:`正規化ルール <normalization>` "
-"に従って<normalize>` 正規化することです。しかし、Archivematica "
+"Archivematica の主なファイル保存方法は、「保存計画」タブの :ref:`normalization rules <normalization>` "
+"に従って :ref:`normalize <normalize>` 正規化することです。しかし、Archivematica "
 "以外（デジタル化プロジェクトなど）でデジタルオブジェクトの保存用コピーやアクセス用コピーを作成したい場合もあります。Archivematicaは、手作業による正規化作業を認識し、新しい派生物を作成する代わりに、保存コピーやアクションコピーを使用できます。"
 
 #: ../../user-manual/transfer/transfer.rst:416
