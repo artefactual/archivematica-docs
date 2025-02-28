@@ -76,7 +76,7 @@ msgid ""
 "If you encounter errors during :ref:`installation <installation>` we "
 "recommend posting your errors to the `Archivematica user forum`_."
 msgstr ""
-":ref:`<installation>` インストール中にエラーが発生した場合は、 `Archivematicaユーザーフォーラム`_ "
+":ref:`installation <installation>` インストール中にエラーが発生した場合は、 `Archivematicaユーザーフォーラム`_ "
 "に投稿することをお勧めします。"
 
 #: ../../getting-started/troubleshooting/faq.rst:34

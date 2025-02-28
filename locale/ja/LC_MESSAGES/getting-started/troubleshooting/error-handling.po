@@ -66,7 +66,7 @@ msgstr ":ref:`管理タブの障害レポート <failure-reports>`"
 
 #: ../../getting-started/troubleshooting/error-handling.rst:27
 msgid ":ref:`Email error report <email-failure>`"
-msgstr ":ref:`メールエラーレポート <email-failure>`"
+msgstr ":ref:`Email error report <email-failure>`"
 
 #: ../../getting-started/troubleshooting/error-handling.rst:28
 msgid ":ref:`Normalization errors <normalization-errors>`"
@@ -305,7 +305,7 @@ msgid ""
 "Archivematica will send an :ref:`email <email-failure>` when normalization "
 "errors occur. Information given in the email report:"
 msgstr ""
-"Archivematicaは、正規化エラーが発生すると :ref:`<email-failure>` にメールを送信します。Eメールに記載される情報："
+"Archivematicaは、正規化エラーが発生すると :ref:`email <email-failure>` にメールを送信します。Eメールに記載される情報："
 
 #: ../../getting-started/troubleshooting/error-handling.rst:196
 msgid ""

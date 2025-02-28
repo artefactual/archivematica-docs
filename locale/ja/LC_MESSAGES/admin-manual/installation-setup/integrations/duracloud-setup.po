@@ -91,8 +91,7 @@ msgid ""
 "DuraCloud can be used as a storage space for the following :ref:`purposes "
 "<storageservice:location-purposes>` within Archivematica:"
 msgstr ""
-"DuraCloudは、Archivematicaののストレージスペースとして使用できます :ref:`<storageservice:location-"
-"purposes>` ："
+"DuraCloudは、Archivematicaののストレージスペースとして使用できます :ref:`purposes <storageservice:location-purposes>` ："
 
 #: ../../admin-manual/installation-setup/integrations/duracloud-setup.rst:39
 msgid ""

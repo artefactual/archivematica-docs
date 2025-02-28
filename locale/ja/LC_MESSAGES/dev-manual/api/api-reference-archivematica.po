@@ -72,7 +72,7 @@ msgstr ":ref:`other-resource`"
 
 #: ../../dev-manual/api/api-reference-archivematica.rst:24
 msgid ":ref:`beta`"
-msgstr ":ref:`ベータ`"
+msgstr ":ref:`beta`"
 
 #: ../../dev-manual/api/api-reference-archivematica.rst:29
 msgid "Transfer"
@@ -508,7 +508,7 @@ msgid ""
 "per the reingest type before the Storage Service endpoint calls the "
 "Archivematica Start reingest endpoint."
 msgstr ""
-"Start reインジェストエンドポイントは、Storage Service側の :ref:`ss-reインジェスト-aip` "
+"Start reインジェストエンドポイントは、Storage Service側の :ref:`ss-reingest-aip` "
 "エンドポイントを補完します。再インジェストが開始されると、Archivematicaは、ストレージからAIPをフェッチし、抽出し、その完全性を確認するためにfixityを実行します。その後、Archivematicaは再インジェストの種類に応じて環境をセットアップし、Storage"
 " Service側のエンドポイントがArchivematica Start reインジェストエンドポイントを呼び出します。"
 
