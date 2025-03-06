@@ -86,7 +86,7 @@ msgstr ":ref:`保存またはアクセス派生物を含む素材の転送 (手�
 msgid ""
 ":ref:`Transferring material with access copies only <transfer-access-"
 "copies>`"
-msgstr ":ref:`アクセスコピーのみで素材の転送 <transfer-access-copies>`"
+msgstr ":ref:`Transferring material with access copies only <transfer-access-copies>`"
 
 #: ../../user-manual/transfer/transfer.rst:27
 msgid ""
@@ -401,7 +401,7 @@ msgstr ""
 " "
 "は転送プロセスの初期段階で、チェックサムやペイロードのオキサムなど、バッグ作成プロセスで作成されたマニフェスト情報を参照し、バッグを妥当性確認します。Unzipped"
 " bags転送タイプは、圧縮形式で保存されていないバッグに使用できます。Archivematica によるバッグの実装方法の詳細については、 "
-":ref:`バッグ <bags>` を参照してください。"
+":ref:`Bags <bags>` を参照してください。"
 
 #: ../../user-manual/transfer/transfer.rst:193
 msgid ""
@@ -758,8 +758,8 @@ msgid ""
 "Archivematica, please see :ref:`METS in Archivematica <mets_schema>` and "
 ":ref:`PREMIS metadata in Archivematica <premis-template>`."
 msgstr ""
-"Archivematica で使用されるメタデータ要素がどのようにエンコードされるかについて詳しくは、 :ref:`Archivematica の "
-"METS <mets_schema>` と :ref:`Archivematica の PREMIS メタデータ <premis-template>` "
+"Archivematica で使用されるメタデータ要素がどのようにエンコードされるかについて詳しくは、 :ref:`METS in Archivematica <mets_schema>`"
+"と :ref:`PREMIS metadata in Archivematica <premis-template>` "
 "を参照してください。"
 
 #: ../../user-manual/transfer/transfer.rst:406
@@ -840,7 +840,7 @@ msgid ""
 "Information Package (DIP) from the provided access copies."
 msgstr ""
 "この転送を処理すると、Archivematica は、アクセスコピーの存在を自動的に認識します。 :ref:`[インジェスト] タブ <ingest>`"
-" の :ref:`正規化 <normalize>` マイクロサービスでは、Archivematica "
+" の :ref:`normalization <normalize>` マイクロサービスでは、Archivematica "
 "が、提供されたアクセスコピーから常に普及情報パッケージ (DIP) を作成するため、表示される正規化オプションが少なくなります。"
 
 #: ../../user-manual/transfer/transfer.rst:-1

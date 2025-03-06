@@ -82,8 +82,7 @@ msgid ""
 "Skip this step if you are planning to run :ref:`Archivematica without "
 "Elasticsearch <install-elasticsearch>`."
 msgstr ""
-"Elasticsearch<install-"
-"elasticsearch>`を使用せずに:ref:`Archivematicaを実行する場合は、この手順をスキップしてください。"
+":ref:`Elasticsearchを使用せずにArchivematicaを実行<install-elasticsearch>`する場合は、この手順をスキップしてください。"
 
 #: ../../admin-manual/installation-setup/installation/install-rocky.rst:54
 msgid "Archivematica - use these commands to install the repositories:"
