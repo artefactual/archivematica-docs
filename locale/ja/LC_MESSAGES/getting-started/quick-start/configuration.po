@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/quick-start/configuration.rst:4
+msgid "Configuration"
+msgstr "設定"
+
+#: ../../getting-started/quick-start/configuration.rst:7
+msgid "Workflow settings"
+msgstr "ワークフロー設定"
+
+#: ../../getting-started/quick-start/configuration.rst:9
+msgid ""
+"Many workflow choices are pre-configurable through the Administration tab of"
+" the Dashboard. Please see :ref:`Processing configuration <dashboard-"
+"processing>`."
+msgstr ""
+"ワークフローの多くの選択肢は、ダッシュボードの「管理」タブで事前設定可能です。 :ref:`処理設定 <dashboard-processing>` "
+"を参照してください。"
+
+#: ../../getting-started/quick-start/configuration.rst:12
+msgid ""
+"Some users have found processing economies by installing multiple "
+"Archivematica pipelines on separate VM's, each with its own processing "
+"configuration specific to the type of material being processed through each "
+"pipeline."
+msgstr ""
+"複数の Archivematicaパイプラインを別々のVMに "
+"インストールし、各パイプラインで処理される素材のタイプに特化した独自の処理設定を行うことで、処理コストの削減を実現しているユーザーもいます。"
+
+#: ../../getting-started/quick-start/configuration.rst:17
+msgid "Integration settings"
+msgstr "統合設定"
+
+#: ../../getting-started/quick-start/configuration.rst:19
+msgid ""
+"Archivematica integrates with a number of different access and storage "
+"systems. Please see:"
+msgstr "Archivematicaは、様々なアクセスシステムやストレージシステムと統合できます。こちらを参照してください："
+
+#: ../../getting-started/quick-start/configuration.rst:22
+msgid ":ref:`AtoM <admin-dashboard-atom>`"
+msgstr ":ref:`AtoM <admin-dashboard-atom>`"
+
+#: ../../getting-started/quick-start/configuration.rst:23
+msgid ":ref:`ContentDM <contentdm>`"
+msgstr ":ref:`ContentDM <contentdm>`"
+
+#: ../../getting-started/quick-start/configuration.rst:24
+msgid ":ref:`DSpace <dspace>`"
+msgstr ":ref:`DSpace <dspace>`"
+
+#: ../../getting-started/quick-start/configuration.rst:25
+msgid ""
+":ref:`LOCKSS <storageService:admin-lockss>` (Administrator documentation)"
+msgstr ":ref:`LOCKSS <storageService:admin-lockss>` （管理者用文書）"
+
+#: ../../getting-started/quick-start/configuration.rst:26
+msgid "Duracloud (coming soon)"
+msgstr "DuraCloud（近日公開）"
+
+#: ../../getting-started/quick-start/configuration.rst:27
+msgid "Arkivum (coming soon)"
+msgstr "Arkivum（近日公開）"
+
+#: ../../getting-started/quick-start/configuration.rst:30
+msgid "Add/edit users and passwords"
+msgstr "ユーザーとパスワードの追加/編集"
+
+#: ../../getting-started/quick-start/configuration.rst:32
+msgid ""
+"Administrative users can add/edit users and update passwords. An "
+"administrative user does not need to be a systems administrator and can "
+"perform this function within the Archivematica dashboard Administration "
+"page."
+msgstr ""
+"管理ユーザーは、ユーザーの追加/編集やパスワードの更新を行うことができます。管理ユーザーは、システム管理者である必要はなく、Archivematicaダッシュボードの管理ページでこの機能を実行できます。"
+
+#: ../../getting-started/quick-start/configuration.rst:36
+msgid "Please see :ref:`Users <dashboard-premis>`."
+msgstr ":ref:`ユーザー <dashboard-premis>` を参照してください。"
+
+#: ../../getting-started/quick-start/configuration.rst:39
+msgid "Add/edit PREMIS agents"
+msgstr "PREMIS エージェントの追加/編集"
+
+#: ../../getting-started/quick-start/configuration.rst:41
+msgid ""
+"Administrative users can add/edit PREMIS agents, which are recorded in the "
+"METS file to identify the agency performing digital preservation events. "
+"This should be configured before processing begins, and can be set through "
+"Archivematica dashboard Administration page."
+msgstr ""
+"管理ユーザーは、PREMISエージェントを追加/編集できます。PREMISエージェントは、METSファイルに記録され、デジタル保存イベントを実行するエージェンシーを識別します。これは、処理を開始する前に設定する必要があり、Archivematicaダッシュボードの管理画面から設定できます。"
+
+#: ../../getting-started/quick-start/configuration.rst:46
+msgid "Please see :ref:`PREMIS agent <dashboard-premis>`."
+msgstr ":ref:`PREMISエージェント <dashboard-premis>` を参照してください。"
+
+#: ../../getting-started/quick-start/configuration.rst:48
+msgid ":ref:`Back to the top <configuration>`"
+msgstr ":ref:`トップに戻る <configuration>`"

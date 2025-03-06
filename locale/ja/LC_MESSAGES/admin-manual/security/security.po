@@ -1,0 +1,771 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/security/security.rst:5
+msgid "Security"
+msgstr "セキュリティ"
+
+#: ../../admin-manual/security/security.rst:9
+msgid ""
+"Once you've set up Archivematica it's a good practice, for the sake of "
+"security, to change the default passwords."
+msgstr "Archivematicaをセットアップしたら、セキュリティのためにデフォルトのパスワードを変更することをお勧めします。"
+
+#: ../../admin-manual/security/security.rst:12
+msgid ""
+"This page outlines various security settings and configurations in "
+"Archivematica."
+msgstr "このページでは、Archivematicaの様々なセキュリティ設定と構成について説明します。"
+
+#: ../../admin-manual/security/security.rst:18
+msgid "Elasticsearch access control"
+msgstr "Elasticsearchのアクセス制御"
+
+#: ../../admin-manual/security/security.rst:20
+msgid ""
+"The only way to limit access to Elasticsearch, currently, is using your "
+"server's firewall configuration. You'll likely want to configure your "
+"server's firewall to limit access to Elasticsearch's TCP/IP port (9200). It "
+"is recommended to only allow access by 127.0.0.1 (the server itself) and the"
+" IPs of any other servers or workstations that should be able to access it."
+msgstr ""
+"現在のところ、Elasticsearchへのアクセスを制限する唯一の方法は、サーバーのファイアウォール設定を使用することです。ElasticsearchのTCP/IPポート（9200）へのアクセスを制限するようにサーバのファイアウォールを設定することをお勧めします。127.0.0.1(サーバー自体)"
+" と、それにアクセスできる他のサーバーまたはワークステーションのIPによるアクセスのみを許可することをお勧めします。"
+
+#: ../../admin-manual/security/security.rst:28
+msgid ""
+"If you are using AtoM as your access system, remember to perform this task "
+"on your AtoM Elasticsearch index. Your AtoM site is more likely to be a "
+"public-facing IP and therefore this is an important step."
+msgstr ""
+"アクセスシステムとしてAtoMを使用している場合は、AtoM "
+"Elasticsearchインデックスに対してこのタスクを忘れずに実行してください。AtoMサイトは一般公開IPである可能性が高いため、これは重要な手順となります。"
+
+#: ../../admin-manual/security/security.rst:32
+msgid ""
+"For more advanced Elasticsearch installations follow `their security "
+"documentation <elasticsearch-security-external_>`_. The "
+"``archivematica_src_elasticsearch_host`` configuration attribute accepts "
+"RFC-1738 formatted URLs (e.g.: ``https://user:secret@host:443``)."
+msgstr ""
+"より高度なElasticsearchのインストールについては、 `セキュリティ文書 <elasticsearch-security-"
+"external_>`_ に従ってください。 ``archivematica_src_elasticsearch_host`` "
+"設定属性は、RFC-1738フォーマットのURLを受け付けます（例： ``https://user:secret@host:443`` ）。"
+
+#: ../../admin-manual/security/security.rst:40
+msgid "MySQL"
+msgstr "MySQL"
+
+#: ../../admin-manual/security/security.rst:42
+msgid ""
+"You should create a new MySQL user or change the password of the default "
+"``archivematica`` MySQL user. The change the password of the default user, "
+"enter the following into the command-line:"
+msgstr ""
+"新しいMySQLユーザーを作成するか、デフォルトの ``archivematica`` "
+"MySQLユーザーのパスワードを変更する必要があります。デフォルトユーザーのパスワードを変更するには、コマンドラインに次のように入力します："
+
+#: ../../admin-manual/security/security.rst:52
+msgid ""
+"Once you've done this you can change Archivematica's MySQL database access "
+"credentials by editing your system files and changing the following values "
+"for each of the following components."
+msgstr ""
+"この後、システムファイルを編集し、以下の各コンポーネントの値を変更することで、ArchivematicaのMySQLデータベースアクセス認証情報を変更できます。"
+
+#: ../../admin-manual/security/security.rst:56
+msgid ""
+"The components can be found in different locations depending on the "
+"Operating System."
+msgstr "コンポーネントは、オペレーティングシステムによって異なる場所にあります。"
+
+#: ../../admin-manual/security/security.rst:59
+msgid "For Ubuntu systems:"
+msgstr "Ubuntuシステムの場合："
+
+#: ../../admin-manual/security/security.rst:61
+msgid "/etc/default/archivematica-dashboard"
+msgstr "/etc/default/archivematica-dashboard"
+
+#: ../../admin-manual/security/security.rst:62
+msgid "/etc/default/archivematica-mcp-client"
+msgstr "/etc/default/archivematica-mcp-client"
+
+#: ../../admin-manual/security/security.rst:63
+msgid "/etc/default/archivematica-mcp-server"
+msgstr "/etc/default/archivematica-mcp-server"
+
+#: ../../admin-manual/security/security.rst:64
+msgid "/etc/default/archivematica-storage-service"
+msgstr "/etc/default/archivematica-storage-service"
+
+#: ../../admin-manual/security/security.rst:66
+msgid "For Rocky Linux/Red Hat systems:"
+msgstr "Rocky Linux/Red Hatシステムの場合："
+
+#: ../../admin-manual/security/security.rst:68
+msgid "/etc/sysconfig/archivematica-dashboard"
+msgstr "/etc/sysconfig/archivematica-dashboard"
+
+#: ../../admin-manual/security/security.rst:69
+msgid "/etc/sysconfig/archivematica-mcp-client"
+msgstr "/etc/sysconfig/archivematica-mcp-client"
+
+#: ../../admin-manual/security/security.rst:70
+msgid "/etc/sysconfig/archivematica-mcp-server"
+msgstr "/etc/sysconfig/archivematica-mcp-server"
+
+#: ../../admin-manual/security/security.rst:71
+msgid "/etc/sysconfig/archivematica-storage-service"
+msgstr "/etc/sysconfig/archivematica-storage-service"
+
+#: ../../admin-manual/security/security.rst:73
+msgid ""
+"The variables are different depending on the component. These are the "
+"following variables to change per component:"
+msgstr "変数はコンポーネントによって異なります。コンポーネントごとに変更する変数は以下の通りです："
+
+#: ../../admin-manual/security/security.rst:76
+msgid "**Dashboard:**"
+msgstr "**ダッシュボード：**"
+
+#: ../../admin-manual/security/security.rst:78
+msgid "ARCHIVEMATICA_DASHBOARD_CLIENT_DATABASE"
+msgstr "ARCHIVEMATICA_DASHBOARD_CLIENT_DATABASE"
+
+#: ../../admin-manual/security/security.rst:79
+msgid "ARCHIVEMATICA_DASHBOARD_CLIENT_HOST"
+msgstr "ARCHIVEMATICA_DASHBOARD_CLIENT_HOST"
+
+#: ../../admin-manual/security/security.rst:80
+msgid "ARCHIVEMATICA_DASHBOARD_CLIENT_PASSWORD"
+msgstr "ARCHIVEMATICA_DASHBOARD_CLIENT_PASSWORD"
+
+#: ../../admin-manual/security/security.rst:81
+msgid "ARCHIVEMATICA_DASHBOARD_CLIENT_USER"
+msgstr "ARCHIVEMATICA_DASHBOARD_CLIENT_USER"
+
+#: ../../admin-manual/security/security.rst:83
+msgid "**MCPClient:**"
+msgstr "**MCPClient：**"
+
+#: ../../admin-manual/security/security.rst:85
+msgid "ARCHIVEMATICA_MCPCLIENT_CLIENT_DATABASE"
+msgstr "ARCHIVEMATICA_MCPCLIENT_CLIENT_DATABASE"
+
+#: ../../admin-manual/security/security.rst:86
+msgid "ARCHIVEMATICA_MCPCLIENT_CLIENT_HOST"
+msgstr "ARCHIVEMATICA_MCPCLIENT_CLIENT_HOST"
+
+#: ../../admin-manual/security/security.rst:87
+msgid "ARCHIVEMATICA_MCPCLIENT_CLIENT_PASSWORD"
+msgstr "ARCHIVEMATICA_MCPCLIENT_CLIENT_PASSWORD"
+
+#: ../../admin-manual/security/security.rst:88
+msgid "ARCHIVEMATICA_MCPCLIENT_CLIENT_USER"
+msgstr "ARCHIVEMATICA_MCPCLIENT_CLIENT_USER"
+
+#: ../../admin-manual/security/security.rst:90
+msgid "**MCPServer:**"
+msgstr "**MCPServer：**"
+
+#: ../../admin-manual/security/security.rst:92
+msgid "ARCHIVEMATICA_MCPSERVER_CLIENT_DATABASE"
+msgstr "ARCHIVEMATICA_MCPSERVER_CLIENT_DATABASE"
+
+#: ../../admin-manual/security/security.rst:93
+msgid "ARCHIVEMATICA_MCPSERVER_CLIENT_HOST"
+msgstr "ARCHIVEMATICA_MCPSERVER_CLIENT_HOST"
+
+#: ../../admin-manual/security/security.rst:94
+msgid "ARCHIVEMATICA_MCPSERVER_CLIENT_PASSWORD"
+msgstr "ARCHIVEMATICA_MCPSERVER_CLIENT_PASSWORD"
+
+#: ../../admin-manual/security/security.rst:95
+msgid "ARCHIVEMATICA_MCPSERVER_CLIENT_USER"
+msgstr "ARCHIVEMATICA_MCPSERVER_CLIENT_USER"
+
+#: ../../admin-manual/security/security.rst:97
+msgid "**Storage Service when using sqlite3:**"
+msgstr "**sqlite3使用時のStorage Service：**"
+
+#: ../../admin-manual/security/security.rst:99
+msgid "SS_DB_NAME"
+msgstr "SS_DB_NAME"
+
+#: ../../admin-manual/security/security.rst:100
+msgid "SS_DB_HOST"
+msgstr "SS_DB_HOST"
+
+#: ../../admin-manual/security/security.rst:101
+msgid "SS_DB_PASSWORD"
+msgstr "SS_DB_PASSWORD"
+
+#: ../../admin-manual/security/security.rst:102
+msgid "SS_DB_USER"
+msgstr "SS_DB_USER"
+
+#: ../../admin-manual/security/security.rst:104
+msgid "**Storage Service when using MySQL:**"
+msgstr "**MySQLを使用する場合のStorage Service：**"
+
+#: ../../admin-manual/security/security.rst:106
+msgid "SS_DB_URL"
+msgstr "SS_DB_URL"
+
+#: ../../admin-manual/security/security.rst:108
+msgid ""
+"For Storage Service MySQL database see: `Storage Service application-"
+"specific-environment-variables <ss-config_>`_."
+msgstr ""
+"Storage ServiceのMySQLデータベースの場合は、 `Storage Serviceアプリケーション固有の環境変数 <ss-"
+"config_>`_ を参照してください。"
+
+#: ../../admin-manual/security/security.rst:114
+msgid "AtoM"
+msgstr "AtoM"
+
+#: ../../admin-manual/security/security.rst:116
+msgid ""
+"In addition to changing the MySQL credentials, if you've also installed AtoM"
+" you'll want to set the password for it as well. Note that after changing "
+"your AtoM credentials you should update the credentials on the :ref:`AtoM "
+"DIP upload administration page <admin-dashboard-atom>` as well."
+msgstr ""
+"MySQL認証情報の変更に加えて、AtoMもインストールしている場合は、そのパスワードも設定します。AtoMの認証情報を変更した後は、 "
+":ref:`AtoM DIPアップロード管理ページ <admin-dashboard-atom>` の認証情報も更新してください。"
+
+#: ../../admin-manual/security/security.rst:124
+msgid "Gearman"
+msgstr "Gearman"
+
+#: ../../admin-manual/security/security.rst:126
+msgid ""
+"Archivematica relies on the German server for queuing work that needs to be "
+"done. Gearman currently doesn't support secured connections so Gearman "
+"should be run locally or on a secure, isolated network. See :issue:`1345`."
+msgstr ""
+"Archivematicaは、実行する必要のある作業をキューイングするためにGermanサーバに依存しています。Gearmanは、現在セキュアな接続をサポートしていないので、Gearmanはローカルか、セキュアで隔離されたネットワーク上で実行する必要があります。issue："
+" `1345` を参照してください。"
+
+#: ../../admin-manual/security/security.rst:133
+msgid "Authentication backends"
+msgstr "認証バックエンド"
+
+#: ../../admin-manual/security/security.rst:135
+msgid ""
+"Archivematica supports multiple authentication backends: LDAP, Shibboleth, "
+"OIDC and CAS. Authentication backends provide an extensible system for when "
+"a ``username`` and ``password`` stored with the user model need to be "
+"authenticated against a different service than the default."
+msgstr ""
+"Archivematicaは、複数の認証バックエンドをサポートしています：LDAP、Shibboleth、OIDC、CASです。認証バックエンドは、ユーザーモデルで保存された"
+" ``username`` と ``password`` を、デフォルトとは異なるサービスで認証する必要がある場合に、拡張可能なシステムを提供します。"
+
+#: ../../admin-manual/security/security.rst:140
+msgid ""
+"This feature relies on the `authentication infrastructure <django-auth-"
+"infra_>`_ provided by the Django web framework. Check out their docs for "
+"more details!"
+msgstr ""
+"この機能は、Django Webフレームワークが提供する `認証基盤 <django-auth-infra_>`_ "
+"に依存しています。詳しくはDjangoの文書を参照してください！"
+
+#: ../../admin-manual/security/security.rst:146
+msgid "LDAP setup"
+msgstr "LDAPの設定"
+
+#: ../../admin-manual/security/security.rst:148
+msgid ""
+"`LDAP <ldap_>`_ is a directory service protocol used for, among other "
+"things, authentication and authorization. This feature allows administrators"
+" to deploy the Archivematica Dashboard Django application with LDAP "
+"authentication."
+msgstr ""
+"`LDAP <ldap_>`_ は、ディレクトリサービスプロトコルで、特に認証と認可に使用されます。この機能により、管理者は、Archivematica"
+" Dashboard DjangoアプリケーションをLDAP認証でデプロイできます。"
+
+#: ../../admin-manual/security/security.rst:152
+msgid ""
+"This functionality has not been made available yet in the Storage Service."
+msgstr "この機能は、Storage Serviceではまだ利用可能になっていません。"
+
+#: ../../admin-manual/security/security.rst:155
+msgid "LDAP backend configuration"
+msgstr "LDAPバックエンドの設定"
+
+#: ../../admin-manual/security/security.rst:157
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION``. You can find more"
+" details about this environment string in the `configuration document <am-"
+"dashboard-config_>`_."
+msgstr ""
+"環境変数 ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_LDAP_AUTHENTICATION`` "
+"を使用して、認証バックエンドを有効にします。この環境文字列の詳細については、 `の設定文書 <am-dashboard-config_>`_ "
+"を参照してください。"
+
+#: ../../admin-manual/security/security.rst:162
+msgid ""
+"Customize the ``ldap_auth.py`` settings module as needed. Open the file to "
+"find what are the existing environment variable lookups. You can inject the "
+"configuration via the environment string or changing the settings mode "
+"manually."
+msgstr ""
+"``ldap_auth.py`` "
+"設定モジュールを必要に応じてカスタマイズします。ファイルを開いて、既存の環境変数ルックアップが何かを見つけてください。環境文字列を介して設定を注入するか、手動で設定モードを変更できます。"
+
+#: ../../admin-manual/security/security.rst:167
+#: ../../admin-manual/security/security.rst:188
+#: ../../admin-manual/security/security.rst:230
+#: ../../admin-manual/security/security.rst:263
+#: ../../admin-manual/security/security.rst:375
+msgid "Restart the Archivematica Dashboard."
+msgstr "Archivematica Dashboardを再起動します。"
+
+#: ../../admin-manual/security/security.rst:172
+msgid "Shibboleth setup"
+msgstr "Shibbolethの設定"
+
+#: ../../admin-manual/security/security.rst:174
+msgid ""
+"`Shibboleth <shibboleth_>`_ is a federated identity solution that provides "
+"Single Sign-On authentication and authorization. This feature allows "
+"administrators to deploy both the Archivematica Dashboard and Storage "
+"Service Django applications with Shibboleth authentication."
+msgstr ""
+"`Shibboleth <shibboleth_>`_ "
+"は、シングルサインオン認証と認可を提供する統合IDソリューションです。この機能により、管理者は、Archivematica "
+"DashboardとStorage Service Djangoアプリケーションの両方をShibboleth認証でデプロイできます。"
+
+#: ../../admin-manual/security/security.rst:180
+msgid "Shibboleth backend configuration in Archivematica Dashboard"
+msgstr "ArchivematicaダッシュボードでのShibbolethバックエンド設定"
+
+#: ../../admin-manual/security/security.rst:182
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SHIBBOLETH_AUTHENTICATION``. You can "
+"find more details about this environment string in the `configuration "
+"document <am-dashboard-config_>`_."
+msgstr ""
+"環境変数 ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SHIBBOLETH_AUTHENTICATION`` "
+"を使用して、認証バックエンドを有効にします。この環境文字列の詳細については、 `の設定文書 <am-dashboard-config_>`_ "
+"を参照してください。"
+
+#: ../../admin-manual/security/security.rst:186
+msgid "Customize the ``shibboleth_auth.py`` settings module as needed."
+msgstr "``shibboleth_auth.py`` 設定モジュールを必要に応じてカスタマイズします。"
+
+#: ../../admin-manual/security/security.rst:191
+msgid "Shibboleth backend configuration in Storage Service"
+msgstr "Storage Serviceにおける Shibbolethバックエンドの設定"
+
+#: ../../admin-manual/security/security.rst:193
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_SHIBBOLETH_AUTHENTICATION``. Assign a string value ``true`` to enable "
+"it."
+msgstr ""
+"環境変数 ``SS_SHIBBOLETH_AUTHENTICATION`` を使って認証バックエンドを有効にします。文字列値 ``true`` "
+"を代入して有効にします。"
+
+#: ../../admin-manual/security/security.rst:197
+#: ../../admin-manual/security/security.rst:239
+#: ../../admin-manual/security/security.rst:287
+msgid "Customize the ``base.py`` settings module as needed."
+msgstr "``base.py`` 設定モジュールを必要に応じてカスタマイズします。"
+
+#: ../../admin-manual/security/security.rst:199
+#: ../../admin-manual/security/security.rst:241
+#: ../../admin-manual/security/security.rst:289
+#: ../../admin-manual/security/security.rst:388
+msgid "Restart the Storage Service."
+msgstr "Storage Serviceを再起動します。"
+
+#: ../../admin-manual/security/security.rst:204
+msgid "OIDC setup"
+msgstr "OIDCのセットアップ"
+
+#: ../../admin-manual/security/security.rst:206
+msgid ""
+"`OIDC <oidc_>`_ (OpenID Connect) is an identity layer on top of OAuth 2.0, "
+"providing identity verification, authentication and basic information about "
+"the end user. This feature allows administrators to deploy both the "
+"Archivematica Dashboard and Storage Service Django applications with OIDC "
+"authentication."
+msgstr ""
+"`OIDC <oidc_>`_ （OpenID Connect）は、OAuth "
+"2.0上のIDレイヤであり、IDの確認、認証、エンドユーザーの基本情報を示します。この機能により、管理者は、Archivematica "
+"DashboardとStorage Service Djangoアプリケーションの両方をOIDC認証でデプロイできます。"
+
+#: ../../admin-manual/security/security.rst:211
+msgid ""
+"It is based on `mozilla-django-oidc <mozilla-django-oidc-docs_>`_. In "
+"addition to the instructions below, please refer to their documentation for "
+"more details."
+msgstr ""
+"これは、 `mozilla-django-oidc <mozilla-django-oidc-docs_>`_ "
+"をベースにしています。以下の説明に加えて、詳細について、その文書を参照してください。"
+
+#: ../../admin-manual/security/security.rst:217
+msgid ""
+"The OIDC backend is an experimental feature that you can turn on to test "
+"(see instructions below). Please share your feedback!"
+msgstr "OIDCバックエンドは、テストのために有効にすることができる実験的な機能です (以下の手順を参照)。ご意見をお聞かせください！"
+
+#: ../../admin-manual/security/security.rst:221
+msgid "OIDC backend configuration in Archivematica Dashboard"
+msgstr "ArchivematicaダッシュボードでのOIDCバックエンド設定"
+
+#: ../../admin-manual/security/security.rst:223
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_OIDC_AUTHENTICATION``. You can find more"
+" details about this environment string in the `configuration document <am-"
+"dashboard-config_>`_."
+msgstr ""
+"環境変数 ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_OIDC_AUTHENTICATION`` "
+"を使用して、認証バックエンドを有効にします。この環境文字列の詳細については、 `の設定文書 <am-dashboard-config_>`_ "
+"を参照してください。"
+
+#: ../../admin-manual/security/security.rst:228
+msgid "Customize the ``oidc_auth.py`` settings module as needed."
+msgstr "``oidc_auth.py`` 設定モジュールを必要に応じてカスタマイズします。"
+
+#: ../../admin-manual/security/security.rst:233
+msgid "OIDC backend configuration in Storage Service"
+msgstr "Storage ServiceのOIDCバックエンド設定"
+
+#: ../../admin-manual/security/security.rst:235
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_OIDC_AUTHENTICATION``. Assign a string value ``true`` to enable it."
+msgstr ""
+"環境変数 ``SS_OIDC_AUTHENTICATION`` を使って認証バックエンドを有効にします。文字列値 ``true`` "
+"を代入して有効にします。"
+
+#: ../../admin-manual/security/security.rst:246
+msgid "CAS setup"
+msgstr "CASのセットアップ"
+
+#: ../../admin-manual/security/security.rst:248
+msgid ""
+"`CAS <cas_>`_ (Central Authentication Service) is an enterprise multilingual"
+" single sign-on solution to authentication for web applications. This "
+"feature allows administrators to deploy both the Archivematica Dashboard and"
+" Storage Service Django applications with CAS authentication."
+msgstr ""
+"`CAS <cas_>`_ （Central Authentication "
+"Service）は、Webアプリケーション認証のためのエンタープライズ向け多言語シングルサインオンソリューションです。この機能により、管理者は、Archivematica"
+" DashboardとStorage Service Djangoアプリケーションの両方にCAS認証を導入できます。"
+
+#: ../../admin-manual/security/security.rst:254
+msgid "CAS backend configuration in Archivematica Dashboard"
+msgstr "ArchivematicaダッシュボードでのCASバックエンド設定"
+
+#: ../../admin-manual/security/security.rst:256
+msgid ""
+"Enable the authentication backend using the environment variable "
+"`ARCHIVEMATICA_DASHBOARD_DASHBOARD_CAS_AUTHENTICATION`. You can find more "
+"details about this environment string in the `configuration document <am-"
+"dashboard-config_>`_."
+msgstr ""
+"環境変数 `ARCHIVEMATICA_DASHBOARD_DASHBOARD_CAS_AUTHENTICATION "
+"`を使用して、認証バックエンドを有効にします。この環境文字列の詳細については、` 設定文書 <am-dashboard-config_>`_ "
+"を参照してください。"
+
+#: ../../admin-manual/security/security.rst:261
+msgid "Customize the ``cas_auth.py`` settings module as needed."
+msgstr "``cas_auth.py`` 設定モジュールを必要に応じてカスタマイズします。"
+
+#: ../../admin-manual/security/security.rst:265
+#: ../../admin-manual/security/security.rst:291
+msgid "Apply the database migrations with:"
+msgstr "以下を用いてデータベース移行を適用します："
+
+#: ../../admin-manual/security/security.rst:281
+msgid "CAS backend configuration in Storage Service"
+msgstr "Storage ServiceのCASバックエンド設定"
+
+#: ../../admin-manual/security/security.rst:283
+msgid ""
+"Enable the authentication backend using the environment variable "
+"``SS_CAS_AUTHENTICATION``. Assign a string value ``true`` to enable it."
+msgstr ""
+"環境変数 ``SS_SHIBBOLETH_AUTHENTICATION`` を使って認証バックエンドを有効にします。文字列値 ``true`` "
+"を代入して有効にします。"
+
+#: ../../admin-manual/security/security.rst:308
+msgid "Password validation"
+msgstr "パスワード認証"
+
+#: ../../admin-manual/security/security.rst:310
+msgid ""
+"A strong password policy can be introduced by enabling the password "
+"validation layer, which is available in both `Archivematica <am-dashboard-"
+"config_>`_ and `Storage Service <ss-config_>`_."
+msgstr ""
+"強力なパスワードポリシーは、 `Archivematica <am-dashboard-config_>`_ と `Storage Service "
+"<ss-config_>`_ の両方で利用可能なパスワード妥当性確認レイヤを有効にすることで導入できます。"
+
+#: ../../admin-manual/security/security.rst:314
+msgid ""
+"Please follow the links above to know more about the different options "
+"available. E.g. the minimum lenght of your user passwords can be adjusted "
+"with ``ARCHIVEMATICA_DASHBOARD_PASSWORD_MINIMUM_LENGTH`` and "
+"``SS_AUTH_PASSWORD_MINIMUM_LENGTH`` depending on the component."
+msgstr ""
+"利用可能なさまざまなオプションの詳細については、上記のリンクをたどってください。例えば、ユーザーパスワードの最小長さは、コンポーネントによって "
+"``ARCHIVEMATICA_DASHBOARD_PASSWORD_MINIMUM_LENGTH`` と "
+"``SS_AUTH_PASSWORD_MINIMUM_LENGTH`` で調整できます。"
+
+#: ../../admin-manual/security/security.rst:322
+msgid "Cookie and session security"
+msgstr "クッキーとセッションのセキュリティ"
+
+#: ../../admin-manual/security/security.rst:324
+msgid ""
+"When using HTTPS, it is recommended to enable \"secure\" cookies as well as "
+"other Django settings that provide additional security. See the `SSL/HTTPS "
+"<django-https-settings_>`_ section on the Django documentation site for "
+"further details."
+msgstr ""
+"HTTPSを使う場合、\"セキュア\"クッキーを有効にし、さらにセキュリティを強化する他のDjango設定も有効にすることをお勧めします。詳しくは、Djangoドキュメンテーションサイトの"
+" `SSL/HTTPS <django-https-settings_>`_ セクションを参照してください。"
+
+#: ../../admin-manual/security/security.rst:329
+msgid ""
+"Additionally, it is possible to adjust some Django settings related to "
+"`session management <django-session-settings_>`_, such as their length or "
+"some other attributes related to the session cookie, e.g. "
+"``SESSION_COOKIE_SECURE`` marks the session cookie as \"secure\"."
+msgstr ""
+"さらに、 `セッション管理 <django-session-settings_>`_ "
+"に関連するいくつかのDjango設定を調整することも可能です。例えば、セッションクッキーの長さや、セッションクッキーに関連する他の属性などです。例えば、"
+" ``SESSION_COOKIE_SECURE`` は、セッションクッキーを\"secure\"としてマークします。"
+
+#: ../../admin-manual/security/security.rst:336
+msgid ""
+"The final Django settings module targeting production environments is "
+"``production.py``. In our repositories, they can be found `here <am-prod-"
+"settings_>`_ and `here <ss-prod-settings_>`_. There is not current support "
+"for additional settings modules but it may be added in the future."
+msgstr ""
+"生産環境をターゲットにした最後のDjango設定モジュールは ``production.py`` です。当社のリポジトリでは、 `ここ <am-"
+"prod-settings_>`_ と `ここ <ss-prod-settings_>`_ "
+"にあります。現在、追加設定モジュールのサポートはありませんが、将来追加されるかもしれません。"
+
+#: ../../admin-manual/security/security.rst:345
+msgid "Content Security Policy (CSP)"
+msgstr "コンテンツセキュリティポリシー（CSP）"
+
+#: ../../admin-manual/security/security.rst:347
+msgid ""
+"`CSP <csp_>`_ (Content Security Policy) is an added layer of security that "
+"helps to detect and mitigate certain types of attacks, including Cross Site "
+"Scripting (XSS) and data injection attacks. This feature allows "
+"administrators to deploy both the Archivematica Dashboard and Storage "
+"Service Django applications with CSP headers."
+msgstr ""
+"`CSP <csp_>`_ （Content Security "
+"Policy）は、クロスサイトスクリプティング（XSS）やデータインジェクション攻撃など、特定のタイプの攻撃を検出し、軽減するのに役立つセキュリティの追加レイヤです。この機能により、管理者は、Archivematica"
+" DashboardとStorage Service Djangoアプリケーションの両方をCSPヘッダ付きでデプロイできます。"
+
+#: ../../admin-manual/security/security.rst:353
+msgid ""
+"It is based on the `django-csp <django-csp-docs_>`_ package. In addition to "
+"the instructions below, please refer to their documentation for more "
+"details."
+msgstr ""
+"`django-csp <django-csp-docs_>`_ "
+"パッケージをベースにしています。以下の説明に加えて、詳細は、その文書を参照してください。"
+
+#: ../../admin-manual/security/security.rst:359
+msgid ""
+"The CSP support is an experimental feature that you can turn on to test (see"
+" instructions below). Please share your feedback!"
+msgstr "CSPサポートは実験的な機能であり、テストするためにオンにできます（下記の説明を参照してください）。フィードバックをお寄せください！"
+
+#: ../../admin-manual/security/security.rst:363
+msgid "CSP configuration in Archivematica Dashboard"
+msgstr "Archivematica DashboardでのCSP構成"
+
+#: ../../admin-manual/security/security.rst:365
+msgid ""
+"Enable CSP support using the environment variable "
+"``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSP_ENABLED``. You can find more details"
+" about this environment string in the `configuration document <am-dashboard-"
+"config_>`_."
+msgstr ""
+"環境変数 ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSP_ENABLED`` "
+"を使用して、CSPサポートを有効にします。この環境文字列の詳細については、 `構成文書 <am-dashboard-config_>`_ "
+"を参照してください。"
+
+#: ../../admin-manual/security/security.rst:370
+#: ../../admin-manual/security/security.rst:383
+msgid ""
+"A small set of header policies are loaded from the "
+"``settings.components.csp`` module, but you can provide your own overrides "
+"through a Python module and set its path in the ``CSP_SETTINGS_FILE`` Django"
+" setting."
+msgstr ""
+"ヘッダポリシーの小さなセットは、 ``settings.components.csp`` "
+"モジュールから読み込まれますが、Pythonモジュールで独自のオーバーライドを提供し、 ``CSP_SETTINGS_FILE`` "
+"Django設定でそのパスを設定できます。"
+
+#: ../../admin-manual/security/security.rst:378
+msgid "CSP backend configuration in Storage Service"
+msgstr "Storage ServiceのCSPバックエンド構成"
+
+#: ../../admin-manual/security/security.rst:380
+msgid ""
+"Enable CSP support using the environment variable ``SS_CSP_ENABLED``. Assign"
+" a string value ``true`` to enable it."
+msgstr ""
+"環境変数 ``SS_CSP_ENABLED`` を使用して、CSPサポートを有効にします。文字列値 ``true`` を代入して有効にします。"
+
+#: ../../admin-manual/security/security.rst:393
+msgid "CA certificates"
+msgstr "CA証明書"
+
+#: ../../admin-manual/security/security.rst:395
+msgid ""
+"Archivematica uses a HTTP library called `Requests <requests_>`_. There are "
+"`two main approaches <requests-cas_>`_ for dealing with the updates of the "
+"root CAs sets:"
+msgstr ""
+"Archivematicaは、 `Requests <requests_>`_ "
+"というHTTPライブラリを使用しています。ルートCAセットの更新を処理するには、 `2つの主なアプローチ <requests-cas_>`_ "
+"があります："
+
+#: ../../admin-manual/security/security.rst:400
+msgid "Upgrade the ``certifi`` package frequently"
+msgstr "``certifi`` パッケージは頻繁にアップグレードしてください"
+
+#: ../../admin-manual/security/security.rst:402
+msgid "This is how you can update ``certifi`` inside the virtual environment:"
+msgstr "このようにして、仮想環境内で ``certifi`` をアップグレードできます："
+
+#: ../../admin-manual/security/security.rst:408
+msgid ""
+"The services need to be restarted after the update, for example if you are "
+"using systemd:"
+msgstr "例えば systemd を使用している場合は、アップデート後にサービスを再起動する必要があります："
+
+#: ../../admin-manual/security/security.rst:418
+msgid "Use the environment string REQUESTS_CA_BUNDLE"
+msgstr "環境文字列REQUESTS_CA_BUNDLEを使用"
+
+#: ../../admin-manual/security/security.rst:420
+msgid ""
+"Requests honours the environment string ``REQUESTS_CA_BUNDLE`` so the "
+"administrator can indicate a custom bundle which could be the system's CA "
+"bundle."
+msgstr ""
+"Requestsは、環境文字列 ``REQUESTS_CA_BUNDLE`` "
+"を重視して、管理者がシステムのCAバンドルとなるカスタムバンドルを指定できるようにします。"
+
+#: ../../admin-manual/security/security.rst:424
+msgid ""
+"The Ubuntu system's CA bundle file is :file:`/etc/ssl/certs/ca-"
+"certificates.crt`."
+msgstr "UbuntuシステムのCAバンドルファイル:file: `/etc/ssl/certs/ca-certificates.crt` 。"
+
+#: ../../admin-manual/security/security.rst:426
+msgid ""
+"The Rocky Linux system's CA bundle file is :file:`/etc/pki/tls/certs/ca-"
+"bundle.crt`."
+msgstr "Rocky LinuxシステムのCAバンドルファイル:file: `/etc/pki/tls/certs/ca-bundle.crt` 。"
+
+#: ../../admin-manual/security/security.rst:429
+msgid ""
+"On Ubuntu, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+"Ubuntuでは、行:file: `/etc/default/archivematica-*` "
+"をファイルに追加し、システムのCAバンドルを使用するようにします："
+
+#: ../../admin-manual/security/security.rst:436
+msgid ""
+"On Rocky Linux, add the following line to the "
+":file:`/etc/default/archivematica-*` files to use the system's CA bundle:"
+msgstr ""
+"Rocky Linuxでは、行:file: `/etc/default/archivematica-*` "
+"をファイルに追加して、システムのCAバンドルを使用します："
+
+#: ../../admin-manual/security/security.rst:444
+msgid "Trusting additional CAs"
+msgstr "追加のCAを信頼する"
+
+#: ../../admin-manual/security/security.rst:446
+msgid ""
+"If you are using ``REQUESTS_CA_BUNDLE`` you may want to trust additional "
+"CAs."
+msgstr "``REQUESTS_CA_BUNDLE`` を使用している場合は、さらにCAを信頼したい場合があります。"
+
+#: ../../admin-manual/security/security.rst:448
+msgid "On Rocky Linux:"
+msgstr "Rocky Linuxでは："
+
+#: ../../admin-manual/security/security.rst:450
+msgid ""
+"Copy the ``.crt`` file to ``/etc/pki/ca-trust/source/anchors`` on your Rocky"
+" Linux machine."
+msgstr ""
+"``.crt`` ファイルをロッキーLinuxマシンの ``/etc/pki/ca-trust/source/anchors`` にコピーします。"
+
+#: ../../admin-manual/security/security.rst:452
+msgid "Run the `update-ca-trust extract` command."
+msgstr "`update-ca-trust extract` コマンドを実行します。"
+
+#: ../../admin-manual/security/security.rst:454
+msgid ""
+"The :file:`/etc/pki/tls/certs/ca-bundle.crt` file is a symbolic link that "
+"refers to the consolidated output created by the ``update-ca-trust`` "
+"command."
+msgstr ""
+"file： `/etc/pki/tls/certs/ca-bundle.crt` ファイルは、 ``update-ca-trust`` "
+"コマンドで作成された連結出力を参照するシンボリックリンクです。"
+
+#: ../../admin-manual/security/security.rst:457
+msgid "On Ubuntu:"
+msgstr "Ubuntuで："
+
+#: ../../admin-manual/security/security.rst:459
+msgid ""
+"Copy the .crt file to :file:`/usr/local/share/ca-certificates` on your "
+"Ubuntu machine."
+msgstr ".crtファイルをUbuntuマシンの:file: `/usr/local/share/ca-certificates` にコピーします。"
+
+#: ../../admin-manual/security/security.rst:461
+msgid "Run the `update-ca-certificates` command."
+msgstr "`update-ca-certificates` コマンドを実行します。"
+
+#: ../../admin-manual/security/security.rst:463
+msgid ""
+"This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file."
+msgstr "これで新しい:file: `/etc/ssl/certs/ca-certificates.crt` ファイルが作成されます。"
+
+#: ../../admin-manual/security/security.rst:466
+msgid ":ref:`Back to the top <security>`"
+msgstr ":ref:`トップに戻る <security>`"

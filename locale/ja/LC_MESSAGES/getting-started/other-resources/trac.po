@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/other-resources/trac.rst:5
+msgid "TRAC review tool"
+msgstr "TRACレビューツール"
+
+#: ../../getting-started/other-resources/trac.rst:7
+msgid ""
+"The Trustworthy Repositories Audit & Certification (TRAC) review tool is a "
+"Drupal implementation of the TRAC checklist, an auditing tool to assess the "
+"reliability, commitment and readiness of institutions to assume long-term "
+"preservation responsibilities."
+msgstr ""
+"Trustworthy Repositories Audit & "
+"Certification（TRAC）レビューツールは、TRACチェックリストをDrupalに実装したもので、長期保存責任を担う機関の信頼性、コミットメント、準備態勢を評価する監査ツールです。"
+
+#: ../../getting-started/other-resources/trac.rst:12
+msgid ""
+"The review tool was developed by MIT in a project led by Nancy McGovern, "
+"Director, Digital Preservation at MIT Libraries. Artefactual has permission "
+"to host this tool for community use. The copy provided here contains data "
+"about the TRAC requirements that Archivematica fulfills for the repository."
+msgstr ""
+"このレビューツールは、MITライブラリのデジタル保存担当ディレクターであるNancy "
+"McGovernが率いるプロジェクトであり、MITによって開発されました。Artefactualは、コミュニティ利用のためにこのツールをホストする許可を得ています。ここで提供されるコピーには、Archivematicaがリポジトリのために満たすTRAC要件に関するデータが含まれています。"
+
+#: ../../getting-started/other-resources/trac.rst:18
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../getting-started/other-resources/trac.rst:20
+msgid "Download link: https://www.archivematica.org/download/trac.tar.gz"
+msgstr "ダウンロードリンク：https://www.archivematica.org/download/trac.tar.gz"
+
+#: ../../getting-started/other-resources/trac.rst:22
+msgid "Instructions for installation:"
+msgstr "取り付け方法："
+
+#: ../../getting-started/other-resources/trac.rst:24
+msgid ""
+"Be sure to consult the README.txt and README_TRAC.txt files in the tarball "
+"prior to installation."
+msgstr "取り付けの前に、tarballのREADME.txとREADME_TRAC.tx ファイルを必ず参照してください。"
+
+#: ../../getting-started/other-resources/trac.rst:28
+msgid "Summary"
+msgstr "概要"
+
+#: ../../getting-started/other-resources/trac.rst:30
+msgid ""
+"The following text is slightly edited from the home page of the Drupal TRAC "
+"Review site."
+msgstr "以下の文は、Drupal TRAC Reviewサイトのトップページから少し編集したものです。"
+
+#: ../../getting-started/other-resources/trac.rst:33
+msgid ""
+"The home page of the site provides an overview of an organization's efforts "
+"to document its evidence for meeting the requirements of the CCSDS Audit and"
+" Certification of Trustworthy Digital Repositories `checklist`_ that was "
+"approved as ISO 16363 and is based on Trustworthy Repositories Audit and "
+"Certification (TRAC): Criteria and Checklist that was released in January "
+"2007. A TRAC review is a self-assessment method for an organization to "
+"demonstrate good practice and conformance as a trusted digital repository to"
+" its designated communities and prepare for a peer review or other external "
+"audit. In many organizations, responsibilities for TRAC compliance are "
+"distributed throughout the organization, with specific units and committees "
+"having certain responsibilities for each requirement."
+msgstr ""
+"このサイトのトップページでは、ISO 16363として承認されたCCSDS Audit and Certification of Trustworthy"
+" Digital Repositories（信頼できるデジタルリポジトリの監査と認証） `チェックリスト`_ "
+"の要件を満たすための証拠を文書化する組織の取り組みの概要を提供し、Trustworthy Repositories Audit and "
+"Certification（信頼できるリポジトリの監査と認証）（TRAC）に基づいています：これは、2007年1月に発表された「Trustworthy "
+"Repositories Audit and Certification（TRAC：Criteria and "
+"Checklist）」に基づいています。TRAC審査は、組織が指定されたコミュニティに対して、信頼できるデジタルリポジトリとしてのグッドプラクティスと適合性を実証し、ピアレビューまたは他の外部監査に備えるための自己評価方法です。多くの組織では、TRAC準拠の責任は組織全体に分散されており、特定のユニットや委員会が各要件に対して一定の責任を負っています。"
+
+#: ../../getting-started/other-resources/trac.rst:46
+msgid "Responsibilities"
+msgstr "責任"
+
+#: ../../getting-started/other-resources/trac.rst:48
+msgid ""
+"Each entity is assigned a role for each requirement using the RACI "
+"responsibility assignment `matrix`_."
+msgstr "各エンティティは、RACI責任割り当て `マトリックス`_ を使用して、各要件に対する役割を割り当てます。"
+
+#: ../../getting-started/other-resources/trac.rst:51
+msgid ""
+"The RACI Matrix describes participation by various organizational roles in "
+"completing tasks for a project. RACI is especially useful in clarifying "
+"roles in projects and processes requiring distributed responsibilities. See "
+"the Responsibilities for TRAC page of the Drupal site for more information "
+"on RACI responsibilities, and a listing of units and committees that have "
+"roles in TRAC conformance."
+msgstr ""
+"RACIマトリクスは、プロジェクトのタスクを完了する際の、さまざまな組織の役割について説明するものです。RACIは、責任の割り当てが必要なプロジェクトやプロセスにおける役割を明確にする上で特に有用です。RACIの責任の詳細、および"
+" TRAC適合の役割を担う部署や委員会のリストについては、DrupalサイトのTRACの責任のページを参照してください。"
+
+#: ../../getting-started/other-resources/trac.rst:58
+msgid ""
+"In each requirement where Archivematica provides all or part of the "
+"evidence, the Operations Group is identified as one of the Responsible "
+"parties. Other organizational roles indicated are simply suggestions."
+msgstr ""
+"Archivematicaがエビデンスの一部または全部を提供する各要件では、Operations "
+"Groupが責任者の一人として指定されています。その他の組織的役割については、単なる提案です。"
+
+#: ../../getting-started/other-resources/trac.rst:63
+msgid "Requirements"
+msgstr "要件"
+
+#: ../../getting-started/other-resources/trac.rst:65
+msgid ""
+"In the site, each TRAC requirement has its own page. Sub- and Sub-sub "
+"requirements are referred to on the relevant high-level requirement page. "
+"Current compliance with TRAC requirements is assessed on a rating system "
+"from 0 to 4:"
+msgstr ""
+"このサイトでは、TRACの各要件には独自のページがあります。サブ要件およびその下位のサブ要件については、関連する高レベルの要件ページで引用されています。TRAC要件への現在の適合については、0から4の範囲で評価されます："
+
+#: ../../getting-started/other-resources/trac.rst:70
+msgid ""
+"4 = fully compliant - the repository can demonstrate that has "
+"comprehensively addressed the requirement"
+msgstr "4 = 完全適合 - リポジトリが要求事項に包括的に準拠していることを証明できます"
+
+#: ../../getting-started/other-resources/trac.rst:73
+msgid ""
+"3 = mostly compliant - the repository can demonstrate that it has mostly "
+"addressed the requirement and is on working on full compliance"
+msgstr "3 = ほぼ適合 - リポジトリは、要件にほぼ対応し、完全な適合に取り組んでいることを示します"
+
+#: ../../getting-started/other-resources/trac.rst:76
+msgid ""
+"2 = half compliant - the repository has partially addressed the requirement "
+"and has significant work remaining to fully address the requirement"
+msgstr "2 = 半分適合 - リポジトリは要件に部分的に対応しており、要件に完全に対応するにはかなりの作業が残っています"
+
+#: ../../getting-started/other-resources/trac.rst:79
+msgid ""
+"1 = slightly compliant - the repository has something in place, but has a "
+"lot of work to do in addressing the requirement"
+msgstr "1 = わずかに適合 - リポジトリは何かを備えているが、要件への対応に多くの課題があります"
+
+#: ../../getting-started/other-resources/trac.rst:82
+msgid ""
+"0 = non-compliant or not started - the repository has not yet addressed the "
+"requirement or has not started the review of the requirement"
+msgstr "0 = 非適合または未着手 - リポジトリはまだ要件に対応していないか、要件のレビューを開始していません"
+
+#: ../../getting-started/other-resources/trac.rst:85
+msgid ""
+"Any group in the organization that is involved in defining policy and "
+"practice should update the status of relevant requirements. When listing "
+"evidence, please include sufficient information for reviewers to get to the "
+"cited evidence (e.g., a document title, date, a link) and note the name of "
+"the group or department that is adding an entry to the evidence addressing "
+"the requirement along with the date of the annotations (e.g., [Right "
+"Management group, 2/13/2013]). (Note that for requirements where "
+"Archivematica provides all or part of the evidence, no date or group is "
+"specified as this evidence must be reviewed and assigned a responsible group"
+" per repository) For additional guidance, please see the Responsibilities "
+"for TRAC page of the site."
+msgstr ""
+"組織内でポリシーと実践の定義に関与しているグループは、関連する要求事項の状況を更新する必要があります。証拠を列挙するときは、査読者が引用された証拠にアクセスするのに十分な情報"
+" (文書のタイトル、日付、リンクなど) "
+"を記載してください。また、注釈の日付とともに、要件に対応する証拠に追加記入するグループまたは部門の名前を書き留めます（例：[権利管理グループ、2/13/2013]）。（この証拠は妥当性確認され、リポジトリごとに担当グループが割り当てられる必要があるため、Archivematicaが証拠のすべてまたは一部を提供する要件については、日付やグループが指定されていないことに注意してください。）追加のガイダンスについては、サイトの"
+" 「TRACの責任」が記載されたページを参照してください。"
+
+#: ../../getting-started/other-resources/trac.rst:98
+msgid "Status"
+msgstr "ステータス"
+
+#: ../../getting-started/other-resources/trac.rst:100
+msgid "The site provides a sequence of status levels for each requirement:"
+msgstr "このサイトでは、各要件について一連のステータスレベルを提供しています："
+
+#: ../../getting-started/other-resources/trac.rst:102
+msgid ""
+"Accepted – the evidence provided has been accepted as sufficient for this "
+"review round"
+msgstr "受理 – 提供された証拠はこの妥当性確認実施に十分なものとして受理されました"
+
+#: ../../getting-started/other-resources/trac.rst:105
+msgid ""
+"Ready for review – the Responsible group has completed its work and the "
+"evidence is ready for review"
+msgstr "レビュー準備完了 - 担当者グループが作業を完了し、証拠を妥当性確認する準備が整いました"
+
+#: ../../getting-started/other-resources/trac.rst:108
+msgid ""
+"In progress – the Responsible group is in the process of compiling or "
+"generating relevant evidence"
+msgstr "進行中 - 担当グループは、関連する証拠を取りまとめ、または作成している最中です"
+
+#: ../../getting-started/other-resources/trac.rst:111
+msgid "Not started – no evidence or information has been provided yet"
+msgstr "未着手 - 証拠も情報もまだ提供されていません"
+
+#: ../../getting-started/other-resources/trac.rst:113
+msgid ""
+"For requirements where Archivematica provides all or part of the evidence, "
+"the status is indicated as In Progress as it should still be reviewed, "
+"edited, and/or completed by the repository."
+msgstr ""
+"Archivematicaがエビデンスの全部または一部を提供する要件については、リポジトリによるレビュー、編集、完了が必要なため、ステータスは進行中と表示されます。"
+
+#: ../../getting-started/other-resources/trac.rst:118
+msgid "Support"
+msgstr "サポート"
+
+#: ../../getting-started/other-resources/trac.rst:120
+msgid ""
+"Artefactual will not be providing free support for this tool. However, we "
+"encourage users to discuss it using our `public discussion list`_."
+msgstr ""
+"Artefactualは、このツールの無償サポートを提供しません。しかし、 `公開ディスカッションリスト`_ を使って議論することをお勧めします。"
+
+#: ../../getting-started/other-resources/trac.rst:123
+msgid ""
+"If you have questions about an internal review that are unrelated to this "
+"tool, contact the `NDSA Standards and Practices Working Group`_."
+msgstr ""
+"このツールとは関係のない内部審査に関する質問がある場合は、 `NDSA Standards and Practices Working Group`_ "
+"までご連絡ください。"
+
+#: ../../getting-started/other-resources/trac.rst:127
+msgid "Thanks"
+msgstr "よろしくお願いいたします"
+
+#: ../../getting-started/other-resources/trac.rst:129
+msgid ""
+"Artefactual is grateful to Nancy McGovern and Matt Bernhardt of MIT for "
+"their work towards the development of this tool and for allowing us to host "
+"it for community consumption here on the Archivematica website."
+msgstr ""
+"Artefactualは、MITのNancy McGovern氏とMatt "
+"Bernhardt氏に対して、このツールの開発に向けて尽力していただき、また、Archivematicaのウェブサイト上でコミュニティが利用できるようにホスティングしていただいたことに感謝しています。"
+
+#: ../../getting-started/other-resources/trac.rst:133
+msgid ":ref:`Back to the top <trac>`"
+msgstr ":ref:`トップに戻る <trac>`"

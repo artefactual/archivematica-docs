@@ -1,0 +1,792 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:5
+msgid "Scaling Archivematica"
+msgstr "Archivematicaのスケーリング"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:10
+msgid "Overview"
+msgstr "概要"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:12
+msgid ""
+"Archivematica includes a number of features and options to improve "
+"scalability and performance. The default configuration options are geared "
+"towards \"typical\" use cases and for many users won't require any "
+"modification. However, some users will benefit from optimising configuration"
+" options to meet their specific preservation needs and available computing "
+"resources."
+msgstr ""
+"Archivematicaには、スケーラビリティとパフォーマンスを向上させるための多くの機能とオプションがあります。デフォルトの設定オプションは、\"\"の典型的なユースケースに対応したものであり、多くのユーザーは特に変更する必要はありません。しかし、ユーザーによっては、保存のニーズや利用可能なコンピューティングリソースに合わせて、設定オプションを最適化することが有効です。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:18
+msgid ""
+"This guide describes three broad approaches to scaling and optimization and "
+"the specific techniques available to each approach."
+msgstr "このガイドでは、スケーリングと最適化に対する3つの幅広いアプローチと、それぞれのアプローチで利用可能な具体的な技術について説明します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:21
+msgid ""
+"This is not a detailed 'how to' guide or set of specific recommendations. "
+"The goal here is to explain what broad strategies are available and enough "
+"of the implementation details to allow skilled administrators to choose and "
+"implement the right strategy for their institution."
+msgstr ""
+"この文書は、詳細なガイドや特定の推奨ではなく。ここでの目的は、利用可能な幅広い戦略を説明し、熟練した管理者が自らの組織に適した戦略を選択し、実装できるように、実装の詳細を十分に説明することです。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:26
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:28
+msgid ":ref:`Scaling up: optimising on one machine <scaling-up>`"
+msgstr ":ref:`スケールアップ：1台のマシンでの最適化 <scaling-up>`"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:29
+msgid ":ref:`Scaling out: optimising across multiple machines <scaling-out>`"
+msgstr ":ref:`スケールアウト：複数のマシンでの最適化 <scaling-out>`"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:30
+msgid ":ref:`Process configuration strategies <config-strategies>`"
+msgstr ":ref:`プロセス構成戦略 <config-strategies>`"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:35
+msgid "Scaling up: optimising on one machine"
+msgstr "スケールアップ：1台のマシンでの最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:37
+msgid ""
+"Processing speed and capacity will generally increase in line with increases"
+" in computing resources (CPU, memory and disk space). When a deployment uses"
+" a machine with considerably more (or less) resources than the "
+":ref:`recommended minimum production requirements <requirements-"
+"production>`, there are several different configuration options that may "
+"help further optimise performance."
+msgstr ""
+"処理速度と容量は、一般にコンピューティングリソース（CPU、メモリ、ディスク容量）の増加に応じて増加します。 "
+":ref:`よりも推奨される生産環境の最小要件 <requirements-production>` "
+"を大幅に上回る（または下回る）リソースを持つマシンを使用する場合、パフォーマンスをさらに最適化するのに役立つさまざまな設定オプションがいくつかあります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:45
+msgid "Optimising the number of packages processed at a time"
+msgstr "一度に処理するパッケージ数の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:47
+msgid ""
+"MCPServer allows processing of up to a set number of packages concurrently. "
+"The ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_CONCURRENT_PACKAGES`` parameter "
+"defines the maximum number of packages that MCPServer will process "
+"simultaneously. The default value is 0.5 * <cpu count>, rounded up. This "
+"number could be increased if you are constantly processing transfers, but "
+"not seeing full CPU utilization. See `MCPServer`_ for more details."
+msgstr ""
+"MCPServerは、最大で設定された数のパッケージを同時に処理できます。 "
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_CONCURRENT_PACKAGES`` "
+"パラメーターは、MCPServerが同時に処理するパッケージの最大数を定義します。デフォルト値は、0.5*<cpu "
+"count>で切り上げられます。転送を常に処理していても、CPUの使用率が十分でない場合は、この数を増やすことができます。詳細については、 "
+"`MCPServer`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:56
+msgid "Optimising the number of MCPServer threads"
+msgstr "MCPServerスレッド数の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:58
+msgid "MCPServer has two settings for modifying the number of threads run:"
+msgstr "MCPServerには、実行するスレッド数を変更するための2つの設定があります："
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:60
+msgid ""
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_RPC_THREADS`` sets the number of \"RPC "
+"Server\" workers available to respond to status requests from other "
+"components (such as the Dashboard). The default value is 4. If you are "
+"seeing slow status updates in the Dashboard, increasing this value _may_ "
+"help."
+msgstr ""
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_RPC_THREADS`` "
+"他のコンポーネント（ダッシュボードなど）からのステータス要求に応答する\"RPC "
+"Server\"ワーカーの数を設定します。デフォルト値は4です。ダッシュボードのステータス更新が遅い場合は、この値を増やすと改善されるかもしれません。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:64
+msgid ""
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_WORKER_THREADS`` sets the number of "
+"threads available to handle MCPServer processing tasks, such as submitting "
+"Gearman jobs for processing by MCPClient. The default value is <cpu count> +"
+" 1. Increasing this value _may_ help increase CPU utilization."
+msgstr ""
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_WORKER_THREADS`` "
+"MCPClientが処理するためのGearmanジョブの送信など、MCPServerの処理タスクに使用できるスレッド数を設定します。デフォルト値は<cpu"
+" count> + 1です。この値を増やすと、CPU使用率が向上する可能性があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:71
+msgid "Deploy multiple MCPClients"
+msgstr "複数のMCPClientsをデプロイ"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:73
+msgid ""
+"The `MCPClient`_ component is responsible for the most significant sources "
+"of load in an Archivematica deployment. In Archivematica 1.8.x and higher, "
+"it can in some cases make sense to deploy more than one MCPClient component "
+"on the same machine, due to the introduction of batching."
+msgstr ""
+"`MCPClient`_ コンポーネントは、Archivematicaのデプロイにおいて最も大きな負荷源となります。Archivematica "
+"1.8.x以降では、バッチ処理の導入により、同じマシンに複数のMCPClientコンポーネントをデプロイすることが理にかなっている場合があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:80
+msgid ""
+"Note: In Archivematica 1.7.x and earlier, the MCPClient does not use "
+"batching, and instead creates multiple Gearman workers (creating one worker "
+"per CPU available). In these earlier versions, there is no benefit to "
+"installing multiple instances of the MCPClient on the same machine. There "
+"will still be a benefit in installing multiple instances on different "
+"machines. See :ref:`Scaling out: optimising across multiple machines "
+"<scaling-out>`."
+msgstr ""
+"注意：Archivematica "
+"1.7.x以前のバージョンでは、MCPClientはバッチ処理を行わず、複数のGearmanワーカーを作成します（使用可能なCPUごとに1つのワーカーを作成します）。これらの以前のバージョンでは、MCPClientの複数のインスタンスを同じマシンにインストールするメリットはありません。異なるマシンに複数のインスタンスをインストールするメリットはまだあります。"
+" :ref:`スケールアウト：複数のマシンでの最適化 <scaling-out>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:88
+msgid ""
+"The MCPClient accepts batches of files to process at once. Batches are "
+"processed using a single process by default, but some client scripts can run"
+" multi-threaded or fork processes where possible (see `MCPClient "
+"concurrency`_ for more details). This approach is a trade-off that delivers "
+"significant improvements in most circumstances."
+msgstr ""
+"MCPClientは、一度に処理するファイルのバッチを受け付けます。バッチは、デフォルトでは単一プロセスで処理されますが、クライアント・スクリプトによっては可能な限りマルチスレッドまたはフォーク・プロセスを実行できます（詳細は、"
+" `MCPClient concurrency`_ を参照してください）。このアプローチは、ほとんどの状況で大幅な改善をもたらすトレードオフです。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:94
+msgid ""
+"However, there will be times when certain tasks are not run concurrently, "
+"and CPU becomes underutilized. Deploying multiple instances of the MCPClient"
+" component may improve overall performance, particularly where a machine has"
+" many CPUs."
+msgstr ""
+"しかし、特定のタスクが同時に実行されず、CPUが十分に使用されない場合もあります。MCPClientコンポーネントの複数のインスタンスをデプロイすると、特にマシンに多くのCPUがある場合、全体的なパフォーマンスが向上する可能性があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:99
+msgid ""
+"To deploy another instance of MCPClient on the same machine we recommend "
+"creating an additional `systemd`_ unit. A second unit can be created by "
+"creating another `unit file`_ for the MCPClient service. For example, in "
+"Rocky Linux the existing `MCPClient unit file`_ is located in "
+"`/etc/systemd/system/archivematica-mcp-client.service`. To add a unit, "
+"create a copy of that unit file with a different name, such as\\ "
+"`/etc/systemd/system/archivematica-mcp-client-two.service` and ask systemd "
+"to reload all unit files using `$ systemctl daemon-reload`."
+msgstr ""
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:110
+msgid "Optimise batch size for large files"
+msgstr "大きなファイルのバッチサイズを最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:112
+msgid ""
+"The ``ARCHIVEMATICA_MCPSERVER_MCPSERVER_BATCH_SIZE`` parameter defines the "
+"maximum number of files that will be included in any one batch. The default "
+"value is 128, which is the threshold at which increasing batch size does not"
+" deliver further performance gains."
+msgstr ""
+"``ARCHIVEMATICA_MCPSERVER_MCPSERVER_BATCH_SIZE`` "
+"パラメーターは、1つのバッチに含まれるファイルの最大数を定義します。デフォルト値は128ですが、これは、バッチサイズを増やしてもパフォーマンスが向上しない閾値です。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:117
+msgid ""
+"When processing large files, smaller batch sizes may improve performance "
+"when there is more than one instance of MCPClient available. For example, "
+"processing large audio-visual files can take significant resources and time "
+"per file. A transfer with 100 files in it will all get included in one batch"
+" assuming the default batch size of 128. Reducing the batch size to 25 would"
+" result in 4 batches, which would all run concurrently if there were 4 "
+"instances of the MCPClient available."
+msgstr ""
+"大きなファイルを処理する場合、MCPClientの複数のインスタンスが利用可能であれば、バッチサイズを小さくすることでパフォーマンスが向上する可能性があります。例えば、大きなオーディオビジュアルファイルの処理には、1ファイルあたりかなりのリソースと時間がかかります。100ファイルの転送は、デフォルトのバッチサイズ128を仮定すると、すべて1つのバッチに含まれます。バッチサイズを25に減らすと、4つのバッチになり、利用可能なMCPClientのインスタンスが4つあれば、すべて同時に実行されます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:125
+msgid ""
+"Currently we do not have detailed recommendations on for optimizations of "
+"this type. We encourage testing and evaluation to find the best settings for"
+" your circumstances."
+msgstr ""
+"現在のところ、この種の最適化に関する詳細な推奨事項はありません。テストと評価を行い、それぞれの状況に最適な設定を見つけることをお勧めします。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:129
+msgid "To set the batch size parameter, see `MCPServer`_ Configuration."
+msgstr "バッチ・サイズ・パラメーターを設定するには、 `MCPServer`_ Configurationを参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:132
+msgid "Optimising the number of Dashboard workers"
+msgstr "ダッシュボードワーカーの数の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:134
+msgid ""
+"The Dashboard process can run multiple worker processes via Gunicorn. The "
+"``AM_GUNICORN_WORKERS`` value (default 1) sets the number of workers used. "
+"Increasing this value _may_ help improve Dashboard responsiveness. See "
+"`Dashboard`_ for more details."
+msgstr ""
+"Dashboardプロセスは、Gunicorn経由で複数のワーカープロセスを実行できます。 ``AM_GUNICORN_WORKERS`` "
+"の値（デフォルトは1）は、使用するワーカーの数を設定します。この値を増やすとDashboardの応答性が向上する可能性があります。詳細は、 "
+"`Dashboard`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:140
+msgid "Optimising the number of Storage Service workers"
+msgstr "Storage Serviceワーカー数の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:142
+msgid ""
+"The Storage Service process can run multiple worker processes via Gunicorn. "
+"The ``SS_GUNICORN_WORKERS`` value (default 1) sets the number of workers "
+"used. Increasing this value _may_ help improve Storage Service "
+"responsiveness."
+msgstr ""
+"Storage Serviceプロセスは、Gunicorn経由で複数のワーカープロセスを実行できます。 ``SS_GUNICORN_WORKERS`` "
+"の値（デフォルト1）は、使用するワーカーの数を設定します。この値を増やすと、Storage Serviceの応答性が向上する可能性があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:148
+msgid ""
+"Note that increasing this value may cause database errors if using SQLite. "
+"Django describes a mitigation path, see `Database is locked`_ for more. "
+"Alternatively, use MySQL as the database (using ``SS_DB_URL``)."
+msgstr ""
+"この値を大きくすると、SQLiteを使っている場合、データベースエラーを起こすかもしれないことに注意してください。Djangoでは緩和策を説明しています。詳しくは、"
+" `Database is locked`_ を参照してください。あるいは、データベースとしてMySQLを使ってください（ ``SS_DB_URL`` "
+"を使う）。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:156
+msgid "Scaling out: optimising across multiple machines"
+msgstr "スケールアウト：複数のマシンでの最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:158
+msgid ""
+"The second general strategy to improve processing speed and capacity is to "
+"distribute some components in the system across more than one machine. This "
+"section sets outs which components can be distributed to other machines and "
+"describes the configuration options available for optimising performance "
+"across those machines."
+msgstr ""
+"処理速度と処理能力を向上させる2つ目の一般的な戦略は、システム内のいくつかのコンポーネントを複数のマシンに分散させることです。このセクションでは、どのコンポーネントを他のマシンに分散させることができるかを示し、それらのマシン全体でパフォーマンスを最適化するために利用可能な設定オプションについて説明します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:165
+msgid "Distributing components on multiple machines"
+msgstr "複数のマシンにコンポーネントを分散"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:168
+msgid "Firewall configuration"
+msgstr "ファイアウォールの設定"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:170
+msgid ""
+"When installing Archivematica on multiple machines, the various "
+"Archivematica processes must be able to reach each other on the relevant "
+"ports. Your firewall configuration must allow for this."
+msgstr ""
+"Archivematicaを複数のマシンにインストールする場合、Archivematicaの各プロセスが関連するポートで相互にアクセスできるようにする必要があります。ファイアウォールの設定でこれを許可しなければなりません。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:174
+msgid ""
+"In particular, please ensure that the Archivematica dashboard can talk to "
+"the Storage Service, and that the pipeline components (i.e., MCPServer, "
+"MCPClient) can talk to Gearman."
+msgstr ""
+"特に、ArchivematicaダッシュボードがStorage "
+"Serviceと通信できること、パイプラインコンポーネント（MCPServer、MCPClientなど）がGearmanと通信できることを確認してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:178
+msgid ""
+"In addition, please ensure that the Elasticsearch (``9200``) and MySQL "
+"(``3306``) services are not exposed to the world."
+msgstr ""
+"さらに、Elasticsearch（ ``9200`` ）とMySQL（ ``3306`` ）サービスが一般に公開されないことを確認してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:181
+msgid ""
+"The ports of the Archivematica components and related services are provided "
+"below."
+msgstr "Archivematicaのコンポーネントと関連サービスのポートを以下に示します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:184
+msgid "Archivematica dashboard: ``80`` (``81`` for RPM-based installs)"
+msgstr "Archivematicaダッシュボード： ``80`` （ ``81`` RPMベースのインストール用）"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:185
+msgid ""
+"Archivematica Storage Service: ``8000`` (``8001`` for RPM-based installs)"
+msgstr "Archivematica Storage Service： ``8000`` （ ``8001`` RPMベースのインストール用）"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:186
+msgid "MySQL: ``3306``"
+msgstr "MySQL： ``3306``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:187
+msgid "Gearman: ``4730``"
+msgstr "Gearman： ``4730``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:188
+msgid "SSH: ``22``"
+msgstr "SSH： ``22``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:189
+msgid "Elasticsearch: ``9200``"
+msgstr "Elasticsearch： ``9200``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:190
+msgid "NFS: ``2049``"
+msgstr "NFS： ``2049``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:193
+msgid "Create multiple instances of MCPClient (on a separate machine)"
+msgstr "MCPClientのインスタンスを（別のマシン上で）複数作成"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:195
+msgid ""
+"As noted above, the MCPClient is responsible for the most significant "
+"sources of load on a machine. Creating instances of the MCPClient on other "
+"machines is the most obvious way to improve concurrent processing."
+msgstr ""
+"上述したように、MCPClientは、マシン上の負荷の最も大きな要因となっています。並行処理を改善する最も明白なやり方として、他のマシンにMCPClientのインスタンスを作成することがあります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:199
+msgid "To create another instance of an MCPClient on another machine:"
+msgstr "MCPClientの別のインスタンスを別のマシンに作成する方法："
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:201
+msgid ""
+"Install the MCPClient using your preferred installation method: manually "
+"using packages, or by modifying ansible scripts or docker-compose scripts"
+msgstr ""
+"お好みのインストール方法でMCPClientをインストールします：パッケージの使用や手動、またはansibleスクリプトやdocker-"
+"composeスクリプトの修正など、お好みのインストール方法でMCPClientをインストールします"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:203
+msgid ""
+"Ensure that the second machine has access to the following shared "
+"directories, defined in these parameters (see `MCPClient`_ Configuration for"
+" details): ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SHAREDDIRECTORYMOUNTED`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_PROCESSINGDIRECTORY`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_REJECTEDDIRECTORY`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_WATCHDIRECTORYPATH``"
+msgstr ""
+"2台目のマシンが、これらのパラメーターで定義された共有ディレクトリにアクセスできることを確認します（詳細については、 `MCPClient`_ "
+"Configurationを参照してください）： "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_SHAREDDIRECTORYMOUNTED`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_PROCESSINGDIRECTORY`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_REJECTEDDIRECTORY`` "
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_WATCHDIRECTORYPATH``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:210
+msgid ""
+"Ensure the additional MCPClient instance is configured to connect to the "
+"Gearman server (on the original machine) by setting the following parameter:"
+" ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_MCPARCHIVEMATICASERVER``"
+msgstr ""
+"以下のパラメーターを設定することにより、追加のMCPClientインスタンスが（元のマシン上の）Gearmanサーバーに接続するように構成されていることを確認します："
+" ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_MCPARCHIVEMATICASERVER``"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:214
+msgid ""
+"It is also possible to restrict an MCPClient to run certain types of tasks, "
+"by editing the list of supported commands in the "
+"`archivematicaClientModules`_ file. This might be advantageous where certain"
+" commands tend to be run on certain kinds of objects, allowing you to route "
+"particular types of work to specific MCPClients or machines."
+msgstr ""
+"また、 `archivematicaClientModules`_ "
+"ファイルでサポートされているコマンドのリストを編集することで、MCPClientが特定の種類のタスクを実行するように制限もできます。これは、特定のコマンドが特定の種類のオブジェクトで実行される傾向がある場合に便利で、特定の種類の作業を特定のMCPCクライアントまたはマシンにルーティングできます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:221
+msgid "Distribute other components to another machine"
+msgstr "他のコンポーネントを別のマシンに分散"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:223
+msgid ""
+"It is possible to deploy the Elasticsearch, Gearman and MySQL components on "
+"other machines. For help, ask on the `Archivematica user forum`_ for more "
+"details."
+msgstr ""
+"Elasticsearch、Gearman、MySQLコンポーネントを他のマシンにデプロイすることも可能です。詳しくは、 "
+"`Archivematicaユーザーフォーラム`_ でお尋ねください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:228
+msgid "Optimising settings across machines"
+msgstr "マシン間の設定の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:231
+msgid "Optimize batch size for large files"
+msgstr "大容量ファイルのバッチサイズを最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:233
+msgid ""
+"This technique will work just as well on multiple machines as it does on one"
+" machine, as described above in :ref:`Scaling up: optimising on one machine "
+"<scaling-up>`."
+msgstr ""
+"このテクニックは、上記の :ref:`Scaling up：optimising on one machine <scaling-up>` "
+"で説明したように、複数のマシンでも1台のマシンと同様に機能します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:237
+msgid "Adjusting timeouts"
+msgstr "タイムアウトの調整"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:239
+msgid ""
+"Timeout settings are an important tool to mitigate failure scenarios created"
+" when one component can't connect to another. The challenge is to set "
+"timeouts so that they are long enough to allow particular processes to "
+"complete, but not so long that system resources are left idle (or user's "
+"time is wasted), waiting for a response from another component that has "
+"failed or can't be reached due to network connectivity issues."
+msgstr ""
+"タイムアウト設定は、あるコンポーネントが別のコンポーネントに接続できないときに発生する障害シナリオを緩和するための重要なツールです。課題は、特定のプロセスが完了するのに十分な長さのタイムアウトを設定することですが、システムリソースがアイドル状態のまま（またはユーザーの時間が無駄になる）、ネットワーク接続の問題で障害が発生したり到達できなかったりした別のコンポーネントからのレスポンスを待つような長さにはしないことです。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:246
+msgid ""
+"The standard timeout parameters for each component are used for long-running"
+" (generally asynchronous) processes. \"Quick\" timeout values are for "
+"processes that are synchronous and short (for instance, when an API is "
+"called to return information to the UI for a waiting user)."
+msgstr ""
+"各コンポーネントの標準タイムアウトパラメーターは、長時間実行される（一般に非同期）プロセスに使用されます。\"クイック\"タイムアウト値は、同期的で短いプロセス（例えば、待機しているユーザーのためにUIに情報を返すためにAPIが呼び出される場合）に使用されます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:251
+msgid ""
+"The default value for the \"Quick\" timeouts is optimal for components that "
+"are located on the same machine, and will be adequate in many cases for "
+"components that are distributed to machines that are co-located."
+msgstr ""
+"\"クイック\"タイムアウトのデフォルト値は、同じマシン上にあるコンポーネントに最適であり、同じ場所にあるマシンに分散して配置されているコンポーネントには、多くの場合適切です。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:255
+msgid ""
+"There may be times when timeout values should be increased for distributed "
+"components that are not co-located, or are slower due to the nature of the "
+"communication protocol used."
+msgstr ""
+"同一場所に配列されていない分散コンポーネントや、使用されている通信プロトコルの性質上遅いコンポーネントに対しては、タイムアウト値を増やすべき場合があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:259
+msgid ""
+"See `Dashboard`_ Configuration, `MCPClient`_ Configuration, and `MCPServer`_"
+" Configuration for a list of all timeout parameters, their default settings "
+"and instructions for modifying them."
+msgstr ""
+"すべてのタイムアウトパラメーターのリスト、デフォルト設定、および変更方法については、 `Dashboard`_ Configuration、 "
+"`MCPClient`_ Configuration、 `MCPServer`_ Configurationを参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:264
+msgid "Optimising storage locations"
+msgstr "保存場所の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:266
+msgid ""
+"The Storage Service Administrator manual describes the different types of "
+":ref:`storage locations <storageService:locations>` that Archivematica uses."
+msgstr ""
+"Storage Service Administratorのマニュアルでは、Archivematicaが使用する様々なタイプの :ref:`保存場所 "
+"<storageService:locations>` について説明しています。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:269
+msgid ""
+"In many cases it may be necessary to use different machines for different "
+"types of storage locations. In general, we recommend having the most "
+"frequently used locations (e.g. the \"currently processing\" location) on a "
+"local machine. Locations that are used less frequently, such as AIP or DIP "
+"storage, will have less impact on performance when distributed to remote "
+"storage locations."
+msgstr ""
+"多くの場合、異なるタイプの保存場所に異なるマシンを使う必要があるかもしれません。一般的には、最も頻繁に使用されるロケーション（例えば、\"現在処理中の\"ロケーション）をローカルマシンに置くことを推奨します。AIPやDIPストレージのような使用頻度の低いロケーションは、リモート保存場所に分散してもパフォーマンスへの影響は少なくなります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:278
+msgid "Process configuration strategies"
+msgstr "プロセス構成戦略"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:281
+msgid "Optimising what and how preservation actions get executed"
+msgstr "保存アクションの内容と実行方法の最適化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:283
+msgid ""
+"The final strategy for improving the performance and capacity of your "
+"Archivematica deployment is to ensure that Archivematica is only carrying "
+"out the work you deem important and necessary. Archivematica provides a wide"
+" range of preservation actions and the default settings tend to make use of "
+"the majority of them. There are several techniques for limiting which "
+"actions are taken, that can have a significant impact on the overall time "
+"and compute required to process a particular Transfer or SIP."
+msgstr ""
+"Archivematicaデプロイのパフォーマンスとキャパシティを向上させる最後の方法は、Archivematicaが重要かつ必要と判断した作業のみを実行するようにすることです。Archivematicaには、様々な保存アクションが用意されており、デフォルトの設定では、その大半が使用される傾向にあります。どのアクションが実行されるかを制限するいくつかのテクニックがあり、特定の転送やSIPの処理に必要な全体的な時間や計算量に大きな影響を与える可能性があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:292
+msgid "Environment configuration options"
+msgstr "環境設定オプション"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:295
+msgid "Disable Elasticsearch indexing"
+msgstr "Elasticsearchのインデックス作成を無効化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:297
+msgid ""
+"Archivematica uses Elasticsearch to create an index of every Archival "
+"Information Package (AIP) it creates. It also creates an index of any "
+"Transfer that is sent to the backlog. Indexes enable the search "
+"functionality from the Archival Storage tab of the Dashboard (in the case of"
+" AIPs) or the Backlog and Appraisal tabs (in the case of Transfers that were"
+" sent to the Backlog). Indexes contain information on every object in a "
+"Transfer or AIP."
+msgstr ""
+"Archivematicaは、Elasticsearchを使用して、作成するすべてのArchival Information "
+"Package（AIP）のインデックスを作成します。また、バックログに送信される転送のインデックスも作成します。インデックスにより、ダッシュボードのArchival"
+" "
+"Storageタブ（AIPの場合）、またはBacklogタブとAppraisalタブ（Backlogに送られたTransferの場合）からの検索機能が有効になります。インデックスには、転送またはAIPのすべてのオブジェクトの情報が含まれています。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:304
+msgid ""
+"If a user chooses (whether in the dashboard or by configuration) to send "
+"Transfers to the Backlog, the \"Index Transfer Contents\" job is run as part"
+" of the \"Create SIP From Transfer Microservice\". At the end of the Ingest "
+"process (in all cases) an Index is created as part of the \"Store AIP\" "
+"Microservice."
+msgstr ""
+"ユーザーが転送をバックログに送信することを選択した場合（ダッシュボードまたは構成による）、\"Index Transfer "
+"Contents\"ジョブは、\"Create SIP From Transfer "
+"Microservice\"の一部として実行されます。インジェストプロセスの最後に（すべての場合で）、\"Store AIP\" "
+"Microserviceの一部としてIndexが作成されます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:309
+msgid ""
+"The larger a Transfer or AIP is, the longer it will take to create the "
+"Index. Some users have found that Indexing can fail on very large Transfers "
+"or AIPS (e.g. with many thousands of files)."
+msgstr ""
+"転送やAIPが大きければ大きいほど、インデックスの作成に時間がかかります。一部のユーザーは、非常に大きな転送やAIPS（何千ものファイルがあるなど）でインデックス作成に失敗することがあることに気づいています。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:313
+msgid ""
+"Use of Elasticsearch is optional. Installing :ref:`Archivematica without "
+"Elasticsearch <install-elasticsearch>` or with limited Elasticsearch "
+"functionality means reduced consumption of compute resources and lower "
+"operational complexity. Fully or partially disabling Elasticsearch means "
+"that the Backlog, Appraisal, and Archival Storage tabs may not appear and "
+"their functionality is not available."
+msgstr ""
+"Elasticsearchの使用はオプションです。 :ref:`ArchivematicaをElasticsearch <install-"
+"elasticsearch>` "
+"を使用せずに、またはElasticsearchの機能を制限してインストールすることは、コンピュートリソースの消費を抑え、運用の複雑さを軽減することを意味します。Elasticsearchを完全または部分的に無効にすると、Backlog、Appraisal、Archival"
+" Storageタブが表示されなくなり、それらの機能が利用できなくなります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:320
+msgid ""
+"See :ref:`Upgrade in indexless mode <upgrade-indexless>` for more details."
+msgstr "詳細は、 :ref:`インデックスレスモードでのアップグレード <upgrade-indexless>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:323
+msgid "Allow indexing to fail"
+msgstr "インデックスの失敗を許可"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:325
+msgid ""
+"Indexing very large datasets can be so resource-intensive that indexing will"
+" fail. By default, Archivematica will abort processing and invoked the "
+"\"Failed SIP\" microservice."
+msgstr ""
+"非常に大きなデータセットのインデックス作成は、リソースを大量に消費するため、インデックス作成に失敗することがあります。デフォルトでは、Archivematicaが処理を中断し、\"Failed"
+" SIP\"マイクロサービスを起動します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:329
+msgid ""
+"The ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_INDEX_AIP_CONTINUE_ON_ERROR`` "
+"parameter can be set to allow indexing to fail. When this is set and "
+"indexing fails, the AIP will carry on with processing and be stored. It "
+"can't be found using the normal search features in the Appraisal and "
+"Archival Storage tabs."
+msgstr ""
+"``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_INDEX_AIP_CONTINUE_ON_ERROR`` "
+"パラメーターは、インデックス作成が失敗してもよいように設定できます。これが設定され、索引付けが失敗すると、AIPは処理を続行し、保存されます。これは、[鑑定]および[アーカイブ保存]タブの通常の検索機能を使用しても見つけることはできません。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:334
+msgid ""
+"This feature doesn't optimize performance so much as mitigate performance "
+"limitations. See `MCPClient`_ Configuration for details."
+msgstr ""
+"この機能は、パフォーマンスを最適化するものではなく、パフォーマンスの制限を緩和するものです。詳しくは、 `MCPClient`_ "
+"Configurationを参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:338
+msgid "Disabling task output"
+msgstr "タスク出力を無効化"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:340
+msgid ""
+"Archivematica allows users to configure their MCPClient(s) in order to "
+"control whether or not output streams (stdout and stderr) from the client "
+"scripts are captured and then passed from the task workers to the task "
+"manager (the MCPServer). Disabling task output will provide performance "
+"improvements."
+msgstr ""
+"Archivematicaでは、クライアントスクリプトからの出力ストリーム（stdoutとstderr）をキャプチャして、タスクワーカーからタスクマネージャ（MCPServer）に渡すかどうかを制御するために、MCPClientを設定できます。タスク出力を無効にすると、パフォーマンスが向上します。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:345
+msgid ""
+"See :ref:`Task output capturing configuration <task-output-capturing-"
+"admin>`."
+msgstr ":ref:`タスク出力キャプチャ設定 <task-output-capturing-admin>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:348
+msgid "Processing configuration options"
+msgstr "処理設定オプション"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:350
+msgid ""
+"The :ref:`Processing configuration <dashboard-processing>` screen provides "
+"many options for controlling what actions Archivematica performs. The "
+"following settings can improve performance."
+msgstr ""
+":ref:`Processing configuration <dashboard-processing>` "
+"画面には、Archivematicaが実行するアクションを制御するための多くのオプションが用意されています。以下の設定により、パフォーマンスを向上させることができます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:354
+msgid ""
+"**Select file format identification command (Transfer):** Using Siegfried "
+"for file identification has been shown to be faster than Fido in this "
+"`benchmarking`_ study. See :ref:`Identification <identification>` for more "
+"information."
+msgstr ""
+"**ファイル形式識別コマンド（Transfer）を選択：** ファイル識別にSiegfriedを使用すると、この `ベンチマーク`_ "
+"調査において、Fidoより高速であることが示されています。詳細は、 :ref:`識別 <identification>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:358
+msgid ""
+"**Select file format identification command (Ingest):** If you are using the"
+" Archivematica backlog and have accumulated items in the backlog for a long "
+"period of time, e.g. months or even years, then you might want Archivematica"
+" to refresh its file format identification at the Ingest stage of the "
+"workflow. If Ingest is happening shortly after Transfer, selecting `Use "
+"existing data` should be adequate and will save processing time."
+msgstr ""
+"**ファイル形式識別コマンド（インジェスト）を選択します：** "
+"Archivematicaのバックログを使用していて、バックログにアイテムが数ヶ月から数年といった長期間蓄積されている場合、ワークフローのインジェストの段階でArchivematicaにファイルフォーマットの識別をリフレッシュさせたいと思うかもしれません。転送後すぐにインジェストを行う場合は、"
+" `Use existing data` を選択すれば十分で、処理時間を短縮できます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:365
+msgid ""
+"**Generate thumbnails:** If you are generating thumbnails, selecting `yes "
+"without defaults` will only generate thumbnail images for formats that have "
+"a specific thumbnail rule defined. The default thumbnail rule only produces "
+"a grey icon and for many formats has little value, but in transfers with "
+"many files, can take significant processing time. It is also possible to "
+"disable generation of thumbnails entirely by selecting  `no`."
+msgstr ""
+"**サムネイルを生成します：** サムネイルを生成する場合、 `yes without defaults` "
+"を選択すると、特定のサムネイルルールが定義されているフォーマットのサムネイル画像のみが生成されます。デフォルトのサムネイルルールは、グレーのアイコンを生成するだけで、多くのフォーマットではほとんど意味がありませんが、ファイル数の多い転送では処理時間が大幅にかかることがあります。"
+" `no` を選択して、サムネイルの生成を完全に無効にすることも可能です。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:372
+msgid ""
+"**Select compression algorithm:** AIP compression causes an AIP to be put "
+"into a container (e.g. a 7Zip container).  Using containers makes AIP "
+"storage and transfer easier because the AIP is easier to move around as a "
+"single file. The AIP file size also has the potential to be reduced, which "
+"saves storage space and speeds up transfers to external AIP stores. The "
+"disadvantage is that compression can take significant processing time and "
+"resources. AIP compression introduces three extra steps in the workflow: "
+"compression to create the container, then decompression to allow for a final"
+" checksum validation step. In transfers with very large numbers of files "
+"(thousands) we have seen significant performance improvements by not "
+"compressing the AIP."
+msgstr ""
+"**Select compression algorithm：** "
+"AIP圧縮では、AIPをコンテナ（例えば7Zipコンテナ）に入れます。コンテナを使用することで、AIPが単一ファイルとして移動しやすくなるため、AIPの保存と転送が容易になります。AIPファイルサイズも小さくできる可能性があるため、保管スペースを節約し、外部のAIPストアへの転送をスピードアップできます。欠点は、圧縮に多大な処理時間とリソースを要することです。AIP圧縮は、ワークフローに3つの余分なステップを導入します。コンテナを作成するための圧縮、そして最後のチェックサム妥当性確認ステップを可能にするための解凍です。ファイル数が非常に多い（数千）転送では、AIPを圧縮しないことでパフォーマンスが大幅に向上しています。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:383
+msgid ""
+"**Select compression level:** Selecting a higher compression level means "
+"that the resulting AIP is smaller, but compression also takes longer. Lower "
+"compression levels mean quicker compression, but a larger AIP."
+msgstr ""
+"**圧縮レベルを選択します：** "
+"高い圧縮レベルを選択すると、圧縮結果のAIPは小さくなりますが、圧縮にも時間がかかります。圧縮レベルを低くすると、圧縮は早くなりますが、AIPは大きくなります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:390
+msgid "Preservation action rules"
+msgstr "保存アクションの規則"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:392
+msgid ""
+"Some of the default preservation action rules can take considerable "
+"processing time and resources. We have found the following rules useful to "
+"change in some cases."
+msgstr ""
+"デフォルトの保存措置ルールの中には、かなりの処理時間とリソースを要するものがあります。以下のルールは、場合によっては変更すると有用であることがわかりました。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:396
+msgid ""
+"**Turn off default characterization rule:** `FITS`_ is used to characterise "
+"files that don't have a recognised file format. Executing this rule takes "
+"processing time and adds raw output to the METS file that can be low value "
+"for some formats. For example, in scientific datasets with large numbers of "
+"generic text files, or binary files created by instruments in scientific "
+"experiments, the output can be verbose without being useful."
+msgstr ""
+"**デフォルトの特性化ルールをオフにします：** `FITS`_ "
+"は、認識されたファイル形式を持たないファイルの特性評価に使用されます。このルールを実行すると、処理時間がかかり、METSファイルに未加工の出力が追加されます。例えば、一般的なテキストファイルや、科学実験の機器によって作成されたバイナリファイルを大量に含む科学的データセットでは、出力は有用でなく冗長になる可能性があります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:403
+msgid ""
+"**Reduce number of image characterization rules:** Archivematica has rules "
+"defined for all image and audio-visual formats to use ExifTool, Mediainfo "
+"and ffprobe for characterisation. Using multiple tools ensures as much "
+"characterization output as possible, but also introduces some level of "
+"duplication. Only using one of the three tools for certain formats may "
+"provide an adequate level of characterization with the benefit of reducing "
+"processing time and the size of the final AIP."
+msgstr ""
+"**画像の特性化ルールの数を減らします：** "
+"Archivematicaには、ExifTool、Mediainfo、ffprobeを使用して特性解析を行うルールが、すべての画像およびオーディオビジュアルフォーマットに対して定義されています。複数のツールを使用することで、可能な限り多くのキャラクタライズ出力を確保できますが、ある程度の重複も生じます。特定のフォーマットに対して3つのツールのうち1つだけを使用することで、処理時間を短縮し、最終的なAIPのサイズを小さくできます。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:411
+msgid ""
+"See :ref:`Characterization <characterization>` and :ref:`Altering commands "
+"and rules <altering-commands-rules>` for more details."
+msgstr ""
+"詳細は、 :ref:`Characterization <characterization>` および :ref:`Altering commands "
+"and rules <altering-commands-rules>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:415
+msgid "General Configuration Settings"
+msgstr "一般構成設定"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:417
+msgid ""
+"**Checksum Algorithm:** In the :ref:`General settings <dashboard-general>` "
+"screen you can select which checksum algorithm Archivematica will use during"
+" the Assign UUIDs and checksums microservice. For the purposes of fixity "
+"checking, the MD5 algorithm may be adequate and takes less processing time "
+"to create (and check) than the alternatives (e.g. SHA-256)."
+msgstr ""
+"**チェックサムアルゴリズム：** :ref:`General settings <dashboard-general>` 画面では、Assign "
+"UUIDおよびチェックサムマイクロサービスでArchivematicaが使用するチェックサムアルゴリズムを選択できます。固定性チェックの目的では、MD5アルゴリズムが適切な場合があり、代替アルゴリズム（SHA-256など）よりも作成（およびチェック）にかかる処理時間が短くなります。"
+
+#: ../../admin-manual/installation-setup/customization/scaling-archivematica.rst:423
+msgid ":ref:`Back to the top <scaling-archivematica>`"
+msgstr ":ref:`トップに戻る <scaling-archivematica>`"

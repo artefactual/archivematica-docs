@@ -1,0 +1,1607 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:5
+msgid "Storage Service API"
+msgstr "Storage Service API"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:7
+msgid ""
+"The Storage Service API enables access to storage areas to which the Storage"
+" Service has access."
+msgstr "Storage Service APIは、Storage Serviceがアクセス可能なストレージ領域へのアクセスを可能にします。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:11
+msgid "Resources and endpoints"
+msgstr "リソースとエンドポイント"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:13
+msgid ""
+"Endpoints for the Storage Service API have been organized into the following"
+" resource categories:"
+msgstr "Storage Service APIのエンドポイントは、以下のリソースカテゴリーに整理されています："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:16
+msgid ":ref:`ss-pipeline`"
+msgstr ":ref:`ss-pipeline`"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:17
+msgid ":ref:`ss-space`"
+msgstr ":ref:`ss-space`"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:18
+msgid ":ref:`ss-location`"
+msgstr ":ref:`ss-location`"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:19
+msgid ":ref:`ss-package`"
+msgstr ":ref:`ss-package`"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:24
+msgid "Pipeline"
+msgstr "Pipeline"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:26
+msgid ""
+"A pipeline is a representation of an Archivematica installation that is "
+"assigned a unique universal identifier (UUID) when it is registered with the"
+" Storage Service. The UUID provides information about your server and all "
+"associated clients."
+msgstr ""
+"パイプラインとは、Archivematicaのインストールを表すもので、Storage "
+"Serviceに登録する際に一意のユニバーサル識別子（UUID）が割り当てられます。UUIDは、サーバーと関連するすべてのクライアントに関する情報を提供します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:31
+msgid ""
+"For each Storage Service API resource, you can display a detailed schema by "
+"adding \"schema\" to the get all URL like in the following example::"
+msgstr ""
+"各Storage Service APIリソースについて、以下の例のように\"schema\"をget all "
+"URLに追加することで、詳細なスキーマを表示できます::"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:192
+msgid ""
+"This schema, among other things, describes the fields in the resource "
+"(including the schema URI of related resource fields) and the fields that "
+"allow filtering. Valid filtering values are: Django ORM filters (e.g. "
+"startswith, exact, lte, etc.) or 1 or 2. If a filtering field is set to 2 it"
+" can be filtered over the related resource fields. For example, the "
+"locations could be filtered by their pipeline UUID setting it in a request "
+"parameter formatted with two underscore chars: "
+"/api/v2/location/?pipeline__uuid=<uuid>"
+msgstr ""
+"このスキーマは特に、リソース内のフィールド（関連するリソースフィールドのスキーマURIを含む）と、フィルタリングを許可するフィールドを記述します。有効なフィルタリング値は以下の通りです：Django"
+" ORMフィルタ（例えばstartswith, exact, "
+"lteなど）か1か2です。フィルタリングフィールドが2に設定されている場合は、関連するリソースフィールドでフィルタリングできます。たとえば、2つのアンダースコアでフォーマットされたリクエストパラメーターにパイプラインUUIDを設定することで、ロケーションをフィルタリングできます：/api/v2/location/?pipeline__uuid=<uuid>"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:200
+msgid "For more info on how to interact with the API see:"
+msgstr "APIとのやり取りについての詳細は、こちらをご参照ください："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:202
+msgid ""
+"`<http://django-tastypie.readthedocs.io/en/v0.13.1/interacting.html>`__"
+msgstr ""
+"` <http://django-tastypie.readthedocs.io/en/v0.13.1/interacting.html>`_ _"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:206
+msgid "Get all pipelines"
+msgstr "すべてのパイプラインを取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:209
+#: ../../dev-manual/api/api-reference-storage-service.rst:333
+#: ../../dev-manual/api/api-reference-storage-service.rst:375
+#: ../../dev-manual/api/api-reference-storage-service.rst:428
+#: ../../dev-manual/api/api-reference-storage-service.rst:467
+#: ../../dev-manual/api/api-reference-storage-service.rst:565
+#: ../../dev-manual/api/api-reference-storage-service.rst:774
+#: ../../dev-manual/api/api-reference-storage-service.rst:844
+#: ../../dev-manual/api/api-reference-storage-service.rst:963
+#: ../../dev-manual/api/api-reference-storage-service.rst:1229
+#: ../../dev-manual/api/api-reference-storage-service.rst:1483
+#: ../../dev-manual/api/api-reference-storage-service.rst:1495
+#: ../../dev-manual/api/api-reference-storage-service.rst:1537
+#: ../../dev-manual/api/api-reference-storage-service.rst:1568
+msgid "``GET``"
+msgstr "``GET``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:209
+#: ../../dev-manual/api/api-reference-storage-service.rst:269
+msgid "**/api/v2/pipeline/**"
+msgstr "**/api/v2/pipeline/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:209
+#: ../../dev-manual/api/api-reference-storage-service.rst:333
+msgid "*Retrieves information about all pipelines in the system.*"
+msgstr "*システム内の全パイプラインの情報を取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:213
+#: ../../dev-manual/api/api-reference-storage-service.rst:382
+#: ../../dev-manual/api/api-reference-storage-service.rst:471
+#: ../../dev-manual/api/api-reference-storage-service.rst:849
+#: ../../dev-manual/api/api-reference-storage-service.rst:1197
+#: ../../dev-manual/api/api-reference-storage-service.rst:1503
+msgid "Query string parameters:"
+msgstr "クエリ文字列パラメーター："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:217
+#: ../../dev-manual/api/api-reference-storage-service.rst:278
+#: ../../dev-manual/api/api-reference-storage-service.rst:341
+#: ../../dev-manual/api/api-reference-storage-service.rst:718
+msgid "``description``"
+msgstr "``description``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:217
+msgid "Description of the pipeline."
+msgstr "パイプラインの説明。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:219
+#: ../../dev-manual/api/api-reference-storage-service.rst:276
+#: ../../dev-manual/api/api-reference-storage-service.rst:347
+#: ../../dev-manual/api/api-reference-storage-service.rst:399
+#: ../../dev-manual/api/api-reference-storage-service.rst:448
+#: ../../dev-manual/api/api-reference-storage-service.rst:1201
+#: ../../dev-manual/api/api-reference-storage-service.rst:1285
+msgid "``uuid``"
+msgstr "``uuid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:219
+msgid "UUID associated with the pipeline."
+msgstr "パイプラインに関連付けられたUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:223
+#: ../../dev-manual/api/api-reference-storage-service.rst:337
+#: ../../dev-manual/api/api-reference-storage-service.rst:403
+#: ../../dev-manual/api/api-reference-storage-service.rst:432
+#: ../../dev-manual/api/api-reference-storage-service.rst:479
+#: ../../dev-manual/api/api-reference-storage-service.rst:1513
+#: ../../dev-manual/api/api-reference-storage-service.rst:1573
+#: ../../dev-manual/api/api-reference-storage-service.rst:1604
+#: ../../dev-manual/api/api-reference-storage-service.rst:1643
+msgid "Response definitions (JSON):"
+msgstr "レスポンス定義（JSON）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:225
+msgid ""
+"Returns information about all the pipelines in the system. Can be filtered "
+"by the description or uuid. Disabled pipelines are not returned."
+msgstr "システム内のすべてのパイプラインに関する情報を返します。説明やuuidでフィルタリングできます。無効なパイプラインは返されません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:230
+#: ../../dev-manual/api/api-reference-storage-service.rst:407
+msgid "``meta``"
+msgstr "``meta``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:230
+#: ../../dev-manual/api/api-reference-storage-service.rst:407
+msgid "Metadata on the response: number of hits, pagination information."
+msgstr "レスポンスのメタデータ：ヒット数、ページネーション情報。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:233
+#: ../../dev-manual/api/api-reference-storage-service.rst:410
+msgid "``objects``"
+msgstr "``objects``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:233
+msgid "List of pipelines. See :ref:`ss_pipeline_details` for format."
+msgstr "パイプラインのリスト。フォーマットについては、 :ref:`ss_pipeline_details` を参照してください。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:237
+#: ../../dev-manual/api/api-reference-storage-service.rst:303
+#: ../../dev-manual/api/api-reference-storage-service.rst:569
+#: ../../dev-manual/api/api-reference-storage-service.rst:779
+#: ../../dev-manual/api/api-reference-storage-service.rst:890
+#: ../../dev-manual/api/api-reference-storage-service.rst:968
+#: ../../dev-manual/api/api-reference-storage-service.rst:1233
+#: ../../dev-manual/api/api-reference-storage-service.rst:1350
+#: ../../dev-manual/api/api-reference-storage-service.rst:1398
+#: ../../dev-manual/api/api-reference-storage-service.rst:1722
+msgid "Example request::"
+msgstr "リクエスト例::"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:245
+#: ../../dev-manual/api/api-reference-storage-service.rst:317
+#: ../../dev-manual/api/api-reference-storage-service.rst:576
+#: ../../dev-manual/api/api-reference-storage-service.rst:787
+#: ../../dev-manual/api/api-reference-storage-service.rst:897
+#: ../../dev-manual/api/api-reference-storage-service.rst:976
+#: ../../dev-manual/api/api-reference-storage-service.rst:1241
+#: ../../dev-manual/api/api-reference-storage-service.rst:1365
+#: ../../dev-manual/api/api-reference-storage-service.rst:1414
+msgid "Example response::"
+msgstr "レスポンス例::"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:266
+msgid "Create new pipeline"
+msgstr "新しいパイプラインの作成"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:269
+#: ../../dev-manual/api/api-reference-storage-service.rst:503
+#: ../../dev-manual/api/api-reference-storage-service.rst:703
+#: ../../dev-manual/api/api-reference-storage-service.rst:810
+#: ../../dev-manual/api/api-reference-storage-service.rst:1184
+#: ../../dev-manual/api/api-reference-storage-service.rst:1329
+#: ../../dev-manual/api/api-reference-storage-service.rst:1378
+#: ../../dev-manual/api/api-reference-storage-service.rst:1670
+#: ../../dev-manual/api/api-reference-storage-service.rst:1707
+msgid "``POST``"
+msgstr "``POST``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:269
+msgid "*Creates a new pipeline.*"
+msgstr "*新しいパイプラインを作成します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:272
+msgid "Request body parameters (accepts JSON strings as parameter values):"
+msgstr "リクエストボディパラメーター（パラメーター値としてJSON文字列を受け付けます）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:276
+msgid "UUID of the new pipeline."
+msgstr "新しいパイプラインのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:278
+msgid "Pipeline description."
+msgstr "パイプラインの説明。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:280
+msgid "``api_key``"
+msgstr "``api_key``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:280
+msgid "API key associated with user for authorization."
+msgstr "認可のためにユーザーに関連付けられたAPIキー。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:282
+msgid "``api_username``"
+msgstr "``api_username``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:282
+msgid "Username of admin authorized to write to the storage location."
+msgstr "ストレージへの書き込みを許可された管理者のユーザー名。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:285
+msgid "``create_default_locations``"
+msgstr "``create_default_locations``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:285
+msgid ""
+"If True, will associated default Locations with the newly created pipeline."
+msgstr "Trueの場合、新しく作成されたパイプラインにデフォルトのLocationsを関連付けます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:288
+msgid "``shared_path``"
+msgstr "``shared_path``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:288
+msgid ""
+"If default locations are created, create the processing location at this "
+"path in the local filesystem."
+msgstr "デフォルトの場所が作成される場合は、ローカルファイルシステムのこのパスに処理場所を作成します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:292
+#: ../../dev-manual/api/api-reference-storage-service.rst:343
+msgid "``remote_name``"
+msgstr "``remote_name``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:292
+#: ../../dev-manual/api/api-reference-storage-service.rst:720
+msgid "URI of the pipeline."
+msgstr "パイプラインのURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:294
+msgid ""
+"Note: Before v0.11.0: If create_default_locations is set, SS will try to "
+"guess the value using the REMOTE_ADDR header."
+msgstr ""
+"注意：v0.11.0以前：create_default_locationsが設定されている場合、SSは、REMOTE_ADDRヘッダーを使って値を推測しようとします。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:298
+msgid ""
+"In v0.11.0 or newer: If not provided, SS will try to guess the value using "
+"the REMOTE_ADDR header."
+msgstr "v0.11.0 以降：提供されない場合、SSは、REMOTE_ADDR ヘッダを使って値を推測しようとします。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:330
+msgid "Get pipeline details"
+msgstr "パイプラインの詳細を取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:333
+msgid "**/api/v2/pipeline/<uuid>**"
+msgstr "**/api/v2/pipeline/<uuid>**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:341
+msgid "General statement about the pipeline."
+msgstr "パイプラインに関する一般的な記述。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:343
+msgid "IP or hostname of the pipeline for use in API calls."
+msgstr "APIコールで使用するパイプラインのIPまたはホスト名。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:345
+#: ../../dev-manual/api/api-reference-storage-service.rst:442
+msgid "``resource_uri``"
+msgstr "``resource_uri``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:345
+msgid "URI for this pipeline in the API."
+msgstr "APIにおけるこのパイプラインのURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:347
+msgid "UUID of the pipeline."
+msgstr "パイプラインのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:351
+#: ../../dev-manual/api/api-reference-storage-service.rst:414
+#: ../../dev-manual/api/api-reference-storage-service.rst:454
+#: ../../dev-manual/api/api-reference-storage-service.rst:489
+#: ../../dev-manual/api/api-reference-storage-service.rst:1674
+msgid "Example request:"
+msgstr "リクエスト例："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:355
+msgid "Example response (JSON body):"
+msgstr "レスポンスの例（JSONボディ）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:362
+msgid "Space"
+msgstr "Space"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:364
+msgid ""
+"A storage space contains all the information necessary to connect to the "
+"physical storage. It is where the files are stored. Protocol-specific "
+"information, like an NFS export path and hostname, or the username of a "
+"system accessible only via SSH, is stored here. All locations must be "
+"contained in a space."
+msgstr ""
+"ストレージスペースには、物理的なストレージに接続するために必要なすべての情報が含まれています。ファイルが保存される場所です。NFSエクスポートパスやホスト名、SSHでのみアクセス可能なシステムのユーザー名など、プロトコル固有の情報は、ここに格納されます。すべての場所は、スペースで囲む必要があります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:372
+msgid "Get all spaces"
+msgstr "すべてのスペースを取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:375
+#: ../../dev-manual/api/api-reference-storage-service.rst:503
+msgid "**/api/v2/space/**"
+msgstr "**/api/v2/space/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:375
+msgid ""
+"*Retrieves information about all the spaces in the system. Can be filtered "
+"by several fields: access protocol, path, size, amount used, UUID and "
+"verified status. Disabled spaces are not returned.*"
+msgstr ""
+"*システム内のすべてのスペースに関する情報を取得します。アクセスプロトコル、パス、サイズ、使用量、UUID、妥当性確認済みステータスなどのフィールドでフィルタリングできます。無効なスペースは返されません。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:386
+#: ../../dev-manual/api/api-reference-storage-service.rst:436
+#: ../../dev-manual/api/api-reference-storage-service.rst:516
+msgid "``access_protocol``"
+msgstr "``access_protocol``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:386
+msgid ""
+"Protocol that the space uses; must be searched based on the database code."
+msgstr "スペースが使用するプロトコル。データベースコードに基づいて検索しなければなりません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:389
+#: ../../dev-manual/api/api-reference-storage-service.rst:440
+#: ../../dev-manual/api/api-reference-storage-service.rst:475
+#: ../../dev-manual/api/api-reference-storage-service.rst:518
+msgid "``path``"
+msgstr "``path``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:389
+#: ../../dev-manual/api/api-reference-storage-service.rst:440
+msgid "Space's path."
+msgstr "スペースのパス。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:391
+#: ../../dev-manual/api/api-reference-storage-service.rst:444
+#: ../../dev-manual/api/api-reference-storage-service.rst:520
+#: ../../dev-manual/api/api-reference-storage-service.rst:1215
+#: ../../dev-manual/api/api-reference-storage-service.rst:1295
+msgid "``size``"
+msgstr "``size``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:391
+msgid ""
+"Maximum size in bytes. Can use greater than (size__gt=1024), less than "
+"(size__lt=1024), and other Django field lookups."
+msgstr ""
+"バイト単位の最大サイズ。より大きい（size__gt=1024）、小さい（size__lt=1024）、その他のDjangoフィールド検索が使えます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:395
+#: ../../dev-manual/api/api-reference-storage-service.rst:446
+msgid "``used``"
+msgstr "``used``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:395
+msgid ""
+"Bytes stored in this space. Can use greater than (size__gt=1024), less than "
+"(size__lt=1024), and other Django field lookups."
+msgstr ""
+"この領域に格納されるバイト数。greater than （size__gt=1024）、less than "
+"（size__lt=1024）、その他のDjangoフィールド検索が使えます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:399
+#: ../../dev-manual/api/api-reference-storage-service.rst:448
+msgid "UUID of the space."
+msgstr "スペースのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:410
+msgid "List of spaces."
+msgstr "スペース一覧。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:418
+#: ../../dev-manual/api/api-reference-storage-service.rst:458
+#: ../../dev-manual/api/api-reference-storage-service.rst:493
+msgid "Example response (JSON):"
+msgstr "レスポンス例（JSON）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:424
+msgid "Get space details"
+msgstr "スペースの詳細を取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:428
+msgid "**/api/v2/space/<UUID>/**"
+msgstr "**/api/v2/space/<UUID>/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:428
+#: ../../dev-manual/api/api-reference-storage-service.rst:565
+#: ../../dev-manual/api/api-reference-storage-service.rst:774
+msgid "*Returns space-specific details.*"
+msgstr "*スペース固有の詳細を返します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:436
+msgid "Database code for the access protocol."
+msgstr "アクセスプロトコルのデータベースコード。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:438
+msgid "``last verified``"
+msgstr "``last verified``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:438
+msgid "Date of last verification; this is a stub feature."
+msgstr "最終妥当性確認日。これはスタブ機能です。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:442
+msgid "URI to the resource in the API."
+msgstr "APIのリソースへのURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:444
+msgid "Maximum size of the space in bytes."
+msgstr "スペースの最大サイズ（バイト）。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:446
+msgid "Bytes stored in this space."
+msgstr "この領域に格納されているバイト数。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:450
+msgid "``verified``"
+msgstr "``verified``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:450
+msgid "If the space is verified, this is a stub feature."
+msgstr "スペースが確認されれば、これはスタブ機能です。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:464
+msgid "Browse space path"
+msgstr "スペースパスをブラウズ"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:467
+msgid "**/api/v2/space/<UUID>/browse/**"
+msgstr "**/api/v2/space/<UUID>/browse/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:467
+msgid "*Gets details about the space path and directory structure.*"
+msgstr "*スペースパスとディレクトリ構造の詳細を取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:475
+msgid "Path inside the Space to look."
+msgstr "スペース内を探索するためのパスです。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:483
+#: ../../dev-manual/api/api-reference-storage-service.rst:853
+msgid "``entries``"
+msgstr "``entries``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:483
+msgid "List of entries at path, files or directories."
+msgstr "パス、ファイル、またはディレクトリのエントリのリスト。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:485
+#: ../../dev-manual/api/api-reference-storage-service.rst:855
+msgid "``directories``"
+msgstr "``directories``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:485
+msgid "List of directories in path. Subset of entries."
+msgstr "パス内のディレクトリのリスト。エントリのサブセット。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:499
+msgid "Create space"
+msgstr "スペースを作成"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:503
+msgid "*Creates a new space.*"
+msgstr "*新しいスペースを作成します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:507
+#: ../../dev-manual/api/api-reference-storage-service.rst:714
+#: ../../dev-manual/api/api-reference-storage-service.rst:815
+#: ../../dev-manual/api/api-reference-storage-service.rst:1278
+msgid "Request body parameters:"
+msgstr "リクエストボディのパラメーター："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:509
+msgid ""
+"Parameters should contain fields for a new space: See the `Storage Service "
+"\\ <https://www.archivematica.org/en/docs/storage-"
+"service-0.18/administrators/#access-protocols>`_ documentation for fields "
+"relevant to each type of space. Basic fields for a local file system space "
+"are listed below."
+msgstr ""
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:516
+msgid "This defines the type of space."
+msgstr "これは、スペースのタイプを定義します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:518
+msgid "Absolute path to the space on the local filesystem."
+msgstr "ローカルファイルシステム上のスペースへの絶対パス。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:520
+msgid ""
+"(Optional) Maximum size allowed for this space. Set to 0 or leave blank for "
+"unlimited."
+msgstr "（オプション）このスペースに許可される最大サイズ。0に設定するか、無制限の場合は空白のままにします。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:525
+msgid "Example (to create an S3 space)::"
+msgstr "例（S3スペースを作成）::"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:534
+msgid "Where payload.json contains::"
+msgstr "payload.jsonには::が含まれます"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:548
+msgid "Endpoint returns all paths base64 encoded."
+msgstr "エンドポイントは、すべてのパスをbase64エンコードして返します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:554
+msgid "Location"
+msgstr "Location"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:556
+msgid ""
+"A location is a subdivision of a space. Each location is assigned a specific"
+" purpose, such as AIP storage, DIP storage, transfer source or transfer "
+"backlog, in order to provide an organized way to structure content within a "
+"space."
+msgstr ""
+"ロケーションとは、スペースを細分化したものです。各ロケーションには、AIP保管、DIP保管、転送元、転送バックログといった特定の目的が割り当てられ、スペース内のコンテンツを組織的に構成する方法を提供します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:561
+msgid "Get all locations"
+msgstr "全ロケーションを取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:565
+#: ../../dev-manual/api/api-reference-storage-service.rst:703
+msgid "**/api/v2/location/**"
+msgstr "**/api/v2/location/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:699
+msgid "Create new location"
+msgstr "新しい場所を作成"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:703
+msgid ""
+"*Added in v0.12 - see issue `367 "
+"<https://github.com/artefactual/archivematica-storage-service/issues/367>`_ "
+"and issue `37 <https://github.com/archivematica/Issues/issues/37>`_.*"
+msgstr ""
+"*v0.12で追加 - issue `367 <https://github.com/artefactual/archivematica-"
+"storage-service/issues/367>`_ およびissue `37 "
+"<https://github.com/archivematica/Issues/issues/37>`_ を参照してください。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:707
+msgid ""
+"*This endpoint creates a location in the storage service, but it doesn't "
+"actually create the directory to which the location points.*"
+msgstr ""
+"*このエンドポイントは、Storage Service内にロケーションを作成します。ただし、その場所が指すディレクトリは実際には作成されません。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:718
+msgid "Information about the space."
+msgstr "スペースに関する情報。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:720
+#: ../../dev-manual/api/api-reference-storage-service.rst:821
+#: ../../dev-manual/api/api-reference-storage-service.rst:1339
+#: ../../dev-manual/api/api-reference-storage-service.rst:1388
+#: ../../dev-manual/api/api-reference-storage-service.rst:1682
+msgid "``pipeline``"
+msgstr "``pipeline``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:722
+msgid "``space``"
+msgstr "``space``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:722
+msgid "URI of the space."
+msgstr "空間のURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:724
+msgid "``default``"
+msgstr "``default``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:724
+msgid "If 'true' this location will be the default for it's purpose."
+msgstr "trueの場合、この場所は、その目的のためのデフォルトとなります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:727
+msgid "``purpose``"
+msgstr "``purpose``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:727
+msgid "Accepts the following possible values:"
+msgstr "以下の値を受け付けます："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:729
+msgid "AR (AIP_RECOVERY)"
+msgstr "AR（AIP_RECOVERY）"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:731
+msgid "AS (AIP_STORAGE)"
+msgstr "AS（AIP_STORAGE）"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:733
+msgid "CP (CURRENTLY_PROCESSING)"
+msgstr "CP（CURRENTLY_PROCESSING）"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:735
+msgid "DS (DIP_STORAGE)"
+msgstr "DS（DIP_STORAGE）"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:737
+msgid "SD (SWORD_DEPOSIT)"
+msgstr "SD (SWORD_DEPOSIT)"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:739
+msgid "SS (STORAGE_SERVICE_INTERNAL)"
+msgstr "SS（STORAGE_SERVICE_INTERNAL）"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:741
+msgid "BL (BACKLOG)"
+msgstr "BL (BACKLOG)"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:743
+msgid "TS (TRANSFER_SOURCE)"
+msgstr "TS (TRANSFER_SOURCE)"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:745
+msgid "RP (REPLICATOR)"
+msgstr "RP (REPLICATOR)"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:747
+#: ../../dev-manual/api/api-reference-storage-service.rst:1608
+msgid "``relative_path``"
+msgstr "``relative_path``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:747
+msgid "Relative to the space's path."
+msgstr "スペースのパスに対して。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:752
+msgid "Example::"
+msgstr "例::"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:770
+msgid "Get location details"
+msgstr "場所の詳細を取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:774
+#: ../../dev-manual/api/api-reference-storage-service.rst:810
+msgid "**/api/v2/location/<UUID>/**"
+msgstr "**/api/v2/location/<UUID>/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:806
+msgid "Move files to this location"
+msgstr "ファイルをこの場所に移動"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:810
+msgid "*Move files to specified pipeline location.*"
+msgstr "*指定したパイプラインの場所にファイルを移動します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:819
+#: ../../dev-manual/api/api-reference-storage-service.rst:1203
+#: ../../dev-manual/api/api-reference-storage-service.rst:1287
+msgid "``origin_location``"
+msgstr "``origin_location``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:819
+#: ../../dev-manual/api/api-reference-storage-service.rst:1682
+msgid "UUID of the pipeline on which to reingest AIP."
+msgstr "AIPを再インジェストするパイプラインのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:821
+msgid ""
+"URI of the pipeline. Both Locations must be associated with this pipeline."
+msgstr "パイプラインのURI。両方の場所をこのパイプラインに関連付けなければなりません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:824
+#: ../../dev-manual/api/api-reference-storage-service.rst:1581
+msgid "``files``"
+msgstr "``files``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:824
+msgid ""
+"List of dicts containing source and destination. The `source` and "
+"`destination` are paths relative to their Location of the files to be moved."
+msgstr ""
+"移動元と移動先を含むディクションのリスト。 `source` 、 `destination` は、移動するファイルのLocationからの相対パスです。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:832
+msgid ""
+"Intended for use with creating Transfers, SIPs, etc and other cases where "
+"files need to be moved but not tracked by the storage service."
+msgstr ""
+"転送、SIPなどの作成や、ファイルを移動する必要があるがStorage Serviceによって追跡されないような場合に使用することを意図しています。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:840
+msgid "Browse location path"
+msgstr "ロケーションパスをブラウズ"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:844
+msgid "**/api/v2/location/<UUID>/browse/**"
+msgstr "**/api/v2/location/<UUID>/browse/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:844
+msgid "*Returns location paths that are base64 encoded.*"
+msgstr "*base64エンコードされたロケーションパスを返します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:853
+msgid "List of entries in `path`, files or directories."
+msgstr "`パス` 、ファイルまたはディレクトリのエントリのリスト。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:855
+msgid "List of directories in `path`. Subset of `entries`."
+msgstr "`パス` 内のディレクトリのリスト。 `エントリ` のサブセット。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:860
+msgid "SWORD collection"
+msgstr "SWORDコレクション"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:864
+#: ../../dev-manual/api/api-reference-storage-service.rst:1637
+msgid "``GET, POST``"
+msgstr "``GET, POST``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:864
+msgid "**/api/v2/location/<UUID>/** \\ **sword/collection**"
+msgstr "**/api/v2/location/<UUID>/** \\ **sword/collection**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:864
+msgid ""
+"*Part of the Archivematica storage service REST API. The Storage Service "
+"also talks to the Archivematica dashboard, however, to notify it that a "
+"transfer created from a SWORD deposit has been approved for processing.*"
+msgstr ""
+"*Archivematica Storage Service REST APIの一部です。Storage "
+"Serviceは、Archivematicaダッシュボードとも通信し、SWORDデポジットから作成された転送の処理が承認されたことを通知します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:875
+msgid ""
+"The Archivematica Sword API enables 3rd party applications to automate the "
+"process of creating Transfers."
+msgstr "Archivematica Sword APIを使用すると、サードパーティのアプリケーションで転送の作成プロセスを自動化できます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:878
+msgid ""
+"1. Create Transfer - set the name and other metadata about a Transfer "
+"Populate Transfer - add/edit/update digital objects in a Transfer, and "
+"associated metadata."
+msgstr ""
+"1. 転送の作成 - 転送の名前とその他のメタデータを設定する転送の入力 - 転送内のデジタルオブジェクトと関連するメタデータを追加/編集/更新します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:882
+msgid ""
+"2. Finalize Transfer - indicates that the Transfer is ready to start "
+"processing. After content has been deposited, if users have access to the "
+"deposit directory they can also manually manipulate the deposit directory "
+"aside from any manipulation using the API."
+msgstr ""
+"2. 転送のファイナライズ - "
+"転送の処理開始準備が整ったことを示します。コンテンツがデポジットされた後、ユーザーがデポジットディレクトリにアクセスできる場合、APIを使用した操作とは別に、デポジットディレクトリを手動で操作もできます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:887
+msgid ""
+"3. Once a Transfer has been created, populated and finalized, Archivematica "
+"will begin processing that Transfer."
+msgstr "3. 転送の作成、入力、確定が完了すると、Archivematicaは、転送の処理を開始します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:951
+msgid "Package"
+msgstr "パッケージ"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:953
+msgid ""
+"A package is a bundle of one or more files transferred from an external "
+"service; for example, a package may be an AIP, a backlogged transfer, or a "
+"DIP. Each package is stored in a location."
+msgstr ""
+"パッケージは、外部サービスから転送された1つ以上のファイルのバンドルです。例えば、パッケージは "
+"AIP、バックログ転送、またはDIPであるかもしれません。各パッケージはある場所に保存されます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:959
+msgid "Get all packages"
+msgstr "すべてのパッケージを取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:963
+#: ../../dev-manual/api/api-reference-storage-service.rst:1184
+msgid "**/api/v2/file/**"
+msgstr "**/api/v2/file/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:963
+msgid ""
+"*Retrieves information about all packages for all available storage "
+"locations.*"
+msgstr "*利用可能なすべての保存場所のすべてのパッケージに関する情報を取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1181
+msgid "Create new package"
+msgstr "新しいパッケージを作成"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1184
+msgid ""
+"*Creates a database entry tracking the package (AIP, transfer, etc). If the "
+"package is an AIP, DIP or AIC and the current_location is an AIP or DIP "
+"storage location it also moves the files from the source to destination "
+"location. If the package is a Transfer and the current_location is transfer "
+"backlog, it is also moved.*"
+msgstr ""
+"*パッケージ（AIP、転送など）を追跡するデータベースエントリを作成します。パッケージがAIP、DIPまたはAICで、current_locationがAIPまたはDIPの保存場所である場合、ソースから宛先の場所にファイルを移動します。パッケージがTransferで、current_locationがtransfer"
+" backlogの場合、それも移動されます。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1192
+msgid ""
+"*This is handled through the modified* ``obj_create`` *function, which "
+"calls* ``Package.store_aip`` *or* ``Package.backlog_transfer``."
+msgstr ""
+"*これは、* ``Package.store_aip`` *または* ``Package.backlog_transfer`` を呼び出す、修正された "
+"* ``obj_create`` * 関数によって処理されます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1201
+msgid "UUID of the new package."
+msgstr "新しいパッケージのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1203
+msgid "URI of the Location where the package is currently."
+msgstr "パッケージが現在ある場所のURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1205
+#: ../../dev-manual/api/api-reference-storage-service.rst:1289
+msgid "``origin_path``"
+msgstr "``origin_path``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1205
+msgid "Path to the package, relative to the origin_location."
+msgstr "パッケージへのパス、origin_locationに対して。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1207
+#: ../../dev-manual/api/api-reference-storage-service.rst:1291
+msgid "``current_location``"
+msgstr "``current_location``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1207
+msgid "URI of the Location where the package should be stored."
+msgstr "パッケージが保存されるべき場所のURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1209
+msgid "``current_path``"
+msgstr "``current_path``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1209
+msgid ""
+"Path where the package should be stored, relative to the current_location."
+msgstr "パッケージが保管されるパス、current_locationに対して。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1212
+#: ../../dev-manual/api/api-reference-storage-service.rst:1293
+msgid "``package_type``"
+msgstr "``package_type``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1212
+msgid ""
+"Type of package this is. One of: `AIP`, `AIC`, `DIP`, `transfer`, `SIP`, "
+"`file`, `deposit`."
+msgstr ""
+"これは、パッケージの種類です。 `AIP` 、 `AIC` 、 `DIP` 、 `転送` 、 `SIP` 、 `ファイル` 、 `デポジット` "
+"のいずれかになります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1215
+msgid "Size of the package."
+msgstr "パッケージのサイズ。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1217
+#: ../../dev-manual/api/api-reference-storage-service.rst:1297
+msgid "``origin_pipeline``"
+msgstr "``origin_pipeline``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1217
+msgid "URI of the pipeline the package is from."
+msgstr "パッケージのあったパイプラインのURI。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1219
+msgid "``related_package_uuid``"
+msgstr "``related_package_uuid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1219
+msgid ""
+"UUID of a package that is related to this one. E.g. UUID of a DIP when "
+"storing an AIP"
+msgstr "このパッケージに関連するパッケージのUUID。例：AIPを保存するときのDIPのUUID"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1225
+msgid "Get package details"
+msgstr "パッケージの詳細を取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1229
+#: ../../dev-manual/api/api-reference-storage-service.rst:1266
+#: ../../dev-manual/api/api-reference-storage-service.rst:1309
+msgid "**/api/v2/file/<UUID>**"
+msgstr "**/api/v2/file/<UUID>**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1229
+msgid "*Retrieves information about a package.*"
+msgstr "*パッケージに関する情報を取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1262
+msgid "Update package contents"
+msgstr "パッケージ内容の更新"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1266
+#: ../../dev-manual/api/api-reference-storage-service.rst:1600
+msgid "``PUT``"
+msgstr "``PUT``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1266
+msgid ""
+"*Updates the contents of a package during reingest. If the package is an AIP"
+" or AIC, currently stored in an AIP storage location, and the 'reingest' "
+"parameter is set, it will call* ``Package.finish_reingest`` *and merge the "
+"new AIP with the existing one.*"
+msgstr ""
+"*reインジェスト中にパッケージの内容を更新します。パッケージがAIPまたはAICで、現在AIPの保存場所に保存されており、「reインジェスト」パラメーターが設定されている場合、*"
+" ``Package.finish_reingest`` *を呼び出し、新しいAIPを既存のものとマージします。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1273
+msgid ""
+"*This is implemented using a modified* ``obj_update`` *which calls* "
+"``obj_update_hook.``"
+msgstr "** ``obj_update_hook.`` を呼び出す修正済み * ``obj_update`` * を使って実施"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1282
+msgid "``reingest``"
+msgstr "``reingest``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1282
+msgid ""
+"*Flag to mark that this is reingest. Reduces chance to accidentally modify "
+"an AIP.*"
+msgstr "*再インジェストであることを示すフラグ。誤ってAIPを変更する可能性を減らします。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1285
+msgid "*UUID of the existing package.*"
+msgstr "*既存のパッケージのUUID。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1287
+msgid "*URI of the Location where the package is currently.*"
+msgstr "*パッケージが現在ある場所のURI。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1289
+msgid "*Path to the package, relative to the origin_location.*"
+msgstr "*パッケージへのパス、origin_locationに対して。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1291
+msgid "*URI of the Location where the package should be stored*"
+msgstr "*パッケージが保存されるべき場所のURI*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1293
+msgid "*Type of package this is. One of:* ``AIP``, ``AIC``."
+msgstr "*パッケージの種類。* ``AIP`` , ``AIC`` のいずれか。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1295
+msgid "*Size of the package.*"
+msgstr "*パッケージのサイズ。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1297
+msgid ""
+"*URI of the pipeline the package is from. This must be the same pipeline "
+"reingest was started on (tracked through* "
+"``Package.misc_attributes.reingest_pipeline)``."
+msgstr ""
+"*パッケージのパイプラインのURI。これは、reインジェストが開始されたのと同じパイプラインでなければなりません（* "
+"``Package.misc_attributes.reingest_pipeline)`` を通して追跡されます）。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1305
+msgid "Update package metadata"
+msgstr "パッケージのメタデータを更新"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1309
+msgid "``PATCH``"
+msgstr "``PATCH``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1309
+msgid ""
+"*Updates the metadata stored in the database for the package. Currently, "
+"this is used to update the reingest status.*"
+msgstr "*パッケージのデータベースに保存されているメタデータを更新します。現在、これは再インジェストステータスの更新に使用されています。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1317
+msgid ""
+"Currently, this always sets ``Package.misc_attributes.reingest`` to "
+"``None``, regardless of what value was actually passed in."
+msgstr ""
+"現在のところ、これは実際にどのような値が渡されたかにかかわらず、常に ``Package.misc_attributes.reingest`` を "
+"``None`` に設定します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1320
+msgid ""
+"This is implemented using a ``modified obj_update`` which calls "
+"``obj_update_hook``. ``update_in_place`` also helps."
+msgstr ""
+"これは、 ``obj_update_hook`` を呼び出す ``modified obj_update`` を使って実装されており、 "
+"``update_in_place`` も役に立ちます。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1325
+msgid "Delete package request"
+msgstr "パッケージ削除リクエスト"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1329
+msgid "**/api/v2/file/<UUID>/delete_aip/**"
+msgstr "**/api/v2/file/<UUID>/delete_aip/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1329
+msgid "*Requests package deletion.*"
+msgstr "*パッケージの削除を要求します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1333
+#: ../../dev-manual/api/api-reference-storage-service.rst:1382
+msgid "Request body parameters (mandatory):"
+msgstr "リクエストボディパラメーター（必須）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1337
+#: ../../dev-manual/api/api-reference-storage-service.rst:1386
+msgid "``event_reason``"
+msgstr "``event_reason``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1337
+msgid "*Rationale for deleting the AIP.*"
+msgstr "*AIP を削除する根拠。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1339
+msgid "*UUID of the pipeline the delete request is from.*"
+msgstr "*削除要求元のパイプラインのUUID。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1341
+#: ../../dev-manual/api/api-reference-storage-service.rst:1390
+msgid "``user_id``"
+msgstr "``user_id``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1341
+msgid ""
+"*User ID requesting the deletion. This is the ID of the user on the "
+"pipeline, and must be an integer greater than 0.*"
+msgstr "*削除を要求するユーザーID。これは、パイプライン上のユーザーのIDであり、0以上の整数でなければなりません。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1345
+#: ../../dev-manual/api/api-reference-storage-service.rst:1394
+msgid "``user_email``"
+msgstr "``user_email``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1345
+msgid "*Email of the user requesting the deletion.*"
+msgstr "*削除を要求するユーザーの電子メール。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1374
+msgid "Recover AIP request"
+msgstr "AIPリクエストの復旧"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1378
+msgid "**/api/v2/file/<UUID>/recover_aip/**"
+msgstr "**/api/v2/file/<UUID>/recover_aip/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1378
+msgid "*Requests package recovery.*"
+msgstr "*パッケージの復旧を要求します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1386
+msgid "*Rationale for recovering the AIP.*"
+msgstr "*AIP復旧の根拠。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1388
+msgid "*URI of the pipeline the recovery request is from.*"
+msgstr "*回復要求元のパイプラインのURI。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1390
+msgid ""
+"*User ID requesting the recovery. This is the ID of the user on the "
+"pipeline, and must be an integer greater than 0.*"
+msgstr "*復旧を要求するユーザーID。これはパイプライン上のユーザーのIDであり、0以上の整数でなければなりません。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1394
+msgid "*Email of the user requesting the recovery.*"
+msgstr "*復旧を依頼するユーザーの電子メール。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1422
+msgid "Download single file"
+msgstr "単一ファイルのダウンロード"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1426
+#: ../../dev-manual/api/api-reference-storage-service.rst:1458
+msgid "``GET, HEAD``"
+msgstr "``GET, HEAD``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1426
+msgid "**/api/v2/file/<UUID>/extract_file/**"
+msgstr "**/api/v2/file/<UUID>/extract_file/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1426
+msgid ""
+"*Checks if a package is locally available and returns a single file from the"
+" package.*"
+msgstr "*パッケージがローカルで利用可能かどうかをチェックし、パッケージから1つのファイルを返します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1435
+msgid ""
+"(Future improvement) HEAD and GET should not perform the same functions. "
+"HEAD should be updated to not return the file, and to only check for "
+"existence. Currently, the storage service has no way to check if a file "
+"exists except by downloading and extracting this AIP."
+msgstr ""
+"（今後の改善）HEADとGETは同じ機能を実行すべきではありません。HEADは、ファイルを返さず、存在だけをチェックするように更新されるべきです。現在、Storage"
+" Serviceは、このAIPをダウンロードして展開する以外に、ファイルが存在するかどうかをチェックする方法がありません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1440
+msgid "Response:"
+msgstr "レスポンス："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1442
+msgid ""
+"Returns a single file from the Package. If the package is compressed, it "
+"downloads the whole AIP and extracts it."
+msgstr "パッケージから単一のファイルを返します。パッケージが圧縮されている場合は、AIP全体をダウンロードして解凍します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1445
+msgid ""
+"This responds to HEAD because AtoM uses HEAD to check for the existence of a"
+" file."
+msgstr "AtoMは HEADを使用してファイルの存在をチェックするため、HEADに応答します。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1447
+#: ../../dev-manual/api/api-reference-storage-service.rst:1472
+msgid ""
+"If the package is in Arkivum, the package may not actually be available. "
+"This endpoint checks if the package is locally available. If it is, it is "
+"returned as normal. If not, it returns ``202`` and emails the administrator "
+"about the attempted access."
+msgstr ""
+"パッケージがArkivumにある場合、そのパッケージは実際には利用できないかもしれません。このエンドポイントは、パッケージがローカルで利用可能かどうかをチェックします。利用可能な場合は、通常通り返されます。そうでない場合は、"
+" ``202`` を返し、アクセスの試みについて管理者にメールを送ります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1454
+msgid "Download package"
+msgstr "パッケージのダウンロード"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1458
+msgid "**/api/v2/file/<UUID>/download/**"
+msgstr "**/api/v2/file/<UUID>/download/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1466
+msgid ""
+"**/api/v2/file/<UUID>/download/ <chunk number>/ (for LOCKSS harvesting)**"
+msgstr "**/api/v2/file/<UUID>/download/<chunk number>/ （LOCKSS採取用）**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1458
+msgid ""
+"*Checks if a package is available and returns the entire package as a single"
+" file.*"
+msgstr "*パッケージが利用可能かどうかをチェックし、パッケージ全体を単一のファイルとして返します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1479
+msgid "Get pointer file"
+msgstr "ポインタファイルの取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1483
+msgid "**/api/v2/file/<UUID>/pointer_file/**"
+msgstr "**/api/v2/file/<UUID>/pointer_file/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1483
+msgid ""
+"*Checks if a pointer file is available and returns the contents of the "
+"pointer file.*"
+msgstr "*ポインタファイルが利用可能かどうかをチェックし、ポインターファイルの内容を返します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1491
+msgid "Check fixity"
+msgstr "fixityのチェック"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1495
+msgid "**//api/v2/file/<UUID>/check_fixity/**"
+msgstr "**//api/v2/file/<UUID>/check_fixity/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1495
+msgid ""
+"*Performs a bag check and updates the Storage Service database with the "
+"results of that check.*"
+msgstr "*バッグチェックを行い、チェック結果でStorage Serviceデータベースを更新します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1507
+msgid "``force_local``"
+msgstr "``force_local``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1507
+msgid ""
+"*If true, download and run fixity on the AIP locally, instead of using the "
+"Space-provided fixity if available.*"
+msgstr ""
+"*trueの場合、スペースが提供する修正機能 (利用可能な場合) を使用するのではなく、AIPにfixityをローカルにダウンロードして実行します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1517
+#: ../../dev-manual/api/api-reference-storage-service.rst:1577
+msgid "``success``"
+msgstr "``success``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1517
+msgid ""
+"`True` if the verification succeeded, `False` if the verification failed, "
+"`None` if the scan could not start."
+msgstr ""
+"妥当性確認に成功した場合は `True` 、妥当性確認に失敗した場合は `Faulse` 、スキャンを開始できなかった場合は `None` です。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1520
+msgid "``message``"
+msgstr "``message``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1520
+msgid ""
+"Human-readable string explaining the report; it will be empty for successful"
+" scans."
+msgstr "人が読める形式でレポートを説明する文字列です。スキャンが成功した場合は空になります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1523
+msgid "``failures``"
+msgstr "``failures``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1523
+msgid "List of 0 or more errors."
+msgstr "0個以上のエラーのリスト。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1525
+msgid "``timestamp``"
+msgstr "``timestamp``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1525
+msgid ""
+"ISO-formated string with the datetime of the last fixity check. If the check"
+" was performed by an external system, this will be provided by that system. "
+"If not provided,or on error, it will be None."
+msgstr ""
+"最後のfixityチェックの日時を示すISO形式の文字列です。チェックが外部システムによって実行された場合、これは、そのシステムによって提供されます。提供されない場合、またはエラーの場合は、Noneとなります。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1533
+msgid "AIP storage callback request"
+msgstr "AIPストレージコールバックリクエスト"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1537
+msgid "**/api/v2/file/<UUID>/send_callback/post_store/**"
+msgstr "**/api/v2/file/<UUID>/send_callback/post_store/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1537
+msgid "*Gets callbacks configured to run post-storage for given AIP.*"
+msgstr "*指定されたAIPのポストストレージを実行するように設定されたコールバックを取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1546
+msgid ""
+"In the Archivematica Storage Service versions 0.15 and above, this endpoint "
+"has been extended to support callbacks for AIP, AIC and DIP stored events."
+msgstr ""
+"Archivematica Storage Serviceのバージョン0.15以降では、このエンドポイントが拡張され、AIP、AIC、DIPの "
+"保存イベントのコールバックをサポートします。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1549
+msgid "**Event:**  Post-store AIP, AIC, or DIP"
+msgstr "**イベント** ポストストアAIP、AIC、またはDIP"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1550
+msgid "**URI:**    https://scope.com/api/v1/dip/<package_uuid>/stored"
+msgstr "**URL：** https://scope.com/api/v1/dip/<package_uuid>/stored"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1551
+msgid "**Method:** POST"
+msgstr "**メソッド** POST"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1553
+msgid "**Headers:**"
+msgstr "**ヘッダー:**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1553
+msgid "Authorization -> Token <token>"
+msgstr "認証 -> トークン<token>"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1554
+msgid "Origin -> https://ss.com"
+msgstr "送信元 -> https://ss.com"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1555
+msgid "**Expected Status:**  202"
+msgstr "**予想されるステータス：** 202"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1559
+msgid ""
+"When using this endpoint, AIPs must be locally stored for the API call to "
+"work properly currently."
+msgstr "このエンドポイントを使用する場合、APIコールが現在正しく機能するには、AIPがローカルに保存されていなければなりません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1564
+msgid "Get file information for package"
+msgstr "パッケージのファイル情報を取得"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1568
+#: ../../dev-manual/api/api-reference-storage-service.rst:1600
+#: ../../dev-manual/api/api-reference-storage-service.rst:1626
+msgid "**/api/v2/file/<UUID>/contents/**"
+msgstr "**/api/v2/file/<UUID>/contents/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1568
+msgid "*Retrieves metadata on every file within a package.*"
+msgstr "*パッケージ内の各ファイルのメタデータを取得します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1577
+msgid "True."
+msgstr "True。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1579
+msgid "``package``"
+msgstr "``package``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1579
+msgid "UUID of the package."
+msgstr "パッケージのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1581
+msgid "List of dictionaries with file information. Each dictionary has:"
+msgstr "ファイル情報を持つ辞書のリスト。各辞書には："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1584
+msgid "source_id - UUID of the file to index."
+msgstr "source_id - インデックス化するファイルのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1585
+msgid "name - relative path of the file inside the package."
+msgstr "name - パッケージ内のファイルの相対パス。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1586
+msgid "source_package - UUID of the SIP this file is from."
+msgstr "source_package - このファイルの送信元のSIPの UUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1587
+msgid "checksum - checksum of the file, or an empty string."
+msgstr "checksum - ファイルのチェックサム、または空の文字列。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1588
+msgid "accessionid - Accession number, or an empty string."
+msgstr "accessionid - Accession番号、または空の文字列。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1589
+#: ../../dev-manual/api/api-reference-storage-service.rst:1657
+msgid "origin - UUID of the Archivematica dashboard this is from."
+msgstr "送信元 - ArchivematicaダッシュボードのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1596
+msgid "Update file information for package"
+msgstr "パッケージのファイル情報を更新"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1600
+msgid "*Adds a set of files to a package.*"
+msgstr "*一連のファイルをパッケージに追加します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1608
+msgid "Relative path of the file inside the package."
+msgstr "パッケージ内のファイルの相対パス。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1610
+msgid "``fileuuid``"
+msgstr "``fileuuid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1610
+msgid "UUID of the file to index."
+msgstr "インデックスを作成するファイルのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1612
+msgid "``accessionid``"
+msgstr "``accessionid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1612
+msgid "Accession number, or an empty string."
+msgstr "Accession番号、または空の文字列。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1614
+msgid "``sipuuid``"
+msgstr "``sipuuid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1614
+msgid "UUID of the SIP this file is from."
+msgstr "このファイルの送信元のSIPのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1616
+msgid "``origin``"
+msgstr "``origin``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1616
+msgid "UUID of the Archivematica dashboard this is from."
+msgstr "ArchivematicaダッシュボードのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1622
+msgid "Delete file information for package"
+msgstr "パッケージのファイル情報を削除"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1626
+msgid "``DELETE``"
+msgstr "``DELETE``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1626
+msgid "*Removes all file records associated with this package.*"
+msgstr "*このパッケージに関連するすべてのファイルレコードを削除します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1633
+msgid "Query file information on packages"
+msgstr "パッケージのファイル情報のクエリ"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1637
+msgid "**/api/v2/file/metadata/**"
+msgstr "**/api/v2/file/metadata/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1637
+msgid "*Access or write file information about the files.*"
+msgstr "*ファイルに関する情報にアクセスしたり、書き込んだりします。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1647
+msgid "``file``"
+msgstr "``file``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1647
+msgid ""
+"List of dictionaries with information about files that match the query:"
+msgstr "クエリーに一致するファイルに関する情報を持つ辞書のリスト："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1650
+msgid "accessionid - accession number, or an empty string."
+msgstr "accessionid - accessionid番号、または空の文字列。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1651
+msgid "file_extension - file extension."
+msgstr "file_extension - ファイルの拡張子。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1652
+msgid "filename - name of the file, sans path."
+msgstr "filename - パス名を除いたファイル名、sans path。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1653
+msgid "relative_path -  relative path of the file inside the package."
+msgstr "relative_path - パッケージ内のファイルの相対パス。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1655
+msgid "fileuuid - UUID of the file to index."
+msgstr "fileuuid - インデックス化するファイルのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1656
+msgid "sipuuid - UUID of the SIP this file is from."
+msgstr "sipuuid - このファイルの送信元のSIPのUUID。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1666
+msgid "Reingest AIP"
+msgstr "AIPの再インジェスト"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1670
+msgid "**/api/v2/file/<UUID>/reingest/**"
+msgstr "**/api/v2/file/<UUID>/reingest/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1670
+msgid "*Initiates an AIP reingest.*"
+msgstr "*AIPの再インジェストを開始します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1678
+#: ../../dev-manual/api/api-reference-storage-service.rst:1712
+msgid "Request body parameters (JSON):"
+msgstr "リクエストボディパラメーター（JSON）："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1684
+msgid "``reingest_type``"
+msgstr "``reingest_type``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1684
+msgid ""
+"One of `METADATA_ONLY` (metadata-only reingest), `OBJECTS` (partial "
+"reingest), `FULL` (full reingest)."
+msgstr ""
+"`METADATA_ONLY` （メタデータのみの再インジェスト）、 `OBJECTS` （部分的な再インジェスト）、 `FULL` "
+"（完全な再インジェスト）のいずれか1つ。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1687
+msgid "``processing_config``"
+msgstr "``processing_config``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1687
+msgid ""
+"Optional. Name of the processing configuration to use on full reingest."
+msgstr "オプション。完全な再インジェストで使用する処理設定の名前。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1692
+msgid "Example response:"
+msgstr "レスポンス例："
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1698
+msgid "Move package"
+msgstr "パッケージの移動"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1702
+msgid "This endpoint was introduced in the Storage Service version 0.14."
+msgstr "このエンドポイントは、Storage Serviceバージョン0.14で導入されました。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1707
+msgid "**/api/v2/file/<UUID>/move/**"
+msgstr "**/api/v2/file/<UUID>/move/**"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1707
+msgid "*Relocates a package.*"
+msgstr "*パッケージを再配列します。*"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1716
+msgid "``location_uuid``"
+msgstr "``location_uuid``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1716
+msgid ""
+"UUID of the location to send the package. The location must have the same "
+"Purpose as the package's current location (e.g. AIP Storage, DIP Storage)."
+msgstr ""
+"パッケージを送る場所のUUID。その場所は、パッケージの現在の場所（例えば、AIP StorageやDIP "
+"Storage）と同じPurposeを持たなければなりません。"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1731
+msgid "SWORD endpoints"
+msgstr "SWORDエンドポイント"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1733
+msgid "URL: ``/api/v2/file/<UUID>/sword/``"
+msgstr "URL： ``/api/v2/file/<UUID>/sword/``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1734
+msgid "URL: ``/api/v2/file/<UUID>/sword/media/``"
+msgstr "URL： ``/api/v2/file/<UUID>/sword/media/``"
+
+#: ../../dev-manual/api/api-reference-storage-service.rst:1735
+msgid "URL: ``/api/v2/file/<UUID>/sword/state/``"
+msgstr "URL： ``/api/v2/file/<UUID>/sword/state/``"

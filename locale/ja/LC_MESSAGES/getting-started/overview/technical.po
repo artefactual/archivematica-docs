@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../getting-started/overview/technical.rst:5
+msgid "Technical architecture"
+msgstr "技術アーキテクチャ"
+
+#: ../../getting-started/overview/technical.rst:13
+msgid "Diagram of the Archivematica technical overview"
+msgstr "Archivematica技術概要図"
+
+#: ../../getting-started/overview/technical.rst:13
+msgid "Archivematica technical overview"
+msgstr "Archivematicaの技術概要"
+
+#: ../../getting-started/overview/technical.rst:16
+msgid ""
+"This page provides a high-level overview of Archivematica's technical "
+"architecture."
+msgstr "このページでは、Archivematicaの技術アーキテクチャの概要を説明します。"
+
+#: ../../getting-started/overview/technical.rst:22
+msgid "Microservices design pattern"
+msgstr "マイクロサービス設計パターン"
+
+#: ../../getting-started/overview/technical.rst:24
+msgid ""
+"Archivematica implements a microservice approach to digital preservation. "
+"The Archivematica microservices are granular system tasks which operate on a"
+" conceptual entity that is equivalent to an OAIS information package: "
+"Submission Information Package (SIP), Archival Information Package (AIP), "
+"Dissemination Information Package (DIP). The physical structure of an "
+"information package will include files, checksums, logs, submission "
+"documentation, XML metadata, etc."
+msgstr ""
+"Archivematicaは、デジタル保存のためのマイクロサービス・アプローチを実装しています。Archivematicaのマイクロサービスは、OAISの情報パッケージに相当する概念的なエンティティ上で動作する粒度の細かいシステムタスク：投稿情報パッケージ（SIP）、アーカイブ情報パッケージ（AIP）、普及情報パッケージ（DIP）です。情報パッケージの物理的な構造には、ファイル、チェックサム、ログ、提出文書、XMLメタデータなどが含まれます。"
+
+#: ../../getting-started/overview/technical.rst:31
+msgid "For more information, see :ref:`Microservices <microservices>`."
+msgstr "詳細は、 :ref:`マイクロサービス <microservices>` を参照してください。"
+
+#: ../../getting-started/overview/technical.rst:36
+msgid "External tools"
+msgstr "外部ツール"
+
+#: ../../getting-started/overview/technical.rst:38
+msgid ""
+"Archivematica is built upon additional open-source frameworks and services."
+msgstr "Archivematicaは、オープンソースのフレームワークやサービスを利用して構築されています。"
+
+#: ../../getting-started/overview/technical.rst:40
+msgid "For more information, see :ref:`External tools <external-tools>`."
+msgstr "詳細は、 :ref:`外部ツール <external-tools>` を参照してください。"
+
+#: ../../getting-started/overview/technical.rst:45
+msgid "Web-based dashboard"
+msgstr "ウェブベースのダッシュボード"
+
+#: ../../getting-started/overview/technical.rst:47
+msgid ""
+"The web dashboard allow users to process, monitor, and control the "
+"Archivematica workflow processes. It is developed using the Python-based "
+"Django MVC framework. The Dashboard provides a multi-user interface that "
+"will report on the status of system events and make it simpler to control "
+"and trigger specific microservices. This interface allows users to easily "
+"add or edit metadata, coordinate AIP and DIP storage, and provide "
+"preservation planning information. Notifications include error reports, "
+"monitoring of MCP tasks, and manual approvals in the workflow."
+msgstr ""
+
+#: ../../getting-started/overview/technical.rst:56
+msgid "For more information, see :ref:`Web-based dashboard <web-dashboard>`."
+msgstr "詳細については、 :ref:`ウェブベースのダッシュボード <web-dashboard>` を参照してください。"
+
+#: ../../getting-started/overview/technical.rst:61
+msgid "Format policies"
+msgstr "フォーマットのポリシー"
+
+#: ../../getting-started/overview/technical.rst:63
+msgid ""
+"Archivematica maintains the original format of all ingested files to support"
+" migration and emulation strategies. However, the primary preservation "
+"strategy is to normalize files to preservation and access formats upon "
+"ingest. Archivematica groups file formats into format policies (e.g. text, "
+"audio, video, raster image, vector image, etc.). Archivematica's "
+"preservation formats must all be open standards. Additionally, the choice of"
+" formats is based on community best practices, availability of free and "
+"open-source normalization tools, and an analysis of the significant "
+"characteristics for each media type. The choice of access formats is based "
+"largely on the ubiquity of web-based viewers for the file format."
+msgstr ""
+"Archivematicaは、移行やエミュレーション戦略をサポートするために、インジェストされたすべてのファイルのオリジナルフォーマットを保持します。しかし、主な保存戦略は、インジェスト時にファイルを保存形式とアクセス形式に正規化することです。Archivematicaは、ファイルフォーマットをフォーマットポリシー（テキスト、オーディオ、ビデオ、ラスターイメージ、ベクターイメージなど）にグループ化します。Archivematicaの保存形式は、すべてオープンスタンダードでなければなりません。さらに、フォーマットの選択は、コミュニティのベストプラクティス、フリーでオープンソースの正規化ツールの利用可能性、各メディアタイプの重要な特性の分析に基づいています。アクセスフォーマットの選択は、主にファイルフォーマット用のWebベースのビューアが普及しているかどうかに基づいています。"
+
+#: ../../getting-started/overview/technical.rst:74
+msgid ""
+"Since the 1.0 production release, Archivematica format policies have been "
+"moved to a structured, online format policy registry (FPR). The FPR brings "
+"together format identification information with significant characteristic "
+"analysis, risk assessments, and normalization tool information to arrive at "
+"default preservation format and access format policies for Archivematica."
+msgstr ""
+"1.0 製品リリース以降、Archivematica フォーマットポリシーは、構造化されたオンラインフォーマットポリシーレジストリ (FPR) "
+"に移動されました。FPR は、フォーマット識別情報と重要な特性分析、リスク評価、正規化ツール情報を組み合わせて、Archivematica "
+"のデフォルトの保存フォーマットとアクセスフォーマットポリシーを決定します。"
+
+#: ../../getting-started/overview/technical.rst:80
+msgid ""
+"For more information, see :ref:`Preservation Planning <preservation-"
+"planning>`."
+msgstr "詳しくは、 :ref:`保存計画 <preservation-planning>` を参照してください。"
+
+#: ../../getting-started/overview/technical.rst:86
+msgid "From Transfer to SIP to AIP and DIP"
+msgstr "転送からSIP、AIP、DIPへ"
+
+#: ../../getting-started/overview/technical.rst:88
+msgid ""
+"The primary function of Archivematica is to process digital transfers "
+"(accessioned digital objects), turn them into SIPs, apply format policies, "
+"and create high-quality, repository-independent Archival Information "
+"Packages (AIP) using `METS`_, `PREMIS`_, and `Bagit`_. Archivematica can be "
+"bundled with `AtoM`_ but is designed to upload Dissemination Information "
+"Packages (DIP), containing descriptive metadata and web-ready access copies,"
+" to any access system (e.g. DSpace, ContentDM, etc.)."
+msgstr ""
+"Archivematicaの主な機能は、 `METS`_ 、 `PREMIS`_ 、 `Bagit`_ "
+"を使用して、デジタル転送（アクセションされたデジタルオブジェクト）を処理し、SIPに変換し、フォーマットポリシーを適用し、高品質でリポジトリに依存しないアーカイブ情報パッケージ（AIP）を作成することです。Archivematicaは、"
+" `AtoM`_ "
+"とバンドルできますが、説明メタデータとウェブ対応アクセスコピーを含む普及情報パッケージ（DIP）を、あらゆるアクセスシステム（DSpace、ContentDMなど）にアップロードするように設計されています。"
+
+#: ../../getting-started/overview/technical.rst:99
+msgid "Single install"
+msgstr "シングルインストール"
+
+#: ../../getting-started/overview/technical.rst:101
+msgid ""
+"Archivematica can be installed on one or many Linux-based operating systems,"
+" on a Virtual Machine or on dedicated hardware. The entire suite of digital "
+"preservation tools is available from one single installation. "
+"Archivematica's client/server processing architecture allows it to be "
+"deployed in multi-node, distributed processing configurations to support "
+"large-scale, resource-intensive production environments."
+msgstr ""
+"Archivematicaは、Linuxベースのオペレーティングシステム、仮想マシン、または専用ハードウェアにインストールできます。一度のインストールで、デジタル保存ツールの全機能を利用できます。Archivematicaのクライアント／サーバ処理アーキテクチャにより、マルチノード、分散処理設定で導入でき、大規模でリソース集約型のプロダクション環境をサポートします。"
+
+#: ../../getting-started/overview/technical.rst:108
+msgid ""
+"For more information, see :ref:`Installing Archivematica <installation>`."
+msgstr "詳細については、 :ref:`Archivematicaのインストール <installation>` を参照してください。"
+
+#: ../../getting-started/overview/technical.rst:110
+msgid ":ref:`Back to the top <technical-arch>`"
+msgstr ":ref:`トップに戻る <technical-arch>`"

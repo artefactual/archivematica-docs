@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../dev-manual/api/api-overview.rst:5
+msgid "API overview"
+msgstr "APIの概要"
+
+#: ../../dev-manual/api/api-overview.rst:7
+msgid ""
+"Archivematica exposes services and resources with the following REST-style "
+"APIs:"
+msgstr "Archivematicaは、以下のRESTスタイルのAPIでサービスとリソースを公開しています："
+
+#: ../../dev-manual/api/api-overview.rst:9
+msgid ":ref:`archivematica-api-intro`"
+msgstr ":ref:`archivematica-api-intro`"
+
+#: ../../dev-manual/api/api-overview.rst:10
+msgid ":ref:`storage-service-api-intro`"
+msgstr ":ref:`storage-service-api-intro`"
+
+#: ../../dev-manual/api/api-overview.rst:12
+msgid ""
+"The Archivematica and Storage service APIs are designed to help you create "
+"custom solutions."
+msgstr "ArchivematicaおよびStorage Service APIは、カスタムソリューションの作成を支援するように設計されています。"
+
+#: ../../dev-manual/api/api-overview.rst:18
+msgid "Archivematica API"
+msgstr "Archivematica API"
+
+#: ../../dev-manual/api/api-overview.rst:20
+msgid "The Archivematica API enables the following:"
+msgstr "Archivematica APIでは、以下のことが可能です："
+
+#: ../../dev-manual/api/api-overview.rst:22
+msgid ""
+"Coverage of some basic workflow functionality (e.g. listing and approving "
+"workflow tasks awaiting decision)."
+msgstr "基本的なワークフロー機能をカバー（例：決定待ちのワークフロータスクのリストアップと承認）。"
+
+#: ../../dev-manual/api/api-overview.rst:24
+msgid "Proxy support to the Storage Service."
+msgstr "Storage Serviceへのプロキシサポート。"
+
+#: ../../dev-manual/api/api-overview.rst:25
+msgid "Exposing unit status or processing configuration details."
+msgstr "ユニットのステータスや処理設定の詳細を公開。"
+
+#: ../../dev-manual/api/api-overview.rst:27
+msgid ""
+"Archivematica API endpoints require authentication. See :ref:`Authentication"
+" <api-overview-auth>` for additional information."
+msgstr ""
+"Archivematica APIのエンドポイントは認証が必要です。詳しくは、 :ref:`認証 <api-overview-auth>` "
+"を参照してください。"
+
+#: ../../dev-manual/api/api-overview.rst:30
+msgid ""
+"See :ref:`api-reference-archivematica` for information on Archivematica API "
+"endpoints."
+msgstr ""
+"Archivematica APIエンドポイントについては、 :ref:`api-reference-archivematica` を参照してください。"
+
+#: ../../dev-manual/api/api-overview.rst:36
+msgid "Storage Service API"
+msgstr "Storage Service API"
+
+#: ../../dev-manual/api/api-overview.rst:38
+msgid ""
+"If your system configuration includes the Archivematica Storage Service, "
+"then you may find the Storage Service API helpful for retrieving information"
+" about the following resources:"
+msgstr ""
+"システム構成にArchivematica Storage Serviceが含まれている場合、Storage Service "
+"APIは、以下のリソースの情報を取得するのに役立ちます："
+
+#: ../../dev-manual/api/api-overview.rst:42
+msgid "Pipeline"
+msgstr "Pipeline"
+
+#: ../../dev-manual/api/api-overview.rst:43
+msgid "Space"
+msgstr "Space"
+
+#: ../../dev-manual/api/api-overview.rst:44
+msgid "Location"
+msgstr "Location"
+
+#: ../../dev-manual/api/api-overview.rst:46
+msgid ""
+"Storage Service API endpoints require authentication. See "
+":ref:`Authentication <api-overview-auth>` for additional information."
+msgstr ""
+"Storage ServiceAPIエンドポイントは、認証を必要とします。詳細は、 :ref:`認証 <api-overview-auth>` "
+"を参照してください。"
+
+#: ../../dev-manual/api/api-overview.rst:49
+msgid ""
+"See :ref:`api-reference-storage-service` for information on Storage Service "
+"API endpoints."
+msgstr ""
+"Storage ServiceAPIエンドポイントについては、 :ref:`api-reference-storage-service` "
+"を参照してください。"
+
+#: ../../dev-manual/api/api-overview.rst:55
+msgid "Authentication"
+msgstr "認証"
+
+#: ../../dev-manual/api/api-overview.rst:57
+msgid ""
+"All calls to the API endpoints require authentication with username and API "
+"key."
+msgstr "APIエンドポイントへのすべての呼び出しには、ユーザー名とAPIキーによる認証が必要です。"
+
+#: ../../dev-manual/api/api-overview.rst:59
+msgid ""
+"Archivematica's Dashboard provides a simple cookie-based user authentication"
+" system using the Django authentication framework. Only authenticated users "
+"have access to the data."
+msgstr ""
+"Archivematica "
+"Dashboardは、Django認証フレームワークを使用したシンプルなクッキーベースのユーザー認証システムを提供しています。認証されたユーザーのみがデータにアクセスできます。"
+
+#: ../../dev-manual/api/api-overview.rst:63
+msgid ""
+"Both the Archivematica API and Storage Service API use GET parameters by "
+"default to give access to authenticated users."
+msgstr ""
+"Archivematica APIもStorage Service "
+"APIも、デフォルトではGETパラメーターを使用し、認証されたユーザーにアクセスを許可します。"
+
+#: ../../dev-manual/api/api-overview.rst:66
+msgid "When setting GET parameters, the format is::"
+msgstr "GETパラメーターを設定する場合のフォーマットは::です"
+
+#: ../../dev-manual/api/api-overview.rst:70
+msgid "When passing an API key value as part of the header, the format is::"
+msgstr "APIキー値をヘッダーの一部として渡す場合、フォーマットは::になります"
+
+#: ../../dev-manual/api/api-overview.rst:74
+msgid ""
+"The Transport Layer Security (TLS) protocol should be enabled in the web "
+"server (typically Nginx) to ensure that all data transmitted between clients"
+" and the server is encrypted with secure algorithms and not viewable by "
+"third parties."
+msgstr ""
+"トランスポートレイヤーセキュリティ（TLS）プロトコルは、クライアントとサーバー間で送信されるすべてのデータが安全なアルゴリズムで暗号化され、第三者が閲覧できないようにするため、ウェブサーバー（通常はNginx）で有効にするべきです。"
+
+#: ../../dev-manual/api/api-overview.rst:79
+msgid "Generating an API key for a user"
+msgstr "ユーザーのAPIキーを生成"
+
+#: ../../dev-manual/api/api-overview.rst:81
+msgid ""
+"API keys are associated with user accounts, which you can manage in the "
+"Dashboard Administration tab. Archivematica users fall into two categories: "
+"administrators and non-administrators. :ref:`admin-dashboard-users` who are "
+"administrators can create and edit user accounts. Administrators can also "
+"generate an API key for any user account in the database."
+msgstr ""
+"APIキーは、ユーザーアカウントに関連付けられており、Dashboard "
+"Administrationタブで管理できます。Archivematicaユーザーは、管理者と非管理者の2津のカテゴリに分かれます。 "
+":ref:`admin-dashboard-users` "
+"の管理者は、ユーザーアカウントの作成と編集ができます。管理者は、データベース内の任意のユーザーアカウントのAPIキーを生成もできます。"
+
+#: ../../dev-manual/api/api-overview.rst:87
+msgid "To generate an API key for an existing user in Archivematica:"
+msgstr "Archivematicaの既存ユーザーのAPIキーを生成するには："
+
+#: ../../dev-manual/api/api-overview.rst:89
+msgid "Navigate to **Admin > Users** to access the Users page."
+msgstr "**Admin > Users** に移動し、Usersページにアクセスします。"
+
+#: ../../dev-manual/api/api-overview.rst:90
+msgid ""
+"Select the username of the user for whom you want to generate an API key."
+msgstr "APIキーを生成したいユーザーのユーザー名を選択します。"
+
+#: ../../dev-manual/api/api-overview.rst:91
+msgid "Click on the **Regenerate API key** box."
+msgstr "**Regenerate API key** ボックスをクリックします。"
+
+#: ../../dev-manual/api/api-overview.rst:92
+msgid "Click **Save**."
+msgstr "**Save** をクリックします。"
+
+#: ../../dev-manual/api/api-overview.rst:93
+msgid ""
+"Access the new API key on the user's profile by clicking on their username."
+msgstr "ユーザー名をクリックして、そのユーザーのプロファイルから新しいAPIキーにアクセスします。"
+
+#: ../../dev-manual/api/api-overview.rst:96
+msgid ""
+"In the Storage Service, an API key is automatically generated for each new "
+"user. If you change the password for a given user, then a new API key will "
+"be randomly generated for that user."
+msgstr ""
+"Storage "
+"Serviceでは、新規ユーザーごとにAPIキーが自動的に生成されます。指定したユーザーのパスワードを変更すると、そのユーザー用に新しいAPIキーがランダムに生成されます。"
+
+#: ../../dev-manual/api/api-overview.rst:101
+msgid "Using an API key in a request"
+msgstr "リクエストでAPIキーを使用"
+
+#: ../../dev-manual/api/api-overview.rst:103
+msgid ""
+"An API key value must be passed with each request to the API endpoints, or "
+"no response will be returned. Below is an example of using `cURL "
+"<https://curl.haxx.se/>`_ to submit the requests with the API key in the "
+"header."
+msgstr ""
+"APIキー値は、APIエンドポイントへの各リクエストで渡されなければなりません。以下は、 `cURL <https://curl.haxx.se/>`_"
+" を使用して、ヘッダーにAPIキーを指定してリクエストを送信する例です。"
+
+#: ../../dev-manual/api/api-overview.rst:108
+msgid "*Example request* (using curl)::"
+msgstr "*リクエスト例* （curlを使用）::"
+
+#: ../../dev-manual/api/api-overview.rst:114
+msgid "*Example request header*::"
+msgstr "*リクエストヘッダの例* ::"
+
+#: ../../dev-manual/api/api-overview.rst:120
+msgid "*Example response header*::"
+msgstr "*レスポンスヘッダの例* ::"

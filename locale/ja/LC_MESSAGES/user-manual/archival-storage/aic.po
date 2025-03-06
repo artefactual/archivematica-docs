@@ -1,0 +1,439 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/archival-storage/aic.rst:5
+msgid "Archival Information Collections (AICs)"
+msgstr "アーカイブ情報コレクション（AICs）"
+
+#: ../../user-manual/archival-storage/aic.rst:7
+msgid ""
+"Because datasets and digital object collections can be large and "
+"heterogeneous, one dataset or collection of digital objects may be broken "
+"into multiple AIPs. In such cases, these AIPs can be intellectually combined"
+" into one Archival Information Collection (AIC), defined by the OAIS "
+"reference model as \"an Archival Information Package whose Content "
+"Information is an aggregation of other Archival Information Packages.\" "
+"(OAIS, 1-9)"
+msgstr ""
+"データセットやデジタルオブジェクトのコレクションは、大規模で異質な場合があるため、1つのデータセットやデジタルオブジェクトのコレクションが複数のAIPに分割されることがあります。このような場合、これらのAIPを知的結合して1つのアーカイブ情報コレクション（AIC）とできます。OAIS参照モデルでは、\"コンテンツ情報が他のアーカイブ情報パッケージの集合体であるアーカイブ情報パッケージと定義されています。\"（OAIS、1-9）"
+
+#: ../../user-manual/archival-storage/aic.rst:14
+msgid ""
+"When you create an AIC in Archivematica, the individual AIPs are not "
+"physically combined; that is, they still exist as separate packages. The AIC"
+" itself is also a separate package, containing only metadata - specifically,"
+" a specialized METS file that lists all of the AIPs that belong to the AIC."
+msgstr ""
+"ArchivematicaでAICを作成する際、個々のAIPは、物理的に結合されません。AIC自体も別個のパッケージであり、メタデータ（具体的には、AICに属するすべてのAIPをリストした特殊なMETSファイル）のみを含んでいます。"
+
+#: ../../user-manual/archival-storage/aic.rst:19
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/archival-storage/aic.rst:21
+msgid ":ref:`Create an Archival Information Collection <create-aic>`"
+msgstr ":ref:`アーカイブ情報コレクションの作成 <create-aic>`"
+
+#: ../../user-manual/archival-storage/aic.rst:22
+msgid ":ref:`Search for AICs <search-aic>`"
+msgstr ":ref:`AICの検索 <search-aic>`"
+
+#: ../../user-manual/archival-storage/aic.rst:23
+msgid ":ref:`Update an AIC <update-aic>`"
+msgstr ":ref:`AICの更新 <update-aic>`"
+
+#: ../../user-manual/archival-storage/aic.rst:24
+msgid ":ref:`AIC contents <aic-contents>`"
+msgstr ":ref:`AICの内容 <aic-contents>`"
+
+#: ../../user-manual/archival-storage/aic.rst:29
+msgid "Create an Archival Information Collection"
+msgstr "アーカイブ情報コレクションの作成"
+
+#: ../../user-manual/archival-storage/aic.rst:31
+msgid ""
+"Creating an AIC is a two-step process. First, you must create your AIPs. "
+"It's easiest if you are able to create all of the required AIPs before you "
+"create the AIC, but there is information below on how to :ref:`update an AIC"
+" <update-aic>` if needed."
+msgstr ""
+"AICの作成は、2つのステップからなります。まず、AIPを作成しなければなりません。AICを作成する前に、必要なAIPをすべて作成できれば最も簡単ですが、必要であれば、"
+" :ref:`AICを更新する <update-aic>` 方法についての情報が以下にあります。"
+
+#: ../../user-manual/archival-storage/aic.rst:36
+msgid ""
+"The method below adds some metadata about the AIC (an identifier) to each "
+"transfer before it becomes an AIP. This is optional, but it can be a helpful"
+" way to search for the AIPs that will form the AIC. If you do not use the "
+"AIC identifier, you must use some other method by which you can search for "
+"the AIPs that will be included in the AIC (i.e. the AIP name). Note that if "
+"you do not add an AIC identifier, it may be more difficult to :ref:`search "
+"<search-aic>` for the AIC's component AIPs later."
+msgstr ""
+"以下の方法は、AIPになる前に、各転送にAICに関するメタデータ（識別子）を追加します。これはオプションですが、AICを形成するAIPを検索するのに役立つ方法です。AIC識別子を使用しない場合は、AICに含まれるAIP（AIP名）を検索できる他の方法を使用する必要があります。AIC識別子を追加しない場合は、後でAICのコンポーネントAIPを"
+" :ref:`検索 <search-aic>` するのが難しくなる可能性があることに注意してください。"
+
+#: ../../user-manual/archival-storage/aic.rst:44
+msgid ""
+"The second step uses the AIC identifier (or some other search parameter) to "
+"connect multiple AIPs into an AIC."
+msgstr "第2段階は、AIC識別子（または他の検索パラメーター）を使って、複数のAIPをAICに接続します。"
+
+#: ../../user-manual/archival-storage/aic.rst:47
+msgid ""
+"The method described requires users to enter the AIC identifier manually "
+"while processing the transfer; however, it is also possible to add the AIC "
+"identifier using a :ref:`metadata CSV <metadata.csv>` by adding a column to "
+"your CSV with the heading ``dcterms.isPartOf``. With this method, you must "
+"append your preferred identifier with \"AIC#\". This is automatically done "
+"when entering data using the metadata form in Archivematica."
+msgstr ""
+"説明されている方法で、ユーザーは、転送処理中にAIC識別子を手動で入力する必要があります；しかし、 :ref:`メタデータCSV "
+"<metadata.csv>` を使って、AIC 識別子を追加することも可能です。この場合、CSV に ``dcterms.isPartOf`` "
+"というカラムを追加します。この方法では、ご希望の識別子を\"AIC#\"として付加する必要があります。これは、Archivematicaのメタデータフォームを使ってデータを入力する際に自動的に行われます。"
+
+#: ../../user-manual/archival-storage/aic.rst:57
+msgid "Step 1: Create your AIPs"
+msgstr "ステップ1：AIP を作成"
+
+#: ../../user-manual/archival-storage/aic.rst:59
+msgid ""
+"Create a :ref:`transfer <transfer>`. This transfer can consist of any data "
+"and may be created using any transfer type."
+msgstr ":ref:`転送 <transfer>` を作成します。この転送は、任意のデータで構成でき、任意の転送タイプを使用して作成できます。"
+
+#: ../../user-manual/archival-storage/aic.rst:62
+msgid ""
+"If you'd like, add an AIC identifier to the transfer by clicking on the "
+"transfer's metadata button. This must be done before ``Microservice: Add "
+"final metadata``."
+msgstr ""
+"必要に応じて、転送のメタデータボタンをクリックして、転送にAIC識別子を追加します。これは、 ``Microservice: Add final "
+"metadata`` より前に行う必要があります。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid ""
+"Click on the metadata button to the right of the transfer name to edit the "
+"transfer's metadata"
+msgstr "転送のメタデータを編集するには、転送名の右側にあるメタデータボタンをクリックしてください"
+
+#: ../../user-manual/archival-storage/aic.rst:73
+msgid ""
+"Archivematica can be configured to remind you to add metadata. In your "
+":ref:`processing configuration <dashboard-processing>`, set the field "
+"``Reminder: add metadata if desired`` to ``None``."
+msgstr ""
+"Archivematicaは、メタデータの追加を忘れないように設定できます。 :ref:`処理設定 <dashboard-processing>` "
+"で、フィールド ``Reminder: add metadata if desired`` を ``None`` に設定します。"
+
+#: ../../user-manual/archival-storage/aic.rst:77
+msgid ""
+"Clicking on the metadata button should have opened up the transfer's "
+"metadata information screen. Under the Metadata heading, click on **Add**."
+msgstr ""
+"メタデータボタンをクリックすると、転送のメタデータ情報画面が開いたはずです。メタデータの見出しの下で、 **Add** をクリックしてください。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Click on Add under Metadata"
+msgstr "メタデータの下の[追加]をクリック"
+
+#: ../../user-manual/archival-storage/aic.rst:85
+msgid ""
+"In the **Part of AIC** field, enter the AIC identifier. You can also add "
+"other descriptive metadata for the transfer, if you wish."
+msgstr "**Part of AIC** フィールドに、AIC識別子を入力します。必要であれば、転送のための他の説明メタデータを追加もできます。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "On the add metadata screen, enter a value into the Part of AIC field."
+msgstr "メタデータの追加画面で、[AICの一部] フィールドに値を入力します。"
+
+#: ../../user-manual/archival-storage/aic.rst:95
+msgid "The AIC identifier can be any combination of letters and numbers."
+msgstr "AICの識別子は、文字と数字を自由に組み合わせることができます。"
+
+#: ../../user-manual/archival-storage/aic.rst:97
+msgid "At bottom of screen, click **Create**."
+msgstr "画面下部で、 **作成** をクリックします。"
+
+#: ../../user-manual/archival-storage/aic.rst:99
+msgid "Finish processing your AIP and place it in storage."
+msgstr "AIPの処理を終了し、ストレージに置きます。"
+
+#: ../../user-manual/archival-storage/aic.rst:101
+msgid ""
+"Repeat steps 1 through 6 to create as many AIPs as you need. If you plan to "
+"use the AIC identifier to connect your AIPs, make sure to enter the same "
+"number in the **Part of AIC** field. Once you've created all your AIPs, move"
+" on to Step 2 and create the AIC."
+msgstr ""
+"ステップ1から6を繰り返して、必要な数のAIPを作成します。AIC識別子を使用してAIPを接続する予定の場合は、 **AICの一部** "
+"フィールドに同じ番号を入力してください。すべてのAIPを作成したら、ステップ2に進み、AICを作成します。"
+
+#: ../../user-manual/archival-storage/aic.rst:109
+msgid "Step 2: Create the AIC"
+msgstr "ステップ2：AICの作成"
+
+#: ../../user-manual/archival-storage/aic.rst:111
+msgid ""
+"Once all your AIPs have been stored, click on the Archival Storage tab."
+msgstr "すべてのAIPが保存されたら、Archival Storageタブをクリックします。"
+
+#: ../../user-manual/archival-storage/aic.rst:113
+msgid ""
+"Search for the AIPs that will be included in the AIC. This is where the AIC "
+"identifier is helpful. To retrieve all AIPs with the same value in **Part of"
+" AIC**, enter ``AIC#[identifier]`` in the search box, replacing "
+"``[identifier]`` with the identifier you entered. Select ``Part of AIC`` as "
+"the search parameter."
+msgstr ""
+"AICに含まれるAIPを検索します。ここでAICの識別子が役に立ちます。 **AICの一部** "
+"に同じ値を持つすべてのAIPを検索するには、検索ボックスに ``AIC#[identifier]`` を入力し、 ``[identifier]`` "
+"を入力した識別子で置き換えます。検索パラメータとして ``Part of AIC`` を選択します。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Search for AIPs in Archival storage"
+msgstr "アーカイブストレージでAIPを検索"
+
+#: ../../user-manual/archival-storage/aic.rst:124
+msgid ""
+"When you're satisfied that only the AIPs that you want to include in the AIC"
+" are included in the search results, click **Create an AIC**."
+msgstr "AICに含めたいAIPのみが検索結果に含まれていることを確認したら、 **AICを作成** をクリックします。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Click the Create an AIC button"
+msgstr "[AICボタンの作成]ボタンをクリック"
+
+#: ../../user-manual/archival-storage/aic.rst:132
+msgid ""
+"You will see a metadata entry template for the AIC. At a minimum, you must "
+"give the AIC an identifier. Archivematica will use the identifier as the "
+"name of the AIC package that it is about to generate. You can also add more "
+"metadata about the AIC using this form, if you wish. When you're done, click"
+" on **Create** at the bottom of the metadata entry template."
+msgstr ""
+"AICのメタデータ入力テンプレートが表示されます。最低限、AICに識別子を付ける必要があります。Archivematicaは、この識別子を、これから生成するAICパッケージの名前として使用します。必要であれば、このフォームを使ってAICに関するメタデータを追加もできます。入力が終わったら、メタデータ入力テンプレートの下にある"
+" **Create** をクリックします。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Enter metadata about the AIC."
+msgstr "AICに関するメタデータを入力します。"
+
+#: ../../user-manual/archival-storage/aic.rst:143
+msgid ""
+"Navigate to the Ingest tab. The AIC will appear as a new ingest. Approve it."
+msgstr "インジェストタブに移動します。AICが新しいインジェストとして表示されます。それを承認します。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Approve the AIC in Ingest tab"
+msgstr "[インジェスト]タブで[AIC]を承認"
+
+#: ../../user-manual/archival-storage/aic.rst:150
+msgid "Continue processing the AIC and place it in archival storage."
+msgstr "AICの処理を続け、アーカイブストレージに入れます。"
+
+#: ../../user-manual/archival-storage/aic.rst:155
+msgid "Search for AICs"
+msgstr "AICの検索"
+
+#: ../../user-manual/archival-storage/aic.rst:157
+msgid ""
+"If you need to retrieve the AIC or any of the AIPs that make up the AIC, you"
+" can do so on the Archival Storage tab."
+msgstr "AICまたはAICを構成するAIPのいずれかを取り出す必要がある場合は、Archival Storageタブで取り出すことができます。"
+
+#: ../../user-manual/archival-storage/aic.rst:160
+msgid ""
+"To see AIC information while browsing the Archival Storage tab, click on "
+"**Select columns** underneath the results table and highlight the ``AIC`` "
+"row. Search results will now include the column ``AIC``, which provides "
+"information about whether or not the AIP is included in an AIC (or if it is,"
+" itself, an AIC)."
+msgstr ""
+"Archival Storageタブを閲覧中にAIC情報を見るには、結果表の下にある **Select columns** をクリックし、 "
+"``AIC`` 行をハイライトします。検索結果には、AIPがAICに含まれるかどうか（あるいはそれ自体がAICであるかどうか）の情報を提供する列 "
+"``AIC`` が含まれるようになりました。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "The AIC column shows the AIC identifier"
+msgstr "AIC列はAIC識別子を示します"
+
+#: ../../user-manual/archival-storage/aic.rst:171
+msgid ""
+"In the above screenshot, note that the first four AIPs are part of an AIC "
+"while the fifth result is the AIC itself. The last two results are neither "
+"AICs nor part of AICs. This was a wildcard search, displaying everything "
+"currently in Archival Storage."
+msgstr ""
+"上のスクリーンショットでは、最初の4つのAIPがAICの一部であるのに対し、5番目の結果はAIC自体であることに注意してください。最後の2つの結果はAICでもAICの一部でもありません。これはワイルドカード検索であり、現在アーカイブストレージにあるものをすべて表示します。"
+
+#: ../../user-manual/archival-storage/aic.rst:176
+msgid ""
+"To search for the AIPs that belong to a specific AIC, enter "
+"``AIC#[identifier]`` in the search box, replacing ``[identifier]`` with the "
+"identifier that you entered while creating the AIPs (see :ref:`Step 1 <aic-"
+"step-1>`, above). Select ``Part of AIC`` as the search parameter."
+msgstr ""
+"特定のAICに属するAIPを検索するには、検索ボックスに ``AIC#[identifier]`` を入力し、 ``[identifier]`` "
+"をAIP作成時に入力した識別子で置き換えます（上記の :ref:`ステップ1 <aic-step-1>` を参照）。検索パラメーターとして ``Part"
+" of AIC`` を選択します。"
+
+#: ../../user-manual/archival-storage/aic.rst:188
+msgid ""
+"If you did not create your AIC by adding the AIC identifier to each AIP, as "
+"described in :ref:`Step 1 <aic-step-1>` above, it may be more difficult to "
+"find the AIC's component AIPs. You may need to download the AIC package and "
+"review the METS file contained within to see which AIPs make up the AIC."
+msgstr ""
+"上記の :ref:`ステップ 1 <aic-step-1>` で説明したように、各 AIP に AIC 識別子を追加して AIC "
+"を作成しなかった場合、AIC のコンポーネント AIP を見つけるのがより困難になる可能性があります。AIC "
+"パッケージをダウンロードし、その中に含まれる METSファイルを確認して、AIC を構成するAIPを確認する必要がある場合があります。"
+
+#: ../../user-manual/archival-storage/aic.rst:193
+msgid ""
+"You can search for a specific AIC by using the AIC identifier. Enter "
+"``AIC#[identifier]`` in the search box, replacing ``[identifier]`` with the "
+"identifier for your AIC. Select ``AIC identifier`` as the search parameter."
+msgstr ""
+"AICの識別子を使って特定のAICを検索できます。検索ボックスに ``AIC#[identifier]`` と入力し、 ``[identifier]``"
+" をAICの識別子に置き換えます。検索パラメーターとして ``AIC identifier`` を選択します。"
+
+#: ../../user-manual/archival-storage/aic.rst:-1
+msgid "Search for AICs using the AIC identifier"
+msgstr "AIC識別子を使ってAICを検索"
+
+#: ../../user-manual/archival-storage/aic.rst:202
+msgid ""
+"If you want to see both the AIC and the AIPs that belong to it, you can "
+"perform a Boolean search."
+msgstr "AICとそれに属するAIPの両方を見たい場合は、ブール検索を行うことができます。"
+
+#: ../../user-manual/archival-storage/aic.rst:205
+msgid ""
+"Search for the AIPs by entering ``AIC#[identifier]`` in the search box, "
+"replacing ``[identifier]`` with the identifier that you entered while "
+"creating the AIPs. Select ``Part of AIC`` as the search parameter."
+msgstr ""
+"検索ボックスに ``AIC#[identifier]`` を入力し、 ``[identifier]`` "
+"をAIP作成時に入力した識別子に置き換えて、AIPを検索します。検索パラメーターとして ``Part of AIC`` を選択します。"
+
+#: ../../user-manual/archival-storage/aic.rst:209
+msgid "Click **Add new** below the search box to add a second search query"
+msgstr "検索ボックスの下にある **新規追加** をクリックして2番目の検索クエリを追加します"
+
+#: ../../user-manual/archival-storage/aic.rst:211
+msgid "Change the boolean operator to ``OR``."
+msgstr "ブーリアン演算子を ``OR`` に変更します。"
+
+#: ../../user-manual/archival-storage/aic.rst:213
+msgid ""
+"In the second query line, enter ``AIC#[identifier]`` in the search box, "
+"replacing ``[identifier]`` with the identifier for your AIC. Select ``AIC "
+"identifier`` as the search parameter."
+msgstr ""
+"2行目のクエリ行で、検索ボックスに ``AIC#[identifier]`` と入力し、 ``[identifier]`` "
+"をAICの識別子に置き換えます。検索パラメーターとして ``AIC identifier`` を選択します。"
+
+#: ../../user-manual/archival-storage/aic.rst:225
+msgid "Update an AIC"
+msgstr "AICの更新"
+
+#: ../../user-manual/archival-storage/aic.rst:227
+msgid ""
+"The most common reason to update an AIC is to add more AIPs to it. To do "
+"this, the original AIC must be deleted and a new AIC created."
+msgstr ""
+"AICを更新する最も一般的な理由は、AIPを追加することです。そのためには、オリジナルのAICを削除し、新しいAICを作成しなければなりません。"
+
+#: ../../user-manual/archival-storage/aic.rst:230
+msgid ""
+"An AIC is deleted the same way that an AIP is deleted. For more information "
+"on deleting an AIP, see :ref:`Delete an AIP <delete-aip>`."
+msgstr ""
+"AIC の削除は、AIP の削除と同じ方法で行います。AIP の削除の詳細については、 :ref:`AIP の削除 <delete-aip>` "
+"を参照してください。"
+
+#: ../../user-manual/archival-storage/aic.rst:233
+msgid ""
+"To create a new AIC, follow the instructions to :ref:`create an AIC <create-"
+"aic>` above."
+msgstr "新しい AIC を作成するには、上記の手順に従って、 :ref:`AIC を作成 <create-aic>` します。"
+
+#: ../../user-manual/archival-storage/aic.rst:239
+msgid "AIC contents"
+msgstr "AICの内容"
+
+#: ../../user-manual/archival-storage/aic.rst:241
+msgid ""
+"An AIC is a package, similar to an AIP, but it contains metadata only. A "
+"basic AIC will have a structure similar to this::"
+msgstr "AIC は AIP に似たパッケージですが、メタデータのみを含めます。基本的な AIC は、::と同じ構造になります"
+
+#: ../../user-manual/archival-storage/aic.rst:254
+msgid ""
+"Like AIPs, AICs are bagged according to the BagIt specification. To learn "
+"more about how Archivematica implements BagIt, see :ref:`AIP structure <aip-"
+"structure>`."
+msgstr ""
+"AIP と同様に、AIC も BagIt の仕様に従ってバッグされます。Archivematica が BagIt "
+"をどのように実装しているかについては、 :ref:`AIP 構造 <aip-structure>` を参照してください。"
+
+#: ../../user-manual/archival-storage/aic.rst:258
+msgid ""
+"There are two METS files included in the AIC. The first one, in the ``data``"
+" subdirectory, is the METS file for the AIC package itself, similar to an "
+"AIP METS file."
+msgstr ""
+"AIC には 2 つの METS ファイルが含まれています。最初のものは ``data`` "
+"サブディレクトリにあり、AICパッケージ自体のMETSファイルで、AIP METSファイルに類似しています。"
+
+#: ../../user-manual/archival-storage/aic.rst:262
+msgid ""
+"The second METS file, located within ``data/metadata``, contains information"
+" about the AIC and its component AIPs. The AIC's descriptive metadata "
+"section (dmdSec) includes the Dublin Core added during AIC creation."
+msgstr ""
+"``data/metadata`` "
+"内にある2番目のMETSファイルには、AICとそのコンポーネントAIPに関する情報が含まれています。AICの説明メタデータセクション (dmdSec) "
+"には、AICの作成時に追加されたDublin Coreが含まれています。"
+
+#: ../../user-manual/archival-storage/aic.rst:281
+msgid ""
+"The METS file also shows which AIPs are included in this AIC. The AIC's "
+"component AIPs are listed in the METS file's fileSec."
+msgstr ""
+"METSファイルは、どのAIPがこのAICに含まれているかも示しています。AIC のコンポーネント AIP は、METS ファイルの fileSec "
+"です."
+
+#: ../../user-manual/archival-storage/aic.rst:294
+msgid ""
+"This information is also displayed in the logical structMap of the METS. The"
+" logical structMap is a hierarchical display of the AIC, intended to show "
+"the relationship between the items being described (i.e. that the component "
+"AIPs are part of this AIC)."
+msgstr ""
+"この情報は、METS の論理構造マップ（logical structMap）にも表示されます。論理 structMap は AIC "
+"の階層表示であり、記述される項目間の関係（すなわち、コンポーネント AIP がこの AIC の一部であること）を示すことを意図しています。"
+
+#: ../../user-manual/archival-storage/aic.rst:315
+msgid ":ref:`Back to the top <aic>`"
+msgstr ":ref:`トップに戻る <aic>`"

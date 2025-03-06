@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:5
+msgid "Using ArchivesSpace with Archivematica"
+msgstr "ArchivematicaでのArchivesSpaceの使用"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:7
+msgid ""
+"For more information about ArchivesSpace, see the `ArchivesSpace`_ website."
+msgstr "ArchivesSpaceの詳細については、 `ArchivesSpace`_ ウェブサイトを参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:9
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:11
+msgid ""
+":ref:`Connecting Archivematica and ArchivesSpace <config_archivesspace>`"
+msgstr ":ref:`ArchivematicaとArchivesSpaceの接続 <config_archivesspace>`"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:12
+msgid ":ref:`Sending material to ArchivesSpace <using-archivesspace>`"
+msgstr ":ref:`ArchivesSpaceに素材を送信 <using-archivesspace>`"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:17
+msgid "Connecting Archivematica and ArchivesSpace"
+msgstr "ArchivematicaとArchivesSpaceの接続"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:19
+msgid ""
+"Before users begin uploading data to ArchivesSpace from Archivematica, you "
+"must fill in the ArchivesSpace DIP upload settings in the administration "
+"tab."
+msgstr ""
+"ユーザーがArchivesSpaceにArchivematicaからデータをアップロードする前に、管理タブでArchivesSpace "
+"DIPアップロード設定を入力しなければなりません。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:22
+msgid ""
+"See :ref:`ArchivesSpace DIP upload <admin-dashboard-AS>` for more "
+"information."
+msgstr "詳細は、 :ref:`ArchivesSpace DIPアップロード <admin-dashboard-AS>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:27
+msgid "Sending material to ArchivesSpace"
+msgstr "ArchivesSpaceに素材を送信"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:29
+msgid ""
+"There are two primary methods of using ArchivesSpace and Archivematica "
+"together: using the matching GUI on the Appraisal tab or using the DIP "
+"upload option on the Ingest tab."
+msgstr ""
+"ArchivesSpaceとArchivematicaを併用するには、主に2つの方法があります。AppraisalタブのマッチングGUIを使用するか、インジェストタブのDIPアップロードオプションを使用します。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:34
+msgid "Matching objects to ArchivesSpace resources on the Appraisal tab"
+msgstr "ArchivesSpaceのリソースにオブジェクトをマッチング"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:36
+msgid ""
+"The ArchivesSpace pane in the Appraisal tab allows users to retrieve a list "
+"of resources that have been created in an ArchivesSpace repository and match"
+" them to digital objects in Archivematica. This information is then sent to "
+"ArchivesSpace when you upload a DIP to ArchivesSpace."
+msgstr ""
+"AppraisalタブのArchivesSpaceペインでは、ArchivesSpaceのリポジトリに作成されたリソースのリストを取得し、Archivematicaのデジタルオブジェクトと照合できます。この情報は、ArchivesSpaceにDIPをアップロードする際にArchivesSpaceに送信されます。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:41
+msgid ""
+"See :ref:`ArchivesSpace resources <archivesspace_pane>` for more "
+"information."
+msgstr "詳しくは、 :ref:`ArchivesSpace resources <archivesspace_pane>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:44
+msgid "Uploading to ArchivesSpace using DIP upload"
+msgstr "DIPアップロードを使用した ArchivesSpaceへのアップロード"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:46
+msgid ""
+"DIP objects can be uploaded to ArchivesSpace without making use of the "
+"Appraisal tab matching GUI, described above. Instead, users can select "
+"**Upload DIP to ArchivesSpace** during the Upload DIP job in the Ingest tab."
+msgstr ""
+"DIPオブジェクトは、上記の鑑定タブのマッチングGUIを使用せずにArchivesSpaceにアップロードできます。代わりに、[インジェスト]タブの[Upload"
+" DIP]ジョブで、[ **Upload DIP to ArchivesSpace** ]を選択します。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:50
+msgid ""
+"See :ref:`Upload DIP to ArchivesSpace <upload-as>` for more information."
+msgstr "詳しくは、 :ref:`Upload DIP to ArchivesSpace <upload-as>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/integrations/archivesspace-setup.rst:52
+msgid ":ref:`Back to the top <atom-setup>`"
+msgstr ":ref:`トップに戻る <atom-setup>`"

@@ -1,0 +1,461 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:5
+msgid "AIP structure"
+msgstr "AIPの構造"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:7
+msgid ""
+"This page describes the standard structure of an AIP produced by "
+"Archivematica."
+msgstr "このページでは、Archivematica が作成するAIPの標準的な構造について説明します。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:9
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:11
+msgid ":ref:`Name <aip-name>`"
+msgstr ":ref:`名前 <aip-name>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:12
+msgid ":ref:`AIP contents <aip-contents>`"
+msgstr ":ref:`AIPの内容 <aip-contents>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:14
+msgid ":ref:`BagIt files <aip-bagit-files>`"
+msgstr ":ref:`BagItファイル <aip-bagit-files>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:15
+msgid ":ref:`Data directory <aip-data-directory>`"
+msgstr ":ref:`データディレクトリ <aip-data-directory>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:17
+msgid ":ref:`AIP METS file <aip-mets>`"
+msgstr ":ref:`AIP METSファイル <aip-mets>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:18
+msgid ":ref:`README file <aip-readme>`"
+msgstr ":ref:`READMEファイル <aip-readme>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:19
+msgid ":ref:`Logs <aip-logs>`"
+msgstr ":ref:`ログ <aip-logs>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:20
+msgid ":ref:`Objects <aip-objects>`"
+msgstr ":ref:`オブジェクト <aip-objects>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:21
+msgid ":ref:`Thumbnails <aip-thumbnails>`"
+msgstr ":ref:`サムネイル <aip-thumbnails>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:26
+msgid "Name"
+msgstr "名前"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:28
+msgid "The AIP name is composed of the following:"
+msgstr "AIP名は以下のように構成されます："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:30
+msgid ""
+"The name assigned to the transfer. This may come from human input or it may "
+"be the name of the transfer directory, depending on the transfer type and "
+"the transfer method."
+msgstr "転送に割り当てられた名前。これは、転送タイプと転送方法に応じて、人間の入力によるものであったり、転送ディレクトリの名前であったりします。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:33
+msgid "A UUID assigned to the AIP during ingest."
+msgstr "インジェスト時にAIPにインジェストされたUUID。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:35
+msgid ""
+"For example, looking at the AIP name ``my-"
+"aip-d31cc44f-ce01-4e67-affe-513868d9cf3d``, ``my-aip`` is the name assigned "
+"by the user and ``d31cc44f-ce01-4e67-affe-513868d9cf3d`` is the UUID "
+"generated during ingest."
+msgstr ""
+"例えば、AIP名 ``my-aip-d31cc44f-ce01-4e67-affe-513868d9cf3d`` を見ると、 ``my-aip`` "
+"は、ユーザーによって割り当てられた名前で、 ``d31cc44f-ce01-4e67-affe-513868d9cf3d`` "
+"はインジェスト時に生成されたUUIDです。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:43
+msgid "AIP contents"
+msgstr "AIPの内容"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:45
+msgid ""
+"Archivematica AIPs are structurally consistent regardless of variables in "
+"original content, processing, and storage. They are is packaged into a bag "
+"in accordance with the `IETF Trust BagIt File Packaging Format`_. This tree "
+"structure depicts a typical Archivematica AIP:"
+msgstr ""
+"Archivematica の AIP は、元のコンテンツ、処理、保存の変数に関係なく、構造的に一貫しています。これらは、 `IETF Trust "
+"BagItファイルのパッケージ化フォーマット`_ に従ってバッグにパッケージされます。このツリー構造は、典型的なArchivematica "
+"AIPを示しています："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:64
+msgid "[1] AIP root directory"
+msgstr "[1] AIPルートディレクトリ"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:65
+msgid ""
+"[2 - 5] :ref:`AIP BagIt files <aip-bagit-files>`: standard packaging files "
+"produced in accordance with the `IETF Trust BagIt File Packaging Format`_."
+msgstr ""
+"[2 - 5] :ref:`AIP BagItファイル <aip-bagit-files>` ： `IETF Trust BagIt File "
+"Packaging Formatに従って作成された標準パッケージングファイル`_ ."
+
+#: ../../user-manual/archival-storage/aip-structure.rst:67
+msgid ""
+"[6] :ref:`Data directory <aip-data-directory>`: a standard directory "
+"required by the BagIt specification. The data directory contains the AIP "
+"Content Information and Preservation Description Information (PDI)."
+msgstr ""
+"[6] :ref:`データディレクトリ <aip-data-directory>` "
+"：BagIt仕様で必要とされる標準ディレクトリ。データディレクトリには、AIPコンテンツ情報と保存記述情報（PDI）が含まれます。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:70
+msgid ""
+"[7] :ref:`Logs directory <aip-logs>`: contains log outputs of some of the "
+"tools that Archivematica uses to generate the AIP."
+msgstr ""
+"[7] :ref:`Logsディレクトリ <aip-logs>` ：Archivematicaが AIP "
+"を生成するために使用するいくつかのツールのログ出力が含まれています。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:72
+msgid ""
+"[8] :ref:`Objects directory <aip-objects>`: contains the original digital "
+"objects as well as any normalized versions."
+msgstr ""
+"[8] :ref:`Objectsディレクトリ <aip-objects>` ：オリジナルのデジタルオブジェクトと、正規化されたバージョンが含まれます。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:74
+msgid ""
+"[9] :ref:`Thumbnails directory <aip-thumbnails>`: contains any thumbnails "
+"generated from the original object."
+msgstr ""
+"[9] :ref:`サムネイルディレクトリ <aip-thumbnails>` ：オリジナルオブジェクトから生成されたサムネイルが含まれます。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:76
+msgid "[10] :ref:`AIP METS file <aip-mets>`"
+msgstr "[10] :ref:`AIP METSファイル <aip-mets>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:77
+msgid "[11] :ref:`README file <aip-readme>`"
+msgstr "[11] :ref:`READMEファイル <aip-readme>`"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:79
+msgid ""
+"For more information about each of these components, see the appropriate "
+"section below."
+msgstr "これらの各コンポーネントの詳細については、以下の該当セクションを参照してください。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:85
+msgid "BagIt files"
+msgstr "BagItファイル"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:87
+msgid ""
+"Archivematica uses a very simple implementation of BagIt. All AIPs contain "
+"the following BagIt files:"
+msgstr ""
+"Archivematica は、BagIt の非常にシンプルな実装を使用しています。すべての AIP には、以下の BagItファイルが含まれています："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:90
+msgid ""
+"``bag-info.txt``: a tag file that contains metadata about the bag, "
+"including:"
+msgstr "``bag-info.txt`` タグファイルには、以下のようなバッグのメタデータが含まれています："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:92
+msgid "``Payload-Oxum``: the octet stream sum of the bag payload."
+msgstr "``Payload-Oxum`` ：バッグのペイロードのオクテットストリームの和。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:93
+msgid ""
+"``Bagging-Date``: a yyyy-mm-dd formatted date on which the bag was created "
+"(e.g. 2018-11-01)."
+msgstr "``Bagging-Date`` バッグが作成された日付（例：2018-11-01）。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:95
+msgid "``Bag-Size``: a human-readable file size (e.g. 42kB)."
+msgstr "``Bag-Size`` ：人間が読めるファイルサイズ（例えば42kB）。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:96
+msgid "``External-Identifier``: the UUID of the AIP."
+msgstr "``External-Identifier`` AIPのUUID。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:98
+msgid "``bagit.txt``: the bag declaration, stating the version and encoding."
+msgstr "``bagit.txt`` ：バッグ宣言で、バージョンとエンコーディングを記述します。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:99
+msgid ""
+"``manifest-sha256.txt``: a list of each payload file name with corresponding"
+" SHA256 checksums."
+msgstr "``manifest-sha256.txt`` 各ペイロードファイル名と対応するSHA256チェックサムのリスト。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:101
+msgid ""
+"``tagmanifest-md5.txt``: a tag file that lists other tag files with "
+"corresponding MD5 checksums."
+msgstr "``tagmanifest-md5.txt`` タグファイルは、対応するMD5 チェックサムを持つ他のタグファイルを一覧表示します。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:104
+msgid "This example shows the contents of the top-level directory of the AIP."
+msgstr "この例では、AIPの最上位にあるディレクトリの内容を示しています。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:118
+msgid "Data directory"
+msgstr "データディレクトリ"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:120
+msgid ""
+"The data directory consists of the METS file for the AIP, a README file, and"
+" three folders: ``logs``, ``objects`` and ``thumbnails``."
+msgstr ""
+"データディレクトリは、AIP の METS ファイル、READMEファイル、および 3 つのフォルダから構成されます： ``logs`` "
+"``objects`` と ``thumbnails`` 。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:123
+msgid "This example shows the contents of the AIP's data directory."
+msgstr "この例は、AIP のデータディレクトリの内容を示しています。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:138
+msgid "AIP METS file"
+msgstr "AIP METSファイル"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:140
+msgid ""
+"The AIP `METS file`_, ``/data/METS.uuid.xml``, lists all of the digital "
+"objects in the AIP (original files, preservation masters, license files, OCR"
+" text files, submission documentation, etc.), describes their relationships "
+"to each other, and links digital objects to their descriptive, technical, "
+"provenance, and rights metadata."
+msgstr ""
+"AIP `METS ファイル`_ 、 ``/data/METS.uuid.xml`` は、AIP "
+"内のすべてのデジタルオブジェクト（オリジナルファイル、保存マスター、ライセンスファイル、OCR "
+"テキストファイル、提出文書など）をリストアップし、相互の関係を記述し、デジタルオブジェクトをその記述的、技術的、出所、および権利メタデータにリンクします。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:146
+msgid ""
+"The AIP METS file name is composed from the prefix ``METS.``, the UUID of "
+"the AIP, and the extension ``.xml``. Note that the presence of the UUID "
+"differentiates the AIP METS file from the transfer METS file, described in "
+"the :ref:`Objects <aip-objects>` section below."
+msgstr ""
+"AIP METS ファイル名は、接頭辞 ``METS.`` 、AIP の UUID、および拡張子 ``.xml`` から構成されます。UUID "
+"の存在により、AIP METS ファイルは以下の :ref:`オブジェクト <aip-objects>` セクションで説明する転送 METS "
+"ファイルと区別されることに注意してください。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:151
+msgid ""
+"For more information about Archivematica's METS implementation, see "
+":ref:`METS in Archivematica <METS_schema>`."
+msgstr ""
+"ArchivematicaのMETS実装の詳細については、 :ref:`ArchivematicaにおけるMETS <METS_schema>` "
+"を参照してください。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:157
+msgid "README file"
+msgstr "READMEファイル"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:159
+msgid ""
+"The AIP README file, ``/data/README.html``, is a human-readable file that "
+"describes the basic structure of an Archivematica AIP. It introduces "
+"Archivematica, OAIS, METS and PREMIS, and other concepts that future users "
+"may find helpful when they encounter an AIP."
+msgstr ""
+"AIPのREADMEファイル（ ``/data/README.html`` ）は、Archivematica "
+"AIPの基本的な構造を説明した、人間が読むことのできるファイルです。Archivematica、OAIS、METS、PREMIS、その他の概念について説明されています。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:167
+msgid "Logs"
+msgstr "ログ"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:169
+msgid ""
+"The logs directory, ``/data/logs``, contains log outputs for some of the "
+"tools and tasks that run inside of Archivematica."
+msgstr "ログディレクトリ ``/data/logs`` には、Archivematica内で実行されるツールやタスクのログ出力が含まれています。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:172
+msgid "This is an example of the contents of an AIP's logs directory:"
+msgstr "これは、AIP のログディレクトリの内容の例です："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:192
+msgid ""
+"The top-level logs (``arrange.log``, ``fileFormatIdentification.log``, etc.)"
+" are outputs for tasks that took place either in the Appraisal tab or on the"
+" Ingest tab. For example, ``data/logs/fileFormatIdentification.log`` is the "
+"log that was created during the *Identify file format* job that takes place "
+"during the Normalize microservice on the Ingest tab."
+msgstr ""
+"トップレベルのログ（ ``arrange.log`` 、 ``fileFormatIdentification.log`` "
+"など）は、「鑑定」タブまたは「インジェスト」タブで行われたタスクの出力です。たとえば、 "
+"``data/logs/fileFormatIdentification.log`` "
+"は、[インジェスト]タブの[Normalize]マイクロサービス中に実行される *ファイル形式の識別* ジョブ中に作成されたログです。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:198
+msgid ""
+"The logs directory has a transfers subdirectory, ``/data/logs/transfers``, "
+"which contains logs for tools that ran on the Transfer tab. Since it is "
+"possible to combine multiple transfers into one SIP (which becomes one AIP),"
+" the transfers subdirectory may contain multiple directories. Continuing to "
+"use the example above, two transfers (``first-transfer`` and ``second-"
+"transfer``) were combined to create one AIP (``my-aip``). Therefore, there "
+"are two more ``fileFormatIdentification.log`` files:"
+msgstr ""
+"ログディレクトリには、転送サブディレクトリ（ ``/data/logs/transfers`` "
+"）があり、転送タブで実行されたツールのログが含まれます。複数の転送を1つのSIP（これは1つのAIPになる）にまとめることができるので、転送サブディレクトリは複数のディレクトリを含むかもしれません。上記の例で続けると、2つの転送（"
+" ``first-transfer`` と ``second-transfer`` ）が1つのAIP（ ``my-aip`` "
+"）を作成するために組み合わさましれた。したがって、 ``fileFormatIdentification.log`` ファイルがあと2つあります："
+
+#: ../../user-manual/archival-storage/aip-structure.rst:206
+msgid ""
+"``data/logs/transfers/first-transfer-"
+"abbff451-f077-4f66-a6e0-d83f6ebbeebf/logs/fileFormatIdentification.log`` is "
+"the log that was created during *Microservice: Identify file format* on the "
+"Transfer tab when ``first-transfer`` was processed."
+msgstr ""
+"``data/logs/transfers/first-transfer-"
+"abbff451-f077-4f66-a6e0-d83f6ebbeebf/logs/fileFormatIdentification.log`` は "
+"*マイクロサービス中に作成されたログ：[転送] タブの ファイルフォーマットの識別* ``first-transfer`` "
+"が処理されたときに作成されたログです。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:209
+msgid ""
+"``data/logs/transfers/second-transfer-52fd11fa-"
+"fca8-4bc7-9214-e6510863759a/logs/fileFormatIdentification.log`` is the log "
+"that was created during *Microservice: Identify file format* on the Transfer"
+" tab when ``second-transfer`` was processed."
+msgstr ""
+"``data/logs/transfers/second-transfer-52fd11fa-"
+"fca8-4bc7-9214-e6510863759a/logs/fileFormatIdentification.log`` は "
+"*マイクロサービス中に作成されたログ：[転送] タブの ファイルフォーマットの識別* ``second-transfer`` "
+"が処理されたときに作成されたログです。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:213
+msgid ""
+"The example above does not show all possible logs. Depending on how you have"
+" set your :ref:`Processing configuration <dashboard-processing>`, you may "
+"see a greater or lesser number of logs or logs of different types in your "
+"AIP."
+msgstr ""
+"上記の例は、すべての可能なログを示しているわけではありません。 :ref:`処理設定 <dashboard-processing>` "
+"をどのように設定したかによって、AIP に表示されるログの数が多くなったり少なくなったり、あるいは異なるタイプのログが表示されたりすることがあります。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:220
+msgid "Objects"
+msgstr "オブジェクト"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:222
+msgid ""
+"The objects directory, ``/data/objects``, contains original objects, "
+"preservation masters, and two folders: ``/metadata`` and "
+"``/submissionDocumentation``. If the SIP contained any lower-level "
+"directories, either from the original transfer or because it was arranged on"
+" the Appraisal tab, the lower-level directories will be present as well."
+msgstr ""
+"オブジェクトディレクトリ ``/data/objects`` には、オリジナルのオブジェクト、保存マスタ、および2つのフォルダ、 "
+"``/metadata`` と ``/submissionDocumentation`` "
+"が含まれます。SIPに下位レベルのディレクトリが含まれていた場合、オリジナルの転送から、または [評価] "
+"タブで配列されていたため、下位レベルのディレクトリも存在します。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:251
+msgid ""
+"The filenames of original objects will be unchanged. Preservation master "
+"copies have a UUID appended to the filename. In the example above, ``799px-"
+"Euroleague-LE_Roma_vs_Toulouse_IC-27.bmp`` is the original object and "
+"``799px-Euroleague-"
+"LE_Roma_vs_Toulouse_IC-27-3e2bcabd-f33f-485b-a566-ff71c141b930.tif`` is the "
+"preservation master. The creation of preservation master copies is guided by"
+" the rules on the :ref:`Preservation planning tab <preservation-planning>`."
+msgstr ""
+"オリジナルオブジェクトのファイル名は変更されません。保存マスターのコピーは、ファイル名にUUIDが付加されます。上記の例では、 ``799px-"
+"Euroleague-LE_Roma_vs_Toulouse_IC-27.bmp`` がオリジナルオブジェクトで、 ``799px-"
+"Euroleague-"
+"LE_Roma_vs_Toulouse_IC-27-3e2bcabd-f33f-485b-a566-ff71c141b930.tif`` "
+"が保存マスターです。保存マスターコピーの作成は、 :ref:`保存計画タブ <preservation-planning>` "
+"のルールに従って行われます。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:258
+msgid ""
+"The ``/metadata`` directory contains metadata associated with the AIP. The "
+"metadata directory has a transfers subdirectory, "
+"``/data/metadata/transfers``, which separates the metadata files into "
+"folders specific to the transfer where they originated. Since it is possible"
+" to combine multiple transfers into one SIP (which becomes one AIP), the "
+"transfers subdirectory may contain multiple folders."
+msgstr ""
+"``/metadata`` ディレクトリには、AIPに関連するメタデータが含まれます。メタデータディレクトリには、転送サブディレクトリ（ "
+"``/data/metadata/transfers`` "
+"）があり、メタデータファイルを、それらが発生した転送に固有のフォルダに分離します。複数の転送を1つのSIP（1つのAIPになる）にまとめることが可能なので、転送サブディレクトリは複数のフォルダを含むかもしれません。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:265
+msgid ""
+"The ``/submissionDocumentation`` directory contains :ref:`submission "
+"documentation <create-submission>` for the AIP. Similar to the metadata "
+"directory, there is a transfers subdirectory, "
+"``/data/submissionDocumentation/transfers``, which separates the submission "
+"documentation files into folders specific to the transfer where they "
+"originated. Since it is possible to combine multiple transfers into one SIP "
+"(which becomes one AIP), the transfers subdirectory may contain multiple "
+"folders. Note that the transfer folders contain a METS.XML file - this is "
+"the transfer METS, which was generated for each transfer on the Transfer "
+"tab. When the transfer (or multiple transfers combined) become a SIP, the "
+"transfer METS files are combined into a new METS file which becomes the "
+":ref:`AIP METS file <aip-mets>`."
+msgstr ""
+"``/submissionDocumentation`` ディレクトリには、AIPの :ref:`提出文書 <create-submission>` "
+"があります。メタデータディレクトリと同様に、転送サブディレクトリ ``/data/submissionDocumentation/transfers``"
+" があり、これにより、提出ドキュメントファイルが、転送元の転送に固有のフォルダに分割されます。複数の転送を 1 つの SIP (1 つの AIP "
+"になります) に結合できるため、転送サブディレクトリには複数のフォルダが含まれる場合があります。転送フォルダには METS.XML "
+"ファイルが含まれていることに注意してください。これは、[転送] タブで転送ごとに生成された転送 METS です。転送（または結合された複数の転送）が "
+"SIP になると、転送 METS ファイルが新しい METS ファイルに結合され、それが :ref:`AIP METS ファイル <aip-mets>`"
+" になります。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:280
+msgid "Thumbnails"
+msgstr "サムネイル"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:282
+msgid ""
+"The objects directory, ``/data/thumbnails``, will contain thumbnail images "
+"if you chose to generate them during the *Normalize for thumbnails* job."
+msgstr ""
+"*サムネイルの正規化* ジョブ中にサムネイル画像を生成することを選択した場合、オブジェクトディレクトリ ``/data/thumbnails`` "
+"にはサムネイル画像が含まれます。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:294
+msgid ""
+"The creation of thumbnails is optional and configurable in the "
+":ref:`processing configuration <dashboard-processing>`."
+msgstr "サムネイルの作成は、オプションであり、 :ref:`処理設定 <dashboard-processing>` で設定可能です。"
+
+#: ../../user-manual/archival-storage/aip-structure.rst:297
+msgid ":ref:`Back to the top <aip-structure>`"
+msgstr ":ref:`トップに戻る <aip-structure>`"

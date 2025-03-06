@@ -1,0 +1,1039 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/appraisal/appraisal.rst:5
+msgid "Appraisal"
+msgstr "評価"
+
+#: ../../user-manual/appraisal/appraisal.rst:7
+msgid ""
+"The Appraisal tab provides an opportunity for users to appraise and analyze "
+"the files included in a transfer. The Appraisal tab includes features for "
+"examining the characteristics and contents of the files, allows users to "
+"connect files to finding aids created in ArchivesSpace, and lets users "
+"decide which files from a transfer should be added to a SIP and how these "
+"files should be arranged within the SIP."
+msgstr ""
+"[評価] タブでは、ユーザーが転送に含まれるファイルを評価および分析する機会が提供されます。[評価] "
+"タブには、ファイルの特性と内容を調べる機能が含まれており、ユーザーは、ファイルがArchivesSpaceで作成された検索支援に接続でき、転送からどのファイルをSIPに追加するか、およびこれらのファイルをSIP内でどのように配列するかをユーザーが決定できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:14
+msgid ""
+"In order to use the Appraisal tab, you must send the transfer to the backlog"
+" when you reach the end of the :ref:`Transfer tab microservices <transfer-"
+"tab-microservices>`."
+msgstr ""
+"鑑定タブを使用するには、 :ref:`転送タブのマイクロサービス <transfer-tab-microservices>` "
+"の最後に到達したときに、バックログに転送する必要があります。"
+
+#: ../../user-manual/appraisal/appraisal.rst:20
+msgid ""
+"If you are running :ref:`Archivematica without Elasticsearch <install-"
+"elasticsearch>` or with limited Elasticsearch functionality, the Appraisal "
+"tab may not appear in your dashboard."
+msgstr ""
+":ref:`ArchivematicaをElasticsearchなし <install-elasticsearch>` "
+"で実行している場合、またはElasticsearchの機能が制限されている場合、ダッシュボードに「鑑定」タブが表示されないことがあります。"
+
+#: ../../user-manual/appraisal/appraisal.rst:24
+msgid "*On this page:*"
+msgstr "*このページでは：*"
+
+#: ../../user-manual/appraisal/appraisal.rst:26
+msgid ":ref:`Backlog pane <backlog_pane>`"
+msgstr ":ref:`バックログペイン <backlog_pane>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:28
+msgid ":ref:`Tagging files <adding-tags>`"
+msgstr ":ref:`ファイルのタグ付け <adding-tags>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:30
+msgid ":ref:`Analysis pane <analysis_pane>`"
+msgstr ":ref:`分析ペイン <analysis_pane>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:32
+msgid ":ref:`Objects <analysis-objects>`"
+msgstr ":ref:`オブジェクト <analysis-objects>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:33
+msgid ":ref:`Tags <analysis-tags>`"
+msgstr ":ref:`タグ <analysis-tags>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:34
+msgid ":ref:`Examine contents <analysis-examine-contents>`"
+msgstr ":ref:`内容検査 <analysis-examine-contents>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:35
+msgid ":ref:`Preview file <analysis-preview-file>`"
+msgstr ":ref:`ファイルのプレビュー <analysis-preview-file>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:37
+msgid ":ref:`File list pane <file_list_pane>`"
+msgstr ":ref:`ファイルリストペイン <file_list_pane>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:38
+msgid ":ref:`ArchivesSpace pane <archivesspace_pane>`"
+msgstr ":ref:`アーカイブスペースペイン <archivesspace_pane>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:40
+msgid ":ref:`ArchivesSpace terms <archivesspace-terms>`"
+msgstr ":ref:`ArchivesSpaceの用語 <archivesspace-terms>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:41
+msgid ":ref:`Searching for resources <archivesspace-searching>`"
+msgstr ":ref:`リソースの検索 <archivesspace-searching>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:42
+msgid ""
+":ref:`Creating and editing archival descriptions <archivesspace-child-"
+"objects>`"
+msgstr ":ref:`アーカイブ記述の作成と編集 <archivesspace-child-objects>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:43
+msgid ":ref:`Adding rights metadata <archivesspace-rights-metadata>`"
+msgstr ":ref:`権利メタデータの追加 <archivesspace-rights-metadata>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:44
+msgid ""
+":ref:`Connecting digital objects to ArchivesSpace resources <archivesspace-"
+"digital-objects>`"
+msgstr ""
+":ref:`デジタルオブジェクトをArchivesSpaceのリソースに接続 <archivesspace-digital-objects>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:46
+msgid ":ref:`Arrangement pane <arrangement>`"
+msgstr ":ref:`配列ペイン <arrangement>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:48
+msgid ":ref:`Arranging a SIP through drag-and-drop <arrangement-drag-drop>`"
+msgstr ":ref:`ドラッグ＆ドロップによるSIPの配列 <arrangement-drag-drop>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:49
+msgid ":ref:`Creating SIPs using tags <creating-sips-tags>`"
+msgstr ":ref:`タグを使ったSIPの作成 <creating-sips-tags>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:50
+msgid ":ref:`Adding AtoM levels of description <adding-atom-lod>`"
+msgstr ":ref:`AtoMの記述レベルを追加 <adding-atom-lod>`"
+
+#: ../../user-manual/appraisal/appraisal.rst:55
+msgid "Backlog"
+msgstr "Backlog"
+
+#: ../../user-manual/appraisal/appraisal.rst:57
+msgid ""
+"Transfers that have been sent to the backlog can be found in the Backlog "
+"pane of the Appraisal tab. You can see everything in the backlog by doing a "
+"blank search using the search boxes at the top of the page, or narrow your "
+"search by entering search terms and parameters."
+msgstr ""
+"バックログに送られた転送は、鑑定タブのバックログペインで確認できます。ページ上部の検索ボックスを使用して空白検索を行うか、検索用語とパラメーターを入力して検索を絞り込むことにより、バックログ内のすべてを見ることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid "A simple search for \"abcd\", with results shown in the backlog pane."
+msgstr "\"abcd\"を検索すると、バックログペインに結果が表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:67
+msgid ""
+"The Backlog pane will display a list of transfer names. You can expand each "
+"one by clicking on the yellow folder icon, or by selecting **Expand all**. "
+"Click on **Collapse all** to collapse all open folders."
+msgstr ""
+"[Backlog]ペインに転送名のリストが表示されます。黄色いフォルダのアイコンをクリックするか、 **Expand all** "
+"を選択すると、各フォルダを展開できます。 **Collapse all** をクリックすると、開いているフォルダがすべて折りたたまれます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid ""
+"The backlog pane with all search result folders expanded to show contents."
+msgstr "すべての検索結果フォルダが展開され、内容が表示されたバックログペイン。"
+
+#: ../../user-manual/appraisal/appraisal.rst:76
+msgid ""
+"Tick **Show metadata & logs directory** to the right of the search boxes to "
+"include metadata and log files in the search results, if you wish."
+msgstr ""
+"**Show metadata & logs directory** 検索ボックスの右側にある「Show metadata & logs "
+"directory」にチェックを入れると、検索結果にメタデータとログファイルを含めることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid "Search results with logs and metadata files"
+msgstr "ログとメタデータファイルによる検索結果"
+
+#: ../../user-manual/appraisal/appraisal.rst:84
+msgid ""
+"There are two reasons that files may be shown greyed out and with a "
+"strikethrough:"
+msgstr "ファイルが灰色で表示されたり、取り消し線が引かれたりする理由は2つあります："
+
+#: ../../user-manual/appraisal/appraisal.rst:87
+msgid ""
+"The file is a metadata or log file and therefore cannot be manipulated by "
+"the user."
+msgstr "このファイルは、メタデータまたはログファイルであるため、ユーザーが操作することはできません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:89
+msgid ""
+"The file has already been :ref:`arranged <arrangement>` into a SIP and "
+"therefore it no longer exists in the backlog - the entry is being maintained"
+" in the backlog pane for context."
+msgstr "このファイルはすでに、SIPに :ref:`配列 <arrangement>` されているため、バックログには存在しません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:96
+msgid "Tagging files"
+msgstr "ファイルのタグ付け"
+
+#: ../../user-manual/appraisal/appraisal.rst:98
+msgid ""
+"The Backlog pane allows users to add a tag to a file in order to aid in "
+"appraisal. The tag is not recorded in any way and does not persist beyond "
+"the Appraisal tab."
+msgstr "バックログペインでは、鑑定を助けるためにファイルにタグを追加できます。タグは、どのような形でも記録されず、「鑑定」タブ以降も持続しません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:102
+msgid ""
+"Select one or more files in the Backlog pane by clicking on the file name. "
+"If you would like to add the tag to all of the files in a directory, select "
+"the directory name."
+msgstr ""
+"Backlogペインでファイル名をクリックして、1つ以上のファイルを選択します。ディレクトリ内のすべてのファイルにタグを追加したい場合は、ディレクトリ名を選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "Several files have been selected and are highlighted in blue."
+msgstr "いくつかのファイルが選択され、青くハイライトされます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:111
+msgid ""
+"Enter the tag name in the text box and select **Add tag to selected files**."
+msgstr "テキストボックスにタグ名を入力し、 **Add tag to selected files** を選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "The selected files have the tag \"keep\" next to them."
+msgstr "選択されたファイルには、その横に\"keep\"というタグが付いています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:118
+msgid "To remove a tag, click on the minus sign next to the tag name."
+msgstr "タグを削除するには、タグ名の横にあるマイナス記号をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:120
+msgid ""
+"Once you have created a tag, you can filter your search results to only show"
+" files that have been tagged by selecting your tag from the **Tags** "
+"dropdown below the search boxes at the top of the Appraisal page."
+msgstr ""
+"タグを作成したら、鑑定ページの上部にある検索ボックスの下にあるタグのドロップダウンから **タグ** "
+"を選択することで、タグ付けされたファイルのみを表示するように検索結果をフィルタリングすることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid "The backlog pane now only displays files with the \"keep\" tag."
+msgstr "バックログペインで、\"keep\"タグを持つファイルのみが表示されるようになりました。"
+
+#: ../../user-manual/appraisal/appraisal.rst:129
+msgid "Tags can also be added in the :ref:`File list pane<file_list_pane>`."
+msgstr "タグは、 :ref:`ファイルリストペイン <file_list_pane>` でも追加できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:134
+msgid "Analysis"
+msgstr "分析"
+
+#: ../../user-manual/appraisal/appraisal.rst:136
+msgid ""
+"The Analysis pane allows the user to analyse transfer materials in bulk as "
+"well as individual files. Files selected in the Backlog pane populate the "
+"Analysis pane and can be analyzed using four tabs: Objects, Tags, Examine "
+"contents, and Preview file."
+msgstr ""
+"[分析]ペインでは、個々のファイルだけでなく、一括して転送素材を分析できます。Backlogペインで選択されたファイルは、Analysisペインに表示され、4つのタブを使用して分析できます：[オブジェクト]、[タグ]、[内容検査]、[ファイルのプレビュー]の4つのタブを使用して分析できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:144
+msgid "Objects"
+msgstr "オブジェクト"
+
+#: ../../user-manual/appraisal/appraisal.rst:146
+msgid ""
+"The Objects tab of the Analysis pane displays format and size information "
+"about selected files."
+msgstr "[分析]ペインの[オブジェクト]タブには、選択したファイルのフォーマットとサイズの情報が表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:149
+msgid ""
+"The Report view provides a list of information about the format, PRONOM "
+"unique identifier (PUID), format group, number of files, and size of the "
+"selected files."
+msgstr ""
+"レポートビューには、選択されたファイルのフォーマット、PRONOM一意識別子（PUID）、フォーマットグループ、ファイル数、選択ファイルのサイズに関する情報のリストが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:158
+msgid ""
+"The left-hand side of the image shows the backlog pane with a number of "
+"files selected. The right-hand side of the image shows information about "
+"those files, including the file format name, PUID, and size."
+msgstr ""
+"画像の左側には、多数のファイルが選択されたバックログペインが表示されています。画像の右側には、ファイルフォーマット名、PUID、サイズなどのファイルに関する情報が表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:158
+msgid ""
+"Report showing information about the files that have been selected in the "
+"Backlog pane."
+msgstr "Backlogペインで選択されているファイルに関する情報を表示するレポート。"
+
+#: ../../user-manual/appraisal/appraisal.rst:160
+msgid ""
+"The Visualizations view provides two visualization options: the total number"
+" of files for each format, or the total size of files for each format."
+msgstr ""
+"[視覚化] ビューには、各フォーマットのファイルの合計数、または各フォーマットのファイルの合計サイズの 2 つの視覚化オプションが用意されています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:168
+msgid ""
+"The left-hand side of the image shows the backlog pane with a number of "
+"files selected. The right-hand side of the image shows a pie chart depicting"
+" the number of files for each format."
+msgstr ""
+"画像の左側には、多数のファイルが選択されたバックログペインが表示されます。画像の右側には、各フォーマットのファイル数を示す円グラフが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:168
+msgid ""
+"Visualization showing total number of each format for the selected files"
+msgstr "選択されたファイルの各フォーマットの総数を示す視覚化"
+
+#: ../../user-manual/appraisal/appraisal.rst:170
+msgid ""
+"Files listed in Analysis can also be filtered by Format, PUID, and Group "
+"through selecting values for these facets in the Report view. For instance, "
+"if the user clicks on the Group “Portable Document Format” listed for one of"
+" the files, this filter is added and only PDF files remain listed in the "
+"Analysis pane. Filters appear under the Tags drop-down menu and can be "
+"removed by clicking the “x” beside the name."
+msgstr ""
+"[分析]に表示されたファイルは、[レポート]ビューでこれらのファセットの値を選択することで、[フォーマット]、[PUID]、および[グループ]によってフィルタリングもできます。たとえば、ユーザーがファイルの1つにリストされているグループ「Portable"
+" Document "
+"Format」をクリックすると、このフィルターが追加され、PDFファイルのみが分析ペインにリスト表示されます。フィルタは、［タグ］ドロップダウンメニューの下に表示され、名前の横にある「x」をクリックすれば削除できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:180
+msgid "Tags"
+msgstr "タグ"
+
+#: ../../user-manual/appraisal/appraisal.rst:182
+msgid ""
+"The Tags tab lists any tags that have been added and how many files with "
+"each tag are present in the selected files."
+msgstr "[タグ]タブには、追加されたタグと、各タグを持つファイルが選択したファイルにいくつ存在するかが一覧表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid ""
+"The left-hand side of the image shows the backlog pane with a number of "
+"files selected. The right-hand side of the image shows that 5 files have "
+"been given the tag \"keep\"."
+msgstr ""
+"画像の左側は、いくつかのファイルが選択されたバックログペインです。画像の右側は、5つのファイルに\"keep\"というタグが付けられていることを示しています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:193
+msgid "Examine contents"
+msgstr "内容検査"
+
+#: ../../user-manual/appraisal/appraisal.rst:195
+msgid ""
+"During the Transfer process, users can choose whether or not to *Examine "
+"contents*. This is a microservice that runs the tool `Bulk Extractor`_, a "
+"forensics tool that scans the contents of a file to look for useful "
+"information. Bulk Extractor looks for many different patterns, such as "
+"social security numbers, credit card numbers, postal addresses, and email "
+"addresses."
+msgstr ""
+"転送プロセス中、ユーザーは、 *コンテンツの検査* を行うかどうかを選択できます。これは、 `Bulk Extractor`_ "
+"というツールを実行するマイクロサービスであり、ファイルの内容をスキャンして有用な情報を探すフォレンジックツールです。Bulk "
+"Extractorは、社会保障番号、クレジットカード番号、郵便住所、電子メールアドレスなど、さまざまなパターンを探します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:201
+msgid ""
+"On the Examine contents tab of the Analysis pane, users can review transfers"
+" to see if any of the files contain PII (personally identifying information,"
+" or more specifically American social security numbers) or credit card "
+"numbers."
+msgstr ""
+"[分析]ペインの[内容検査]タブで、ユーザーは、ファイルのいずれかがPII（個人識別情報、より具体的には米国の社会保障番号）またはクレジットカード番号を含むかどうかを確認するために転送を確認できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:210
+msgid ""
+"The left-hand side of the image shows the backlog pane with a transfer "
+"directory selected. The right-hand side of the image shows that one of the "
+"files in the transfer may contain credit card numbers."
+msgstr ""
+"画像の左側は、転送ディレクトリが選択されたバックログペインを示します。画像の右側は、転送内のファイルの1つにクレジットカード番号が含まれている可能性があることを示しています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:210
+msgid "This transfer contains a file that may include credit card numbers."
+msgstr "この転送には、クレジットカード番号を含む可能性のあるファイルが含まれています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:212
+msgid "Selecting the file name will show a preview of the data."
+msgstr "ファイル名を選択すると、データのプレビューが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:219
+msgid ""
+"A list of credit card numbers is displayed in the Examine contents tab."
+msgstr "クレジットカード番号のリストは、「内容検査 」タブに表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:219
+msgid ""
+"The file clearly contains credit card data, with the credit card number "
+"shown in the \"Content\" column and the context for the number shown in the "
+"\"Context\" column."
+msgstr ""
+"このファイルには明らかにクレジットカードのデータが含まれており、\"Content\"列にクレジットカード番号が、\"Context\"列に番号のコンテキストが示されています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:223
+msgid ""
+"Clicking on **Preview** will display the file in the Preview file tab, if "
+"possible (see :ref:`Preview file <analysis-preview-file>`, below)."
+msgstr ""
+"**プレビュー** をクリックすると、可能であればファイルがファイルのプレビュタブに表示されます（ :ref:`ファイルのプレビュー "
+"<analysis-preview-file>` 、以下を参照）。"
+
+#: ../../user-manual/appraisal/appraisal.rst:226
+msgid ""
+"You can also add tags to files containing sensitive information by selecting"
+" the checkbox next to the file name, adding a tag to the text box, and "
+"clicking **Add tag to checked files**. The tag will appear attached to the "
+"file in the Backlog pane."
+msgstr ""
+"また、機密情報を含むファイルにタグを追加するには、ファイル名の横にあるチェックボックスを選択し、テキストボックスにタグを追加して、 **Add tag "
+"to checked files** をクリックします。タグは、[Backlog]ペインのファイルに添付されて表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:233
+msgid ""
+"More Bulk Extractor data can be reviewed by downloading the transfer from "
+"the Backlog tab."
+msgstr "その他の Bulk Extractorデータは、[バックログ]タブから転送をダウンロードして確認できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:239
+msgid "Preview file"
+msgstr "ファイルのプレビュー"
+
+#: ../../user-manual/appraisal/appraisal.rst:241
+msgid ""
+"The Preview file pane allows users to take a look at a file without having "
+"to download it to their computer. The preview window only works for files "
+"that can be rendered in a browser - for example, JPEG images or MP3 audio "
+"files."
+msgstr ""
+"[プレビュー]ファイルペインを使用すると、ユーザーは、ファイルをコンピュータにダウンロードすることなく見ることができます。プレビューウィンドウは、ブラウザでレンダリング可能なファイル、例えば"
+" JPEG画像やMP3オーディオファイルに対してのみ機能します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:245
+msgid "To preview a file, you must select it from the File list pane."
+msgstr "ファイルをプレビューするには、ファイルリストペインからファイルを選択する必要があります。"
+
+#: ../../user-manual/appraisal/appraisal.rst:247
+msgid ""
+"In the Backlog pane, select the file, or directory of files, that you would "
+"like to view."
+msgstr "[バックログ]ペインで、表示したいファイルまたはファイルのディレクトリを選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:250
+msgid "Open the Analysis pane and click on the Preview file tab."
+msgstr "[分析]ペインを開き、[ファイルのプレビュー]タブをクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:252
+msgid ""
+"In the File list pane, select the file that you would like to preview. Image"
+" files will be displayed in the window; audio and video files will be "
+"displayed in a media player."
+msgstr ""
+"[ファイル]一覧ペインで、プレビューしたいファイルを選択します。画像ファイルは、ウィンドウに表示され、オーディオおよびビデオファイルは、メディアプレーヤーに表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:261
+msgid ""
+"The left-hand column shows the backlog pane with a transfer directory "
+"selected. The right-hand colum shows a list of the files in the transfer. "
+"The centre column shows a media player with a file called bird.mp3 playing."
+msgstr ""
+"左側の列は、転送ディレクトリが選択された状態でのバックログペインを表示します。右側の列には、転送中のファイルのリストが表示されます。中央の列は、bird.mp3というファイルが再生されているメディアプレーヤーを表示しています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:261
+msgid "The file *bird.mp3* being played in the Preview file tab."
+msgstr "*bird.mp3* ファイルをファイルのプレビュータブで再生中。"
+
+#: ../../user-manual/appraisal/appraisal.rst:266
+msgid "File list"
+msgstr "ファイルリスト"
+
+#: ../../user-manual/appraisal/appraisal.rst:268
+msgid ""
+"The File list pane is populated by selecting files in the Backlog pane. File"
+" list provides information about the filenames, sizes, dates files were last"
+" modified (if available), and any tags that have been added to the selected "
+"files."
+msgstr ""
+"[ファイルリスト]ペインは、[バックログ]ペインでファイルを選択すると表示されます。ファイルリストには、ファイル名、サイズ、ファイルの最終更新日（可能な場合）、選択したファイルに追加されたタグに関する情報が表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid "File list pane"
+msgstr "ファイルリストペイン"
+
+#: ../../user-manual/appraisal/appraisal.rst:279
+msgid ""
+"Any filters that have been applied in the Analysis pane or through the Tags "
+"drop-down menu will affect what files appear in File list."
+msgstr "[分析]ペインまたは[タグ]ドロップダウンメニューで適用されたフィルタは、[ファイル]リストに表示されるファイルに影響します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:282
+msgid ""
+"You can sort the file list by clicking on the filename, size, or last "
+"modified column headers."
+msgstr "ファイル名、サイズ、または最終更新日の列ヘッダーをクリックすると、ファイルリストを並べえることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:285
+msgid ""
+"You can add tags to files on the File list pane by selecting the checkbox "
+"next to the file name, adding a tag to the text box, and clicking **Add tag "
+"to selected files**. The tag will appear attached to the file in the Backlog"
+" pane and in the Tags column on the File list pane. Click on the minus sign "
+"next to the tag name to remove the tag."
+msgstr ""
+"ファイルリストペインのファイルにタグを追加するには、ファイル名の横のチェックボックスを選択し、テキストボックスにタグを追加して、 **Add tag "
+"to selected files** "
+"をクリックします。タグは、[Backlog]ペインのファイルと、[File]リストペインの[Tags]列に表示されます。タグを削除するには、タグ名の横のマイナス記号をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:291
+msgid ""
+"Clicking on the name of the file will allow you to view the file, if "
+"possible, in the :ref:`Preview file <analysis-preview-file>` tab of the "
+"Analysis pane."
+msgstr ""
+"ファイル名をクリックすると、分析ペインの :ref:`ファイルのプレビュー <analysis-preview-file>` "
+"タブで、可能であればファイルを表示できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:294
+msgid ""
+"You can also toggle the full file path on and off by clicking on **Show "
+"path**."
+msgstr "また、 **Show path** をクリックして、ファイルのフルパスのオン/オフを切り替えることもできます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:299
+msgid "ArchivesSpace"
+msgstr "ArchivesSpace"
+
+#: ../../user-manual/appraisal/appraisal.rst:301
+msgid ""
+"The ArchivesSpace pane in the Appraisal tab allow users to view "
+"ArchivesSpace resources, add new child records and digital objects, and edit"
+" the resource metadata. Materials that have been transferred into "
+"Archivematica can be associated with resources created in ArchivesSpace. "
+"Arranging materials in the ArchivesSpace pane results in a SIP that contains"
+" the materials connected to the ArchivesSpace resouces."
+msgstr ""
+"AppraisalタブのArchivesSpaceペインでは、ArchivesSpaceリソースの表示、新しい子レコードやデジタルオブジェクトの追加、リソースメタデータの編集ができます。Archivematicaに転送された素材は、ArchivesSpaceで作成されたリソースに関連付けることができます。ArchivesSpaceペインで素材を整理すると、ArchivesSpaceリソースに関連付けられた素材を含むSIPが作成されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:308
+msgid ""
+"To enable the ArchivesSpace integration, connect your ArchivesSpace instance"
+" to Archivematica by adding credentials to the :ref:`ArchivesSpace DIP "
+"upload <dashboard-AS>` section of the Administration tab."
+msgstr ""
+"ArchivesSpaceとの連携を有効にするには、ArchivesSpaceインスタンスをArchivematicaに接続し、Administrationタブの"
+" :ref:`ArchivesSpace DIP upload <dashboard-AS>` セクションに認証情報を追加します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:315
+msgid "ArchivesSpace terms"
+msgstr "ArchivesSpaceの用語"
+
+#: ../../user-manual/appraisal/appraisal.rst:317
+msgid ""
+"**Resources**: top-level descriptive metadata records or finding aids (for "
+"fonds, collections, record groups, etc.)"
+msgstr ""
+"**Resources** ：トップレベルの説明メタデータレコードまたはファインディングエイド（所蔵素材、コレクション、レコードグループなど）"
+
+#: ../../user-manual/appraisal/appraisal.rst:319
+msgid ""
+"**Archival objects**: lower-level description nested under resources "
+"(series, files, items, etc.)"
+msgstr "**Archival objects** ：リソース（シリーズ、ファイル、アイテムなど）の下にネストされた下位レベルの記述"
+
+#: ../../user-manual/appraisal/appraisal.rst:321
+msgid ""
+"**Digital objects**: metadata about digital objects; can be associated with "
+"resources or archival objects at any level of description."
+msgstr ""
+"**Digital objects** "
+"：デジタルオブジェクトに関するメタデータ。どのレベルの記述であっても、リソースやアーカイブオブジェクトに関連付けることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:324
+msgid ""
+"More information on ArchivesSpace can be found at "
+"https://archivesspace.org/."
+msgstr "ArchivesSpaceの詳細については、https://archivesspace.org/.を参照してください"
+
+#: ../../user-manual/appraisal/appraisal.rst:329
+msgid "Searching for ArchivesSpace resources"
+msgstr "ArchivesSpaceリソースの検索"
+
+#: ../../user-manual/appraisal/appraisal.rst:331
+msgid ""
+"When you open the ArchivesSpace pane, it will not be populated. You can "
+"populate it with all resources by clicking on the **Search ArchivesSpace** "
+"button with the *Title* and *Identifier* fields left blank."
+msgstr ""
+"ArchivesSpaceペインを開いても、入力はされていません。 *Title* と *Identifier* フィールドを空白のまま、 "
+"**Search ArchivesSpace** ボタンをクリックすると、すべてのリソースが入力されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:335
+msgid ""
+"Using the search box at the top of the ArchivesSpace pane, you can limit "
+"your search results by the title or identifier of a resource."
+msgstr "ArchivesSpaceペインの上部にある検索ボックスを使用すると、リソースのタイトルまたは識別子で検索結果を制限できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:338
+msgid ""
+"Click on the caret (triangle) to expand and navigate through the resource's "
+"hierarchy."
+msgstr "キャレット（三角形）をクリックしてリソースの階層を展開し、ナビゲートします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid ""
+"ArchivesSpace pane showing the search results for \"Hugh Acton\", with the "
+"resulting resource expanded to show the resource's hierarchy"
+msgstr "ArchivesSpaceのペインで、\"Hugh Acton\"の検索結果を表示し、結果のリソースを展開してリソースの階層を表示します"
+
+#: ../../user-manual/appraisal/appraisal.rst:346
+msgid ""
+"The folder icon indicates an ArchivesSpace resource or archival object that "
+"has a child record nested beneath it in the hierarchy."
+msgstr ""
+"フォルダのアイコンは、ArchivesSpaceリソースまたはアーカイブオブジェクトの階層で、その下に子レコードがネストされていることを示します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:349
+msgid ""
+"The page icon indicates an ArchivesSpace resources and archival objects that"
+" does not have child record nested beneath it in the hierarchy."
+msgstr ""
+"ページアイコンは、ArchivesSpaceリソースとアーカイブオブジェクトの階層で、その下に子レコードがネストされていないことを示します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:352
+msgid "Digital objects are designated by the parallel lines icon."
+msgstr "デジタルオブジェクトは、平行線のアイコンで示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:356
+msgid ""
+"Digital objects that were created in ArchivesSpace will not appear in the "
+"ArchivesSpace pane in Archivematica. Only digital objects added to a "
+"resource from within Archivematica are displayed."
+msgstr ""
+"ArchivesSpaceで作成されたデジタルオブジェクトは、ArchivematicaのArchivesSpaceペインには表示されません。Archivematica内からリソースに追加されたデジタルオブジェクトのみが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:363
+msgid "Creating and editing archival objects"
+msgstr "アーカイブオブジェクトの作成と編集"
+
+#: ../../user-manual/appraisal/appraisal.rst:365
+msgid ""
+"From the ArchivesSpace pane in Archivematica, users can add a new child "
+"archival object to any existing resource or archival object."
+msgstr ""
+"ArchivematicaのArchivesSpaceペインから、既存のリソースやアーカイブオブジェクトに新しい子アーカイブオブジェクトを追加できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:368
+msgid ""
+"Navigate to the resource or archival object you would like to add a child "
+"archival object to and click on the name of the resource or archival object."
+msgstr ""
+"子アーカイブ オブジェクトを追加したいリソースまたはアーカイブオブジェクトに移動し、リソースまたはアーカイブオブジェクトの名前をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:371
+msgid ""
+"Click **Add new child record**. A metadata box will pop up where you can "
+"enter basic metadata for the record. At a minimum, the new archival object "
+"must have a title and a level of description."
+msgstr ""
+"**新しい子レコードの追加** "
+"をクリックします。メタデータボックスがポップアップ表示され、レコードの基本的なメタデータを入力できます。最低限、新しいアーカイブオブジェクトには、タイトルと説明のレベルが必要です。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid ""
+"\"Add new child record\" dialog box, showing fields for title, level of "
+"description, general note, conditions governing access note, start date, end"
+" date, and date expression."
+msgstr ""
+"\"新しい子レコードの追加\"ダイアログボックスには、タイトル、説明のレベル、一般的なメモ、アクセスを管理する条件メモ、開始日、終了日、および日付表現のフィールドが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:380
+msgid ""
+"Click **Save** once you are satisfied with the metadata. The new child "
+"archival object will appear in the hierarchy, and will also be added to your"
+" ArchivesSpace repository."
+msgstr ""
+"メタデータに問題がなければ、 **Save** "
+"をクリックします。新しい子アーカイブオブジェクトが階層に表示され、ArchivesSpaceリポジトリにも追加されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:384
+msgid ""
+"To remove a resource or archival object, select the name of the resource or "
+"archival object and click **Delete selected**. Please note that this cannot "
+"be reversed, and that the deletion will happen in your ArchivesSpace "
+"repository as well."
+msgstr ""
+"リソースまたはアーカイブオブジェクトを削除するには、リソースまたはアーカイブオブジェクトの名前を選択し、 **Delete selected** "
+"をクリックします。この操作は取り消すことができず、ArchivesSpaceリポジトリでも削除されることに注意してください。"
+
+#: ../../user-manual/appraisal/appraisal.rst:389
+msgid ""
+"To edit the title or level of description of a resource or archival object, "
+"select the name of the resource or archival object and click **Edit "
+"metadata**."
+msgstr ""
+"リソースまたはアーカイブオブジェクトのタイトルまたは説明のレベルを編集するには、リソースまたはアーカイブオブジェクトの名前を選択し、 **Edit "
+"metadata** をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid ""
+"\"Edit metadata\" dialogue box, showing fields to change the title or level "
+"of description."
+msgstr "\"Edit metadata\"ダイアログボックス。タイトルや説明のレベルを変更するフィールドが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:401
+msgid "Adding rights metadata"
+msgstr "権利メタデータの追加"
+
+#: ../../user-manual/appraisal/appraisal.rst:403
+msgid ""
+"You can add rights metadata to a resource or archival object using the "
+"ArchivesSpace pane in Archivematica. Archivematica uses `PREMIS rights`_ for"
+" rights metadata."
+msgstr ""
+"ArchivematicaのArchivesSpaceペインを使用して、リソースやアーカイブオブジェクトにライツメタデータを追加できます。Archivematicaは、ライツメタデータに"
+" `PREMIS rights`_ を使用します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:409
+msgid ""
+"Rights can only be added at the SIP level - that is, to the resource or "
+"archival object that will eventually become the SIP."
+msgstr "権利は、SIPレベル、つまり、最終的にSIPとなるリソースまたはアーカイブオブジェクトにのみ追加できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:412
+msgid ""
+"To add rights metadata to a resource or archival object, select the name of "
+"the resource or archival object and click **Edit rights metadata**. A new "
+"tab will open showing the metadata information page. Select **Add** under "
+"the Rights heading. This will open the first page of the rights metadata "
+"entry form."
+msgstr ""
+"リソースまたはアーカイブオブジェクトに権利メタデータを追加するには、リソースまたはアーカイブオブジェクトの名前を選択し、 **Edit rights "
+"metadata** をクリックします。新しいタブが開き、メタデータ情報ページが表示されます。Rightsの見出しの下にある **Add** "
+"を選択します。これにより、権利メタデータ入力フォームの最初のページが開きます。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "Form for adding rights information."
+msgstr "権利情報を追加するフォーム。"
+
+#: ../../user-manual/appraisal/appraisal.rst:423
+msgid ""
+"Add the rights basis information for the resource or archival object and "
+"click **Save** to save the data."
+msgstr "リソースまたはアーカイブオブジェクトの権利ベース情報を追加し、 **Save** をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:426
+msgid ""
+"Click **Next** to add the rights act. Once you are done adding the act "
+"information, click **Done**."
+msgstr "**Next** をクリックし、権利行為を追加します。行為情報の追加が完了したら、 **完了** をクリックします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:434
+msgid ""
+"Once you have saved your rights metadata, you can add another by selecting "
+"**Add** from the metadata information page again."
+msgstr "権利メタデータを保存したら、メタデータ情報ページから **Add** を選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:440
+msgid "Connecting digital objects to ArchivesSpace resources"
+msgstr "デジタルオブジェクトをArchivesSpaceのリソースに接続"
+
+#: ../../user-manual/appraisal/appraisal.rst:442
+msgid ""
+"Materials that are stored in the backlog can be associated with "
+"ArchivesSpace resources by creating a digital object component and then "
+"dragging and dropping files from the Backlog pane to the new digital object "
+"component in the ArchivesSpace pane."
+msgstr ""
+"バックログに保存されている素材は、デジタルオブジェクトコンポーネントを作成し、バックログペインからArchivesSpaceペインの新しいデジタルオブジェクトコンポーネントにファイルをドラッグ＆ドロップすることで、ArchivesSpaceリソースに関連付けることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:449
+msgid ""
+"Digital object components will not appear in the ArchivesSpace repository "
+"until the AIP for the digital object is stored."
+msgstr "デジタルオブジェクトのコンポーネントは、デジタルオブジェクトのAIPが保存されるまでArchivesSpaceリポジトリに表示されません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:452
+#: ../../user-manual/appraisal/appraisal.rst:513
+msgid ""
+"Populate the Backlog pane by doing a blank search using the search boxes at "
+"the top of the page, or narrow your search by entering search terms and "
+"parameters."
+msgstr "ページ上部の検索ボックスを使って空白検索を行うか、検索語句とパラメーターを入力して検索条件を絞り込んで、Backlogペインに入力します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:456
+msgid ""
+"Populate the ArchivesSpace pane by doing a blank search using the search "
+"boxes in the ArchivesSpace pane, or :ref:`search by title or identifier of a"
+" resource <archivesspace-searching>`. A hierarchical view of the "
+"ArchivesSpace resources will be displayed in the pane."
+msgstr ""
+"ArchivesSpaceペインの検索ボックスを使用して、空白検索を行うか、 "
+":ref:`リソースのタイトルまたは識別子で検索して、ArchivesSpaceペインを入力します <archivesspace-searching>`"
+" 。ArchivesSpaceリソースの階層ビューがペインに表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:461
+msgid ""
+"Select the name of the resource or archival object for which you would like "
+"to create a digital object component and click **Add new digital object**. A"
+" digital object record will appear as a child of the resource or archival "
+"object."
+msgstr ""
+"デジタルオブジェクトコンポーネントを作成したいリソースまたはアーカイブオブジェクトの名前を選択し、 **Add new digital object**"
+" をクリックします。リソースまたはアーカイブオブジェクトの子として、デジタルオブジェクトレコードが表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid ""
+"The left-hand side of the image shows the Backlog pane. The right hand side "
+"of the image shows the ArchivesSpace pane, with a new digital object record "
+"added as a child of \"This is a new child record, 2005-2009\"."
+msgstr ""
+"画像の左側はBacklogペインです。画像の右側はArchivesSpaceペインで、\"の子として新しいデジタルオブジェクトレコードが追加されています。これは新しい子レコード、2005～2009\"です。"
+
+#: ../../user-manual/appraisal/appraisal.rst:471
+msgid ""
+"A new digital object has been added under the archival object titled \"This "
+"is a new child record\"."
+msgstr "\"というタイトルのアーカイブオブジェクトの下に、新しいデジタルオブジェクトが追加されましたた。これは新しい子レコード\"です。"
+
+#: ../../user-manual/appraisal/appraisal.rst:473
+msgid ""
+"From the Backlog pane, select a digital object and drag it over to the new "
+"digital object record in the ArchivesSpace pane. Only one file or directory "
+"from a transfer can be moved at a time. A file can only be added once to an "
+"ArchivesSpace resource. Repeat this step as many times as needed."
+msgstr ""
+"[バックログ]ペインから、デジタルオブジェクトを選択し、ArchivesSpaceペインの新しいデジタルオブジェクトのレコードにドラッグします。転送で一度に移動できるファイルまたはディレクトリは1つだけです。ファイルはArchivesSpaceリソース1に1回だけ追加できます。この手順を必要なだけ繰り返します。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "Backlog and analysis panes"
+msgstr "バックログと分析ペイン"
+
+#: ../../user-manual/appraisal/appraisal.rst:483
+msgid ""
+"The file Landing_zone.jpg has been attached to the digital object record in "
+"the ArchivesSpace pane."
+msgstr "Landing_zone.jpg ファイルがArchivesSpaceペインのデジタルオブジェクトレコードに添付されました。"
+
+#: ../../user-manual/appraisal/appraisal.rst:485
+msgid ""
+"Once all files have been added and you are happy with the arrangement, "
+"select the name of the resource or archival object where materials have been"
+" arranged and click **Finalize arrangement**. This will start a SIP on the "
+"Ingest tab in Archivematica."
+msgstr ""
+"すべてのファイルが追加され、配列に満足したら、素材が配列されたリソースまたはアーカイブオブジェクトの名前を選択し、 **Finalize "
+"arrangement** をクリックします。これで、ArchivematicaのインジェストタブでSIPが開始されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:492
+msgid ""
+"Before you start the SIP in the ArchivesSpace pane, verify that all required"
+" metadata associated with an ArchivesSpace resource is in place, "
+"particularly at the parent-level of the arrangement. In ArchivesSpace, "
+"verify that the description record is linked to an agent record."
+msgstr ""
+"ArchivesSpaceペインでSIPを開始する前に、ArchivesSpaceリソースに関連付けられたすべての必要なメタデータが配列されていること、特に配列の親レベルで配列されていることを確認します。ArchivesSpaceで、説明レコードがエージェントレコードにリンクされていることを確認します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:500
+msgid "Arrangement"
+msgstr "配列"
+
+#: ../../user-manual/appraisal/appraisal.rst:502
+msgid ""
+"The Arrangement pane allows users to organize materials stored in the "
+"backlog before turning the material into a SIP. The Arrangement pane allows "
+"users to combine material from multiple transfers into one SIP or, by only "
+"dragging and dropping selected files, weed the transfer so that the "
+"resulting SIP only includes the files that you would like to preserve."
+msgstr ""
+"配列ペインでは、SIPにする前に、バックログに保存されている素材を整理できます。配列ペインでは、複数の転送素材を1つのSIPにまとめたり、選択したファイルをドラッグ＆ドロップするだけで、結果的に保存したいファイルだけをSIPに含めるように転送をウィードしたりすることができます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:511
+msgid "Arranging materials through drag-and-drop"
+msgstr "ドラッグ＆ドロップで素材を配列"
+
+#: ../../user-manual/appraisal/appraisal.rst:519
+msgid ""
+"Files with a strikethrough cannot be dragged over to the arrangement tab, "
+"either because the file is a metadata or log file that will be added to the "
+"SIP automatically or because the file has already been included in another "
+"SIP."
+msgstr ""
+"取り消し線が付いているファイルは、そのファイルがSIPに自動的に追加されるメタデータまたはログファイルであるか、またはファイルがすでに別のSIPに含まれているため、配列タブにドラッグできません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:523
+msgid ""
+"In the Arrangement pane, click on **Add directory** to create a structure "
+"for the SIP. Use the same button to create separate SIP directories or to "
+"create nested sub-directories. To create a sub-directory, select the name of"
+" the parent directory before clicking **Add directory**."
+msgstr ""
+"配列ペインで、 **Add directory** "
+"をクリックして、SIPの構造を作成します。別々のSIPディレクトリを作成したり、ネストしたサブディレクトリを作成したりするには、同じボタンを使用します。サブディレクトリを作成するには、"
+" **Add directory** をクリックする前に、親ディレクトリの名前を選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:528
+msgid ""
+"Drag and drop the transfer directory and/or individual objects you wish to "
+"arrange from the Backlog pane to the Arrangement pane. Note that all "
+"metadata, submission documentation, and other associated data is also copied"
+" to the arrange pane with your object(s)."
+msgstr ""
+"配列したい転送ディレクトリや個々のオブジェクトを、[バックログ] ペインから [配列] "
+"ペインにドラッグ&ドロップします。すべてのメタデータ、提出ドキュメント、およびその他の関連データもオブジェクトとともに配列ペインにコピーされることに注意してください。"
+
+#: ../../user-manual/appraisal/appraisal.rst:533
+msgid ""
+"Once all relevant files have been dragged from the Backlog pane to "
+"directories in the Arrangement pane, select the top-level directory "
+"corresponding to the intended SIP, and click **Create SIP**. This will start"
+" a SIP on the Ingest tab."
+msgstr ""
+"すべての関連ファイルを[バックログ]ペインから[配列]ペインのディレクトリにドラッグしたら、目的のSIPに対応する最上位ディレクトリを選択し、 "
+"**SIPの作成** ]をクリックします。これにより、[インジェスト]タブでSIPが開始されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:538
+msgid ""
+"Once your arrangement is complete and the SIP has been turned into an AIP "
+"for long-term storage, you can delete any files remaining in the transfer "
+"that you would like to discard by follow the instructions to :ref:`delete "
+"transfers <backlog-delete>` on the Backlog tab."
+msgstr ""
+"配列が完了し、SIPが長期保管用のAIPに変換されると、[バックログ]タブの :ref:`転送を削除 <backlog-delete>` "
+"する手順に従って、転送に残っている破棄したいファイルを削除できます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:546
+msgid "Adding AtoM levels of description"
+msgstr "AtoMの記述レベルを追加"
+
+#: ../../user-manual/appraisal/appraisal.rst:548
+msgid ""
+"If you plan to create a DIP to :ref:`Upload to AtoM <upload-atom>`, you may "
+"wish to add levels of description to your directories and/or objects. "
+"Archivematica will add a logical structMAP to the METS file, which AtoM will"
+" use to create information objects, applying the chosen levels of "
+"description. Note that if you do not apply a level of description to a "
+"digital object, AtoM will automatically assign it the level of \"item\"."
+msgstr ""
+"DIP to :ref:`Upload to AtoM <upload-atom>` "
+"を作成する場合、ディレクトリやオブジェクトに記述レベルを追加できます。Archivematicaは、METSファイルに論理的なstructMAPを追加し、AtoMは、選択した記述レベルを適用して情報オブジェクトを作成します。デジタルオブジェクトに記述レベルを適用しない場合、AtoMは、自動的に\"item\"のレベルを割り当てます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:555
+msgid "This functionality is supported with AtoM 2.2 and higher."
+msgstr "この機能は、AtoM 2.2以降でサポートされています。"
+
+#: ../../user-manual/appraisal/appraisal.rst:559
+msgid ""
+"To have the AtoM levels of description appear, you must configure the "
+":ref:`AtoM integration <dashboard-atom>` in the Administration tab."
+msgstr "AtoMの説明レベルを表示させるには、管理タブで :ref:`AtoM統合 <dashboard-atom>` を設定する必要があります。"
+
+#: ../../user-manual/appraisal/appraisal.rst:562
+msgid ""
+"Select a directory or object in the Arrange pane. Click the *Edit metadata* "
+"button to choose the level of description."
+msgstr ""
+"Arrangeペインでディレクトリまたはオブジェクトを選択します。 *Edit metadata* ボタンをクリックして、説明のレベルを選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "Choosing the AtoM level of description"
+msgstr "記述のAtoM レベルの選択"
+
+#: ../../user-manual/appraisal/appraisal.rst:570
+msgid ""
+"As you add levels of description they will be shown in the arrange pane for "
+"you to review before finalizing your SIP."
+msgstr "記述のレベルを追加すると、それらはSIPを確定する前に確認できるように配列ペインに表示されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst
+msgid "Viewing levels of description applied to SIP"
+msgstr "SIPに適用される記述レベルの表示"
+
+#: ../../user-manual/appraisal/appraisal.rst:578
+msgid ""
+"Once you have added the levels of description, click **Create SIP**. This "
+"will start a SIP on the Ingest tab."
+msgstr "説明のレベルを追加したら、 **Create SIP** をクリックします。これにより、インジェストタブでSIPが開始されます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:583
+msgid ""
+"If you choose not to assign levels of description to directories in SIP "
+"arrange, AtoM will flatten the DIP so that all digital objects are child-"
+"level descriptions of the target description."
+msgstr ""
+"SIP配列でディレクトリに記述レベルを割り当てないことを選択した場合、AtoMは、すべてのデジタルオブジェクトがターゲット記述の子レベルの記述になるようにDIP"
+" をフラットにします。"
+
+#: ../../user-manual/appraisal/appraisal.rst:587
+msgid ""
+"If you add levels of description to the SIP then metadata added through the "
+"form in Archivematica will not be included in the DIP."
+msgstr "SIPに説明のレベルを追加した場合、Archivematicaのフォームから追加したメタデータはDIPに含まれません。"
+
+#: ../../user-manual/appraisal/appraisal.rst:593
+msgid "Creating a SIP using tags"
+msgstr "タグを使用したSIPの作成"
+
+#: ../../user-manual/appraisal/appraisal.rst:595
+msgid ""
+"You can also use tags as a quick way to generate new SIPs. For more "
+"information on adding tags, see :ref:`tagging files <adding-tags>`."
+msgstr ""
+"また、新しいSIPを生成する素早い方法としてタグを使用もできます。タグの追加の詳細については、 :ref:`ファイルのタグ付 <adding-"
+"tags>` を参照してください。"
+
+#: ../../user-manual/appraisal/appraisal.rst:598
+msgid ""
+"Tag all of the material in the backlog that you would like to combine into "
+"one SIP."
+msgstr "一つのSIPにまとめたいバックログのすべての素材にタグをつけます。"
+
+#: ../../user-manual/appraisal/appraisal.rst:601
+msgid "At the top of the Arrangement pane, select a tag from the dropdown."
+msgstr "[配列]ペインの上部で、ドロップダウンからタグを選択します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:603
+msgid ""
+"Click **Create SIP**. Archivematica will automatically generate a new SIP "
+"and send it to Ingest using all the files that share this tag and using the "
+"tag as the SIP name."
+msgstr ""
+"**Create SIP** "
+"をクリックします。Archivematicaが自動的に新しいSIPを生成し、このタグを共有するすべてのファイルを使用して、タグをSIP名としてインジェストに送信します。"
+
+#: ../../user-manual/appraisal/appraisal.rst:-1
+msgid "Creating a SIP from a tag"
+msgstr "タグからSIPを作成"
+
+#: ../../user-manual/appraisal/appraisal.rst:612
+msgid ":ref:`Back to the top <appraisal>`"
+msgstr ":ref:`トップに戻る <appraisal>`"

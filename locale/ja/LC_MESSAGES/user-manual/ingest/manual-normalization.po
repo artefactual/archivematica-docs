@@ -1,0 +1,548 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/ingest/manual-normalization.rst:5
+msgid "Manual normalization"
+msgstr "マニュアル正規化"
+
+#: ../../user-manual/ingest/manual-normalization.rst:7
+msgid ""
+"Normalization is the act of making copies of a file for the purpose of "
+"access or preservation. Usually, Archivematica carries out this action "
+"during the :ref:`Normalization microservice <normalize>` on the Ingest tab, "
+"using :ref:`normalization rules <normalization>` from the Preservation "
+"Planning tab to create access and/or preservation derivatives."
+msgstr ""
+"正規化とは、アクセスや保存のためにファイルのコピーを作成することです。通常、Archivematica は、[インジェスト] タブの "
+":ref:`正規化マイクロサービス <normalize>` 中にこのアクションを実行し、[保存計画] タブの :ref:`正規化ルール "
+"<normalization>` を適用して アクセスおよび/または保存の派生物を作成します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:13
+msgid ""
+"However, in some cases it makes sense for users to create access or "
+"preservation copies outside of Archivematica - for example, as part of a "
+"digitization workflow, or when working with files that cannot be normalized "
+"by Archivematica's tool suite."
+msgstr ""
+"ただし、場合によっては、ユーザーが Archivematica "
+"の外部でアクセスコピーまたは保存コピーを作成することが合理的である場合があります。たとえば、デジタル化ワークフローの一部として、または "
+"Archivematica のツールスイートで正規化できないファイルを操作する場合などです。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:18
+msgid ""
+"The term \"manual normalization\" is used to refer to two different "
+"workflows in Archivematica:"
+msgstr "\"手動正規化\" という用語は、Archivematica の2つの異なるワークフローを指すのに使われます："
+
+#: ../../user-manual/ingest/manual-normalization.rst:21
+msgid ""
+"Adding normalized files to a transfer before ingesting it into Archivematica"
+msgstr "Archivematica にインジェストする前に、転送に正規化されたファイルを追加"
+
+#: ../../user-manual/ingest/manual-normalization.rst:22
+msgid "Adding normalized files to the SIP during the Normalize microservice"
+msgstr "正規化マイクロサービス中にSIPに正規化されたファイルを追加"
+
+#: ../../user-manual/ingest/manual-normalization.rst:24
+msgid ""
+"For both options, the user has the choice to add PREMIS event detail "
+"metadata that describes the manual normalization events."
+msgstr "どちらのオプションでも、ユーザーは手動正規化イベントを記述する PREMIS イベント詳細メタデータを追加できます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:27
+msgid ""
+"Manually normalized derivatives can be added to Standard transfers. Other "
+"transfer types are not supported."
+msgstr "手動で正規化されたデリバティブは、標準転送に追加できます。その他の転送タイプは、サポートされていません。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:30
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/ingest/manual-normalization.rst:32
+msgid ""
+":ref:`Workflow 1: Manual normalization prior to transfer to Archivematica "
+"<man-norm-before>`"
+msgstr ":ref:`ワークフロー1：Archivematicaに転送する前の手動正規化 <man-norm-before>`"
+
+#: ../../user-manual/ingest/manual-normalization.rst:33
+msgid ""
+":ref:`Workflow 2: Manual normalization during Ingest <man-norm-ingest>`"
+msgstr ":ref:`ワークフロー 2：インジェスト中の手動正規化 <man-norm-ingest>`"
+
+#: ../../user-manual/ingest/manual-normalization.rst:34
+msgid ""
+":ref:`Adding PREMIS eventDetail for manual normalization <man-norm-premis-"
+"detail>`"
+msgstr ":ref:`手動正規化のためのPREMIS eventDetailの追加 <man-norm-premis-detail>`"
+
+#: ../../user-manual/ingest/manual-normalization.rst:35
+msgid ":ref:`Normalizing files with the same name <man-norm-same-name>`"
+msgstr ":ref:`同じ名前のファイルの正規化 <man-norm-same-name>`"
+
+#: ../../user-manual/ingest/manual-normalization.rst:40
+msgid "Workflow 1: Manual normalization prior to transfer to Archivematica"
+msgstr "ワークフロー1：Archivematicaに転送する前の手動正規化"
+
+#: ../../user-manual/ingest/manual-normalization.rst:42
+msgid ""
+"This workflow assumes that users have created access and/or preservation "
+"copies of their files before the material is transferred into Archivematica."
+msgstr ""
+"このワークフローは、素材が Archivematica "
+"に転送される前に、ユーザーがファイルのアクセスコピーや保存コピーを作成していることを前提としています。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:45
+msgid ""
+"For example, during a digitization project, high-resolution original "
+"(master) images as well as lower-resolution access copies may be created. It"
+" would be redundant of Archivematica to duplicate this normalization work. "
+"By adding a folder called ``manualNormalization`` to the transfer prior to "
+"processing, the Archivematica can recognize that normalization work has "
+"already been done so that Archivematica does not replicate the effort."
+msgstr ""
+"例えば、デジタル化プロジェクトでは、高解像度のオリジナル（マスター）画像と低解像度のアクセスコピーが作成されることがあります。この正規化作業をArchivematicaが重複して行うことは冗長です。転送処理前に"
+" ``manualNormalization`` "
+"と呼ばれるフォルダを追加することで、Archivematicaは、既に正規化作業が行われたことを認識し、正規化作業を重複させることがなくなります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:53
+msgid ""
+"This workflow requires a one-to-one relationship an original object and its "
+"access or preservation derivative. Creating multiple access or preservation "
+"derivatives that relate to a single original object is not supported."
+msgstr ""
+"このワークフローでは、オリジナルのオブジェクトとその派生アクセスまたは保存との間に1対1の関係が必要です。単一のオリジナルのオブジェクトに関連する複数のアクセスまたは保存派生物の作成はサポートされていません。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:57
+msgid ""
+"Create your files - the original (master) copies and the manually normalized"
+" derivatives. Note that the filenames must match in order for Archivematica "
+"to recognize the links between the original file and its derivatives."
+msgstr ""
+"オリジナル（マスター）コピーと手動で正規化した派生ファイルのファイルを作成します。Archivematicaがオリジナルファイルと派生ファイルのリンクを認識するためには、ファイル名が一致している必要があります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:74
+msgid ""
+"In this example, there are three copies of each file - a GIF, a PNG, and a "
+"TIFF. The PNG files will be used as the original files, the TIFF files as "
+"preservation derivatives, and the GIF files as access derivatives."
+msgstr ""
+"この例では、各ファイルの 3 つのコピー (GIF、PNG、TIFF) があります。PNG ファイルはオリジナル ファイルとして使用され、TIFF "
+"ファイルは保存用の派生ファイルとして、GIF ファイルはアクセス用の派生ファイルとして使用されます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:78
+#: ../../user-manual/ingest/manual-normalization.rst:177
+msgid ""
+"Create a transfer directory and place the original files inside at the top "
+"level."
+msgstr "転送ディレクトリを作成し、その中の最上位にオリジナルのファイルを置きます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:88
+msgid ""
+"Create a subdirectory called ``manualNormalization`` (note the capital N). "
+"Inside of the ``manualNormalization`` directory, create directories called "
+"``access`` and ``preservation`` (you do not need both - if you only have "
+"preservation copies, create only the ``preservation`` directory, and vice "
+"versa). Place your manually normalized files in the appropriate directory."
+msgstr ""
+"``manualNormalization`` というサブディレクトリを作成します（大文字のNに注意）。 ``manualNormalization``"
+" ディレクトリ内に ``access`` と ``preservation`` というディレクトリを作成します "
+"(両方は必要ありません。保存コピーしかない場合は、 ``preservation`` "
+"ディレクトリのみを作成します。逆も同様です)。手動で正規化したファイルを適切なディレクトリに配列します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:110
+msgid ""
+"In the example above, you can see that the GIF access derivatives have been "
+"moved to the ``manualNormalization/access`` directory and the TIFF "
+"preservation derivatives have been moved to the "
+"``manualNormalization/preservation`` directory."
+msgstr ""
+"上の例では、GIF アクセス派生物が ``manualNormalization/access`` ディレクトリに移動され、TIFF 保存派生物が "
+"``manualNormalization/preservation`` ディレクトリに移動されたことがわかります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:115
+#: ../../user-manual/ingest/manual-normalization.rst:229
+msgid ""
+"Note that the filenames must match in order for Archivematica to recognize "
+"the links between the original file and its derivatives."
+msgstr "Archivematicaがオリジナルファイルとその派生ファイルのリンクを認識するためには、ファイル名が一致している必要があります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:118
+#: ../../user-manual/ingest/manual-normalization.rst:187
+msgid ""
+"Place the transfer in your transfer source location and start a Standard "
+"transfer as usual. For instructions, see the :ref:`Transfer <transfer>` and "
+":ref:`Ingest <ingest>` documentation."
+msgstr ""
+"転送を転送元の場所に配列し、通常どおり標準転送を開始します。手順については、 :ref:`転送r <transfer>` および "
+":ref:`インジェスト <ingest>` の文書を参照してください。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:122
+msgid ""
+"When you reach the normalization microservice on the Ingest tab, choose "
+"whether to normalize for access, preservation, or both."
+msgstr "[インジェスト] タブで正規化マイクロサービスに到達したら、アクセス、保存、またはその両方のために正規化するかどうかを選択します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:127
+msgid ""
+"If you choose to review normalization results prior to accepting, you will "
+"find your ``manualNormalization`` folder and its contents in the objects "
+"directory of your transfer, with its ``access`` and/or ``preservation`` "
+"folders and their content intact."
+msgstr ""
+"受け入れる前に正規化結果を確認することを選択した場合は、転送のオブジェクトディレクトリに ``manualNormalization`` "
+"フォルダとその内容があり、その ``access`` および/または ``preservation`` フォルダとその内容はそのままです。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:132
+msgid ""
+"Once the AIP is created, you will find that the originals and their "
+"preservation derivatives are now located in the ``data`` directory of the "
+"AIP as usual. Note that the ``manualNormalization`` directory and subfolders"
+" were deleted once normalization was complete. If you chose to normalize for"
+" access, a DIP will be created as well."
+msgstr ""
+"AIP が作成されると、オリジナルとその保存派生物が通常どおり AIP の ``data`` "
+"ディレクトリに配列されることがわかります。正規化が完了すると、 ``manualNormalization`` "
+"ディレクトリとサブフォルダーが削除されたことに注意してください。アクセスのために正規化を選択した場合は、DIP も作成されます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:140
+msgid ""
+"Note that while there needs to be a one-to-one relationship between an "
+"original and its derivatives, it is not required that every original have a "
+"corresponding number of derivatives. A structure like this would work just "
+"as well:"
+msgstr ""
+"オリジナルとその派生物の間には 1 対 1 "
+"の関係がある必要がありますが、すべてのオリジナルが対応する数の派生物を持つ必要はないことに注意してください。次のような構造も同様に機能します："
+
+#: ../../user-manual/ingest/manual-normalization.rst:157
+msgid ""
+"In a transfer like the above, Archivematica will fill in any gaps as per the"
+" selected normalization option. For example, if the user selects \"Normalize"
+" for preservation\", then a preservation derivative for ``ornamental-"
+"onion.png`` will be created by Archivematica."
+msgstr ""
+"上記のような転送では、Archivematica は選択された正規化オプションに従ってギャップを埋めます。たとえば、ユーザーが "
+"\"保存のために正規化\"を選択した場合、 ``ornamental-onion.png`` の保存派生物が Archivematica "
+"によって作成されます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:165
+msgid "Workflow 2: Manual normalization during Ingest"
+msgstr "ワークフロー 2：インジェスト中の手動正規化"
+
+#: ../../user-manual/ingest/manual-normalization.rst:167
+msgid ""
+"This workflow assumes that users have created access and/or preservation "
+"copies of their files while the material is being processed by "
+"Archivematica. For example, during processing the user might decide that the"
+" material needs to be normalized in a specialized way (for example, using "
+"proprietary tools)."
+msgstr ""
+"このワークフローでは、Archivematica "
+"で処理されている間に、ユーザーがファイルのアクセスコピーや保存コピーを作成することを想定しています。例えば、素材の処理中に、ユーザーは素材を特殊な方法（例えば、独自のツールを使用するなど）で正規化する必要があると判断するかもしれません。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:172
+msgid ""
+"This workflow requires that a user start a transfer in Archivematica, then "
+"use external normalization tools to create the required derivatives, "
+"manually place the derivatives within the currently processing directory on "
+"disk, and then return to Archivematica to proceed."
+msgstr ""
+"このワークフローでは、ユーザーが Archivematica "
+"で転送を開始し、外部正規化ツールを使用して必要な派生物を作成し、ディスク上の現在処理中のディレクトリ内に派生ファイルを手動で配列してから、Archivematica"
+" に戻って続ける必要があります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:191
+msgid ""
+"When you reach the normalization microservice on the Ingest tab, choose "
+"**Normalize manually** from the dropdown menu."
+msgstr "[インジェスト] タブの正規化マイクロサービスに到達したら、ドロップダウンメニューから **手動で正規化** を選択します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:194
+msgid "Manually normalize your files."
+msgstr "手動でファイルを正規化します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:196
+msgid ""
+"Using an SFTP file browser or SSH in your command line, go to your "
+"pipeline's Processing Location and find the approveNormalization watched "
+"directory. The default location is "
+"``/var/archivematica/sharedDirectory/watchedDirectories/approveNormalization/preservation/``,"
+" which will contain your transfer directory. You may need to look at your "
+":ref:`Storage Service <storageservice:index>` configuration to confirm the "
+"Processing Location defined for your pipeline."
+msgstr ""
+"SFTP ファイルブラウザーまたは コマンドラインのSSHを使用して、パイプラインの処理場所に移動し、approveNormalization "
+"監視ディレクトリを見つけます。デフォルトの場所は "
+"``/var/archivematica/sharedDirectory/watchedDirectories/approveNormalization/preservation/``"
+" であり、ここに転送ディレクトリが含まれます。パイプラインに定義されている処理場所を確認するには、 :ref:`ストレージサービス "
+"<storageservice:index>` の設定を確認する必要がある場合があります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:204
+msgid ""
+"Copy your manually normalized derivatives into your transfer directory. You "
+"will need to create a directory structure containing a "
+"``manualNormalization`` directory. Inside of the ``manualNormalization`` "
+"directory, create directories called ``access`` and ``preservation`` (you do"
+" not need both - if you only have preservation copies, create only the "
+"``preservation`` directory, and vice versa). Place your manually normalized "
+"files in the appropriate directory."
+msgstr ""
+"手動で正規化した派生物を転送ディレクトリにコピーします。 ``manualNormalization`` "
+"ディレクトリを含むディレクトリ構造を作成する必要があります。 ``manualNormalization`` ディレクトリ内に ``access`` と"
+" ``preservation`` というディレクトリを作成します (両方は必要ありません。保存コピーしかない場合は、 ``preservation``"
+" ディレクトリのみを作成します。逆も同様です)。手動で正規化したファイルを適切なディレクトリに配列します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:225
+msgid ""
+"In the above example, preservation and access derivatives were created for "
+"``pepperbox-poppy.png``, while only a preservation copy was created for "
+"``hooded-pitcher-plant.png``."
+msgstr ""
+"上記の例では、 ``pepperbox-poppy.png`` には保存用とアクセス用の派生物が作成されましたが、 ``hooded-pitcher-"
+"plant.png`` には保存用コピーのみが作成されました。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:232
+msgid "Return to the dashboard and approve normalization."
+msgstr "ダッシュボードに戻り、正規化を承認します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:234
+msgid ""
+"Once the AIP is created, you will find that the originals and their "
+"preservation derivatives are now located in the ``data`` directory of the "
+"AIP as usual. Note that the ``manualNormalization`` directory and subfolders"
+" were deleted once normalization was complete. If you had access copies, a "
+"DIP will be created as well."
+msgstr ""
+"AIP が作成されると、オリジナルとその保存派生物が通常どおり AIP の ``data`` "
+"ディレクトリに配列されることがわかります。正規化が完了すると、 ``manualNormalization`` "
+"ディレクトリとサブフォルダーが削除されたことに注意してください。アクセスコピーを持っていた場合、DIP も作成されます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:243
+msgid "Adding PREMIS eventDetail for manual normalization"
+msgstr "手動正規化のためのPREMIS eventDetailの追加"
+
+#: ../../user-manual/ingest/manual-normalization.rst:245
+msgid ""
+"When Archivematica carries out normalization, a PREMIS event is created and "
+"added to the METS that describes the normalization event. However, when you "
+"manually normalize material, Archivematica does not create a PREMIS event. "
+"This feature allows you to write a PREMIS event for manually normalized "
+"materials."
+msgstr ""
+"Archivematicaが正規化を実行すると、PREMISイベントが作成され、正規化イベントを記述するMETSに追加されます。しかし、手動で素材を正規化した場合、ArchivematicaはPREMISイベントを作成しません。この機能により、手動で正規化した素材に対してPREMISイベントを記述できます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:250
+msgid ""
+"Regardless of whether you include manually normalized files in the initial "
+"transfer (Workflow 1) or during processing (Workflow 2), the procedure for "
+"adding PREMIS eventDetail is the same."
+msgstr ""
+"手動で正規化したファイルを最初の転送（ワークフロー1）に含めるか、処理中（ワークフロー2）に含めるかにかかわらず、PREMIS "
+"eventDetailを追加する手順は同じです。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:256
+msgid ""
+"If you want to add a manual normalization PREMIS event, it is helpful to set"
+" \"Reminder: add metadata if desired\" to **None** in your :ref:`processing "
+"configuration <dashboard-processing>` so that you do not miss the window of "
+"opportunity. Once the SIP has passed this microservice, you can no longer "
+"add the PREMIS event."
+msgstr ""
+"手動正規化 PREMIS イベントを追加する場合は、 :ref:`処理設定 <dashboard-processing>` で "
+"\"リマインダー：必要に応じてメタデータを追加\" を **なし** に設定し、好機を逃さないようにすると便利です。SIP "
+"がこのマイクロサービスを通過すると、PREMIS イベントを追加できなくなります。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:262
+msgid "Follow the steps in Workflow 1 or 2, above."
+msgstr "上記のワークフロー1または2の手順に従ってください。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:264
+msgid ""
+"After normalization is approved, Archivematica will stop and remind you to "
+"add metadata. Click on the metadata icon."
+msgstr "正規化が承認されると、Archivematicaは停止し、メタデータを追加するよう促します。メタデータのアイコンをクリックしてください。"
+
+#: ../../user-manual/ingest/manual-normalization.rst
+msgid "Click on the metadata icon"
+msgstr "メタデータのアイコンをクリック"
+
+#: ../../user-manual/ingest/manual-normalization.rst:272
+msgid "Select \"Manual normalization event detail\" under metadata."
+msgstr "メタデータの下にある\"手動正規化イベントの詳細\" を選択します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst
+msgid "Link to add Manual Normalization Event Detail"
+msgstr "手動正規化イベント詳細追加へのリンク"
+
+#: ../../user-manual/ingest/manual-normalization.rst:279
+#, python-format
+msgid ""
+"Add event detail. This might be technical tool output, like: "
+"``program=ImageMagick; version=6.6.4.0; command=%convertPath% %fileFullName%"
+" +compress %preservationFileDirectory%%fileTitle%.%preservationFormat%`` or "
+"something more narrative like in the example below."
+msgstr ""
+"イベントの詳細を追加します。これは、 ``program=ImageMagick; version=6.6.4.0; "
+"command=%convertPath% %fileFullName% +compress "
+"%preservationFileDirectory%%fileTitle%.%preservationFormat%`` "
+"のような技術的なツールの出力かもしれないし、または下の例のようなもっと説明的なものかもしれません。"
+
+#: ../../user-manual/ingest/manual-normalization.rst
+msgid "Add event detail"
+msgstr "イベントの詳細を追加"
+
+#: ../../user-manual/ingest/manual-normalization.rst:290
+msgid "Save the metadata and click on the ingest tab to continue processing."
+msgstr "メタデータを保存し、インジェストタブをクリックして処理を続行します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:292
+msgid ""
+"Select Continue from the metadata reminder dropdown box to continue "
+"processing."
+msgstr "処理を続けるには、メタデータリマインダーのドロップダウンボックスから [続ける] を選択します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:297
+msgid "Normalizing files with the same name"
+msgstr "同じ名前のファイルの正規化"
+
+#: ../../user-manual/ingest/manual-normalization.rst:299
+msgid ""
+"The  manual normalization workflow outlined above assumes that there are no "
+"conflicts between filenames. For example, if the original filenames are "
+"``file1.doc`` and ``file2.xls``, there is no conflict. But if you are "
+"manually normalizing both ``file1.doc`` and ``file1.xls``, even if the "
+"extensions of the normalized files are different, you will need to provide a"
+" CSV file to document the relationships between the original and normalized "
+"files."
+msgstr ""
+
+#: ../../user-manual/ingest/manual-normalization.rst:306
+msgid "Create your directory structure."
+msgstr "ディレクトリ構造を作成します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:322
+msgid ""
+"In the example above, ``file1.tga`` has a JPG access derivative and a TIFF "
+"preservation derivative. ``file1.doc`` has PDF access and preservation "
+"derivatives. ``file1.crw`` does not have any derivatives."
+msgstr ""
+"上記の例では、 ``file1.tga`` には JPG アクセス派生物と TIFF 保存派生があります。 ``file1.doc`` には PDF "
+"へのアクセスと保存派生物があります。 ``file1.crw`` には派生物がありません。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:326
+msgid ""
+"Create a CSV file called ``normalization.csv``. The CSV must contain three "
+"columns: the path of the original file, the path of the access derivative, "
+"and the path of the preservation derivative. All the files with duplicate "
+"names need to be listed, even if they do not have manually normalized "
+"derivatives."
+msgstr ""
+"``normalization.csv`` という名前の CSV ファイルを作成します。CSV "
+"には、オリジナルのファイルのパス、アクセス派生物のパス、保存派生物のパスの 3 "
+"つの列が必要です。手動で正規化された派生物がない場合でも、重複する名前を持つすべてのファイルをリストアップする必要があります。"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "file1.tga"
+msgstr "file1.tga"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "manualNormalization/access/file1.jpg"
+msgstr "manualNormalization/access/file1.jpg"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "manualNormalization/preservation/file1.tif"
+msgstr "manualNormalization/preservation/file1.tif"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "file1.doc"
+msgstr "file1.doc"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "manualNormalization/access/file1.pdf"
+msgstr "manualNormalization/access/file1.pdf"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "manualNormalization/preservation/sfile1.pdf"
+msgstr "manualNormalization/preservation/sfile1.pdf"
+
+#: ../../user-manual/ingest/_csv/normalization.csv:1
+msgid "file1.crw"
+msgstr "file1.crw"
+
+#: ../../user-manual/ingest/manual-normalization.rst:337
+msgid ""
+"``normalization.csv`` is case-sensitive. Ensure that file paths are exact. "
+"Do not include column headers."
+msgstr ""
+"``normalization.csv`` "
+"は大文字と小文字を区別します。ファイルパスが正確であることを確認してください。列ヘッダーは含めないでください。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:340
+msgid "Include the CSV file at the top level of your transfer."
+msgstr "CSVファイルを転送の最上位に含めます。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:357
+msgid "Transfer as per Workflow 1 or 2, above."
+msgstr "上記のワークフロー1または2に従って転送します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:359
+msgid ""
+"In the example above, there are manually normalized files for both "
+"preservation and access, however it is possible to have manually normalized "
+"files for only access or preservation by leaving the appropriate column "
+"blank."
+msgstr ""
+"上記の例では、保存とアクセスの両方に対して手動で正規化されたファイルがありますが、該当する列を空白にすることで、アクセスまたは保存のみに対して手動で正規化されたファイルを持つことも可能です。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:363
+msgid "Other scenarios are also possible:"
+msgstr "他のシナリオも可能です："
+
+#: ../../user-manual/ingest/manual-normalization.rst:365
+msgid "Original file not in a subdirectory, normalized copies are:"
+msgstr "オリジナルのファイルはサブディレクトリにはありませんが、正規化されたコピーはサブディレクトリにあります："
+
+#: ../../user-manual/ingest/manual-normalization.rst:372
+msgid "Only some normalized copies in a subdirectory:"
+msgstr "サブディレクトリ内の一部の正規化されたコピーのみ："
+
+#: ../../user-manual/ingest/manual-normalization.rst:379
+msgid "Subdirectories used only to distinguish file names:"
+msgstr "ファイル名を区別するためだけに使用されるサブディレクトリ："
+
+#: ../../user-manual/ingest/manual-normalization.rst:388
+msgid ""
+"If the filenames contain characters that Archivematica's toolset cannot "
+"handle, Archivematica will change the filenames by replacing the character "
+"with the nearest equivalent (see :ref:`Filename changes <change-filenames>` "
+"for more information.) The normalization.csv file will work with either the "
+"original filenames or the changed filenames."
+msgstr ""
+"ファイル名に Archivematica のツールセットが処理できない文字が含まれている場合、Archivematica "
+"はその文字を最も近い同等の文字に置き換えてファイル名を変更します (詳細については、 :ref:`ファイル名の変更 <change-"
+"filenames>` を参照してください)。Normalization.csv "
+"ファイルは、オリジナルのファイル名または変更されたファイル名のいずれでも機能します。"
+
+#: ../../user-manual/ingest/manual-normalization.rst:394
+msgid ":ref:`Back to the top <manual-norm>`"
+msgstr ":ref:`トップに戻る <manual-norm>`"

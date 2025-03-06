@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../user-manual/transfer/bags.rst:5
+msgid "Unzipped and zipped bags"
+msgstr "圧縮バッグと解凍バッグ"
+
+#: ../../user-manual/transfer/bags.rst:7
+msgid ""
+"Archivematica supports the ingest of materials packaged in accordance with "
+"the Library of Congress `BagIt`_ specification. Users can ingest both zipped"
+" and unzipped bags by using the appropriate :ref:`transfer type <transfer-"
+"types>`."
+msgstr ""
+"Archivematica は、米国議会図書館の `BagIt`_ "
+"仕様に従ってパッケージ化された素材のインジェストをサポートしています。ユーザーは、適切な :ref:`転送タイプ <transfer-types>` "
+"を使用して、圧縮バッグと解凍バッグの両方をインジェストすることができます。"
+
+#: ../../user-manual/transfer/bags.rst:11
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../user-manual/transfer/bags.rst:13
+msgid ":ref:`Bag structure requirements <bag-structure-requirements>`"
+msgstr ":ref:`バッグ構造の要件 <bag-structure-requirements>`"
+
+#: ../../user-manual/transfer/bags.rst:14
+msgid ":ref:`Configuring bags <configure-bags>`"
+msgstr ":ref:`バッグの設定 <configure-bags>`"
+
+#: ../../user-manual/transfer/bags.rst:16
+msgid ":ref:`Unzipped bags <unzipped-bags>`"
+msgstr ":ref:`解凍されたバッグ <unzipped-bags>`"
+
+#: ../../user-manual/transfer/bags.rst:17
+msgid ":ref:`Zipped bags <zipped-bags>`"
+msgstr ":ref:`圧縮されたバッグ <zipped-bags>`"
+
+#: ../../user-manual/transfer/bags.rst:18
+msgid ":ref:`Adding metadata to bags <adding-metadata-bags>`"
+msgstr ":ref:`バッグにメタデータを追加 <adding-metadata-bags>`"
+
+#: ../../user-manual/transfer/bags.rst:19
+msgid ":ref:`Other ways to configure bags <other-bag-configs>`"
+msgstr ":ref:`バッグを設定するその他の方法 <other-bag-configs>`"
+
+#: ../../user-manual/transfer/bags.rst:21
+msgid ":ref:`Index and search bag metadata <searching-bags>`"
+msgstr ":ref:`バッグのメタデータを索引付けして検索 <searching-bags>`"
+
+#: ../../user-manual/transfer/bags.rst:26
+msgid "Bag structure requirements"
+msgstr "バッグ構造の要件"
+
+#: ../../user-manual/transfer/bags.rst:28
+msgid ""
+"Bags must adhere to requirements of the `BagIt`_ specification. If not, "
+"Archivematica will fail and files will be cleaned up and removed."
+msgstr ""
+"バッグは、 `BagIt`_ "
+"仕様の要件に準拠する必要があります。そうでない場合、Archivematicaは失敗し、ファイルはクリーンアップされて削除されます。"
+
+#: ../../user-manual/transfer/bags.rst:31
+msgid "Some issues that can cause bags to inadvertently fail include:"
+msgstr "バッグが不注意で故障する原因となる問題には、以下のようなものがあります："
+
+#: ../../user-manual/transfer/bags.rst:33
+msgid "Invisible files were added to the bag after it has been created."
+msgstr "バッグが作成された後に、見えないファイルがバッグに追加されました。"
+
+#: ../../user-manual/transfer/bags.rst:34
+msgid ""
+"Encoding requirements found in `bagit.txt` do not match the encoding of "
+"characters in `bag-info.txt`."
+msgstr "`bagit.txt` にあるエンコード要件は、 `bag-info.txt` にある文字のエンコードと一致しません。"
+
+#: ../../user-manual/transfer/bags.rst:36
+msgid "Editing a file (e.g. metadata.csv) after the bag has been created."
+msgstr "バッグ作成後にファイル（例：metadata.csv）を編集します。"
+
+#: ../../user-manual/transfer/bags.rst:37
+msgid ""
+"Structural issues. See :ref:`Adding metadata to bags <metadata-bags>` for "
+"more information on how to structure bags."
+msgstr ""
+"構造上の問題。バッグの構造化の方法については、 :ref:`バッグにメタデータを追加 <metadata-bags>` を参照してください。"
+
+#: ../../user-manual/transfer/bags.rst:43
+msgid "Configuring bags"
+msgstr "バッグの設定"
+
+#: ../../user-manual/transfer/bags.rst:45
+msgid ""
+"Bags can be configured in a variety of ways to achieve specific preservation"
+" goals."
+msgstr "バッグは、特定の保存目標を達成するために様々な方法で構成できます。"
+
+#: ../../user-manual/transfer/bags.rst:51
+msgid "Unzipped bags"
+msgstr "解凍されたバッグ"
+
+#: ../../user-manual/transfer/bags.rst:53
+msgid ""
+"Unzipped bags can be created by hand or by using a BagIt tool like `BagIt-"
+"python`_ or `Bagger`_. The bag must comply with the `BagIt`_ specification."
+msgstr ""
+"アンジップされたバッグは、手作業で作成するか、 `BagIt-python`_ や `Bagger`_ のような BagIt "
+"ツールを使用して作成できます。バッグは、 `BagIt`_ の仕様に準拠していなければなりません。"
+
+#: ../../user-manual/transfer/bags.rst:57
+msgid ""
+"To ingest an unzipped bag, select **Unzipped bag** from the transfer type "
+"dropdown menu in the Transfer tab and then select your material from the "
+"transfer browser."
+msgstr ""
+"アンジップされたバッグをインジェストするには、TransferタブのTransfer Typeドロップダウンメニューから **Unzipped "
+"bag** を選択し、Transferブラウザから素材を選択します。"
+
+#: ../../user-manual/transfer/bags.rst:-1
+msgid "Unzipped bag transfer in dashboard"
+msgstr "ダッシュボードで解凍されたバッグの転送"
+
+#: ../../user-manual/transfer/bags.rst:66
+msgid ""
+"The screenshot above shows a simple bag containing three digital objects to "
+"be preserved (``LICENSE``, ``README``, and ``TRADEMARK``) as well as the "
+"accompanying files required by the BagIt specification (``bag-info.txt``, "
+"``bagit.txt``, and a manifest file, in this case for sha512 checksums.) Note"
+" that the digital objects to be preserved are within a subdirectory called "
+"``data``."
+msgstr ""
+"上のスクリーンショットは、保存すべき3つのデジタルオブジェクト（ ``LICENSE`` 、 ``README`` 、 ``TRADEMARK`` "
+"）と、BagIt仕様で要求される付属ファイル（ ``bag-info.txt`` 、 ``bagit.txt`` "
+"、およびマニフェストファイル（この場合はsha512チェックサム用））を含むシンプルなバッグを示しています。保存するべきデジタルオブジェクトは、 "
+"``data`` というサブディレクトリ内にあることに注意してください。"
+
+#: ../../user-manual/transfer/bags.rst:73
+#: ../../user-manual/transfer/bags.rst:101
+msgid ""
+"For more information on processing your transfer, see :ref:`process transfer"
+" <process-transfer>` on the Transfer page."
+msgstr ""
+"転送処理の詳細については、転送ページの :ref:`process transfer <process-transfer>` を参照してください。"
+
+#: ../../user-manual/transfer/bags.rst:79
+msgid "Zipped bags"
+msgstr "圧縮されたバッグ"
+
+#: ../../user-manual/transfer/bags.rst:81
+msgid ""
+"Zipped bags can be created by hand or by using a BagIt tool like `BagIt-"
+"python`_ or `Bagger`_. The bag must comply with the `BagIt`_ specification."
+msgstr ""
+"ジップされたバッグは、手作業で作成するか、 `BagIt-python`_ や `Bagger`_ のような BagIt "
+"ツールを使用して作成できます。バッグは `BagIt`_ の仕様に準拠している必要があります。"
+
+#: ../../user-manual/transfer/bags.rst:84
+msgid ""
+"To ingest a zipped bag, select the transfer type **Zipped bag** from the "
+"dropdown menu in the transfer tab of the Dashboard. When you open the "
+"transfer browser, you will notice that only materials that use the "
+"compression formats ``.zip``, ``.tgz``, or ``tar.gz`` can be selected for "
+"transfer. These are the only compressed formats that Archivematica accepts "
+"for zipped bag transfers."
+msgstr ""
+"ジップバッグをインジェストするには、ダッシュボードの転送タブのドロップダウンメニューから、転送タイプ **ジップバッグ** "
+"を選択します。転送ブラウザを開くと、 ``.zip`` 、 ``.tgz`` 、 ``tar.gz`` "
+"の圧縮形式を使用した素材のみ転送に選択できます。これらは、Archivematicaがzip形式で転送できる唯一の圧縮形式です。"
+
+#: ../../user-manual/transfer/bags.rst:-1
+msgid "Zipped bag transfer in dashboard"
+msgstr "ダッシュボードでの圧縮されたバッグの転送"
+
+#: ../../user-manual/transfer/bags.rst:95
+msgid ""
+"The bag itself should be structured internally like an :ref:`unzipped bag "
+"<unzipped-bags>`, as shown above."
+msgstr "バッグ自体の内部構造は、上図のように :ref:`アンジップされたバッグ <unzipped-bags>` のようにします。"
+
+#: ../../user-manual/transfer/bags.rst:98
+msgid ""
+"Note that zipped bag transfers always use the name of the bag as the "
+"transfer name."
+msgstr "ジップされたバッグの転送では、常にバッグの名前が転送名として使用されることに注意してください。"
+
+#: ../../user-manual/transfer/bags.rst:107
+msgid ""
+"Adding descriptive/rights metadata and submission documentation to bags"
+msgstr "説明/権利メタデータと提出文書をバッグに追加"
+
+#: ../../user-manual/transfer/bags.rst:109
+msgid ""
+"Similar to standard transfers, it is possible to add descriptive and rights "
+"metadata to unzipped and zipped bag transfers. See :ref:`Adding metadata to "
+"bags <metadata-bags>` for more information."
+msgstr ""
+"標準的な転送と同様に、解凍および圧縮されたバッグ転送に、説明および権利メタデータを追加することが可能です。詳しくは、 "
+":ref:`バッグにメタデータを追加する <metadata-bags>` を参照してください。"
+
+#: ../../user-manual/transfer/bags.rst:116
+msgid "Other ways to configure bags"
+msgstr "バッグを設定するその他の方法"
+
+#: ../../user-manual/transfer/bags.rst:118
+msgid ""
+"There may be other ways to combine standard transfer configurations with "
+"bags, such as:"
+msgstr "標準的な転送設定とバッグを組み合わせるには、次のような他の方法もあります："
+
+#: ../../user-manual/transfer/bags.rst:121
+msgid ":ref:`Transfers with submission documentation <create-submission>`"
+msgstr ":ref:`提出書類を伴う転送 <create-submission>`"
+
+#: ../../user-manual/transfer/bags.rst:122
+msgid ":ref:`Persistent identifiers <transfer-pids>`"
+msgstr ":ref:`永続的識別子 <transfer-pids>`"
+
+#: ../../user-manual/transfer/bags.rst:123
+msgid ""
+":ref:`Transferring material with preservation or access derivatives (manual "
+"normalization) <transfer-derivatives>`"
+msgstr ":ref:`保存またはアクセス派生物を含む素材の転送 (手動正規化) <transfer-derivatives>`"
+
+#: ../../user-manual/transfer/bags.rst:124
+msgid ""
+":ref:`Transferring material with access copies only <transfer-access-"
+"copies>`"
+msgstr ":ref:`アクセスコピーのみで素材の転送 <transfer-access-copies>`"
+
+#: ../../user-manual/transfer/bags.rst:125
+msgid ""
+":ref:`Transferring material with service (mezzanine) files <transfer-"
+"service-files>`"
+msgstr ":ref:`サービス (メザニン) ファイルで素材を転送 <transfer-service-files>`"
+
+#: ../../user-manual/transfer/bags.rst:127
+msgid ""
+"However, Artefactual does not test all configurations. It is recommended to "
+"thoroughly test any unique configuration and review the results before "
+"running your workflow in production. If you have questions about different "
+"ways to set up bags for transfer, consider a post to the `Archivematica user"
+" forum`_."
+msgstr ""
+"しかし、Artefactual "
+"は、すべての設定をテストするわけではありません。ワークフローを生産で実行する前に、独自の設定を徹底的にテストし、結果を確認することをお勧めします。転送用バッグのさまざまな設定方法について質問がある場合は、"
+" `Archivematica ユーザーフォーラム`_ への投稿をご検討ください。"
+
+#: ../../user-manual/transfer/bags.rst:135
+msgid "Index and search bag metadata"
+msgstr "バッグのメタデータを索引付けして検索"
+
+#: ../../user-manual/transfer/bags.rst:137
+msgid ""
+"In Archivematica 1.4 and higher, fields in the ``bag-info.txt`` file are "
+"indexed as source metadata in Elasticsearch, making their contents "
+"searchable in the Archival Storage tab after the bag transfer has been "
+"stored."
+msgstr ""
+"Archivematica 1.4 以降では、 ``bag-info.txt`` ファイル内のフィールドは Elasticsearch "
+"のソースメタデータとしてインデックス付けされ、バッグの転送が保管された後、[アーカイブ保管] タブでその内容を検索できるようになります。"
+
+#: ../../user-manual/transfer/bags.rst:141
+msgid ""
+"Labels in the ``bag-info.txt`` file are serialized as XML in the METS "
+"``sourceMD`` field and linked to the objects directory of the AIP."
+msgstr ""
+"``bag-info.txt`` ファイルのラベルは、METS ``sourceMD`` フィールドで XML としてシリアライズされ、AIP の "
+"Objects ディレクトリにリンクされます。"
+
+#: ../../user-manual/transfer/bags.rst:144
+msgid ""
+"For example, the bag-info.txt might include the following information "
+"(sample provided via https://tools.ietf.org/html/draft-kunze-bagit-10)."
+msgstr ""
+"たとえば、bag-info.txt には次の情報が含まれる場合があります (サンプルは "
+"https://tools.ietf.org/html/draft-kunze-bagit-10). から提供されます)"
+
+#: ../../user-manual/transfer/bags.rst:164
+msgid ""
+"When preserved in the resulting AIP's METS XML file, the above information "
+"is represented like so:"
+msgstr "結果の AIP の METS XML ファイルに保存されると、上記の情報は次のように表現されます："
+
+#: ../../user-manual/transfer/bags.rst:196
+msgid ""
+"In order to be parsed into the METS file, bag-info.txt labels (i.e. Source-"
+"Organization) must be compliant with XML so they cannot contain spaces or "
+"forbidden characters."
+msgstr ""
+"METS ファイルに解析されるためには、bag-info.txt ラベル (つまり、Source-Organization) が XML "
+"に準拠している必要があり、スペースや禁止文字を含めることはできません。"
+
+#: ../../user-manual/transfer/bags.rst:200
+msgid ""
+"The metadata contained within the ``<transfer_metadata>`` tags can now be "
+"used for searching on the :ref:`Archival Storage <archival-storage>` tab."
+msgstr ""
+"``<transfer_metadata>`` タグに含まれるメタデータは、 :ref:`Archival Storage <archival-"
+"storage>` タブでの検索に使用できるようになりました。"
+
+#: ../../user-manual/transfer/bags.rst:203
+msgid ""
+"Searching for any of the terms (i.e. ``Spengler University``) in the bag-"
+"info.txt using the search parameter **Any** should display stored packages "
+"that includes the search term in any field (or in the AIP name, etc. as per "
+":ref:`Searching the AIP store <search-aip>`)."
+msgstr ""
+"検索パラメーター **を使って、bag-info.txt内のいずれかの用語（すなわち ``Spengler University`` "
+"）を検索すると、** いずれかのフィールド（または :ref:`AIPストアの検索 <search-aip>` "
+"に従ってAIP名など）に検索用語を含む保存されたパッケージが表示されるはずです。"
+
+#: ../../user-manual/transfer/bags.rst:-1
+msgid ""
+"The image shows a search carried out using the term \"Spengler University\" "
+"with the search parameter set to \"Any\" and the search type set to "
+"\"Keyword\""
+msgstr ""
+"画像は、\"Spengler University\" という用語を使い、検索パラメーターを\"Any\" に、検索タイプを\"Keyword "
+"に設定して実行した検索を示しています\""
+
+#: ../../user-manual/transfer/bags.rst:213
+msgid ""
+"In the above example, the AIP ``coyote`` contained the search phrase in the "
+"descriptive metadata, rather than bag-info.txt. The other two AIPs contained"
+" the search phrase in bag-info.txt."
+msgstr ""
+"上記の例では、AIP ``coyote`` には、bag-info.txt ではなく、説明メタデータに検索フレーズが含まれていました。他の 2 つの "
+"AIP には、bag-info.txt に検索フレーズが含まれていました。"
+
+#: ../../user-manual/transfer/bags.rst:217
+msgid ""
+"You can narrow the search results to just search the metadata that comes "
+"from bag-info.txt by selecting **Transfer metadata** as the search "
+"parameter. This will search for anything within the ``<transfer_metadata>`` "
+"tags in the METS file."
+msgstr ""
+"検索パラメータとして **メタデータを転送** を選択すると、検索結果を絞り込んで、bag-info.txt "
+"からのメタデータのみを検索できます。これにより、METS ファイル内の ``<transfer_metadata>`` タグ内のものが検索されます。"
+
+#: ../../user-manual/transfer/bags.rst:-1
+msgid ""
+"The image shows a search carried out using the term \"Spengler University\" "
+"with the search parameter set to \"Transfer metadata\" and the search type "
+"set to \"Keyword\""
+msgstr ""
+"画像は、\"Spengler University\" という用語を使い、検索パラメーターを\"Transfer metadata\" "
+"に設定し、検索タイプを\"Keyword に設定して行った検索を示しています\""
+
+#: ../../user-manual/transfer/bags.rst:227
+msgid ""
+"You can narrow the search results even further by using the **Transfer "
+"metadata (other)** search parameter, which allows you to define the specific"
+" sub-field within the ``<transfer_metadata>`` that you want to search. For "
+"example, you may want to search for AIPs where the search phrase \"Spengler "
+"University\" is present in the ``Source-Organization`` field, but not other "
+"fields."
+msgstr ""
+"検索結果をさらに絞り込むには、 **Transfer metadata （other）** 検索パラメーターを使用します。これにより、検索したい "
+"``<transfer_metadata>`` 内の特定のサブフィールドを定義できます。例えば、検索フレーズ\"Spengler "
+"University\" が ``Source-Organization`` フィールドに存在し、他のフィールドに存在しない AIP "
+"を検索したい場合などです。"
+
+#: ../../user-manual/transfer/bags.rst:-1
+msgid ""
+"The image shows a search carried out using the term \"Spengler University\" "
+"with the search parameter set to \"Transfer metadata (other)\", the field "
+"name set to \"Source-Organization\", and the search type set to \"Keyword\""
+msgstr ""
+"画像は、\"Spengler University\" という用語を用い、検索パラメーターを\"Transfer metadata （other）\" "
+"に設定し、フィールド名を\"Source-Organization\" に設定し、検索タイプを\"Keyword に設定して検索を実行したものです\""
+
+#: ../../user-manual/transfer/bags.rst:238
+msgid ""
+"To search on a date range in <transfer_metadata> or one if its sub-fields, "
+"the user enters two dates in ISO date format separated by a colon. For "
+"example, ``2015-01-03:2015-04-14``."
+msgstr ""
+"<transfer_metadata>、またはそのサブフィールドの1つで日付範囲を検索するには、ユーザーは、コロンで区切られたISO日付フォーマットで2つの日付を入力します。例えば、"
+" ``2015-01-03:2015-04-14`` ."
+
+#: ../../user-manual/transfer/bags.rst:242
+msgid ":ref:`Back to the top <bags>`."
+msgstr ":ref:`トップに戻る <bags>` 。"

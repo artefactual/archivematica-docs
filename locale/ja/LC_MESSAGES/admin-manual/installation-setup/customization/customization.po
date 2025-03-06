@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Artefactual Systems Inc.
+# This file is distributed under the same license as the Archivematica
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Archivematica 1.15\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-11 08:36+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:5
+msgid "Customization and automation"
+msgstr "カスタマイズと自動化"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:7
+msgid "*On this page*"
+msgstr "*このページ上*"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:9
+msgid ":ref:`Administration tab <config-admin-tab>`"
+msgstr ":ref:`管理タブ <config-admin-tab>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:10
+msgid ""
+":ref:`Automating microservice decisions using the dashboard <config-using-"
+"dashboard>`"
+msgstr ":ref:`ダッシュボードを使ったマイクロサービスの意思決定の自動化 <config-using-dashboard>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:11
+msgid ":ref:`Preservation planning configuration <config-using-fpr>`"
+msgstr ":ref:`保存計画の設定 <config-using-fpr>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:12
+msgid ":ref:`Antivirus configuration <antivirus-config>`"
+msgstr ":ref:`アンチウイルスの設定 <antivirus-config>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:13
+msgid ":ref:`Resources for development configuration <development-config>`"
+msgstr ":ref:`開発設定用リソース <development-config>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:14
+msgid ":ref:`Task output capturing configuration <task-config>`"
+msgstr ":ref:`タスク出力キャプチャ設定 <task-config>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:15
+msgid ""
+":ref:`Customizing for scalability and performance <customize-scalability>`"
+msgstr ":ref:`スケーラビリティとパフォーマンスのためのカスタマイズ <customize-scalability>`"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:20
+msgid "Administration tab"
+msgstr "管理タブ"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:22
+msgid ""
+"Archivematica's Administration tab is where users and administrators can "
+"create users, change the language of the interface, review storage "
+"locations, and set configuration details like DIP upload integrations and "
+"PREMIS agent information. For more information about the Administration tab,"
+" see :ref:`Dashboard Administration tab <dashboard-config>`."
+msgstr ""
+"Archivematicaの「管理」タブでは、ユーザーや管理者がユーザーを作成したり、インターフェイスの言語を変更したり、ストレージの場所を確認したり、DIPアップロードの統合やPREMISエージェント情報などの設定の詳細を設定したりできます。管理タブの詳細については、"
+" :ref:`[ダッシュボード管理]タブ <dashboard-config>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:31
+msgid "Automating microservice decisions using the dashboard"
+msgstr "ダッシュボードを使ったマイクロサービスの意思決定の自動化"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:33
+msgid ""
+"It is possible for administrators or end-users to automate almost all of "
+"Archivematica's workflow decision points by changing the default processing "
+"configuration through the Administration tab. For more information, please "
+"see :ref:`Processing configuration <process-config>`."
+msgstr ""
+"管理者またはエンドユーザーは、Administrationタブからデフォルトの処理設定を変更することで、Archivematicaのほぼすべてのワークフロー決定ポイントを自動化できます。詳しくは、"
+" :ref:`処理設定 <process-config>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:38
+msgid ""
+"You can also automate workflow choices by placing a ``processingMCP.xml`` "
+"file into the root directory of your transfer. For more information about "
+"the processingMCP file and how to use it, please see :ref:`Using a custom "
+"processing configuration file <processingmcp-file>`."
+msgstr ""
+"また、 ``processingMCP.xml`` "
+"ファイルを転送のルートディレクトリに配置することで、ワークフローの自動化もできます。processingMCPファイルとその使用方法の詳細については、 "
+":ref:`カスタム処理設定ファイルの使用 <processingmcp-file>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:46
+msgid "Preservation planning configuration"
+msgstr "保存計画の設定"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:48
+msgid ""
+"The Preservation Planning tab allows users to edit, add, or disable commands"
+" for a variety of preservation tasks, including identification, "
+"characterization, normalization, validation, and verification. Please see "
+"the :ref:`Preservation Planning <preservation-planning>` documentation for "
+"more information."
+msgstr ""
+"保存計画タブでは、同定、特徴づけ、正規化、妥当性確認、妥当性確認など、さまざまな保存作業のコマンドを、編集、追加、無効化できます。詳しくは、 "
+":ref:`PreservationPlanning <preservation-planning>` 文書を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:56
+msgid "Antivirus configuration"
+msgstr "アンチウイルスの設定"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:58
+msgid ""
+"Archivematica's antivirus capabilities can be customized by editing various "
+"operating system environment variables. Please see :ref:`Antivirus "
+"Administration <antivirus-admin>` for more information."
+msgstr ""
+"Archivematicaのアンチウイルス機能は、オペレーティングシステムの環境変数を編集することでカスタマイズできます。詳しくは、 "
+":ref:`アンチウイルス管理 <antivirus-admin>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:65
+msgid "Email notification configuration"
+msgstr "電子メール通知の設定"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:67
+msgid "Archivematica's MCPClient sends two types of email reports:"
+msgstr "ArchivematicaのMCPClientは、2種類の電子メールレポートを送信します："
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:69
+msgid ""
+"Normalization reports are sent when the normalization process has resulted "
+"in at least one error."
+msgstr "正規化レポートは、正規化プロセスで少なくとも1つのエラーが発生した場合に送信されます。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:71
+msgid "Failure reports are sent when the workflow fails unexpectedly."
+msgstr "ワークフローが予期せず失敗した場合、失敗レポートが送信されます。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:73
+msgid ""
+"The email reports are sent to all users who have an account on the pipeline."
+" Currently, there is no way to configure which users receive the email. If "
+"you don't want a user to receive the email, the easiest way to disable this "
+"is to change the email address associated with the user to an invalid one."
+msgstr ""
+"Eメールレポートは、パイプラインにアカウントを持つすべてのユーザーに送信されます。現在のところ、メールを受け取るユーザーを設定する方法はありません。メールを受信したくないユーザーがいる場合、これを無効にする最も簡単な方法は、そのユーザーに関連付けられているメールアドレスを無効に変更することです。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:78
+msgid ""
+"If you are running a QA environment, it is possible that your only "
+"registered user is ``demo@example.com``. Be aware that Archivematica ignores"
+" this address and will not send notifications to it. If you want to test the"
+" email reporting functionality make sure to register a functional email "
+"address for a user."
+msgstr ""
+"QA環境をご利用の場合、登録ユーザーが ``demo@example.com`` "
+"のみである可能性があります。Archivematicaは、このアドレスを無視し、通知を送信しませんのでご注意ください。メールレポート機能をテストする場合は、必ず機能するメールアドレスを登録してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:83
+msgid ""
+"Currently, emails are only sent by MCPClient. This means that in order to "
+"configure the email backend settings, changes are required in the MCPClient "
+"service configuration. For example, you can use the following environment "
+"strings to send emails via a local MTA such as Postfix::"
+msgstr ""
+"現在、電子メールはMCPClientによってのみ送信されます。つまり、電子メールのバックエンド設定を行うには、MCPClientサービスの設定を変更する必要があります。例えば、Postfix::のようなローカルMTA経由でメールを送信するには、次の環境文字列を使用できます"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:92
+msgid ""
+"For more information about configuring the MCPClient, please see the "
+"`MCPClient configuration documentation`_."
+msgstr "MCPClientの設定の詳細については、 `MCPClient設定文書`_ を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:95
+msgid ""
+"Archivematica sends emails using the Django Web Framework. You can install "
+"third-party packages like ``django-ses`` to support additional email "
+"backends. Packages must be installed in the Python environment of MCPClient."
+msgstr ""
+"Archivematicaは、Django Web Frameworkを使用してメールを送信します。 ``django-ses`` "
+"のようなサードパーティのパッケージをインストールすることで、追加のメールバックエンドをサポートできます。パッケージは、MCPClientのPython環境にインストールする必要があります。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:102
+msgid "Resources for development configuration"
+msgstr "開発設定用リソース"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:104
+msgid "If you are working on developing Archivematica, it may be helpful to"
+msgstr "お客様がArchivematicaの開発に取り組んでいるのであれば、以下が役に立つでしょう"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:106
+msgid ""
+"A common area for development work is the MCP (Master Control Program). The "
+"MCP is the core of Archivematica, and controls the various microservices "
+"that Archivematica uses to carry out preservation tasks. Developers who wish"
+" to modify the MCP configuration should consult the following resources on "
+"the Archivematica wiki:"
+msgstr ""
+"開発作業でよく使われるのがMCP（マスターコントロールプログラム）です。MCPは、Archivematicaの中核であり、Archivematicaが保存タスクを実行するために使用する様々なマイクロサービスを制御します。MCPの設定を変更したい開発者は、Archivematica"
+" wikiの以下のリソースを参照してください："
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:112
+msgid "`MCP`_"
+msgstr "`MCP`_"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:113
+msgid "`Basic MCP configuration`_"
+msgstr "`基本的なMCP設定`_"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:115
+msgid ""
+"For other development resources, please see the `Development`_ section of "
+"the Archivematica wiki."
+msgstr "その他の開発リソースについては、Archivematica wikiの `開発`_ セクションを参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:121
+msgid "Task output capturing configuration"
+msgstr "タスク出力キャプチャ設定"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:123
+msgid ""
+"When Archivematica's MCP client (a Gearman worker) runs a client script in "
+"order to perform a preservation task, e.g., normalizing a single file, that "
+"client script may write data to standard streams, i.e., standard output "
+"(stdout) or standard error (stderr). By default, the worker serializes those"
+" outputs and sends them back to the MCP server (the task manager), at which "
+"point they are stored in the database (the ``Tasks`` table). However, in "
+"some cases these outputs may be quite large and the job of serializing and "
+"moving them around can have a noticeable performance impact. For this "
+"reason, Archivematica allows users to configure their MCP clients in order "
+"to control whether or not these output streams are captured. See :ref:`Task "
+"output capturing configuration <task-output-capturing-admin>` for more "
+"details."
+msgstr ""
+"ArchivematicaのMCPクライアント（Gearmanワーカー）が保存タスク（例えば、1つのファイルの正規化など）を実行するためにクライアントスクリプトを実行すると、そのクライアントスクリプトは、標準ストリーム、つまり標準出力（stdout）や標準エラー（stderr）にデータを書き込むことがあります。デフォルトでは、ワーカーは、これらの出力をシリアライズしてMCPサーバー（タスクマネージャー）に送り返し、その時点でデータベース（"
+" ``Tasks`` "
+"テーブル）に保存されます。しかし、場合によってはこれらの出力が非常に大きくなり、シリアライズや移動の作業がパフォーマンスに顕著な影響を与えることがあります。このため、Archivematicaでは、これらの出力ストリームをキャプチャするかどうかを制御するために、MCPクライアントを設定できます。詳細については、"
+" :ref:`タスク出力キャプチャ設定 <task-output-capturing-admin>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:138
+msgid "Customizing for scalability and performance"
+msgstr "スケーラビリティとパフォーマンスのためのカスタマイズ"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:140
+msgid ""
+"Archivematica includes a number of features and options to improve "
+"scalability & performance. The default configuration options are geared "
+"towards \"typical\" use cases and for many users won't require any "
+"modification. However, some users will benefit from optimizing configuration"
+" options to meet their specific preservation needs & available computing "
+"resources."
+msgstr ""
+"Archivematicaには、スケーラビリティとパフォーマンスを向上させるための多くの機能とオプションがあります。デフォルトの設定オプションは、\"典型的な\"ユースケースに対応したものであり、多くのユーザーは変更する必要はありません。しかし、ユーザーによっては、保存のニーズや利用可能なコンピューティングリソースに応じて、設定オプションを最適化することで、メリットを得ることができます。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:146
+msgid ""
+"See :ref:`Scaling Archivematica <scaling-archivematica>` for a description "
+"of three broad approaches to scaling & optimization and the specific "
+"techniques available to each approach."
+msgstr ""
+"スケーリングと最適化のための3つのアプローチと、それぞれのアプローチで利用できる具体的なテクニックについては、 "
+":ref:`Archivematicaのスケーリング <scaling-archivematica>` を参照してください。"
+
+#: ../../admin-manual/installation-setup/customization/customization.rst:150
+msgid ":ref:`Back to the top <customization>`"
+msgstr ":ref:`トップに戻る <customization>`"
