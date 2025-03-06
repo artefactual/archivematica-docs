@@ -62,8 +62,7 @@ msgid ""
 "could be supported in a future release along with these two issues. Please "
 "see `issues filed in GitHub`_."
 msgstr ""
-"この2つの課題とともに、将来のリリースでサポートされる可能性のあるワークフローの機能強化/改善が他にも多数あります。GitHub`_ "
-"に提出された`issue を参照してください。"
+"この2つの課題とともに、将来のリリースでサポートされる可能性のあるワークフローの機能強化/改善が他にも多数あります。`issues filed in GitHub`_ を参照してください。"
 
 #: ../../user-manual/transfer/dataverse.rst:30
 msgid "*On this page*"
@@ -176,7 +175,7 @@ msgid ""
 " *Microservice: Extract packages* on the :ref:`Transfer <transfer>` tab."
 msgstr ""
 "Archivematicaは、パッケージ化された素材（.zipファイルや.tarファイルなど）を含むDataverseデータセットを処理する際に、これらのファイルの内容を抽出し、その内容に対して保存マイクロサービスを実行できます。これは"
-" *マイクロサービス中に発生します：パッケージの抽出* :ref:` 転送 <transfer>` タブにあります。"
+" *マイクロサービス：パッケージの抽出* の :ref:`転送 <transfer>` タブで発生します。"
 
 #: ../../user-manual/transfer/dataverse.rst:96
 msgid "Dataverse METS file"

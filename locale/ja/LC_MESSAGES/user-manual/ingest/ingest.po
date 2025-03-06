@@ -185,7 +185,7 @@ msgid ""
 "is run, or automated in  :ref:`Processing configuration <dashboard-"
 "processing>`."
 msgstr ""
-"**Normalize** ： :ref:`正規化 <normalize>` :ref:` 保存計画 <preservation-planning>` "
+"**Normalize** ： :ref:`正規化 <normalize>` は、:ref:`保存計画 <preservation-planning>` "
 "のルールを使用して、インジェストされたデジタルオブジェクトを、ユーザーの好みに応じて、望ましい保存形式および/またはアクセス形式に変換します。正規化に関する選択は、サービス実行時に行うことも、"
 " :ref:`処理設定 <dashboard-processing>` で自動化もできます。"
 
@@ -683,7 +683,7 @@ msgstr "**手動で正規化** - 詳細は、 :ref:`手動正規化 <manual-norm
 msgid ""
 "**Do not normalize** - the AIP will contain originals only. No preservation "
 "or access copies are generated and no DIP will be generated."
-msgstr "**** を正規化しないでください。AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
+msgstr "**正規化しない** - AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
 
 #: ../../user-manual/ingest/ingest.rst:415
 msgid "**Reject SIP** - the ingest will be cancelled."

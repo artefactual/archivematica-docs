@@ -174,8 +174,7 @@ msgid ""
 " recognize by :ref:`using the arrangement feature on Appraisal tab "
 "<arrangement-drag-drop>`."
 msgstr ""
-"「鑑定」タブ<arrangement-drag-"
-"drop>`の配列機能を:ref:`使用して、AtoMが認識できる階層を作成し、転送を配列することが可能です。"
+":ref:`「鑑定」タブの配列機能 <arrangement-drag-drop>` を使用して、AtoMが認識できる階層を作成し、転送を配列することが可能です。"
 
 #: ../../user-manual/access/access.rst:85
 msgid ""
@@ -746,8 +745,7 @@ msgid ""
 ":ref:`Packages tab in the Storage Service <storageservice:packages-tab>`. "
 "This is the default method for downloading DIPs."
 msgstr ""
-"保存されているすべてのDIPは、Storage Service（<storageservice:packages-"
-"tab>`）の「:ref:`Packages」タブからダウンロードできます。これは、DIPをダウンロードするためのデフォルトの方法です。"
+"保存されているすべてのDIPは、:ref:`Storage Serviceのパッケージタブ <storageservice:packages-tab>` からダウンロードできます。これは、DIPをダウンロードするためのデフォルトの方法です。"
 
 #: ../../user-manual/access/access.rst:393
 msgid ""

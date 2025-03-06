@@ -135,7 +135,7 @@ msgid ""
 "As of Archivematica 1.7, this feature can be :ref:`fully or partially "
 "disabled <install-elasticsearch>`."
 msgstr ""
-"<install-elasticsearch>`Archivematica 1.7では、この機能を:ref:`完全または部分的に無効にできます。"
+"Archivematica 1.7では、この機能を :ref:`完全または部分的に無効 <install-elasticsearch>` にできます。"
 
 #: ../../admin-manual/maintenance/maintenance.rst:102
 msgid "`Elasticsearch troubleshooting`_ help from AtoM documentation."

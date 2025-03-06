@@ -307,7 +307,7 @@ msgstr "**はい** - UUID が割り当てられます。"
 
 #: ../../user-manual/administer/dashboard-admin.rst:127
 msgid "**No** - UUIDs are not assigned.*"
-msgstr "**** - UUID は割り当てられません。*"
+msgstr "**いいえ** - UUID は割り当てられません。*"
 
 #: ../../user-manual/administer/dashboard-admin.rst:130
 msgid "Generate transfer structure report"
@@ -553,7 +553,7 @@ msgstr "**手動で正規化** - 詳細は、 :ref:`手動正規化 <manual-norm
 msgid ""
 "**Do not normalize** - the AIP will contain originals only. No preservation "
 "or access copies are generated and no DIP will be generated."
-msgstr "**** を正規化しないでください。AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
+msgstr "**正規化しない** - AIPには、原本のみが含まれます。保存用コピーやアクセス用コピーは生成されず、DIPも生成されません。"
 
 #: ../../user-manual/administer/dashboard-admin.rst:266
 msgid "Approve normalization"
@@ -644,7 +644,7 @@ msgstr "**はい** - PIDが作成され、APIコールがPIDをハンドルサ�
 
 #: ../../user-manual/administer/dashboard-admin.rst:327
 msgid "**No** - PIDs are not created.*"
-msgstr "**** - PIDは作成されません。*"
+msgstr "**いいえ** - PIDは作成されません。*"
 
 #: ../../user-manual/administer/dashboard-admin.rst:330
 msgid "Document empty directories"

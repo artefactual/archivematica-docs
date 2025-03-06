@@ -758,8 +758,8 @@ msgid ""
 "Archivematica, please see :ref:`METS in Archivematica <mets_schema>` and "
 ":ref:`PREMIS metadata in Archivematica <premis-template>`."
 msgstr ""
-"Archivematica で使用されるメタデータ要素がどのようにエンコードされるかについて詳しくは、 :ref:`METS in Archivematica <mets_schema>`"
-"と :ref:`PREMIS metadata in Archivematica <premis-template>` "
+"Archivematica で使用されるメタデータ要素がどのようにエンコードされるかについて詳しくは、 :ref:`Archivematicaの"
+"METS <mets_schema>` および :ref:`ArchivematicaのPREMISメタデータ <premis-template>` "
 "を参照してください。"
 
 #: ../../user-manual/transfer/transfer.rst:406

@@ -505,7 +505,7 @@ msgid ""
 "computing * django_http_requests_latency_including_middlewares_seconds)"
 msgstr ""
 "``django_http_requests_unknown_latency_including_middlewares_total`` "
-"（カウンタ）：（*django_http_requests_latency_including_middlewares_secondsの計算時）レイテンシが不明だったリクエストの数"
+"（カウンタ）：（\\*django_http_requests_latency_including_middlewares_secondsの計算時）レイテンシが不明だったリクエストの数"
 
 #: ../../admin-manual/installation-setup/customization/instrumentation.rst:200
 msgid ""

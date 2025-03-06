@@ -125,11 +125,7 @@ msgid ""
 "Documentation`_. This workflow includes integration with Archivematica's "
 "`validation API endpoint` and `Automation-Tools`_ DIP creation script."
 msgstr ""
-"`Avalon Media System`_ "
-"は、デジタルオーディオとビデオの大規模なコレクションを管理し、アクセスを提供するためのオープンソースシステムです。システム間の統合については、 "
-"`Avalon Media System Technical Documentation`_ "
-"を参照してください。このワークフローには、Archivematicaの `妥当性確認APIエンドポイント `および` Automation-"
-"Tools`_ DIP作成スクリプトとの統合が含まれています。"
+"`Avalon Media System`_ は、大規模なデジタルオーディオおよびビデオファイルのコレクションを管理するためのシステムです。Avalon Media System バージョン7には、Archivematicaとの統合が含まれています。詳細については、`Avalon Media System Technical Documentation`_ および `Automation-Tools`_ を参照してください。"
 
 #: ../../admin-manual/installation-setup/integrations/integrations.rst:60
 msgid "Binder integration"

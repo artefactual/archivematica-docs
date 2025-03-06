@@ -179,8 +179,7 @@ msgid ""
 "please refer to the other methods of installations explained under this "
 "manual."
 msgstr ""
-"この仮想マシンは、 **** "
-"生産環境での使用を想定していません。これは、開発者や経験豊富なユーザーがVagrantを使ってArchivematicaを試してみるためのものです。製造環境でArchivematicaを使い始める場合は、本マニュアルで説明する他のインストール方法を参照してください。"
+"この仮想マシンは、**生産環境での使用を想定していません**。これは、開発者や経験豊富なユーザーがVagrantを使ってArchivematicaを試してみるためのものです。製造環境でArchivematicaを使い始める場合は、本マニュアルで説明する他のインストール方法を参照してください。"
 
 #: ../../getting-started/quick-start/quick-start.rst:86
 msgid ""

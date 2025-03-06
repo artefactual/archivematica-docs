@@ -372,9 +372,8 @@ msgid ""
 "digiprovMD in the METS AIP file (See :ref:`METS in Archivematica "
 "<METS_schema>`)."
 msgstr ""
-"各タイプのAgentは、METS "
-"AIPファイルのdigiprovMDとして各amdSecに1つずつ含まれます（Archivematica<METS_schema>` "
-"の:ref:`METSを参照）。"
+"各タイプのAgentは、METS AIPファイルのdigiprovMDとして各amdSecに1つずつ含まれます（:ref:`Archivematicaの"
+"METS <METS_schema>` を参照）。"
 
 #: ../../user-manual/metadata/premis.rst:227
 msgid "PREMIS Rights metadata"
@@ -807,7 +806,7 @@ msgstr "ドナー文書識別子 - 値"
 #: ../../user-manual/metadata/premis.rst:678
 #: ../../user-manual/metadata/premis.rst:872
 msgid "**Rule** \"The value of the otherRightsDocumentationIdentifier.\""
-msgstr "**ルール** \"otherRightsDocumentationIdentifier の値。\""
+msgstr "**ルール** otherRightsDocumentationIdentifier の値。\""
 
 #: ../../user-manual/metadata/premis.rst:689
 msgid "Donor documentation identifier- Role"
