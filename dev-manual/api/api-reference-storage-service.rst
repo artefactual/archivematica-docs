@@ -2056,7 +2056,7 @@ Request body parameters (JSON):
 Example request::
 
     curl \
-        -d 'location_uuid=7c5c48d4-50db-4018-b4b1-7ed29d1ef9d3 ' \
+        -d 'location_uuid=7c5c48d4-50db-4018-b4b1-7ed29d1ef9d3' \
         --header "Authorization: ApiKey test:4525fd5272275caeac04a28447698c51" \
             'http://mysite.archivematica.org:8000/api/v2/file/8b8aa1a2-79c9-490e-b630-28f90bb7e654/move/'
 
