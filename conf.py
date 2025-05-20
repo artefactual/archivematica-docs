@@ -78,7 +78,7 @@ copyright = u'2023, Artefactual Systems Inc.'
 # The short X.Y version.
 version = '1.17'
 # The full version, including alpha/beta/rc tags.
-release = '1.17.0'
+release = '1.17.1'
 
 rst_epilog = """
 .. |previous_version| replace:: 1.16
