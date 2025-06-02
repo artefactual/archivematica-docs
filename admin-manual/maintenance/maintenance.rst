@@ -313,12 +313,12 @@ To restore from ``mysqldump`` file:
 Storage Service Database backup and restore
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To backup the SQLite database and pointer files created by the storage service run:
+To backup the MySQL database and pointer files created by the storage service run:
 
 .. code:: bash
 
   rsync -av /var/archivematica/storage_service /backup/location/storage_service
-  rsync -av /var/archivematica/storage-service/storage.db /backup/location/storage.db
+  mysqldump -u <your username> -p<your password> -c SS > <filename of backup>
 
 .. note::
 
@@ -331,8 +331,8 @@ To restore Storage Service from backup:
 .. code:: bash
 
   service archivematica-storage-service stop
-  rsync -av /backup/location/storage.db /var/archivematica/storage-service/storage.db
   rsync -av /backup/location/storage_service /var/archivematica/storage_service
+  mysql -u <your username> -p<your password> SS < SS_backup.sql
   service archivematica-storage-service start
 
 Elasticsearch
