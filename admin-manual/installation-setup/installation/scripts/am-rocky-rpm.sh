@@ -66,8 +66,8 @@ sudo -u root yum install -y python-pip archivematica-storage-service
 sudo -u archivematica bash -c " \
 set -a -e -x
 source /etc/sysconfig/archivematica-storage-service
-cd /usr/lib/archivematica/storage-service
-/usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
+/usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+    migrate
 ";
 
 sudo -u root systemctl enable archivematica-storage-service
@@ -82,8 +82,8 @@ sudo -u root yum install -y archivematica-common archivematica-mcp-server archiv
 sudo -u archivematica bash -c " \
 set -a -e -x
 source /etc/sysconfig/archivematica-dashboard
-cd /usr/share/archivematica/dashboard
-/usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py migrate
+/usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+    migrate
 ";
 
 sudo -u root systemctl enable archivematica-mcp-server
@@ -117,13 +117,13 @@ sudo -u archivematica bash -c " \
     source /etc/default/archivematica-storage-service || \
         source /etc/sysconfig/archivematica-storage-service \
             || (echo 'Environment file not found'; exit 1)
-    cd /usr/lib/archivematica/storage-service
-      /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py create_user \
-          --username=test \
-          --password=test \
-          --email="example@example.com" \
-          --api-key="THIS_IS_THE_SS_APIKEY" \
-          --superuser
+    /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+        create_user \
+            --username=test \
+            --password=test \
+            --email="example@example.com" \
+            --api-key="THIS_IS_THE_SS_APIKEY" \
+            --superuser
 ";
 
 sudo -u archivematica bash -c " \
@@ -131,16 +131,16 @@ sudo -u archivematica bash -c " \
     source /etc/default/archivematica-dashboard || \
         source /etc/sysconfig/archivematica-dashboard \
             || (echo 'Environment file not found'; exit 1)
-    cd /usr/share/archivematica/dashboard
-      /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py install \
-          --username="test" \
-          --password="test" \
-          --email="example@example.com" \
-          --org-name="test" \
-          --org-id="test" \
-          --api-key="THIS_IS_THE_SS_APIKEY" \
-          --ss-url="http://localhost4:7500" \
-          --ss-user="test" \
-          --ss-api-key="THIS_IS_THE_SS_APIKEY" \
-          --site-url="http://localhost:81"
+    /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+        install \
+            --username="test" \
+            --password="test" \
+            --email="example@example.com" \
+            --org-name="test" \
+            --org-id="test" \
+            --api-key="THIS_IS_THE_SS_APIKEY" \
+            --ss-url="http://localhost4:7500" \
+            --ss-user="test" \
+            --ss-api-key="THIS_IS_THE_SS_APIKEY" \
+            --site-url="http://localhost:81"
 ";

@@ -45,9 +45,8 @@ A full list of commands can be retrieved as follows:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py help
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           help
    ";
 
 If you want to see the help message of a specific command, try:
@@ -59,9 +58,8 @@ If you want to see the help message of a specific command, try:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py help purge_transient_processing_data
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           help purge_transient_processing_data
    ";
 
 We've looked up ``purge_transient_processing_data`` in the example above. The
@@ -78,9 +76,8 @@ optional arguments:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py purge_transient_processing_data --dry-run
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           purge_transient_processing_data --dry-run
    ";
 
 
@@ -137,9 +134,8 @@ the path of the AIP storage location you confirmed above.
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py rebuild_elasticsearch_aip_index_from_files \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           rebuild_elasticsearch_aip_index_from_files \
                /var/archivematica/sharedDirectory/www/AIPsStore --delete-all
    ";
 
@@ -181,7 +177,7 @@ status other than "DELETED".
                 || (echo 'Environment file not found'; exit 1)
         cd /usr/share/archivematica/dashboard
         /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-            manage.py rebuild_aip_index_from_storage_service --delete-all
+            rebuild_aip_index_from_storage_service --delete-all
     ";
 
 The command accepts the following parameters:
@@ -220,9 +216,8 @@ mappings and populated with the Transfers from the location. Execution example:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py rebuild_transfer_backlog
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           rebuild_transfer_backlog
    ";
 
 The command accepts the following parameters:
@@ -600,13 +595,12 @@ sessions perodically, e.g. via a cron job. This is how it is executed:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py clearsessions \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           clearsessions
    ";
 
 When using CAS authentication, it is additionally recommended to clear expired
-CAS sessions with ``./manage.py django_cas_ng_clean_sessions`` immediately
+CAS sessions with ``django_cas_ng_clean_sessions`` immediately
 after running ``clearsessions``. This is how it is executed:
 
 .. code:: bash
@@ -616,9 +610,8 @@ after running ``clearsessions``. This is how it is executed:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py django_cas_ng_clean_sessions \
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           django_cas_ng_clean_sessions
    ";
 
 You can also clear active sessions by emptying the ``django_session`` table in
@@ -646,9 +639,8 @@ more details.
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py help purge_transient_processing_data
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           help purge_transient_processing_data
    ";
 
 The example below will destroy all records from the database as well as the
@@ -661,9 +653,8 @@ search documents related to packages that completed more than six hours ago:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py purge_transient_processing_data --age='0 00:06:00'
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           purge_transient_processing_data --age='0 00:06:00'
    ";
 
 

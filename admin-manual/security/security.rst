@@ -271,9 +271,8 @@ CAS backend configuration in Archivematica Dashboard
         source /etc/default/archivematica-dashboard || \
             source /etc/sysconfig/archivematica-dashboard \
                 || (echo 'Environment file not found'; exit 1)
-        cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-            manage.py migrate \
+        /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+            migrate
     ";
 
 
@@ -297,9 +296,8 @@ CAS backend configuration in Storage Service
         source /etc/default/archivematica-storage-service || \
             source /etc/sysconfig/archivematica-storage-service \
                 || (echo 'Environment file not found'; exit 1)
-        cd /usr/lib/archivematica/storage-service
-        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python \
-            manage.py migrate
+        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+            migrate
     ";
 
 .. _password-validation:
