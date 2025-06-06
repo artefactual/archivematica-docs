@@ -208,8 +208,8 @@ Upgrade on Rocky Linux/Red Hat packages
           source /etc/default/archivematica-dashboard || \
               source /etc/sysconfig/archivematica-dashboard \
                   || (echo 'Environment file not found'; exit 1)
-          cd /usr/share/archivematica/dashboard
-          /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py migrate --noinput
+          /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+              migrate --noinput
       ";
 
 #. Apply the Storage Service database migrations:
@@ -233,8 +233,8 @@ Upgrade on Rocky Linux/Red Hat packages
           source /etc/default/archivematica-storage-service || \
               source /etc/sysconfig/archivematica-storage-service \
                   || (echo 'Environment file not found'; exit 1)
-          cd /usr/lib/archivematica/storage-service
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py migrate
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+              migrate
       ";
 
 #. Restart the Archivematica related services, and continue using the system:
@@ -461,9 +461,8 @@ Execution example:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py rebuild_transfer_backlog --from-storage-service --no-prompt
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           rebuild_transfer_backlog --from-storage-service --no-prompt
    ";
 
    sudo -u archivematica bash -c " \
@@ -471,9 +470,8 @@ Execution example:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python \
-           manage.py rebuild_aip_index_from_storage_service --delete-all
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           rebuild_aip_index_from_storage_service --delete-all
    ";
 
 .. note::

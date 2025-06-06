@@ -702,8 +702,8 @@ command-line, issue the following commands:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py createsuperuser
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           createsuperuser
    ";
 
 CLI password resetting
@@ -719,8 +719,8 @@ user, you can change it via the command-line:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/archivematica/virtualenvs/archivematica/bin/python manage.py changepassword <username>
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           changepassword <username>
    ";
 
 CLI configuration pipeline and registration on the Storage Service
@@ -738,18 +738,18 @@ exactly like the GUI for the initial configuration screen:
        source /etc/default/archivematica-dashboard || \
            source /etc/sysconfig/archivematica-dashboard \
                || (echo 'Environment file not found'; exit 1)
-       cd /usr/share/archivematica/dashboard
-       /usr/share/python/archivematica-dashboard/bin/python manage.py install \
-           --username=<username> \
-           --password=<password> \
-           --email=<email-address> \
-           --org-name=<org-name> \
-           --org-id=<org-id> \
-           --api-key=<api-key>\
-           --ss-url=<ss-ulr> \
-           --ss-user=<ss-username> \
-           --ss-api-key=<ss-api-key> \
-           --whitelist=<whitelist>
+       /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
+           install \
+              --username=<username> \
+              --password=<password> \
+              --email=<email-address> \
+              --org-name=<org-name> \
+              --org-id=<org-id> \
+              --api-key=<api-key>\
+              --ss-url=<ss-ulr> \
+              --ss-user=<ss-username> \
+              --ss-api-key=<ss-api-key> \
+              --whitelist=<whitelist>
    ";
 
 Where:

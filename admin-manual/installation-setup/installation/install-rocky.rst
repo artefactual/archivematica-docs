@@ -223,8 +223,8 @@ the configuration of your new server.
           source /etc/default/archivematica-storage-service || \
               source /etc/sysconfig/archivematica-storage-service \
                   || (echo 'Environment file not found'; exit 1)
-          cd /usr/lib/archivematica/storage-service
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+              createsuperuser
         ";
 
    After you have created this user, the API key will be generated automatically, and that key will connect the Archivematica pipeline to the Storage Service API. The API key can be found via the web interface (go to **Administration > Users**).

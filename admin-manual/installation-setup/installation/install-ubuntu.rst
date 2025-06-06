@@ -185,7 +185,8 @@ the configuration of your new server.
             source /etc/sysconfig/archivematica-storage-service \
                 || (echo 'Environment file not found'; exit 1)
         cd /usr/lib/archivematica/storage-service
-        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python manage.py createsuperuser
+        /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+            createsuperuser
         ";
 
    After you have created this user an API key will be generated that will connect
