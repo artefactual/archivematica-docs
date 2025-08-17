@@ -16,6 +16,7 @@ Upgrade from Archivematica |previous_version|.x to |release|
 * :ref:`Review the processing configuration <review-processing-configuration>`
 * :ref:`Migrate from MySQL 5.x to 8.x <migrate-mysql>`
 * :ref:`Uninstall FITS <uninstall-fits>`
+* :ref:`Upgrade Elasticsearch from 6.x to 8.x <upgrade-elasticsearch>`
 
 .. note::
 
@@ -612,6 +613,296 @@ Ansible
 
 The `stable/1.17.x` branch of the `ansible-archivematica-src`_ repository
 disables and uninstalls the `fits` and `nailgun` packages automatically.
+
+.. _upgrade-elasticsearch:
+
+Upgrade Elasticsearch from 6.x to 8.x
+--------------------------------------
+
+.. note::
+
+   This section only applies when upgrading to Archivematica 1.18.0 or higher,
+   which requires Elasticsearch 8.x. If you are upgrading from a version that
+   uses Elasticsearch 6.x, you must follow this procedure.
+
+Archivematica 1.18.0 requires Elasticsearch 8.x, which is not directly
+compatible with the 6.x version used in previous releases. As a result, data
+from Elasticsearch 6.x cannot be automatically upgraded to 8.x and will require
+manual migration.
+
+.. warning::
+
+   Before starting this process, ensure you have backed up your Elasticsearch
+   data as described in the :ref:`Create a backup <create-backup>` section.
+   Keep your backups until you have verified that the upgrade was successful
+   and Archivematica is functioning properly with Elasticsearch 8.x.
+
+Stage 1: Backup and prepare for upgrade
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Stop all Archivematica services.
+
+   If you are using Ubuntu, run the following commands:
+
+   .. code:: bash
+
+      sudo service archivematica-dashboard stop
+      sudo service archivematica-mcp-server stop
+      sudo service archivematica-mcp-client stop
+      sudo service archivematica-storage-service stop
+
+   If you are using Rocky Linux, run the following commands:
+
+   .. code:: bash
+
+      sudo systemctl stop archivematica-dashboard
+      sudo systemctl stop archivematica-mcp-server
+      sudo systemctl stop archivematica-mcp-client
+      sudo systemctl stop archivematica-storage-service
+
+#. Create a backup of your Elasticsearch data.
+
+   .. code:: bash
+
+      sudo service elasticsearch stop
+      sudo tar --create --gzip --file var_lib_elasticsearch_$(date +%y%m%d).tgz /var/lib/elasticsearch
+      sudo service elasticsearch start
+
+#. Check that Elasticsearch is running and note the current indices.
+
+   .. code:: bash
+
+      curl --request GET "localhost:9200/_cat/indices?v"
+
+   The output should show your current indices, similar to:
+
+   .. code:: bash
+
+      health status index         uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+      yellow open   transferfiles SjoFbZLSTO6ay6GYLveO1Q   5   1         32            2     93.6kb         93.6kb
+      yellow open   transfers     kNMGveNRS6K3YYdlI7hPQw   5   1          1            0      6.8kb          6.8kb
+      yellow open   aips          pE9ucbEjRXeiCBhw5AvndQ   5   1         79            1    343.9kb        343.9kb
+      yellow open   aipfiles      7iM3mnk5Q02yLqi1wdO0Fg   5   1       1680            2       10mb           10mb
+
+#. Check for existing snapshots and remove them if present.
+
+   .. code:: bash
+
+      curl --request GET "localhost:9200/_snapshot/_all?pretty"
+
+   If snapshots exist, remove them:
+
+   .. code:: bash
+
+      curl --request DELETE "localhost:9200/_snapshot/backup-repo?pretty"
+
+Stage 2: Create temporary Elasticsearch 6.x instance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Stop the system Elasticsearch service.
+
+   .. code:: bash
+
+      sudo service elasticsearch stop
+
+#. Check your current Elasticsearch version.
+
+   If you are using Ubuntu:
+
+   .. code:: bash
+
+      dpkg -l elasticsearch
+
+   If you are using Rocky Linux:
+
+   .. code:: bash
+
+      rpm -q elasticsearch
+
+#. Install Java 11 for the temporary Elasticsearch instances.
+
+   Elasticsearch 6.x requires Java 11. We'll install it separately and use
+   it only for the temporary instances to avoid affecting your system's default
+   Java version.
+
+   If you are using Ubuntu:
+
+   .. code:: bash
+
+      sudo apt-get update
+      sudo apt-get install openjdk-11-jdk
+
+   If you are using Rocky Linux:
+
+   .. code:: bash
+
+      sudo yum install java-11-openjdk java-11-openjdk-devel
+
+   Note the Java 11 installation path for later use:
+
+   .. code:: bash
+
+      export JAVA11_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+      echo "Java 11 installed at: $JAVA11_HOME"
+
+#. Download and set up a temporary Elasticsearch 6.x instance with the same
+   version you are using. Here we use version 6.8.23.
+
+   .. code:: bash
+
+      wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.23.tar.gz
+      tar --extract --gzip --verbose --file elasticsearch-6.8.23.tar.gz
+      cd elasticsearch-6.8.23
+
+#. Copy your Elasticsearch data directory to the temporary instance.
+
+   .. code:: bash
+
+      sudo cp /var/lib/elasticsearch data --recursive --force
+      sudo chown $USER:$USER data --recursive
+
+#. Start the temporary Elasticsearch instance on a different port.
+
+   .. code:: bash
+
+      JAVA_HOME=$JAVA11_HOME ES_JAVA_OPTS="-Xms2g -Xmx2g" ./bin/elasticsearch --daemonize --pidfile elastic-6x-tmp.pid \
+      -Ehttp.port=9500 -Ediscovery.type=single-node
+
+#. Verify that the temporary instance is functioning correctly and that the
+   document counts closely match those of your production environment.
+
+   .. code:: bash
+
+      curl --request GET "localhost:9500/_cat/indices?v"
+
+Stage 3: Remove your Elasticsearch 6.x installation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Uninstall Elasticsearch.
+
+   If you are using Ubuntu:
+
+   .. code:: bash
+
+      sudo apt-get remove --purge elasticsearch
+
+   If you are using Rocky Linux:
+
+   .. code:: bash
+
+      sudo yum remove elasticsearch
+
+#. Rename Elasticsearch directories.
+
+   .. code:: bash
+
+      sudo mv /etc/elasticsearch /etc/elasticsearch-6
+      sudo mv /var/lib/elasticsearch /var/lib/elasticsearch-6
+      sudo mv /var/log/elasticsearch /var/log/elasticsearch-6
+
+Stage 4: Upgrade Archivematica
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Upgrade Archivematica using your preferred installation method, ensuring that
+Elasticsearch is upgraded to version 8.x and that the Elasticsearch server
+address in your settings files includes the connection scheme (e.g.,
+``http://127.0.0.1:9200`` instead of ``127.0.0.1:9200``). Omitting the scheme
+will prevent Archivematica from connecting to Elasticsearch.
+
+After restarting Archivematica, Elasticsearch will be configured with mappings
+appropriate for the new version. However, the indexes will initially be empty
+and will require data migration.
+
+Stage 5: Reindex from temporary Elasticsearch 6.x instance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Configure Elasticsearch to support reindexing from the temporary 6.x
+   instance:
+
+   .. code:: bash
+
+      echo 'reindex.remote.whitelist: localhost:9500' | sudo tee -a /etc/elasticsearch/elasticsearch.yml
+      sudo service elasticsearch restart
+
+#. Migrate your Archivematica indexes using curl:
+
+   .. code:: bash
+
+      sleep 30
+      curl --request POST "localhost:9200/_reindex?pretty" --header 'Content-Type: application/json' --data '
+      {
+        "source": {
+          "remote": {
+            "host": "http://localhost:9500"
+          },
+          "index": "aips"
+        },
+        "dest": {
+          "index": "aips"
+        }
+      }'
+      curl --request POST "localhost:9200/_reindex?pretty" --header 'Content-Type: application/json' --data '
+      {
+        "source": {
+          "remote": {
+            "host": "http://localhost:9500"
+          },
+          "index": "aipfiles"
+        },
+        "dest": {
+          "index": "aipfiles"
+        }
+      }'
+      curl --request POST "localhost:9200/_reindex?pretty" --header 'Content-Type: application/json' --data '
+      {
+        "source": {
+          "remote": {
+            "host": "http://localhost:9500"
+          },
+          "index": "transfers"
+        },
+        "dest": {
+          "index": "transfers"
+        }
+      }'
+      curl --request POST "localhost:9200/_reindex?pretty" --header 'Content-Type: application/json' --data '
+      {
+        "source": {
+          "remote": {
+            "host": "http://localhost:9500"
+          },
+          "index": "transferfiles"
+        },
+        "dest": {
+          "index": "transferfiles"
+        }
+      }'
+
+#. Verify reindexing was successful.
+
+   .. code:: bash
+
+      curl -X POST "http://localhost:9200/_flush"
+      curl --request GET "localhost:9200/_cat/indices?v"
+
+   You should see all your indices with the correct document counts. You should
+   also verify that Archivematica is working correctly with Elasticsearch 8.x
+   by checking the Dashboard and performing test searches.
+
+Stage 6: Remove the Elasticsearch 6.x instance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Stop the temporary Elasticsearch 6.x instance.
+
+   .. code:: bash
+
+      kill $(cat ~/elasticsearch-6.8.23/elastic-6x-tmp.pid)
+
+#. Remove the Elasticsearch 6.x directory.
+
+   .. code:: bash
+
+      rm -rf ~/elasticsearch-6.8.23
 
 .. _`Elasticsearch docs`: https://www.elastic.co/guide/en/elasticsearch/reference/8.19/snapshot-restore.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
