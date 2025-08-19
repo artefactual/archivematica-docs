@@ -121,8 +121,8 @@ Possible ``archivematica_src_search_enabled`` configuration attribute values:
 * ``false``: Indexless mode. Neither AIPs nor transfers are indexed. The
   Backlog, Appraisal, and Archival Storage tabs will be non-functional.
 
-When Elasticsearch is used, Archivematica |release| requires version 6.x (tested
-with 6.8.21).
+When Elasticsearch is used, Archivematica |release| requires version 8.x (tested
+with 8.19.2).
 
 For more information on disabling Elasticsearch, please see the README for
 Archivematica's ansible role,

@@ -114,7 +114,7 @@ You can follow these steps in order to create a backup of Elasticsearch:
    curl -X PUT "localhost:9200/_snapshot/backup-repo/am_indexes_backup?wait_for_completion=true"
    cp /var/lib/elasticsearch/backup-repo elasticsearch-backup -rf
 
-For more info, refer to the `ElasticSearch 6.8 docs`_.
+For more info, refer to the `ElasticSearch docs`_.
 
 
 .. _upgrade-ubuntu:
@@ -613,7 +613,7 @@ Ansible
 The `stable/1.17.x` branch of the `ansible-archivematica-src`_ repository
 disables and uninstalls the `fits` and `nailgun` packages automatically.
 
-.. _`Elasticsearch 6.8 docs`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
+.. _`Elasticsearch docs`: https://www.elastic.co/guide/en/elasticsearch/reference/8.19/snapshot-restore.html
 .. _`release notes`: https://wiki.archivematica.org/Release_Notes
 .. _`Reindex API`: https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
 .. _`es-reindex.sh`: https://github.com/artefactual-labs/ops-helpers/blob/master/es-helpers/README.md#es-reindexsh-update-search-indices
