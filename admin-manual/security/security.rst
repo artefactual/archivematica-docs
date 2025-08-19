@@ -466,9 +466,9 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _django-auth-infra: https://docs.djangoproject.com/en/3.2/topics/auth/customizing/#authentication-backends
 .. _am-gh-issues: https://github.com/artefactual/archivematica/issues
 .. _am-google-groups: https://groups.google.com/forum/#!forum/archivematica
-.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/dashboard/install/README.md
-.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/dashboard/src/settings/components/ldap_auth.py
-.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/dashboard/src/settings/components/shibboleth_auth.py
+.. _am-dashboard-config: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/install/README.md
+.. _am-ldap-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/src/settings/components/ldap_auth.py
+.. _am-shib-auth-mod: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/src/settings/components/shibboleth_auth.py
 .. _ldap: https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol
 .. _shibboleth: https://www.shibboleth.net/
 .. _oidc: https://openid.net/connect/
@@ -482,5 +482,5 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _django-csp-docs: https://django-csp.readthedocs.io/en/latest/
 .. _django-https-settings: https://docs.djangoproject.com/en/3.2/topics/security/#ssl-https
 .. _django-session-settings: https://docs.djangoproject.com/en/3.2/topics/http/sessions/#settings
-.. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/dashboard/src/settings/production.py
+.. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/src/settings/production.py
 .. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.23.x/storage_service/storage_service/settings/production.py
