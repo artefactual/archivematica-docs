@@ -48,6 +48,6 @@ In order to obtain valid SSL certificates trusted by any browser, you can use
 :ref:`Back to the top <install-advanced>`
 
 .. _`development environment instructions`: https://github.com/artefactual/archivematica/blob/qa/1.x/hack/README.md
-.. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
-.. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/8b2aee1ba90053d030c31f3b8d0e5b0f14fcf57c/templates/etc/nginx/sites-available/storage-ssl.conf.j2
+.. _`sample configurations for the dashboard`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/a2bed23d0cd4ac632c9fdfbe21db2ef985a0242d/templates/etc/nginx/sites-available/dashboard-ssl.conf.j2
+.. _`sample configurations for the Storage Service`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/a2bed23d0cd4ac632c9fdfbe21db2ef985a0242d/templates/etc/nginx/sites-available/storage-ssl.conf.j2
 .. _`Let's Encrypt`: https://letsencrypt.org
