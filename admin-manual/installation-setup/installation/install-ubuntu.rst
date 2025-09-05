@@ -6,7 +6,7 @@ Manually Installing Archivematica on Ubuntu
 
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages are available
-for Ubuntu 22.04.
+for Ubuntu 24.04.
 
 .. note:: Manual installation using packages on Ubuntu is not officially
    supported. Please see :ref:`Instructions for new installation
@@ -14,17 +14,17 @@ for Ubuntu 22.04.
 
 *On this page*
 
-* :ref:`Installation instructions for Ubuntu 22.04 (Jammy) <ubuntu-instructions>`
+* :ref:`Installation instructions for Ubuntu 24.04 (Noble) <ubuntu-instructions>`
 * :ref:`Post-installation configuration <ubuntu-post-install-config>`
 
 .. _ubuntu-instructions:
 
-Ubuntu 22.04 (Jammy) installation instructions
+Ubuntu 24.04 (Noble) installation instructions
 -----------------------------------------------
 
 #. Use these commands to install the repositories:
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 15-18
 
@@ -35,20 +35,20 @@ Ubuntu 22.04 (Jammy) installation instructions
       Skip this step if you are planning to run :ref:`Archivematica without
       Elasticsearch <install-elasticsearch>`.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 20-21
 
 #. Update to the most recent OS release. This step will also fetch a list of
    the software from the package repositories you just added to your system.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 23-24
 
 #. Install some needed packages
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 26
 
@@ -57,7 +57,7 @@ Ubuntu 22.04 (Jammy) installation instructions
    .. note:: Skip this step if you are planning to run Archivematica in
       indexless mode (without Elasticsearch).
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 27
 
@@ -65,13 +65,13 @@ Ubuntu 22.04 (Jammy) installation instructions
    prompted to create a password for its database. If necessary, the password
    can be changed after the installation is complete.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 29
 
 #. Configure the Storage Service.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 31-32
 
@@ -88,7 +88,7 @@ Ubuntu 22.04 (Jammy) installation instructions
    You will be prompted to create a password for the database. If necessary,
    the password can be changed after the installation is complete.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 34-37
 
@@ -111,7 +111,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
 #. Configure the dashboard.
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
       :lines: 38
 
@@ -120,15 +120,15 @@ Ubuntu 22.04 (Jammy) installation instructions
    .. note:: Skip this step if you are planning to run Archivematica in indexless
       mode (without Elasticsearch).
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
-      :lines: 40-42
+      :lines: 40-43
 
 #. Start the remaining services
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
-      :lines: 44-52
+      :lines: 45-53
 
    If you have trouble with the gearman or clamav command try restarting it:
 
@@ -150,9 +150,9 @@ Ubuntu 22.04 (Jammy) installation instructions
    the dashboard and the Storage Service, i.e., 80 and 8000.
 
 
-   .. literalinclude:: scripts/am-jammy-deb.sh
+   .. literalinclude:: scripts/am-noble-deb.sh
       :language: bash
-      :lines: 55-57
+      :lines: 56-58
 
 #. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
@@ -184,7 +184,6 @@ the configuration of your new server.
         source /etc/default/archivematica-storage-service || \
             source /etc/sysconfig/archivematica-storage-service \
                 || (echo 'Environment file not found'; exit 1)
-        cd /usr/lib/archivematica/storage-service
         /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
             createsuperuser
         ";

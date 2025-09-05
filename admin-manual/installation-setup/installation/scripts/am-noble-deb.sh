@@ -37,6 +37,7 @@ sudo apt-get install -y archivematica-mcp-client
 
 sudo ln -sf /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
+sudo sed -i -e 's/xpack.security.enabled: true/xpack.security.enabled: false/g' /etc/elasticsearch/elasticsearch.yml
 sudo systemctl daemon-reload
 sudo service elasticsearch restart
 sudo systemctl enable elasticsearch

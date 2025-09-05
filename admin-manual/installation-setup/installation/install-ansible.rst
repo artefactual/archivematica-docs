@@ -65,7 +65,7 @@ Installation instructions
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-jammy
+      cd deploy-pub/playbooks/archivematica-noble
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
 4. Create the virtual machine and provision it:
@@ -119,7 +119,7 @@ steps:
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-jammy
+      cd deploy-pub/playbooks/archivematica-noble
       ansible-galaxy install -f -p roles/ -r requirements-qa.yml
 
 2. Update ``singlenode.yml`` to load ``vars-singlenode-qa.yml``. Inside the

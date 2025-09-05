@@ -51,7 +51,7 @@ Operating system
 Archivematica |release| installation instructions are provided here for the
 following operating systems:
 
-* Ubuntu 22.04 64-bit Server Edition
+* Ubuntu 24.04 64-bit Server Edition
 * Rocky Linux 9 x86-64
 
 Other Linux distributions should work, but will require customization of these
@@ -85,7 +85,7 @@ information, see :ref:`Advanced <advanced>`.
    the Percona and MariaDB alternatives.
 
    Some of the tools run by Archivematica require Java to be
-   installed (primarily Elasticsearch). On Ubuntu 22.04, Open JDK 8
+   installed (primarily Elasticsearch). On Ubuntu 24.04, Open JDK 8
    is used, but Open JDK 11 is the default. It is possible to use Oracle Java 8
    instead.
 
@@ -195,10 +195,10 @@ Rocky Linux/Red Hat or Ubuntu environments. At this time, installation
 instructions are provided for officially tested and supported installation
 environments:
 
-* :ref:`Automated install on Ubuntu 22.04 using Ansible <install-ansible>`.
+* :ref:`Automated install on Ubuntu 24.04 using Ansible <install-ansible>`.
 * :ref:`Manual install of OS packages on Rocky Linux 9/Red Hat <install-pkg-rocky>`
 
-Note that :ref:`manual install of OS packages on Ubuntu 22.04
+Note that :ref:`manual install of OS packages on Ubuntu 24.04
 <install-pkg-ubuntu>` is documented but not officially supported.
 
 Installing Archivematica using :ref:`Docker <development>` is not officially

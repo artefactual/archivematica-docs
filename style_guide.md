@@ -369,7 +369,7 @@ Text blocks should truncated after 80 characters.
 ```rst
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
-22.04 and Rocky Linux 9 are available.
+24.04 and Rocky Linux 9 are available.
 ```
 
 Code blocks are an exception to this rule. A line of code can extend beyond 80

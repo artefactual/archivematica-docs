@@ -279,13 +279,13 @@ with cloud based virtual machines, or physical servers.
 
 #. Go into the appropiate playbook folder, and install the needed roles
 
-   .. _ubuntu-22.04:
+   .. _ubuntu-24.04:
 
-   Ubuntu 22.04 (Jammy):
+   Ubuntu 24.04 (Noble):
 
    .. code:: bash
 
-      cd deploy-pub/playbooks/archivematica-jammy
+      cd deploy-pub/playbooks/archivematica-noble
       ansible-galaxy install -f -p roles/ -r requirements.yml
 
    .. rocky-9:
