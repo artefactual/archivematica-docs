@@ -175,8 +175,7 @@ status other than "DELETED".
         source /etc/default/archivematica-dashboard || \
             source /etc/sysconfig/archivematica-dashboard \
                 || (echo 'Environment file not found'; exit 1)
-        cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+        /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
             rebuild_aip_index_from_storage_service --delete-all
     ";
 
