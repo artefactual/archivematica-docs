@@ -48,6 +48,7 @@ EOF'
 
 sudo -u root yum install -y java-1.8.0-openjdk-headless mariadb-server gearmand
 sudo -u root yum install -y elasticsearch
+sudo -u root sed -i -e 's/xpack.security.enabled: true/xpack.security.enabled: false/g' /etc/elasticsearch/elasticsearch.yml
 sudo -u root systemctl enable elasticsearch
 sudo -u root systemctl start elasticsearch
 sudo -u root systemctl enable mariadb
