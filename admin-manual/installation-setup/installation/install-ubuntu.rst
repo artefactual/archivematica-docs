@@ -128,7 +128,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 44-54
+      :lines: 44-52
 
    If you have trouble with the gearman or clamav command try restarting it:
 
@@ -152,7 +152,7 @@ Ubuntu 22.04 (Jammy) installation instructions
 
    .. literalinclude:: scripts/am-jammy-deb.sh
       :language: bash
-      :lines: 57-59
+      :lines: 55-57
 
 #. Complete :ref:`Post Install Configuration <ubuntu-post-install-config>`.
 
