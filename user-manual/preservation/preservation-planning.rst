@@ -876,7 +876,7 @@ JHOVE
 
 JHOVE is the most commonly-used tool to validate file formats in Archivematica. It looks at a given file and assesses whether the file is well-formed (meets the syntactic requirements for its format) and valid (is well-formed and meets additional requirements for its format). For more information on how JHOVE works, see the `JHOVE`_ website.
 
-Eight JHOVE modules are enabled on their relevant formats by default in Archivematica. 
+Eight JHOVE modules are enabled on their relevant formats by default in Archivematica.
 
 AIFF-hul: Audio Interchange File Format
 GIF-hul: Graphics Interchange Format
@@ -887,7 +887,7 @@ JHOVE TIFF-hul: TIFF (Tagged Image File Format) format
 WARC-kb: WARC (Web ARChive) format
 WAVE-hul: Audio for Windows format (WAVE)
 
-When JHOVE encounters a file, it will apply the appropriate module for its validation. 
+When JHOVE encounters a file, it will apply the appropriate module for its validation.
 
 If it can successfully validate, a simple success message is displayed in the standard output, which includes the module run:
 
@@ -911,7 +911,8 @@ If a given file can not be validated, a simple failure message is displayed in t
 
 The validation event for the file is written to the METS.xml. The dashboard will report that the validation was completed with failures, but will continue to process the ingest.
 
-Entire modules can be disabled in the Command section of Validation in the preservation planning tab. Additionally, modules can be disabled at the format level through the Rules section. 
+Entire modules can be disabled in the Command section of Validation in the preservation planning tab.
+Additionally, modules can be disabled at the format level through the Rules section.
 
 By default, the command to use JHOVE without an assignment module is disabled. To successfully use this method, all other JHOVE modules must be disabled, and the JHOVE rule must be enabled. Then, in Rules, each relevant format will need to have hte tool replaced to the JHOVE and enabled. 
 This command if used, will cycle through all modules until a file passes validation in a given module. In some cases, JHOVE may evaluate a given file as a bytestream, rather than a specific format. This is the default JHOVE behaviour. In a case where the bytestream is valid, JHOVE considers this to be a successful validation. Archivematica reports a successful bytestream validation as a partial success, in order to differentiate it from successful validation based on a format specification.
