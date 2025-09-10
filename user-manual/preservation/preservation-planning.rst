@@ -878,14 +878,14 @@ JHOVE is the most commonly-used tool to validate file formats in Archivematica. 
 
 Eight JHOVE modules are enabled on their relevant formats by default in Archivematica.
 
-AIFF-hul: Audio Interchange File Format
-GIF-hul: Graphics Interchange Format
-JPEG-hul: JPEG format
-JPEG2000-hul: JPEG 2000 (ISO/IEC 15444) format
-PDF-hul: PDF (Portable Document Format) format
-JHOVE TIFF-hul: TIFF (Tagged Image File Format) format
-WARC-kb: WARC (Web ARChive) format
-WAVE-hul: Audio for Windows format (WAVE)
+* **AIFF-hul**: Audio Interchange File Format
+* **GIF-hul**: Graphics Interchange Format
+* **JPEG-hul**: JPEG format
+* **JPEG2000-hul**: JPEG 2000 (ISO/IEC 15444) format
+* **PDF-hul**: PDF (Portable Document Format) format
+* **TIFF-hul**: TIFF (Tagged Image File Format) format
+* **WARC-kb**: WARC (Web ARChive) format
+* **WAVE-hul**: Audio for Windows format (WAVE)
 
 When JHOVE encounters a file, it will apply the appropriate module for its validation.
 
