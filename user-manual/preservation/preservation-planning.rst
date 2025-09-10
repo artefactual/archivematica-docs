@@ -914,7 +914,7 @@ The validation event for the file is written to the METS.xml. The dashboard will
 Entire modules can be disabled in the Command section of Validation in the preservation planning tab.
 Additionally, modules can be disabled at the format level through the Rules section.
 
-By default, the command to use JHOVE without an assignment module is disabled. To successfully use this method, all other JHOVE modules must be disabled, and the JHOVE rule must be enabled. Then, in Rules, each relevant format will need to have hte tool replaced to the JHOVE and enabled. 
+By default, the command to use JHOVE without an assignment module is disabled. To successfully use this method, all other JHOVE modules must be disabled, and the JHOVE rule must be enabled. Then, in Rules, each relevant format will need to have hte tool replaced to the JHOVE and enabled.
 This command if used, will cycle through all modules until a file passes validation in a given module. In some cases, JHOVE may evaluate a given file as a bytestream, rather than a specific format. This is the default JHOVE behaviour. In a case where the bytestream is valid, JHOVE considers this to be a successful validation. Archivematica reports a successful bytestream validation as a partial success, in order to differentiate it from successful validation based on a format specification.
 
 
