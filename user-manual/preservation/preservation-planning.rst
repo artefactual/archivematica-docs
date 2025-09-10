@@ -874,32 +874,48 @@ For more information about creating a rule, see :ref:`Changing rules
 JHOVE
 ^^^^^
 
-JHOVE is the most commonly-used tool to validate file formats in Archivematica.
-It looks at a given file and assesses whether the file is well-formed (meets the
-syntactic requirements for its format) and valid (is well-formed and meets
-additional requirements for its format). For more information on how JHOVE
-works, see the `JHOVE`_ website.
+JHOVE is the most commonly-used tool to validate file formats in Archivematica. It looks at a given file and assesses whether the file is well-formed (meets the syntactic requirements for its format) and valid (is well-formed and meets additional requirements for its format). For more information on how JHOVE works, see the `JHOVE`_ website.
 
-When JHOVE encounters a file that it is able to successfully validate, a simple
-success message is displayed in the standard output:
+Eight JHOVE modules are enabled on their relevant formats by default in Archivematica. 
+
+AIFF-hul: Audio Interchange File Format
+GIF-hul: Graphics Interchange Format
+JPEG-hul: JPEG format
+JPEG2000-hul: JPEG 2000 (ISO/IEC 15444) format
+PDF-hul: PDF (Portable Document Format) format
+JHOVE TIFF-hul: TIFF (Tagged Image File Format) format
+WARC-kb: WARC (Web ARChive) format
+WAVE-hul: Audio for Windows format (WAVE)
+
+When JHOVE encounters a file, it will apply the appropriate module for its validation. 
+
+If it can successfully validate, a simple success message is displayed in the standard output, which includes the module run:
 
 .. code:: bash
 
-   Running Validate using JHOVE
-   Command "Validate using JHOVE" was successful
-   Creating validation event for /var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/copy-compress-test-31de910f-77dd-425c-97dc-2319ac339954/objects/Landing_zone.jpg (adbef753-318b-47b5-8b5c-27ef51dc6003)
+   Running Validate using JHOVE AIFF-hul
+   Command "Validate using JHOVE AIFF-hul" was successful
+   Creating validation event for /var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/JayTest-43ab8873-097d-470e-9b55-edf3bbd59215/objects/aiff-hul/pass.aiff (a28e9d9b-6dff-4fa2-b520-22cb6ee22754)
 
 The validation event for the file is written to the METS.xml. The dashboard will
 report that the validation was completed successfully.
 
-In some cases, JHOVE may evaluate a given file as a bytestream, rather than a
-specific format. This is default JHOVE behaviour. In a case where the bytestream
-is valid, JHOVE considers this to be a successful validation. In previous
-versions of Archivematica (1.9.x and earlier), Archivematica reported a
-successful bytestream validation as an error in the dashboard. As of 1.10,
-Archivematica reports a successful bytestream validation as a partial success,
-in order to differentiate it from successful validation based on a format
-specification.
+If a given file can not be validated, a simple failure message is displayed in the Errors and diagnostics,  which includes details of the failure:
+
+.. code:: bash
+
+   Command Validate using JHOVE AIFF-hul indicated failure with this output:
+   ('{"eventOutcomeInformation": "fail", "eventOutcomeDetailNote": '
+    '"format=\\"AIFF\\"; result=\\"Not well-formed\\"; error=\\"JHOVE error: '
+    'AIFF-HUL-2, message: Document does not contain a Common Chunk\\""}\n')
+
+The validation event for the file is written to the METS.xml. The dashboard will report that the validation was completed with failures, but will continue to process the ingest.
+
+Entire modules can be disabled in the Command section of Validation in the preservation planning tab. Additionally, modules can be disabled at the format level through the Rules section. 
+
+By default, the command to use JHOVE without an assignment module is disabled. To successfully use this method, all other JHOVE modules must be disabled, and the JHOVE rule must be enabled. Then, in Rules, each relevant format will need to have hte tool replaced to the JHOVE and enabled. 
+This command if used, will cycle through all modules until a file passes validation in a given module. In some cases, JHOVE may evaluate a given file as a bytestream, rather than a specific format. This is the default JHOVE behaviour. In a case where the bytestream is valid, JHOVE considers this to be a successful validation. Archivematica reports a successful bytestream validation as a partial success, in order to differentiate it from successful validation based on a format specification.
+
 
 .. code:: bash
 
@@ -907,9 +923,7 @@ specification.
    Command "Validate using JHOVE" was partially successful
    Creating validation event for /var/archivematica/sharedDirectory/watchedDirectories/workFlowDecisions/extractPackagesChoice/jhove-test-fbc8e8ca-a459-4219-9a95-c7a4065f7411/objects/sample.aif (d2413c00-4217-4933-ad07-78ba37c244ec)
 
-As with a full success, the validation event for the file is written to the
-METS.xml. The dashboard will report that the validation was completed
-successfully.
+As with a full success, the validation event for the file is written to the METS.xml. The dashboard will report that the validation was completed successfully.
 
 .. _fpr-mediaconch:
 
