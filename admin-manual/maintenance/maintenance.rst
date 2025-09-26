@@ -175,8 +175,7 @@ status other than "DELETED".
         source /etc/default/archivematica-dashboard || \
             source /etc/sysconfig/archivematica-dashboard \
                 || (echo 'Environment file not found'; exit 1)
-        cd /usr/share/archivematica/dashboard
-        /usr/share/archivematica/virtualenvs/archivematica/bin/python \
+        /usr/share/archivematica/virtualenvs/archivematica/bin/python -m archivematica.dashboard.manage \
             rebuild_aip_index_from_storage_service --delete-all
     ";
 
@@ -660,7 +659,7 @@ search documents related to packages that completed more than six hours ago:
 
 :ref:`Back to the top <maintenance>`
 
-.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html
+.. _`Elasticsearch documentation`: https://www.elastic.co/guide/en/elasticsearch/reference/8.19/snapshot-restore.html
 .. _`Elasticsearch troubleshooting`: https://www.accesstomemory.org/docs/latest/admin-manual/maintenance/elasticsearch/#maintenance-elasticsearch
 .. _`Kibana`: https://www.elastic.co/kibana
 .. _`Dejavu`: https://github.com/appbaseio/dejavu

@@ -18,9 +18,9 @@ sudo -u root yum-config-manager --enable crb
 
 sudo -u root rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/elasticsearch.repo
-[elasticsearch-6.x]
-name=Elasticsearch repository for 6.x packages
-baseurl=https://artifacts.elastic.co/packages/6.x/yum
+[elasticsearch-8.x]
+name=Elasticsearch repository for 8.x packages
+baseurl=https://artifacts.elastic.co/packages/8.x/yum
 gpgcheck=1
 gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=1
@@ -31,7 +31,7 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica.repo
 [archivematica]
 name=archivematica
-baseurl=https://packages.archivematica.org/1.17.x/rocky9/
+baseurl=https://packages.archivematica.org/1.18.x/rocky9/
 gpgcheck=1
 gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
 enabled=1
@@ -40,7 +40,7 @@ EOF'
 sudo -u root bash -c 'cat << EOF > /etc/yum.repos.d/archivematica-extras.repo
 [archivematica-extras]
 name=archivematica-extras
-baseurl=https://packages.archivematica.org/1.17.x/rocky9-extras
+baseurl=https://packages.archivematica.org/1.18.x/rocky9-extras
 gpgcheck=1
 gpgkey=https://packages.archivematica.org/GPG-KEY-archivematica-sha512
 enabled=1
@@ -48,6 +48,7 @@ EOF'
 
 sudo -u root yum install -y java-1.8.0-openjdk-headless mariadb-server gearmand
 sudo -u root yum install -y elasticsearch
+sudo -u root sed -i -e 's/xpack.security.enabled: true/xpack.security.enabled: false/g' /etc/elasticsearch/elasticsearch.yml
 sudo -u root systemctl enable elasticsearch
 sudo -u root systemctl start elasticsearch
 sudo -u root systemctl enable mariadb
@@ -66,7 +67,7 @@ sudo -u root yum install -y python-pip archivematica-storage-service
 sudo -u archivematica bash -c " \
 set -a -e -x
 source /etc/sysconfig/archivematica-storage-service
-/usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+/usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.manage \
     migrate
 ";
 
@@ -117,7 +118,7 @@ sudo -u archivematica bash -c " \
     source /etc/default/archivematica-storage-service || \
         source /etc/sysconfig/archivematica-storage-service \
             || (echo 'Environment file not found'; exit 1)
-    /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+    /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.manage \
         create_user \
             --username=test \
             --password=test \

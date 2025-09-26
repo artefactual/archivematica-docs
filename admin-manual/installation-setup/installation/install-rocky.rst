@@ -67,14 +67,14 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 49-56
+      :lines: 49-57
 
 #. Now that MariaDB is up and running, create the Archivematica and
    Storage Service databases and set up the expected credentials.
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 58-62
+      :lines: 59-63
 
 #. Install Archivematica Storage Service
 
@@ -82,20 +82,20 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 64
+        :lines: 65
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 66-71
+        :lines: 67-72
 
    * Now enable and start the archivematica-storage-service, rngd (needed for
      encrypted spaces) and the Nginx frontend:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 73-78
+        :lines: 74-79
 
      .. note:: The Storage Service will be available at ``http://<ip>:8001``.
 
@@ -110,25 +110,25 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 80
+        :lines: 81
 
    * Apply the database migrations using the ``archivematica`` user:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 82-87
+        :lines: 83-88
 
    * Start and enable services:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 89-92
+        :lines: 90-93
 
    * Restart Nginx in order to load the dashboard config file:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 94
+        :lines: 95
 
      .. note:: The dashboard will be available at ``http://<ip>:81``
 
@@ -138,13 +138,13 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 96
+        :lines: 97
 
    * Tweak ClamAV configuration:
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 98-99
+        :lines: 99-100
 
    * Indexless mode:
 
@@ -163,7 +163,7 @@ Installation instructions
 
      .. literalinclude:: scripts/am-rocky-rpm.sh
         :language: bash
-        :lines: 101-106
+        :lines: 102-107
 
 #. Finalizing installation
 
@@ -192,7 +192,7 @@ Installation instructions
 
    .. literalinclude:: scripts/am-rocky-rpm.sh
       :language: bash
-      :lines: 111-113
+      :lines: 112-114
 
 #. Complete :ref:`Post Install Configuration <rocky-post-install-config>`.
 
@@ -223,7 +223,7 @@ the configuration of your new server.
           source /etc/default/archivematica-storage-service || \
               source /etc/sysconfig/archivematica-storage-service \
                   || (echo 'Environment file not found'; exit 1)
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.manage \
               createsuperuser
         ";
 
@@ -255,8 +255,8 @@ the configuration of your new server.
 
 :ref:`Back to the top <install-pkg-rocky>`
 
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.17.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/MCPServer/install/README.md
 .. _`known issue`: https://github.com/artefactual/archivematica-storage-service/issues/312
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API

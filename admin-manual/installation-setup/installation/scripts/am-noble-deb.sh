@@ -12,13 +12,13 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/mysql/app-pass password demo-am"
 sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-server/app-password-confirm password demo-am"
 
-curl -fsSL https://packages.archivematica.org/1.17.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.17.x.gpg
+curl -fsSL https://packages.archivematica.org/1.18.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.18.x.gpg
 
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.17.x.gpg] http://packages.archivematica.org/1.17.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.17.x.gpg] http://packages.archivematica.org/1.17.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
 
-curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/keyrings/elasticsearch-6.x.gpg
-echo "deb [signed-by=/etc/apt/keyrings/elasticsearch-6.x.gpg] https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/keyrings/elasticsearch-8.x.gpg
+echo "deb [signed-by=/etc/apt/keyrings/elasticsearch-8.x.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
 
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -37,6 +37,7 @@ sudo apt-get install -y archivematica-mcp-client
 
 sudo ln -sf /etc/nginx/sites-available/dashboard.conf /etc/nginx/sites-enabled/dashboard.conf
 
+sudo sed -i -e 's/xpack.security.enabled: true/xpack.security.enabled: false/g' /etc/elasticsearch/elasticsearch.yml
 sudo systemctl daemon-reload
 sudo service elasticsearch restart
 sudo systemctl enable elasticsearch
@@ -61,7 +62,7 @@ sudo -u archivematica bash -c " \
     source /etc/default/archivematica-storage-service || \
         source /etc/sysconfig/archivematica-storage-service \
             || (echo 'Environment file not found'; exit 1)
-    /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+    /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.manage \
         create_user \
             --username=admin \
             --password=archivematica \

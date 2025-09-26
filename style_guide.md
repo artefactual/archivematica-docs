@@ -369,7 +369,7 @@ Text blocks should truncated after 80 characters.
 ```rst
 Archivematica packages are hosted at packages.archivematica.org as a central
 place to store packages for multiple operating systems. Packages for both Ubuntu
-22.04 and Rocky Linux 9 are available.
+24.04 and Rocky Linux 9 are available.
 ```
 
 Code blocks are an exception to this rule. A line of code can extend beyond 80
@@ -568,9 +568,9 @@ Short, simple scripts can be added as code blocks using the `code` directive.
 ```rst
 .. code:: bash
 
-   sudo wget -O - https://packages.archivematica.org/1.17.x/key.asc  | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.17.x/ubuntu jammy main" >> /etc/apt/sources.list'
-   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.17.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
+   sudo wget -O - https://packages.archivematica.org/1.18.x/key.asc  | sudo apt-key add -
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.18.x/ubuntu jammy main" >> /etc/apt/sources.list'
+   sudo sh -c 'echo "deb [arch=amd64] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main" >> /etc/apt/sources.list'
 ```
 
 For longer scripts, or scripts that will be referenced on multiple pages, you
