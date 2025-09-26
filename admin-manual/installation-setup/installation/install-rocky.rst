@@ -223,7 +223,7 @@ the configuration of your new server.
           source /etc/default/archivematica-storage-service || \
               source /etc/sysconfig/archivematica-storage-service \
                   || (echo 'Environment file not found'; exit 1)
-          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.storage_service.manage \
+          /usr/share/archivematica/virtualenvs/archivematica-storage-service/bin/python -m archivematica.storage_service.manage \
               createsuperuser
         ";
 
