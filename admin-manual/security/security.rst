@@ -319,15 +319,23 @@ available. E.g. the minimum lenght of your user passwords can be adjusted with
 Cookie and session security
 ---------------------------
 
-When using HTTPS, it is recommended to enable "secure" cookies as well as other
-Django settings that provide additional security. See the `SSL/HTTPS
-<django-https-settings_>`_ section on the Django documentation site for further
-details.
+Starting with Archivematica 1.18.0 and Storage Service 0.24.0, the Dashboard and
+the Storage Service ship with stricter defaults for cookie attributes (Secure,
+HttpOnly, SameSite). Secure-related settings (for example, ``*_SESSION_COOKIE_SECURE``
+and ``*_CSRF_COOKIE_SECURE``) are now enabled by default.
 
-Additionally, it is possible to adjust some Django settings related to `session
-management <django-session-settings_>`_, such as their length or some other
-attributes related to the session cookie, e.g. ``SESSION_COOKIE_SECURE`` marks
-the session cookie as "secure".
+See `Cookie configuration improvements <cookie-configuration-improvements_>`_ in
+the Archivematica 1.18.0 release notes for the full list of environment
+variables and guidance on adjusting the defaults for your deployment.
+
+When using HTTPS, it is still recommended to review `SSL/HTTPS <django-https-settings_>`_
+and related Django settings that provide additional security. You can continue
+to tune `session management <django-session-settings_>`_ if you need behaviour
+that differs from the defaults.
+
+If your deployment does not use HTTPS (not recommended for production),
+explicitly set the ``*_SESSION_COOKIE_SECURE`` and ``*_CSRF_COOKIE_SECURE``
+environment variables to ``false`` to allow cookies to be sent over HTTP.
 
 .. important::
 
@@ -484,3 +492,4 @@ This will create a new :file:`/etc/ssl/certs/ca-certificates.crt` file.
 .. _django-session-settings: https://docs.djangoproject.com/en/3.2/topics/http/sessions/#settings
 .. _am-prod-settings: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/src/settings/production.py
 .. _ss-prod-settings: https://github.com/artefactual/archivematica-storage-service/blob/stable/0.23.x/storage_service/storage_service/settings/production.py
+.. _cookie-configuration-improvements: https://wiki.archivematica.org/Archivematica_1.18.0_and_Storage_Service_0.24.0_release_notes#Cookie_configuration_improvements
