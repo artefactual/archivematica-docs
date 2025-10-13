@@ -783,10 +783,11 @@ Language
 
 The language menu allows you to choose from select languages.
 
-Archivematica is translated by volunteers through `Transifex`_. The completeness
-of a language is dependent on how many strings have been translated in
-Transifex. For information about contributing translations to the Archivematica
-project, see :ref:`Translations <translations>`.
+Previously, Archivematica was translated by volunteers and the completeness
+of a language is dependent on how many strings have been translated.
+While we no longer have a workflow to submit translations, you can translate
+Archivematica locally. Please visit the `Contributors Portal`_ for more
+information.
 
 .. _version:
 
@@ -807,3 +808,4 @@ This tab displays the version of Archivematica you're using.
 .. _gzip: https://launchpad.net/gzip
 .. _Transifex: https://www.transifex.com/artefactual/archivematica/
 .. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki
+.. _Contributors Portal: https://contributors.artefactual.com/

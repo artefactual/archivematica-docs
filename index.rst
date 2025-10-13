@@ -241,11 +241,12 @@ Archivematica implements and makes use of them.
 Translations
 ------------
 
-Beginning with Archivematica 1.6.1, the community has been able to support the
-project by volunteering their time and effort to translate the Archivematica
-documentation, the interface, and the Storage Service into other languages.
+We no longer have a workflow to submit translations to the Archivematica
+project. We thank all past community contributors for their efforts. If
+you would like to translate Archivematica locally, please visit the
+`Contributors Portal`_ for more information.
 
-* :ref:`Contributing translations to the Archivematica project <translations>`
+.. _Contributors Portal: https://contributors.artefactual.com/
 
 .. _admin-manual-home:
 
