@@ -637,7 +637,6 @@ This guide reuses content from the following resources:
 [user-manual]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual
 [Transfer]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer
 [Appraisal]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/appraisal
-[Translations]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/translations
 [Installation and setup]: https://github.com/artefactual/archivematica-docs/tree/1.7/admin-manual/installation-setup
 [reference label]: http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role
 [images subdirectory]: https://github.com/artefactual/archivematica-docs/tree/1.7/user-manual/transfer/images
