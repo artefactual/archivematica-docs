@@ -806,6 +806,5 @@ This tab displays the version of Archivematica you're using.
 .. _LZMA: https://www.7-zip.org/sdk.html
 .. _Parallel bzip2 (pbzip2): https://launchpad.net/pbzip2/
 .. _gzip: https://launchpad.net/gzip
-.. _Transifex: https://www.transifex.com/artefactual/archivematica/
 .. _Bulk Extractor: https://github.com/simsong/bulk_extractor/wiki
 .. _Contributors Portal: https://contributors.artefactual.com/

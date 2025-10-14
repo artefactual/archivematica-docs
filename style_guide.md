@@ -192,18 +192,14 @@ directories as well.
 
 Chapters generally correspond to tabs in the interface (such as Transfer and
 Ingest) or topics that are in some way greater than the interface (such as
-Metadata or Translations). Be thoughtful about adding a new chapter. Most
-features occur within an already-defined workflow. Here are two examples for
+Metadata). Be thoughtful about adding a new chapter. Most
+features occur within an already-defined workflow. Here is an example for
 why a new chapter might be added:
 
 - A new tab is added to the Archivematica dashboard. For example, when the
   Appraisal tab was introduced in Archivematica 1.6, a chapter titled
   [Appraisal][Appraisal] was added to the User manual as a place to record
   appraisal workflow instructions.
-- A feature is introduced that has implications outside normal user workflows.
-  For example, when internationalization hooks were added to the code, a chapter
-  titled [Translations][Translations] was added to the User Manual as a place to
-  put translation instructions.
 
 Though somewhat less strictly enforced than the creation of a new manual, new
 chapters should only be created if there is consensus with Artefactual staff.
