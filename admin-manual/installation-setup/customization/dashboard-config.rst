@@ -890,10 +890,11 @@ Language
 
 The language menu allows you to choose from select languages.
 
-Archivematica is translated by volunteers through `Transifex`_. The completeness
-of a language is dependent on how many strings have been translated in
-Transifex. For information about contributing translations to the Archivematica
-project, see :ref:`Translations <translations>`.
+Previously, Archivematica was translated by volunteers and the completeness
+of a language is dependent on how many strings have been translated.
+While we no longer have a workflow to submit translations, you can translate
+Archivematica locally. Please visit the `Contributors Portal`_ for more
+information.
 
 .. _admin-version:
 
@@ -909,5 +910,5 @@ This tab displays the version of Archivematica you're using.
 .. _PBKDF2: https://en.wikipedia.org/wiki/PBKDF2
 .. _How Django stores passwords: https://django.readthedocs.io/en/1.4.X/topics/auth.html#how-django-stores-passwords
 .. _automation tools: https://github.com/artefactual/automation-tools
-.. _Transifex: https://www.transifex.com/artefactual/archivematica/
 .. _PID webservice being used by IISH: https://github.com/IISH/PID-webservice
+.. _Contributors Portal: https://contributors.artefactual.com/
