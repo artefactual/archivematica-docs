@@ -237,7 +237,7 @@ followed by acts granted/restricted.
 
 Skip to:
 
-* :ref:`Basis: Copyight <basis-copyight>`
+* :ref:`Basis: Copyright <basis-copyright>`
 * :ref:`Basis: Statute <basis-statute>`
 * :ref:`Basis: License <basis-license>`
 * :ref:`Basis: Donor <basis-donor>`
@@ -246,7 +246,7 @@ Skip to:
 * :ref:`Acts granted or restricted <acts-granted>`
 
 
-.. _basis-copyight:
+.. _basis-copyright:
 
 Basis: Copyright
 ^^^^^^^^^^^^^^^^
