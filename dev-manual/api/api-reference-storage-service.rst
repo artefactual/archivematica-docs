@@ -1752,6 +1752,66 @@ Example response::
         "id": 4
     }
 
+
+Review AIP deletion request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+========  ============================================  ========================
+
+``POST``  **/api/v2/file/<UUID>/review_aip_deletion/**  *Approves or rejects a
+                                                        pending AIP deletion
+                                                        request.*
+
+========  ============================================  ========================
+
+Request body parameters (mandatory):
+
+========================  ======================================================
+
+``event_id``              *ID of the deletion request event to review. Use the*
+                          ``id`` *returned when the delete request was created.
+                          Must be a positive integer.*
+
+``decision``              *Decision to record. Accepted values are:* ``approve``
+                          *or* ``reject`` *.*
+
+``reason``                *Explanation to accompany the decision. Stored as
+                          the review comment.*
+
+========================  ======================================================
+
+Only users with the ``locations.approve_package_deletion`` permission (e.g.
+with the ``Reviewers`` role) can access this endpoint. Other users receive
+``403 Forbidden``.
+
+Successful reviews return a ``message`` field. If the review cannot be
+completed (for instance, the deletion fails on disk, the event is no longer
+pending, or validation fails), the response contains ``error_message`` instead.
+
+Attempting to review an event that does not belong to the package or is not
+pending returns ``404 Not Found`` or ``400 Bad Request`` respectively.
+
+Example request::
+
+    curl \
+        --location \
+        --request POST \
+        --header 'Authorization: ApiKey test:ow7ioGh2reephua8uPaiWee4EiHeev2z' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{
+        "event_id": 3,
+        "decision": "approve",
+        "reason": "Policy review completed"
+        }' \
+            'http://test.archivematica.net:8000/api/v2/file/2cd0575f-5e0b-4d2f-bd00-7e0b254e0802/review_aip_deletion/'
+
+Example response::
+
+    {
+        "message": "Request approved: Package deleted successfully."
+    }
+
+
 Download single file
 ^^^^^^^^^^^^^^^^^^^^
 
