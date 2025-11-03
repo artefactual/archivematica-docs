@@ -1,10 +1,10 @@
 repos:
 - repo: "https://github.com/sphinx-contrib/sphinx-lint"
-  rev: "v0.9.1"
+  rev: "v1.0.1"
   hooks:
   - id: "sphinx-lint"
 - repo: "https://github.com/igorshubovych/markdownlint-cli"
-  rev: "v0.39.0"
+  rev: "v0.45.0"
   hooks:
   - id: "markdownlint"
     exclude: |
@@ -12,7 +12,7 @@ repos:
         issue_template\.md
       )
 - repo: "https://github.com/adrienverge/yamllint"
-  rev: "v1.34.0"
+  rev: "v1.37.1"
   hooks:
   - id: "yamllint"
 - repo: "https://github.com/thlorenz/doctoc"
@@ -24,7 +24,7 @@ repos:
         style_guide\.md
       )
 - repo: "https://github.com/pre-commit/pre-commit-hooks"
-  rev: "v4.5.0"
+  rev: "v6.0.0"
   hooks:
   - id: "trailing-whitespace"
     exclude: |
