@@ -1,25 +1,28 @@
 ---
 name: "Test"
 on:
+  workflow_dispatch:
   pull_request:
   push:
+    branches:
+      - "1.[0-9][0-9]"
 jobs:
   test:
     name: "Test"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
     steps:
       - name: "Check out repository"
-        uses: "actions/checkout@v4"
+        uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5.0.0
       - name: "Set up Python"
-        uses: "actions/setup-python@v5"
+        uses: "actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c" # v6.0.0
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       - name: "Get pip cache dir"
         id: "pip-cache"
         run: |
           echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
       - name: "Cache pip packages"
-        uses: "actions/cache@v4"
+        uses: "actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830" # v4.3.0
         with:
           path: "${{ steps.pip-cache.outputs.dir }}"
           key: "${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}"
@@ -34,8 +37,8 @@ jobs:
           make test
   lint:
     name: "Linting"
-    runs-on: "ubuntu-22.04"
+    runs-on: "ubuntu-24.04"
     steps:
-    - uses: "actions/checkout@v4"
-    - uses: "actions/setup-python@v5"
-    - uses: "pre-commit/action@v3.0.1"
+    - uses: "actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8" # v5.0.0
+    - uses: "actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c" # v6.0.0
+    - uses: "pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd" #v3.0.1
