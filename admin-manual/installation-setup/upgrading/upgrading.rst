@@ -133,8 +133,10 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.18.x/ubuntu jammy main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main' >> /etc/apt/sources.list
+      curl -fsSL https://packages.archivematica.org/1.18.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.18.x.gpg
+
+      echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu jammy main' >> /etc/apt/sources.list
+      echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main' >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.
@@ -154,11 +156,10 @@ Upgrade on Ubuntu packages
 
    .. code:: bash
 
-      sudo apt-get install archivematica-common
+      sudo apt-get install archivematica archivematica-common
       sudo apt-get install archivematica-dashboard
       sudo apt-get install archivematica-mcp-server
       sudo apt-get install archivematica-mcp-client
-      sudo apt-get install archivematica
 
 #. Restart services.
 
