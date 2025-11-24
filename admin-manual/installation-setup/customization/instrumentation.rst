@@ -326,9 +326,9 @@ the dashboard as a file and upload it.
 .. _Prometheus metric types: https://prometheus.io/docs/concepts/metric_types/
 .. _intentionally not zeroed: https://www.robustperception.io/existential-issues-with-metrics
 .. _django-prometheus: https://github.com/korfuri/django-prometheus
-.. _Dashboard: https://github.com/artefactual/archivematica/blob/qa/1.x/src/dashboard/install/README.md
-.. _MCPClient: https://github.com/artefactual/archivematica/blob/qa/1.x/src/MCPClient/install/README.md
-.. _MCPServer: https://github.com/artefactual/archivematica/blob/qa/1.x/src/MCPServer/install/README.md
+.. _Dashboard: https://github.com/artefactual/archivematica/blob/qa/1.x/src/archivematica/dashboard/install/README.md
+.. _MCPClient: https://github.com/artefactual/archivematica/blob/qa/1.x/src/archivematica/MCPClient/install/README.md
+.. _MCPServer: https://github.com/artefactual/archivematica/blob/qa/1.x/src/archivematica/MCPServer/install/README.md
 .. _Storage Service: https://github.com/artefactual/archivematica-storage-service/blob/qa/0.x/install/README.md
 .. _download and install Prometheus: https://prometheus.io/docs/prometheus/latest/installation/
 .. _download and install Grafana: https://grafana.com/grafana/download
