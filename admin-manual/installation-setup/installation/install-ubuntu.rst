@@ -228,7 +228,7 @@ the configuration of your new server.
 
 .. _`Sword API`: https://wiki.archivematica.org/Sword_API
 .. _`known issue with pip`: https://bugs.launchpad.net/ubuntu/+source/python-pip/+bug/1658844
-.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/dashboard/install/README.md
-.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/MCPClient/install/README.md
-.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/MCPServer/install/README.md
+.. _`Dashboard install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/archivematica/dashboard/install/README.md
+.. _`MCPClient install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/archivematica/MCPClient/install/README.md
+.. _`MCPServer install README`: https://github.com/artefactual/archivematica/blob/stable/1.18.x/src/archivematica/MCPServer/install/README.md
 .. _`Archivematica user forum`: https://groups.google.com/forum/#!forum/archivematica
