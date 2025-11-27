@@ -135,8 +135,8 @@ Upgrade on Ubuntu packages
 
       curl -fsSL https://packages.archivematica.org/1.18.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.18.x.gpg
 
-      echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu jammy main' >> /etc/apt/sources.list
-      echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main' >> /etc/apt/sources.list
+      echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu $(lsb_release -sc) main" >> /etc/apt/sources.list
+      echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals $(lsb_release -sc) main" >> /etc/apt/sources.list
 
    Optionally you can remove the lines referencing
    packages.archivematica.org/|previous_version|.x from /etc/apt/sources.list.

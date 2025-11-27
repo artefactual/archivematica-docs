@@ -14,8 +14,8 @@ sudo debconf-set-selections <<< "archivematica-mcp-server archivematica-mcp-serv
 
 curl -fsSL https://packages.archivematica.org/1.18.x/key.asc | sudo gpg --dearmor -o /etc/apt/keyrings/archivematica-1.18.x.gpg
 
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu jammy main" > /etc/apt/sources.list.d/archivematica.list'
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals jammy main" > /etc/apt/sources.list.d/archivematica-externals.list'
+sudo sh -c "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu $(lsb_release -sc) main' > /etc/apt/sources.list.d/archivematica.list"
+sudo sh -c "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/archivematica-1.18.x.gpg] http://packages.archivematica.org/1.18.x/ubuntu-externals $(lsb_release -sc) main' > /etc/apt/sources.list.d/archivematica-externals.list"
 
 curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /etc/apt/keyrings/elasticsearch-8.x.gpg
 echo "deb [signed-by=/etc/apt/keyrings/elasticsearch-8.x.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-8.x.list
