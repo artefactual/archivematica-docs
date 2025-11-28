@@ -57,6 +57,12 @@ Installation instructions
    If it is not up to date, you can download the newest version from the
    `Vagrant website`_ .
 
+   Archivematica's playbook uses a host-only network with the IP
+   address ``192.168.168.198``. Make sure your VirtualBox network configuration
+   allows this address range. For details on creating or configuring host-only
+   networks in VirtualBox, refer to the
+   `official VirtualBox Networking documentation`_.
+
 2. Checkout the deployment repo:
 
    .. code:: bash
@@ -150,3 +156,4 @@ steps:
 .. _`deploy-pub`: https://github.com/artefactual/deploy-pub
 .. _`ansible-archivematica-src`: https://github.com/artefactual-labs/ansible-archivematica-src/blob/d4474c3dbaef2b561c87e0650c6ee386be6910a7/README.md#disable-elasticsearch-use
 .. _`Vagrant website`: https://www.vagrantup.com/downloads.html
+.. _`official VirtualBox Networking documentation`: https://www.virtualbox.org/manual/ch06.html#network_hostonly
