@@ -43,8 +43,10 @@ Installation instructions
 
    .. code:: bash
 
-      sudo apt-get install virtualbox vagrant
-      sudo pip install ansible==2.9.10 jmespath jinja2==3.0.3
+      sudo apt-get install virtualbox vagrant python3-venv
+      python3 -m venv ~/.venv-ansible
+      source ~/.venv-ansible/bin/activate
+      pip install ansible jmespath
 
    Vagrant must be at least version 1.9. Check your version with:
 
