@@ -98,6 +98,11 @@ Install Vagrant and VirtualBox
    manager). VirtualBox 5.2.18 or newer is required.
 #. Install Vagrant from https://www.vagrantup.com/ (or use your package manager).
    Vagrant 2.1.4 or newer is required.
+#. Archivematica's Vagrant environment uses a host-only network with the IP
+   address ``10.10.10.20``. Make sure your VirtualBox network configuration
+   allows this address range. For details on creating or configuring host-only
+   networks in VirtualBox, refer to the
+   `official VirtualBox Networking documentation`_.
 
 Spin it up
 ++++++++++
@@ -512,3 +517,4 @@ processing more complex content, see the :ref:`User manual <user-manual>`.
 .. _PRONOM: https://www.nationalarchives.gov.uk/PRONOM/Default.aspx
 .. _fmt/402: https://www.nationalarchives.gov.uk/PRONOM/fmt/402
 .. _VirtualBox: https://www.virtualbox.org/
+.. _official VirtualBox Networking documentation: https://www.virtualbox.org/manual/ch06.html#network_hostonly

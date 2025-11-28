@@ -409,7 +409,7 @@ This is how you can update ``certifi`` inside the virtual environment:
 
 .. code:: bash
 
-   $ sudo /usr/share/archivematica/virtualenvs/archivematica/bin/pip install -U certifi
+   $ sudo -u archivematica /usr/share/archivematica/virtualenvs/archivematica/bin/pip install -U certifi
 
 The services need to be restarted after the update, for example if you are
 using systemd:

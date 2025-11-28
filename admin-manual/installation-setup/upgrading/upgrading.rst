@@ -263,15 +263,22 @@ with cloud based virtual machines, or physical servers.
 
 #. Connect to your Vagrant machine or server
 
-    .. code:: bash
+   .. code:: bash
 
       vagrant ssh # Or ssh <your user>@<host>
 
+#. Create and activate a Python virtual environment
+
+   .. code:: bash
+
+      python3 -m venv ~/.venv-ansible
+      source ~/.venv-ansible/bin/activate
+
 #. Install Ansible
 
-    .. code:: bash
+   .. code:: bash
 
-      sudo pip install ansible==2.9.10 jmespath jinja2==3.0.3
+      pip install ansible jmespath
 
 #. Checkout the deployment repo:
 
