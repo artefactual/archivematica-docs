@@ -321,21 +321,83 @@ Cookie and session security
 
 Starting with Archivematica 1.18.0 and Storage Service 0.24.0, the Dashboard and
 the Storage Service ship with stricter defaults for cookie attributes (Secure,
-HttpOnly, SameSite). Secure-related settings (for example, ``*_SESSION_COOKIE_SECURE``
-and ``*_CSRF_COOKIE_SECURE``) are now enabled by default.
+HttpOnly, SameSite) suited for deployments using HTTPS.
 
-See `Cookie configuration improvements <cookie-configuration-improvements_>`_ in
-the Archivematica 1.18.0 release notes for the full list of environment
-variables and guidance on adjusting the defaults for your deployment.
+Administrators should review their settings to take advantage of these options
+ensuring deployment configurations are updated to align with these stricter
+defaults.
+
+Dashboard application variables
+===============================
+
+============================================================= ============== ==========
+Variable Name                                                 Previous Value New Value
+============================================================= ============== ==========
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SESSION_COOKIE_SECURE``   ``false``      ``true``
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SESSION_COOKIE_HTTPONLY`` ``false``      ``true``
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SESSION_COOKIE_SAMESITE`` ``Lax``        ``Strict``
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSRF_COOKIE_SECURE``      ``false``      ``true``
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSRF_COOKIE_HTTPONLY``    ``false``      ``false``
+``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSRF_COOKIE_SAMESITE``    ``Lax``        ``Strict``
+============================================================= ============== ==========
+
+Documentation for these application variables is available in the
+`Dashboard configuration <am-dashboard-config_>`_.
+
+Storage Service application-specific environment variables
+==========================================================
+
+=========================== ============== ==========
+Variable Name               Previous Value New Value
+=========================== ============== ==========
+``SESSION_COOKIE_SECURE``   ``false``      ``true``
+``SESSION_COOKIE_HTTPONLY`` ``false``      ``true``
+``SESSION_COOKIE_SAMESITE`` ``Lax``        ``Strict``
+``CSRF_COOKIE_SECURE``      ``false``      ``true``
+``CSRF_COOKIE_HTTPONLY``    ``false``      ``true``
+``CSRF_COOKIE_SAMESITE``    ``Lax``        ``Strict``
+=========================== ============== ==========
+
+Documentation for these environment variables is available in the
+`Storage Service configuration <ss-config_>`_.
+
+.. note::
+
+   If your deployment uses OIDC authentication across different domains, you may
+   need to adjust these settings:
+
+   * Dashboard
+
+     + ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SESSION_COOKIE_SAMESITE``
+
+   * Storage Service
+
+     + ``SESSION_COOKIE_SAMESITE``
+
+   By default, they are set to ``Strict``, which may prevent cross-domain login
+   flows. In such cases, relax the settings to ``Lax`` to allow OIDC
+   authentication to function correctly across domains.
+
+.. note::
+
+   If your deployment does not use HTTPS (not recommended for production),
+   explicitly set these variables to ``false`` to allow cookies to be sent over
+   HTTP:
+
+   * Dashboard
+
+     + ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_SESSION_COOKIE_SECURE``
+     + ``ARCHIVEMATICA_DASHBOARD_DASHBOARD_CSRF_COOKIE_SECURE``
+
+   * Storage Service
+
+     + ``SESSION_COOKIE_SECURE``
+     + ``CSRF_COOKIE_SECURE``
 
 When using HTTPS, it is still recommended to review `SSL/HTTPS <django-https-settings_>`_
 and related Django settings that provide additional security. You can continue
 to tune `session management <django-session-settings_>`_ if you need behaviour
 that differs from the defaults.
-
-If your deployment does not use HTTPS (not recommended for production),
-explicitly set the ``*_SESSION_COOKIE_SECURE`` and ``*_CSRF_COOKIE_SECURE``
-environment variables to ``false`` to allow cookies to be sent over HTTP.
 
 .. important::
 
