@@ -1,10 +1,10 @@
 repos:
 - repo: "https://github.com/sphinx-contrib/sphinx-lint"
-  rev: "v1.0.1"
+  rev: "v1.0.2"
   hooks:
   - id: "sphinx-lint"
 - repo: "https://github.com/igorshubovych/markdownlint-cli"
-  rev: "v0.45.0"
+  rev: "v0.46.0"
   hooks:
   - id: "markdownlint"
     exclude: |
