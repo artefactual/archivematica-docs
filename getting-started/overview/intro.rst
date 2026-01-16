@@ -39,18 +39,17 @@ to begin preserving digital information today. The project has conducted a
 thorough OAIS use case and process analysis to synthesize the specific, concrete
 steps that must be carried out to comply with the OAIS functional model from
 Ingest to Access. Through deployment experiences and user feedback, the project
-has expanded beyond OAIS to address analysis and arrangement of transferred
-digital objects into SIPs and allow for archival appraisal at multiple decision
-points. Wherever possible, these requirements are assigned to software tools
-within the Archivematica system. If it is not possible to automate these steps
-in the current system iteration, they are incorporated and documented into a
-manual procedure to be carried out by the end user. This ensures that the entire
-set of preservation requirements is being carried out, even in the early,
-pre-1.0 system releases. In short, the system is conceptualized as an integrated
-whole of technology, people and procedures, not just a set of software tools.
-For institutions that want technical assistance to install and customize
-Archivematica, optional technical support services are provided by Artefactual
-Systems.
+has expanded beyond OAIS to support analysis of transferred digital objects and
+to provide preservation decision points during processing. Wherever possible,
+these requirements are assigned to software tools within the Archivematica
+system. If it is not possible to automate these steps in the current system
+iteration, they are incorporated and documented into a manual procedure to be
+carried out by the end user. This ensures that the entire set of preservation
+requirements is being carried out, even in the early, pre-1.0 system releases.
+In short, the system is conceptualized as an integrated whole of technology,
+people and procedures, not just a set of software tools. For institutions that
+want technical assistance to install and customize Archivematica, optional
+technical support services are provided by Artefactual Systems.
 
 All of the software, documentation and development infrastructure are
 available free of charge and released under AGPL and Creative Commons licenses

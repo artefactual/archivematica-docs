@@ -104,10 +104,8 @@ from bottom to top.
 
 At the end of the transfer process, the transferred material can be sent to the
 :ref:`backlog <backlog>`, where it can be stored until you are ready to
-turn it into an AIP. The backlog also gives users a chance to carry out
-:ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
-transferred material into a SIP and send it along to the :ref:`Ingest <ingest>`
-tab.
+turn it into an AIP. Alternately, the user can turn the transferred material
+into a SIP and send it along to the :ref:`Ingest <ingest>` tab.
 
 You can clean up the Transfer tab by removing completed or rejected transfers.
 For more information, see :ref:`Cleaning up the Transfer tab <cleanup>` below.
@@ -670,10 +668,9 @@ The microservices that run on the Transfer tab include:
 
 * **Create SIP from transfer**: gives users the chance to send the transfer to
   the :ref:`Backlog tab <backlog>`, where it can be stored for processing
-  later. Using the backlog also gives users a chance to carry out
-  :ref:`appraisal <appraisal>` tasks. Alternately, the user can turn the
-  transferred material into a SIP and send it along to the :ref:`Ingest
-  <ingest>` tab. The transfer can also be rejected at this point.
+  later. Alternately, the user can turn the transferred material into a SIP and
+  send it along to the :ref:`Ingest <ingest>` tab. The transfer can also be
+  rejected at this point.
 
 .. image:: images/create-sip.*
    :align: center

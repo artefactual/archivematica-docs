@@ -65,8 +65,8 @@ Examine contents
 The examine contents microservice runs `Bulk Extractor`_, a forensics tool that
 can recognize credit card numbers, social security numbers, and other patterns
 in data. Bulk Extractor creates logs that are stored in the AIP. The logs can be
-inspected by sending the transfer to the backlog and using the Examine Contents
-functionality on the :ref:`Analysis pane <analysis_pane>` in the Appraisal tab.
+inspected by reviewing the AIP logs after ingest, for example by downloading the
+AIP or browsing it in the Storage Service.
 
 Examine contents is another microservice that can result in increased processing
 time, especially if it is running on the contents of an extracted forensic disk
@@ -137,20 +137,17 @@ Using the disk image transfer type
 Compound disk images
 ++++++++++++++++++++
 
-You can combine multiple parts of a compound disk image into a single AIP, if
-desired, by using the backlog arrangement functionality in Archivematica.
+You can combine multiple parts of a compound disk image into a single AIP by
+preparing them as one transfer before processing.
 
-#. Start each part of the compound disk image as a single transfer, as per the
+#. Assemble all parts of the compound disk image into a single transfer
+   directory (or bag).
+
+#. Start the transfer in Archivematica using that directory, following the
    instructions above.
 
-#. When you reach the *Create SIP* job, select "Send to backlog". Do this for
-   each transfer.
-
-#. In the :ref:`Appraisal tab <appraisal>`, use the
-   :ref:`Arrangement <arrangement>` pane to combine your transfers into one SIP.
-
-#. Once you're happy with the arrangement, start the SIP by selecting the parent
-   directory and then clicking **Create SIP**.
+#. Proceed through the normal :ref:`Transfer <transfer>` and
+   :ref:`Ingest <ingest>` workflows.
 
 
 :ref:`Back to the top <forensic>`

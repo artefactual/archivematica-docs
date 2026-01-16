@@ -661,7 +661,6 @@ see :ref:`Processing configuration <dashboard-processing>`.
    * Examine contents if not performed on first ingest
    * Transfer structure report if not performed on first ingest
    * Extract packages in the AIP and then delete them
-   * Send AIP to backlog for re-arrangement during re-ingest
 
 
 Choosing full re-ingest will take you back to the Transfer tab.
