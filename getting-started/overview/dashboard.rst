@@ -26,9 +26,8 @@ image above.
 The Dashboard is divided into a number of tabs, with the grey area indicating
 the tab currently in view. Alerts appear in red circles when there is action
 required by the archivist in a tab. The names of the tabs (Transfer, Backlog,
-Appraisal, Ingest, Archival storage, Preservation planning, Access,
-Administration) reference both the OAIS model and sections of the user
-documentation.
+Ingest, Archival storage, Preservation planning, Access, Administration)
+reference both the OAIS model and sections of the user documentation.
 
 2. User login
 -------------

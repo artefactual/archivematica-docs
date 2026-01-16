@@ -194,12 +194,12 @@ Elasticsearch indexing
 ^^^^^^^^^^^^^^^^^^^^^^
 
 As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch
-powers the indexes that are used for searching in the :ref:`Backlog <backlog>`,
-:ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage <archival-storage>`.
-Installing Archivematica without Elasticsearch results in reduced consumption of
-compute resources and lower operational complexity. Disabling Elasticsearch
-means that the Backlog, Appraisal, and/or Archival Storage tabs will not appear
-in the user interface and their functionality will not be available.
+powers the indexes that are used for searching in the :ref:`Backlog <backlog>`
+and/or :ref:`Archival Storage <archival-storage>`. Installing Archivematica
+without Elasticsearch results in reduced consumption of compute resources and
+lower operational complexity. Disabling Elasticsearch means that the Backlog
+and/or Archival Storage tabs will not appear in the user interface and their
+functionality will not be available.
 
 This section in the General configuration shows if Elasticsearch is enabled or
 disabled.
@@ -211,10 +211,10 @@ disabled.
 
    In this example, indexing is enabled for both transfers and AIPs.
 
-It is possible to disable indexing for transfers (the Backlog and Appraisal
-tabs), for AIPs (the Archival Storage tab), or for both. For more information on
-disabling Elasticsearch, please see :ref:`Elasticsearch <install-elasticsearch>`
-in the Administrator Manual.
+It is possible to disable indexing for transfers (the Backlog tab), for AIPs
+(the Archival Storage tab), or for both. For more information on disabling
+Elasticsearch, please see :ref:`Elasticsearch <install-elasticsearch>` in the
+Administrator Manual.
 
 .. _admin-dashboard-failures:
 

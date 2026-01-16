@@ -101,13 +101,15 @@ FAQ
 
 #. **Can I appraise and arrange records in Archivematica?**
 
-   Yes! In Archivematica 1.6 an appraisal dashboard allows the user to perform
-   archival appraisal and arrangement activities on ingested files. Submission
-   documentation such as donor agreements, transfer forms and accession records
-   can be added to the SIP for preservation along with the ingested digital objects,
-   and are identified as submission documentation in the preservation metadata
-   in the AIP. In AtoM, an accessions module allows users to record accessions,
-   accruals and deaccessions and to record information about appraisal and selection.
+   Archivematica does not include a dedicated appraisal or arrangement
+   interface. Appraise and select materials before transfer, or document
+   appraisal decisions in your access system. Submission documentation such as
+   donor agreements, transfer forms and accession records can be added to the
+   SIP for preservation along with the ingested digital objects, and are
+   identified as submission documentation in the preservation metadata in the
+   AIP. In AtoM, an accessions module allows users to record accessions,
+   accruals and deaccessions and to record information about appraisal and
+   selection.
 
 #. **Why doesn't Archivematica have a module for providing access to digital
    materials?**

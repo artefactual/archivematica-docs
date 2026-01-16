@@ -113,22 +113,6 @@ backlog location.
 * :ref:`Deleting transfers from the backlog <backlog-delete>`
 * :ref:`Retrieving transfers from the backlog <backlog-retrieve>`
 
-.. _home-appraisal:
-
-Appraisal
----------
-
-The Appraisal and Arrangement tab is used to analyze and arrange material which
-has been placed in backlog. It can also be used to arrange materials directly to
-resources in ArchivesSpace.
-
-* :ref:`General description <appraisal>`
-* :ref:`Backlog pane <backlog_pane>`
-* :ref:`Analysis pane <analysis_pane>`
-* :ref:`File list pane <file_list_pane>`
-* :ref:`ArchivesSpace pane <archivesspace_pane>`
-* :ref:`Arrangement pane <arrangement>`
-
 .. _home-ingest:
 
 Ingest

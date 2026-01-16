@@ -74,12 +74,8 @@ AtoM 2.x with Archivematica <atom-setup>`.
 
 Digital objects uploaded to AtoM are added as children of the target description
 and are, by default, given the level of description of ``item``. You can assign
-other levels of description by sending your transfer to backlog and :ref:`adding
-AtoM levels of description <adding-atom-lod>` on the Appraisal tab.
-
-It is possible to arrange your transfer to create a hierarchy that AtoM will
-recognize by :ref:`using the arrangement feature on Appraisal tab
-<arrangement-drag-drop>`.
+other levels of description by preparing your transfer structure before
+processing or by managing description levels directly in AtoM.
 
 You can also :ref:`add descriptive metadata <add-metadata>` to your transfer
 using either the metadata form or the metadata CSV file. This descriptive
@@ -109,11 +105,7 @@ subject      subject access point
 .. note::
 
   Adding metadata through the form in Archivematica will create an intermediary
-  descripton in AtoM. However, if the transfer is sent to the backlog and AtoM
-  descriptions are applied (see :ref:`Adding AtoM levels of description
-  <adding-atom-lod>`), then any metadata added through the form will not be
-  present in AtoM. There will also be no intermediary description, but the
-  levels of description you applied will be present in AtoM.
+  description in AtoM.
 
 There are two ways to provide the target description to Archivematica. The first
 is by providing the slug during the Upload DIP microservice.
@@ -191,9 +183,6 @@ display online for copyright or privacy reasons.
    * Descriptive metadata: if descriptive metadata is included by csv or
      entering in the user interface, the metadata will not display in AtoM
      in this workflow.
-   * SIPs with levels of description assigned using the :ref:`arranging for
-     AtoM <arrangement>` workflow - the levels of description will be ignored in
-     this workflow.
 
 1. Navigate to Archival Storage and search or browse for the AIP. Click on the
    name of the AIP, or "View".

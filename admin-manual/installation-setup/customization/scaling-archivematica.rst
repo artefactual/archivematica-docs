@@ -297,8 +297,8 @@ Disable Elasticsearch indexing
 Archivematica uses Elasticsearch to create an index of every Archival
 Information Package (AIP) it creates. It also creates an index of any Transfer
 that is sent to the backlog. Indexes enable the search functionality from the
-Archival Storage tab of the Dashboard (in the case of AIPs) or the Backlog and
-Appraisal tabs (in the case of Transfers that were sent to the Backlog).
+Archival Storage tab of the Dashboard (in the case of AIPs) or the Backlog tab
+(in the case of Transfers that were sent to the Backlog).
 Indexes contain information on every object in a Transfer or AIP.
 
 If a user chooses (whether in the dashboard or by configuration) to send
@@ -314,8 +314,8 @@ Use of Elasticsearch is optional. Installing :ref:`Archivematica without
 Elasticsearch <install-elasticsearch>` or with limited Elasticsearch
 functionality means reduced consumption of compute resources and lower
 operational complexity. Fully or partially disabling Elasticsearch means that
-the Backlog, Appraisal, and Archival Storage tabs may not appear and their
-functionality is not available.
+the Backlog and Archival Storage tabs may not appear and their functionality is
+not available.
 
 See :ref:`Upgrade in indexless mode <upgrade-indexless>` for more details.
 
@@ -329,7 +329,7 @@ fail. By default, Archivematica will abort processing and invoked the
 The ``ARCHIVEMATICA_MCPCLIENT_MCPCLIENT_INDEX_AIP_CONTINUE_ON_ERROR`` parameter
 can be set to allow indexing to fail. When this is set and indexing fails,
 the AIP will carry on with processing and be stored. It can't be found using
-the normal search features in the Appraisal and Archival Storage tabs.
+the normal search features in the Archival Storage tab.
 
 This feature doesn't optimize performance so much as mitigate performance
 limitations. See `MCPClient`_ Configuration for details.

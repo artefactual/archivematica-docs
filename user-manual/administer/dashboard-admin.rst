@@ -195,9 +195,9 @@ Examine contents
 ++++++++++++++++
 
 Run `Bulk Extractor`_, a forensics tool that can recognize credit card numbers,
-social security numbers, and other patterns in data. For more information on
-reviewing Bulk Extractor logs, see the :ref:`Analysis pane <analysis_pane>` on
-the Appraisal tab.
+social security numbers, and other patterns in data. Bulk Extractor logs are
+stored in the AIP and can be reviewed after ingest by downloading the AIP or
+browsing it in the Storage Service.
 
 **Options:**
 
@@ -217,7 +217,7 @@ Options:
 #. **Create single SIP and continue processing** - transfer becomes a SIP and is
    made available for further processing on the ingest tab.
 #. **Send to backlog** - transfer is sent to a backlog storage space for
-   temporary storage or appraisal.
+   temporary storage or later processing.
 
 .. note::
 
@@ -527,12 +527,12 @@ Elasticsearch indexing
 ^^^^^^^^^^^^^^^^^^^^^^
 
 As of Archivematica 1.7, installing Elasticsearch is optional. Elasticsearch
-powers the indexes that are used for searching in the :ref:`Backlog <backlog>`,
-:ref:`Appraisal <appraisal>`, and/or :ref:`Archival Storage <archival-storage>`.
-Installing Archivematica without Elasticsearch results in reduced consumption of
-compute resources and lower operational complexity. Disabling Elasticsearch
-means that the Backlog, Appraisal, and/or Archival Storage tabs will not appear
-in the user interface and their functionality will not be available.
+powers the indexes that are used for searching in the :ref:`Backlog <backlog>`
+and/or :ref:`Archival Storage <archival-storage>`. Installing Archivematica
+without Elasticsearch results in reduced consumption of compute resources and
+lower operational complexity. Disabling Elasticsearch means that the Backlog
+and/or Archival Storage tabs will not appear in the user interface and their
+functionality will not be available.
 
 This section in the General configuration shows if Elasticsearch is enabled or
 disabled.
@@ -544,10 +544,10 @@ disabled.
 
    In this example, indexing is enabled for both transfers and AIPs.
 
-It is possible to disable indexing for transfers (the Backlog and Appraisal
-tabs), for AIPs (the Archival Storage tab), or for both. For more information on
-disabling Elasticsearch, please see :ref:`Elasticsearch <install-elasticsearch>`
-in the Administrator Manual.
+It is possible to disable indexing for transfers (the Backlog tab), for AIPs
+(the Archival Storage tab), or for both. For more information on disabling
+Elasticsearch, please see :ref:`Elasticsearch <install-elasticsearch>` in the
+Administrator Manual.
 
 .. _dashboard-failures:
 
@@ -665,23 +665,6 @@ contents can be accessed online.
 For more information on configuring the AtoM DIP upload parameters and
 the servers, please see the :ref:`AtoM DIP upload <admin-dashboard-atom>`
 configuration instructions.
-
-**Levels of description**
-
-You can fetch levels of description from AtoM so that they can be used for
-:ref:`SIP arrangement <arrangement>`. From the AtoM page in the
-Administration tab, click on *Levels of Description*, then *Fetch from AtoM* to
-get an updated list from the AtoM levels of description taxonomy.
-
-.. image:: images/atom-levels-of-description.*
-   :align: center
-   :width: 80%
-   :alt: Levels of description from AtoM shown in Archivematica administration screen
-
-If there are levels of description in the AtoM taxonomy that you prefer not to
-use in Archivematica SIP arrange, you can remove them using the red delete
-button. You can change the order that they appear in SIP arrange by using the
-up/down arrows in this screen.
 
 .. note::
 

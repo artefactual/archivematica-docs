@@ -18,7 +18,6 @@ resource categories:
 
 * :ref:`transfer-resource`
 * :ref:`ingest-resource`
-* :ref:`admin-resource`
 * :ref:`unit-resource`
 * :ref:`other-resource`
 * :ref:`beta`
@@ -546,63 +545,6 @@ Response examples
       "message": "Location 6dca8140-0864-4319-86d7-584f6be687a3 is not associated with this pipeline"
     }
 
-.. _admin-resource:
-
-Administration
---------------
-
-Administration enables you to configure various parts of the application and
-manage integrations and users.
-
-
-Levels of description
-^^^^^^^^^^^^^^^^^^^^^
-
-======= ===========================================  ===========================
-
-``GET`` **/api/administration/dips/atom /levels/**   *Returns a JSON-encoded set
-                                                     of the configured levels
-                                                     of description.*
-
-======= ===========================================  ===========================
-
-
-Example request:
-
-.. literalinclude:: _code/admin_levels_of_desc_req.curl
-
-Example response (JSON):
-
-The following response includes a list of AtoM Levels of description with key
-'UUID' and value 'name of level of description'.
-
-.. literalinclude:: _code/admin_levels_of_desc_response.curl
-
-
-Fetch levels of description
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-======= =============================================== ========================
-
-``GET`` **/api/administration/dips/atom/fetch_levels/**  *Fetches all levels of
-                                                         description from an
-                                                         AtoM database,
-                                                         replacing any previously
-                                                         existing.*
-
-======= =============================================== ========================
-
-Example request:
-
-.. literalinclude:: _code/fetch_levels.curl
-
-Example response (JSON):
-
-The following response includes an updated list of AtoM Levels of description
-with key 'UUID' and value 'name of level of description'.
-
-.. literalinclude:: _code/fetch_levels_response.curl
-
 .. _unit-resource:
 
 
@@ -712,45 +654,6 @@ Example response (JSON):
 
 Other
 -----
-
-Other is a generic resource category that includes path metadata associated
-with level of description, and it also includes name associated with any
-customized processing configuration.
-
-Path metadata
-^^^^^^^^^^^^^
-
-============= ============================= =================================
-``GET, POST`` **/api/filesystem/metadata/** *Fetches (GET) or update (POST)
-                                            metadata for a path (currently
-                                            only level of description).*
-============= ============================= =================================
-
-
-Query string parameters or request body parameters:
-
-.. tip:: The following parameter can be submitted as query string parameter
-         with GET or as a JSON object with a key-value pair in the request body
-         with POST.
-
-================     ===========================================================
-
-``path``             Arranged path on which to get metadata.
-
-================     ===========================================================
-
-Response: the processing config file as a stream
-
-Content type: text/xml
-
-Example request:
-
-.. literalinclude:: _code/task_request.curl
-
-Example response (JSON):
-
-.. literalinclude:: _code/task_response.curl
-
 
 Processing configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^

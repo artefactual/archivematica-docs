@@ -176,7 +176,6 @@ This is an example of the contents of an AIP's logs directory:
    my-aip-d31cc44f-ce01-4e67-affe-513868d9cf3d
    └── data
        └── logs
-           ├── arrange.log
            ├── fileFormatIdentification.log
            ├── filenameChanges.log
            └── transfers
@@ -189,19 +188,17 @@ This is an example of the contents of an AIP's logs directory:
                        ├── fileFormatIdentification.log
                        └── filenameChanges.log
 
-The top-level logs (``arrange.log``, ``fileFormatIdentification.log``, etc.) are
-outputs for tasks that took place either in the Appraisal tab or on the Ingest
-tab. For example, ``data/logs/fileFormatIdentification.log`` is the log that was
-created during the *Identify file format* job that takes place during the
-Normalize microservice on the Ingest tab.
+The top-level logs (``fileFormatIdentification.log``, etc.) are outputs for
+tasks that took place during ingest. For example,
+``data/logs/fileFormatIdentification.log`` is the log that was created during
+the *Identify file format* job that takes place during the Normalize
+microservice on the Ingest tab.
 
 The logs directory has a transfers subdirectory, ``/data/logs/transfers``, which
-contains logs for tools that ran on the Transfer tab. Since it is possible to
-combine multiple transfers into one SIP (which becomes one AIP), the transfers
-subdirectory may contain multiple directories. Continuing to use the example
-above, two transfers (``first-transfer`` and ``second-transfer``) were combined
-to create one AIP (``my-aip``). Therefore, there are two more
-``fileFormatIdentification.log`` files:
+contains logs for tools that ran on the Transfer tab. In most workflows the
+subdirectory will contain a single transfer, but it can include more than one
+transfer directory depending on how the SIP was created. Continuing to use the
+example above, there are two ``fileFormatIdentification.log`` files:
 
 * ``data/logs/transfers/first-transfer-abbff451-f077-4f66-a6e0-d83f6ebbeebf/logs/fileFormatIdentification.log``
   is the log that was created during *Microservice: Identify file format* on the
@@ -221,9 +218,8 @@ Objects
 
 The objects directory, ``/data/objects``, contains original objects,
 preservation masters, and two folders: ``/metadata`` and
-``/submissionDocumentation``. If the SIP contained any lower-level directories,
-either from the original transfer or because it was arranged on the Appraisal
-tab, the lower-level directories will be present as well.
+``/submissionDocumentation``. If the SIP contained any lower-level directories
+from the original transfer, the lower-level directories will be present as well.
 
 .. code::
 

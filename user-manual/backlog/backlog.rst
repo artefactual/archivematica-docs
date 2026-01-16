@@ -8,8 +8,7 @@ At the end of the :ref:`Transfer tab microservices
 <transfer-tab-microservices>`, users are given the option to place a transfer
 into a backlog storage space. Users may choose to use the backlog in order to do
 more analysis on the materials at a later date, either outside of Archivematica
-or by using the :ref:`Appraisal tab <appraisal>` features, before placing the
-materials in long-term storage.
+or after additional review, before placing the materials in long-term storage.
 
 Transfers placed in the backlog have undergone basic digital preservation
 microservices - for example, all files have been given UUIDs, checksums have
@@ -149,11 +148,10 @@ Storage Service to confirm the deletion.
 Retrieving transfers from the backlog
 -------------------------------------
 
-Materials in backlog can be analysed, appraised, and arranged by using the
-functionality on the :ref:`Appraisal tab <appraisal>`. Once you are ready to
-move a transfer out of the backlog and process it for long-term storage, follow
-the instructions in the see :ref:`Arranging a SIP through drag-and-drop
-<arrangement-drag-drop>` section of the Appraisal tab documentation.
+Materials in backlog can be retrieved for processing when you are ready to move
+them into the pipeline. Select **Retrieve** for the transfer, then proceed
+through the normal :ref:`Transfer <transfer>` and :ref:`Ingest <ingest>`
+workflows.
 
 :ref:`Back to the top <backlog>`
 
