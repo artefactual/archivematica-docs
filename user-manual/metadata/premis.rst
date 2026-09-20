@@ -228,9 +228,10 @@ PREMIS Rights metadata
 
 PREMIS rights metadata can be added during :ref:`transfer <transfer>` or
 :ref:`ingest <ingest>`; it can be entered via the GUI interface to be applied to
-the entirety of the SIP or transfer. Rights can also be entered at the object
-level by describing them in a rights.csv file and using the :ref:`Import
-metadata <import-metadata>` feature.
+the entirety of the SIP or transfer. Rights can also be imported for individual
+files or a whole transfer using a :ref:`rights.csv file <rights.csv>`. Use a
+file path for an individual file, or ``objects/`` (also accepted as ``objects``)
+for the whole transfer. Other directory targets are not supported.
 
 Below, the entry template is described as it appears for each rights basis,
 followed by acts granted/restricted.

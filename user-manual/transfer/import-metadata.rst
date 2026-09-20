@@ -462,14 +462,24 @@ the process.
 Importing rights metadata with rights.csv
 -----------------------------------------
 
-Rights information can be associated with objects or directories in a transfer
+Rights information can be associated with individual files or a whole transfer
 by creating a rights.csv file, similar to the metadata.csv file used for
 descriptive metadata. Archivematica implements :ref:`PREMIS metadata in
 Archivematica <premis-template>`, including PREMIS rights, as used here. Rights
 metadata added using the rights.csv will be transposed to the METS file.
 
-Rights metadata can be applied to individual objects within a transfer, to
-directories within the transfer, or both.
+The ``file`` column identifies the target of each rights statement:
+
+* For an individual file, use its path beginning with ``objects/``, such as
+  ``objects/beihai.tif`` or ``objects/audio/bird.mp3``.
+* For the whole transfer, use ``objects/`` or ``objects``. Both values create
+  transfer-scoped rights, which Archivematica includes with each original file
+  in the transfer and AIP METS files.
+
+Other directory paths, such as ``objects/audio/``, are not supported. A CSV may
+contain both transfer-wide and file-specific rows. Archivematica includes both
+sets of rights for affected files; file-specific rights do not override
+transfer-wide rights.
 
 #. Create a transfer directory containing the digital objects you would like to
    preserve. As an example, the following directory tree displays a basic
@@ -482,15 +492,16 @@ directories within the transfer, or both.
     └── beihai.tif
 
 #. Create a file called rights.csv. The example below can be used as
-   a template for PREMIS rights metadata. The filename column must come first
-   and the filename path must always start with ``objects/``.
+   a template for PREMIS rights metadata. The ``file`` column must come first.
 
    .. csv-table::
       :file: _csv/rights.csv
       :header-rows: 1
 
-   Note that to enter multiple rights acts for the same basis, you must create
-   two separate rows, as with rows 1 and 2 in the example above.
+   To enter multiple rights acts for the same basis, use separate rows, as
+   with rows 1 and 2 in the example above. Within one CSV import, if rows have
+   the same target, basis and act, only the first is imported. The targets
+   ``objects`` and ``objects/`` are treated as equivalent for this check.
 
 #. Create a subdirectory called ``metadata`` and place the rights.csv file
    inside it.::
@@ -510,6 +521,24 @@ metadata sections (``<mets:rightsMD>``).
 
 .. literalinclude:: scripts/rights-mets.xml
    :language: xml
+
+The following CSV combines a transfer-wide statement with a file-specific
+statement:
+
+.. code-block:: text
+
+   file,basis,terms,grant_act,grant_restriction
+   objects/,license,Transfer license terms,use,Allow
+   objects/beihai.tif,license,Additional file license terms,use,Allow
+
+Every original file receives the transfer-wide statement in the transfer and
+AIP METS files. The file ``beihai.tif`` also receives the file-specific
+statement. Both statements are retained even though they have the same basis
+and act, because they apply to different targets. The file
+``audio/bird.mp3`` receives only the transfer-wide statement.
+
+File-specific rows add rights statements; they cannot be used to create
+exceptions to or replace transfer-wide rights.
 
 .. _premis.xml:
 
