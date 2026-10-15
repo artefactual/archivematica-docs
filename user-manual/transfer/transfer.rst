@@ -290,9 +290,9 @@ Transfers with submission documentation
 Submission documentation is a concept in Archivematica that accounts for
 materials that are related to the digital objects being preserved, but aren't
 strictly part of the collection - for example, donor agreements, correspondence
-about the materials, conservation reports, etc. If Archivematica sees that a
-transfer includes submission documentation, it can include descriptions of this
-material in the AIP METS file.
+about the materials, conservation reports, semantic representationinformation, etc.
+If Archivematica sees that a transfer includes submission documentation, it can include
+descriptions of this material in the AIP METS file.
 
 Submission documentation can be added to standard, unzipped, zipped, and disk
 image transfer types.
